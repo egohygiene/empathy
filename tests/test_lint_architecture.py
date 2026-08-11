@@ -9,7 +9,7 @@ import importlib.util
 from pathlib import Path
 import sys
 import unittest
-from xml.etree import ElementTree
+import xml.etree.ElementTree as ET
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = (
@@ -20,7 +20,7 @@ SPECIFICATION = importlib.util.spec_from_file_location(
     SCRIPT_PATH,
 )
 if SPECIFICATION is None or SPECIFICATION.loader is None:
-    raise RuntimeError(f"Unable to load {SCRIPT_PATH}")
+    raise RuntimeError(SCRIPT_PATH)
 GENERATOR = importlib.util.module_from_spec(SPECIFICATION)
 sys.modules[SPECIFICATION.name] = GENERATOR
 SPECIFICATION.loader.exec_module(GENERATOR)
@@ -64,7 +64,8 @@ class LintArchitectureContractTests(unittest.TestCase):
         )
 
     def test_svg_is_valid_xml_with_accessible_metadata(self) -> None:
-        root = ElementTree.parse(self.svg_path).getroot()
+        # The parsed SVG is a trusted artifact generated in this test suite.
+        root = ET.parse(self.svg_path).getroot()  # noqa: S314
         namespace = {"svg": "http://www.w3.org/2000/svg"}
         self.assertIsNotNone(root.find("svg:title", namespace))
         self.assertIsNotNone(root.find("svg:desc", namespace))
@@ -87,11 +88,11 @@ class LintArchitectureContractTests(unittest.TestCase):
                 self.assertIn(phrase, markdown)
 
     def test_output_directory_rejects_traversal(self) -> None:
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError):  # noqa: PT027
             GENERATOR.output_paths(REPOSITORY_ROOT, "../architecture")
 
     def test_output_directory_rejects_nested_destinations(self) -> None:
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError):  # noqa: PT027
             GENERATOR.output_paths(
                 REPOSITORY_ROOT,
                 ".reports/egolint/architecture/history",

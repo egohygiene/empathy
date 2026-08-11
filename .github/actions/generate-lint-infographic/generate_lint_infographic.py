@@ -60,7 +60,7 @@ def load_json(path: Path) -> dict[str, Any]:
     except (OSError, json.JSONDecodeError) as error:
         raise ValueError(f"Unable to load matrix {path}: {error}") from error
     if not isinstance(value, dict):
-        raise ValueError(f"Matrix must contain a JSON object: {path}")
+        raise TypeError(f"Matrix must contain a JSON object: {path}")
     return value
 
 
@@ -147,7 +147,7 @@ def build_inventory(repository_root: Path) -> ArchitectureInventory:
     )
 
 
-def svg_text(
+def svg_text(  # noqa: PLR0913
     x: int,
     y: int,
     value: str,
@@ -168,12 +168,21 @@ def svg_text(
     )
 
 
-def card(x: int, y: int, width: int, height: int, title: str, lines: list[str]) -> str:
+def card(  # noqa: PLR0913, PLR0917
+    x: int,
+    y: int,
+    width: int,
+    height: int,
+    title: str,
+    lines: list[str],
+) -> str:
     """Render one architecture card."""
 
     elements = [
-        f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="20" '
-        'fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>',
+        (
+            f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="20" '
+            'fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>'
+        ),
         svg_text(x + 24, y + 38, title, size=21, fill="#F5D0FE", weight=700),
     ]
     for index, line in enumerate(lines):
@@ -185,12 +194,16 @@ def render_svg(inventory: ArchitectureInventory) -> str:
     """Render the deterministic architecture infographic."""
 
     parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" '
-        'viewBox="0 0 1440 1040" role="img" aria-labelledby="title description" '
-        'font-family="Inter, ui-sans-serif, system-ui, sans-serif">',
+        (
+            '<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" '
+            'viewBox="0 0 1440 1040" role="img" aria-labelledby="title description" '
+            'font-family="Inter, ui-sans-serif, system-ui, sans-serif">'
+        ),
         '<title id="title">Egolint lint platform architecture</title>',
-        '<desc id="description">Execution paths, tool profiles, state model, and report '
-        "publication flow generated from the canonical tool matrices.</desc>",
+        (
+            '<desc id="description">Execution paths, tool profiles, state model, and report '
+            "publication flow generated from the canonical tool matrices.</desc>"
+        ),
         "<defs>",
         '<linearGradient id="background" x1="0" y1="0" x2="1" y2="1">',
         '<stop offset="0" stop-color="#090719"/>',
@@ -245,8 +258,10 @@ def render_svg(inventory: ArchitectureInventory) -> str:
             "CI",
             ["PRs: fast and read-only", "Trusted: holistic and publish"],
         ),
-        '<path d="M222 330 H1218" stroke="#6D5DD3" stroke-width="3" '
-        'stroke-dasharray="8 10" opacity="0.8"/>',
+        (
+            '<path d="M222 330 H1218" stroke="#6D5DD3" stroke-width="3" '
+            'stroke-dasharray="8 10" opacity="0.8"/>'
+        ),
         '<path d="M720 330 V376" stroke="#C084FC" stroke-width="4" marker-end="none"/>',
         card(
             72,
@@ -437,7 +452,7 @@ def main() -> int:
     try:
         inventory = build_inventory(repository_root)
         markdown_path, svg_path = output_paths(repository_root, args.output_directory)
-    except ValueError as error:
+    except (TypeError, ValueError) as error:
         print(str(error), file=sys.stderr)
         return 2
 
