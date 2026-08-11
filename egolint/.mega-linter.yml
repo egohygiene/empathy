@@ -47,21 +47,6 @@ DISABLE_LINTERS:
   # within the wider security pipeline are reviewed.
   - REPOSITORY_DEVSKIM
 
-  # JSON is validated through the selected JSON-specific toolchain rather than
-  # eslint-plugin-jsonc.
-  - JSON_ESLINT_PLUGIN_JSONC
-
-  # Checkmake is disabled until the universal Makefile policy is finalized.
-  - MAKEFILE_CHECKMAKE
-
-  # MegaLinter v10.0.0 currently disables API_SPECTRAL internally because the
-  # integration is marked as crashing. Preserve the native ruleset and wiring
-  # so the linter can be re-enabled when upstream support is restored.
-  - API_SPECTRAL
-
-  # TERRAFORM_TERRASCAN is deprecated and will be removed in a future major release. Repo archived.
-  - TERRAFORM_TERRASCAN
-
   # Disable the JSX linter in favor of the local repository pinned ESLint v9.
   - JSX_ESLINT
   - PYTHON_BLACK
@@ -316,21 +301,6 @@ ANSIBLE_ANSIBLE_LINT_CLI_LINT_MODE: project
 # Restrict Ansible Lint auto-discovery to the repository's Ansible workspace.
 ANSIBLE_ANSIBLE_LINT_ARGUMENTS:
   - .ansible
-
-# ==============================================================================
-# API specifications
-# ==============================================================================
-
-# Spectral
-# https://github.com/stoplightio/spectral
-# https://megalinter.io/latest/descriptors/api_spectral/
-#
-# NOTE:
-# MegaLinter v10.0.0 currently disables API_SPECTRAL internally because the
-# integration is marked as crashing. Preserve the native ruleset and wiring
-# so the linter can be re-enabled when upstream support is restored.
-API_SPECTRAL_RULES_PATH: egolint/.config/lint/api
-API_SPECTRAL_CONFIG_FILE: spectral.yaml
 
 # ==============================================================================
 # Azure Resource Manager templates
@@ -626,21 +596,6 @@ LUA_LUACHECK_RULES_PATH: egolint/.config/lint/lua
 LUA_LUACHECK_CONFIG_FILE: .luacheckrc
 
 # ==============================================================================
-# Makefile static analysis
-# ==============================================================================
-
-# checkmake
-# https://github.com/checkmake/checkmake
-# https://megalinter.io/latest/descriptors/makefile_checkmake/
-#
-# NOTE:
-# MegaLinter currently disables this descriptor because of upstream security
-# concerns. Keep the configuration ready, but retain MAKEFILE_CHECKMAKE in
-# DISABLE_LINTERS until MegaLinter re-enables it.
-MAKEFILE_CHECKMAKE_RULES_PATH: egolint/.config/lint/makefile
-MAKEFILE_CHECKMAKE_CONFIG_FILE: .checkmake.ini
-
-# ==============================================================================
 # Markdown static analysis
 # ==============================================================================
 
@@ -651,28 +606,6 @@ MARKDOWN_MARKDOWNLINT_RULES_PATH: egolint/.config/lint/markdown
 MARKDOWN_MARKDOWNLINT_CONFIG_FILE: .markdownlint.json
 MARKDOWN_MARKDOWNLINT_ARGUMENTS: >-
   --ignore-path egolint/.markdownlintignore
-
-# ==============================================================================
-# Markdown link validation
-# ==============================================================================
-
-# markdown-link-check
-# https://github.com/tcort/markdown-link-check
-# https://megalinter.io/latest/descriptors/markdown_markdown_link_check/
-MARKDOWN_MARKDOWN_LINK_CHECK_RULES_PATH: egolint/.config/lint/markdown
-MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: .markdown-link-check.json
-MARKDOWN_MARKDOWN_LINK_CHECK_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.reports)/'
-
-# ==============================================================================
-# Markdown AST analysis
-# ==============================================================================
-
-# remark-lint
-# https://github.com/remarkjs/remark-lint
-# https://megalinter.io/latest/descriptors/markdown_remark_lint/
-MARKDOWN_REMARK_LINT_RULES_PATH: egolint/.config/lint/markdown
-MARKDOWN_REMARK_LINT_CONFIG_FILE: .remarkrc.json
-MARKDOWN_REMARK_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.reports)/'
 
 # ==============================================================================
 # PHP analysis
@@ -734,22 +667,6 @@ POWERSHELL_POWERSHELL_FORMATTER_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor
 PROTOBUF_PROTOLINT_RULES_PATH: egolint/.config/lint/protobuf
 PROTOBUF_PROTOLINT_CONFIG_FILE: .protolintrc.yml
 PROTOBUF_PROTOLINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|generated|build|dist|coverage|\.cache|\.reports)/'
-
-# ==============================================================================
-# Puppet static analysis
-# ==============================================================================
-
-# puppet-lint
-# https://github.com/puppetlabs/puppet-lint
-# https://megalinter.io/latest/descriptors/puppet_puppet_lint/
-#
-# NOTE:
-# The MegaLinter descriptor is currently disabled upstream. Keep this
-# configuration prepared, but retain PUPPET_PUPPET_LINT in DISABLE_LINTERS
-# until MegaLinter restores support.
-PUPPET_PUPPET_LINT_RULES_PATH: egolint/.config/lint/puppet
-PUPPET_PUPPET_LINT_CONFIG_FILE: .puppet-lint.rc
-PUPPET_PUPPET_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|generated|build|dist|coverage|\.cache|\.reports)/'
 
 # ==============================================================================
 # Raku syntax and compilation validation
@@ -904,28 +821,6 @@ REPOSITORY_TRUFFLEHOG_ARGUMENTS: >-
   --archive-timeout=30s
 
 # ==============================================================================
-# Infrastructure-as-code security analysis
-# ==============================================================================
-
-# KICS
-# https://github.com/Checkmarx/kics
-# https://megalinter.io/latest/descriptors/repository_kics/
-#
-# NOTE:
-# MegaLinter currently disables this descriptor because of an upstream
-# supply-chain security incident. Keep the configuration ready, but retain
-# REPOSITORY_KICS in DISABLE_LINTERS until the integration is restored.
-REPOSITORY_KICS_RULES_PATH: egolint/.config/security/kics
-REPOSITORY_KICS_CONFIG_FILE: .kics.config.json
-
-REPOSITORY_KICS_PRE_COMMANDS:
-  - command: >-
-      mkdir -p
-      ".cache/kics"
-      ".reports/megalinter/kics"
-    cwd: workspace
-
-# ==============================================================================
 # Software Bill of Materials generation
 # ==============================================================================
 
@@ -1067,17 +962,6 @@ YAML_YAMLLINT_CONFIG_FILE: .yamllint.yml
 # Terraform and Terragrunt analysis
 # ==============================================================================
 
-# Terrascan
-# https://github.com/tenable/terrascan
-# https://megalinter.io/latest/descriptors/terraform_terrascan/
-#
-# NOTE:
-# Terrascan is archived and deprecated by MegaLinter. Keep this configuration
-# available for compatibility, but retain TERRAFORM_TERRASCAN in
-# DISABLE_LINTERS.
-TERRAFORM_TERRASCAN_RULES_PATH: egolint/.config/lint/terraform
-TERRAFORM_TERRASCAN_CONFIG_FILE: terrascan-config.toml
-
 # TFLint
 # https://github.com/terraform-linters/tflint
 # https://megalinter.io/latest/descriptors/terraform_tflint/
@@ -1160,30 +1044,17 @@ SNAKEMAKE_SNAKEFMT_CONFIG_FILE: .snakefmt.toml
 # Repository secret scanning
 # ==============================================================================
 
-# Gitleaks
-# https://github.com/gitleaks/gitleaks
-# https://megalinter.io/latest/descriptors/repository_gitleaks/
-REPOSITORY_GITLEAKS_RULES_PATH: egolint/.config/security/gitleaks
-REPOSITORY_GITLEAKS_CONFIG_FILE: .gitleaks.toml
+# Betterleaks
+# https://github.com/betterleaks/betterleaks
+# https://megalinter.io/latest/descriptors/repository_betterleaks/
+#
+# Betterleaks is MegaLinter v10's supported Gitleaks successor and consumes the
+# existing Gitleaks policy and ignore files without migration.
+REPOSITORY_BETTERLEAKS_RULES_PATH: egolint/.config/security/gitleaks
+REPOSITORY_BETTERLEAKS_CONFIG_FILE: .gitleaks.toml
 
-REPOSITORY_GITLEAKS_ARGUMENTS: >-
+REPOSITORY_BETTERLEAKS_ARGUMENTS: >-
   --redact
-
-# ==============================================================================
-# T-SQL static analysis
-# ==============================================================================
-
-# TSQLLint
-# https://github.com/tsqllint/tsqllint
-# https://megalinter.io/latest/descriptors/sql_tsqllint/
-SQL_TSQLLINT_RULES_PATH: egolint/.config/lint/sql
-SQL_TSQLLINT_CONFIG_FILE: .tsqllintrc.json
-
-SQL_TSQLLINT_ARGUMENTS: >-
-  --ignorelist
-  egolint/.config/lint/sql/.tsqllintignore
-
-SQL_TSQLLINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports|tests/fixtures/sqlfluff)/'
 
 # ==============================================================================
 # SQL static analysis and formatting

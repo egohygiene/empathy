@@ -42,7 +42,7 @@ The routine profile enables:
 - JSON syntax and Prettier checks;
 - Markdownlint;
 - Ruff;
-- Gitleaks;
+- Betterleaks, using the existing Gitleaks policy unchanged;
 - YAML Prettier and yamllint checks.
 
 The routine profile disables direct GitHub comments and statuses inherited from
@@ -58,7 +58,7 @@ The six imported `egolint/.staging/` artifacts were resolved as follows:
 | Actionlint policy       | Consolidated at `egolint/.config/lint/actions/actionlint.yml`                    |
 | Commitlint config       | Consolidated into an ESM universal policy plus a preserved optional emoji policy |
 | Commitlint workflow     | Merged into the root commitlint workflow with an explicit Egolint config path    |
-| MegaLinter workflow     | Merged into the root workflow with summary, SARIF, and `.reports/` artifacts     |
+| MegaLinter workflow     | Merged with summary, non-empty SARIF upload, and `.reports/` artifacts           |
 | MegaLinter fix workflow | Merged into the root manual workflow with scoped fix input and review patch      |
 | Remediation checklist   | Promoted to `.audits/egolint/megalinter-remediation-checklist.md`                |
 
@@ -121,12 +121,69 @@ pnpm were aligned to v10.0.0 and v11.21.0 respectively.
 Python additions cover Ansible Lint, Black, CloudFormation Lint, Flake8, isort,
 rstcheck, and Checkov. Black, Flake8, and isort remain available for compatibility
 and targeted comparison even though the holistic MegaLinter policy selects Ruff
-as the primary Python owner.
+as the primary Python owner. Ruff is aligned to v0.16.2, the version embedded in
+the pinned MegaLinter v10.0.0 image.
 
 The new `egolint/pnpm-lock.yaml` contains 4,028 package records and passed pnpm's
 frozen lockfile and supply-chain policy verification. A Poetry lockfile was not
 invented because the imported project did not contain one and the complete
 Python environment was not resolved in this integration pass.
+
+## CI verification and inherited security debt
+
+The first draft-PR run provided the container-only verification that was not
+available locally. Commit validation, automation policy, and CodeQL passed.
+MegaLinter executed the intended profile and found three integration issues:
+
+- the inherited holistic shfmt policy used four spaces while Empathy's existing
+  root profile and the wrapper use two;
+- EditorConfig duplicated indentation and wrapping checks already owned by
+  Prettier, shfmt, and Ruff;
+- Ruff's strict application rules needed explicit, narrow exceptions for the
+  unittest-based wrapper test.
+
+The root now retains its two-space shfmt contract. EditorConfig Checker still
+enforces encoding, line endings, final newlines, and trailing whitespace, while
+language formatters own indentation and line length. Test-only Ruff exceptions
+cover unittest assertions, controlled subprocess execution, and deliberate
+unsafe-path inputs. MegaLinter SARIF upload is skipped when the generated report
+contains no runs; GitHub rejects an empty `runs` array as an invalid upload.
+
+MegaLinter v10 also reported ten obsolete configuration keys. The supported
+replacements were applied where available, and dead MegaLinter wiring was
+removed without deleting the standalone rule files:
+
+| Removed integration                            | Disposition                                                |
+| ---------------------------------------------- | ---------------------------------------------------------- |
+| `REPOSITORY_GITLEAKS`                          | Replaced by `REPOSITORY_BETTERLEAKS`; policy is compatible |
+| `JSON_ESLINT_PLUGIN_JSONC`                     | JSON Prettier remains the active replacement               |
+| `MARKDOWN_REMARK_LINT`                         | Markdownlint remains the active replacement                |
+| `MARKDOWN_MARKDOWN_LINK_CHECK`                 | Native config retained; MegaLinter recommends Lychee       |
+| `REPOSITORY_KICS`, `TERRAFORM_TERRASCAN`       | Checkov is the supported migration target                  |
+| API Spectral, Checkmake, Puppet Lint, TSQLLint | No v10 replacement; native configs remain                  |
+
+OSV Scanner correctly remains red. The generated lockfile exposed 57 known
+vulnerabilities across 24 packages: 2 critical, 25 high, 25 medium, and 5 low;
+51 have a published fix. All high and critical reverse-dependency paths traced
+to direct tooling dependencies already declared on `origin/main`, rather than
+to the linter packages added during this integration. Representative paths are:
+
+| Existing direct dependency | Vulnerable transitive package | Remediation characteristic           |
+| -------------------------- | ----------------------------- | ------------------------------------ |
+| `shellcheck`               | `decompress@4.2.1`            | Critical; requires package migration |
+| `@cucumber/messages`       | `protobufjs@6.11.6`           | Critical; requires consumer upgrade  |
+| `nx`                       | `brace-expansion@5.0.8`       | High; upgrade parent dependency      |
+| `@vercel/python-analysis`  | `js-yaml`, `minimatch`        | High; upgrade the Vercel toolchain   |
+| `gherkin-lint`             | `lodash@4.17.21`              | High; upgrade or replace parent      |
+| `@vercel/node`             | `path-to-regexp`, `undici`    | High; upgrade the Vercel toolchain   |
+| webpack-related plugins    | `serialize-javascript`        | High; upgrade the plugin chain       |
+
+The severity threshold, lockfile scope, and findings were not suppressed. A
+follow-up dependency-remediation change should first identify which broad
+application and release tools Egolint actually needs, then upgrade or replace
+their parent packages with integration tests. Forcing incompatible transitive
+major versions solely to make the gate green would create unverified runtime
+behavior.
 
 ## Repository hygiene
 
@@ -141,22 +198,26 @@ history.
 
 ## Validation evidence
 
-| Validation                          | Result                            |
-| ----------------------------------- | --------------------------------- |
-| Root unit tests                     | 9 passed                          |
-| Egolint wrapper unit tests          | 5 passed                          |
-| Automation policy                   | 9 workflows and 10 actions passed |
-| YAML syntax and duplicate keys      | 147 files passed                  |
-| JSON syntax                         | 31 files passed                   |
-| TOML syntax                         | 16 files passed                   |
-| Canonical pre-commit document count | 1                                 |
-| Bash and POSIX shell syntax         | Passed                            |
-| JavaScript configuration syntax     | Passed                            |
-| Canonical Prettier check            | Full repository passed            |
-| Canonical Markdownlint check        | Full repository passed            |
-| Commitlint policy smoke test        | Passed                            |
-| pnpm frozen lockfile verification   | 4,028 records passed              |
-| Git whitespace check                | Passed                            |
+| Validation                          | Result                              |
+| ----------------------------------- | ----------------------------------- |
+| Root unit tests                     | 9 passed                            |
+| Egolint wrapper unit tests          | 5 passed                            |
+| Automation policy                   | 9 workflows and 10 actions passed   |
+| YAML syntax and duplicate keys      | 147 files passed                    |
+| JSON syntax                         | 31 files passed                     |
+| TOML syntax                         | 16 files passed                     |
+| Canonical pre-commit document count | 1                                   |
+| Bash and POSIX shell syntax         | Passed                              |
+| JavaScript configuration syntax     | Passed                              |
+| Canonical Prettier check            | Full repository passed              |
+| Canonical Markdownlint check        | Full repository passed              |
+| Commitlint policy smoke test        | Passed                              |
+| pnpm frozen lockfile verification   | 4,028 records passed                |
+| Git whitespace check                | Passed                              |
+| Draft-PR commit validation          | Passed                              |
+| Draft-PR automation policy          | Passed                              |
+| Draft-PR CodeQL                     | Passed                              |
+| Draft-PR OSV severity gate          | Blocked by documented existing debt |
 
 A full local MegaLinter container run was not possible because this workspace
 does not provide Docker or Podman. The wrapper's command construction, path
@@ -186,9 +247,9 @@ for lockfile verification; it did not weaken the committed engine contract.
 
 1. Evaluate `REPOSITORY_SEMGREP` for semantic security rules with a measured
    runtime and false-positive budget.
-2. Trial exactly one of `REPOSITORY_BETTERLEAKS` or
-   `REPOSITORY_KINGFISHER` beside Gitleaks; avoid enabling multiple equivalent
-   secret scanners without distinct ownership.
+2. Betterleaks is now the active MegaLinter secret scanner. Evaluate
+   `REPOSITORY_KINGFISHER` only if live validation or a distinct detector set
+   justifies the runtime and duplicate-signal cost.
 3. Consider `ENV_DOTENV_LINTER` for committed example environment files.
 4. Keep OSV Scanner in its dedicated workflow rather than enabling the
    equivalent MegaLinter descriptor twice.
@@ -211,15 +272,16 @@ for lockfile verification; it did not weaken the committed engine contract.
   application, documentation, release, and test tooling plus deprecated
   transitive packages and peer warnings. Split it into purpose-specific groups
   before treating Egolint as an independently publishable package.
-- Resolve or formally accept the upstream-disabled API Spectral and Checkmake
-  integrations. Terrascan is deprecated; preserve its config only while a
-  migration target is chosen.
+- Decide whether API Spectral, Checkmake, Puppet Lint, and TSQLLint should run
+  natively now that MegaLinter v10 has removed them. Migrate KICS and Terrascan
+  policy to Checkov before enabling equivalent infrastructure scanning.
 - Run the holistic profile on a schedule or manual dispatch before promoting
   more descriptors into the pull-request baseline.
 
 ## References
 
-- [MegaLinter configuration](https://megalinter.io/latest/configuration/)
-- [MegaLinter supported linters](https://megalinter.io/latest/linters/)
+- [MegaLinter v10 configuration](https://megalinter.io/10.0.0/configuration/)
+- [MegaLinter v10 removed linters](https://megalinter.io/10.0.0/removed-linters/)
+- [MegaLinter Betterleaks integration](https://megalinter.io/10.0.0/descriptors/repository_betterleaks/)
 - [Taskfile includes](https://taskfile.dev/docs/guide#including-other-taskfiles)
 - [Commitlint GitHub Action configuration](https://github.com/wagoid/commitlint-github-action)

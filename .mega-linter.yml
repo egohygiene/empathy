@@ -20,9 +20,13 @@ ENABLE_LINTERS:
   - JSON_PRETTIER
   - MARKDOWN_MARKDOWNLINT
   - PYTHON_RUFF
-  - REPOSITORY_GITLEAKS
+  - REPOSITORY_BETTERLEAKS
   - YAML_PRETTIER
   - YAML_YAMLLINT
+
+# Preserve Empathy's established two-space shell formatting policy. The
+# holistic profile's language-specific rules still own all other shfmt behavior.
+BASH_SHFMT_ARGUMENTS: "--indent 2 --case-indent --space-redirects --simplify"
 
 REPORT_OUTPUT_FOLDER: .reports/megalinter
 

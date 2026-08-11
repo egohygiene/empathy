@@ -136,6 +136,21 @@ task-tags = [
   "PLR2004",
 ]
 
+"**/test_*.py" = [
+  "S101",
+  "PLR2004",
+  # The imported test suites use unittest-style assertions intentionally.
+  "PT009",
+]
+
+"egolint/tests/test_megalinter_wrapper.py" = [
+  # The wrapper tests exercise controlled subprocess arguments and unsafe-path
+  # rejection; no untrusted input is executed.
+  "S108",
+  "S603",
+  "S607",
+]
+
 "**/__init__.py" = [
   "F401",
 ]

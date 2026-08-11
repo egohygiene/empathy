@@ -61,10 +61,25 @@ jobs:
             printf 'No Markdown summary was generated.\n' >> "${GITHUB_STEP_SUMMARY}"
           fi
 
+      - name: Inspect MegaLinter SARIF
+        id: sarif
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          sarif_path=".reports/megalinter/megalinter-report.sarif"
+          if [[ -s "${sarif_path}" ]] &&
+            jq -e '.runs | length > 0' "${sarif_path}" >/dev/null; then
+            printf 'upload=true\n' >> "${GITHUB_OUTPUT}"
+          else
+            printf 'upload=false\n' >> "${GITHUB_OUTPUT}"
+            printf 'MegaLinter produced no SARIF runs; skipping code-scanning upload.\n'
+          fi
+
       - name: Upload MegaLinter SARIF
         if: >-
           always() &&
-          hashFiles('.reports/megalinter/megalinter-report.sarif') != '' &&
+          steps.sarif.outputs.upload == 'true' &&
           (github.event_name != 'pull_request' ||
           github.event.pull_request.head.repo.full_name == github.repository)
         # github/codeql-action v4.37.6
