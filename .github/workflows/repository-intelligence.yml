@@ -1,65 +1,63 @@
 ---
-# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
-name: "🧠 Repository Intelligence"
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Generate repository intelligence
 
 on:
   workflow_dispatch:
-
-  push:
-    branches:
-      - "main"
-      - "master"
-    # The workflow writes only this directory. Ignoring it prevents the bot's
-    # generated commit from triggering another generation run.
-    paths-ignore:
-      - "docs/generated/**"
+    inputs:
+      output-root:
+        description: Repository-relative artifact directory.
+        required: true
+        default: "docs/generated"
+        type: string
+      max-depth:
+        description: Maximum tree depth.
+        required: true
+        default: "10"
+        type: string
+      activity-since:
+        description: Git-compatible activity start date.
+        required: true
+        default: "1 year ago"
+        type: string
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: "repository-intelligence-${{ github.ref }}"
+  group: "repository-intelligence-${{ github.repository }}-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
   generate:
-    name: "🧠 Generate Repository Intelligence"
-    runs-on: "ubuntu-latest"
+    name: Generate deterministic repository artifacts
+    runs-on: ubuntu-latest
     timeout-minutes: 15
 
     steps:
-      - name: "📥 Checkout repository"
+      - name: Checkout complete repository history
         # actions/checkout v7.0.1
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          # Activity intelligence is invalid when only the triggering commit is
-          # present, so always retrieve complete branch and tag history.
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: "🧠 Generate intelligence artifacts"
+      - name: Generate intelligence artifacts
         uses: ./.github/actions/generate-repository-intelligence
         with:
-          output-root: "docs/generated"
-          max-depth: "10"
-          activity-since: "1 year ago"
+          output-root: "${{ inputs.output-root }}"
+          max-depth: "${{ inputs.max-depth }}"
+          activity-since: "${{ inputs.activity-since }}"
           activity-ref: "HEAD"
           require-full-history: "true"
 
-      - name: "💾 Commit generated artifacts"
-        shell: bash
-        env:
-          OUTPUT_ROOT: "docs/generated"
-        run: |
-          set -euo pipefail
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- "${OUTPUT_ROOT}"
-
-          if git diff --cached --quiet; then
-            printf 'No repository intelligence changes detected.\n'
-            exit 0
-          fi
-
-          git commit --message "docs: refresh repository intelligence"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+      - name: Upload intelligence artifacts
+        # actions/upload-artifact v7.0.1
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "repository-intelligence-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ inputs.output-root }}"
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9

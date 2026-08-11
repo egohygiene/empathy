@@ -1,36 +1,92 @@
-name: Setup Flutter
-description: >
-  Installs the Flutter SDK, restores the pub cache, and fetches all package
-  dependencies for the egohygiene Flutter application.
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Set up Flutter
+description: >-
+  Install a pinned Flutter SDK and optionally resolve dependencies for a
+  repository-relative Flutter or Dart project.
 
 inputs:
   flutter-version:
-    description: Flutter SDK version to install
+    description: Exact Flutter SDK version to install.
     required: false
-    default: '3.44.2'
+    default: "3.44.2"
+  channel:
+    description: Flutter release channel.
+    required: false
+    default: "stable"
   working-directory:
-    description: Path to the Flutter application root (relative to repository root)
+    description: Flutter project directory, relative to the workspace.
     required: false
-    default: apps/egohygiene
+    default: "."
+  cache:
+    description: Cache the Flutter SDK and pub dependencies.
+    required: false
+    default: "true"
+  run-pub-get:
+    description: Run flutter pub get after installing the SDK.
+    required: false
+    default: "true"
+
+outputs:
+  flutter-version:
+    description: Installed Flutter version.
+    value: "${{ steps.version.outputs.flutter-version }}"
 
 runs:
   using: composite
   steps:
-    - name: Setup Flutter
-      uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
-      with:
-        flutter-version: ${{ inputs.flutter-version }}
-        cache: true
-
-    - name: Cache pub packages
-      uses: actions/cache@v4
-      with:
-        path: ${{ env.PUB_CACHE }}
-        key: ${{ runner.os }}-pub-${{ hashFiles('apps/egohygiene/pubspec.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-pub-
-
-    - name: Install Dependencies
+    - name: Validate inputs
       shell: bash
-      working-directory: ${{ inputs.working-directory }}
-      run: flutter pub get
+      env:
+        INPUT_CACHE: "${{ inputs.cache }}"
+        INPUT_RUN_PUB_GET: "${{ inputs.run-pub-get }}"
+        INPUT_WORKING_DIRECTORY: "${{ inputs.working-directory }}"
+      run: |
+        set -euo pipefail
+        for value in "${INPUT_CACHE}" "${INPUT_RUN_PUB_GET}"; do
+          case "${value}" in
+            true|false) ;;
+            *)
+              printf 'Boolean inputs must be true or false: %s\n' "${value}" >&2
+              exit 2
+              ;;
+          esac
+        done
+        if [[ "${INPUT_WORKING_DIRECTORY}" == /* || "/${INPUT_WORKING_DIRECTORY}/" == */../* ]]; then
+          printf 'working-directory must be repository-relative: %s\n' \
+            "${INPUT_WORKING_DIRECTORY}" >&2
+          exit 2
+        fi
+
+    - name: Set up Flutter
+      # subosito/flutter-action v2.23.0
+      uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+      with:
+        channel: "${{ inputs.channel }}"
+        flutter-version: "${{ inputs.flutter-version }}"
+        cache: "${{ inputs.cache }}"
+
+    - name: Resolve Flutter dependencies
+      if: inputs.run-pub-get == 'true'
+      shell: bash
+      working-directory: "${{ inputs.working-directory }}"
+      run: |
+        set -euo pipefail
+        [[ -f pubspec.yaml ]] || {
+          printf 'pubspec.yaml was not found in %s.\n' "${PWD}" >&2
+          exit 2
+        }
+        flutter pub get
+
+    - name: Capture Flutter version
+      id: version
+      shell: bash
+      run: |
+        set -euo pipefail
+        flutter_version="$(flutter --version | sed -n '1s/^Flutter \([^ ]*\).*/\1/p')"
+        [[ -n "${flutter_version}" ]] || {
+          printf 'Unable to determine the installed Flutter version.\n' >&2
+          exit 1
+        }
+        printf 'flutter-version=%s\n' "${flutter_version}" >> "${GITHUB_OUTPUT}"

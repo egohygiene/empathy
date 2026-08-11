@@ -1,5 +1,4 @@
 {
-  "$schema": "https://www.schemastore.org/all-contributors.json",
   "files": [
     "CONTRIBUTORS.md"
   ],
@@ -50,6 +49,6 @@
   "skipCi": true,
   "repoType": "github",
   "repoHost": "https://github.com",
-  "projectName": "szmyty",
-  "projectOwner": "szmyty"
+  "projectName": "empathy",
+  "projectOwner": "egohygiene"
 }

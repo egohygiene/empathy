@@ -8,12 +8,12 @@ name: "🔍 OSV Vulnerability Scan"
 # =============================================================================
 #
 # This workflow intentionally owns discovery, report generation, severity
-# policy, artifact publication, and optional report commits. It invokes the
-# official OSV Scanner CLI through Google's pinned scanner action, but does not
-# delegate policy to Google's reusable workflows.
+# policy, artifact publication, and optional report commits. It installs the
+# official OSV Scanner release with a pinned checksum and invokes the CLI
+# directly; policy is not delegated to an upstream reusable workflow.
 #
 # Report contract:
-#   .engineering/reports/osv/
+#   .reports/osv/
 #   ├── latest.json
 #   ├── latest.sarif
 #   ├── latest.md                 # optional manual-dispatch setting
@@ -42,7 +42,7 @@ on:
     # A manually requested report commit must not recursively trigger another
     # scan when the commit contains only generated OSV reports.
     paths-ignore:
-      - ".engineering/reports/osv/**"
+      - ".reports/osv/**"
 
   pull_request:
     branches:
@@ -150,6 +150,9 @@ jobs:
         run: |
           set -euo pipefail
 
+          # @description Normalize a case-insensitive boolean value.
+          # @arg $1 string Boolean value.
+          # @stdout Normalized true or false value.
           normalize_boolean() {
             case "${1,,}" in
               true) printf 'true\n' ;;
@@ -174,7 +177,7 @@ jobs:
           commit_reports="$(normalize_boolean "${REQUESTED_COMMIT_REPORTS}")"
           verbose="$(normalize_boolean "${REQUESTED_VERBOSE}")"
           report_timestamp="$(date --utc '+%Y-%m-%dT%H-%M-%SZ')"
-          report_root=".engineering/reports/osv"
+          report_root=".reports/osv"
           history_root="${report_root}/history/${report_timestamp}"
           temporary_root="${RUNNER_TEMP}/osv-scan"
 
@@ -290,7 +293,7 @@ jobs:
             done < <(
               find . -type f -name "${filename_pattern}" \
                 -not -path './.git/*' \
-                -not -path './.engineering/reports/osv/*' \
+                -not -path './.reports/osv/*' \
                 -not -path '*/node_modules/*' \
                 -not -path '*/vendor/*' \
                 -not -path '*/dist/*' \
@@ -328,6 +331,10 @@ jobs:
             printf 'ecosystem_count=%s\n' "${ecosystem_count}"
           } >> "${GITHUB_OUTPUT}"
 
+      - name: "🧰 Set up OSV Scanner"
+        if: steps.discover.outputs.count != '0'
+        uses: ./.github/actions/setup-osv-scanner
+
       # OSV Scanner returns 1 when it finds vulnerabilities. Each scanner step
       # therefore continues so reports can be validated, uploaded, summarized,
       # and gated by our configured threshold instead of OSV's binary policy.
@@ -335,62 +342,67 @@ jobs:
         id: scan_json
         if: steps.discover.outputs.count != '0'
         continue-on-error: true
-        # google/osv-scanner-action v2.3.8, pinned to its release source commit.
-        uses: google/osv-scanner-action/osv-scanner-action@3adb4b14a2b0623876d18d863a498b785fb3752d
-        with:
-          scan-args: |-
-            --recursive
-            --format=json
-            --all-packages
-            --verbosity=${{ env.OSV_VERBOSITY }}
-            --output-file=.engineering/reports/osv/latest.json
-            --exclude=.git
-            --exclude=.engineering/reports/osv
-            --exclude=node_modules
-            --exclude=vendor
-            --exclude=dist
-            --exclude=build
-            --exclude=coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          osv-scanner scan source \
+            --recursive \
+            --allow-no-lockfiles \
+            --format=json \
+            --all-packages \
+            --verbosity="${OSV_VERBOSITY}" \
+            --output-file=.reports/osv/latest.json \
+            --experimental-exclude=.git \
+            --experimental-exclude=.reports/osv \
+            --experimental-exclude=node_modules \
+            --experimental-exclude=vendor \
+            --experimental-exclude=dist \
+            --experimental-exclude=build \
+            --experimental-exclude=coverage \
             ./
 
       - name: "🛡️ Generate OSV SARIF"
         id: scan_sarif
         if: steps.discover.outputs.count != '0'
         continue-on-error: true
-        uses: google/osv-scanner-action/osv-scanner-action@3adb4b14a2b0623876d18d863a498b785fb3752d
-        with:
-          scan-args: |-
-            --recursive
-            --format=sarif
-            --verbosity=${{ env.OSV_VERBOSITY }}
-            --output-file=.engineering/reports/osv/latest.sarif
-            --exclude=.git
-            --exclude=.engineering/reports/osv
-            --exclude=node_modules
-            --exclude=vendor
-            --exclude=dist
-            --exclude=build
-            --exclude=coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          osv-scanner scan source \
+            --recursive \
+            --allow-no-lockfiles \
+            --format=sarif \
+            --verbosity="${OSV_VERBOSITY}" \
+            --output-file=.reports/osv/latest.sarif \
+            --experimental-exclude=.git \
+            --experimental-exclude=.reports/osv \
+            --experimental-exclude=node_modules \
+            --experimental-exclude=vendor \
+            --experimental-exclude=dist \
+            --experimental-exclude=build \
+            --experimental-exclude=coverage \
             ./
 
       - name: "📝 Generate OSV Markdown data"
         id: scan_markdown
         if: steps.discover.outputs.count != '0'
         continue-on-error: true
-        uses: google/osv-scanner-action/osv-scanner-action@3adb4b14a2b0623876d18d863a498b785fb3752d
-        with:
-          scan-args: |-
-            --recursive
-            --format=markdown
-            --verbosity=${{ env.OSV_VERBOSITY }}
-            --output-file=.engineering/reports/osv/.raw-report.md
-            --exclude=.git
-            --exclude=.engineering/reports/osv
-            --exclude=node_modules
-            --exclude=vendor
-            --exclude=dist
-            --exclude=build
-            --exclude=coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          osv-scanner scan source \
+            --recursive \
+            --allow-no-lockfiles \
+            --format=markdown \
+            --verbosity="${OSV_VERBOSITY}" \
+            --output-file=.reports/osv/.raw-report.md \
+            --experimental-exclude=.git \
+            --experimental-exclude=.reports/osv \
+            --experimental-exclude=node_modules \
+            --experimental-exclude=vendor \
+            --experimental-exclude=dist \
+            --experimental-exclude=build \
+            --experimental-exclude=coverage \
             ./
 
       - name: "○ Create empty reports when nothing is discoverable"
@@ -422,7 +434,7 @@ jobs:
                                   "driver": {
                                       "name": "osv-scanner",
                                       "informationUri": "https://osv.dev/",
-                                      "version": "2.3.8",
+                                      "version": "2.5.0",
                                       "rules": [],
                                   }
                               },
@@ -543,7 +555,7 @@ jobs:
 
           summary = {
               "schema_version": 1,
-              "scanner": {"name": "osv-scanner", "version": "2.3.8"},
+              "scanner": {"name": "osv-scanner", "version": "2.5.0"},
               "generated_at": time.strftime(
                   "%Y-%m-%dT%H:%M:%SZ",
                   time.strptime(os.environ["REPORT_TIMESTAMP"], "%Y-%m-%dT%H-%M-%SZ"),
@@ -673,10 +685,10 @@ jobs:
           env.UPLOAD_SARIF == 'true' &&
           (github.event_name != 'pull_request' ||
            github.event.pull_request.head.repo.full_name == github.repository)
-        # github/codeql-action v4.37.1; immutable release pin.
-        uses: github/codeql-action/upload-sarif@7188fc363630916deb702c7fdcf4e481b751f97a
+        # github/codeql-action v4.37.6; immutable release pin.
+        uses: github/codeql-action/upload-sarif@5595ccaf912efad79be6eef63a5619ff05969be3
         with:
-          sarif_file: ".engineering/reports/osv/latest.sarif"
+          sarif_file: ".reports/osv/latest.sarif"
           category: "osv-scanner"
 
       - name: "📦 Upload OSV report artifact"
@@ -685,7 +697,7 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "osv-reports-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: ".engineering/reports/osv/"
+          path: ".reports/osv/"
           if-no-files-found: error
           retention-days: 30
           compression-level: 9
@@ -740,6 +752,7 @@ jobs:
 
     steps:
       - name: "📥 Checkout dispatched branch"
+        # actions/checkout v7.0.1; immutable release pin.
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
@@ -750,7 +763,7 @@ jobs:
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           name: "osv-reports-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: ".engineering/reports/osv/"
+          path: ".reports/osv/"
 
       - name: "💾 Commit generated reports"
         shell: bash
@@ -759,7 +772,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- ".engineering/reports/osv"
+          git add --force -- ".reports/osv"
 
           if git diff --cached --quiet; then
             printf 'No OSV report changes detected.\n'

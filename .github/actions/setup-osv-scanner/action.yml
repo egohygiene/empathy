@@ -1,0 +1,73 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Set up OSV Scanner
+description: >-
+  Download and verify an exact OSV Scanner release for a Linux X64 GitHub
+  Actions runner, then add the binary to PATH.
+
+inputs:
+  version:
+    description: Exact OSV Scanner release version.
+    required: false
+    default: "2.5.0"
+  linux-amd64-sha256:
+    description: SHA-256 checksum of the pinned Linux AMD64 release binary.
+    required: false
+    default: "edcfc41d257db36148f065055655fe3fcfc434b0b423ea67468a84c207524e0c"
+
+outputs:
+  binary-path:
+    description: Absolute path to the verified OSV Scanner binary.
+    value: "${{ steps.install.outputs.binary-path }}"
+  version:
+    description: Installed OSV Scanner version.
+    value: "${{ steps.install.outputs.version }}"
+
+runs:
+  using: composite
+  steps:
+    - name: Install OSV Scanner
+      id: install
+      shell: bash
+      env:
+        OSV_SCANNER_SHA256: "${{ inputs.linux-amd64-sha256 }}"
+        OSV_SCANNER_VERSION: "${{ inputs.version }}"
+      run: |
+        set -euo pipefail
+
+        [[ "${RUNNER_OS}" == "Linux" && "${RUNNER_ARCH}" == "X64" ]] || {
+          printf 'setup-osv-scanner currently requires a Linux X64 runner.\n' >&2
+          exit 2
+        }
+        [[ "${OSV_SCANNER_VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+          printf 'version must be exact: %s\n' "${OSV_SCANNER_VERSION}" >&2
+          exit 2
+        }
+        [[ "${OSV_SCANNER_SHA256}" =~ ^[0-9a-f]{64}$ ]] || {
+          printf 'Invalid OSV Scanner SHA-256 checksum.\n' >&2
+          exit 2
+        }
+
+        install_root="${RUNNER_TEMP}/empathy-osv-scanner-${OSV_SCANNER_VERSION}"
+        binary_path="${install_root}/osv-scanner"
+        mkdir -p "${install_root}"
+
+        curl --fail --location --silent --show-error \
+          "https://github.com/google/osv-scanner/releases/download/v${OSV_SCANNER_VERSION}/osv-scanner_linux_amd64" \
+          --output "${binary_path}"
+        printf '%s  %s\n' "${OSV_SCANNER_SHA256}" "${binary_path}" \
+          | sha256sum --check
+        chmod 0755 "${binary_path}"
+
+        installed_version="$("${binary_path}" --version \
+          | awk '/^osv-scanner version:/ { print $3; exit }')"
+        [[ "${installed_version}" == "${OSV_SCANNER_VERSION}" ]] || {
+          printf 'Expected OSV Scanner %s but installed %s.\n' \
+            "${OSV_SCANNER_VERSION}" "${installed_version:-unknown}" >&2
+          exit 1
+        }
+
+        printf '%s\n' "${install_root}" >> "${GITHUB_PATH}"
+        printf 'binary-path=%s\n' "${binary_path}" >> "${GITHUB_OUTPUT}"
+        printf 'version=%s\n' "${installed_version}" >> "${GITHUB_OUTPUT}"

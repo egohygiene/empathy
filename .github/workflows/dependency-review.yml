@@ -1,55 +1,47 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 
-name: "🔍 Dependency Review"
+name: Review dependency changes
 
 on:
   pull_request:
-    branches:
-      - main
-      - master
 
 permissions:
   contents: read
-  pull-requests: write
+
+concurrency:
+  group: "dependency-review-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
 
 jobs:
   dependency-review:
-    name: "🔍 Review Dependencies"
+    name: Review dependency risk
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - name: "📦 Checkout"
-        uses: actions/checkout@v7
+      - name: Checkout repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
 
-      - name: "🔍 Dependency Review"
-        uses: actions/dependency-review-action@v5
+      - name: Review dependency changes
+        # actions/dependency-review-action v5.0.0
+        uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294
         with:
           fail-on-severity: high
-          comment-summary-in-pr: always
+          comment-summary-in-pr: never
           retry-on-snapshot-warnings: true
           warn-only: false
-          deny-licenses: >-
-            GPL-2.0-only,
-            GPL-2.0-or-later,
-            GPL-3.0-only,
-            GPL-3.0-or-later,
-            AGPL-3.0-only,
-            AGPL-3.0-or-later
 
-      - name: "📊 Write Summary"
+      - name: Write policy summary
         if: always()
+        shell: bash
         run: |
           {
-            printf "## 🔍 Dependency Review Summary\n\n"
-            printf "Dependency review completed.\n\n"
-            printf "This workflow checks pull request dependency changes for:\n\n"
-            printf "- 🔒 Known vulnerabilities\n"
-            printf "- 📜 Denied licenses\n"
-            printf "- ⚠️ Risky dependency changes\n\n"
-            printf "### Blocking Policy\n\n"
-            printf "- Critical vulnerabilities block merge.\n"
-            printf "- High vulnerabilities block merge.\n"
-            printf "- Denied licenses block merge.\n\n"
-            printf "See the Dependency Review step for detailed findings.\n"
+            printf '## Dependency review\n\n'
+            printf 'The pull request dependency diff was checked for known vulnerabilities.\n\n'
+            printf -- '- High and critical vulnerabilities block the workflow.\n'
+            printf -- '- License policy remains a selectable profile concern.\n'
           } >> "${GITHUB_STEP_SUMMARY}"

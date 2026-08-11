@@ -1,64 +1,39 @@
 /* TEAM */
 
-Name: Alan Szmyt
+Maintainer: Alan Szmyt
 Role: Software Engineer, Systems Architect, Creative Technologist
 GitHub: https://github.com/szmyty
 Location: Massachusetts, USA
 
 /* PROJECT */
 
-Name: szmyty/szmyty
+Name: Ego Hygiene / Empathy
+Repository: https://github.com/egohygiene/empathy
+Issues: https://github.com/egohygiene/empathy/issues
+Discussions: https://github.com/egohygiene/empathy/discussions
 
 Description:
-Alan Szmyt's public GitHub profile repository and reusable README/template
-assets. Maintained as a personal engineering profile and template system.
-
-/* REPOSITORY */
-
-Repository:
-https://github.com/szmyty/szmyty
-
-Issues:
-https://github.com/szmyty/szmyty/issues
-
-Discussions:
-https://github.com/szmyty/szmyty/discussions
+A humane, reusable repository foundation for maintainers, contributors, users,
+automation, and AI agents.
 
 /* TECHNOLOGY */
 
-Primary Languages:
-
+- GitHub Actions
+- Composite actions
+- MegaLinter
 - Python
 - Bash
-- YAML
-- Markdown
-
-Core Technologies:
-
-- GitHub Actions
 - Task
-- Poetry
+- YAML
 
 /* THANKS */
 
-Special thanks to the open source community and everyone whose
-ideas, libraries, research, and tools make this project possible.
-
-See CONTRIBUTORS.md for repository contributors.
+Thanks to the open-source maintainers whose tools and documentation make this
+foundation possible. See CONTRIBUTORS.md for repository contributors once the
+contributor workflow has generated it.
 
 /* METADATA */
 
-Repository:
-https://github.com/szmyty/szmyty
-
-Maintained By:
-Alan Szmyt
-
-License:
-MIT
-
-Last Updated:
-2026-08-09
-
-Humans TXT:
-https://humanstxt.org
+License: MIT
+Last updated: 2026-08-11
+Humans TXT: https://humanstxt.org

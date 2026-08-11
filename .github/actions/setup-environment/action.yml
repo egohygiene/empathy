@@ -1,106 +1,230 @@
-# =============================================================================
-# Ego Hygiene — Shared CI Environment Setup
-# =============================================================================
-#
-# Location:
-#   .github/actions/setup-environment/action.yml
-#
-# Purpose
-# -------
-# This composite GitHub Action prepares a repository for CI execution.
-# It standardizes the environment used across all workflows in Ego Hygiene
-# repositories.
-#
-# Responsibilities
-# ----------------
-# • Configure SSH for accessing private AI submodules
-# • Checkout the repository with submodules
-# • Setup Node.js (latest LTS)
-# • Enable pnpm using Corepack
-# • Install Node dependencies using pnpm
-# • Setup Flutter (when .fvmrc exists)
-# • Install Flutter dependencies (when pubspec.yaml exists)
-# • Verify installed toolchains for debugging
-#
-# Design Notes
-# ------------
-# - This action intentionally detects project features automatically
-#   (Node / Flutter) so it can be reused across many repository types.
-#
-# - pnpm is used instead of npm because it:
-#     • installs significantly faster
-#     • uses content-addressable storage
-#     • improves CI caching performance
-#
-# - Corepack is used to manage pnpm versions consistently.
-#
-# =============================================================================
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
 
-name: Setup Environment
-description: Shared CI environment setup for Ego Hygiene repositories
+name: Set up repository environment
+description: >-
+  Detect or explicitly select Node.js, Python/Poetry, and Flutter toolchains,
+  install pinned runtimes, and optionally install locked Node.js, Poetry, and
+  Flutter dependencies.
+
+inputs:
+  working-directory:
+    description: Project directory, relative to the GitHub workspace.
+    required: false
+    default: "."
+  setup-node:
+    description: Set up Node.js. Accepted values are auto, true, and false.
+    required: false
+    default: "auto"
+  node-version:
+    description: Node.js version understood by actions/setup-node.
+    required: false
+    default: "22"
+  package-manager:
+    description: Package manager. Accepted values are auto, npm, pnpm, yarn, and none.
+    required: false
+    default: "auto"
+  pnpm-version:
+    description: Exact pnpm version activated when pnpm is selected.
+    required: false
+    default: "11.21.0"
+  yarn-version:
+    description: Exact Yarn Classic version activated when yarn is selected.
+    required: false
+    default: "1.22.22"
+  setup-python:
+    description: Set up Python. Accepted values are auto, true, and false.
+    required: false
+    default: "auto"
+  python-version:
+    description: Python version understood by actions/setup-python.
+    required: false
+    default: "3.12"
+  poetry-version:
+    description: Exact Poetry version installed for locked Poetry projects.
+    required: false
+    default: "2.4.1"
+  setup-flutter:
+    description: Set up Flutter. Accepted values are auto, true, and false.
+    required: false
+    default: "auto"
+  flutter-version:
+    description: Exact Flutter SDK version to install.
+    required: false
+    default: "3.44.2"
+  install-dependencies:
+    description: Install dependencies for detected package managers.
+    required: false
+    default: "true"
+
+outputs:
+  node-enabled:
+    description: Whether Node.js was selected.
+    value: "${{ steps.detect.outputs.node-enabled }}"
+  python-enabled:
+    description: Whether Python was selected.
+    value: "${{ steps.detect.outputs.python-enabled }}"
+  poetry-enabled:
+    description: Whether a locked Poetry project was detected.
+    value: "${{ steps.detect.outputs.poetry-enabled }}"
+  flutter-enabled:
+    description: Whether Flutter was selected.
+    value: "${{ steps.detect.outputs.flutter-enabled }}"
+  package-manager:
+    description: Selected Node.js package manager, or none.
+    value: "${{ steps.detect.outputs.package-manager }}"
 
 runs:
   using: composite
   steps:
-    # -----------------------------------------------------------------------
-    # Setup Node.js
-    # -----------------------------------------------------------------------
-    - name: Setup Node.js
-      if: ${{ hashFiles('package.json') != '' }}
-      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
-      with:
-        node-version-file: ".nvmrc"
-        cache: npm
-
-    # -----------------------------------------------------------------------
-    # Install pnpm via Corepack (no node20 JS action dependency)
-    # -----------------------------------------------------------------------
-    - name: Install pnpm
-      if: ${{ hashFiles('package.json') != '' }}
+    - name: Detect repository capabilities
+      id: detect
       shell: bash
+      working-directory: "${{ inputs.working-directory }}"
+      env:
+        INPUT_INSTALL_DEPENDENCIES: "${{ inputs.install-dependencies }}"
+        INPUT_PACKAGE_MANAGER: "${{ inputs.package-manager }}"
+        INPUT_SETUP_FLUTTER: "${{ inputs.setup-flutter }}"
+        INPUT_SETUP_NODE: "${{ inputs.setup-node }}"
+        INPUT_SETUP_PYTHON: "${{ inputs.setup-python }}"
       run: |
-        corepack enable pnpm
-        corepack prepare pnpm@latest --activate
-        pnpm --version
+        set -euo pipefail
 
-    # -----------------------------------------------------------------------
-    # Install Node dependencies
-    # -----------------------------------------------------------------------
-    - name: Install Node dependencies
-      if: ${{ hashFiles('package.json') != '' }}
-      shell: bash
-      run: |
-        if [ -f pnpm-lock.yaml ]; then
-          pnpm install --frozen-lockfile --prefer-offline
-        else
-          pnpm install
+        # @description Resolve an auto/true/false capability selection.
+        # @arg $1 string Requested selection.
+        # @arg $2 boolean Auto-detected value.
+        # @stdout Resolved boolean value.
+        resolve_capability() {
+          local requested="${1}"
+          local detected="${2}"
+          case "${requested}" in
+            true|false) printf '%s\n' "${requested}" ;;
+            auto) printf '%s\n' "${detected}" ;;
+            *)
+              printf 'Capability selection must be auto, true, or false: %s\n' \
+                "${requested}" >&2
+              return 2
+              ;;
+          esac
+        }
+
+        case "${INPUT_INSTALL_DEPENDENCIES}" in
+          true|false) ;;
+          *)
+            printf 'install-dependencies must be true or false: %s\n' \
+              "${INPUT_INSTALL_DEPENDENCIES}" >&2
+            exit 2
+            ;;
+        esac
+
+        [[ -f package.json ]] && detected_node=true || detected_node=false
+        [[ -f pyproject.toml || -f requirements.txt || -f requirements-dev.txt ]] \
+          && detected_python=true || detected_python=false
+        [[ -f pubspec.yaml ]] && detected_flutter=true || detected_flutter=false
+        [[ -f pyproject.toml && -f poetry.lock ]] \
+          && detected_poetry=true || detected_poetry=false
+
+        node_enabled="$(resolve_capability "${INPUT_SETUP_NODE}" "${detected_node}")"
+        python_enabled="$(resolve_capability "${INPUT_SETUP_PYTHON}" "${detected_python}")"
+        flutter_enabled="$(resolve_capability "${INPUT_SETUP_FLUTTER}" "${detected_flutter}")"
+
+        package_manager="${INPUT_PACKAGE_MANAGER}"
+        if [[ "${package_manager}" == "auto" ]]; then
+          if [[ -f pnpm-lock.yaml ]]; then
+            package_manager=pnpm
+          elif [[ -f yarn.lock ]]; then
+            package_manager=yarn
+          elif [[ -f package-lock.json || -f npm-shrinkwrap.json ]]; then
+            package_manager=npm
+          else
+            package_manager=none
+          fi
+        fi
+        case "${package_manager}" in
+          npm|pnpm|yarn|none) ;;
+          *)
+            printf 'Unsupported package manager: %s\n' "${package_manager}" >&2
+            exit 2
+            ;;
+        esac
+        if [[ "${node_enabled}" != "true" ]]; then
+          package_manager=none
+        fi
+        if [[ "${python_enabled}" != "true" ]]; then
+          detected_poetry=false
         fi
 
-    # -----------------------------------------------------------------------
-    # Setup Flutter
-    # -----------------------------------------------------------------------
-    - name: Setup Flutter
-      id: flutter-action
-      if: ${{ hashFiles('pubspec.yaml') != '' }}
-      uses: subosito/flutter-action@fd55f4c5af5b953cc57a2be44cb082c8f6635e8e # v2.21.0
+        {
+          printf 'node-enabled=%s\n' "${node_enabled}"
+          printf 'python-enabled=%s\n' "${python_enabled}"
+          printf 'poetry-enabled=%s\n' "${detected_poetry}"
+          printf 'flutter-enabled=%s\n' "${flutter_enabled}"
+          printf 'package-manager=%s\n' "${package_manager}"
+        } >> "${GITHUB_OUTPUT}"
+
+    - name: Set up Node.js
+      if: steps.detect.outputs.node-enabled == 'true'
+      # actions/setup-node v6.5.0
+      uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
       with:
-        channel: stable
-        flutter-version: 3.41.0
-        cache: true
+        node-version: "${{ inputs.node-version }}"
 
-    # -----------------------------------------------------------------------
-    # Configure git safe.directory
-    # -----------------------------------------------------------------------
-    - name: Configure git safe.directory for Flutter
-      if: ${{ hashFiles('pubspec.yaml') != '' }}
+    - name: Install Node.js dependencies
+      if: >-
+        steps.detect.outputs.node-enabled == 'true' &&
+        inputs.install-dependencies == 'true' &&
+        steps.detect.outputs.package-manager != 'none'
       shell: bash
+      working-directory: "${{ inputs.working-directory }}"
+      env:
+        PACKAGE_MANAGER: "${{ steps.detect.outputs.package-manager }}"
+        PNPM_VERSION: "${{ inputs.pnpm-version }}"
+        YARN_VERSION: "${{ inputs.yarn-version }}"
       run: |
-        git config --global --add safe.directory "${{ steps.flutter-action.outputs['CACHE-PATH'] }}"
+        set -euo pipefail
+        case "${PACKAGE_MANAGER}" in
+          npm)
+            if [[ -f package-lock.json || -f npm-shrinkwrap.json ]]; then
+              npm ci
+            else
+              npm install
+            fi
+            ;;
+          pnpm)
+            corepack enable
+            corepack prepare "pnpm@${PNPM_VERSION}" --activate
+            pnpm install --frozen-lockfile
+            ;;
+          yarn)
+            corepack enable
+            corepack prepare "yarn@${YARN_VERSION}" --activate
+            yarn install --frozen-lockfile
+            ;;
+        esac
 
-    # -----------------------------------------------------------------------
-    # Install Flutter dependencies
-    # -----------------------------------------------------------------------
-    - name: Install Flutter dependencies
-      if: ${{ hashFiles('pubspec.yaml') != '' }}
-      shell: bash
-      run: flutter pub get
+    - name: Set up locked Poetry project
+      if: steps.detect.outputs.poetry-enabled == 'true'
+      uses: ./.github/actions/python-poetry-setup
+      with:
+        python-version: "${{ inputs.python-version }}"
+        poetry-version: "${{ inputs.poetry-version }}"
+        working-directory: "${{ inputs.working-directory }}"
+        cache-dependency-path: "${{ inputs.working-directory }}/poetry.lock"
+        install-dependencies: "${{ inputs.install-dependencies }}"
+
+    - name: Set up Python
+      if: >-
+        steps.detect.outputs.python-enabled == 'true' &&
+        steps.detect.outputs.poetry-enabled != 'true'
+      # actions/setup-python v6.3.0
+      uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+      with:
+        python-version: "${{ inputs.python-version }}"
+
+    - name: Set up Flutter
+      if: steps.detect.outputs.flutter-enabled == 'true'
+      uses: ./.github/actions/flutter-setup
+      with:
+        flutter-version: "${{ inputs.flutter-version }}"
+        working-directory: "${{ inputs.working-directory }}"
+        run-pub-get: "${{ inputs.install-dependencies }}"

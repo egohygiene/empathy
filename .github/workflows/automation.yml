@@ -1,0 +1,46 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Validate automation
+
+on:
+  pull_request:
+    paths:
+      - ".github/**"
+      - ".staging/github/**"
+      - ".gitattributes"
+      - ".gitignore"
+      - "Taskfile.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/**"
+      - ".staging/github/**"
+      - ".gitattributes"
+      - ".gitignore"
+      - "Taskfile.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "automation-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate workflows and actions
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Validate GitHub automation
+        uses: ./.github/actions/validate-automation

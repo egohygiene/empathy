@@ -1,28 +1,67 @@
-name: Generate Flutter Code
-description: >
-  Runs localization generation (slang) and build_runner code generation for
-  the egohygiene Flutter application.
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Generate Flutter sources
+description: >-
+  Run optional localization generation, build_runner generation, and Dart
+  formatting for a repository-relative Flutter project.
 
 inputs:
   working-directory:
-    description: Path to the Flutter application root (relative to repository root)
+    description: Flutter project directory, relative to the workspace.
     required: false
-    default: apps/egohygiene
+    default: "."
+  generate-localizations:
+    description: Run dart run slang.
+    required: false
+    default: "false"
+  generate-build-runner:
+    description: Run build_runner with conflicting-output deletion enabled.
+    required: false
+    default: "true"
+  format:
+    description: Format the project after generation.
+    required: false
+    default: "true"
 
 runs:
   using: composite
   steps:
-    - name: Generate Localization
+    - name: Validate inputs
       shell: bash
-      working-directory: ${{ inputs.working-directory }}
+      env:
+        INPUT_FORMAT: "${{ inputs.format }}"
+        INPUT_GENERATE_BUILD_RUNNER: "${{ inputs.generate-build-runner }}"
+        INPUT_GENERATE_LOCALIZATIONS: "${{ inputs.generate-localizations }}"
+      run: |
+        set -euo pipefail
+        for value in \
+          "${INPUT_GENERATE_LOCALIZATIONS}" \
+          "${INPUT_GENERATE_BUILD_RUNNER}" \
+          "${INPUT_FORMAT}"; do
+          case "${value}" in
+            true|false) ;;
+            *)
+              printf 'Boolean inputs must be true or false: %s\n' "${value}" >&2
+              exit 2
+              ;;
+          esac
+        done
+
+    - name: Generate localizations
+      if: inputs.generate-localizations == 'true'
+      shell: bash
+      working-directory: "${{ inputs.working-directory }}"
       run: dart run slang
 
-    - name: Generate Code
+    - name: Generate build_runner sources
+      if: inputs.generate-build-runner == 'true'
       shell: bash
-      working-directory: ${{ inputs.working-directory }}
+      working-directory: "${{ inputs.working-directory }}"
       run: dart run build_runner build --delete-conflicting-outputs
 
-    - name: Format Generated Code
+    - name: Format generated Dart sources
+      if: inputs.format == 'true'
       shell: bash
-      working-directory: ${{ inputs.working-directory }}
+      working-directory: "${{ inputs.working-directory }}"
       run: dart format .

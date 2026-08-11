@@ -1,18 +1,59 @@
-name: Install Linux Build Dependencies
-description: Installs the shared Linux system packages required by Flutter builds.
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Install Flutter Linux build dependencies
+description: >-
+  Install the minimal Debian-family packages needed to compile a Flutter Linux
+  desktop application on a GitHub-hosted runner.
+
+inputs:
+  additional-packages:
+    description: Optional whitespace-separated Debian package names.
+    required: false
+    default: ""
 
 runs:
   using: composite
   steps:
     - name: Install Linux build dependencies
       shell: bash
+      env:
+        ADDITIONAL_PACKAGES: "${{ inputs.additional-packages }}"
       run: |
-        sudo apt-get update
-        sudo apt-get install --yes \
-          clang \
-          cmake \
-          ninja-build \
-          pkg-config \
-          libgtk-3-dev \
-          liblzma-dev \
+        set -euo pipefail
+
+        [[ "${RUNNER_OS:-Linux}" == "Linux" ]] || {
+          printf 'This action supports Linux runners only.\n' >&2
+          exit 2
+        }
+        command -v apt-get >/dev/null || {
+          printf 'apt-get is required; use a Debian-family runner.\n' >&2
+          exit 2
+        }
+
+        packages=(
+          clang
+          cmake
+          libgtk-3-dev
+          liblzma-dev
           libsecret-1-dev
+          ninja-build
+          pkg-config
+        )
+
+        if [[ -n "${ADDITIONAL_PACKAGES}" ]]; then
+          read -r -a requested_packages <<< "${ADDITIONAL_PACKAGES}"
+          for package in "${requested_packages[@]}"; do
+            [[ "${package}" =~ ^[a-z0-9][a-z0-9+.-]*$ ]] || {
+              printf 'Invalid Debian package name: %s\n' "${package}" >&2
+              exit 2
+            }
+            packages+=("${package}")
+          done
+        fi
+
+        sudo apt-get update
+        sudo env DEBIAN_FRONTEND=noninteractive apt-get install \
+          --no-install-recommends \
+          --yes \
+          "${packages[@]}"

@@ -15,8 +15,8 @@
 # Cache layers inside the repository.
 --cache-server-path ./.cache/act/cache
 
+# Store workflow artifacts inside the repository cache.
+--artifact-server-path ./.cache/act/artifacts
+
 # Default runner image.
 --platform ubuntu-latest=catthehacker/ubuntu:act-latest
-
-# Disable the local cache server.
---no-cache-server

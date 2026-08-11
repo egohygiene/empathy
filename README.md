@@ -1,10 +1,38 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+# Empathy
 
-- [empathy](#empathy)
+🤝 A humane, reusable repository foundation for maintainers, contributors,
+users, automation, and AI agents.
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+Empathy is the integration monorepo for Ego Hygiene's opinionated repository
+baseline. It assembles universal contracts and selectable capability profiles in
+one place before independently versioned components are extracted.
 
-# empathy
-🤝 A humane, reusable repository foundation for maintainers, contributors, users, automation, and AI agents.
+## Current foundation
+
+This first consolidation pass establishes the GitHub automation layer:
+
+- immutable external action references;
+- least-privilege workflow permissions and bounded job runtimes;
+- reusable composite actions for common toolchain and generation steps;
+- automation policy tests and MegaLinter validation;
+- dependency, CodeQL, OSV, and OpenSSF supply-chain checks;
+- safe manual workflows for contributor and repository-intelligence generation.
+
+Imported workflows that still depend on a product, toolchain, secret set, or
+release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
+and are intentionally inert.
+
+## Repository contract
+
+```bash
+task check
+```
+
+The command validates formatting, Markdown, Python syntax, unit tests, and the
+GitHub automation policy. See [the composite action catalog](.github/actions/README.md)
+for reusable action contracts.
+
+## Status
+
+Empathy is under active foundation development. Staged material is preserved for
+classification and must not be treated as production-ready template content.
