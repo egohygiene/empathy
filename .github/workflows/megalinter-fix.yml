@@ -30,7 +30,7 @@ jobs:
       # 1. Check out the repository
       # -------------------------------------------------------------
       - name: 🛎️ Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0  # Full git history for better analysis
 
@@ -39,7 +39,7 @@ jobs:
       # -------------------------------------------------------------
       - name: 🧹 MegaLinter Auto-Fix
         id: ml
-        uses: oxsecurity/megalinter@v9.2.0
+        uses: oxsecurity/megalinter@v10.0.0
         env:
           # Apply all formatters and linters
           APPLY_FIXES: ${{ inputs.apply-fixes || 'all' }}
@@ -88,7 +88,7 @@ jobs:
       # -------------------------------------------------------------
       - name: 📦 Upload MegaLinter Reports
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: megalinter-reports
           path: |
@@ -101,7 +101,7 @@ jobs:
       # -------------------------------------------------------------
       - name: 📤 Upload Diff Patch
         if: always() && steps.diff.outputs.has_changes == 'true'
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: megalinter-fixes-patch
           path: megalinter-fixes.patch

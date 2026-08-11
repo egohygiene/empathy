@@ -31,7 +31,7 @@ jobs:
         working-directory: apps/egohygiene
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.release.tag_name }}
           persist-credentials: false
@@ -40,7 +40,7 @@ jobs:
         uses: ./.github/actions/flutter-setup
 
       - name: Cache Gradle
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: |
             ~/.gradle/caches
@@ -139,7 +139,7 @@ jobs:
         run: rm -rf "$RUNNER_TEMP/android-signing"
 
       - name: Upload Android Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-android
           path: |
@@ -157,7 +157,7 @@ jobs:
         working-directory: apps/egohygiene
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.release.tag_name }}
           persist-credentials: false
@@ -179,7 +179,7 @@ jobs:
             -C build/web .
 
       - name: Upload Web Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-web
           path: apps/egohygiene/release-assets/egohygiene-web-${{ github.event.release.tag_name }}.tar.gz
@@ -195,7 +195,7 @@ jobs:
         working-directory: apps/egohygiene
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.release.tag_name }}
           persist-credentials: false
@@ -223,7 +223,7 @@ jobs:
             -C build/ios/iphoneos Runner.app
 
       - name: Upload iOS Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-ios
           path: apps/egohygiene/release-assets/egohygiene-ios-${{ github.event.release.tag_name }}.tar.gz
@@ -239,7 +239,7 @@ jobs:
         working-directory: apps/egohygiene
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.release.tag_name }}
           persist-credentials: false
@@ -264,7 +264,7 @@ jobs:
             -C build/linux/x64/release/bundle .
 
       - name: Upload Linux Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-linux
           path: apps/egohygiene/release-assets/egohygiene-linux-${{ github.event.release.tag_name }}.tar.gz
@@ -277,31 +277,31 @@ jobs:
       contents: write
     steps:
       - name: Download Android artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: release-android
           path: release-assets/
 
       - name: Download iOS artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: release-ios
           path: release-assets/
 
       - name: Download Web artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: release-web
           path: release-assets/
 
       - name: Download Linux artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: release-linux
           path: release-assets/
 
       - name: Attach Artifacts to Release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
+        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
         with:
           tag_name: ${{ github.event.release.tag_name }}
           files: |

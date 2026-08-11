@@ -39,13 +39,13 @@ jobs:
       # 1. Check out the repository
       # -------------------------------------------------------------
       - name: 📥 Checkout Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # -------------------------------------------------------------
       # 2. Setup Node.js for npm dependencies
       # -------------------------------------------------------------
       - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '20'
           cache: 'npm'
@@ -60,7 +60,7 @@ jobs:
       # 3. Setup Python and Poetry for Python dependencies
       # -------------------------------------------------------------
       - name: 🐍 Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: 'pip'
@@ -79,7 +79,7 @@ jobs:
           poetry config virtualenvs.create true
 
       - name: 📦 Cache Poetry dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: |
             .venv
@@ -188,13 +188,13 @@ jobs:
       # 11. Install Docker Buildx
       # -------------------------------------------------------------
       - name: 🏗️ Setup Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       # -------------------------------------------------------------
       # 12. Install cosign (for image signing verification)
       # -------------------------------------------------------------
       - name: ✍️ Install Cosign
-        uses: sigstore/cosign-installer@v3.7.0
+        uses: sigstore/cosign-installer@v4.1.2
         with:
           cosign-release: 'v2.4.1'
 
@@ -340,7 +340,7 @@ jobs:
 
     steps:
       - name: 📥 Checkout Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: ⚡ Install actionlint
         run: |

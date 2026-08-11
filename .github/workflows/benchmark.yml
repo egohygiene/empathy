@@ -51,7 +51,7 @@ jobs:
       # 1. Check out the repository
       # -------------------------------------------------------------
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -80,13 +80,13 @@ jobs:
       # 3. Set up Docker Buildx
       # -------------------------------------------------------------
       - name: 🔧 Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       # -------------------------------------------------------------
       # 4. Build the UBI Image (load for testing)
       # -------------------------------------------------------------
       - name: 🛠️ Build UBI Image (${{ matrix.variant.name }})
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: ${{ matrix.variant.dockerfile }}
@@ -515,7 +515,7 @@ jobs:
       # 14. Upload Benchmark Artifacts
       # -------------------------------------------------------------
       - name: 📤 Upload Benchmark Artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: benchmark-results-${{ matrix.variant.name }}-${{ matrix.arch }}-${{ steps.version.outputs.version }}
           path: |
@@ -535,7 +535,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Read VERSION
         id: version
@@ -544,7 +544,7 @@ jobs:
           echo "version=$VERSION_CONTENT" >> "$GITHUB_OUTPUT"
 
       - name: Download all artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: artifacts
 
@@ -612,7 +612,7 @@ jobs:
           done
 
       - name: 📤 Upload Aggregated Results
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: benchmark-aggregated-${{ steps.version.outputs.version }}
           path: |

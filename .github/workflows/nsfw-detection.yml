@@ -27,10 +27,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run NSFW Detection
-        uses: fabasoad/nsfw-detection-action@0765793ab34d8864d91bf36d9956dad979463eeb # v3.0.1
+        uses: fabasoad/nsfw-detection-action@84dfcb183b5ad70af6506f75223e5b6783e9c7d4 # v3.0.2
         with:
           api-key: ${{ secrets.NSFW_API_KEY }}
           folder: .

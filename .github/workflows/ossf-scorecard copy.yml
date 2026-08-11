@@ -66,12 +66,12 @@ jobs:
 
     steps:
       - name: "📦 Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           persist-credentials: false
 
       - name: "🛡️ Run OpenSSF Scorecard"
-        uses: ossf/scorecard-action@v2.4.0
+        uses: ossf/scorecard-action@v2.4.4
         with:
           results_file: results.sarif
           results_format: sarif
@@ -86,7 +86,7 @@ jobs:
 
       - name: "📦 Upload Results"
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: ossf-scorecard-results
           path: results.sarif
