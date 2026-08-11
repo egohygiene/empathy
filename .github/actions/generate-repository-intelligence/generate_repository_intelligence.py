@@ -1,18 +1,23 @@
 from __future__ import annotations
 
 import argparse
+from collections.abc import Iterable
 import html
 import json
 import os
 from pathlib import Path
 import tempfile
-from typing import Any, Iterable
+from typing import Any
 import xml.etree.ElementTree as ET
 
 DEFAULT_EXCLUDED_PATHS = [
     ".git",
+    ".staging",
+    ".cache",
+    ".venv",
     "docs/generated",
     "node_modules",
+    "vendor",
     "dist",
     "build",
     "coverage",
@@ -32,9 +37,7 @@ def positive_integer(raw_value: str) -> int:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Generate repository intelligence tree artifacts."
-    )
+    parser = argparse.ArgumentParser(description="Generate repository intelligence tree artifacts.")
     parser.add_argument("--repo-root", required=True)
     parser.add_argument("--output-root", required=True)
     parser.add_argument("--max-depth", type=positive_integer, default=10)
@@ -64,9 +67,8 @@ def is_excluded(relative_path: Path, excluded_paths: Iterable[str]) -> bool:
     for excluded_path in excluded_paths:
         if "/" not in excluded_path and excluded_path in relative_path.parts:
             return True
-        if (
-            relative_path_string == excluded_path
-            or relative_path_string.startswith(f"{excluded_path}/")
+        if relative_path_string == excluded_path or relative_path_string.startswith(
+            f"{excluded_path}/"
         ):
             return True
 
@@ -233,10 +235,7 @@ def render_markdown(ascii_tree: str) -> str:
 
 def render_svg(tree: Node) -> str:
     top_level_children = list(tree.get("children", []))
-    preview_items = [
-        node_label(child)
-        for child in top_level_children[:6]
-    ]
+    preview_items = [node_label(child) for child in top_level_children[:6]]
     preview_text = " • ".join(preview_items) if preview_items else "Repository is empty."
     width = 960
     height = 220
@@ -246,12 +245,12 @@ def render_svg(tree: Node) -> str:
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
   <title id="title">{escaped_name} repository visualization</title>
-  <desc id="desc">Fallback repository visualization generated locally. CI replaces this file with a repo-visualizer diagram.</desc>
+  <desc id="desc">Deterministic repository visualization generated from the top-level repository tree.</desc>
   <rect width="{width}" height="{height}" rx="16" ry="16" fill="#0f172a" />
   <text x="32" y="64" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="30" font-weight="700">{escaped_name}</text>
   <text x="32" y="104" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">Top-level entries: {escaped_count}</text>
   <text x="32" y="148" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">{escaped_preview}</text>
-  <text x="32" y="188" fill="#64748b" font-family="Arial, sans-serif" font-size="16">The repository intelligence workflow refreshes this file with githubocto/repo-visualizer.</text>
+  <text x="32" y="188" fill="#64748b" font-family="Arial, sans-serif" font-size="16">Generated locally without a third-party rendering service.</text>
 </svg>
 """
 
@@ -312,6 +311,10 @@ def main() -> None:
     output_root = Path(args.output_root).resolve()
     if not repo_root.is_dir():
         raise SystemExit(f"Repository root is not a directory: {repo_root}")
+    try:
+        output_root.relative_to(repo_root)
+    except ValueError as error:
+        raise SystemExit(f"Output root must be inside the repository: {output_root}") from error
 
     excluded_paths = normalize_excluded_paths(args.excluded_paths)
     # Create the destination before scanning so a first run and a subsequent

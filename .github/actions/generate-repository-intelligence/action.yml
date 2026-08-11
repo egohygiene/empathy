@@ -18,7 +18,7 @@ inputs:
   excluded-paths:
     description: "Comma-separated repository-relative paths or directory names to exclude."
     required: false
-    default: ".git,docs/generated,node_modules,dist,build,coverage,__pycache__,site"
+    default: ".git,.staging,.cache,.venv,docs/generated,node_modules,vendor,dist,build,coverage,__pycache__,site"
   activity-since:
     description: "Git-compatible start date for the activity report."
     required: false
@@ -144,12 +144,3 @@ runs:
         fi
 
         bash "${GITHUB_ACTION_PATH}/repo-activity" "${args[@]}"
-
-    - name: "🗺️ Generate repository visualization"
-      # githubocto/repo-visualizer v0.9.1
-      uses: githubocto/repo-visualizer@a999615bdab757559bf94bda1fe6eef232765f85
-      with:
-        output_file: "${{ inputs.output-root }}/visualization/repository.svg"
-        excluded_paths: "${{ inputs.excluded-paths }},${{ inputs.output-root }}"
-        max_depth: "${{ inputs.max-depth }}"
-        should_push: false

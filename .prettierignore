@@ -1,0 +1,15 @@
+.cache/
+.git/
+.reports/
+.staging/
+.venv/
+.github/copilot-instructions.md
+build/
+coverage/
+dist/
+node_modules/
+reports/
+target/
+CONTRIBUTORS.md
+LICENSE
+empathy.code-workspace

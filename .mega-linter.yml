@@ -1,0 +1,39 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
+
+APPLY_FIXES: none
+DISABLE_ERRORS: false
+SHOW_ELAPSED_TIME: true
+PRINT_ALL_FILES: false
+PARALLEL: true
+
+REPORT_OUTPUT_FOLDER: reports/megalinter
+GITHUB_COMMENT_REPORTER: false
+GITHUB_STATUS_REPORTER: false
+FILEIO_REPORTER: false
+
+FILTER_REGEX_EXCLUDE: >-
+  (^|/)(\.git|\.staging|\.cache|\.venv|node_modules|vendor|dist|build|coverage)/
+
+ENABLE_LINTERS:
+  - ACTION_ACTIONLINT
+  - BASH_EXEC
+  - BASH_SHELLCHECK
+  - BASH_SHFMT
+  - EDITORCONFIG_EDITORCONFIG_CHECKER
+  - JSON_JSONLINT
+  - JSON_PRETTIER
+  - MARKDOWN_MARKDOWNLINT
+  - PYTHON_RUFF
+  - REPOSITORY_GITLEAKS
+  - YAML_PRETTIER
+  - YAML_YAMLLINT
+
+ACTION_ACTIONLINT_CONFIG_FILE: .github/actionlint.yaml
+BASH_SHFMT_ARGUMENTS: "--indent 2 --case-indent --space-redirects --simplify"
+EDITORCONFIG_EDITORCONFIG_CHECKER_ARGUMENTS: "-disable-indentation"
+PYTHON_RUFF_CONFIG_FILE: pyproject.toml
+YAML_YAMLLINT_CONFIG_FILE: .yamllint.yml
+
+MARKDOWN_MARKDOWNLINT_FILTER_REGEX_EXCLUDE: >-
+  (^|/)(LICENSE|CONTRIBUTORS\.md|\.github/copilot-instructions\.md)$

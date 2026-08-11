@@ -49,7 +49,7 @@ GIT_FILTERS=()
 
 # @description Print command help.
 usage() {
-  cat <<'EOF'
+  cat << 'EOF'
 Usage:
   repo-activity [options]
 
@@ -105,7 +105,7 @@ die() {
 
 # @description Return success when colored diagnostics should be used.
 use_color() {
-  [[ -z "${NO_COLOR:-}" ]] || return 1
+  [[ -z ${NO_COLOR:-} ]] || return 1
   case "${USE_COLOR}" in
     always) return 0 ;;
     never) return 1 ;;
@@ -116,7 +116,7 @@ use_color() {
 # @description Print an informational diagnostic.
 # @arg $@ string Message.
 log() {
-  [[ "${QUIET}" == false ]] || return 0
+  [[ ${QUIET} == false ]] || return 0
   if use_color; then
     printf '\033[34m%s:\033[0m %s\n' "${PROGRAM_NAME}" "$*" >&2
   else
@@ -128,7 +128,7 @@ log() {
 # @arg $1 string Option name.
 # @arg $2 string Option value.
 require_value() {
-  [[ -n "${2:-}" ]] || die 2 "${1} requires a value"
+  [[ -n ${2:-} ]] || die 2 "${1} requires a value"
 }
 
 # @description Parse CLI arguments.
@@ -136,7 +136,7 @@ require_value() {
 parse_args() {
   while [[ $# -gt 0 ]]; do
     case "${1}" in
-      -r|--repo)
+      -r | --repo)
         require_value "${1}" "${2:-}"
         REPO_INPUT="${2}"
         shift 2
@@ -146,7 +146,7 @@ parse_args() {
         require_value "--repo" "${REPO_INPUT}"
         shift
         ;;
-      -o|--output)
+      -o | --output)
         require_value "${1}" "${2:-}"
         OUTPUT_INPUT="${2}"
         shift 2
@@ -220,11 +220,11 @@ parse_args() {
         require_value "--color" "${USE_COLOR}"
         shift
         ;;
-      -h|--help)
+      -h | --help)
         usage
         exit 0
         ;;
-      -v|--version)
+      -v | --version)
         printf '%s %s\n' "${PROGRAM_NAME}" "${VERSION}"
         exit 0
         ;;
@@ -241,25 +241,25 @@ parse_args() {
 # @description Validate enumerated and conflicting options.
 validate_options() {
   case "${USE_COLOR}" in
-    auto|always|never) ;;
+    auto | always | never) ;;
     *) die 2 "invalid color mode: ${USE_COLOR}" ;;
   esac
-  [[ "${OUTPUT_INPUT}" != "" ]] || die 2 "output directory cannot be empty"
-  if [[ "${OUTPUT_INPUT}" != /* ]]; then
+  [[ ${OUTPUT_INPUT} != "" ]] || die 2 "output directory cannot be empty"
+  if [[ ${OUTPUT_INPUT} != /* ]]; then
     case "/${OUTPUT_INPUT}/" in
       */../*) die 2 "relative output directory cannot contain '..': ${OUTPUT_INPUT}" ;;
     esac
   fi
-  if [[ "${GENERATE_GOURCE}" == true && "${REF}" == "--all" ]]; then
+  if [[ ${GENERATE_GOURCE} == true && ${REF} == "--all" ]]; then
     die 2 "--gource cannot be combined with --all"
   fi
-  if [[ "${GENERATE_GOURCE}" == true && -n "${AUTHOR}" ]]; then
+  if [[ ${GENERATE_GOURCE} == true && -n ${AUTHOR} ]]; then
     die 2 "--gource cannot be combined with --author"
   fi
-  if [[ "${GENERATE_GITINSPECTOR}" == true && "${REF}" != "HEAD" ]]; then
+  if [[ ${GENERATE_GITINSPECTOR} == true && ${REF} != "HEAD" ]]; then
     die 2 "--gitinspector currently requires --ref HEAD"
   fi
-  if [[ "${GENERATE_GITINSPECTOR}" == true && -n "${AUTHOR}" ]]; then
+  if [[ ${GENERATE_GITINSPECTOR} == true && -n ${AUTHOR} ]]; then
     die 2 "--gitinspector cannot be combined with --author"
   fi
 }
@@ -267,7 +267,7 @@ validate_options() {
 # @description Return success when a command exists.
 # @arg $1 string Command name.
 has_command() {
-  command -v "${1}" >/dev/null 2>&1
+  command -v "${1}" > /dev/null 2>&1
 }
 
 # @description Verify portable required commands.
@@ -280,14 +280,14 @@ require_dependencies() {
 
 # @description Verify dependencies for requested optional reports before writing output.
 require_optional_dependencies() {
-  if [[ "${GENERATE_GOURCE}" == true ]]; then
+  if [[ ${GENERATE_GOURCE} == true ]]; then
     has_command gource || die 69 "--gource requires Gource"
     has_command ffmpeg || die 69 "--gource requires FFmpeg"
-    if [[ "$(uname -s 2>/dev/null || true)" == Linux && -z "${DISPLAY:-}" ]]; then
+    if [[ "$(uname -s 2> /dev/null || true)" == Linux && -z ${DISPLAY:-} ]]; then
       has_command xvfb-run || die 69 "headless Gource rendering requires xvfb-run"
     fi
   fi
-  if [[ "${GENERATE_GITINSPECTOR}" == true ]]; then
+  if [[ ${GENERATE_GITINSPECTOR} == true ]]; then
     has_command gitinspector || die 69 "--gitinspector requires GitInspector"
   fi
 }
@@ -295,19 +295,19 @@ require_optional_dependencies() {
 # @description Canonicalize an existing directory.
 # @arg $1 string Directory.
 canonical_directory() {
-  [[ -d "${1}" ]] || return 1
-  (cd "${1}" 2>/dev/null && pwd -P)
+  [[ -d ${1} ]] || return 1
+  (cd "${1}" 2> /dev/null && pwd -P)
 }
 
 # @description Resolve and validate repository and output paths.
 resolve_paths() {
   local candidate
-  candidate="$(canonical_directory "${REPO_INPUT}")" \
-    || die 3 "repository directory does not exist: ${REPO_INPUT}"
-  REPO_ROOT="$(git -C "${candidate}" rev-parse --show-toplevel 2>/dev/null)" \
-    || die 3 "not inside a Git repository: ${candidate}"
-  REPO_ROOT="$(canonical_directory "${REPO_ROOT}")" \
-    || die 3 "repository root is inaccessible"
+  candidate="$(canonical_directory "${REPO_INPUT}")" ||
+    die 3 "repository directory does not exist: ${REPO_INPUT}"
+  REPO_ROOT="$(git -C "${candidate}" rev-parse --show-toplevel 2> /dev/null)" ||
+    die 3 "not inside a Git repository: ${candidate}"
+  REPO_ROOT="$(canonical_directory "${REPO_ROOT}")" ||
+    die 3 "repository root is inaccessible"
 
   case "${OUTPUT_INPUT}" in
     /*) OUTPUT_DIR="${OUTPUT_INPUT}" ;;
@@ -315,7 +315,7 @@ resolve_paths() {
   esac
 
   case "${OUTPUT_DIR}" in
-    "${REPO_ROOT}"|"${REPO_ROOT}/.git"|/)
+    "${REPO_ROOT}" | "${REPO_ROOT}/.git" | /)
       die 4 "refusing unsafe output directory: ${OUTPUT_DIR}"
       ;;
   esac
@@ -323,25 +323,25 @@ resolve_paths() {
 
 # @description Validate the selected revision and construct Git filters.
 validate_repository() {
-  if [[ "${REF}" != "--all" ]]; then
-    git -C "${REPO_ROOT}" rev-parse --verify --quiet "${REF}^{commit}" >/dev/null \
-      || die 3 "revision does not resolve to a commit: ${REF}"
+  if [[ ${REF} != "--all" ]]; then
+    git -C "${REPO_ROOT}" rev-parse --verify --quiet "${REF}^{commit}" > /dev/null ||
+      die 3 "revision does not resolve to a commit: ${REF}"
   fi
 
   GIT_FILTERS=("--since=${SINCE}")
-  if [[ -n "${AUTHOR}" ]]; then
+  if [[ -n ${AUTHOR} ]]; then
     GIT_FILTERS+=("--author=${AUTHOR}")
   fi
 
-  if [[ "$(git -C "${REPO_ROOT}" rev-parse --is-shallow-repository 2>/dev/null || printf 'false')" == true ]]; then
-    if [[ "${REQUIRE_FULL_HISTORY}" == true ]]; then
+  if [[ "$(git -C "${REPO_ROOT}" rev-parse --is-shallow-repository 2> /dev/null || printf 'false')" == true ]]; then
+    if [[ ${REQUIRE_FULL_HISTORY} == true ]]; then
       die 3 "repository is shallow; fetch full history before generating activity intelligence"
     fi
     log "warning: repository is shallow; reports only include available history"
   fi
 
-  git -C "${REPO_ROOT}" log "${REF}" "${GIT_FILTERS[@]}" -1 --format='%H' >/dev/null \
-    || die 3 "Git rejected the date, author, or revision filters"
+  git -C "${REPO_ROOT}" log "${REF}" "${GIT_FILTERS[@]}" -1 --format='%H' > /dev/null ||
+    die 3 "Git rejected the date, author, or revision filters"
 }
 
 # @description Prepare a temporary staging directory and optionally clean output.
@@ -350,29 +350,29 @@ prepare_output() {
   local managed
   parent="$(dirname "${OUTPUT_DIR}")"
   mkdir -p "${parent}" || die 4 "could not create output parent: ${parent}"
-  if [[ "${CLEAN}" == true && -e "${OUTPUT_DIR}" ]]; then
+  if [[ ${CLEAN} == true && -e ${OUTPUT_DIR} ]]; then
     rm -rf -- "${OUTPUT_DIR}" || die 4 "could not clean output directory: ${OUTPUT_DIR}"
   fi
   mkdir -p "${OUTPUT_DIR}" || die 4 "could not create output directory: ${OUTPUT_DIR}"
   for managed in \
     summary.md log-graph.txt commits.tsv contributors.tsv files.tsv \
     manifest.txt gource.png gitinspector; do
-    rm -rf -- "${OUTPUT_DIR}/${managed}"
+    rm -rf -- "${OUTPUT_DIR:?}/${managed}"
   done
-  STAGING_DIR="$(mktemp -d "${parent}/.${PROGRAM_NAME}.XXXXXX")" \
-    || die 4 "could not create staging directory under ${parent}"
+  STAGING_DIR="$(mktemp -d "${parent}/.${PROGRAM_NAME}.XXXXXX")" ||
+    die 4 "could not create staging directory under ${parent}"
 }
 
 # @description Remove the staging directory.
 cleanup() {
-  if [[ -n "${STAGING_DIR}" && -d "${STAGING_DIR}" ]]; then
+  if [[ -n ${STAGING_DIR} && -d ${STAGING_DIR} ]]; then
     rm -rf -- "${STAGING_DIR}"
   fi
 }
 
 # @description Emit arguments selecting the configured revision.
 git_revision_args() {
-  if [[ "${REF}" == "--all" ]]; then
+  if [[ ${REF} == "--all" ]]; then
     printf '%s\n' '--all'
   else
     printf '%s\n' "${REF}"
@@ -387,8 +387,8 @@ generate_log_graph() {
   git -C "${REPO_ROOT}" --no-pager log "${revision}" "${GIT_FILTERS[@]}" \
     --graph --decorate --date=short \
     --pretty=format:'%h %ad %d %s — %an' \
-    >"${STAGING_DIR}/log-graph.txt"
-  printf '\n' >>"${STAGING_DIR}/log-graph.txt"
+    > "${STAGING_DIR}/log-graph.txt"
+  printf '\n' >> "${STAGING_DIR}/log-graph.txt"
 }
 
 # @description Generate one sanitized tab-separated row per commit.
@@ -399,8 +399,8 @@ generate_commits_tsv() {
   {
     printf 'commit\tauthor_date\tauthor_name\tauthor_email\tsubject\n'
     git -C "${REPO_ROOT}" --no-pager log "${revision}" "${GIT_FILTERS[@]}" \
-      --date-order --format='%H%x1f%aI%x1f%aN%x1f%aE%x1f%s' \
-      | awk '
+      --date-order --format='%H%x1f%aI%x1f%aN%x1f%aE%x1f%s' |
+      awk '
           BEGIN { FS = sprintf("%c", 31); OFS = "\t" }
           {
             for (i = 1; i <= 5; i++) {
@@ -409,7 +409,7 @@ generate_commits_tsv() {
             print $1, $2, $3, $4, $5
           }
         '
-  } >"${STAGING_DIR}/commits.tsv"
+  } > "${STAGING_DIR}/commits.tsv"
 }
 
 # @description Generate tab-separated contribution totals by author.
@@ -419,8 +419,8 @@ generate_contributors_tsv() {
   log "generating contributor summary"
   {
     printf 'commits\tauthor\n'
-    git -C "${REPO_ROOT}" shortlog -sne "${revision}" "${GIT_FILTERS[@]}" \
-      | awk '
+    git -C "${REPO_ROOT}" shortlog -sne "${revision}" "${GIT_FILTERS[@]}" |
+      awk '
           BEGIN { OFS = "\t" }
           {
             count = $1
@@ -430,7 +430,7 @@ generate_contributors_tsv() {
             print count, line
           }
         '
-  } >"${STAGING_DIR}/contributors.tsv"
+  } > "${STAGING_DIR}/contributors.tsv"
 }
 
 # @description Generate deterministic per-file insertion and deletion totals.
@@ -440,8 +440,8 @@ generate_files_tsv() {
   revision="$(git_revision_args)"
   log "generating per-file change totals"
   git -C "${REPO_ROOT}" --no-pager log "${revision}" "${GIT_FILTERS[@]}" \
-    --format= --numstat \
-    | awk -F '\t' '
+    --format= --numstat |
+    awk -F '\t' '
         BEGIN { OFS = "\t" }
         NF >= 3 && $3 != "" {
           touches[$3] += 1
@@ -459,11 +459,11 @@ generate_files_tsv() {
             print output_path, additions[path] + 0, deletions[path] + 0, touches[path], binary_changes[path] + 0
           }
         }
-      ' >"${unsorted_file}"
+      ' > "${unsorted_file}"
   {
     printf 'path\tinsertions\tdeletions\tcommit_touches\tbinary_changes\n'
     LC_ALL=C sort -t "$(printf '\t')" -k1,1 "${unsorted_file}"
-  } >"${STAGING_DIR}/files.tsv"
+  } > "${STAGING_DIR}/files.tsv"
   rm -f -- "${unsorted_file}"
 }
 
@@ -479,7 +479,7 @@ collect_statistics() {
   INSERTIONS="$(awk -F '\t' 'NR > 1 { total += $2 } END { print total + 0 }' "${STAGING_DIR}/files.tsv")"
   DELETIONS="$(awk -F '\t' 'NR > 1 { total += $3 } END { print total + 0 }' "${STAGING_DIR}/files.tsv")"
   first_commit_sha="$(git -C "${REPO_ROOT}" rev-list --max-count=1 --reverse "${revision}" "${GIT_FILTERS[@]}" || true)"
-  if [[ -n "${first_commit_sha}" ]]; then
+  if [[ -n ${first_commit_sha} ]]; then
     FIRST_COMMIT="$(git -C "${REPO_ROOT}" --no-pager show -s --format='%aI' "${first_commit_sha}")"
   else
     FIRST_COMMIT=""
@@ -494,13 +494,15 @@ markdown_cell() {
 }
 
 # @description Generate the Markdown overview.
+# ShellCheck interprets literal Markdown code-span backticks as shell expansions.
+# shellcheck disable=SC2016
 generate_summary() {
   local repo_name
   local display_ref="${REF}"
   local display_author="All authors"
   repo_name="$(basename "${REPO_ROOT}")"
-  [[ -n "${AUTHOR}" ]] && display_author="${AUTHOR}"
-  [[ "${REF}" != "--all" ]] || display_ref="All refs"
+  [[ -n ${AUTHOR} ]] && display_author="${AUTHOR}"
+  [[ ${REF} != "--all" ]] || display_ref="All refs"
 
   log "generating Markdown summary"
   {
@@ -530,9 +532,9 @@ generate_summary() {
     printf -- '- `commits.tsv` — machine-readable commit records\n'
     printf -- '- `contributors.tsv` — commits grouped by author\n'
     printf -- '- `files.tsv` — accumulated per-file line changes\n'
-    [[ "${GENERATE_GOURCE}" == false ]] || printf -- '- `gource.png` — final Gource visualization frame\n'
-    [[ "${GENERATE_GITINSPECTOR}" == false ]] || printf -- '- `gitinspector/index.html` — GitInspector analysis\n'
-  } >"${STAGING_DIR}/summary.md"
+    [[ ${GENERATE_GOURCE} == false ]] || printf -- '- `gource.png` — final Gource visualization frame\n'
+    [[ ${GENERATE_GITINSPECTOR} == false ]] || printf -- '- `gitinspector/index.html` — GitInspector analysis\n'
+  } > "${STAGING_DIR}/summary.md"
 }
 
 # @description Generate a Gource snapshot from the selected history window.
@@ -544,28 +546,28 @@ generate_gource() {
   local -a export_command
   local -a render_command
 
-  [[ "${GENERATE_GOURCE}" == true ]] || return 0
-  [[ "${COMMIT_COUNT}" -gt 0 ]] || {
+  [[ ${GENERATE_GOURCE} == true ]] || return 0
+  [[ ${COMMIT_COUNT} -gt 0 ]] || {
     log "skipping Gource because no commits match the filters"
     GENERATE_GOURCE=false
     return 0
   }
   revision="$(git_revision_args)"
-  if [[ "${revision}" != "--all" ]]; then
+  if [[ ${revision} != "--all" ]]; then
     boundary_commit="$(git -C "${REPO_ROOT}" rev-list -1 --before="${SINCE}" "${revision}" || true)"
-    if [[ -n "${boundary_commit}" ]]; then
+    if [[ -n ${boundary_commit} ]]; then
       boundary_date="$(git -C "${REPO_ROOT}" show -s --format='%cI' "${boundary_commit}")"
     fi
   fi
 
   export_command=(gource --output-custom-log "${custom_log}")
-  [[ "${revision}" == "--all" ]] || export_command+=(--git-branch "${revision}")
-  [[ -z "${boundary_date}" ]] || export_command+=(--start-date "${boundary_date}")
+  [[ ${revision} == "--all" ]] || export_command+=(--git-branch "${revision}")
+  [[ -z ${boundary_date} ]] || export_command+=(--start-date "${boundary_date}")
   export_command+=("${REPO_ROOT}")
 
   log "exporting Gource history"
-  "${export_command[@]}" >/dev/null
-  [[ -s "${custom_log}" ]] || die 4 "Gource produced an empty history log"
+  "${export_command[@]}" > /dev/null
+  [[ -s ${custom_log} ]] || die 4 "Gource produced an empty history log"
 
   render_command=(gource
     --log-format custom
@@ -574,21 +576,21 @@ generate_gource() {
     --stop-at-end
     --highlight-users
     --user-scale 1.5
-    --hide filenames,mouse,progress
+    --hide "filenames,mouse,progress"
     --viewport 1280x720
     --output-framerate 30
     --output-ppm-stream -
     "${custom_log}")
 
   log "rendering final Gource frame"
-  if [[ "$(uname -s 2>/dev/null || true)" == Linux && -z "${DISPLAY:-}" ]]; then
-    xvfb-run -a "${render_command[@]}" 2>/dev/null \
-      | ffmpeg -hide_banner -loglevel error -y -f image2pipe -vcodec ppm -i - \
-          -update 1 "${STAGING_DIR}/gource.png"
+  if [[ "$(uname -s 2> /dev/null || true)" == Linux && -z ${DISPLAY:-} ]]; then
+    xvfb-run -a "${render_command[@]}" 2> /dev/null |
+      ffmpeg -hide_banner -loglevel error -y -f image2pipe -vcodec ppm -i - \
+        -update 1 "${STAGING_DIR}/gource.png"
   else
-    "${render_command[@]}" 2>/dev/null \
-      | ffmpeg -hide_banner -loglevel error -y -f image2pipe -vcodec ppm -i - \
-          -update 1 "${STAGING_DIR}/gource.png"
+    "${render_command[@]}" 2> /dev/null |
+      ffmpeg -hide_banner -loglevel error -y -f image2pipe -vcodec ppm -i - \
+        -update 1 "${STAGING_DIR}/gource.png"
   fi
   rm -f -- "${custom_log}"
 }
@@ -596,8 +598,8 @@ generate_gource() {
 # @description Generate an optional GitInspector HTML report.
 generate_gitinspector() {
   local since_date
-  [[ "${GENERATE_GITINSPECTOR}" == true ]] || return 0
-  [[ "${COMMIT_COUNT}" -gt 0 ]] || {
+  [[ ${GENERATE_GITINSPECTOR} == true ]] || return 0
+  [[ ${COMMIT_COUNT} -gt 0 ]] || {
     log "skipping GitInspector because no commits match the filters"
     GENERATE_GITINSPECTOR=false
     return 0
@@ -608,7 +610,7 @@ generate_gitinspector() {
   (
     cd "${REPO_ROOT}"
     gitinspector -H --since="${since_date}" .
-  ) >"${STAGING_DIR}/gitinspector/index.html"
+  ) > "${STAGING_DIR}/gitinspector/index.html"
 }
 
 # @description Generate a stable inventory of all staged artifacts.
@@ -616,18 +618,20 @@ generate_manifest() {
   log "generating artifact manifest"
   (
     cd "${STAGING_DIR}"
-    find . -type f ! -name manifest.txt -print \
-      | sed 's#^./##' \
-      | LC_ALL=C sort
-  ) >"${STAGING_DIR}/manifest.txt"
+    find . -type f ! -name manifest.txt -print |
+      sed 's#^./##' |
+      LC_ALL=C sort
+  ) > "${STAGING_DIR}/manifest.txt"
 }
 
 # @description Publish staged artifacts into the output directory.
 publish_artifacts() {
   local artifact
+  local artifact_name
   for artifact in "${STAGING_DIR}"/*; do
-    [[ -e "${artifact}" ]] || continue
-    rm -rf -- "${OUTPUT_DIR}/$(basename "${artifact}")"
+    [[ -e ${artifact} ]] || continue
+    artifact_name="$(basename "${artifact}")"
+    rm -rf -- "${OUTPUT_DIR:?}/${artifact_name}"
     mv "${artifact}" "${OUTPUT_DIR}/"
   done
 }

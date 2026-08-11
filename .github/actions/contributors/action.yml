@@ -1,89 +1,108 @@
 ---
-# yaml-language-server: $schema=https://www.schemastore.org/github-action.json
-name: "👥 Contributors"
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
 
-description: "Generate and maintain All Contributors metadata."
+name: Generate contributors
+description: >-
+  Hydrate All Contributors metadata from the current repository and regenerate
+  CONTRIBUTORS.md without committing or pushing changes.
+
+inputs:
+  node-version:
+    description: Node.js version used by All Contributors.
+    required: false
+    default: "22"
+  all-contributors-version:
+    description: Exact all-contributors-cli version to execute.
+    required: false
+    default: "6.26.1"
+  include-anonymous:
+    description: Include contributors whose GitHub account is marked anonymous.
+    required: false
+    default: "false"
+
+outputs:
+  contributor-count:
+    description: Number of contributors written to .allcontributorsrc.
+    value: "${{ steps.generate.outputs.contributor-count }}"
 
 runs:
-  using: "composite"
-
+  using: composite
   steps:
-    - name: 🧰 Setup Node.js
-      uses: actions/setup-node@v4
+    - name: Set up Node.js
+      # actions/setup-node v6.5.0
+      uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
       with:
-        node-version: 22
+        node-version: "${{ inputs.node-version }}"
 
-    - name: 📥 Install Dependencies
-      shell: bash
-      run: |
-        npm install \
-          --global \
-          all-contributors-cli
-
-    - name: 🏷️ Hydrate Repository Metadata
+    - name: Generate contributor metadata
+      id: generate
       shell: bash
       env:
-        REPOSITORY: ${{ github.repository }}
+        ALL_CONTRIBUTORS_VERSION: "${{ inputs.all-contributors-version }}"
+        GH_TOKEN: "${{ github.token }}"
+        INCLUDE_ANONYMOUS: "${{ inputs.include-anonymous }}"
+        REPOSITORY: "${{ github.repository }}"
       run: |
+        set -euo pipefail
+
+        case "${INCLUDE_ANONYMOUS}" in
+          true|false) ;;
+          *)
+            printf 'include-anonymous must be true or false: %s\n' "${INCLUDE_ANONYMOUS}" >&2
+            exit 2
+            ;;
+        esac
+        [[ "${ALL_CONTRIBUTORS_VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+          printf 'all-contributors-version must be an exact semantic version: %s\n' \
+            "${ALL_CONTRIBUTORS_VERSION}" >&2
+          exit 2
+        }
+
+        command -v gh >/dev/null
+        command -v jq >/dev/null
+        [[ -f .allcontributorsrc ]] || {
+          printf '.allcontributorsrc is required.\n' >&2
+          exit 2
+        }
+
         owner="${REPOSITORY%%/*}"
         project="${REPOSITORY##*/}"
+        pages_file="${RUNNER_TEMP}/contributors-pages.json"
+        contributors_file="${RUNNER_TEMP}/contributors.json"
+
+        gh api --paginate --slurp \
+          --header "Accept: application/vnd.github+json" \
+          "repos/${REPOSITORY}/contributors?per_page=100&anon=${INCLUDE_ANONYMOUS}" \
+          > "${pages_file}"
+
+        jq '[.[][]]' "${pages_file}" > "${contributors_file}"
 
         jq \
           --arg owner "${owner}" \
           --arg project "${project}" \
+          --slurpfile contributors "${contributors_file}" \
           '
-          .projectOwner = $owner |
-          .projectName = $project
+          .projectOwner = $owner
+          | .projectName = $project
+          | .contributors = [
+              $contributors[0][]
+              | {
+                  login: .login,
+                  name: .login,
+                  avatar_url: .avatar_url,
+                  profile: .html_url,
+                  contributions: ["code"]
+                }
+            ]
           ' \
           .allcontributorsrc \
           > .allcontributorsrc.tmp
 
-        mv \
-          .allcontributorsrc.tmp \
-          .allcontributorsrc
+        mv .allcontributorsrc.tmp .allcontributorsrc
+        contributor_count="$(jq '.contributors | length' .allcontributorsrc)"
 
-    - name: 👥 Fetch Contributors
-      shell: bash
-      env:
-        GH_TOKEN: ${{ github.token }}
-        REPOSITORY: ${{ github.repository }}
-      run: |
-        contributors="$(
-          gh api \
-            "repos/${REPOSITORY}/contributors?per_page=100"
-        )"
+        npx --yes "all-contributors-cli@${ALL_CONTRIBUTORS_VERSION}" generate
 
-        jq \
-          --argjson contributors "${contributors}" \
-          '
-          .contributors =
-          [
-            $contributors[]
-            |
-            {
-              login: .login,
-              name: .login,
-              avatar_url: .avatar_url,
-              profile: .html_url,
-              contributions: ["code"]
-            }
-          ]
-          ' \
-          .allcontributorsrc \
-          > .allcontributorsrc.tmp
-
-        mv \
-          .allcontributorsrc.tmp \
-          .allcontributorsrc
-
-    - name: 📝 Generate Contributors File
-      shell: bash
-      run: |
-        cat .allcontributorsrc
-
-        all-contributors generate
-
-        printf "\n\n"
-        printf "Generated CONTRIBUTORS.md:\n\n"
-
-        cat CONTRIBUTORS.md
+        printf 'contributor-count=%s\n' "${contributor_count}" >> "${GITHUB_OUTPUT}"
+        printf 'Generated CONTRIBUTORS.md for %s contributor(s).\n' \
+          "${contributor_count}"

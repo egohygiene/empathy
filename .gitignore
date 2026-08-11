@@ -1,737 +1,186 @@
-# ==============================================================================
-# UNIVERSAL BASELINE GITIGNORE
-# Organized by category for easy manual review and editing.
-# ==============================================================================
-
-# ==============================================================================
-# 1. OPERATING SYSTEMS & SYSTEM TOOLS
-# ==============================================================================
-
-# --- macOS ---
+# Operating systems
 .DS_Store
-.AppleDB
-.AppleDesktop
 .AppleDouble
 .LSOverride
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.fseventsd
-.DocumentRevisions-V100
-.apdisk
-*.icloud
 ._*
-Icon
-Network Trash Folder
-Temporary Items
-
-# --- Windows ---
-$RECYCLE.BIN/
 Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-[Dd]esktop.ini
-*.lnk
-*.msix
-*.stackdump
+Desktop.ini
+$RECYCLE.BIN/
 
-# --- Linux ---
-.Trash-*
-.directory
-.fuse_hidden*
-.nfs*
-
-# --- Homebrew ---
-Brewfile.lock.json
-
-
-# ==============================================================================
-# 2. EDITORS, IDES & WORKSPACES
-# ==============================================================================
-
-# --- Visual Studio Code ---
+# Editors and IDEs
+*~
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+.idea/
+.fleet/
 .history/
-.ionide/
 .vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/*.code-snippets
-!.vscode/cspell.json
-*.vsix
 
-# --- Visual Studio (MSVC / .NET) ---
-.vs/
-.builds
-.localhistory/
-.vshistory/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-# [Bb]in/
-[Bb]uild[Ll]og.*
-[Dd]ebug/
-[Dd]ebugPS/
-[Dd]ebugPublic/
-[Ll]og/
-[Ll]ogs/
-[Oo]bj/
-[Rr]elease/
-[Rr]eleasePS/
-[Rr]eleases/
-[Tt]est[Rr]esult*/
-[Ww][Ii][Nn]32/
-bld/
-x64/
-x86/
-*.aps
-*.azurePubxml
-*.binlog
-*.cachefile
-*.coverage
-*.coveragexml
-*.e2e
-*.gpState
-*.iobj
-*.ipdb
-*.meta
-*.ncb
-*.nvuser
-*.opendb
-*.opensdf
-*.pgc
-*.pgd
-*.psess
-*.pubxml
-*.publishproj
-*.publishsettings
-*.rsp
-*.rsuser
-*.sbr
-*.scc
-*.sdf
-*.sln.docstates
-*.suo
-*.svclog
-*.tlb
-*.tlh
-*.tli
-*.tlog
-*.tmp_proj
-*.user
-*.userosscache
-*.VC.db
-*.vsp
-*.vspscc
-*.vspx
-*.vssscc
-*_i.c
-*_p.c
-*_h.h
-*_wpftmp.csproj
-BenchmarkDotNet.Artifacts/
-FakesAssemblies/
-Generated Files/
-Generated_Code/
-MigrationBackup/
-ScaffoldingReadMe.txt
-ServiceFabricBackup/
-StyleCopReport.xml
-_Chutzpah*
-_NCrunch_*
-_Pvt_Extensions
-_ReSharper*/
-*.[Rr]e[Ss]harper
-_TeamCity*
-_UpgradeReport_Files/
-.*crunch*.local.xml
-.axoCover/*
-!.axoCover/settings.json
-AutoTest.Net/
-Backup*/
-FodyWeavers.xsd
-OpenCover/
-PublishScripts/
-UpgradeLog*.htm
-UpgradeLog*.XML
-
-# --- JetBrains (IntelliJ, PyCharm, WebStorm, Android Studio, etc.) ---
-.idea_modules/
-.navigation/
-atlassian-ide-plugin.xml
-cmake-build-*/
-out/
-
-# --- Xcode & Apple Development ---
-/*.gcno
-**/DerivedData/
-**/Pods/
-**/xcuserdata
-**/xcshareddata/WorkspaceSettings.xcsettings
-*.dSYM/
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
-*.xccheckout
-*.xcscmblueprint
-
-# --- Eclipse ---
-.apt_generated/
-.apt_generated_test/
-.autotools
-.buildpath
-.cache-main
-.cproject
-.externalToolBuilders/
-.factorypath
-.loadpath
-.metadata
-.recommenders
-.recommenders/
-.scala_dependencies
-.settings/
-.springBeans
-.sts4-cache/
-.target
-.tern-project
-.texlipse
-.worksheet
-*.launch
-*.pydevproject
-*~.nib
-# bin/
-tmp/
-
-# --- Vim & Emacs ---
-[._]*.s[a-v][a-z]
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
-!*.svg
-Session.vim
-Sessionx.vim
-.netrwhist
-*~
-\#*\#
-.\#*
-/.emacs.desktop
-/.emacs.desktop.lock
-/auto/
-/elpa/
-/eshell/history
-/eshell/lastdir
-/network-security.data
-/server/
-*_archive
-*_flymake.*
-.cask/
-.dir-locals.el
-.org-id-locations
-.projectile
-*.elc
-*.rel
-auto-save-list
-flycheck_*.el
-tramp
-
-# --- Sublime Text ---
-Package Control.*
-oscrypto-ca-bundle.crt
-sftp-config.json
-sftp-config-alt*.json
-
-# --- Qt Creator ---
-*.autosave
-*.cflags
-*.config
-*.creator
-*.creator.user*
-*.cxxflags
-*.files
-*.includes
-
-# --- Xamarin Studio ---
-.mfractor/
-obj/
-*.userprefs
-
-# --- Obsidian ---
-# .obsidian/
-
-
-# ==============================================================================
-# 3. VERSION CONTROL & CODE INDEXING
-# ==============================================================================
-
-# --- Git Backups & Conflicts ---
-*.orig
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-*_BACKUP_*.txt
-*_BASE_*.txt
-*_LOCAL_*.txt
-*_REMOTE_*.txt
-
-# --- Code Indexing (CTags/GTags) ---
-GPATH
-GRTAGS
-GSYMS
-GTAGS
-TAGS
-.TAGS
-!TAGS/
-tags
-.tags
-!tags/
-
-
-# ==============================================================================
-# 4. SECRETS, KEYS & ENVIRONMENT
-# ==============================================================================
-
-.env*
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
 *.jks
+*.key
 *.keystore
-.signing/
-google-services.json
+*.p12
+*.pfx
+*.secrets.*
+.secrets/
 
+# Logs, caches, temporary files, and generated reports
+*.log
+*.pid
+*.seed
+.cache/
+.reports/
+.tmp/
+coverage/
+reports/
+temp/
+tmp/
+/docs/generated/
 
-# ==============================================================================
-# 5. COMPRESSED ARCHIVES & PACKAGES
-# ==============================================================================
-
-*.7z
-*.bz2
-*.bzip
-*.bzip2
-*.cab
-*.deb
-*.dmg
-*.egg
-*.gem
-*.gz
-*.gzip
-*.iso
-*.jar
-*.lzma
-*.msi
-*.msm
-*.msp
-*.rar
-*.rpm
-*.tar
-*.tgz
-*.txz
-*.xar
-*.xpi
-*.xz
-*.zip
-
-
-# ==============================================================================
-# 6. LANGUAGES & RUNTIMES
-# ==============================================================================
-
-# --- C / C++ ---
-.tmp_versions/
-*.a
-*.app
-*.cmd
-*.d
-*.dll
-*.dylib
-*.elf
-*.exe
-*.exp
-*.gch
-*.hex
-*.i*86
-*.idb
-*.ilk
-*.ko
-*.la
-*.lib
-*.lo
-*.lai
-*.map
-*.mod*
-*.o
-*.obj
-*.out
-*.pch
-*.pdb
-*.slo
-*.smod
-*.so
-*.so.*
-*.su
-*.x86_64
-dkms.conf
-Mkfile.old
-Module.symvers
-modules.order
-
-# --- Java ---
-*.class
-*.ctxt
-*.ear
-*.nar
-*.war
-hs_err_pid*
-replay_pid*
-
-# --- Python & Virtual Environments ---
-.Python
-.venv
+# Python
 __pycache__/
-*.pyc
-# [Bb]in
-[Ii]nclude
-# [Ll]ib
-[Ll]ib64
-[Ll]ocal
-# [Ss]cripts
-pip-selfcheck.json
-pyvenv.cfg
+*.py[cod]
+*$py.class
+.coverage
+.coverage.*
+.dmypy.json
+.hypothesis/
+.ipynb_checkpoints/
+.mypy_cache/
+.nox/
+.pyre/
+.pytest_cache/
+.pytype/
+.ruff_cache/
+.tox/
+.venv/
+coverage.xml
+htmlcov/
+pip-wheel-metadata/
+site-packages/
+venv/
 
-# --- Rust ---
-# Cargo.lock
-debug/
+# Node.js and web tooling
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/cache/
+.yarn/install-state.gz
+.yarn/unplugged/
+.next/
+.nuxt/
+.parcel-cache/
+.svelte-kit/
+.turbo/
+.vercel/
+.vite/
+.vitepress/cache/
+.vuepress/.cache/
+.vuepress/dist/
+.webpack/
+*.tsbuildinfo
+storybook-static/
+
+# Rust
 target/
-**/*.rs.bk
 
-# --- Dart & Flutter ---
+# Dart and Flutter
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
-.fvm/flutter_sdk
 .packages
-.pub/
 .pub-cache/
-coverage/
-doc/api/
-lib/generated_plugin_registrant.dart
-pubspec.lock
-*.dart.js
-*.info.json
-# *.js
-*.js_
-*.js.deps
+.pub/
+**/doc/api/
+**/ios/Flutter/.last_build_id
 
-# --- LaTeX ---
-.*.lb
-# .pdf
-.texpadtmp
-./auto/*
-*.4ct
-*.4tc
-*.acn
-*.acr
-*.alg
-*.aux
-*.auxlock
-*.bbl
-*.bcf
-*.backup
-*.blg
-*.brf
-*.cb
-*.cb2
-*.cpt
-*.cut
-*.dpth
-*.dvi
-*.eledsec*
-*.el
-*.end
-*.ent
-*.fdb_latexmk
-*.fff
-*.fls
-*.fmt
-*.fot
-*.gaux
-*.glg
-*.glo
-*.gls
-*.glsdefs
-*.glog
-*.gnuplot
-*.gtex
-*.hst
-*.idx
-*.idv
-*.ilg
-*.ind
-*.lg
-*.listing
-*.loa
-*.lod
-*.loe
-*.lof
-*.lol
-*.lot
-*.lox
-*.lpz
-*.ltjruby
-*.lzo
-*.lzs
-*.maf
-# *.md5
-*.mf
-*.mlf
-*.mlt
-*.mp
-*.mw
-*.nav
-*.newpax
-*.nlg
-*.nlo
-*.nls
-*.pax
-*.pdfpc
-*.pdfsync
-*.pre
-*.ptc
-*.pyg
-*.pytxcode
-*.rel
-*.run.xml
-*.sagetex.py
-*.sagetex.sage
-*.sagetex.scmd
-*.sav
-*.slg
-*.sls
-*.snm
-*.soc
-*.sout
-*.spl
-*.sta
-*.synctex
-*.synctex(busy)
-*.synctex.gz(busy)
-*.table
-*.tdo
-*.tfm
-*.thm
-*.toc
-*.tps
-*.trc
-*.ttt
-*.upa
-*.upb
-*.ver
-*.vrb
-*.vtc
-*.wrt
-*.xcp
-*.xdy
-*.xmpi
-*.xwm
-*.xdv
-*.xyc
-*.xyd
-*-blx.bib
-*-concordance.tex
-*-converted-to.*
-*-gnuplottex-*
-*-tags.tex
-*-tikzDictionary
-*~[0-9]*
-_minted*
-acs-*.bib
-pythontex-files-*/
-svg-inkscape/
-sympy-plots-for-*.tex/
-TSWLatexianTemp*
-
-# --- Lua ---
-*.def
-*.os
-*.src.rock
-
-# --- Perl ---
-!Build/
-/.build/
-/_eumm/
-/blib/
-# /Makefile
-/Makefile.old
-# /META.json
-# /META.yml
-/MYMETA.*
-/pm_to_blib
-*.bs
-*.pm.tdy
-_build/
-# Build
-Build.bat
-cover_db/
-inc/
-local/
-.last_cover_stats
-
-# --- Sass / Styles ---
-.sass-cache/
-
-
-# ==============================================================================
-# 7. WEB, JAVASCRIPT & FRAMEWORKS
-# ==============================================================================
-
-# --- Node.js & Package Managers ---
-.eslintcache
-.node_repl_history
-.npm
-.nyc_output
-.pnp.*
-.pnpm-debug.log*
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-.stylelintcache
-.yarn/build-state.yml
-.yarn/cache
-.yarn/unplugged
-.yarn-integrity
-*.lcov
-*.pid
-*.pid.lock
-*.seed
-*.tsbuildinfo
-bower_components
-jspm_packages/
-lib-cov
-lerna-debug.log*
-logs
-node_modules/
-npm-debug.log*
-pids
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-web_modules/
-yarn-debug.log*
-yarn-error.log*
-
-# --- Build Output & Framework Caches ---
-.cache
-.cache/
-.docusaurus
-.fusebox
-.next
-.nuxt
-.parcel-cache
-.serverless/
-.svelte-kit
-.temp
-.vuepress/dist
-.webpack/
-storybook-static/
-
-
-# ==============================================================================
-# 8. MOBILE DEVELOPMENT
-# ==============================================================================
-
-# --- Android Development ---
+# Java, Kotlin, Gradle, and Android
+.gradle/
 .cxx/
 .externalNativeBuild/
-.gradle/
+**/.gradletasknamecache
+**/local.properties
 *.aab
-*.ap_
 *.apk
 *.dex
 *.hprof
-# build/
-captures/
-gen/
-gen-external-apklibs
-local.properties
-output.json
-proguard/
-/*/build/
-/*/local.properties
-/*/out
-!/gradle/wrapper/gradle-wrapper.jar
 
-# --- React Native ---
-.buckconfig.local
-.buckd/
-.buckversion
-.expo
-.fakebuckversion
-.gradletasknamecache
-__generated__
-buck-out/
-gradle-app.setting
-!gradle-wrapper.jar
-!gradle-wrapper.properties
-!src/**/build/
+# Apple development
+DerivedData/
+*.xcarchive
+*.xcuserstate
+**/*.xcodeproj/xcuserdata/
+**/*.xcworkspace/xcuserdata/
+Pods/
 
-# --- Crashlytics ---
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+# .NET
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+[Bb]in/
+[Oo]bj/
+TestResults/
 
+# Build and package outputs
+**/build/
+**/dist/
+**/out/
+*.egg-info/
+*.whl
 
-# ==============================================================================
-# 9. DEVOPS, CLOUD & INFRASTRUCTURE
-# ==============================================================================
+# Go
+*.test
+coverage.out
 
-# --- Ansible ---
-*.retry
-
-# --- Terraform ---
-**/.terraform/*
+# Infrastructure tools
+.terraform/
 *.tfstate
 *.tfstate.*
 *.tfvars
 *.tfvars.json
-.terraformrc
-override.tf
-override.tf.json
-terraform.rc
-*_override.tf
-*_override.tf.json
-
-# --- Pulumi & Puppet ---
-.bundle/*
+!*.tfvars.example
 .pulumi/
-pkg/*
-spec/fixtures/*
-vendor/*
-!site/js/vendor/
-!site/js/vendor/three.module.min.js
-Gemfile.lock
+.serverless/
+.aws-sam/
 
-# --- SonarQube ---
-/.sonar/
+# LaTeX-generated files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.out.ps
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+_minted*/
 
-
-# ==============================================================================
-# 10. ENTERPRISE & SALESFORCE
-# ==============================================================================
-
-.deploy
-.history
-.sfdx
-*.sfuo
-apex-scripts/log
-build.properties
-# config
-# config/
-IlluminatedCloud
-Referenced Packages
-salesforce.schema
-TestCache.xml
-TestsResultsCache.xml
+# Preserve placeholders in otherwise ignored directories.
+!**/.gitkeep

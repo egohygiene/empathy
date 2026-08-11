@@ -1,3 +1,4 @@
+---
 name: "🏗️ Repository Evolution Bootstrap"
 description: Bootstrap an existing repository using the Engineering Methodology.
 title: "🏗️ Bootstrap: "
@@ -216,4 +217,3 @@ body:
         - label: Repository evolution roadmap exists.
         - label: Copilot implementation plan exists.
         - label: Repository can evolve through iterative GitHub issues.
-

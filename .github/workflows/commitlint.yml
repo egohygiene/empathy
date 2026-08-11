@@ -1,4 +1,7 @@
-name: Commit Lint
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Validate commits
 
 on:
   pull_request:
@@ -11,18 +14,24 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: "commitlint-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
 jobs:
-  lint-commits:
-    name: Validate conventional commits
+  commitlint:
+    name: Validate conventional commit messages
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout complete pull request history
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Lint commit messages
-        uses: wagoid/commitlint-github-action@v6
-        with:
-          configFile: .commitlintrc.json
+        # wagoid/commitlint-github-action v6.2.1
+        uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed
