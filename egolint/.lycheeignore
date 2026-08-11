@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
+# ==============================================================================
+# Lychee Exception Register
+# ==============================================================================
+#
+# Each entry may be a URL, glob, or regular expression.
+# Add exclusions only for destinations that are intentionally unavailable to
+# automated clients, and document why the exception exists.
+
+# LinkedIn commonly rejects automated link-checking clients.
+^https://(www\.)?linkedin\.com/

@@ -1,0 +1,72 @@
+---
+# =============================================================================
+# ⚙️ Actionlint Configuration — GitHub Actions Linting Policy
+# -----------------------------------------------------------------------------
+# Tool:
+#   https://github.com/rhysd/actionlint
+#
+# Purpose:
+#   Validate GitHub Actions workflows for:
+#     - syntax correctness
+#     - runner compatibility
+#     - environment/config usage
+#
+# Design Goals:
+#   - CI-safe (deterministic, no hidden assumptions)
+#   - Portable across repositories
+#   - Explicit policy (no implicit allowances)
+# =============================================================================
+
+
+# =============================================================================
+# 🖥️ Self-Hosted Runner Configuration
+# =============================================================================
+# Define allowed labels for self-hosted runners.
+#
+# Empty array:
+#   → No restrictions (default GitHub-hosted runners expected)
+#
+# Example:
+#   labels:
+#     - linux
+#     - x64
+#     - gpu
+# =============================================================================
+self-hosted-runner:
+  labels: []
+
+
+# =============================================================================
+# 🔐 Configuration Variables Policy
+# =============================================================================
+# Controls usage of repository/organization-level variables.
+#
+# null:
+#   → Disable validation (allow all variables)
+#
+# []:
+#   → Disallow ALL config variables (strict mode)
+#
+# ["FOO", "BAR"]:
+#   → Allow only explicitly listed variables
+# =============================================================================
+config-variables: null
+
+
+# =============================================================================
+# 📁 Path-Based Rules
+# =============================================================================
+# Apply linting overrides based on workflow file paths.
+#
+# Key:
+#   Glob pattern (relative to repository root)
+#
+# Value:
+#   Configuration overrides
+#
+# "ignore":
+#   Array of regex patterns matching error messages to suppress
+# =============================================================================
+paths:
+  .github/workflows/**/*.yml:
+    ignore: []
