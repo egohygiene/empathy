@@ -296,6 +296,7 @@ repos:
         name: "prose · detect identifier typos"
         args:
           - --config=egolint/.typos.toml
+        exclude: ^egolint/\.config/lint/prose/styles/
         stages:
           - manual
 

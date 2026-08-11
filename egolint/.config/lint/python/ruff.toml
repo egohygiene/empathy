@@ -173,11 +173,34 @@ task-tags = [
   "TRY003",
 ]
 
+"egolint/scripts/complementary_tools.py" = [
+  # The contract runner is a command-line boundary with explicit diagnostics
+  # and an intentionally branchy manifest/state-machine validator. Commands
+  # come only from the repository-owned manifest and execute without a shell.
+  "PERF401",
+  "PLR0911",
+  "PLR0912",
+  "S603",
+  "T201",
+]
+
 "egolint/tests/test_megalinter_policy.py" = [
   # The test invokes only the fixed local validator module and constructs one
   # explicit module-load failure diagnostic.
   "S603",
   "TRY003",
+]
+
+"egolint/tests/test_complementary_tools.py" = [
+  # A clear module-load diagnostic is more useful than a custom exception type
+  # in this test-only dynamic import boundary.
+  "TRY003",
+]
+
+"egolint/tests/fixtures/**/*.py" = [
+  # Cross-tool fixtures are intentionally standalone source files, not Python
+  # packages that should gain synthetic __init__.py modules.
+  "INP001",
 ]
 
 "tests/test_quality_policy.py" = [

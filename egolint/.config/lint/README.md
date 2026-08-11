@@ -10,3 +10,14 @@ linter, not redefine its policy through opaque command-line overrides.
 
 Configuration changes should include at least one matching fixture or a
 documented reason why an executable fixture is impractical.
+
+Tools outside MegaLinter are cataloged in
+[`../toolchain/complementary-tools.json`](../toolchain/complementary-tools.json).
+That manifest records native configuration paths, exact versions, applicability
+markers, positive and negative fixture evidence, direct commands, and report
+destinations. It does not replace native tool configuration.
+
+Project-aware tools require every marker group in their applicability contract.
+For example, a `pyproject.toml` without packaged `src/**/*.py` source does not
+activate deptry, Vulture, interrogate, or complexipy. Fixture paths never count
+as repository applicability.

@@ -1,0 +1,76 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "quality: fast",
+      "type": "shell",
+      "command": "task",
+      "args": ["lint:fast"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "quality: holistic",
+      "type": "shell",
+      "command": "task",
+      "args": ["lint:holistic"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "quality: complementary",
+      "type": "shell",
+      "command": "task",
+      "args": ["lint:complementary"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "quality: contracts",
+      "type": "shell",
+      "command": "task",
+      "args": ["lint:contracts"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "security: source",
+      "type": "shell",
+      "command": "task",
+      "args": ["security:source"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "security: dependencies",
+      "type": "shell",
+      "command": "task",
+      "args": ["security:dependencies"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "license: check",
+      "type": "shell",
+      "command": "task",
+      "args": ["license:check"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "SBOM: generate",
+      "type": "shell",
+      "command": "task",
+      "args": ["sbom:generate"],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "tools: versions",
+      "type": "shell",
+      "command": "task",
+      "args": ["tools:versions"],
+      "problemMatcher": []
+    }
+  ]
+}

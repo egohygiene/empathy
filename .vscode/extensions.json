@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "bufbuild.vscode-buf",
+    "charliermarsh.ruff",
+    "dbaeumer.vscode-eslint",
+    "davidanson.vscode-markdownlint",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "james-yu.latex-workshop",
+    "mkhl.shfmt",
+    "ms-azuretools.vscode-docker",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml",
+    "sqlfluff.vscode-sqlfluff",
+    "stoplight.spectral",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "timonwong.shellcheck",
+    "tombi-toml.tombi",
+    "tsandall.opa"
+  ]
+}
