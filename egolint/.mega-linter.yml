@@ -43,9 +43,27 @@ DISABLE: []
 # Disable individual linters that conflict with the canonical toolchain or are
 # intentionally handled through another quality-control mechanism.
 DISABLE_LINTERS:
+  # New v10 analyzers remain configured but disabled until their dedicated
+  # positive/negative fixtures and repository baselines have been reviewed.
+  - ACTION_ZIZMOR
+  - GO_GOLANGCI_LINT
+  - HTML_DJLINT
+  - KUBERNETES_HELM
+  - KUBERNETES_KUBECONFORM
+  - KUBERNETES_KUBESCAPE
+  - MARKDOWN_RUMDL
+  - PYTHON_NBQA_MYPY
+  - REPOSITORY_KINGFISHER
+  - REPOSITORY_SEMGREP
+  - SPELL_CODESPELL
+
   # DevSkim is currently excluded while its configuration and responsibility
   # within the wider security pipeline are reviewed.
   - REPOSITORY_DEVSKIM
+
+  # The dedicated OSV workflow owns dependency vulnerability policy, SARIF,
+  # and severity thresholds. MegaLinter must not duplicate that signal.
+  - REPOSITORY_OSV_SCANNER
 
   # Disable the JSX linter in favor of the local repository pinned ESLint v9.
   - JSX_ESLINT
@@ -248,6 +266,8 @@ FILTER_REGEX_EXCLUDE: |-
     |
     ^\.staging/
     |
+    ^egolint/tests/fixtures/negative/
+    |
     ^docs/generated/
     |
     # Local databases.
@@ -270,13 +290,11 @@ FILTER_REGEX_EXCLUDE: |-
 ACTION_ACTIONLINT_RULES_PATH: egolint/.config/lint/actions
 ACTION_ACTIONLINT_CONFIG_FILE: actionlint.yml
 
-# ==============================================================================
-# Ansible
-# ==============================================================================
-
-# ansible-lint
-# https://ansible.readthedocs.io/projects/lint/
-# https://megalinter.io/latest/descriptors/ansible_ansible_lint/
+# zizmor
+# https://zizmor.sh/
+# https://megalinter.io/10.0.0/descriptors/action_zizmor/
+ACTION_ZIZMOR_RULES_PATH: egolint/.config/lint/actions
+ACTION_ZIZMOR_CONFIG_FILE: zizmor.yml
 
 # ==============================================================================
 # Ansible
@@ -381,6 +399,14 @@ COPYPASTE_JSCPD_CONFIG_FILE: jscpd.json
 CPP_CLANG_FORMAT_RULES_PATH: egolint/.config/lint/cpp
 CPP_CLANG_FORMAT_CONFIG_FILE: .clang-format
 
+# cppcheck has no native configuration-file flag in MegaLinter. Keep its
+# deterministic safety-focused policy explicit through arguments.
+CPP_CPPCHECK_ARGUMENTS:
+  - --enable=warning,style,performance,portability
+  - --error-exitcode=1
+  - --inline-suppr
+  - --std=c++20
+
 # ==============================================================================
 # C formatting
 # ==============================================================================
@@ -390,6 +416,12 @@ CPP_CLANG_FORMAT_CONFIG_FILE: .clang-format
 # https://megalinter.io/latest/descriptors/c_clang_format/
 C_CLANG_FORMAT_RULES_PATH: egolint/.config/lint/cpp
 C_CLANG_FORMAT_CONFIG_FILE: .clang-format
+
+C_CPPCHECK_ARGUMENTS:
+  - --enable=warning,style,performance,portability
+  - --error-exitcode=1
+  - --inline-suppr
+  - --std=c17
 
 # ==============================================================================
 # CSS static analysis
@@ -432,6 +464,15 @@ EDITORCONFIG_EDITORCONFIG_CHECKER_RULES_PATH: egolint/.config/lint/editorconfig
 EDITORCONFIG_EDITORCONFIG_CHECKER_CONFIG_FILE: editorconfig-checker.json
 
 # ==============================================================================
+# Environment-file validation
+# ==============================================================================
+
+# dotenv-linter has no configuration file. The explicit check verb is supplied
+# by MegaLinter; repository-wide exclusions protect real local secret files.
+ENV_DOTENV_LINTER_FILTER_REGEX_EXCLUDE: >-
+  (^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports|tests/fixtures/negative)/
+
+# ==============================================================================
 # Gherkin feature-file linting
 # ==============================================================================
 
@@ -450,6 +491,11 @@ GHERKIN_GHERKIN_LINT_CONFIG_FILE: gherkin-lint.json
 # https://megalinter.io/latest/descriptors/go_revive/
 GO_REVIVE_RULES_PATH: egolint/.config/lint/go
 GO_REVIVE_CONFIG_FILE: revive.toml
+
+# golangci-lint is project-aware and remains disabled until a representative
+# Go module fixture proves module discovery and the existing rules baseline.
+GO_GOLANGCI_LINT_RULES_PATH: egolint/.config/lint/go
+GO_GOLANGCI_LINT_CONFIG_FILE: golangci-lint.yml
 
 # ==============================================================================
 # GraphQL schema linting
@@ -484,6 +530,14 @@ GROOVY_NPM_GROOVY_LINT_CONFIG_FILE: .groovylintrc.json
 # https://megalinter.io/latest/descriptors/html_htmlhint/
 HTML_HTMLHINT_RULES_PATH: egolint/.config/lint/html
 HTML_HTMLHINT_CONFIG_FILE: htmlhint.json
+
+# djLint has no MegaLinter config-file variable. Its template behavior is
+# therefore declared explicitly and remains disabled until template fixtures
+# are baselined against HTMLHint ownership.
+HTML_DJLINT_ARGUMENTS:
+  - --profile=jinja
+  - --indent=2
+  - --max-line-length=100
 
 # ==============================================================================
 # JavaScript and TypeScript static analysis
@@ -555,6 +609,11 @@ JSON_JSONLINT_CONFIG_FILE: jsonlint.json
 JSON_PRETTIER_RULES_PATH: egolint/.config/lint/javascript
 JSON_PRETTIER_CONFIG_FILE: prettier.config.mjs
 
+# SchemaStore-backed JSON validation shares the same v8r policy as YAML.
+JSON_V8R_RULES_PATH: egolint/.config/lint/yaml
+JSON_V8R_CONFIG_FILE: .v8rrc.yml
+JSON_V8R_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports|tests/fixtures/negative)/'
+
 # ==============================================================================
 # JSX static analysis
 # ==============================================================================
@@ -606,6 +665,11 @@ MARKDOWN_MARKDOWNLINT_RULES_PATH: egolint/.config/lint/markdown
 MARKDOWN_MARKDOWNLINT_CONFIG_FILE: .markdownlint.json
 MARKDOWN_MARKDOWNLINT_ARGUMENTS: >-
   --ignore-path egolint/.markdownlintignore
+
+# rumdl is prepared as a modern Markdown alternative but remains disabled until
+# its findings are compared with the canonical Markdownlint policy.
+MARKDOWN_RUMDL_RULES_PATH: egolint/.config/lint/markdown
+MARKDOWN_RUMDL_CONFIG_FILE: .rumdl.toml
 
 # ==============================================================================
 # PHP analysis
@@ -730,6 +794,13 @@ SPELL_CSPELL_PRE_COMMANDS:
       && test -f "egolint/node_modules/@cspell/dict-win32/cspell-ext.json"
       && test -d "egolint/node_modules/@cspell/cspell-json-reporter"
     cwd: workspace
+
+# codespell uses the same reviewed spelling policy but remains disabled until
+# its repository-wide noise baseline is classified.
+SPELL_CODESPELL_RULES_PATH: egolint/.config/lint/prose/spell
+SPELL_CODESPELL_CONFIG_FILE: .codespellrc
+SPELL_CODESPELL_FILTER_REGEX_EXCLUDE: >-
+  (^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports|tests/fixtures/negative)/
 
 # ==============================================================================
 # Infrastructure-as-code security analysis
@@ -959,6 +1030,25 @@ YAML_YAMLLINT_RULES_PATH: egolint/.config/lint/yaml
 YAML_YAMLLINT_CONFIG_FILE: .yamllint.yml
 
 # ==============================================================================
+# Kubernetes validation and security
+# ==============================================================================
+
+# Kubeconform is network-sensitive unless schemas are pre-cached. Keep the
+# strict policy ready but disabled until the fixture schema cache is defined.
+KUBERNETES_KUBECONFORM_ARGUMENTS:
+  - -strict
+  - -ignore-missing-schemas
+
+# Helm and Kubescape are project-aware and activate only when Chart.yaml is
+# present. They remain disabled until a representative chart baseline exists.
+KUBERNETES_HELM_ARGUMENTS:
+  - --strict
+
+KUBERNETES_KUBESCAPE_ARGUMENTS:
+  - --exclude-namespaces
+  - kube-system,kube-public,kube-node-lease
+
+# ==============================================================================
 # Terraform and Terragrunt analysis
 # ==============================================================================
 
@@ -975,6 +1065,10 @@ TERRAFORM_TFLINT_CONFIG_FILE: .tflint.hcl
 # Terragrunt files are operational infrastructure configuration, not generic
 # linter policy. Let Terragrunt format each actual .hcl file directly.
 TERRAFORM_TERRAGRUNT_CONFIG_FILE: LINTER_DEFAULT
+
+# terraform fmt is configuration-free and check-only under APPLY_FIXES=none.
+TERRAFORM_TERRAFORM_FMT_FILTER_REGEX_EXCLUDE: >-
+  (^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports|tests/fixtures/negative)/
 
 # ==============================================================================
 # Tekton pipeline analysis
@@ -1223,6 +1317,15 @@ PYTHON_PYRIGHT_CLI_LINT_MODE: project
 PYTHON_RUFF_RULES_PATH: egolint/.config/lint/python
 PYTHON_RUFF_CONFIG_FILE: ruff.toml
 
+# Ruff lint and format consume one canonical policy.
+PYTHON_RUFF_FORMAT_RULES_PATH: egolint/.config/lint/python
+PYTHON_RUFF_FORMAT_CONFIG_FILE: ruff.toml
+
+# nbQA forwards the central mypy policy to notebooks. It remains disabled until
+# a notebook dependency environment and negative type fixture are baselined.
+PYTHON_NBQA_MYPY_RULES_PATH: egolint/.config/lint/python
+PYTHON_NBQA_MYPY_CONFIG_FILE: .mypy.ini
+
 PYTHON_RUFF_PRE_COMMANDS:
   - command: >-
       mkdir -p
@@ -1242,6 +1345,25 @@ REPOSITORY_SECRETLINT_CONFIG_FILE: .secretlintrc.json
 REPOSITORY_SECRETLINT_ARGUMENTS: >-
   --secretlintignore
   egolint/.config/security/secretlint/.secretlintignore
+
+# ==============================================================================
+# Semantic and complementary secret analysis
+# ==============================================================================
+
+# Semgrep does not expose MegaLinter RULES_PATH/CONFIG_FILE variables. Point it
+# at a local deterministic ruleset instead of the network-backed `auto` policy.
+REPOSITORY_SEMGREP_ARGUMENTS:
+  - --config
+  - egolint/.config/security/semgrep/semgrep.yml
+  - --metrics=off
+
+# Kingfisher has no configuration-file contract. Keep live validation disabled
+# until its detector overlap with Betterleaks and Secretlint is measured.
+REPOSITORY_KINGFISHER_ARGUMENTS:
+  - --confidence=medium
+
+# OSV remains an explicit disabled ownership record. The dedicated workflow is
+# the sole executor for discovery, reporting, and vulnerability severity policy.
 
 # ==============================================================================
 # Reporters

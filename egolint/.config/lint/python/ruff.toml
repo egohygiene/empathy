@@ -41,6 +41,7 @@ extend-exclude = [
   "coverage",
   "dist",
   "generated",
+  "egolint/tests/fixtures/negative",
   "node_modules",
   "out",
   "site",
@@ -158,6 +159,25 @@ task-tags = [
   "S108",
   "S603",
   "S607",
+]
+
+"egolint/scripts/validate_megalinter_policy.py" = [
+  # The contract validator is a command-line boundary with explicit errors and
+  # a deliberately branchy schema/policy validator.
+  "PERF401",
+  "PLR0912",
+  "S108",
+  "S603",
+  "S607",
+  "T201",
+  "TRY003",
+]
+
+"egolint/tests/test_megalinter_policy.py" = [
+  # The test invokes only the fixed local validator module and constructs one
+  # explicit module-load failure diagnostic.
+  "S603",
+  "TRY003",
 ]
 
 "tests/test_quality_policy.py" = [

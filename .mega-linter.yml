@@ -1,37 +1,19 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
 
-# Empathy's active monorepo profile.
+# Empathy's canonical MegaLinter entry point.
 #
-# Egolint owns the complete cross-language policy, configuration catalog, and
-# holistic profile. This root bridge selects the deterministic subset that is
-# appropriate for every pull request while preserving the full suite at
-# `task lint:holistic`.
+# The default is intentionally holistic: local `task lint`, trusted main-branch
+# runs, and manual audits inspect every supported and baselined descriptor. The
+# explicit changed-file profile lives at `egolint/.mega-linter.fast.yml` and is
+# selected by `task lint:fast` and pull-request CI.
 EXTENDS:
   - egolint/.mega-linter.yml
 
-ENABLE_LINTERS:
-  - ACTION_ACTIONLINT
-  - BASH_EXEC
-  - BASH_SHELLCHECK
-  - BASH_SHFMT
-  - EDITORCONFIG_EDITORCONFIG_CHECKER
-  - JSON_JSONLINT
-  - JSON_PRETTIER
-  - MARKDOWN_MARKDOWNLINT
-  - PYTHON_RUFF
-  - REPOSITORY_BETTERLEAKS
-  - YAML_PRETTIER
-  - YAML_YAMLLINT
-
-# Preserve Empathy's established two-space shell formatting policy. The
-# holistic profile's language-specific rules still own all other shfmt behavior.
-BASH_SHFMT_ARGUMENTS: "--indent 2 --case-indent --space-redirects --simplify"
-
 REPORT_OUTPUT_FOLDER: .reports/megalinter
 
-# Pull-request feedback is owned by the workflow summary and uploaded artifacts
-# so the routine profile can retain read-only repository permissions.
+# Repository runs publish through workflow summaries and artifacts. Direct
+# MegaLinter comments/statuses require broader permissions and remain disabled.
 GITHUB_COMMENT_REPORTER: false
 GITHUB_STATUS_REPORTER: false
 FILEIO_REPORTER: false

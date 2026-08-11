@@ -36,12 +36,13 @@ useDefault = true
 # Those locations can contain real credentials and should remain scanned.
 
 [[allowlists]]
-description = "generated output and the reviewed Detect Secrets baseline"
+description = "generated output, reviewed baselines, and isolated negative fixtures"
 
 paths = [
   '''(?:^|/)\.cache(?:/.*)?$''',
   '''(?:^|/)\.reports(?:/.*)?$''',
   '''(?:^|/)\.secrets\.baseline$''',
+  '''^egolint/tests/fixtures/negative(?:/.*)?$''',
   '''(?:^|/)megalinter-reports(?:/.*)?$''',
 ]
 
