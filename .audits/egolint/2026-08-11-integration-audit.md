@@ -53,14 +53,14 @@ feedback without expanding ordinary pull-request permissions.
 
 The six imported `egolint/.staging/` artifacts were resolved as follows:
 
-| Staged artifact         | Resolution                                                                       |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| Actionlint policy       | Consolidated at `egolint/.config/lint/actions/actionlint.yml`                    |
-| Commitlint config       | Consolidated into an ESM universal policy plus a preserved optional emoji policy |
-| Commitlint workflow     | Merged into the root commitlint workflow with an explicit Egolint config path    |
-| MegaLinter workflow     | Merged with summary, non-empty SARIF upload, and `.reports/` artifacts           |
-| MegaLinter fix workflow | Merged into the root manual workflow with scoped fix input and review patch      |
-| Remediation checklist   | Promoted to `.audits/egolint/megalinter-remediation-checklist.md`                |
+| Staged artifact         | Resolution                                                                    |
+| ----------------------- | ----------------------------------------------------------------------------- |
+| Actionlint policy       | Consolidated at `egolint/.config/lint/actions/actionlint.yml`                 |
+| Commitlint config       | Promoted to the canonical emoji policy with an ESM compatibility entry point  |
+| Commitlint workflow     | Merged into the root commitlint workflow with an explicit Egolint config path |
+| MegaLinter workflow     | Merged with summary, non-empty SARIF upload, and `.reports/` artifacts        |
+| MegaLinter fix workflow | Merged into the root manual workflow with scoped fix input and review patch   |
+| Remediation checklist   | Promoted to `.audits/egolint/megalinter-remediation-checklist.md`             |
 
 `egolint/.staging/` is empty after promotion.
 
@@ -76,8 +76,8 @@ It is now one canonical document with current filesystem checks, Gitleaks,
 Ruff, notebook checks, Biome, Markdownlint, mdformat, ShellCheck, Hadolint,
 Bashate, schema checks, spelling checks, Commitlint, and REUSE validation.
 
-Capabilities from the historical documents that were not activated are kept in
-this deferred register:
+Capabilities from the historical documents that were not activated during the
+integration pass were kept in this deferred register:
 
 - `detect-secrets` requires a reviewed baseline before activation;
 - `addlicense` requires a single approved license-header policy;
@@ -87,22 +87,22 @@ this deferred register:
 - local LaTeX and metadata hooks referenced scripts that were not imported.
 
 The corresponding linter configurations and dependencies were not discarded.
+The policy follow-up resolves the first two items with a reviewed Detect Secrets
+baseline and one MIT/SPDX header policy shared by addlicense and REUSE.
 
 ### Commit messages
 
-The root workflow now uses
-`egolint/.config/lint/commits/commitlint.config.mjs`, which is compatible with
-the v6 Commitlint GitHub action's ESM configuration requirement. Its type list
-is the union of the staged conventional types and the imported historical type
-catalog. The former emoji-required policy remains available as
-`commitlint.emoji.config.cjs` without making emoji mandatory in CI.
+The policy follow-up makes
+`egolint/.config/lint/commits/commitlint.emoji.config.cjs` canonical locally and
+in CI. Its type list is derived from `.czrc`, so Commitizen and Commitlint cannot
+drift. `commitlint.config.mjs` remains as a compatibility entry point.
 
 ### Paths and generated output
 
 Nested rule paths were rebased for the monorepo, including MegaLinter rule
 directories, CSpell dictionaries and cache, security scanner output, native
 Taskfile tools, and CI artifacts. Active generated output uses `.reports/`.
-Legacy `reports/` ignores remain only as a migration safeguard.
+The policy follow-up removes the legacy `reports/` migration ignore entirely.
 
 The root formatter task now uses Egolint's Prettier configuration. Generated
 lockfiles, Clang's own formatter policy, and editor workspace metadata are

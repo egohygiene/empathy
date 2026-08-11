@@ -1,3 +1,6 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 from __future__ import annotations
 
 import importlib.util
@@ -14,7 +17,8 @@ MODULE_PATH = (
     / "generate_repository_intelligence.py"
 )
 SPEC = importlib.util.spec_from_file_location("repository_intelligence", MODULE_PATH)
-assert SPEC and SPEC.loader
+assert SPEC is not None
+assert SPEC.loader is not None
 repository_intelligence = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(repository_intelligence)
 

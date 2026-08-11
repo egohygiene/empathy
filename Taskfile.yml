@@ -45,6 +45,53 @@ tasks:
         "prettier@{{.PRETTIER_VERSION}}"
         --config "{{.PRETTIER_CONFIG}}" --check .
 
+  hooks:install:
+    desc: Install Husky as the repository's sole Git hook manager
+    cmds:
+      - task: egolint:hooks:install
+
+  hooks:check:
+    desc: Verify Git hook ownership and executability
+    cmds:
+      - task: egolint:hooks:check
+
+  precommit:staged:
+    desc: Run the automatic structural and security profile
+    cmds:
+      - task: egolint:precommit:staged
+
+  precommit:all:
+    desc: Run the complete manual pre-commit profile
+    cmds:
+      - task: egolint:precommit:all
+
+  commit:create:
+    desc: Create an emoji Conventional Commit with Commitizen
+    cmds:
+      - task: egolint:commit:create
+
+  commit:validate:
+    desc: Validate a commit-message file passed after --
+    cmds:
+      - task: egolint:commit:validate
+        vars:
+          CLI_ARGS: "{{.CLI_ARGS}}"
+
+  commit:test:
+    desc: Validate canonical commit-message fixtures
+    cmds:
+      - task: egolint:commit:test
+
+  secrets:check:
+    desc: Validate the reviewed scanner baseline
+    cmds:
+      - task: egolint:secrets:check
+
+  license:check:
+    desc: Validate MIT/SPDX headers and REUSE compliance
+    cmds:
+      - task: egolint:license:check
+
   lint:
     desc: Lint changed repository files through the canonical Egolint toolchain
     cmds:

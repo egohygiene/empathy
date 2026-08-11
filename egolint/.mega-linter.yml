@@ -1236,7 +1236,7 @@ PYTHON_RUFF_PRE_COMMANDS:
 # Secretlint
 # https://github.com/secretlint/secretlint
 # https://megalinter.io/latest/descriptors/repository_secretlint/
-REPOSITORY_SECRETLINT_RULES_PATH: egolint/.config/security/secretlint
+REPOSITORY_SECRETLINT_RULES_PATH: egolint/.config/security/secretlint # pragma: allowlist secret
 REPOSITORY_SECRETLINT_CONFIG_FILE: .secretlintrc.json
 
 REPOSITORY_SECRETLINT_ARGUMENTS: >-

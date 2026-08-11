@@ -6,6 +6,8 @@ version: "3"
 vars:
   EGOLINT_ROOT: "{{.ROOT_DIR}}/egolint"
   MEGALINTER_SCRIPT: "{{.EGOLINT_ROOT}}/scripts/megalinter.sh"
+  PNPM_SCRIPT: "{{.EGOLINT_ROOT}}/scripts/pnpm.sh"
+  PRE_COMMIT_SCRIPT: "{{.EGOLINT_ROOT}}/scripts/precommit.sh"
   MEGALINTER_VERSION: "v10.0.0"
   MEGALINTER_CONFIG_FILE: ".mega-linter.yml"
   MEGALINTER_HOLISTIC_CONFIG_FILE: "egolint/.mega-linter.yml"
@@ -42,8 +44,88 @@ tasks:
 
         printf '%s\n' "Installing locked workspace dependencies..."
 
-        pnpm --dir "{{.EGOLINT_ROOT}}" install \
+        sh "{{.PNPM_SCRIPT}}" --dir "{{.EGOLINT_ROOT}}" install \
           --frozen-lockfile
+
+  hooks:install:
+    desc: "Install Husky as the repository's sole Git hook manager"
+    deps:
+      - dependencies:ensure
+    cmds:
+      - 'sh "{{.PNPM_SCRIPT}}" --dir "{{.EGOLINT_ROOT}}" run hooks:install'
+
+  hooks:check:
+    desc: "Verify the canonical Husky hook path and hook executability"
+    cmds:
+      - |
+        configured_hooks_path="$(git config --get core.hooksPath || true)"
+        expected_hooks_path="egolint/.husky/_"
+
+        if test "$configured_hooks_path" != "$expected_hooks_path"; then
+          printf 'Expected core.hooksPath=%s, found %s\n' \
+            "$expected_hooks_path" \
+            "${configured_hooks_path:-<unset>}" >&2
+          exit 1
+        fi
+
+        for hook_path in \
+          "{{.EGOLINT_ROOT}}/.husky/commit-msg" \
+          "{{.EGOLINT_ROOT}}/.husky/pre-commit"; do
+          if ! test -x "$hook_path"; then
+            printf 'Hook is not executable: %s\n' "$hook_path" >&2
+            exit 1
+          fi
+        done
+
+        printf '%s\n' "Husky hook ownership is configured correctly."
+
+  precommit:staged:
+    desc: "Run the structural and security profile against staged files"
+    cmds:
+      - '"{{.PRE_COMMIT_SCRIPT}}" staged'
+
+  precommit:all:
+    desc: "Run the complete pre-commit profile against all tracked files"
+    cmds:
+      - '"{{.PRE_COMMIT_SCRIPT}}" all'
+
+  commit:create:
+    desc: "Create an emoji Conventional Commit with Commitizen"
+    deps:
+      - dependencies:ensure
+    interactive: true
+    cmds:
+      - 'sh "{{.PNPM_SCRIPT}}" --dir "{{.EGOLINT_ROOT}}" run commit'
+
+  commit:validate:
+    desc: "Validate a commit-message file passed after --"
+    deps:
+      - dependencies:ensure
+    cmds:
+      - |
+        if test -z "{{.CLI_ARGS}}"; then
+          printf '%s\n' "Usage: task commit:validate -- <commit-message-file>" >&2
+          exit 2
+        fi
+
+        sh "{{.PNPM_SCRIPT}}" --dir "{{.EGOLINT_ROOT}}" run commitlint \
+          --edit "{{.CLI_ARGS}}"
+
+  commit:test:
+    desc: "Validate the canonical valid and invalid commit-message fixtures"
+    cmds:
+      - 'sh "{{.PNPM_SCRIPT}}" --dir "{{.EGOLINT_ROOT}}" run commitlint:test'
+
+  secrets:check:
+    desc: "Scan all tracked files against the reviewed Detect Secrets baseline"
+    cmds:
+      - '"{{.PRE_COMMIT_SCRIPT}}" all detect-secrets'
+
+  license:check:
+    desc: "Verify first-party SPDX headers and repository-wide REUSE compliance"
+    cmds:
+      - '"{{.PRE_COMMIT_SCRIPT}}" all addlicense'
+      - '"{{.PRE_COMMIT_SCRIPT}}" all reuse'
 
   default:
     desc: "Run the complete MegaLinter quality suite"

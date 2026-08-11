@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 # megalinter
 #
 # A portable local wrapper around the MegaLinter container image. It is

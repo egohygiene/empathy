@@ -36,6 +36,7 @@ $RECYCLE.BIN/
 *.p12
 *.pfx
 *.secrets.*
+!.secrets.baseline
 .secrets/
 
 # Logs, caches, temporary files, and generated reports
@@ -43,11 +44,13 @@ $RECYCLE.BIN/
 *.pid
 *.seed
 .cache/
-.reports/
+.reports/*
+!.reports/README.md
 .tmp/
 coverage/
-reports/
 temp/
+temp.md
+temp.txt
 tmp/
 /docs/generated/
 

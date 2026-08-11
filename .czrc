@@ -4,13 +4,31 @@
     "config": {
         "cz-emoji": {
             "conventional": true,
-            "scopes": ["web", "api", "shared", "ui", "ci", "docs", "dx"],
+            "scopes": [
+                "api",
+                "automation",
+                "ci",
+                "commits",
+                "dependencies",
+                "docs",
+                "dx",
+                "egolint",
+                "hooks",
+                "license",
+                "quality",
+                "reports",
+                "repository",
+                "security",
+                "shared",
+                "ui",
+                "web"
+            ],
             "symbol": true,
             "skipQuestions": ["breaking"],
             "questions": {
                 "subject": "🔤 What did you do? (Start with a verb, lowercase)"
             },
-            "subjectMaxLength": 200,
+            "subjectMaxLength": 72,
             "types": [
                 {
                     "emoji": "🎨",
@@ -461,6 +479,54 @@
                     "code": ":technologist:",
                     "description": "Improve developer experience",
                     "name": "technologist"
+                },
+                {
+                    "emoji": "🧹",
+                    "code": ":broom:",
+                    "description": "Maintaining repository policy and tooling.",
+                    "name": "chore"
+                },
+                {
+                    "emoji": "✨",
+                    "code": ":sparkles:",
+                    "description": "Introducing a conventional new feature.",
+                    "name": "feat"
+                },
+                {
+                    "emoji": "♻️",
+                    "code": ":recycle:",
+                    "description": "Refactoring without changing behavior.",
+                    "name": "refactor"
+                },
+                {
+                    "emoji": "🏗️",
+                    "code": ":building_construction:",
+                    "description": "Changing build systems or external dependencies.",
+                    "name": "build"
+                },
+                {
+                    "emoji": "🤖",
+                    "code": ":robot:",
+                    "description": "Changing AI agent instructions or behavior.",
+                    "name": "agents"
+                },
+                {
+                    "emoji": "🧠",
+                    "code": ":brain:",
+                    "description": "Changing reusable skills or knowledge.",
+                    "name": "skills"
+                },
+                {
+                    "emoji": "📐",
+                    "code": ":triangular_ruler:",
+                    "description": "Adding or changing implementation specifications.",
+                    "name": "specs"
+                },
+                {
+                    "emoji": "💎",
+                    "code": ":gem:",
+                    "description": "Changing product or system design.",
+                    "name": "design"
                 },
                 {
                     "emoji": "👽️",
