@@ -1,0 +1,119 @@
+name: 📦 Changesets Release
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      (github.event.pull_request.merged == true)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for tags
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm' # ✅ still valid here
+
+      - name: 📦 Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: 📥 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🚀 Run Changeset Version
+        run: pnpm changeset version
+
+      - name: 💾 Commit and Push Version Bumps
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "chore(release): version packages"
+          git push
+
+
+
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: 🚀 Release
+
+######################################################################
+# release — automate changelog and version management with Changesets
+#
+# On every push to main, this workflow checks for pending changesets
+# and either:
+#   - Opens (or updates) a "Version Packages" pull request that bumps
+#     package versions and updates CHANGELOG.md, or
+#   - Publishes packages if the Version Packages PR was just merged.
+#
+# References:
+#   - https://pnpm.io/using-changesets
+#   - https://github.com/changesets/action
+######################################################################
+
+on:
+  push:
+    branches: [main, master]
+
+permissions: {}
+
+jobs:
+  release:
+    name: 📦 Version or Publish
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: 🧾 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📦 Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+
+      - name: 🟢 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - name: 📥 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🚀 Create Release Pull Request
+        uses: changesets/action@v1
+        with:
+          version: pnpm changelog:version
+          commit: "chore: version packages"
+          title: "chore: version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

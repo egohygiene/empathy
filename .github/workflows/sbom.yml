@@ -1,0 +1,113 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+# =============================================================================
+# CycloneDX SBOM
+# =============================================================================
+#
+# Status:
+#   Future Governance Enhancement
+#
+# Purpose:
+#   Generate a CycloneDX Software Bill of Materials and optionally scan it with
+#   Trivy for vulnerabilities and license issues.
+#
+# Notes:
+#   - Currently manual only.
+#   - Useful for dependency inventory, auditability, and supply-chain governance.
+#   - Complements Dependabot, Dependency Review, CodeQL, and license workflows.
+#
+# TODO:
+#   - Decide whether SBOM generation should run on pull requests.
+#   - Decide whether Trivy findings should fail the workflow.
+#   - Add or finalize config/trivy-cyclonedx.yaml.
+#   - Consider publishing SBOMs as release artifacts later.
+#
+# Related:
+#   - https://cyclonedx.org/
+#   - https://github.com/CycloneDX/cdxgen
+#   - https://github.com/aquasecurity/trivy
+#
+# =============================================================================
+
+name: "📦 CycloneDX SBOM"
+
+on:
+  workflow_dispatch:
+
+  # TODO: Enable after SBOM policy is finalized.
+  #
+  # pull_request:
+  #   paths:
+  #     - "package.json"
+  #     - "pnpm-lock.yaml"
+  #     - "pyproject.toml"
+  #     - "poetry.lock"
+
+  # TODO: Enable recurring audits later.
+  #
+  # schedule:
+  #   - cron: "0 4 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sbom-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sbom:
+    name: "📋 Generate and Scan SBOM"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: "📦 Checkout"
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: "🟢 Setup Node.js"
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+
+      - name: "📁 Prepare reports directory"
+        run: |
+          mkdir -p reports
+
+      - name: "📦 Generate CycloneDX SBOM"
+        run: |
+          npx --yes @cyclonedx/cdxgen@12 \
+            --output reports/sbom.cyclonedx.json
+
+      - name: "🔍 Scan SBOM with Trivy"
+        uses: aquasecurity/trivy-action@v0.35.0
+        with:
+          scan-type: sbom
+          scan-ref: reports/sbom.cyclonedx.json
+          trivy-config: config/trivy-cyclonedx.yaml
+
+      - name: "📤 Upload SBOM artifact"
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: sbom-cyclonedx
+          path: reports/sbom.cyclonedx.json
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: "📊 Summary"
+        if: always()
+        run: |
+          {
+            printf "## 📦 CycloneDX SBOM\n\n"
+            printf "Generated a CycloneDX SBOM for repository dependencies.\n\n"
+            printf "Artifact:\n\n"
+            printf "- \`sbom-cyclonedx\`\n\n"
+            printf "Current status:\n\n"
+            printf "- Manual execution only.\n"
+            printf "- Not yet enforced on pull requests.\n"
+            printf "- Not yet attached to releases.\n"
+          } >> "${GITHUB_STEP_SUMMARY}"

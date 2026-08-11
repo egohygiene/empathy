@@ -1,0 +1,111 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+# =============================================================================
+# OpenSSF Scorecard
+# =============================================================================
+#
+# Status:
+#   Future Governance Enhancement
+#
+# Purpose:
+#   Evaluate repository security posture and supply-chain security practices
+#   using the OpenSSF Scorecard project.
+#
+# Notes:
+#   - Provides a security health score for the repository.
+#   - Evaluates security best practices.
+#   - Complements CodeQL, Dependency Review, Gitleaks, and SBOM workflows.
+#
+# References:
+#   - https://github.com/ossf/scorecard
+#   - https://securityscorecards.dev/
+#
+# Future Integrations:
+#   - Security Dashboard
+#   - Governance Reporting
+#   - Repository Quality Audits
+#
+# TODO:
+#   - Determine minimum acceptable score.
+#   - Evaluate scheduled execution cadence.
+#   - Consider publishing score history over time.
+#
+# =============================================================================
+
+name: "🛡️ OpenSSF Scorecard"
+
+on:
+  workflow_dispatch:
+
+  # TODO: Enable recurring audits when governance stack matures.
+  #
+  # schedule:
+  #   - cron: "0 5 * * 1"
+
+permissions:
+  security-events: write
+  id-token: write
+  contents: read
+  actions: read
+
+concurrency:
+  group: scorecard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scorecard:
+    name: "🛡️ Repository Security Posture"
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+      id-token: write
+      contents: read
+      actions: read
+
+    steps:
+      - name: "📦 Checkout"
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: "🛡️ Run OpenSSF Scorecard"
+        uses: ossf/scorecard-action@v2.4.0
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          publish_results: false
+
+      - name: "📤 Upload SARIF"
+        if: always()
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: results.sarif
+          category: ossf-scorecard
+
+      - name: "📦 Upload Results"
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: ossf-scorecard-results
+          path: results.sarif
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: "📊 Summary"
+        if: always()
+        run: |
+          {
+            printf "## 🛡️ OpenSSF Scorecard\n\n"
+            printf "Purpose:\n\n"
+            printf "- Evaluate repository security posture.\n"
+            printf "- Audit supply-chain security practices.\n"
+            printf "- Provide actionable governance recommendations.\n\n"
+            printf "Current status:\n\n"
+            printf "- Manual execution only.\n"
+            printf "- Not yet enforced.\n"
+            printf "- Not yet scheduled.\n\n"
+            printf "Artifact:\n\n"
+            printf "- \`ossf-scorecard-results\`\n"
+          } >> "${GITHUB_STEP_SUMMARY}"

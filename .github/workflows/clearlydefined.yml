@@ -1,0 +1,162 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+# =============================================================================
+# ClearlyDefined License Audit
+# =============================================================================
+#
+# Status:
+#   Future Governance Enhancement
+#
+# Purpose:
+#   Evaluate dependency license metadata quality using ClearlyDefined.
+#
+# Notes:
+#   - ClearlyDefined is NOT a security scanner.
+#   - ClearlyDefined is NOT a license compliance engine.
+#   - ClearlyDefined evaluates the quality and completeness of license
+#     metadata for dependencies.
+#   - Useful for SBOM, compliance, and open source governance initiatives.
+#
+# Related:
+#   - https://clearlydefined.io
+#   - https://github.com/clearlydefined
+#
+# Future Integrations:
+#   - Scancode Toolkit
+#   - SBOM Generation
+#   - License Compliance
+#   - REUSE Compliance
+#
+# TODO:
+#   - Evaluate integration with Scancode Toolkit.
+#   - Determine minimum acceptable clarity score.
+#   - Consider scheduled execution after governance stack matures.
+#
+# =============================================================================
+
+name: "📜 ClearlyDefined Audit"
+
+on:
+  workflow_dispatch:
+
+  # TODO: Enable scheduled audits in the future.
+  #
+  # schedule:
+  #   - cron: "0 4 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: "📜 License Metadata Audit"
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      # ----------------------------------------------------------------------
+      # Repository
+      # ----------------------------------------------------------------------
+
+      - name: "📦 Checkout"
+        uses: actions/checkout@v6
+
+      # ----------------------------------------------------------------------
+      # Python
+      # ----------------------------------------------------------------------
+
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # ----------------------------------------------------------------------
+      # Dependencies
+      # ----------------------------------------------------------------------
+
+      - name: "📦 Install dependencies"
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      # ----------------------------------------------------------------------
+      # Audit
+      # ----------------------------------------------------------------------
+
+      - name: "📜 Evaluate dependency metadata"
+        run: |
+          python <<'PYTHON'
+          import json
+          import pathlib
+          import requests
+
+          package_json = pathlib.Path("package.json")
+
+          if not package_json.exists():
+              print("No package.json found.")
+              raise SystemExit(0)
+
+          data = json.loads(package_json.read_text())
+
+          dependencies = {
+              **data.get("dependencies", {}),
+              **data.get("devDependencies", {}),
+          }
+
+          print(f"Found {len(dependencies)} dependencies")
+
+          evaluated = 0
+
+          for dependency_name in sorted(dependencies):
+              print(f"\nChecking: {dependency_name}")
+
+              try:
+                  response = requests.get(
+                      f"https://api.clearlydefined.io/definitions/npm/npmjs/-/{dependency_name}",
+                      timeout=10,
+                  )
+
+                  if response.status_code == 200:
+                      print("  ✓ Metadata available")
+                  elif response.status_code == 404:
+                      print("  ⚠ No ClearlyDefined definition found")
+                  else:
+                      print(
+                          f"  ⚠ Unexpected response: {response.status_code}"
+                      )
+
+                  evaluated += 1
+
+              except Exception as exc:
+                  print(f"  ⚠ Error: {exc}")
+
+          print(f"\nEvaluated {evaluated} dependencies")
+          PYTHON
+
+      # ----------------------------------------------------------------------
+      # Summary
+      # ----------------------------------------------------------------------
+
+      - name: "📊 Summary"
+        if: always()
+        run: |
+          {
+            echo "## 📜 ClearlyDefined Audit"
+            echo ""
+            echo "Purpose:"
+            echo ""
+            echo "- Evaluates dependency license metadata quality."
+            echo "- Supports future governance initiatives."
+            echo "- Complements SBOM and license tooling."
+            echo ""
+            echo "This workflow is currently informational only."
+            echo ""
+            echo "Future integrations:"
+            echo ""
+            echo "- Scancode Toolkit"
+            echo "- SBOM Generation"
+            echo "- License Compliance"
+            echo "- REUSE Compliance"
+          } >> "${GITHUB_STEP_SUMMARY}"

@@ -1,0 +1,125 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+# =============================================================================
+# Gitleaks Secret Scanning
+# =============================================================================
+#
+# Status:
+#   Future Governance Enhancement
+#
+# Purpose:
+#   Detect hardcoded secrets, tokens, credentials, and sensitive values in the
+#   repository.
+#
+# Notes:
+#   - Currently disabled for automatic enforcement.
+#   - Can be run manually with workflow_dispatch.
+#   - Generates a SARIF report for GitHub code scanning.
+#   - Does not require a baseline file.
+#
+# TODO:
+#   - Add a repository-level Gitleaks configuration if needed.
+#   - Enable pull_request scanning when ready to enforce secret detection.
+#   - Enable scheduled scanning when the governance stack matures.
+#
+# Related:
+#   - https://github.com/gitleaks/gitleaks
+#   - https://github.com/gitleaks/gitleaks-action
+#
+# =============================================================================
+
+name: "🔐 Gitleaks"
+
+on:
+  workflow_dispatch:
+
+  # TODO: Enable when ready to enforce secret scanning on pull requests.
+  #
+  # pull_request:
+  #   branches:
+  #     - main
+  #     - master
+
+  # TODO: Enable when ready to scan default branches automatically.
+  #
+  # push:
+  #   branches:
+  #     - main
+  #     - master
+
+  # TODO: Enable when ready for recurring secret audits.
+  #
+  # schedule:
+  #   - cron: "0 4 * * 1"
+
+permissions:
+  contents: read
+  security-events: write
+
+concurrency:
+  group: gitleaks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    name: "🔐 Scan Secrets"
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: "📦 Checkout"
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: "📁 Prepare reports directory"
+        run: |
+          mkdir -p reports
+
+      - name: "🔐 Run Gitleaks"
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: >-
+            detect
+            --source .
+            --report-format sarif
+            --report-path reports/gitleaks.sarif
+            --redact
+
+      - name: "📤 Upload SARIF"
+        if: always()
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: reports/gitleaks.sarif
+          category: gitleaks
+
+      - name: "📦 Upload report artifact"
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: gitleaks-report
+          path: reports/gitleaks.sarif
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: "📊 Summary"
+        if: always()
+        run: |
+          {
+            printf "## 🔐 Gitleaks Secret Scanning\n\n"
+            printf "Purpose:\n\n"
+            printf "- Detect hardcoded secrets and credentials.\n"
+            printf "- Produce SARIF output for GitHub code scanning.\n"
+            printf "- Support future security governance.\n\n"
+            printf "Current status:\n\n"
+            printf "- Manual execution only.\n"
+            printf "- Not yet enforced on pull requests.\n"
+            printf "- Not yet scheduled.\n\n"
+            printf "Report artifact:\n\n"
+            printf "- \`gitleaks-report\`\n"
+          } >> "${GITHUB_STEP_SUMMARY}"

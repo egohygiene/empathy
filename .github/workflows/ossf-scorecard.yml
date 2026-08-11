@@ -1,0 +1,117 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "🛡️ OpenSSF Scorecard"
+
+# =============================================================================
+# OpenSSF Scorecard
+# =============================================================================
+#
+# Purpose:
+#   Evaluate repository security posture and supply-chain security practices
+#   using the OpenSSF Scorecard project.
+#
+# Notes:
+#   - Provides a security health score for the repository.
+#   - Evaluates security best practices across multiple categories.
+#   - Publishes results to GitHub Security Code Scanning.
+#   - Complements CodeQL, Dependency Review, and OSV scanning.
+#
+# Score Categories Evaluated:
+#   - Branch protection
+#   - Code review practices
+#   - CI best practices
+#   - Vulnerability disclosure
+#   - Maintained status
+#   - Pinned dependencies
+#   - Token permissions
+#   - SAST tooling
+#   - And more...
+#
+# References:
+#   - https://github.com/ossf/scorecard
+#   - https://securityscorecards.dev/
+#   - https://github.com/marketplace/actions/ossf-scorecard-action
+#
+# =============================================================================
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+  schedule:
+    # Run every Monday at 05:00 UTC to catch drift in repository security posture.
+    - cron: "0 5 * * 1"
+
+  workflow_dispatch:
+
+permissions:
+  security-events: write
+  id-token: write
+  contents: read
+  actions: read
+
+concurrency:
+  group: scorecard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scorecard:
+    name: "🛡️ Repository Security Posture"
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+      id-token: write
+      contents: read
+      actions: read
+
+    steps:
+      - name: "📦 Checkout"
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: "🛡️ Run OpenSSF Scorecard"
+        uses: ossf/scorecard-action@v2.4.3
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          publish_results: true
+
+      - name: "📤 Upload SARIF to GitHub Security"
+        if: always()
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: results.sarif
+          category: ossf-scorecard
+
+      - name: "📦 Upload Results Artifact"
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ossf-scorecard-results
+          path: results.sarif
+          retention-days: 90
+          if-no-files-found: error
+
+      - name: "📊 Write Summary"
+        if: always()
+        run: |
+          {
+            printf "## 🛡️ OpenSSF Scorecard\n\n"
+            printf "Evaluated repository security posture across multiple categories.\n\n"
+            printf "Results are published to GitHub Security Code Scanning and available\n"
+            printf "at https://securityscorecards.dev/viewer/?uri=github.com/%s\n\n" "${GITHUB_REPOSITORY}"
+            printf "### What Is Evaluated\n\n"
+            printf "- Branch protection and code review practices\n"
+            printf "- CI/CD configuration and best practices\n"
+            printf "- Dependency pinning and update automation\n"
+            printf "- Token permissions and least-privilege enforcement\n"
+            printf "- SAST tooling and vulnerability disclosure\n"
+            printf "- Project maintenance and contributor activity\n\n"
+            printf "### Artifact\n\n"
+            printf "- \`ossf-scorecard-results\` (SARIF, 90-day retention)\n"
+          } >> "${GITHUB_STEP_SUMMARY}"

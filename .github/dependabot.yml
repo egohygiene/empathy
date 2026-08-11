@@ -1,0 +1,144 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/dependabot-2.0.json
+
+# =============================================================================
+# Dependabot Configuration
+# =============================================================================
+#
+# Purpose:
+#   Keep repository automation and root development tooling up to date.
+#
+# Maintains:
+#   - GitHub Actions workflows
+#   - Node.js / pnpm dependencies from package.json
+#   - Python / Poetry dependencies from pyproject.toml
+#
+# Notes:
+#   - Docker updates are intentionally excluded for now.
+#   - Security updates are still handled by GitHub Dependabot security alerts.
+#   - Version update pull requests are grouped to reduce PR noise.
+#
+# Reference:
+#   https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+#
+# =============================================================================
+
+version: 2
+
+updates:
+  # ---------------------------------------------------------------------------
+  # 🤖 GitHub Actions
+  # ---------------------------------------------------------------------------
+  - package-ecosystem: "github-actions"
+    directory: "/"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+
+    commit-message:
+      prefix: "ci"
+      prefix-development: "ci"
+      include: "scope"
+
+    labels:
+      - "dependencies"
+      - "github-actions"
+      - "automation"
+
+    open-pull-requests-limit: 5
+
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  # ---------------------------------------------------------------------------
+  # 📦 Node.js / pnpm
+  # ---------------------------------------------------------------------------
+  - package-ecosystem: "npm"
+    directory: "/"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:15"
+      timezone: "UTC"
+
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "node"
+      - "npm"
+      - "pnpm"
+
+    open-pull-requests-limit: 5
+
+    versioning-strategy: "increase-if-necessary"
+
+    cooldown:
+      default-days: 3
+      semver-major-days: 14
+      semver-minor-days: 3
+      semver-patch-days: 1
+
+    groups:
+      npm-production-dependencies:
+        dependency-type: "production"
+        patterns:
+          - "*"
+
+      npm-development-dependencies:
+        dependency-type: "development"
+        patterns:
+          - "*"
+
+  # ---------------------------------------------------------------------------
+  # 🐍 Python / Poetry
+  # ---------------------------------------------------------------------------
+  - package-ecosystem: "pip"
+    directory: "/"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:30"
+      timezone: "UTC"
+
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+
+    labels:
+      - "dependencies"
+      - "python"
+      - "poetry"
+
+    open-pull-requests-limit: 5
+
+    versioning-strategy: "increase-if-necessary"
+
+    cooldown:
+      default-days: 3
+      semver-major-days: 14
+      semver-minor-days: 3
+      semver-patch-days: 1
+
+    groups:
+      python-production-dependencies:
+        dependency-type: "production"
+        patterns:
+          - "*"
+
+      python-development-dependencies:
+        dependency-type: "development"
+        patterns:
+          - "*"

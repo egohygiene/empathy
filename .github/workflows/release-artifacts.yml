@@ -1,0 +1,313 @@
+name: Release Artifacts
+
+# Triggered when a versioned release is published (tag starting with "v").
+# Builds all four platform targets in parallel, then attaches the resulting
+# artifacts to the release. Artifacts are built from the exact tagged commit
+# so release outputs are deterministic and traceable.
+#
+# Job dependency graph:
+#   build-android ──┐
+#   build-ios ──────┤
+#   build-web ──────┼── attach-artifacts
+#   build-linux ────┘
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: read
+
+jobs:
+  build-android:
+    name: Build Android
+    if: startsWith(github.event.release.tag_name, 'v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: apps/egohygiene
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.release.tag_name }}
+          persist-credentials: false
+
+      - name: Setup Flutter
+        uses: ./.github/actions/flutter-setup
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('apps/egohygiene/android/gradle/wrapper/gradle-wrapper.properties', 'apps/egohygiene/android/**/*.gradle.kts') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Generate Code
+        uses: ./.github/actions/flutter-generate
+
+      - name: Validate Android signing secrets
+        env:
+          ANDROID_RELEASE_KEYSTORE_BASE64: ${{ secrets.ANDROID_RELEASE_KEYSTORE_BASE64 }}
+          ANDROID_RELEASE_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEYSTORE_PASSWORD }}
+          ANDROID_RELEASE_KEY_ALIAS: ${{ secrets.ANDROID_RELEASE_KEY_ALIAS }}
+          ANDROID_RELEASE_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=0
+          if [ -z "${ANDROID_RELEASE_KEYSTORE_BASE64:-}" ]; then
+            echo '::error::Missing required secret: ANDROID_RELEASE_KEYSTORE_BASE64'
+            missing=1
+          fi
+          if [ -z "${ANDROID_RELEASE_KEYSTORE_PASSWORD:-}" ]; then
+            echo '::error::Missing required secret: ANDROID_RELEASE_KEYSTORE_PASSWORD'
+            missing=1
+          fi
+          if [ -z "${ANDROID_RELEASE_KEY_ALIAS:-}" ]; then
+            echo '::error::Missing required secret: ANDROID_RELEASE_KEY_ALIAS'
+            missing=1
+          fi
+          if [ -z "${ANDROID_RELEASE_KEY_PASSWORD:-}" ]; then
+            echo '::error::Missing required secret: ANDROID_RELEASE_KEY_PASSWORD'
+            missing=1
+          fi
+          if [ "$missing" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Reconstruct Android release keystore
+        env:
+          ANDROID_RELEASE_KEYSTORE_BASE64: ${{ secrets.ANDROID_RELEASE_KEYSTORE_BASE64 }}
+          ANDROID_RELEASE_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEYSTORE_PASSWORD }}
+          ANDROID_RELEASE_KEY_ALIAS: ${{ secrets.ANDROID_RELEASE_KEY_ALIAS }}
+          ANDROID_RELEASE_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          key_dir="$RUNNER_TEMP/android-signing"
+          mkdir -p "$key_dir"
+          echo "$ANDROID_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$key_dir/release.keystore"
+          cat > "$key_dir/key.properties" <<EOF
+          storePassword=$ANDROID_RELEASE_KEYSTORE_PASSWORD
+          keyPassword=$ANDROID_RELEASE_KEY_PASSWORD
+          keyAlias=$ANDROID_RELEASE_KEY_ALIAS
+          storeFile=$key_dir/release.keystore
+          EOF
+
+      - name: Build Android APK
+        env:
+          ANDROID_KEY_PROPERTIES_PATH: ${{ runner.temp }}/android-signing/key.properties
+        run: flutter build apk --release
+
+      - name: Verify Android APK signature identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          apk_path='build/app/outputs/flutter-apk/app-release.apk'
+          apksigner="$(find "${ANDROID_HOME}/build-tools" -name apksigner -type f | LC_ALL=C sort | tail -n 1)"
+          if [ -z "$apksigner" ]; then
+            echo '::error::Unable to locate apksigner in Android SDK build-tools.'
+            exit 1
+          fi
+          "$apksigner" verify --verbose "$apk_path"
+
+      - name: Generate Android artifact checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-assets
+          sha256sum build/app/outputs/flutter-apk/app-release.apk > \
+            release-assets/egohygiene-${{ github.event.release.tag_name }}.apk.sha256
+
+      - name: Stage Android Artifact
+        shell: bash
+        run: |
+          mkdir -p release-assets
+          cp build/app/outputs/flutter-apk/app-release.apk \
+            release-assets/egohygiene-${{ github.event.release.tag_name }}.apk
+
+      - name: Cleanup temporary Android signing files
+        if: always()
+        shell: bash
+        run: rm -rf "$RUNNER_TEMP/android-signing"
+
+      - name: Upload Android Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-android
+          path: |
+            apps/egohygiene/release-assets/egohygiene-${{ github.event.release.tag_name }}.apk
+            apps/egohygiene/release-assets/egohygiene-${{ github.event.release.tag_name }}.apk.sha256
+
+  build-web:
+    name: Build Web
+    if: startsWith(github.event.release.tag_name, 'v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: apps/egohygiene
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.release.tag_name }}
+          persist-credentials: false
+
+      - name: Setup Flutter
+        uses: ./.github/actions/flutter-setup
+
+      - name: Generate Code
+        uses: ./.github/actions/flutter-generate
+
+      - name: Build Web
+        run: flutter build web --release
+
+      - name: Stage Web Artifact
+        shell: bash
+        run: |
+          mkdir -p release-assets
+          tar -czf release-assets/egohygiene-web-${{ github.event.release.tag_name }}.tar.gz \
+            -C build/web .
+
+      - name: Upload Web Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-web
+          path: apps/egohygiene/release-assets/egohygiene-web-${{ github.event.release.tag_name }}.tar.gz
+
+  build-ios:
+    name: Build iOS
+    if: startsWith(github.event.release.tag_name, 'v')
+    runs-on: macos-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: apps/egohygiene
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.release.tag_name }}
+          persist-credentials: false
+
+      - name: Setup Flutter
+        uses: ./.github/actions/flutter-setup
+
+      - name: Generate Code
+        uses: ./.github/actions/flutter-generate
+
+      - name: Install CocoaPods dependencies
+        shell: bash
+        run: |
+          cd ios
+          pod install --repo-update
+
+      - name: Build iOS (no code signing)
+        run: flutter build ios --release --no-codesign
+
+      - name: Stage iOS Artifact
+        shell: bash
+        run: |
+          mkdir -p release-assets
+          tar -czf release-assets/egohygiene-ios-${{ github.event.release.tag_name }}.tar.gz \
+            -C build/ios/iphoneos Runner.app
+
+      - name: Upload iOS Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-ios
+          path: apps/egohygiene/release-assets/egohygiene-ios-${{ github.event.release.tag_name }}.tar.gz
+
+  build-linux:
+    name: Build Linux
+    if: startsWith(github.event.release.tag_name, 'v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: apps/egohygiene
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.release.tag_name }}
+          persist-credentials: false
+
+      - name: Setup Flutter
+        uses: ./.github/actions/flutter-setup
+
+      - name: Install Linux Build Dependencies
+        uses: ./.github/actions/install-linux-build-deps
+
+      - name: Generate Code
+        uses: ./.github/actions/flutter-generate
+
+      - name: Build Linux
+        run: flutter build linux --release
+
+      - name: Stage Linux Artifact
+        shell: bash
+        run: |
+          mkdir -p release-assets
+          tar -czf release-assets/egohygiene-linux-${{ github.event.release.tag_name }}.tar.gz \
+            -C build/linux/x64/release/bundle .
+
+      - name: Upload Linux Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-linux
+          path: apps/egohygiene/release-assets/egohygiene-linux-${{ github.event.release.tag_name }}.tar.gz
+
+  attach-artifacts:
+    name: Attach Artifacts to Release
+    needs: [build-android, build-ios, build-web, build-linux]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download Android artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-android
+          path: release-assets/
+
+      - name: Download iOS artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-ios
+          path: release-assets/
+
+      - name: Download Web artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-web
+          path: release-assets/
+
+      - name: Download Linux artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-linux
+          path: release-assets/
+
+      - name: Attach Artifacts to Release
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
+        with:
+          tag_name: ${{ github.event.release.tag_name }}
+          files: |
+            release-assets/egohygiene-${{ github.event.release.tag_name }}.apk
+            release-assets/egohygiene-${{ github.event.release.tag_name }}.apk.sha256
+            release-assets/egohygiene-ios-${{ github.event.release.tag_name }}.tar.gz
+            release-assets/egohygiene-web-${{ github.event.release.tag_name }}.tar.gz
+            release-assets/egohygiene-linux-${{ github.event.release.tag_name }}.tar.gz
+          overwrite_files: true

@@ -1,0 +1,53 @@
+name: Setup Python + Poetry
+description: >
+  Sets up Python, installs Poetry, restores the Poetry virtualenv cache, and
+  installs dependencies for a repository-local Poetry project.
+
+inputs:
+  python-version:
+    description: Python version to install
+    required: false
+    default: '3.12'
+  working-directory:
+    description: Path to the Poetry project root (relative to repository root)
+    required: true
+  cache-path:
+    description: Path to the Poetry virtualenv cache directory
+    required: true
+  cache-dependency-path:
+    description: Dependency lockfile path used to derive the cache key
+    required: true
+  cache-key-prefix:
+    description: Stable cache key prefix for the project
+    required: true
+  install-args:
+    description: Additional arguments passed to `poetry install`
+    required: false
+    default: '--no-interaction'
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install Poetry
+      shell: bash
+      run: pipx install poetry
+
+    - name: Cache Poetry virtualenv
+      uses: actions/cache@v4
+      with:
+        path: ${{ inputs.cache-path }}
+        key: ${{ runner.os }}-${{ inputs.cache-key-prefix }}-${{ hashFiles(inputs.cache-dependency-path) }}
+        restore-keys: |
+          ${{ runner.os }}-${{ inputs.cache-key-prefix }}-
+
+    - name: Install dependencies
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        poetry config virtualenvs.in-project true
+        poetry install ${{ inputs.install-args }}

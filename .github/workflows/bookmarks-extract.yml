@@ -1,0 +1,140 @@
+name: Bookmarks Extract
+
+on:
+  workflow_dispatch:
+    inputs:
+      bookmark_file:
+        description: Path to the bookmark file to process (relative to repo root)
+        required: false
+        default: ''
+      dry_run:
+        description: Run in dry-run mode (no files written)
+        type: boolean
+        required: false
+        default: true
+      check_liveness:
+        description: Check URL liveness (slow for large collections)
+        type: boolean
+        required: false
+        default: false
+      limit:
+        description: Maximum number of bookmarks to extract (0 = no limit)
+        required: false
+        default: '0'
+
+concurrency:
+  group: bookmarks-extract
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Bookmarks Pipeline
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Set up Python toolchain
+        uses: ./.github/actions/python-poetry-setup
+        with:
+          working-directory: publishing/tools/bookmarks
+          cache-path: publishing/tools/bookmarks/.venv
+          cache-dependency-path: publishing/tools/bookmarks/poetry.lock
+          cache-key-prefix: poetry-bookmarks
+
+      - name: Run tests
+        shell: bash
+        working-directory: publishing/tools/bookmarks
+        run: poetry run pytest tests/ -v
+
+  extract:
+    name: Extract Bookmarks Knowledge
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'workflow_dispatch' && inputs.bookmark_file != ''
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python toolchain
+        uses: ./.github/actions/python-poetry-setup
+        with:
+          working-directory: publishing/tools/bookmarks
+          cache-path: publishing/tools/bookmarks/.venv
+          cache-dependency-path: publishing/tools/bookmarks/poetry.lock
+          cache-key-prefix: poetry-bookmarks
+
+      - name: Create backup
+        if: ${{ !inputs.dry_run }}
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        run: |
+          poetry run --directory publishing/tools/bookmarks bookmarks backup \
+            "${{ inputs.bookmark_file }}" \
+            --backup-dir publishing/sources/bookmarks
+
+      - name: Analyze bookmarks
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        env:
+          BOOKMARK_FILE: ${{ inputs.bookmark_file }}
+          CHECK_LIVENESS: ${{ inputs.check_liveness }}
+        run: |
+          cmd=(
+            poetry run --directory publishing/tools/bookmarks bookmarks analyze
+            "$BOOKMARK_FILE"
+            --output-json publishing/sources/bookmarks/analysis.json
+          )
+          if [ "$CHECK_LIVENESS" = 'true' ]; then
+            cmd+=(--check-liveness)
+          fi
+          "${cmd[@]}"
+
+      - name: Generate organization proposal
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        env:
+          BOOKMARK_FILE: ${{ inputs.bookmark_file }}
+        run: |
+          poetry run --directory publishing/tools/bookmarks bookmarks organize \
+            "$BOOKMARK_FILE" \
+            --output-proposal publishing/sources/bookmarks/proposal.yaml
+
+      - name: Extract knowledge
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        env:
+          BOOKMARK_FILE: ${{ inputs.bookmark_file }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          LIMIT: ${{ inputs.limit }}
+        run: |
+          cmd=(
+            poetry run --directory publishing/tools/bookmarks bookmarks extract
+            "$BOOKMARK_FILE"
+            --output-dir publishing/sources/bookmarks
+          )
+          if [ "$DRY_RUN" = 'true' ]; then
+            cmd+=(--dry-run)
+          fi
+          if [ "$LIMIT" != '0' ]; then
+            cmd+=(--limit "$LIMIT")
+          fi
+          "${cmd[@]}"
+
+      - name: Commit extracted knowledge
+        if: ${{ !inputs.dry_run }}
+        uses: ./.github/actions/commit-if-changed
+        with:
+          pathspec: publishing/sources/bookmarks/
+          commit-message: 'docs(bookmarks): 📚 extract knowledge from bookmark collection [skip ci]'

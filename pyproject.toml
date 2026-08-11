@@ -1,0 +1,79 @@
+# pyproject.toml
+# https://python-poetry.org/docs/pyproject/
+[project]
+name = "szmyty"
+version = "0.0.1"
+description = "Alan Szmyt's GitHub profile and reusable template assets."
+license-files = [
+  "LICENSE*",
+  "LICENCE*",
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+authors = [
+    { name = "Alan Szmyt", email = "14865041+szmyty@users.noreply.github.com" },
+]
+maintainers = [
+    { name = "Alan Szmyt", email = "14865041+szmyty@users.noreply.github.com" },
+]
+keywords = [
+  "github-profile",
+  "templates",
+  "automation",
+  "documentation"
+]
+dynamic = [ "classifiers" ]
+
+[project.urls]
+homepage = "https://github.com/szmyty"
+repository = "https://github.com/szmyty/szmyty"
+"Bug Tracker" = "https://github.com/szmyty/szmyty/issues"
+
+[tool.poetry]
+requires-poetry = ">=2.0"
+package-mode = false
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+click = ">=8.1,<9.0"
+jinja2 = ">=3.1,<4.0"
+pydantic = ">=2.0,<3.0"
+pyyaml = ">=6.0,<7.0"
+
+[tool.poetry.scripts]
+profile-builder = "tools.profile_builder.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.lint.dependencies]
+ruff = ">=0.11.0,<0.12.0"
+yamllint = ">=1.35.0,<2.0.0"
+codespell = ">=2.4.0,<3.0.0"
+
+[tool.poetry.group.security.dependencies]
+pip-audit = ">=2.9.0,<3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=4.0.0,<5.0.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = ">=8.0,<9.0"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]

@@ -1,0 +1,287 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: "📝 Create GitHub Release"
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  create-release:
+    name: "📋 Generate Release Notes"
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write       # Required for creating releases
+      actions: read         # Required for downloading artifacts
+
+    steps:
+      # -------------------------------------------------------------
+      # 1. Checkout the repository at the tag
+      # -------------------------------------------------------------
+      - name: 🛎️ Checkout code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # -------------------------------------------------------------
+      # 2. Extract version from tag
+      # -------------------------------------------------------------
+      - name: 🏷️ Extract version from tag
+        id: version
+        run: |
+          # Get the tag name (e.g., "0.1.5" or "v0.1.5")
+          TAG_NAME="${GITHUB_REF#refs/tags/}"
+          echo "tag=$TAG_NAME" >> "$GITHUB_OUTPUT"
+
+          # Remove 'v' prefix if present
+          VERSION="${TAG_NAME#v}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+          echo "📌 Tag: $TAG_NAME"
+          echo "📌 Version: $VERSION"
+
+      # -------------------------------------------------------------
+      # 3. Extract changelog section for this version
+      # -------------------------------------------------------------
+      - name: 📝 Extract changelog section
+        id: changelog
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+
+          # Check if CHANGELOG.md exists
+          if [ ! -f CHANGELOG.md ]; then
+            echo "⚠️ CHANGELOG.md not found, using default release notes"
+            echo "body=Release $VERSION" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Extract the section for this version using awk
+          # This extracts from "## VERSION" to the next "## " line
+          CHANGELOG_SECTION=$(awk -v version="$VERSION" '
+            /^## / {
+              if (found) exit
+              if ($0 ~ "^## " version) {
+                found=1
+                next
+              }
+            }
+            found { print }
+          ' CHANGELOG.md)
+
+          # If extraction failed or is empty, use default message
+          if [ -z "$CHANGELOG_SECTION" ]; then
+            echo "⚠️ Could not extract changelog for version $VERSION"
+            CHANGELOG_SECTION="Release $VERSION"
+            CHANGELOG_SECTION="${CHANGELOG_SECTION}"$'\n\n'"See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/${{ steps.version.outputs.tag }}/CHANGELOG.md) for details."
+          fi
+
+          # Save to output using heredoc to preserve multi-line content
+          {
+            echo "body<<EOF"
+            echo "$CHANGELOG_SECTION"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          # Display extracted content
+          echo "📄 Extracted changelog:"
+          echo "$CHANGELOG_SECTION"
+
+      # -------------------------------------------------------------
+      # 4. Wait for publish workflow to complete
+      # -------------------------------------------------------------
+      - name: ⏳ Wait for publish workflow
+        uses: lewagon/wait-on-check-action@v1.4.1
+        with:
+          ref: ${{ steps.version.outputs.tag }}
+          check-name: "📦 Build & Publish UBI Image"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 20
+          allowed-conclusions: success,skipped,neutral
+
+      # -------------------------------------------------------------
+      # 5. Download SBOM artifacts from publish workflow (all variants)
+      # -------------------------------------------------------------
+      - name: 📥 Download SBOM artifacts (base)
+        continue-on-error: true
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          workflow: publish.yml
+          workflow_conclusion: success
+          name: ubi-base-sbom-${{ steps.version.outputs.version }}
+          path: ./sbom-artifacts
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_artifacts: true
+          search_artifacts: true
+          if_no_artifact_found: warn
+
+      - name: 📥 Download SBOM artifacts (minimal)
+        continue-on-error: true
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          workflow: publish.yml
+          workflow_conclusion: success
+          name: ubi-minimal-sbom-${{ steps.version.outputs.version }}
+          path: ./sbom-artifacts
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_artifacts: true
+          search_artifacts: true
+          if_no_artifact_found: warn
+
+      - name: 📥 Download SBOM artifacts (python)
+        continue-on-error: true
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          workflow: publish.yml
+          workflow_conclusion: success
+          name: ubi-python-sbom-${{ steps.version.outputs.version }}
+          path: ./sbom-artifacts
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_artifacts: true
+          search_artifacts: true
+          if_no_artifact_found: warn
+
+      - name: 📥 Download SBOM artifacts (node)
+        continue-on-error: true
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          workflow: publish.yml
+          workflow_conclusion: success
+          name: ubi-node-sbom-${{ steps.version.outputs.version }}
+          path: ./sbom-artifacts
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_artifacts: true
+          search_artifacts: true
+          if_no_artifact_found: warn
+
+      - name: 📥 Download SBOM artifacts (full)
+        continue-on-error: true
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          workflow: publish.yml
+          workflow_conclusion: success
+          name: ubi-full-sbom-${{ steps.version.outputs.version }}
+          path: ./sbom-artifacts
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_artifacts: true
+          search_artifacts: true
+          if_no_artifact_found: warn
+
+      # -------------------------------------------------------------
+      # 6. Prepare SBOM files for release
+      # -------------------------------------------------------------
+      - name: 📦 Prepare release assets
+        id: prepare-assets
+        run: |
+          SBOM_COUNT=0
+
+          # Create release assets directory if it doesn't exist
+          mkdir -p ./release-assets
+
+          # Check for each variant SBOM and copy to release assets
+          # NOTE: This list should match the variant matrix in publish.yml
+          # TODO: Consider extracting to a shared configuration file
+          for variant in base minimal python node full; do
+            SBOM_FILE="./sbom-artifacts/ubi-${variant}-sbom.spdx.json"
+            if [ -f "$SBOM_FILE" ]; then
+              echo "✅ SBOM found for variant: $variant"
+              cp "$SBOM_FILE" "./release-assets/ubi-${variant}-sbom-${{ steps.version.outputs.version }}.spdx.json"
+              SBOM_COUNT=$((SBOM_COUNT + 1))
+            else
+              echo "⚠️ SBOM not found for variant: $variant"
+            fi
+          done
+
+          echo "sbom_count=$SBOM_COUNT" >> "$GITHUB_OUTPUT"
+
+          if [ "$SBOM_COUNT" -gt 0 ]; then
+            echo "✅ Total SBOMs prepared: $SBOM_COUNT"
+          else
+            echo "⚠️ No SBOM artifacts found, release will not include SBOMs"
+          fi
+
+      # -------------------------------------------------------------
+      # 7. Create GitHub Release
+      # -------------------------------------------------------------
+      - name: 🚀 Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: ${{ steps.version.outputs.version }}
+          body: |
+            ${{ steps.changelog.outputs.body }}
+
+            ---
+
+            ## 📦 Container Image
+
+            Pull the image:
+            ```bash
+            docker pull ghcr.io/${{ github.repository_owner }}/ubi:${{ steps.version.outputs.version }}
+            ```
+
+            **Available variants:**
+            - `base` - Base UBI image with essential tools
+            - `minimal` - Minimal footprint variant
+            - `python` - Python development environment
+            - `node` - Node.js development environment  
+            - `full` - Full-featured development environment
+
+            **Image tags format:**
+            - `ghcr.io/${{ github.repository_owner }}/ubi:${{ steps.version.outputs.version }}[-variant]`
+            - `ghcr.io/${{ github.repository_owner }}/ubi:latest[-variant]`
+            - `ghcr.io/${{ github.repository_owner }}/ubi:sha-<commit>[-variant]`
+
+            ## 🧾 Software Bill of Materials (SBOM)
+
+            SPDX JSON SBOMs are attached to this release for each variant:
+            - `ubi-base-sbom-${{ steps.version.outputs.version }}.spdx.json`
+            - `ubi-minimal-sbom-${{ steps.version.outputs.version }}.spdx.json`
+            - `ubi-python-sbom-${{ steps.version.outputs.version }}.spdx.json`
+            - `ubi-node-sbom-${{ steps.version.outputs.version }}.spdx.json`
+            - `ubi-full-sbom-${{ steps.version.outputs.version }}.spdx.json`
+
+            Download and inspect with [Syft](https://github.com/anchore/syft) or any SPDX-compatible tool.
+
+            ## 🔗 Links
+
+            - [Full CHANGELOG](https://github.com/${{ github.repository }}/blob/${{ steps.version.outputs.tag }}/CHANGELOG.md)
+            - [Documentation](https://github.com/${{ github.repository }}/blob/${{ steps.version.outputs.tag }}/README.md)
+            - [Security Overview](https://github.com/${{ github.repository }}/blob/${{ steps.version.outputs.tag }}/docs/security-overview.md)
+          files: |
+            release-assets/*.spdx.json
+          draft: false
+          prerelease: false
+          generate_release_notes: false
+          fail_on_unmatched_files: false
+
+      # -------------------------------------------------------------
+      # 8. Display release summary
+      # -------------------------------------------------------------
+      - name: 📊 Display release summary
+        run: |
+          {
+            echo "## 📝 GitHub Release Created"
+            echo ""
+            echo "**Version:** ${{ steps.version.outputs.version }}"
+            echo "**Tag:** ${{ steps.version.outputs.tag }}"
+            echo ""
+            echo "### 📦 Release Contents"
+            echo "- ✅ Changelog notes extracted"
+            SBOM_COUNT="${{ steps.prepare-assets.outputs.sbom_count }}"
+            if [ "$SBOM_COUNT" -gt 0 ]; then
+              echo "- ✅ SBOMs attached for $SBOM_COUNT variant(s)"
+              echo "  - \`ubi-{variant}-sbom-${{ steps.version.outputs.version }}.spdx.json\`"
+            else
+              echo "- ⚠️ SBOMs not attached (not yet available)"
+            fi
+            echo ""
+            echo "### 🔗 View Release"
+            echo "[GitHub Release Page](https://github.com/${{ github.repository }}/releases/tag/${{ steps.version.outputs.tag }})"
+            echo ""
+            echo "### 📥 Pull Container Image"
+            echo "\`\`\`bash"
+            echo "docker pull ghcr.io/${{ github.repository_owner }}/ubi:${{ steps.version.outputs.version }}"
+            echo "\`\`\`"
+          } >> "$GITHUB_STEP_SUMMARY"

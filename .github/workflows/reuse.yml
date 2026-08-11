@@ -1,0 +1,55 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "📄 REUSE Compliance"
+
+# =============================================================================
+# REUSE Compliance
+# =============================================================================
+#
+# Purpose:
+#   Validate repository compliance with the REUSE Specification.
+#
+# References:
+#   - https://reuse.software/
+#   - https://reuse.software/spec/
+#
+# Notes:
+#   - Verifies SPDX licensing metadata.
+#   - Verifies copyright declarations.
+#   - Uses LICENSES/ and REUSE.toml as the source of truth.
+#
+# =============================================================================
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+  pull_request:
+
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: reuse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: "📄 REUSE Lint"
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: "📦 Checkout"
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: "📄 Validate REUSE compliance"
+        uses: fsfe/reuse-action@v6

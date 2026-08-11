@@ -1,0 +1,255 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: 🐳 Build Devcontainer Image
+
+######################################################################
+# Reproducible devcontainer image build
+#
+# Builds the devcontainer image defined in .devcontainer/Dockerfile
+# and pushes it to the GitHub Container Registry (ghcr.io) on merges
+# to the default branch.
+#
+# Reproducibility features:
+#   - SOURCE_DATE_EPOCH is derived from the HEAD commit timestamp so
+#     all BuildKit layer mtimes are deterministic.
+#   - SNAPSHOT_TIMESTAMP pins apt sources to a specific Ubuntu snapshot
+#     via repro-sources-list (https://github.com/reproducible-containers/repro-sources-list.sh).
+#   - BuildKit layer caches are persisted across runs with
+#     buildkit-cache-dance (https://github.com/reproducible-containers/buildkit-cache-dance).
+#   - A second build is run and diffoci (https://github.com/reproducible-containers/diffoci)
+#     is used to verify that both builds produce bit-for-bit identical
+#     images on the `verify` job (scheduled weekly + manual dispatch).
+######################################################################
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - ".devcontainer/**"
+      - "shell/**"
+  pull_request:
+    paths:
+      - ".devcontainer/**"
+      - "shell/**"
+  # Allow a full rebuild with a custom snapshot timestamp
+  workflow_dispatch:
+    inputs:
+      snapshot_timestamp:
+        description: >-
+          Snapshot timestamp for reproducible apt sources (YYYYMMDDTHHMMSSZ).
+          Leave blank to use the date of the HEAD commit.
+        required: false
+        default: ""
+      push_image:
+        description: "Push the built image to ghcr.io"
+        type: boolean
+        required: false
+        default: false
+  # Verify reproducibility weekly
+  schedule:
+    - cron: "0 3 * * 0"
+
+permissions: {}
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}/devcontainer
+
+jobs:
+  # --------------------------------------------------------------------------
+  # build — compile the image, cache layers, optionally push
+  # --------------------------------------------------------------------------
+  build:
+    name: 🏗️ Build
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    outputs:
+      image: ${{ steps.meta.outputs.tags }}
+      digest: ${{ steps.build.outputs.digest }}
+      source_date_epoch: ${{ steps.epoch.outputs.SOURCE_DATE_EPOCH }}
+      snapshot_timestamp: ${{ steps.epoch.outputs.SNAPSHOT_TIMESTAMP }}
+
+    steps:
+      - name: 🧾 Checkout
+        uses: actions/checkout@v4
+
+      # Derive SOURCE_DATE_EPOCH from the HEAD commit so that the image
+      # layer timestamps are deterministic even across different machines.
+      - name: 📅 Derive reproducible timestamps
+        id: epoch
+        run: |
+          EPOCH="$(git log -1 --pretty=%ct)"
+          echo "SOURCE_DATE_EPOCH=${EPOCH}" >> "${GITHUB_ENV}"
+          echo "SOURCE_DATE_EPOCH=${EPOCH}" >> "${GITHUB_OUTPUT}"
+
+          # Derive snapshot timestamp from the commit date (YYYYMMDDTHHMMSSZ)
+          # unless the caller supplied one explicitly.
+          if [[ -n "${{ inputs.snapshot_timestamp }}" ]]; then
+            TS="${{ inputs.snapshot_timestamp }}"
+          else
+            TS="$(git log -1 --pretty=%cd --date=format:'%Y%m%dT%H%M%SZ')"
+          fi
+          echo "SNAPSHOT_TIMESTAMP=${TS}" >> "${GITHUB_ENV}"
+          echo "SNAPSHOT_TIMESTAMP=${TS}" >> "${GITHUB_OUTPUT}"
+
+          echo "SOURCE_DATE_EPOCH=${EPOCH}"
+          echo "SNAPSHOT_TIMESTAMP=${TS}"
+
+      - name: 🔧 Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Inject previously exported apt package caches into BuildKit's
+      # mount-cache so that repeated builds reuse already-downloaded debs.
+      # https://github.com/reproducible-containers/buildkit-cache-dance
+      - name: 🕺 Restore apt BuildKit cache
+        uses: reproducible-containers/buildkit-cache-dance@v3.1.2
+        with:
+          cache-map: |
+            {
+              "apt-cache": "/var/cache/apt",
+              "apt-lib": "/var/lib/apt"
+            }
+          skip-extraction: ${{ github.event_name == 'push' }}
+
+      - name: 🔑 Log in to Container Registry
+        if: >-
+          github.event_name == 'push' ||
+          (github.event_name == 'workflow_dispatch' && inputs.push_image == true)
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🏷️ Extract image metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=sha,format=long
+            type=ref,event=branch
+            type=ref,event=pr
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
+
+      # Build (and optionally push) the devcontainer image.
+      # SOURCE_DATE_EPOCH clamps all layer timestamps; SNAPSHOT_TIMESTAMP
+      # pins all apt installs to a deterministic Ubuntu snapshot.
+      - name: 🏗️ Build and push devcontainer image
+        id: build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: .devcontainer/Dockerfile
+          target: final
+          push: >-
+            ${{
+              github.event_name == 'push' ||
+              (github.event_name == 'workflow_dispatch' && inputs.push_image == true)
+            }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            SOURCE_DATE_EPOCH=${{ env.SOURCE_DATE_EPOCH }}
+            SNAPSHOT_TIMESTAMP=${{ env.SNAPSHOT_TIMESTAMP }}
+          # Persist cache in GitHub Actions cache for subsequent runs.
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          # Generate SLSA provenance attestation and SBOM.
+          provenance: true
+          sbom: true
+
+  # --------------------------------------------------------------------------
+  # verify — rebuild and compare with diffoci to confirm reproducibility
+  # Runs on schedule and manual dispatch only (it doubles the build time).
+  # --------------------------------------------------------------------------
+  verify:
+    name: 🔍 Verify Reproducibility (diffoci)
+    if: >-
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: 🧾 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🔧 Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Restore the apt cache populated by the build job so we reuse the
+      # same downloaded debs (important for reproducibility testing).
+      - name: 🕺 Restore apt BuildKit cache
+        uses: reproducible-containers/buildkit-cache-dance@v3.1.2
+        with:
+          cache-map: |
+            {
+              "apt-cache": "/var/cache/apt",
+              "apt-lib": "/var/lib/apt"
+            }
+          skip-extraction: false
+
+      # Build the image a first time and export to a local OCI tarball.
+      - name: 🏗️ Build image (first pass)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: .devcontainer/Dockerfile
+          target: final
+          push: false
+          outputs: type=oci,dest=/tmp/devcontainer-1.tar,recompute-checksums=true
+          build-args: |
+            SOURCE_DATE_EPOCH=${{ needs.build.outputs.source_date_epoch }}
+            SNAPSHOT_TIMESTAMP=${{ needs.build.outputs.snapshot_timestamp }}
+          cache-from: type=gha
+
+      # Build the image a second time using the same args.
+      - name: 🏗️ Build image (second pass)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: .devcontainer/Dockerfile
+          target: final
+          push: false
+          outputs: type=oci,dest=/tmp/devcontainer-2.tar,recompute-checksums=true
+          build-args: |
+            SOURCE_DATE_EPOCH=${{ needs.build.outputs.source_date_epoch }}
+            SNAPSHOT_TIMESTAMP=${{ needs.build.outputs.snapshot_timestamp }}
+          cache-from: type=gha
+
+      # Install diffoci and compare the two OCI archives.
+      # https://github.com/reproducible-containers/diffoci
+      - name: 📥 Install diffoci
+        env:
+          DIFFOCI_VERSION: v0.1.5
+        run: |
+          BASE_URL="https://github.com/reproducible-containers/diffoci/releases/download/${DIFFOCI_VERSION}"
+          BINARY="diffoci-${DIFFOCI_VERSION}.linux-amd64"
+
+          curl -fsSL "${BASE_URL}/${BINARY}"          -o /usr/local/bin/diffoci
+          curl -fsSL "${BASE_URL}/checksums.txt" -o /tmp/diffoci-checksums.txt
+
+          # Verify the binary against the published checksum before use.
+          grep "${BINARY}" /tmp/diffoci-checksums.txt | sha256sum --check --status
+          echo "✅ diffoci checksum verified"
+
+          chmod +x /usr/local/bin/diffoci
+          diffoci --version
+
+      - name: 🔎 Compare builds with diffoci
+        run: |
+          echo "🔍 Comparing two independent builds for bit-for-bit reproducibility…"
+          diffoci diff \
+            oci-archive:/tmp/devcontainer-1.tar \
+            oci-archive:/tmp/devcontainer-2.tar \
+            && echo "✅ Builds are reproducible — images are identical." \
+            || { echo "❌ Builds differ — the devcontainer image is NOT reproducible."; exit 1; }

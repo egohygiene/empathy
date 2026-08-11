@@ -1,0 +1,160 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+name: "🖼️ Image Optimization"
+
+on:
+  workflow_dispatch:
+    inputs:
+      paths:
+        description: "Space-separated list of directories/paths to optimize"
+        required: false
+        default: "."
+      allow_lossy:
+        description: "Allow lossy compression (WARNING: May degrade image quality)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      dry_run:
+        description: "Dry run — report savings without writing changes"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+# ── Permissions ──────────────────────────────────────────────────────────────
+# Requires write access to update content and open Pull Requests.
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: "image-optimization-${{ github.ref }}"
+  cancel-in-progress: true
+
+# ── Environment ──────────────────────────────────────────────────────────────
+env:
+  RUBY_VERSION: "3.3"
+  COMMIT_MESSAGE: "chore(assets): optimize images with image_optim [skip ci]"
+
+jobs:
+  optimize:
+    name: "🖼️ Optimize Repository Images"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 30
+
+    steps:
+      - name: "📥 Checkout Repository"
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: "💎 Setup Ruby Environment"
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "${{ env.RUBY_VERSION }}"
+          bundler-cache: false
+
+      - name: "📦 Install APT Binary Optimizers"
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            advancecomp \
+            gifsicle \
+            jhead \
+            jpegoptim \
+            libjpeg-turbo-progs \
+            optipng \
+            pngcrush \
+            pngquant
+
+      - name: "🦀 Install Oxipng Binary"
+        run: |
+          OXIPNG_VERSION="$(curl -fsSL https://api.github.com/repos/shssoichiro/oxipng/releases/latest \
+            | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')"
+          curl -fsSL \
+            "https://github.com/shssoichiro/oxipng/releases/download/v${OXIPNG_VERSION}/oxipng-${OXIPNG_VERSION}-x86_64-unknown-linux-musl.tar.gz" \
+            | tar -xz --strip-components=1 -C /usr/local/bin oxipng-${OXIPNG_VERSION}-x86_64-unknown-linux-musl/oxipng
+          chmod +x /usr/local/bin/oxipng
+
+      - name: "🟢 Install SVGO"
+        run: sudo npm install -g svgo
+
+      - name: "💎 Install image_optim Gem"
+        run: gem install --no-document image_optim
+
+      - name: "⚙️ Generate Lossless Configuration"
+        run: |
+          cat << 'EOF' > .image_optim.yml
+          # Enforce strictly lossless compression unless explicitly overridden
+          allow_lossy: ${{ inputs.allow_lossy || 'false' }}
+          nice: 10
+          pngquant:
+            allow_lossy: ${{ inputs.allow_lossy || 'false' }}
+          jpegoptim:
+            allow_lossy: ${{ inputs.allow_lossy || 'false' }}
+            strip: :all
+          optipng:
+            level: 6
+          oxipng:
+            level: 3
+            strip: true
+          svgo:
+            allow_lossy: ${{ inputs.allow_lossy || 'false' }}
+          EOF
+
+      - name: "🖼️ Run Image Optimization"
+        id: optimize
+        run: |
+          PATHS="${{ inputs.paths || '.' }}"
+          DRY_RUN="${{ inputs.dry_run || 'false' }}"
+
+          # Collect all git-tracked image files across target directories
+          mapfile -t IMAGE_FILES < <(
+            git ls-files -- ${PATHS} \
+              | grep -iE '\.(png|jpg|jpeg|gif|svg)$' \
+              || true
+          )
+
+          if [[ ${#IMAGE_FILES[@]} -eq 0 ]]; then
+            echo "::notice::No image files found matching target paths: ${PATHS}"
+            echo "changed=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          echo "Found ${#IMAGE_FILES[@]} image file(s) to process."
+
+          if [[ "${DRY_RUN}" == "true" ]]; then
+            image_optim --no-pngout --info "${IMAGE_FILES[@]}"
+            echo "changed=false" >> "${GITHUB_OUTPUT}"
+          else
+            EXIT_CODE=0
+            image_optim --no-pngout "${IMAGE_FILES[@]}" || EXIT_CODE=$?
+            
+            if [[ ${EXIT_CODE} -ne 0 ]]; then
+              echo "::warning::image_optim completed with non-zero exit code (${EXIT_CODE}). Some files may have been skipped."
+            fi
+
+            if git diff --quiet; then
+              echo "No image quality or file size changes produced."
+              echo "changed=false" >> "${GITHUB_OUTPUT}"
+            else
+              echo "changed=true" >> "${GITHUB_OUTPUT}"
+            fi
+          fi
+
+      - name: "📝 Commit & Push Changes"
+        if: steps.optimize.outputs.changed == 'true'
+        run: |
+          # Clean up temporary execution config before committing
+          rm -f .image_optim.yml
+          
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -u
+          git commit -m "${{ env.COMMIT_MESSAGE }}"
+          git push

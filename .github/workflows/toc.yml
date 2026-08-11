@@ -1,0 +1,55 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+name: "📚 Generate Table of Contents"
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - "main"
+      - "master"
+    paths:
+      - "**.md"
+      - ".github/workflows/toc.yml"
+
+  # Optional: Automatically update TOCs when pull requests touch Markdown files
+  # pull_request:
+  #   types: [opened, synchronize, reopened]
+  #   paths:
+  #     - "**.md"
+
+# ── Permissions ──────────────────────────────────────────────────────────────
+# Requires write access to update and commit modified TOCs back to the repository.
+permissions:
+  contents: write
+
+concurrency:
+  group: "toc-${{ github.ref }}"
+  cancel-in-progress: true
+
+# ── Environment ──────────────────────────────────────────────────────────────
+env:
+  # Target files to scan for TOC markers (<!-- START doctoc --> ... <!-- END doctoc -->)
+  TARGET_PATHS: "README.md,docs/**/*.md"
+  COMMIT_MESSAGE: "chore(docs): update table of contents [skip ci]"
+
+jobs:
+  generate-toc:
+    name: "📖 Update Markdown TOC"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 10
+
+    steps:
+      - name: "📥 Checkout Repository"
+        uses: actions/checkout@v6
+        with:
+          # Fetch full commit history to allow proper git diff checks
+          fetch-depth: 0
+
+      - name: "📝 Generate & Commit Table of Contents"
+        uses: technote-space/toc-generator@v4
+        with:
+          COMMIT_MESSAGE: "${{ env.COMMIT_MESSAGE }}"
+          TARGET_PATHS: "${{ env.TARGET_PATHS }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

@@ -1,0 +1,89 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-action.json
+name: "👥 Contributors"
+
+description: "Generate and maintain All Contributors metadata."
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: 🧰 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: 📥 Install Dependencies
+      shell: bash
+      run: |
+        npm install \
+          --global \
+          all-contributors-cli
+
+    - name: 🏷️ Hydrate Repository Metadata
+      shell: bash
+      env:
+        REPOSITORY: ${{ github.repository }}
+      run: |
+        owner="${REPOSITORY%%/*}"
+        project="${REPOSITORY##*/}"
+
+        jq \
+          --arg owner "${owner}" \
+          --arg project "${project}" \
+          '
+          .projectOwner = $owner |
+          .projectName = $project
+          ' \
+          .allcontributorsrc \
+          > .allcontributorsrc.tmp
+
+        mv \
+          .allcontributorsrc.tmp \
+          .allcontributorsrc
+
+    - name: 👥 Fetch Contributors
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPOSITORY: ${{ github.repository }}
+      run: |
+        contributors="$(
+          gh api \
+            "repos/${REPOSITORY}/contributors?per_page=100"
+        )"
+
+        jq \
+          --argjson contributors "${contributors}" \
+          '
+          .contributors =
+          [
+            $contributors[]
+            |
+            {
+              login: .login,
+              name: .login,
+              avatar_url: .avatar_url,
+              profile: .html_url,
+              contributions: ["code"]
+            }
+          ]
+          ' \
+          .allcontributorsrc \
+          > .allcontributorsrc.tmp
+
+        mv \
+          .allcontributorsrc.tmp \
+          .allcontributorsrc
+
+    - name: 📝 Generate Contributors File
+      shell: bash
+      run: |
+        cat .allcontributorsrc
+
+        all-contributors generate
+
+        printf "\n\n"
+        printf "Generated CONTRIBUTORS.md:\n\n"
+
+        cat CONTRIBUTORS.md

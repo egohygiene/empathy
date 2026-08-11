@@ -1,0 +1,215 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "🤖 Copilot Setup Steps"
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+      - ".github/workflows/copilot-setup-steps.yml"
+      - "docs/copilot/COPILOT_ALLOWLIST.md"
+
+  pull_request:
+    paths:
+      - ".github/workflows/copilot-setup-steps.yml"
+      - "docs/copilot/COPILOT_ALLOWLIST.md"
+
+permissions: {}
+
+jobs:
+  # Must be named exactly "copilot-setup-steps"
+  copilot-setup-steps:
+    name: "🤖 Prepare Copilot Environment"
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    permissions:
+      contents: read
+
+    steps:
+      # ----------------------------------------------------------------------
+      # Repository
+      # ----------------------------------------------------------------------
+
+      - name: "📦 Checkout repository"
+        uses: actions/checkout@v7
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      # ----------------------------------------------------------------------
+      # GitHub CLI
+      # ----------------------------------------------------------------------
+
+      - name: "🐙 Verify GitHub CLI"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh auth status
+
+      # ----------------------------------------------------------------------
+      # Git Metadata
+      # ----------------------------------------------------------------------
+
+      - name: "🏷️ Fetch tags and history"
+        run: |
+          git fetch --unshallow || true
+          git fetch --tags
+
+      # ----------------------------------------------------------------------
+      # Base Tooling
+      # ----------------------------------------------------------------------
+
+      - name: "🧰 Install baseline tools"
+        run: |
+          sudo apt-get update
+
+          sudo apt-get install \
+            --yes \
+            curl \
+            git \
+            jq \
+            make \
+            shellcheck \
+            wget
+
+      # ----------------------------------------------------------------------
+      # yq
+      # ----------------------------------------------------------------------
+
+      - name: "📄 Install yq"
+        run: |
+          sudo wget \
+            --output-document /usr/local/bin/yq \
+            "https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64"
+
+          sudo chmod +x /usr/local/bin/yq
+
+      # ----------------------------------------------------------------------
+      # actionlint
+      # ----------------------------------------------------------------------
+
+      - name: "⚙️ Install actionlint"
+        run: |
+          bash <(
+            curl \
+              --silent \
+              --show-error \
+              --location \
+              "https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash"
+          )
+
+          sudo mv ./actionlint /usr/local/bin/actionlint
+
+      # ----------------------------------------------------------------------
+      # hadolint
+      # ----------------------------------------------------------------------
+
+      - name: "🐳 Install hadolint"
+        run: |
+          sudo wget \
+            --output-document /usr/local/bin/hadolint \
+            "https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64"
+
+          sudo chmod +x /usr/local/bin/hadolint
+
+      # ----------------------------------------------------------------------
+      # cosign
+      # ----------------------------------------------------------------------
+
+      - name: "🔏 Install cosign"
+        run: |
+          COSIGN_VERSION="$(
+            curl \
+              --silent \
+              "https://api.github.com/repos/sigstore/cosign/releases/latest" \
+              | jq --raw-output '.tag_name'
+          )"
+
+          curl \
+            --silent \
+            --show-error \
+            --location \
+            "https://github.com/sigstore/cosign/releases/download/${COSIGN_VERSION}/cosign-linux-amd64" \
+            --output cosign
+
+          chmod +x cosign
+
+          sudo mv cosign /usr/local/bin/cosign
+
+      # ----------------------------------------------------------------------
+      # Verify Tooling
+      # ----------------------------------------------------------------------
+
+      - name: "✅ Verify installed tooling"
+        run: |
+          printf "\nGit\n"
+          git --version
+
+          printf "\nGitHub CLI\n"
+          gh --version
+
+          printf "\nNode.js\n"
+          node --version || true
+
+          printf "\nnpm\n"
+          npm --version || true
+
+          printf "\nPython\n"
+          python3 --version || true
+
+          printf "\npip\n"
+          pip3 --version || true
+
+          printf "\njq\n"
+          jq --version
+
+          printf "\nyq\n"
+          yq --version
+
+          printf "\nShellCheck\n"
+          shellcheck --version
+
+          printf "\nactionlint\n"
+          actionlint --version
+
+          printf "\nhadolint\n"
+          hadolint --version
+
+          printf "\ncosign\n"
+          cosign version || true
+
+      # ----------------------------------------------------------------------
+      # Diagnostics
+      # ----------------------------------------------------------------------
+
+      - name: "🔍 Environment diagnostics"
+        run: |
+          printf "Repository: %s\n" "${GITHUB_REPOSITORY}"
+          printf "Ref: %s\n" "${GITHUB_REF}"
+          printf "Actor: %s\n" "${GITHUB_ACTOR}"
+
+          printf "\nOperating System\n"
+          uname --all
+
+          printf "\nWorking Directory\n"
+          pwd
+
+          printf "\nDisk Usage\n"
+          df --human-readable
+
+      # ----------------------------------------------------------------------
+      # Repository Extension Point
+      # ----------------------------------------------------------------------
+
+      - name: "📚 Repository-specific setup"
+        run: |
+          printf "%s\n" \
+            "Add repository-specific dependency installation here."
+
+          printf "%s\n" \
+            "Examples: pnpm, Poetry, Flutter, Terraform, Docker, etc."

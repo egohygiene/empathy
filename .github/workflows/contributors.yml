@@ -1,0 +1,61 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+name: "👥 Update Contributors"
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # Run every Sunday at midnight UTC
+    - cron: "0 0 * * 0"
+
+# ── Permissions ──────────────────────────────────────────────────────────────
+# Minimal permissions to update and commit back contributor documentation.
+permissions:
+  contents: write
+
+concurrency:
+  group: "contributors-${{ github.ref }}"
+  cancel-in-progress: true
+
+# ── Environment ──────────────────────────────────────────────────────────────
+env:
+  COMMIT_MESSAGE: "docs(contributors): update CONTRIBUTORS.md [skip ci]"
+
+jobs:
+  contributors:
+    name: "👥 Generate & Update List"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 10
+
+    steps:
+      - name: "📥 Checkout Repository"
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: "⚙️ Setup Node.js Environment"
+        uses: actions/setup-node@v6
+        with:
+          node-version: "lts/*"
+
+      - name: "👥 Generate Contributors List"
+        run: |
+          # Executes the standard All-Contributors CLI without relying on local action files
+          npx --yes @all-contributors/cli generate
+
+      - name: "💾 Commit & Push Changes"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Stage modified contributor configuration and output files
+          git add .allcontributorsrc CONTRIBUTORS.md README.md 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "::notice::No contributor changes detected."
+            exit 0
+          fi
+
+          git commit -m "${{ env.COMMIT_MESSAGE }}"
+          git push

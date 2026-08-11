@@ -1,0 +1,60 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: 🔧 autofix.ci
+
+######################################################################
+# autofix.ci — automatically apply code fixes to pull requests
+#
+# Uses autofix.ci (https://autofix.ci/) to commit auto-fixable
+# formatting and lint issues back to the source branch of a PR so
+# contributors don't need to run formatters locally.
+#
+# Currently applies:
+#   - Biome (format + safe lint fixes) for JS/TS/JSON/CSS
+######################################################################
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  autofix:
+    name: 🔧 Apply Fixes
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: 🧾 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+
+      - name: 🟢 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - name: 📥 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🎨 Biome format
+        run: pnpm biome:format:write
+
+      - name: 🧹 Biome lint fix
+        run: pnpm biome:lint:fix
+
+      - name: 🤖 Push fixes
+        uses: autofix-ci/action@v1

@@ -1,0 +1,770 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "🔍 OSV Vulnerability Scan"
+
+# =============================================================================
+# Canonical OSV dependency vulnerability scanning
+# =============================================================================
+#
+# This workflow intentionally owns discovery, report generation, severity
+# policy, artifact publication, and optional report commits. It invokes the
+# official OSV Scanner CLI through Google's pinned scanner action, but does not
+# delegate policy to Google's reusable workflows.
+#
+# Report contract:
+#   .engineering/reports/osv/
+#   ├── latest.json
+#   ├── latest.sarif
+#   ├── latest.md                 # optional manual-dispatch setting
+#   ├── summary.json
+#   └── history/<UTC timestamp>/
+#       ├── report.json
+#       ├── report.sarif
+#       ├── report.md             # optional manual-dispatch setting
+#       └── summary.json
+#
+# Every run uploads this tree as a workflow artifact. Committing it to the
+# repository is opt-in and available only through workflow_dispatch. Keeping
+# report commits explicit avoids noisy scheduled commits and unsafe writes from
+# pull-request contexts.
+#
+# OSV Scanner documentation:
+#   https://google.github.io/osv-scanner/
+#
+# =============================================================================
+
+on:
+  push:
+    branches:
+      - "main"
+      - "master"
+    # A manually requested report commit must not recursively trigger another
+    # scan when the commit contains only generated OSV reports.
+    paths-ignore:
+      - ".engineering/reports/osv/**"
+
+  pull_request:
+    branches:
+      - "main"
+      - "master"
+
+  schedule:
+    # Weekly scans catch vulnerabilities published after dependencies landed.
+    - cron: "0 4 * * 3"
+
+  workflow_dispatch:
+    inputs:
+      fail-on-severity:
+        description: "Fail when a finding meets or exceeds this severity."
+        required: true
+        default: "high"
+        type: choice
+        options:
+          - "none"
+          - "low"
+          - "medium"
+          - "high"
+          - "critical"
+      upload-sarif:
+        description: "Upload SARIF findings to GitHub Code Scanning."
+        required: true
+        default: true
+        type: boolean
+      generate-markdown:
+        description: "Generate latest.md and timestamped report.md."
+        required: true
+        default: true
+        type: boolean
+      commit-reports:
+        description: "Commit generated reports to the dispatched branch."
+        required: true
+        default: false
+        type: boolean
+      verbose:
+        description: "Enable informational OSV Scanner logging."
+        required: true
+        default: false
+        type: boolean
+
+# Default all token capabilities to none. Each job opts into only what it uses.
+permissions: {}
+
+concurrency:
+  # ref is stable for pushes and pull requests; run_id prevents unrelated
+  # scheduled/manual runs from cancelling one another.
+  group: >-
+    osv-scan-${{ github.workflow }}-${{
+      github.event_name == 'schedule' && github.run_id || github.ref
+    }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    name: "🔍 Discover, Scan, and Report"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 20
+
+    permissions:
+      contents: read
+      # Required only by the conditional SARIF upload step. GitHub downgrades
+      # this permission for untrusted fork pull requests, which are skipped.
+      security-events: write
+      actions: read
+
+    outputs:
+      critical_count: "${{ steps.summarize.outputs.critical_count }}"
+      high_count: "${{ steps.summarize.outputs.high_count }}"
+      medium_count: "${{ steps.summarize.outputs.medium_count }}"
+      low_count: "${{ steps.summarize.outputs.low_count }}"
+      unknown_count: "${{ steps.summarize.outputs.unknown_count }}"
+      vulnerability_count: "${{ steps.summarize.outputs.vulnerability_count }}"
+      lockfiles_scanned: "${{ steps.summarize.outputs.lockfiles_scanned }}"
+      scan_duration: "${{ steps.summarize.outputs.scan_duration }}"
+      report_timestamp: "${{ steps.configure.outputs.report_timestamp }}"
+      commit_reports: "${{ steps.configure.outputs.commit_reports }}"
+
+    steps:
+      - name: "📥 Checkout repository"
+        # actions/checkout v7.0.1; immutable pin prevents tag mutation.
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          # A dependency scan needs only the triggering revision.
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: "⚙️ Resolve run configuration"
+        id: configure
+        shell: bash
+        env:
+          REQUESTED_THRESHOLD: >-
+            ${{ github.event_name == 'workflow_dispatch' && inputs['fail-on-severity'] || 'high' }}
+          REQUESTED_UPLOAD_SARIF: >-
+            ${{ github.event_name == 'workflow_dispatch' && inputs['upload-sarif'] || github.event_name != 'workflow_dispatch' }}
+          REQUESTED_GENERATE_MARKDOWN: >-
+            ${{ github.event_name == 'workflow_dispatch' && inputs['generate-markdown'] || github.event_name != 'workflow_dispatch' }}
+          REQUESTED_COMMIT_REPORTS: >-
+            ${{ github.event_name == 'workflow_dispatch' && inputs['commit-reports'] || false }}
+          REQUESTED_VERBOSE: >-
+            ${{ github.event_name == 'workflow_dispatch' && inputs.verbose || false }}
+        run: |
+          set -euo pipefail
+
+          normalize_boolean() {
+            case "${1,,}" in
+              true) printf 'true\n' ;;
+              false) printf 'false\n' ;;
+              *)
+                printf 'Invalid boolean value: %s\n' "$1" >&2
+                return 2
+                ;;
+            esac
+          }
+
+          case "${REQUESTED_THRESHOLD}" in
+            none|low|medium|high|critical) ;;
+            *)
+              printf 'Invalid severity threshold: %s\n' "${REQUESTED_THRESHOLD}" >&2
+              exit 2
+              ;;
+          esac
+
+          upload_sarif="$(normalize_boolean "${REQUESTED_UPLOAD_SARIF}")"
+          generate_markdown="$(normalize_boolean "${REQUESTED_GENERATE_MARKDOWN}")"
+          commit_reports="$(normalize_boolean "${REQUESTED_COMMIT_REPORTS}")"
+          verbose="$(normalize_boolean "${REQUESTED_VERBOSE}")"
+          report_timestamp="$(date --utc '+%Y-%m-%dT%H-%M-%SZ')"
+          report_root=".engineering/reports/osv"
+          history_root="${report_root}/history/${report_timestamp}"
+          temporary_root="${RUNNER_TEMP}/osv-scan"
+
+          if [[ "${verbose}" == "true" ]]; then
+            osv_verbosity="info"
+          else
+            osv_verbosity="error"
+          fi
+
+          mkdir --parents "${report_root}" "${history_root}" "${temporary_root}"
+
+          # A repository may already contain reports from a prior committed
+          # run. Remove current-run targets so a failed scanner invocation can
+          # never be mistaken for fresh, valid output.
+          rm --force \
+            "${report_root}/latest.json" \
+            "${report_root}/latest.sarif" \
+            "${report_root}/latest.md" \
+            "${report_root}/summary.json" \
+            "${report_root}/.raw-report.md"
+
+          {
+            printf 'FAIL_ON_SEVERITY=%s\n' "${REQUESTED_THRESHOLD}"
+            printf 'UPLOAD_SARIF=%s\n' "${upload_sarif}"
+            printf 'GENERATE_MARKDOWN=%s\n' "${generate_markdown}"
+            printf 'COMMIT_REPORTS=%s\n' "${commit_reports}"
+            printf 'OSV_VERBOSITY=%s\n' "${osv_verbosity}"
+            printf 'REPORT_TIMESTAMP=%s\n' "${report_timestamp}"
+            printf 'REPORT_ROOT=%s\n' "${report_root}"
+            printf 'HISTORY_ROOT=%s\n' "${history_root}"
+            printf 'TEMPORARY_ROOT=%s\n' "${temporary_root}"
+          } >> "${GITHUB_ENV}"
+
+          {
+            printf 'report_timestamp=%s\n' "${report_timestamp}"
+            printf 'commit_reports=%s\n' "${commit_reports}"
+          } >> "${GITHUB_OUTPUT}"
+
+          printf 'OSV scan started at %s\n' "${report_timestamp}"
+          date +%s > "${temporary_root}/started-at.epoch"
+
+      - name: "🔎 Discover dependency artifacts"
+        id: discover
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          discovery_tsv="${TEMPORARY_ROOT}/discovery.tsv"
+          discovered_files="${TEMPORARY_ROOT}/discovered-files.txt"
+          discovered_ecosystems="${TEMPORARY_ROOT}/discovered-ecosystems.txt"
+          : > "${discovery_tsv}"
+          : > "${discovered_files}"
+          : > "${discovered_ecosystems}"
+
+          # These patterns are used for an explainable discovery inventory.
+          # OSV Scanner still performs recursive source discovery itself, so a
+          # new upstream extractor does not require new scan arguments here.
+          artifact_patterns=(
+            "Node.js|pnpm-lock.yaml"
+            "Node.js|package-lock.json"
+            "Node.js|npm-shrinkwrap.json"
+            "Node.js|yarn.lock"
+            "Node.js|bun.lock"
+            "Node.js|bun.lockb"
+            "Node.js|package.json"
+            "Python|poetry.lock"
+            "Python|uv.lock"
+            "Python|Pipfile.lock"
+            "Python|requirements*.txt"
+            "Python|pylock.toml"
+            "Python|pyproject.toml"
+            "Rust|Cargo.lock"
+            "Go|go.mod"
+            "Go|go.sum"
+            ".NET|packages.lock.json"
+            ".NET|packages.config"
+            ".NET|paket.lock"
+            ".NET|project.assets.json"
+            ".NET|*.csproj"
+            ".NET|*.fsproj"
+            ".NET|*.vbproj"
+            "Java/Kotlin|pom.xml"
+            "Java/Kotlin|build.gradle"
+            "Java/Kotlin|build.gradle.kts"
+            "Java/Kotlin|gradle.lockfile"
+            "Ruby|Gemfile.lock"
+            "PHP|composer.lock"
+            "Dart|pubspec.lock"
+            "Elixir|mix.lock"
+            "Swift|Package.resolved"
+            "CocoaPods|Podfile.lock"
+            "Conan|conan.lock"
+            "vcpkg|vcpkg.json"
+            "SBOM|*.spdx.json"
+            "SBOM|*.cdx.json"
+            "SBOM|bom.json"
+          )
+
+          printf '::group::Dependency Discovery\n'
+
+          for artifact_pattern in "${artifact_patterns[@]}"; do
+            ecosystem="${artifact_pattern%%|*}"
+            filename_pattern="${artifact_pattern#*|}"
+            matches=()
+
+            while IFS= read -r -d '' path; do
+              relative_path="${path#./}"
+              if [[ "${relative_path}" == *$'\n'* ]]; then
+                printf 'Unsupported newline in dependency path: %q\n' "${relative_path}" >&2
+                exit 2
+              fi
+              matches+=("${relative_path}")
+            done < <(
+              find . -type f -name "${filename_pattern}" \
+                -not -path './.git/*' \
+                -not -path './.engineering/reports/osv/*' \
+                -not -path '*/node_modules/*' \
+                -not -path '*/vendor/*' \
+                -not -path '*/dist/*' \
+                -not -path '*/build/*' \
+                -not -path '*/coverage/*' \
+                -print0 | sort --zero-terminated
+            )
+
+            if (( ${#matches[@]} == 0 )); then
+              printf '○ %-16s %-24s (not found)\n' "${ecosystem}" "${filename_pattern}"
+              printf '%s\t%s\tmissing\t\n' "${ecosystem}" "${filename_pattern}" >> "${discovery_tsv}"
+              continue
+            fi
+
+            for relative_path in "${matches[@]}"; do
+              printf '✓ %-16s %s\n' "${ecosystem}" "${relative_path}"
+              printf '%s\t%s\tfound\t%s\n' \
+                "${ecosystem}" "${filename_pattern}" "${relative_path}" >> "${discovery_tsv}"
+              printf '%s\n' "${relative_path}" >> "${discovered_files}"
+              printf '%s\n' "${ecosystem}" >> "${discovered_ecosystems}"
+            done
+          done
+
+          sort --unique --output="${discovered_files}" "${discovered_files}"
+          sort --unique --output="${discovered_ecosystems}" "${discovered_ecosystems}"
+          discovered_count="$(awk 'END { print NR + 0 }' "${discovered_files}")"
+          ecosystem_count="$(awk 'END { print NR + 0 }' "${discovered_ecosystems}")"
+
+          printf '\nDiscovered %s dependency artifact(s) across %s ecosystem label(s).\n' \
+            "${discovered_count}" "${ecosystem_count}"
+          printf '::endgroup::\n'
+
+          {
+            printf 'count=%s\n' "${discovered_count}"
+            printf 'ecosystem_count=%s\n' "${ecosystem_count}"
+          } >> "${GITHUB_OUTPUT}"
+
+      # OSV Scanner returns 1 when it finds vulnerabilities. Each scanner step
+      # therefore continues so reports can be validated, uploaded, summarized,
+      # and gated by our configured threshold instead of OSV's binary policy.
+      - name: "🧾 Generate OSV JSON"
+        id: scan_json
+        if: steps.discover.outputs.count != '0'
+        continue-on-error: true
+        # google/osv-scanner-action v2.3.8, pinned to its release source commit.
+        uses: google/osv-scanner-action/osv-scanner-action@3adb4b14a2b0623876d18d863a498b785fb3752d
+        with:
+          scan-args: |-
+            --recursive
+            --format=json
+            --all-packages
+            --verbosity=${{ env.OSV_VERBOSITY }}
+            --output-file=.engineering/reports/osv/latest.json
+            --exclude=.git
+            --exclude=.engineering/reports/osv
+            --exclude=node_modules
+            --exclude=vendor
+            --exclude=dist
+            --exclude=build
+            --exclude=coverage
+            ./
+
+      - name: "🛡️ Generate OSV SARIF"
+        id: scan_sarif
+        if: steps.discover.outputs.count != '0'
+        continue-on-error: true
+        uses: google/osv-scanner-action/osv-scanner-action@3adb4b14a2b0623876d18d863a498b785fb3752d
+        with:
+          scan-args: |-
+            --recursive
+            --format=sarif
+            --verbosity=${{ env.OSV_VERBOSITY }}
+            --output-file=.engineering/reports/osv/latest.sarif
+            --exclude=.git
+            --exclude=.engineering/reports/osv
+            --exclude=node_modules
+            --exclude=vendor
+            --exclude=dist
+            --exclude=build
+            --exclude=coverage
+            ./
+
+      - name: "📝 Generate OSV Markdown data"
+        id: scan_markdown
+        if: steps.discover.outputs.count != '0'
+        continue-on-error: true
+        uses: google/osv-scanner-action/osv-scanner-action@3adb4b14a2b0623876d18d863a498b785fb3752d
+        with:
+          scan-args: |-
+            --recursive
+            --format=markdown
+            --verbosity=${{ env.OSV_VERBOSITY }}
+            --output-file=.engineering/reports/osv/.raw-report.md
+            --exclude=.git
+            --exclude=.engineering/reports/osv
+            --exclude=node_modules
+            --exclude=vendor
+            --exclude=dist
+            --exclude=build
+            --exclude=coverage
+            ./
+
+      - name: "○ Create empty reports when nothing is discoverable"
+        if: steps.discover.outputs.count == '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          report_root = Path(os.environ["REPORT_ROOT"])
+          temporary_root = Path(os.environ["TEMPORARY_ROOT"])
+
+          (report_root / "latest.json").write_text(
+              json.dumps({"results": []}, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          (report_root / "latest.sarif").write_text(
+              json.dumps(
+                  {
+                      "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+                      "version": "2.1.0",
+                      "runs": [
+                          {
+                              "tool": {
+                                  "driver": {
+                                      "name": "osv-scanner",
+                                      "informationUri": "https://osv.dev/",
+                                      "version": "2.3.8",
+                                      "rules": [],
+                                  }
+                              },
+                              "results": [],
+                          }
+                      ],
+                  },
+                  indent=2,
+              )
+              + "\n",
+              encoding="utf-8",
+          )
+          (report_root / ".raw-report.md").write_text(
+              "No dependency artifacts were discovered; no packages were scanned.\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: "📊 Validate and summarize reports"
+        id: summarize
+        shell: bash
+        env:
+          DISCOVERED_COUNT: "${{ steps.discover.outputs.count }}"
+          DISCOVERED_ECOSYSTEM_COUNT: "${{ steps.discover.outputs.ecosystem_count }}"
+          JSON_SCAN_OUTCOME: "${{ steps.scan_json.outcome }}"
+          SARIF_SCAN_OUTCOME: "${{ steps.scan_sarif.outcome }}"
+          MARKDOWN_SCAN_OUTCOME: "${{ steps.scan_markdown.outcome }}"
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          import time
+          from pathlib import Path
+
+          report_root = Path(os.environ["REPORT_ROOT"])
+          history_root = Path(os.environ["HISTORY_ROOT"])
+          temporary_root = Path(os.environ["TEMPORARY_ROOT"])
+          latest_json = report_root / "latest.json"
+          latest_sarif = report_root / "latest.sarif"
+          raw_markdown = report_root / ".raw-report.md"
+
+          def load_json(path: Path, label: str) -> dict:
+              if not path.is_file() or path.stat().st_size == 0:
+                  raise SystemExit(f"{label} output is missing or empty: {path}")
+              try:
+                  value = json.loads(path.read_text(encoding="utf-8"))
+              except (OSError, json.JSONDecodeError) as error:
+                  raise SystemExit(f"Invalid {label} output at {path}: {error}") from error
+              if not isinstance(value, dict):
+                  raise SystemExit(f"{label} output must contain a JSON object: {path}")
+              return value
+
+          osv_json = load_json(latest_json, "OSV JSON")
+          sarif = load_json(latest_sarif, "OSV SARIF")
+          if not isinstance(osv_json.get("results"), list):
+              raise SystemExit("OSV JSON output is missing its results array")
+          if sarif.get("version") != "2.1.0" or not isinstance(sarif.get("runs"), list):
+              raise SystemExit("OSV SARIF output is not SARIF 2.1.0")
+          if not raw_markdown.is_file():
+              raise SystemExit(f"OSV Markdown output is missing: {raw_markdown}")
+
+          raw_markdown_text = raw_markdown.read_text(encoding="utf-8")
+          severity_pattern = re.compile(
+              r"(?P<critical>\d+) Critical,\s*"
+              r"(?P<high>\d+) High,\s*"
+              r"(?P<medium>\d+) Medium,\s*"
+              r"(?P<low>\d+) Low,\s*"
+              r"(?P<unknown>\d+) Unknown",
+              re.IGNORECASE,
+          )
+          severity_match = severity_pattern.search(raw_markdown_text)
+          if severity_match:
+              counts = {key: int(value) for key, value in severity_match.groupdict().items()}
+          else:
+              # Clean scans and repositories without dependency artifacts may
+              # not contain OSV's aggregate sentence.
+              counts = {key: 0 for key in ("critical", "high", "medium", "low", "unknown")}
+
+          vulnerability_count = sum(counts.values())
+          package_match = re.search(
+              r"Total\s+(\d+)\s+packages?\s+affected\s+by\s+(\d+)\s+known vulnerabilities?",
+              raw_markdown_text,
+              re.IGNORECASE,
+          )
+          affected_package_count = int(package_match.group(1)) if package_match else 0
+
+          discovered_file_path = temporary_root / "discovered-files.txt"
+          ecosystem_path = temporary_root / "discovered-ecosystems.txt"
+          discovered_files = [
+              line for line in discovered_file_path.read_text(encoding="utf-8").splitlines() if line
+          ]
+          discovered_ecosystems = [
+              line for line in ecosystem_path.read_text(encoding="utf-8").splitlines() if line
+          ]
+
+          workspace = Path(os.environ["GITHUB_WORKSPACE"]).resolve()
+          scanned_files = set()
+          for result in osv_json["results"]:
+              if not isinstance(result, dict):
+                  continue
+              source = result.get("source")
+              if not isinstance(source, dict) or not source.get("path"):
+                  continue
+              source_path = Path(str(source["path"]))
+              try:
+                  normalized = source_path.resolve().relative_to(workspace).as_posix()
+              except ValueError:
+                  normalized = source_path.as_posix()
+              scanned_files.add(normalized.removeprefix("./"))
+
+          scanned_files = sorted(scanned_files)
+          skipped_files = sorted(set(discovered_files) - set(scanned_files))
+          started_at = int((temporary_root / "started-at.epoch").read_text(encoding="utf-8"))
+          scan_duration = max(0, int(time.time()) - started_at)
+
+          summary = {
+              "schema_version": 1,
+              "scanner": {"name": "osv-scanner", "version": "2.3.8"},
+              "generated_at": time.strftime(
+                  "%Y-%m-%dT%H:%M:%SZ",
+                  time.strptime(os.environ["REPORT_TIMESTAMP"], "%Y-%m-%dT%H-%M-%SZ"),
+              ),
+              "repository": os.environ["GITHUB_REPOSITORY"],
+              "commit": os.environ["GITHUB_SHA"],
+              "event": os.environ["GITHUB_EVENT_NAME"],
+              "severity_threshold": os.environ["FAIL_ON_SEVERITY"],
+              "scan_duration_seconds": scan_duration,
+              "discovery": {
+                  "artifact_count": len(discovered_files),
+                  "ecosystem_count": len(discovered_ecosystems),
+                  "ecosystems": discovered_ecosystems,
+                  "artifacts": discovered_files,
+              },
+              "scan": {
+                  "files_scanned": scanned_files,
+                  "files_skipped": skipped_files,
+                  "affected_packages": affected_package_count,
+                  "vulnerabilities": vulnerability_count,
+                  "severity": {**counts, "total": vulnerability_count},
+              },
+              "scanner_step_outcomes": {
+                  "json": os.environ.get("JSON_SCAN_OUTCOME", "skipped"),
+                  "sarif": os.environ.get("SARIF_SCAN_OUTCOME", "skipped"),
+                  "markdown": os.environ.get("MARKDOWN_SCAN_OUTCOME", "skipped"),
+              },
+              "reports": {
+                  "json": f"{report_root.as_posix()}/latest.json",
+                  "sarif": f"{report_root.as_posix()}/latest.sarif",
+                  "markdown": (
+                      f"{report_root.as_posix()}/latest.md"
+                      if os.environ["GENERATE_MARKDOWN"] == "true"
+                      else None
+                  ),
+                  "history": history_root.as_posix(),
+              },
+          }
+
+          summary_json = json.dumps(summary, indent=2, sort_keys=True) + "\n"
+          (report_root / "summary.json").write_text(summary_json, encoding="utf-8")
+          (history_root / "summary.json").write_text(summary_json, encoding="utf-8")
+
+          (history_root / "report.json").write_bytes(latest_json.read_bytes())
+          (history_root / "report.sarif").write_bytes(latest_sarif.read_bytes())
+
+          markdown_lines = [
+              "# OSV Vulnerability Scan",
+              "",
+              f"- Generated: `{os.environ['REPORT_TIMESTAMP']}`",
+              f"- Repository: `{os.environ['GITHUB_REPOSITORY']}`",
+              f"- Commit: `{os.environ['GITHUB_SHA']}`",
+              f"- Severity gate: `{os.environ['FAIL_ON_SEVERITY']}`",
+              f"- Duration: `{scan_duration}s`",
+              "",
+              "## Findings",
+              "",
+              "| Severity | Count |",
+              "| --- | ---: |",
+              f"| Critical | {counts['critical']} |",
+              f"| High | {counts['high']} |",
+              f"| Medium | {counts['medium']} |",
+              f"| Low | {counts['low']} |",
+              f"| Unknown | {counts['unknown']} |",
+              f"| **Total** | **{vulnerability_count}** |",
+              "",
+              "## Discovery",
+              "",
+              f"Discovered {len(discovered_files)} artifact(s) across "
+              f"{len(discovered_ecosystems)} ecosystem label(s).",
+              "",
+          ]
+
+          if discovered_files:
+              markdown_lines.extend(f"- `{path}`" for path in discovered_files)
+          else:
+              markdown_lines.append("- No supported dependency artifacts discovered.")
+
+          markdown_lines.extend(["", "## Scanned Files", ""])
+          if scanned_files:
+              markdown_lines.extend(f"- `{path}`" for path in scanned_files)
+          else:
+              markdown_lines.append("- No dependency sources reported by OSV Scanner.")
+
+          markdown_lines.extend(["", "## Skipped Discovered Files", ""])
+          if skipped_files:
+              markdown_lines.extend(f"- `{path}`" for path in skipped_files)
+          else:
+              markdown_lines.append("- None.")
+
+          markdown_lines.extend(["", "## OSV Scanner Report", "", raw_markdown_text.rstrip(), ""])
+          rendered_markdown = "\n".join(markdown_lines)
+
+          if os.environ["GENERATE_MARKDOWN"] == "true":
+              (report_root / "latest.md").write_text(rendered_markdown, encoding="utf-8")
+              (history_root / "report.md").write_text(rendered_markdown, encoding="utf-8")
+          else:
+              (report_root / "latest.md").unlink(missing_ok=True)
+              (history_root / "report.md").unlink(missing_ok=True)
+
+          # The raw Markdown is an implementation detail used to read OSV's
+          # canonical aggregate counts. Only the normalized report is public.
+          raw_markdown.unlink(missing_ok=True)
+
+          github_output = Path(os.environ["GITHUB_OUTPUT"])
+          with github_output.open("a", encoding="utf-8") as output:
+              for key, value in counts.items():
+                  output.write(f"{key}_count={value}\n")
+              output.write(f"vulnerability_count={vulnerability_count}\n")
+              output.write(f"lockfiles_scanned={len(scanned_files)}\n")
+              output.write(f"scan_duration={scan_duration}\n")
+
+          job_summary = Path(os.environ["GITHUB_STEP_SUMMARY"])
+          with job_summary.open("a", encoding="utf-8") as output:
+              output.write(rendered_markdown)
+              output.write("\n## Output Locations\n\n")
+              output.write(f"- JSON: `{report_root}/latest.json`\n")
+              output.write(f"- SARIF: `{report_root}/latest.sarif`\n")
+              if os.environ["GENERATE_MARKDOWN"] == "true":
+                  output.write(f"- Markdown: `{report_root}/latest.md`\n")
+              output.write(f"- Machine summary: `{report_root}/summary.json`\n")
+              output.write(f"- History: `{history_root}/`\n")
+          PY
+
+      - name: "⬆️ Upload SARIF to GitHub Code Scanning"
+        if: >-
+          env.UPLOAD_SARIF == 'true' &&
+          (github.event_name != 'pull_request' ||
+           github.event.pull_request.head.repo.full_name == github.repository)
+        # github/codeql-action v4.37.1; immutable release pin.
+        uses: github/codeql-action/upload-sarif@7188fc363630916deb702c7fdcf4e481b751f97a
+        with:
+          sarif_file: ".engineering/reports/osv/latest.sarif"
+          category: "osv-scanner"
+
+      - name: "📦 Upload OSV report artifact"
+        if: always()
+        # actions/upload-artifact v7.0.1; immutable release pin.
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "osv-reports-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: ".engineering/reports/osv/"
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9
+
+      - name: "🚦 Enforce severity threshold"
+        shell: bash
+        env:
+          CRITICAL_COUNT: "${{ steps.summarize.outputs.critical_count }}"
+          HIGH_COUNT: "${{ steps.summarize.outputs.high_count }}"
+          MEDIUM_COUNT: "${{ steps.summarize.outputs.medium_count }}"
+          LOW_COUNT: "${{ steps.summarize.outputs.low_count }}"
+        run: |
+          set -euo pipefail
+
+          critical_count="${CRITICAL_COUNT:-0}"
+          high_count="${HIGH_COUNT:-0}"
+          medium_count="${MEDIUM_COUNT:-0}"
+          low_count="${LOW_COUNT:-0}"
+          gated_count=0
+
+          case "${FAIL_ON_SEVERITY}" in
+            none) gated_count=0 ;;
+            critical) gated_count="${critical_count}" ;;
+            high) gated_count=$((critical_count + high_count)) ;;
+            medium) gated_count=$((critical_count + high_count + medium_count)) ;;
+            low) gated_count=$((critical_count + high_count + medium_count + low_count)) ;;
+            *)
+              printf 'Invalid configured threshold: %s\n' "${FAIL_ON_SEVERITY}" >&2
+              exit 2
+              ;;
+          esac
+
+          if (( gated_count > 0 )); then
+            printf '::error title=OSV severity gate failed::Found %s vulnerability finding(s) at or above %s severity.\n' \
+              "${gated_count}" "${FAIL_ON_SEVERITY}"
+            exit 1
+          fi
+
+          printf 'OSV severity gate passed at threshold: %s\n' "${FAIL_ON_SEVERITY}"
+
+  commit-reports:
+    name: "💾 Commit OSV Reports"
+    needs: scan
+    # The scan may intentionally fail its severity gate. A requested report
+    # commit should still preserve those findings, hence always().
+    if: always() && needs.scan.outputs.commit_reports == 'true'
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 10
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: "📥 Checkout dispatched branch"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          ref: "${{ github.ref_name }}"
+
+      - name: "📦 Download generated reports"
+        # actions/download-artifact v8.0.1; immutable release pin.
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: "osv-reports-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: ".engineering/reports/osv/"
+
+      - name: "💾 Commit generated reports"
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- ".engineering/reports/osv"
+
+          if git diff --cached --quiet; then
+            printf 'No OSV report changes detected.\n'
+            exit 0
+          fi
+
+          git commit --message "security: refresh OSV vulnerability reports"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

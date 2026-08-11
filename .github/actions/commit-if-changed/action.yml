@@ -1,0 +1,34 @@
+name: Commit If Changed
+description: Configures the GitHub Actions bot identity, commits staged changes, and pushes when needed.
+
+inputs:
+  pathspec:
+    description: Pathspec to stage before checking for changes
+    required: true
+  commit-message:
+    description: Commit message to use when staged changes exist
+    required: true
+  author-name:
+    description: Git author name
+    required: false
+    default: github-actions[bot]
+  author-email:
+    description: Git author email
+    required: false
+    default: 41898282+github-actions[bot]@users.noreply.github.com
+
+runs:
+  using: composite
+  steps:
+    - name: Commit and push changes when present
+      shell: bash
+      run: |
+        git config user.name "${{ inputs.author-name }}"
+        git config user.email "${{ inputs.author-email }}"
+        git add -- ${{ inputs.pathspec }}
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "${{ inputs.commit-message }}"
+          git push
+        fi

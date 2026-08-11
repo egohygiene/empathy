@@ -1,0 +1,122 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+name: "🌱 Digital Garden"
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - "main"
+      - "master"
+    paths:
+      - "garden/publish/**"
+      - "garden/quartz/**"
+      - ".github/workflows/garden.yml"
+
+# ── Permissions ──────────────────────────────────────────────────────────────
+# Minimal permissions required for a read-only build plus Pages upload.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "garden"
+  cancel-in-progress: true
+
+# ── Environment ──────────────────────────────────────────────────────────────
+env:
+  # Quartz commit to use. Pin this to a specific commit for reproducibility.
+  # To update Quartz, change this SHA and test locally before merging.
+  QUARTZ_COMMIT: "9cf87ff1c248a8ca551093214b0fec3b31415009"
+  # Path to the content directory relative to the repository root.
+  # Notes placed here are included in the published garden.
+  CONTENT_DIR: "garden/publish"
+  # Path to the Quartz configuration file relative to the repository root.
+  QUARTZ_CONFIG: "garden/quartz/quartz.config.yaml"
+
+jobs:
+  build:
+    name: "🏗️ Build Garden"
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 15
+
+    steps:
+      - name: "📥 Checkout Repository"
+        uses: actions/checkout@v7
+        with:
+          # Fetch full history so Quartz can compute accurate modified dates.
+          fetch-depth: 0
+
+      - name: "⚙️ Setup Node.js"
+        uses: actions/setup-node@v6
+        with:
+          # Quartz v5 requires Node.js >= 22.
+          node-version: "22"
+
+      - name: "📦 Cache npm dependencies"
+        uses: actions/cache@v6
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-quartz-${{ env.QUARTZ_COMMIT }}
+          restore-keys: |
+            ${{ runner.os }}-npm-quartz-
+
+      - name: "📦 Cache Quartz plugins"
+        uses: actions/cache@v6
+        with:
+          path: /tmp/quartz/.quartz/plugins
+          key: ${{ runner.os }}-quartz-plugins-${{ env.QUARTZ_COMMIT }}
+          restore-keys: |
+            ${{ runner.os }}-quartz-plugins-
+
+      - name: "🔧 Clone Quartz engine"
+        run: |
+          git clone --no-checkout https://github.com/jackyzha0/quartz.git /tmp/quartz
+          cd /tmp/quartz
+          git checkout "$QUARTZ_COMMIT"
+
+      - name: "📋 Apply Garden configuration"
+        run: |
+          cp "$GITHUB_WORKSPACE/$QUARTZ_CONFIG" /tmp/quartz/quartz.config.yaml
+
+      - name: "📦 Install Quartz dependencies"
+        working-directory: /tmp/quartz
+        run: npm ci
+
+      - name: "🔌 Install Quartz plugins"
+        working-directory: /tmp/quartz
+        run: npx quartz plugin install
+
+      - name: "🏗️ Build Garden site"
+        working-directory: /tmp/quartz
+        run: |
+          npx quartz build \
+            --directory "$GITHUB_WORKSPACE/$CONTENT_DIR" \
+            --output public \
+            --verbose
+
+      - name: "📄 Configure GitHub Pages"
+        uses: actions/configure-pages@v6
+
+      - name: "📤 Upload Pages artifact"
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: "/tmp/quartz/public"
+
+  deploy:
+    name: "🚀 Deploy Garden"
+    needs: build
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 10
+    # Only deploy on push to main/master, not on pull requests.
+    if: github.event_name != 'pull_request'
+    environment:
+      name: "garden"
+      url: "${{ steps.deployment.outputs.page_url }}"
+
+    steps:
+      - name: "🚀 Deploy to GitHub Pages"
+        id: deployment
+        uses: actions/deploy-pages@v5
