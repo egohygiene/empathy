@@ -1,0 +1,43 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Generate lint architecture
+description: >-
+  Generate the deterministic Egolint architecture SVG and Markdown legend from
+  the canonical MegaLinter and complementary-tool matrices.
+
+inputs:
+  output-directory:
+    description: Repository-relative architecture report directory.
+    required: false
+    default: ".reports/egolint/architecture"
+
+outputs:
+  markdown-path:
+    description: Repository-relative generated Markdown legend path.
+    value: "${{ steps.generate.outputs.markdown-path }}"
+  svg-path:
+    description: Repository-relative generated SVG path.
+    value: "${{ steps.generate.outputs.svg-path }}"
+
+runs:
+  using: composite
+  steps:
+    - name: Generate architecture artifacts
+      id: generate
+      shell: bash
+      env:
+        OUTPUT_DIRECTORY: "${{ inputs.output-directory }}"
+      run: |
+        set -euo pipefail
+
+        python3 \
+          "${GITHUB_ACTION_PATH}/generate_lint_infographic.py" \
+          --repository-root "${GITHUB_WORKSPACE}" \
+          --output-directory "${OUTPUT_DIRECTORY}" \
+          --write
+
+        printf 'markdown-path=%s/README.md\n' "${OUTPUT_DIRECTORY}" \
+          >> "${GITHUB_OUTPUT}"
+        printf 'svg-path=%s/lint-architecture.svg\n' "${OUTPUT_DIRECTORY}" \
+          >> "${GITHUB_OUTPUT}"

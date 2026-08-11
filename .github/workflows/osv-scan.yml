@@ -8,7 +8,7 @@ name: "🔍 OSV Vulnerability Scan"
 # =============================================================================
 #
 # This workflow intentionally owns discovery, report generation, severity
-# policy, artifact publication, and optional report commits. It installs the
+# policy, artifact publication, and trusted report snapshots. It installs the
 # official OSV Scanner release with a pinned checksum and invokes the CLI
 # directly; policy is not delegated to an upstream reusable workflow.
 #
@@ -17,17 +17,11 @@ name: "🔍 OSV Vulnerability Scan"
 #   ├── latest.json
 #   ├── latest.sarif
 #   ├── latest.md                 # optional manual-dispatch setting
-#   ├── summary.json
-#   └── history/<UTC timestamp>/
-#       ├── report.json
-#       ├── report.sarif
-#       ├── report.md             # optional manual-dispatch setting
-#       └── summary.json
+#   └── summary.json
 #
-# Every run uploads this tree as a workflow artifact. Committing it to the
-# repository is opt-in and available only through workflow_dispatch. Keeping
-# report commits explicit avoids noisy scheduled commits and unsafe writes from
-# pull-request contexts.
+# Every run uploads this tree as a workflow artifact. Trusted default-branch
+# pushes, schedules, and manual runs publish the same stable latest snapshot.
+# Git history and per-run artifacts preserve history without timestamped trees.
 #
 # OSV Scanner documentation:
 #   https://google.github.io/osv-scanner/
@@ -39,10 +33,9 @@ on:
     branches:
       - "main"
       - "master"
-    # A manually requested report commit must not recursively trigger another
-    # scan when the commit contains only generated OSV reports.
+    # Report-only commits must not recursively trigger another scan.
     paths-ignore:
-      - ".reports/osv/**"
+      - ".reports/**"
 
   pull_request:
     branches:
@@ -72,14 +65,9 @@ on:
         default: true
         type: boolean
       generate-markdown:
-        description: "Generate latest.md and timestamped report.md."
+        description: "Generate the curated latest.md report."
         required: true
         default: true
-        type: boolean
-      commit-reports:
-        description: "Commit generated reports to the dispatched branch."
-        required: true
-        default: false
         type: boolean
       verbose:
         description: "Enable informational OSV Scanner logging."
@@ -122,7 +110,6 @@ jobs:
       lockfiles_scanned: "${{ steps.summarize.outputs.lockfiles_scanned }}"
       scan_duration: "${{ steps.summarize.outputs.scan_duration }}"
       report_timestamp: "${{ steps.configure.outputs.report_timestamp }}"
-      commit_reports: "${{ steps.configure.outputs.commit_reports }}"
 
     steps:
       - name: "📥 Checkout repository"
@@ -143,8 +130,6 @@ jobs:
             ${{ github.event_name == 'workflow_dispatch' && inputs['upload-sarif'] || github.event_name != 'workflow_dispatch' }}
           REQUESTED_GENERATE_MARKDOWN: >-
             ${{ github.event_name == 'workflow_dispatch' && inputs['generate-markdown'] || github.event_name != 'workflow_dispatch' }}
-          REQUESTED_COMMIT_REPORTS: >-
-            ${{ github.event_name == 'workflow_dispatch' && inputs['commit-reports'] || false }}
           REQUESTED_VERBOSE: >-
             ${{ github.event_name == 'workflow_dispatch' && inputs.verbose || false }}
         run: |
@@ -174,11 +159,9 @@ jobs:
 
           upload_sarif="$(normalize_boolean "${REQUESTED_UPLOAD_SARIF}")"
           generate_markdown="$(normalize_boolean "${REQUESTED_GENERATE_MARKDOWN}")"
-          commit_reports="$(normalize_boolean "${REQUESTED_COMMIT_REPORTS}")"
           verbose="$(normalize_boolean "${REQUESTED_VERBOSE}")"
           report_timestamp="$(date --utc '+%Y-%m-%dT%H-%M-%SZ')"
           report_root=".reports/osv"
-          history_root="${report_root}/history/${report_timestamp}"
           temporary_root="${RUNNER_TEMP}/osv-scan"
 
           if [[ "${verbose}" == "true" ]]; then
@@ -187,7 +170,8 @@ jobs:
             osv_verbosity="error"
           fi
 
-          mkdir --parents "${report_root}" "${history_root}" "${temporary_root}"
+          mkdir --parents "${report_root}" "${temporary_root}"
+          rm --force --recursive "${report_root}/history"
 
           # A repository may already contain reports from a prior committed
           # run. Remove current-run targets so a failed scanner invocation can
@@ -203,17 +187,14 @@ jobs:
             printf 'FAIL_ON_SEVERITY=%s\n' "${REQUESTED_THRESHOLD}"
             printf 'UPLOAD_SARIF=%s\n' "${upload_sarif}"
             printf 'GENERATE_MARKDOWN=%s\n' "${generate_markdown}"
-            printf 'COMMIT_REPORTS=%s\n' "${commit_reports}"
             printf 'OSV_VERBOSITY=%s\n' "${osv_verbosity}"
             printf 'REPORT_TIMESTAMP=%s\n' "${report_timestamp}"
             printf 'REPORT_ROOT=%s\n' "${report_root}"
-            printf 'HISTORY_ROOT=%s\n' "${history_root}"
             printf 'TEMPORARY_ROOT=%s\n' "${temporary_root}"
           } >> "${GITHUB_ENV}"
 
           {
             printf 'report_timestamp=%s\n' "${report_timestamp}"
-            printf 'commit_reports=%s\n' "${commit_reports}"
           } >> "${GITHUB_OUTPUT}"
 
           printf 'OSV scan started at %s\n' "${report_timestamp}"
@@ -473,7 +454,6 @@ jobs:
           from pathlib import Path
 
           report_root = Path(os.environ["REPORT_ROOT"])
-          history_root = Path(os.environ["HISTORY_ROOT"])
           temporary_root = Path(os.environ["TEMPORARY_ROOT"])
           latest_json = report_root / "latest.json"
           latest_sarif = report_root / "latest.sarif"
@@ -595,16 +575,11 @@ jobs:
                       if os.environ["GENERATE_MARKDOWN"] == "true"
                       else None
                   ),
-                  "history": history_root.as_posix(),
               },
           }
 
           summary_json = json.dumps(summary, indent=2, sort_keys=True) + "\n"
           (report_root / "summary.json").write_text(summary_json, encoding="utf-8")
-          (history_root / "summary.json").write_text(summary_json, encoding="utf-8")
-
-          (history_root / "report.json").write_bytes(latest_json.read_bytes())
-          (history_root / "report.sarif").write_bytes(latest_sarif.read_bytes())
 
           markdown_lines = [
               "# OSV Vulnerability Scan",
@@ -655,10 +630,8 @@ jobs:
 
           if os.environ["GENERATE_MARKDOWN"] == "true":
               (report_root / "latest.md").write_text(rendered_markdown, encoding="utf-8")
-              (history_root / "report.md").write_text(rendered_markdown, encoding="utf-8")
           else:
               (report_root / "latest.md").unlink(missing_ok=True)
-              (history_root / "report.md").unlink(missing_ok=True)
 
           # The raw Markdown is an implementation detail used to read OSV's
           # canonical aggregate counts. Only the normalized report is public.
@@ -681,7 +654,6 @@ jobs:
               if os.environ["GENERATE_MARKDOWN"] == "true":
                   output.write(f"- Markdown: `{report_root}/latest.md`\n")
               output.write(f"- Machine summary: `{report_root}/summary.json`\n")
-              output.write(f"- History: `{history_root}/`\n")
           PY
 
       - name: "⬆️ Upload SARIF to GitHub Code Scanning"
@@ -742,12 +714,16 @@ jobs:
 
           printf 'OSV severity gate passed at threshold: %s\n' "${FAIL_ON_SEVERITY}"
 
-  commit-reports:
-    name: "💾 Commit OSV Reports"
+  publish-reports:
+    name: "💾 Publish Curated OSV Snapshot"
     needs: scan
-    # The scan may intentionally fail its severity gate. A requested report
-    # commit should still preserve those findings, hence always().
-    if: always() && needs.scan.outputs.commit_reports == 'true'
+    # The severity gate may intentionally fail. Trusted runs still publish the
+    # evidence, while pull requests and non-default branches remain read-only.
+    if: >-
+      always() &&
+      needs.scan.result != 'cancelled' &&
+      github.event_name != 'pull_request' &&
+      github.ref_name == github.event.repository.default_branch
     runs-on: "ubuntu-latest"
     timeout-minutes: 10
 
@@ -755,12 +731,18 @@ jobs:
       contents: write
 
     steps:
-      - name: "📥 Checkout dispatched branch"
+      - name: "📥 Checkout default branch"
         # actions/checkout v7.0.1; immutable release pin.
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
-          ref: "${{ github.ref_name }}"
+          ref: "${{ github.event.repository.default_branch }}"
+
+      - name: "🧹 Clear the previous OSV snapshot"
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm --force --recursive --ignore-unmatch -- ".reports/osv"
 
       - name: "📦 Download generated reports"
         # actions/download-artifact v8.0.1; immutable release pin.
@@ -769,19 +751,10 @@ jobs:
           name: "osv-reports-${{ github.run_id }}-${{ github.run_attempt }}"
           path: ".reports/osv/"
 
-      - name: "💾 Commit generated reports"
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add --force -- ".reports/osv"
-
-          if git diff --cached --quiet; then
-            printf 'No OSV report changes detected.\n'
-            exit 0
-          fi
-
-          git commit --message "security: refresh OSV vulnerability reports"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+      - name: "💾 Publish stable OSV snapshot"
+        uses: ./.github/actions/publish-report-snapshot
+        with:
+          paths: .reports/osv
+          default-branch: "${{ github.event.repository.default_branch }}"
+          commit-message: >-
+            chore(reports): 📊 refresh OSV snapshot [skip ci]

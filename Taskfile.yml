@@ -120,6 +120,27 @@ tasks:
     cmds:
       - task: egolint:contracts
       - task: tool:contracts
+      - task: lint:architecture
+
+  lint:architecture:
+    desc: Verify the generated lint architecture matches the tool matrices
+    cmds:
+      - >-
+        python3
+        .github/actions/generate-lint-infographic/generate_lint_infographic.py
+        --repository-root .
+        --output-directory .reports/egolint/architecture
+        --check
+
+  lint:architecture:write:
+    desc: Regenerate the lint architecture SVG and Markdown legend
+    cmds:
+      - >-
+        python3
+        .github/actions/generate-lint-infographic/generate_lint_infographic.py
+        --repository-root .
+        --output-directory .reports/egolint/architecture
+        --write
 
   lint:complementary:
     desc: Run every applicable non-MegaLinter tool
