@@ -30,6 +30,7 @@ A staged workflow may become canonical only after it:
 - declares explicit inputs, permissions, concurrency, and job timeouts;
 - pins every external action to a reviewed full commit SHA;
 - handles forks, missing secrets, and absent technology files safely;
+- verifies required repository features such as Dependency Graph are enabled;
 - passes actionlint, MegaLinter, and a representative end-to-end run;
 - documents whether it belongs in Empathy, Relay, Realm, Aether, or a technology
   profile.
