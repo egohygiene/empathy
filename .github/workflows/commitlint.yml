@@ -35,3 +35,5 @@ jobs:
       - name: Lint commit messages
         # wagoid/commitlint-github-action v6.2.1
         uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed
+        with:
+          configFile: egolint/.config/lint/commits/commitlint.config.mjs

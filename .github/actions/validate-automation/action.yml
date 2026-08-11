@@ -76,7 +76,7 @@ runs:
           exit 2
         }
         "${ACTIONLINT}" \
-          -config-file .github/actionlint.yaml \
+          -config-file egolint/.config/lint/actions/actionlint.yml \
           "${workflow_files[@]}"
 
     - name: Validate local action metadata

@@ -9,7 +9,8 @@ one place before independently versioned components are extracted.
 
 ## Current foundation
 
-This first consolidation pass establishes the GitHub automation layer:
+The current consolidation passes establish the GitHub automation and Egolint
+quality layers:
 
 - immutable external action references;
 - least-privilege workflow permissions and bounded job runtimes;
@@ -17,6 +18,10 @@ This first consolidation pass establishes the GitHub automation layer:
 - automation policy tests and MegaLinter validation;
 - dependency, CodeQL, OSV, and OpenSSF supply-chain checks;
 - safe manual workflows for contributor and repository-intelligence generation.
+- an encapsulated, cross-language Egolint subsystem with root Taskfile imports;
+- universal and holistic MegaLinter profiles with generated output under
+  `.reports/`;
+- durable quality audits and remediation guidance under `.audits/`.
 
 Imported workflows that still depend on a product, toolchain, secret set, or
 release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
@@ -26,11 +31,14 @@ and are intentionally inert.
 
 ```bash
 task check
+task lint:all
+task lint:holistic
 ```
 
-The command validates formatting, Markdown, Python syntax, unit tests, and the
-GitHub automation policy. See [the composite action catalog](.github/actions/README.md)
-for reusable action contracts.
+The standard check validates formatting, tests, and the changed-file Egolint
+profile. The complete and holistic commands expand that scope deliberately.
+See [the Egolint subsystem](egolint/README.md) and
+[the composite action catalog](.github/actions/README.md) for their contracts.
 
 ## Status
 

@@ -29,7 +29,7 @@
 (^|/)generated/
 (^|/)tmp/
 
-^\.engineering/reports/
+^\.reports/
 
 \.map$
 \.min\.js$

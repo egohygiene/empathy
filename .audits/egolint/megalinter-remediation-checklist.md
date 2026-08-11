@@ -1,4 +1,4 @@
-# MegaLinter Remediation Checklist
+# Egolint Remediation Checklist
 
 Use this checklist to validate and remediate each linter independently.
 
@@ -147,7 +147,7 @@ Run these after the individual checklist is complete:
 
 - [ ] `task lint:changed` — validate current worktree changes
 - [ ] `task lint:all` — validate the complete enabled suite
-- [ ] Review `.engineering/reports/megalinter/`
+- [ ] Review `.reports/megalinter/`
 - [ ] Confirm no unexpected modified files with `git status --short`
 - [ ] Confirm no accidental mode changes with `git diff --summary`
 

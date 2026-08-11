@@ -10,6 +10,10 @@ dist/
 node_modules/
 reports/
 target/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+**/.clang-format
+*.code-workspace
 CONTRIBUTORS.md
 LICENSE
-empathy.code-workspace

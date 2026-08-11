@@ -98,6 +98,9 @@ storybook-static/
 # Rust
 target/
 
+# Raku
+**/.precomp/
+
 # Dart and Flutter
 .dart_tool/
 .flutter-plugins

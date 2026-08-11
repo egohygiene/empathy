@@ -78,7 +78,7 @@ jobs:
 
       - name: "📁 Prepare reports directory"
         run: |
-          mkdir -p reports
+          mkdir -p .reports
 
       - name: "📜 Scan repository"
         run: |
@@ -87,7 +87,7 @@ jobs:
             --copyright \
             --package \
             --summary \
-            --json reports/scancode.json \
+            --json .reports/scancode.json \
             .
 
       - name: "📦 Upload report artifact"
@@ -95,7 +95,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: scancode-report
-          path: reports/scancode.json
+          path: .reports/scancode.json
           retention-days: 30
           if-no-files-found: error
 

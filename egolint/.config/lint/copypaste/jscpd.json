@@ -39,7 +39,7 @@
     "**/logs/**",
     "**/node_modules/**",
     "**/out/**",
-    "**/reports/**",
+    "**/.reports/**",
     "**/target/**",
     "**/tmp/**",
     "**/venv/**",
@@ -60,5 +60,5 @@
   ],
   "absolute": false,
   "gitignore": true,
-  "output": ".engineering/reports/megalinter/jscpd"
+  "output": ".reports/megalinter/jscpd"
 }

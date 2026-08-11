@@ -48,7 +48,7 @@ ignore =
     venv
 
 ignore-paths =
-    ^\.engineering/reports/,
+    ^\.reports/,
     (^|/)site-packages/,
     (^|/).*\.generated\.py$,
     (^|/).*_pb2\.py$,

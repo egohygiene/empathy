@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://raw.githubusercontent.com/oxsecurity/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
 
 # MegaLinter repository-wide code-quality configuration.
 #
@@ -54,7 +54,7 @@ DISABLE_LINTERS:
   # Checkmake is disabled until the universal Makefile policy is finalized.
   - MAKEFILE_CHECKMAKE
 
-  # MegaLinter v9.6.0 currently disables API_SPECTRAL internally because the
+  # MegaLinter v10.0.0 currently disables API_SPECTRAL internally because the
   # integration is marked as crashing. Preserve the native ruleset and wiring
   # so the linter can be re-enabled when upstream support is restored.
   - API_SPECTRAL
@@ -95,6 +95,7 @@ ADDITIONAL_EXCLUDED_DIRECTORIES:
   - .parcel-cache
   - .pnpm
   - .pytest_cache
+  - .reports
   - .ruff_cache
   - .sbom
   - .scannerwork
@@ -165,7 +166,7 @@ JAVASCRIPT_DEFAULT_STYLE: prettier
 #
 # Linters whose configurations live in nested domain directories will receive
 # explicit *_RULES_PATH and *_CONFIG_FILE values later in this file.
-LINTER_RULES_PATH: .config/lint
+LINTER_RULES_PATH: egolint/.config/lint
 
 # ==============================================================================
 # Logging
@@ -208,9 +209,9 @@ PARALLEL_PROCESS_NUMBER: 4
 # Reporting
 # ==============================================================================
 
-# Store all generated lint reports beneath the repository's engineering-output
+# Store all generated lint reports beneath the repository's disposable report
 # namespace.
-REPORT_OUTPUT_FOLDER: .engineering/reports/megalinter
+REPORT_OUTPUT_FOLDER: .reports/megalinter
 
 # Include total and per-linter execution timing in the console output.
 SHOW_ELAPSED_TIME: true
@@ -258,7 +259,7 @@ FILTER_REGEX_EXCLUDE: |-
     # Repository-specific vendored, experimental, and generated trees.
     ^\.github/agents/copilot/awesome-copilot/
     |
-    ^\.engineering/reports/megalinter/
+    ^\.reports/megalinter/
     |
     ^\.staging/
     |
@@ -281,7 +282,7 @@ FILTER_REGEX_EXCLUDE: |-
 # actionlint
 # https://github.com/rhysd/actionlint
 # https://megalinter.io/latest/descriptors/action_actionlint/
-ACTION_ACTIONLINT_RULES_PATH: .config/lint/actions
+ACTION_ACTIONLINT_RULES_PATH: egolint/.config/lint/actions
 ACTION_ACTIONLINT_CONFIG_FILE: actionlint.yml
 
 # ==============================================================================
@@ -305,7 +306,7 @@ ACTION_ACTIONLINT_CONFIG_FILE: actionlint.yml
 ANSIBLE_DIRECTORY: ansible
 
 # Load the canonical repository-wide Ansible Lint configuration.
-ANSIBLE_ANSIBLE_LINT_RULES_PATH: .config/lint/ansible
+ANSIBLE_ANSIBLE_LINT_RULES_PATH: egolint/.config/lint/ansible
 ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: ansible-lint.yml
 
 # Run once from the repository root so Ansible can resolve project context,
@@ -325,10 +326,10 @@ ANSIBLE_ANSIBLE_LINT_ARGUMENTS:
 # https://megalinter.io/latest/descriptors/api_spectral/
 #
 # NOTE:
-# MegaLinter v9.6.0 currently disables API_SPECTRAL internally because the
+# MegaLinter v10.0.0 currently disables API_SPECTRAL internally because the
 # integration is marked as crashing. Preserve the native ruleset and wiring
 # so the linter can be re-enabled when upstream support is restored.
-API_SPECTRAL_RULES_PATH: .config/lint/api
+API_SPECTRAL_RULES_PATH: egolint/.config/lint/api
 API_SPECTRAL_CONFIG_FILE: spectral.yaml
 
 # ==============================================================================
@@ -338,7 +339,7 @@ API_SPECTRAL_CONFIG_FILE: spectral.yaml
 # ARM Template Test Toolkit
 # https://github.com/Azure/arm-ttk
 # https://megalinter.io/latest/descriptors/arm_arm_ttk/
-ARM_ARM_TTK_RULES_PATH: .config/lint/arm
+ARM_ARM_TTK_RULES_PATH: egolint/.config/lint/arm
 ARM_ARM_TTK_CONFIG_FILE: arm-ttk.psd1
 
 # ==============================================================================
@@ -348,7 +349,7 @@ ARM_ARM_TTK_CONFIG_FILE: arm-ttk.psd1
 # cljstyle
 # https://github.com/greglook/cljstyle
 # https://megalinter.io/latest/descriptors/clojure_cljstyle/
-CLOJURE_CLJSTYLE_RULES_PATH: .config/lint/clojure
+CLOJURE_CLJSTYLE_RULES_PATH: egolint/.config/lint/clojure
 CLOJURE_CLJSTYLE_CONFIG_FILE: cljstyle.edn
 
 # Do not format the formatter configuration or the clj-kondo configuration.
@@ -362,7 +363,7 @@ CLOJURE_CLJSTYLE_FILTER_REGEX_EXCLUDE: >-
 # clj-kondo
 # https://github.com/clj-kondo/clj-kondo
 # https://megalinter.io/latest/descriptors/clojure_clj_kondo/
-CLOJURE_CLJ_KONDO_RULES_PATH: .config/lint/clojure/.clj-kondo
+CLOJURE_CLJ_KONDO_RULES_PATH: egolint/.config/lint/clojure/.clj-kondo
 CLOJURE_CLJ_KONDO_CONFIG_FILE: config.edn
 
 # Do not lint centralized Clojure linter and formatter configurations as
@@ -377,7 +378,7 @@ CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE: >-
 # cfn-lint
 # https://github.com/aws-cloudformation/cfn-lint
 # https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
-CLOUDFORMATION_CFN_LINT_RULES_PATH: .config/lint/cloudformation
+CLOUDFORMATION_CFN_LINT_RULES_PATH: egolint/.config/lint/cloudformation
 CLOUDFORMATION_CFN_LINT_CONFIG_FILE: cfnlint.yml
 
 # ==============================================================================
@@ -387,7 +388,7 @@ CLOUDFORMATION_CFN_LINT_CONFIG_FILE: cfnlint.yml
 # CoffeeLint
 # https://github.com/coffeelint/coffeelint
 # https://megalinter.io/latest/descriptors/coffee_coffee_lint/
-COFFEE_COFFEELINT_RULES_PATH: .config/lint/coffee
+COFFEE_COFFEELINT_RULES_PATH: egolint/.config/lint/coffee
 COFFEE_COFFEELINT_CONFIG_FILE: coffeelint.json
 
 # ==============================================================================
@@ -397,7 +398,7 @@ COFFEE_COFFEELINT_CONFIG_FILE: coffeelint.json
 # jscpd
 # https://github.com/kucherenko/jscpd
 # https://megalinter.io/latest/descriptors/copypaste_jscpd/
-COPYPASTE_JSCPD_RULES_PATH: .config/lint/copypaste
+COPYPASTE_JSCPD_RULES_PATH: egolint/.config/lint/copypaste
 COPYPASTE_JSCPD_CONFIG_FILE: jscpd.json
 
 # ==============================================================================
@@ -407,7 +408,7 @@ COPYPASTE_JSCPD_CONFIG_FILE: jscpd.json
 # clang-format
 # https://clang.llvm.org/docs/ClangFormat.html
 # https://megalinter.io/latest/descriptors/cpp_clang_format/
-CPP_CLANG_FORMAT_RULES_PATH: .config/lint/cpp
+CPP_CLANG_FORMAT_RULES_PATH: egolint/.config/lint/cpp
 CPP_CLANG_FORMAT_CONFIG_FILE: .clang-format
 
 # ==============================================================================
@@ -417,7 +418,7 @@ CPP_CLANG_FORMAT_CONFIG_FILE: .clang-format
 # clang-format
 # https://clang.llvm.org/docs/ClangFormat.html
 # https://megalinter.io/latest/descriptors/c_clang_format/
-C_CLANG_FORMAT_RULES_PATH: .config/lint/cpp
+C_CLANG_FORMAT_RULES_PATH: egolint/.config/lint/cpp
 C_CLANG_FORMAT_CONFIG_FILE: .clang-format
 
 # ==============================================================================
@@ -427,7 +428,7 @@ C_CLANG_FORMAT_CONFIG_FILE: .clang-format
 # Stylelint
 # https://stylelint.io/
 # https://megalinter.io/latest/descriptors/css_stylelint/
-CSS_STYLELINT_RULES_PATH: .config/lint/css
+CSS_STYLELINT_RULES_PATH: egolint/.config/lint/css
 CSS_STYLELINT_CONFIG_FILE: stylelint.json
 
 # ==============================================================================
@@ -437,7 +438,7 @@ CSS_STYLELINT_CONFIG_FILE: stylelint.json
 # Dart analyzer
 # https://dart.dev/tools/dart-analyze
 # https://megalinter.io/latest/descriptors/dart_dartanalyzer/
-DART_DARTANALYZER_RULES_PATH: .config/lint/dart
+DART_DARTANALYZER_RULES_PATH: egolint/.config/lint/dart
 DART_DARTANALYZER_CONFIG_FILE: analysis_options.yaml
 
 # ==============================================================================
@@ -447,7 +448,7 @@ DART_DARTANALYZER_CONFIG_FILE: analysis_options.yaml
 # Hadolint
 # https://github.com/hadolint/hadolint
 # https://megalinter.io/latest/descriptors/dockerfile_hadolint/
-DOCKERFILE_HADOLINT_RULES_PATH: .config/lint/dockerfile
+DOCKERFILE_HADOLINT_RULES_PATH: egolint/.config/lint/dockerfile
 DOCKERFILE_HADOLINT_CONFIG_FILE: hadolint.yaml
 
 # ==============================================================================
@@ -457,7 +458,7 @@ DOCKERFILE_HADOLINT_CONFIG_FILE: hadolint.yaml
 # editorconfig-checker
 # https://github.com/editorconfig-checker/editorconfig-checker
 # https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
-EDITORCONFIG_EDITORCONFIG_CHECKER_RULES_PATH: .config/lint/editorconfig
+EDITORCONFIG_EDITORCONFIG_CHECKER_RULES_PATH: egolint/.config/lint/editorconfig
 EDITORCONFIG_EDITORCONFIG_CHECKER_CONFIG_FILE: editorconfig-checker.json
 
 # ==============================================================================
@@ -467,7 +468,7 @@ EDITORCONFIG_EDITORCONFIG_CHECKER_CONFIG_FILE: editorconfig-checker.json
 # gherkin-lint
 # https://github.com/gherkin-lint/gherkin-lint
 # https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
-GHERKIN_GHERKIN_LINT_RULES_PATH: .config/lint/gherkin
+GHERKIN_GHERKIN_LINT_RULES_PATH: egolint/.config/lint/gherkin
 GHERKIN_GHERKIN_LINT_CONFIG_FILE: gherkin-lint.json
 
 # ==============================================================================
@@ -477,7 +478,7 @@ GHERKIN_GHERKIN_LINT_CONFIG_FILE: gherkin-lint.json
 # Revive
 # https://github.com/mgechev/revive
 # https://megalinter.io/latest/descriptors/go_revive/
-GO_REVIVE_RULES_PATH: .config/lint/go
+GO_REVIVE_RULES_PATH: egolint/.config/lint/go
 GO_REVIVE_CONFIG_FILE: revive.toml
 
 # ==============================================================================
@@ -487,12 +488,12 @@ GO_REVIVE_CONFIG_FILE: revive.toml
 # graphql-schema-linter
 # https://github.com/cjoudrey/graphql-schema-linter
 # https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
-GRAPHQL_GRAPHQL_SCHEMA_LINTER_RULES_PATH: .config/lint/graphql
+GRAPHQL_GRAPHQL_SCHEMA_LINTER_RULES_PATH: egolint/.config/lint/graphql
 GRAPHQL_GRAPHQL_SCHEMA_LINTER_CONFIG_FILE: .graphql-schema-linterrc
 
 GRAPHQL_GRAPHQL_SCHEMA_LINTER_ARGUMENTS: >-
   --config-directory
-  .config/lint/graphql
+  egolint/.config/lint/graphql
 
 # ==============================================================================
 # Groovy and Jenkinsfile static analysis
@@ -501,7 +502,7 @@ GRAPHQL_GRAPHQL_SCHEMA_LINTER_ARGUMENTS: >-
 # npm-groovy-lint
 # https://github.com/nvuillam/npm-groovy-lint
 # https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
-GROOVY_NPM_GROOVY_LINT_RULES_PATH: .config/lint/groovy
+GROOVY_NPM_GROOVY_LINT_RULES_PATH: egolint/.config/lint/groovy
 GROOVY_NPM_GROOVY_LINT_CONFIG_FILE: .groovylintrc.json
 
 # ==============================================================================
@@ -511,7 +512,7 @@ GROOVY_NPM_GROOVY_LINT_CONFIG_FILE: .groovylintrc.json
 # HTMLHint
 # https://htmlhint.com/
 # https://megalinter.io/latest/descriptors/html_htmlhint/
-HTML_HTMLHINT_RULES_PATH: .config/lint/html
+HTML_HTMLHINT_RULES_PATH: egolint/.config/lint/html
 HTML_HTMLHINT_CONFIG_FILE: htmlhint.json
 
 # ==============================================================================
@@ -521,7 +522,7 @@ HTML_HTMLHINT_CONFIG_FILE: htmlhint.json
 # ESLint
 # https://eslint.org/
 # https://megalinter.io/latest/descriptors/javascript_eslint/
-JAVASCRIPT_ES_RULES_PATH: .config/lint/javascript
+JAVASCRIPT_ES_RULES_PATH: egolint/.config/lint/javascript
 JAVASCRIPT_ES_CONFIG_FILE: eslint.config.mjs
 JAVASCRIPT_ES_ARGUMENTS: >-
   --cache
@@ -541,7 +542,7 @@ JAVASCRIPT_ES_PRE_COMMANDS:
 # Prettier
 # https://prettier.io/
 # https://megalinter.io/latest/descriptors/javascript_prettier/
-JAVASCRIPT_PRETTIER_RULES_PATH: .config/lint/javascript
+JAVASCRIPT_PRETTIER_RULES_PATH: egolint/.config/lint/javascript
 JAVASCRIPT_PRETTIER_CONFIG_FILE: prettier.config.mjs
 
 # ==============================================================================
@@ -551,7 +552,7 @@ JAVASCRIPT_PRETTIER_CONFIG_FILE: prettier.config.mjs
 # Checkstyle
 # https://checkstyle.org/
 # https://megalinter.io/latest/descriptors/java_checkstyle/
-JAVA_CHECKSTYLE_RULES_PATH: .config/lint/java/checkstyle
+JAVA_CHECKSTYLE_RULES_PATH: egolint/.config/lint/java/checkstyle
 JAVA_CHECKSTYLE_CONFIG_FILE: checkstyle.xml
 
 # ==============================================================================
@@ -561,7 +562,7 @@ JAVA_CHECKSTYLE_CONFIG_FILE: checkstyle.xml
 # PMD
 # https://pmd.github.io/
 # https://megalinter.io/latest/descriptors/java_pmd/
-JAVA_PMD_RULES_PATH: .config/lint/java/pmd
+JAVA_PMD_RULES_PATH: egolint/.config/lint/java/pmd
 JAVA_PMD_CONFIG_FILE: java-pmd-ruleset.xml
 
 # ==============================================================================
@@ -571,7 +572,7 @@ JAVA_PMD_CONFIG_FILE: java-pmd-ruleset.xml
 # jsonlint
 # https://github.com/prantlf/jsonlint
 # https://megalinter.io/latest/descriptors/json_jsonlint/
-JSON_JSONLINT_RULES_PATH: .config/lint/json
+JSON_JSONLINT_RULES_PATH: egolint/.config/lint/json
 JSON_JSONLINT_CONFIG_FILE: jsonlint.json
 
 # ==============================================================================
@@ -581,7 +582,7 @@ JSON_JSONLINT_CONFIG_FILE: jsonlint.json
 # Prettier
 # https://prettier.io/
 # https://megalinter.io/latest/descriptors/json_prettier/
-JSON_PRETTIER_RULES_PATH: .config/lint/javascript
+JSON_PRETTIER_RULES_PATH: egolint/.config/lint/javascript
 JSON_PRETTIER_CONFIG_FILE: prettier.config.mjs
 
 # ==============================================================================
@@ -591,7 +592,7 @@ JSON_PRETTIER_CONFIG_FILE: prettier.config.mjs
 # ESLint
 # https://eslint.org/
 # https://megalinter.io/latest/descriptors/jsx_eslint/
-JSX_ESLINT_RULES_PATH: .config/lint/javascript
+JSX_ESLINT_RULES_PATH: egolint/.config/lint/javascript
 JSX_ESLINT_CONFIG_FILE: eslint.config.mjs
 JSX_ESLINT_ARGUMENTS: >-
   --cache
@@ -611,7 +612,7 @@ JSX_ESLINT_PRE_COMMANDS:
 # ChkTeX
 # https://www.nongnu.org/chktex/
 # https://megalinter.io/latest/descriptors/latex_chktex/
-LATEX_CHKTEX_RULES_PATH: .config/lint/latex
+LATEX_CHKTEX_RULES_PATH: egolint/.config/lint/latex
 LATEX_CHKTEX_CONFIG_FILE: .chktexrc
 
 # ==============================================================================
@@ -621,7 +622,7 @@ LATEX_CHKTEX_CONFIG_FILE: .chktexrc
 # Luacheck
 # https://github.com/lunarmodules/luacheck
 # https://megalinter.io/latest/descriptors/lua_luacheck/
-LUA_LUACHECK_RULES_PATH: .config/lint/lua
+LUA_LUACHECK_RULES_PATH: egolint/.config/lint/lua
 LUA_LUACHECK_CONFIG_FILE: .luacheckrc
 
 # ==============================================================================
@@ -636,7 +637,7 @@ LUA_LUACHECK_CONFIG_FILE: .luacheckrc
 # MegaLinter currently disables this descriptor because of upstream security
 # concerns. Keep the configuration ready, but retain MAKEFILE_CHECKMAKE in
 # DISABLE_LINTERS until MegaLinter re-enables it.
-MAKEFILE_CHECKMAKE_RULES_PATH: .config/lint/makefile
+MAKEFILE_CHECKMAKE_RULES_PATH: egolint/.config/lint/makefile
 MAKEFILE_CHECKMAKE_CONFIG_FILE: .checkmake.ini
 
 # ==============================================================================
@@ -646,8 +647,10 @@ MAKEFILE_CHECKMAKE_CONFIG_FILE: .checkmake.ini
 # markdownlint
 # https://github.com/DavidAnson/markdownlint
 # https://megalinter.io/latest/descriptors/markdown_markdownlint/
-MARKDOWN_MARKDOWNLINT_RULES_PATH: .config/lint/markdown
+MARKDOWN_MARKDOWNLINT_RULES_PATH: egolint/.config/lint/markdown
 MARKDOWN_MARKDOWNLINT_CONFIG_FILE: .markdownlint.json
+MARKDOWN_MARKDOWNLINT_ARGUMENTS: >-
+  --ignore-path egolint/.markdownlintignore
 
 # ==============================================================================
 # Markdown link validation
@@ -656,9 +659,9 @@ MARKDOWN_MARKDOWNLINT_CONFIG_FILE: .markdownlint.json
 # markdown-link-check
 # https://github.com/tcort/markdown-link-check
 # https://megalinter.io/latest/descriptors/markdown_markdown_link_check/
-MARKDOWN_MARKDOWN_LINK_CHECK_RULES_PATH: .config/lint/markdown
+MARKDOWN_MARKDOWN_LINK_CHECK_RULES_PATH: egolint/.config/lint/markdown
 MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: .markdown-link-check.json
-MARKDOWN_MARKDOWN_LINK_CHECK_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.engineering/reports)/'
+MARKDOWN_MARKDOWN_LINK_CHECK_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.reports)/'
 
 # ==============================================================================
 # Markdown AST analysis
@@ -667,9 +670,9 @@ MARKDOWN_MARKDOWN_LINK_CHECK_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|di
 # remark-lint
 # https://github.com/remarkjs/remark-lint
 # https://megalinter.io/latest/descriptors/markdown_remark_lint/
-MARKDOWN_REMARK_LINT_RULES_PATH: .config/lint/markdown
+MARKDOWN_REMARK_LINT_RULES_PATH: egolint/.config/lint/markdown
 MARKDOWN_REMARK_LINT_CONFIG_FILE: .remarkrc.json
-MARKDOWN_REMARK_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.engineering/reports)/'
+MARKDOWN_REMARK_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.reports)/'
 
 # ==============================================================================
 # PHP analysis
@@ -678,28 +681,28 @@ MARKDOWN_REMARK_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build
 # PHP_CodeSniffer
 # https://github.com/PHPCSStandards/PHP_CodeSniffer/
 # https://megalinter.io/latest/descriptors/php_phpcs/
-PHP_PHPCS_RULES_PATH: .config/lint/php
+PHP_PHPCS_RULES_PATH: egolint/.config/lint/php
 PHP_PHPCS_CONFIG_FILE: phpcs.xml
 PHP_PHPCS_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|build|dist|coverage|\.cache|storage/framework|bootstrap/cache)/'
 
 # PHPLint
 # https://github.com/overtrue/phplint
 # https://megalinter.io/latest/descriptors/php_phplint/
-PHP_PHPLINT_RULES_PATH: .config/lint/php
+PHP_PHPLINT_RULES_PATH: egolint/.config/lint/php
 PHP_PHPLINT_CONFIG_FILE: .phplint.yml
 PHP_PHPLINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|build|dist|coverage|\.cache|storage/framework|bootstrap/cache)/'
 
 # PHPStan
 # https://phpstan.org/
 # https://megalinter.io/latest/descriptors/php_phpstan/
-PHP_PHPSTAN_RULES_PATH: .config/lint/php
+PHP_PHPSTAN_RULES_PATH: egolint/.config/lint/php
 PHP_PHPSTAN_CONFIG_FILE: phpstan.neon.dist
 PHP_PHPSTAN_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|build|dist|coverage|\.cache|storage/framework|bootstrap/cache)/'
 
 # Psalm
 # https://psalm.dev/
 # https://megalinter.io/latest/descriptors/php_psalm/
-PHP_PSALM_RULES_PATH: .config/lint/php
+PHP_PSALM_RULES_PATH: egolint/.config/lint/php
 PHP_PSALM_CONFIG_FILE: psalm.xml
 PHP_PSALM_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|build|dist|coverage|\.cache|storage/framework|bootstrap/cache)/'
 
@@ -710,16 +713,16 @@ PHP_PSALM_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|build|dist|coverage|\
 # PSScriptAnalyzer
 # https://github.com/PowerShell/PSScriptAnalyzer
 # https://megalinter.io/latest/descriptors/powershell_powershell/
-POWERSHELL_POWERSHELL_RULES_PATH: .config/lint/powershell
+POWERSHELL_POWERSHELL_RULES_PATH: egolint/.config/lint/powershell
 POWERSHELL_POWERSHELL_CONFIG_FILE: powershell-psscriptanalyzer.psd1
-POWERSHELL_POWERSHELL_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.engineering/reports)/'
+POWERSHELL_POWERSHELL_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.reports)/'
 
 # PowerShell formatter
 # https://github.com/PowerShell/PSScriptAnalyzer
 # https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
-POWERSHELL_POWERSHELL_FORMATTER_RULES_PATH: .config/lint/powershell
+POWERSHELL_POWERSHELL_FORMATTER_RULES_PATH: egolint/.config/lint/powershell
 POWERSHELL_POWERSHELL_FORMATTER_CONFIG_FILE: powershell-formatter.psd1
-POWERSHELL_POWERSHELL_FORMATTER_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.engineering/reports)/'
+POWERSHELL_POWERSHELL_FORMATTER_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|dist|build|coverage|\.cache|\.reports)/'
 
 # ==============================================================================
 # Protocol Buffer static analysis
@@ -728,9 +731,9 @@ POWERSHELL_POWERSHELL_FORMATTER_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor
 # protolint
 # https://github.com/yoheimuta/protolint
 # https://megalinter.io/latest/descriptors/protobuf_protolint/
-PROTOBUF_PROTOLINT_RULES_PATH: .config/lint/protobuf
+PROTOBUF_PROTOLINT_RULES_PATH: egolint/.config/lint/protobuf
 PROTOBUF_PROTOLINT_CONFIG_FILE: .protolintrc.yml
-PROTOBUF_PROTOLINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|generated|build|dist|coverage|\.cache|\.engineering/reports)/'
+PROTOBUF_PROTOLINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|generated|build|dist|coverage|\.cache|\.reports)/'
 
 # ==============================================================================
 # Puppet static analysis
@@ -744,9 +747,9 @@ PROTOBUF_PROTOLINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|generated|bu
 # The MegaLinter descriptor is currently disabled upstream. Keep this
 # configuration prepared, but retain PUPPET_PUPPET_LINT in DISABLE_LINTERS
 # until MegaLinter restores support.
-PUPPET_PUPPET_LINT_RULES_PATH: .config/lint/puppet
+PUPPET_PUPPET_LINT_RULES_PATH: egolint/.config/lint/puppet
 PUPPET_PUPPET_LINT_CONFIG_FILE: .puppet-lint.rc
-PUPPET_PUPPET_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|generated|build|dist|coverage|\.cache|\.engineering/reports)/'
+PUPPET_PUPPET_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(vendor|node_modules|generated|build|dist|coverage|\.cache|\.reports)/'
 
 # ==============================================================================
 # Raku syntax and compilation validation
@@ -764,7 +767,7 @@ RAKU_RAKU_CONFIG_FILE: LINTER_DEFAULT
 # ls-lint
 # https://github.com/loeffel-io/ls-lint
 # https://megalinter.io/latest/descriptors/repository_ls_lint/
-REPOSITORY_LS_LINT_RULES_PATH: .config/lint/repo
+REPOSITORY_LS_LINT_RULES_PATH: egolint/.config/lint/repo
 REPOSITORY_LS_LINT_CONFIG_FILE: .ls-lint.yml
 
 # ==============================================================================
@@ -774,7 +777,7 @@ REPOSITORY_LS_LINT_CONFIG_FILE: .ls-lint.yml
 # CSpell
 # https://github.com/streetsidesoftware/cspell
 # https://megalinter.io/latest/descriptors/spell_cspell/
-SPELL_CSPELL_RULES_PATH: .config/lint/prose/spell
+SPELL_CSPELL_RULES_PATH: egolint/.config/lint/prose/spell
 SPELL_CSPELL_CONFIG_FILE: cspell.megalinter.json
 
 # CSpell is a repository-wide scanner, but MegaLinter still needs at least one
@@ -794,21 +797,21 @@ SPELL_CSPELL_ANALYZE_FILE_NAMES: false
 
 SPELL_CSPELL_PRE_COMMANDS:
   - command: >-
-      mkdir -p ".cache/cspell" ".engineering/reports/megalinter/cspell"
-      && test -f "node_modules/@cspell/dict-clojure/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-elisp/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-gdscript/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-gis/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-medicalterms/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-mime-types/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-mnemonics/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-people-names/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-pokemon/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-redis/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-scientific-terms-us/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-vim/cspell-ext.json"
-      && test -f "node_modules/@cspell/dict-win32/cspell-ext.json"
-      && test -d "node_modules/@cspell/cspell-json-reporter"
+      mkdir -p ".cache/cspell" ".reports/megalinter/cspell"
+      && test -f "egolint/node_modules/@cspell/dict-clojure/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-elisp/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-gdscript/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-gis/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-medicalterms/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-mime-types/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-mnemonics/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-people-names/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-pokemon/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-redis/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-scientific-terms-us/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-vim/cspell-ext.json"
+      && test -f "egolint/node_modules/@cspell/dict-win32/cspell-ext.json"
+      && test -d "egolint/node_modules/@cspell/cspell-json-reporter"
     cwd: workspace
 
 # ==============================================================================
@@ -818,7 +821,7 @@ SPELL_CSPELL_PRE_COMMANDS:
 # Checkov
 # https://www.checkov.io/
 # https://megalinter.io/latest/descriptors/repository_checkov/
-REPOSITORY_CHECKOV_RULES_PATH: .config/security/checkov
+REPOSITORY_CHECKOV_RULES_PATH: egolint/.config/security/checkov
 REPOSITORY_CHECKOV_CONFIG_FILE: .checkov.yml
 
 # ==============================================================================
@@ -828,7 +831,7 @@ REPOSITORY_CHECKOV_CONFIG_FILE: .checkov.yml
 # DevSkim
 # https://github.com/microsoft/DevSkim
 # https://megalinter.io/latest/descriptors/repository_devskim/
-REPOSITORY_DEVSKIM_RULES_PATH: .config/security/devskim
+REPOSITORY_DEVSKIM_RULES_PATH: egolint/.config/security/devskim
 REPOSITORY_DEVSKIM_CONFIG_FILE: .devskim.json
 
 # ==============================================================================
@@ -838,14 +841,14 @@ REPOSITORY_DEVSKIM_CONFIG_FILE: .devskim.json
 # Grype
 # https://github.com/anchore/grype
 # https://megalinter.io/latest/descriptors/repository_grype/
-REPOSITORY_GRYPE_RULES_PATH: .config/security/grype
+REPOSITORY_GRYPE_RULES_PATH: egolint/.config/security/grype
 REPOSITORY_GRYPE_CONFIG_FILE: .grype.yaml
 
 REPOSITORY_GRYPE_PRE_COMMANDS:
   - command: >-
       mkdir -p
       ".cache/grype/db"
-      ".engineering/reports/megalinter/grype"
+      ".reports/megalinter/grype"
     cwd: workspace
 
 # ==============================================================================
@@ -855,27 +858,27 @@ REPOSITORY_GRYPE_PRE_COMMANDS:
 # Trivy
 # https://github.com/aquasecurity/trivy
 # https://megalinter.io/latest/descriptors/repository_trivy/
-REPOSITORY_TRIVY_RULES_PATH: .config/security/trivy
+REPOSITORY_TRIVY_RULES_PATH: egolint/.config/security/trivy
 REPOSITORY_TRIVY_CONFIG_FILE: trivy.yaml
 
 REPOSITORY_TRIVY_PRE_COMMANDS:
   - command: >-
       mkdir -p
       ".cache/trivy"
-      ".engineering/reports/megalinter/trivy"
+      ".reports/megalinter/trivy"
     cwd: workspace
 
 # Trivy SBOM
 # https://github.com/aquasecurity/trivy
 # https://megalinter.io/latest/descriptors/repository_trivy_sbom/
-REPOSITORY_TRIVY_SBOM_RULES_PATH: .config/security/trivy
+REPOSITORY_TRIVY_SBOM_RULES_PATH: egolint/.config/security/trivy
 REPOSITORY_TRIVY_SBOM_CONFIG_FILE: trivy-sbom.yaml
 
 REPOSITORY_TRIVY_SBOM_PRE_COMMANDS:
   - command: >-
       mkdir -p
       ".cache/trivy"
-      ".engineering/reports/megalinter/trivy-sbom"
+      ".reports/megalinter/trivy-sbom"
     cwd: workspace
 
 # ==============================================================================
@@ -885,11 +888,11 @@ REPOSITORY_TRIVY_SBOM_PRE_COMMANDS:
 # TruffleHog
 # https://github.com/trufflesecurity/trufflehog
 # https://megalinter.io/latest/descriptors/repository_trufflehog/
-REPOSITORY_TRUFFLEHOG_RULES_PATH: .config/security/trufflehog
+REPOSITORY_TRUFFLEHOG_RULES_PATH: egolint/.config/security/trufflehog
 REPOSITORY_TRUFFLEHOG_CONFIG_FILE: .trufflehog.yml
 
 REPOSITORY_TRUFFLEHOG_ARGUMENTS: >-
-  --exclude-paths=.config/security/trufflehog/.trufflehogignore
+  --exclude-paths=egolint/.config/security/trufflehog/.trufflehogignore
   --results=verified,unknown
   --fail
   --fail-on-scan-errors
@@ -912,14 +915,14 @@ REPOSITORY_TRUFFLEHOG_ARGUMENTS: >-
 # MegaLinter currently disables this descriptor because of an upstream
 # supply-chain security incident. Keep the configuration ready, but retain
 # REPOSITORY_KICS in DISABLE_LINTERS until the integration is restored.
-REPOSITORY_KICS_RULES_PATH: .config/security/kics
+REPOSITORY_KICS_RULES_PATH: egolint/.config/security/kics
 REPOSITORY_KICS_CONFIG_FILE: .kics.config.json
 
 REPOSITORY_KICS_PRE_COMMANDS:
   - command: >-
       mkdir -p
       ".cache/kics"
-      ".engineering/reports/megalinter/kics"
+      ".reports/megalinter/kics"
     cwd: workspace
 
 # ==============================================================================
@@ -929,14 +932,14 @@ REPOSITORY_KICS_PRE_COMMANDS:
 # Syft
 # https://github.com/anchore/syft
 # https://megalinter.io/latest/descriptors/repository_syft/
-REPOSITORY_SYFT_RULES_PATH: .config/security/syft
+REPOSITORY_SYFT_RULES_PATH: egolint/.config/security/syft
 REPOSITORY_SYFT_CONFIG_FILE: .syft.yaml
 
 REPOSITORY_SYFT_PRE_COMMANDS:
   - command: >-
       mkdir -p
       ".cache/syft"
-      ".engineering/reports/megalinter/syft"
+      ".reports/megalinter/syft"
     cwd: workspace
 
 # ==============================================================================
@@ -946,9 +949,9 @@ REPOSITORY_SYFT_PRE_COMMANDS:
 # rstcheck
 # https://github.com/rstcheck/rstcheck
 # https://megalinter.io/latest/descriptors/rst_rstcheck/
-RST_RSTCHECK_RULES_PATH: .config/lint/rst
+RST_RSTCHECK_RULES_PATH: egolint/.config/lint/rst
 RST_RSTCHECK_CONFIG_FILE: .rstcheck.cfg
-RST_RSTCHECK_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.engineering/reports)/'
+RST_RSTCHECK_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports)/'
 
 # ==============================================================================
 # Ruby static analysis and formatting
@@ -957,7 +960,7 @@ RST_RSTCHECK_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverag
 # RuboCop
 # https://rubocop.org/
 # https://megalinter.io/latest/descriptors/ruby_rubocop/
-RUBY_RUBOCOP_RULES_PATH: .config/lint/ruby
+RUBY_RUBOCOP_RULES_PATH: egolint/.config/lint/ruby
 RUBY_RUBOCOP_CONFIG_FILE: .rubocop.yml
 RUBY_RUBOCOP_ARGUMENTS: "--force-exclusion"
 
@@ -974,7 +977,7 @@ RUBY_RUBOCOP_PRE_COMMANDS:
 # Clippy
 # https://github.com/rust-lang/rust-clippy
 # https://megalinter.io/latest/descriptors/rust_clippy/
-RUST_CLIPPY_RULES_PATH: .config/lint/rust
+RUST_CLIPPY_RULES_PATH: egolint/.config/lint/rust
 RUST_CLIPPY_CONFIG_FILE: .clippy.toml
 
 RUST_CLIPPY_ARGUMENTS: >-
@@ -997,16 +1000,16 @@ RUST_CLIPPY_ARGUMENTS: >-
 # lintr
 # https://github.com/r-lib/lintr
 # https://megalinter.io/latest/descriptors/r_lintr/
-R_LINTR_RULES_PATH: .config/lint/r
+R_LINTR_RULES_PATH: egolint/.config/lint/r
 R_LINTR_CONFIG_FILE: .lintr
-R_LINTR_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|renv/library|packrat/lib|build|dist|coverage|generated|\.cache|\.engineering/reports)/'
+R_LINTR_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|renv/library|packrat/lib|build|dist|coverage|generated|\.cache|\.reports)/'
 
 # ==============================================================================
 # TypeScript and TSX analysis
 # ==============================================================================
 
 # Shared ESLint flat configuration
-TSX_ESLINT_RULES_PATH: .config/lint/javascript
+TSX_ESLINT_RULES_PATH: egolint/.config/lint/javascript
 TSX_ESLINT_CONFIG_FILE: eslint.config.mjs
 TSX_ESLINT_ARGUMENTS: >-
   --cache
@@ -1019,7 +1022,7 @@ TSX_ESLINT_PRE_COMMANDS:
       ".cache/eslint/tsx"
     cwd: workspace
 
-TYPESCRIPT_ES_RULES_PATH: .config/lint/javascript
+TYPESCRIPT_ES_RULES_PATH: egolint/.config/lint/javascript
 TYPESCRIPT_ES_CONFIG_FILE: eslint.config.mjs
 TYPESCRIPT_ES_ARGUMENTS: >-
   --cache
@@ -1033,10 +1036,10 @@ TYPESCRIPT_ES_PRE_COMMANDS:
     cwd: workspace
 
 # Shared Prettier configuration
-TYPESCRIPT_PRETTIER_RULES_PATH: .config/lint/javascript
+TYPESCRIPT_PRETTIER_RULES_PATH: egolint/.config/lint/javascript
 TYPESCRIPT_PRETTIER_CONFIG_FILE: prettier.config.mjs
 
-YAML_PRETTIER_RULES_PATH: .config/lint/javascript
+YAML_PRETTIER_RULES_PATH: egolint/.config/lint/javascript
 YAML_PRETTIER_CONFIG_FILE: prettier.config.mjs
 
 # ==============================================================================
@@ -1046,9 +1049,9 @@ YAML_PRETTIER_CONFIG_FILE: prettier.config.mjs
 # v8r
 # https://github.com/chris48s/v8r
 # https://megalinter.io/latest/descriptors/yaml_v8r/
-YAML_V8R_RULES_PATH: .config/lint/yaml
+YAML_V8R_RULES_PATH: egolint/.config/lint/yaml
 YAML_V8R_CONFIG_FILE: .v8rrc.yml
-YAML_V8R_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.engineering/reports)/'
+YAML_V8R_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports)/'
 
 # ==============================================================================
 # YAML static analysis
@@ -1057,7 +1060,7 @@ YAML_V8R_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|ge
 # yamllint
 # https://yamllint.readthedocs.io/en/stable/
 # https://megalinter.io/latest/descriptors/yaml_yamllint/
-YAML_YAMLLINT_RULES_PATH: .config/lint/yaml
+YAML_YAMLLINT_RULES_PATH: egolint/.config/lint/yaml
 YAML_YAMLLINT_CONFIG_FILE: .yamllint.yml
 
 # ==============================================================================
@@ -1072,13 +1075,13 @@ YAML_YAMLLINT_CONFIG_FILE: .yamllint.yml
 # Terrascan is archived and deprecated by MegaLinter. Keep this configuration
 # available for compatibility, but retain TERRAFORM_TERRASCAN in
 # DISABLE_LINTERS.
-TERRAFORM_TERRASCAN_RULES_PATH: .config/lint/terraform
+TERRAFORM_TERRASCAN_RULES_PATH: egolint/.config/lint/terraform
 TERRAFORM_TERRASCAN_CONFIG_FILE: terrascan-config.toml
 
 # TFLint
 # https://github.com/terraform-linters/tflint
 # https://megalinter.io/latest/descriptors/terraform_tflint/
-TERRAFORM_TFLINT_RULES_PATH: /tmp/lint/.config/lint/terraform
+TERRAFORM_TFLINT_RULES_PATH: /tmp/lint/egolint/.config/lint/terraform
 TERRAFORM_TFLINT_CONFIG_FILE: .tflint.hcl
 
 # Terragrunt
@@ -1096,7 +1099,7 @@ TERRAFORM_TERRAGRUNT_CONFIG_FILE: LINTER_DEFAULT
 # tekton-lint
 # https://github.com/IBM/tekton-lint
 # https://megalinter.io/latest/descriptors/tekton_tekton_lint/
-TEKTON_TEKTON_LINT_RULES_PATH: .config/lint/tekton
+TEKTON_TEKTON_LINT_RULES_PATH: egolint/.config/lint/tekton
 TEKTON_TEKTON_LINT_CONFIG_FILE: .tektonlintrc.yaml
 
 # Fail when any warning is reported in addition to ordinary errors.
@@ -1104,7 +1107,7 @@ TEKTON_TEKTON_LINT_ARGUMENTS: >-
   --max-warnings 0
   --color false
 
-TEKTON_TEKTON_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.engineering/reports)/'
+TEKTON_TEKTON_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports)/'
 
 # ==============================================================================
 # Swift static analysis and formatting
@@ -1113,7 +1116,7 @@ TEKTON_TEKTON_LINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|c
 # SwiftLint
 # https://github.com/realm/SwiftLint
 # https://megalinter.io/latest/descriptors/swift_swiftlint/
-SWIFT_SWIFTLINT_RULES_PATH: .config/lint/swift
+SWIFT_SWIFTLINT_RULES_PATH: egolint/.config/lint/swift
 SWIFT_SWIFTLINT_CONFIG_FILE: .swiftlint.yml
 
 # ==============================================================================
@@ -1123,7 +1126,7 @@ SWIFT_SWIFTLINT_CONFIG_FILE: .swiftlint.yml
 # Scalafix
 # https://github.com/scalacenter/scalafix
 # https://megalinter.io/latest/descriptors/scala_scalafix/
-SCALA_SCALAFIX_RULES_PATH: .config/lint/scala
+SCALA_SCALAFIX_RULES_PATH: egolint/.config/lint/scala
 SCALA_SCALAFIX_CONFIG_FILE: .scalafix.conf
 
 # ==============================================================================
@@ -1133,7 +1136,7 @@ SCALA_SCALAFIX_CONFIG_FILE: .scalafix.conf
 # Salesforce Code Analyzer v5
 # https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/
 # https://megalinter.io/latest/descriptors/salesforce_code_analyzer_apex/
-SALESFORCE_CODE_ANALYZER_APEX_RULES_PATH: .config/lint/salesforce
+SALESFORCE_CODE_ANALYZER_APEX_RULES_PATH: egolint/.config/lint/salesforce
 SALESFORCE_CODE_ANALYZER_APEX_CONFIG_FILE: code-analyzer.yml
 
 # Run Salesforce's recommended PMD rules plus every rule referenced by the
@@ -1150,7 +1153,7 @@ SALESFORCE_CODE_ANALYZER_APEX_ARGUMENTS: >-
 # snakefmt
 # https://github.com/snakemake/snakefmt
 # https://megalinter.io/latest/descriptors/snakemake_snakefmt/
-SNAKEMAKE_SNAKEFMT_RULES_PATH: .config/lint/snakemake
+SNAKEMAKE_SNAKEFMT_RULES_PATH: egolint/.config/lint/snakemake
 SNAKEMAKE_SNAKEFMT_CONFIG_FILE: .snakefmt.toml
 
 # ==============================================================================
@@ -1160,7 +1163,7 @@ SNAKEMAKE_SNAKEFMT_CONFIG_FILE: .snakefmt.toml
 # Gitleaks
 # https://github.com/gitleaks/gitleaks
 # https://megalinter.io/latest/descriptors/repository_gitleaks/
-REPOSITORY_GITLEAKS_RULES_PATH: .config/security/gitleaks
+REPOSITORY_GITLEAKS_RULES_PATH: egolint/.config/security/gitleaks
 REPOSITORY_GITLEAKS_CONFIG_FILE: .gitleaks.toml
 
 REPOSITORY_GITLEAKS_ARGUMENTS: >-
@@ -1173,14 +1176,14 @@ REPOSITORY_GITLEAKS_ARGUMENTS: >-
 # TSQLLint
 # https://github.com/tsqllint/tsqllint
 # https://megalinter.io/latest/descriptors/sql_tsqllint/
-SQL_TSQLLINT_RULES_PATH: .config/lint/sql
+SQL_TSQLLINT_RULES_PATH: egolint/.config/lint/sql
 SQL_TSQLLINT_CONFIG_FILE: .tsqllintrc.json
 
 SQL_TSQLLINT_ARGUMENTS: >-
   --ignorelist
-  .config/lint/sql/.tsqllintignore
+  egolint/.config/lint/sql/.tsqllintignore
 
-SQL_TSQLLINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.engineering/reports|tests/fixtures/sqlfluff)/'
+SQL_TSQLLINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports|tests/fixtures/sqlfluff)/'
 
 # ==============================================================================
 # SQL static analysis and formatting
@@ -1189,10 +1192,10 @@ SQL_TSQLLINT_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverag
 # SQLFluff
 # https://github.com/sqlfluff/sqlfluff
 # https://megalinter.io/latest/descriptors/sql_sqlfluff/
-SQL_SQLFLUFF_RULES_PATH: .config/lint/sql
+SQL_SQLFLUFF_RULES_PATH: egolint/.config/lint/sql
 SQL_SQLFLUFF_CONFIG_FILE: .sqlfluff.ini
 
-SQL_SQLFLUFF_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.engineering/reports|tests/fixtures/tsqllint)/'
+SQL_SQLFLUFF_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverage|generated|\.cache|\.reports|tests/fixtures/tsqllint)/'
 
 # ==============================================================================
 # Prose quality
@@ -1201,7 +1204,7 @@ SQL_SQLFLUFF_FILTER_REGEX_EXCLUDE: '(^|/)(node_modules|vendor|build|dist|coverag
 # Proselint
 # https://github.com/amperser/proselint
 # https://megalinter.io/latest/descriptors/spell_proselint/
-SPELL_PROSELINT_RULES_PATH: .config/lint/prose
+SPELL_PROSELINT_RULES_PATH: egolint/.config/lint/prose
 SPELL_PROSELINT_CONFIG_FILE: .proselintrc
 
 SPELL_PROSELINT_FILTER_REGEX_EXCLUDE: >-
@@ -1214,14 +1217,14 @@ SPELL_PROSELINT_FILTER_REGEX_EXCLUDE: >-
     |coverage
     |generated
     |\.cache
-    |\.engineering/reports
+    |\.reports
     |\.config/lint/prose/styles
   )/
 
 # Vale
 # https://github.com/errata-ai/vale
 # https://megalinter.io/latest/descriptors/spell_vale/
-SPELL_VALE_RULES_PATH: .config/lint/prose
+SPELL_VALE_RULES_PATH: egolint/.config/lint/prose
 SPELL_VALE_CONFIG_FILE: .vale.ini
 
 SPELL_VALE_FILE_EXTENSIONS:
@@ -1243,7 +1246,7 @@ SPELL_VALE_FILTER_REGEX_EXCLUDE: >-
     |coverage
     |generated
     |\.cache
-    |\.engineering/reports
+    |\.reports
     |\.config/lint/prose/styles
   )/
 
@@ -1254,7 +1257,7 @@ SPELL_VALE_FILTER_REGEX_EXCLUDE: >-
 # Lychee
 # https://github.com/lycheeverse/lychee
 # https://megalinter.io/latest/descriptors/spell_lychee/
-SPELL_LYCHEE_RULES_PATH: .config/lint/prose/spell
+SPELL_LYCHEE_RULES_PATH: egolint/.config/lint/prose/spell
 SPELL_LYCHEE_CONFIG_FILE: lychee.toml
 
 SPELL_LYCHEE_FILTER_REGEX_EXCLUDE: >-
@@ -1267,7 +1270,7 @@ SPELL_LYCHEE_FILTER_REGEX_EXCLUDE: >-
     |coverage
     |generated
     |\.cache
-    |\.engineering/reports
+    |\.reports
   )/
 
 SPELL_LYCHEE_UNSECURED_ENV_VARIABLES:
@@ -1280,7 +1283,7 @@ SPELL_LYCHEE_UNSECURED_ENV_VARIABLES:
 # ------------------------------------------------------------------------------
 # Bandit
 # ------------------------------------------------------------------------------
-PYTHON_BANDIT_RULES_PATH: .config/lint/python
+PYTHON_BANDIT_RULES_PATH: egolint/.config/lint/python
 PYTHON_BANDIT_CONFIG_FILE: .bandit.yml
 
 # ------------------------------------------------------------------------------
@@ -1289,7 +1292,7 @@ PYTHON_BANDIT_CONFIG_FILE: .bandit.yml
 #
 # Ruff remains the default Python formatter. Black is retained for optional
 # compatibility profiles and migration comparison.
-PYTHON_BLACK_RULES_PATH: .config/lint/python
+PYTHON_BLACK_RULES_PATH: egolint/.config/lint/python
 PYTHON_BLACK_CONFIG_FILE: pyproject.toml
 
 # ------------------------------------------------------------------------------
@@ -1298,7 +1301,7 @@ PYTHON_BLACK_CONFIG_FILE: pyproject.toml
 #
 # Ruff owns the universal fast-lint profile. Flake8 remains available for
 # projects requiring plugins that Ruff has not implemented.
-PYTHON_FLAKE8_RULES_PATH: .config/lint/python
+PYTHON_FLAKE8_RULES_PATH: egolint/.config/lint/python
 PYTHON_FLAKE8_CONFIG_FILE: .flake8
 
 # ------------------------------------------------------------------------------
@@ -1306,7 +1309,7 @@ PYTHON_FLAKE8_CONFIG_FILE: .flake8
 # ------------------------------------------------------------------------------
 #
 # Ruff's I rules own import sorting by default.
-PYTHON_ISORT_RULES_PATH: .config/lint/python
+PYTHON_ISORT_RULES_PATH: egolint/.config/lint/python
 PYTHON_ISORT_CONFIG_FILE: .isort.cfg
 
 # Explicit command-line files must still respect configured exclusions.
@@ -1316,7 +1319,7 @@ PYTHON_ISORT_ARGUMENTS: >-
 # ------------------------------------------------------------------------------
 # Mypy
 # ------------------------------------------------------------------------------
-PYTHON_MYPY_RULES_PATH: .config/lint/python
+PYTHON_MYPY_RULES_PATH: egolint/.config/lint/python
 PYTHON_MYPY_CONFIG_FILE: .mypy.ini
 
 # Mypy is a project type checker rather than an isolated-file checker.
@@ -1331,13 +1334,13 @@ PYTHON_MYPY_PRE_COMMANDS:
 # ------------------------------------------------------------------------------
 # Pylint
 # ------------------------------------------------------------------------------
-PYTHON_PYLINT_RULES_PATH: .config/lint/python
+PYTHON_PYLINT_RULES_PATH: egolint/.config/lint/python
 PYTHON_PYLINT_CONFIG_FILE: .pylintrc
 
 # ------------------------------------------------------------------------------
 # Pyright
 # ------------------------------------------------------------------------------
-PYTHON_PYRIGHT_RULES_PATH: .config/lint/python
+PYTHON_PYRIGHT_RULES_PATH: egolint/.config/lint/python
 PYTHON_PYRIGHT_CONFIG_FILE: pyrightconfig.json
 
 # Resolve imports and execution environments as one Python project.
@@ -1346,7 +1349,7 @@ PYTHON_PYRIGHT_CLI_LINT_MODE: project
 # ------------------------------------------------------------------------------
 # Ruff
 # ------------------------------------------------------------------------------
-PYTHON_RUFF_RULES_PATH: .config/lint/python
+PYTHON_RUFF_RULES_PATH: egolint/.config/lint/python
 PYTHON_RUFF_CONFIG_FILE: ruff.toml
 
 PYTHON_RUFF_PRE_COMMANDS:
@@ -1362,12 +1365,12 @@ PYTHON_RUFF_PRE_COMMANDS:
 # Secretlint
 # https://github.com/secretlint/secretlint
 # https://megalinter.io/latest/descriptors/repository_secretlint/
-REPOSITORY_SECRETLINT_RULES_PATH: .config/security/secretlint
+REPOSITORY_SECRETLINT_RULES_PATH: egolint/.config/security/secretlint
 REPOSITORY_SECRETLINT_CONFIG_FILE: .secretlintrc.json
 
 REPOSITORY_SECRETLINT_ARGUMENTS: >-
   --secretlintignore
-  .config/security/secretlint/.secretlintignore
+  egolint/.config/security/secretlint/.secretlintignore
 
 # ==============================================================================
 # Reporters
@@ -1470,6 +1473,6 @@ TAP_REPORTER: false
 TAP_REPORTER_SUB_FOLDER: tap
 
 POST_COMMANDS:
-  - command: echo "Megalinter completed successfully."
+  - command: printf '%s\n' "MegaLinter completed successfully."
     cwd: "workspace"
     continue_if_failed: true

@@ -40,7 +40,7 @@ description = "generated lint caches and security reports"
 
 paths = [
   '''(?:^|/)\.cache(?:/.*)?$''',
-  '''(?:^|/)\.engineering/reports(?:/.*)?$''',
+  '''(?:^|/)\.reports(?:/.*)?$''',
   '''(?:^|/)megalinter-reports(?:/.*)?$''',
 ]
 

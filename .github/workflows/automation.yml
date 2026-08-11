@@ -7,19 +7,25 @@ on:
   pull_request:
     paths:
       - ".github/**"
+      - ".audits/**"
+      - ".mega-linter.yml"
       - ".staging/github/**"
       - ".gitattributes"
       - ".gitignore"
       - "Taskfile.yml"
+      - "egolint/**"
   push:
     branches:
       - main
     paths:
       - ".github/**"
+      - ".audits/**"
+      - ".mega-linter.yml"
       - ".staging/github/**"
       - ".gitattributes"
       - ".gitignore"
       - "Taskfile.yml"
+      - "egolint/**"
   workflow_dispatch:
 
 permissions:

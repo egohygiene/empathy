@@ -3,10 +3,15 @@
 
 version: "3"
 
+includes:
+  egolint:
+    taskfile: ./egolint/tasks/lint.yml
+    dir: .
+
 vars:
   NPM_CACHE: .cache/npm
+  PRETTIER_CONFIG: egolint/.config/lint/javascript/prettier.config.mjs
   PRETTIER_VERSION: 3.9.6
-  MARKDOWNLINT_VERSION: 0.23.2
 
 tasks:
   default:
@@ -29,32 +34,52 @@ tasks:
     cmds:
       - >-
         npx --yes --cache "{{.NPM_CACHE}}"
-        "prettier@{{.PRETTIER_VERSION}}" --write .
+        "prettier@{{.PRETTIER_VERSION}}"
+        --config "{{.PRETTIER_CONFIG}}" --write .
 
   format:check:
     desc: Verify supported text formatting
     cmds:
       - >-
         npx --yes --cache "{{.NPM_CACHE}}"
-        "prettier@{{.PRETTIER_VERSION}}" --check .
+        "prettier@{{.PRETTIER_VERSION}}"
+        --config "{{.PRETTIER_CONFIG}}" --check .
 
   lint:
-    desc: Validate Markdown, Python syntax, and GitHub automation policy
+    desc: Lint changed repository files through the canonical Egolint toolchain
     cmds:
-      - >-
-        npx --yes --cache "{{.NPM_CACHE}}"
-        "markdownlint-cli2@{{.MARKDOWNLINT_VERSION}}"
-        "**/*.md" "#**/.staging/**" "#.github/copilot-instructions.md"
-      - python3 -m compileall -q .github/actions
-      - >-
-        python3 .github/actions/validate-automation/validate_automation.py
-        --repository-root .
+      - task: egolint:changed
+
+  lint:all:
+    desc: Lint the complete repository through the universal Egolint profile
+    cmds:
+      - task: egolint:all
+
+  lint:holistic:
+    desc: Run every supported Egolint descriptor against the repository
+    cmds:
+      - task: egolint:holistic
+
+  lint:doctor:
+    desc: Diagnose the local Egolint and MegaLinter runtime
+    cmds:
+      - task: egolint:doctor
+
+  lint:fix:
+    desc: Apply supported Egolint fixes for explicit review
+    cmds:
+      - task: egolint:fix
 
   test:
-    desc: Run baseline unit tests
+    desc: Run root and Egolint unit tests
     cmds:
       - >-
         python3 -m unittest discover
         --start-directory tests
+        --pattern "test_*.py"
+        --verbose
+      - >-
+        python3 -m unittest discover
+        --start-directory egolint/tests
         --pattern "test_*.py"
         --verbose

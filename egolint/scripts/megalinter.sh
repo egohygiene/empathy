@@ -17,8 +17,8 @@ SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}")"
 readonly SCRIPT_NAME
 readonly CONTAINER_WORKSPACE="/tmp/lint"
 readonly DEFAULT_REGISTRY="ghcr.io/oxsecurity"
-readonly DEFAULT_VERSION="v9.6.0"
-readonly DEFAULT_REPORT_DIRECTORY=".engineering/reports/megalinter"
+readonly DEFAULT_VERSION="v10.0.0"
+readonly DEFAULT_REPORT_DIRECTORY=".reports/megalinter"
 
 readonly EXIT_SUCCESS=0
 readonly EXIT_USAGE=2
@@ -27,7 +27,7 @@ readonly EXIT_RUNTIME=4
 
 RUNTIME="auto"
 WORKSPACE=""
-CONFIG_FILE=""
+CONFIG_FILE="${MEGALINTER_CONFIG:-}"
 FLAVOR="all"
 MEGALINTER_VERSION="${MEGALINTER_VERSION:-${DEFAULT_VERSION}}"
 IMAGE="${MEGALINTER_IMAGE:-}"
@@ -54,26 +54,37 @@ EXTRA_VOLUMES=()
 RUNTIME_ARGS=()
 RUN_COMMAND=()
 
+# @description Write an informational wrapper message unless quiet mode is active.
+# @arg $@ string Message fragments.
 log_info() {
   if [[ "${QUIET_MODE}" != "true" ]]; then
     printf "[%s] %s\n" "${SCRIPT_NAME}" "$*"
   fi
 }
 
+# @description Write a diagnostic message when debug mode is active.
+# @arg $@ string Message fragments.
 log_debug() {
   if [[ "${DEBUG_MODE}" == "true" ]]; then
     printf "[%s][debug] %s\n" "${SCRIPT_NAME}" "$*" >&2
   fi
 }
 
+# @description Write a warning message to standard error.
+# @arg $@ string Message fragments.
 log_warn() {
   printf "[%s][warning] %s\n" "${SCRIPT_NAME}" "$*" >&2
 }
 
+# @description Write an error message to standard error.
+# @arg $@ string Message fragments.
 log_error() {
   printf "[%s][error] %s\n" "${SCRIPT_NAME}" "$*" >&2
 }
 
+# @description Write a fatal error and exit with an explicit status.
+# @arg $1 string Error message.
+# @arg $2 integer Optional exit status; defaults to the usage status.
 die() {
   local message="$1"
   local exit_code="${2:-${EXIT_USAGE}}"
@@ -81,6 +92,8 @@ die() {
   exit "${exit_code}"
 }
 
+# @description Print the wrapper command reference.
+# @stdout Usage, option, environment, and example documentation.
 show_help() {
   cat <<'EOF'
 Usage:
@@ -88,7 +101,7 @@ Usage:
 
 Run MegaLinter against a repository using Docker or Podman. With no options,
 the wrapper discovers the Git root, uses .mega-linter.yml when present, and
-runs the complete codebase with MegaLinter v9.6.0.
+runs the complete codebase with MegaLinter v10.0.0.
 
 Selection:
   --descriptors LIST          Enable descriptor keys, such as PYTHON,YAML.
@@ -104,13 +117,13 @@ Repository and output:
   --workspace PATH            Repository to lint. Default: Git root or cwd.
   --config PATH               MegaLinter config inside the workspace.
   --report-directory PATH     Repository-relative report directory.
-                              Default: .cache/megalinter/reports.
+                              Default: .reports/megalinter.
   --no-reports                Disable report generation.
 
 Container image:
   --runtime auto|docker|podman  Container engine. Default: auto.
   --flavor NAME                MegaLinter flavor. Default: all.
-  --version TAG                Image tag. Default: v9.6.0.
+  --version TAG                Image tag. Default: v10.0.0.
   --image IMAGE                Exact image reference; overrides flavor/version.
   --pull always|missing|never  Image pull policy. Default: missing.
   --platform PLATFORM          Optional container platform, such as linux/amd64.
@@ -137,6 +150,7 @@ Diagnostics:
 Environment defaults:
   MEGALINTER_IMAGE             Exact default image reference.
   MEGALINTER_VERSION           Default image tag.
+  MEGALINTER_CONFIG            Default repository-relative configuration file.
   MEGALINTER_REPORT_DIRECTORY  Default repository-relative report directory.
 
 Examples:
@@ -145,25 +159,30 @@ Examples:
   megalinter --linters "PYTHON_RUFF,YAML_PRETTIER"
   megalinter --changed-only
   megalinter --fix
-  megalinter --flavor python --version v9.6.0
+  megalinter --flavor python --version v10.0.0
   megalinter --env "LOG_LEVEL=DEBUG" --dry-run
 
 Taskfile example:
   lint:
     cmds:
-      - ./scripts/megalinter
+      - ./egolint/scripts/megalinter.sh
 
   lint:fix:
     cmds:
-      - ./scripts/megalinter --fix
+      - ./egolint/scripts/megalinter.sh --fix
 EOF
 }
 
+# @description Print wrapper and default MegaLinter versions.
+# @stdout Version information.
 show_version() {
   printf "%s wrapper 1.0.0\n" "${SCRIPT_NAME}"
   printf "Default MegaLinter version: %s\n" "${DEFAULT_VERSION}"
 }
 
+# @description Require a non-option value for a command-line option.
+# @arg $1 string Option name.
+# @arg $2 string Candidate value.
 require_option_value() {
   local option="$1"
   local value="${2:-}"
@@ -172,6 +191,9 @@ require_option_value() {
   fi
 }
 
+# @description Validate a comma-separated MegaLinter key list.
+# @arg $1 string Option name used in diagnostics.
+# @arg $2 string Normalized key list.
 validate_list() {
   local option="$1"
   local value="$2"
@@ -180,10 +202,15 @@ validate_list() {
   fi
 }
 
+# @description Remove whitespace and uppercase a MegaLinter key list.
+# @arg $1 string Raw key list.
+# @stdout Normalized comma-separated key list.
 normalize_list() {
   printf "%s" "$1" | tr -d '[:space:]' | tr '[:lower:]' '[:upper:]'
 }
 
+# @description Parse wrapper arguments into validated global option state.
+# @arg $@ string Wrapper command-line arguments.
 parse_arguments() {
   while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -347,12 +374,16 @@ parse_arguments() {
   done
 }
 
+# @description Resolve an existing directory to a physical absolute path.
+# @arg $1 string Candidate directory.
+# @stdout Physical absolute path when the directory exists.
 absolute_directory() {
   local path="$1"
   [[ -d "${path}" ]] || return 1
   (cd "${path}" && pwd -P)
 }
 
+# @description Resolve and validate the repository workspace.
 resolve_workspace() {
   local candidate="${WORKSPACE}"
   if [[ -z "${candidate}" ]]; then
@@ -365,6 +396,8 @@ resolve_workspace() {
   [[ -r "${WORKSPACE}" ]] || die "Workspace is not readable: ${WORKSPACE}"
 }
 
+# @description Determine whether an absolute path is inside the workspace.
+# @arg $1 string Absolute path.
 path_is_within_workspace() {
   local path="$1"
   case "${path}" in
@@ -373,6 +406,7 @@ path_is_within_workspace() {
   esac
 }
 
+# @description Resolve an explicit or conventional MegaLinter configuration.
 resolve_config() {
   local candidate=""
 
@@ -399,6 +433,7 @@ resolve_config() {
   CONFIG_FILE="${candidate}"
 }
 
+# @description Validate and normalize the repository-relative report directory.
 validate_report_directory() {
   [[ "${REPORT_DIRECTORY}" == "none" ]] && return 0
   [[ -n "${REPORT_DIRECTORY}" ]] || die "Report directory cannot be empty."
@@ -409,6 +444,7 @@ validate_report_directory() {
   REPORT_DIRECTORY="${REPORT_DIRECTORY#./}"
 }
 
+# @description Validate enumerated options and option-dependent prerequisites.
 validate_options() {
   case "${RUNTIME}" in auto|docker|podman) ;; *) die "Invalid runtime: ${RUNTIME}" ;; esac
   case "${PULL_POLICY}" in always|missing|never) ;; *) die "Invalid pull policy: ${PULL_POLICY}" ;; esac
@@ -429,6 +465,7 @@ validate_options() {
   fi
 }
 
+# @description Select Docker or Podman and confirm the executable is available.
 select_runtime() {
   if [[ "${RUNTIME}" == "auto" ]]; then
     if command -v docker >/dev/null 2>&1; then
@@ -443,6 +480,7 @@ select_runtime() {
   fi
 }
 
+# @description Resolve the MegaLinter image from flavor and version defaults.
 resolve_image() {
   [[ -n "${IMAGE}" ]] && return 0
   if [[ "${FLAVOR}" == "all" ]]; then
@@ -452,10 +490,12 @@ resolve_image() {
   fi
 }
 
+# @description Check whether the selected container runtime service is ready.
 runtime_ready() {
   "${RUNTIME}" info >/dev/null 2>&1
 }
 
+# @description Check whether the resolved MegaLinter image exists locally.
 image_exists() {
   if [[ "${RUNTIME}" == "docker" ]]; then
     docker image inspect "${IMAGE}" >/dev/null 2>&1
@@ -464,6 +504,7 @@ image_exists() {
   fi
 }
 
+# @description Enforce the configured container-image pull policy.
 prepare_image() {
   if [[ "${PULL_POLICY}" == "always" ]]; then
     log_info "Pulling ${IMAGE}"
@@ -476,6 +517,8 @@ prepare_image() {
   fi
 }
 
+# @description Derive an owner/repository identifier from the origin remote.
+# @stdout GitHub repository identifier, or an empty line when unavailable.
 github_repository() {
   local remote_url=""
   local repository=""
@@ -491,6 +534,8 @@ github_repository() {
   printf "%s\n" "${repository}"
 }
 
+# @description Derive the current symbolic Git branch as a full GitHub ref.
+# @stdout Full branch ref, or an empty line for detached worktrees.
 github_ref() {
   local branch=""
   branch="$(git -C "${WORKSPACE}" symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
@@ -499,10 +544,13 @@ github_ref() {
   fi
 }
 
+# @description Append one environment assignment to the container command.
+# @arg $1 string NAME=VALUE assignment.
 append_env() {
   RUN_COMMAND+=("--env" "$1")
 }
 
+# @description Build the complete container command as a shell-safe array.
 build_run_command() {
   local repository=""
   local ref=""
@@ -584,6 +632,9 @@ build_run_command() {
   RUN_COMMAND+=("${IMAGE}")
 }
 
+# @description Render one command argument using conservative POSIX quoting.
+# @arg $1 string Argument value.
+# @stdout Shell-quoted argument.
 shell_quote() {
   local value="$1"
   if [[ "${value}" =~ ^[A-Za-z0-9_./:@%+=,-]+$ ]]; then
@@ -595,6 +646,8 @@ shell_quote() {
   fi
 }
 
+# @description Print the generated container command with environment values redacted.
+# @stdout Multiline shell command safe to share in diagnostics.
 print_redacted_command() {
   local index=0
   local argument=""
@@ -625,6 +678,7 @@ print_redacted_command() {
   done
 }
 
+# @description Report runtime, image, configuration, and report readiness.
 run_doctor() {
   local failures=0
 
@@ -656,6 +710,7 @@ run_doctor() {
   fi
 }
 
+# @description Execute MegaLinter or print its dry-run command.
 run_megalinter() {
   local exit_code=0
 
@@ -687,6 +742,8 @@ run_megalinter() {
   return "${exit_code}"
 }
 
+# @description Orchestrate argument parsing, validation, and MegaLinter execution.
+# @arg $@ string Wrapper command-line arguments.
 main() {
   parse_arguments "$@"
   resolve_workspace
