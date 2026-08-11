@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
 import stat
 import subprocess
 import tempfile
 import unittest
-from pathlib import Path
 
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
