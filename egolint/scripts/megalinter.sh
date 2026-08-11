@@ -670,7 +670,7 @@ print_redacted_command() {
     fi
     index=$((index + 1))
     if [[ ${index} -lt ${#RUN_COMMAND[@]} ]]; then
-      printf ' \'
+      printf ' %b' '\134'
       printf "\n  "
     else
       printf "\n"

@@ -7,7 +7,6 @@ import subprocess
 import tempfile
 import unittest
 
-
 REPOSITORY_ROOT = Path(__file__).parents[2]
 WRAPPER_PATH = REPOSITORY_ROOT / "egolint" / "scripts" / "megalinter.sh"
 
