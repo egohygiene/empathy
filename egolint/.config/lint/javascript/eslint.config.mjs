@@ -1,3 +1,6 @@
+// Copyright 2026 Ego Hygiene
+// SPDX-License-Identifier: MIT
+
 import js from "@eslint/js";
 import jsonPlugin from "@eslint/json";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";

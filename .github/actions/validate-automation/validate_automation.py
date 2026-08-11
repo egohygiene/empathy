@@ -1,3 +1,6 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 from __future__ import annotations
 
 import argparse
@@ -78,7 +81,7 @@ def check_remote_uses(path: Path, text: str) -> list[Finding]:
     return findings
 
 
-def check_workflow(path: Path, repository_root: Path) -> list[Finding]:
+def check_workflow(path: Path) -> list[Finding]:
     text = path.read_text(encoding="utf-8")
     findings = check_remote_uses(path, text)
 
@@ -150,7 +153,7 @@ def validate(repository_root: Path) -> list[Finding]:
         path for path in workflow_root.iterdir() if path.suffix in {".yaml", ".yml"}
     )
     for path in workflow_paths:
-        findings.extend(check_workflow(path, repository_root))
+        findings.extend(check_workflow(path))
     for path in sorted(action_root.glob("*/action.yml")):
         findings.extend(check_action(path))
     return findings

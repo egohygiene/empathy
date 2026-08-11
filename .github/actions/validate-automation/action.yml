@@ -14,7 +14,7 @@ inputs:
   actionlint-linux-amd64-sha256:
     description: SHA-256 checksum for the pinned actionlint Linux archive.
     required: false
-    default: "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8"
+    default: "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8" # pragma: allowlist secret
   action-validator-version:
     description: Exact @action-validator/cli version.
     required: false

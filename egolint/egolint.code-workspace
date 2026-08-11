@@ -115,8 +115,9 @@
         ".lycheeignore": "ignore",
         ".pylintrc": "ini",
         "pylintrc": "ini",
+        // pragma: allowlist nextline secret
         ".secretlintignore": "ignore",
-        "secretlintignore": "ignore",
+        "secretlintignore": "ignore", // pragma: allowlist secret
     },
     "json.schemaDownload.trustedDomains": {
         "https://azure.com": true,

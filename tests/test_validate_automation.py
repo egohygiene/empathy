@@ -1,3 +1,6 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 from __future__ import annotations
 
 import importlib.util
@@ -14,7 +17,8 @@ MODULE_PATH = (
     / "validate_automation.py"
 )
 SPEC = importlib.util.spec_from_file_location("validate_automation", MODULE_PATH)
-assert SPEC and SPEC.loader
+assert SPEC is not None
+assert SPEC.loader is not None
 validate_automation = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = validate_automation
 SPEC.loader.exec_module(validate_automation)
@@ -69,7 +73,7 @@ jobs:
 """
         )
 
-        findings = validate_automation.check_workflow(path, self.repository_root)
+        findings = validate_automation.check_workflow(path)
 
         self.assertTrue(
             any("full commit SHA" in finding.message for finding in findings),
@@ -91,7 +95,7 @@ jobs:
 """
         )
 
-        findings = validate_automation.check_workflow(path, self.repository_root)
+        findings = validate_automation.check_workflow(path)
 
         self.assertTrue(
             any("SHA-256 image digest" in finding.message for finding in findings),
@@ -135,7 +139,7 @@ jobs:
 """
         )
 
-        findings = validate_automation.check_workflow(path, self.repository_root)
+        findings = validate_automation.check_workflow(path)
 
         self.assertTrue(
             any("timeout-minutes" in finding.message for finding in findings),
@@ -154,7 +158,7 @@ name: Second
 """
         )
 
-        findings = validate_automation.check_workflow(path, self.repository_root)
+        findings = validate_automation.check_workflow(path)
 
         self.assertTrue(
             any("exactly one YAML document" in finding.message for finding in findings),

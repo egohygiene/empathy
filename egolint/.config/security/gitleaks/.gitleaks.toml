@@ -36,11 +36,12 @@ useDefault = true
 # Those locations can contain real credentials and should remain scanned.
 
 [[allowlists]]
-description = "generated lint caches and security reports"
+description = "generated output and the reviewed Detect Secrets baseline"
 
 paths = [
   '''(?:^|/)\.cache(?:/.*)?$''',
   '''(?:^|/)\.reports(?:/.*)?$''',
+  '''(?:^|/)\.secrets\.baseline$''',
   '''(?:^|/)megalinter-reports(?:/.*)?$''',
 ]
 

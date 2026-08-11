@@ -1,14 +1,19 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 from __future__ import annotations
 
 import argparse
-from collections.abc import Iterable
 import html
 import json
 import os
 from pathlib import Path
 import tempfile
-from typing import Any
+from typing import TYPE_CHECKING, Any
 import xml.etree.ElementTree as ET
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable
 
 DEFAULT_EXCLUDED_PATHS = [
     ".git",
@@ -268,7 +273,7 @@ def atomic_write_text(path: Path, content: str) -> None:
             handle.write(content)
             handle.flush()
             os.fsync(handle.fileno())
-        os.replace(temporary_path, path)
+        temporary_path.replace(path)
     except BaseException:
         temporary_path.unlink(missing_ok=True)
         raise

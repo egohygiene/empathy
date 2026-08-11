@@ -8,10 +8,16 @@ on:
     paths:
       - ".github/**"
       - ".audits/**"
+      - ".reports/README.md"
+      - ".czrc"
       - ".mega-linter.yml"
+      - ".prettierignore"
+      - ".secrets.baseline"
       - ".staging/github/**"
       - ".gitattributes"
       - ".gitignore"
+      - "LICENSES/**"
+      - "REUSE.toml"
       - "Taskfile.yml"
       - "egolint/**"
   push:
@@ -20,10 +26,16 @@ on:
     paths:
       - ".github/**"
       - ".audits/**"
+      - ".reports/README.md"
+      - ".czrc"
       - ".mega-linter.yml"
+      - ".prettierignore"
+      - ".secrets.baseline"
       - ".staging/github/**"
       - ".gitattributes"
       - ".gitignore"
+      - "LICENSES/**"
+      - "REUSE.toml"
       - "Taskfile.yml"
       - "egolint/**"
   workflow_dispatch:
@@ -50,3 +62,16 @@ jobs:
 
       - name: Validate GitHub automation
         uses: ./.github/actions/validate-automation
+
+      - name: Validate repository policy tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover \
+            --start-directory tests \
+            --pattern "test_*.py" \
+            --verbose
+          python3 -m unittest discover \
+            --start-directory egolint/tests \
+            --pattern "test_*.py" \
+            --verbose

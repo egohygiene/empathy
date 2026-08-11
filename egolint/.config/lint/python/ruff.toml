@@ -126,6 +126,15 @@ task-tags = [
 
 [lint.per-file-ignores]
 
+".github/actions/**/*.py" = [
+  # Action entry points are standalone executables, not Python packages.
+  "INP001",
+  # Command-line actions intentionally write status and diagnostics.
+  "T201",
+  # argparse and CLI exits keep their actionable messages at the raise site.
+  "TRY003",
+]
+
 "tests/**/*.py" = [
   "S101",
   "PLR2004",
@@ -147,6 +156,13 @@ task-tags = [
   # The wrapper tests exercise controlled subprocess arguments and unsafe-path
   # rejection; no untrusted input is executed.
   "S108",
+  "S603",
+  "S607",
+]
+
+"tests/test_quality_policy.py" = [
+  # The policy tests only invoke the fixed local Git executable with
+  # test-controlled arguments.
   "S603",
   "S607",
 ]

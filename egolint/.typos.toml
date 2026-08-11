@@ -33,6 +33,9 @@
 #
 [default.extend-words]
 
+# Clojure's extensible data notation file extension.
+edn = "edn"
+
 # Examples:
 #
 # egohygiene = "egohygiene"

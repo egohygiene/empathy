@@ -1,0 +1,11 @@
+#:schema https://reuse.software/reuse-toml-v1.schema.json
+
+version = 1
+
+# First-party files use the repository's MIT license unless a closer REUSE.toml or
+# an in-file SPDX header provides more specific licensing information.
+[[annotations]]
+path = ["**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Ego Hygiene"
+SPDX-License-Identifier = "MIT"
