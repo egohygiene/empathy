@@ -86,7 +86,7 @@ exclude:
   - "./**/coverage/**"
   - "./**/generated/**"
 
-  - "./.engineering/reports/**"
+  - "./.reports/**"
 
 # Global vulnerability suppressions are intentionally empty.
 #

@@ -19,9 +19,14 @@ concurrency:
 
 jobs:
   lint:
-    name: Lint repository baseline
+    name: Lint monorepo baseline
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
+
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
 
     steps:
       - name: Checkout repository
@@ -38,8 +43,50 @@ jobs:
         env:
           APPLY_FIXES: none
           GITHUB_TOKEN: "${{ github.token }}"
+          MEGALINTER_CONFIG: .mega-linter.yml
+          REPORT_OUTPUT_FOLDER: .reports/megalinter
           VALIDATE_ALL_CODEBASE: >-
             ${{ github.event_name != 'pull_request' }}
+
+      - name: Publish MegaLinter summary
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          summary_path=".reports/megalinter/megalinter-summary.md"
+          printf '## MegaLinter\n\n' >> "${GITHUB_STEP_SUMMARY}"
+          if [[ -s "${summary_path}" ]]; then
+            cat "${summary_path}" >> "${GITHUB_STEP_SUMMARY}"
+          else
+            printf 'No Markdown summary was generated.\n' >> "${GITHUB_STEP_SUMMARY}"
+          fi
+
+      - name: Inspect MegaLinter SARIF
+        id: sarif
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          sarif_path=".reports/megalinter/megalinter-report.sarif"
+          if [[ -s "${sarif_path}" ]] &&
+            jq -e '.runs | length > 0' "${sarif_path}" >/dev/null; then
+            printf 'upload=true\n' >> "${GITHUB_OUTPUT}"
+          else
+            printf 'upload=false\n' >> "${GITHUB_OUTPUT}"
+            printf 'MegaLinter produced no SARIF runs; skipping code-scanning upload.\n'
+          fi
+
+      - name: Upload MegaLinter SARIF
+        if: >-
+          always() &&
+          steps.sarif.outputs.upload == 'true' &&
+          (github.event_name != 'pull_request' ||
+          github.event.pull_request.head.repo.full_name == github.repository)
+        # github/codeql-action v4.37.6
+        uses: github/codeql-action/upload-sarif@5595ccaf912efad79be6eef63a5619ff05969be3
+        with:
+          sarif_file: .reports/megalinter/megalinter-report.sarif
+          category: megalinter
 
       - name: Upload MegaLinter reports
         if: always()
@@ -47,7 +94,7 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "megalinter-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: reports/
+          path: .reports/megalinter/
           if-no-files-found: warn
           retention-days: 30
           compression-level: 9

@@ -5,6 +5,12 @@ name: Apply MegaLinter fixes
 
 on:
   workflow_dispatch:
+    inputs:
+      apply-fixes:
+        description: Linter or formatter keys to fix, or all.
+        required: true
+        default: all
+        type: string
 
 permissions:
   contents: write
@@ -26,6 +32,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
+          persist-credentials: false
           ref: "${{ github.ref_name }}"
 
       - name: Run MegaLinter auto-fixes
@@ -34,8 +41,10 @@ jobs:
         # oxsecurity/megalinter v10.0.0
         uses: oxsecurity/megalinter@15e5b45552097e318c93de385779ce3b1084052c
         env:
-          APPLY_FIXES: all
+          APPLY_FIXES: "${{ inputs.apply-fixes }}"
           GITHUB_TOKEN: "${{ github.token }}"
+          MEGALINTER_CONFIG: .mega-linter.yml
+          REPORT_OUTPUT_FOLDER: .reports/megalinter
           VALIDATE_ALL_CODEBASE: true
 
       - name: Detect changed files
@@ -62,8 +71,26 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "megalinter-fix-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: reports/
+          path: .reports/megalinter/
           if-no-files-found: warn
+          retention-days: 30
+          compression-level: 9
+
+      - name: Create review patch
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --binary > "${RUNNER_TEMP}/megalinter-fixes.patch"
+
+      - name: Upload review patch
+        if: steps.changes.outputs.changed == 'true'
+        # actions/upload-artifact v7.0.1
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "megalinter-fixes-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ runner.temp }}/megalinter-fixes.patch"
+          if-no-files-found: error
           retention-days: 30
           compression-level: 9
 

@@ -224,8 +224,8 @@ ignore:
   - "coverage"
   - "**/coverage/**"
 
-  - ".engineering/reports"
-  - ".engineering/reports/**"
+  - ".reports"
+  - ".reports/**"
 
   # ---------------------------------------------------------------------------
   # Imported and archival resources

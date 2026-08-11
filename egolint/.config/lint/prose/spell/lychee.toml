@@ -127,7 +127,7 @@ accept_timeouts = false
 exclude_path = [
   "(^|/)\\.git/",
   "(^|/)\\.cache/",
-  "(^|/)\\.engineering/reports/",
+  "(^|/)\\.reports/",
   "(^|/)node_modules/",
   "(^|/)vendor/",
   "(^|/)\\.venv/",

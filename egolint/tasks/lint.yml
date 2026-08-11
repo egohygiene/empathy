@@ -4,12 +4,16 @@
 version: "3"
 
 vars:
-  MEGALINTER_SCRIPT: "{{.ROOT_DIR}}/scripts/megalinter.sh"
-  MEGALINTER_VERSION: "v9.6.0"
-  MEGALINTER_REPORT_DIRECTORY: ".engineering/reports/megalinter"
+  EGOLINT_ROOT: "{{.ROOT_DIR}}/egolint"
+  MEGALINTER_SCRIPT: "{{.EGOLINT_ROOT}}/scripts/megalinter.sh"
+  MEGALINTER_VERSION: "v10.0.0"
+  MEGALINTER_CONFIG_FILE: ".mega-linter.yml"
+  MEGALINTER_HOLISTIC_CONFIG_FILE: "egolint/.mega-linter.yml"
+  MEGALINTER_REPORT_DIRECTORY: ".reports/megalinter"
 
 env:
   MEGALINTER_VERSION: "{{.MEGALINTER_VERSION}}"
+  MEGALINTER_CONFIG: "{{.MEGALINTER_CONFIG_FILE}}"
   MEGALINTER_REPORT_DIRECTORY: "{{.MEGALINTER_REPORT_DIRECTORY}}"
 
 tasks:
@@ -18,27 +22,27 @@ tasks:
     cmds:
       - |
         if test \
-          -f "node_modules/@cspell/dict-pokemon/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-clojure/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-elisp/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-gdscript/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-gis/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-medicalterms/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-mime-types/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-mnemonics/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-people-names/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-redis/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-scientific-terms-us/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-vim/cspell-ext.json" \
-          -a -f "node_modules/@cspell/dict-win32/cspell-ext.json" \
-          -a -d "node_modules/@cspell/cspell-json-reporter"; then
+          -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-pokemon/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-clojure/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-elisp/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-gdscript/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-gis/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-medicalterms/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-mime-types/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-mnemonics/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-people-names/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-redis/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-scientific-terms-us/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-vim/cspell-ext.json" \
+          -a -f "{{.EGOLINT_ROOT}}/node_modules/@cspell/dict-win32/cspell-ext.json" \
+          -a -d "{{.EGOLINT_ROOT}}/node_modules/@cspell/cspell-json-reporter"; then
           printf '%s\n' "Workspace dependencies are already installed."
           exit 0
         fi
 
         printf '%s\n' "Installing locked workspace dependencies..."
 
-        pnpm install \
+        pnpm --dir "{{.EGOLINT_ROOT}}" install \
           --frozen-lockfile
 
   default:
@@ -57,7 +61,16 @@ tasks:
       - '"{{.MEGALINTER_SCRIPT}}" --dry-run'
 
   all:
-    desc: "Lint the complete repository with all enabled linters"
+    desc: "Lint the complete repository with the universal baseline profile"
+    cmds:
+      - '"{{.MEGALINTER_SCRIPT}}"'
+
+  holistic:
+    desc: "Lint the complete repository with every supported Egolint descriptor"
+    deps:
+      - "dependencies:ensure"
+    env:
+      MEGALINTER_CONFIG: "{{.MEGALINTER_HOLISTIC_CONFIG_FILE}}"
     cmds:
       - '"{{.MEGALINTER_SCRIPT}}"'
 
@@ -294,10 +307,12 @@ tasks:
 
   eslint-jsx:
     desc: "Analyze JSX source with the repository ESLint toolchain"
+    deps:
+      - "dependencies:ensure"
     cmds:
       - >-
-        pnpm exec eslint
-        --config ".config/lint/javascript/eslint.config.mjs"
+        "{{.EGOLINT_ROOT}}/node_modules/.bin/eslint"
+        --config "{{.EGOLINT_ROOT}}/.config/lint/javascript/eslint.config.mjs"
         "**/*.jsx"
 
   chktex:
@@ -344,7 +359,7 @@ tasks:
 
             for makefile_path do
               if ! checkmake \
-                --config ".config/lint/makefile/.checkmake.ini" \
+                --config "egolint/.config/lint/makefile/.checkmake.ini" \
                 "${makefile_path}"; then
                 status=1
               fi
@@ -618,8 +633,8 @@ tasks:
       - "dependencies:ensure"
     cmds:
       - >-
-        pnpm exec eslint
-        --config ".config/lint/javascript/eslint.config.mjs"
+        "{{.EGOLINT_ROOT}}/node_modules/.bin/eslint"
+        --config "{{.EGOLINT_ROOT}}/.config/lint/javascript/eslint.config.mjs"
         --cache
         --cache-location ".cache/eslint/tsx"
         --cache-strategy "content"
@@ -631,8 +646,8 @@ tasks:
       - "dependencies:ensure"
     cmds:
       - >-
-        pnpm exec eslint
-        --config ".config/lint/javascript/eslint.config.mjs"
+        "{{.EGOLINT_ROOT}}/node_modules/.bin/eslint"
+        --config "{{.EGOLINT_ROOT}}/.config/lint/javascript/eslint.config.mjs"
         --cache
         --cache-location ".cache/eslint/typescript"
         --cache-strategy "content"
@@ -912,7 +927,7 @@ tasks:
           temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-check.XXXXXX")"
 
           if ! latexindent \
-            --local=".config/lint/latex/latexindent.yml" \
+            --local="egolint/.config/lint/latex/latexindent.yml" \
             "${latex_file}" \
             > "${temporary_file}"; then
             printf 'latexindent failed: %s\n' "${latex_file}" >&2
@@ -976,7 +991,7 @@ tasks:
         temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-format.XXXXXX")"
 
         if ! latexindent \
-          --local=".config/lint/latex/latexindent.yml" \
+          --local="egolint/.config/lint/latex/latexindent.yml" \
           "{{.FILE}}" \
           > "${temporary_file}"; then
           printf 'latexindent failed: %s\n' "{{.FILE}}" >&2

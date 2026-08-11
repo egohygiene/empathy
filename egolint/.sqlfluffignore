@@ -15,7 +15,7 @@
 **/.cache/**
 
 # Tool reports
-.engineering/reports/**
+.reports/**
 
 # dbt output and downloaded packages
 **/dbt_packages/**

@@ -125,7 +125,7 @@ export default defineConfig([
         rules: {
             ...js.configs.recommended.rules,
 
-            "eqeqeq": ["error", "always"],
+            eqeqeq: ["error", "always"],
             "no-console": "off",
             "no-constant-binary-expression": "error",
             "no-duplicate-imports": "error",
@@ -252,10 +252,7 @@ export default defineConfig([
             "react/jsx-uses-react": "off",
             "react/react-in-jsx-scope": "off",
 
-            "react/jsx-boolean-value": [
-                "error",
-                "never",
-            ],
+            "react/jsx-boolean-value": ["error", "never"],
             "react/jsx-key": "error",
             "react/jsx-no-comment-textnodes": "error",
             "react/jsx-no-duplicate-props": "error",
@@ -305,11 +302,7 @@ export default defineConfig([
     // -------------------------------------------------------------------------
 
     {
-        files: [
-            "**/*.cjs",
-            "**/*.cts",
-            "**/scripts/**/*.{js,ts,cjs,mjs,cts,mts}",
-        ],
+        files: ["**/*.cjs", "**/*.cts", "**/scripts/**/*.{js,ts,cjs,mjs,cts,mts}"],
 
         languageOptions: {
             sourceType: "commonjs",

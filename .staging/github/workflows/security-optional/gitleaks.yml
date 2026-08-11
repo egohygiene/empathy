@@ -77,7 +77,7 @@ jobs:
 
       - name: "📁 Prepare reports directory"
         run: |
-          mkdir -p reports
+          mkdir -p .reports
 
       - name: "🔐 Run Gitleaks"
         uses: gitleaks/gitleaks-action@v2
@@ -88,14 +88,14 @@ jobs:
             detect
             --source .
             --report-format sarif
-            --report-path reports/gitleaks.sarif
+            --report-path .reports/gitleaks.sarif
             --redact
 
       - name: "📤 Upload SARIF"
         if: always()
         uses: github/codeql-action/upload-sarif@v4
         with:
-          sarif_file: reports/gitleaks.sarif
+          sarif_file: .reports/gitleaks.sarif
           category: gitleaks
 
       - name: "📦 Upload report artifact"
@@ -103,7 +103,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: gitleaks-report
-          path: reports/gitleaks.sarif
+          path: .reports/gitleaks.sarif
           retention-days: 30
           if-no-files-found: ignore
 

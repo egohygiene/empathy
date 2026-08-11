@@ -86,11 +86,16 @@ coverage/
 # Generated reports and caches
 # ------------------------------------------------------------------------------
 
-.engineering/reports/
-.engineering/reports/**
+.reports/
+.reports/**
 
 .cache/
 **/.cache/
+
+# Each cross-linter fixture is validated by its owning tool. The remark fixture
+# intentionally exercises Markdown syntax that conflicts with markdownlint's
+# single-title and emphasis-style policy.
+egolint/tests/fixtures/remark-lint/
 
 # ------------------------------------------------------------------------------
 # Imported and vendored reference collections
