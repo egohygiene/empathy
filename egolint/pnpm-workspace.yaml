@@ -1,0 +1,14 @@
+---
+allowBuilds:
+  "@pulumi/kubernetes": false
+  "@scarf/scarf": false
+  "@swc/core": true
+  core-js: false
+  cpu-features: false
+  esbuild: true
+  msw: false
+  nx: true
+  protobufjs: true
+  secp256k1: false
+  ssh2: false
+  unrs-resolver: true

@@ -36,6 +36,12 @@
 # Clojure's extensible data notation file extension.
 edn = "edn"
 
+# LaTeX's canonical multiline equation environment.
+multline = "multline"
+
+# The Paket dependency manager's canonical lockfile stem.
+paket = "paket"
+
 # Examples:
 #
 # egohygiene = "egohygiene"
@@ -107,6 +113,11 @@ extend-exclude = [
     ".nuxt/",
     ".turbo/",
     ".vscode/",
+
+    # -------------------------------------------------------------------------
+    # Prose-rule dictionaries intentionally catalog discouraged spellings
+    # -------------------------------------------------------------------------
+    "egolint/.config/lint/prose/styles/**",
 
     # -------------------------------------------------------------------------
     # Generated source

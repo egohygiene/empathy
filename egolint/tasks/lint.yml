@@ -630,6 +630,13 @@ tasks:
         "{{.MEGALINTER_SCRIPT}}"
         --linters "REPOSITORY_CHECKOV"
 
+  betterleaks:
+    desc: "Scan source for committed secrets with Betterleaks"
+    cmds:
+      - >-
+        "{{.MEGALINTER_SCRIPT}}"
+        --linters "REPOSITORY_BETTERLEAKS"
+
   devskim:
     desc: "Scan repository source for insecure coding patterns with DevSkim"
     cmds:
@@ -1020,105 +1027,16 @@ tasks:
 
   latexindent:check:
     desc: "Check LaTeX formatting with latexindent"
-    preconditions:
-      - sh: "command -v latexindent >/dev/null 2>&1"
-        msg: "latexindent is not installed or available on PATH."
     cmds:
-      - |
-        status=0
-
-        while IFS= read -r -d '' latex_file; do
-          temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-check.XXXXXX")"
-
-          if ! latexindent \
-            --local="egolint/.config/lint/latex/latexindent.yml" \
-            "${latex_file}" \
-            > "${temporary_file}"; then
-            printf 'latexindent failed: %s\n' "${latex_file}" >&2
-            rm -f "${temporary_file}"
-            status=1
-            continue
-          fi
-
-          if test ! -s "${temporary_file}"; then
-            printf 'latexindent produced empty output: %s\n' "${latex_file}" >&2
-            rm -f "${temporary_file}"
-            status=1
-            continue
-          fi
-
-          if ! cmp -s "${latex_file}" "${temporary_file}"; then
-            printf 'Formatting required: %s\n' "${latex_file}"
-            status=1
-          fi
-
-          rm -f "${temporary_file}"
-        done < <(
-          find . \
-            \( \
-              -path "./.git" \
-              -o -path "*/node_modules" \
-              -o -path "*/vendor" \
-              -o -path "*/.venv" \
-              -o -path "*/venv" \
-              -o -path "*/dist" \
-              -o -path "*/build" \
-              -o -path "*/coverage" \
-              -o -path "*/.cache" \
-            \) \
-            -prune \
-            -o \
-            -type f \
-            \( \
-              -name "*.tex" \
-              -o -name "*.sty" \
-              -o -name "*.cls" \
-              -o -name "*.bib" \
-            \) \
-            -print0
-        )
-
-        exit "${status}"
+      - '"{{.EGOLINT_ROOT}}/scripts/latexindent.sh" check'
 
   latexindent:format:
     desc: "Format a LaTeX file with latexindent"
     requires:
       vars:
         - FILE
-    preconditions:
-      - sh: "command -v latexindent >/dev/null 2>&1"
-        msg: "latexindent is not installed or available on PATH."
-      - sh: "test -f {{.FILE | quote}}"
-        msg: "The requested LaTeX file does not exist."
     cmds:
-      - |
-        temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-format.XXXXXX")"
-
-        if ! latexindent \
-          --local="egolint/.config/lint/latex/latexindent.yml" \
-          "{{.FILE}}" \
-          > "${temporary_file}"; then
-          printf 'latexindent failed: %s\n' "{{.FILE}}" >&2
-          rm -f "${temporary_file}"
-          exit 1
-        fi
-
-        if test ! -s "${temporary_file}"; then
-          printf 'latexindent produced empty output: %s\n' "{{.FILE}}" >&2
-          rm -f "${temporary_file}"
-          exit 1
-        fi
-
-        if cmp -s "{{.FILE}}" "${temporary_file}"; then
-          rm -f "${temporary_file}"
-          printf 'Already formatted: %s\n' "{{.FILE}}"
-          exit 0
-        fi
-
-        cat "${temporary_file}" > "{{.FILE}}"
-        rm -f "${temporary_file}"
-
-        printf 'Formatted: %s\n' "{{.FILE}}"
+      - '"{{.EGOLINT_ROOT}}/scripts/latexindent.sh" format {{.FILE | quote}}'
 
   bandit:
     desc: "Analyze Python security with Bandit"

@@ -7,6 +7,9 @@ includes:
   egolint:
     taskfile: ./egolint/tasks/lint.yml
     dir: .
+  tool:
+    taskfile: ./egolint/tasks/complementary.yml
+    dir: .
 
 vars:
   NPM_CACHE: .cache/npm
@@ -113,9 +116,59 @@ tasks:
       - task: egolint:holistic
 
   lint:contracts:
-    desc: Validate MegaLinter v10 policy and generated inventory contracts
+    desc: Validate MegaLinter and complementary toolchain contracts
     cmds:
       - task: egolint:contracts
+      - task: tool:contracts
+
+  lint:complementary:
+    desc: Run every applicable non-MegaLinter tool
+    cmds:
+      - task: tool:all
+
+  security:source:
+    desc: Run complementary and MegaLinter-native source security checks
+    cmds:
+      - task: tool:detect-secrets
+      - task: egolint:betterleaks
+      - task: egolint:secretlint
+
+  security:dependencies:
+    desc: Scan discovered dependencies and repository packages for vulnerabilities
+    cmds:
+      - task: egolint:grype
+      - task: egolint:trivy
+
+  sbom:generate:
+    desc: Generate SPDX and CycloneDX dependency inventories
+    cmds:
+      - task: egolint:syft
+      - task: egolint:trivy-sbom
+
+  sbom:scan:
+    desc: Scan dependency inventories and repository packages for vulnerabilities
+    cmds:
+      - task: security:dependencies
+
+  tools:status:
+    desc: Show complementary applicability and dependency state
+    cmds:
+      - task: tool:status
+
+  tools:versions:
+    desc: Print the pinned complementary tool inventory
+    cmds:
+      - task: tool:versions
+
+  tools:install:
+    desc: Install the locked complementary Python lint environment
+    cmds:
+      - task: tool:dependencies:python
+
+  tools:install:security:
+    desc: Install the separately locked Python security dependency group
+    cmds:
+      - task: tool:dependencies:security
 
   lint:doctor:
     desc: Diagnose the local Egolint and MegaLinter runtime

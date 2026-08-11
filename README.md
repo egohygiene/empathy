@@ -24,6 +24,9 @@ quality layers:
 - canonical emoji Conventional Commits with Commitizen, Husky, and Commitlint;
 - reviewed Detect Secrets, MIT/SPDX header, and REUSE policies;
 - durable quality audits and remediation guidance under `.audits/`.
+- an explicit complementary-tool matrix with truthful project applicability;
+- Taskfile-backed VS Code settings, extensions, and quality tasks;
+- separated source-license, SBOM, and vulnerability ownership contracts.
 
 Imported workflows that still depend on a product, toolchain, secret set, or
 release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
@@ -39,8 +42,12 @@ task precommit:staged
 task precommit:all
 task license:check
 task secrets:check
-task lint:all
+task lint:fast
 task lint:holistic
+task lint:complementary
+task lint:contracts
+task tools:status
+task tools:versions
 ```
 
 Husky is the sole Git hook manager. Its pre-commit hook combines lint-staged's

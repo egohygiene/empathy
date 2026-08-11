@@ -1,0 +1,133 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.rulers": [100],
+  "files.associations": {
+    ".allcontributorsrc": "jsonc",
+    ".codespellrc": "ini",
+    ".dockerignore": "ignore",
+    ".gitleaksignore": "ignore",
+    ".mailmap": "plaintext",
+    ".markdownlintignore": "ignore",
+    ".pnpmignore": "ignore",
+    ".secretlintignore": "ignore",
+    ".shellcheckrc": "ini",
+    ".sqlfluffignore": "ignore",
+    ".trivyignore": "ignore",
+    ".typos.toml": "toml",
+    ".v8rignore": "ignore",
+    "Brewfile": "ruby",
+    "Taskfile.yml": "yaml",
+    "buf.yaml": "yaml",
+    "tombi.toml": "toml"
+  },
+  "files.encoding": "utf8",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "prettier.configPath": "${workspaceFolder}/egolint/.config/lint/javascript/prettier.config.mjs",
+  "prettier.ignorePath": "${workspaceFolder}/.prettierignore",
+  "eslint.options": {
+    "overrideConfigFile": "${workspaceFolder}/egolint/.config/lint/javascript/eslint.config.mjs"
+  },
+  "eslint.workingDirectories": [
+    {
+      "directory": "${workspaceFolder}",
+      "changeProcessCWD": true
+    }
+  ],
+  "stylelint.configFile": "${workspaceFolder}/egolint/.config/lint/css/stylelint.json",
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "markdownlint.configFile": "${workspaceFolder}/egolint/.config/lint/markdown/.markdownlint.json",
+  "markdownlint.lintWorkspaceGlobs": [
+    "**/*.md",
+    "!**/node_modules/**",
+    "!egolint/tests/fixtures/negative/**"
+  ],
+  "shellcheck.customArgs": [
+    "--rcfile=${workspaceFolder}/egolint/.config/lint/shell/shellcheckrc"
+  ],
+  "shfmt.executablePath": "shfmt",
+  "shfmt.executableArgs": [
+    "--case-indent",
+    "--indent",
+    "4",
+    "--language-dialect",
+    "bash",
+    "--simplify"
+  ],
+  "sqlfluff.config": "${workspaceFolder}/egolint/.config/lint/sql/.sqlfluff.ini",
+  "sqlfluff.dialect": "postgres",
+  "sqlfluff.ignoreLocalConfig": false,
+  "cSpell.configFile": "${workspaceFolder}/egolint/.config/lint/prose/spell/cspell.json",
+  "spectral.rulesetFile": "${workspaceFolder}/egolint/.config/lint/api/spectral.yaml",
+  "latex-workshop.latexindent.args": [
+    "--local=${workspaceFolder}/egolint/.config/lint/latex/latexindent.yml"
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-action.json": ".github/actions/*/action.yml",
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.{yml,yaml}",
+    "https://taskfile.dev/schema.json": ["Taskfile.yml", "egolint/tasks/*.yml"]
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[latex]": {
+    "editor.defaultFormatter": "james-yu.latex-workshop"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[rego]": {
+    "editor.defaultFormatter": "tsandall.opa"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "sqlfluff.vscode-sqlfluff"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tombi-toml.tombi"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

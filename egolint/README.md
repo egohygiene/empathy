@@ -5,23 +5,25 @@ consistent, reproducible code quality.
 
 Egolint owns Empathy's complete quality-policy catalog. It keeps linter rules,
 security-scanner configuration, fixtures, dependency manifests, the local
-container wrapper, and composable Taskfile commands behind one stable boundary.
+container wrapper, direct complementary-tool contracts, and composable Taskfile
+commands behind one stable boundary.
 The monorepo root consumes that boundary without copying the individual tool
 configurations.
 
 ## Profiles
 
-The root [`.mega-linter.yml`](../.mega-linter.yml) extends the holistic policy
-and selects a small universal baseline for routine pull requests. The full
-[`egolint/.mega-linter.yml`](.mega-linter.yml) retains every imported descriptor
-and can be run deliberately when broad coverage is useful.
+The root [`.mega-linter.yml`](../.mega-linter.yml) is the canonical holistic
+policy. The explicit [fast profile](.mega-linter.fast.yml) selects a stable
+12-linter changed-file surface for routine pull requests and local feedback.
 
 From the monorepo root:
 
 ```bash
 task lint
-task lint:all
+task lint:fast
 task lint:holistic
+task lint:complementary
+task lint:contracts
 task lint:doctor
 task lint:fix
 ```
@@ -59,8 +61,10 @@ Generated output is always disposable and namespaced under `.reports/`:
 
 ```text
 .reports/
+├── complementary/
 ├── megalinter/
-└── osv/
+├── osv/
+└── supply-chain/
 ```
 
 Durable findings, architectural decisions, and future recommendations belong
@@ -72,13 +76,17 @@ under [`.audits/`](../.audits/), never in the generated report tree.
 egolint/
 ├── .config/
 │   ├── lint/           # Language and format rules
-│   └── security/       # Scanner and supply-chain rules
+│   ├── security/       # Scanner and supply-chain rules
+│   └── toolchain/      # Machine-readable inventories
 ├── scripts/
+│   ├── complementary_tools.py # Direct-tool contract and runner
+│   ├── latexindent.sh  # Portable LaTeX check/format adapter
 │   ├── megalinter.sh   # Docker/Podman wrapper
 │   ├── pnpm.sh         # Corepack-aware pinned pnpm adapter
 │   └── precommit.sh    # Stable pre-commit runtime adapter
 ├── tasks/
-│   └── lint.yml        # Composable Taskfile API
+│   ├── complementary.yml # Direct non-MegaLinter tasks
+│   └── lint.yml          # MegaLinter-focused Taskfile API
 ├── tests/
 │   └── fixtures/       # Cross-language validation fixtures
 ├── package.json        # Node-based quality tools
@@ -87,3 +95,15 @@ egolint/
 
 The root GitHub workflows are the active monorepo integration layer. Egolint
 does not keep a second `.github/workflows/` tree.
+
+## Complementary tools
+
+`task tools:status` distinguishes applicability from dependency availability.
+`task tools:versions` prints the pinned inventory without installing anything.
+Project-aware tools are skipped when their project markers are absent; missing
+runtimes are reported separately and never presented as passing checks.
+
+VS Code reads the same Ruff, ESLint, Stylelint, Markdownlint, ShellCheck,
+SQLFluff, Tombi, CSpell, Spectral, and latexindent policies through the root
+`.vscode/` directory. Workspace files contain only folder and UI preferences,
+so editor policy cannot drift between `.code-workspace` files.

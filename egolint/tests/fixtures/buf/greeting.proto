@@ -1,0 +1,11 @@
+// Copyright 2026 Ego Hygiene
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package egohygiene.greeting.v1;
+
+// GreetingRequest identifies the person to greet.
+message GreetingRequest {
+  string name = 1;
+}
