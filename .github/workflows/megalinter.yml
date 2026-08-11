@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   lint:
-    name: Lint monorepo baseline
+    name: Lint selected MegaLinter profile
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -43,7 +43,12 @@ jobs:
         env:
           APPLY_FIXES: none
           GITHUB_TOKEN: "${{ github.token }}"
-          MEGALINTER_CONFIG: .mega-linter.yml
+          # Pull requests use the deterministic changed-file profile. Trusted
+          # branch and manual runs use the canonical holistic configuration.
+          MEGALINTER_CONFIG: >-
+            ${{ github.event_name == 'pull_request'
+            && 'egolint/.mega-linter.fast.yml'
+            || '.mega-linter.yml' }}
           REPORT_OUTPUT_FOLDER: .reports/megalinter
           VALIDATE_ALL_CODEBASE: >-
             ${{ github.event_name != 'pull_request' }}

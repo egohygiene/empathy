@@ -10,7 +10,9 @@ vars:
   PRE_COMMIT_SCRIPT: "{{.EGOLINT_ROOT}}/scripts/precommit.sh"
   MEGALINTER_VERSION: "v10.0.0"
   MEGALINTER_CONFIG_FILE: ".mega-linter.yml"
+  MEGALINTER_FAST_CONFIG_FILE: "egolint/.mega-linter.fast.yml"
   MEGALINTER_HOLISTIC_CONFIG_FILE: "egolint/.mega-linter.yml"
+  MEGALINTER_POLICY_SCRIPT: "{{.EGOLINT_ROOT}}/scripts/validate_megalinter_policy.py"
   MEGALINTER_REPORT_DIRECTORY: ".reports/megalinter"
 
 env:
@@ -128,9 +130,19 @@ tasks:
       - '"{{.PRE_COMMIT_SCRIPT}}" all reuse'
 
   default:
-    desc: "Run the complete MegaLinter quality suite"
+    desc: "Run the canonical holistic MegaLinter quality suite"
     cmds:
-      - task: all
+      - task: holistic
+
+  contracts:
+    desc: "Validate MegaLinter v10 variables, profiles, fixtures, and generated inventory"
+    cmds:
+      - 'python3 "{{.MEGALINTER_POLICY_SCRIPT}}" --check'
+
+  contracts:write:
+    desc: "Regenerate the MegaLinter tool matrix and profile snapshots"
+    cmds:
+      - 'python3 "{{.MEGALINTER_POLICY_SCRIPT}}" --write'
 
   doctor:
     desc: "Validate MegaLinter runtime and repository configuration"
@@ -143,7 +155,9 @@ tasks:
       - '"{{.MEGALINTER_SCRIPT}}" --dry-run'
 
   all:
-    desc: "Lint the complete repository with the universal baseline profile"
+    desc: "Lint the complete repository with the holistic profile"
+    deps:
+      - contracts
     cmds:
       - '"{{.MEGALINTER_SCRIPT}}"'
 
@@ -151,15 +165,23 @@ tasks:
     desc: "Lint the complete repository with every supported Egolint descriptor"
     deps:
       - "dependencies:ensure"
-    env:
-      MEGALINTER_CONFIG: "{{.MEGALINTER_HOLISTIC_CONFIG_FILE}}"
+      - contracts
     cmds:
       - '"{{.MEGALINTER_SCRIPT}}"'
 
-  changed:
-    desc: "Lint only files changed in the current Git worktree"
+  fast:
+    desc: "Lint changed files with the deterministic 12-linter profile"
+    deps:
+      - contracts
+    env:
+      MEGALINTER_CONFIG: "{{.MEGALINTER_FAST_CONFIG_FILE}}"
     cmds:
       - '"{{.MEGALINTER_SCRIPT}}" --changed-only'
+
+  changed:
+    desc: "Alias for the deterministic changed-file profile"
+    cmds:
+      - task: fast
 
   fix:
     desc: "Apply fixes from all supported linters"

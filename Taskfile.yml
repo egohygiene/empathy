@@ -93,9 +93,14 @@ tasks:
       - task: egolint:license:check
 
   lint:
-    desc: Lint changed repository files through the canonical Egolint toolchain
+    desc: Lint the complete repository through the canonical holistic policy
     cmds:
-      - task: egolint:changed
+      - task: egolint:holistic
+
+  lint:fast:
+    desc: Lint changed repository files through the deterministic fast policy
+    cmds:
+      - task: egolint:fast
 
   lint:all:
     desc: Lint the complete repository through the universal Egolint profile
@@ -106,6 +111,11 @@ tasks:
     desc: Run every supported Egolint descriptor against the repository
     cmds:
       - task: egolint:holistic
+
+  lint:contracts:
+    desc: Validate MegaLinter v10 policy and generated inventory contracts
+    cmds:
+      - task: egolint:contracts
 
   lint:doctor:
     desc: Diagnose the local Egolint and MegaLinter runtime

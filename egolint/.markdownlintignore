@@ -96,6 +96,7 @@ coverage/
 # intentionally exercises Markdown syntax that conflicts with markdownlint's
 # single-title and emphasis-style policy.
 egolint/tests/fixtures/remark-lint/
+egolint/tests/fixtures/negative/
 
 # ------------------------------------------------------------------------------
 # Imported and vendored reference collections
