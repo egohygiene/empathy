@@ -46,6 +46,11 @@ $RECYCLE.BIN/
 .cache/
 .reports/*
 !.reports/README.md
+!.reports/egolint/
+.reports/egolint/*
+!.reports/egolint/architecture/
+!.reports/egolint/architecture/README.md
+!.reports/egolint/architecture/lint-architecture.svg
 .tmp/
 coverage/
 temp/

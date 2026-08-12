@@ -32,6 +32,8 @@ token policy.
 | `python-poetry-setup`              | Install pinned Python/Poetry and locked dependencies               | Tool/cache installation          |
 | `setup-environment`                | Detect and prepare Node.js, Python/Poetry, and Flutter projects    | Tool/dependency installation     |
 | `setup-osv-scanner`                | Install a checksum-verified OSV Scanner release                    | Temporary tool installation      |
+| `generate-lint-infographic`        | Generate architecture SVG and legend from canonical tool matrices  | `.reports/egolint/architecture/` |
+| `publish-report-snapshot`          | Guard and publish stable reports from trusted default-branch runs  | Explicit `.reports/` paths       |
 | `validate-automation`              | Run actionlint, action metadata validation, and repository policy  | Temporary tool downloads         |
 
 ## Selection guide

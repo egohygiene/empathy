@@ -1,0 +1,112 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Generate lint architecture
+
+on:
+  pull_request:
+    paths:
+      - ".github/actions/generate-lint-infographic/**"
+      - ".github/actions/publish-report-snapshot/**"
+      - ".github/workflows/**"
+      - ".mega-linter.yml"
+      - ".reports/README.md"
+      - "Taskfile.yml"
+      - "egolint/.config/megalinter/**"
+      - "egolint/.config/toolchain/**"
+      - "egolint/.mega-linter*.yml"
+      - "egolint/scripts/complementary_tools.py"
+      - "egolint/scripts/validate_megalinter_policy.py"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/actions/generate-lint-infographic/**"
+      - ".github/actions/publish-report-snapshot/**"
+      - ".github/workflows/**"
+      - ".mega-linter.yml"
+      - ".reports/README.md"
+      - "Taskfile.yml"
+      - "egolint/.config/megalinter/**"
+      - "egolint/.config/toolchain/**"
+      - "egolint/.mega-linter*.yml"
+      - "egolint/scripts/complementary_tools.py"
+      - "egolint/scripts/validate_megalinter_policy.py"
+  schedule:
+    - cron: "53 5 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "lint-architecture-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: Generate deterministic architecture artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Generate lint architecture
+        uses: ./.github/actions/generate-lint-infographic
+
+      - name: Upload complete architecture artifact
+        # actions/upload-artifact v7.0.1
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "lint-architecture-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .reports/egolint/architecture/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9
+
+  publish-report:
+    name: Publish curated architecture snapshot
+    needs: generate
+    if: >-
+      github.event_name != 'pull_request' &&
+      github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout default branch
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          ref: "${{ github.event.repository.default_branch }}"
+
+      - name: Clear the previous architecture snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm --force --recursive --ignore-unmatch -- \
+            ".reports/egolint/architecture"
+
+      - name: Download architecture artifact
+        # actions/download-artifact v8.0.1
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: "lint-architecture-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .reports/egolint/architecture
+
+      - name: Publish stable architecture snapshot
+        uses: ./.github/actions/publish-report-snapshot
+        with:
+          paths: .reports/egolint/architecture
+          default-branch: "${{ github.event.repository.default_branch }}"
+          commit-message: >-
+            chore(reports): 📊 refresh lint architecture [skip ci]

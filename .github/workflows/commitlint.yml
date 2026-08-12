@@ -32,8 +32,33 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Lint commit messages
-        # wagoid/commitlint-github-action v6.2.1
-        uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed
+      - name: Set up Node.js
+        # actions/setup-node v6.5.0
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
-          configFile: egolint/.config/lint/commits/commitlint.emoji.config.cjs
+          node-version: "26.5.0"
+
+      - name: Install the locked commit policy
+        shell: bash
+        env:
+          COREPACK_HOME: "${{ runner.temp }}/empathy-corepack"
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@11.21.0 --activate
+          sh egolint/scripts/pnpm.sh --dir egolint install \
+            --frozen-lockfile \
+            --ignore-scripts
+
+      - name: Lint commit messages
+        shell: bash
+        env:
+          BASE_SHA: "${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA: "${{ github.event.pull_request.head.sha }}"
+        run: |
+          set -euo pipefail
+          sh egolint/scripts/pnpm.sh --dir egolint exec commitlint \
+            --config .config/lint/commits/commitlint.emoji.config.cjs \
+            --from "${BASE_SHA}" \
+            --to "${HEAD_SHA}" \
+            --verbose

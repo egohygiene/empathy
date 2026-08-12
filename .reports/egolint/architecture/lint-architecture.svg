@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title description" font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+<title id="title">Egolint lint platform architecture</title>
+<desc id="description">Execution paths, tool profiles, state model, and report publication flow generated from the canonical tool matrices.</desc>
+<defs>
+<linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#090719"/>
+<stop offset="0.55" stop-color="#181034"/>
+<stop offset="1" stop-color="#071A2D"/>
+</linearGradient>
+<filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+<feGaussianBlur stdDeviation="5" result="blur"/>
+<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<rect width="1440" height="1040" fill="url(#background)"/>
+<circle cx="1280" cy="80" r="180" fill="#8B5CF6" opacity="0.08"/>
+<circle cx="80" cy="920" r="230" fill="#22D3EE" opacity="0.06"/>
+<text x="72" y="78" font-size="34" fill="#EDE9FE" font-weight="800" text-anchor="start">EGOLINT QUALITY CONSTELLATION</text>
+<text x="72" y="112" font-size="18" fill="#A5B4FC" font-weight="500" text-anchor="start">Deterministic architecture generated from the canonical tool matrices</text>
+<rect x="72" y="154" width="300" height="152" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="96" y="192" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">Local</text>
+<text x="96" y="224" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Taskfile: public command surface</text>
+<text x="96" y="250" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Fast, holistic, and direct tools</text>
+<rect x="404" y="154" width="300" height="152" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="428" y="192" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">Editor</text>
+<text x="428" y="224" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">VS Code delegates to Taskfile</text>
+<text x="428" y="250" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">One formatter per language</text>
+<rect x="736" y="154" width="300" height="152" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="760" y="192" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">Hooks</text>
+<text x="760" y="224" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Husky owns Git hooks</text>
+<text x="760" y="250" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Fast pre-commit + lint-staged</text>
+<rect x="1068" y="154" width="300" height="152" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="1092" y="192" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">CI</text>
+<text x="1092" y="224" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">PRs: fast and read-only</text>
+<text x="1092" y="250" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Trusted: holistic and publish</text>
+<path d="M222 330 H1218" stroke="#6D5DD3" stroke-width="3" stroke-dasharray="8 10" opacity="0.8"/>
+<path d="M720 330 V376" stroke="#C084FC" stroke-width="4" marker-end="none"/>
+<rect x="72" y="378" width="628" height="220" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="96" y="416" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">MegaLinter-native · 124 tools</text>
+<text x="96" y="448" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Fast profile: 12 selected</text>
+<text x="96" y="474" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Holistic profile: 107 selected</text>
+<text x="96" y="500" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Configured: 96 enabled</text>
+<text x="96" y="526" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Project-aware: 11 conditional</text>
+<text x="96" y="552" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Deferred: 17 disabled with reasons</text>
+<text x="96" y="578" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Reports: .reports/megalinter/</text>
+<rect x="740" y="378" width="628" height="220" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="764" y="416" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">Complementary · 18 tools</text>
+<text x="764" y="448" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Universal: 6 enabled</text>
+<text x="764" y="474" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Project-aware: 12 conditional</text>
+<text x="764" y="500" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Disabled: 0</text>
+<text x="764" y="526" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Not applicable is distinct from missing dependency</text>
+<text x="764" y="552" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Reports: .reports/complementary/&lt;tool&gt;/</text>
+<text x="720" y="644" font-size="23" fill="#EDE9FE" font-weight="800" text-anchor="middle">OBSERVABILITY AND PUBLICATION</text>
+<rect x="72" y="682" width="396" height="170" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="96" y="720" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">Complete artifacts</text>
+<text x="96" y="752" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Every run uploads native output</text>
+<text x="96" y="778" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Run ID and attempt preserve history</text>
+<text x="96" y="804" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">30-day retention</text>
+<rect x="522" y="682" width="396" height="170" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="546" y="720" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">Security findings</text>
+<text x="546" y="752" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Valid SARIF → Code Scanning</text>
+<text x="546" y="778" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">OSV keeps its severity gate</text>
+<text x="546" y="804" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Signals retain canonical owners</text>
+<rect x="972" y="682" width="396" height="170" rx="20" fill="#15112B" stroke="#6D5DD3" stroke-width="2"/>
+<text x="996" y="720" font-size="21" fill="#F5D0FE" font-weight="700" text-anchor="start">Curated latest</text>
+<text x="996" y="752" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Trusted default-branch runs only</text>
+<text x="996" y="778" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Stable snapshots under .reports/</text>
+<text x="996" y="804" font-size="16" fill="#EDE9FE" font-weight="500" text-anchor="start">Git history replaces timestamp trees</text>
+<path d="M468 767 H522" stroke="#22D3EE" stroke-width="4" filter="url(#glow)"/>
+<path d="M918 767 H972" stroke="#22D3EE" stroke-width="4" filter="url(#glow)"/>
+<text x="72" y="910" font-size="20" fill="#A5B4FC" font-weight="800" text-anchor="start">STATE MODEL</text>
+<rect x="72" y="934" width="18" height="18" rx="5" fill="#34D399"/>
+<text x="100" y="949" font-size="15" fill="#EDE9FE" font-weight="500" text-anchor="start">Enabled / selected / passed</text>
+<rect x="392" y="934" width="18" height="18" rx="5" fill="#FBBF24"/>
+<text x="420" y="949" font-size="15" fill="#EDE9FE" font-weight="500" text-anchor="start">Conditional / not applicable</text>
+<rect x="742" y="934" width="18" height="18" rx="5" fill="#A78BFA"/>
+<text x="770" y="949" font-size="15" fill="#EDE9FE" font-weight="500" text-anchor="start">Disabled / deferred with reason</text>
+<rect x="1080" y="934" width="18" height="18" rx="5" fill="#FB7185"/>
+<text x="1108" y="949" font-size="15" fill="#EDE9FE" font-weight="500" text-anchor="start">Findings / execution error</text>
+<text x="72" y="1000" font-size="14" fill="#64748B" font-weight="500" text-anchor="start">Source digest: 8a69af7c221f599c</text>
+</svg>
