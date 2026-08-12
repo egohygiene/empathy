@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Validate canonical SKILL.md frontmatter against the Agent Skills specification.
 
 Usage:
@@ -7,7 +10,7 @@ Usage:
 Exit code 0 when all skills are valid; non-zero otherwise.
 """
 
-import os
+from pathlib import Path
 import re
 import sys
 
@@ -17,7 +20,7 @@ except ImportError:
     print("ERROR: PyYAML is required. Install with: pip install pyyaml", file=sys.stderr)
     sys.exit(2)
 
-BASE = os.path.dirname(os.path.abspath(__file__))
+BASE = Path(__file__).resolve().parent
 
 ALLOWED_TOP = {"name", "description", "license", "compatibility", "metadata", "allowed-tools"}
 REQUIRED = {"name", "description"}
@@ -26,18 +29,16 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
 
 
 def find_skills(base):
-    results = []
-    for root, _dirs, files in os.walk(base):
-        if "SKILL.md" in files:
-            results.append((os.path.relpath(root, base), os.path.join(root, "SKILL.md")))
-    return sorted(results)
+    return sorted(
+        (skill_path.parent.relative_to(base), skill_path) for skill_path in base.rglob("SKILL.md")
+    )
 
 
 def validate_skill(rel, path):
-    dir_name = os.path.basename(rel)
+    dir_name = rel.name
     errors = []
 
-    with open(path) as f:
+    with path.open(encoding="utf-8") as f:
         content = f.read()
 
     m = FRONTMATTER_RE.match(content)
@@ -100,9 +101,8 @@ def main():
     if total_errors == 0:
         print(f"All {len(skills)} skills are valid.")
         return 0
-    else:
-        print(f"{total_errors} error(s) across {sum(1 for v in all_errors.values() if v)} skill(s).")
-        return 1
+    print(f"{total_errors} error(s) across {sum(1 for v in all_errors.values() if v)} skill(s).")
+    return 1
 
 
 if __name__ == "__main__":

@@ -184,6 +184,19 @@ task-tags = [
   "T201",
 ]
 
+"egolint/.agents/**/*.py" = [
+  # Imported Aether builders and validators are explicit command-line
+  # boundaries. They intentionally print human-readable diagnostics, collect
+  # validation errors imperatively, and keep schema state machines together so
+  # source/distribution failures remain understandable.
+  "PERF401",
+  "PLR0912",
+  "PLR0915",
+  "PLR2004",
+  "T201",
+  "TRY003",
+]
+
 "egolint/tests/test_megalinter_policy.py" = [
   # The test invokes only the fixed local validator module and constructs one
   # explicit module-load failure diagnostic.
@@ -208,6 +221,12 @@ task-tags = [
   # test-controlled arguments.
   "S603",
   "S607",
+]
+
+"tests/test_architecture_documents.py" = [
+  # The small frontmatter parser raises assertion diagnostics directly so a
+  # malformed architecture file reports its exact path and field.
+  "TRY003",
 ]
 
 "**/__init__.py" = [

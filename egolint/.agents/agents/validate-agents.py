@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Validate canonical AGENT.md frontmatter against the Aether agent contract.
 
 Usage:
@@ -8,9 +11,9 @@ Exit code 0 when all agents are valid; non-zero otherwise.
 """
 
 import os
+from pathlib import Path
 import re
 import sys
-from pathlib import Path
 
 try:
     import yaml
@@ -26,8 +29,13 @@ REQUIRED = {"aether-id", "name", "description", "tools", "metadata"}
 ALLOWED_TOP = {"aether-id", "name", "description", "tools", "metadata"}
 ID_RE = re.compile(r"^[a-z]([a-z0-9-]*[a-z0-9])?$")
 REQUIRED_META = {
-    "aether-version", "aether-status", "aether-scope", "aether-domain",
-    "aether-owners", "aether-created", "aether-updated",
+    "aether-version",
+    "aether-status",
+    "aether-scope",
+    "aether-domain",
+    "aether-owners",
+    "aether-created",
+    "aether-updated",
 }
 ALLOWED_STATUSES = {"draft", "stable", "deprecated", "retired"}
 ALLOWED_TOOLS = {"read", "search", "edit", "execute", "web"}
@@ -97,9 +105,7 @@ def validate_agent(dir_name: str, path: Path, skill_ids: set, spec_ids: set):
     # aether-id must match directory name
     aether_id = fm.get("aether-id", "")
     if aether_id != dir_name:
-        errors.append(
-            f"aether-id '{aether_id}' does not match directory name '{dir_name}'"
-        )
+        errors.append(f"aether-id '{aether_id}' does not match directory name '{dir_name}'")
     if not ID_RE.match(str(aether_id)):
         errors.append(f"aether-id '{aether_id}' is not valid kebab-case")
     elif len(str(aether_id)) > 64:
@@ -108,11 +114,15 @@ def validate_agent(dir_name: str, path: Path, skill_ids: set, spec_ids: set):
     # tools must be explicit list of allowed values
     tools = fm.get("tools")
     if tools is None:
-        errors.append("tools field is required (must be explicit; omitting implies broad access on some hosts)")
+        errors.append(
+            "tools field is required (must be explicit; omitting implies broad access on some hosts)"
+        )
     elif not isinstance(tools, list):
         errors.append("tools must be a list")
     elif not tools:
-        errors.append("tools list must not be empty; use ['read'] for read-only roles instead of []")
+        errors.append(
+            "tools list must not be empty; use ['read'] for read-only roles instead of []"
+        )
     else:
         for t in tools:
             if t not in ALLOWED_TOOLS:
@@ -130,26 +140,20 @@ def validate_agent(dir_name: str, path: Path, skill_ids: set, spec_ids: set):
 
             status = meta.get("aether-status", "")
             if status not in ALLOWED_STATUSES:
-                errors.append(
-                    f"aether-status '{status}' not in {sorted(ALLOWED_STATUSES)}"
-                )
+                errors.append(f"aether-status '{status}' not in {sorted(ALLOWED_STATUSES)}")
 
             # Validate skill dependencies resolve
             for skill_id in meta.get("aether-skills", []):
                 if skill_id not in skill_ids:
-                    errors.append(
-                        f"aether-skills references unknown skill id '{skill_id}'"
-                    )
+                    errors.append(f"aether-skills references unknown skill id '{skill_id}'")
 
             # Validate spec dependencies resolve
             for spec_id in meta.get("aether-specs", []):
                 if spec_id not in spec_ids:
-                    errors.append(
-                        f"aether-specs references unknown spec id '{spec_id}'"
-                    )
+                    errors.append(f"aether-specs references unknown spec id '{spec_id}'")
 
     # Body section validation
-    body = text[m.end():]
+    body = text[m.end() :]
     for section in REQUIRED_SECTIONS:
         if section not in body:
             errors.append(f"body is missing required section: {section!r}")

@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Build GitHub repository and organization agent projections from canonical source.
 
 Usage:
@@ -26,9 +29,9 @@ Projection rules
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
 import re
 import sys
-from pathlib import Path
 
 try:
     import yaml
@@ -55,8 +58,7 @@ STRIP_FIELDS = {"aether-id", "metadata"}
 def _rewrite_links(body: str, spec_prefix: str) -> str:
     """Rewrite source-relative library links to consumer-local paths."""
     body = _SKILL_LINK_RE.sub(lambda m: f".agents/skills/{m.group(1)}/SKILL.md", body)
-    body = _SPEC_LINK_RE.sub(lambda m: f"{spec_prefix}/{m.group(1)}", body)
-    return body
+    return _SPEC_LINK_RE.sub(lambda m: f"{spec_prefix}/{m.group(1)}", body)
 
 
 def _build_frontmatter(fm: dict) -> str:
@@ -65,14 +67,14 @@ def _build_frontmatter(fm: dict) -> str:
     return yaml.dump(out, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
 
-def project_agent(agent_id: str, source: Path, out_dir: Path, spec_prefix: str) -> str:
+def project_agent(source: Path, spec_prefix: str) -> str:
     """Return the projected file content for an agent."""
     text = source.read_text(encoding="utf-8")
     m = FRONTMATTER_RE.match(text)
     if not m:
         raise ValueError(f"no frontmatter in {source}")
     fm = yaml.safe_load(m.group(1)) or {}
-    body = text[m.end():]
+    body = text[m.end() :]
     body = _rewrite_links(body, spec_prefix)
     header = f"---\n{_build_frontmatter(fm)}---\n"
     return header + body
@@ -105,8 +107,8 @@ def build(check: bool = False, output_directory: Path | None = None) -> int:
     for agent_id, source in agents:
         filename = f"{agent_id}.agent.md"
 
-        repo_content = project_agent(agent_id, source, repo_proj, ".github/specs")
-        org_content = project_agent(agent_id, source, org_proj, "specs")
+        repo_content = project_agent(source, ".github/specs")
+        org_content = project_agent(source, "specs")
 
         for out_path, content in [
             (repo_proj / filename, repo_content),
@@ -127,7 +129,10 @@ def build(check: bool = False, output_directory: Path | None = None) -> int:
                 print(f"wrote  {rel}")
 
     if check and drift:
-        print(f"\n{drift} projection(s) out of date. Run build-projections.py to regenerate.", file=sys.stderr)
+        print(
+            f"\n{drift} projection(s) out of date. Run build-projections.py to regenerate.",
+            file=sys.stderr,
+        )
         return 1
 
     if not check:
@@ -138,7 +143,9 @@ def build(check: bool = False, output_directory: Path | None = None) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="Check for drift without writing files")
+    parser.add_argument(
+        "--check", action="store_true", help="Check for drift without writing files"
+    )
     parser.add_argument(
         "--output-directory",
         default="dist",

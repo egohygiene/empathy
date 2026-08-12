@@ -26,6 +26,7 @@ tasks:
   check:
     desc: Run the complete repository validation contract
     deps:
+      - architecture:check
       - format:check
       - lint
       - test
@@ -118,9 +119,18 @@ tasks:
   lint:contracts:
     desc: Validate MegaLinter and complementary toolchain contracts
     cmds:
+      - task: architecture:check
       - task: egolint:contracts
       - task: tool:contracts
       - task: lint:architecture
+
+  architecture:check:
+    desc: Validate the architecture document inventory and dependency graph
+    cmds:
+      - >-
+        python3 -m unittest
+        tests.test_architecture_documents
+        --verbose
 
   lint:architecture:
     desc: Verify the generated lint architecture matches the tool matrices
