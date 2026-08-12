@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Build deterministic portable specification distributions from canonical source.
 
 Usage:
@@ -8,9 +11,9 @@ Usage:
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
 import re
 import sys
-from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 SPECS_DIR = REPO_ROOT / "library" / "organization" / "specs"
@@ -52,7 +55,9 @@ def build(check: bool = False, output_directory: Path | None = None) -> int:
     dist_dir = (output_directory or (REPO_ROOT / "dist")) / "specs"
     specs = find_specs()
     if not specs:
-        print("WARNING: no *.spec.md files found under library/organization/specs/", file=sys.stderr)
+        print(
+            "WARNING: no *.spec.md files found under library/organization/specs/", file=sys.stderr
+        )
         return 0
 
     drift = 0

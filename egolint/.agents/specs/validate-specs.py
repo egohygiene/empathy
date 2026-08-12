@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """
 Deterministic specification graph validation script.
 
-Verifies that all canonical specifications in library/organization/specs/:
+Verifies that all canonical specifications beside this validator:
   - parse as YAML frontmatter
   - use the accepted schema (aether.specification/v1)
   - contain all required fields
@@ -19,23 +22,34 @@ Note on relationship semantics:
 Replace this script with `aether validate --format text` once issue 007
 delivers the canonical validator.
 """
+
 from __future__ import annotations
 
 import os
+from pathlib import Path
 import re
 import sys
-from pathlib import Path
 
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-SPECS_DIR = REPO_ROOT / "library" / "organization" / "specs"
-SKILLS_DIR = REPO_ROOT / "library" / "organization" / "skills"
+AGENTS_ROOT = Path(__file__).resolve().parents[1]
+SPECS_DIR = AGENTS_ROOT / "specs"
+SKILLS_DIR = AGENTS_ROOT / "skills"
 
 ACCEPTED_SCHEMA = "aether.specification/v1"
 REQUIRED_FIELDS = [
-    "schema", "id", "title", "kind", "version", "status",
-    "owners", "created", "updated", "domain", "tags",
+    "schema",
+    "id",
+    "title",
+    "kind",
+    "version",
+    "status",
+    "owners",
+    "created",
+    "updated",
+    "domain",
+    "tags",
 ]
 # These fields must resolve to known spec IDs.
 SPEC_ID_FIELDS = ("depends_on", "supersedes")
@@ -55,25 +69,22 @@ def parse_frontmatter(path):
         return None
 
 
-def collect_ids(directory, filename):
-    """Return mapping of id -> file path for all matching files under directory."""
+def collect_ids(directory, filename, identity_field="id"):
+    """Return identity-to-path mappings for matching files under a directory."""
     id_map = {}
     for path in sorted(directory.rglob(filename)):
         fm = parse_frontmatter(path)
-        if fm and "id" in fm:
-            id_map[fm["id"]] = path
+        if fm and identity_field in fm:
+            id_map[fm[identity_field]] = path
     return id_map
 
 
 def is_path_reference(ref):
     """Return True if ref looks like a file path rather than a stable spec ID."""
     return (
-        ref.startswith("library/")
-        or ref.startswith("./")
-        or ref.startswith("../")
-        or ref.startswith("/")
+        ref.startswith(("library/", "./", "../", "/"))
         or os.sep in ref
-        or "." in Path(ref).suffix and Path(ref).suffix != ""
+        or ("." in Path(ref).suffix and Path(ref).suffix != "")
     )
 
 
@@ -86,14 +97,14 @@ def find_cycles(graph):
     def dfs(node, path):
         if node in stack:
             idx = path.index(node)
-            cycles.append(path[idx:] + [node])
+            cycles.append([*path[idx:], node])
             return
         if node in visited:
             return
         visited.add(node)
         stack.add(node)
         for neighbour in graph.get(node, []):
-            dfs(neighbour, path + [node])
+            dfs(neighbour, [*path, node])
         stack.discard(node)
 
     for node in list(graph):
@@ -110,13 +121,13 @@ def main():
         print("ERROR: No specification files found.", file=sys.stderr)
         return 1
 
-    skill_ids = collect_ids(SKILLS_DIR, "SKILL.md")
+    skill_ids = collect_ids(SKILLS_DIR, "SKILL.md", identity_field="name")
 
     frontmatters = {}
     for path in spec_files:
         fm = parse_frontmatter(path)
         if fm is None:
-            errors.append("YAML parse error: {}".format(path.relative_to(REPO_ROOT)))
+            errors.append(f"YAML parse error: {path.relative_to(REPO_ROOT)}")
         else:
             frontmatters[path] = fm
 
@@ -126,19 +137,15 @@ def main():
         rel = path.relative_to(REPO_ROOT)
         schema = fm.get("schema", "")
         if schema != ACCEPTED_SCHEMA:
-            errors.append(
-                "Wrong schema in {}: got '{}', expected '{}'".format(rel, schema, ACCEPTED_SCHEMA)
-            )
+            errors.append(f"Wrong schema in {rel}: got '{schema}', expected '{ACCEPTED_SCHEMA}'")
         for field in REQUIRED_FIELDS:
             if field not in fm:
-                errors.append("Missing required field '{}' in {}".format(field, rel))
+                errors.append(f"Missing required field '{field}' in {rel}")
         spec_id = fm.get("id")
         if spec_id:
             if spec_id in id_to_path:
                 errors.append(
-                    "Duplicate ID '{}' in {} and {}".format(
-                        spec_id, rel, id_to_path[spec_id].relative_to(REPO_ROOT)
-                    )
+                    f"Duplicate ID '{spec_id}' in {rel} and {id_to_path[spec_id].relative_to(REPO_ROOT)}"
                 )
             else:
                 id_to_path[spec_id] = path
@@ -159,18 +166,14 @@ def main():
             for target in targets:
                 dep_graph.setdefault(spec_id, []).append(target)
                 if target not in id_to_path:
-                    errors.append(
-                        "Unresolved {} target '{}' in {}".format(field, target, rel)
-                    )
+                    errors.append(f"Unresolved {field} target '{target}' in {rel}")
         for field in CATALOG_FIELDS:
             targets = fm.get(field) or []
             if isinstance(targets, str):
                 targets = [targets]
             for target in targets:
                 if target not in catalog_ids:
-                    errors.append(
-                        "Unresolved {} target '{}' in {}".format(field, target, rel)
-                    )
+                    errors.append(f"Unresolved {field} target '{target}' in {rel}")
 
     # Check dependency graph acyclicity
     cycles = find_cycles(dep_graph)
@@ -189,32 +192,34 @@ def main():
             continue
         refs = skill_fm.get("specs") or []
         implements = skill_fm.get("implements") or []
+        if isinstance(refs, str):
+            refs = [refs]
         if isinstance(implements, str):
             implements = [implements]
+        metadata = skill_fm.get("metadata") or {}
+        metadata_spec_id = metadata.get("aether-spec-id")
+        if metadata_spec_id:
+            implements.append(metadata_spec_id)
         for ref in refs + implements:
             if not isinstance(ref, str):
                 continue
             if is_path_reference(ref):
                 errors.append(
-                    "Skill {} uses path reference '{}' -- use stable spec ID instead".format(
-                        skill_path.relative_to(REPO_ROOT), ref
-                    )
+                    f"Skill {skill_path.relative_to(REPO_ROOT)} uses path reference '{ref}' -- use stable spec ID instead"
                 )
             elif ref not in id_to_path:
                 errors.append(
-                    "Skill {} references nonexistent spec ID '{}'".format(
-                        skill_path.relative_to(REPO_ROOT), ref
-                    )
+                    f"Skill {skill_path.relative_to(REPO_ROOT)} references nonexistent spec ID '{ref}'"
                 )
 
     # Report
     if errors:
-        print("VALIDATION FAILED -- {} error(s):\n".format(len(errors)))
+        print(f"VALIDATION FAILED -- {len(errors)} error(s):\n")
         for err in errors:
-            print("  x  {}".format(err))
+            print(f"  x  {err}")
         return 1
 
-    print("VALIDATION PASSED -- {} specification(s) checked, 0 errors.".format(len(frontmatters)))
+    print(f"VALIDATION PASSED -- {len(frontmatters)} specification(s) checked, 0 errors.")
     return 0
 
 

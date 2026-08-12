@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Build deterministic portable skill distributions from canonical source.
 
 Usage:
@@ -38,10 +41,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import re
-import shutil
-import sys
 from pathlib import Path
+import re
+import sys
 
 try:
     import yaml
@@ -61,6 +63,7 @@ COMPANION_DIRS = ("evals", "references", "templates")
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
 
 def _normalized_bytes(path: Path) -> bytes:
     text = path.read_text(encoding="utf-8")
@@ -88,6 +91,7 @@ def _read_frontmatter(path: Path) -> dict:
 # Discovery
 # ---------------------------------------------------------------------------
 
+
 def find_skills() -> list[tuple[str, Path]]:
     """Return sorted list of (skill-name, source-dir) for every canonical skill."""
     results = []
@@ -106,6 +110,7 @@ def find_skills() -> list[tuple[str, Path]]:
 # ---------------------------------------------------------------------------
 # Distribution manifest
 # ---------------------------------------------------------------------------
+
 
 def _build_manifest(
     skill_name: str,
@@ -137,6 +142,7 @@ def _build_manifest(
 # ---------------------------------------------------------------------------
 # Per-skill distribution
 # ---------------------------------------------------------------------------
+
 
 def _collect_generated_paths(skill_name: str, source_dir: Path) -> list[str]:
     """Enumerate all paths that will be written to dist/skills/<name>/."""
@@ -184,11 +190,14 @@ def _build_skill_dist(skill_name: str, source_dir: Path) -> dict[str, bytes]:
 # Build / check
 # ---------------------------------------------------------------------------
 
+
 def build(check: bool = False, output_directory: Path | None = None) -> int:
     dist_dir = (output_directory or (REPO_ROOT / "dist")) / "skills"
     skills = find_skills()
     if not skills:
-        print("WARNING: no SKILL.md files found under library/organization/skills/", file=sys.stderr)
+        print(
+            "WARNING: no SKILL.md files found under library/organization/skills/", file=sys.stderr
+        )
         return 0
 
     drift = 0
@@ -223,8 +232,7 @@ def build(check: bool = False, output_directory: Path | None = None) -> int:
     if check:
         if drift:
             print(
-                f"\n{drift} file(s) out of date. "
-                "Run build-distributions.py to regenerate.",
+                f"\n{drift} file(s) out of date. Run build-distributions.py to regenerate.",
                 file=sys.stderr,
             )
             return 1

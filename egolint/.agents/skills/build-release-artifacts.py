@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Build deterministic release metadata for first-party skill publications.
 
 Usage:
@@ -11,8 +14,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import sys
 from pathlib import Path
+import sys
 
 from jsonschema import Draft202012Validator
 
@@ -50,12 +53,7 @@ def _load_release_records(catalog_path: Path) -> list[dict]:
 
 
 def _load_distribution_manifest(output_directory: Path, skill_name: str) -> dict:
-    manifest_path = (
-        output_directory
-        / "skills"
-        / skill_name
-        / "distribution-manifest.v1.json"
-    )
+    manifest_path = output_directory / "skills" / skill_name / "distribution-manifest.v1.json"
     if not manifest_path.exists():
         raise ValueError(f"missing distribution manifest: {manifest_path}")
     return _read_json(manifest_path)
@@ -234,7 +232,9 @@ def build_release_artifacts(
         encoding="utf-8",
     )
     (release_dir / "release-provenance.v1.json").write_text(
-        _canonical_json(_build_provenance(release_tag, commit_sha, release_manifest, output_directory)),
+        _canonical_json(
+            _build_provenance(release_tag, commit_sha, release_manifest, output_directory)
+        ),
         encoding="utf-8",
     )
     return release_dir

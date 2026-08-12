@@ -63,6 +63,26 @@ profile. The complete and holistic commands expand that scope deliberately.
 See [the Egolint subsystem](egolint/README.md) and
 [the composite action catalog](.github/actions/README.md) for their contracts.
 
+## Architecture
+
+Empathy's architecture is a connected set of 18 repository-specific documents
+derived from the reusable Aether architecture specifications. Start with
+[`META.md`](META.md) for the inventory, ownership map, dependency graph, reading
+order, lifecycle, and change-propagation rules.
+
+The shortest orientation path is:
+
+1. [`PURPOSE.md`](PURPOSE.md), [`VISION.md`](VISION.md), and
+   [`PRINCIPLES.md`](PRINCIPLES.md) for intent;
+2. [`ONTOLOGY.md`](ONTOLOGY.md) for canonical language;
+3. [`SYSTEM.md`](SYSTEM.md) and [`ARCHITECTURE.md`](ARCHITECTURE.md) for logical
+   and structural boundaries;
+4. [`DECISIONS.md`](DECISIONS.md) and [`ROADMAP.md`](ROADMAP.md) for accepted
+   choices and strategic evolution.
+
+Run `task architecture:check` to validate metadata, governing specifications,
+relationships, graph acyclicity, document structure, and inventory coverage.
+
 ## Status
 
 Empathy is under active foundation development. Staged material is preserved for
