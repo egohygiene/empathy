@@ -58,6 +58,17 @@ _run_installer_split_streams() {
 		_ "${INSTALL_SH}" "$@"
 }
 
+_run_installed_mantle() {
+	local prefix_path="${1:?}"
+	shift
+
+	run env -i \
+		HOME="${TEST_HOME}" \
+		PATH="${STUB_DIR}:${PATH}" \
+		TERM=dumb \
+		"${prefix_path}/bin/mantle" "$@"
+}
+
 _count_fixed_string() {
 	local needle="${1:?}"
 	local file_path="${2:?}"
@@ -80,9 +91,12 @@ _assert_installed_payload() {
 	assert_dir_exists "${prefix_path}"
 	assert_file_exists "${prefix_path}/.shellrc"
 	assert_dir_exists "${prefix_path}/bin"
+	assert_dir_exists "${prefix_path}/config"
 	assert_dir_exists "${prefix_path}/lib"
+	assert_dir_exists "${prefix_path}/libexec/mantle/commands"
 	assert_file_exists "$(_metadata_path "${prefix_path}")"
 	assert_file_executable "${prefix_path}/bin/mantle"
+	assert_file_executable "${prefix_path}/libexec/mantle/commands/help.sh"
 	assert_file_not_exists "${prefix_path}/.git"
 }
 
@@ -140,6 +154,12 @@ EOF
 	_run_installer --shell bash
 	assert_success
 	_assert_installed_payload "${DEFAULT_PREFIX}"
+	_run_installed_mantle "${DEFAULT_PREFIX}" help
+	assert_success
+	assert_output_contains 'Usage:'
+	_run_installed_mantle "${DEFAULT_PREFIX}" doctor
+	assert_success
+	assert_output_contains 'status: ok'
 	assert_file_exists "${TEST_HOME}/.bashrc"
 	run grep -F "${DEFAULT_PREFIX}/.shellrc" "${TEST_HOME}/.bashrc"
 	assert_success
