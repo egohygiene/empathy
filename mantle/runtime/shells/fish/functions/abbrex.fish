@@ -1,3 +1,5 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 function abbrex --description "Expand a Fish abbreviation"
     if test (count $argv) -eq 0
         return 0

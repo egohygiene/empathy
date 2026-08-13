@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2312 # Test helpers deliberately compose observable pipelines.
 #
 # Common Bats test helpers for the Mantle test suite.
 #
@@ -120,6 +122,7 @@ run_zsh_source() {
 run_bash_env() {
 	local env_vars="$1"
 	local command_string="$2"
+	# shellcheck disable=SC2086 # The helper accepts a documented assignment list.
 	run env -i \
 		HOME="${TEST_HOME:-${HOME}}" \
 		MANTLE_ROOT="${MANTLE_ROOT}" \

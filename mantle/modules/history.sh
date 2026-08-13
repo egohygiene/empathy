@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 #
 # Configure interactive Bash/Zsh history and supported REPL history files under
 # XDG_STATE_HOME. This module owns history policy; runtime adapters do not.

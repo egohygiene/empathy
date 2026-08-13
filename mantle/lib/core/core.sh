@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 #
 # Mantle Shell Library — Core Utilities
 #
@@ -105,7 +107,7 @@ mantle_core_platform() {
 		return 69
 	fi
 
-	case "$kernel_name" in
+	case "${kernel_name}" in
 	Linux) printf '%s\n' "linux" ;;
 	Darwin) printf '%s\n' "macos" ;;
 	FreeBSD) printf '%s\n' "freebsd" ;;
@@ -144,18 +146,18 @@ mantle_core_require_command() {
 	local command_name=${1-}
 	local hint=${2-}
 
-	if (($# < 1 || $# > 2)) || [[ -z "$command_name" ]]; then
+	if (($# < 1 || $# > 2)) || [[ -z "${command_name}" ]]; then
 		__mantle_core_error "mantle_core_require_command expects COMMAND [HINT]"
 		return 64
 	fi
 
-	if mantle_core_has_command "$command_name"; then
+	if mantle_core_has_command "${command_name}"; then
 		return 0
 	fi
 
-	__mantle_core_error "required command not found on PATH: $command_name"
-	if [[ -n "$hint" ]]; then
-		printf 'core: hint: %s\n' "$hint" >&2
+	__mantle_core_error "required command not found on PATH: ${command_name}"
+	if [[ -n "${hint}" ]]; then
+		printf 'core: hint: %s\n' "${hint}" >&2
 	fi
 	return 127
 }
@@ -173,13 +175,13 @@ mantle_core_path_contains() {
 	local directory=${1-}
 	local path_value
 
-	if (($# != 1)) || [[ -z "$directory" ]]; then
+	if (($# != 1)) || [[ -z "${directory}" ]]; then
 		__mantle_core_error "mantle_core_path_contains expects one nonempty directory"
 		return 64
 	fi
-	case "$directory" in
+	case "${directory}" in
 	*:*)
-		__mantle_core_error "PATH entries cannot contain a colon: $directory"
+		__mantle_core_error "PATH entries cannot contain a colon: ${directory}"
 		return 64
 		;;
 	*$'\n'*)
@@ -188,15 +190,15 @@ mantle_core_path_contains() {
 		;;
 	esac
 
-	while [[ "$directory" != "/" && "$directory" == */ ]]; do
+	while [[ "${directory}" != "/" && "${directory}" == */ ]]; do
 		directory=${directory%/}
 	done
 
 	path_value=":${PATH-}:"
-	case "$path_value" in
+	case "${path_value}" in
 	*":${directory}:"*) return 0 ;;
 	*::*)
-		[[ "$directory" == "." ]] && return 0
+		[[ "${directory}" == "." ]] && return 0
 		;;
 	esac
 	return 1
@@ -210,32 +212,32 @@ mantle_core_path_prepend() {
 	local directory=${1-}
 	local path_check_status
 
-	if (($# != 1)) || [[ -z "$directory" ]]; then
+	if (($# != 1)) || [[ -z "${directory}" ]]; then
 		__mantle_core_error "mantle_core_path_prepend expects one nonempty directory"
 		return 64
 	fi
-	if [[ ! -d "$directory" ]]; then
-		__mantle_core_error "PATH entry is not a directory: $directory"
+	if [[ ! -d "${directory}" ]]; then
+		__mantle_core_error "PATH entry is not a directory: ${directory}"
 		return 64
 	fi
 
-	if mantle_core_path_contains "$directory"; then
+	if mantle_core_path_contains "${directory}"; then
 		return 0
 	else
 		path_check_status=$?
 		if ((path_check_status != 1)); then
-			return "$path_check_status"
+			return "${path_check_status}"
 		fi
 	fi
 
-	while [[ "$directory" != "/" && "$directory" == */ ]]; do
+	while [[ "${directory}" != "/" && "${directory}" == */ ]]; do
 		directory=${directory%/}
 	done
 
 	if [[ -n "${PATH-}" ]]; then
 		PATH="${directory}:${PATH}"
 	else
-		PATH=$directory
+		PATH=${directory}
 	fi
 	export PATH
 }
@@ -248,32 +250,32 @@ mantle_core_path_append() {
 	local directory=${1-}
 	local path_check_status
 
-	if (($# != 1)) || [[ -z "$directory" ]]; then
+	if (($# != 1)) || [[ -z "${directory}" ]]; then
 		__mantle_core_error "mantle_core_path_append expects one nonempty directory"
 		return 64
 	fi
-	if [[ ! -d "$directory" ]]; then
-		__mantle_core_error "PATH entry is not a directory: $directory"
+	if [[ ! -d "${directory}" ]]; then
+		__mantle_core_error "PATH entry is not a directory: ${directory}"
 		return 64
 	fi
 
-	if mantle_core_path_contains "$directory"; then
+	if mantle_core_path_contains "${directory}"; then
 		return 0
 	else
 		path_check_status=$?
 		if ((path_check_status != 1)); then
-			return "$path_check_status"
+			return "${path_check_status}"
 		fi
 	fi
 
-	while [[ "$directory" != "/" && "$directory" == */ ]]; do
+	while [[ "${directory}" != "/" && "${directory}" == */ ]]; do
 		directory=${directory%/}
 	done
 
 	if [[ -n "${PATH-}" ]]; then
 		PATH="${PATH}:${directory}"
 	else
-		PATH=$directory
+		PATH=${directory}
 	fi
 	export PATH
 }
@@ -300,11 +302,11 @@ mantle_core_retry() {
 		__mantle_core_error "mantle_core_retry expects ATTEMPTS DELAY COMMAND [ARG...]"
 		return 64
 	fi
-	if ! __mantle_core_is_positive_integer "$__core_retry_max_attempts"; then
+	if ! __mantle_core_is_positive_integer "${__core_retry_max_attempts}"; then
 		__mantle_core_error "retry attempt count must be a positive integer"
 		return 64
 	fi
-	if ! __mantle_core_is_nonnegative_integer "$__core_retry_delay_seconds"; then
+	if ! __mantle_core_is_nonnegative_integer "${__core_retry_delay_seconds}"; then
 		__mantle_core_error "retry delay must be a nonnegative integer"
 		return 64
 	fi
@@ -318,22 +320,22 @@ mantle_core_retry() {
 		fi
 
 		if ((__core_retry_attempt == __core_retry_max_attempts)); then
-			return "$__core_retry_status"
+			return "${__core_retry_status}"
 		fi
 
 		if ((__core_retry_delay_seconds > 0)); then
-			if sleep "$__core_retry_delay_seconds"; then
+			if sleep "${__core_retry_delay_seconds}"; then
 				:
 			else
 				__core_retry_status=$?
 				__mantle_core_error "sleep failed while waiting to retry"
-				return "$__core_retry_status"
+				return "${__core_retry_status}"
 			fi
 		fi
 		((__core_retry_attempt += 1))
 	done
 
-	return "$__core_retry_status"
+	return "${__core_retry_status}"
 }
 
 # -----------------------------------------------------------------------------
@@ -354,51 +356,51 @@ mantle_core_set_owner() {
 	local operand_path
 	local lookup_status
 
-	if (($# < 2 || $# > 3)) || [[ -z "$path" || -z "$owner" ]]; then
+	if (($# < 2 || $# > 3)) || [[ -z "${path}" || -z "${owner}" ]]; then
 		__mantle_core_error "mantle_core_set_owner expects PATH OWNER [GROUP]"
 		return 64
 	fi
-	if [[ ! -e "$path" && ! -L "$path" ]]; then
-		__mantle_core_error "cannot set ownership of a missing path: $path"
+	if [[ ! -e "${path}" && ! -L "${path}" ]]; then
+		__mantle_core_error "cannot set ownership of a missing path: ${path}"
 		return 64
 	fi
-	if ! __mantle_core_is_account_name "$owner"; then
-		__mantle_core_error "invalid portable owner name: $owner"
+	if ! __mantle_core_is_account_name "${owner}"; then
+		__mantle_core_error "invalid portable owner name: ${owner}"
 		return 64
 	fi
-	if [[ -n "$group" ]] && ! __mantle_core_is_account_name "$group"; then
-		__mantle_core_error "invalid portable group name: $group"
+	if [[ -n "${group}" ]] && ! __mantle_core_is_account_name "${group}"; then
+		__mantle_core_error "invalid portable group name: ${group}"
 		return 64
 	fi
-	if ! mantle_core_user_exists "$owner"; then
-		__mantle_core_error "owner does not exist: $owner"
+	if ! mantle_core_user_exists "${owner}"; then
+		__mantle_core_error "owner does not exist: ${owner}"
 		return 64
 	fi
 
-	if [[ -z "$group" ]]; then
-		if ! group=$(id -gn "$owner" 2>/dev/null); then
-			__mantle_core_error "could not determine primary group for user: $owner"
+	if [[ -z "${group}" ]]; then
+		if ! group=$(id -gn "${owner}" 2>/dev/null); then
+			__mantle_core_error "could not determine primary group for user: ${owner}"
 			return 1
 		fi
 	else
-		if mantle_core_group_exists "$group"; then
+		if mantle_core_group_exists "${group}"; then
 			:
 		else
 			lookup_status=$?
 			if ((lookup_status == 1)); then
-				__mantle_core_error "group does not exist: $group"
+				__mantle_core_error "group does not exist: ${group}"
 				return 64
 			fi
-			return "$lookup_status"
+			return "${lookup_status}"
 		fi
 	fi
 
-	case "$path" in
-	-*) operand_path="./$path" ;;
-	*) operand_path=$path ;;
+	case "${path}" in
+	-*) operand_path="./${path}" ;;
+	*) operand_path=${path} ;;
 	esac
-	if ! chown "${owner}:${group}" "$operand_path"; then
-		__mantle_core_error "failed to set ownership on: $path"
+	if ! chown "${owner}:${group}" "${operand_path}"; then
+		__mantle_core_error "failed to set ownership on: ${path}"
 		return 1
 	fi
 }
@@ -416,30 +418,30 @@ mantle_core_ensure_directory() {
 	local group=${3-}
 	local operand_path
 
-	if (($# < 1 || $# > 3)) || [[ -z "$directory" ]]; then
+	if (($# < 1 || $# > 3)) || [[ -z "${directory}" ]]; then
 		__mantle_core_error "mantle_core_ensure_directory expects DIRECTORY [OWNER [GROUP]]"
 		return 64
 	fi
-	if [[ -n "$group" && -z "$owner" ]]; then
+	if [[ -n "${group}" && -z "${owner}" ]]; then
 		__mantle_core_error "GROUP cannot be supplied without OWNER"
 		return 64
 	fi
-	if [[ -e "$directory" && ! -d "$directory" ]]; then
-		__mantle_core_error "directory path exists as another file type: $directory"
+	if [[ -e "${directory}" && ! -d "${directory}" ]]; then
+		__mantle_core_error "directory path exists as another file type: ${directory}"
 		return 64
 	fi
 
-	case "$directory" in
-	-*) operand_path="./$directory" ;;
-	*) operand_path=$directory ;;
+	case "${directory}" in
+	-*) operand_path="./${directory}" ;;
+	*) operand_path=${directory} ;;
 	esac
-	if ! mkdir -p "$operand_path"; then
-		__mantle_core_error "failed to create directory: $directory"
+	if ! mkdir -p "${operand_path}"; then
+		__mantle_core_error "failed to create directory: ${directory}"
 		return 1
 	fi
 
-	if [[ -n "$owner" ]]; then
-		mantle_core_set_owner "$directory" "$owner" "$group"
+	if [[ -n "${owner}" ]]; then
+		mantle_core_set_owner "${directory}" "${owner}" "${group}"
 	fi
 }
 
@@ -452,20 +454,20 @@ mantle_core_directory_is_empty() {
 	local directory=${1-}
 	local entry
 
-	if (($# != 1)) || [[ -z "$directory" ]]; then
+	if (($# != 1)) || [[ -z "${directory}" ]]; then
 		__mantle_core_error "mantle_core_directory_is_empty expects one directory"
 		return 64
 	fi
-	if [[ ! -d "$directory" ]]; then
-		__mantle_core_error "not a directory: $directory"
+	if [[ ! -d "${directory}" ]]; then
+		__mantle_core_error "not a directory: ${directory}"
 		return 64
 	fi
 
 	for entry in \
-		"$directory"/* \
-		"$directory"/.[!.]* \
-		"$directory"/..?*; do
-		if [[ -e "$entry" || -L "$entry" ]]; then
+		"${directory}"/* \
+		"${directory}"/.[!.]* \
+		"${directory}"/..?*; do
+		if [[ -e "${entry}" || -L "${entry}" ]]; then
 			return 1
 		fi
 	done
@@ -487,7 +489,7 @@ mantle_core_is_root() {
 		__mantle_core_error "could not determine the effective user ID"
 		return 1
 	fi
-	[[ "$effective_uid" == "0" ]]
+	[[ "${effective_uid}" == "0" ]]
 }
 
 # @description Print total physical memory in bytes.
@@ -508,7 +510,7 @@ mantle_core_total_memory_bytes() {
 
 	if [[ -r "/proc/meminfo" ]]; then
 		while read -r key value _; do
-			if [[ "$key" == "MemTotal:" ]] && __mantle_core_is_nonnegative_integer "$value"; then
+			if [[ "${key}" == "MemTotal:" ]] && __mantle_core_is_nonnegative_integer "${value}"; then
 				printf '%s\n' "$((value * 1024))"
 				return 0
 			fi
@@ -517,9 +519,9 @@ mantle_core_total_memory_bytes() {
 
 	if mantle_core_has_command sysctl; then
 		for sysctl_key in hw.memsize hw.physmem64 hw.physmem hw.realmem; do
-			if value=$(sysctl -n "$sysctl_key" 2>/dev/null) &&
-				__mantle_core_is_nonnegative_integer "$value" && ((value > 0)); then
-				printf '%s\n' "$value"
+			if value=$(sysctl -n "${sysctl_key}" 2>/dev/null) &&
+				__mantle_core_is_nonnegative_integer "${value}" && ((value > 0)); then
+				printf '%s\n' "${value}"
 				return 0
 			fi
 		done
@@ -528,8 +530,8 @@ mantle_core_total_memory_bytes() {
 	if mantle_core_has_command getconf; then
 		if pages=$(getconf _PHYS_PAGES 2>/dev/null) &&
 			page_size=$(getconf PAGE_SIZE 2>/dev/null) &&
-			__mantle_core_is_nonnegative_integer "$pages" &&
-			__mantle_core_is_nonnegative_integer "$page_size" &&
+			__mantle_core_is_nonnegative_integer "${pages}" &&
+			__mantle_core_is_nonnegative_integer "${page_size}" &&
 			((pages > 0 && page_size > 0)); then
 			printf '%s\n' "$((pages * page_size))"
 			return 0
@@ -552,12 +554,12 @@ mantle_core_total_memory_bytes() {
 mantle_core_user_exists() {
 	local user=${1-}
 
-	if (($# != 1)) || ! __mantle_core_is_account_name "$user"; then
+	if (($# != 1)) || ! __mantle_core_is_account_name "${user}"; then
 		__mantle_core_error "mantle_core_user_exists expects one portable user name"
 		return 64
 	fi
 
-	id -u "$user" >/dev/null 2>&1
+	id -u "${user}" >/dev/null 2>&1
 }
 
 # @description Return whether a group exists using the host's supported database.
@@ -570,29 +572,29 @@ mantle_core_group_exists() {
 	local group=${1-}
 	local group_name
 
-	if (($# != 1)) || ! __mantle_core_is_account_name "$group"; then
+	if (($# != 1)) || ! __mantle_core_is_account_name "${group}"; then
 		__mantle_core_error "mantle_core_group_exists expects one portable group name"
 		return 64
 	fi
 
 	if mantle_core_has_command getent; then
-		getent group "$group" >/dev/null 2>&1
+		getent group "${group}" >/dev/null 2>&1
 		return $?
 	fi
 
 	if mantle_core_has_command dscl; then
-		dscl . -read "/Groups/$group" >/dev/null 2>&1
+		dscl . -read "/Groups/${group}" >/dev/null 2>&1
 		return $?
 	fi
 
 	if mantle_core_has_command pw; then
-		pw groupshow "$group" >/dev/null 2>&1
+		pw groupshow "${group}" >/dev/null 2>&1
 		return $?
 	fi
 
 	if [[ -r "/etc/group" ]]; then
 		while IFS=: read -r group_name _; do
-			if [[ "$group_name" == "$group" ]]; then
+			if [[ "${group_name}" == "${group}" ]]; then
 				return 0
 			fi
 		done <"/etc/group"
@@ -614,14 +616,14 @@ mantle_core_user_in_group() {
 	local group=${2-}
 	local memberships
 
-	if (($# != 2)) || ! __mantle_core_is_account_name "$user" || ! __mantle_core_is_account_name "$group"; then
+	if (($# != 2)) || ! __mantle_core_is_account_name "${user}" || ! __mantle_core_is_account_name "${group}"; then
 		__mantle_core_error "mantle_core_user_in_group expects USER GROUP"
 		return 64
 	fi
-	if ! mantle_core_user_exists "$user"; then
+	if ! mantle_core_user_exists "${user}"; then
 		return 1
 	fi
-	if ! memberships=$(id -Gn "$user" 2>/dev/null); then
+	if ! memberships=$(id -Gn "${user}" 2>/dev/null); then
 		return 1
 	fi
 
@@ -642,17 +644,17 @@ mantle_core_ensure_group() {
 	local lookup_status
 	local platform
 
-	if (($# != 1)) || ! __mantle_core_is_account_name "$group"; then
+	if (($# != 1)) || ! __mantle_core_is_account_name "${group}"; then
 		__mantle_core_error "mantle_core_ensure_group expects one portable group name"
 		return 64
 	fi
 
-	if mantle_core_group_exists "$group"; then
+	if mantle_core_group_exists "${group}"; then
 		return 0
 	else
 		lookup_status=$?
 		if ((lookup_status != 1)); then
-			return "$lookup_status"
+			return "${lookup_status}"
 		fi
 	fi
 
@@ -661,7 +663,7 @@ mantle_core_ensure_group() {
 		return 69
 	}
 
-	case "$platform" in
+	case "${platform}" in
 	linux)
 		if ! mantle_core_has_command groupadd; then
 			__mantle_core_error "group creation requires the groupadd command on Linux"
@@ -675,16 +677,16 @@ mantle_core_ensure_group() {
 		fi
 		;;
 	*)
-		__mantle_core_error "automatic group creation is unsupported on platform: $platform"
+		__mantle_core_error "automatic group creation is unsupported on platform: ${platform}"
 		return 69
 		;;
 	esac
 
 	__mantle_core_require_root || return $?
 
-	case "$platform" in
-	linux) groupadd "$group" ;;
-	freebsd) pw groupadd "$group" ;;
+	case "${platform}" in
+	linux) groupadd "${group}" ;;
+	freebsd) pw groupadd "${group}" ;;
 	esac
 }
 
@@ -701,31 +703,31 @@ mantle_core_ensure_group_membership() {
 	local platform
 	local lookup_status
 
-	if (($# != 2)) || ! __mantle_core_is_account_name "$user" || ! __mantle_core_is_account_name "$group"; then
+	if (($# != 2)) || ! __mantle_core_is_account_name "${user}" || ! __mantle_core_is_account_name "${group}"; then
 		__mantle_core_error "mantle_core_ensure_group_membership expects USER GROUP"
 		return 64
 	fi
-	if ! mantle_core_user_exists "$user"; then
-		__mantle_core_error "user does not exist: $user"
+	if ! mantle_core_user_exists "${user}"; then
+		__mantle_core_error "user does not exist: ${user}"
 		return 64
 	fi
-	if mantle_core_group_exists "$group"; then
+	if mantle_core_group_exists "${group}"; then
 		:
 	else
 		lookup_status=$?
 		if ((lookup_status == 1)); then
-			__mantle_core_error "group does not exist: $group"
+			__mantle_core_error "group does not exist: ${group}"
 			return 64
 		fi
-		return "$lookup_status"
+		return "${lookup_status}"
 	fi
-	if mantle_core_user_in_group "$user" "$group"; then
+	if mantle_core_user_in_group "${user}" "${group}"; then
 		return 0
 	fi
 
 	platform=$(mantle_core_platform) || return 69
 
-	case "$platform" in
+	case "${platform}" in
 	linux)
 		if ! mantle_core_has_command usermod; then
 			__mantle_core_error "group membership changes require usermod on Linux"
@@ -745,17 +747,17 @@ mantle_core_ensure_group_membership() {
 		fi
 		;;
 	*)
-		__mantle_core_error "group membership mutation is unsupported on platform: $platform"
+		__mantle_core_error "group membership mutation is unsupported on platform: ${platform}"
 		return 69
 		;;
 	esac
 
 	__mantle_core_require_root || return $?
 
-	case "$platform" in
-	linux) usermod -a -G "$group" "$user" ;;
-	freebsd) pw groupmod "$group" -m "$user" ;;
-	macos) dseditgroup -o edit -a "$user" -t user "$group" ;;
+	case "${platform}" in
+	linux) usermod -a -G "${group}" "${user}" ;;
+	freebsd) pw groupmod "${group}" -m "${user}" ;;
+	macos) dseditgroup -o edit -a "${user}" -t user "${group}" ;;
 	esac
 }
 
@@ -773,29 +775,29 @@ mantle_core_ensure_user() {
 	local user_missing=false
 	local lookup_status
 
-	if (($# < 1 || $# > 2)) || ! __mantle_core_is_account_name "$user"; then
+	if (($# < 1 || $# > 2)) || ! __mantle_core_is_account_name "${user}"; then
 		__mantle_core_error "mantle_core_ensure_user expects USER [SUPPLEMENTARY_GROUP]"
 		return 64
 	fi
-	if [[ -n "$group" ]] && ! __mantle_core_is_account_name "$group"; then
-		__mantle_core_error "supplementary group name is invalid: $group"
+	if [[ -n "${group}" ]] && ! __mantle_core_is_account_name "${group}"; then
+		__mantle_core_error "supplementary group name is invalid: ${group}"
 		return 64
 	fi
 
-	if mantle_core_user_exists "$user"; then
+	if mantle_core_user_exists "${user}"; then
 		user_missing=false
 	else
 		lookup_status=$?
 		if ((lookup_status != 1)); then
-			return "$lookup_status"
+			return "${lookup_status}"
 		fi
 		user_missing=true
 	fi
 
-	if [[ "$user_missing" == true ]]; then
+	if [[ "${user_missing}" == true ]]; then
 		platform=$(mantle_core_platform) || return 69
 
-		case "$platform" in
+		case "${platform}" in
 		linux)
 			if ! mantle_core_has_command useradd; then
 				__mantle_core_error "user creation requires the useradd command on Linux"
@@ -809,7 +811,7 @@ mantle_core_ensure_user() {
 			fi
 			;;
 		*)
-			__mantle_core_error "automatic user creation is unsupported on platform: $platform"
+			__mantle_core_error "automatic user creation is unsupported on platform: ${platform}"
 			return 69
 			;;
 		esac
@@ -817,19 +819,19 @@ mantle_core_ensure_user() {
 		__mantle_core_require_root || return $?
 	fi
 
-	if [[ -n "$group" ]]; then
-		mantle_core_ensure_group "$group" || return $?
+	if [[ -n "${group}" ]]; then
+		mantle_core_ensure_group "${group}" || return $?
 	fi
 
-	if [[ "$user_missing" == true ]]; then
-		case "$platform" in
-		linux) useradd "$user" || return $? ;;
-		freebsd) pw useradd "$user" || return $? ;;
+	if [[ "${user_missing}" == true ]]; then
+		case "${platform}" in
+		linux) useradd "${user}" || return $? ;;
+		freebsd) pw useradd "${user}" || return $? ;;
 		esac
 	fi
 
-	if [[ -n "$group" ]]; then
-		mantle_core_ensure_group_membership "$user" "$group"
+	if [[ -n "${group}" ]]; then
+		mantle_core_ensure_group_membership "${user}" "${group}"
 	fi
 }
 

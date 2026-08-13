@@ -2,6 +2,8 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2154 # Runtime or test-harness contracts inject these variables.
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 # Public Mantle command dispatcher.
 
 set -o errexit
@@ -58,24 +60,24 @@ if (($# == 0)); then
 fi
 
 case "$1" in
-	--help | -h)
-		set -- help
-		;;
-	--version)
-		set -- version
-		;;
-	--)
-		shift
-		if (($# == 0)); then
-			mantle_cli_error "missing command after --"
-			exit 64
-		fi
-		;;
-	-*)
-		mantle_cli_error "unknown global option: $1"
-		printf "Run 'mantle --help' for usage.\n" >&2
+--help | -h)
+	set -- help
+	;;
+--version)
+	set -- version
+	;;
+--)
+	shift
+	if (($# == 0)); then
+		mantle_cli_error "missing command after --"
 		exit 64
-		;;
+	fi
+	;;
+-*)
+	mantle_cli_error "unknown global option: $1"
+	printf "Run 'mantle --help' for usage.\n" >&2
+	exit 64
+	;;
 esac
 
 mantle_cli_command_name="$1"

@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2154 # Runtime or test-harness contracts inject these variables.
 #
 # Fixture helpers for the Mantle test suite.
 #

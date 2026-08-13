@@ -7,15 +7,15 @@ integration, contract, and bin CLI layers.
 
 ## Required local tools
 
-| Tool | Minimum version | Purpose |
-|------|----------------|---------|
-| [Bats Core](https://github.com/bats-core/bats-core) | 1.5.0 | Test runner |
-| Bash | 3.2+ | Required shell |
-| Zsh | any | Optional (tests skip if absent) |
-| Fish | any | Optional (tests skip if absent) |
-| `shellcheck` | any | Static analysis (optional) |
-| `shdoc` | any | Shell API documentation validation (optional) |
-| `shfmt` | 3.8.0 | Formatting check / write mode |
+| Tool                                                | Minimum version | Purpose                                       |
+| --------------------------------------------------- | --------------- | --------------------------------------------- |
+| [Bats Core](https://github.com/bats-core/bats-core) | 1.5.0           | Test runner                                   |
+| Bash                                                | 3.2+            | Required shell                                |
+| Zsh                                                 | any             | Optional (tests skip if absent)               |
+| Fish                                                | any             | Optional (tests skip if absent)               |
+| `shellcheck`                                        | any             | Static analysis (optional)                    |
+| `shdoc`                                             | any             | Shell API documentation validation (optional) |
+| `shfmt`                                             | 3.8.0           | Formatting check / write mode                 |
 
 The tools marked optional may be skipped only in local validation. Strict mode
 requires all of them and returns a nonzero status when any is unavailable.
@@ -99,7 +99,7 @@ bats --filter "generate-password --length 16" tests/bin/generate-password.bats
 
 ## Test suite architecture
 
-```
+```text
 tests/
 ├── bin/                    bin/ CLI behavioral tests (black-box)
 │   ├── helpers/
@@ -111,6 +111,7 @@ tests/
 │   ├── shared-contract.bats --help, --version, and unknown-option for all commands
 │   └── <command>.bats      Per-command behavioral tests
 ├── contract/               Repository-layout and public-API contract tests
+│   └── source-policy.bats  License, shebang, and executable-role policy
 ├── integration/            Integration tests for bin/mantle and shell bootstrap
 │   └── runner.bats         Black-box failure-injection tests for tests/run.sh
 ├── test_helper/            Shared helpers for unit/integration/contract layers
@@ -154,13 +155,13 @@ command. Test paths are relative to `tests/`, which allows a public command to
 reuse comprehensive integration coverage without creating an empty placeholder
 suite. Columns:
 
-| Column | Description |
-|--------|-------------|
-| `command` | Executable name in `bin/` |
-| `test_file` | Bats file (relative to `tests/`) providing coverage |
-| `categories` | Comma-separated behavior categories covered |
-| `exemptions` | Behaviors not covered (or `none`) |
-| `exemption_reason` | Justification for every exemption |
+| Column             | Description                                         |
+| ------------------ | --------------------------------------------------- |
+| `command`          | Executable name in `bin/`                           |
+| `test_file`        | Bats file (relative to `tests/`) providing coverage |
+| `categories`       | Comma-separated behavior categories covered         |
+| `exemptions`       | Behaviors not covered (or `none`)                   |
+| `exemption_reason` | Justification for every exemption                   |
 
 ### Coverage guard
 
@@ -178,14 +179,16 @@ The guard runs as part of `./tests/run.sh bin` and in CI. It fails when a new
 
 1. Add an entry to `tests/bin/coverage-map.tsv`:
 
-   ```
-   my-command	bin/my-command.bats	help,version,unknown-option,core-behavior	none	none
+   ```text
+   my-command\tbin/my-command.bats\thelp,version,unknown-option,core-behavior\tnone\tnone
    ```
 
 2. Create `tests/bin/my-command.bats`:
 
    ```bash
-   #!/usr/bin/env bats
+   # Copyright 2026 Ego Hygiene
+   # SPDX-License-Identifier: MIT
+
    setup() {
        load 'helpers/environment'
        load 'helpers/assertions'
@@ -206,6 +209,7 @@ The guard runs as part of `./tests/run.sh bin` and in CI. It fails when a new
 ### Safety requirements
 
 Tests never perform real:
+
 - `sudo` or root-privileged changes.
 - Package installs or removals.
 - APT source modifications.
@@ -277,13 +281,13 @@ after each test.
 
 Static test data lives in `tests/fixtures/`:
 
-| Directory | Contents |
-|-----------|---------|
-| `archives/` | Pre-built `.tar.gz` and `.zip` archives |
-| `checksums/` | SHA-256 and SHA-512 checksum files |
-| `github/` | Mocked GitHub release API responses |
-| `installers/` | Installer-specific fixture data |
-| `repositories/` | Minimal Git repositories |
+| Directory       | Contents                                |
+| --------------- | --------------------------------------- |
+| `archives/`     | Pre-built `.tar.gz` and `.zip` archives |
+| `checksums/`    | SHA-256 and SHA-512 checksum files      |
+| `github/`       | Mocked GitHub release API responses     |
+| `installers/`   | Installer-specific fixture data         |
+| `repositories/` | Minimal Git repositories                |
 
 Helper functions in `test_helper/fixtures.bash` can generate fixtures
 dynamically in `$TEST_HOME` when static files are not needed.
@@ -332,11 +336,11 @@ list). Deeper installer tests:
 
 ## CI requirements and shells
 
-| Job | OS | Shells tested |
-|-----|----|---------------|
-| `static` | Ubuntu | Bash (syntax + ShellCheck + shfmt) |
-| `test-linux` | Ubuntu | Bash, Zsh, Fish |
-| `test-macos` | macOS | Bash, Zsh |
+| Job          | OS     | Shells tested                      |
+| ------------ | ------ | ---------------------------------- |
+| `static`     | Ubuntu | Bash (syntax + ShellCheck + shfmt) |
+| `test-linux` | Ubuntu | Bash, Zsh, Fish                    |
+| `test-macos` | macOS  | Bash, Zsh                          |
 
 The bin/ CLI tests run on both Linux and macOS as part of each test job.
 

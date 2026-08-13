@@ -1,3 +1,5 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Mantle's canonical Fish entrypoint. Source from config.fish after setting
 # MANTLE_ROOT to the absolute path of the Mantle repository.
 

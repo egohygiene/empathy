@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2034 # Declarative installer metadata is consumed by the runtime.
 # Install crate-ci/typos from a verified GitHub release.
 
 set -o errexit

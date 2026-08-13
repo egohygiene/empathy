@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2016 # Literal templates generate isolated stub scripts.
 #
 # Command stub helpers for the Mantle test suite.
 #

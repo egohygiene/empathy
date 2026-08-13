@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Integration tests for the installer matrix.
 # Discovers all installers dynamically — no hand-written list.
 

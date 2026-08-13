@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2312 # These substitutions are validated by their enclosing operation.
 #
 # Provide opt-in, cross-platform font inventory helpers.
 

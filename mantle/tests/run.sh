@@ -2,6 +2,8 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2310 # Functions explicitly return and callers inspect every relevant status.
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 # Run Mantle's behavioral and static validation suites truthfully.
 
 set -o errexit
@@ -126,36 +128,36 @@ _parse_arguments() {
 
 	while (($# > 0)); do
 		case "$1" in
-			--strict)
-				RUNNER_STRICT="1"
-				shift
-				;;
-			--local)
-				RUNNER_STRICT="0"
-				shift
-				;;
-			--help | -h)
-				_print_usage
-				exit 0
-				;;
-			--)
-				shift
-				break
-				;;
-			-*)
-				printf "[mantle:test:error] unknown option: %s\n" "$1" >&2
-				_print_usage >&2
+		--strict)
+			RUNNER_STRICT="1"
+			shift
+			;;
+		--local)
+			RUNNER_STRICT="0"
+			shift
+			;;
+		--help | -h)
+			_print_usage
+			exit 0
+			;;
+		--)
+			shift
+			break
+			;;
+		-*)
+			printf "[mantle:test:error] unknown option: %s\n" "$1" >&2
+			_print_usage >&2
+			return 64
+			;;
+		*)
+			if ((positional_count > 0)); then
+				printf "[mantle:test:error] only one mode or test file may be selected\n" >&2
 				return 64
-				;;
-			*)
-				if ((positional_count > 0)); then
-					printf "[mantle:test:error] only one mode or test file may be selected\n" >&2
-					return 64
-				fi
-				RUNNER_MODE="$1"
-				positional_count=$((positional_count + 1))
-				shift
-				;;
+			fi
+			RUNNER_MODE="$1"
+			positional_count=$((positional_count + 1))
+			shift
+			;;
 		esac
 	done
 
@@ -170,11 +172,11 @@ _parse_arguments() {
 	done
 
 	case "${RUNNER_STRICT}" in
-		0 | 1) ;;
-		*)
-			printf "[mantle:test:error] MANTLE_VALIDATION_STRICT must be 0 or 1\n" >&2
-			return 64
-			;;
+	0 | 1) ;;
+	*)
+		printf "[mantle:test:error] MANTLE_VALIDATION_STRICT must be 0 or 1\n" >&2
+		return 64
+		;;
 	esac
 }
 
@@ -183,7 +185,7 @@ _tool_available() {
 	local unavailable_tools=",${MANTLE_RUNNER_TEST_UNAVAILABLE_TOOLS:-},"
 
 	case "${unavailable_tools}" in
-		*",${tool_name},"*) return 1 ;;
+	*",${tool_name},"*) return 1 ;;
 	esac
 
 	command -v "${tool_name}" >/dev/null 2>&1
@@ -403,12 +405,12 @@ _run_static() {
 	if _tool_available shellcheck; then
 		for file_path in "${BASH_FILES[@]}" "${POSIX_FILES[@]}"; do
 			case "${file_path}" in
-				*.sh) shellcheck_files+=("${file_path}") ;;
+			*.sh) shellcheck_files+=("${file_path}") ;;
 			esac
 		done
 
 		if shellcheck --severity=style \
-			--exclude=SC1090,SC1091,SC2034,SC2317 \
+			--exclude=SC1090,SC1091,SC2317 \
 			"${shellcheck_files[@]}"; then
 			_record_pass "ShellCheck"
 		else
@@ -468,7 +470,7 @@ _find_bats() {
 	local unavailable_tools=",${MANTLE_RUNNER_TEST_UNAVAILABLE_TOOLS:-},"
 
 	case "${unavailable_tools}" in
-		*",bats,"*) return 1 ;;
+	*",bats,"*) return 1 ;;
 	esac
 
 	for candidate in \
@@ -677,15 +679,15 @@ main() {
 	fi
 
 	case "${RUNNER_MODE}" in
-		all | unit | integration | contract | bin | static | format) ;;
-		*.bats) ;;
-		*)
-			if [[ ! -f "${RUNNER_MODE}" ]]; then
-				printf "[mantle:test:error] unknown mode or test file: %s\n" "${RUNNER_MODE}" >&2
-				_print_usage >&2
-				return 64
-			fi
-			;;
+	all | unit | integration | contract | bin | static | format) ;;
+	*.bats) ;;
+	*)
+		if [[ ! -f "${RUNNER_MODE}" ]]; then
+			printf "[mantle:test:error] unknown mode or test file: %s\n" "${RUNNER_MODE}" >&2
+			_print_usage >&2
+			return 64
+		fi
+		;;
 	esac
 
 	if ! _validate_layout; then
@@ -694,41 +696,41 @@ main() {
 
 	if ((layout_valid == 1)); then
 		case "${RUNNER_MODE}" in
-			static)
+		static)
+			_run_static
+			;;
+		format)
+			_run_format
+			;;
+		all | unit | integration | contract | bin | *.bats)
+			if ! _require_bats; then
+				bats_available=0
+			fi
+
+			if ((bats_available == 1)); then
+				case "${RUNNER_MODE}" in
+				all)
+					_run_bats_directory "unit" "${MANTLE_TEST_DIR}/unit"
+					_run_bats_directory "integration" "${MANTLE_TEST_DIR}/integration"
+					_run_bats_directory "contract" "${MANTLE_TEST_DIR}/contract"
+					_run_bin_suite
+					;;
+				unit | integration | contract)
+					_run_bats_directory "${RUNNER_MODE}" "${MANTLE_TEST_DIR}/${RUNNER_MODE}"
+					;;
+				bin)
+					_run_bin_suite
+					;;
+				*.bats)
+					_run_custom_test "${RUNNER_MODE}"
+					;;
+				esac
+			fi
+
+			if [[ "${RUNNER_MODE}" == "all" ]]; then
 				_run_static
-				;;
-			format)
-				_run_format
-				;;
-			all | unit | integration | contract | bin | *.bats)
-				if ! _require_bats; then
-					bats_available=0
-				fi
-
-				if ((bats_available == 1)); then
-					case "${RUNNER_MODE}" in
-						all)
-							_run_bats_directory "unit" "${MANTLE_TEST_DIR}/unit"
-							_run_bats_directory "integration" "${MANTLE_TEST_DIR}/integration"
-							_run_bats_directory "contract" "${MANTLE_TEST_DIR}/contract"
-							_run_bin_suite
-							;;
-						unit | integration | contract)
-							_run_bats_directory "${RUNNER_MODE}" "${MANTLE_TEST_DIR}/${RUNNER_MODE}"
-							;;
-						bin)
-							_run_bin_suite
-							;;
-						*.bats)
-							_run_custom_test "${RUNNER_MODE}"
-							;;
-					esac
-				fi
-
-				if [[ "${RUNNER_MODE}" == "all" ]]; then
-					_run_static
-				fi
-				;;
+			fi
+			;;
 		esac
 	fi
 

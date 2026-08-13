@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2034 # Declarative installer metadata is consumed by the runtime.
 # Install Docker Desktop on macOS without launching a GUI installer implicitly.
 
 set -o errexit

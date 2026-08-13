@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
+# shellcheck disable=SC2034 # Declarative installer metadata is consumed by the runtime.
 # Install Talisman, with global Git-hook mutation available only by explicit opt-in.
 
 set -o errexit

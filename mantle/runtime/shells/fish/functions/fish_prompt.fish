@@ -1,3 +1,5 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 function fish_prompt --description "Display Mantle's minimal Fish prompt"
     set -l previous_status $status
     set -l prompt_color (set_color blue)

@@ -1,4 +1,5 @@
-#!/bin/sh
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=sh
 #
 # Establish Mantle's portable POSIX runtime baseline.

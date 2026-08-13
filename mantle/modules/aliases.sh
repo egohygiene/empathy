@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2312 # These substitutions are validated by their enclosing operation.
 #
 # Define portable, low-surprise interactive aliases and helper functions for
 # Bash and Zsh. Platform-specific behavior is guarded at runtime so sourcing
@@ -287,8 +289,8 @@ mantle_generate_password() {
 
 	generated_password="$(
 		command head -c 48 /dev/urandom |
-		command base64 |
-		tr -d "=+/\n"
+			command base64 |
+			tr -d "=+/\n"
 	)" || return 1
 
 	if ((${#generated_password} < 32)); then

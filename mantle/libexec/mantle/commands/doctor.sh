@@ -2,6 +2,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 # Perform read-only checks against the active Mantle installation.
 
 set -o errexit
@@ -24,23 +25,23 @@ fi
 mantle_doctor_quiet="0"
 while (($# > 0)); do
 	case "$1" in
-		--summary)
-			printf "Check the Mantle installation and environment.\n"
-			exit 0
-			;;
-		--quiet)
-			mantle_doctor_quiet="1"
-			shift
-			;;
-		--help | -h)
-			mantle_doctor_usage
-			exit 0
-			;;
-		*)
-			printf "[mantle:error] unknown doctor option: %s\n" "$1" >&2
-			mantle_doctor_usage >&2
-			exit 64
-			;;
+	--summary)
+		printf "Check the Mantle installation and environment.\n"
+		exit 0
+		;;
+	--quiet)
+		mantle_doctor_quiet="1"
+		shift
+		;;
+	--help | -h)
+		mantle_doctor_usage
+		exit 0
+		;;
+	*)
+		printf "[mantle:error] unknown doctor option: %s\n" "$1" >&2
+		mantle_doctor_usage >&2
+		exit 64
+		;;
 	esac
 done
 
@@ -52,8 +53,8 @@ mantle_doctor_report() {
 	local message="$2"
 
 	case "${level}" in
-		fail) mantle_doctor_failures=$((mantle_doctor_failures + 1)) ;;
-		warn) mantle_doctor_warnings=$((mantle_doctor_warnings + 1)) ;;
+	fail) mantle_doctor_failures=$((mantle_doctor_failures + 1)) ;;
+	warn) mantle_doctor_warnings=$((mantle_doctor_warnings + 1)) ;;
 	esac
 
 	if [[ "${mantle_doctor_quiet}" != "1" || "${level}" == "fail" ]]; then
@@ -93,12 +94,12 @@ else
 fi
 
 case ":${PATH:-}:" in
-	*":${MANTLE_ROOT}/bin:"*)
-		mantle_doctor_report "pass" "Mantle bin directory is on PATH"
-		;;
-	*)
-		mantle_doctor_report "warn" "Mantle bin directory is not on PATH"
-		;;
+*":${MANTLE_ROOT}/bin:"*)
+	mantle_doctor_report "pass" "Mantle bin directory is on PATH"
+	;;
+*)
+	mantle_doctor_report "warn" "Mantle bin directory is not on PATH"
+	;;
 esac
 
 if ((mantle_doctor_failures > 0)); then

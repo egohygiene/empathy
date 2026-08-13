@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2312 # These substitutions are validated by their enclosing operation.
+# shellcheck disable=SC2310 # Functions explicitly return and callers inspect every relevant status.
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 #
 # Install Mantle into a user-owned prefix and optionally add shell hooks.
 

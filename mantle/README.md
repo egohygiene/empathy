@@ -460,7 +460,7 @@ What the current test harness provides:
 
 - Bats-based unit, integration, and contract tests.
 - Static validation for Bash syntax, optional Zsh/Fish syntax, optional ShellCheck, optional shdoc parsing, and optional shfmt checks.
-- Canonical shell formatting through the root `.editorconfig`.
+- Canonical shell formatting through Mantle's nearest `.editorconfig`.
 - Hermetic temporary-home isolation for tests that interact with shell state.
 - Root-installer integration coverage for copy installs, symlink installs, shell
   activation, dry-run, status, uninstall, and rollback.
@@ -474,6 +474,10 @@ For local setup details, fixture guidance, command stubs, and debugging failed t
 Tests are intended to avoid real installations and should stub external tools or network interactions when exercising installer flows.
 
 ## Development
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before adding a source file. It defines
+Mantle's executable and source-only roles, shebang and permission contract,
+license metadata, shell dialects, formatting rules, and validation expectations.
 
 A focused development workflow for this repository looks like this:
 
@@ -497,7 +501,8 @@ If you want to contribute:
 - Add or update tests alongside behavior changes, especially for public entrypoints and installer contracts.
 - Avoid committing machine-specific state, credentials, local config files, or generated artifacts.
 
-This repository does not currently include a dedicated `CONTRIBUTING.md`, so the README is the primary contributor entrypoint for now.
+The complete source-role and validation policy lives in
+[`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Roadmap
 
