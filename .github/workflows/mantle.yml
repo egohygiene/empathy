@@ -1,0 +1,125 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Validate Mantle
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/mantle.yml"
+      - ".vscode/tasks.json"
+      - "Taskfile.yml"
+      - "mantle/**"
+      - "tests/test_mantle_ci.py"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/mantle.yml"
+      - ".vscode/tasks.json"
+      - "Taskfile.yml"
+      - "mantle/**"
+      - "tests/test_mantle_ci.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "mantle-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: "${{ matrix.system }} / Bash, Zsh, Fish"
+    runs-on: "${{ matrix.runner }}"
+    timeout-minutes: 25
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - system: Linux
+            runner: ubuntu-24.04
+          - system: macOS
+            runner: macos-15
+
+    steps:
+      - name: Checkout repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Install Linux shell dependencies
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update --quiet
+          sudo apt-get install --yes \
+            bats \
+            fish \
+            gawk \
+            shellcheck \
+            zsh
+
+      - name: Install macOS shell dependencies
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          set -euo pipefail
+          brew install \
+            bats-core \
+            fish \
+            gawk \
+            shellcheck
+
+      - name: Install pinned shdoc
+        shell: bash
+        env:
+          SHDOC_COMMIT: "b3436134f08428f8bbe2e54bc4dc20da85cd300b"
+        run: |
+          set -euo pipefail
+          shdoc_root="${RUNNER_TEMP}/mantle-shdoc"
+          shdoc_bin="${RUNNER_TEMP}/mantle-tools"
+          mkdir -p "${shdoc_root}" "${shdoc_bin}"
+          git -C "${shdoc_root}" init --quiet
+          git -C "${shdoc_root}" remote add origin \
+            "https://github.com/reconquest/shdoc.git"
+          git -C "${shdoc_root}" fetch --depth 1 origin "${SHDOC_COMMIT}"
+          git -C "${shdoc_root}" checkout --detach FETCH_HEAD
+          install -m 0755 "${shdoc_root}/shdoc" "${shdoc_bin}/shdoc"
+          printf '%s\n' "${shdoc_bin}" >> "${GITHUB_PATH}"
+
+      - name: Install verified shfmt through Mantle
+        shell: bash
+        run: |
+          set -euo pipefail
+          shfmt_bin="${RUNNER_TEMP}/mantle-tools"
+          ./mantle/bin/mantle install shfmt \
+            --version "3.12.0" \
+            --install-dir "${shfmt_bin}"
+          printf '%s\n' "${shfmt_bin}" >> "${GITHUB_PATH}"
+
+      - name: Report shell matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+          /bin/bash --version | head -n 1
+          zsh --version
+          fish --version
+          bats --version
+          shellcheck --version
+          printf 'shdoc: %s\n' "$(command -v shdoc)"
+          shfmt --version
+
+      - name: Run strict Mantle validation
+        shell: bash
+        working-directory: mantle
+        run: ./tests/run.sh --strict
+
+      - name: Run temporary-prefix installation smoke test
+        shell: bash
+        working-directory: mantle
+        run: /bin/bash ./tests/smoke/install.sh

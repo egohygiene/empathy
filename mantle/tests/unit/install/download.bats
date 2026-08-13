@@ -41,6 +41,17 @@ _bash_download() {
 	assert_file_exists "${dest}"
 }
 
+@test "download_file accepts no request headers with nounset enabled" {
+	stub_curl_success "stub body"
+	local dest="${TEST_HOME}/downloaded-nounset.txt"
+	_bash_download "
+		set -u
+		mantle_install_download_file 'https://example.invalid/file.txt' '${dest}'
+	"
+	assert_success
+	assert_file_exists "${dest}"
+}
+
 # ---------------------------------------------------------------------------
 # Insecure URL policy
 # ---------------------------------------------------------------------------

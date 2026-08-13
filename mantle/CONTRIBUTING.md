@@ -57,6 +57,10 @@ Before opening a pull request, install every required validation tool and run:
 ./tests/run.sh --strict
 ```
 
+From the Empathy repository root, `task mantle:ci` runs the same strict suite
+and the hermetic temporary-prefix installation smoke test used by GitHub
+Actions. Use `task mantle:check` for the developer-friendly local equivalent.
+
 The contract suite rejects missing license metadata, misplaced executable bits,
 noncanonical executable shebangs, and shebangs on source-only files.
 

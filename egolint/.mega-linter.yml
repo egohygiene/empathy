@@ -331,6 +331,20 @@ ARM_ARM_TTK_RULES_PATH: egolint/.config/lint/arm
 ARM_ARM_TTK_CONFIG_FILE: arm-ttk.psd1
 
 # ==============================================================================
+# Bash executable policy
+# ==============================================================================
+
+# Mantle's initialization, library, module, and test layers are deliberately
+# source-only. Their non-executable modes are enforced by Mantle's own role
+# contract, while BASH_EXEC remains active for its command and installer layers.
+BASH_EXEC_FILTER_REGEX_EXCLUDE: >-
+  ^mantle/(?:init|lib|modules|tests)/.*\.sh$
+
+# Mantle owns its shfmt policy through tests/run.sh so formatting is resolved
+# from the standalone package root consistently in local and native CI runs.
+BASH_SHFMT_FILTER_REGEX_EXCLUDE: ^mantle/
+
+# ==============================================================================
 # Clojure formatting
 # ==============================================================================
 
