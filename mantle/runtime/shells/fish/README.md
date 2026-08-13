@@ -10,7 +10,8 @@ set -gx MANTLE_ROOT "/absolute/path/to/mantle"
 source "$MANTLE_ROOT/runtime/shells/fish/runtime.fish"
 ```
 
-The entrypoint loads native environment, privacy, and interactive abbreviation
-fragments in deterministic order, then exposes Mantle functions and
-completions. Startup is quiet and idempotent. Existing user-selected values are
+The entrypoint resolves the same versioned profile configuration used by Bash,
+Zsh, and `mantle config`, then loads native environment, privacy, update, and
+enabled safe/network/system/safety/legacy capability fragments in deterministic
+order. Startup is quiet and idempotent. Existing user-selected values are
 preserved unless a Mantle policy explicitly documents otherwise.

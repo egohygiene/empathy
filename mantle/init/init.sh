@@ -67,6 +67,12 @@ fi
 
 if ((__mantle_init_status == 0)); then
 	__mantle_init_source_required \
+		"${MANTLE_ROOT}/lib/config/profile.sh" \
+		"configuration resolver" || __mantle_init_status=$?
+fi
+
+if ((__mantle_init_status == 0)); then
+	__mantle_init_source_required \
 		"${MANTLE_ROOT}/init/bootstrap.sh" \
 		"environment bootstrap" || __mantle_init_status=$?
 fi

@@ -34,7 +34,7 @@ function __mantle_fish_runtime
         end
     end
 
-    for fragment in environment.fish privacy.fish abbreviations.fish
+    for fragment in profile.fish environment.fish privacy.fish
         set -l fragment_path "$runtime_root/conf.d/$fragment"
         if not test -r "$fragment_path"
             printf '[mantle:error] missing Fish configuration fragment: %s\n' "$fragment_path" >&2
@@ -46,6 +46,31 @@ function __mantle_fish_runtime
             printf '[mantle:error] Fish configuration failed with status %d: %s\n' "$fragment_status" "$fragment_path" >&2
             set -g MANTLE_FISH_INITIALIZATION_STATE failed
             return $fragment_status
+        end
+    end
+
+    set -l capability_fragments
+    if test "$MANTLE_POLICY_SUPPRESS_UPDATE_CHECKS" = true
+        set --append capability_fragments updates.fish
+    end
+    if test "$MANTLE_INTERACTIVE" = 1
+        test "$MANTLE_POLICY_ALIASES_SAFE" = true; and set --append capability_fragments abbreviations.fish
+        test "$MANTLE_POLICY_ALIASES_NETWORK" = true; and set --append capability_fragments network.fish
+        test "$MANTLE_POLICY_ALIASES_SYSTEM" = true; and set --append capability_fragments system.fish
+        test "$MANTLE_POLICY_ALIASES_SAFETY" = true; and set --append capability_fragments safety.fish
+        test "$MANTLE_POLICY_ALIASES_LEGACY" = true; and set --append capability_fragments legacy.fish
+    end
+    for capability_fragment in $capability_fragments
+        set -l capability_path "$runtime_root/conf.d/$capability_fragment"
+        if not test -r "$capability_path"
+            printf '[mantle:error] missing Fish configuration fragment: %s\n' "$capability_path" >&2
+            set -g MANTLE_FISH_INITIALIZATION_STATE failed
+            return 1
+        end
+        source "$capability_path"; or begin
+            set -l capability_status $status
+            set -g MANTLE_FISH_INITIALIZATION_STATE failed
+            return $capability_status
         end
     end
 

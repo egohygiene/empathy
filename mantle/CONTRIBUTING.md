@@ -71,10 +71,11 @@ directories. Every maintained shell file must match exactly one row in
 [`config/architecture/layers.tsv`](config/architecture/layers.tsv), and every
 new source-time dependency must follow that layer's declared direction.
 
-Keep reusable primitives in `lib/core/` or `lib/bash/`, portable environment
-policy in `modules/`, OS-specific choices in `platforms/`, shell-specific
-behavior in `runtime/shells/`, and orchestration in `init/`. In particular,
-core owns PATH mutation; modules and platforms only choose path candidates.
+Keep reusable primitives in `lib/core/` or `lib/bash/`, typed configuration
+resolution in `lib/config/`, portable environment policy in `modules/`,
+OS-specific choices in `platforms/`, shell-specific behavior in
+`runtime/shells/`, and orchestration in `init/`. In particular, core owns PATH
+mutation; modules and platforms only choose path candidates.
 
 Follow [`PROVENANCE.md`](PROVENANCE.md) when adding generated, copied, adapted,
 or vendored material. Unknown provenance is a release blocker.

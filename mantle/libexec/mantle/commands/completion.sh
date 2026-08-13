@@ -74,6 +74,8 @@ bash)
 		"    COMPREPLY=( \$(compgen -W \"${mantle_completion_installers}\" -- \"\${current}\") )" \
 		'  elif [[ "${COMP_WORDS[1]}" == "completion" && "${COMP_CWORD}" -eq 2 ]]; then' \
 		'    COMPREPLY=( $(compgen -W "bash zsh fish" -- "${current}") )' \
+		'  elif [[ "${COMP_WORDS[1]}" == "config" && "${COMP_CWORD}" -eq 2 ]]; then' \
+		'    COMPREPLY=( $(compgen -W "list-profiles path validate show explain" -- "${current}") )' \
 		'  elif [[ "${previous}" == "fastfetch" ]]; then' \
 		'    COMPREPLY=( $(compgen -W "runtime workspace toolchains contexts" -- "${current}") )' \
 		'  fi' \
@@ -83,13 +85,14 @@ bash)
 zsh)
 	# $words belongs to generated Zsh.
 	# shellcheck disable=SC2016
-	printf '#compdef mantle\n_arguments "1:command:(%s)" "2:argument:->args"\ncase $words[2] in\n  install) _values "installer" %s ;;\n  completion) _values "shell" bash zsh fish ;;\n  fastfetch) _values "collector" runtime workspace toolchains contexts ;;\nesac\n' \
+	printf '#compdef mantle\n_arguments "1:command:(%s)" "2:argument:->args"\ncase $words[2] in\n  install) _values "installer" %s ;;\n  completion) _values "shell" bash zsh fish ;;\n  config) _values "config command" list-profiles path validate show explain ;;\n  fastfetch) _values "collector" runtime workspace toolchains contexts ;;\nesac\n' \
 		"${mantle_completion_commands}" "${mantle_completion_installers}"
 	;;
 fish)
 	printf "complete -c mantle -f -n '__fish_use_subcommand' -a '%s'\n" "${mantle_completion_commands}"
 	printf "complete -c mantle -f -n '__fish_seen_subcommand_from install' -a '%s'\n" "${mantle_completion_installers}"
 	printf "complete -c mantle -f -n '__fish_seen_subcommand_from completion' -a 'bash zsh fish'\n"
+	printf "complete -c mantle -f -n '__fish_seen_subcommand_from config' -a 'list-profiles path validate show explain'\n"
 	printf "complete -c mantle -f -n '__fish_seen_subcommand_from fastfetch' -a 'runtime workspace toolchains contexts'\n"
 	;;
 *)

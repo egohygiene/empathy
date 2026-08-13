@@ -78,7 +78,8 @@ Mantle is an actively developed project with a real CLI, runtime modules, platfo
 - Public `.shellrc` entrypoint that must be sourced, not executed.
 - Idempotent initialization with explicit `initialized`, `initializing`, and `failed` states.
 - Separate loading phases for shared runtime, POSIX baseline, active-shell runtime, modules, and platform adapters.
-- Interactive-only loading for aliases and history behavior.
+- Profile-driven interactive loading for safe, network, system, legacy, safety,
+  and history capability groups.
 - Native Fish runtime with its own functions, completions, and `conf.d` fragments.
 
 ### Environment management
@@ -164,6 +165,8 @@ mantle help
 mantle version
 mantle doctor
 mantle env
+mantle config show
+mantle config explain
 mantle install --list
 ```
 
@@ -214,6 +217,10 @@ mantle fastfetch contexts
 mantle completion bash
 mantle completion zsh
 mantle completion fish
+mantle config list-profiles
+mantle config validate
+mantle config show
+mantle config explain aliases.safe
 mantle install --help
 mantle install --list
 mantle install eza --help
@@ -252,13 +259,72 @@ Installer destinations are configurable per installer where supported. For examp
 
 ## Configuration
 
-Mantle uses standard environment variables rather than a repository-specific config file. The table below focuses on public or user-relevant variables that shape runtime behavior.
+Mantle has a versioned, typed configuration model shared by Bash, Zsh, Fish,
+and the CLI. The default file is
+`"${XDG_CONFIG_HOME:-$HOME/.config}/mantle/config.conf"`; override it with an
+absolute `MANTLE_CONFIG_FILE` path. Configuration is parsed as data and is
+never sourced or evaluated as shell code.
+
+Precedence is deterministic:
+
+```text
+built-in profile defaults < config file values < environment overrides
+```
+
+The file grammar is deliberately small: one `key=value` per line, comments
+begin with `#`, duplicate and unknown keys are errors, and `schema_version=1`
+is required. Copy [`config/example.conf`](config/example.conf) to get started.
+
+### Built-in profiles
+
+| Profile      | Intended use                                                                    |
+| ------------ | ------------------------------------------------------------------------------- |
+| `minimal`    | Required environment only; no interactive conveniences.                        |
+| `standard`   | Default low-surprise aliases and history for everyday development.              |
+| `full`       | Maintained safe, network, and system helpers without historical name collisions. |
+| `workbench`  | Explicit complete experience, including legacy and familiar-command aliases.    |
+| `ci`         | Noninteractive CI policy with supported automatic update checks suppressed.      |
+| `share-safe` | Low-surprise helpers plus a presentation policy for shareable terminal output.   |
+
+Selecting `full` or `workbench` makes helpers available; startup still performs
+no network requests and runs no privileged operations. Those effects occur only
+when an operator invokes a corresponding helper.
+
+`aliases.legacy=true` is intentionally an umbrella for the historical
+all-in-one corpus. For granular capability control, leave it `false` and select
+the safe, network, system, and safety settings independently.
+
+Use the CLI to inspect the contract and trace every effective value:
+
+```sh
+mantle config list-profiles
+mantle config validate
+mantle config validate "/path/to/config.conf"
+mantle config show
+mantle config explain
+mantle config explain aliases.network
+```
+
+### Environment controls
+
+Boolean profile overrides accept `1`, `0`, `true`, `false`, `yes`, `no`, `on`,
+or `off`. The table below focuses on public or user-relevant variables that
+shape runtime behavior.
 
 | Variable                                 | Default                             | Purpose                                                           | Example                                              |
 | ---------------------------------------- | ----------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- |
 | `MANTLE_ROOT`                            | Resolved from the entrypoint or CLI | Absolute path to the Mantle installation root                     | `export MANTLE_ROOT="$HOME/src/mantle"`              |
 | `MANTLE_SHELL_NAME`                      | Detected (`bash`, `zsh`, `fish`)    | Active shell runtime identifier                                   | `export MANTLE_SHELL_NAME="bash"`                    |
 | `MANTLE_INTERACTIVE`                     | Detected from the current shell     | Distinguishes interactive and noninteractive initialization       | `export MANTLE_INTERACTIVE="1"`                      |
+| `MANTLE_PROFILE`                         | `standard`                          | Selects a built-in typed profile                                  | `export MANTLE_PROFILE="share-safe"`                 |
+| `MANTLE_CONFIG_FILE`                     | XDG config path                     | Selects an explicit absolute configuration file                   | `export MANTLE_CONFIG_FILE="$HOME/.mantle.conf"`     |
+| `MANTLE_ENABLE_SAFE_ALIASES`             | Profile value                       | Overrides low-surprise interactive helpers                        | `export MANTLE_ENABLE_SAFE_ALIASES="true"`           |
+| `MANTLE_ENABLE_NETWORK_ALIASES`          | Profile value                       | Overrides network inspection helpers                              | `export MANTLE_ENABLE_NETWORK_ALIASES="true"`        |
+| `MANTLE_ENABLE_SYSTEM_ALIASES`           | Profile value                       | Overrides OS mutation and privileged helpers                      | `export MANTLE_ENABLE_SYSTEM_ALIASES="false"`        |
+| `MANTLE_ENABLE_LEGACY_ALIASES`           | Profile value                       | Overrides the historical all-in-one alias corpus                  | `export MANTLE_ENABLE_LEGACY_ALIASES="false"`        |
+| `MANTLE_ENABLE_SAFETY_ALIASES`           | Profile value                       | Overrides prompting replacements for `cp`, `mv`, and `rm`         | `export MANTLE_ENABLE_SAFETY_ALIASES="true"`         |
+| `MANTLE_ENABLE_HISTORY`                  | Profile value                       | Overrides Mantle-owned interactive history policy                 | `export MANTLE_ENABLE_HISTORY="false"`               |
+| `MANTLE_PRESENTATION_MODE`               | Profile value                       | Publishes `private`, `share-safe`, `ci`, or `off` presentation mode | `export MANTLE_PRESENTATION_MODE="share-safe"`       |
 | `MANTLE_DISABLE_TELEMETRY`               | `1`                                 | Enables Mantle's telemetry opt-out defaults when set to `1`       | `export MANTLE_DISABLE_TELEMETRY="1"`                |
 | `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS` | `0`                                 | Opts into the update-check suppression module                     | `export MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS="1"`  |
 | `MANTLE_ENABLE_PROJECT_PATH`             | `0`                                 | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled | `export MANTLE_ENABLE_PROJECT_PATH="1"`              |
@@ -304,6 +370,7 @@ machine-readable layer registry lives at
 │   └── load-platform-runtime.sh
 ├── lib/
 │   ├── core/
+│   ├── config/
 │   └── extensions/
 ├── libexec/
 │   └── mantle/
@@ -326,6 +393,7 @@ machine-readable layer registry lives at
 - `/bin/mantle` — public CLI dispatcher.
 - `/init/` — initialization orchestration and loader boundaries.
 - `/lib/core/` — reusable shell libraries for detection, guards, logging, time, colors, and Bash helpers.
+- `/lib/config/` — non-executing typed profile parsing and effective-policy resolution.
 - `/lib/extensions/` — optional libraries loaded explicitly through `mantle_load_extension`.
 - `/modules/` — runtime policies for XDG, privacy, tooling, PATH, cache, aliases, history, and update checks.
 - `/platforms/` — OS-specific adapters loaded after portable modules.
@@ -366,10 +434,11 @@ At a high level, Mantle initialization follows this sequence:
 3. `init/init.sh` loads core libraries and runtimes through `init/load-core.sh`.
 4. `init/load-extensions.sh` defines the opt-in extension loader.
 5. `lib/modules.sh` defines the transactional module loader.
-6. `init/bootstrap.sh` loads required noninteractive modules in order: `xdg`, `privacy`, `cache`, `tooling`, and `environment`.
-7. The platform adapter is loaded through `init/load-platform-runtime.sh`.
-8. Interactive-only modules such as `aliases` and `history` load when `MANTLE_INTERACTIVE=1`.
-9. If everything succeeds, `.shellrc` records `MANTLE_INITIALIZATION_STATE=initialized`.
+6. `lib/config/profile.sh` resolves the profile, config file, and environment precedence.
+7. `init/bootstrap.sh` loads required noninteractive modules in order: `xdg`, `privacy`, `cache`, `tooling`, and `environment`.
+8. The platform adapter is loaded through `init/load-platform-runtime.sh`.
+9. Enabled interactive capability modules load when `MANTLE_INTERACTIVE=1`.
+10. If everything succeeds, `.shellrc` records `MANTLE_INITIALIZATION_STATE=initialized`.
 
 Operational guarantees from the current implementation:
 
@@ -446,7 +515,8 @@ Mantle's current implementation makes several concrete promises that are worth c
 
 - Mantle itself does not perform startup-time network requests during normal shell initialization.
 - Telemetry opt-out defaults are enabled by `modules/privacy.sh` unless `MANTLE_DISABLE_TELEMETRY` is changed.
-- Automatic update-check suppression is separate and opt-in through `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS=1`.
+- Automatic update-check suppression is separate and enabled only by a profile
+  or the explicit `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS=1` override.
 - Platform runtimes must remain quiet, idempotent, and free from install, prompt, privilege, and preference-mutation side effects.
 - Installers are contract-tested to avoid `sudo` usage.
 - XDG runtime directories are created with private permissions when Mantle needs a fallback.

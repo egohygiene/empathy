@@ -3,10 +3,9 @@
 # shellcheck shell=bash
 # shellcheck disable=SC2312 # These substitutions are validated by their enclosing operation.
 #
-# Define portable, low-surprise interactive aliases and helper functions for
-# Bash and Zsh. Platform-specific behavior is guarded at runtime so sourcing
-# this module never assumes that a particular operating system or command is
-# available.
+# Preserve Mantle's historical all-in-one alias corpus for the opt-in
+# workbench profile. New profiles use capability-specific modules so network,
+# privileged, safety-replacing, and name-colliding behavior is explainable.
 
 if [[ -n "${BASH_VERSION:-}" && "${BASH_SOURCE[0]}" == "$0" ]]; then
 	printf "[mantle:error] modules/aliases.sh is internal and must be sourced\n" >&2
@@ -352,6 +351,11 @@ mantle_save_dconf() {
 mantle_system_update() {
 	local package_manager_found=0
 
+	if [[ "${MANTLE_PLATFORM_RUNTIME:-}" == "darwin" ]] && command -v brew >/dev/null 2>&1; then
+		package_manager_found=1
+		command brew update && command brew upgrade || return $?
+	fi
+
 	if command -v apt-get >/dev/null 2>&1; then
 		package_manager_found=1
 		command sudo apt-get update &&
@@ -437,7 +441,7 @@ alias mkcd="mantle_mkcd"
 
 # These aliases add prompts while changing familiar command behavior, so they
 # require explicit consent.
-if [[ "${MANTLE_ENABLE_SAFETY_ALIASES:-0}" == "1" ]]; then
+if [[ "${MANTLE_POLICY_ALIASES_SAFETY:-false}" == "true" ]]; then
 	alias cp="command cp -iv"
 	alias mv="command mv -iv"
 	alias rm="command rm -i"
@@ -508,7 +512,7 @@ alias public-ip="mantle_public_ip"
 
 # Preserve the historical public-IP `ip` alias only where it cannot shadow the
 # operating system's iproute2 command, unless legacy aliases are explicitly on.
-if ! command -v ip >/dev/null 2>&1 || [[ "${MANTLE_ENABLE_LEGACY_ALIASES:-0}" == "1" ]]; then
+if ! command -v ip >/dev/null 2>&1 || [[ "${MANTLE_POLICY_ALIASES_LEGACY:-false}" == "true" ]]; then
 	alias ip="mantle_public_ip"
 fi
 

@@ -1,0 +1,7 @@
+schema_version	profile	aliases_safe	aliases_network	aliases_system	aliases_legacy	aliases_safety	history	suppress_update_checks	experimental	presentation	description
+1	minimal	false	false	false	false	false	false	false	false	off	Required environment only; no interactive conveniences.
+1	standard	true	false	false	false	false	true	false	false	private	Low-surprise interactive defaults for everyday development.
+1	full	true	true	true	false	false	true	false	false	private	All maintained capability groups without legacy collisions.
+1	workbench	true	true	true	true	true	true	true	false	private	Opinionated opt-in profile retaining the complete legacy experience.
+1	ci	false	false	false	false	false	false	true	false	ci	Noninteractive CI policy with update checks suppressed.
+1	share-safe	true	false	false	false	false	false	true	false	share-safe	Share-aware presentation policy and low-surprise interactive helpers.
