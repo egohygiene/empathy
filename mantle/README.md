@@ -282,6 +282,13 @@ Notes:
 
 ## Architecture
 
+The formal layer model, public/private boundaries, dependency directions, and
+Mantle-versus-Realm ownership rule are documented in
+[`ARCHITECTURE.md`](ARCHITECTURE.md). Source lineage and the third-party code
+boundary are recorded in [`PROVENANCE.md`](PROVENANCE.md). The contract-tested,
+machine-readable layer registry lives at
+[`config/architecture/layers.tsv`](config/architecture/layers.tsv).
+
 ### Repository layout
 
 ```text
@@ -326,6 +333,11 @@ Notes:
 - `/libexec/mantle/commands/` — supported public command implementations.
 - `/libexec/mantle/installers/` — private installer entrypoints discovered by `mantle install`.
 - `/tests/` — unit, integration, contract, and static validation harnesses.
+
+Every maintained shell file maps to exactly one registered layer. The contract
+suite rejects unclassified files, overlapping ownership, unknown dependency
+layers, and source commands in layers declared to have no source-time
+dependencies.
 
 ### CLI dispatch flow
 

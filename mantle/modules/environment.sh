@@ -24,27 +24,10 @@ if [[ -z "${HOME:-}" || -z "${XDG_DATA_HOME:-}" || -z "${XDG_CONFIG_HOME:-}" ]];
 	return 1
 fi
 
-__mantle_environment_path_prepend() {
-	local path_candidate="${1:-}"
-
-	if [[ -z "${path_candidate}" || "${path_candidate}" == *:* ]]; then
-		return 64
-	fi
-
-	case ":${PATH:-}:" in
-	*":${path_candidate}:"*)
-		return 0
-		;;
-	esac
-
-	if [[ -n "${PATH:-}" ]]; then
-		PATH="${path_candidate}:${PATH}"
-	else
-		PATH="${path_candidate}"
-	fi
-
-	export PATH
-}
+if ! command -v mantle_core_path_prepend >/dev/null 2>&1; then
+	printf "[mantle:error] environment: core PATH ownership is unavailable\n" >&2
+	return 1
+fi
 
 # Do not set LC_ALL: it overrides every locale category and prevents callers
 # from selecting category-specific behavior. LANG supplies the portable default.
@@ -69,7 +52,6 @@ export XDG_BIN_HOME="${XDG_BIN_HOME:-${HOME}/.local/bin}"
 
 if [[ "${XDG_BIN_HOME}" != /* ]]; then
 	printf "[mantle:error] environment: XDG_BIN_HOME must be an absolute path\n" >&2
-	unset -f __mantle_environment_path_prepend
 	return 1
 fi
 
@@ -77,7 +59,6 @@ if [[ "${MANTLE_CREATE_XDG_DIRECTORIES:-1}" == "1" ]] &&
 	! mkdir -p -- "${XDG_BIN_HOME}"; then
 	printf "[mantle:error] environment: unable to create XDG_BIN_HOME: %s\n" \
 		"${XDG_BIN_HOME}" >&2
-	unset -f __mantle_environment_path_prepend
 	return 1
 fi
 
@@ -99,11 +80,10 @@ __mantle_environment_path_candidates=(
 
 for __mantle_environment_path_candidate in "${__mantle_environment_path_candidates[@]}"; do
 	if [[ -d "${__mantle_environment_path_candidate}" ]]; then
-		__mantle_environment_path_prepend \
+		mantle_core_path_prepend \
 			"${__mantle_environment_path_candidate}" || {
 			printf "[mantle:error] environment: invalid PATH candidate: %s\n" \
 				"${__mantle_environment_path_candidate}" >&2
-			unset -f __mantle_environment_path_prepend
 			unset __mantle_environment_path_candidate
 			unset __mantle_environment_path_candidates
 			return 1
@@ -117,11 +97,10 @@ done
 if [[ "${MANTLE_ENABLE_PROJECT_PATH:-0}" == "1" ]]; then
 	for __mantle_environment_project_path in "${PWD}/bin" "${PWD}/node_modules/.bin"; do
 		if [[ -d "${__mantle_environment_project_path}" ]]; then
-			__mantle_environment_path_prepend \
+			mantle_core_path_prepend \
 				"${__mantle_environment_project_path}" || {
 				printf "[mantle:error] environment: invalid project PATH candidate: %s\n" \
 					"${__mantle_environment_project_path}" >&2
-				unset -f __mantle_environment_path_prepend
 				unset __mantle_environment_path_candidate
 				unset __mantle_environment_path_candidates
 				unset __mantle_environment_project_path
@@ -140,7 +119,6 @@ export POETRY_PREVIEW="${POETRY_PREVIEW:-1}"
 export GCC_COLORS="${GCC_COLORS:-error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01}"
 export GHCUP_USE_XDG_DIRS="${GHCUP_USE_XDG_DIRS:-true}"
 
-unset -f __mantle_environment_path_prepend
 unset __mantle_environment_path_candidate
 unset __mantle_environment_path_candidates
 

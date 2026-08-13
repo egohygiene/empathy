@@ -111,7 +111,9 @@ tests/
 │   ├── shared-contract.bats --help, --version, and unknown-option for all commands
 │   └── <command>.bats      Per-command behavioral tests
 ├── contract/               Repository-layout and public-API contract tests
-│   └── source-policy.bats  License, shebang, and executable-role policy
+│   ├── architecture-boundaries.bats
+│   │                         Layer ownership and dependency direction
+│   └── source-policy.bats   License, shebang, and executable-role policy
 ├── integration/            Integration tests for bin/mantle and shell bootstrap
 │   └── runner.bats         Black-box failure-injection tests for tests/run.sh
 ├── test_helper/            Shared helpers for unit/integration/contract layers
