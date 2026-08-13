@@ -21,9 +21,9 @@ ENABLE_LINTERS:
 
 VALIDATE_ALL_CODEBASE: false
 
-# Preserve Empathy's established two-space shell formatting policy. The
-# holistic profile's language-specific rules still own all other behavior.
-BASH_SHFMT_ARGUMENTS: "--indent 2 --case-indent --space-redirects --simplify"
+# Let shfmt resolve the nearest .editorconfig for each file. This preserves the
+# repository default while allowing nested projects such as Mantle to declare
+# their own dialect and indentation policy without a conflicting CLI override.
 
 REPORT_OUTPUT_FOLDER: .reports/megalinter
 GITHUB_COMMENT_REPORTER: false

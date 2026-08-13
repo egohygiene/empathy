@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 
 if [[ -n "${BASH_VERSION:-}" && "${BASH_SOURCE[0]}" == "$0" ]]; then
 	printf "[mantle:error] platforms/darwin/runtime.sh must be sourced\n" >&2

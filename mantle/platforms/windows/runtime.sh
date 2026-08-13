@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 # Minimal MSYS2/Git Bash adapter. Native PowerShell is outside this runtime.
 

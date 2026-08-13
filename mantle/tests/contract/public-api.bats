@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Contract tests — public API inventory.
 # Every mantle_* function in lib/core/ and lib/bash/ should have at least
 # one call site in the test suite.

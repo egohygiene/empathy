@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2154 # Bats injects output, lines, status, and stderr.
 #
 # Custom Bats assertion helpers for the Mantle test suite.
 #

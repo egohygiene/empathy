@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Contract tests — namespace hygiene and legacy-reference checks.
 
 setup() {

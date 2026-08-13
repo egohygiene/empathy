@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2034 # Declarative installer metadata is consumed by the runtime.
 # Install libE57Format development files with the native package manager.
 
 set -o errexit

@@ -1,4 +1,5 @@
-#!/bin/sh
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=sh
 #
 # Load the shell-neutral core libraries required by every Mantle runtime.

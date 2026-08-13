@@ -1,3 +1,5 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Mantle disables supported telemetry by default. Set MANTLE_DISABLE_TELEMETRY=0
 # before sourcing the runtime to preserve each tool's native behavior.
 # Wrapped in a function so that `return` works in fish < 3.4 (e.g. Ubuntu 22.04

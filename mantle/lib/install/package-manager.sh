@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 #
 # Detect the host's preferred native package manager without installing packages.

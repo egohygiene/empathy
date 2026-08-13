@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 #
 # Provide Bash-native validation predicates and dotted-version comparison.

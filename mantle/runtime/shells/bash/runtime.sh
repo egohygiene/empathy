@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 #
 # Load Mantle's Bash-specific introspection and utility libraries.

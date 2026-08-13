@@ -24,23 +24,23 @@ fi
 mantle_env_format="text"
 while (($# > 0)); do
 	case "$1" in
-		--summary)
-			printf "Show Mantle's public environment state.\n"
-			exit 0
-			;;
-		--shell)
-			mantle_env_format="shell"
-			shift
-			;;
-		--help | -h)
-			mantle_env_usage
-			exit 0
-			;;
-		*)
-			printf "[mantle:error] unknown env option: %s\n" "$1" >&2
-			mantle_env_usage >&2
-			exit 64
-			;;
+	--summary)
+		printf "Show Mantle's public environment state.\n"
+		exit 0
+		;;
+	--shell)
+		mantle_env_format="shell"
+		shift
+		;;
+	--help | -h)
+		mantle_env_usage
+		exit 0
+		;;
+	*)
+		printf "[mantle:error] unknown env option: %s\n" "$1" >&2
+		mantle_env_usage >&2
+		exit 64
+		;;
 	esac
 done
 

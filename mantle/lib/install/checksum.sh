@@ -1,5 +1,8 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2312 # These substitutions are validated by their enclosing operation.
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 #
 # Calculate and verify SHA-256 and SHA-512 file digests portably.
 

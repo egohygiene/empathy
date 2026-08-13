@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 #
 # Configure XDG-aware locations for developer tools. Existing values always
 # win. Stateful tools with legacy data move only through an explicit migration;

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2310 # Functions explicitly return and callers inspect every relevant status.
+# shellcheck disable=SC2034 # Declarative installer metadata is consumed by the runtime.
 # Install or update pyenv and its maintained companion plugins.
 
 set -o errexit

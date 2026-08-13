@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 #
 # Redirect supported tool caches, temporary data, and logs into Mantle's XDG
 # directory contract. Existing user-selected values take precedence.

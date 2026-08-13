@@ -1,4 +1,5 @@
-#!/usr/bin/env zsh
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 #
 # Establish Mantle's Zsh-specific runtime adapter.
 #

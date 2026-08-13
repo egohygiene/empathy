@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 #
 # Configure Mantle's portable locale, editor, executable-path, and language
 # runtime defaults. Existing user-selected values take precedence.

@@ -1,5 +1,8 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2154 # Runtime or test-harness contracts inject these variables.
+# shellcheck disable=SC2249 # Closed case statements intentionally treat unmatched values as no-ops.
 # Install operating-system packages without implicit privilege escalation.
 
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then

@@ -1,3 +1,5 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Wrapped in a function so that `return` works in fish < 3.4 (e.g. Ubuntu 22.04
 # ships fish 3.3.1 which disallows `return` outside a function definition).
 function __mantle_fish_abbreviations

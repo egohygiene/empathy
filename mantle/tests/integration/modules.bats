@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Integration tests for module behavior (xdg, privacy, update-checks, etc.).
 
 setup() {
