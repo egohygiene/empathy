@@ -55,7 +55,8 @@ Mantle is an actively developed project with a real CLI, runtime modules, platfo
 - Bash and Zsh initialization through the repository-level `.shellrc`.
 - Native Fish runtime loading through `runtime/shells/fish/runtime.fish`.
 - Portable shared/runtime bootstrapping, XDG directory management, privacy defaults, PATH construction, and interactive history policy.
-- Public `mantle help`, `mantle version`, and `mantle install` command surfaces.
+- Public help, version, diagnostics, environment, path, completion, Fastfetch,
+  and installer command surfaces through `bin/mantle`.
 - Dynamic installer discovery and tested dry-run/help flows for representative installers such as `eza`, `shfmt`, `shdoc`, `pyenv`, `linuxbrew`, and `talisman`.
 - CI-backed validation on Linux and macOS, plus static validation for shell syntax, ShellCheck, and formatting when local tools are available.
 
@@ -161,6 +162,8 @@ That flow is non-destructive: it initializes Mantle for the current shell sessio
 ```sh
 mantle help
 mantle version
+mantle doctor
+mantle env
 mantle install --list
 ```
 
@@ -199,6 +202,18 @@ mantle help
 mantle help install
 mantle version
 mantle version --short
+mantle doctor
+mantle env
+mantle env --shell
+mantle path --root
+mantle path --entries
+mantle fastfetch runtime
+mantle fastfetch workspace
+mantle fastfetch toolchains
+mantle fastfetch contexts
+mantle completion bash
+mantle completion zsh
+mantle completion fish
 mantle install --help
 mantle install --list
 mantle install eza --help
@@ -221,6 +236,19 @@ mantle install talisman --dry-run
 - Invalid command names and unknown global options exit with status `64`, and non-executable internal command implementations exit with status `70`.
 
 Installer destinations are configurable per installer where supported. For example, installers may expose flags such as `--install-dir`, `--destination`, `--target`, `--ref`, or tool-specific home-directory options.
+
+### Diagnostics and environment behavior
+
+- `mantle doctor` performs read-only installation checks and reports whether
+  the CLI is available on the current `PATH`.
+- `mantle env` prints only Mantle's public environment contract rather than the
+  complete process environment; `--shell` renders safely quoted exports.
+- `mantle path` reports the resolved installation paths, while `--entries`
+  prints the executable search path one entry per line.
+- `mantle fastfetch` exposes the four compact collectors referenced by the
+  checked-in Fastfetch configuration without printing hostnames or addresses.
+- `mantle completion bash|zsh|fish` generates completion definitions from the
+  currently installed commands and installers.
 
 ## Configuration
 

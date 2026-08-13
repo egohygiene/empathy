@@ -147,6 +147,12 @@ Pods/
 [Oo]bj/
 TestResults/
 
+# Mantle's public CLI and CLI coverage map are source, not .NET output.
+!mantle/bin/
+!mantle/bin/**
+!mantle/tests/bin/
+!mantle/tests/bin/**
+
 # Build and package outputs
 **/build/
 **/dist/

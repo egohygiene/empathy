@@ -207,7 +207,12 @@ teardown() {
 	assert_output_contains "codespaces"
 }
 
-@test ".shellrc detects local environment without CI variables" {
+@test ".shellrc detects the host runtime environment without CI variables" {
+	local expected_environment="local"
+	if [[ -f "/.dockerenv" ]]; then
+		expected_environment="container"
+	fi
+
 	run env -i \
 		HOME="${TEST_HOME}" \
 		PATH="${PATH}" \
@@ -217,5 +222,5 @@ teardown() {
 			printf '%s\n' \"\${MANTLE_RUNTIME_ENVIRONMENT}\"
 		"
 	assert_success
-	assert_output_contains "local"
+	assert_output_contains "${expected_environment}"
 }

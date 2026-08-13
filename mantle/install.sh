@@ -21,7 +21,9 @@ readonly MANTLE_SOURCE_ROOT
 MANTLE_PAYLOAD_ITEMS=(
 	".shellrc"
 	"bin"
+	"config"
 	"lib"
+	"libexec"
 	"init"
 	"modules"
 	"platforms"

@@ -172,6 +172,53 @@ _mantle() {
 }
 
 # ---------------------------------------------------------------------------
+# Initial public diagnostics and environment commands
+# ---------------------------------------------------------------------------
+
+@test "mantle doctor validates the repository installation" {
+	_mantle doctor
+	assert_success
+	assert_output_contains "status: ok"
+}
+
+@test "mantle env reports the resolved installation root" {
+	_mantle env
+	assert_success
+	assert_output_contains "MANTLE_ROOT"
+	assert_output_contains "${MANTLE_ROOT}"
+}
+
+@test "mantle env --shell emits reusable exports" {
+	_mantle env --shell
+	assert_success
+	assert_output_contains "export MANTLE_ROOT="
+}
+
+@test "mantle path --root prints only the resolved root" {
+	_mantle path --root
+	assert_success
+	[[ "${output}" == "${MANTLE_ROOT}" ]]
+}
+
+@test "mantle fastfetch exposes every configured collector" {
+	local collector
+	for collector in runtime workspace toolchains contexts; do
+		_mantle fastfetch "${collector}"
+		assert_success
+		[[ -n "${output}" ]]
+	done
+}
+
+@test "mantle completion generates definitions for supported shells" {
+	local shell_name
+	for shell_name in bash zsh fish; do
+		_mantle completion "${shell_name}"
+		assert_success
+		assert_output_contains "mantle"
+	done
+}
+
+# ---------------------------------------------------------------------------
 # Symlink invocation
 # ---------------------------------------------------------------------------
 
