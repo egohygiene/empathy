@@ -27,11 +27,6 @@ if [[ -d "/var/lib/snapd/desktop" ]]; then
 		;;
 	esac
 fi
-if [[ -r "${MANTLE_ROOT}/platforms/linux/aliases.sh" ]]; then
-	# shellcheck disable=SC1091
-	source "${MANTLE_ROOT}/platforms/linux/aliases.sh" || return 1
-fi
-
 MANTLE_PLATFORM_RUNTIME="linux"
 MANTLE_PLATFORM_LINUX_LOADED="1"
 export MANTLE_PLATFORM_RUNTIME

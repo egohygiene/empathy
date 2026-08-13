@@ -156,6 +156,7 @@ layer_allows_dependency() {
 	layer_allows_dependency "initialization" "shared-runtime"
 	layer_allows_dependency "initialization" "shell-runtime"
 	layer_allows_dependency "initialization" "module-loader"
+	layer_allows_dependency "initialization" "config-library"
 	layer_allows_dependency "initialization" "platform"
 	layer_allows_dependency "shared-runtime" "core-library"
 	layer_allows_dependency "shell-runtime" "core-library"
@@ -165,6 +166,7 @@ layer_allows_dependency() {
 	layer_allows_dependency "installer" "install-library"
 	layer_allows_dependency "install-library" "core-library"
 	layer_allows_dependency "install-library" "install-library"
+	layer_allows_dependency "command" "config-library"
 }
 
 @test "layers without source dependencies contain no active source command" {

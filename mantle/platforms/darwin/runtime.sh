@@ -32,14 +32,6 @@ for __mantle_darwin_path in "/usr/local/sbin" "/usr/local/bin" "/opt/homebrew/sb
 	fi
 done
 
-if [[ -r "${MANTLE_ROOT}/platforms/darwin/aliases.sh" ]]; then
-	# shellcheck disable=SC1091
-	source "${MANTLE_ROOT}/platforms/darwin/aliases.sh" || {
-		unset __mantle_darwin_path
-		return 1
-	}
-fi
-
 MANTLE_PLATFORM_RUNTIME="darwin"
 MANTLE_PLATFORM_DARWIN_LOADED="1"
 export MANTLE_PLATFORM_RUNTIME

@@ -40,6 +40,8 @@ define which files are direct entrypoints.
 - Core and Bash libraries own reusable, side-effect-limited primitives. Core
   owns all mutation of `PATH` through `mantle_core_path_prepend` and
   `mantle_core_path_append`.
+- The config library owns schema parsing, profile resolution, precedence, and
+  provenance reporting. It treats user configuration strictly as data.
 - Modules choose portable environment values and candidates. They consume core
   APIs instead of reimplementing primitives.
 - Platform adapters choose OS-specific values and candidates after portable
@@ -57,14 +59,15 @@ library layers. A lower-level library must never depend on a public entrypoint.
 | Consumer                    | May depend on                                                            |
 | --------------------------- | ------------------------------------------------------------------------ |
 | Shell entrypoint            | Initialization                                                           |
-| Initialization              | Core, shared/shell runtime, module loader, modules, platform, extensions |
+| Initialization              | Config, core, shared/shell runtime, module loader, modules, platform, extensions |
 | Shared/shell runtime        | Core and Bash libraries; other shell-runtime files                       |
 | Module loader               | Modules                                                                  |
 | Modules and platforms       | Core APIs; platforms may source same-platform files                      |
 | Installer entrypoint        | A copied shell entrypoint during activation                              |
 | Installer implementations   | Install runtime and libraries                                            |
 | Install libraries           | Core and other install libraries                                         |
-| CLI dispatcher and commands | No source-time dependency; dispatch is process isolated                  |
+| CLI dispatcher              | No source-time dependency; dispatch is process isolated                  |
+| Config CLI command          | Config library                                                           |
 
 The complete allowed-dependency sets live in the layer registry. Adding a
 maintained shell file requires assigning exactly one layer. Adding a new
@@ -75,11 +78,12 @@ test when the edge is dynamic.
 
 1. `.shellrc` resolves and validates `MANTLE_ROOT`.
 2. `init/init.sh` loads core/runtime adapters, the extension loader, the module
-   loader, and the bootstrap orchestrator.
-3. Bootstrap loads portable modules in dependency order.
-4. The active platform adapter applies OS-specific behavior.
-5. Interactive-only modules load only for interactive sessions.
-6. Successful initialization records an idempotent initialized state; failures
+   loader, and the typed configuration resolver.
+3. Bootstrap resolves the selected profile and environment overrides.
+4. Bootstrap loads portable modules in dependency order.
+5. The active platform adapter applies OS-specific behavior.
+6. Profile-enabled capability modules load only where applicable.
+7. Successful initialization records an idempotent initialized state; failures
    remain visible and retryable.
 
 Fish uses its native runtime entrypoint and configuration fragments rather than

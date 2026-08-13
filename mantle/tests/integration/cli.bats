@@ -195,6 +195,34 @@ _mantle() {
 	assert_output_contains "export MANTLE_ROOT="
 }
 
+@test "mantle config lists the built-in typed profiles" {
+	_mantle config list-profiles
+	assert_success
+	assert_output_contains "standard"
+	assert_output_contains "workbench"
+	assert_output_contains "share-safe"
+}
+
+@test "mantle config show reports effective standard defaults" {
+	_mantle config show
+	assert_success
+	assert_output_contains "schema_version=1"
+	assert_output_contains "profile=standard"
+	assert_output_contains "aliases.safe=true"
+}
+
+@test "mantle config explain reports value provenance" {
+	_mantle config explain aliases.safe
+	assert_success
+	assert_output_contains "profile:standard"
+	assert_output_contains "interactive"
+}
+
+@test "mantle config rejects unknown explain settings" {
+	_mantle config explain unknown.setting
+	assert_status 64
+}
+
 @test "mantle path --root prints only the resolved root" {
 	_mantle path --root
 	assert_success
@@ -217,6 +245,12 @@ _mantle() {
 		assert_success
 		assert_output_contains "mantle"
 	done
+}
+
+@test "mantle completion includes typed config subcommands" {
+	_mantle completion bash
+	assert_success
+	assert_output_contains "list-profiles path validate show explain"
 }
 
 # ---------------------------------------------------------------------------

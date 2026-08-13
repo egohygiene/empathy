@@ -6,13 +6,14 @@ path	layer	visibility	owner	allowed_dependencies
 .shellrc	shell-entrypoint	public	initialization	initialization
 bin/	cli-entrypoint	public	cli	none
 install.sh	install-entrypoint	public	installation	shell-entrypoint
-init/	initialization	internal	initialization	initialization,core-library,extension-library,module-loader,platform,shared-runtime,shell-runtime
+init/	initialization	internal	initialization	initialization,config-library,core-library,extension-library,module-loader,platform,shared-runtime,shell-runtime
 lib/core/	core-library	public	runtime	none
 lib/bash/	bash-library	public	runtime	core-library
+lib/config/	config-library	internal	configuration	none
 lib/extensions/	extension-library	optional	extensions	core-library
 lib/install/	install-library	internal	installation	core-library,install-library
 lib/modules.sh	module-loader	public	initialization	module
-libexec/mantle/commands/	command	internal	cli	none
+libexec/mantle/commands/	command	internal	cli	config-library
 libexec/mantle/installers/	installer	internal	installation	install-library
 modules/	module	internal	environment	core-library
 platforms/	platform	internal	platform	core-library,platform

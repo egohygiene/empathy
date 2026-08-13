@@ -120,6 +120,7 @@ tests/
 ├── contract/               Repository-layout and public-API contract tests
 │   ├── architecture-boundaries.bats
 │   │                         Layer ownership and dependency direction
+│   ├── configuration.bats    Typed profile and registry contracts
 │   └── source-policy.bats   License, shebang, and executable-role policy
 ├── integration/            Integration tests for bin/mantle and shell bootstrap
 │   └── runner.bats         Black-box failure-injection tests for tests/run.sh
