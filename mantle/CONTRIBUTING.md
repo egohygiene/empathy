@@ -60,11 +60,29 @@ Before opening a pull request, install every required validation tool and run:
 The contract suite rejects missing license metadata, misplaced executable bits,
 noncanonical executable shebangs, and shebangs on source-only files.
 
+## Architecture and provenance
+
+Read [`ARCHITECTURE.md`](ARCHITECTURE.md) before moving runtime behavior between
+directories. Every maintained shell file must match exactly one row in
+[`config/architecture/layers.tsv`](config/architecture/layers.tsv), and every
+new source-time dependency must follow that layer's declared direction.
+
+Keep reusable primitives in `lib/core/` or `lib/bash/`, portable environment
+policy in `modules/`, OS-specific choices in `platforms/`, shell-specific
+behavior in `runtime/shells/`, and orchestration in `init/`. In particular,
+core owns PATH mutation; modules and platforms only choose path candidates.
+
+Follow [`PROVENANCE.md`](PROVENANCE.md) when adding generated, copied, adapted,
+or vendored material. Unknown provenance is a release blocker.
+
 ## Adding files
 
 1. Choose the file's role before writing it.
 2. Add the canonical copyright and SPDX metadata.
 3. Set executable mode only for one of the executable locations above.
 4. Register new public commands in `tests/bin/coverage-map.tsv`.
-5. Add behavioral coverage at the narrowest appropriate test layer.
-6. Run formatting and strict validation before submission.
+5. Register new maintained shell paths or dependency changes in
+   `config/architecture/layers.tsv`.
+6. Update `PROVENANCE.md` for third-party or generated material.
+7. Add behavioral coverage at the narrowest appropriate test layer.
+8. Run formatting and strict validation before submission.

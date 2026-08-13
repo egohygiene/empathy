@@ -12,12 +12,13 @@ if [[ -z "${MANTLE_ROOT:-}" || ! -d "${MANTLE_ROOT}" ]]; then
 	return 1
 fi
 
+if ! command -v mantle_core_path_append >/dev/null 2>&1; then
+	printf "[mantle:error] linux runtime requires the core PATH API\n" >&2
+	return 1
+fi
+
 if [[ -d "/snap/bin" ]]; then
-	case ":${PATH:-}:" in *":/snap/bin:"*) ;; *)
-		PATH="${PATH:+${PATH}:}/snap/bin"
-		export PATH
-		;;
-	esac
+	mantle_core_path_append "/snap/bin" || return 1
 fi
 if [[ -d "/var/lib/snapd/desktop" ]]; then
 	case ":${XDG_DATA_DIRS:-}:" in *":/var/lib/snapd/desktop:"*) ;; *)

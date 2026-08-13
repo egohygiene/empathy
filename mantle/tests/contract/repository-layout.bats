@@ -152,3 +152,9 @@ setup() {
 @test "lib/modules.sh exists" {
 	assert_file_exists "${MANTLE_ROOT}/lib/modules.sh"
 }
+
+@test "architecture and provenance contracts exist" {
+	assert_file_exists "${MANTLE_ROOT}/ARCHITECTURE.md"
+	assert_file_exists "${MANTLE_ROOT}/PROVENANCE.md"
+	assert_file_exists "${MANTLE_ROOT}/config/architecture/layers.tsv"
+}
