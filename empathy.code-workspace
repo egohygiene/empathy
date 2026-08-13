@@ -9,18 +9,6 @@
     "git.ignoreLimitWarning": true,
     "telemetry.feedback.enabled": false,
     "terminal.integrated.defaultProfile.linux": "bash",
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "workbench.colorCustomizations": {
-      "activityBar.background": "#832577",
-      "activityBar.foreground": "#e7e7e7",
-      "editorGroup.border": "#832577",
-      "panel.border": "#832577",
-      "sideBar.border": "#832577",
-      "statusBar.background": "#5b1a53",
-      "statusBar.foreground": "#e7e7e7",
-      "tab.activeBorder": "#832577",
-      "titleBar.activeBackground": "#5b1a53",
-      "titleBar.activeForeground": "#e7e7e7"
-    }
+    "terminal.integrated.defaultProfile.osx": "zsh"
   }
 }
