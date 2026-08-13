@@ -62,6 +62,13 @@ cd bats-core && ./install.sh /usr/local
 ./tests/run.sh --strict static
 ```
 
+From the Empathy repository root, run strict validation plus the real
+temporary-prefix installation smoke test with:
+
+```sh
+task mantle:ci
+```
+
 `MANTLE_VALIDATION_STRICT=1` is equivalent to `--strict`. Pass `--local` to
 explicitly select the developer-friendly mode that records unavailable optional
 tools as skips.
@@ -116,6 +123,8 @@ tests/
 │   └── source-policy.bats   License, shebang, and executable-role policy
 ├── integration/            Integration tests for bin/mantle and shell bootstrap
 │   └── runner.bats         Black-box failure-injection tests for tests/run.sh
+├── smoke/
+│   └── install.sh          Hermetic real-install lifecycle smoke test
 ├── test_helper/            Shared helpers for unit/integration/contract layers
 │   ├── assertions.bash
 │   ├── common.bash

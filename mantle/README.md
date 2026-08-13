@@ -7,11 +7,11 @@
 <p>A portable, modular shell environment and developer-tooling framework for local-first development.</p>
 
 <p>
-  <a href="https://github.com/egohygiene/mantle/actions/workflows/test.yml"><img src="https://github.com/egohygiene/mantle/actions/workflows/test.yml/badge.svg?branch=main" alt="GitHub Actions status for the Test Suite workflow on main" /></a>
-  <a href="https://github.com/egohygiene/mantle/blob/main/.github/workflows/test.yml"><img src="https://img.shields.io/badge/workflow-test.yml-181717?style=flat-square&logo=githubactions&logoColor=white" alt="Workflow file: test.yml" /></a>
-  <a href="https://github.com/egohygiene/mantle/blob/main/tests/README.md"><img src="https://img.shields.io/badge/tests-Bats%20%2B%20ShellCheck-2E8B57?style=flat-square" alt="Tests use Bats and ShellCheck-based validation" /></a>
-  <a href="https://github.com/egohygiene/mantle/blob/main/.shellrc"><img src="https://img.shields.io/badge/shells-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25?style=flat-square" alt="Supported shell runtimes: Bash, Zsh, and Fish" /></a>
-  <a href="https://github.com/egohygiene/mantle/blob/main/platforms/README.md"><img src="https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20MSYS2%2FGit%20Bash-0A66C2?style=flat-square" alt="Platform coverage: Linux, macOS, and Windows Unix-compatible shells" /></a>
+  <a href="https://github.com/egohygiene/empathy/actions/workflows/mantle.yml"><img src="https://github.com/egohygiene/empathy/actions/workflows/mantle.yml/badge.svg?branch=main" alt="GitHub Actions status for Mantle validation on main" /></a>
+  <a href="https://github.com/egohygiene/empathy/blob/main/.github/workflows/mantle.yml"><img src="https://img.shields.io/badge/workflow-mantle.yml-181717?style=flat-square&logo=githubactions&logoColor=white" alt="Workflow file: mantle.yml" /></a>
+  <a href="https://github.com/egohygiene/empathy/blob/main/mantle/tests/README.md"><img src="https://img.shields.io/badge/tests-Bats%20%2B%20ShellCheck-2E8B57?style=flat-square" alt="Tests use Bats and ShellCheck-based validation" /></a>
+  <a href="https://github.com/egohygiene/empathy/blob/main/mantle/.shellrc"><img src="https://img.shields.io/badge/shells-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25?style=flat-square" alt="Supported shell runtimes: Bash, Zsh, and Fish" /></a>
+  <a href="https://github.com/egohygiene/empathy/blob/main/mantle/platforms/README.md"><img src="https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20MSYS2%2FGit%20Bash-0A66C2?style=flat-square" alt="Platform coverage: Linux, macOS, and Windows Unix-compatible shells" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License" /></a>
 </p>
 
@@ -105,16 +105,16 @@ Mantle is an actively developed project with a real CLI, runtime modules, platfo
 
 ## Supported environments
 
-| Environment | Status | Runtime | Notes |
-| --- | --- | --- | --- |
-| Bash | Supported | `.shellrc` | Public entrypoint; tested locally and in CI. |
-| Zsh | Supported | `.shellrc` | Public entrypoint; tested locally and in CI when Zsh is available. |
-| Fish | Supported with separate entrypoint | `runtime/shells/fish/runtime.fish` | Requires explicit `MANTLE_ROOT`; does not use `.shellrc`. |
-| POSIX shell | Baseline/shared support | `runtime/shells/posix/runtime.sh` | Shared layer loaded before shell-specific runtime; not a standalone public entrypoint here. |
-| Linux | Supported | `platforms/linux/runtime.sh` | Covered by CI and used for Linux/WSL detection. |
-| macOS | Supported | `platforms/darwin/runtime.sh` | Covered by CI; intended for Apple Silicon and Intel. |
-| Windows / MSYS2 / Git Bash | Experimental | `platforms/windows/runtime.sh` | Minimal Unix-compatible adapter only; native PowerShell is out of scope. |
-| WSL | Supported through Linux adapter | `platforms/linux/runtime.sh` | Runtime environment can classify WSL; platform adapter normalizes to Linux. |
+| Environment                | Status                             | Runtime                            | Notes                                                                                       |
+| -------------------------- | ---------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------- |
+| Bash                       | Supported                          | `.shellrc`                         | Public entrypoint; tested locally and in CI.                                                |
+| Zsh                        | Supported                          | `.shellrc`                         | Public entrypoint; tested locally and in CI when Zsh is available.                          |
+| Fish                       | Supported with separate entrypoint | `runtime/shells/fish/runtime.fish` | Requires explicit `MANTLE_ROOT`; does not use `.shellrc`.                                   |
+| POSIX shell                | Baseline/shared support            | `runtime/shells/posix/runtime.sh`  | Shared layer loaded before shell-specific runtime; not a standalone public entrypoint here. |
+| Linux                      | Supported                          | `platforms/linux/runtime.sh`       | Covered by CI and used for Linux/WSL detection.                                             |
+| macOS                      | Supported                          | `platforms/darwin/runtime.sh`      | Covered by CI; intended for Apple Silicon and Intel.                                        |
+| Windows / MSYS2 / Git Bash | Experimental                       | `platforms/windows/runtime.sh`     | Minimal Unix-compatible adapter only; native PowerShell is out of scope.                    |
+| WSL                        | Supported through Linux adapter    | `platforms/linux/runtime.sh`       | Runtime environment can classify WSL; platform adapter normalizes to Linux.                 |
 
 ## Quick start
 
@@ -254,26 +254,26 @@ Installer destinations are configurable per installer where supported. For examp
 
 Mantle uses standard environment variables rather than a repository-specific config file. The table below focuses on public or user-relevant variables that shape runtime behavior.
 
-| Variable | Default | Purpose | Example |
-| --- | --- | --- | --- |
-| `MANTLE_ROOT` | Resolved from the entrypoint or CLI | Absolute path to the Mantle installation root | `export MANTLE_ROOT="$HOME/src/mantle"` |
-| `MANTLE_SHELL_NAME` | Detected (`bash`, `zsh`, `fish`) | Active shell runtime identifier | `export MANTLE_SHELL_NAME="bash"` |
-| `MANTLE_INTERACTIVE` | Detected from the current shell | Distinguishes interactive and noninteractive initialization | `export MANTLE_INTERACTIVE="1"` |
-| `MANTLE_DISABLE_TELEMETRY` | `1` | Enables Mantle's telemetry opt-out defaults when set to `1` | `export MANTLE_DISABLE_TELEMETRY="1"` |
-| `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS` | `0` | Opts into the update-check suppression module | `export MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS="1"` |
-| `MANTLE_ENABLE_PROJECT_PATH` | `0` | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled | `export MANTLE_ENABLE_PROJECT_PATH="1"` |
-| `MANTLE_CREATE_XDG_DIRECTORIES` | `1` | Creates missing XDG directories and `XDG_BIN_HOME` | `export MANTLE_CREATE_XDG_DIRECTORIES="0"` |
-| `MANTLE_HISTORY_SIZE` | `50000` | Controls interactive shell and REPL history sizing | `export MANTLE_HISTORY_SIZE="100000"` |
-| `MANTLE_DEBUG` | `0` | Enables additional debug logging and loader diagnostics | `export MANTLE_DEBUG="1"` |
-| `XDG_CONFIG_HOME` | `"$HOME/.config"` | XDG config root | `export XDG_CONFIG_HOME="$HOME/.config"` |
-| `XDG_CACHE_HOME` | `"$HOME/.cache"` | XDG cache root | `export XDG_CACHE_HOME="$HOME/.cache"` |
-| `XDG_DATA_HOME` | `"$HOME/.local/share"` | XDG data root and default base for many managed tool directories | `export XDG_DATA_HOME="$HOME/.local/share"` |
-| `XDG_STATE_HOME` | `"$HOME/.local/state"` | XDG state root, including history storage | `export XDG_STATE_HOME="$HOME/.local/state"` |
-| `XDG_RUNTIME_DIR` | Platform-specific secure fallback | Private runtime directory for transient state | `export XDG_RUNTIME_DIR="/run/user/1000"` |
-| `XDG_BIN_HOME` | `"$HOME/.local/bin"` | User-owned executable destination added to PATH | `export XDG_BIN_HOME="$HOME/.local/bin"` |
-| `TALISMAN_HOME` | `"$XDG_DATA_HOME/talisman"` | Example installer destination override for `talisman` | `export TALISMAN_HOME="$HOME/.local/share/talisman"` |
-| `MANTLE_GITHUB_CONNECT_TIMEOUT` | `10` | Optional GitHub extension request connect timeout | `export MANTLE_GITHUB_CONNECT_TIMEOUT="5"` |
-| `MANTLE_GITHUB_REQUEST_TIMEOUT` | `30` | Optional GitHub extension request total timeout | `export MANTLE_GITHUB_REQUEST_TIMEOUT="15"` |
+| Variable                                 | Default                             | Purpose                                                           | Example                                              |
+| ---------------------------------------- | ----------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- |
+| `MANTLE_ROOT`                            | Resolved from the entrypoint or CLI | Absolute path to the Mantle installation root                     | `export MANTLE_ROOT="$HOME/src/mantle"`              |
+| `MANTLE_SHELL_NAME`                      | Detected (`bash`, `zsh`, `fish`)    | Active shell runtime identifier                                   | `export MANTLE_SHELL_NAME="bash"`                    |
+| `MANTLE_INTERACTIVE`                     | Detected from the current shell     | Distinguishes interactive and noninteractive initialization       | `export MANTLE_INTERACTIVE="1"`                      |
+| `MANTLE_DISABLE_TELEMETRY`               | `1`                                 | Enables Mantle's telemetry opt-out defaults when set to `1`       | `export MANTLE_DISABLE_TELEMETRY="1"`                |
+| `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS` | `0`                                 | Opts into the update-check suppression module                     | `export MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS="1"`  |
+| `MANTLE_ENABLE_PROJECT_PATH`             | `0`                                 | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled | `export MANTLE_ENABLE_PROJECT_PATH="1"`              |
+| `MANTLE_CREATE_XDG_DIRECTORIES`          | `1`                                 | Creates missing XDG directories and `XDG_BIN_HOME`                | `export MANTLE_CREATE_XDG_DIRECTORIES="0"`           |
+| `MANTLE_HISTORY_SIZE`                    | `50000`                             | Controls interactive shell and REPL history sizing                | `export MANTLE_HISTORY_SIZE="100000"`                |
+| `MANTLE_DEBUG`                           | `0`                                 | Enables additional debug logging and loader diagnostics           | `export MANTLE_DEBUG="1"`                            |
+| `XDG_CONFIG_HOME`                        | `"$HOME/.config"`                   | XDG config root                                                   | `export XDG_CONFIG_HOME="$HOME/.config"`             |
+| `XDG_CACHE_HOME`                         | `"$HOME/.cache"`                    | XDG cache root                                                    | `export XDG_CACHE_HOME="$HOME/.cache"`               |
+| `XDG_DATA_HOME`                          | `"$HOME/.local/share"`              | XDG data root and default base for many managed tool directories  | `export XDG_DATA_HOME="$HOME/.local/share"`          |
+| `XDG_STATE_HOME`                         | `"$HOME/.local/state"`              | XDG state root, including history storage                         | `export XDG_STATE_HOME="$HOME/.local/state"`         |
+| `XDG_RUNTIME_DIR`                        | Platform-specific secure fallback   | Private runtime directory for transient state                     | `export XDG_RUNTIME_DIR="/run/user/1000"`            |
+| `XDG_BIN_HOME`                           | `"$HOME/.local/bin"`                | User-owned executable destination added to PATH                   | `export XDG_BIN_HOME="$HOME/.local/bin"`             |
+| `TALISMAN_HOME`                          | `"$XDG_DATA_HOME/talisman"`         | Example installer destination override for `talisman`             | `export TALISMAN_HOME="$HOME/.local/share/talisman"` |
+| `MANTLE_GITHUB_CONNECT_TIMEOUT`          | `10`                                | Optional GitHub extension request connect timeout                 | `export MANTLE_GITHUB_CONNECT_TIMEOUT="5"`           |
+| `MANTLE_GITHUB_REQUEST_TIMEOUT`          | `30`                                | Optional GitHub extension request total timeout                   | `export MANTLE_GITHUB_REQUEST_TIMEOUT="15"`          |
 
 Notes:
 
@@ -468,6 +468,22 @@ Mantle ships a canonical test runner at `./tests/run.sh`.
 ./tests/run.sh format
 ```
 
+From the Empathy repository root, the equivalent task contract is:
+
+```sh
+task mantle:status
+task mantle:test
+task mantle:lint
+task mantle:install:smoke
+task mantle:docs
+task mantle:ci
+```
+
+`task mantle:ci` reproduces the strict GitHub Actions contract. It requires
+Bats, Bash, Zsh, Fish, ShellCheck, shdoc, and shfmt. The root
+`task mantle:check` command uses developer-friendly validation and records
+unavailable optional tools as explicit skips.
+
 What the current test harness provides:
 
 - Bats-based unit, integration, and contract tests.
@@ -476,10 +492,8 @@ What the current test harness provides:
 - Hermetic temporary-home isolation for tests that interact with shell state.
 - Root-installer integration coverage for copy installs, symlink installs, shell
   activation, dry-run, status, uninstall, and rollback.
-- CI coverage for:
-  - `static` on Ubuntu
-  - `test-linux` on Ubuntu with Bash, Zsh, and Fish
-  - `test-macos` on macOS with Bash and Zsh
+- Root-level CI coverage on Ubuntu and macOS with Bash, Zsh, Fish, strict static
+  analysis, and a real temporary-prefix installation lifecycle.
 
 For local setup details, fixture guidance, command stubs, and debugging failed tests, see [`tests/README.md`](tests/README.md).
 

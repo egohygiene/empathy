@@ -71,6 +71,61 @@
       "command": "task",
       "args": ["tools:versions"],
       "problemMatcher": []
+    },
+    {
+      "label": "mantle: status",
+      "type": "shell",
+      "command": "task",
+      "args": ["mantle:status"],
+      "problemMatcher": []
+    },
+    {
+      "label": "mantle: test",
+      "type": "shell",
+      "command": "task",
+      "args": ["mantle:test"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "mantle: lint",
+      "type": "shell",
+      "command": "task",
+      "args": ["mantle:lint"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "mantle: install smoke",
+      "type": "shell",
+      "command": "task",
+      "args": ["mantle:install:smoke"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "mantle: docs",
+      "type": "shell",
+      "command": "task",
+      "args": ["mantle:docs"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "mantle: check",
+      "type": "shell",
+      "command": "task",
+      "args": ["mantle:check"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "mantle: ci",
+      "type": "shell",
+      "command": "task",
+      "args": ["mantle:ci"],
+      "group": "test",
+      "problemMatcher": []
     }
   ]
 }

@@ -7,6 +7,9 @@ includes:
   egolint:
     taskfile: ./egolint/tasks/lint.yml
     dir: .
+  mantle:
+    taskfile: ./mantle/Taskfile.yml
+    dir: ./mantle
   tool:
     taskfile: ./egolint/tasks/complementary.yml
     dir: .
@@ -29,6 +32,7 @@ tasks:
       - architecture:check
       - format:check
       - lint
+      - mantle:check
       - test
     cmds:
       - git diff --check

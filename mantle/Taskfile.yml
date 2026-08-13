@@ -1,0 +1,48 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+tasks:
+  default:
+    desc: List the Mantle task contract
+    cmds:
+      - task --list
+    silent: true
+
+  status:
+    desc: Diagnose the repository-local Mantle installation
+    cmds:
+      - ./bin/mantle doctor
+
+  test:
+    desc: Run Mantle's complete developer-friendly validation suite
+    cmds:
+      - ./tests/run.sh --local
+
+  lint:
+    desc: Run Mantle's developer-friendly static validation
+    cmds:
+      - ./tests/run.sh --local static
+
+  install:smoke:
+    desc: Exercise a hermetic temporary-prefix install lifecycle
+    cmds:
+      - /bin/bash ./tests/smoke/install.sh
+
+  docs:
+    desc: Validate Mantle's documentation contract
+    cmds:
+      - ./tests/run.sh tests/contract/documentation.bats
+
+  check:
+    desc: Run the local Mantle validation and installation contract
+    cmds:
+      - task: test
+      - task: install:smoke
+
+  ci:
+    desc: Reproduce the strict Mantle CI contract locally
+    cmds:
+      - ./tests/run.sh --strict
+      - task: install:smoke
