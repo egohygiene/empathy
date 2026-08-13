@@ -14,7 +14,11 @@ integration, contract, and bin CLI layers.
 | Zsh | any | Optional (tests skip if absent) |
 | Fish | any | Optional (tests skip if absent) |
 | `shellcheck` | any | Static analysis (optional) |
+| `shdoc` | any | Shell API documentation validation (optional) |
 | `shfmt` | 3.8.0 | Formatting check / write mode |
+
+The tools marked optional may be skipped only in local validation. Strict mode
+requires all of them and returns a nonzero status when any is unavailable.
 
 Install Bats using one of:
 
@@ -51,6 +55,17 @@ cd bats-core && ./install.sh /usr/local
 ./tests/run.sh format
 ```
 
+### Run strict CI-equivalent validation
+
+```sh
+./tests/run.sh --strict
+./tests/run.sh --strict static
+```
+
+`MANTLE_VALIDATION_STRICT=1` is equivalent to `--strict`. Pass `--local` to
+explicitly select the developer-friendly mode that records unavailable optional
+tools as skips.
+
 ### Run a single file
 
 ```sh
@@ -67,6 +82,11 @@ optional Zsh and Fish syntax checks, ShellCheck, `shdoc` parsing for
 `format` rewrites the maintained `bash`, `posix`, and `bats` file sets using the
 canonical `.editorconfig` policy and intentionally skips `.shellrc` plus the
 native Zsh runtime because `shfmt` does not support their syntax.
+
+Every invocation prints an authoritative summary containing the validation
+mode and the number of passed, failed, and skipped checks. A failed test,
+missing required directory, failed source discovery, empty selected suite,
+syntax error, or static-analysis failure always produces a nonzero exit status.
 
 ### Run a single test by name
 
@@ -92,6 +112,7 @@ tests/
 │   └── <command>.bats      Per-command behavioral tests
 ├── contract/               Repository-layout and public-API contract tests
 ├── integration/            Integration tests for bin/mantle and shell bootstrap
+│   └── runner.bats         Black-box failure-injection tests for tests/run.sh
 ├── test_helper/            Shared helpers for unit/integration/contract layers
 │   ├── assertions.bash
 │   ├── common.bash
@@ -129,12 +150,14 @@ bats tests/bin/shell-banner.bats
 ### Coverage map
 
 `tests/bin/coverage-map.tsv` is a tab-separated file with one row per `bin/`
-command. Columns:
+command. Test paths are relative to `tests/`, which allows a public command to
+reuse comprehensive integration coverage without creating an empty placeholder
+suite. Columns:
 
 | Column | Description |
 |--------|-------------|
 | `command` | Executable name in `bin/` |
-| `test_file` | Bats file (relative to `tests/bin/`) providing coverage |
+| `test_file` | Bats file (relative to `tests/`) providing coverage |
 | `categories` | Comma-separated behavior categories covered |
 | `exemptions` | Behaviors not covered (or `none`) |
 | `exemption_reason` | Justification for every exemption |
@@ -156,7 +179,7 @@ The guard runs as part of `./tests/run.sh bin` and in CI. It fails when a new
 1. Add an entry to `tests/bin/coverage-map.tsv`:
 
    ```
-   my-command	my-command.bats	help,version,unknown-option,core-behavior	none	none
+   my-command	bin/my-command.bats	help,version,unknown-option,core-behavior	none	none
    ```
 
 2. Create `tests/bin/my-command.bats`:
@@ -319,6 +342,9 @@ The bin/ CLI tests run on both Linux and macOS as part of each test job.
 
 Required shells (`bash`, `zsh`, `fish`) are installed in CI so required
 coverage never silently passes through skips.
+
+CI must invoke `./tests/run.sh --strict` so absent validation tools are failures
+rather than local-development skips.
 
 ### Which local skips are acceptable
 
