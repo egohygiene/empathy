@@ -1,0 +1,25 @@
+# OSV Scanner configuration for the empathy repository.
+# See: https://google.github.io/osv-scanner/configuration/
+
+# Vulnerabilities suppressed because no patched version has been published to
+# npm. All affected packages are devDependencies that are never shipped to
+# production. Each entry will be revisited when upstream publishes a fix.
+[[IgnoredVulns]]
+id = "GHSA-mp2f-45pm-3cg9"
+reason = "decompress@4.2.2 is not published to npm (latest: 4.2.1); only present as a transitive devDependency via shellcheck"
+
+[[IgnoredVulns]]
+id = "GHSA-h39j-r5qq-r9mm"
+reason = "decompress@4.2.2 is not published to npm (latest: 4.2.1); only present as a transitive devDependency via shellcheck"
+
+[[IgnoredVulns]]
+id = "GHSA-jwp9-9v96-94mx"
+reason = "decompress@4.2.2 is not published to npm (latest: 4.2.1); only present as a transitive devDependency via shellcheck"
+
+[[IgnoredVulns]]
+id = "GHSA-w3rx-r6r6-pgpr"
+reason = "image-size@2.0.3 is not published to npm (latest: 2.0.2); only present as a transitive devDependency via @docusaurus"
+
+[[IgnoredVulns]]
+id = "GHSA-5p2g-fcmc-qvqq"
+reason = "image-size@2.0.3 is not published to npm (latest: 2.0.2); only present as a transitive devDependency via @docusaurus"
