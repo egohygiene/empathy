@@ -36,3 +36,15 @@ A staged workflow may become canonical only after it:
   profile.
 
 Do not copy staged workflows into a generated repository unchanged.
+
+## Promotion ledger
+
+| Capability | Status | Reason / owner |
+| --- | --- | --- |
+| Dependency review | Promoted as an opt-in profile | A least-privilege pull-request gate with no product assumptions. Set `DEPENDENCY_REVIEW_ENABLED=true` only after enabling GitHub Dependency Graph. |
+| OpenSSF Scorecard | Already active | Empathy's canonical workflow is newer than the staged copy and will gain a stable dashboard summary in a later slice. |
+| OSV, SBOM, and Trivy | Already owned by current reports | Do not duplicate scanners. The repository dashboard will consume compact published summaries from the canonical scanners. |
+| Gitleaks | Not promoted | MegaLinter already runs secret-scanning coverage; adding another default scanner would duplicate alerts until an explicit policy selects it. |
+| DCO and REUSE | Optional governance profiles | Both are valuable but change contributor/release policy and belong behind opt-in organization profiles. |
+| Devcontainer, image, Flutter, release, and Quartz workflows | Profile-specific | Realm, application, release, and Mindgarden owners should promote them through their own contracts. |
+| Vitality audit | Redesign as dashboard collector | The staged Ruby script is a useful signal source, but the canonical implementation should emit the dashboard's versioned JSON contract. |

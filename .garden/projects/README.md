@@ -30,3 +30,7 @@ without introducing a second data store.
 The optional Project Manager integration is documented in the
 [Obsidian profile](../../mindgarden/profiles/obsidian/README.md). Community
 plugins remain human-installed and are not vendored or automatically trusted.
+
+## Active project notes
+
+- [[repository-intelligence-dashboard|Repository intelligence dashboard]]

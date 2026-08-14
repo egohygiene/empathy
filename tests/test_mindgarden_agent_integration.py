@@ -25,7 +25,7 @@ from scripts.validate_garden import validate_repository  # noqa: E402
 
 class MindgardenAgentIntegrationTests(unittest.TestCase):
     def test_repository_agent_projection_is_current_and_deterministic(self) -> None:
-        self.assertEqual(validate_repository(REPOSITORY_ROOT), 3)
+        self.assertEqual(validate_repository(REPOSITORY_ROOT), 4)
         first = canonical_json(build_index(REPOSITORY_ROOT))
         second = canonical_json(build_index(REPOSITORY_ROOT))
         self.assertEqual(first, second)

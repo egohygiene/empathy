@@ -1,0 +1,49 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Review dependency changes
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+permissions: {}
+
+concurrency:
+  group: "dependency-review-${{ github.event.pull_request.number }}"
+  cancel-in-progress: true
+
+jobs:
+  review:
+    name: Review dependency risk
+    if: vars.DEPENDENCY_REVIEW_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Review dependency changes
+        # actions/dependency-review-action v5.0.0
+        uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294
+        with:
+          fail-on-severity: high
+          comment-summary-in-pr: never
+          retry-on-snapshot-warnings: true
+          warn-only: false
+
+      - name: Write policy summary
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            printf '## Dependency review\n\n'
+            printf 'The pull request dependency diff was checked for known vulnerabilities.\n\n'
+            printf -- '- High and critical vulnerabilities block the workflow.\n'
+            printf -- '- License policy remains a selectable repository profile concern.\n'
+          } >> "${GITHUB_STEP_SUMMARY}"
