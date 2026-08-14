@@ -1,0 +1,48 @@
+filters:
+  and:
+    - 'file.inFolder(".garden")'
+    - 'file.ext == "md"'
+    - 'file.path != ".garden/templates/note.md"'
+properties:
+  file.name:
+    displayName: Note
+  kind:
+    displayName: Kind
+  status:
+    displayName: Status
+  reviewed:
+    displayName: Reviewed
+  confidence:
+    displayName: Confidence
+  updated:
+    displayName: Updated
+views:
+  - type: cards
+    name: Knowledge
+    order:
+      - file.name
+      - kind
+      - status
+      - confidence
+      - updated
+  - type: table
+    name: Needs review
+    filters:
+      or:
+        - "reviewed != true"
+        - 'status == "draft"'
+        - 'status == "proposed"'
+    order:
+      - file.name
+      - kind
+      - status
+      - confidence
+      - updated
+  - type: table
+    name: Projects
+    filters: 'kind == "project"'
+    order:
+      - file.name
+      - status
+      - confidence
+      - updated
