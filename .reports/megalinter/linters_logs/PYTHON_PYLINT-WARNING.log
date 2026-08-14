@@ -7,6 +7,10 @@ Linter raw log:
 ************* Module generate_lint_infographic
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:150:0: R0913: Too many arguments (8/7) (too-many-arguments)
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:171:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module normalize_repository_report
+.github/actions/normalize-repository-report/normalize_repository_report.py:139:0: R0913: Too many arguments (11/7) (too-many-arguments)
+.github/actions/normalize-repository-report/normalize_repository_report.py:232:0: R0914: Too many local variables (22/20) (too-many-locals)
+.github/actions/normalize-repository-report/normalize_repository_report.py:310:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 ************* Module validate-agents
 egolint/.agents/agents/validate-agents.py:84:0: R0912: Too many branches (26/12) (too-many-branches)
 ************* Module build-distributions

@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-42d4f849-c5f4-4b9d-b5c3-da6aa5b6cc04",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-5bbcddf3-0d2d-42d2-8706-7bc81b792886",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.50.0"
   ],
-  "created": "2026-08-14T18:08:19Z"
+  "created": "2026-08-14T20:30:33Z"
  },
  "packages": [
   {
@@ -274,6 +274,201 @@
    ]
   },
   {
+   "name": "./.github/actions/normalize-repository-report",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-9a33cdeb60265eaa",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/megalinter.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/normalize-repository-report",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-1a0c4ae9deac44db",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/ossf-scorecard.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/normalize-repository-report",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-f302c1084f6a5995",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/osv-scan.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
    "name": "./.github/actions/publish-report-snapshot",
    "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-publish-report-snapshot-243857b282062c6d",
    "versionInfo": "UNKNOWN",
@@ -347,6 +542,71 @@
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
    "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/megalinter.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/publish-report-snapshot",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-publish-report-snapshot-e452725c5fee6a9c",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/ossf-scorecard.yml",
    "licenseConcluded": "NOASSERTION",
    "licenseDeclared": "NOASSERTION",
    "copyrightText": "NOASSERTION",
@@ -77246,6 +77506,56 @@
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
    "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/megalinter.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c"
+    }
+   ]
+  },
+  {
+   "name": "actions/download-artifact",
+   "SPDXID": "SPDXRef-Package-github-action-actions-download-artifact-df89071e8de794b8",
+   "versionInfo": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/ossf-scorecard.yml",
    "licenseConcluded": "NOASSERTION",
    "licenseDeclared": "NOASSERTION",
    "copyrightText": "NOASSERTION",
@@ -248848,7 +249158,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "efa7c8946baeb57a96c5f5ad4386df1ce4ce3832202a77c23151d7cd4360ba03"
+     "checksumValue": "05bcf4c976812b052216f2d281cc9deb5ba6e1e1e4be1c9e9622b4a40ec15365"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -248884,7 +249194,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "c54df0f89c80e16d0a92327e532a273ea48b51393ea6dcbabce292bd8ff73b18"
+     "checksumValue": "f21e0dd05152a4f61aff330841cc54665b16f24716d02d28209b7cc191391700"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -248902,7 +249212,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "e5d5cde23c30a94e3b5b4309431550b8328822956b97692e5fb769663c940a1a"
+     "checksumValue": "478f3a11d272276b02b89ae4fdf8f3aa1a2b3663365bd9dc457dd0276464ddae"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -342229,6 +342539,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-1a0c4ae9deac44db",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--humanfs-node-1a125701f1777747",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -355351,6 +355667,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-9a33cdeb60265eaa",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-megalinter.yml-e06c6f17a0229f7b",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-is-unicode-supported-9a415de16e8eaa3f",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -362809,6 +363131,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-download-artifact-df89071e8de794b8",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-soupsieve-df8f1c49f784cc71",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
    "relationshipType": "OTHER",
@@ -363159,6 +363487,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-postcss-place-e451485c32a9eb4d",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-publish-report-snapshot-e452725c5fee6a9c",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -364609,6 +364943,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-f302c1084f6a5995",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-osv-scan.yml-28289e589bf36e7a",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-dart-pub-ego-hygiene-dart-analyzer-fixture-f30a35d55d0618c3",
    "relatedSpdxElement": "SPDXRef-File-...fixtures-dart-analyzer-pubspec.yaml-be37ea30db072d0c",
    "relationshipType": "OTHER",
@@ -365757,12 +366097,32 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-9a33cdeb60265eaa",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-1a0c4ae9deac44db",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-normalize-repository-report-f302c1084f6a5995",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-publish-report-snapshot-243857b282062c6d",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-publish-report-snapshot-736859c8763cfbc7",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-publish-report-snapshot-e452725c5fee6a9c",
    "relationshipType": "CONTAINS"
   },
   {
@@ -372588,6 +372948,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-download-artifact-9d4b6570fa937d82",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-download-artifact-df89071e8de794b8",
    "relationshipType": "CONTAINS"
   },
   {

@@ -8,6 +8,153 @@ Linter raw log:
   .github/actions/generate-lint-infographic/generate_lint_infographic.py:64:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
   .github/actions/generate-lint-infographic/generate_lint_infographic.py:73:43 - error: Type of "tool" is unknown (reportUnknownVariableType)
   .github/actions/generate-lint-infographic/generate_lint_infographic.py:75:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+.github/actions/normalize-repository-report/normalize_repository_report.py
+  .github/actions/normalize-repository-report/normalize_repository_report.py:57:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:195:5 - error: Type of "scan" is partially unknown
+    Type of "scan" is "Any | Unknown | None" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:195:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Overload[(key: str, default: None = None, /) -> (Any | None), (key: str, default: Any, /) -> Any, (key: str, default: _T@get, /) -> (Any | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:196:5 - error: Type of "threshold" is partially unknown
+    Type of "threshold" is "Any | Unknown | None" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:196:17 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Overload[(key: str, default: None = None, /) -> (Any | None), (key: str, default: Any, /) -> Any, (key: str, default: _T@get, /) -> (Any | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:199:5 - error: Type of "severity" is partially unknown
+    Type of "severity" is "Unknown | None" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:199:16 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:202:25 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:202:25 - error: Argument type is unknown
+    Argument corresponds to parameter "x" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:229:38 - error: Type of "key" is partially unknown
+    Type of "key" is "str | Unknown" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:229:43 - error: Type of "value" is partially unknown
+    Type of "value" is "Any | Unknown" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:242:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:242:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "object" in function "__new__"
+    Argument type is "Unknown | None" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:242:34 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:242:34 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:243:13 - error: Type of "tool" is unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:244:39 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:252:9 - error: Type of "linter" is unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:255:26 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:255:26 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:256:22 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:256:22 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:257:27 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:257:27 - error: Argument type is partially unknown
+    Argument corresponds to parameter "x" in function "__new__"
+    Argument type is "Unknown | Literal[0]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:257:64 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:258:29 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:258:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "x" in function "__new__"
+    Argument type is "Unknown | Literal[0]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:296:27 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:317:26 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:317:26 - error: Argument type is unknown
+    Argument corresponds to parameter "x" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:342:9 - error: Type of "driver" is unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:342:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:342:18 - error: Type of "get" is unknown (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:343:9 - error: Type of "rules" is partially unknown
+    Type of "rules" is "Unknown | list[Unknown]" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:343:17 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:345:32 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:346:17 - error: Type of "rule" is unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:347:47 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:348:37 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:349:9 - error: Type of "run_results" is unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:349:23 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:351:28 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "extend"
+    Argument type is "Generator[dict[Unknown, Unknown], None, None]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:351:39 - error: Type of "result" is unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:357:20 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:357:20 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:388:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:388:12 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:390:8 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:418:62 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:420:25 - error: Argument type is unknown
+    Argument corresponds to parameter "x" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:423:13 - error: Type of "documentation" is unknown (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:423:29 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:424:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:426:31 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:426:31 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:427:33 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:427:33 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:433:52 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:433:52 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:437:35 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:437:35 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:439:29 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:439:29 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:443:9 - error: Type of "checks" is partially unknown
+    Type of "checks" is "list[Unknown]" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:443:25 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:443:41 - error: Argument type is partially unknown
+    Argument corresponds to parameter "key" in function "sorted"
+    Argument type is "(item: Unknown) -> tuple[Unknown, Unknown]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:443:48 - error: Type of parameter "item" is unknown (reportUnknownLambdaType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:443:54 - error: Return type of lambda, "tuple[Unknown, Unknown]", is partially unknown (reportUnknownLambdaType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:448:9 - error: Type of "check" is partially unknown
+    Type of "check" is "Unknown | dict[str, Any]" (reportUnknownVariableType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:449:20 - error: Type of "get" is partially unknown
+    Type of "get" is "Unknown | Overload[(key: str, default: None = None, /) -> (Any | None), (key: str, default: Any, /) -> Any, (key: str, default: _T@get, /) -> (Any | _T@get)]" (reportUnknownMemberType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:449:20 - error: Argument type is partially unknown
+    Argument corresponds to parameter "object" in function "__new__"
+    Argument type is "Any | Unknown" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:455:40 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown] | list[dict[str, Any]]" (reportUnknownArgumentType)
+  .github/actions/normalize-repository-report/normalize_repository_report.py:462:41 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown] | list[dict[str, Any]]" (reportUnknownArgumentType)
 egolint/.agents/agents/build-projections.py
   egolint/.agents/agents/build-projections.py:64:24 - error: Type of parameter "fm" is partially unknown
     Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
@@ -1172,5 +1319,5 @@ tests/test_mindgarden_publishing_integration.py
 tests/test_repository_intelligence.py
   tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-622 errors, 10 warnings, 0 informations
+695 errors, 10 warnings, 0 informations
 

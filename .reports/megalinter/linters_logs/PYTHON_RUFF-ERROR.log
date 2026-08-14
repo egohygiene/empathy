@@ -1,0 +1,108 @@
+Results of ruff linter (version 0.16.2)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+PLR0913 Too many arguments in function definition (6 > 5)
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:112:5
+    |
+112 | def default_links(
+    |     ^^^^^^^^^^^^^
+113 |     *,
+114 |     producer: str,
+    |
+
+PLR0913 Too many arguments in function definition (11 > 5)
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:139:5
+    |
+139 | def common_summary(
+    |     ^^^^^^^^^^^^^^
+140 |     *,
+141 |     producer: str,
+    |
+
+PLR0911 Too many return statements (7 > 6)
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:310:5
+    |
+310 | def risk_from_rule(rule: dict[str, Any]) -> str:
+    |     ^^^^^^^^^^^^^^
+311 |     """Translate SARIF's numeric security severity into a compact risk label."""
+    |
+
+PLR2004 Magic value used in comparison, consider replacing `9` with a constant variable
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:320:20
+    |
+318 |     except (TypeError, ValueError):
+319 |         return "unknown"
+320 |     if severity >= 9:
+    |                    ^
+321 |         return "critical"
+322 |     if severity >= 7:
+    |
+
+PLR2004 Magic value used in comparison, consider replacing `7` with a constant variable
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:322:20
+    |
+320 |     if severity >= 9:
+321 |         return "critical"
+322 |     if severity >= 7:
+    |                    ^
+323 |         return "high"
+324 |     if severity >= 4:
+    |
+
+PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:324:20
+    |
+322 |     if severity >= 7:
+323 |         return "high"
+324 |     if severity >= 4:
+    |                    ^
+325 |         return "medium"
+326 |     if severity > 0:
+    |
+
+PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:421:38
+    |
+419 |                 continue
+420 |             score = int(check["score"])
+421 |             if score < 0 or score >= 10:
+    |                                      ^^
+422 |                 continue
+423 |             documentation = check.get("documentation", {})
+    |
+
+C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:447:19
+    |
+445 |         source = "api"
+446 |
+447 |     by_severity = {name: 0 for name in SEVERITY_ORDER}
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+448 |     for check in checks:
+449 |         risk = str(check.get("risk", "unknown"))
+    |
+help: Replace with `dict.fromkeys(iterable)`)
+    |
+446 |
+    -     by_severity = {name: 0 for name in SEVERITY_ORDER}
+447 +     by_severity = dict.fromkeys(SEVERITY_ORDER, 0)
+448 |     for check in checks:
+    |
+
+TRY301 Abstract `raise` to an inner function
+   --> .github/actions/normalize-repository-report/normalize_repository_report.py:490:17
+    |
+488 |         elif args.producer == "megalinter":
+489 |             if not args.policy_input:
+490 |                 raise ReportInputError("MegaLinter normalization requires --policy-input")
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+491 |             policy = load_object(Path(args.policy_input), "MegaLinter policy input")
+492 |             normalize_megalinter(document, policy, summary)
+    |
+
+Found 9 errors.
+[*] 1 fixable with the `--fix` option.
+
