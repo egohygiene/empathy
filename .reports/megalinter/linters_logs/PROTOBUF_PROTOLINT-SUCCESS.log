@@ -2,7 +2,4 @@ Results of protolint linter (version 0.56.4)
 See documentation on https://megalinter.io/10.0.0/descriptors/protobuf_protolint/
 -----------------------------------------------
 
-❌ [ERROR] for workspace /github/workspace
-Linter raw log:
-[egolint/tests/fixtures/buf/greeting.proto:10:3] Field "name" should have a comment
-
+✅ [SUCCESS] for workspace /github/workspace

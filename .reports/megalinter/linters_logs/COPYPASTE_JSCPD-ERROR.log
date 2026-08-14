@@ -13,10 +13,13 @@ Clone found (markdown)
  - .audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown [27:12 - 32:65] (6 lines, 196 tokens)
    ONTOLOGY.md:markdown [89:27 - 90:12]
 Clone found (markdown)
+ - .audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown [94:10 - 101:61] (8 lines, 253 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [10:3 - 11:3]
+Clone found (markdown)
  - .audits/egolint/2026-08-11-integration-audit.md:markdown [171:101 - 176:36] (6 lines, 201 tokens)
    mantle/README.md:markdown [109:198 - 111:3]
 Clone found (markdown)
- - .audits/egolint/2026-08-11-integration-audit.md:markdown [202:1 - 207:77] (6 lines, 165 tokens)
+ - .audits/egolint/2026-08-11-integration-audit.md:markdown [202:1 - 208:2] (7 lines, 167 tokens)
    mantle/README.md:markdown [316:44 - 317:4]
 Clone found (markdown)
  - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [24:93 - 29:45] (6 lines, 170 tokens)
@@ -171,9 +174,6 @@ Clone found (markdown)
 Clone found (markdown)
  - egolint/.agents/agents/AGENT-CONTRACT.md:markdown [22:15 - 28:53] (7 lines, 85 tokens)
    egolint/.agents/skills/SKILL-CONTRACT.md:markdown [20:10 - 26:53]
-Clone found (markdown)
- - egolint/.agents/agents/AGENT-CONTRACT.md:markdown [57:67 - 63:40] (7 lines, 57 tokens)
-   egolint/.agents/skills/SKILL-CONTRACT.md:markdown [50:29 - 56:40]
 Clone found (yaml)
  - egolint/.agents/agents/auditor/AGENT.md:yaml [8:1 - 17:7] (10 lines, 59 tokens)
    egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml [10:1 - 19:7]
@@ -187,7 +187,7 @@ Clone found (python)
  - egolint/.agents/agents/build-projections.py [32:1 - 42:48] (11 lines, 59 tokens)
    egolint/.agents/skills/build-distributions.py [44:1 - 54:48]
 Clone found (python)
- - egolint/.agents/agents/build-projections.py [152:64 - 166:21] (15 lines, 99 tokens)
+ - egolint/.agents/agents/build-projections.py [152:64 - 166:21] (15 lines, 97 tokens)
    egolint/.agents/skills/build-distributions.py [256:66 - 270:21]
 Clone found (yaml)
  - egolint/.agents/agents/github-issue-creator/AGENT.md:yaml [8:1 - 18:7] (11 lines, 63 tokens)
@@ -460,8 +460,8 @@ Clone found (python)
  - egolint/.agents/skills/build-distributions.py [216:52 - 230:29] (15 lines, 107 tokens)
    egolint/.agents/specs/build-distributions.py [69:41 - 83:29]
 Clone found (python)
- - egolint/.agents/skills/build-distributions.py [252:5 - 259:89] (8 lines, 55 tokens)
-   egolint/.agents/specs/build-distributions.py [104:98 - 111:89]
+ - egolint/.agents/skills/build-distributions.py [252:5 - 259:87] (8 lines, 53 tokens)
+   egolint/.agents/specs/build-distributions.py [104:98 - 111:87]
 Clone found (yaml)
  - egolint/.agents/skills/quality/bug-fixing/SKILL.md:yaml [3:256 - 12:31] (10 lines, 56 tokens)
    egolint/.agents/skills/quality/repository-cleanup/SKILL.md:yaml [3:239 - 12:31]
@@ -598,17 +598,14 @@ Clone found (hcl)
  - egolint/.config/lint/terraform/.tflint.hcl [44:36 - 49:3] (6 lines, 91 tokens)
    egolint/.config/lint/terraform/.tflint.hcl [52:33 - 57:3]
 Clone found (yaml)
- - egolint/.config/megalinter/policy.yml [197:1 - 203:54] (7 lines, 60 tokens)
-   egolint/.config/megalinter/policy.yml [219:1 - 225:54]
+ - egolint/.config/megalinter/policy.yml [199:1 - 205:54] (7 lines, 60 tokens)
+   egolint/.config/megalinter/policy.yml [221:1 - 227:54]
 Clone found (json)
  - egolint/.config/megalinter/snapshots/fast.json [7:18 - 26:5] (20 lines, 56 tokens)
-   egolint/.config/megalinter/snapshots/holistic.json [31:17 - 50:5]
+   egolint/.config/megalinter/snapshots/holistic.json [33:17 - 52:5]
 Clone found (json)
  - egolint/.config/megalinter/snapshots/fast.json [80:25 - 99:5] (20 lines, 56 tokens)
-   egolint/.config/megalinter/snapshots/holistic.json [95:28 - 114:5]
-Clone found (json)
- - egolint/.config/megalinter/snapshots/fast.json [99:22 - 116:5] (18 lines, 50 tokens)
-   egolint/.config/megalinter/snapshots/holistic.json [113:25 - 130:5]
+   egolint/.config/megalinter/snapshots/holistic.json [96:28 - 115:5]
 Clone found (json)
  - egolint/.config/megalinter/tool-matrix.json [1858:90 - 1868:13] (11 lines, 53 tokens)
    egolint/.config/megalinter/tool-matrix.json [1875:90 - 1885:13]
@@ -655,8 +652,8 @@ Clone found (json)
  - egolint/.config/toolchain/tool-matrix.json [272:25 - 286:11] (15 lines, 51 tokens)
    egolint/.config/toolchain/tool-matrix.json [494:24 - 508:11]
 Clone found (yaml)
- - egolint/.mega-linter.yml [1189:37 - 1201:5] (13 lines, 53 tokens)
-   egolint/.mega-linter.yml [1218:32 - 1230:5]
+ - egolint/.mega-linter.yml [1196:37 - 1208:5] (13 lines, 53 tokens)
+   egolint/.mega-linter.yml [1225:32 - 1237:5]
 Clone found (toml)
  - egolint/poetry.toml [1:1 - 107:15] (107 lines, 185 tokens)
    poetry.toml [1:1 - 107:15]
@@ -670,68 +667,71 @@ Clone found (yaml)
  - mantle/.github/workflows/test.yml [66:1 - 91:34] (26 lines, 248 tokens)
    mantle/.github/workflows/test.yml [115:1 - 140:34]
 Clone found (markdown)
- - mantle/CONTRIBUTING.md:markdown [14:41 - 19:10] (6 lines, 312 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [269:1 - 280:4]
+ - mantle/CONTRIBUTING.md:markdown [14:41 - 19:32] (6 lines, 319 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [270:1 - 281:4]
 Clone found (markdown)
  - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [261:1 - 266:2] (6 lines, 103 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [302:1 - 307:2]
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [304:1 - 309:2]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 275:7] (10 lines, 147 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [307:276 - 313:4]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 276:7] (11 lines, 154 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:276 - 316:4]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 275:14] (10 lines, 154 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [376:282 - 383:4]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 271:35] (6 lines, 58 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [352:211 - 359:4]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:299 - 273:2] (8 lines, 109 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [406:267 - 414:4]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 276:14] (11 lines, 161 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [383:282 - 391:4]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 277:8] (12 lines, 178 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [438:273 - 448:4]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:299 - 274:2] (9 lines, 116 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [415:267 - 424:4]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 283:14] (18 lines, 353 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [505:264 - 522:21]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 277:17] (12 lines, 178 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [448:273 - 459:4]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 273:6] (8 lines, 109 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [546:245 - 555:13]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 285:7] (20 lines, 353 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [519:264 - 537:21]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 274:13] (9 lines, 131 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [675:293 - 685:13]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 274:3] (9 lines, 113 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [561:245 - 572:13]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [307:274 - 314:62] (8 lines, 210 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [592:328 - 603:4]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 275:10] (10 lines, 135 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [695:293 - 707:13]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [333:1 - 338:17] (6 lines, 130 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [397:1 - 402:15]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:274 - 318:55] (10 lines, 210 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [609:328 - 621:4]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [336:27 - 341:19] (6 lines, 95 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [430:22 - 435:19]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [337:1 - 342:17] (6 lines, 130 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [406:1 - 411:15]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [336:1 - 342:5] (7 lines, 136 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [499:1 - 505:5]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [340:27 - 345:19] (6 lines, 95 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [440:22 - 445:19]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [349:1 - 354:21] (6 lines, 57 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [411:5 - 416:21]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [340:1 - 346:5] (7 lines, 136 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [513:1 - 519:5]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [376:281 - 386:43] (11 lines, 224 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [624:229 - 634:27]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [356:1 - 361:21] (6 lines, 64 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [420:45 - 426:21]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [396:1 - 401:15] (6 lines, 152 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [568:1 - 573:15]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [383:281 - 395:43] (13 lines, 231 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [643:229 - 654:27]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [401:1 - 406:5] (6 lines, 109 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [466:1 - 471:5]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [405:1 - 410:15] (6 lines, 152 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [585:1 - 590:15]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [438:272 - 451:25] (14 lines, 253 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [473:153 - 482:4]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [410:1 - 415:5] (6 lines, 109 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [478:1 - 483:5]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [541:1 - 546:2] (6 lines, 102 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [587:1 - 592:2]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [448:272 - 463:25] (16 lines, 253 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [485:153 - 495:4]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [541:1 - 546:5] (6 lines, 105 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [670:1 - 675:5]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [556:1 - 561:2] (6 lines, 102 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [604:1 - 609:2]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [586:25 - 591:30] (6 lines, 106 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [646:21 - 651:30]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [556:1 - 561:5] (6 lines, 105 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [690:1 - 695:5]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [603:25 - 608:30] (6 lines, 106 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [666:21 - 671:30]
 Clone found (bash)
  - mantle/init/init.sh [30:1 - 48:2] (19 lines, 112 tokens)
    mantle/init/load-core.sh [51:1 - 69:2]
@@ -931,27 +931,29 @@ Clone found (python)
  - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
    mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
 Clone found (python)
- - tests/test_validate_automation.py [42:53 - 54:32] (13 lines, 66 tokens)
-   tests/test_validate_automation.py [105:47 - 117:32]
+ - tests/test_validate_automation.py [45:53 - 57:32] (13 lines, 66 tokens)
+   tests/test_validate_automation.py [108:47 - 120:32]
 Clone found (python)
- - tests/test_validate_automation.py [43:9 - 54:32] (12 lines, 56 tokens)
-   tests/test_validate_automation.py [61:16 - 72:32]
+ - tests/test_validate_automation.py [46:9 - 57:32] (12 lines, 56 tokens)
+   tests/test_validate_automation.py [64:16 - 75:32]
 ┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex       │ 1              │ 13          │ 88           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash       │ 127            │ 19146       │ 90084        │ 58           │ 670 (3.50%)      │ 4439 (4.93%)      │
+│ bash       │ 127            │ 19168       │ 90084        │ 58           │ 670 (3.50%)      │ 4439 (4.93%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ c          │ 1              │ 50          │ 296          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ clojure    │ 2              │ 280         │ 919          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ cpp        │ 1              │ 47          │ 236          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ cpp        │ 1              │ 44          │ 233          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css        │ 2              │ 103         │ 823          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css        │ 2              │ 102         │ 908          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ dart       │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ diff       │ 1              │ 704         │ 59           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ gherkin    │ 1              │ 13          │ 155          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -963,19 +965,19 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ hcl        │ 2              │ 101         │ 1134         │ 1            │ 5 (4.95%)        │ 91 (8.02%)        │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ ini        │ 3              │ 231         │ 3083         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ ini        │ 3              │ 233         │ 3111         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java       │ 2              │ 54          │ 504          │ 1            │ 7 (12.96%)       │ 62 (12.30%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript │ 6              │ 653         │ 2129         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ javascript │ 6              │ 658         │ 2169         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 84             │ 14105       │ 59414        │ 22           │ 553 (3.92%)      │ 1972 (3.32%)      │
+│ json       │ 84             │ 14011       │ 59330        │ 21           │ 536 (3.83%)      │ 1922 (3.24%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx        │ 1              │ 10          │ 52           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 223            │ 23307       │ 260655       │ 138          │ 1647 (7.07%)     │ 16997 (6.52%)     │
+│ markdown   │ 223            │ 23365       │ 265812       │ 139          │ 1667 (7.13%)     │ 17303 (6.51%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -983,11 +985,11 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ php        │ 1              │ 19          │ 92           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ powershell │ 3              │ 163         │ 585          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ powershell │ 3              │ 163         │ 583          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 36             │ 8389        │ 63202        │ 16           │ 157 (1.87%)      │ 1116 (1.77%)      │
+│ python     │ 36             │ 8411        │ 63401        │ 16           │ 157 (1.87%)      │ 1112 (1.75%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1001,7 +1003,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift      │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text       │ 7              │ 1674        │ 1762         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ text       │ 7              │ 1642        │ 1703         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml       │ 21             │ 1945        │ 5850         │ 2            │ 111 (5.71%)      │ 242 (4.14%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1009,12 +1011,12 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 227            │ 18659       │ 97968        │ 72           │ 822 (4.41%)      │ 5463 (5.58%)      │
+│ yaml       │ 227            │ 18676       │ 98090        │ 72           │ 822 (4.40%)      │ 5463 (5.57%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 787            │ 91803       │ 611396       │ 310          │ 3972 (4.33%)     │ 30382 (4.97%)     │
+│ Total:     │ 788            │ 92503       │ 616938       │ 310          │ 3975 (4.30%)     │ 30634 (4.97%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 310 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 1.40s
+time: 1.56s
 

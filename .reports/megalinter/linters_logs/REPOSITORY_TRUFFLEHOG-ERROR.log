@@ -4,5 +4,5 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_truffle
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-trufflehog: error: flag 'fail' cannot be repeated, try --help
+2026-08-14T12:50:04Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
 

@@ -4,13 +4,10 @@ See documentation on https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-Could not find an option or flag "-c".
+Analyzing greeeting_service.dart...
 
-Usage: dart analyze [arguments] [<directory>]
--h, --help                   Print this usage information.
-    --fatal-infos            Treat info level issues as fatal.
-    --[no-]fatal-warnings    Treat warning level issues as fatal.
-                             (defaults to on)
+   info - greeeting_service.dart:13:12 - Unnecessary use of double quotes. Try using single quotes unless the string contains single quotes. - prefer_single_quotes
+   info - greeeting_service.dart:15:2 - Missing a newline at the end of the file. Try adding a newline at the end of the file. - eol_at_end_of_file
 
-Run "dart help" to see global options.
+2 issues found.
 

@@ -1,0 +1,5 @@
+Results of ansible-lint linter (version 26.6.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint/
+-----------------------------------------------
+
+✅ [SUCCESS] for workspace /github/workspace

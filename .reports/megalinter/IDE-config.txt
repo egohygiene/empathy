@@ -441,15 +441,6 @@ prettier (TYPESCRIPT)
   - vscode:
     - prettier-vscode: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
-ts-standard (TYPESCRIPT)
-  - idea:
-    - native support: https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/
-  - sublime:
-    - SublimeLinter-contrib-standard: https://packagecontrol.io/packages/SublimeLinter-contrib-standard
-    - StandardFormat: https://packagecontrol.io/packages/StandardFormat
-  - vscode:
-    - https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard: vscode-standard
-
 prettier (YAML)
   - emacs:
     - prettier-emacs: https://github.com/prettier/prettier-emacs

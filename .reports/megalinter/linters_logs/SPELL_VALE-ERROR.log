@@ -482,7 +482,7 @@ Linter raw log:
 
 
  egolint/.agents/skills/SKILL-CONTRACT.md
- 4:48   warning  'It is' is too wordy.                                           write-good.TooWordy 
+ 4:47   warning  'It is' is too wordy.                                           write-good.TooWordy 
  32:59  warning  'be loaded' may be passive voice. Use active voice if you can.  write-good.Passive  
 
 
@@ -1169,8 +1169,8 @@ Linter raw log:
 
 
  egolint/.agents/skills/quality/audit-repository/templates/AUDIT.template.md
- 21:4  warning  'Methodology' is too wordy.  write-good.TooWordy 
- 22:4  warning  'Overall' is too wordy.      write-good.TooWordy 
+ 24:4  warning  'Methodology' is too wordy.  write-good.TooWordy 
+ 26:4  warning  'Overall' is too wordy.      write-good.TooWordy 
 
 
  egolint/.agents/skills/quality/bug-fixing/SKILL.md
@@ -2382,68 +2382,68 @@ Linter raw log:
 
 
  mantle/audits/mantle-holistic-polish-20260806T124442Z.md
- 21:163   warning  'be executed' may be passive voice. Use active voice if you can.       write-good.Passive  
- 29:87    warning  'prior to' is too wordy.                                               write-good.TooWordy 
- 29:124   warning  'been implemented' may be passive voice. Use active voice if you can.  write-good.Passive  
- 31:80    warning  'are recommended' may be passive voice. Use active voice if you can.   write-good.Passive  
- 32:53    warning  'several' is a weasel word!                                            write-good.Weasel   
- 36:19    warning  'are recorded' may be passive voice. Use active voice if you can.      write-good.Passive  
- 133:7    warning  'Methodology' is too wordy.                                            write-good.TooWordy 
- 146:66   warning  'several' is a weasel word!                                            write-good.Weasel   
- 165:7    warning  'Overall' is too wordy.                                                write-good.TooWordy 
- 189:103  warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 190:139  warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 193:58   warning  'is resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 244:71   warning  'is computed' may be passive voice. Use active voice if you can.       write-good.Passive  
- 291:32   warning  'be done' may be passive voice. Use active voice if you can.           write-good.Passive  
- 307:194  warning  'However' is too wordy.                                                write-good.TooWordy 
- 307:265  warning  'be captured' may be passive voice. Use active voice if you can.       write-good.Passive  
- 316:128  warning  'be detected' may be passive voice. Use active voice if you can.       write-good.Passive  
- 318:114  warning  'minimum' is too wordy.                                                write-good.TooWordy 
- 342:77   warning  'is produced' may be passive voice. Use active voice if you can.       write-good.Passive  
- 376:63   warning  'equivalent' is too wordy.                                             write-good.TooWordy 
- 376:152  warning  'multiple' is too wordy.                                               write-good.TooWordy 
- 406:1    error    Don't start a sentence with 'There are'.                               write-good.ThereIs  
- 406:153  error    Don't start a sentence with 'There is'.                                write-good.ThereIs  
- 471:241  warning  'it is' is too wordy.                                                  write-good.TooWordy 
- 471:244  warning  'is sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 473:68   warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 487:94   warning  'equivalent' is too wordy.                                             write-good.TooWordy 
- 489:41   warning  'clearly' is a weasel word!                                            write-good.Weasel   
- 524:160  warning  'is restored' may be passive voice. Use active voice if you can.       write-good.Passive  
- 546:120  warning  'are exported' may be passive voice. Use active voice if you can.      write-good.Passive  
- 592:90   warning  'Several' is a weasel word!                                            write-good.Weasel   
- 592:242  warning  'it is' is too wordy.                                                  write-good.TooWordy 
- 606:126  warning  'was added' may be passive voice. Use active voice if you can.         write-good.Passive  
- 624:43   warning  'is noted' may be passive voice. Use active voice if you can.          write-good.Passive  
- 636:120  warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 636:155  warning  'been validated' may be passive voice. Use active voice if you can.    write-good.Passive  
- 652:121  warning  'However' is too wordy.                                                write-good.TooWordy 
- 711:37   warning  'are registered' may be passive voice. Use active voice if you can.    write-good.Passive  
- 717:50   warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 753:165  warning  'is backed' may be passive voice. Use active voice if you can.         write-good.Passive  
- 763:72   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 768:71   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 769:50   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 774:18   warning  'Validate' is too wordy.                                               write-good.TooWordy 
- 781:3    warning  'Evaluate' is too wordy.                                               write-good.TooWordy 
- 802:8    warning  'are ordered' may be passive voice. Use active voice if you can.       write-good.Passive  
- 874:75   warning  'be produced' may be passive voice. Use active voice if you can.       write-good.Passive  
- 893:74   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 902:35   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 914:48   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 915:190  warning  'is required' may be passive voice. Use active voice if you can.       write-good.Passive  
- 926:107  warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 938:110  warning  'evaluate' is too wordy.                                               write-good.TooWordy 
- 941:90   warning  'is expected' may be passive voice. Use active voice if you can.       write-good.Passive  
- 941:105  warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
- 949:58   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 951:196  warning  'be required' may be passive voice. Use active voice if you can.       write-good.Passive  
- 953:125  warning  'is enabled' may be passive voice. Use active voice if you can.        write-good.Passive  
- 955:110  warning  'be added' may be passive voice. Use active voice if you can.          write-good.Passive  
- 991:163  warning  'were read' may be passive voice. Use active voice if you can.         write-good.Passive  
- 1074:13  warning  'is marked' may be passive voice. Use active voice if you can.         write-good.Passive  
- 1083:63  warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 21:164    warning  'be executed' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 29:87     warning  'prior to' is too wordy.                                               write-good.TooWordy 
+ 29:124    warning  'been implemented' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 31:80     warning  'are recommended' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 32:53     warning  'several' is a weasel word!                                            write-good.Weasel   
+ 36:19     warning  'are recorded' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 133:7     warning  'Methodology' is too wordy.                                            write-good.TooWordy 
+ 146:66    warning  'several' is a weasel word!                                            write-good.Weasel   
+ 165:7     warning  'Overall' is too wordy.                                                write-good.TooWordy 
+ 189:103   warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 190:139   warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 193:58    warning  'is resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 244:71    warning  'is computed' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 293:32    warning  'be done' may be passive voice. Use active voice if you can.           write-good.Passive  
+ 309:194   warning  'However' is too wordy.                                                write-good.TooWordy 
+ 309:265   warning  'be captured' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 320:128   warning  'be detected' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 322:114   warning  'minimum' is too wordy.                                                write-good.TooWordy 
+ 346:77    warning  'is produced' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 383:63    warning  'equivalent' is too wordy.                                             write-good.TooWordy 
+ 383:152   warning  'multiple' is too wordy.                                               write-good.TooWordy 
+ 415:1     error    Don't start a sentence with 'There are'.                               write-good.ThereIs  
+ 415:153   error    Don't start a sentence with 'There is'.                                write-good.ThereIs  
+ 483:241   warning  'it is' is too wordy.                                                  write-good.TooWordy 
+ 483:244   warning  'is sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 485:68    warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 501:94    warning  'equivalent' is too wordy.                                             write-good.TooWordy 
+ 503:41    warning  'clearly' is a weasel word!                                            write-good.Weasel   
+ 539:160   warning  'is restored' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 561:120   warning  'are exported' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 609:90    warning  'Several' is a weasel word!                                            write-good.Weasel   
+ 609:242   warning  'it is' is too wordy.                                                  write-good.TooWordy 
+ 625:126   warning  'was added' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 643:43    warning  'is noted' may be passive voice. Use active voice if you can.          write-good.Passive  
+ 656:120   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
+ 656:155   warning  'been validated' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 672:121   warning  'However' is too wordy.                                                write-good.TooWordy 
+ 733:37    warning  'are registered' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 739:50    warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 775:165   warning  'is backed' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 785:72    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 790:71    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 791:50    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 796:18    warning  'Validate' is too wordy.                                               write-good.TooWordy 
+ 803:3     warning  'Evaluate' is too wordy.                                               write-good.TooWordy 
+ 824:8     warning  'are ordered' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 896:75    warning  'be produced' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 915:74    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 924:35    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 936:48    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 937:190   warning  'is required' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 948:107   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
+ 960:110   warning  'evaluate' is too wordy.                                               write-good.TooWordy 
+ 963:90    warning  'is expected' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 963:105   warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 971:58    warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
+ 973:196   warning  'be required' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 975:125   warning  'is enabled' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 977:110   warning  'be added' may be passive voice. Use active voice if you can.          write-good.Passive  
+ 1013:163  warning  'were read' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 1096:13   warning  'is marked' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 1105:69   warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
 
 
  mantle/lib/install/README.md

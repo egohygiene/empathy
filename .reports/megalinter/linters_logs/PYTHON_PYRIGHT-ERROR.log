@@ -4,7 +4,6 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_pyright/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-Config contains unrecognized setting "$schema".
 .github/actions/generate-lint-infographic/generate_lint_infographic.py
   .github/actions/generate-lint-infographic/generate_lint_infographic.py:64:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
   .github/actions/generate-lint-infographic/generate_lint_infographic.py:73:43 - error: Type of "tool" is unknown (reportUnknownVariableType)
@@ -472,7 +471,7 @@ egolint/.agents/specs/validate-specs.py
   egolint/.agents/specs/validate-specs.py:180:9 - error: Type of "cycle" is unknown (reportUnknownVariableType)
   egolint/.agents/specs/validate-specs.py:181:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  egolint/.agents/specs/validate-specs.py:181:74 - error: Argument type is unknown
+  egolint/.agents/specs/validate-specs.py:181:65 - error: Argument type is unknown
     Argument corresponds to parameter "iterable" in function "join" (reportUnknownArgumentType)
   egolint/.agents/specs/validate-specs.py:190:13 - error: Type of "skill_fm" is partially unknown
     Type of "skill_fm" is "Any | dict[Unknown, Unknown]" (reportUnknownVariableType)
@@ -511,33 +510,33 @@ egolint/.agents/specs/validate-specs.py
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
 egolint/scripts/complementary_tools.py
-  egolint/scripts/complementary_tools.py:460:44 - error: Type of "endswith" is partially unknown
+  egolint/scripts/complementary_tools.py:463:44 - error: Type of "endswith" is partially unknown
     Type of "endswith" is "Unknown | Any | ((suffix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | ((suffix: Buffer | tuple[Buffer, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool)" (reportUnknownMemberType)
-  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "int"
+  egolint/scripts/complementary_tools.py:463:62 - error: Cannot access attribute "endswith" for class "int"
     Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "float"
+  egolint/scripts/complementary_tools.py:463:62 - error: Cannot access attribute "endswith" for class "float"
     Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "list[str]"
+  egolint/scripts/complementary_tools.py:463:62 - error: Cannot access attribute "endswith" for class "list[str]"
     Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:460:71 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
+  egolint/scripts/complementary_tools.py:463:71 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
     Type "Literal['\n']" is not assignable to type "ReadableBuffer | tuple[ReadableBuffer, ...]"
       "Literal['\n']" is incompatible with protocol "Buffer"
         "__buffer__" is not present
       "Literal['\n']" is not assignable to "tuple[ReadableBuffer, ...]" (reportArgumentType)
-  egolint/scripts/complementary_tools.py:463:59 - error: Type of "endswith" is partially unknown
+  egolint/scripts/complementary_tools.py:466:59 - error: Type of "endswith" is partially unknown
     Type of "endswith" is "Unknown | Any | ((suffix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | ((suffix: Buffer | tuple[Buffer, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool)" (reportUnknownMemberType)
-  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "int"
+  egolint/scripts/complementary_tools.py:466:77 - error: Cannot access attribute "endswith" for class "int"
     Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "float"
+  egolint/scripts/complementary_tools.py:466:77 - error: Cannot access attribute "endswith" for class "float"
     Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "list[str]"
+  egolint/scripts/complementary_tools.py:466:77 - error: Cannot access attribute "endswith" for class "list[str]"
     Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:463:86 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
+  egolint/scripts/complementary_tools.py:466:86 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
     Type "Literal['\n']" is not assignable to type "ReadableBuffer | tuple[ReadableBuffer, ...]"
       "Literal['\n']" is incompatible with protocol "Buffer"
         "__buffer__" is not present
       "Literal['\n']" is not assignable to "tuple[ReadableBuffer, ...]" (reportArgumentType)
-  egolint/scripts/complementary_tools.py:466:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
+  egolint/scripts/complementary_tools.py:469:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
     Type "int | Any | str | float | list[str] | bytes" is not assignable to type "ConvertibleToInt"
       Type "list[str]" is not assignable to type "ConvertibleToInt"
         "list[str]" is not assignable to "str"
@@ -547,7 +546,7 @@ egolint/scripts/complementary_tools.py
           "__int__" is not present
         "list[str]" is incompatible with protocol "SupportsIndex"
     ... (reportArgumentType)
-  egolint/scripts/complementary_tools.py:466:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
+  egolint/scripts/complementary_tools.py:469:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
     Type "int | Any | str | float | list[str] | bytes" is not assignable to type "ConvertibleToInt"
       Type "list[str]" is not assignable to type "ConvertibleToInt"
         "list[str]" is not assignable to "str"
@@ -556,9 +555,9 @@ egolint/scripts/complementary_tools.py
         "list[str]" is incompatible with protocol "SupportsInt"
           "__int__" is not present
         "list[str]" is incompatible with protocol "SupportsIndex" (reportArgumentType)
-  egolint/scripts/complementary_tools.py:475:9 - error: Type of "append" is partially unknown
+  egolint/scripts/complementary_tools.py:478:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  egolint/scripts/complementary_tools.py:486:13 - error: Type of "row" is unknown (reportUnknownVariableType)
+  egolint/scripts/complementary_tools.py:489:13 - error: Type of "row" is unknown (reportUnknownVariableType)
 egolint/scripts/validate_megalinter_policy.py
   egolint/scripts/validate_megalinter_policy.py:77:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
   egolint/scripts/validate_megalinter_policy.py:88:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
@@ -657,7 +656,7 @@ egolint/tests/fixtures/python/test_greeting_service.py
   egolint/tests/fixtures/python/test_greeting_service.py:3:6 - warning: Import "greeting_service" could not be resolved (reportMissingImports)
   egolint/tests/fixtures/python/test_greeting_service.py:3:30 - error: Type of "format_greeting" is unknown (reportUnknownVariableType)
 egolint/tests/test_complementary_tools.py
-  egolint/tests/test_complementary_tools.py:82:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
+  egolint/tests/test_complementary_tools.py:86:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
 mindgarden/scripts/garden_agent.py
   mindgarden/scripts/garden_agent.py:37:9 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
   mindgarden/scripts/garden_agent.py:38:9 - error: Type of "discover_note_paths" is unknown (reportUnknownVariableType)
@@ -693,22 +692,18 @@ mindgarden/scripts/garden_agent.py
     Argument type is "str | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:141:9 - error: Type of "title" is partially unknown
     Type of "title" is "str | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/garden_agent.py:141:32 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:141:32 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:141:51 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:142:30 - error: Argument type is partially unknown
     Argument corresponds to parameter "metadata" in function "metadata_list"
     Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:147:38 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:147:38 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:147:54 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
@@ -721,67 +716,51 @@ mindgarden/scripts/garden_agent.py
   mindgarden/scripts/garden_agent.py:149:40 - error: Argument type is partially unknown
     Argument corresponds to parameter "value" in function "sha256_bytes"
     Argument type is "bytes | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:151:40 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:151:40 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:151:58 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:152:42 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:152:42 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:152:62 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:154:46 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:154:46 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:154:70 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:155:46 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:155:46 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:155:70 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:156:43 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:156:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:156:64 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:157:47 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:157:47 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string_list"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:157:67 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string_list"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:158:48 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:158:48 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string_list"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:158:69 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string_list"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:159:48 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/garden_agent.py:159:48 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string_list"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:159:69 - error: Argument type is partially unknown
     Argument corresponds to parameter "source" in function "require_string_list"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
@@ -931,11 +910,9 @@ mindgarden/scripts/publish_garden.py
     Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
   mindgarden/scripts/publish_garden.py:450:5 - error: Type of "content_roots" is partially unknown
     Type of "content_roots" is "list[str] | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:450:41 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
-      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/publish_garden.py:450:41 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string_list"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/publish_garden.py:451:23 - error: Argument type is partially unknown
     Argument corresponds to parameter "args" in function "__init__"
     Argument type is "str | Unknown" (reportUnknownArgumentType)
@@ -996,255 +973,71 @@ mindgarden/scripts/quartz_site.py
   mindgarden/scripts/quartz_site.py:252:10 - error: Type of "error" is partially unknown
     Type of "error" is "Unknown | OSError | UnicodeError | JSONDecodeError | CalledProcessError" (reportUnknownVariableType)
 mindgarden/scripts/validate_garden.py
-  mindgarden/scripts/validate_garden.py:194:85 - error: Type of "item" is unknown (reportUnknownVariableType)
-  mindgarden/scripts/validate_garden.py:198:12 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:198:85 - error: Type of "item" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:202:12 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:198:26 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:202:26 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:198:30 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:202:30 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:200:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
-  mindgarden/scripts/validate_garden.py:225:23 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:228:32 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:230:20 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:232:30 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:236:29 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:240:34 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:244:33 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:249:33 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:253:20 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:254:25 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:255:25 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:256:20 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:257:20 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:258:20 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:279:23 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:282:30 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:284:20 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:286:27 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:290:29 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:302:33 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:306:33 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:312:34 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:316:49 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:317:49 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:330:42 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:386:9 - error: Type of "observed_fields" is partially unknown
+  mindgarden/scripts/validate_garden.py:204:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:390:9 - error: Type of "observed_fields" is partially unknown
     Type of "observed_fields" is "set[Unknown]" (reportUnknownVariableType)
-  mindgarden/scripts/validate_garden.py:386:31 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:390:31 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:389:13 - error: Type of "unknown" is partially unknown
+  mindgarden/scripts/validate_garden.py:393:13 - error: Type of "unknown" is partially unknown
     Type of "unknown" is "list[Unknown]" (reportUnknownVariableType)
-  mindgarden/scripts/validate_garden.py:389:30 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:393:30 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:394:32 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:398:32 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:396:41 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:400:41 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:399:39 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:403:39 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:406:46 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:410:46 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:416:27 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:419:38 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:423:38 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:423:29 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:427:29 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:424:48 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:428:48 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:426:42 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:430:42 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:440:9 - error: Type of "transformations" is partially unknown
+  mindgarden/scripts/validate_garden.py:444:9 - error: Type of "transformations" is partially unknown
     Type of "transformations" is "Unknown | None" (reportUnknownVariableType)
-  mindgarden/scripts/validate_garden.py:440:27 - error: Type of "get" is partially unknown
+  mindgarden/scripts/validate_garden.py:444:27 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  mindgarden/scripts/validate_garden.py:444:62 - error: Type of "item" is unknown (reportUnknownVariableType)
-  mindgarden/scripts/validate_garden.py:445:20 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:448:62 - error: Type of "item" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:449:20 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:445:44 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:449:44 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:445:48 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:449:48 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:448:32 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:452:32 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:450:29 - error: Argument type is partially unknown
+  mindgarden/scripts/validate_garden.py:454:29 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  mindgarden/scripts/validate_garden.py:458:27 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:483:27 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:485:34 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:490:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:491:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:492:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:494:40 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:495:40 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:506:40 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:509:37 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:529:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:536:41 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:537:43 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:545:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:551:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:562:44 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:576:40 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:580:34 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:586:57 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:591:46 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
 mindgarden/tests/test_garden_agent.py
   mindgarden/tests/test_garden_agent.py:22:6 - warning: Import "scripts.garden_agent" could not be resolved (reportMissingImports)
   mindgarden/tests/test_garden_agent.py:23:5 - error: Type of "build_index" is unknown (reportUnknownVariableType)
@@ -1328,10 +1121,6 @@ mindgarden/tests/test_validate_garden.py
     Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
   mindgarden/tests/test_validate_garden.py:168:41 - error: Argument type is unknown
     Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
-tests/test_architecture_documents.py
-  tests/test_architecture_documents.py:196:13 - error: Argument of type "str | list[str]" cannot be assigned to parameter "value" of type "list[str]" in function "__setitem__"
-    Type "str | list[str]" is not assignable to type "list[str]"
-      "str" is not assignable to "list[str]" (reportArgumentType)
 tests/test_mindgarden_agent_integration.py
   tests/test_mindgarden_agent_integration.py:16:6 - warning: Import "scripts.garden_agent" could not be resolved (reportMissingImports)
   tests/test_mindgarden_agent_integration.py:17:5 - error: Type of "build_index" is unknown (reportUnknownVariableType)
@@ -1368,5 +1157,5 @@ tests/test_mindgarden_publishing_integration.py
 tests/test_repository_intelligence.py
   tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-662 errors, 10 warnings, 0 informations
+615 errors, 10 warnings, 0 informations
 

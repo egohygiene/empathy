@@ -4,395 +4,97 @@
 
 |   Descriptor    |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |-----------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   13|     |     0|          |       0|       0.33s|
-|❌ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |     1|          |      no|       9.34s|
-|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|        4.0s|
-|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.36s|
-|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       8.35s|
-|❌ BASH          |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     4|          |       0|       0.03s|
-|❌ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     1|          |       0|       0.19s|
+|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   13|     |     0|          |       0|       0.52s|
+|✅ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|      10.99s|
+|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       4.75s|
+|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|        0.5s|
+|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|      11.99s|
+|❌ BASH          |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     4|          |       0|       0.05s|
+|✅ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     0|          |       0|       0.27s|
 |✅ C             |[cppcheck](https://megalinter.io/10.0.0/descriptors/c_cppcheck)                                       |    1|     |     0|          |       0|       0.06s|
-|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|       0.31s|
+|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|       0.36s|
 |✅ CLOJURE       |[cljstyle](https://megalinter.io/10.0.0/descriptors/clojure_cljstyle)                                 |    1|     |     0|          |       0|       0.04s|
 |✅ CLOJURE       |[clj-kondo](https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo)                               |    1|     |     0|          |       0|       0.04s|
-|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       8.29s|
-|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.28s|
-|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   310|          |      no|       3.56s|
-|❌ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     6|          |       0|       0.11s|
+|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|      10.63s|
+|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.35s|
+|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   310|          |      no|       3.64s|
+|✅ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     0|          |       0|       0.09s|
 |✅ CPP           |[cppcheck](https://megalinter.io/10.0.0/descriptors/cpp_cppcheck)                                     |    1|     |     0|          |       0|       0.04s|
-|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |     9|          |       0|       0.14s|
-|❌ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |     5|          |       0|       1.16s|
-|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       0.05s|
-|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.15s|
-|❌ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  876|     |     1|          |       0|       0.87s|
-|✅ ENV           |[dotenv-linter](https://megalinter.io/10.0.0/descriptors/env_dotenv_linter)                           |    1|     |     0|          |       0|       0.01s|
-|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.42s|
-|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|      10.02s|
-|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.78s|
-|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      13.66s|
-|❌ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     2|          |       0|       0.36s|
-|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|       2.37s|
-|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       7.24s|
-|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|        1.6s|
-|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.64s|
-|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   99|     |     0|          |       0|       0.18s|
-|❌ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   99|     |     1|          |       0|        2.8s|
-|❌ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   99|     |     1|          |       0|      35.72s|
-|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.01s|
-|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.14s|
-|❌ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     1|          |       0|       0.03s|
-|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  226|     |   305|          |       0|       3.98s|
-|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  226|     |     1|          |       0|       0.41s|
-|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.21s|
-|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.33s|
-|✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.11s|
-|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.07s|
-|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.29s|
-|✅ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     0|          |       0|        5.0s|
-|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       3.85s|
-|❌ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     1|          |       0|       0.09s|
-|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   44|     |    18|          |       0|       2.31s|
-|❌ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |     1|          |      no|       1.63s|
-|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   43|     |    25|          |       0|      12.52s|
-|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   662|          |      no|        9.0s|
-|✅ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   44|     |     0|          |       0|       0.07s|
-|❌ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   44|     |     1|          |       0|       0.04s|
-|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       0.99s|
-|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       0.95s|
-|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.21s|
-|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      33.93s|
-|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       3.31s|
-|❌ REPOSITORY    |[git_diff](https://megalinter.io/10.0.0/descriptors/repository_git_diff)                              |  yes|     |     1|          |      no|       1.33s|
-|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     8|          |      no|     108.79s|
+|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |    10|          |       0|       0.17s|
+|✅ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |     0|          |       0|       1.47s|
+|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       1.02s|
+|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.27s|
+|✅ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  878|     |     0|          |       0|       1.03s|
+|✅ ENV           |[dotenv-linter](https://megalinter.io/10.0.0/descriptors/env_dotenv_linter)                           |    1|     |     0|          |       0|       0.02s|
+|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.39s|
+|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|      13.28s|
+|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.89s|
+|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      20.14s|
+|✅ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     0|          |       0|       0.45s|
+|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|        3.5s|
+|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       9.92s|
+|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.99s|
+|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.68s|
+|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   99|     |     0|          |       0|       0.32s|
+|✅ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   99|     |     0|          |       0|       5.01s|
+|✅ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   99|     |     0|          |       0|       38.6s|
+|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.03s|
+|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.13s|
+|✅ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     0|          |       0|       0.06s|
+|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  226|     |    20|          |       0|       5.09s|
+|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  226|     |     1|          |       0|       0.84s|
+|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.29s|
+|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.37s|
+|✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.12s|
+|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.77s|
+|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.77s|
+|❌ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     2|          |       0|       5.74s|
+|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       4.48s|
+|✅ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     0|          |       0|       0.18s|
+|✅ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   44|     |     0|          |       0|       3.32s|
+|✅ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    no|          |      no|      15.26s|
+|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   43|     |    19|          |       0|      15.98s|
+|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   615|          |      no|      10.99s|
+|✅ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   44|     |     0|          |       0|       0.17s|
+|❌ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   44|     |     1|          |       0|       0.06s|
+|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       1.12s|
+|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       1.02s|
+|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.53s|
+|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      46.98s|
+|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       2.14s|
+|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     8|          |      no|     130.49s|
 |❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.01s|
-|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      24.35s|
-|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       5.42s|
-|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      19.07s|
-|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      37.93s|
-|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       1.88s|
-|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|       7.95s|
-|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|        3.3s|
-|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.35s|
-|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|        3.7s|
-|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.41s|
-|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|       4.66s|
-|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       7.77s|
-|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|        1.5s|
-|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  474|     |     1|          |       0|       0.06s|
-|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  233|     |   358|          |       0|       5.74s|
-|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  235|     |     4|          |    1977|       6.71s|
-|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       4.16s|
-|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.53s|
-|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.61s|
-|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.34s|
+|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      38.81s|
+|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.58s|
+|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      23.63s|
+|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.49s|
+|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       8.72s|
+|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|      10.57s|
+|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       4.29s|
+|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.51s|
+|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       4.04s|
+|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.53s|
+|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|       6.49s|
+|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|      10.86s|
+|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       2.02s|
+|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  475|     |     1|          |       0|       0.07s|
+|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  233|     |   361|          |       0|       6.33s|
+|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  235|     |     4|          |    1977|       6.84s|
+|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       5.62s|
+|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.57s|
+|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.64s|
+|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.49s|
 |✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|       0.47s|
-|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       2.78s|
-|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       0.34s|
-|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       0.35s|
-|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.45s|
-|❌ TYPESCRIPT    |[ts-standard](https://megalinter.io/10.0.0/descriptors/typescript_ts_standard)                        |    2|     |     1|          |       0|        0.4s|
-|✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|       0.33s|
-|❌ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  137|     |     1|          |       2|       3.47s|
-|❌ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  137|     |     1|          |       0|      41.62s|
-|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  137|     |     0|          |       0|       8.55s|
+|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       3.65s|
+|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|        0.4s|
+|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|        0.4s|
+|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.56s|
+|✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|        0.3s|
+|✅ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  138|     |     0|          |       0|       4.04s|
+|✅ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  138|     |     0|          |       0|      51.32s|
+|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  138|     |     0|          |       0|      10.63s|
 
 ## Detailed Issues
-
-<details>
-<summary>❌ ANSIBLE / ansible-lint - 1 error</summary>
-
-```
-WARNING: PATH altered to expand ~ in it. Read https://stackoverflow.com/a/44704799/99834 and correct your system configuration.
-INFO     Identified /github/workspace as project root due .git directory.
-/usr/local/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 304: 'Not Modified'>
-  _warnings.warn(self.warn_message, ResourceWarning)
-INFO     Schema meta was updated
-INFO     Schema playbook was updated
-INFO     Schema tasks was updated
-INFO     Collection paths was patched to include extra directories /github/home/.ansible/collections,/usr/share/ansible/collections,/venvs/ansible-lint/lib/python3.14/site-packages
-INFO     Set ANSIBLE_LIBRARY=.ansible/modules:/github/home/.ansible/plugins/modules:/usr/share/ansible/plugins/modules
-INFO     Set ANSIBLE_COLLECTIONS_PATH=.ansible/collections:/github/home/.ansible/collections:/usr/share/ansible/collections:/venvs/ansible-lint/lib/python3.14/site-packages
-INFO     Set ANSIBLE_ROLES_PATH=.ansible/roles:/github/home/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles
-ERROR    Found incompatible custom yamllint configuration (.yamllint.yml), please either remove the file or edit it to comply with:
-  - comments.min-spaces-from-content must be 1
-  - comments-indentation must be false
-  - braces.max-spaces-inside must be 1
-  - octal-values.forbid-implicit-octal must be true
-  - octal-values.forbid-explicit-octal must be true.
-
-Read https://docs.ansible.com/projects/lint/rules/yaml/ for more details regarding why we have these requirements. Fix mode will not be available.
-```
-
-</details>
-
-<details>
-<summary>❌ PYTHON / bandit - 18 errors</summary>
-
-```
-Run started:2026-08-14 12:11:33.146719+00:00
-
-Test results:
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./egolint/scripts/complementary_tools.py:18:0
-17	import shutil
-18	import subprocess
-19	import sys
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./egolint/scripts/complementary_tools.py:365:20
-364	    try:
-365	        completed = subprocess.run(
-366	            tool["version_command"],
-367	            cwd=REPOSITORY_ROOT,
-368	            env=environment,
-369	            check=False,
-370	            capture_output=True,
-371	            text=True,
-372	            timeout=60,
-373	        )
-374	    except (OSError, subprocess.TimeoutExpired):
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./egolint/scripts/complementary_tools.py:412:20
-411	    try:
-412	        completed = subprocess.run(
-413	            command,
-414	            cwd=REPOSITORY_ROOT,
-415	            env=environment,
-416	            check=False,
-417	            capture_output=True,
-418	            text=True,
-419	            timeout=timeout_seconds,
-420	        )
-421	        status = "passed" if completed.returncode == 0 else "failed_findings"
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./egolint/scripts/validate_megalinter_policy.py:14:0
-13	import re
-14	import subprocess
-15	import sys
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./egolint/scripts/validate_megalinter_policy.py:144:15
-143	    """Build a compact offline contract from an official MegaLinter checkout."""
-144	    checkout = subprocess.run(
-145	        ["git", "-C", str(source_root), "rev-parse", "HEAD"],
-146	        check=False,
-147	        capture_output=True,
-148	        text=True,
-149	    )
-150	    checkout_commit = checkout.stdout.strip()
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./egolint/scripts/validate_megalinter_policy.py:144:15
-143	    """Build a compact offline contract from an official MegaLinter checkout."""
-144	    checkout = subprocess.run(
-145	        ["git", "-C", str(source_root), "rev-parse", "HEAD"],
-146	        check=False,
-147	        capture_output=True,
-148	        text=True,
-149	    )
-150	    checkout_commit = checkout.stdout.strip()
-
---------------------------------------------------
->> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
-   Severity: Medium   Confidence: Medium
-   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
-   Location: ./egolint/scripts/validate_megalinter_policy.py:267:52
-266	    """Resolve a MegaLinter rules/config pair into the local workspace."""
-267	    normalized_rules_path = rules_path.removeprefix("")
-268	    rules_root = Path(normalized_rules_path)
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./egolint/tests/test_megalinter_policy.py:9:0
-8	from pathlib import Path
-9	import subprocess
-10	import sys
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./egolint/tests/test_megalinter_policy.py:31:17
-30	    def test_generated_contracts_are_current(self) -> None:
-31	        result = subprocess.run(
-32	            [sys.executable, str(MODULE_PATH), "--check"],
-33	            cwd=REPOSITORY_ROOT,
-34	            check=False,
-35	            capture_output=True,
-36	            text=True,
-37	        )
-38	        self.assertEqual(result.returncode, 0, f"{result.stdout}\n{result.stderr}")
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./egolint/tests/test_megalinter_wrapper.py:9:0
-8	import stat
-9	import subprocess
-10	import tempfile
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./egolint/tests/test_megalinter_wrapper.py:31:15
-30	
-31	        return subprocess.run(
-32	            ["bash", str(WRAPPER_PATH), *arguments],
-33	            cwd=REPOSITORY_ROOT,
-34	            env=process_environment,
-35	            check=False,
-36	            capture_output=True,
-37	            text=True,
-38	        )
-39	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./egolint/tests/test_megalinter_wrapper.py:31:15
-30	
-31	        return subprocess.run(
-32	            ["bash", str(WRAPPER_PATH), *arguments],
-33	            cwd=REPOSITORY_ROOT,
-34	            env=process_environment,
-35	            check=False,
-36	            capture_output=True,
-37	            text=True,
-38	        )
-39	
-
---------------------------------------------------
->> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
-   Severity: Medium   Confidence: Medium
-   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
-   Location: ./egolint/tests/test_megalinter_wrapper.py:49:56
-48	    def test_rejects_report_directory_outside_workspace(self) -> None:
-49	        result = self.run_wrapper("--report-directory", "/tmp/unsafe-reports")
-50	
-
---------------------------------------------------
->> Issue: [B405:blacklist] Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.
-   Severity: Low   Confidence: High
-   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b405-import-xml-etree
-   Location: ./tests/test_lint_architecture.py:12:0
-11	import unittest
-12	import xml.etree.ElementTree as ET
-13	
-
---------------------------------------------------
->> Issue: [B314:blacklist] Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called
-   Severity: Medium   Confidence: High
-   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_calls.html#b313-b320-xml-bad-elementtree
-   Location: ./tests/test_lint_architecture.py:68:15
-67	        # The parsed SVG is a trusted artifact generated in this test suite.
-68	        root = ET.parse(self.svg_path).getroot()  # noqa: S314
-69	        namespace = {"svg": "http://www.w3.org/2000/svg"}
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_quality_policy.py:8:0
-7	from pathlib import Path
-8	import subprocess
-9	import tomllib
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_quality_policy.py:43:15
-42	    ) -> subprocess.CompletedProcess[str]:
-43	        return subprocess.run(
-44	            ["git", *arguments],
-45	            check=False,
-46	            cwd=REPOSITORY_ROOT,
-47	            encoding="utf8",
-48	            input=input_text,
-49	            capture_output=True,
-50	        )
-51	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_quality_policy.py:43:15
-42	    ) -> subprocess.CompletedProcess[str]:
-43	        return subprocess.run(
-44	            ["git", *arguments],
-45	            check=False,
-46	            cwd=REPOSITORY_ROOT,
-47	            encoding="utf8",
-48	            input=input_text,
-49	            capture_output=True,
-50	        )
-51	
-
---------------------------------------------------
-
-Code scanned:
-	Total lines of code: 5605
-	Total lines skipped (#nosec): 0
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 3
-
-Run metrics:
-	Total issues (by severity):
-		Undefined: 0
-		Low: 15
-		Medium: 3
-		High: 0
-	Total issues (by confidence):
-		Undefined: 0
-		Low: 0
-		Medium: 2
-		High: 16
-Files skipped (0):
-```
-
-</details>
 
 <details>
 <summary>❌ BASH / bash-exec - 14 errors</summary>
@@ -497,11 +199,112 @@ See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
 <summary>❌ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
+= re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,974 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,974 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,974 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,977 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-14 12:49:47,028 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-14 12:49:47,087 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-14 12:49:47,087 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-14 12:49:47,353 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-14 12:49:47,359 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-14 12:49:47,367 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-14 12:49:47,371 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-14 12:49:47,375 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-14 12:49:47,375 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-14 12:49:47,382 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-14 12:49:47,430 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 12:49:47,431 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-14 12:49:47,431 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 12:49:47,431 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-14 12:49:47,429 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-14 12:49:47,450 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-14 12:49:47,562 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-14 12:49:47,592 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-14 12:49:48,187 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-14 12:49:48,190 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 12:49:48,215 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-14 12:49:48,215 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 12:49:48,216 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-14 12:49:48,244 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-14 12:49:48,456 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-14 12:49:48,461 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-14 12:49:48,467 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-14 12:49:48,482 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-14 12:50:01,493 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-14 12:50:01,494 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-14 12:50:01,727 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-14 12:50:01,730 [MainThread  ] [INFO ]  Successfully created Ansible graph
+terraform scan results:
+
+Passed checks: 9, Failed checks: 6, Skipped checks: 0
+
+Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
 Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
 Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -729,44 +532,7 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 17777 characters out of 36188)
-```
-
-</details>
-
-<details>
-<summary>❌ C / clang-format - 1 error</summary>
-
-```
-egolint/tests/fixtures/clang-format/valid.c:50:2: error: code should be clang-formatted [-Wclang-format-violations]
-}
- ^
-```
-
-</details>
-
-<details>
-<summary>❌ CPP / clang-format - 6 errors</summary>
-
-```
-egolint/tests/fixtures/clang-format/valid.cpp:9:2: error: code should be clang-formatted [-Wclang-format-violations]
-{
- ^
-egolint/tests/fixtures/clang-format/valid.cpp:11:47: error: code should be clang-formatted [-Wclang-format-violations]
-  explicit GreetingService(std::string prefix)
-                                              ^
-egolint/tests/fixtures/clang-format/valid.cpp:12:35: error: code should be clang-formatted [-Wclang-format-violations]
-      : prefix_(std::move(prefix))
-                                  ^
-egolint/tests/fixtures/clang-format/valid.cpp:13:4: error: code should be clang-formatted [-Wclang-format-violations]
-  {
-   ^
-egolint/tests/fixtures/clang-format/valid.cpp:24:4: error: code should be clang-formatted [-Wclang-format-violations]
-  }
-   ^
-egolint/tests/fixtures/clang-format/valid.cpp:47:2: error: code should be clang-formatted [-Wclang-format-violations]
-}
- ^
+(Truncated to last 26666 characters out of 36188)
 ```
 
 </details>
@@ -799,20 +565,21 @@ Total errors found: 8
 </details>
 
 <details>
-<summary>❌ CPP / cpplint - 9 errors</summary>
+<summary>❌ CPP / cpplint - 10 errors</summary>
 
 ```
 egolint/tests/fixtures/clang-format/valid.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
 egolint/tests/fixtures/clang-format/valid.cpp:6:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
 egolint/tests/fixtures/clang-format/valid.cpp:9:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:13:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:17:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:19:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:33:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:42:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:12:  Add #include <utility> for move  [build/include_what_you_use] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:10:  public: should be indented +1 space inside class GreetingService  [whitespace/indent] [3]
+egolint/tests/fixtures/clang-format/valid.cpp:14:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:16:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:23:  private: should be indented +1 space inside class GreetingService  [whitespace/indent] [3]
+egolint/tests/fixtures/clang-format/valid.cpp:30:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:39:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:11:  Add #include <utility> for move  [build/include_what_you_use] [4]
 Done processing egolint/tests/fixtures/clang-format/valid.cpp
-Total errors found: 9
+Total errors found: 10
 ```
 
 </details>
@@ -821,29 +588,12 @@ Total errors found: 9
 <summary>❌ DART / dartanalyzer - 1 error</summary>
 
 ```
-Could not find an option or flag "-c".
+Analyzing greeeting_service.dart...
 
-Usage: dart analyze [arguments] [<directory>]
--h, --help                   Print this usage information.
-    --fatal-infos            Treat info level issues as fatal.
-    --[no-]fatal-warnings    Treat warning level issues as fatal.
-                             (defaults to on)
+   info - greeeting_service.dart:13:12 - Unnecessary use of double quotes. Try using single quotes unless the string contains single quotes. - prefer_single_quotes
+   info - greeeting_service.dart:15:2 - Missing a newline at the end of the file. Try adding a newline at the end of the file. - eol_at_end_of_file
 
-Run "dart help" to see global options.
-```
-
-</details>
-
-<details>
-<summary>❌ EDITORCONFIG / editorconfig-checker - 1 error</summary>
-
-```
-egolint/.config/lint/powershell/powershell-formatter.psd1:
-	Wrong character encoding ("UTF-8-SIG" instead of "utf-8")
-egolint/.config/lint/powershell/powershell-psscriptanalyzer.psd1:
-	Wrong character encoding ("UTF-8-SIG" instead of "utf-8")
-
-2 errors found
+2 issues found.
 ```
 
 </details>
@@ -856,29 +606,19 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@eslint/js' imported from egolint/.config/lint/javascript/eslint.config.mjs
-Did you mean to import "@eslint/js/src/index.js"?
-    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)
-    at packageResolve (node:internal/modules/esm/resolve:768:81)
-    at moduleResolve (node:internal/modules/esm/resolve:859:18)
-    at defaultResolve (node:internal/modules/esm/resolve:992:11)
-    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:20)
-    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:724:38)
-    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:762:56)
-    at #resolve (node:internal/modules/esm/loader:686:17)
-    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:606:35)
-    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33)
-
-
-[JAVASCRIPT_ES_ERROR_FLAT_CONFIG_MODULE_NOT_FOUND] ESLint v9+/v10 flat config (`eslint.config.mjs`) uses native ESM resolution, which does not honor `NODE_PATH`. Bare imports like `import js from '@eslint/js'` fail when ESLint runs from MegaLinter's bundled install.
-Resolutions:
-  - Use `createRequire` in your `eslint.config.mjs` (see the "ESLint v10" section in this linter's documentation above).
-  - Or install your project's dependencies and run the project-local ESLint binary:
-      JAVASCRIPT_ES_PRE_COMMANDS:
-        - command: yarn install --frozen-lockfile --ignore-scripts
-          cwd: workspace
-          continue_if_failed: false
-      JAVASCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
+Error: Cannot find module '@eslint/json'
+Require stack:
+- egolint/.config/lint/javascript/eslint.config.mjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)
+    at Module._load (node:internal/modules/cjs/loader:1296:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1619:12)
+    at require (node:internal/modules/helpers:191:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786711719252:10:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 ```
 
 </details>
@@ -891,29 +631,19 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@eslint/js' imported from egolint/.config/lint/javascript/eslint.config.mjs
-Did you mean to import "@eslint/js/src/index.js"?
-    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)
-    at packageResolve (node:internal/modules/esm/resolve:768:81)
-    at moduleResolve (node:internal/modules/esm/resolve:859:18)
-    at defaultResolve (node:internal/modules/esm/resolve:992:11)
-    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:20)
-    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:724:38)
-    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:762:56)
-    at #resolve (node:internal/modules/esm/loader:686:17)
-    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:606:35)
-    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33)
-
-
-[TSX_ESLINT_ERROR_FLAT_CONFIG_MODULE_NOT_FOUND] ESLint v9+/v10 flat config (`eslint.config.mjs`) uses native ESM resolution, which does not honor `NODE_PATH`. Bare imports like `import tsPlugin from '@typescript-eslint/eslint-plugin'` fail when ESLint runs from MegaLinter's bundled install.
-Resolutions:
-  - Use `createRequire` in your `eslint.config.mjs` (see the "ESLint v10" section in this linter's documentation above).
-  - Or install your project's dependencies and run the project-local ESLint binary:
-      TSX_ESLINT_PRE_COMMANDS:
-        - command: yarn install --frozen-lockfile --ignore-scripts
-          cwd: workspace
-          continue_if_failed: false
-      TSX_ESLINT_CLI_EXECUTABLE: node_modules/.bin/eslint
+Error: Cannot find module '@eslint/json'
+Require stack:
+- egolint/.config/lint/javascript/eslint.config.mjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)
+    at Module._load (node:internal/modules/cjs/loader:1296:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1619:12)
+    at require (node:internal/modules/helpers:191:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786711719252:10:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 ```
 
 </details>
@@ -926,98 +656,19 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@eslint/js' imported from egolint/.config/lint/javascript/eslint.config.mjs
-Did you mean to import "@eslint/js/src/index.js"?
-    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)
-    at packageResolve (node:internal/modules/esm/resolve:768:81)
-    at moduleResolve (node:internal/modules/esm/resolve:859:18)
-    at defaultResolve (node:internal/modules/esm/resolve:992:11)
-    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:20)
-    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:724:38)
-    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:762:56)
-    at #resolve (node:internal/modules/esm/loader:686:17)
-    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:606:35)
-    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33)
-
-
-[TYPESCRIPT_ES_ERROR_FLAT_CONFIG_MODULE_NOT_FOUND] ESLint v9+/v10 flat config (`eslint.config.mjs`) uses native ESM resolution, which does not honor `NODE_PATH`. Bare imports like `import tsPlugin from '@typescript-eslint/eslint-plugin'` fail when ESLint runs from MegaLinter's bundled install.
-Resolutions:
-  - Use `createRequire` in your `eslint.config.mjs` (see the "ESLint v10" section in this linter's documentation above).
-  - Or install your project's dependencies and run the project-local ESLint binary:
-      TYPESCRIPT_ES_PRE_COMMANDS:
-        - command: yarn install --frozen-lockfile --ignore-scripts
-          cwd: workspace
-          continue_if_failed: false
-      TYPESCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
-```
-
-</details>
-
-<details>
-<summary>❌ REPOSITORY / git_diff - 1 error</summary>
-
-```
-warning: in the working copy of '.reports/megalinter/linters_logs/REPOSITORY_TRIVY-ERROR.log', CRLF will be replaced by LF the next time Git touches it
-.reports/megalinter/copy-paste/jscpd-report.html:6267: trailing whitespace.
-+          
-.reports/megalinter/copy-paste/jscpd-report.html:6429: trailing whitespace.
-+          
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:115: trailing whitespace.
-+ 5:72   warning  'be built' may be passive voice. Use active voice if you can.  write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:116: trailing whitespace.
-+ 58:61  warning  'is read' may be passive voice. Use active voice if you can.   write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:120: trailing whitespace.
-+ 3:39  warning  'be staged' may be passive voice. Use active voice if you can.     write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:121: trailing whitespace.
-+ 7:55  warning  'it is' is too wordy.                                              write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:122: trailing whitespace.
-+ 7:58  warning  'is committed' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:126: trailing whitespace.
-+ 6:72  warning  'are reviewed' may be passive voice. Use active voice if you can.  write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:127: trailing whitespace.
-+ 8:35  warning  'be promoted' may be passive voice. Use active voice if you can.   write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:167: trailing whitespace.
-+ 163:31  warning  'been adapted' may be passive voice. Use active voice if you can.     write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:195: trailing whitespace.
-+ 155:85  warning  'been completed' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:196: trailing whitespace.
-+ 159:45  warning  'be required' may be passive voice. Use active voice if you can.     write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:197: trailing whitespace.
-+ 160:30  warning  'be tested' may be passive voice. Use active voice if you can.       write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:369: trailing whitespace.
-+ 8:53    warning  'are extracted' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:370: trailing whitespace.
-+ 38:18   warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:371: trailing whitespace.
-+ 70:58   warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:372: trailing whitespace.
-+ 97:34   warning  'validate' is too wordy.                                            write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:373: trailing whitespace.
-+ 102:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:374: trailing whitespace.
-+ 103:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:392: trailing whitespace.
-+ 124:61   warning  'are resolved' may be passive voice. Use active voice if you can.    write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:393: trailing whitespace.
-+ 143:103  warning  'validate' is too wordy.                                             write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:394: trailing whitespace.
-+ 147:115  warning  'validate' is too wordy.                                             write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:395: trailing whitespace.
-+ 205:53   warning  'be mistaken' may be passive voice. Use active voice if you can.     write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:396: trailing whitespace.
-+ 209:24   warning  'is derived' may be passive voice. Use active voice if you can.      write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:397: trailing whitespace.
-+ 210:14   warning  'several' is a weasel word!                                          write-good.Weasel   
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2310: trailing whitespace.
-+ 22:20  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2314: trailing whitespace.
-+ 12:21  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2318: trailing whitespace.
-+ 5:17   warning  'was designed' may be passive voice. Use active voice if you can.     write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2319: trailing whitespace.
-+ 10:20  warning  'was informed' may be passive voice. Use active voice if you can.     write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2320: trailing whitespace.
-+ 19:44  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive
+Error: Cannot find module '@eslint/json'
+Require stack:
+- egolint/.config/lint/javascript/eslint.config.mjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)
+    at Module._load (node:internal/modules/cjs/loader:1296:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1619:12)
+    at require (node:internal/modules/helpers:191:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786711719252:10:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 ```
 
 </details>
@@ -1036,7 +687,7 @@ decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (4
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
 decompress             4.2.1      npm     GHSA-jwp9-9v96-94mx  Medium    0.3% (25th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0108] ERROR discovered vulnerabilities at or above the severity threshold
+[0130] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
@@ -1053,27 +704,154 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 </details>
 
 <details>
-<summary>❌ HTML / htmlhint - 2 errors</summary>
-
-```
-Config loaded: egolint/.config/lint/html/htmlhint.json
-
-   egolint/tests/fixtures/htmlhint/valid.html
-      L11 |      <h1 class="greeting-page__title">Hello, Ego Hygiene!</h1>
-                    ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L14 |        class="greeting-page__image"
-           ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-
-Scanned 1 files, found 2 errors in 1 files (40 ms)
-```
-
-</details>
-
-<details>
 <summary>❌ COPYPASTE / jscpd - 310 errors</summary>
 
 ```
-core/core.sh [217:1 - 238:8] (22 lines, 137 tokens)
+t/.config/megalinter/v10-catalog.json [1451:49 - 1471:5] (21 lines, 59 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2897:26 - 2917:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [1728:38 - 1745:5] (18 lines, 50 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2916:49 - 2933:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [2379:43 - 2411:5] (33 lines, 95 tokens)
+   egolint/.config/megalinter/v10-catalog.json [3020:34 - 3052:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [3308:42 - 3324:22] (17 lines, 58 tokens)
+   egolint/.config/megalinter/v10-catalog.json [3330:31 - 3346:22]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [3328:19 - 3346:22] (19 lines, 72 tokens)
+   egolint/.config/megalinter/v10-catalog.json [3350:18 - 3368:22]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [4462:41 - 4479:22] (18 lines, 61 tokens)
+   egolint/.config/megalinter/v10-catalog.json [4495:40 - 4512:22]
+Clone found (yaml)
+ - egolint/.config/security/trivy/trivy-sbom.yaml [39:1 - 84:24] (46 lines, 157 tokens)
+   egolint/.config/security/trivy/trivy.yaml [27:1 - 72:24]
+Clone found (json)
+ - egolint/.config/toolchain/tool-matrix.json [124:25 - 138:11] (15 lines, 51 tokens)
+   egolint/.config/toolchain/tool-matrix.json [186:26 - 200:11]
+Clone found (json)
+ - egolint/.config/toolchain/tool-matrix.json [272:25 - 286:11] (15 lines, 51 tokens)
+   egolint/.config/toolchain/tool-matrix.json [494:24 - 508:11]
+Clone found (yaml)
+ - egolint/.mega-linter.yml [1196:37 - 1208:5] (13 lines, 53 tokens)
+   egolint/.mega-linter.yml [1225:32 - 1237:5]
+Clone found (toml)
+ - egolint/poetry.toml [1:1 - 107:15] (107 lines, 185 tokens)
+   poetry.toml [1:1 - 107:15]
+Clone found (java)
+ - egolint/tests/fixtures/checkstyle/GreetingService.java [27:1 - 34:2] (8 lines, 62 tokens)
+   egolint/tests/fixtures/pmd/GreetingService.java [13:1 - 20:2]
+Clone found (toml)
+ - egolint/tests/fixtures/clippy/Cargo.toml [10:1 - 15:45] (6 lines, 57 tokens)
+   identity/Cargo.toml [22:1 - 27:45]
+Clone found (yaml)
+ - mantle/.github/workflows/test.yml [66:1 - 91:34] (26 lines, 248 tokens)
+   mantle/.github/workflows/test.yml [115:1 - 140:34]
+Clone found (markdown)
+ - mantle/CONTRIBUTING.md:markdown [14:41 - 19:32] (6 lines, 319 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [270:1 - 281:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [261:1 - 266:2] (6 lines, 103 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [304:1 - 309:2]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 276:7] (11 lines, 154 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:276 - 316:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 271:35] (6 lines, 58 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [352:211 - 359:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 276:14] (11 lines, 161 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [383:282 - 391:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:299 - 274:2] (9 lines, 116 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [415:267 - 424:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 277:17] (12 lines, 178 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [448:273 - 459:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 285:7] (20 lines, 353 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [519:264 - 537:21]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 274:3] (9 lines, 113 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [561:245 - 572:13]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 275:10] (10 lines, 135 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [695:293 - 707:13]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:274 - 318:55] (10 lines, 210 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [609:328 - 621:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [337:1 - 342:17] (6 lines, 130 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [406:1 - 411:15]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [340:27 - 345:19] (6 lines, 95 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [440:22 - 445:19]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [340:1 - 346:5] (7 lines, 136 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [513:1 - 519:5]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [356:1 - 361:21] (6 lines, 64 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [420:45 - 426:21]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [383:281 - 395:43] (13 lines, 231 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [643:229 - 654:27]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [405:1 - 410:15] (6 lines, 152 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [585:1 - 590:15]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [410:1 - 415:5] (6 lines, 109 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [478:1 - 483:5]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [448:272 - 463:25] (16 lines, 253 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [485:153 - 495:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [556:1 - 561:2] (6 lines, 102 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [604:1 - 609:2]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [556:1 - 561:5] (6 lines, 105 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [690:1 - 695:5]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [603:25 - 608:30] (6 lines, 106 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [666:21 - 671:30]
+Clone found (bash)
+ - mantle/init/init.sh [30:1 - 48:2] (19 lines, 112 tokens)
+   mantle/init/load-core.sh [51:1 - 69:2]
+Clone found (bash)
+ - mantle/install.sh [108:1 - 121:45] (14 lines, 122 tokens)
+   mantle/libexec/mantle/commands/version.sh [25:1 - 38:45]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [28:23 - 46:2] (19 lines, 103 tokens)
+   mantle/lib/bash/collection.sh [121:22 - 139:2]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
+   mantle/lib/bash/collection.sh [53:1 - 59:3]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
+   mantle/lib/bash/collection.sh [108:1 - 114:3]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [35:1 - 48:73] (14 lines, 70 tokens)
+   mantle/lib/bash/collection.sh [128:1 - 141:65]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 59:33] (11 lines, 76 tokens)
+   mantle/lib/bash/collection.sh [66:25 - 76:34]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 62:8] (14 lines, 91 tokens)
+   mantle/lib/bash/collection.sh [83:23 - 94:27]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 59:22] (11 lines, 73 tokens)
+   mantle/lib/bash/collection.sh [142:25 - 152:6]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 59:43] (11 lines, 81 tokens)
+   mantle/lib/bash/collection.sh [159:23 - 169:43]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [72:1 - 78:3] (7 lines, 64 tokens)
+   mantle/lib/bash/collection.sh [89:1 - 95:4]
+Clone found (bash)
+ - mantle/lib/bash/file.sh [54:21 - 61:3] (8 lines, 80 tokens)
+   mantle/lib/bash/file.sh [68:22 - 75:3]
+Clone found (bash)
+ - mantle/lib/core/core.sh [217:1 - 238:8] (22 lines, 137 tokens)
    mantle/lib/core/core.sh [255:1 - 276:8]
 Clone found (bash)
  - mantle/lib/extensions/wget.sh [195:52 - 201:5] (7 lines, 51 tokens)
@@ -1235,27 +1013,29 @@ Clone found (python)
  - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
    mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
 Clone found (python)
- - tests/test_validate_automation.py [42:53 - 54:32] (13 lines, 66 tokens)
-   tests/test_validate_automation.py [105:47 - 117:32]
+ - tests/test_validate_automation.py [45:53 - 57:32] (13 lines, 66 tokens)
+   tests/test_validate_automation.py [108:47 - 120:32]
 Clone found (python)
- - tests/test_validate_automation.py [43:9 - 54:32] (12 lines, 56 tokens)
-   tests/test_validate_automation.py [61:16 - 72:32]
+ - tests/test_validate_automation.py [46:9 - 57:32] (12 lines, 56 tokens)
+   tests/test_validate_automation.py [64:16 - 75:32]
 ┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex       │ 1              │ 13          │ 88           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash       │ 127            │ 19146       │ 90084        │ 58           │ 670 (3.50%)      │ 4439 (4.93%)      │
+│ bash       │ 127            │ 19168       │ 90084        │ 58           │ 670 (3.50%)      │ 4439 (4.93%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ c          │ 1              │ 50          │ 296          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ clojure    │ 2              │ 280         │ 919          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ cpp        │ 1              │ 47          │ 236          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ cpp        │ 1              │ 44          │ 233          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css        │ 2              │ 103         │ 823          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css        │ 2              │ 102         │ 908          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ dart       │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ diff       │ 1              │ 704         │ 59           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ gherkin    │ 1              │ 13          │ 155          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1267,19 +1047,19 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ hcl        │ 2              │ 101         │ 1134         │ 1            │ 5 (4.95%)        │ 91 (8.02%)        │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ ini        │ 3              │ 231         │ 3083         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ ini        │ 3              │ 233         │ 3111         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java       │ 2              │ 54          │ 504          │ 1            │ 7 (12.96%)       │ 62 (12.30%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript │ 6              │ 653         │ 2129         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ javascript │ 6              │ 658         │ 2169         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 84             │ 14105       │ 59414        │ 22           │ 553 (3.92%)      │ 1972 (3.32%)      │
+│ json       │ 84             │ 14011       │ 59330        │ 21           │ 536 (3.83%)      │ 1922 (3.24%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx        │ 1              │ 10          │ 52           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 223            │ 23307       │ 260655       │ 138          │ 1647 (7.07%)     │ 16997 (6.52%)     │
+│ markdown   │ 223            │ 23365       │ 265812       │ 139          │ 1667 (7.13%)     │ 17303 (6.51%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1287,11 +1067,11 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ php        │ 1              │ 19          │ 92           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ powershell │ 3              │ 163         │ 585          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ powershell │ 3              │ 163         │ 583          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 36             │ 8389        │ 63202        │ 16           │ 157 (1.87%)      │ 1116 (1.77%)      │
+│ python     │ 36             │ 8411        │ 63401        │ 16           │ 157 (1.87%)      │ 1112 (1.75%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1305,7 +1085,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift      │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text       │ 7              │ 1674        │ 1762         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ text       │ 7              │ 1642        │ 1703         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml       │ 21             │ 1945        │ 5850         │ 2            │ 111 (5.71%)      │ 242 (4.14%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1313,16 +1093,16 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 227            │ 18659       │ 97968        │ 72           │ 822 (4.41%)      │ 5463 (5.58%)      │
+│ yaml       │ 227            │ 18676       │ 98090        │ 72           │ 822 (4.40%)      │ 5463 (5.57%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 787            │ 91803       │ 611396       │ 310          │ 3972 (4.33%)     │ 30382 (4.97%)     │
+│ Total:     │ 788            │ 92503       │ 616938       │ 310          │ 3975 (4.30%)     │ 30634 (4.97%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 310 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 1.40s
+time: 1.56s
 
-(Truncated to last 17777 characters out of 72129)
+(Truncated to last 26666 characters out of 72437)
 ```
 
 </details>
@@ -1331,7 +1111,7 @@ time: 1.40s
 <summary>❌ REPOSITORY / ls-lint - 5 errors</summary>
 
 ```
-2026/08/14 12:12:17 rule ignore not exists
+2026/08/14 12:51:05 rule ignore not exists
 
 
 [REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.
@@ -1398,184 +1178,120 @@ Caused by:
 </details>
 
 <details>
-<summary>❌ MARKDOWN / markdownlint - 305 errors</summary>
+<summary>❌ MARKDOWN / markdownlint - 20 errors</summary>
 
 ```
-ILL-CONTRACT.md:55:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-egolint/.agents/skills/SKILL-CONTRACT.md:129 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-egolint/.agents/specs/SCHEMA.md:12 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-egolint/.agents/specs/SCHEMA.md:26:101 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-egolint/.agents/specs/SCHEMA.md:27:102 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-egolint/.agents/specs/SCHEMA.md:31:106 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-egolint/.agents/specs/SCHEMA.md:40:135 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-egolint/.agents/specs/SCHEMA.md:41:115 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-egolint/.agents/specs/SCHEMA.md:43:120 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-mantle/ARCHITECTURE.md:62:114 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:10:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:10:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:10:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:10:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:76:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:76:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:76:13 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:76:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:76:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:76:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:105:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:105:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:105:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:105:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:116:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:116:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:116:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:116:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:154:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:154:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:154:13 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:154:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:154:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:154:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:13 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:17 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:21 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:13 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:202:17 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:13 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:17 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:21 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:25 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:29 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:13 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:17 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:21 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:230:25 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:269 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:269 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:280 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:310 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:310 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:313 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:343 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```bash"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:345 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:349 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:349 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:379 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:379 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:383 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:409 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:409 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:441 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```bash"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:448 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:476 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```fish"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:482 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:508 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```bash"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:549 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:549 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:554 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:595 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```bash"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:603 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:627 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:627 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:678 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:678 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:684 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:964:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:964:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:964:13 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:964:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:964:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:964:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:1077:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:1077:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:1077:13 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:1077:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:1077:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:1077:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-mantle/README.md:283:97 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-mantle/README.md:285:99 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-mantle/README.md:287:99 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-mantle/README.md:288:99 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-mantle/README.md:328:152 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-mantle/README.md:328:207 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-
-(Truncated to last 17777 characters out of 61599)
+.github/copilot-instructions.md:9 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- prioritize maintainability a..."]
+.github/copilot-instructions.md:16 error MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Engineering Principles"]
+.github/copilot-instructions.md:42 error MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Validation Expectations"]
+.github/copilot-instructions.md:55 error MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Repository Conventions"]
+.github/copilot-instructions.md:60 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- EditorConfig"]
+.github/copilot-instructions.md:72 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- update relevant documentatio..."]
+.github/copilot-instructions.md:81 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- prefer conservative defaults"]
+.github/copilot-instructions.md:87 error MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Automation & CI"]
+.github/copilot-instructions.md:92 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- workflows"]
+.github/copilot-instructions.md:99 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- reproducibility"]
+.github/copilot-instructions.md:107 error MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "AI-Assisted Development Expect..."]
+.github/copilot-instructions.md:110 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- reviewed"]
+.github/copilot-instructions.md:118 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- explicit naming"]
+.github/copilot-instructions.md:123 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- cleverness"]
+.github/copilot-instructions.md:129 error MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Repository Exploration"]
+.github/copilot-instructions.md:132 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- search for existing implemen..."]
+.github/copilot-instructions.md:139 error MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Final Guidance"]
+.github/copilot-instructions.md:142 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "1. clarity"]
+egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxiv-baseline.md:7:3 error MD034/no-bare-urls Bare URL used [Context: "https://info.arxiv.org/help/su..."]
+egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxiv-baseline.md:8:3 error MD034/no-bare-urls Bare URL used [Context: "https://info.arxiv.org/help/an..."]
 ```
 
 </details>
 
 <details>
-<summary>❌ PYTHON / mypy - 1 error</summary>
+<summary>❌ POWERSHELL / powershell - 2 errors</summary>
 
 ```
-egolint/.config/lint/python/.mypy.ini: Source contains parsing errors: 'egolint/.config/lint/python/.mypy.ini'
-	[line 108]: ')\n'
-mindgarden/tests/__init__.py: error: Duplicate module named "tests" (also at "./egolint/tests/__init__.py")
-mindgarden/tests/__init__.py: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#mapping-file-paths-to-modules for more info
-mindgarden/tests/__init__.py: note: Common resolutions include: a) using `--exclude` to avoid checking one of them, b) adding `__init__.py` somewhere, c) using `--explicit-package-bases` or adjusting MYPYPATH
-Found 1 error in 1 file (errors prevented further checking)
-```
+Results of powershell linter (version 7.6.4)
+See documentation on https://megalinter.io/10.0.0/descriptors/powershell_powershell/
+-----------------------------------------------
 
-</details>
+✅ [SUCCESS] egolint/.config/lint/arm/arm-ttk.psd1
+❌ [ERROR] egolint/.config/lint/powershell/powershell-formatter.psd1
+    
+    Severity RuleName                      ScriptName                Line Message
+    -------- --------                      ----------                ---- -------
+    Warning  PSUseBOMForUnicodeEncodedFile powershell-formatter.psd1      Missing BOM encoding for non-ASCII encoded file 'powershell-formatter.psd1'
 
-<details>
-<summary>❌ JSON / prettier - 1 error</summary>
+❌ [ERROR] egolint/.config/lint/powershell/powershell-psscriptanalyzer.psd1
+    
+    Severity RuleName                      ScriptName                       Line Message
+    -------- --------                      ----------                       ---- -------
+    Warning  PSUseBOMForUnicodeEncodedFile powershell-psscriptanalyzer.psd1      Missing BOM encoding for non-ASCII encoded file 'powershell-psscriptanaly
+                                                                                 zer.psd1'
 
-```
-Checking formatting...
-[warn] egolint/.agents/skills/architecture/architecture-authoring/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-ai-constitution-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-design-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-design-system-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-epistemology-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-manifesto-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-meta-architecture-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-ontology-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-personal-model-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-pillars-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-principles-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-purpose-document/evals/evals.json
-[warn] egolint/.agents/skills/architecture/create-vision-document/evals/evals.json
-[warn] egolint/.agents/skills/authoring/create-specification-file/evals/evals.json
-[warn] egolint/.agents/skills/authoring/github-issue-authoring/evals/evals.json
-[warn] egolint/.agents/skills/authoring/implementation-planning/evals/evals.json
-[warn] egolint/.agents/skills/authoring/skill-authoring/evals/evals.json
-[warn] egolint/.agents/skills/methodology/orchestrate-reflective-development/evals/evals.json
-[warn] egolint/.agents/skills/publishing/prepare-arxiv-release/evals/evals.json
-[warn] egolint/.agents/skills/quality/audit-repository/evals/evals.json
-[warn] egolint/.agents/skills/quality/bug-fixing/evals/evals.json
-[warn] egolint/.agents/skills/quality/repository-cleanup/evals/evals.json
-[warn] egolint/.agents/skills/quality/test-engineering/evals/evals.json
-[warn] Code style issues found in 23 files. Run Prettier with --write to fix.
+✅ [SUCCESS] egolint/tests/fixtures/powershell/Get-Greeting.ps1
 ```
 
 </details>
 
 <details>
-<summary>❌ YAML / prettier - 1 error</summary>
+<summary>❌ SPELL / proselint - 361 errors</summary>
 
 ```
-Checking formatting...
-[warn] mantle/.github/workflows/test.yml
-[warn] Code style issues found in the above file. Run Prettier with --write to fix.
-```
-
-</details>
-
-<details>
-<summary>❌ SPELL / proselint - 358 errors</summary>
-
-```
-cleanup/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+L.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:25:27: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md:5:29: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md:12:31: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:49:26: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/skills/methodology/orchestrate-reflective-development/templates/REFLECTIVE_CYCLE.template.md:39:9: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/repository-cleanup/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/repository-cleanup/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/repository-cleanup/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -1583,15 +1299,19 @@ egolint/.agents/skills/quality/test-engineering/SKILL.md:7:18: typography.symbol
 egolint/.agents/skills/quality/test-engineering/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/specs/SCHEMA.md:22:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:23:95: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:24:55: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:25:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:26:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:28:91: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:29:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:30:78: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:32:51: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:22:70: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:23:96: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:24:56: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:25:77: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:26:77: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:27:100: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:28:92: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:29:77: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:30:79: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:32:52: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:41:113: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:42:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:43:118: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 egolint/.agents/specs/SCHEMA.md:125:3: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
 egolint/.agents/specs/architecture/domain/ontology.spec.md:324:11: lexical_illusions: There's a lexical illusion in 'Concept
 
@@ -1682,40 +1402,40 @@ mantle/README.md:302:1: lexical_illusions: There's a lexical illusion in 'mantle
 mantle config validate' - a phrase is repeated.
 mantle/README.md:305:1: lexical_illusions: There's a lexical illusion in 'mantle config explain
 mantle config explain' - a phrase is repeated.
-mantle/README.md:318:178: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:319:179: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:322:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:323:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:324:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:325:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:326:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:327:182: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:329:185: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:330:199: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:331:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:332:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:333:180: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:334:173: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:342:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:343:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:318:180: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:319:181: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:322:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:323:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:324:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:325:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:326:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:327:184: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:329:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:330:201: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:331:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:332:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:333:182: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:334:175: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:342:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:343:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:502:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:612:3: uncomparables: Comparison of an uncomparable: 'More complete' is not comparable.
 mantle/audits/mantle-holistic-polish-20260806T124442Z.md:51:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:443:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:444:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:444:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:446:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:478:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:512:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:512:40: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:514:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:516:25: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:553:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:598:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:682:30: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:683:12: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:683:32: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:953:87: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:454:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:455:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:455:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:457:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:491:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:527:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:527:40: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:529:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:531:25: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:569:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:616:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:703:30: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:704:12: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:704:32: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:975:87: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/lib/install/README.md:75:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/lib/install/README.md:77:34: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/runtime/shells/fish/README.md:9:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -1754,112 +1474,220 @@ mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
-(Truncated to last 17777 characters out of 50010)
+(Truncated to last 26666 characters out of 50395)
 ```
 
 </details>
 
 <details>
-<summary>❌ PROTOBUF / protolint - 1 error</summary>
+<summary>❌ PYTHON / pylint - 19 errors</summary>
 
 ```
-[egolint/tests/fixtures/buf/greeting.proto:10:3] Field "name" should have a comment
-```
-
-</details>
-
-<details>
-<summary>❌ PYTHON / pylint - 25 errors</summary>
-
-```
-************* Module egolint/.config/lint/python/.pylintrc
-egolint/.config/lint/python/.pylintrc:1:0: E0015: Unrecognized option found: suggestion-mode (unrecognized-option)
 ************* Module generate_lint_infographic
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:150:0: R0913: Too many arguments (8/7) (too-many-arguments)
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:171:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
-************* Module build-projections
-egolint/.agents/agents/build-projections.py:155:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
 ************* Module validate-agents
 egolint/.agents/agents/validate-agents.py:84:0: R0912: Too many branches (26/12) (too-many-branches)
 ************* Module build-distributions
-egolint/.agents/skills/build-distributions.py:259:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
 egolint/.agents/skills/build-distributions.py:209:15: W0718: Catching too general exception Exception (broad-exception-caught)
 ************* Module build-release-artifacts
 egolint/.agents/skills/build-release-artifacts.py:20:0: E0401: Unable to import 'jsonschema' (import-error)
 ************* Module validate-skills
 egolint/.agents/skills/validate-skills.py:37:0: R0912: Too many branches (15/12) (too-many-branches)
-egolint/.agents/specs/build-distributions.py:111:0: C0325: Unnecessary parens after '=' keyword (superfluous-parens)
 ************* Module validate-specs
 egolint/.agents/specs/validate-specs.py:33:0: E0401: Unable to import 'yaml' (import-error)
 egolint/.agents/specs/validate-specs.py:115:0: R0914: Too many local variables (27/20) (too-many-locals)
-egolint/.agents/specs/validate-specs.py:181:22: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
 egolint/.agents/specs/validate-specs.py:115:0: R0912: Too many branches (33/12) (too-many-branches)
 egolint/.agents/specs/validate-specs.py:115:0: R0915: Too many statements (72/60) (too-many-statements)
 ************* Module complementary_tools
-egolint/scripts/complementary_tools.py:135:0: R0911: Too many return statements (7/6) (too-many-return-statements)
-egolint/scripts/complementary_tools.py:199:0: R0912: Too many branches (14/12) (too-many-branches)
-egolint/scripts/complementary_tools.py:528:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+egolint/scripts/complementary_tools.py:138:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+egolint/scripts/complementary_tools.py:202:0: R0912: Too many branches (14/12) (too-many-branches)
+egolint/scripts/complementary_tools.py:531:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 ************* Module validate_megalinter_policy
 egolint/scripts/validate_megalinter_policy.py:18:0: E0401: Unable to import 'yaml' (import-error)
 egolint/scripts/validate_megalinter_policy.py:292:0: R0912: Too many branches (15/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:350:0: R0912: Too many branches (18/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:426:0: R0914: Too many local variables (28/20) (too-many-locals)
+************* Module scripts.garden_agent
+mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
-************* Module test_mindgarden_obsidian_integration
-tests/test_mindgarden_obsidian_integration.py:96:0: C0305: Trailing newlines (trailing-newlines)
-************* Module test_validate_automation
-tests/test_validate_automation.py:29:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 
 -----------------------------------
-Your code has been rated at 9.91/10
+Your code has been rated at 9.92/10
 ```
 
 </details>
 
 <details>
-<summary>❌ PYTHON / pyright - 662 errors</summary>
+<summary>❌ PYTHON / pyright - 615 errors</summary>
 
 ```
-[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:536:41 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:537:43 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:545:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:551:24 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:562:44 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:576:40 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:580:34 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:586:57 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
-  mindgarden/scripts/validate_garden.py:591:46 - error: Argument of type "dict[str, str | bool | int | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
-    "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
-      Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
-      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+tially unknown
+    Type of "quartz_commit" is "str | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:171:36 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:172:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "string" in function "fullmatch"
+    Argument type is "str | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:175:5 - error: Type of "node_major" is partially unknown
+    Type of "node_major" is "Any | Unknown | None" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:175:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: str, default: None = None, /) -> (Any | None), (key: str, default: Any, /) -> Any, (key: str, default: _T@get, /) -> (Any | _T@get)] | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:182:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:183:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:186:5 - error: Type of "manifest" is partially unknown
+    Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:187:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:188:9 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:191:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:192:9 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:196:12 - error: Return type, "tuple[Path, dict[str, Any] | Unknown]", is partially unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:449:5 - error: Type of "manifest" is partially unknown
+    Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:450:5 - error: Type of "content_roots" is partially unknown
+    Type of "content_roots" is "list[str] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:450:41 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string_list"
+    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:451:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "args" in function "__init__"
+    Argument type is "str | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:453:5 - error: Type of "all_source_files" is partially unknown
+    Type of "all_source_files" is "list[Path] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:453:57 - error: Argument type is partially unknown
+    Argument corresponds to parameter "content_roots" in function "discover_note_paths"
+    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:457:9 - error: Type of "source_file" is partially unknown
+    Type of "source_file" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:458:12 - error: Type of "is_symlink" is partially unknown
+    Type of "is_symlink" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:458:44 - error: Type of "is_file" is partially unknown
+    Type of "is_file" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:460:9 - error: Type of "relative" is partially unknown
+    Type of "relative" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:460:20 - error: Type of "relative_to" is partially unknown
+    Type of "relative_to" is "Overload[(other: str | PathLike[str], /, *, walk_up: bool = False) -> Path, (other: str | PathLike[str], /, *_deprecated: str | PathLike[str], walk_up: bool = False) -> Path] | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:461:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "element" in function "add"
+    Argument type is "Path | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:463:49 - error: Argument type is partially unknown
+    Argument corresponds to parameter "path" in function "parse_note"
+    Argument type is "Path | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:465:20 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:466:24 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:596:76 - error: Type of "error" is partially unknown
+    Type of "error" is "Unknown | OSError | UnicodeError | JSONDecodeError" (reportUnknownVariableType)
+mindgarden/scripts/quartz_site.py
+  mindgarden/scripts/quartz_site.py:31:9 - error: Type of "DEFAULT_OUTPUT_PATH" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:32:9 - error: Type of "DEFAULT_PROFILE_PATH" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:33:9 - error: Type of "load_publish_profile" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:34:9 - error: Type of "project_garden" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:158:5 - error: Type of "resolved_profile" is partially unknown
+    Type of "resolved_profile" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:158:23 - error: Type of "profile" is partially unknown
+    Type of "profile" is "dict[str, Any] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:161:5 - error: Type of "expected_node_major" is partially unknown
+    Type of "expected_node_major" is "Any | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:175:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "profile" in function "prepare_engine"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/quartz_site.py:176:5 - error: Type of "configuration_path" is partially unknown
+    Type of "configuration_path" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:176:26 - error: Type of "parent" is partially unknown
+    Type of "parent" is "Path | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:177:12 - error: Type of "is_file" is partially unknown
+    Type of "is_file" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:177:44 - error: Type of "is_symlink" is partially unknown
+    Type of "is_symlink" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:179:21 - error: Argument type is partially unknown
+    Argument corresponds to parameter "src" in function "copyfile"
+    Argument type is "Path | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/quartz_site.py:252:10 - error: Type of "error" is partially unknown
+    Type of "error" is "Unknown | OSError | UnicodeError | JSONDecodeError | CalledProcessError" (reportUnknownVariableType)
+mindgarden/scripts/validate_garden.py
+  mindgarden/scripts/validate_garden.py:198:85 - error: Type of "item" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:202:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:202:26 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:202:30 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:204:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:390:9 - error: Type of "observed_fields" is partially unknown
+    Type of "observed_fields" is "set[Unknown]" (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:390:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:393:13 - error: Type of "unknown" is partially unknown
+    Type of "unknown" is "list[Unknown]" (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:393:30 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:398:32 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:400:41 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:403:39 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:410:46 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:423:38 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:427:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:428:48 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:430:42 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:444:9 - error: Type of "transformations" is partially unknown
+    Type of "transformations" is "Unknown | None" (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:444:27 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  mindgarden/scripts/validate_garden.py:448:62 - error: Type of "item" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:449:20 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:449:44 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:449:48 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:452:32 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:454:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
 mindgarden/tests/test_garden_agent.py
   mindgarden/tests/test_garden_agent.py:22:6 - warning: Import "scripts.garden_agent" could not be resolved (reportMissingImports)
   mindgarden/tests/test_garden_agent.py:23:5 - error: Type of "build_index" is unknown (reportUnknownVariableType)
@@ -1943,10 +1771,6 @@ mindgarden/tests/test_validate_garden.py
     Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
   mindgarden/tests/test_validate_garden.py:168:41 - error: Argument type is unknown
     Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
-tests/test_architecture_documents.py
-  tests/test_architecture_documents.py:196:13 - error: Argument of type "str | list[str]" cannot be assigned to parameter "value" of type "list[str]" in function "__setitem__"
-    Type "str | list[str]" is not assignable to type "list[str]"
-      "str" is not assignable to "list[str]" (reportArgumentType)
 tests/test_mindgarden_agent_integration.py
   tests/test_mindgarden_agent_integration.py:16:6 - warning: Import "scripts.garden_agent" could not be resolved (reportMissingImports)
   tests/test_mindgarden_agent_integration.py:17:5 - error: Type of "build_index" is unknown (reportUnknownVariableType)
@@ -1983,9 +1807,9 @@ tests/test_mindgarden_publishing_integration.py
 tests/test_repository_intelligence.py
   tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-662 errors, 10 warnings, 0 informations
+615 errors, 10 warnings, 0 informations
 
-(Truncated to last 17777 characters out of 144869)
+(Truncated to last 26666 characters out of 116446)
 ```
 
 </details>
@@ -2008,9 +1832,9 @@ See documentation on https://megalinter.io/10.0.0/descriptors/raku_raku/
         /opt/rakudo-pkg/share/perl6/site
         /opt/rakudo-pkg/share/perl6/vendor
         /opt/rakudo-pkg/share/perl6/core
-        CompUnit::Repository::AbsolutePath<3053019523792>
-        CompUnit::Repository::NQP<3052895016360>
-        CompUnit::Repository::Perl5<3052895016400>
+        CompUnit::Repository::AbsolutePath<6086910603872>
+        CompUnit::Repository::NQP<6086786098680>
+        CompUnit::Repository::Perl5<6086786098720>
     at egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 ```
 
@@ -2078,64 +1902,7 @@ unformatted: File would be reformatted
 83 |
    |
 
-unformatted: File would be reformatted
-  --> tests/test_mindgarden_obsidian_integration.py:16:14
-   |
-15 |         profile = json.loads(
-   -             (
-   -                 REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json"
-   -             ).read_text(encoding="utf8")
-16 +             (REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json").read_text(
-17 +                 encoding="utf8"
-18 +             )
-19 |         )
---------------------------------------------------------------------------------
-24 |
-   -         optional_plugins = {
-   -             plugin["id"]: plugin for plugin in profile["optionalCommunityPlugins"]
-   -         }
-25 +         optional_plugins = {plugin["id"]: plugin for plugin in profile["optionalCommunityPlugins"]}
-26 |         self.assertEqual(optional_plugins["project-manager"]["version"], "1.8.0")
---------------------------------------------------------------------------------
-33 |         profile = json.loads(
-   -             (
-   -                 REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json"
-   -             ).read_text(encoding="utf8")
-34 +             (REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json").read_text(
-35 +                 encoding="utf8"
-36 +             )
-37 |         )
---------------------------------------------------------------------------------
-64 |     def test_dashboard_uses_native_base_and_scoped_css(self) -> None:
-   -         dashboard = (REPOSITORY_ROOT / ".garden/dashboard.md").read_text(
-   -             encoding="utf8"
-   -         )
-   -         base = (REPOSITORY_ROOT / ".garden/views/knowledge.base").read_text(
-   -             encoding="utf8"
-   -         )
-   -         css = (
-   -             REPOSITORY_ROOT / ".obsidian/snippets/mindgarden.css"
-   -         ).read_text(encoding="utf8")
-65 +         dashboard = (REPOSITORY_ROOT / ".garden/dashboard.md").read_text(encoding="utf8")
-66 +         base = (REPOSITORY_ROOT / ".garden/views/knowledge.base").read_text(encoding="utf8")
-67 +         css = (REPOSITORY_ROOT / ".obsidian/snippets/mindgarden.css").read_text(encoding="utf8")
-68 |
---------------------------------------------------------------------------------
-77 |         schema = json.loads(
-   -             (
-   -                 REPOSITORY_ROOT
-   -                 / "mindgarden/contracts/obsidian-profile.schema.json"
-   -             ).read_text(encoding="utf8")
-78 +             (REPOSITORY_ROOT / "mindgarden/contracts/obsidian-profile.schema.json").read_text(
-79 +                 encoding="utf8"
-80 +             )
-81 |         )
---------------------------------------------------------------------------------
-86 |     unittest.main()
-   -
-   |
-
-2 files would be reformatted, 42 files already formatted
+1 file would be reformatted, 43 files already formatted
 ```
 
 </details>
@@ -2144,7 +1911,227 @@ unformatted: File would be reformatted
 <summary>❌ BASH / shfmt - 4 errors</summary>
 
 ```
-ntf "%s\n" "${repository}"
+Determine whether an absolute path is inside the workspace.
+ # @arg $1 string Absolute path.
+ path_is_within_workspace() {
+-  local path="$1"
+-  case "${path}" in
++    local path="$1"
++    case "${path}" in
+     "${WORKSPACE}" | "${WORKSPACE}"/*) return 0 ;;
+     *) return 1 ;;
+-  esac
++    esac
+ }
+ 
+ # @description Resolve an explicit or conventional MegaLinter configuration.
+ resolve_config() {
+-  local candidate=""
+-
+-  if [[ -n ${CONFIG_FILE} ]]; then
+-    case "${CONFIG_FILE}" in
+-      /*) candidate="${CONFIG_FILE}" ;;
+-      *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
+-    esac
+-  elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
+-    candidate="${WORKSPACE}/.mega-linter.yml"
+-  elif [[ -f "${WORKSPACE}/.mega-linter.yaml" ]]; then
+-    candidate="${WORKSPACE}/.mega-linter.yaml"
+-  fi
+-
+-  if [[ -z ${candidate} ]]; then
+-    CONFIG_FILE=""
+-    return 0
+-  fi
+-
+-  [[ -f ${candidate} ]] || die "MegaLinter config does not exist: ${candidate}"
+-  candidate="$(cd "$(dirname "${candidate}")" && pwd -P)/$(basename "${candidate}")"
+-  path_is_within_workspace "${candidate}" ||
+-    die "MegaLinter config must be inside the workspace: ${candidate}"
+-  CONFIG_FILE="${candidate}"
++    local candidate=""
++
++    if [[ -n ${CONFIG_FILE} ]]; then
++        case "${CONFIG_FILE}" in
++        /*) candidate="${CONFIG_FILE}" ;;
++        *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
++        esac
++    elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
++        candidate="${WORKSPACE}/.mega-linter.yml"
++    elif [[ -f "${WORKSPACE}/.mega-linter.yaml" ]]; then
++        candidate="${WORKSPACE}/.mega-linter.yaml"
++    fi
++
++    if [[ -z ${candidate} ]]; then
++        CONFIG_FILE=""
++        return 0
++    fi
++
++    [[ -f ${candidate} ]] || die "MegaLinter config does not exist: ${candidate}"
++    candidate="$(cd "$(dirname "${candidate}")" && pwd -P)/$(basename "${candidate}")"
++    path_is_within_workspace "${candidate}" ||
++        die "MegaLinter config must be inside the workspace: ${candidate}"
++    CONFIG_FILE="${candidate}"
+ }
+ 
+ # @description Validate and normalize the repository-relative report directory.
+ validate_report_directory() {
+-  [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
+-  [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
+-  case "${REPORT_DIRECTORY}" in
++    [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
++    [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
++    case "${REPORT_DIRECTORY}" in
+     /*) die "Report directory must be relative to the workspace." ;;
+     */../* | ../* | */..) die "Report directory may not contain a '..' segment: ${REPORT_DIRECTORY}" ;;
+-  esac
+-  REPORT_DIRECTORY="${REPORT_DIRECTORY#./}"
++    esac
++    REPORT_DIRECTORY="${REPORT_DIRECTORY#./}"
+ }
+ 
+ # @description Validate enumerated options and option-dependent prerequisites.
+ validate_options() {
+-  case "${RUNTIME}" in auto | docker | podman) ;; *) die "Invalid runtime: ${RUNTIME}" ;; esac
+-  case "${PULL_POLICY}" in always | missing | never) ;; *) die "Invalid pull policy: ${PULL_POLICY}" ;; esac
+-  case "${TTY_MODE}" in auto | always | never) ;; *) die "Invalid TTY mode: ${TTY_MODE}" ;; esac
+-  case "${USER_MODE}" in default | host) ;; *) die "Invalid user mode: ${USER_MODE}" ;; esac
+-
+-  [[ ${FLAVOR} =~ ^[a-z0-9][a-z0-9_-]*$ ]] || die "Invalid flavor: ${FLAVOR}"
+-  [[ -n ${MEGALINTER_VERSION} ]] || die "MegaLinter version cannot be empty."
+-
+-  if [[ ${CHANGED_ONLY} == "true" && ! -d "${WORKSPACE}/.git" ]]; then
+-    git -C "${WORKSPACE}" rev-parse --git-dir > /dev/null 2>&1 ||
+-      die "--changed-only requires a Git worktree."
+-  fi
+-
+-  if [[ -n ${ENV_FILE} ]]; then
+-    [[ -f ${ENV_FILE} ]] || die "Environment file does not exist: ${ENV_FILE}"
+-    ENV_FILE="$(cd "$(dirname "${ENV_FILE}")" && pwd -P)/$(basename "${ENV_FILE}")"
+-  fi
++    case "${RUNTIME}" in auto | docker | podman) ;; *) die "Invalid runtime: ${RUNTIME}" ;; esac
++    case "${PULL_POLICY}" in always | missing | never) ;; *) die "Invalid pull policy: ${PULL_POLICY}" ;; esac
++    case "${TTY_MODE}" in auto | always | never) ;; *) die "Invalid TTY mode: ${TTY_MODE}" ;; esac
++    case "${USER_MODE}" in default | host) ;; *) die "Invalid user mode: ${USER_MODE}" ;; esac
++
++    [[ ${FLAVOR} =~ ^[a-z0-9][a-z0-9_-]*$ ]] || die "Invalid flavor: ${FLAVOR}"
++    [[ -n ${MEGALINTER_VERSION} ]] || die "MegaLinter version cannot be empty."
++
++    if [[ ${CHANGED_ONLY} == "true" && ! -d "${WORKSPACE}/.git" ]]; then
++        git -C "${WORKSPACE}" rev-parse --git-dir >/dev/null 2>&1 ||
++            die "--changed-only requires a Git worktree."
++    fi
++
++    if [[ -n ${ENV_FILE} ]]; then
++        [[ -f ${ENV_FILE} ]] || die "Environment file does not exist: ${ENV_FILE}"
++        ENV_FILE="$(cd "$(dirname "${ENV_FILE}")" && pwd -P)/$(basename "${ENV_FILE}")"
++    fi
+ }
+ 
+ # @description Select Docker or Podman and confirm the executable is available.
+ select_runtime() {
+-  if [[ ${RUNTIME} == "auto" ]]; then
+-    if command -v docker > /dev/null 2>&1; then
+-      RUNTIME="docker"
+-    elif command -v podman > /dev/null 2>&1; then
+-      RUNTIME="podman"
+-    else
+-      die "Neither Docker nor Podman is installed." "${EXIT_DEPENDENCY}"
+-    fi
+-  elif ! command -v "${RUNTIME}" > /dev/null 2>&1; then
+-    die "Container runtime is not installed: ${RUNTIME}" "${EXIT_DEPENDENCY}"
+-  fi
++    if [[ ${RUNTIME} == "auto" ]]; then
++        if command -v docker >/dev/null 2>&1; then
++            RUNTIME="docker"
++        elif command -v podman >/dev/null 2>&1; then
++            RUNTIME="podman"
++        else
++            die "Neither Docker nor Podman is installed." "${EXIT_DEPENDENCY}"
++        fi
++    elif ! command -v "${RUNTIME}" >/dev/null 2>&1; then
++        die "Container runtime is not installed: ${RUNTIME}" "${EXIT_DEPENDENCY}"
++    fi
+ }
+ 
+ # @description Resolve the MegaLinter image from flavor and version defaults.
+ resolve_image() {
+-  [[ -n ${IMAGE} ]] && return 0
+-  if [[ ${FLAVOR} == "all" ]]; then
+-    IMAGE="${DEFAULT_REGISTRY}/megalinter:${MEGALINTER_VERSION}"
+-  else
+-    IMAGE="${DEFAULT_REGISTRY}/megalinter-${FLAVOR}:${MEGALINTER_VERSION}"
+-  fi
++    [[ -n ${IMAGE} ]] && return 0
++    if [[ ${FLAVOR} == "all" ]]; then
++        IMAGE="${DEFAULT_REGISTRY}/megalinter:${MEGALINTER_VERSION}"
++    else
++        IMAGE="${DEFAULT_REGISTRY}/megalinter-${FLAVOR}:${MEGALINTER_VERSION}"
++    fi
+ }
+ 
+ # @description Check whether the selected container runtime service is ready.
+ runtime_ready() {
+-  "${RUNTIME}" info > /dev/null 2>&1
++    "${RUNTIME}" info >/dev/null 2>&1
+ }
+ 
+ # @description Check whether the resolved MegaLinter image exists locally.
+ image_exists() {
+-  if [[ ${RUNTIME} == "docker" ]]; then
+-    docker image inspect "${IMAGE}" > /dev/null 2>&1
+-  else
+-    podman image exists "${IMAGE}" > /dev/null 2>&1
+-  fi
++    if [[ ${RUNTIME} == "docker" ]]; then
++        docker image inspect "${IMAGE}" >/dev/null 2>&1
++    else
++        podman image exists "${IMAGE}" >/dev/null 2>&1
++    fi
+ }
+ 
+ # @description Enforce the configured container-image pull policy.
+ prepare_image() {
+-  if [[ ${PULL_POLICY} == "always" ]]; then
+-    log_info "Pulling ${IMAGE}"
+-    "${RUNTIME}" pull "${IMAGE}"
+-  elif [[ ${PULL_POLICY} == "missing" ]] && ! image_exists; then
+-    log_info "Image is not present locally; pulling ${IMAGE}"
+-    "${RUNTIME}" pull "${IMAGE}"
+-  elif [[ ${PULL_POLICY} == "never" ]] && ! image_exists; then
+-    die "Image is not present locally and --pull never was selected: ${IMAGE}" "${EXIT_RUNTIME}"
+-  fi
++    if [[ ${PULL_POLICY} == "always" ]]; then
++        log_info "Pulling ${IMAGE}"
++        "${RUNTIME}" pull "${IMAGE}"
++    elif [[ ${PULL_POLICY} == "missing" ]] && ! image_exists; then
++        log_info "Image is not present locally; pulling ${IMAGE}"
++        "${RUNTIME}" pull "${IMAGE}"
++    elif [[ ${PULL_POLICY} == "never" ]] && ! image_exists; then
++        die "Image is not present locally and --pull never was selected: ${IMAGE}" "${EXIT_RUNTIME}"
++    fi
+ }
+ 
+ # @description Derive an owner/repository identifier from the origin remote.
+ # @stdout GitHub repository identifier, or an empty line when unavailable.
+ github_repository() {
+-  local remote_url=""
+-  local repository=""
+-  remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2> /dev/null || true)"
+-
+-  case "${remote_url}" in
++    local remote_url=""
++    local repository=""
++    remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2>/dev/null || true)"
++
++    case "${remote_url}" in
+     git@github.com:*) repository="${remote_url#git@github.com:}" ;;
+     ssh://git@github.com/*) repository="${remote_url#ssh://git@github.com/}" ;;
+     https://github.com/*) repository="${remote_url#https://github.com/}" ;;
+     http://github.com/*) repository="${remote_url#http://github.com/}" ;;
+-  esac
+-  repository="${repository%.git}"
+-  printf "%s\n" "${repository}"
 +    esac
 +    repository="${repository%.git}"
 +    printf "%s\n" "${repository}"
@@ -2740,7 +2727,7 @@ diff egolint/scripts/precommit.sh.orig egolint/scripts/precommit.sh
  
  main "$@"
 
-(Truncated to last 17777 characters out of 47476)
+(Truncated to last 26666 characters out of 47476)
 ```
 
 </details>
@@ -2767,57 +2754,570 @@ See documentation on https://megalinter.io/10.0.0/descriptors/snakemake_snakemak
 </details>
 
 <details>
-<summary>❌ CSS / stylelint - 5 errors</summary>
-
-```
-.obsidian/snippets/mindgarden.css
-   2:1   ✖  Expected empty line before comment                               comment-empty-line-before
-  17:23  ✖  Expected class selector ".cm-contentContainer" to be kebab-case  selector-class-pattern
-  41:3   ✖  Expected empty line before declaration                           declaration-empty-line-before
-
-egolint/tests/fixtures/stylelint/valid.css
-  18:1  ✖  Expected class selector ".greeting-card__title" to be kebab-case    selector-class-pattern
-  24:1  ✖  Expected class selector ".greeting-card__message" to be kebab-case  selector-class-pattern
-
-✖ 5 problems (5 errors, 0 warnings)
-  2 errors potentially fixable with the "--fix" option.
-```
-
-</details>
-
-<details>
-<summary>❌ LUA / stylua - 1 error</summary>
-
-```
-Results of stylua linter (version 2.5.2)
-See documentation on https://megalinter.io/10.0.0/descriptors/lua_stylua/
------------------------------------------------
-
-❌ [ERROR] egolint/tests/fixtures/luacheck/valid.lua
-    Diff in egolint/tests/fixtures/luacheck/valid.lua:
-    8   8    | end
-    9   9    | 
-    10  10   | return greeting
-    11       |-
-```
-
-</details>
-
-<details>
 <summary>❌ TERRAFORM / tflint - 1 error</summary>
 
 ```
-│ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
+run in egolint/tests/fixtures/negative/djlint; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/dotenv-linter; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/golangci-lint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/interrogate; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/kingfisher; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/knip; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/knip/src; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/latexindent; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/kubernetes; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/nbqa-mypy; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/regal; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/ruff-format; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/semgrep; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/rumdl; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/v8r; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
 
 │ Failed to run in egolint/tests/fixtures/negative/terraform-fmt; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/tombi; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/vacuum; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/zizmor; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/negative/vulture; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/npm-groovy-lint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/npm-package-json-lint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/php; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/pmd; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/powershell; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/protolint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/prose; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/prettier; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/python; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/puppet; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/raku; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/raku/lib; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/raku/lib/EgoHygiene; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/raku/t; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/remark-lint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/regal; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/revive; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/rstcheck; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/salesforce-apex; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/rubocop; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app/main/default; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app/main; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app/main/default/classes; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/scalafix; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/snakefmt/data; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/secretlint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/sqlfluff; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/snakefmt; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/stylelint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/libexec/mantle/installers; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/tekton-lint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/terragrunt; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
 
 │ Failed to run in egolint/tests/fixtures/tflint; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/trufflehog; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/tombi; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/vacuum; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/tsqllint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/vulture; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/v8r; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in identity/profiles; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in identity/contracts; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/yamllint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in identity; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in identity/src; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in lib; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/assets; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/assets/branding; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/assets/presentation; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/audits; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/config; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/bin; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/config/architecture; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/config/fastfetch; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/lib/bash; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/init; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/lib; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/lib/config; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/lib/extensions; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/lib/core; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/libexec; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/lib/install; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/libexec/mantle; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/modules; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/bin; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/libexec/mantle/commands; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/platforms; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/platforms/linux; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/platforms/darwin; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/platforms/windows; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shared; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells/fish; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells/bash; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells/fish/completions; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells/fish/conf.d; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells/fish/functions; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells/zsh; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/runtime/shells/posix; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/integration; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/contract; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/smoke; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/test_helper; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/unit; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/unit/core; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/unit/install; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mantle/tests/unit/config; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/profiles; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/contracts; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/profiles/obsidian; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/profiles/agent; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/checkmake; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/scripts; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tasks; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/arm-ttk; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/buf; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/htmlhint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/gherkin; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/govulncheck; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/scripts; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/gitleaks; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/hadolint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/graphql-schema-linter; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in LICENSES; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/profiles/quartz; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/templates; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/interrogate; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/kics; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in mindgarden/tests; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/jsonlint; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in tests; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+│ Failed to run in egolint/tests/fixtures/knip; exit status 1
+
+Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+
+(Truncated to last 26666 characters out of 35385)
 ```
 
 </details>
@@ -2826,21 +3326,25 @@ Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --
 <summary>❌ REPOSITORY / trivy - 1 error</summary>
 
 ```
-MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 48.39 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 45.27 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 45.27 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 45.27 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 42.35 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 42.35 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 42.35 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 39.61 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 39.61 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 39.61 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 37.06 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 37.06 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 37.06 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 34.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 34.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 34.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 32.43 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 32.43 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 32.43 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 30.34 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 30.34 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 30.34 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 28.38 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 28.38 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 28.38 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 26.55 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------------] 100.00% 7.70 MiB p/s 14s2026-08-14T12:11:24Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-14T12:11:24Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-14T12:11:24Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-14T12:11:24Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-14T12:11:24Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-14T12:11:27Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-14T12:11:27Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-14T12:11:27Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-14T12:11:27Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-14T12:11:28Z	INFO	Number of language-specific files	num=4
-2026-08-14T12:11:28Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-14T12:11:28Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-14T12:11:28Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-14T12:11:28Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-14T12:11:28Z	INFO	Detected config files	num=13
+2026-08-14T12:49:32Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-14T12:49:32Z	INFO	[vulndb] Need to update DB
+2026-08-14T12:49:32Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-14T12:49:32Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+1.39 MiB / 106.87 MiB [>_____________________________________________________________] 1.30% ? p/s ?17.25 MiB / 106.87 MiB [--------->__________________________________________________] 16.14% ? p/s ?44.14 MiB / 106.87 MiB [------------------------>___________________________________] 41.30% ? p/s ?69.93 MiB / 106.87 MiB [------------------------------>_______________] 65.43% 114.05 MiB p/s ETA 0s92.93 MiB / 106.87 MiB [--------------------------------------->______] 86.95% 114.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.76 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.76 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.76 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 74.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 74.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 74.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 69.39 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 69.39 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 69.39 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 64.91 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 64.91 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 64.91 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 60.72 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 15.74 MiB p/s 7.0s2026-08-14T12:49:40Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-14T12:49:40Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-14T12:49:40Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-14T12:49:40Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-14T12:49:40Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 4.33 MiB p/s 300ms2026-08-14T12:49:51Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-14T12:49:51Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-14T12:49:51Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-14T12:49:52Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-14T12:49:53Z	INFO	Number of language-specific files	num=4
+2026-08-14T12:49:53Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-14T12:49:53Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-14T12:49:53Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-14T12:49:54Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-14T12:49:54Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -3040,8 +3544,6 @@ See https://avd.aquasec.com/misconfig/ksv-0118
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
 
 To suppress version checks, run Trivy scans with the --skip-version-check flag
-
-(Truncated to last 17777 characters out of 22469)
 ```
 
 </details>
@@ -3050,77 +3552,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 <summary>❌ REPOSITORY / trufflehog - 1 error</summary>
 
 ```
-trufflehog: error: flag 'fail' cannot be repeated, try --help
-```
-
-</details>
-
-<details>
-<summary>❌ TYPESCRIPT / ts-standard - 1 error</summary>
-
-```
-Unable to locate the project file. A project file (tsconfig.json or tsconfig.eslint.json) is required in order to use ts-standard.
-```
-
-</details>
-
-<details>
-<summary>❌ JSON / v8r - 1 error</summary>
-
-```
-✖ .devcontainer/devcontainer.json is invalid
-
-.devcontainer/devcontainer.json# must have required property 'build'
-.devcontainer/devcontainer.json# must have required property 'dockerFile'
-.devcontainer/devcontainer.json# must match exactly one schema in oneOf
-.devcontainer/devcontainer.json# must have required property 'image'
-.devcontainer/devcontainer.json# must match exactly one schema in oneOf
-.devcontainer/devcontainer.json# must have required property 'dockerComposeFile'
-.devcontainer/devcontainer.json# must have required property 'service'
-.devcontainer/devcontainer.json# must have required property 'workspaceFolder'
-.devcontainer/devcontainer.json# must match exactly one schema in oneOf
-.devcontainer/devcontainer.json# must NOT have additional properties, found additional property '$schema'
-.devcontainer/devcontainer.json# must NOT have additional properties, found additional property 'name'
-.devcontainer/devcontainer.json# must match exactly one schema in oneOf
-
-✖ egolint/.config/lint/groovy/.groovylintrc.json is invalid
-
-egolint/.config/lint/groovy/.groovylintrc.json# must NOT have additional properties, found additional property '$schema'
-
-✖ egolint/.config/lint/markdown/.markdown-link-check.json is invalid
-
-egolint/.config/lint/markdown/.markdown-link-check.json# must NOT have additional properties, found additional property '$schema'
-
-✖ egolint/.config/lint/markdown/.remarkrc.json is invalid
-
-egolint/.config/lint/markdown/.remarkrc.json# must NOT have additional properties, found additional property '$schema'
-
-✖ egolint/tests/fixtures/commitlint/messages.json is invalid
-
-egolint/tests/fixtures/commitlint/messages.json#/valid must be object
-egolint/tests/fixtures/commitlint/messages.json#/invalid must be object
-```
-
-</details>
-
-<details>
-<summary>❌ YAML / v8r - 1 error</summary>
-
-```
-✖ egolint/tasks/complementary.yml is invalid
-
-egolint/tasks/complementary.yml# must NOT have additional properties, found additional property 'version'
-egolint/tasks/complementary.yml# must NOT have additional properties, found additional property 'vars'
-egolint/tasks/complementary.yml# must NOT have additional properties, found additional property 'tasks'
-
-✖ egolint/tasks/lint.yml is invalid
-
-egolint/tasks/lint.yml# must NOT have additional properties, found additional property 'version'
-egolint/tasks/lint.yml# must NOT have additional properties, found additional property 'vars'
-egolint/tasks/lint.yml# must NOT have additional properties, found additional property 'env'
-egolint/tasks/lint.yml# must NOT have additional properties, found additional property 'tasks'
-
-✖ Called http://json-schema.org/draft-04/schema >10 times. Possible circular reference.
+2026-08-14T12:50:04Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
 ```
 
 </details>
@@ -3129,7 +3561,119 @@ egolint/tasks/lint.yml# must NOT have additional properties, found additional pr
 <summary>❌ SPELL / vale - 4 errors</summary>
 
 ```
-Use active voice if you can.  write-good.Passive 
+rite-good.Passive  
+ 246:17  warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 267:13  warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 267:19  warning  'be reported' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 271:14  warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 274:4   warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 295:1   warning  'Validate' is too wordy.                                             write-good.TooWordy 
+ 315:11  warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 316:56  warning  'is found' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 317:1   warning  'be generated' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 317:35  warning  'was mutated' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 319:11  warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 319:52  warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 323:36  warning  'additional' is too wordy.                                           write-good.TooWordy 
+ 335:20  warning  'shall' is too wordy.                                                write-good.TooWordy 
+ 337:14  warning  'prioritize' is too wordy.                                           write-good.TooWordy 
+ 343:23  warning  'is isolated' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 346:40  warning  'are validated' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 347:47  warning  'are detected' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 349:28  warning  'is preserved' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 350:28  warning  'is required' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 351:37  warning  'are generated' may be passive voice. Use active voice if you can.   write-good.Passive  
+
+
+ egolint/.agents/specs/quality/auditor.spec.md
+ 47:7    warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 47:26   warning  'be audited' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 54:13   warning  'authorize' is too wordy.                                             write-good.TooWordy 
+ 59:13   warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 93:19   warning  'is required' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 95:19   warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 95:25   warning  'be recorded' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 114:17  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 114:23  warning  'be reported' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 160:13  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 165:26  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 222:25  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 246:3   warning  'methodology' is too wordy.                                           write-good.TooWordy 
+ 247:3   warning  'overall' is too wordy.                                               write-good.TooWordy 
+ 258:18  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 258:24  warning  'be marked' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 269:20  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 274:30  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 292:20  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 292:30  warning  'be modified' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 296:45  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 298:3   warning  'modify' is too wordy.                                                write-good.TooWordy 
+ 309:22  warning  'be proposed' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 317:6   warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 317:16  warning  'be created' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 321:13  warning  'shall' is too wordy.                                                 write-good.TooWordy 
+ 328:17  warning  'prioritize' is too wordy.                                            write-good.TooWordy 
+ 336:37  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 338:23  warning  'was followed' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 339:25  warning  'were considered' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 342:56  warning  'are normalized' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 343:29  warning  'are included' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 345:37  warning  'is supported' may be passive voice. Use active voice if you can.     write-good.Passive  
+
+
+ egolint/.ansible/inventories/README.md
+ 3:61  warning  'validate' is too wordy.                                           write-good.TooWordy 
+ 5:42  warning  'be committed' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+
+ egolint/.config/lint/README.md
+ 14:26  warning  'are cataloged' may be passive voice. Use active voice if you can.  write-good.Passive 
+
+
+ egolint/.config/lint/prose/styles/proselint/README.md
+ 6:82   warning  'are permitted' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 6:96   warning  'provided that' is too wordy.                                        write-good.TooWordy 
+ 7:22   warning  'are met' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 9:40   warning  'retain' is too wordy.                                               write-good.TooWordy 
+ 16:83  warning  'be used' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 19:15  warning  'IS PROVIDED' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 21:20  warning  'ARE DISCLAIMED' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 21:48  warning  'SHALL' is too wordy.                                                write-good.TooWordy 
+ 24:1   warning  'HOWEVER' is too wordy.                                              write-good.TooWordy 
+
+
+ egolint/.config/megalinter/README.md
+ 24:52  warning  'validate' is too wordy.                                          write-good.TooWordy 
+ 51:17  warning  'be reported' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+
+ egolint/README.md
+ 45:7    warning  'exclusively' is too wordy.                                        write-good.TooWordy 
+ 48:20   warning  'is preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 103:21  warning  'are skipped' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 104:10  warning  'are reported' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+
+ egolint/tests/fixtures/markdown-link-check/valid.md
+ 3:23  warning  'several' is a weasel word!  write-good.Weasel 
+
+
+ egolint/tests/fixtures/rstcheck/valid.rst
+ 35:29  warning  'additional' is too wordy.  write-good.TooWordy 
+
+
+ identity/ARCHITECTURE.md
+ 22:20  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
+
+
+ identity/EXTRACTION.md
+ 12:21  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
+
+
+ identity/PROVENANCE.md
+ 5:17   warning  'was designed' may be passive voice. Use active voice if you can.     write-good.Passive 
+ 10:20  warning  'was informed' may be passive voice. Use active voice if you can.     write-good.Passive 
+ 19:44  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive 
 
 
  llms.txt
@@ -3194,68 +3738,68 @@ Use active voice if you can.  write-good.Passive
 
 
  mantle/audits/mantle-holistic-polish-20260806T124442Z.md
- 21:163   warning  'be executed' may be passive voice. Use active voice if you can.       write-good.Passive  
- 29:87    warning  'prior to' is too wordy.                                               write-good.TooWordy 
- 29:124   warning  'been implemented' may be passive voice. Use active voice if you can.  write-good.Passive  
- 31:80    warning  'are recommended' may be passive voice. Use active voice if you can.   write-good.Passive  
- 32:53    warning  'several' is a weasel word!                                            write-good.Weasel   
- 36:19    warning  'are recorded' may be passive voice. Use active voice if you can.      write-good.Passive  
- 133:7    warning  'Methodology' is too wordy.                                            write-good.TooWordy 
- 146:66   warning  'several' is a weasel word!                                            write-good.Weasel   
- 165:7    warning  'Overall' is too wordy.                                                write-good.TooWordy 
- 189:103  warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 190:139  warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 193:58   warning  'is resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 244:71   warning  'is computed' may be passive voice. Use active voice if you can.       write-good.Passive  
- 291:32   warning  'be done' may be passive voice. Use active voice if you can.           write-good.Passive  
- 307:194  warning  'However' is too wordy.                                                write-good.TooWordy 
- 307:265  warning  'be captured' may be passive voice. Use active voice if you can.       write-good.Passive  
- 316:128  warning  'be detected' may be passive voice. Use active voice if you can.       write-good.Passive  
- 318:114  warning  'minimum' is too wordy.                                                write-good.TooWordy 
- 342:77   warning  'is produced' may be passive voice. Use active voice if you can.       write-good.Passive  
- 376:63   warning  'equivalent' is too wordy.                                             write-good.TooWordy 
- 376:152  warning  'multiple' is too wordy.                                               write-good.TooWordy 
- 406:1    error    Don't start a sentence with 'There are'.                               write-good.ThereIs  
- 406:153  error    Don't start a sentence with 'There is'.                                write-good.ThereIs  
- 471:241  warning  'it is' is too wordy.                                                  write-good.TooWordy 
- 471:244  warning  'is sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 473:68   warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 487:94   warning  'equivalent' is too wordy.                                             write-good.TooWordy 
- 489:41   warning  'clearly' is a weasel word!                                            write-good.Weasel   
- 524:160  warning  'is restored' may be passive voice. Use active voice if you can.       write-good.Passive  
- 546:120  warning  'are exported' may be passive voice. Use active voice if you can.      write-good.Passive  
- 592:90   warning  'Several' is a weasel word!                                            write-good.Weasel   
- 592:242  warning  'it is' is too wordy.                                                  write-good.TooWordy 
- 606:126  warning  'was added' may be passive voice. Use active voice if you can.         write-good.Passive  
- 624:43   warning  'is noted' may be passive voice. Use active voice if you can.          write-good.Passive  
- 636:120  warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 636:155  warning  'been validated' may be passive voice. Use active voice if you can.    write-good.Passive  
- 652:121  warning  'However' is too wordy.                                                write-good.TooWordy 
- 711:37   warning  'are registered' may be passive voice. Use active voice if you can.    write-good.Passive  
- 717:50   warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 753:165  warning  'is backed' may be passive voice. Use active voice if you can.         write-good.Passive  
- 763:72   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 768:71   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 769:50   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 774:18   warning  'Validate' is too wordy.                                               write-good.TooWordy 
- 781:3    warning  'Evaluate' is too wordy.                                               write-good.TooWordy 
- 802:8    warning  'are ordered' may be passive voice. Use active voice if you can.       write-good.Passive  
- 874:75   warning  'be produced' may be passive voice. Use active voice if you can.       write-good.Passive  
- 893:74   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 902:35   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 914:48   warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 915:190  warning  'is required' may be passive voice. Use active voice if you can.       write-good.Passive  
- 926:107  warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 938:110  warning  'evaluate' is too wordy.                                               write-good.TooWordy 
- 941:90   warning  'is expected' may be passive voice. Use active voice if you can.       write-good.Passive  
- 941:105  warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
- 949:58   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 951:196  warning  'be required' may be passive voice. Use active voice if you can.       write-good.Passive  
- 953:125  warning  'is enabled' may be passive voice. Use active voice if you can.        write-good.Passive  
- 955:110  warning  'be added' may be passive voice. Use active voice if you can.          write-good.Passive  
- 991:163  warning  'were read' may be passive voice. Use active voice if you can.         write-good.Passive  
- 1074:13  warning  'is marked' may be passive voice. Use active voice if you can.         write-good.Passive  
- 1083:63  warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 21:164    warning  'be executed' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 29:87     warning  'prior to' is too wordy.                                               write-good.TooWordy 
+ 29:124    warning  'been implemented' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 31:80     warning  'are recommended' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 32:53     warning  'several' is a weasel word!                                            write-good.Weasel   
+ 36:19     warning  'are recorded' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 133:7     warning  'Methodology' is too wordy.                                            write-good.TooWordy 
+ 146:66    warning  'several' is a weasel word!                                            write-good.Weasel   
+ 165:7     warning  'Overall' is too wordy.                                                write-good.TooWordy 
+ 189:103   warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 190:139   warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 193:58    warning  'is resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 244:71    warning  'is computed' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 293:32    warning  'be done' may be passive voice. Use active voice if you can.           write-good.Passive  
+ 309:194   warning  'However' is too wordy.                                                write-good.TooWordy 
+ 309:265   warning  'be captured' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 320:128   warning  'be detected' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 322:114   warning  'minimum' is too wordy.                                                write-good.TooWordy 
+ 346:77    warning  'is produced' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 383:63    warning  'equivalent' is too wordy.                                             write-good.TooWordy 
+ 383:152   warning  'multiple' is too wordy.                                               write-good.TooWordy 
+ 415:1     error    Don't start a sentence with 'There are'.                               write-good.ThereIs  
+ 415:153   error    Don't start a sentence with 'There is'.                                write-good.ThereIs  
+ 483:241   warning  'it is' is too wordy.                                                  write-good.TooWordy 
+ 483:244   warning  'is sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 485:68    warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 501:94    warning  'equivalent' is too wordy.                                             write-good.TooWordy 
+ 503:41    warning  'clearly' is a weasel word!                                            write-good.Weasel   
+ 539:160   warning  'is restored' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 561:120   warning  'are exported' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 609:90    warning  'Several' is a weasel word!                                            write-good.Weasel   
+ 609:242   warning  'it is' is too wordy.                                                  write-good.TooWordy 
+ 625:126   warning  'was added' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 643:43    warning  'is noted' may be passive voice. Use active voice if you can.          write-good.Passive  
+ 656:120   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
+ 656:155   warning  'been validated' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 672:121   warning  'However' is too wordy.                                                write-good.TooWordy 
+ 733:37    warning  'are registered' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 739:50    warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 775:165   warning  'is backed' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 785:72    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 790:71    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 791:50    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 796:18    warning  'Validate' is too wordy.                                               write-good.TooWordy 
+ 803:3     warning  'Evaluate' is too wordy.                                               write-good.TooWordy 
+ 824:8     warning  'are ordered' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 896:75    warning  'be produced' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 915:74    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 924:35    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 936:48    warning  'requirement' is too wordy.                                            write-good.TooWordy 
+ 937:190   warning  'is required' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 948:107   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
+ 960:110   warning  'evaluate' is too wordy.                                               write-good.TooWordy 
+ 963:90    warning  'is expected' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 963:105   warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 971:58    warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
+ 973:196   warning  'be required' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 975:125   warning  'is enabled' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 977:110   warning  'be added' may be passive voice. Use active voice if you can.          write-good.Passive  
+ 1013:163  warning  'were read' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 1096:13   warning  'is marked' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 1105:69   warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
 
 
  mantle/lib/install/README.md
@@ -3348,7 +3892,7 @@ Use active voice if you can.  write-good.Passive
 
 ✖ 4 errors, 1977 warnings and 0 suggestions in 235 files.
 
-(Truncated to last 17777 characters out of 223788)
+(Truncated to last 26666 characters out of 223850)
 ```
 
 </details>

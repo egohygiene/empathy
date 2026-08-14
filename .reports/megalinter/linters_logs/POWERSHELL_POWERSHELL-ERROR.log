@@ -1,0 +1,19 @@
+Results of powershell linter (version 7.6.4)
+See documentation on https://megalinter.io/10.0.0/descriptors/powershell_powershell/
+-----------------------------------------------
+
+✅ [SUCCESS] egolint/.config/lint/arm/arm-ttk.psd1
+❌ [ERROR] egolint/.config/lint/powershell/powershell-formatter.psd1
+    
+    Severity RuleName                      ScriptName                Line Message
+    -------- --------                      ----------                ---- -------
+    Warning  PSUseBOMForUnicodeEncodedFile powershell-formatter.psd1      Missing BOM encoding for non-ASCII encoded file 'powershell-formatter.psd1'
+
+❌ [ERROR] egolint/.config/lint/powershell/powershell-psscriptanalyzer.psd1
+    
+    Severity RuleName                      ScriptName                       Line Message
+    -------- --------                      ----------                       ---- -------
+    Warning  PSUseBOMForUnicodeEncodedFile powershell-psscriptanalyzer.psd1      Missing BOM encoding for non-ASCII encoded file 'powershell-psscriptanaly
+                                                                                 zer.psd1'
+
+✅ [SUCCESS] egolint/tests/fixtures/powershell/Get-Greeting.ps1

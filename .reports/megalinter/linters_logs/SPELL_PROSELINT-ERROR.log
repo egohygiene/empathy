@@ -110,8 +110,7 @@ egolint/.agents/agents/test-specialist/AGENT.md:12:18: typography.symbols.curly_
 egolint/.agents/agents/test-specialist/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/test-specialist/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/test-specialist/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/SKILL-CONTRACT.md:44:7: typography.punctuation.spacing: Inconsistent spacing after period (1 vs. 2 spaces).
-egolint/.agents/skills/SKILL-CONTRACT.md:97:68: typography.punctuation.spacing: Inconsistent spacing after period (1 vs. 2 spaces).
+egolint/.agents/skills/SKILL-CONTRACT.md:60:88: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 egolint/.agents/skills/SKILL-CONTRACT.md:101:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/SKILL-CONTRACT.md:103:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/SKILL-CONTRACT.md:104:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -232,7 +231,7 @@ egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:9
 egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:49:26: typography.diacritical_marks: Use diacritical marks in 'résumé'.
-egolint/.agents/skills/methodology/orchestrate-reflective-development/templates/REFLECTIVE_CYCLE.template.md:28:9: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/skills/methodology/orchestrate-reflective-development/templates/REFLECTIVE_CYCLE.template.md:39:9: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -254,15 +253,19 @@ egolint/.agents/skills/quality/test-engineering/SKILL.md:7:18: typography.symbol
 egolint/.agents/skills/quality/test-engineering/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/specs/SCHEMA.md:22:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:23:95: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:24:55: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:25:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:26:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:28:91: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:29:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:30:78: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-egolint/.agents/specs/SCHEMA.md:32:51: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:22:70: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:23:96: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:24:56: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:25:77: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:26:77: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:27:100: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:28:92: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:29:77: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:30:79: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:32:52: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:41:113: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:42:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:43:118: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 egolint/.agents/specs/SCHEMA.md:125:3: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
 egolint/.agents/specs/architecture/domain/ontology.spec.md:324:11: lexical_illusions: There's a lexical illusion in 'Concept
 
@@ -353,40 +356,40 @@ mantle/README.md:302:1: lexical_illusions: There's a lexical illusion in 'mantle
 mantle config validate' - a phrase is repeated.
 mantle/README.md:305:1: lexical_illusions: There's a lexical illusion in 'mantle config explain
 mantle config explain' - a phrase is repeated.
-mantle/README.md:318:178: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:319:179: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:322:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:323:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:324:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:325:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:326:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:327:182: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:329:185: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:330:199: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:331:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:332:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:333:180: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:334:173: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:342:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:343:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:318:180: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:319:181: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:322:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:323:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:324:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:325:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:326:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:327:184: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:329:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:330:201: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:331:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:332:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:333:182: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:334:175: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:342:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:343:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:502:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:612:3: uncomparables: Comparison of an uncomparable: 'More complete' is not comparable.
 mantle/audits/mantle-holistic-polish-20260806T124442Z.md:51:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:443:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:444:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:444:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:446:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:478:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:512:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:512:40: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:514:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:516:25: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:553:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:598:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:682:30: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:683:12: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:683:32: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:953:87: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:454:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:455:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:455:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:457:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:491:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:527:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:527:40: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:529:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:531:25: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:569:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:616:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:703:30: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:704:12: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:704:32: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:975:87: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/lib/install/README.md:75:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/lib/install/README.md:77:34: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/runtime/shells/fish/README.md:9:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".

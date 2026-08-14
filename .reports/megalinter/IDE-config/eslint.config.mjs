@@ -1,13 +1,18 @@
 // Copyright 2026 Ego Hygiene
 // SPDX-License-Identifier: MIT
 
-import js from "@eslint/js";
-import jsonPlugin from "@eslint/json";
-import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
-import typescriptParser from "@typescript-eslint/parser";
-import reactPlugin from "eslint-plugin-react";
-import { defineConfig, globalIgnores } from "eslint/config";
-import globals from "globals";
+import { createRequire } from "node:module";
+
+// MegaLinter exposes its bundled plugins through NODE_PATH. Native ESM package
+// resolution ignores that path, while createRequire deliberately honors it.
+const require = createRequire(import.meta.url);
+const js = require("@eslint/js");
+const jsonPlugin = require("@eslint/json");
+const typescriptEslintPlugin = require("@typescript-eslint/eslint-plugin");
+const typescriptParser = require("@typescript-eslint/parser");
+const reactPlugin = require("eslint-plugin-react");
+const { defineConfig, globalIgnores } = require("eslint/config");
+const globals = require("globals");
 
 const javascriptFiles = ["**/*.{js,jsx,mjs,cjs}"];
 const typescriptFiles = ["**/*.{ts,tsx,mts,cts}"];

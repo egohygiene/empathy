@@ -7,12 +7,13 @@ Linter raw log:
 egolint/tests/fixtures/clang-format/valid.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
 egolint/tests/fixtures/clang-format/valid.cpp:6:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
 egolint/tests/fixtures/clang-format/valid.cpp:9:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:13:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:17:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:19:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:33:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:42:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
-egolint/tests/fixtures/clang-format/valid.cpp:12:  Add #include <utility> for move  [build/include_what_you_use] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:10:  public: should be indented +1 space inside class GreetingService  [whitespace/indent] [3]
+egolint/tests/fixtures/clang-format/valid.cpp:14:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:16:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:23:  private: should be indented +1 space inside class GreetingService  [whitespace/indent] [3]
+egolint/tests/fixtures/clang-format/valid.cpp:30:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:39:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:11:  Add #include <utility> for move  [build/include_what_you_use] [4]
 Done processing egolint/tests/fixtures/clang-format/valid.cpp
-Total errors found: 9
+Total errors found: 10
 
