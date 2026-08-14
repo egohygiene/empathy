@@ -1,0 +1,587 @@
+Results of ruff linter (version 0.16.2)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+TRY003 Avoid specifying long messages outside the exception class
+  --> mindgarden/scripts/validate_garden.py:87:23
+   |
+85 |         if line.startswith("  - "):
+86 |             if active_list is None:
+87 |                 raise ContractError(f"{source}:{line_number}: orphan list item")
+   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+88 |             value = parse_scalar(line.removeprefix("  - "))
+89 |             if not isinstance(value, str) or not value:
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> mindgarden/scripts/validate_garden.py:90:23
+   |
+88 |             value = parse_scalar(line.removeprefix("  - "))
+89 |             if not isinstance(value, str) or not value:
+90 |                 raise ContractError(f"{source}:{line_number}: list items must be strings")
+   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+91 |             current = metadata[active_list]
+92 |             if not isinstance(current, list):
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> mindgarden/scripts/validate_garden.py:93:23
+   |
+91 |             current = metadata[active_list]
+92 |             if not isinstance(current, list):
+93 |                 raise ContractError(f"{source}:{line_number}: invalid list field {active_list}")
+   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+94 |             current.append(value)
+95 |             continue
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:98:19
+    |
+ 97 |         if line.startswith(" "):
+ 98 |             raise ContractError(f"{source}:{line_number}: nested mappings are not supported in v0")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 99 |         if ":" not in line:
+100 |             raise ContractError(f"{source}:{line_number}: expected a key-value field")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:100:19
+    |
+ 98 |             raise ContractError(f"{source}:{line_number}: nested mappings are not supported in v0")
+ 99 |         if ":" not in line:
+100 |             raise ContractError(f"{source}:{line_number}: expected a key-value field")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+101 |
+102 |         key, raw_value = line.split(":", 1)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:105:19
+    |
+103 |         key = key.strip()
+104 |         if not key or key in metadata:
+105 |             raise ContractError(f"{source}:{line_number}: invalid or duplicate field {key!r}")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+106 |
+107 |         value = raw_value.strip()
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:131:15
+    |
+129 |     match = FRONTMATTER_PATTERN.match(text)
+130 |     if match is None:
+131 |         raise ContractError(f"{path}: missing YAML frontmatter")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+132 |     return parse_simple_yaml(match.group("body"), path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:138:15
+    |
+136 |     value = metadata.get(field)
+137 |     if not isinstance(value, str) or not value:
+138 |         raise ContractError(f"{source}: {field} must be a non-empty string")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+139 |     return value
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:151:15
+    |
+149 |     value = metadata.get(field)
+150 |     if not isinstance(value, list) or any(not isinstance(item, str) or not item for item in value):
+151 |         raise ContractError(f"{source}: {field} must be a list of non-empty strings")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+152 |     if non_empty and not value:
+153 |         raise ContractError(f"{source}: {field} must not be empty")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:153:15
+    |
+151 |         raise ContractError(f"{source}: {field} must be a list of non-empty strings")
+152 |     if non_empty and not value:
+153 |         raise ContractError(f"{source}: {field} must not be empty")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+154 |     if len(value) != len(set(value)):
+155 |         raise ContractError(f"{source}: {field} must not contain duplicates")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:155:15
+    |
+153 |         raise ContractError(f"{source}: {field} must not be empty")
+154 |     if len(value) != len(set(value)):
+155 |         raise ContractError(f"{source}: {field} must not contain duplicates")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+156 |     return value
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:161:15
+    |
+159 | def require_identifier(value: str, field: str, source: Path) -> None:
+160 |     if IDENTIFIER_PATTERN.fullmatch(value) is None:
+161 |         raise ContractError(f"{source}: {field} must be a stable lowercase identifier")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:169:15
+    |
+167 |         candidate.relative_to(base.resolve())
+168 |     except ValueError as error:
+169 |         raise ContractError(f"{source}: {field} escapes .garden: {value}") from error
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+170 |     return candidate
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:179:15
+    |
+177 |         missing = sorted(MANIFEST_REQUIRED_FIELDS - observed_fields)
+178 |         unknown = sorted(observed_fields - MANIFEST_REQUIRED_FIELDS)
+179 |         raise ContractError(f"{path}: manifest fields differ; missing={missing}, unknown={unknown}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+180 |
+181 |     if require_string(metadata, "schema", path) != "mindgarden.garden/v0":
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:182:15
+    |
+181 |     if require_string(metadata, "schema", path) != "mindgarden.garden/v0":
+182 |         raise ContractError(f"{path}: unsupported garden schema")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+183 |
+184 |     garden_id = require_string(metadata, "id", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:190:15
+    |
+188 |     version = require_string(metadata, "version", path)
+189 |     if VERSION_PATTERN.fullmatch(version) is None:
+190 |         raise ContractError(f"{path}: v0 version must use 0.MINOR.PATCH")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+191 |
+192 |     status = require_string(metadata, "status", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:194:15
+    |
+192 |     status = require_string(metadata, "status", path)
+193 |     if status not in GARDEN_STATUSES:
+194 |         raise ContractError(f"{path}: unsupported garden status {status}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+195 |
+196 |     owners = require_string_list(metadata, "owners", path, non_empty=True)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:203:15
+    |
+201 |     parsed_repository = urlparse(repository)
+202 |     if parsed_repository.scheme not in {"http", "https"} or not parsed_repository.netloc:
+203 |         raise ContractError(f"{path}: repository must be an HTTP(S) URI")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+204 |
+205 |     visibility = require_string(metadata, "visibility", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:207:15
+    |
+205 |     visibility = require_string(metadata, "visibility", path)
+206 |     if visibility not in VISIBILITY_LEVELS:
+207 |         raise ContractError(f"{path}: unsupported visibility {visibility}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+208 |
+209 |     require_string(metadata, "entrypoint", path)
+    |
+
+PLR0912 Too many branches (16 > 12)
+   --> mindgarden/scripts/validate_garden.py:216:5
+    |
+216 | def validate_note_metadata(
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+217 |     metadata: dict[str, str | bool | list[str]],
+218 |     path: Path,
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:229:15
+    |
+227 |       }
+228 |       if missing or unknown:
+229 |           raise ContractError(
+    |  _______________^
+230 | |             f"{path}: note fields differ; "
+231 | |             f"missing={sorted(missing)}, unknown={sorted(unknown)}"
+232 | |         )
+    | |_________^
+233 |
+234 |       if require_string(metadata, "schema", path) != "mindgarden.note/v0":
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:235:15
+    |
+234 |     if require_string(metadata, "schema", path) != "mindgarden.note/v0":
+235 |         raise ContractError(f"{path}: unsupported note schema")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+236 |
+237 |     note_id = require_string(metadata, "id", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:243:15
+    |
+241 |     kind = require_string(metadata, "kind", path)
+242 |     if kind not in NOTE_KINDS:
+243 |         raise ContractError(f"{path}: unsupported note kind {kind}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+244 |
+245 |     status = require_string(metadata, "status", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:247:15
+    |
+245 |     status = require_string(metadata, "status", path)
+246 |     if status not in NOTE_STATUSES:
+247 |         raise ContractError(f"{path}: unsupported note status {status}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+248 |
+249 |     reviewed = metadata.get("reviewed")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:251:15
+    |
+249 |     reviewed = metadata.get("reviewed")
+250 |     if not isinstance(reviewed, bool):
+251 |         raise ContractError(f"{path}: reviewed must be a boolean")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+252 |     if status in {"draft", "proposed"} and reviewed:
+253 |         raise ContractError(f"{path}: draft or proposed knowledge cannot be reviewed")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:253:15
+    |
+251 |         raise ContractError(f"{path}: reviewed must be a boolean")
+252 |     if status in {"draft", "proposed"} and reviewed:
+253 |         raise ContractError(f"{path}: draft or proposed knowledge cannot be reviewed")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+254 |     if status == "reviewed" and not reviewed:
+255 |         raise ContractError(f"{path}: reviewed knowledge must set reviewed: true")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:255:15
+    |
+253 |         raise ContractError(f"{path}: draft or proposed knowledge cannot be reviewed")
+254 |     if status == "reviewed" and not reviewed:
+255 |         raise ContractError(f"{path}: reviewed knowledge must set reviewed: true")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+256 |
+257 |     confidence = require_string(metadata, "confidence", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:259:15
+    |
+257 |     confidence = require_string(metadata, "confidence", path)
+258 |     if confidence not in CONFIDENCE_LEVELS:
+259 |         raise ContractError(f"{path}: unsupported confidence {confidence}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+260 |
+261 |     visibility = require_string(metadata, "visibility", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:263:15
+    |
+261 |     visibility = require_string(metadata, "visibility", path)
+262 |     if visibility not in VISIBILITY_LEVELS:
+263 |         raise ContractError(f"{path}: unsupported visibility {visibility}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+264 |     if garden_visibility == "public" and visibility != "public":
+265 |         raise ContractError(f"{path}: a public garden cannot commit {visibility} knowledge")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:265:15
+    |
+263 |         raise ContractError(f"{path}: unsupported visibility {visibility}")
+264 |     if garden_visibility == "public" and visibility != "public":
+265 |         raise ContractError(f"{path}: a public garden cannot commit {visibility} knowledge")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+266 |
+267 |     owners = require_string_list(metadata, "owners", path, non_empty=True)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:274:15
+    |
+272 |     updated = date.fromisoformat(require_string(metadata, "updated", path))
+273 |     if updated < created:
+274 |         raise ContractError(f"{path}: updated date precedes created date")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+275 |
+276 |     for field in ("sources", "related", "supersedes", "aliases", "tags"):
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:289:19
+    |
+287 |         content_path = contained_path(garden_root, root_value, "content_roots", source)
+288 |         if not content_path.exists():
+289 |             raise ContractError(f"{source}: content root does not exist: {root_value}")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+290 |         if content_path.is_file():
+291 |             if content_path.suffix != ".md":
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:292:23
+    |
+290 |         if content_path.is_file():
+291 |             if content_path.suffix != ".md":
+292 |                 raise ContractError(f"{source}: content file must be Markdown: {root_value}")
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+293 |             note_paths.add(content_path)
+294 |         else:
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:306:19
+    |
+304 |         source_path = (path.parent / source).resolve()
+305 |         if not source_path.exists():
+306 |             raise ContractError(f"{path}: source does not resolve: {source}")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PLR0912 Too many branches (13 > 12)
+   --> mindgarden/scripts/validate_garden.py:309:5
+    |
+309 | def validate_repository(repository_root: Path) -> int:
+    |     ^^^^^^^^^^^^^^^^^^^
+310 |     repository_root = repository_root.resolve()
+311 |     garden_root = repository_root / ".garden"
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:314:15
+    |
+312 |     manifest_path = garden_root / "garden.yaml"
+313 |     if not manifest_path.is_file():
+314 |         raise ContractError(f"{manifest_path}: missing garden manifest")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+315 |
+316 |     manifest = validate_manifest(manifest_path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:324:15
+    |
+322 |     )
+323 |     if not entrypoint.is_file():
+324 |         raise ContractError(f"{manifest_path}: entrypoint does not exist")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+325 |
+326 |     content_roots = require_string_list(manifest, "content_roots", manifest_path, non_empty=True)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:331:15
+    |
+329 |         contained_path(garden_root, generated_root, "generated_roots", manifest_path)
+330 |     if set(content_roots) & set(generated_roots):
+331 |         raise ContractError(f"{manifest_path}: content and generated roots overlap")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+332 |
+333 |     private_overlay_value = require_string(manifest, "private_overlay", manifest_path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:340:15
+    |
+338 |         pass
+339 |     else:
+340 |         raise ContractError(f"{manifest_path}: private_overlay must live outside .garden")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+341 |
+342 |     note_paths = discover_note_paths(garden_root, content_roots, manifest_path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:344:15
+    |
+342 |     note_paths = discover_note_paths(garden_root, content_roots, manifest_path)
+343 |     if entrypoint not in note_paths:
+344 |         raise ContractError(f"{manifest_path}: entrypoint must belong to content_roots")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+345 |
+346 |     notes: dict[str, tuple[Path, dict[str, str | bool | list[str]]]] = {}
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:353:19
+    |
+351 |           note_id = require_string(metadata, "id", note_path)
+352 |           if note_id in notes:
+353 |               raise ContractError(
+    |  ___________________^
+354 | |                 f"{note_path}: duplicate note id {note_id}; "
+355 | |                 f"first seen in {notes[note_id][0]}"
+356 | |             )
+    | |_____________^
+357 |           notes[note_id] = (note_path, metadata)
+358 |           validate_sources(note_path, require_string_list(metadata, "sources", note_path))
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:366:23
+    |
+364 |             dangling = set(references) - known_ids
+365 |             if dangling:
+366 |                 raise ContractError(f"{note_path}: dangling {field}: {sorted(dangling)}")
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+367 |             if note_id in references:
+368 |                 raise ContractError(f"{note_path}: {field} cannot reference its own note id")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:368:23
+    |
+366 |                 raise ContractError(f"{note_path}: dangling {field}: {sorted(dangling)}")
+367 |             if note_id in references:
+368 |                 raise ContractError(f"{note_path}: {field} cannot reference its own note id")
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+369 |
+370 |     return len(notes)
+    |
+
+T201 `print` found
+   --> mindgarden/scripts/validate_garden.py:389:9
+    |
+387 |         note_count = validate_repository(arguments.repository_root)
+388 |     except (ContractError, OSError, ValueError) as error:
+389 |         print(f"mindgarden validation failed: {error}", file=sys.stderr)
+    |         ^^^^^
+390 |         return 1
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> mindgarden/scripts/validate_garden.py:392:5
+    |
+390 |         return 1
+391 |
+392 |     print(f"mindgarden validation passed: {note_count} note(s)")
+    |     ^^^^^
+393 |     return 0
+    |
+help: Remove `print`
+
+INP001 File `mindgarden/tests/test_validate_garden.py` is part of an implicit namespace package. Add an `__init__.py`.
+--> mindgarden/tests/test_validate_garden.py:1:1
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> mindgarden/tests/test_validate_garden.py:16:1
+   |
+14 | sys.path.insert(0, str(MINDGARDEN_ROOT))
+15 |
+16 | from scripts.validate_garden import ContractError, validate_repository  # noqa: E402
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: Organize imports
+   |
+17 |
+   -
+18 | MANIFEST = """
+   |
+
+PLR0913 Too many arguments in function definition (6 > 5)
+  --> mindgarden/tests/test_validate_garden.py:39:5
+   |
+39 | def note(
+   |     ^^^^
+40 |     note_id: str,
+41 |     *,
+   |
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:112:18
+    |
+110 |                 encoding="utf8",
+111 |             )
+112 |             with self.assertRaisesRegex(ContractError, "public garden cannot commit private"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+113 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:122:18
+    |
+120 |                 encoding="utf8",
+121 |             )
+122 |             with self.assertRaisesRegex(ContractError, "cannot be reviewed"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+123 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:132:18
+    |
+130 |                 encoding="utf8",
+131 |             )
+132 |             with self.assertRaisesRegex(ContractError, "duplicate note id"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+133 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:142:18
+    |
+140 |                 encoding="utf8",
+141 |             )
+142 |             with self.assertRaisesRegex(ContractError, "dangling related"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+143 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:152:18
+    |
+150 |                 encoding="utf8",
+151 |             )
+152 |             with self.assertRaisesRegex(ContractError, "source does not resolve"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+153 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:163:18
+    |
+161 |                 encoding="utf8",
+162 |             )
+163 |             with self.assertRaisesRegex(ContractError, "must live outside"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+164 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+Found 54 errors.
+[*] 1 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
+

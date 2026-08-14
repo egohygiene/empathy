@@ -14,6 +14,99 @@ Installing collected packages: types-PyYAML
 Successfully installed types-PyYAML-6.0.12.20260724
 egolint/tests/fixtures/python/test_greeting_service.py:3: error: Cannot find implementation or library stub for module named "greeting_service"  [import-not-found]
 egolint/tests/fixtures/negative/deptry/src/example/__init__.py:1: error: Cannot find implementation or library stub for module named "undeclared_dependency"  [import-not-found]
+mindgarden/scripts/validate_garden.py:181: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:181: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:181: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:184: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:184: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:184: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:186: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:186: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:186: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:188: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:188: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:188: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:192: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:192: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:192: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:196: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:196: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:196: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:200: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:200: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:200: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:205: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:205: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:205: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:209: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:209: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:209: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:210: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:210: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:210: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:211: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:211: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:211: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:212: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:212: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:212: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:234: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:234: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:234: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:237: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:237: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:237: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:239: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:239: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:239: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:241: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:241: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:241: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:245: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:245: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:245: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:257: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:257: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:257: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:261: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:261: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:261: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:267: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:267: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:267: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:271: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:271: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:271: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:272: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:272: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:272: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:278: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:278: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:278: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:319: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:319: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:319: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:326: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:326: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:326: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:327: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:327: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:327: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:333: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:333: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:333: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:347: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:347: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:347: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:351: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:351: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:351: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:358: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:358: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:358: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:363: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:363: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:363: note: Consider using "Mapping" instead, which is covariant in the value type
 tests/test_lint_architecture.py:34: error: "type[LintArchitectureContractTests]" has no attribute "inventory"  [attr-defined]
 tests/test_lint_architecture.py:35: error: "type[LintArchitectureContractTests]" has no attribute "markdown_path"  [attr-defined]
 tests/test_lint_architecture.py:36: error: "type[LintArchitectureContractTests]" has no attribute "svg_path"  [attr-defined]
@@ -74,5 +167,5 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 58 errors in 6 files (checked 26 source files)
+Found 89 errors in 7 files (checked 29 source files)
 

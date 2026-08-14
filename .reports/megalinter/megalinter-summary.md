@@ -5,96 +5,96 @@
 |   Descriptor    |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |-----------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
 |✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   11|     |     0|          |       0|       0.31s|
-|❌ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |     1|          |      no|       9.95s|
-|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       3.33s|
-|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.29s|
-|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       9.43s|
+|❌ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |     1|          |      no|       8.45s|
+|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|        3.9s|
+|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.35s|
+|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       8.66s|
 |❌ BASH          |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     4|          |       0|       0.04s|
-|❌ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     1|          |       0|        0.2s|
+|❌ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     1|          |       0|       0.16s|
 |✅ C             |[cppcheck](https://megalinter.io/10.0.0/descriptors/c_cppcheck)                                       |    1|     |     0|          |       0|       0.05s|
-|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|       0.29s|
+|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|        0.3s|
 |✅ CLOJURE       |[cljstyle](https://megalinter.io/10.0.0/descriptors/clojure_cljstyle)                                 |    1|     |     0|          |       0|       0.04s|
 |✅ CLOJURE       |[clj-kondo](https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo)                               |    1|     |     0|          |       0|       0.03s|
-|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       9.49s|
-|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.33s|
-|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   298|          |      no|       3.19s|
-|❌ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     6|          |       0|       0.06s|
-|✅ CPP           |[cppcheck](https://megalinter.io/10.0.0/descriptors/cpp_cppcheck)                                     |    1|     |     0|          |       0|       0.05s|
-|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |     9|          |       0|        0.2s|
-|❌ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    1|     |     2|          |       0|       1.23s|
+|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       8.66s|
+|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.29s|
+|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   298|          |      no|       3.35s|
+|❌ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     6|          |       0|       0.11s|
+|✅ CPP           |[cppcheck](https://megalinter.io/10.0.0/descriptors/cpp_cppcheck)                                     |    1|     |     0|          |       0|       0.04s|
+|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |     9|          |       0|       0.15s|
+|❌ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    1|     |     2|          |       0|       1.17s|
 |❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       0.05s|
-|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.07s|
-|❌ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  790|     |     1|          |       0|       0.87s|
+|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.19s|
+|❌ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  812|     |     1|          |       0|       0.86s|
 |✅ ENV           |[dotenv-linter](https://megalinter.io/10.0.0/descriptors/env_dotenv_linter)                           |    1|     |     0|          |       0|       0.01s|
-|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.37s|
+|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.34s|
 |✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|        9.8s|
-|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.37s|
-|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      14.72s|
-|❌ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     2|          |       0|       0.45s|
-|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|       2.46s|
-|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       8.45s|
-|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.81s|
-|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.68s|
-|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   76|     |     0|          |       0|       0.37s|
-|❌ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   76|     |     1|          |       0|       3.05s|
-|❌ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   76|     |     1|          |       0|      31.57s|
+|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.73s|
+|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      15.07s|
+|❌ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     2|          |       0|       0.54s|
+|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|       2.32s|
+|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       6.95s|
+|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.63s|
+|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.67s|
+|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   78|     |     0|          |       0|       0.43s|
+|❌ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   78|     |     1|          |       0|       3.17s|
+|❌ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   78|     |     1|          |       0|       31.1s|
 |✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.03s|
 |✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.09s|
 |❌ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     1|          |       0|       0.05s|
-|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  204|     |   305|          |       0|       3.89s|
-|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  204|     |     1|          |       0|       0.48s|
-|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.31s|
-|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.41s|
+|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  212|     |   305|          |       0|       3.67s|
+|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  212|     |     1|          |       0|       0.43s|
+|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.18s|
+|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|        0.4s|
 |✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.12s|
-|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.13s|
-|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.18s|
-|✅ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     0|          |       0|       4.82s|
-|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       3.99s|
-|❌ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     1|          |       0|       0.13s|
-|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   31|     |    18|          |       0|       1.81s|
-|❌ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    58|          |      no|      12.23s|
-|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   30|     |    23|          |       0|      12.41s|
-|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   374|          |      no|       6.33s|
-|✅ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   31|     |     0|          |       0|       0.16s|
-|✅ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   31|     |     0|          |       0|       0.05s|
-|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       0.92s|
-|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       0.85s|
-|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.21s|
-|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      36.16s|
-|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       1.91s|
-|❌ REPOSITORY    |[git_diff](https://megalinter.io/10.0.0/descriptors/repository_git_diff)                              |  yes|     |     1|          |      no|       1.29s|
-|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     7|          |      no|     112.12s|
-|❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.01s|
-|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      23.21s|
-|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.19s|
-|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      15.79s|
-|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.31s|
-|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       1.99s|
-|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|       7.96s|
-|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       3.59s|
-|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.44s|
-|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.92s|
-|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.46s|
+|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.11s|
+|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|        3.2s|
+|✅ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     0|          |       0|       4.68s|
+|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       3.96s|
+|❌ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     1|          |       0|        0.1s|
+|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   34|     |    18|          |       0|       1.92s|
+|❌ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    89|          |      no|       12.8s|
+|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   33|     |    26|          |       0|      10.86s|
+|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   418|          |      no|        6.6s|
+|❌ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   34|     |    54|          |       0|       0.59s|
+|❌ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   34|     |     1|          |       0|       0.03s|
+|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       0.95s|
+|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       0.79s|
+|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.08s|
+|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      34.75s|
+|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       3.43s|
+|❌ REPOSITORY    |[git_diff](https://megalinter.io/10.0.0/descriptors/repository_git_diff)                              |  yes|     |     1|          |      no|       1.25s|
+|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     8|          |      no|     108.81s|
+|❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.02s|
+|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      23.83s|
+|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       3.81s|
+|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      21.01s|
+|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      36.85s|
+|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|        1.8s|
+|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|      10.21s|
+|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       3.83s|
+|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       2.08s|
+|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.48s|
+|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.37s|
 |✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|        4.8s|
-|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       9.19s|
-|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       1.73s|
-|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  422|     |     1|          |       0|       0.06s|
-|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  210|     |   348|          |       0|       6.21s|
-|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  212|     |     4|          |    1926|       6.29s|
-|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       4.13s|
-|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.61s|
-|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.62s|
-|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.19s|
-|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|       0.97s|
+|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       9.13s|
+|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       1.09s|
+|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  433|     |     1|          |       0|       0.09s|
+|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  218|     |   349|          |       0|       5.58s|
+|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  220|     |     4|          |    1939|       6.69s|
+|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       3.89s|
+|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.57s|
+|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.63s|
+|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.53s|
+|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|       0.64s|
 |❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       2.56s|
-|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       0.35s|
-|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       0.35s|
-|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.48s|
-|❌ TYPESCRIPT    |[ts-standard](https://megalinter.io/10.0.0/descriptors/typescript_ts_standard)                        |    2|     |     1|          |       0|        0.4s|
-|✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|       0.36s|
-|❌ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  131|     |     1|          |       2|       3.79s|
-|❌ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  131|     |     1|          |       0|      44.56s|
-|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  131|     |     0|          |       0|       10.1s|
+|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       0.32s|
+|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       0.36s|
+|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.42s|
+|❌ TYPESCRIPT    |[ts-standard](https://megalinter.io/10.0.0/descriptors/typescript_ts_standard)                        |    2|     |     1|          |       0|       0.42s|
+|✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|       0.32s|
+|❌ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  132|     |     1|          |       2|       3.62s|
+|❌ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  132|     |     1|          |       0|      44.47s|
+|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  132|     |     0|          |       0|       8.35s|
 
 ## Detailed Issues
 
@@ -129,7 +129,7 @@ Read https://docs.ansible.com/projects/lint/rules/yaml/ for more details regardi
 <summary>❌ PYTHON / bandit - 18 errors</summary>
 
 ```
-Run started:2026-08-14 01:41:27.329748+00:00
+Run started:2026-08-14 07:35:19.649310+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -374,7 +374,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 2581
+	Total lines of code: 3048
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -497,16 +497,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
 <summary>❌ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-ics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
-Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
-Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
+ies/s3-13-enable-logging
 Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -519,33 +510,65 @@ cloudformation scan results:
 
 Passed checks: 7, Failed checks: 2, Skipped checks: 0
 
-Check: CKV_AWS_21: "Ensure the S3 bucket has versioning enabled"
-	FAILED for resource: AWS::S3::Bucket.ExampleBucket
-	File: /egolint/tests/fixtures/cloudformation/valid-template.yml:7-20
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
 Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
 	FAILED for resource: AWS::S3::Bucket.ExampleBucket
 	File: /egolint/tests/fixtures/cloudformation/valid-template.yml:7-20
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
+Check: CKV_AWS_21: "Ensure the S3 bucket has versioning enabled"
+	FAILED for resource: AWS::S3::Bucket.ExampleBucket
+	File: /egolint/tests/fixtures/cloudformation/valid-template.yml:7-20
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
 kubernetes scan results:
 
 Passed checks: 164, Failed checks: 44, Skipped checks: 0
 
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_29: "Apply security context to your pods and containers"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
+Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
 Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
+Check: CKV_K8S_29: "Apply security context to your pods and containers"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_21: "The default namespace should not be used"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
 Check: CKV_K8S_23: "Minimize the admission of root containers"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
+Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
+Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
+Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
+Check: CKV_K8S_29: "Apply security context to your pods and containers"
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_21: "The default namespace should not be used"
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
+Check: CKV_K8S_23: "Minimize the admission of root containers"
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
 Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
 	FAILED for resource: Deployment.default.invalid-deployment
@@ -555,34 +578,30 @@ Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or 
 	FAILED for resource: Deployment.default.invalid-deployment
 	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_16: "Container should not be privileged"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-15
-Check: CKV_K8S_9: "Readiness Probe Should be Configured"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
-Check: CKV_K8S_12: "Memory requests should be set"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-11
-Check: CKV_K8S_28: "Minimize the admission of containers with the NET_RAW capability"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27
-Check: CKV_K8S_37: "Minimize the admission of containers with capabilities assigned"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-34
+Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
 Check: CKV_K8S_29: "Apply security context to your pods and containers"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_21: "The default namespace should not be used"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
+Check: CKV_K8S_23: "Minimize the admission of root containers"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
+Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
+Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
 Check: CKV_K8S_8: "Liveness Probe Should be Configured"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
@@ -591,114 +610,86 @@ Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where ne
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
-Check: CKV_K8S_23: "Minimize the admission of root containers"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
-Check: CKV_K8S_15: "Image Pull Policy should be Always"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14
 Check: CKV_K8S_13: "Memory limits should be set"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-12
-Check: CKV_K8S_11: "CPU limits should be set"
+Check: CKV_K8S_16: "Container should not be privileged"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-10
-Check: CKV_K8S_10: "CPU requests should be set"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-9
-Check: CKV_K8S_20: "Containers should not run with allowPrivilegeEscalation"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-19
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-15
 Check: CKV_K8S_22: "Use read-only filesystem for containers where possible"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-21
-Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
+Check: CKV_K8S_20: "Containers should not run with allowPrivilegeEscalation"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-19
+Check: CKV_K8S_29: "Apply security context to your pods and containers"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_37: "Minimize the admission of containers with capabilities assigned"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-34
+Check: CKV_K8S_12: "Memory requests should be set"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-11
+Check: CKV_K8S_21: "The default namespace should not be used"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
+Check: CKV_K8S_10: "CPU requests should be set"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-9
+Check: CKV_K8S_15: "Image Pull Policy should be Always"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14
+Check: CKV_K8S_11: "CPU limits should be set"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-10
+Check: CKV_K8S_23: "Minimize the admission of root containers"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
+Check: CKV_K8S_9: "Readiness Probe Should be Configured"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
+Check: CKV_K8S_28: "Minimize the admission of containers with the NET_RAW capability"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27
 Check: CKV_K8S_43: "Image should use digest"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39
-Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_29: "Apply security context to your pods and containers"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
-Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
-Check: CKV_K8S_23: "Minimize the admission of root containers"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
-Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
-Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.greeting-service
-	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_9: "Readiness Probe Should be Configured"
-	FAILED for resource: Deployment.default.greeting-service
-	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
 Check: CKV_K8S_8: "Liveness Probe Should be Configured"
 	FAILED for resource: Deployment.default.greeting-service
 	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7
+Check: CKV_K8S_21: "The default namespace should not be used"
+	FAILED for resource: Deployment.default.greeting-service
+	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
 Check: CKV_K8S_15: "Image Pull Policy should be Always"
 	FAILED for resource: Deployment.default.greeting-service
 	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14
+Check: CKV_K8S_9: "Readiness Probe Should be Configured"
+	FAILED for resource: Deployment.default.greeting-service
+	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
 Check: CKV_K8S_43: "Image should use digest"
 	FAILED for resource: Deployment.default.greeting-service
 	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_29: "Apply security context to your pods and containers"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
-Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
-Check: CKV_K8S_23: "Minimize the admission of root containers"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
-Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
-Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
 Check: CKV2_K8S_6: "Minimize the admission of pods which lack an associated NetworkPolicy"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
@@ -717,13 +708,9 @@ openapi scan results:
 
 Passed checks: 6, Failed checks: 4, Skipped checks: 0
 
-Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
-	FAILED for resource: security
-	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 Check: CKV_OPENAPI_4: "Ensure that the global security field has rules defined"
 	FAILED for resource: security
-	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
+	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-the-global-security-field-has-rules-defined
 Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	FAILED for resource: security
@@ -731,10 +718,14 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 Check: CKV_OPENAPI_4: "Ensure that the global security field has rules defined"
 	FAILED for resource: security
-	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
+	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-the-global-security-field-has-rules-defined
+Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
+	FAILED for resource: security
+	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 18181 characters out of 36188)
+(Truncated to last 17391 characters out of 36188)
 ```
 
 </details>
@@ -963,14 +954,48 @@ Resolutions:
 
 ```
 warning: in the working copy of '.reports/megalinter/linters_logs/REPOSITORY_TRIVY-ERROR.log', CRLF will be replaced by LF the next time Git touches it
-.reports/megalinter/mega-linter.log:51: trailing whitespace.
-+- Excluding .gitignored files [0]:
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:77: trailing whitespace.
++ 4:69   warning  'be viewed' may be passive voice. Use active voice if you can.     write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:78: trailing whitespace.
++ 15:47  warning  'be committed' may be passive voice. Use active voice if you can.  write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:337: trailing whitespace.
++ 34:18  warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:338: trailing whitespace.
++ 61:58  warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:339: trailing whitespace.
++ 86:34  warning  'validate' is too wordy.                                            write-good.TooWordy 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:340: trailing whitespace.
++ 91:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:341: trailing whitespace.
++ 92:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2439: trailing whitespace.
++ 12:21  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2440: trailing whitespace.
++ 19:76  warning  'be projected' may be passive voice. Use active voice if you can.   write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2444: trailing whitespace.
++ 5:12   warning  'was incubated' may be passive voice. Use active voice if you can.  write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2445: trailing whitespace.
++ 14:17  warning  'is retained' may be passive voice. Use active voice if you can.    write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2446: trailing whitespace.
++ 14:50  warning  'was expanded' may be passive voice. Use active voice if you can.   write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2447: trailing whitespace.
++ 31:31  warning  'be evaluated' may be passive voice. Use active voice if you can.   write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2451: trailing whitespace.
++ 30:35  warning  'multiple' is too wordy.                                              write-good.TooWordy 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2452: trailing whitespace.
++ 45:1   warning  'Validate' is too wordy.                                              write-good.TooWordy 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2453: trailing whitespace.
++ 57:50  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2454: trailing whitespace.
++ 59:47  warning  'are defined' may be passive voice. Use active voice if you can.      write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2455: trailing whitespace.
++ 62:36  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive
 ```
 
 </details>
 
 <details>
-<summary>❌ REPOSITORY / grype - 7 errors</summary>
+<summary>❌ REPOSITORY / grype - 8 errors</summary>
 
 ```
 [0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal) from=syft
@@ -981,8 +1006,9 @@ image-size             2.0.2      npm     GHSA-5p2g-fcmc-qvqq  High      0.4% (3
 image-size             2.0.2      npm     GHSA-w3rx-r6r6-pgpr  High      0.4% (35th)  0.3    
 decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (41st)  0.3    
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
+decompress             4.2.1      npm     GHSA-jwp9-9v96-94mx  Medium    0.3% (25th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0112] ERROR discovered vulnerabilities at or above the severity threshold
+[0108] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
@@ -1010,7 +1036,7 @@ Config loaded: egolint/.config/lint/html/htmlhint.json
       L14 |        class="greeting-page__image"
            ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
 
-Scanned 1 files, found 2 errors in 1 files (39 ms)
+Scanned 1 files, found 2 errors in 1 files (64 ms)
 ```
 
 </details>
@@ -1019,25 +1045,7 @@ Scanned 1 files, found 2 errors in 1 files (39 ms)
 <summary>❌ COPYPASTE / jscpd - 298 errors</summary>
 
 ```
-:30]
-Clone found (bash)
- - mantle/init/init.sh [30:1 - 48:2] (19 lines, 112 tokens)
-   mantle/init/load-core.sh [51:1 - 69:2]
-Clone found (bash)
- - mantle/install.sh [108:1 - 121:45] (14 lines, 122 tokens)
-   mantle/libexec/mantle/commands/version.sh [25:1 - 38:45]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [28:23 - 46:2] (19 lines, 103 tokens)
-   mantle/lib/bash/collection.sh [121:22 - 139:2]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
-   mantle/lib/bash/collection.sh [53:1 - 59:3]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
-   mantle/lib/bash/collection.sh [108:1 - 114:3]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [35:1 - 48:73] (14 lines, 70 tokens)
-   mantle/lib/bash/collection.sh [128:1 - 141:65]
+tion.sh [128:1 - 141:65]
 Clone found (bash)
  - mantle/lib/bash/collection.sh [49:24 - 59:33] (11 lines, 76 tokens)
    mantle/lib/bash/collection.sh [66:25 - 76:34]
@@ -1205,7 +1213,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex       │ 1              │ 13          │ 88           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash       │ 123            │ 18876       │ 89599        │ 58           │ 670 (3.55%)      │ 4439 (4.95%)      │
+│ bash       │ 123            │ 18879       │ 89604        │ 58           │ 670 (3.55%)      │ 4439 (4.95%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ c          │ 1              │ 50          │ 296          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1233,13 +1241,13 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript │ 6              │ 653         │ 2129         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 64             │ 12536       │ 51991        │ 22           │ 553 (4.41%)      │ 1972 (3.79%)      │
+│ json       │ 66             │ 12737       │ 52914        │ 22           │ 553 (4.34%)      │ 1972 (3.73%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx        │ 1              │ 10          │ 52           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 202            │ 22332       │ 249964       │ 137          │ 1641 (7.35%)     │ 16795 (6.72%)     │
+│ markdown   │ 209            │ 22602       │ 252481       │ 137          │ 1641 (7.26%)     │ 16795 (6.65%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1251,7 +1259,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 25             │ 4883        │ 36182        │ 8            │ 84 (1.72%)       │ 564 (1.56%)       │
+│ python     │ 27             │ 5448        │ 40729        │ 8            │ 84 (1.54%)       │ 564 (1.38%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1273,16 +1281,16 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 217            │ 17974       │ 94172        │ 70           │ 804 (4.47%)      │ 5356 (5.69%)      │
+│ yaml       │ 220            │ 18046       │ 94559        │ 70           │ 804 (4.46%)      │ 5356 (5.66%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 710            │ 83346       │ 551056       │ 298          │ 3870 (4.64%)     │ 29464 (5.35%)     │
+│ Total:     │ 724            │ 84457       │ 559435       │ 298          │ 3870 (4.58%)     │ 29464 (5.27%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 298 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.6%) over threshold (3.0%)
-time: 1.37s
+time: 1.43s
 
-(Truncated to last 18181 characters out of 70260)
+(Truncated to last 17391 characters out of 70260)
 ```
 
 </details>
@@ -1291,7 +1299,7 @@ time: 1.37s
 <summary>❌ REPOSITORY / ls-lint - 5 errors</summary>
 
 ```
-2026/08/14 01:42:11 rule ignore not exists
+2026/08/14 07:36:03 rule ignore not exists
 
 
 [REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.
@@ -1360,12 +1368,7 @@ Caused by:
 <summary>❌ MARKDOWN / markdownlint - 305 errors</summary>
 
 ```
-Table pipe is missing space to the left for style "compact"]
-egolint/.agents/skills/SKILL-CONTRACT.md:55:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-egolint/.agents/skills/SKILL-CONTRACT.md:55:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-egolint/.agents/skills/SKILL-CONTRACT.md:55:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
-egolint/.agents/skills/SKILL-CONTRACT.md:129 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-egolint/.agents/specs/SCHEMA.md:12 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+uage specified [Context: "```"]
 egolint/.agents/specs/SCHEMA.md:26:101 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
 egolint/.agents/specs/SCHEMA.md:27:102 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
 egolint/.agents/specs/SCHEMA.md:31:106 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
@@ -1470,25 +1473,85 @@ mantle/README.md:288:99 error MD060/table-column-style Table column style [Table
 mantle/README.md:328:152 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
 mantle/README.md:328:207 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
 
-(Truncated to last 18181 characters out of 61599)
+(Truncated to last 17391 characters out of 61599)
 ```
 
 </details>
 
 <details>
-<summary>❌ PYTHON / mypy - 58 errors</summary>
+<summary>❌ PYTHON / mypy - 89 errors</summary>
 
 ```
-egolint/.config/lint/python/.mypy.ini: Source contains parsing errors: 'egolint/.config/lint/python/.mypy.ini'
-	[line 108]: ')\n'
-WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
-Collecting types-PyYAML
-  Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl.metadata (1.7 kB)
-Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl (20 kB)
-Installing collected packages: types-PyYAML
-Successfully installed types-PyYAML-6.0.12.20260724
-egolint/tests/fixtures/python/test_greeting_service.py:3: error: Cannot find implementation or library stub for module named "greeting_service"  [import-not-found]
-egolint/tests/fixtures/negative/deptry/src/example/__init__.py:1: error: Cannot find implementation or library stub for module named "undeclared_dependency"  [import-not-found]
+der using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:209: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:209: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:209: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:210: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:210: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:210: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:211: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:211: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:211: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:212: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:212: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:212: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:234: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:234: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:234: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:237: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:237: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:237: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:239: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:239: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:239: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:241: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:241: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:241: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:245: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:245: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:245: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:257: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:257: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:257: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:261: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:261: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:261: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:267: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:267: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:267: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:271: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:271: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:271: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:272: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:272: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:272: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:278: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:278: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:278: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:319: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:319: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:319: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:326: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:326: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:326: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:327: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:327: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:327: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:333: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:333: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:333: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:347: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:347: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:347: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:351: error: Argument 1 to "require_string" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:351: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:351: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:358: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:358: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:358: note: Consider using "Mapping" instead, which is covariant in the value type
+mindgarden/scripts/validate_garden.py:363: error: Argument 1 to "require_string_list" has incompatible type "dict[str, str | bool | list[str]]"; expected "dict[str, object]"  [arg-type]
+mindgarden/scripts/validate_garden.py:363: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+mindgarden/scripts/validate_garden.py:363: note: Consider using "Mapping" instead, which is covariant in the value type
 tests/test_lint_architecture.py:34: error: "type[LintArchitectureContractTests]" has no attribute "inventory"  [attr-defined]
 tests/test_lint_architecture.py:35: error: "type[LintArchitectureContractTests]" has no attribute "markdown_path"  [attr-defined]
 tests/test_lint_architecture.py:36: error: "type[LintArchitectureContractTests]" has no attribute "svg_path"  [attr-defined]
@@ -1549,7 +1612,9 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 58 errors in 6 files (checked 26 source files)
+Found 89 errors in 7 files (checked 29 source files)
+
+(Truncated to last 17391 characters out of 21874)
 ```
 
 </details>
@@ -1599,15 +1664,9 @@ Checking formatting...
 </details>
 
 <details>
-<summary>❌ SPELL / proselint - 348 errors</summary>
+<summary>❌ SPELL / proselint - 349 errors</summary>
 
 ```
-LL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/audit-repository/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/audit-repository/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/audit-repository/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/audit-repository/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/bug-fixing/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/bug-fixing/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/bug-fixing/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/bug-fixing/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -1781,7 +1840,7 @@ mantle/tests/README.md:371:9: typography.symbols.curly_quotes: Use curly quotes 
 mantle/tests/README.md:390:38: lexical_illusions: There's a lexical illusion in 'bats
    bats' - a phrase is repeated.
 
-(Truncated to last 18181 characters out of 48818)
+(Truncated to last 17391 characters out of 48932)
 ```
 
 </details>
@@ -1796,7 +1855,7 @@ mantle/tests/README.md:390:38: lexical_illusions: There's a lexical illusion in 
 </details>
 
 <details>
-<summary>❌ PYTHON / pylint - 23 errors</summary>
+<summary>❌ PYTHON / pylint - 26 errors</summary>
 
 ```
 ************* Module egolint/.config/lint/python/.pylintrc
@@ -1831,6 +1890,11 @@ egolint/scripts/validate_megalinter_policy.py:18:0: E0401: Unable to import 'yam
 egolint/scripts/validate_megalinter_policy.py:292:0: R0912: Too many branches (15/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:350:0: R0912: Too many branches (18/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:426:0: R0914: Too many local variables (28/20) (too-many-locals)
+************* Module scripts.validate_garden
+mindgarden/scripts/validate_garden.py:216:0: R0912: Too many branches (16/12) (too-many-branches)
+mindgarden/scripts/validate_garden.py:309:0: R0912: Too many branches (13/12) (too-many-branches)
+************* Module test_validate_garden
+mindgarden/tests/test_validate_garden.py:16:0: C0413: Import "from scripts.validate_garden import ContractError, validate_repository" should be placed at the top of the module (wrong-import-position)
 ************* Module test_validate_automation
 tests/test_validate_automation.py:29:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 
@@ -1841,174 +1905,146 @@ Your code has been rated at 9.86/10
 </details>
 
 <details>
-<summary>❌ PYTHON / pyright - 374 errors</summary>
+<summary>❌ PYTHON / pyright - 418 errors</summary>
 
 ```
-" is "((object: str, /) -> None) | Unknown | Any" (reportUnknownMemberType)
-  egolint/.agents/specs/validate-specs.py:202:31 - error: Argument type is partially unknown
-    Argument corresponds to parameter "object" in function "append"
-    Argument type is "Unknown | Any" (reportUnknownArgumentType)
-  egolint/.agents/specs/validate-specs.py:203:13 - error: Type of "ref" is partially unknown
-    Type of "ref" is "str | Unknown | Any" (reportUnknownVariableType)
-  egolint/.agents/specs/validate-specs.py:207:17 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  egolint/.agents/specs/validate-specs.py:211:17 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  egolint/.agents/specs/validate-specs.py:217:43 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  egolint/.agents/specs/validate-specs.py:218:13 - error: Type of "err" is unknown (reportUnknownVariableType)
-  egolint/.agents/specs/validate-specs.py:222:39 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-egolint/scripts/complementary_tools.py
-  egolint/scripts/complementary_tools.py:460:44 - error: Type of "endswith" is partially unknown
-    Type of "endswith" is "Unknown | Any | ((suffix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | ((suffix: Buffer | tuple[Buffer, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool)" (reportUnknownMemberType)
-  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "int"
-    Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "float"
-    Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "list[str]"
-    Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:460:71 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
-    Type "Literal['\n']" is not assignable to type "ReadableBuffer | tuple[ReadableBuffer, ...]"
-      "Literal['\n']" is incompatible with protocol "Buffer"
-        "__buffer__" is not present
-      "Literal['\n']" is not assignable to "tuple[ReadableBuffer, ...]" (reportArgumentType)
-  egolint/scripts/complementary_tools.py:463:59 - error: Type of "endswith" is partially unknown
-    Type of "endswith" is "Unknown | Any | ((suffix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | ((suffix: Buffer | tuple[Buffer, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool)" (reportUnknownMemberType)
-  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "int"
-    Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "float"
-    Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "list[str]"
-    Attribute "endswith" is unknown (reportAttributeAccessIssue)
-  egolint/scripts/complementary_tools.py:463:86 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
-    Type "Literal['\n']" is not assignable to type "ReadableBuffer | tuple[ReadableBuffer, ...]"
-      "Literal['\n']" is incompatible with protocol "Buffer"
-        "__buffer__" is not present
-      "Literal['\n']" is not assignable to "tuple[ReadableBuffer, ...]" (reportArgumentType)
-  egolint/scripts/complementary_tools.py:466:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
-    Type "int | Any | str | float | list[str] | bytes" is not assignable to type "ConvertibleToInt"
-      Type "list[str]" is not assignable to type "ConvertibleToInt"
-        "list[str]" is not assignable to "str"
-        "list[str]" is incompatible with protocol "Buffer"
-          "__buffer__" is not present
-        "list[str]" is incompatible with protocol "SupportsInt"
-          "__int__" is not present
-        "list[str]" is incompatible with protocol "SupportsIndex"
-    ... (reportArgumentType)
-  egolint/scripts/complementary_tools.py:466:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
-    Type "int | Any | str | float | list[str] | bytes" is not assignable to type "ConvertibleToInt"
-      Type "list[str]" is not assignable to type "ConvertibleToInt"
-        "list[str]" is not assignable to "str"
-        "list[str]" is incompatible with protocol "Buffer"
-          "__buffer__" is not present
-        "list[str]" is incompatible with protocol "SupportsInt"
-          "__int__" is not present
-        "list[str]" is incompatible with protocol "SupportsIndex" (reportArgumentType)
-  egolint/scripts/complementary_tools.py:475:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  egolint/scripts/complementary_tools.py:486:13 - error: Type of "row" is unknown (reportUnknownVariableType)
-egolint/scripts/validate_megalinter_policy.py
-  egolint/scripts/validate_megalinter_policy.py:77:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:88:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:177:61 - error: Argument type is partially unknown
-    Argument corresponds to parameter "linter" in function "normalized_linter_id"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:179:34 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:180:37 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:182:36 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:185:37 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:188:32 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:189:32 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:194:21 - error: Argument type is partially unknown
-    Argument corresponds to parameter "linter" in function "extract_documented_version"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:199:5 - error: Type of "deprecated_variables" is partially unknown
-    Type of "deprecated_variables" is "list[Unknown]" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:200:9 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:201:13 - error: Type of "key" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:201:18 - error: Type of "value" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:202:40 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:210:43 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:236:9 - error: Type of "reference" is partially unknown
-    Type of "reference" is "str | Unknown" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:260:66 - error: Type of "item" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:261:21 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:360:5 - error: Type of "policy_release" is partially unknown
-    Type of "policy_release" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:360:22 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:361:5 - error: Type of "policy_commit" is partially unknown
-    Type of "policy_commit" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:361:21 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:381:9 - error: Type of "reason" is partially unknown
-    Type of "reason" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:381:18 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:384:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:384:29 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:391:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:391:20 - error: Type of "metadata" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:398:9 - error: Type of "configuration_path" is partially unknown
-    Type of "configuration_path" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:398:30 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:407:9 - error: Type of "fixture_metadata" is partially unknown
-    Type of "fixture_metadata" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:407:28 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:413:9 - error: Type of "positive" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:413:20 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:414:9 - error: Type of "negative" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:414:20 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:415:9 - error: Type of "blocker" is partially unknown
-    Type of "blocker" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:415:19 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:420:13 - error: Type of "fixture_path" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:421:20 - error: Type of "is_file" is unknown (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:499:13 - error: Type of "disabled_for_profile" is partially unknown
-    Type of "disabled_for_profile" is "set[Unknown]" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:507:43 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "set[Any] | set[Unknown]" (reportUnknownArgumentType)
-egolint/tests/fixtures/negative/complexipy/complex.py
-  egolint/tests/fixtures/negative/complexipy/complex.py:1:19 - error: Type of parameter "values" is unknown (reportUnknownParameterType)
-  egolint/tests/fixtures/negative/complexipy/complex.py:1:19 - error: Type annotation is missing for parameter "values" (reportMissingParameterType)
-  egolint/tests/fixtures/negative/complexipy/complex.py:3:9 - error: Type of "value" is unknown (reportUnknownVariableType)
-  egolint/tests/fixtures/negative/complexipy/complex.py:6:40 - error: Argument type is unknown
-    Argument corresponds to parameter "stop" in function "__new__" (reportUnknownArgumentType)
-egolint/tests/fixtures/negative/deptry/src/example/__init__.py
-  egolint/tests/fixtures/negative/deptry/src/example/__init__.py:1:8 - warning: Import "undeclared_dependency" could not be resolved (reportMissingImports)
-  egolint/tests/fixtures/negative/deptry/src/example/__init__.py:3:1 - error: Type of "VALUE" is unknown (reportUnknownVariableType)
-  egolint/tests/fixtures/negative/deptry/src/example/__init__.py:3:9 - error: Type of "value" is unknown (reportUnknownMemberType)
-egolint/tests/fixtures/negative/vulture/unused.py
-  egolint/tests/fixtures/negative/vulture/unused.py:1:8 - warning: Import "os" is not accessed (reportUnusedImport)
-egolint/tests/fixtures/python/test_greeting_service.py
-  egolint/tests/fixtures/python/test_greeting_service.py:3:6 - warning: Import "greeting_service" could not be resolved (reportMissingImports)
-  egolint/tests/fixtures/python/test_greeting_service.py:3:30 - error: Type of "format_greeting" is unknown (reportUnknownVariableType)
-egolint/tests/test_complementary_tools.py
-  egolint/tests/test_complementary_tools.py:82:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
+"dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:184:32 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:186:20 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:188:30 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:192:29 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:196:34 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:200:33 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:205:33 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:209:20 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:210:25 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:211:25 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:212:20 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:234:23 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:237:30 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:239:20 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:241:27 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:245:29 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:257:33 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:261:33 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:267:34 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:271:49 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:272:49 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:278:42 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:319:24 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:326:41 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:327:43 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:333:44 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:347:40 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:351:34 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:358:57 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/validate_garden.py:363:46 - error: Argument of type "dict[str, str | bool | list[str]]" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    "dict[str, str | bool | list[str]]" is not assignable to "dict[str, object]"
+      Type parameter "_VT@dict" is invariant, but "str | bool | list[str]" is not the same as "object"
+      Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+mindgarden/tests/test_validate_garden.py
+  mindgarden/tests/test_validate_garden.py:16:6 - warning: Import "scripts.validate_garden" could not be resolved (reportMissingImports)
+  mindgarden/tests/test_validate_garden.py:16:37 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_validate_garden.py:16:52 - error: Type of "validate_repository" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_validate_garden.py:112:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_validate_garden.py:122:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_validate_garden.py:132:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_validate_garden.py:142:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_validate_garden.py:152:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_validate_garden.py:163:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
 tests/test_architecture_documents.py
   tests/test_architecture_documents.py:196:13 - error: Argument of type "str | list[str]" cannot be assigned to parameter "value" of type "list[str]" in function "__setitem__"
     Type "str | list[str]" is not assignable to type "list[str]"
@@ -2016,9 +2052,9 @@ tests/test_architecture_documents.py
 tests/test_repository_intelligence.py
   tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-374 errors, 3 warnings, 0 informations
+418 errors, 4 warnings, 0 informations
 
-(Truncated to last 18181 characters out of 71057)
+(Truncated to last 17391 characters out of 89223)
 ```
 
 </details>
@@ -2041,9 +2077,9 @@ See documentation on https://megalinter.io/10.0.0/descriptors/raku_raku/
         /opt/rakudo-pkg/share/perl6/site
         /opt/rakudo-pkg/share/perl6/vendor
         /opt/rakudo-pkg/share/perl6/core
-        CompUnit::Repository::AbsolutePath<2956113826512>
-        CompUnit::Repository::NQP<2955989820960>
-        CompUnit::Repository::Perl5<2955989821000>
+        CompUnit::Repository::AbsolutePath<3423021748944>
+        CompUnit::Repository::NQP<3422899742240>
+        CompUnit::Repository::Perl5<3422899742280>
     at egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 ```
 
@@ -2070,29 +2106,462 @@ egolint/tests/fixtures/rstcheck/valid.rst is not correctly formatted!
 </details>
 
 <details>
+<summary>❌ PYTHON / ruff - 54 errors</summary>
+
+```
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+191 |
+192 |     status = require_string(metadata, "status", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:194:15
+    |
+192 |     status = require_string(metadata, "status", path)
+193 |     if status not in GARDEN_STATUSES:
+194 |         raise ContractError(f"{path}: unsupported garden status {status}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+195 |
+196 |     owners = require_string_list(metadata, "owners", path, non_empty=True)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:203:15
+    |
+201 |     parsed_repository = urlparse(repository)
+202 |     if parsed_repository.scheme not in {"http", "https"} or not parsed_repository.netloc:
+203 |         raise ContractError(f"{path}: repository must be an HTTP(S) URI")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+204 |
+205 |     visibility = require_string(metadata, "visibility", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:207:15
+    |
+205 |     visibility = require_string(metadata, "visibility", path)
+206 |     if visibility not in VISIBILITY_LEVELS:
+207 |         raise ContractError(f"{path}: unsupported visibility {visibility}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+208 |
+209 |     require_string(metadata, "entrypoint", path)
+    |
+
+PLR0912 Too many branches (16 > 12)
+   --> mindgarden/scripts/validate_garden.py:216:5
+    |
+216 | def validate_note_metadata(
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+217 |     metadata: dict[str, str | bool | list[str]],
+218 |     path: Path,
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:229:15
+    |
+227 |       }
+228 |       if missing or unknown:
+229 |           raise ContractError(
+    |  _______________^
+230 | |             f"{path}: note fields differ; "
+231 | |             f"missing={sorted(missing)}, unknown={sorted(unknown)}"
+232 | |         )
+    | |_________^
+233 |
+234 |       if require_string(metadata, "schema", path) != "mindgarden.note/v0":
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:235:15
+    |
+234 |     if require_string(metadata, "schema", path) != "mindgarden.note/v0":
+235 |         raise ContractError(f"{path}: unsupported note schema")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+236 |
+237 |     note_id = require_string(metadata, "id", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:243:15
+    |
+241 |     kind = require_string(metadata, "kind", path)
+242 |     if kind not in NOTE_KINDS:
+243 |         raise ContractError(f"{path}: unsupported note kind {kind}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+244 |
+245 |     status = require_string(metadata, "status", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:247:15
+    |
+245 |     status = require_string(metadata, "status", path)
+246 |     if status not in NOTE_STATUSES:
+247 |         raise ContractError(f"{path}: unsupported note status {status}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+248 |
+249 |     reviewed = metadata.get("reviewed")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:251:15
+    |
+249 |     reviewed = metadata.get("reviewed")
+250 |     if not isinstance(reviewed, bool):
+251 |         raise ContractError(f"{path}: reviewed must be a boolean")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+252 |     if status in {"draft", "proposed"} and reviewed:
+253 |         raise ContractError(f"{path}: draft or proposed knowledge cannot be reviewed")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:253:15
+    |
+251 |         raise ContractError(f"{path}: reviewed must be a boolean")
+252 |     if status in {"draft", "proposed"} and reviewed:
+253 |         raise ContractError(f"{path}: draft or proposed knowledge cannot be reviewed")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+254 |     if status == "reviewed" and not reviewed:
+255 |         raise ContractError(f"{path}: reviewed knowledge must set reviewed: true")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:255:15
+    |
+253 |         raise ContractError(f"{path}: draft or proposed knowledge cannot be reviewed")
+254 |     if status == "reviewed" and not reviewed:
+255 |         raise ContractError(f"{path}: reviewed knowledge must set reviewed: true")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+256 |
+257 |     confidence = require_string(metadata, "confidence", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:259:15
+    |
+257 |     confidence = require_string(metadata, "confidence", path)
+258 |     if confidence not in CONFIDENCE_LEVELS:
+259 |         raise ContractError(f"{path}: unsupported confidence {confidence}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+260 |
+261 |     visibility = require_string(metadata, "visibility", path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:263:15
+    |
+261 |     visibility = require_string(metadata, "visibility", path)
+262 |     if visibility not in VISIBILITY_LEVELS:
+263 |         raise ContractError(f"{path}: unsupported visibility {visibility}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+264 |     if garden_visibility == "public" and visibility != "public":
+265 |         raise ContractError(f"{path}: a public garden cannot commit {visibility} knowledge")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:265:15
+    |
+263 |         raise ContractError(f"{path}: unsupported visibility {visibility}")
+264 |     if garden_visibility == "public" and visibility != "public":
+265 |         raise ContractError(f"{path}: a public garden cannot commit {visibility} knowledge")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+266 |
+267 |     owners = require_string_list(metadata, "owners", path, non_empty=True)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:274:15
+    |
+272 |     updated = date.fromisoformat(require_string(metadata, "updated", path))
+273 |     if updated < created:
+274 |         raise ContractError(f"{path}: updated date precedes created date")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+275 |
+276 |     for field in ("sources", "related", "supersedes", "aliases", "tags"):
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:289:19
+    |
+287 |         content_path = contained_path(garden_root, root_value, "content_roots", source)
+288 |         if not content_path.exists():
+289 |             raise ContractError(f"{source}: content root does not exist: {root_value}")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+290 |         if content_path.is_file():
+291 |             if content_path.suffix != ".md":
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:292:23
+    |
+290 |         if content_path.is_file():
+291 |             if content_path.suffix != ".md":
+292 |                 raise ContractError(f"{source}: content file must be Markdown: {root_value}")
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+293 |             note_paths.add(content_path)
+294 |         else:
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:306:19
+    |
+304 |         source_path = (path.parent / source).resolve()
+305 |         if not source_path.exists():
+306 |             raise ContractError(f"{path}: source does not resolve: {source}")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PLR0912 Too many branches (13 > 12)
+   --> mindgarden/scripts/validate_garden.py:309:5
+    |
+309 | def validate_repository(repository_root: Path) -> int:
+    |     ^^^^^^^^^^^^^^^^^^^
+310 |     repository_root = repository_root.resolve()
+311 |     garden_root = repository_root / ".garden"
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:314:15
+    |
+312 |     manifest_path = garden_root / "garden.yaml"
+313 |     if not manifest_path.is_file():
+314 |         raise ContractError(f"{manifest_path}: missing garden manifest")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+315 |
+316 |     manifest = validate_manifest(manifest_path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:324:15
+    |
+322 |     )
+323 |     if not entrypoint.is_file():
+324 |         raise ContractError(f"{manifest_path}: entrypoint does not exist")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+325 |
+326 |     content_roots = require_string_list(manifest, "content_roots", manifest_path, non_empty=True)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:331:15
+    |
+329 |         contained_path(garden_root, generated_root, "generated_roots", manifest_path)
+330 |     if set(content_roots) & set(generated_roots):
+331 |         raise ContractError(f"{manifest_path}: content and generated roots overlap")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+332 |
+333 |     private_overlay_value = require_string(manifest, "private_overlay", manifest_path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:340:15
+    |
+338 |         pass
+339 |     else:
+340 |         raise ContractError(f"{manifest_path}: private_overlay must live outside .garden")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+341 |
+342 |     note_paths = discover_note_paths(garden_root, content_roots, manifest_path)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:344:15
+    |
+342 |     note_paths = discover_note_paths(garden_root, content_roots, manifest_path)
+343 |     if entrypoint not in note_paths:
+344 |         raise ContractError(f"{manifest_path}: entrypoint must belong to content_roots")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+345 |
+346 |     notes: dict[str, tuple[Path, dict[str, str | bool | list[str]]]] = {}
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:353:19
+    |
+351 |           note_id = require_string(metadata, "id", note_path)
+352 |           if note_id in notes:
+353 |               raise ContractError(
+    |  ___________________^
+354 | |                 f"{note_path}: duplicate note id {note_id}; "
+355 | |                 f"first seen in {notes[note_id][0]}"
+356 | |             )
+    | |_____________^
+357 |           notes[note_id] = (note_path, metadata)
+358 |           validate_sources(note_path, require_string_list(metadata, "sources", note_path))
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:366:23
+    |
+364 |             dangling = set(references) - known_ids
+365 |             if dangling:
+366 |                 raise ContractError(f"{note_path}: dangling {field}: {sorted(dangling)}")
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+367 |             if note_id in references:
+368 |                 raise ContractError(f"{note_path}: {field} cannot reference its own note id")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mindgarden/scripts/validate_garden.py:368:23
+    |
+366 |                 raise ContractError(f"{note_path}: dangling {field}: {sorted(dangling)}")
+367 |             if note_id in references:
+368 |                 raise ContractError(f"{note_path}: {field} cannot reference its own note id")
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+369 |
+370 |     return len(notes)
+    |
+
+T201 `print` found
+   --> mindgarden/scripts/validate_garden.py:389:9
+    |
+387 |         note_count = validate_repository(arguments.repository_root)
+388 |     except (ContractError, OSError, ValueError) as error:
+389 |         print(f"mindgarden validation failed: {error}", file=sys.stderr)
+    |         ^^^^^
+390 |         return 1
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> mindgarden/scripts/validate_garden.py:392:5
+    |
+390 |         return 1
+391 |
+392 |     print(f"mindgarden validation passed: {note_count} note(s)")
+    |     ^^^^^
+393 |     return 0
+    |
+help: Remove `print`
+
+INP001 File `mindgarden/tests/test_validate_garden.py` is part of an implicit namespace package. Add an `__init__.py`.
+--> mindgarden/tests/test_validate_garden.py:1:1
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> mindgarden/tests/test_validate_garden.py:16:1
+   |
+14 | sys.path.insert(0, str(MINDGARDEN_ROOT))
+15 |
+16 | from scripts.validate_garden import ContractError, validate_repository  # noqa: E402
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: Organize imports
+   |
+17 |
+   -
+18 | MANIFEST = """
+   |
+
+PLR0913 Too many arguments in function definition (6 > 5)
+  --> mindgarden/tests/test_validate_garden.py:39:5
+   |
+39 | def note(
+   |     ^^^^
+40 |     note_id: str,
+41 |     *,
+   |
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:112:18
+    |
+110 |                 encoding="utf8",
+111 |             )
+112 |             with self.assertRaisesRegex(ContractError, "public garden cannot commit private"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+113 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:122:18
+    |
+120 |                 encoding="utf8",
+121 |             )
+122 |             with self.assertRaisesRegex(ContractError, "cannot be reviewed"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+123 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:132:18
+    |
+130 |                 encoding="utf8",
+131 |             )
+132 |             with self.assertRaisesRegex(ContractError, "duplicate note id"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+133 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:142:18
+    |
+140 |                 encoding="utf8",
+141 |             )
+142 |             with self.assertRaisesRegex(ContractError, "dangling related"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+143 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:152:18
+    |
+150 |                 encoding="utf8",
+151 |             )
+152 |             with self.assertRaisesRegex(ContractError, "source does not resolve"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+153 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+   --> mindgarden/tests/test_validate_garden.py:163:18
+    |
+161 |                 encoding="utf8",
+162 |             )
+163 |             with self.assertRaisesRegex(ContractError, "must live outside"):
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+164 |                 validate_repository(fixture.root)
+    |
+help: Replace `assertRaisesRegex` with `pytest.raises`
+
+Found 54 errors.
+[*] 1 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
+
+(Truncated to last 17391 characters out of 25013)
+```
+
+</details>
+
+<details>
+<summary>❌ PYTHON / ruff-format - 1 error</summary>
+
+```
+unformatted: File would be reformatted
+   --> mindgarden/scripts/validate_garden.py:230:43
+    |
+229 |         raise ContractError(
+    -             f"{path}: note fields differ; "
+    -             f"missing={sorted(missing)}, unknown={sorted(unknown)}"
+230 +             f"{path}: note fields differ; missing={sorted(missing)}, unknown={sorted(unknown)}"
+231 |         )
+--------------------------------------------------------------------------------
+352 |             raise ContractError(
+    -                 f"{note_path}: duplicate note id {note_id}; "
+    -                 f"first seen in {notes[note_id][0]}"
+353 +                 f"{note_path}: duplicate note id {note_id}; first seen in {notes[note_id][0]}"
+354 |             )
+    |
+
+1 file would be reformatted, 33 files already formatted
+```
+
+</details>
+
+<details>
 <summary>❌ BASH / shfmt - 4 errors</summary>
 
 ```
-2>/dev/null || true)"
-+
-+    case "${remote_url}" in
-     git@github.com:*) repository="${remote_url#git@github.com:}" ;;
-     ssh://git@github.com/*) repository="${remote_url#ssh://git@github.com/}" ;;
-     https://github.com/*) repository="${remote_url#https://github.com/}" ;;
-     http://github.com/*) repository="${remote_url#http://github.com/}" ;;
--  esac
--  repository="${repository%.git}"
--  printf "%s\n" "${repository}"
-+    esac
-+    repository="${repository%.git}"
-+    printf "%s\n" "${repository}"
- }
- 
- # @description Derive the current symbolic Git branch as a full GitHub ref.
- # @stdout Full branch ref, or an empty line for detached worktrees.
- github_ref() {
--  local branch=""
--  branch="$(git -C "${WORKSPACE}" symbolic-ref --quiet --short HEAD 2> /dev/null || true)"
 -  if [[ -n ${branch} ]]; then
 -    printf "refs/heads/%s\n" "${branch}"
 -  fi
@@ -2678,7 +3147,7 @@ diff egolint/scripts/precommit.sh.orig egolint/scripts/precommit.sh
  
  main "$@"
 
-(Truncated to last 18181 characters out of 47476)
+(Truncated to last 17391 characters out of 47476)
 ```
 
 </details>
@@ -2741,15 +3210,15 @@ See documentation on https://megalinter.io/10.0.0/descriptors/lua_stylua/
 ```
 │ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to initialize plugins; Plugin "aws" not found. Did you run "tflint --init"?
 
 │ Failed to run in egolint/tests/fixtures/negative/terraform-fmt; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to initialize plugins; Plugin "aws" not found. Did you run "tflint --init"?
 
 │ Failed to run in egolint/tests/fixtures/tflint; exit status 1
 
-Failed to initialize plugins; Plugin "google" not found. Did you run "tflint --init"?
+Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
 ```
 
 </details>
@@ -2758,21 +3227,21 @@ Failed to initialize plugins; Plugin "google" not found. Did you run "tflint --i
 <summary>❌ REPOSITORY / trivy - 1 error</summary>
 
 ```
-.76 MiB [------------------------------------------->] 100.00% 149.90 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 149.90 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 149.90 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 140.23 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 140.23 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 140.23 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 131.18 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 131.18 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 131.18 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 122.72 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 122.72 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 122.72 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 114.80 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 114.80 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 114.80 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 107.39 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 107.39 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 107.39 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 100.46 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 100.46 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 100.46 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 93.98 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 93.98 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 93.98 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 87.92 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 87.92 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 87.92 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 82.25 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 82.25 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 82.25 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 76.94 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 76.94 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-----------------------------------------------] 100.00% 15.31 MiB p/s 7.2s2026-08-14T01:41:04Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-14T01:41:04Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-14T01:41:04Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-14T01:41:04Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-14T01:41:04Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-14T01:41:09Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-14T01:41:10Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-14T01:41:10Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-14T01:41:10Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-14T01:41:10Z	INFO	Number of language-specific files	num=4
-2026-08-14T01:41:10Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-14T01:41:10Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-14T01:41:10Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-14T01:41:10Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-14T01:41:10Z	INFO	Detected config files	num=13
+MiB / 106.87 MiB [------------------------------------------->] 100.00% 126.32 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 126.32 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 118.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 118.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 118.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.55 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.55 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.55 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.42 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.42 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.42 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.74 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.74 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.74 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.50 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.50 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.50 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.66 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.66 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.66 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.20 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.20 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.20 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 74.09 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 16.17 MiB p/s 6.8s2026-08-14T07:34:57Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-14T07:34:57Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-14T07:34:57Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-14T07:34:57Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-14T07:34:57Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 100ms2026-08-14T07:35:07Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-14T07:35:09Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-14T07:35:09Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-14T07:35:09Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-14T07:35:09Z	INFO	Number of language-specific files	num=4
+2026-08-14T07:35:09Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-14T07:35:09Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-14T07:35:09Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-14T07:35:10Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-14T07:35:10Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -2966,7 +3435,7 @@ See https://avd.aquasec.com/misconfig/ksv-0118
   11 └         privileged: true
 ────────────────────────────────────────
 
-(Truncated to last 18181 characters out of 18803)
+(Truncated to last 17391 characters out of 18703)
 ```
 
 </details>
@@ -3041,34 +3510,7 @@ egolint/tasks/lint.yml# must NOT have additional properties, found additional pr
 <summary>❌ SPELL / vale - 4 errors</summary>
 
 ```
-write-good.TooWordy 
- 298:3   warning  'modify' is too wordy.                                                write-good.TooWordy 
- 309:22  warning  'be proposed' may be passive voice. Use active voice if you can.      write-good.Passive  
- 317:6   warning  'shall' is too wordy.                                                 write-good.TooWordy 
- 317:16  warning  'be created' may be passive voice. Use active voice if you can.       write-good.Passive  
- 321:13  warning  'shall' is too wordy.                                                 write-good.TooWordy 
- 328:17  warning  'prioritize' is too wordy.                                            write-good.TooWordy 
- 336:37  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
- 338:23  warning  'was followed' may be passive voice. Use active voice if you can.     write-good.Passive  
- 339:25  warning  'were considered' may be passive voice. Use active voice if you can.  write-good.Passive  
- 342:56  warning  'are normalized' may be passive voice. Use active voice if you can.   write-good.Passive  
- 343:29  warning  'are included' may be passive voice. Use active voice if you can.     write-good.Passive  
- 345:37  warning  'is supported' may be passive voice. Use active voice if you can.     write-good.Passive  
-
-
- egolint/.ansible/inventories/README.md
- 3:61  warning  'validate' is too wordy.                                           write-good.TooWordy 
- 5:42  warning  'be committed' may be passive voice. Use active voice if you can.  write-good.Passive  
-
-
- egolint/.config/lint/README.md
- 14:26  warning  'are cataloged' may be passive voice. Use active voice if you can.  write-good.Passive 
-
-
- egolint/.config/lint/prose/styles/proselint/README.md
- 6:82   warning  'are permitted' may be passive voice. Use active voice if you can.   write-good.Passive  
- 6:96   warning  'provided that' is too wordy.                                        write-good.TooWordy 
- 7:22   warning  'are met' may be passive voice. Use active voice if you can.         write-good.Passive  
+ning  'are met' may be passive voice. Use active voice if you can.         write-good.Passive  
  9:40   warning  'retain' is too wordy.                                               write-good.TooWordy 
  16:83  warning  'be used' may be passive voice. Use active voice if you can.         write-good.Passive  
  19:15  warning  'IS PROVIDED' may be passive voice. Use active voice if you can.     write-good.Passive  
@@ -3258,9 +3700,29 @@ write-good.TooWordy
  379:13  warning  'are designed' may be passive voice. Use active voice if you can.   write-good.Passive  
  397:60  warning  'is involved' may be passive voice. Use active voice if you can.    write-good.Passive  
 
-✖ 4 errors, 1926 warnings and 0 suggestions in 212 files.
 
-(Truncated to last 18181 characters out of 217968)
+ mindgarden/EXTRACTION.md
+ 12:21  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 19:76  warning  'be projected' may be passive voice. Use active voice if you can.   write-good.Passive 
+
+
+ mindgarden/PROVENANCE.md
+ 5:12   warning  'was incubated' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 14:17  warning  'is retained' may be passive voice. Use active voice if you can.    write-good.Passive 
+ 14:50  warning  'was expanded' may be passive voice. Use active voice if you can.   write-good.Passive 
+ 31:31  warning  'be evaluated' may be passive voice. Use active voice if you can.   write-good.Passive 
+
+
+ mindgarden/README.md
+ 30:35  warning  'multiple' is too wordy.                                              write-good.TooWordy 
+ 45:1   warning  'Validate' is too wordy.                                              write-good.TooWordy 
+ 57:50  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 59:47  warning  'are defined' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 62:36  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+✖ 4 errors, 1939 warnings and 0 suggestions in 220 files.
+
+(Truncated to last 17391 characters out of 219447)
 ```
 
 </details>
