@@ -10,6 +10,7 @@ reusable installation primitives. Private installer implementations belong in
 lib/install/
 ├── README.md
 ├── runtime.sh
+├── assurance.sh
 ├── platform.sh
 ├── package-manager.sh
 ├── download.sh
@@ -29,6 +30,8 @@ transactionally. Missing or failed dependencies leave
 
 - `platform.sh` maps Mantle's normalized OS and architecture values to upstream
   release naming.
+- `assurance.sh` resolves checked-in installer locks and rejects mutable
+  selectors.
 - `package-manager.sh` detects an available native package manager without
   installing anything.
 - `download.sh` performs HTTPS-first, retried, atomic downloads.
@@ -49,7 +52,11 @@ orchestrator.
 
 - Downloads require HTTPS unless
   `MANTLE_INSTALL_ALLOW_INSECURE_DOWNLOADS=1` is explicitly set.
+- Installer defaults come from `config/installers.lock.tsv`; release and source
+  installers do not query a live latest branch or version.
 - Configured checksum assets fail closed when no matching digest is found.
+- Releases without an upstream checksum fail closed unless `--no-verify` is
+  explicit.
 - `--no-verify` is an explicit escape hatch and emits a warning.
 - Archives are rejected when they contain absolute paths or parent traversal.
 - Executables are staged and atomically moved into place.
