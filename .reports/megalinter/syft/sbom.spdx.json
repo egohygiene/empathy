@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-5af23d0d-0a76-41d0-882e-a41b126469b4",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-e23beb3e-82ad-449f-ab44-33beac94b7e8",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.50.0"
   ],
-  "created": "2026-08-14T23:11:39Z"
+  "created": "2026-08-14T23:30:14Z"
  },
  "packages": [
   {
@@ -205,6 +205,71 @@
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
      "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_lint_infographic:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/generate-repository-intelligence",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-8240392e72f414a9",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/mindgarden-pages.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
     }
    ]
   },
@@ -249346,7 +249411,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "6f74583c15cc60e22ba7ad1c17a808d6dbcd9b1d6507528bc96bf3357868b5e7"
+     "checksumValue": "f382f3351d6c15aa405233c75f28d418da5f7a4c6f721f884eb03ac994506943"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -249400,7 +249465,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "0602c210b3032de938e78fc331a29d84daed1a74e95c81c7c316517f2cf52efc"
+     "checksumValue": "3117f688c9cc21123d0e09499f360032a14c33e4134eb1119958579c8b71b1af"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -353401,6 +353466,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-8240392e72f414a9",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-backrefs-825bedbbfa26ec52",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
    "relationshipType": "OTHER",
@@ -366270,6 +366341,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-generate-lint-infographic-4832fa9b723789c2",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-8240392e72f414a9",
    "relationshipType": "CONTAINS"
   },
   {

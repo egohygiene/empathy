@@ -6,42 +6,73 @@ See documentation on https://megalinter.io/10.0.0/descriptors/css_stylelint/
 Linter raw log:
 
 .github/actions/generate-repository-intelligence-dashboard/dashboard.css
-    2:1   ✖  Expected empty line before comment                                                             comment-empty-line-before
-    6:3   ✖  Expected empty line before custom property                                                     custom-property-empty-line-before
-    7:14  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-    7:14  ✖  Expected modern color-function notation                                                        color-function-notation
-    7:31  ✖  Expected "0.88" to be "88%"                                                                    alpha-value-notation
-    9:13  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-    9:13  ✖  Expected modern color-function notation                                                        color-function-notation
-    9:33  ✖  Expected "0.2" to be "20%"                                                                     alpha-value-notation
-   19:25  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-   19:25  ✖  Expected modern color-function notation                                                        color-function-notation
-   19:39  ✖  Expected "0.32" to be "32%"                                                                    alpha-value-notation
-   37:40  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-   37:40  ✖  Expected modern color-function notation                                                        color-function-notation
-   37:59  ✖  Expected "0.27" to be "27%"                                                                    alpha-value-notation
-   38:39  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-   38:39  ✖  Expected modern color-function notation                                                        color-function-notation
-   38:58  ✖  Expected "0.18" to be "18%"                                                                    alpha-value-notation
-   59:1   ✖  Expected selector ".skip-link" to come before selector ".skip-link:focus-visible", at line 53  no-descending-specificity
-  114:39  ✖  Expected "#ffffff" to be "#fff"                                                                color-hex-length
-  143:15  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-  143:15  ✖  Expected modern color-function notation                                                        color-function-notation
-  143:32  ✖  Expected "0.8" to be "80%"                                                                     alpha-value-notation
-  152:15  ✖  Expected "currentColor" to be "currentcolor"                                                   value-keyword-case
-  232:39  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-  232:39  ✖  Expected modern color-function notation                                                        color-function-notation
-  232:56  ✖  Expected "0.9" to be "90%"                                                                     alpha-value-notation
-  270:39  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-  270:39  ✖  Expected modern color-function notation                                                        color-function-notation
-  270:59  ✖  Expected "0.17" to be "17%"                                                                    alpha-value-notation
-  310:28  ✖  Expected "rgba" to be "rgb"                                                                    color-function-alias-notation
-  310:28  ✖  Expected modern color-function notation                                                        color-function-notation
-  310:48  ✖  Expected "0.12" to be "12%"                                                                    alpha-value-notation
-  369:8   ✖  Expected "context" media feature range notation                                                media-feature-range-notation
-  380:8   ✖  Expected "context" media feature range notation                                                media-feature-range-notation
+    2:1   ✖  Expected empty line before comment                                                                            comment-empty-line-before
+    6:3   ✖  Expected empty line before custom property                                                                    custom-property-empty-line-before
+    7:14  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+    7:14  ✖  Expected modern color-function notation                                                                       color-function-notation
+    7:31  ✖  Expected "0.88" to be "88%"                                                                                   alpha-value-notation
+    9:13  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+    9:13  ✖  Expected modern color-function notation                                                                       color-function-notation
+    9:33  ✖  Expected "0.2" to be "20%"                                                                                    alpha-value-notation
+   25:25  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+   25:25  ✖  Expected modern color-function notation                                                                       color-function-notation
+   25:39  ✖  Expected "0.32" to be "32%"                                                                                   alpha-value-notation
+   43:40  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+   43:40  ✖  Expected modern color-function notation                                                                       color-function-notation
+   43:59  ✖  Expected "0.27" to be "27%"                                                                                   alpha-value-notation
+   44:39  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+   44:39  ✖  Expected modern color-function notation                                                                       color-function-notation
+   44:58  ✖  Expected "0.18" to be "18%"                                                                                   alpha-value-notation
+   71:1   ✖  Expected selector ".skip-link" to come before selector ".skip-link:focus-visible", at line 65                 no-descending-specificity
+  126:39  ✖  Expected "#ffffff" to be "#fff"                                                                               color-hex-length
+  155:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  155:15  ✖  Expected modern color-function notation                                                                       color-function-notation
+  155:32  ✖  Expected "0.8" to be "80%"                                                                                    alpha-value-notation
+  164:15  ✖  Expected "currentColor" to be "currentcolor"                                                                  value-keyword-case
+  256:39  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  256:39  ✖  Expected modern color-function notation                                                                       color-function-notation
+  256:56  ✖  Expected "0.9" to be "90%"                                                                                    alpha-value-notation
+  294:39  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  294:39  ✖  Expected modern color-function notation                                                                       color-function-notation
+  294:59  ✖  Expected "0.17" to be "17%"                                                                                   alpha-value-notation
+  334:28  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  334:28  ✖  Expected modern color-function notation                                                                       color-function-notation
+  334:48  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
+  420:11  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  420:11  ✖  Expected modern color-function notation                                                                       color-function-notation
+  420:31  ✖  Expected "0.16" to be "16%"                                                                                   alpha-value-notation
+  522:11  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  522:11  ✖  Expected modern color-function notation                                                                       color-function-notation
+  522:31  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
+  601:9   ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  601:9   ✖  Expected modern color-function notation                                                                       color-function-notation
+  601:29  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
+  617:9   ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  617:9   ✖  Expected modern color-function notation                                                                       color-function-notation
+  617:29  ✖  Expected "0.18" to be "18%"                                                                                   alpha-value-notation
+  632:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  632:15  ✖  Expected modern color-function notation                                                                       color-function-notation
+  632:35  ✖  Expected "0.18" to be "18%"                                                                                   alpha-value-notation
+  675:1   ✖  Expected selector ".freshness-row p" to come before selector ".chart-empty-card > p:last-child", at line 397  no-descending-specificity
+  689:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  689:15  ✖  Expected modern color-function notation                                                                       color-function-notation
+  689:35  ✖  Expected "0.14" to be "14%"                                                                                   alpha-value-notation
+  694:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  694:15  ✖  Expected modern color-function notation                                                                       color-function-notation
+  694:35  ✖  Expected "0.14" to be "14%"                                                                                   alpha-value-notation
+  713:25  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  713:25  ✖  Expected modern color-function notation                                                                       color-function-notation
+  713:45  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
+  739:28  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
+  739:28  ✖  Expected modern color-function notation                                                                       color-function-notation
+  739:48  ✖  Expected "0.1" to be "10%"                                                                                    alpha-value-notation
+  749:1   ✖  Expected selector ".data-table thead th" to come before selector ".data-table th:first-child", at line 744    no-descending-specificity
+  760:3   ✖  Deprecated property "clip"                                                                                    property-no-deprecated
+  774:1   ✖  Expected selector ".provenance p" to come before selector ".chart-empty-card > p:last-child", at line 397     no-descending-specificity
+  785:8   ✖  Expected "context" media feature range notation                                                               media-feature-range-notation
+  810:8   ✖  Expected "context" media feature range notation                                                               media-feature-range-notation
 
-✖ 34 problems (34 errors, 0 warnings)
-  33 errors potentially fixable with the "--fix" option.
+✖ 65 problems (65 errors, 0 warnings)
+  61 errors potentially fixable with the "--fix" option.
 
 
