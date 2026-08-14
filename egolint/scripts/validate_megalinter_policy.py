@@ -264,7 +264,13 @@ def as_string_list(value: Any, key: str) -> list[str]:
 
 def resolve_configuration_path(rules_path: str, config_file: str) -> Path:
     """Resolve a MegaLinter rules/config pair into the local workspace."""
-    normalized_rules_path = rules_path.removeprefix("/tmp/lint/")  # nosec B108
+    normalized_rules_path = rules_path
+    for workspace_prefix in (
+        "${GITHUB_WORKSPACE}/",
+        "/github/workspace/",
+        "/tmp/lint/",
+    ):
+        normalized_rules_path = normalized_rules_path.removeprefix(workspace_prefix)
     rules_root = Path(normalized_rules_path)
     if not rules_root.is_absolute():
         rules_root = REPOSITORY_ROOT / rules_root

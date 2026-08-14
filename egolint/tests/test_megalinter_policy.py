@@ -111,6 +111,22 @@ class MegaLinterPolicyTests(unittest.TestCase):
         self.assertTrue(any("removed linter" in finding for finding in removed_findings))
         self.assertTrue(any("removed descriptor" in finding for finding in removed_findings))
 
+    def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
+        expected = (
+            REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
+        )
+        for rules_path in (
+            "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
+            "/github/workspace/egolint/.config/lint/terraform",
+            "/tmp/lint/egolint/.config/lint/terraform",
+        ):
+            with self.subTest(rules_path=rules_path):
+                resolved = megalinter_policy.resolve_configuration_path(
+                    rules_path,
+                    ".tflint.hcl",
+                )
+                self.assertEqual(resolved, expected)
+
     def test_selection_and_result_states_are_distinguishable(self) -> None:
         expected_result_states = {
             "configuration_error",
