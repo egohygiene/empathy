@@ -41,6 +41,9 @@ cssclasses:
 
 ## Knowledge
 
+- [[home\|Garden map]]
+- [[projects/README\|Project map]]
+
 ![[views/knowledge.base#Knowledge]]
 
 ## Needs review

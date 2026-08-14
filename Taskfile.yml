@@ -68,10 +68,19 @@ tasks:
         --pattern "test_mindgarden_obsidian_integration.py"
         --verbose
       - >-
+        python3 -m unittest discover
+        --start-directory tests
+        --pattern "test_mindgarden_publishing_integration.py"
+        --verbose
+      - >-
         python3 mindgarden/scripts/validate_garden.py
         --repository-root .
       - >-
         python3 mindgarden/scripts/garden_agent.py
+        --repository-root .
+        verify
+      - >-
+        python3 mindgarden/scripts/publish_garden.py
         --repository-root .
         verify
 
@@ -102,6 +111,40 @@ tasks:
         --repository-root .
         llms
         --write
+
+  garden:publish:check:
+    desc: Verify the deterministic reviewed-public projection
+    cmds:
+      - >-
+        python3 mindgarden/scripts/publish_garden.py
+        --repository-root .
+        verify
+
+  garden:publish:
+    desc: Materialize the disposable reviewed-public projection
+    cmds:
+      - >-
+        python3 mindgarden/scripts/publish_garden.py
+        --repository-root .
+        project
+        --output-directory ".cache/mindgarden/publish"
+
+  garden:site:build:
+    desc: Build the public garden with the pinned Quartz engine
+    cmds:
+      - >-
+        python3 mindgarden/scripts/quartz_site.py
+        --repository-root .
+        build
+
+  garden:site:serve:
+    desc: Serve the public garden locally with the pinned Quartz engine
+    cmds:
+      - >-
+        python3 mindgarden/scripts/quartz_site.py
+        --repository-root .
+        serve
+        --port "{{.SITE_PORT | default 8080}}"
 
   hooks:install:
     desc: Install Husky as the repository's sole Git hook manager

@@ -2,7 +2,7 @@
 
 This directory is Empathy's first Mindgarden consumer instance. Its committed
 Markdown and YAML are canonical repository knowledge that can be viewed through
-Obsidian and may later be published through GitHub Pages or retrieved by agent
+Obsidian, published through GitHub Pages, or retrieved by deterministic agent
 tools.
 
 Open the repository root, not this directory, as the Obsidian vault. That keeps
@@ -10,9 +10,10 @@ repository documents and `.garden/` notes in one linkable knowledge space while
 the shareable vault profile under [`.obsidian/`](../.obsidian/README.md) keeps
 machine-local workspace state out of Git.
 
-The current profile uses Obsidian's native Bases feature and first-party CSS for
-the garden dashboard. Agent adapters, ingestion, indexing, and Pages publishing
-remain separate future changes.
+The current profiles use Obsidian's native Bases feature and first-party CSS for
+the human vault, a dependency-free agent interface for bounded retrieval, and a
+reviewed-public Quartz projection for GitHub Pages. These are adapters over the
+same files rather than competing knowledge stores.
 
 ## Public boundary
 
@@ -37,3 +38,7 @@ Start from [`dashboard.md`](dashboard.md) for the visual knowledge view or
 Agents can begin at [`../llms.txt`](../llms.txt) or use the deterministic
 [agent profile](../mindgarden/profiles/agent/README.md) for validated search and
 bounded context packs.
+
+Readers can browse the [published Mindgarden](https://egohygiene.github.io/empathy/).
+Its fail-closed projection and local preview workflow are documented in the
+[Quartz profile](../mindgarden/profiles/quartz/README.md).

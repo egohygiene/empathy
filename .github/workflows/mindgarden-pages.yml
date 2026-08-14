@@ -1,0 +1,94 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Publish Mindgarden
+
+on:
+  pull_request:
+    paths:
+      - ".garden/**"
+      - ".github/workflows/mindgarden-pages.yml"
+      - "mindgarden/**"
+      - "tests/test_mindgarden_publishing_integration.py"
+      - "Taskfile.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - ".garden/**"
+      - ".github/workflows/mindgarden-pages.yml"
+      - "mindgarden/**"
+      - "tests/test_mindgarden_publishing_integration.py"
+      - "Taskfile.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "mindgarden-pages-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Validate and build public garden
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout complete repository history
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        # actions/setup-node v6.0.0
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: "24"
+
+      - name: Verify deterministic public boundary
+        run: >-
+          python3 mindgarden/scripts/publish_garden.py
+          --repository-root .
+          verify
+
+      - name: Build the pinned Quartz site
+        run: >-
+          python3 mindgarden/scripts/quartz_site.py
+          --repository-root .
+          build
+
+      - name: Configure GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        # actions/configure-pages v6.0.0
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
+
+      - name: Upload GitHub Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        # actions/upload-pages-artifact v5.0.0
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
+        with:
+          path: ".cache/mindgarden/site"
+
+  deploy:
+    name: Deploy public garden
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: "${{ steps.deployment.outputs.page_url }}"
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        # actions/deploy-pages v5.0.0
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128

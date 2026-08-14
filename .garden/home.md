@@ -35,6 +35,12 @@ contributors, automation, and AI agents.
 - [Accepted decisions](../DECISIONS.md)
 - [Strategic roadmap](../ROADMAP.md)
 
+## Public interfaces
+
+- [Published Mindgarden](https://egohygiene.github.io/empathy/)
+- [Agent discovery](../llms.txt)
+- [Repository source](https://github.com/egohygiene/empathy)
+
 ## Knowledge lifecycle
 
 New material begins in `inbox/` or enters a durable content area as `draft` or
