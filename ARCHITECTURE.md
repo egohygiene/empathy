@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-14
 governed_by:
   - architecture-architecture
 depends_on:
@@ -150,6 +150,7 @@ may inform intent, but generated output does not directly mutate governance.
 | Automation                   | Execution; Verification               | `.github/actions/`, `.github/workflows/`              |
 | Intelligence Artifacts       | Source Contracts; Distribution target | `egolint/.agents/` provisional import                 |
 | Development Environment      | Composition; Execution                | `.devcontainer/`, `.vscode/`, workspace/manifests     |
+| Visual Identity              | Source Contracts through Distribution | `identity/`, `.identity/`, future generated assets    |
 | Evidence and Observability   | Verification                          | `.reports/`, `.audits/`, workflow artifacts           |
 | Staging and Classification   | Isolated from active layers           | `.staging/`                                           |
 | Distribution and Conformance | Distribution target                   | Builders and projection concepts; no stable release   |

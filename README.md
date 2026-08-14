@@ -30,6 +30,9 @@ quality layers:
 - an incubated Mindgarden holon with versioned `.garden` contracts,
   dependency-free validation, deterministic agent access, a reviewed-public
   Quartz projection, and Empathy as its first consumer.
+- an incubated Rust `identity` holon with a consumer-owned `.identity/`
+  contract, versioned asset profiles, deterministic planning, and a contextual
+  creative handoff that keeps human approval canonical.
 
 Imported workflows that still depend on a product, toolchain, secret set, or
 release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
@@ -42,6 +45,9 @@ task check
 task garden:check
 task garden:publish:check
 task garden:site:serve
+task identity:check
+task identity:plan
+task identity:handoff
 task hooks:install
 task commit:test
 task precommit:staged
@@ -68,6 +74,8 @@ The standard check validates formatting, tests, and the changed-file Egolint
 profile. The complete and holistic commands expand that scope deliberately.
 See [the Egolint subsystem](egolint/README.md) and
 [the composite action catalog](.github/actions/README.md) for their contracts.
+See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle and
+[`identity`](identity/README.md) for the visual identity lifecycle.
 
 ## Architecture
 
