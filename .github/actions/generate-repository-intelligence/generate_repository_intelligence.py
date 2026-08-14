@@ -8,12 +8,13 @@ import html
 import json
 import os
 from pathlib import Path
+import subprocess
 import tempfile
 from typing import TYPE_CHECKING, Any
 import xml.etree.ElementTree as ET
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable
+    from collections.abc import Iterable, Sequence
 
 DEFAULT_EXCLUDED_PATHS = [
     ".git",
@@ -30,8 +31,11 @@ DEFAULT_EXCLUDED_PATHS = [
     "site",
 ]
 
+TREE_SCHEMA = "egohygiene.repository-tree/v1"
+TREE_SCHEMA_VERSION = 1
 
 Node = dict[str, Any]
+GitEntry = tuple[str, str]
 
 
 def positive_integer(raw_value: str) -> int:
@@ -42,9 +46,12 @@ def positive_integer(raw_value: str) -> int:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate repository intelligence tree artifacts.")
+    parser = argparse.ArgumentParser(
+        description="Generate commit-scoped repository intelligence tree artifacts."
+    )
     parser.add_argument("--repo-root", required=True)
     parser.add_argument("--output-root", required=True)
+    parser.add_argument("--ref", default="HEAD")
     parser.add_argument("--max-depth", type=positive_integer, default=10)
     parser.add_argument(
         "--excluded-paths",
@@ -66,80 +73,146 @@ def normalize_excluded_paths(raw_paths: str) -> list[str]:
     return excluded
 
 
-def is_excluded(relative_path: Path, excluded_paths: Iterable[str]) -> bool:
-    relative_path_string = relative_path.as_posix()
+def is_excluded_path(relative_path: str, excluded_paths: Iterable[str]) -> bool:
+    parts = Path(relative_path).parts
 
     for excluded_path in excluded_paths:
-        if "/" not in excluded_path and excluded_path in relative_path.parts:
+        if "/" not in excluded_path and excluded_path in parts:
             return True
-        if relative_path_string == excluded_path or relative_path_string.startswith(
-            f"{excluded_path}/"
-        ):
+        if relative_path == excluded_path or relative_path.startswith(f"{excluded_path}/"):
             return True
 
     return False
 
 
-def build_tree(
-    path: Path,
-    repo_root: Path,
-    excluded_paths: list[str],
-    max_depth: int,
-    depth: int = 0,
-) -> Node:
-    is_root = path == repo_root
-    node_type = "directory" if path.is_dir() else "file"
-    node: Node = {
-        "name": repo_root.name if is_root else path.name,
-        "path": "." if is_root else path.relative_to(repo_root).as_posix(),
-        "type": node_type,
+def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
+    completed = subprocess.run(
+        ["git", "-C", str(repo_root), *arguments],
+        check=True,
+        capture_output=True,
+    )
+    return completed.stdout
+
+
+def resolve_revision(repo_root: Path, revision: str) -> str:
+    return (
+        run_git(repo_root, ["rev-parse", "--verify", f"{revision}^{{commit}}"])
+        .decode("utf-8")
+        .strip()
+    )
+
+
+def source_committed_at(repo_root: Path, revision: str) -> str:
+    return (
+        run_git(repo_root, ["show", "--no-patch", "--format=%cI", revision]).decode("utf-8").strip()
+    )
+
+
+def list_git_entries(repo_root: Path, revision: str) -> list[GitEntry]:
+    output = run_git(repo_root, ["ls-tree", "-r", "-z", "--full-tree", revision])
+    entries: list[GitEntry] = []
+
+    for raw_record in output.split(b"\0"):
+        if not raw_record:
+            continue
+        metadata, raw_path = raw_record.split(b"\t", maxsplit=1)
+        mode = metadata.split(b" ", maxsplit=1)[0].decode("ascii")
+        entries.append((raw_path.decode("utf-8", errors="surrogateescape"), mode))
+
+    return entries
+
+
+def entry_type(mode: str) -> str:
+    if mode == "120000":
+        return "symlink"
+    if mode == "160000":
+        return "submodule"
+    return "file"
+
+
+def new_directory(name: str, path: str) -> Node:
+    return {
+        "name": name,
+        "path": path,
+        "type": "directory",
+        "children": [],
     }
 
-    if node_type != "directory":
-        return node
 
-    if depth >= max_depth:
-        node["truncated"] = True
-        node["children"] = []
-        return node
+def child_by_name(node: Node, name: str) -> Node | None:
+    return next((child for child in node["children"] if child["name"] == name), None)
 
-    children: list[Node] = []
 
-    for child in sorted(
-        path.iterdir(),
-        key=lambda current: (
-            not current.is_dir(),
-            current.name.casefold(),
-            current.name,
-        ),
-    ):
-        relative_child = child.relative_to(repo_root)
+def add_entry(root: Node, relative_path: str, mode: str, max_depth: int) -> None:
+    parts = Path(relative_path).parts
+    current = root
 
-        if is_excluded(relative_child, excluded_paths):
+    for index, part in enumerate(parts, start=1):
+        if index > max_depth:
+            current["truncated"] = True
+            return
+
+        path = Path(*parts[:index]).as_posix()
+        is_leaf = index == len(parts)
+        existing = child_by_name(current, part)
+
+        if existing is not None:
+            current = existing
             continue
 
-        if child.is_symlink():
-            children.append(
-                {
-                    "name": child.name,
-                    "path": relative_child.as_posix(),
-                    "type": "symlink",
-                }
-            )
-            continue
-
-        children.append(
-            build_tree(
-                path=child,
-                repo_root=repo_root,
-                excluded_paths=excluded_paths,
-                max_depth=max_depth,
-                depth=depth + 1,
-            )
+        child = (
+            {"name": part, "path": path, "type": entry_type(mode)}
+            if is_leaf
+            else new_directory(part, path)
         )
+        current["children"].append(child)
+        current = child
 
-    node["children"] = children
-    return node
+
+def sort_and_annotate(node: Node) -> dict[str, int]:
+    if node["type"] != "directory":
+        return {
+            "directories": 0,
+            "files": int(node["type"] == "file"),
+            "symlinks": int(node["type"] == "symlink"),
+            "submodules": int(node["type"] == "submodule"),
+        }
+
+    node["children"].sort(
+        key=lambda child: (
+            child["type"] != "directory",
+            child["name"].casefold(),
+            child["name"],
+        )
+    )
+    counts = {"directories": 0, "files": 0, "symlinks": 0, "submodules": 0}
+
+    for child in node["children"]:
+        if child["type"] == "directory":
+            counts["directories"] += 1
+        child_counts = sort_and_annotate(child)
+        for key, value in child_counts.items():
+            counts[key] += value
+
+    node["descendants"] = counts
+    return counts
+
+
+def build_tree(
+    repository_name: str,
+    entries: Iterable[GitEntry],
+    excluded_paths: Iterable[str],
+    max_depth: int,
+) -> Node:
+    root = new_directory(repository_name, ".")
+
+    for relative_path, mode in entries:
+        if is_excluded_path(relative_path, excluded_paths):
+            continue
+        add_entry(root, relative_path, mode, max_depth)
+
+    sort_and_annotate(root)
+    return root
 
 
 def node_label(node: Node) -> str:
@@ -175,10 +248,7 @@ def append_xml(parent: ET.Element, node: Node) -> None:
     element = ET.SubElement(
         parent,
         element_name,
-        {
-            "name": str(node["name"]),
-            "path": str(node["path"]),
-        },
+        {"name": str(node["name"]), "path": str(node["path"])},
     )
 
     if node.get("truncated"):
@@ -191,10 +261,7 @@ def append_xml(parent: ET.Element, node: Node) -> None:
 def render_xml(tree: Node) -> str:
     root = ET.Element(
         "repository",
-        {
-            "name": str(tree["name"]),
-            "path": str(tree["path"]),
-        },
+        {"name": str(tree["name"]), "path": str(tree["path"])},
     )
 
     for child in list(tree.get("children", [])):
@@ -215,7 +282,7 @@ def render_html(ascii_tree: str, repository_name: str) -> str:
     <title>{escaped_name} Repository Structure</title>
     <style>
       body {{
-        font-family: ui-monospace, SFMono-Regular, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;
         margin: 2rem;
         line-height: 1.5;
       }}
@@ -248,14 +315,14 @@ def render_svg(tree: Node) -> str:
     escaped_name = html.escape(str(tree["name"]))
     escaped_count = html.escape(str(len(top_level_children)))
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-  <title id="title">{escaped_name} repository visualization</title>
-  <desc id="desc">Deterministic repository visualization generated from the top-level repository tree.</desc>
-  <rect width="{width}" height="{height}" rx="16" ry="16" fill="#0f172a" />
-  <text x="32" y="64" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="30" font-weight="700">{escaped_name}</text>
-  <text x="32" y="104" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">Top-level entries: {escaped_count}</text>
-  <text x="32" y="148" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">{escaped_preview}</text>
-  <text x="32" y="188" fill="#64748b" font-family="Arial, sans-serif" font-size="16">Generated locally without a third-party rendering service.</text>
+    return f"""<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{width}\" height=\"{height}\" viewBox=\"0 0 {width} {height}\" role=\"img\" aria-labelledby=\"title desc\">
+  <title id=\"title\">{escaped_name} repository visualization</title>
+  <desc id=\"desc\">Deterministic repository visualization generated from the top-level repository tree.</desc>
+  <rect width=\"{width}\" height=\"{height}\" rx=\"16\" ry=\"16\" fill=\"#0f172a\" />
+  <text x=\"32\" y=\"64\" fill=\"#e2e8f0\" font-family=\"Arial, sans-serif\" font-size=\"30\" font-weight=\"700\">{escaped_name}</text>
+  <text x=\"32\" y=\"104\" fill=\"#94a3b8\" font-family=\"Arial, sans-serif\" font-size=\"20\">Top-level entries: {escaped_count}</text>
+  <text x=\"32\" y=\"148\" fill=\"#cbd5e1\" font-family=\"Arial, sans-serif\" font-size=\"18\">{escaped_preview}</text>
+  <text x=\"32\" y=\"188\" fill=\"#64748b\" font-family=\"Arial, sans-serif\" font-size=\"16\">Generated locally without a third-party rendering service.</text>
 </svg>
 """
 
@@ -279,7 +346,26 @@ def atomic_write_text(path: Path, content: str) -> None:
         raise
 
 
-def write_outputs(output_root: Path, tree: Node) -> None:
+def tree_contract(tree: Node, revision: str, ref: str, committed_at: str) -> Node:
+    return {
+        "schema": TREE_SCHEMA,
+        "schema_version": TREE_SCHEMA_VERSION,
+        "source": {
+            "revision": revision,
+            "ref": ref,
+            "committed_at": committed_at,
+        },
+        "tree": tree,
+    }
+
+
+def write_outputs(
+    output_root: Path,
+    tree: Node,
+    revision: str,
+    ref: str,
+    committed_at: str,
+) -> None:
     tree_output_dir = output_root / "tree"
     visualization_output_dir = output_root / "visualization"
     tree_output_dir.mkdir(parents=True, exist_ok=True)
@@ -288,26 +374,26 @@ def write_outputs(output_root: Path, tree: Node) -> None:
     ascii_tree = render_ascii_tree(tree)
 
     atomic_write_text(tree_output_dir / "repo.tree", ascii_tree)
-    atomic_write_text(
-        tree_output_dir / "repo.md",
-        render_markdown(ascii_tree),
-    )
+    atomic_write_text(tree_output_dir / "repo.md", render_markdown(ascii_tree))
     atomic_write_text(
         tree_output_dir / "repo.json",
-        json.dumps(tree, indent=2) + "\n",
+        json.dumps(
+            tree_contract(
+                tree=tree,
+                revision=revision,
+                ref=ref,
+                committed_at=committed_at,
+            ),
+            indent=2,
+        )
+        + "\n",
     )
-    atomic_write_text(
-        tree_output_dir / "repo.xml",
-        render_xml(tree) + "\n",
-    )
+    atomic_write_text(tree_output_dir / "repo.xml", render_xml(tree) + "\n")
     atomic_write_text(
         tree_output_dir / "repo.html",
         render_html(ascii_tree, str(tree["name"])),
     )
-    atomic_write_text(
-        visualization_output_dir / "repository.svg",
-        render_svg(tree),
-    )
+    atomic_write_text(visualization_output_dir / "repository.svg", render_svg(tree))
 
 
 def main() -> None:
@@ -322,17 +408,21 @@ def main() -> None:
         raise SystemExit(f"Output root must be inside the repository: {output_root}") from error
 
     excluded_paths = normalize_excluded_paths(args.excluded_paths)
-    # Create the destination before scanning so a first run and a subsequent
-    # run observe the same directory topology.
-    output_root.mkdir(parents=True, exist_ok=True)
-
+    revision = resolve_revision(repo_root, args.ref)
+    committed_at = source_committed_at(repo_root, revision)
     tree = build_tree(
-        path=repo_root,
-        repo_root=repo_root,
+        repository_name=repo_root.name,
+        entries=list_git_entries(repo_root, revision),
         excluded_paths=excluded_paths,
         max_depth=args.max_depth,
     )
-    write_outputs(output_root=output_root, tree=tree)
+    write_outputs(
+        output_root=output_root,
+        tree=tree,
+        revision=revision,
+        ref=args.ref,
+        committed_at=committed_at,
+    )
 
 
 if __name__ == "__main__":
