@@ -13,5 +13,5 @@ Linter raw log:
       L14 |        class="greeting-page__image"
            ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
 
-Scanned 1 files, found 2 errors in 1 files (39 ms)
+Scanned 1 files, found 2 errors in 1 files (40 ms)
 

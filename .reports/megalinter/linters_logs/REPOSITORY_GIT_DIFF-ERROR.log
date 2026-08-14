@@ -5,64 +5,64 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_git_dif
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 warning: in the working copy of '.reports/megalinter/linters_logs/REPOSITORY_TRIVY-ERROR.log', CRLF will be replaced by LF the next time Git touches it
-.reports/megalinter/copy-paste/jscpd-report.html:5937: trailing whitespace.
+.reports/megalinter/copy-paste/jscpd-report.html:6267: trailing whitespace.
 +          
-.reports/megalinter/copy-paste/jscpd-report.html:5978: trailing whitespace.
+.reports/megalinter/copy-paste/jscpd-report.html:6429: trailing whitespace.
 +          
-.reports/megalinter/copy-paste/jscpd-report.html:6003: trailing whitespace.
-+          
-.reports/megalinter/copy-paste/jscpd-report.html:6078: trailing whitespace.
-+          
-.reports/megalinter/copy-paste/jscpd-report.html:6458: trailing whitespace.
-+          
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:77: trailing whitespace.
-+ 4:63   warning  'be viewed' may be passive voice. Use active voice if you can.       write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:78: trailing whitespace.
-+ 22:47  warning  'be committed' may be passive voice. Use active voice if you can.    write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:79: trailing whitespace.
-+ 43:55  warning  'are documented' may be passive voice. Use active voice if you can.  write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:84: trailing whitespace.
-+ 59:1   warning  'be installed' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:85: trailing whitespace.
-+ 60:24  warning  'are reviewed' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:354: trailing whitespace.
-+ 35:18  warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:355: trailing whitespace.
-+ 64:58  warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:356: trailing whitespace.
-+ 89:34  warning  'validate' is too wordy.                                            write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:357: trailing whitespace.
-+ 94:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:358: trailing whitespace.
-+ 95:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2460: trailing whitespace.
-+ 30:34  warning  'are bounded' may be passive voice. Use active voice if you can.   write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2461: trailing whitespace.
-+ 35:10  warning  'is committed' may be passive voice. Use active voice if you can.  write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2473: trailing whitespace.
-+ 35:31  warning  'be evaluated' may be passive voice. Use active voice if you can.   write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2474: trailing whitespace.
-+ 40:65  warning  'are vendored' may be passive voice. Use active voice if you can.   write-good.Passive 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2479: trailing whitespace.
-+ 59:1   warning  'Validate' is too wordy.                                              write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2480: trailing whitespace.
-+ 73:50  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2481: trailing whitespace.
-+ 75:47  warning  'are defined' may be passive voice. Use active voice if you can.      write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2482: trailing whitespace.
-+ 78:36  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2499: trailing whitespace.
-+ 12:30  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2500: trailing whitespace.
-+ 13:51  warning  'are omitted' may be passive voice. Use active voice if you can.   write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2501: trailing whitespace.
-+ 16:45  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2502: trailing whitespace.
-+ 26:36  warning  'are required' may be passive voice. Use active voice if you can.  write-good.Passive  
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2503: trailing whitespace.
-+ 52:5   warning  'equivalent' is too wordy.                                         write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2504: trailing whitespace.
-+ 62:57  warning  'it is' is too wordy.                                              write-good.TooWordy 
-.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2505: trailing whitespace.
-+ 66:32  warning  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:115: trailing whitespace.
++ 5:72   warning  'be built' may be passive voice. Use active voice if you can.  write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:116: trailing whitespace.
++ 58:61  warning  'is read' may be passive voice. Use active voice if you can.   write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:120: trailing whitespace.
++ 3:39  warning  'be staged' may be passive voice. Use active voice if you can.     write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:121: trailing whitespace.
++ 7:55  warning  'it is' is too wordy.                                              write-good.TooWordy 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:122: trailing whitespace.
++ 7:58  warning  'is committed' may be passive voice. Use active voice if you can.  write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:126: trailing whitespace.
++ 6:72  warning  'are reviewed' may be passive voice. Use active voice if you can.  write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:127: trailing whitespace.
++ 8:35  warning  'be promoted' may be passive voice. Use active voice if you can.   write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:167: trailing whitespace.
++ 163:31  warning  'been adapted' may be passive voice. Use active voice if you can.     write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:195: trailing whitespace.
++ 155:85  warning  'been completed' may be passive voice. Use active voice if you can.  write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:196: trailing whitespace.
++ 159:45  warning  'be required' may be passive voice. Use active voice if you can.     write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:197: trailing whitespace.
++ 160:30  warning  'be tested' may be passive voice. Use active voice if you can.       write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:369: trailing whitespace.
++ 8:53    warning  'are extracted' may be passive voice. Use active voice if you can.  write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:370: trailing whitespace.
++ 38:18   warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:371: trailing whitespace.
++ 70:58   warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:372: trailing whitespace.
++ 97:34   warning  'validate' is too wordy.                                            write-good.TooWordy 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:373: trailing whitespace.
++ 102:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:374: trailing whitespace.
++ 103:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:392: trailing whitespace.
++ 124:61   warning  'are resolved' may be passive voice. Use active voice if you can.    write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:393: trailing whitespace.
++ 143:103  warning  'validate' is too wordy.                                             write-good.TooWordy 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:394: trailing whitespace.
++ 147:115  warning  'validate' is too wordy.                                             write-good.TooWordy 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:395: trailing whitespace.
++ 205:53   warning  'be mistaken' may be passive voice. Use active voice if you can.     write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:396: trailing whitespace.
++ 209:24   warning  'is derived' may be passive voice. Use active voice if you can.      write-good.Passive  
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:397: trailing whitespace.
++ 210:14   warning  'several' is a weasel word!                                          write-good.Weasel   
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2310: trailing whitespace.
++ 22:20  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2314: trailing whitespace.
++ 12:21  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2318: trailing whitespace.
++ 5:17   warning  'was designed' may be passive voice. Use active voice if you can.     write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2319: trailing whitespace.
++ 10:20  warning  'was informed' may be passive voice. Use active voice if you can.     write-good.Passive 
+.reports/megalinter/linters_logs/SPELL_VALE-ERROR.log:2320: trailing whitespace.
++ 19:44  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive 
 

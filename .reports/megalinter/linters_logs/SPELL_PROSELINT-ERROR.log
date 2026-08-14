@@ -31,7 +31,7 @@ ARCHITECTURE.md:108:30: typography.symbols.curly_quotes: Use curly quotes “”
 ARCHITECTURE.md:109:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:121:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
 DECISIONS.md:313:87: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-DESIGN.md:126:33: misc.preferred_forms: 'sans serif' is the preferred form.
+DESIGN.md:128:1: misc.preferred_forms: 'sans serif' is the preferred form.
 DESIGN_SYSTEM.md:68:38: misc.preferred_forms: 'sans serif' is the preferred form.
 EPISTEMOLOGY.md:109:22: lexical_illusions: There's a lexical illusion in 'Knowledge
 
@@ -63,7 +63,7 @@ PILLARS.md:68:38: lexical_illusions: There's a lexical illusion in 'Automation
 Automation' - a phrase is repeated.
 README.md:19:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:58:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-SYSTEM.md:157:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+SYSTEM.md:174:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -313,6 +313,7 @@ egolint/README.md:22:1: lexical_illusions: There's a lexical illusion in 'task l
 task lint' - a phrase is repeated.
 egolint/README.md:67:5: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 egolint/README.md:79:39: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+identity/README.md:44:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/ARCHITECTURE.md:22:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 mantle/ARCHITECTURE.md:23:116: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 mantle/ARCHITECTURE.md:24:117: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.

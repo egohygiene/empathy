@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:97e5c46d-6397-4022-b679-14e48ad1781a",
+  "serialNumber": "urn:uuid:ab756305-e240-4d08-8b02-8473ca751c0a",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-14T11:06:50Z",
+    "timestamp": "2026-08-14T12:12:22Z",
     "tools": {
       "components": [
         {
@@ -80112,6 +80112,35 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/contributors.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=6d5fb011de1637ee",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/identity.yml"
         }
       ]
     },
@@ -258074,6 +258103,17 @@
         {
           "alg": "SHA-256",
           "content": "064abb7d1ea55a21d7c5a4f65ca2463c5431bd156a1a2647ddc713bd4bd99215"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a2eefa88a8e800a7",
+      "type": "file",
+      "name": "/github/workspace/.github/workflows/identity.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ef8eaee8260cfa476360a192407bd88c2f1f15a0e2de071a1427a27fb36ef6cf"
         }
       ]
     },

@@ -5,6 +5,44 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff_format
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 unformatted: File would be reformatted
+  --> tests/test_identity_integration.py:33:29
+   |
+32 |     def test_profiles_resolve_unique_safe_targets_and_declared_sources(self) -> None:
+   -         declared_sources = {
+   -             source["role"] for source in self.specification["sources"]["required"]
+   -         }
+33 +         declared_sources = {source["role"] for source in self.specification["sources"]["required"]}
+34 |         declared_sources.update({"identity-brief", "project-spec"})
+--------------------------------------------------------------------------------
+54 |     def test_platform_profiles_capture_foundational_constraints(self) -> None:
+   -         github = json.loads(
+   -             (IDENTITY_ROOT / "profiles" / "github.json").read_text(encoding="utf8")
+   -         )
+55 +         github = json.loads((IDENTITY_ROOT / "profiles" / "github.json").read_text(encoding="utf8"))
+56 |         social_preview = next(
+   -             target
+   -             for target in github["targets"]
+   -             if target["id"] == "repository-social-preview"
+57 +             target for target in github["targets"] if target["id"] == "repository-social-preview"
+58 |         )
+59 |         self.assertEqual((social_preview["width"], social_preview["height"]), (1280, 640))
+60 |         self.assertEqual(social_preview["maximum_bytes"], 1_000_000)
+61 |
+   -         pwa = json.loads(
+   -             (IDENTITY_ROOT / "profiles" / "pwa.json").read_text(encoding="utf8")
+   -         )
+62 +         pwa = json.loads((IDENTITY_ROOT / "profiles" / "pwa.json").read_text(encoding="utf8"))
+63 |         purposes = {target.get("purpose") for target in pwa["targets"]}
+--------------------------------------------------------------------------------
+81 |             )
+   -             self.assertEqual(
+   -                 contract["$schema"], "https://json-schema.org/draft/2020-12/schema"
+   -             )
+82 +             self.assertEqual(contract["$schema"], "https://json-schema.org/draft/2020-12/schema")
+83 |
+   |
+
+unformatted: File would be reformatted
   --> tests/test_mindgarden_obsidian_integration.py:16:14
    |
 15 |         profile = json.loads(
@@ -61,5 +99,5 @@ unformatted: File would be reformatted
    -
    |
 
-1 file would be reformatted, 42 files already formatted
+2 files would be reformatted, 42 files already formatted
 
