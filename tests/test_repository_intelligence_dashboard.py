@@ -83,7 +83,11 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         self.repository_root.mkdir()
         self.source_commit = initialize_repository(self.repository_root)
 
-    def build(self, reports_root: Path) -> dict[str, object]:
+    def build(
+        self,
+        reports_root: Path,
+        analytics_summary: Path | None = None,
+    ) -> dict[str, object]:
         """Build one dashboard against the fixture checkout."""
 
         return dashboard_builder.build_dashboard(
@@ -93,6 +97,7 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
             default_branch="main",
             source_commit=self.source_commit,
             as_of=AS_OF,
+            analytics_summary=analytics_summary,
         )
 
     def copy_reports(self) -> Path:
@@ -101,6 +106,90 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         reports_root = self.repository_root / ".reports"
         shutil.copytree(FIXTURE_ROOT, reports_root)
         return reports_root
+
+    def write_analytics_summary(self) -> Path:
+        """Write one public-safe analytics contract for chart rendering."""
+
+        path = self.repository_root / ".cache/intelligence/analytics/summary.json"
+        path.parent.mkdir(parents=True)
+        payload = {
+            "schema": "egohygiene.repository-analytics/v1",
+            "schema_version": 1,
+            "source": {
+                "revision": self.source_commit,
+                "ref": "HEAD",
+                "committed_at": "2026-08-14T10:00:00Z",
+            },
+            "scope": {
+                "since": "1 year ago",
+                "resolved_since": "2025-08-14T10:00:00Z",
+            },
+            "privacy": {
+                "public_safe": True,
+                "contributor_identities_included": False,
+                "commit_messages_included": False,
+            },
+            "repository": {
+                "tracked_files": 100,
+                "areas": [
+                    {"name": "src", "file_count": 48},
+                    {"name": ".github", "file_count": 22},
+                    {"name": "tests", "file_count": 18},
+                    {"name": "docs", "file_count": 8},
+                    {"name": "(root)", "file_count": 4},
+                ],
+                "extensions": [],
+            },
+            "activity": {
+                "commits": 18,
+                "merges": 4,
+                "contributors": 3,
+                "first_commit_at": "2026-07-27T10:00:00Z",
+                "last_commit_at": "2026-08-14T10:00:00Z",
+                "weekly": [
+                    {"week": "2026-07-27", "commits": 4, "merges": 1},
+                    {"week": "2026-08-03", "commits": 6, "merges": 1},
+                    {"week": "2026-08-10", "commits": 8, "merges": 2},
+                ],
+            },
+            "changes": {
+                "files_changed": 64,
+                "insertions": 2400,
+                "deletions": 600,
+                "net_lines": 1800,
+                "areas": [
+                    {
+                        "name": "src",
+                        "commit_touches": 40,
+                        "insertions": 1200,
+                        "deletions": 300,
+                        "binary_changes": 0,
+                    },
+                    {
+                        "name": ".github",
+                        "commit_touches": 24,
+                        "insertions": 700,
+                        "deletions": 200,
+                        "binary_changes": 0,
+                    },
+                    {
+                        "name": "tests",
+                        "commit_touches": 18,
+                        "insertions": 500,
+                        "deletions": 100,
+                        "binary_changes": 0,
+                    },
+                ],
+                "hotspots": [],
+            },
+            "filters": {
+                "excluded_paths": [".reports"],
+                "excluded_tracked_files": 12,
+                "excluded_change_records": 42,
+            },
+        }
+        path.write_text(json.dumps(payload), encoding="utf-8")
+        return path
 
     def test_complete_reports_preserve_independent_states(self) -> None:
         dashboard = self.build(self.copy_reports())
@@ -120,6 +209,35 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         self.assertEqual(dashboard["states"]["execution"]["unknown"], 3)
         self.assertEqual(dashboard["states"]["findings"]["unknown"], 3)
         self.assertEqual(dashboard["states"]["freshness"]["unknown"], 3)
+
+    def test_public_analytics_renders_accessible_statistical_snapshots(self) -> None:
+        dashboard = self.build(
+            self.copy_reports(),
+            self.write_analytics_summary(),
+        )
+        rendered = dashboard_builder.render_html(dashboard)
+
+        self.assertEqual(dashboard["analytics"]["availability"], "available")
+        self.assertIn("Weekly repository commits and merges", rendered)
+        self.assertIn("Repository file composition", rendered)
+        self.assertIn("Repository change hotspots", rendered)
+        self.assertIn("Scanner findings by producer", rendered)
+        self.assertIn("<progress", rendered)
+        self.assertGreaterEqual(rendered.count("<table>"), 5)
+        self.assertNotIn("<script", rendered)
+
+    def test_analytics_for_another_commit_is_invalid_not_rendered(self) -> None:
+        analytics_path = self.write_analytics_summary()
+        payload = json.loads(analytics_path.read_text(encoding="utf-8"))
+        payload["source"]["revision"] = "a" * 40
+        analytics_path.write_text(json.dumps(payload), encoding="utf-8")
+
+        dashboard = self.build(self.copy_reports(), analytics_path)
+        rendered = dashboard_builder.render_html(dashboard)
+
+        self.assertEqual(dashboard["analytics"]["availability"], "invalid")
+        self.assertIn("Statistical snapshots unavailable", rendered)
+        self.assertNotIn("Weekly repository commits and merges", rendered)
 
     def test_malformed_report_is_invalid_instead_of_green(self) -> None:
         reports_root = self.repository_root / ".reports"
@@ -165,25 +283,18 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
 
     def test_bundle_is_deterministic_and_contains_no_contributor_identities(self) -> None:
         reports_root = self.copy_reports()
-        first = self.build(reports_root)
-        second = self.build(reports_root)
+        analytics_summary = self.write_analytics_summary()
+        first = self.build(reports_root, analytics_summary)
+        second = self.build(reports_root, analytics_summary)
         output_root = self.repository_root / "site/intelligence"
 
-        dashboard_builder.write_dashboard_bundle(
-            output_root, first, ACTION_ROOT / "dashboard.css"
-        )
+        dashboard_builder.write_dashboard_bundle(output_root, first, ACTION_ROOT / "dashboard.css")
         first_json = (output_root / "summary.json").read_text(encoding="utf-8")
         first_html = (output_root / "index.html").read_text(encoding="utf-8")
-        dashboard_builder.write_dashboard_bundle(
-            output_root, second, ACTION_ROOT / "dashboard.css"
-        )
+        dashboard_builder.write_dashboard_bundle(output_root, second, ACTION_ROOT / "dashboard.css")
 
-        self.assertEqual(
-            first_json, (output_root / "summary.json").read_text(encoding="utf-8")
-        )
-        self.assertEqual(
-            first_html, (output_root / "index.html").read_text(encoding="utf-8")
-        )
+        self.assertEqual(first_json, (output_root / "summary.json").read_text(encoding="utf-8"))
+        self.assertEqual(first_html, (output_root / "index.html").read_text(encoding="utf-8"))
         self.assertNotIn("fixture@example.test", first_json)
         self.assertEqual(first["vitality"]["metrics"]["contributors_90_days"], 1)
         self.assertTrue((output_root / "styles.css").is_file())
@@ -214,6 +325,7 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
             schema["properties"]["schema"]["const"], dashboard_builder.DASHBOARD_SCHEMA
         )
         self.assertIn("producers", schema["required"])
+        self.assertIn("analytics", schema["required"])
         self.assertIn("vitality", schema["required"])
 
     def test_artifact_workflow_generates_and_uploads_the_dashboard(self) -> None:
@@ -223,6 +335,10 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
 
         self.assertIn("dashboard-output-root", workflow)
         self.assertIn("generate-repository-intelligence-dashboard", workflow)
+        self.assertIn(
+            'analytics-summary: "${{ inputs.output-root }}/analytics/summary.json"',
+            workflow,
+        )
         self.assertIn("${{ inputs.dashboard-output-root }}", workflow)
 
 

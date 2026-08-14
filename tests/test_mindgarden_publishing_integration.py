@@ -68,7 +68,12 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
             encoding="utf8"
         )
 
+        self.assertIn("./.github/actions/generate-repository-intelligence", workflow)
         self.assertIn("./.github/actions/generate-repository-intelligence-dashboard", workflow)
+        self.assertIn(
+            'analytics-summary: ".cache/mindgarden/repository-intelligence/analytics/summary.json"',
+            workflow,
+        )
         self.assertIn('output-root: ".cache/mindgarden/site/intelligence"', workflow)
         self.assertIn('path: ".cache/mindgarden/site"', workflow)
         self.assertIn('".reports/*/summary.json"', workflow)
@@ -83,6 +88,10 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
             self.assertIn(producer_workflow, workflow)
         self.assertLess(
             workflow.index("Build the pinned Quartz site"),
+            workflow.index("Generate public repository analytics"),
+        )
+        self.assertLess(
+            workflow.index("Generate public repository analytics"),
             workflow.index("Generate repository intelligence dashboard"),
         )
         self.assertLess(

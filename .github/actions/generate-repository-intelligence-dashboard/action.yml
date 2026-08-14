@@ -11,6 +11,12 @@ inputs:
     description: Repository-relative root containing normalized producer reports.
     required: false
     default: ".reports"
+  analytics-summary:
+    description: >-
+      Optional repository-relative path to an
+      egohygiene.repository-analytics/v1 public summary.
+    required: false
+    default: ""
   output-root:
     description: Repository-relative directory for index.html, styles.css, and summary.json.
     required: false
@@ -50,6 +56,7 @@ runs:
       shell: bash
       env:
         INPUT_AS_OF: "${{ inputs.as-of }}"
+        INPUT_ANALYTICS_SUMMARY: "${{ inputs.analytics-summary }}"
         INPUT_DEFAULT_BRANCH: "${{ inputs.default-branch }}"
         INPUT_OUTPUT_ROOT: "${{ inputs.output-root }}"
         INPUT_REPORTS_ROOT: "${{ inputs.reports-root }}"
@@ -70,6 +77,9 @@ runs:
 
         validate_relative_path "reports-root" "${INPUT_REPORTS_ROOT}"
         validate_relative_path "output-root" "${INPUT_OUTPUT_ROOT}"
+        if [[ -n "${INPUT_ANALYTICS_SUMMARY}" ]]; then
+          validate_relative_path "analytics-summary" "${INPUT_ANALYTICS_SUMMARY}"
+        fi
 
         repository="${INPUT_REPOSITORY:-${GITHUB_REPOSITORY:-}}"
         source_commit="${INPUT_SOURCE_COMMIT:-${GITHUB_SHA:-}}"
@@ -87,6 +97,7 @@ runs:
         python3 "${GITHUB_ACTION_PATH}/generate_repository_intelligence_dashboard.py" \
           --repository-root "${GITHUB_WORKSPACE}" \
           --reports-root "${GITHUB_WORKSPACE}/${INPUT_REPORTS_ROOT}" \
+          --analytics-summary "${INPUT_ANALYTICS_SUMMARY:+${GITHUB_WORKSPACE}/${INPUT_ANALYTICS_SUMMARY}}" \
           --output-root "${GITHUB_WORKSPACE}/${INPUT_OUTPUT_ROOT}" \
           --repository "${repository}" \
           --default-branch "${INPUT_DEFAULT_BRANCH}" \

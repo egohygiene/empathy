@@ -7,11 +7,14 @@ on:
   pull_request:
     paths:
       - ".garden/**"
+      - ".github/actions/generate-repository-intelligence/**"
       - ".github/actions/generate-repository-intelligence-dashboard/**"
       - ".github/workflows/mindgarden-pages.yml"
       - ".reports/*/summary.json"
       - "mindgarden/**"
       - "tests/test_mindgarden_publishing_integration.py"
+      - "tests/test_repository_analytics.py"
+      - "tests/test_repository_intelligence.py"
       - "tests/test_repository_intelligence_dashboard.py"
       - "Taskfile.yml"
   push:
@@ -19,11 +22,14 @@ on:
       - main
     paths:
       - ".garden/**"
+      - ".github/actions/generate-repository-intelligence/**"
       - ".github/actions/generate-repository-intelligence-dashboard/**"
       - ".github/workflows/mindgarden-pages.yml"
       - ".reports/*/summary.json"
       - "mindgarden/**"
       - "tests/test_mindgarden_publishing_integration.py"
+      - "tests/test_repository_analytics.py"
+      - "tests/test_repository_intelligence.py"
       - "tests/test_repository_intelligence_dashboard.py"
       - "Taskfile.yml"
   workflow_run:
@@ -84,10 +90,20 @@ jobs:
           --repository-root .
           build
 
+      - name: Generate public repository analytics
+        uses: ./.github/actions/generate-repository-intelligence
+        with:
+          output-root: ".cache/mindgarden/repository-intelligence"
+          max-depth: "10"
+          activity-since: "1 year ago"
+          activity-ref: "HEAD"
+          require-full-history: "true"
+
       - name: Generate repository intelligence dashboard
         uses: ./.github/actions/generate-repository-intelligence-dashboard
         with:
           reports-root: ".reports"
+          analytics-summary: ".cache/mindgarden/repository-intelligence/analytics/summary.json"
           output-root: ".cache/mindgarden/site/intelligence"
           repository: "${{ github.repository }}"
           default-branch: "${{ github.event.repository.default_branch }}"

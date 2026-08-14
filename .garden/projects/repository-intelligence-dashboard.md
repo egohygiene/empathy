@@ -156,7 +156,7 @@ configuration.
    and guarantee that public projections contain no contributor identities or
    commit messages. **Complete.**
 2. Render accessible line, donut, and horizontal-bar statistical snapshots from
-   the public analytics contract, with semantic table fallbacks.
+   the public analytics contract, with semantic table fallbacks. **Complete.**
 3. Add a searchable, collapsible repository anatomy explorer sourced from the
    commit-scoped tree contract, with source-pinned links and consistent icons.
 4. Add historical scanner deltas, sparklines, deterministic insight callouts,
