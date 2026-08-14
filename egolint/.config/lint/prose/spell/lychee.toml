@@ -87,8 +87,9 @@ include_fragments = "full"
 # Validate mail links when the bundled build supports email checking.
 include_mail = true
 
-# Validate Markdown wikilinks.
-include_wikilinks = true
+# Mindgarden validates Obsidian wikilinks against the local garden graph. Lychee
+# owns standard Markdown, local-file, fragment, mail, and external links.
+include_wikilinks = false
 
 # ------------------------------------------------------------------------------
 # Local links

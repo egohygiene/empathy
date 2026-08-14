@@ -6,6 +6,7 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
+import shutil
 import subprocess  # nosec B404
 import sys
 import tempfile
@@ -117,13 +118,11 @@ class MegaLinterPolicyTests(unittest.TestCase):
         self.assertTrue(any("removed descriptor" in finding for finding in removed_findings))
 
     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
-        expected = (
-            REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
-        )
+        expected = REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
         for rules_path in (
             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
             "/github/workspace/egolint/.config/lint/terraform",
-            "/tmp/lint/egolint/.config/lint/terraform",
+            "/tmp/lint/egolint/.config/lint/terraform",  # noqa: S108  # nosec B108
         ):
             with self.subTest(rules_path=rules_path):
                 resolved = megalinter_policy.resolve_configuration_path(
@@ -159,6 +158,18 @@ class MegaLinterPolicyTests(unittest.TestCase):
             self.matrix_by_id["PYTHON_RUFF_FORMAT"]["profiles"]["holistic"],
             "selected",
         )
+        self.assertEqual(
+            self.matrix_by_id["PYTHON_RUFF_FORMAT"]["enforcement"],
+            "blocking",
+        )
+        self.assertEqual(
+            self.matrix_by_id["REPOSITORY_GRYPE"]["enforcement"],
+            "advisory",
+        )
+        self.assertEqual(
+            self.matrix_by_id["ACTION_ZIZMOR"]["enforcement"],
+            "disabled",
+        )
 
     def test_root_policy_best_effort_installs_optional_json_plugin(self) -> None:
         configuration = megalinter_policy.resolve_extended_configuration(
@@ -175,7 +186,8 @@ class MegaLinterPolicyTests(unittest.TestCase):
             ),
             None,
         )
-        self.assertIsNotNone(command)
+        if not isinstance(command, dict):
+            self.fail("Expected the optional @eslint/json installation command.")
         self.assertEqual(command["cwd"], "workspace")
         self.assertIn("@eslint/json@2.0.1", command["command"])
         self.assertIn("--prefix egolint", command["command"])
@@ -266,6 +278,9 @@ class MegaLinterPolicyTests(unittest.TestCase):
             self.assertIn("json/json5", with_plugin)
 
     def _load_eslint_languages(self, config_path: Path) -> list[str]:
+        node_executable = shutil.which("node")
+        if node_executable is None:
+            self.fail("Node.js is required to validate the ESLint configuration.")
         script = textwrap.dedent(
             """
             const { default: config } = await import(process.argv[1]);
@@ -278,7 +293,7 @@ class MegaLinterPolicyTests(unittest.TestCase):
             """
         ).strip()
         result = subprocess.run(  # nosec B603
-            ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
+            [node_executable, "--input-type=module", "--eval", script, config_path.as_uri()],
             cwd=config_path.parent,
             check=False,
             capture_output=True,
@@ -288,7 +303,7 @@ class MegaLinterPolicyTests(unittest.TestCase):
         languages = json.loads(result.stdout)
         self.assertIsInstance(languages, list)
         self.assertTrue(all(isinstance(language, str) for language in languages))
-        return languages
+        return [str(language) for language in languages]
 
     def _write_commonjs_module(
         self,

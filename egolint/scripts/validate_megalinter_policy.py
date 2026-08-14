@@ -268,7 +268,7 @@ def resolve_configuration_path(rules_path: str, config_file: str) -> Path:
     for workspace_prefix in (
         "${GITHUB_WORKSPACE}/",
         "/github/workspace/",
-        "/tmp/lint/",
+        "/tmp/lint/",  # noqa: S108  # nosec B108
     ):
         candidate = normalized_rules_path.removeprefix(workspace_prefix)
         if candidate != normalized_rules_path:
@@ -382,6 +382,12 @@ def validate_policy(
     disabled_linters = set(
         as_string_list(holistic_configuration.get("DISABLE_LINTERS"), "DISABLE_LINTERS")
     )
+    advisory_linters = set(
+        as_string_list(
+            holistic_configuration.get("DISABLE_ERRORS_LINTERS"),
+            "DISABLE_ERRORS_LINTERS",
+        )
+    )
     disabled_reasons = policy.get("disabled_reasons", {})
     if not isinstance(disabled_reasons, dict):
         return [f"{POLICY_PATH}: disabled_reasons must be a mapping"]
@@ -393,6 +399,17 @@ def validate_policy(
     for linter_id in sorted(disabled_reasons):
         if linter_id not in disabled_linters:
             findings.append(f"{POLICY_PATH}: stale disabled reason for enabled {linter_id}")
+
+    advisory_reasons = policy.get("advisory_reasons", {})
+    if not isinstance(advisory_reasons, dict):
+        return [*findings, f"{POLICY_PATH}: advisory_reasons must be a mapping"]
+    for linter_id in sorted(advisory_linters):
+        reason = advisory_reasons.get(linter_id)
+        if not isinstance(reason, str) or not reason.strip():
+            findings.append(f"{POLICY_PATH}: {linter_id} has no advisory reason")
+    for linter_id in sorted(advisory_reasons):
+        if linter_id not in advisory_linters:
+            findings.append(f"{POLICY_PATH}: stale advisory reason for blocking {linter_id}")
 
     tool_policy = policy.get("tools", {})
     if not isinstance(tool_policy, dict):
@@ -445,9 +462,16 @@ def build_matrix_and_snapshots(
     holistic_configuration = effective_profiles["holistic"]
     fast_configuration = effective_profiles["fast"]
     disabled = set(as_string_list(holistic_configuration.get("DISABLE_LINTERS"), "DISABLE_LINTERS"))
+    advisory = set(
+        as_string_list(
+            holistic_configuration.get("DISABLE_ERRORS_LINTERS"),
+            "DISABLE_ERRORS_LINTERS",
+        )
+    )
     fast_selected = set(as_string_list(fast_configuration.get("ENABLE_LINTERS"), "ENABLE_LINTERS"))
     tool_policy = policy.get("tools", {})
     disabled_reasons = policy["disabled_reasons"]
+    advisory_reasons = policy["advisory_reasons"]
 
     matrix_tools: list[dict[str, Any]] = []
     for tool_id, catalog_tool in catalog["tools"].items():
@@ -460,6 +484,12 @@ def build_matrix_and_snapshots(
         state = "disabled" if is_disabled else "enabled"
         if not is_disabled and applicability and applicability != ["complete-repository"]:
             state = "conditional"
+        if is_disabled:
+            enforcement = "disabled"
+        elif tool_id in advisory:
+            enforcement = "advisory"
+        else:
+            enforcement = "blocking"
 
         matrix_tools.append(
             {
@@ -476,9 +506,16 @@ def build_matrix_and_snapshots(
                     "fast": ("selected" if tool_id in fast_selected else "disabled_by_profile"),
                     "holistic": ("disabled_by_configuration" if is_disabled else "selected"),
                 },
+                "enforcement": enforcement,
                 "reason": disabled_reasons.get(
                     tool_id,
-                    metadata.get("ownership", "Selected by the holistic MegaLinter profile."),
+                    advisory_reasons.get(
+                        tool_id,
+                        metadata.get(
+                            "ownership",
+                            "Selected by the holistic MegaLinter profile.",
+                        ),
+                    ),
                 ),
                 "report_path": f".reports/megalinter/linters_logs/{tool_id}.log",
             }

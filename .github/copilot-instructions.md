@@ -6,6 +6,7 @@ This repository follows a structured, reusable, and automation-focused
 engineering workflow.
 
 When making changes:
+
 - prioritize maintainability and clarity
 - prefer explicit behavior over implicit behavior
 - optimize for long-term readability and reproducibility
@@ -13,9 +14,9 @@ When making changes:
 
 ---
 
-# Engineering Principles
+## Engineering Principles
 
-## Prefer Simplicity
+### Prefer Simplicity
 
 - Prefer small, focused changes.
 - Avoid premature abstraction.
@@ -23,7 +24,7 @@ When making changes:
 
 ---
 
-## Preserve Existing Structure
+### Preserve Existing Structure
 
 - Follow established repository patterns and conventions.
 - Reuse existing utilities and abstractions where appropriate.
@@ -31,7 +32,7 @@ When making changes:
 
 ---
 
-## Make Incremental Changes
+### Make Incremental Changes
 
 - Prefer incremental refactors over large rewrites.
 - Avoid unrelated modifications in the same change set.
@@ -39,7 +40,7 @@ When making changes:
 
 ---
 
-# Validation Expectations
+## Validation Expectations
 
 Before finalizing changes:
 
@@ -52,11 +53,12 @@ Do not assume changes work without validation.
 
 ---
 
-# Repository Conventions
+## Repository Conventions
 
-## Formatting
+### Formatting
 
 This repository uses:
+
 - EditorConfig
 - Prettier
 - ESLint
@@ -66,29 +68,32 @@ Respect existing formatting and linting rules.
 
 ---
 
-## Documentation
+### Documentation
 
 When introducing new systems or workflows:
+
 - update relevant documentation
 - include concise comments where helpful
 - avoid redundant comments that restate obvious behavior
 
 ---
 
-## Configuration Changes
+### Configuration Changes
 
 When modifying configuration:
+
 - prefer conservative defaults
 - avoid tool-specific hacks unless necessary
 - preserve cross-platform compatibility where possible
 
 ---
 
-# Automation & CI
+## Automation & CI
 
 Treat CI failures as important signals.
 
 When changing:
+
 - workflows
 - scripts
 - tooling
@@ -96,6 +101,7 @@ When changing:
 - build systems
 
 consider how changes affect:
+
 - reproducibility
 - local development
 - automation pipelines
@@ -104,9 +110,10 @@ consider how changes affect:
 
 ---
 
-# AI-Assisted Development Expectations
+## AI-Assisted Development Expectations
 
 AI-generated code must still be:
+
 - reviewed
 - validated
 - maintainable
@@ -115,20 +122,23 @@ AI-generated code must still be:
 Do not introduce code that cannot be confidently explained or maintained.
 
 Prefer:
+
 - explicit naming
 - structured organization
 - minimal surprise
 
 over:
+
 - cleverness
 - unnecessary abstraction
 - opaque generated code
 
 ---
 
-# Repository Exploration
+## Repository Exploration
 
 Before introducing new dependencies, utilities, or patterns:
+
 - search for existing implementations
 - reuse established conventions when appropriate
 
@@ -136,9 +146,10 @@ Avoid unnecessary duplication.
 
 ---
 
-# Final Guidance
+## Final Guidance
 
 Prioritize:
+
 1. clarity
 2. maintainability
 3. reproducibility
