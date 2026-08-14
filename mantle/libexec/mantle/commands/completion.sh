@@ -58,6 +58,7 @@ for mantle_completion_path in "${MANTLE_ROOT}/libexec/mantle/installers"/*.sh; d
 	mantle_completion_name="${mantle_completion_name%.sh}"
 	mantle_completion_installers="${mantle_completion_installers}${mantle_completion_installers:+ }${mantle_completion_name}"
 done
+mantle_completion_install_arguments="--list --assurance --help ${mantle_completion_installers}"
 
 case "$1" in
 bash)
@@ -71,6 +72,8 @@ bash)
 		'  if [[ "${COMP_CWORD}" -eq 1 ]]; then' \
 		"    COMPREPLY=( \$(compgen -W \"${mantle_completion_commands}\" -- \"\${current}\") )" \
 		'  elif [[ "${COMP_WORDS[1]}" == "install" && "${COMP_CWORD}" -eq 2 ]]; then' \
+		"    COMPREPLY=( \$(compgen -W \"${mantle_completion_install_arguments}\" -- \"\${current}\") )" \
+		'  elif [[ "${COMP_WORDS[1]}" == "install" && "${previous}" == "--assurance" ]]; then' \
 		"    COMPREPLY=( \$(compgen -W \"${mantle_completion_installers}\" -- \"\${current}\") )" \
 		'  elif [[ "${COMP_WORDS[1]}" == "completion" && "${COMP_CWORD}" -eq 2 ]]; then' \
 		'    COMPREPLY=( $(compgen -W "bash zsh fish" -- "${current}") )' \
@@ -86,11 +89,11 @@ zsh)
 	# $words belongs to generated Zsh.
 	# shellcheck disable=SC2016
 	printf '#compdef mantle\n_arguments "1:command:(%s)" "2:argument:->args"\ncase $words[2] in\n  install) _values "installer" %s ;;\n  completion) _values "shell" bash zsh fish ;;\n  config) _values "config command" list-profiles path validate show explain ;;\n  fastfetch) _values "collector" runtime workspace toolchains contexts ;;\nesac\n' \
-		"${mantle_completion_commands}" "${mantle_completion_installers}"
+		"${mantle_completion_commands}" "${mantle_completion_install_arguments}"
 	;;
 fish)
 	printf "complete -c mantle -f -n '__fish_use_subcommand' -a '%s'\n" "${mantle_completion_commands}"
-	printf "complete -c mantle -f -n '__fish_seen_subcommand_from install' -a '%s'\n" "${mantle_completion_installers}"
+	printf "complete -c mantle -f -n '__fish_seen_subcommand_from install' -a '%s'\n" "${mantle_completion_install_arguments}"
 	printf "complete -c mantle -f -n '__fish_seen_subcommand_from completion' -a 'bash zsh fish'\n"
 	printf "complete -c mantle -f -n '__fish_seen_subcommand_from config' -a 'list-profiles path validate show explain'\n"
 	printf "complete -c mantle -f -n '__fish_seen_subcommand_from fastfetch' -a 'runtime workspace toolchains contexts'\n"

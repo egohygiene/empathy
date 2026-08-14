@@ -134,6 +134,18 @@ _mantle() {
 	assert_success
 }
 
+@test "mantle install --assurance publishes locked resolution" {
+	_mantle install --assurance eza
+	assert_success
+	assert_output_contains "explicit-opt-out"
+	assert_output_contains "0.23.5"
+}
+
+@test "mantle install --assurance rejects unknown installers" {
+	_mantle install --assurance nonexistent-tool-xyz
+	assert_status 64
+}
+
 @test "mantle install eza --help prints eza-specific usage" {
 	_mantle install eza --help
 	assert_success
@@ -251,6 +263,12 @@ _mantle() {
 	_mantle completion bash
 	assert_success
 	assert_output_contains "list-profiles path validate show explain"
+}
+
+@test "mantle completion includes installer assurance diagnostics" {
+	_mantle completion bash
+	assert_success
+	assert_output_contains "--assurance"
 }
 
 # ---------------------------------------------------------------------------

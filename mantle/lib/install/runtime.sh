@@ -40,6 +40,7 @@ __mantle_install_runtime_entrypoint() {
 		"os.sh"
 	)
 	local -a install_files=(
+		"assurance.sh"
 		"platform.sh"
 		"package-manager.sh"
 		"download.sh"

@@ -130,6 +130,35 @@ _tool_name() {
 	assert_output_contains "tool: talisman"
 }
 
+@test "GitHub installer defaults resolve from the lock without network" {
+	stub_curl_failure 99
+	_mantle_install eza --dry-run
+	assert_success
+	assert_output_contains "version: 0.23.5"
+	assert_output_contains "resolution: lockfile"
+}
+
+@test "GitHub installer rejects mutable version selectors" {
+	_mantle_install eza --dry-run --version latest
+	assert_status 64
+	assert_output_contains "Mutable installer selector"
+}
+
+@test "unchecksummed GitHub installer fails before download without explicit opt-out" {
+	stub_curl_failure 99
+	_mantle_install asdf
+	assert_status 77
+	assert_output_contains "explicitly rerun with --no-verify"
+}
+
+@test "Python installer defaults to its exact package lock" {
+	create_recording_stub "uv" 0
+	_mantle_install httpie --dry-run --manager uv
+	assert_success
+	assert_output_contains "httpie==3.2.4"
+	assert_output_contains "resolution: lockfile"
+}
+
 @test "mantle install eza unknown-option exits 64" {
 	_mantle_install eza --unknown-option-xyz
 	assert_status 64

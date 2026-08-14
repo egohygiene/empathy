@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 # shellcheck disable=SC2034 # Declarative installer metadata is consumed by the runtime.
-# Install errata-ai/vale from a verified GitHub release.
+# Install vale-cli/vale from a verified GitHub release.
 
 set -o errexit
 set -o nounset
@@ -18,14 +18,14 @@ export MANTLE_ROOT
 source "${MANTLE_ROOT}/lib/install/runtime.sh"
 
 MANTLE_INSTALL_TOOL_NAME="vale"
-MANTLE_INSTALL_GITHUB_OWNER="errata-ai"
+MANTLE_INSTALL_GITHUB_OWNER="vale-cli"
 MANTLE_INSTALL_GITHUB_REPOSITORY="vale"
 MANTLE_INSTALL_ASSET_TEMPLATE="vale_{{version}}_{{platform}}_{{arch}}.tar.gz"
 MANTLE_INSTALL_PLATFORM_LINUX="Linux"
 MANTLE_INSTALL_PLATFORM_DARWIN="macOS"
 MANTLE_INSTALL_ARCH_X86_64="64-bit"
 MANTLE_INSTALL_ARCH_ARM64="arm64"
-MANTLE_INSTALL_CHECKSUM_ASSET_TEMPLATE="checksums.txt"
+MANTLE_INSTALL_CHECKSUM_ASSET_TEMPLATE="vale_{{version}}_checksums.txt"
 MANTLE_INSTALL_ARCHIVE_FORMAT="tar.gz"
 MANTLE_INSTALL_ARCHIVE_MEMBER_TEMPLATE="vale"
 MANTLE_INSTALL_BINARY_NAME="vale"

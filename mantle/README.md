@@ -223,6 +223,7 @@ mantle config show
 mantle config explain aliases.safe
 mantle install --help
 mantle install --list
+mantle install --assurance
 mantle install eza --help
 mantle install talisman --dry-run
 ```
@@ -466,12 +467,15 @@ mantle install shfmt --help
 mantle install talisman --dry-run
 ```
 
-For validated installers such as `talisman`, dry-run reports the planned tool name, version, download URL, archive format, and install destination without mutating the system.
+For validated installers such as `talisman`, dry-run reports the planned tool name, locked version, resolution source, verification mode, download URL, archive format, and install destination without mutating the system.
 
 ### Common installer behaviors
 
 - Installer-specific help is implemented by each installer script.
-- Some installers support version or ref selection with flags such as `--version` or `--ref`.
+- Versioned installers default to the exact values in `config/installers.lock.tsv`; they do not resolve live `latest`, `main`, `master`, or `HEAD` selectors.
+- Some installers support explicit immutable version or ref overrides with flags such as `--version` or `--ref`.
+- `mantle install --assurance [TOOL]` prints the executable resolution and verification matrix. See [Installer assurance](INSTALLER_ASSURANCE.md) for the trust model and lock-update workflow.
+- Release installers without a published checksum require an explicit `--no-verify` acknowledgement at execution time.
 - Destination control is installer-specific and may use flags such as `--install-dir`, `--destination`, `--target`, or dedicated tool-home variables.
 - Installers are tested to avoid silent `sudo` usage.
 - Mantle ships reusable install libraries under `lib/install/` for archive extraction, GitHub release metadata, checksums, and filesystem operations.

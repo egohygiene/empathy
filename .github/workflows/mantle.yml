@@ -92,13 +92,13 @@ jobs:
           install -m 0755 "${shdoc_root}/shdoc" "${shdoc_bin}/shdoc"
           printf '%s\n' "${shdoc_bin}" >> "${GITHUB_PATH}"
 
-      - name: Install verified shfmt through Mantle
+      - name: Install locked shfmt through Mantle
         shell: bash
         run: |
           set -euo pipefail
           shfmt_bin="${RUNNER_TEMP}/mantle-tools"
           ./mantle/bin/mantle install shfmt \
-            --version "3.12.0" \
+            --no-verify \
             --install-dir "${shfmt_bin}"
           printf '%s\n' "${shfmt_bin}" >> "${GITHUB_PATH}"
 
