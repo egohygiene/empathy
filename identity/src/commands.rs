@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 use std::collections::BTreeMap;
+use std::fmt::Write as _;
 use std::fs;
 use std::path::Path;
 
@@ -16,7 +17,7 @@ use crate::contract::{
 };
 use crate::output::render_plan_markdown;
 
-pub fn init(arguments: InitArguments) -> Result<()> {
+pub fn init(arguments: &InitArguments) -> Result<()> {
     if !valid_identifier(&arguments.project_id) {
         bail!("project id must use lowercase letters, digits, and hyphens");
     }
@@ -55,7 +56,7 @@ pub fn init(arguments: InitArguments) -> Result<()> {
     Ok(())
 }
 
-pub fn validate(arguments: RepositoryArguments) -> Result<()> {
+pub fn validate(arguments: &RepositoryArguments) -> Result<()> {
     let project = validate_repository(&arguments.repository_root)?;
     let plan = resolve_plan(&project);
     println!(
@@ -67,7 +68,7 @@ pub fn validate(arguments: RepositoryArguments) -> Result<()> {
     Ok(())
 }
 
-pub fn plan(arguments: PlanArguments) -> Result<()> {
+pub fn plan(arguments: &PlanArguments) -> Result<()> {
     let project = validate_repository(&arguments.repository_root)?;
     let plan = resolve_plan(&project);
     let rendered = match arguments.format {
@@ -75,9 +76,9 @@ pub fn plan(arguments: PlanArguments) -> Result<()> {
         PlanFormat::Markdown => render_plan_markdown(&plan),
     };
 
-    if let Some(output) = arguments.output {
-        validate_relative_path(&output, "plan output")?;
-        reject_symlink_components(&project.repository_root, &output, "plan output")?;
+    if let Some(output) = &arguments.output {
+        validate_relative_path(output, "plan output")?;
+        reject_symlink_components(&project.repository_root, output, "plan output")?;
         let destination = project.repository_root.join(output);
         write_file(&destination, &rendered)?;
         println!("Wrote {}", destination.display());
@@ -87,7 +88,7 @@ pub fn plan(arguments: PlanArguments) -> Result<()> {
     Ok(())
 }
 
-pub fn handoff(arguments: HandoffArguments) -> Result<()> {
+pub fn handoff(arguments: &HandoffArguments) -> Result<()> {
     validate_relative_path(&arguments.output_directory, "handoff output directory")?;
     let project = validate_repository(&arguments.repository_root)?;
     reject_symlink_components(
@@ -130,13 +131,15 @@ identity compiler can derive every crop, size, format, theme, and platform proje
     output.push_str("Human review is required before any candidate becomes canonical. Do not claim \n\
 that generated artwork, fonts, or references have licenses or provenance that were not supplied.\n\n");
     output.push_str("## Project\n\n");
-    output.push_str(&format!(
-        "- Name: {}\n- Stable ID: `{}`\n- Repository: {}\n- Tagline: {}\n\n",
+    writeln!(
+        output,
+        "- Name: {}\n- Stable ID: `{}`\n- Repository: {}\n- Tagline: {}\n",
         project.spec.project.display_name,
         project.spec.project.id,
         project.spec.project.repository,
         project.spec.project.tagline
-    ));
+    )
+    .expect("writing to String cannot fail");
     output.push_str("## Identity brief\n\n<identity-brief>\n");
     output.push_str(brief.trim());
     output.push_str("\n</identity-brief>\n\n");
@@ -146,11 +149,13 @@ that generated artwork, fonts, or references have licenses or provenance that we
         for context_path in &project.spec.context.files {
             let context = fs::read_to_string(project.repository_root.join(context_path))
                 .with_context(|| format!("cannot read context file {}", context_path.display()))?;
-            output.push_str(&format!(
-                "<project-context path=\"{}\">\n{}\n</project-context>\n\n",
+            writeln!(
+                output,
+                "<project-context path=\"{}\">\n{}\n</project-context>\n",
                 context_path.display(),
                 context.trim()
-            ));
+            )
+            .expect("writing to String cannot fail");
         }
     }
 
@@ -158,13 +163,15 @@ that generated artwork, fonts, or references have licenses or provenance that we
     output.push_str("| Role | Candidate path | Format | Requirement |\n");
     output.push_str("| --- | --- | --- | --- |\n");
     for source in &project.spec.sources.required {
-        output.push_str(&format!(
-            "| `{}` | `{}` | `{}` | {} |\n",
+        writeln!(
+            output,
+            "| `{}` | `{}` | `{}` | {} |",
             source.role,
             source.path.display(),
             source.format,
             source.description
-        ));
+        )
+        .expect("writing to String cannot fail");
     }
     output.push_str("\n## Derived target plan\n\n");
     output.push_str(&render_plan_markdown(plan));

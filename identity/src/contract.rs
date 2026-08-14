@@ -164,6 +164,32 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
         .with_context(|| format!("invalid TOML in {}", spec_path.display()))?;
 
     let mut errors = Vec::new();
+    validate_project_contract(&repository_root, &spec, &mut errors);
+    validate_profile_selection(&spec, &mut errors);
+    let source_roles = validate_source_selection(&spec, &mut errors);
+    let profiles = load_selected_profiles(&spec, &mut errors);
+    validate_loaded_profiles(&profiles, &source_roles, &mut errors);
+
+    if !errors.is_empty() {
+        bail!(
+            "identity specification failed validation:\n- {}",
+            errors.join("\n- ")
+        );
+    }
+
+    Ok(ValidatedProject {
+        repository_root,
+        spec_path,
+        spec,
+        profiles,
+    })
+}
+
+fn validate_project_contract(
+    repository_root: &Path,
+    spec: &ProjectSpec,
+    errors: &mut Vec<String>,
+) {
     if spec.schema != PROJECT_SCHEMA {
         errors.push(format!(
             "schema must be {PROJECT_SCHEMA:?}, found {:?}",
@@ -197,17 +223,17 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
         if let Err(error) = validate_relative_path(path, "context.files entry") {
             errors.push(error.to_string());
         } else if let Err(error) =
-            validate_existing_path(&repository_root, path, true, "context file")
+            validate_existing_path(repository_root, path, true, "context file")
         {
             errors.push(error.to_string());
         }
     }
 
-    if let Err(error) = validate_existing_path(&repository_root, &spec.paths.brief, true, "brief") {
+    if let Err(error) = validate_existing_path(repository_root, &spec.paths.brief, true, "brief") {
         errors.push(error.to_string());
     }
     if let Err(error) = validate_existing_path(
-        &repository_root,
+        repository_root,
         &spec.paths.source_root,
         false,
         "source root",
@@ -219,7 +245,9 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
     if context_paths.len() != spec.context.files.len() {
         errors.push("context.files contains duplicate paths".to_owned());
     }
+}
 
+fn validate_profile_selection(spec: &ProjectSpec, errors: &mut Vec<String>) {
     let mut profile_ids = BTreeSet::new();
     if spec.profiles.enabled.is_empty() {
         errors.push("profiles.enabled must select at least one profile".to_owned());
@@ -246,8 +274,13 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
             ));
         }
     }
+}
 
-    let source_roles: BTreeSet<&str> = spec
+fn validate_source_selection<'a>(
+    spec: &'a ProjectSpec,
+    errors: &mut Vec<String>,
+) -> BTreeSet<&'a str> {
+    let source_roles = spec
         .sources
         .required
         .iter()
@@ -273,7 +306,10 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
             ));
         }
     }
+    source_roles
+}
 
+fn load_selected_profiles(spec: &ProjectSpec, errors: &mut Vec<String>) -> Vec<Profile> {
     let mut profiles = Vec::new();
     for profile_id in &spec.profiles.enabled {
         match load_profile(profile_id) {
@@ -281,10 +317,17 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
             Err(error) => errors.push(format!("profile {profile_id:?}: {error:#}")),
         }
     }
+    profiles
+}
 
+fn validate_loaded_profiles(
+    profiles: &[Profile],
+    source_roles: &BTreeSet<&str>,
+    errors: &mut Vec<String>,
+) {
     let mut target_ids = BTreeSet::new();
     let mut target_paths = BTreeMap::<PathBuf, String>::new();
-    for profile in &profiles {
+    for profile in profiles {
         if profile.schema != PROFILE_SCHEMA {
             errors.push(format!(
                 "profile {:?} schema must be {PROFILE_SCHEMA:?}",
@@ -351,20 +394,6 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
             }
         }
     }
-
-    if !errors.is_empty() {
-        bail!(
-            "identity specification failed validation:\n- {}",
-            errors.join("\n- ")
-        );
-    }
-
-    Ok(ValidatedProject {
-        repository_root,
-        spec_path,
-        spec,
-        profiles,
-    })
 }
 
 pub fn resolve_plan(project: &ValidatedProject) -> ResolvedPlan {

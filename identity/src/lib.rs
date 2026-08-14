@@ -14,9 +14,9 @@ use crate::cli::{Cli, Command};
 pub fn run() -> Result<()> {
     let cli = Cli::parse();
     match cli.command {
-        Command::Init(arguments) => commands::init(arguments),
-        Command::Validate(arguments) => commands::validate(arguments),
-        Command::Plan(arguments) => commands::plan(arguments),
-        Command::Handoff(arguments) => commands::handoff(arguments),
+        Command::Init(arguments) => commands::init(&arguments),
+        Command::Validate(arguments) => commands::validate(&arguments),
+        Command::Plan(arguments) => commands::plan(&arguments),
+        Command::Handoff(arguments) => commands::handoff(&arguments),
     }
 }
