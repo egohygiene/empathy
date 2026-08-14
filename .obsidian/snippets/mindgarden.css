@@ -1,0 +1,70 @@
+/* Copyright 2026 Ego Hygiene */
+/* SPDX-License-Identifier: MIT */
+
+.mindgarden-dashboard {
+  --mindgarden-leaf: #7ee787;
+  --mindgarden-mint: #56d4b5;
+  --mindgarden-violet: #b392f0;
+  --mindgarden-sky: #79c0ff;
+  --mindgarden-border: color-mix(
+    in srgb,
+    var(--mindgarden-mint) 28%,
+    var(--background-modifier-border)
+  );
+}
+
+.mindgarden-dashboard .markdown-preview-sizer,
+.mindgarden-dashboard .cm-contentContainer {
+  --file-line-width: 1120px;
+}
+
+.mindgarden-dashboard h1 {
+  background: linear-gradient(
+    110deg,
+    var(--mindgarden-leaf),
+    var(--mindgarden-sky),
+    var(--mindgarden-violet)
+  );
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.mindgarden-dashboard h2 {
+  border-bottom: 1px solid var(--mindgarden-border);
+  padding-bottom: 0.35rem;
+}
+
+.mindgarden-dashboard .callout[data-callout="abstract"] {
+  --callout-color: 86, 212, 181;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--mindgarden-mint) 12%, var(--background-primary)),
+    color-mix(in srgb, var(--mindgarden-violet) 10%, var(--background-primary))
+  );
+  border: 1px solid var(--mindgarden-border);
+  border-radius: 1rem;
+}
+
+.mindgarden-dashboard table {
+  border: 1px solid var(--mindgarden-border);
+  border-radius: 0.75rem;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mindgarden-dashboard thead {
+  background: color-mix(
+    in srgb,
+    var(--mindgarden-violet) 10%,
+    var(--background-secondary)
+  );
+}
+
+.mindgarden-dashboard .bases-embed {
+  border: 1px solid var(--mindgarden-border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+}

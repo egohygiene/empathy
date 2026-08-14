@@ -10,10 +10,11 @@ visibility: public
 owners:
   - egohygiene
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-08-14
 sources:
   - ../README.md
-related: []
+related:
+  - empathy-garden-dashboard
 supersedes: []
 tags:
   - empathy
@@ -27,6 +28,7 @@ contributors, automation, and AI agents.
 
 ## Current maps
 
+- [[dashboard|Garden dashboard]]
 - [Repository orientation](../README.md)
 - [Architecture](../ARCHITECTURE.md)
 - [System responsibilities](../SYSTEM.md)

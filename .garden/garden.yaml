@@ -11,6 +11,7 @@ visibility: public
 entrypoint: home.md
 content_roots:
   - home.md
+  - dashboard.md
   - inbox
   - concepts
   - decisions

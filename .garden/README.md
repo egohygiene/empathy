@@ -1,12 +1,18 @@
 # Empathy Garden
 
 This directory is Empathy's first Mindgarden consumer instance. Its committed
-Markdown and YAML are canonical repository knowledge that may later be viewed
-through Obsidian, published through GitHub Pages, or retrieved by agent tools.
+Markdown and YAML are canonical repository knowledge that can be viewed through
+Obsidian and may later be published through GitHub Pages or retrieved by agent
+tools.
 
-The initial pass intentionally contains only the portable v0 contract and a
-home map. Obsidian configuration, agent adapters, ingestion, indexing, and Pages
-publishing will arrive through separately reviewable changes.
+Open the repository root, not this directory, as the Obsidian vault. That keeps
+repository documents and `.garden/` notes in one linkable knowledge space while
+the shareable vault profile under [`.obsidian/`](../.obsidian/README.md) keeps
+machine-local workspace state out of Git.
+
+The current profile uses Obsidian's native Bases feature and first-party CSS for
+the garden dashboard. Agent adapters, ingestion, indexing, and Pages publishing
+remain separate future changes.
 
 ## Public boundary
 
@@ -24,3 +30,6 @@ task garden:check
 
 The manifest declares which paths contain validated knowledge. Templates and
 generated artifacts are outside those content roots.
+
+Start from [`dashboard.md`](dashboard.md) for the visual knowledge view or
+[`home.md`](home.md) for the compact garden map.

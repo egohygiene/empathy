@@ -63,6 +63,11 @@ tasks:
         --pattern "test_*.py"
         --verbose
       - >-
+        python3 -m unittest discover
+        --start-directory tests
+        --pattern "test_mindgarden_obsidian_integration.py"
+        --verbose
+      - >-
         python3 mindgarden/scripts/validate_garden.py
         --repository-root .
 

@@ -63,6 +63,10 @@ tmp/
 .garden.local/
 .garden/.index/
 
+# Obsidian device-local state and third-party plugin payloads
+.obsidian/plugins/
+.obsidian/workspace*.json
+
 # Python
 __pycache__/
 *.py[cod]
@@ -205,3 +209,4 @@ _minted*/
 
 # Preserve placeholders in otherwise ignored directories.
 !**/.gitkeep
+

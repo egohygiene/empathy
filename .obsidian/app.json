@@ -1,0 +1,8 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": ".garden/attachments",
+  "newFileFolderPath": ".garden/inbox",
+  "newFileLocation": "folder",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": false
+}
