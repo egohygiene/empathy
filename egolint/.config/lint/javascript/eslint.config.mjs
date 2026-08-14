@@ -7,7 +7,19 @@ import { createRequire } from "node:module";
 // resolution ignores that path, while createRequire deliberately honors it.
 const require = createRequire(import.meta.url);
 const js = require("@eslint/js");
-const jsonPlugin = require("@eslint/json");
+const jsonPlugin = (() => {
+    try {
+        return require("@eslint/json");
+    } catch (error) {
+        if (
+            error?.code === "MODULE_NOT_FOUND" &&
+            String(error.message).includes("@eslint/json")
+        ) {
+            return null;
+        }
+        throw error;
+    }
+})();
 const typescriptEslintPlugin = require("@typescript-eslint/eslint-plugin");
 const typescriptParser = require("@typescript-eslint/parser");
 const reactPlugin = require("eslint-plugin-react");
@@ -23,6 +35,54 @@ const testFiles = [
     "**/tests/**/*.{js,jsx,ts,tsx}",
     "**/__tests__/**/*.{js,jsx,ts,tsx}",
 ];
+const jsonConfigs = jsonPlugin
+    ? [
+          // -----------------------------------------------------------------------------
+          // JSON
+          // -----------------------------------------------------------------------------
+
+          {
+              files: ["**/*.json"],
+              plugins: {
+                  json: jsonPlugin,
+              },
+              language: "json/json",
+              rules: {
+                  ...jsonPlugin.configs.recommended.rules,
+              },
+          },
+
+          // -----------------------------------------------------------------------------
+          // JSON with comments
+          // -----------------------------------------------------------------------------
+
+          {
+              files: ["**/*.jsonc"],
+              plugins: {
+                  json: jsonPlugin,
+              },
+              language: "json/jsonc",
+              rules: {
+                  ...jsonPlugin.configs.recommended.rules,
+              },
+          },
+
+          // -----------------------------------------------------------------------------
+          // JSON5
+          // -----------------------------------------------------------------------------
+
+          {
+              files: ["**/*.json5"],
+              plugins: {
+                  json: jsonPlugin,
+              },
+              language: "json/json5",
+              rules: {
+                  ...jsonPlugin.configs.recommended.rules,
+              },
+          },
+      ]
+    : [];
 
 export default defineConfig([
     globalIgnores(
@@ -66,51 +126,7 @@ export default defineConfig([
         ],
         "Ignore dependencies, generated files, build output, caches, and local tooling state",
     ),
-
-    // -----------------------------------------------------------------------------
-    // JSON
-    // -----------------------------------------------------------------------------
-
-    {
-        files: ["**/*.json"],
-        plugins: {
-            json: jsonPlugin,
-        },
-        language: "json/json",
-        rules: {
-            ...jsonPlugin.configs.recommended.rules,
-        },
-    },
-
-    // -----------------------------------------------------------------------------
-    // JSON with comments
-    // -----------------------------------------------------------------------------
-
-    {
-        files: ["**/*.jsonc"],
-        plugins: {
-            json: jsonPlugin,
-        },
-        language: "json/jsonc",
-        rules: {
-            ...jsonPlugin.configs.recommended.rules,
-        },
-    },
-
-    // -----------------------------------------------------------------------------
-    // JSON5
-    // -----------------------------------------------------------------------------
-
-    {
-        files: ["**/*.json5"],
-        plugins: {
-            json: jsonPlugin,
-        },
-        language: "json/json5",
-        rules: {
-            ...jsonPlugin.configs.recommended.rules,
-        },
-    },
+    ...jsonConfigs,
 
     // -------------------------------------------------------------------------
     // Core JavaScript baseline

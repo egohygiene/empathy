@@ -8,11 +8,16 @@ import json
 from pathlib import Path
 import subprocess  # nosec B404
 import sys
+import tempfile
+import textwrap
 from typing import Any
 import unittest
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
 MODULE_PATH = REPOSITORY_ROOT / "egolint" / "scripts" / "validate_megalinter_policy.py"
+ESLINT_CONFIG_PATH = (
+    REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "javascript" / "eslint.config.mjs"
+)
 SPEC = importlib.util.spec_from_file_location("validate_megalinter_policy", MODULE_PATH)
 if SPEC is None or SPEC.loader is None:
     raise RuntimeError(f"Unable to load MegaLinter policy module from {MODULE_PATH}")
@@ -154,6 +159,150 @@ class MegaLinterPolicyTests(unittest.TestCase):
             self.matrix_by_id["PYTHON_RUFF_FORMAT"]["profiles"]["holistic"],
             "selected",
         )
+
+    def test_root_policy_best_effort_installs_optional_json_plugin(self) -> None:
+        configuration = megalinter_policy.resolve_extended_configuration(
+            REPOSITORY_ROOT / ".mega-linter.yml"
+        )
+        self.assertIn("PRE_COMMANDS", configuration)
+        self.assertIsInstance(configuration["PRE_COMMANDS"], list)
+        self.assertGreaterEqual(len(configuration["PRE_COMMANDS"]), 1)
+        command = next(
+            (
+                candidate
+                for candidate in configuration["PRE_COMMANDS"]
+                if "@eslint/json@2.0.1" in candidate.get("command", "")
+            ),
+            None,
+        )
+        self.assertIsNotNone(command)
+        self.assertEqual(command["cwd"], "workspace")
+        self.assertIn("@eslint/json@2.0.1", command["command"])
+        self.assertIn("--prefix egolint", command["command"])
+        self.assertIn(
+            "continuing with optional JSON plugin disabled",
+            command["command"],
+        )
+
+    def test_eslint_config_only_registers_json_blocks_when_plugin_exists(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            workspace = Path(temporary_directory)
+            config_directory = workspace / ".config" / "lint" / "javascript"
+            node_modules = workspace / "node_modules"
+            config_directory.mkdir(parents=True)
+            node_modules.mkdir()
+            config_source = ESLINT_CONFIG_PATH.read_text(encoding="utf-8")
+            without_json_config_path = config_directory / "eslint.without-json.config.mjs"
+            with_json_config_path = config_directory / "eslint.with-json.config.mjs"
+            without_json_config_path.write_text(config_source, encoding="utf-8")
+            with_json_config_path.write_text(config_source, encoding="utf-8")
+
+            self._write_commonjs_module(
+                node_modules,
+                "@eslint/js",
+                "module.exports = { configs: { recommended: { rules: {} } } };",
+            )
+            self._write_commonjs_module(
+                node_modules,
+                "@typescript-eslint/eslint-plugin",
+                "module.exports = { configs: { recommended: { rules: {} } } };",
+            )
+            self._write_commonjs_module(
+                node_modules,
+                "@typescript-eslint/parser",
+                "module.exports = { parseForESLint() { return {}; } };",
+            )
+            self._write_commonjs_module(
+                node_modules,
+                "eslint-plugin-react",
+                "module.exports = { configs: { recommended: { rules: {} } } };",
+            )
+            self._write_commonjs_file(
+                node_modules / "eslint" / "config.js",
+                textwrap.dedent(
+                    """
+                    module.exports = {
+                      defineConfig(config) {
+                        return config;
+                      },
+                      globalIgnores(patterns, name) {
+                        return { ignores: patterns, name };
+                      },
+                    };
+                    """
+                ).strip(),
+            )
+            self._write_commonjs_module(
+                node_modules,
+                "globals",
+                textwrap.dedent(
+                    """
+                    module.exports = {
+                      browser: {},
+                      es2024: {},
+                      jest: {},
+                      mocha: {},
+                      node: {},
+                      vitest: {},
+                    };
+                    """
+                ).strip(),
+            )
+
+            without_plugin = self._load_eslint_languages(without_json_config_path)
+            self.assertNotIn("json/json", without_plugin)
+            self.assertNotIn("json/jsonc", without_plugin)
+            self.assertNotIn("json/json5", without_plugin)
+
+            self._write_commonjs_module(
+                node_modules,
+                "@eslint/json",
+                "module.exports = { configs: { recommended: { rules: { 'json/no-duplicate-keys': 'error' } } } };",
+            )
+
+            with_plugin = self._load_eslint_languages(with_json_config_path)
+            self.assertIn("json/json", with_plugin)
+            self.assertIn("json/jsonc", with_plugin)
+            self.assertIn("json/json5", with_plugin)
+
+    def _load_eslint_languages(self, config_path: Path) -> list[str]:
+        script = textwrap.dedent(
+            """
+            const { default: config } = await import(process.argv[1]);
+
+            const languages = config
+              .map((entry) => entry?.language)
+              .filter((language) => typeof language === "string");
+
+            console.log(JSON.stringify(languages));
+            """
+        ).strip()
+        result = subprocess.run(  # nosec B603
+            ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
+            cwd=config_path.parent,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, f"{result.stdout}\n{result.stderr}")
+        languages = json.loads(result.stdout)
+        self.assertIsInstance(languages, list)
+        self.assertTrue(all(isinstance(language, str) for language in languages))
+        return languages
+
+    def _write_commonjs_module(
+        self,
+        node_modules: Path,
+        package_name: str,
+        source: str,
+    ) -> None:
+        module_path = node_modules / Path(*package_name.split("/"))
+        module_path.mkdir(parents=True, exist_ok=True)
+        self._write_commonjs_file(module_path / "index.js", source)
+
+    def _write_commonjs_file(self, path: Path, source: str) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(f"{source}\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
