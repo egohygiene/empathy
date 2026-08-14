@@ -30,9 +30,7 @@ class IdentityIntegrationTests(unittest.TestCase):
         )
 
     def test_profiles_resolve_unique_safe_targets_and_declared_sources(self) -> None:
-        declared_sources = {
-            source["role"] for source in self.specification["sources"]["required"]
-        }
+        declared_sources = {source["role"] for source in self.specification["sources"]["required"]}
         declared_sources.update({"identity-brief", "project-spec"})
         paths: set[str] = set()
 
@@ -54,20 +52,14 @@ class IdentityIntegrationTests(unittest.TestCase):
                 self.assertEqual("width" in target, "height" in target)
 
     def test_platform_profiles_capture_foundational_constraints(self) -> None:
-        github = json.loads(
-            (IDENTITY_ROOT / "profiles" / "github.json").read_text(encoding="utf8")
-        )
+        github = json.loads((IDENTITY_ROOT / "profiles" / "github.json").read_text(encoding="utf8"))
         social_preview = next(
-            target
-            for target in github["targets"]
-            if target["id"] == "repository-social-preview"
+            target for target in github["targets"] if target["id"] == "repository-social-preview"
         )
         self.assertEqual((social_preview["width"], social_preview["height"]), (1280, 640))
         self.assertEqual(social_preview["maximum_bytes"], 1_000_000)
 
-        pwa = json.loads(
-            (IDENTITY_ROOT / "profiles" / "pwa.json").read_text(encoding="utf8")
-        )
+        pwa = json.loads((IDENTITY_ROOT / "profiles" / "pwa.json").read_text(encoding="utf8"))
         purposes = {target.get("purpose") for target in pwa["targets"]}
         self.assertTrue({"any", "maskable", "monochrome"}.issubset(purposes))
         raster_sizes = {
@@ -87,9 +79,7 @@ class IdentityIntegrationTests(unittest.TestCase):
             contract = json.loads(
                 (IDENTITY_ROOT / "contracts" / contract_name).read_text(encoding="utf8")
             )
-            self.assertEqual(
-                contract["$schema"], "https://json-schema.org/draft/2020-12/schema"
-            )
+            self.assertEqual(contract["$schema"], "https://json-schema.org/draft/2020-12/schema")
 
         for path_key in ("brief", "source_root"):
             path = REPOSITORY_ROOT / self.specification["paths"][path_key]

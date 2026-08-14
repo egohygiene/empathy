@@ -54,4 +54,4 @@ requests never receive report write permissions.
 
 - MegaLinter source: `egolint/.config/megalinter/tool-matrix.json`
 - Complementary source: `egolint/.config/toolchain/tool-matrix.json`
-- Source digest: `3ca51df9d76b4448e8a92d8b24b1d1c179d06b86fe15c74a4bbce0794f41a4f5`
+- Source digest: `64e25dee3201a75b3042f3d921442161383c8899c9ee42adb011dc166e68d45f`

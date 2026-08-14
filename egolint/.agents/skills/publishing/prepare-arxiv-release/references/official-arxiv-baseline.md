@@ -4,8 +4,8 @@ Verified: 2026-08-02
 
 Official sources:
 
-- https://info.arxiv.org/help/submit_tex.html
-- https://info.arxiv.org/help/ancillary_files.html
+- [TeX submission guidance](https://info.arxiv.org/help/submit_tex.html)
+- [Ancillary file guidance](https://info.arxiv.org/help/ancillary_files.html)
 
 Verified baseline:
 
