@@ -151,6 +151,25 @@ FLAVOR_SUGGESTIONS: false
 # Treat formatter findings as blocking errors rather than advisory warnings.
 FORMATTERS_DISABLE_ERRORS: false
 
+# Install the optional JSON ESLint plugin once per MegaLinter invocation when
+# the runtime can reach npm. ESLint still treats the plugin as optional so lint
+# bootstrap continues when this best-effort install is unavailable.
+PRE_COMMANDS:
+  - command: >-
+      if ! test -d "egolint/node_modules/@eslint/json"; then
+        npm install
+        --prefix egolint
+        --no-save
+        --package-lock=false
+        --no-audit
+        --no-fund
+        @eslint/json@2.0.1
+        || printf '%s\n'
+        'MegaLinter: unable to install @eslint/json; continuing with optional JSON plugin disabled.'
+        >&2;
+      fi
+    cwd: workspace
+
 # Do not display security-related suggestions in the console output.
 SECURITY_SUGGESTIONS: false
 
