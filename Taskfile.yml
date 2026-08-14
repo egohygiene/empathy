@@ -31,6 +31,7 @@ tasks:
     deps:
       - architecture:check
       - format:check
+      - garden:check
       - lint
       - mantle:check
       - test
@@ -52,6 +53,18 @@ tasks:
         npx --yes --cache "{{.NPM_CACHE}}"
         "prettier@{{.PRETTIER_VERSION}}"
         --config "{{.PRETTIER_CONFIG}}" --check .
+
+  garden:check:
+    desc: Validate the incubated Mindgarden contract and Empathy garden
+    cmds:
+      - >-
+        python3 -m unittest discover
+        --start-directory mindgarden/tests
+        --pattern "test_*.py"
+        --verbose
+      - >-
+        python3 mindgarden/scripts/validate_garden.py
+        --repository-root .
 
   hooks:install:
     desc: Install Husky as the repository's sole Git hook manager

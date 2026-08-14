@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../mindgarden/contracts/garden.schema.json
+schema: mindgarden.garden/v0
+id: egohygiene-empathy
+title: Empathy Garden
+version: 0.1.0
+status: incubating
+owners:
+  - egohygiene
+repository: https://github.com/egohygiene/empathy
+visibility: public
+entrypoint: home.md
+content_roots:
+  - home.md
+  - inbox
+  - concepts
+  - decisions
+  - projects
+  - procedures
+  - sources
+generated_roots:
+  - .index
+private_overlay: ../.garden.local
