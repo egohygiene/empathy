@@ -13,5 +13,5 @@ image-size             2.0.2      npm     GHSA-w3rx-r6r6-pgpr  High      0.4% (3
 decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (41st)  0.3    
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0115] ERROR discovered vulnerabilities at or above the severity threshold
+[0112] ERROR discovered vulnerabilities at or above the severity threshold
 

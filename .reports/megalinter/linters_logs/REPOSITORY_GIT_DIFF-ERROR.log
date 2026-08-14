@@ -1,0 +1,10 @@
+Results of git_diff linter (version 2.54.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/repository_git_diff/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+warning: in the working copy of '.reports/megalinter/linters_logs/REPOSITORY_TRIVY-ERROR.log', CRLF will be replaced by LF the next time Git touches it
+.reports/megalinter/mega-linter.log:51: trailing whitespace.
++- Excluding .gitignored files [0]: 
+

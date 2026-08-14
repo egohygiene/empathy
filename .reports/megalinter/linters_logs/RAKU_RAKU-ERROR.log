@@ -12,8 +12,8 @@ See documentation on https://megalinter.io/10.0.0/descriptors/raku_raku/
         /opt/rakudo-pkg/share/perl6/site
         /opt/rakudo-pkg/share/perl6/vendor
         /opt/rakudo-pkg/share/perl6/core
-        CompUnit::Repository::AbsolutePath<5877664670416>
-        CompUnit::Repository::NQP<5877540658600>
-        CompUnit::Repository::Perl5<5877540658640>
+        CompUnit::Repository::AbsolutePath<2956113826512>
+        CompUnit::Repository::NQP<2955989820960>
+        CompUnit::Repository::Perl5<2955989821000>
     at egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 

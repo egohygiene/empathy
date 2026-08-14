@@ -4,97 +4,97 @@
 
 |   Descriptor    |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |-----------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   11|     |     0|          |       0|       0.37s|
-|❌ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |     1|          |      no|      10.52s|
-|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       3.41s|
-|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.36s|
-|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       9.44s|
+|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   11|     |     0|          |       0|       0.31s|
+|❌ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |     1|          |      no|       9.95s|
+|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       3.33s|
+|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.29s|
+|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       9.43s|
 |❌ BASH          |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     4|          |       0|       0.04s|
-|❌ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     1|          |       0|       0.24s|
-|✅ C             |[cppcheck](https://megalinter.io/10.0.0/descriptors/c_cppcheck)                                       |    1|     |     0|          |       0|       0.06s|
-|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|        0.3s|
-|✅ CLOJURE       |[cljstyle](https://megalinter.io/10.0.0/descriptors/clojure_cljstyle)                                 |    1|     |     0|          |       0|       0.03s|
+|❌ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     1|          |       0|        0.2s|
+|✅ C             |[cppcheck](https://megalinter.io/10.0.0/descriptors/c_cppcheck)                                       |    1|     |     0|          |       0|       0.05s|
+|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|       0.29s|
+|✅ CLOJURE       |[cljstyle](https://megalinter.io/10.0.0/descriptors/clojure_cljstyle)                                 |    1|     |     0|          |       0|       0.04s|
 |✅ CLOJURE       |[clj-kondo](https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo)                               |    1|     |     0|          |       0|       0.03s|
-|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       9.19s|
-|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.31s|
-|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   298|          |      no|       3.18s|
-|❌ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     6|          |       0|       0.07s|
+|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       9.49s|
+|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.33s|
+|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   298|          |      no|       3.19s|
+|❌ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     6|          |       0|       0.06s|
 |✅ CPP           |[cppcheck](https://megalinter.io/10.0.0/descriptors/cpp_cppcheck)                                     |    1|     |     0|          |       0|       0.05s|
-|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |     9|          |       0|       0.16s|
-|❌ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    1|     |     2|          |       0|       1.17s|
-|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       0.04s|
-|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.25s|
-|❌ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  790|     |     1|          |       0|       0.85s|
+|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |     9|          |       0|        0.2s|
+|❌ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    1|     |     2|          |       0|       1.23s|
+|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       0.05s|
+|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.07s|
+|❌ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  790|     |     1|          |       0|       0.87s|
 |✅ ENV           |[dotenv-linter](https://megalinter.io/10.0.0/descriptors/env_dotenv_linter)                           |    1|     |     0|          |       0|       0.01s|
 |✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.37s|
-|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|      10.56s|
-|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.35s|
-|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|       15.0s|
-|❌ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     2|          |       0|       0.41s|
-|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|        2.8s|
-|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       6.86s|
-|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.94s|
-|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.63s|
+|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|        9.8s|
+|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.37s|
+|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      14.72s|
+|❌ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     2|          |       0|       0.45s|
+|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|       2.46s|
+|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       8.45s|
+|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.81s|
+|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.68s|
 |✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   76|     |     0|          |       0|       0.37s|
-|❌ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   76|     |     1|          |       0|       2.99s|
-|❌ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   76|     |     1|          |       0|      33.78s|
-|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.02s|
-|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.11s|
-|❌ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     1|          |       0|       0.07s|
-|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  204|     |   305|          |       0|       4.01s|
-|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  204|     |     1|          |       0|       0.51s|
-|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.23s|
-|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.31s|
-|✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.11s|
-|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.12s|
-|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.39s|
-|✅ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     0|          |       0|       4.72s|
-|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       4.16s|
-|❌ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     1|          |       0|       0.17s|
-|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   31|     |    18|          |       0|       1.83s|
-|❌ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    58|          |      no|      12.43s|
-|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   30|     |    23|          |       0|      12.07s|
-|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   374|          |      no|       6.13s|
-|✅ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   31|     |     0|          |       0|       0.17s|
-|✅ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   31|     |     0|          |       0|       0.04s|
-|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       1.08s|
-|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       0.91s|
-|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.24s|
-|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      37.14s|
-|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       4.42s|
-|✅ REPOSITORY    |[git_diff](https://megalinter.io/10.0.0/descriptors/repository_git_diff)                              |  yes|     |    no|          |      no|       0.12s|
-|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     7|          |      no|     115.53s|
+|❌ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   76|     |     1|          |       0|       3.05s|
+|❌ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   76|     |     1|          |       0|      31.57s|
+|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.03s|
+|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.09s|
+|❌ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     1|          |       0|       0.05s|
+|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  204|     |   305|          |       0|       3.89s|
+|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  204|     |     1|          |       0|       0.48s|
+|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.31s|
+|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.41s|
+|✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.12s|
+|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.13s|
+|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.18s|
+|✅ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     0|          |       0|       4.82s|
+|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       3.99s|
+|❌ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     1|          |       0|       0.13s|
+|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   31|     |    18|          |       0|       1.81s|
+|❌ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    58|          |      no|      12.23s|
+|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   30|     |    23|          |       0|      12.41s|
+|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   374|          |      no|       6.33s|
+|✅ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   31|     |     0|          |       0|       0.16s|
+|✅ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   31|     |     0|          |       0|       0.05s|
+|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       0.92s|
+|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       0.85s|
+|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.21s|
+|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      36.16s|
+|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       1.91s|
+|❌ REPOSITORY    |[git_diff](https://megalinter.io/10.0.0/descriptors/repository_git_diff)                              |  yes|     |     1|          |      no|       1.29s|
+|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     7|          |      no|     112.12s|
 |❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.01s|
-|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      23.18s|
-|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.08s|
-|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      21.48s|
-|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      38.78s|
-|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|        2.3s|
-|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|       8.43s|
-|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       4.22s|
-|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.31s|
-|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       4.56s|
-|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|        0.7s|
-|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|       5.84s|
-|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       9.24s|
-|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       1.53s|
-|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  422|     |     1|          |       0|       0.05s|
-|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  210|     |   348|          |       0|       5.86s|
-|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  212|     |     4|          |    1926|       6.68s|
-|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       4.12s|
-|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.55s|
-|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.58s|
-|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|        0.2s|
-|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|       1.15s|
-|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       2.75s|
-|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       0.37s|
-|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       0.37s|
+|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      23.21s|
+|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.19s|
+|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      15.79s|
+|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.31s|
+|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       1.99s|
+|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|       7.96s|
+|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       3.59s|
+|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.44s|
+|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.92s|
+|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.46s|
+|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|        4.8s|
+|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       9.19s|
+|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       1.73s|
+|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  422|     |     1|          |       0|       0.06s|
+|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  210|     |   348|          |       0|       6.21s|
+|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  212|     |     4|          |    1926|       6.29s|
+|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       4.13s|
+|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.61s|
+|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.62s|
+|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.19s|
+|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|       0.97s|
+|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       2.56s|
+|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       0.35s|
+|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       0.35s|
 |✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.48s|
-|❌ TYPESCRIPT    |[ts-standard](https://megalinter.io/10.0.0/descriptors/typescript_ts_standard)                        |    2|     |     1|          |       0|       0.44s|
+|❌ TYPESCRIPT    |[ts-standard](https://megalinter.io/10.0.0/descriptors/typescript_ts_standard)                        |    2|     |     1|          |       0|        0.4s|
 |✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|       0.36s|
-|❌ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  131|     |     1|          |       2|       3.41s|
-|❌ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  131|     |     1|          |       0|      46.01s|
-|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  131|     |     0|          |       0|       9.66s|
+|❌ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  131|     |     1|          |       2|       3.79s|
+|❌ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  131|     |     1|          |       0|      44.56s|
+|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  131|     |     0|          |       0|       10.1s|
 
 ## Detailed Issues
 
@@ -129,7 +129,7 @@ Read https://docs.ansible.com/projects/lint/rules/yaml/ for more details regardi
 <summary>❌ PYTHON / bandit - 18 errors</summary>
 
 ```
-Run started:2026-08-14 01:31:42.098786+00:00
+Run started:2026-08-14 01:41:27.329748+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -497,13 +497,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
 <summary>❌ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-S3 buckets should have event notifications enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
-Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+ics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
 Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
 	FAILED for resource: aws_s3_bucket.fixture
@@ -740,7 +734,7 @@ Check: CKV_OPENAPI_4: "Ensure that the global security field has rules defined"
 	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-the-global-security-field-has-rules-defined
 
-(Truncated to last 18604 characters out of 36188)
+(Truncated to last 18181 characters out of 36188)
 ```
 
 </details>
@@ -965,6 +959,17 @@ Resolutions:
 </details>
 
 <details>
+<summary>❌ REPOSITORY / git_diff - 1 error</summary>
+
+```
+warning: in the working copy of '.reports/megalinter/linters_logs/REPOSITORY_TRIVY-ERROR.log', CRLF will be replaced by LF the next time Git touches it
+.reports/megalinter/mega-linter.log:51: trailing whitespace.
++- Excluding .gitignored files [0]:
+```
+
+</details>
+
+<details>
 <summary>❌ REPOSITORY / grype - 7 errors</summary>
 
 ```
@@ -977,7 +982,7 @@ image-size             2.0.2      npm     GHSA-w3rx-r6r6-pgpr  High      0.4% (3
 decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (41st)  0.3    
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0115] ERROR discovered vulnerabilities at or above the severity threshold
+[0112] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
@@ -1005,7 +1010,7 @@ Config loaded: egolint/.config/lint/html/htmlhint.json
       L14 |        class="greeting-page__image"
            ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
 
-Scanned 1 files, found 2 errors in 1 files (57 ms)
+Scanned 1 files, found 2 errors in 1 files (39 ms)
 ```
 
 </details>
@@ -1014,12 +1019,7 @@ Scanned 1 files, found 2 errors in 1 files (57 ms)
 <summary>❌ COPYPASTE / jscpd - 298 errors</summary>
 
 ```
-found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [541:1 - 546:5] (6 lines, 105 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [670:1 - 675:5]
-Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [586:25 - 591:30] (6 lines, 106 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [646:21 - 651:30]
+:30]
 Clone found (bash)
  - mantle/init/init.sh [30:1 - 48:2] (19 lines, 112 tokens)
    mantle/init/load-core.sh [51:1 - 69:2]
@@ -1267,7 +1267,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ text       │ 6              │ 1595        │ 1684         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ toml       │ 19             │ 1811        │ 5259         │ 1            │ 106 (5.85%)      │ 185 (3.52%)       │
+│ toml       │ 19             │ 1828        │ 5320         │ 1            │ 106 (5.80%)      │ 185 (3.48%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ txt        │ 4              │ 104         │ 1710         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1275,14 +1275,14 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ yaml       │ 217            │ 17974       │ 94172        │ 70           │ 804 (4.47%)      │ 5356 (5.69%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 710            │ 83329       │ 550995       │ 298          │ 3870 (4.64%)     │ 29464 (5.35%)     │
+│ Total:     │ 710            │ 83346       │ 551056       │ 298          │ 3870 (4.64%)     │ 29464 (5.35%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 298 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.6%) over threshold (3.0%)
-time: 1.23s
+time: 1.37s
 
-(Truncated to last 18604 characters out of 70260)
+(Truncated to last 18181 characters out of 70260)
 ```
 
 </details>
@@ -1291,7 +1291,7 @@ time: 1.23s
 <summary>❌ REPOSITORY / ls-lint - 5 errors</summary>
 
 ```
-2026/08/14 01:32:28 rule ignore not exists
+2026/08/14 01:42:11 rule ignore not exists
 
 
 [REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.
@@ -1360,10 +1360,7 @@ Caused by:
 <summary>❌ MARKDOWN / markdownlint - 305 errors</summary>
 
 ```
-Notes"]
-egolint/.agents/skills/SKILL-CONTRACT.md:55:5 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-egolint/.agents/skills/SKILL-CONTRACT.md:55:9 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
-egolint/.agents/skills/SKILL-CONTRACT.md:55:13 error MD060/table-column-style Table column style [Table pipe is missing space to the left for style "compact"]
+Table pipe is missing space to the left for style "compact"]
 egolint/.agents/skills/SKILL-CONTRACT.md:55:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
 egolint/.agents/skills/SKILL-CONTRACT.md:55:5 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
 egolint/.agents/skills/SKILL-CONTRACT.md:55:9 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]
@@ -1473,7 +1470,7 @@ mantle/README.md:288:99 error MD060/table-column-style Table column style [Table
 mantle/README.md:328:152 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
 mantle/README.md:328:207 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
 
-(Truncated to last 18604 characters out of 61599)
+(Truncated to last 18181 characters out of 61599)
 ```
 
 </details>
@@ -1605,10 +1602,7 @@ Checking formatting...
 <summary>❌ SPELL / proselint - 348 errors</summary>
 
 ```
-aphy.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/audit-repository/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/audit-repository/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/audit-repository/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/audit-repository/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -1787,7 +1781,7 @@ mantle/tests/README.md:371:9: typography.symbols.curly_quotes: Use curly quotes 
 mantle/tests/README.md:390:38: lexical_illusions: There's a lexical illusion in 'bats
    bats' - a phrase is repeated.
 
-(Truncated to last 18604 characters out of 48818)
+(Truncated to last 18181 characters out of 48818)
 ```
 
 </details>
@@ -1850,10 +1844,7 @@ Your code has been rated at 9.86/10
 <summary>❌ PYTHON / pyright - 374 errors</summary>
 
 ```
-lidate-specs.py:200:28 - error: Type of "get" is partially unknown
-    Type of "get" is "Unknown | Any | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/.agents/specs/validate-specs.py:202:13 - error: Type of "append" is partially unknown
-    Type of "append" is "((object: str, /) -> None) | Unknown | Any" (reportUnknownMemberType)
+" is "((object: str, /) -> None) | Unknown | Any" (reportUnknownMemberType)
   egolint/.agents/specs/validate-specs.py:202:31 - error: Argument type is partially unknown
     Argument corresponds to parameter "object" in function "append"
     Argument type is "Unknown | Any" (reportUnknownArgumentType)
@@ -2027,7 +2018,7 @@ tests/test_repository_intelligence.py
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
 374 errors, 3 warnings, 0 informations
 
-(Truncated to last 18604 characters out of 71057)
+(Truncated to last 18181 characters out of 71057)
 ```
 
 </details>
@@ -2050,9 +2041,9 @@ See documentation on https://megalinter.io/10.0.0/descriptors/raku_raku/
         /opt/rakudo-pkg/share/perl6/site
         /opt/rakudo-pkg/share/perl6/vendor
         /opt/rakudo-pkg/share/perl6/core
-        CompUnit::Repository::AbsolutePath<5877664670416>
-        CompUnit::Repository::NQP<5877540658600>
-        CompUnit::Repository::Perl5<5877540658640>
+        CompUnit::Repository::AbsolutePath<2956113826512>
+        CompUnit::Repository::NQP<2955989820960>
+        CompUnit::Repository::Perl5<2955989821000>
     at egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 ```
 
@@ -2082,17 +2073,7 @@ egolint/tests/fixtures/rstcheck/valid.rst is not correctly formatted!
 <summary>❌ BASH / shfmt - 4 errors</summary>
 
 ```
-owner/repository identifier from the origin remote.
- # @stdout GitHub repository identifier, or an empty line when unavailable.
- github_repository() {
--  local remote_url=""
--  local repository=""
--  remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2> /dev/null || true)"
--
--  case "${remote_url}" in
-+    local remote_url=""
-+    local repository=""
-+    remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2>/dev/null || true)"
+2>/dev/null || true)"
 +
 +    case "${remote_url}" in
      git@github.com:*) repository="${remote_url#git@github.com:}" ;;
@@ -2697,7 +2678,7 @@ diff egolint/scripts/precommit.sh.orig egolint/scripts/precommit.sh
  
  main "$@"
 
-(Truncated to last 18604 characters out of 47476)
+(Truncated to last 18181 characters out of 47476)
 ```
 
 </details>
@@ -2777,25 +2758,21 @@ Failed to initialize plugins; Plugin "google" not found. Did you run "tflint --i
 <summary>❌ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-14T01:31:12Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-14T01:31:12Z	INFO	[vulndb] Need to update DB
-2026-08-14T01:31:12Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-14T01:31:12Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-16.06 MiB / 106.76 MiB [--------->__________________________________________________] 15.05% ? p/s ?44.96 MiB / 106.76 MiB [------------------------->__________________________________] 42.12% ? p/s ?70.37 MiB / 106.76 MiB [--------------------------------------->____________________] 65.91% ? p/s ?96.18 MiB / 106.76 MiB [----------------------------------------->____] 90.09% 133.09 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 133.09 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 133.09 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 125.64 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 125.64 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 125.64 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 117.54 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 117.54 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 117.54 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 109.95 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 109.95 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 109.95 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 102.86 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 102.86 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 102.86 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 96.22 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 96.22 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 96.22 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 90.02 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 90.02 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 90.02 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 84.21 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 84.21 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 84.21 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 78.78 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 78.78 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 78.78 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 73.69 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-----------------------------------------------] 100.00% 17.24 MiB p/s 6.4s2026-08-14T01:31:20Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-14T01:31:20Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-14T01:31:20Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-14T01:31:20Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-14T01:31:20Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 100ms2026-08-14T01:31:27Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-14T01:31:32Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-14T01:31:32Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-14T01:31:32Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-14T01:31:33Z	INFO	Number of language-specific files	num=4
-2026-08-14T01:31:33Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-14T01:31:33Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-14T01:31:33Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-14T01:31:33Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-14T01:31:33Z	INFO	Detected config files	num=13
+.76 MiB [------------------------------------------->] 100.00% 149.90 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 149.90 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 149.90 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 140.23 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 140.23 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 140.23 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 131.18 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 131.18 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 131.18 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 122.72 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 122.72 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 122.72 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 114.80 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 114.80 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 114.80 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 107.39 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 107.39 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 107.39 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 100.46 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 100.46 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [------------------------------------------->] 100.00% 100.46 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 93.98 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 93.98 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 93.98 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 87.92 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 87.92 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 87.92 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 82.25 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 82.25 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 82.25 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 76.94 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-------------------------------------------->] 100.00% 76.94 MiB p/s ETA 0s106.76 MiB / 106.76 MiB [-----------------------------------------------] 100.00% 15.31 MiB p/s 7.2s2026-08-14T01:41:04Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-14T01:41:04Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-14T01:41:04Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-14T01:41:04Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-14T01:41:04Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-14T01:41:09Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-14T01:41:10Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-14T01:41:10Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-14T01:41:10Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-14T01:41:10Z	INFO	Number of language-specific files	num=4
+2026-08-14T01:41:10Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-14T01:41:10Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-14T01:41:10Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-14T01:41:10Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-14T01:41:10Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -2988,6 +2965,8 @@ See https://avd.aquasec.com/misconfig/ksv-0118
   10 │       securityContext:
   11 └         privileged: true
 ────────────────────────────────────────
+
+(Truncated to last 18181 characters out of 18803)
 ```
 
 </details>
@@ -3063,10 +3042,6 @@ egolint/tasks/lint.yml# must NOT have additional properties, found additional pr
 
 ```
 write-good.TooWordy 
- 274:30  warning  'shall' is too wordy.                                                 write-good.TooWordy 
- 292:20  warning  'shall' is too wordy.                                                 write-good.TooWordy 
- 292:30  warning  'be modified' may be passive voice. Use active voice if you can.      write-good.Passive  
- 296:45  warning  'shall' is too wordy.                                                 write-good.TooWordy 
  298:3   warning  'modify' is too wordy.                                                write-good.TooWordy 
  309:22  warning  'be proposed' may be passive voice. Use active voice if you can.      write-good.Passive  
  317:6   warning  'shall' is too wordy.                                                 write-good.TooWordy 
@@ -3285,7 +3260,7 @@ write-good.TooWordy
 
 ✖ 4 errors, 1926 warnings and 0 suggestions in 212 files.
 
-(Truncated to last 18604 characters out of 217968)
+(Truncated to last 18181 characters out of 217968)
 ```
 
 </details>
