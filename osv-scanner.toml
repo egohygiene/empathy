@@ -2,8 +2,9 @@
 # See: https://google.github.io/osv-scanner/configuration/
 
 # Vulnerabilities suppressed because no patched version has been published to
-# npm. All affected packages are devDependencies that are never shipped to
-# production. Each entry will be revisited when upstream publishes a fix.
+# the upstream registry. All affected packages are devDependencies that are
+# never shipped to production. Each entry will be revisited when upstream
+# publishes a fix.
 [[IgnoredVulns]]
 id = "GHSA-mp2f-45pm-3cg9"
 reason = "decompress@4.2.2 is not published to npm (latest: 4.2.1); only present as a transitive devDependency via shellcheck"
@@ -23,3 +24,19 @@ reason = "image-size@2.0.3 is not published to npm (latest: 2.0.2); only present
 [[IgnoredVulns]]
 id = "GHSA-5p2g-fcmc-qvqq"
 reason = "image-size@2.0.3 is not published to npm (latest: 2.0.2); only present as a transitive devDependency via @docusaurus"
+
+[[IgnoredVulns]]
+id = "GHSA-wj6h-64fc-37mp"
+reason = "ecdsa@0.19.2 Minerva timing attack on P-256; no patched version has been published to PyPI; only present as a transitive dependency of checkov in the security dependency group and never shipped to production"
+
+[[IgnoredVulns]]
+id = "PYSEC-2026-1325"
+reason = "ecdsa@0.19.2 Minerva timing attack on P-256 (alias of GHSA-wj6h-64fc-37mp); no patched version has been published to PyPI; only present as a transitive dependency of checkov in the security dependency group and never shipped to production"
+
+[[IgnoredVulns]]
+id = "GHSA-8r96-8889-qg2x"
+reason = "httpie@3.2.4 missing SSL certificate validation (CVE-2023-48052); no patched version has been published to PyPI; only present as a direct devDependency and never shipped to production"
+
+[[IgnoredVulns]]
+id = "PYSEC-2023-242"
+reason = "httpie@3.2.4 missing SSL certificate validation (alias of GHSA-8r96-8889-qg2x); no patched version has been published to PyPI; only present as a direct devDependency and never shipped to production"
