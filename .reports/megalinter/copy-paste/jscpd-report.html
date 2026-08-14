@@ -62,15 +62,15 @@
           </div>
           <div class="stat-card stat-green">
             <h3>Total Lines of Code</h3>
-            <div class="val">96908</div>
+            <div class="val">96996</div>
           </div>
           <div class="stat-card stat-yellow">
             <h3>Number of Clones</h3>
-            <div class="val">324</div>
+            <div class="val">325</div>
           </div>
           <div class="stat-card stat-red">
             <h3>Duplicated Lines</h3>
-            <div class="val">4171 (4.30%)</div>
+            <div class="val">4176 (4.31%)</div>
           </div>
         </div>
       </section>
@@ -266,7 +266,7 @@
             <tr>
               <td><a href="#markdown-clones">markdown</a></td>
               <td>227</td>
-              <td>23703</td>
+              <td>23722</td>
               <td>138</td>
               <td>1660 (7.00%)</td>
               <td>17050 (6.31%)</td>
@@ -320,9 +320,9 @@
             <tr>
               <td><a href="#python-clones">python</a></td>
               <td>41</td>
-              <td>10446</td>
+              <td>10475</td>
               <td>17</td>
-              <td>170 (1.63%)</td>
+              <td>170 (1.62%)</td>
               <td>1201 (1.48%)</td>
             </tr>
             
@@ -419,19 +419,19 @@
             <tr>
               <td><a href="#yaml-clones">yaml</a></td>
               <td>233</td>
-              <td>19359</td>
-              <td>83</td>
-              <td>981 (5.07%)</td>
-              <td>6418 (6.28%)</td>
+              <td>19399</td>
+              <td>84</td>
+              <td>986 (5.08%)</td>
+              <td>6500 (6.33%)</td>
             </tr>
             
             <tr style="font-weight: 700;">
               <td>Total</td>
               <td>816</td>
-              <td>96908</td>
-              <td>324</td>
-              <td>4171 (4.30%)</td>
-              <td>31597 (4.86%)</td>
+              <td>96996</td>
+              <td>325</td>
+              <td>4176 (4.31%)</td>
+              <td>31679 (4.87%)</td>
             </tr>
           </tbody>
         </table>
@@ -6833,7 +6833,7 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .github/workflows/mindgarden-pages.yml (Line 38:1 - Line 52:15),
+              .github/workflows/mindgarden-pages.yml (Line 55:1 - Line 69:15),
               .github/workflows/repository-intelligence.yml (Line 43:1 - Line 57:15)
             </div>
             <div>
@@ -6858,28 +6858,24 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .github/workflows/osv-scan.yml (Line 330:1 - Line 339:22),
-              .github/workflows/osv-scan.yml (Line 354:1 - Line 363:22)
+              .github/workflows/mindgarden-pages.yml (Line 97:1 - Line 102:9),
+              .github/workflows/mindgarden-pages.yml (Line 106:1 - Line 111:9)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-23')">Show code</button>
             </div>
-            <pre id="code-yaml-23" class="code-block">        if: steps.discover.outputs.count != &#39;0&#39;
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -euo pipefail
-          osv-scanner scan source \
-            --recursive \
-            --allow-no-lockfiles \
-            --config=osv-scanner.toml \
-            --format=json \</pre>
+            <pre id="code-yaml-23" class="code-block">        if: &#62;-
+          (github.event_name == &#39;push&#39; &#38;&#38; github.ref == &#39;refs/heads/main&#39;) ||
+          (github.event_name == &#39;workflow_run&#39; &#38;&#38;
+          github.event.workflow_run.event != &#39;pull_request&#39; &#38;&#38;
+          github.event.workflow_run.head_branch == github.event.repository.default_branch)
+        # actions/configure-pages v6.0.0</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               .github/workflows/osv-scan.yml (Line 330:1 - Line 339:22),
-              .github/workflows/osv-scan.yml (Line 377:1 - Line 386:22)
+              .github/workflows/osv-scan.yml (Line 354:1 - Line 363:22)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-24')">Show code</button>
@@ -6898,29 +6894,28 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .github/workflows/osv-scan.yml (Line 342:51 - Line 352:15),
-              .github/workflows/osv-scan.yml (Line 365:52 - Line 375:15)
+              .github/workflows/osv-scan.yml (Line 330:1 - Line 339:22),
+              .github/workflows/osv-scan.yml (Line 377:1 - Line 386:22)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-25')">Show code</button>
             </div>
-            <pre id="code-yaml-25" class="code-block">            --output-file=.reports/osv/latest.json \
-            --experimental-exclude=.git \
-            --experimental-exclude=.reports/osv \
-            --experimental-exclude=node_modules \
-            --experimental-exclude=vendor \
-            --experimental-exclude=dist \
-            --experimental-exclude=build \
-            --experimental-exclude=coverage \
-            ./
-
-      - name: &#34;🛡️ Generate OSV SARIF&#34;</pre>
+            <pre id="code-yaml-25" class="code-block">        if: steps.discover.outputs.count != &#39;0&#39;
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          osv-scanner scan source \
+            --recursive \
+            --allow-no-lockfiles \
+            --config=osv-scanner.toml \
+            --format=json \</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               .github/workflows/osv-scan.yml (Line 342:51 - Line 352:15),
-              .github/workflows/osv-scan.yml (Line 388:54 - Line 398:15)
+              .github/workflows/osv-scan.yml (Line 365:52 - Line 375:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-26')">Show code</button>
@@ -6940,13 +6935,34 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/github/workflows/application-flutter/autofix.yml (Line 39:1 - Line 53:15),
-              .staging/github/workflows/release-strategies/changesets-release.yml (Line 98:1 - Line 112:15)
+              .github/workflows/osv-scan.yml (Line 342:51 - Line 352:15),
+              .github/workflows/osv-scan.yml (Line 388:54 - Line 398:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-27')">Show code</button>
             </div>
-            <pre id="code-yaml-27" class="code-block">      - name: 📦 Set up pnpm
+            <pre id="code-yaml-27" class="code-block">            --output-file=.reports/osv/latest.json \
+            --experimental-exclude=.git \
+            --experimental-exclude=.reports/osv \
+            --experimental-exclude=node_modules \
+            --experimental-exclude=vendor \
+            --experimental-exclude=dist \
+            --experimental-exclude=build \
+            --experimental-exclude=coverage \
+            ./
+
+      - name: &#34;🛡️ Generate OSV SARIF&#34;</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/github/workflows/application-flutter/autofix.yml (Line 39:1 - Line 53:15),
+              .staging/github/workflows/release-strategies/changesets-release.yml (Line 98:1 - Line 112:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-28')">Show code</button>
+            </div>
+            <pre id="code-yaml-28" class="code-block">      - name: 📦 Set up pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10.14.0
@@ -6969,9 +6985,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/application-flutter/copilot-setup-steps2.yml (Line 16:15 - Line 21:60)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-28')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-29')">Show code</button>
             </div>
-            <pre id="code-yaml-28" class="code-block">  push:
+            <pre id="code-yaml-29" class="code-block">  push:
     paths:
       - .github/workflows/copilot-setup-steps.yml
       - .github/actions/flutter-setup/action.yml
@@ -6985,9 +7001,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/application-flutter/release-artifacts.yml (Line 245:1 - Line 254:49)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-29')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-30')">Show code</button>
             </div>
-            <pre id="code-yaml-29" class="code-block">          persist-credentials: false
+            <pre id="code-yaml-30" class="code-block">          persist-credentials: false
 
       - name: Setup Flutter
         uses: ./.github/actions/flutter-setup
@@ -7003,34 +7019,6 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
             <div class="clone-info">
               .staging/github/workflows/application-flutter/release-artifacts.yml (Line 25:1 - Line 42:15),
               .staging/github/workflows/application-flutter/release-artifacts.yml (Line 151:1 - Line 168:15)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-30')">Show code</button>
-            </div>
-            <pre id="code-yaml-30" class="code-block">    if: startsWith(github.event.release.tag_name, &#39;v&#39;)
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    defaults:
-      run:
-        working-directory: apps/egohygiene
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.release.tag_name }}
-          persist-credentials: false
-
-      - name: Setup Flutter
-        uses: ./.github/actions/flutter-setup
-
-      - name: Cache Gradle</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 25:1 - Line 42:15),
-              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 233:1 - Line 250:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-31')">Show code</button>
@@ -7057,13 +7045,41 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 26:20 - Line 46:15),
-              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 190:19 - Line 209:15)
+              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 25:1 - Line 42:15),
+              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 233:1 - Line 250:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-32')">Show code</button>
             </div>
-            <pre id="code-yaml-32" class="code-block">    runs-on: ubuntu-latest
+            <pre id="code-yaml-32" class="code-block">    if: startsWith(github.event.release.tag_name, &#39;v&#39;)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: apps/egohygiene
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.release.tag_name }}
+          persist-credentials: false
+
+      - name: Setup Flutter
+        uses: ./.github/actions/flutter-setup
+
+      - name: Cache Gradle</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 26:20 - Line 46:15),
+              .staging/github/workflows/application-flutter/release-artifacts.yml (Line 190:19 - Line 209:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-33')">Show code</button>
+            </div>
+            <pre id="code-yaml-33" class="code-block">    runs-on: ubuntu-latest
     permissions:
       contents: read
     defaults:
@@ -7092,9 +7108,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/application-flutter/release-artifacts.yml (Line 86:1 - Line 94:11)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-33')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-34')">Show code</button>
             </div>
-            <pre id="code-yaml-33" class="code-block">        env:
+            <pre id="code-yaml-34" class="code-block">        env:
           ANDROID_RELEASE_KEYSTORE_BASE64: ${{ secrets.ANDROID_RELEASE_KEYSTORE_BASE64 }}
           ANDROID_RELEASE_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEYSTORE_PASSWORD }}
           ANDROID_RELEASE_KEY_ALIAS: ${{ secrets.ANDROID_RELEASE_KEY_ALIAS }}
@@ -7111,9 +7127,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/publish.yml (Line 28:1 - Line 45:28)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-34')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-35')">Show code</button>
             </div>
-            <pre id="code-yaml-34" class="code-block">    strategy:
+            <pre id="code-yaml-35" class="code-block">    strategy:
       matrix:
         variant:
           - name: &#34;base&#34;
@@ -7139,9 +7155,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/trivy-scan.yml (Line 44:1 - Line 62:16)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-35')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-36')">Show code</button>
             </div>
-            <pre id="code-yaml-35" class="code-block">      # -------------------------------------------------------------
+            <pre id="code-yaml-36" class="code-block">      # -------------------------------------------------------------
       # 2. Read VERSION file
       # -------------------------------------------------------------
       - name: Read VERSION
@@ -7168,9 +7184,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/publish.yml (Line 64:1 - Line 73:29)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-36')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-37')">Show code</button>
             </div>
-            <pre id="code-yaml-36" class="code-block">      # -------------------------------------------------------------
+            <pre id="code-yaml-37" class="code-block">      # -------------------------------------------------------------
       - name: Read VERSION
         id: version
         run: |
@@ -7188,9 +7204,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/benchmark.yml (Line 198:23 - Line 207:19)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-37')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-38')">Show code</button>
             </div>
-            <pre id="code-yaml-37" class="code-block">            docker run --name test-container --rm &#34;$IMAGE_TAG&#34; echo &#34;Ready&#34; &#62; /dev/null 2&#62;&#38;1
+            <pre id="code-yaml-38" class="code-block">            docker run --name test-container --rm &#34;$IMAGE_TAG&#34; echo &#34;Ready&#34; &#62; /dev/null 2&#62;&#38;1
             END_TIME=$(date +%s.%N)
             
             ELAPSED=$(echo &#34;$END_TIME - $START_TIME&#34; | bc)
@@ -7208,9 +7224,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/benchmark.yml (Line 234:89 - Line 242:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-38')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-39')">Show code</button>
             </div>
-            <pre id="code-yaml-38" class="code-block">            docker run --name test-container --rm &#34;$IMAGE_TAG&#34; echo &#34;Ready&#34; &#62; /dev/null 2&#62;&#38;1
+            <pre id="code-yaml-39" class="code-block">            docker run --name test-container --rm &#34;$IMAGE_TAG&#34; echo &#34;Ready&#34; &#62; /dev/null 2&#62;&#38;1
             END_TIME=$(date +%s.%N)
             
             ELAPSED=$(echo &#34;$END_TIME - $START_TIME&#34; | bc)
@@ -7227,9 +7243,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/devcontainer.yml (Line 191:1 - Line 199:28)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-39')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-40')">Show code</button>
             </div>
-            <pre id="code-yaml-39" class="code-block">      - name: 🕺 Restore apt BuildKit cache
+            <pre id="code-yaml-40" class="code-block">      - name: 🕺 Restore apt BuildKit cache
         uses: reproducible-containers/buildkit-cache-dance@v3.1.2
         with:
           cache-map: |
@@ -7246,9 +7262,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/devcontainer.yml (Line 216:42 - Line 223:52)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-40')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-41')">Show code</button>
             </div>
-            <pre id="code-yaml-40" class="code-block">      - name: 🏗️ Build image (first pass)
+            <pre id="code-yaml-41" class="code-block">      - name: 🏗️ Build image (first pass)
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -7264,9 +7280,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/devcontainer.yml (Line 223:54 - Line 229:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-41')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-42')">Show code</button>
             </div>
-            <pre id="code-yaml-41" class="code-block">          outputs: type=oci,dest=/tmp/devcontainer-1.tar,recompute-checksums=true
+            <pre id="code-yaml-42" class="code-block">          outputs: type=oci,dest=/tmp/devcontainer-1.tar,recompute-checksums=true
           build-args: |
             SOURCE_DATE_EPOCH=${{ needs.build.outputs.source_date_epoch }}
             SNAPSHOT_TIMESTAMP=${{ needs.build.outputs.snapshot_timestamp }}
@@ -7281,9 +7297,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/trivy-scan.yml (Line 27:1 - Line 37:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-42')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-43')">Show code</button>
             </div>
-            <pre id="code-yaml-42" class="code-block">    runs-on: ubuntu-latest
+            <pre id="code-yaml-43" class="code-block">    runs-on: ubuntu-latest
     # Only run if:
     # - For workflow_run: triggering workflow succeeded AND ran on main/master
     # - For other trigger types: always run
@@ -7302,24 +7318,6 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/container-platform/release-notes.yml (Line 125:28 - Line 132:45)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-43')">Show code</button>
-            </div>
-            <pre id="code-yaml-43" class="code-block">          name: ubi-base-sbom-${{ steps.version.outputs.version }}
-          path: ./sbom-artifacts
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          check_artifacts: true
-          search_artifacts: true
-          if_no_artifact_found: warn
-
-      - name: 📥 Download SBOM artifacts (minimal)</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              .staging/github/workflows/container-platform/release-notes.yml (Line 112:25 - Line 119:45),
-              .staging/github/workflows/container-platform/release-notes.yml (Line 138:27 - Line 145:45)
-            </div>
-            <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-44')">Show code</button>
             </div>
             <pre id="code-yaml-44" class="code-block">          name: ubi-base-sbom-${{ steps.version.outputs.version }}
@@ -7335,7 +7333,7 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           <div class="clone-item">
             <div class="clone-info">
               .staging/github/workflows/container-platform/release-notes.yml (Line 112:25 - Line 119:45),
-              .staging/github/workflows/container-platform/release-notes.yml (Line 151:25 - Line 158:45)
+              .staging/github/workflows/container-platform/release-notes.yml (Line 138:27 - Line 145:45)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-45')">Show code</button>
@@ -7352,8 +7350,8 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/github/workflows/container-platform/release-notes.yml (Line 112:25 - Line 119:7),
-              .staging/github/workflows/container-platform/release-notes.yml (Line 164:25 - Line 171:7)
+              .staging/github/workflows/container-platform/release-notes.yml (Line 112:25 - Line 119:45),
+              .staging/github/workflows/container-platform/release-notes.yml (Line 151:25 - Line 158:45)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-46')">Show code</button>
@@ -7370,13 +7368,31 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/github/workflows/content-and-docs/bookmarks-extract.yml (Line 44:1 - Line 52:15),
-              .staging/github/workflows/content-and-docs/bookmarks-extract.yml (Line 70:1 - Line 78:15)
+              .staging/github/workflows/container-platform/release-notes.yml (Line 112:25 - Line 119:7),
+              .staging/github/workflows/container-platform/release-notes.yml (Line 164:25 - Line 171:7)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-47')">Show code</button>
             </div>
-            <pre id="code-yaml-47" class="code-block">      - name: Set up Python toolchain
+            <pre id="code-yaml-47" class="code-block">          name: ubi-base-sbom-${{ steps.version.outputs.version }}
+          path: ./sbom-artifacts
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_artifacts: true
+          search_artifacts: true
+          if_no_artifact_found: warn
+
+      - name: 📥 Download SBOM artifacts (minimal)</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/github/workflows/content-and-docs/bookmarks-extract.yml (Line 44:1 - Line 52:15),
+              .staging/github/workflows/content-and-docs/bookmarks-extract.yml (Line 70:1 - Line 78:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-48')">Show code</button>
+            </div>
+            <pre id="code-yaml-48" class="code-block">      - name: Set up Python toolchain
         uses: ./.github/actions/python-poetry-setup
         with:
           working-directory: publishing/tools/bookmarks
@@ -7393,9 +7409,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/content-and-docs/docs.yml (Line 94:1 - Line 112:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-48')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-49')">Show code</button>
             </div>
-            <pre id="code-yaml-48" class="code-block">      # -------------------------------------------------------------
+            <pre id="code-yaml-49" class="code-block">      # -------------------------------------------------------------
       # 2. Set up Python
       # -------------------------------------------------------------
       - name: &#34;🐍 Set up Python&#34;
@@ -7422,9 +7438,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/source-specific/aether-release-first-party-skills.yml (Line 62:1 - Line 74:15)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-49')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-50')">Show code</button>
             </div>
-            <pre id="code-yaml-49" class="code-block">      - name: Set up Python
+            <pre id="code-yaml-50" class="code-block">      - name: Set up Python
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: &#34;3.12&#34;
@@ -7445,9 +7461,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/source-specific/aether-release-first-party-skills.yml (Line 168:1 - Line 176:11)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-50')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-51')">Show code</button>
             </div>
-            <pre id="code-yaml-50" class="code-block">          ./aether catalog generate --check | tee &#34;${RUN_REPORT_DIR}/catalog-generate.txt&#34;
+            <pre id="code-yaml-51" class="code-block">          ./aether catalog generate --check | tee &#34;${RUN_REPORT_DIR}/catalog-generate.txt&#34;
           python3 catalog/validate_catalog.py | tee &#34;${RUN_REPORT_DIR}/catalog-schema.txt&#34;
           ./aether eval run --mode &#34;deterministic&#34; --format &#34;text&#34; | tee &#34;${RUN_REPORT_DIR}/evals.txt&#34;
           ./aether test | tee &#34;${RUN_REPORT_DIR}/tests.txt&#34;
@@ -7464,9 +7480,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/source-specific/aether-release-first-party-skills.yml (Line 145:35 - Line 160:23)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-51')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-52')">Show code</button>
             </div>
-            <pre id="code-yaml-51" class="code-block">          ref: ${{ steps.release-context.outputs.release_ref }}
+            <pre id="code-yaml-52" class="code-block">          ref: ${{ steps.release-context.outputs.release_ref }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -7490,9 +7506,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               .staging/github/workflows/source-specific/aether-release-first-party-skills.yml (Line 163:1 - Line 168:20)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-52')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-53')">Show code</button>
             </div>
-            <pre id="code-yaml-52" class="code-block">          mkdir -p &#34;${RUN_REPORT_DIR}&#34;
+            <pre id="code-yaml-53" class="code-block">          mkdir -p &#34;${RUN_REPORT_DIR}&#34;
           rm -rf dist
           ./aether distribution build --output-directory &#34;dist&#34; | tee &#34;${RUN_REPORT_DIR}/distribution-build.txt&#34;
           ./aether distribution build --output-directory &#34;dist&#34; --check | tee &#34;${RUN_REPORT_DIR}/distribution-check.txt&#34;
@@ -7506,9 +7522,9 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
               egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml (Line 10:1 - Line 19:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-53')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-54')">Show code</button>
             </div>
-            <pre id="code-yaml-53" class="code-block">metadata:
+            <pre id="code-yaml-54" class="code-block">metadata:
   aether-version: &#34;1.0.0&#34;
   aether-status: &#34;draft&#34;
   aether-scope: &#34;organization&#34;
@@ -7524,31 +7540,6 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
             <div class="clone-info">
               egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml (Line 5:1 - Line 19:7),
               egolint/.agents/agents/cleanup-specialist/AGENT.md:yaml (Line 5:1 - Line 19:7)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-54')">Show code</button>
-            </div>
-            <pre id="code-yaml-54" class="code-block">tools:
-  - read
-  - search
-  - edit
-  - execute
-metadata:
-  aether-version: &#34;1.0.0&#34;
-  aether-status: &#34;draft&#34;
-  aether-scope: &#34;organization&#34;
-  aether-domain: &#34;quality&#34;
-  aether-owners: &#34;egohygiene&#34;
-  aether-created: &#34;2026-08-08&#34;
-  aether-updated: &#34;2026-08-08&#34;
-  aether-skills:
-    - bug-fixing</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml (Line 5:1 - Line 19:7),
-              egolint/.agents/agents/test-specialist/AGENT.md:yaml (Line 5:1 - Line 19:7)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-55')">Show code</button>
@@ -7572,13 +7563,38 @@ metadata:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/agents/github-issue-creator/AGENT.md:yaml (Line 8:1 - Line 18:7),
-              egolint/.agents/agents/implementation-planner/AGENT.md:yaml (Line 9:1 - Line 19:7)
+              egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml (Line 5:1 - Line 19:7),
+              egolint/.agents/agents/test-specialist/AGENT.md:yaml (Line 5:1 - Line 19:7)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-56')">Show code</button>
             </div>
-            <pre id="code-yaml-56" class="code-block">  - web
+            <pre id="code-yaml-56" class="code-block">tools:
+  - read
+  - search
+  - edit
+  - execute
+metadata:
+  aether-version: &#34;1.0.0&#34;
+  aether-status: &#34;draft&#34;
+  aether-scope: &#34;organization&#34;
+  aether-domain: &#34;quality&#34;
+  aether-owners: &#34;egohygiene&#34;
+  aether-created: &#34;2026-08-08&#34;
+  aether-updated: &#34;2026-08-08&#34;
+  aether-skills:
+    - bug-fixing</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/agents/github-issue-creator/AGENT.md:yaml (Line 8:1 - Line 18:7),
+              egolint/.agents/agents/implementation-planner/AGENT.md:yaml (Line 9:1 - Line 19:7)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-57')">Show code</button>
+            </div>
+            <pre id="code-yaml-57" class="code-block">  - web
 metadata:
   aether-version: &#34;1.0.0&#34;
   aether-status: &#34;draft&#34;
@@ -7597,9 +7613,9 @@ metadata:
               egolint/.agents/agents/specfile-creator/AGENT.md:yaml (Line 5:1 - Line 19:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-57')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-58')">Show code</button>
             </div>
-            <pre id="code-yaml-57" class="code-block">tools:
+            <pre id="code-yaml-58" class="code-block">tools:
   - read
   - search
   - edit
@@ -7622,9 +7638,9 @@ metadata:
               egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:yaml (Line 2:1 - Line 13:31)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-58')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-59')">Show code</button>
             </div>
-            <pre id="code-yaml-58" class="code-block">name: create-purpose-document
+            <pre id="code-yaml-59" class="code-block">name: create-purpose-document
 description: Creates or updates PURPOSE.md from repository evidence. Use when a project needs to define, repair, or review why it exists and whom it serves.
 license: MIT
 metadata:
@@ -7644,9 +7660,9 @@ metadata:
               egolint/.agents/skills/authoring/implementation-planning/SKILL.md:yaml (Line 3:277 - Line 12:31)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-59')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-60')">Show code</button>
             </div>
-            <pre id="code-yaml-59" class="code-block">description: Converts evidence, specifications, audits, bug reports, and rough notes into scoped, copy-ready GitHub issues or dependency-aware issue batches. Use when defining implementation work clearly without performing the implementation itself.
+            <pre id="code-yaml-60" class="code-block">description: Converts evidence, specifications, audits, bug reports, and rough notes into scoped, copy-ready GitHub issues or dependency-aware issue batches. Use when defining implementation work clearly without performing the implementation itself.
 license: MIT
 metadata:
   aether-version: &#34;1.0.0&#34;
@@ -7664,9 +7680,9 @@ metadata:
               egolint/.agents/skills/authoring/skill-authoring/SKILL.md:yaml (Line 3:275 - Line 12:31)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-60')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-61')">Show code</button>
             </div>
-            <pre id="code-yaml-60" class="code-block">description: Converts evidence, specifications, audits, bug reports, and rough notes into scoped, copy-ready GitHub issues or dependency-aware issue batches. Use when defining implementation work clearly without performing the implementation itself.
+            <pre id="code-yaml-61" class="code-block">description: Converts evidence, specifications, audits, bug reports, and rough notes into scoped, copy-ready GitHub issues or dependency-aware issue batches. Use when defining implementation work clearly without performing the implementation itself.
 license: MIT
 metadata:
   aether-version: &#34;1.0.0&#34;
@@ -7682,26 +7698,6 @@ metadata:
             <div class="clone-info">
               egolint/.agents/skills/quality/bug-fixing/SKILL.md:yaml (Line 3:256 - Line 12:31),
               egolint/.agents/skills/quality/repository-cleanup/SKILL.md:yaml (Line 3:239 - Line 12:31)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-61')">Show code</button>
-            </div>
-            <pre id="code-yaml-61" class="code-block">description: Reproduces, diagnoses, fixes, and validates a concrete software defect with the smallest safe change and regression protection. Use when a bug report, failing test, regression, crash, or incorrect behavior requires corrective engineering work.
-license: MIT
-metadata:
-  aether-version: &#34;1.0.0&#34;
-  aether-status: &#34;experimental&#34;
-  aether-scope: &#34;organization&#34;
-  aether-domain: &#34;quality&#34;
-  aether-owners: &#34;egohygiene&#34;
-  aether-created: &#34;2026-08-08&#34;
-  aether-updated: &#34;2026-08-08&#34;</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/quality/bug-fixing/SKILL.md:yaml (Line 3:256 - Line 12:31),
-              egolint/.agents/skills/quality/test-engineering/SKILL.md:yaml (Line 3:248 - Line 12:31)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-62')">Show code</button>
@@ -7720,13 +7716,33 @@ metadata:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/specs/SCHEMA.md:yaml (Line 66:1 - Line 91:15),
-              egolint/.agents/specs/architecture/foundation/system.spec.md:yaml (Line 2:1 - Line 27:15)
+              egolint/.agents/skills/quality/bug-fixing/SKILL.md:yaml (Line 3:256 - Line 12:31),
+              egolint/.agents/skills/quality/test-engineering/SKILL.md:yaml (Line 3:248 - Line 12:31)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-63')">Show code</button>
             </div>
-            <pre id="code-yaml-63" class="code-block">schema: aether.specification/v1
+            <pre id="code-yaml-63" class="code-block">description: Reproduces, diagnoses, fixes, and validates a concrete software defect with the smallest safe change and regression protection. Use when a bug report, failing test, regression, crash, or incorrect behavior requires corrective engineering work.
+license: MIT
+metadata:
+  aether-version: &#34;1.0.0&#34;
+  aether-status: &#34;experimental&#34;
+  aether-scope: &#34;organization&#34;
+  aether-domain: &#34;quality&#34;
+  aether-owners: &#34;egohygiene&#34;
+  aether-created: &#34;2026-08-08&#34;
+  aether-updated: &#34;2026-08-08&#34;</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/specs/SCHEMA.md:yaml (Line 66:1 - Line 91:15),
+              egolint/.agents/specs/architecture/foundation/system.spec.md:yaml (Line 2:1 - Line 27:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-64')">Show code</button>
+            </div>
+            <pre id="code-yaml-64" class="code-block">schema: aether.specification/v1
 id: architecture-system
 title: System Document Specification
 kind: specification
@@ -7760,29 +7776,6 @@ supersedes: []</pre>
               egolint/.agents/specs/architecture/foundation/architecture.spec.md:yaml (Line 4:20 - Line 16:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-64')">Show code</button>
-            </div>
-            <pre id="code-yaml-64" class="code-block">title: System Document Specification
-kind: specification
-version: 1.1.0
-status: draft
-owners:
-  - egohygiene
-created: 2026-07-18
-updated: 2026-08-02
-domain: architecture
-tags:
-  - architecture
-  - specification
-  - systems</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/specs/SCHEMA.md:yaml (Line 68:14 - Line 80:5),
-              egolint/.agents/specs/architecture/foundation/foundations.spec.md:yaml (Line 4:19 - Line 16:5)
-            </div>
-            <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-65')">Show code</button>
             </div>
             <pre id="code-yaml-65" class="code-block">title: System Document Specification
@@ -7803,7 +7796,7 @@ tags:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/SCHEMA.md:yaml (Line 68:14 - Line 80:5),
-              egolint/.agents/specs/architecture/foundation/methodology.spec.md:yaml (Line 4:19 - Line 16:5)
+              egolint/.agents/specs/architecture/foundation/foundations.spec.md:yaml (Line 4:19 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-66')">Show code</button>
@@ -7826,7 +7819,7 @@ tags:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/SCHEMA.md:yaml (Line 68:14 - Line 80:5),
-              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:yaml (Line 4:15 - Line 16:5)
+              egolint/.agents/specs/architecture/foundation/methodology.spec.md:yaml (Line 4:19 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-67')">Show code</button>
@@ -7848,13 +7841,36 @@ tags:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml (Line 4:16 - Line 16:5),
-              egolint/.agents/specs/architecture/domain/personal-model.spec.md:yaml (Line 4:22 - Line 16:5)
+              egolint/.agents/specs/SCHEMA.md:yaml (Line 68:14 - Line 80:5),
+              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:yaml (Line 4:15 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-68')">Show code</button>
             </div>
-            <pre id="code-yaml-68" class="code-block">title: Ontology Architecture Document Specification
+            <pre id="code-yaml-68" class="code-block">title: System Document Specification
+kind: specification
+version: 1.1.0
+status: draft
+owners:
+  - egohygiene
+created: 2026-07-18
+updated: 2026-08-02
+domain: architecture
+tags:
+  - architecture
+  - specification
+  - systems</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml (Line 4:16 - Line 16:5),
+              egolint/.agents/specs/architecture/domain/personal-model.spec.md:yaml (Line 4:22 - Line 16:5)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-69')">Show code</button>
+            </div>
+            <pre id="code-yaml-69" class="code-block">title: Ontology Architecture Document Specification
 kind: specification
 version: 2.0.0
 status: draft
@@ -7875,9 +7891,9 @@ tags:
               egolint/.agents/specs/architecture/experience/design-system.spec.md:yaml (Line 4:21 - Line 15:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-69')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-70')">Show code</button>
             </div>
-            <pre id="code-yaml-69" class="code-block">title: Ontology Architecture Document Specification
+            <pre id="code-yaml-70" class="code-block">title: Ontology Architecture Document Specification
 kind: specification
 version: 2.0.0
 status: draft
@@ -7897,9 +7913,9 @@ tags:
               egolint/.agents/specs/architecture/experience/design.spec.md:yaml (Line 4:14 - Line 16:11)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-70')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-71')">Show code</button>
             </div>
-            <pre id="code-yaml-70" class="code-block">title: Ontology Architecture Document Specification
+            <pre id="code-yaml-71" class="code-block">title: Ontology Architecture Document Specification
 kind: specification
 version: 2.0.0
 status: draft
@@ -7920,9 +7936,9 @@ tags:
               egolint/.agents/specs/architecture/governance/decisions.spec.md:yaml (Line 4:17 - Line 15:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-71')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-72')">Show code</button>
             </div>
-            <pre id="code-yaml-71" class="code-block">title: Ontology Architecture Document Specification
+            <pre id="code-yaml-72" class="code-block">title: Ontology Architecture Document Specification
 kind: specification
 version: 2.0.0
 status: draft
@@ -7942,9 +7958,9 @@ tags:
               egolint/.agents/specs/architecture/meta/ai-constitution.spec.md:yaml (Line 4:23 - Line 15:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-72')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-73')">Show code</button>
             </div>
-            <pre id="code-yaml-72" class="code-block">title: Ontology Architecture Document Specification
+            <pre id="code-yaml-73" class="code-block">title: Ontology Architecture Document Specification
 kind: specification
 version: 2.0.0
 status: draft
@@ -7962,29 +7978,6 @@ tags:
             <div class="clone-info">
               egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml (Line 4:16 - Line 16:5),
               egolint/.agents/specs/architecture/meta/epistemology.spec.md:yaml (Line 4:20 - Line 16:5)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-73')">Show code</button>
-            </div>
-            <pre id="code-yaml-73" class="code-block">title: Ontology Architecture Document Specification
-kind: specification
-version: 2.0.0
-status: draft
-owners:
-  - egohygiene
-created: 2026-07-18
-updated: 2026-08-02
-domain: architecture
-tags:
-  - architecture
-  - domain
-  - ontology</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml (Line 4:16 - Line 16:5),
-              egolint/.agents/specs/architecture/meta/meta.spec.md:yaml (Line 4:12 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-74')">Show code</button>
@@ -8006,13 +7999,36 @@ tags:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/specs/architecture/experience/design-system.spec.md:yaml (Line 4:43 - Line 16:12),
-              egolint/.agents/specs/architecture/experience/design.spec.md:yaml (Line 4:36 - Line 17:3)
+              egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml (Line 4:16 - Line 16:5),
+              egolint/.agents/specs/architecture/meta/meta.spec.md:yaml (Line 4:12 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-75')">Show code</button>
             </div>
-            <pre id="code-yaml-75" class="code-block">title: Design System Architecture Document Specification
+            <pre id="code-yaml-75" class="code-block">title: Ontology Architecture Document Specification
+kind: specification
+version: 2.0.0
+status: draft
+owners:
+  - egohygiene
+created: 2026-07-18
+updated: 2026-08-02
+domain: architecture
+tags:
+  - architecture
+  - domain
+  - ontology</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/specs/architecture/experience/design-system.spec.md:yaml (Line 4:43 - Line 16:12),
+              egolint/.agents/specs/architecture/experience/design.spec.md:yaml (Line 4:36 - Line 17:3)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-76')">Show code</button>
+            </div>
+            <pre id="code-yaml-76" class="code-block">title: Design System Architecture Document Specification
 kind: specification
 version: 2.0.0
 status: draft
@@ -8031,29 +8047,6 @@ tags:
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml (Line 4:17 - Line 16:5),
               egolint/.agents/specs/architecture/identity/pillars.spec.md:yaml (Line 4:15 - Line 16:5)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-76')">Show code</button>
-            </div>
-            <pre id="code-yaml-76" class="code-block">title: Manifesto Architecture Document Specification
-kind: specification
-version: 2.0.0
-status: draft
-owners:
-  - egohygiene
-created: 2026-07-18
-updated: 2026-08-01
-domain: architecture
-tags:
-  - architecture
-  - identity
-  - manifesto</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml (Line 4:17 - Line 16:5),
-              egolint/.agents/specs/architecture/identity/principles.spec.md:yaml (Line 4:18 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-77')">Show code</button>
@@ -8076,7 +8069,7 @@ tags:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml (Line 4:17 - Line 16:5),
-              egolint/.agents/specs/architecture/identity/purpose.spec.md:yaml (Line 4:15 - Line 16:5)
+              egolint/.agents/specs/architecture/identity/principles.spec.md:yaml (Line 4:18 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-78')">Show code</button>
@@ -8099,7 +8092,7 @@ tags:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml (Line 4:17 - Line 16:5),
-              egolint/.agents/specs/architecture/identity/vision.spec.md:yaml (Line 4:14 - Line 16:5)
+              egolint/.agents/specs/architecture/identity/purpose.spec.md:yaml (Line 4:15 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-79')">Show code</button>
@@ -8121,13 +8114,36 @@ tags:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.config/megalinter/policy.yml (Line 210:1 - Line 216:54),
-              egolint/.config/megalinter/policy.yml (Line 232:1 - Line 238:54)
+              egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml (Line 4:17 - Line 16:5),
+              egolint/.agents/specs/architecture/identity/vision.spec.md:yaml (Line 4:14 - Line 16:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-80')">Show code</button>
             </div>
-            <pre id="code-yaml-80" class="code-block">      - kubernetes/**/*.yml
+            <pre id="code-yaml-80" class="code-block">title: Manifesto Architecture Document Specification
+kind: specification
+version: 2.0.0
+status: draft
+owners:
+  - egohygiene
+created: 2026-07-18
+updated: 2026-08-01
+domain: architecture
+tags:
+  - architecture
+  - identity
+  - manifesto</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.config/megalinter/policy.yml (Line 210:1 - Line 216:54),
+              egolint/.config/megalinter/policy.yml (Line 232:1 - Line 238:54)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-yaml-81')">Show code</button>
+            </div>
+            <pre id="code-yaml-81" class="code-block">      - kubernetes/**/*.yml
       - kubernetes/**/*.yaml
     fixtures:
       positive:
@@ -8142,9 +8158,9 @@ tags:
               egolint/.config/security/trivy/trivy.yaml (Line 27:1 - Line 72:24)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-81')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-82')">Show code</button>
             </div>
-            <pre id="code-yaml-81" class="code-block">    - &#34;license&#34;
+            <pre id="code-yaml-82" class="code-block">    - &#34;license&#34;
 
   detection-priority: &#34;precise&#34;
   disable-telemetry: true
@@ -8198,9 +8214,9 @@ vulnerability:
               egolint/.mega-linter.yml (Line 1266:32 - Line 1278:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-82')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-83')">Show code</button>
             </div>
-            <pre id="code-yaml-82" class="code-block">SPELL_PROSELINT_FILTER_REGEX_EXCLUDE: &#62;-
+            <pre id="code-yaml-83" class="code-block">SPELL_PROSELINT_FILTER_REGEX_EXCLUDE: &#62;-
   (^|/)
   (
     node_modules
@@ -8221,9 +8237,9 @@ vulnerability:
               mantle/.github/workflows/test.yml (Line 115:1 - Line 140:34)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-yaml-83')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-yaml-84')">Show code</button>
             </div>
-            <pre id="code-yaml-83" class="code-block">      - name: Install Bats
+            <pre id="code-yaml-84" class="code-block">      - name: Install Bats
         run: |
           BATS_VERSION=&#34;1.11.0&#34;
           curl -fsSL \

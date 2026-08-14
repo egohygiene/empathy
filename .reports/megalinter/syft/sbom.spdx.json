@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-374683ec-fbe2-4d07-be13-7c93279f74e1",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-bad24baa-f65c-4ee1-ba8b-59f20a32606c",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.50.0"
   ],
-  "created": "2026-08-14T21:33:40Z"
+  "created": "2026-08-14T21:51:31Z"
  },
  "packages": [
   {
@@ -270,6 +270,91 @@
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
      "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/generate-repository-intelligence-dashboard",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-dashboard-f91acad11e004238",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/mindgarden-pages.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
     }
    ]
   },
@@ -249261,7 +249346,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "fe069e287aeca1cd71c1eab877313f484daca116ca2d50e40d7356622ddecefe"
+     "checksumValue": "6f74583c15cc60e22ba7ad1c17a808d6dbcd9b1d6507528bc96bf3357868b5e7"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -365568,6 +365653,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-dashboard-f91acad11e004238",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-sort-keys-f94aad1cee7f58d1",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -366184,6 +366275,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-3b0731b310809a45",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-dashboard-f91acad11e004238",
    "relationshipType": "CONTAINS"
   },
   {

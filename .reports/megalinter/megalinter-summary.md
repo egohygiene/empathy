@@ -4,45 +4,45 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   14|     |     0|          |       0|       0.41s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       10.7s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   47|     |     0|          |       0|       0.18s|
-|✅ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       6.31s|
-|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     0|          |       0|       0.03s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   324|          |      no|       3.09s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |    34|          |       0|        1.2s|
-|✅ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  802|     |     0|          |       0|       0.82s|
-|✅ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  100|     |     0|          |       0|       0.23s|
-|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  100|     |     1|          |       0|       1.99s|
-|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  100|     |     0|          |       0|      18.76s|
-|✅ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  224|     |     0|          |       0|       2.71s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  224|     |     1|          |       0|       0.44s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.08s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.94s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   41|     |     3|          |       0|        1.8s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    16|          |      no|       9.73s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   41|     |    26|          |       0|      10.92s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   742|          |      no|       7.61s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   41|     |    24|          |       0|       0.24s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   41|     |     1|          |       0|       0.05s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   14|     |     0|          |       0|       0.46s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       7.95s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   47|     |     0|          |       0|       0.22s|
+|✅ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       6.03s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     0|          |       0|       0.02s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   325|          |      no|       3.85s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |    34|          |       0|       1.11s|
+|✅ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  802|     |     0|          |       0|       0.45s|
+|✅ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  100|     |     0|          |       0|        0.2s|
+|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  100|     |     1|          |       0|       1.58s|
+|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  100|     |     0|          |       0|      23.03s|
+|✅ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  224|     |     0|          |       0|        2.6s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  224|     |     1|          |       0|       0.39s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.14s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.74s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   41|     |     3|          |       0|       2.05s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    16|          |      no|      11.72s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   41|     |    26|          |       0|      13.98s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   742|          |      no|       8.91s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   41|     |    24|          |       0|       0.31s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   41|     |     1|          |       0|       0.08s|
 |✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       0.99s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      35.59s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       3.86s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    13|          |      no|      71.14s|
-|✅ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |    no|          |      no|       0.47s|
-|✅ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      20.55s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       3.83s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      14.44s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      28.89s|
-|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       3.02s|
-|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.79s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  458|     |    32|          |       0|      15.09s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  228|     |   406|          |       0|      10.06s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  228|     |     4|          |    1991|       4.37s|
-|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.22s|
-|✅ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  129|     |     0|          |       0|       2.46s|
-|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  129|     |     0|          |       0|      23.63s|
-|✅ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  129|     |     0|          |       0|       6.21s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      38.63s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       3.94s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    13|          |      no|      89.17s|
+|✅ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |    no|          |      no|       0.46s|
+|✅ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      25.46s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       4.39s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      14.12s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      40.38s|
+|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|      12.25s|
+|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.32s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  458|     |    32|          |       0|      33.44s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  228|     |   407|          |       0|       6.35s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  228|     |     4|          |    1993|       4.77s|
+|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.32s|
+|✅ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  129|     |     0|          |       0|       3.35s|
+|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  129|     |     0|          |       0|      32.42s|
+|✅ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  129|     |     0|          |       0|       8.68s|
 
 ## Detailed Issues
 
@@ -54,7 +54,7 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-14 21:33:22.894726+00:00
+Run started:2026-08-14 21:51:06.481966+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -101,7 +101,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 6116
+	Total lines of code: 6143
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
@@ -138,155 +138,53 @@ For more information, try '--help'.
 <summary>❌ SPELL / lychee - 32 errors</summary>
 
 ```
-b.com/lunarmodules/luacheck (at 711:3)
-[200] https://github.com/loeffel-io/ls-lint (at 808:3) | OK (cached)
-[200] https://github.com/prantlf/jsonlint (at 656:3)
-[200] https://megalinter.io/latest/descriptors/json_jsonlint/ (at 657:3)
-[200] https://github.com/DavidAnson/markdownlint (at 721:3)
-[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/ (at 722:3)
-[200] https://www.checkov.io/ (at 874:3)
-[200] https://megalinter.io/latest/descriptors/php_phpcs/ (at 739:3)
-[200] https://megalinter.io/latest/descriptors/jsx_eslint/ (at 682:3)
-[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/ (at 738:3)
-[200] https://megalinter.io/latest/descriptors/php_phpstan/ (at 753:3)
-[200] https://megalinter.io/latest/descriptors/php_phplint/ (at 746:3)
-[200] https://github.com/overtrue/phplint (at 745:3)
-[200] https://github.com/PowerShell/PSScriptAnalyzer (at 770:3)
-[200] https://github.com/PowerShell/PSScriptAnalyzer (at 777:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 925:3) | OK (cached)
-[200] https://github.com/trufflesecurity/trufflehog (at 941:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/php_psalm/ (at 760:3)
-[200] https://megalinter.io/latest/descriptors/repository_syft/ (at 961:3) | OK (cached)
-[200] https://github.com/streetsidesoftware/cspell (at 823:3)
-[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/ (at 778:3)
-[200] https://megalinter.io/latest/descriptors/protobuf_protolint/ (at 789:3)
-[200] https://rubocop.org/ (at 988:3)
-[200] https://raku.org/ (at 799:3)
-[200] https://megalinter.io/latest/descriptors/powershell_powershell/ (at 771:3)
-[200] https://github.com/microsoft/DevSkim (at 884:3)
-[200] https://github.com/anchore/grype (at 894:3)
-[200] https://megalinter.io/latest/descriptors/repository_ls_lint/ (at 809:3)
-[200] https://github.com/aquasecurity/trivy (at 911:3)
-[200] https://github.com/aquasecurity/trivy (at 924:3)
-[200] https://megalinter.io/latest/descriptors/spell_cspell/ (at 824:3)
-[200] https://github.com/anchore/syft (at 960:3)
-[200] https://megalinter.io/latest/descriptors/raku_raku/ (at 800:3)
-[200] https://yamllint.readthedocs.io/en/stable/ (at 1089:3)
-[200] https://megalinter.io/latest/descriptors/repository_devskim/ (at 885:3)
-[200] https://github.com/IBM/tekton-lint (at 1140:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 1141:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/repository_grype/ (at 895:3)
-[200] https://github.com/rstcheck/rstcheck (at 977:3)
-[200] https://megalinter.io/latest/descriptors/repository_checkov/ (at 875:3)
-[200] https://github.com/rust-lang/rust-clippy (at 1005:3)
-[200] https://megalinter.io/latest/descriptors/lua_luacheck/ (at 712:3)
-[200] https://github.com/chris48s/v8r (at 1078:3)
-[200] https://github.com/r-lib/lintr (at 1029:3)
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Rejected status code: 403 Forbidden
-[200] https://megalinter.io/latest/descriptors/rst_rstcheck/ (at 978:3)
-[200] https://megalinter.io/latest/descriptors/repository_trufflehog/ (at 942:3)
-[200] https://megalinter.io/latest/descriptors/rust_clippy/ (at 1006:3)
-[200] https://github.com/terraform-linters/tflint (at 1118:3)
-[200] https://megalinter.io/latest/descriptors/r_lintr/ (at 1030:3)
-[200] https://github.com/gruntwork-io/terragrunt (at 1124:3)
-[200] https://megalinter.io/latest/descriptors/ruby_rubocop/ (at 989:3)
-[200] https://github.com/realm/SwiftLint (at 1157:3)
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 1090:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy/ (at 912:3)
-[200] https://github.com/scalacenter/scalafix (at 1167:3)
-[200] https://megalinter.io/latest/descriptors/terraform_tflint/ (at 1119:3)
-[200] file://mantle/ARCHITECTURE.md (at 69:6)
-[200] file://mantle/config/architecture/layers.tsv (at 71:1)
-[200] file://mantle/PROVENANCE.md (at 80:8)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] file://.obsidian/README.md (at 10:35)
-[200] file://.garden/dashboard.md (at 35:12)
-[200] file://.garden/home.md (at 36:1)
-[200] file://llms.txt (at 38:21)
-[200] file://mindgarden/profiles/agent/README.md (at 39:1)
-[200] https://egohygiene.github.io/empathy/ (at 42:24) | OK (cached)
-[200] file://mindgarden/profiles/quartz/README.md (at 44:1)
-[200] file://egolint/.agents/skills/quality/audit-repository/SKILL.md (at 28:11)
-[200] file://egolint/.agents/specs/quality/auditor.spec.md (at 28:97)
-[200] file://.mega-linter.yml (at 15:10)
-[200] file://egolint/.mega-linter.fast.yml (at 16:22)
-[200] file://.czrc (at 52:33)
-[200] file://.secrets.baseline (at 56:34)
-[200] file://REUSE.toml (at 58:12)
-[200] file://.audits (at 71:7)
-[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/ (at 1125:3)
-[200] https://megalinter.io/latest/descriptors/yaml_v8r/ (at 1079:3)
-[200] file://mantle/config/installers.lock.tsv (at 4:1)
-[200] https://github.com/snakemake/snakefmt (at 1194:3)
-[200] https://agentskills.io/specification (at 12:25)
-[200] https://github.com/sqlfluff/sqlfluff (at 1220:3)
-[200] https://github.com/betterleaks/betterleaks (at 1204:3)
-[200] https://megalinter.io/latest/descriptors/scala_scalafix/ (at 1168:3)
-[200] https://quartz.jzhao.xyz/configuration (at 6:19)
-[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/ (at 1195:3)
-[200] https://github.com/amperser/proselint (at 1232:3)
-[200] https://megalinter.io/latest/descriptors/salesforce_code_analyzer_apex/ (at 1178:3)
+/github.com/IBM/tekton-lint (at 1140:3)
 [200] https://megalinter.io/latest/descriptors/swift_swiftlint/ (at 1158:3)
-[200] https://megalinter.io/latest/descriptors/repository_betterleaks/ (at 1205:3)
-[200] https://github.com/lycheeverse/lychee (at 1285:3)
-[200] https://github.com/hadolint/hadolint (at 255:11) | OK (cached)
-[200] https://github.com/errata-ai/vale (at 1252:3) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
-[200] https://megalinter.io/latest/descriptors/spell_proselint/ (at 1233:3)
-[200] https://megalinter.io/latest/descriptors/spell_lychee/ (at 1286:3)
-[200] https://megalinter.io/latest/descriptors/spell_vale/ (at 1253:3)
-[200] https://github.com/secretlint/secretlint (at 1402:3)
-[200] https://github.com/gitleaks/gitleaks (at 29:11)
+[200] https://github.com/egohygiene/empathy/issues (at 19:13) | OK (cached)
+[EXCLUDED] mailto:szmyty@gmail.com (at 20:15) | This is due to your 'exclude' values
+[200] https://json.schemastore.org/sarif-2.1.0.json (at 419:35) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/sarif-2.1.0.json --[301]--> https://www.schemastore.org/sarif-2.1.0.json
+[EXCLUDED] mailto:szmyty@gmail.com (at 29:15) | This is due to your 'exclude' values
+[200] https://json.schemastore.org/package.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
 [200] https://megalinter.io/latest/descriptors/sql_sqlfluff/ (at 1221:3)
-[200] https://megalinter.io/latest/descriptors/repository_secretlint/ (at 1403:3)
-[200] https://github.com/Yelp/detect-secrets (at 39:11)
-[200] https://github.com/google/addlicense (at 51:11)
-[200] https://github.com/pre-commit/pre-commit-hooks (at 71:11)
-[200] https://github.com/egohygiene/empathy (at 11:13) | OK (cached)
-[200] https://github.com/astral-sh/ruff-pre-commit (at 162:11)
-[200] https://github.com/pre-commit/mirrors-prettier (at 206:11)
-[200] https://github.com/abravalheri/validate-pyproject (at 196:11)
-[200] https://github.com/nbQA-dev/nbQA (at 179:11)
-[200] https://github.com/biomejs/pre-commit (at 217:11)
-[200] https://github.com/igorshubovych/markdownlint-cli (at 227:11)
-[200] https://github.com/shellcheck-py/shellcheck-py (at 245:11)
-[200] file://PURPOSE.md (at 54:3)
-[200] file://VISION.md (at 55:3)
-[200] file://PRINCIPLES.md (at 56:3)
-[200] file://PILLARS.md (at 57:3)
-[200] file://MANIFESTO.md (at 58:3)
-[200] file://EPISTEMOLOGY.md (at 59:3)
-[200] file://AI_CONSTITUTION.md (at 60:3)
-[200] file://ONTOLOGY.md (at 61:3)
-[200] file://PERSONAL_MODEL.md (at 62:3)
-[200] file://FOUNDATIONS.md (at 63:3)
-[200] file://SYSTEM.md (at 64:3)
-[200] file://ARCHITECTURE.md (at 65:3)
-[200] file://DESIGN.md (at 66:3)
-[200] file://DESIGN_SYSTEM.md (at 67:3)
-[200] file://METHODOLOGY.md (at 68:3)
-[200] file://DECISIONS.md (at 69:3)
-[200] file://ROADMAP.md (at 70:3)
-[200] file://META.md (at 71:3)
-[200] https://raw.githubusercontent.com/nvuillam/npm-groovy-lint/refs/heads/main/docs/groovy-lint.jsonschema.json (at 2:15)
-[200] https://github.com/executablebooks/mdformat (at 237:11) | 200 OK | Followed 1 redirect. Redirects: https://github.com/executablebooks/mdformat --[301]--> https://github.com/hukkin/mdformat
-[200] https://humanstxt.org/ (at 39:13)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://github.com/openstack/bashate (at 265:11)
-[200] https://yamllint.readthedocs.io/en/stable/ (at 11:5) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 12:5) | OK (cached)
+[200] https://osv.dev/ (at 426:58)
+[200] https://github.com/scalacenter/scalafix (at 1167:3)
+[200] https://registry.npmjs.org/ (at 45:18)
+[200] https://megalinter.io/latest/descriptors/spell_proselint/ (at 1233:3)
+[200] file://egolint/.agents/skills/quality/test-engineering/SKILL.md (at 30:11)
+[ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
+[200] https://github.com/egohygiene/empathy (at 191:17) | OK (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/quality/repository-cleanup/SKILL.md (at 30:11)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://github.com/snakemake/snakefmt (at 1194:3)
+[200] https://raw.githubusercontent.com/jackyzha0/quartz/v5/quartz/plugins/quartz-plugins.schema.json (at 1:33)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://github.com/betterleaks/betterleaks (at 1204:3)
+[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Error (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/spell_vale/ (at 1253:3)
+[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json (at 2:15)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md (at 31:11)
+[200] file://egolint/.agents/specs/publishing/arxiv.spec.md (at 31:110)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[ERROR] https://egohygiene.dev/schemas/repository-report-summary/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
 [200] file://mantle/assets/branding/mantle-banner-placeholder.svg (at 2:13)
-[200] https://github.com/python-jsonschema/check-jsonschema (at 275:11)
-[200] https://github.com/codespell-project/codespell (at 291:11)
-[200] https://github.com/crate-ci/typos (at 303:11)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
+[200] https://megalinter.io/latest/descriptors/spell_lychee/ (at 1286:3)
+[404] https://egohygiene.github.io/identity/contracts/handoff-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://github.com/lycheeverse/lychee (at 1285:3)
+[200] https://www.designtokens.org/tr/2025.10/format/ (at 6:19)
+[200] https://raw.githubusercontent.com/editorconfig-checker/editorconfig-checker/main/.editorconfig-checker.schema.json (at 2:15)
 [200] https://img.shields.io/badge/workflow-mantle.yml-181717?style=flat-square&logo=githubactions&logoColor=white (at 11:100)
-[200] https://github.com/fsfe/reuse-tool (at 324:11)
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 1141:3)
 [200] https://img.shields.io/badge/tests-Bats%20%2B%20ShellCheck-2E8B57?style=flat-square (at 12:94)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
-[200] https://img.shields.io/badge/shells-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25?style=flat-square (at 13:87)
 [200] file://mantle/LICENSE (at 15:12)
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
+[200] https://github.com/sqlfluff/sqlfluff (at 1220:3)
 [200] file://mantle/README.md#overview (at 21:12)
 [200] file://mantle/README.md#project-status (at 22:12)
 [200] file://mantle/README.md#features (at 23:12)
@@ -306,82 +204,108 @@ b.com/lunarmodules/luacheck (at 711:3)
 [200] file://mantle/CONTRIBUTING.md (at 578:6)
 [200] file://mantle/CONTRIBUTING.md (at 605:1)
 [200] file://mantle/LICENSE (at 621:31)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-issue-config.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-issue-config.json --[301]--> https://www.schemastore.org/github-issue-config.json
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Rejected status code: 404 Not Found
+[200] https://megalinter.io/latest/descriptors/repository_betterleaks/ (at 1205:3)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Error (cached)
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Error (cached)
 [200] https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20MSYS2%2FGit%20Bash-0A66C2?style=flat-square (at 14:98)
-[200] https://img.shields.io/badge/license-MIT-blue?style=flat-square (at 15:31)
-[404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
-[200] https://github.com/szmyty (at 5:9)
-[200] https://github.com/egohygiene/empathy/issues (at 12:9)
-[200] file://README.md (at 37:40)
-[200] file://PRINCIPLES.md (at 37:77)
-[200] file://.garden/README.md (at 38:3)
-[200] file://ARCHITECTURE.md (at 38:40)
-[200] file://METHODOLOGY.md (at 38:77)
-[200] file://.garden/templates/note.md (at 39:3)
-[200] file://SYSTEM.md (at 39:40)
-[200] file://DECISIONS.md (at 39:77)
-[200] file://ROADMAP.md (at 40:40)
-[200] file://EPISTEMOLOGY.md (at 40:77)
-[200] file://.garden/views/knowledge.base#Knowledge (at 47:1)
-[200] file://.garden/views/knowledge.base#Needs%20review (at 54:1)
-[200] file://.garden/views/knowledge.base#Projects (at 62:1)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://github.com/egohygiene/empathy/discussions (at 13:14)
-[200] https://github.com/egohygiene/empathy/discussions (at 27:10)
 [200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://docs.github.com/issues/tracking-your-work-with-issues (at 18:5) | 200 OK | Followed 1 redirect. Redirects: https://docs.github.com/issues/tracking-your-work-with-issues --[302]--> https://docs.github.com/en/issues/tracking-your-work-with-issues
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/authoring-guide.md (at 98:1)
-[200] file://egolint/.agents/skills/architecture/create-architecture-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-architecture-document/references/authoring-guide.md (at 98:1)
-[EXCLUDED] https://example.test/branch-protection (at 4:34) | This is due to your 'exclude' values
-[EXCLUDED] https://example.test/security-policy (at 10:34) | This is due to your 'exclude' values
-[EXCLUDED] https://example.test/signed-releases (at 16:34) | This is due to your 'exclude' values
 [200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
 [200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[ERROR] https://egohygiene.dev/schemas/repository-report-summary/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
 [200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://github.com/aws-cloudformation/cfn-lint#configuration (at 18:3)
-[404] https://docs.github.com/en/copilot/customizing-copilot/using-github-copilot-extensions/about-github-copilot-agents (at 13:2) | Rejected status code: 404 Not Found
-[200] https://dart.dev/tools/analysis (at 17:3)
-[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
-[200] https://dart.dev/tools/linter-rules (at 20:3)
-[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[200] https://github.com/ (at 35:20)
-[200] https://github.com/ (at 31:10)
-[200] https://www.schemastore.org/markdown-link-check.json (at 2:15)
-[200] file://EPISTEMOLOGY.md (at 42:43)
-[200] file://AI_CONSTITUTION.md (at 145:1)
-[200] https://raw.githubusercontent.com/ (at 33:10) | 200 OK | Followed 1 redirect. Redirects: https://raw.githubusercontent.com/ --[301]--> https://github.com/
-[200] https://json.schemastore.org/remarkrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/remarkrc.json --[301]--> https://www.schemastore.org/remarkrc.json
-[200] https://www.schemastore.org/htmlhint.json (at 2:15)
-[200] https://github.com/egohygiene/empathy/issues (at 19:13) | OK (cached)
-[EXCLUDED] mailto:szmyty@gmail.com (at 20:15) | This is due to your 'exclude' values
-[200] https://json.schemastore.org/package.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
-[EXCLUDED] mailto:szmyty@gmail.com (at 29:15) | This is due to your 'exclude' values
-[200] https://api.github.com/ (at 32:10)
-[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
-[200] https://registry.npmjs.org/ (at 45:18)
-[EXCLUDED] mailto:support@errata.ai (at 4:13) | This is due to your 'exclude' values
-[200] https://github.com/StepanKropachev/obsidian-pm (at 17:18)
-[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml/badge.svg?branch=main (at 10:90)
-[200] https://github.com/blacksmithgu/obsidian-dataview (at 24:18)
-[200] https://github.com/amperser/proselint (at 11:16) | OK (cached)
+[200] file://README.md (at 98:23)
+[200] file://PURPOSE.md (at 116:10)
+[200] file://SYSTEM.md (at 116:38)
+[200] file://ARCHITECTURE.md (at 117:1)
+[200] file://egolint/README.md (at 143:31)
+[200] file://SYSTEM.md (at 160:10)
+[200] file://ARCHITECTURE.md (at 160:36)
+[200] file://.reports/egolint/architecture/README.md (at 161:1)
+[200] file://.staging/github/README.md (at 186:1)
+[200] file://FOUNDATIONS.md (at 200:10)
+[200] file://SYSTEM.md (at 200:46)
+[200] file://Taskfile.yml (at 225:1)
+[200] file://METHODOLOGY.md (at 241:10)
+[200] file://.vscode/tasks.json (at 241:46)
+[200] file://egolint/README.md (at 266:34)
+[200] file://.reports/README.md (at 267:1)
+[200] file://EPISTEMOLOGY.md (at 281:10)
+[200] file://.github/actions/publish-report-snapshot/action.yml (at 282:1)
+[200] file://AI_CONSTITUTION.md (at 322:10)
+[200] file://tests/test_report_publication.py (at 323:1)
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://EPISTEMOLOGY.md (at 54:35)
-[200] file://PRINCIPLES.md (at 159:18)
-[200] file://EPISTEMOLOGY.md (at 160:3)
+[200] https://github.com/egohygiene/empathy (at 7:13) | OK (cached)
+[200] https://github.com/egohygiene/empathy.git (at 24:13) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
+[200] https://github.com/amperser/proselint (at 1232:3)
+[200] file://egolint/.agents/skills/architecture/create-system-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-system-document/references/authoring-guide.md (at 98:1)
+[200] file://mantle/ARCHITECTURE.md (at 69:6)
+[200] file://mantle/config/architecture/layers.tsv (at 71:1)
+[200] file://mantle/PROVENANCE.md (at 80:8)
+[200] https://img.shields.io/badge/license-MIT-blue?style=flat-square (at 15:31)
+[EXCLUDED] http://localhost:8080/ (at 40:30) | This is due to your 'exclude' values
+[200] https://megalinter.io/latest/descriptors/repository_secretlint/ (at 1403:3)
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 62:2)
+[200] file://mindgarden/profiles/quartz/profile.yaml (at 75:42)
+[200] file://.mega-linter.yml (at 15:10)
+[200] file://egolint/.mega-linter.fast.yml (at 16:22)
+[200] file://.czrc (at 52:33)
+[200] file://.secrets.baseline (at 56:34)
+[200] file://REUSE.toml (at 58:12)
+[200] file://.audits (at 71:7)
+[404] https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-funding-files (at 10:3) | Rejected status code: 404 Not Found
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+  [WARN] egolint/pnpm-lock.yaml: No files found for this input source
+[200] https://github.com/errata-ai/vale (at 1252:3) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
+[200] https://github.com/IBM/tekton-lint (at 11:5) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 12:5) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] file://PURPOSE.md (at 54:3)
+[200] file://VISION.md (at 55:3)
+[200] file://PRINCIPLES.md (at 56:3)
+[200] file://PILLARS.md (at 57:3)
+[200] file://MANIFESTO.md (at 58:3)
+[200] file://EPISTEMOLOGY.md (at 59:3)
+[200] file://AI_CONSTITUTION.md (at 60:3)
+[200] file://ONTOLOGY.md (at 61:3)
+[200] file://PERSONAL_MODEL.md (at 62:3)
+[200] file://FOUNDATIONS.md (at 63:3)
+[200] file://SYSTEM.md (at 64:3)
+[200] file://ARCHITECTURE.md (at 65:3)
+[200] file://DESIGN.md (at 66:3)
+[200] file://DESIGN_SYSTEM.md (at 67:3)
+[200] file://METHODOLOGY.md (at 68:3)
+[200] file://DECISIONS.md (at 69:3)
+[200] file://ROADMAP.md (at 70:3)
+[200] file://META.md (at 71:3)
+[200] https://img.shields.io/badge/shells-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25?style=flat-square (at 13:87)
+[200] https://github.com/sponsors/szmyty (at 34:13)
+[200] https://egohygiene.github.io/empathy/ (at 72:2)
+[200] https://json.schemastore.org/markdownlint.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/markdownlint.json --[301]--> https://www.schemastore.org/markdownlint.json
+[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/validation-checklist.md (at 95:5)
+[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/authoring-guide.md (at 97:1)
 [200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[404] https://egohygiene.github.io/identity/contracts/handoff-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15)
 [200] https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons (at 7:6)
+[200] https://github.com/yoheimuta/protolint (at 11:5) | OK (cached)
+[200] https://json.schemastore.org/prettierrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/prettierrc.json --[301]--> https://www.schemastore.org/prettierrc.json
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://github.com/reconquest/shdoc.git (at 95:14) | OK (cached)
+[200] file://mindgarden/profiles/obsidian/profile.json (at 33:1)
+[200] file://PURPOSE.md (at 103:33)
+[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md (at 98:1)
 [200] https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable (at 8:6)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] file://README.md (at 96:32)
+[200] file://pyproject.toml (at 96:58)
+[200] file://.staging/github/README.md (at 97:48)
 [404] https://egohygiene.github.io/identity/contracts/project.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview (at 7:6)
+[200] file://mantle/config/installers.lock.tsv (at 4:1)
+[200] https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json (at 2:15)
+[200] https://protobuf.dev/programming-guides/style/ (at 12:5)
+[200] https://megalinter.io/10.0.0/configuration/ (at 283:3)
+[200] https://agentskills.io/specification (at 12:25)
+[200] https://megalinter.io/10.0.0/descriptors/repository_betterleaks/ (at 285:3)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
 [200] file://.staging/github/README.md (at 38:35)
 [200] file://egolint/README.md (at 75:5)
 [200] file://.github/actions/README.md (at 76:1)
@@ -396,138 +320,230 @@ b.com/lunarmodules/luacheck (at 711:3)
 [200] file://ARCHITECTURE.md (at 92:33)
 [200] file://DECISIONS.md (at 94:4)
 [200] file://ROADMAP.md (at 94:39)
-[200] https://github.com/egohygiene/empathy (at 7:13) | OK (cached)
-[200] https://github.com/egohygiene/empathy/blob/main/.github/workflows/mantle.yml (at 11:12)
-[200] file://egolint/.agents/skills/architecture/create-system-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-system-document/references/authoring-guide.md (at 98:1)
 [200] file://PURPOSE.md (at 89:46)
 [200] file://VISION.md (at 89:74)
 [200] file://PRINCIPLES.md (at 90:1)
 [200] file://PILLARS.md (at 90:39)
-[200] file://ARCHITECTURE.md (at 29:53)
-[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml (at 10:12)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] file://PURPOSE.md (at 103:33)
-[200] file://mindgarden/profiles/obsidian/profile.json (at 33:1)
-[200] https://github.com/overtrue/phplint (at 9:3) | OK (cached)
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/.shellrc (at 13:12)
-[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15) | OK (cached)
-  [WARN] egolint/pnpm-lock.yaml: No files found for this input source
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/tests/README.md (at 12:12)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json (at 2:33)
-[200] https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview (at 7:6)
-[200] https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json (at 2:15)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
-[200] https://oss.anchore.com/docs/reference/grype/configuration/ (at 11:5)
-[200] https://github.com/anchore/grype (at 12:5) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/platforms/README.md (at 14:12)
-[200] file://egolint/.agents/skills/quality/repository-cleanup/SKILL.md (at 30:11)
-[200] https://github.com/chris48s/v8r (at 11:5) | OK (cached)
-[200] https://github.com/egohygiene/empathy/discussions/categories/ideas (at 31:10)
-[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json (at 15:11)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://chris48s.github.io/v8r/ (at 12:5)
-[200] file://mantle/config/architecture/layers.tsv (at 14:1)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] file://mantle/LICENSE (at 18:43)
-[200] file://README.md (at 96:32)
-[200] file://pyproject.toml (at 96:58)
-[200] file://.staging/github/README.md (at 97:48)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] file://SYSTEM.md (at 34:1)
-[200] https://web.dev/articles/maskable-icon (at 9:6)
-[200] https://github.com/egohygiene/empathy/discussions/categories/documentation (at 35:10)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
 [200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] file://EPISTEMOLOGY.md (at 42:43)
+[200] file://AI_CONSTITUTION.md (at 145:1)
+[200] file://README.md (at 38:40)
+[200] file://PRINCIPLES.md (at 38:77)
+[200] file://.garden/README.md (at 39:3)
+[200] file://ARCHITECTURE.md (at 39:40)
+[200] file://METHODOLOGY.md (at 39:77)
+[200] file://.garden/templates/note.md (at 40:3)
+[200] file://SYSTEM.md (at 40:40)
+[200] file://DECISIONS.md (at 40:77)
+[200] file://ROADMAP.md (at 41:40)
+[200] file://EPISTEMOLOGY.md (at 41:77)
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 45:1) | OK (cached)
+[200] file://.garden/views/knowledge.base#Knowledge (at 55:1)
+[200] file://.garden/views/knowledge.base#Needs%20review (at 62:1)
+[200] file://.garden/views/knowledge.base#Projects (at 70:1)
+[200] https://web.dev/articles/maskable-icon (at 9:6)
+[200] https://github.com/chris48s/v8r (at 11:5) | OK (cached)
+[200] https://megalinter.io/10.0.0/removed-linters/ (at 284:3)
+[200] https://github.com/jackyzha0/quartz.git (at 53:17) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
+[200] https://github.com/jackyzha0/quartz.git (at 10:20) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
+[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json (at 15:11)
+[200] https://github.com/loeffel-io/ls-lint (at 12:5) | OK (cached)
+[200] https://www.schemastore.org/jscpd.json (at 2:15)
+[200] https://github.com/ (at 31:10) | OK (cached)
+[200] https://chris48s.github.io/v8r/ (at 12:5)
+[200] https://github.com/egohygiene/empathy/blob/main/mindgarden/profiles/agent/README.md (at 192:22)
 [200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://github.com/egohygiene/empathy/security/advisories/new (at 39:10) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy/security/advisories/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fegohygiene%2Fempathy%2Fsecurity%2Fadvisories%2Fnew
-[200] https://ogp.me/ (at 6:19) | OK (cached)
-[200] file://egolint/.config/toolchain/complementary-tools.json (at 15:1)
-[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md (at 98:1)
-[404] https://egohygiene.github.io/identity/contracts/candidate-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://unpkg.com/knip@6/schema.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://unpkg.com/knip@6/schema.json --[302]--> https://unpkg.com/knip@6.32.2/schema.json
-[200] https://docs.ansible.com/projects/lint/configuring/ (at 19:3)
-[200] https://github.com/realm/SwiftLint (at 11:5) | OK (cached)
-[200] https://docs.ansible.com/projects/lint/rules/ (at 22:3)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[404] https://github.com/google/osv-scanner/releases/download/v$%7BOSV_SCANNER_VERSION%7D/osv-scanner_linux_amd64 (at 57:12) | Rejected status code: 404 Not Found
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 15:5) | OK (cached)
 [200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://latexindentpl.readthedocs.io/ (at 10:5) | 200 OK | Followed 1 redirect. Redirects: https://latexindentpl.readthedocs.io/ --[302]--> https://latexindentpl.readthedocs.io/en/latest/
+[200] https://raw.githubusercontent.com/ (at 33:10) | 200 OK | Followed 1 redirect. Redirects: https://raw.githubusercontent.com/ --[301]--> https://github.com/
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://api.github.com/ (at 32:10)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://github.com/secretlint/secretlint (at 1402:3)
+[200] file://egolint/.agents/skills/quality/audit-repository/SKILL.md (at 28:11)
+[200] file://egolint/.agents/specs/quality/auditor.spec.md (at 28:97)
+[200] https://trivy.dev/docs/latest/supply-chain/sbom/ (at 14:5)
 [404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Error (cached)
-[200] https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible-lint-config.json (at 2:33)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-[200] https://json.schemastore.org/prettierrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/prettierrc.json --[301]--> https://www.schemastore.org/prettierrc.json
-[200] https://json.schemastore.org/github-action.json (at 71:6) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 72:6) | OK (cached)
-[200] https://taskfile.dev/schema.json (at 73:6) | OK (cached)
-[404] https://github.com/google/osv-scanner/releases/download/v$%7BOSV_SCANNER_VERSION%7D/osv-scanner_linux_amd64 (at 57:12) | Rejected status code: 404 Not Found
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Error (cached)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://www.schemastore.org/stylelintrc.json (at 2:15)
+[404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
+[200] file://egolint/.agents/skills/architecture/architecture-authoring/SKILL.md (at 30:11)
+[200] file://egolint/.agents/specs/architecture (at 30:153)
+[200] file://README.md (at 33:3)
+[200] file://ARCHITECTURE.md (at 34:3)
+[200] file://SYSTEM.md (at 35:3)
+[200] file://DECISIONS.md (at 36:3)
+[200] file://ROADMAP.md (at 37:3)
+[200] https://egohygiene.github.io/empathy/ (at 41:3) | OK (cached)
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 42:3) | OK (cached)
+[200] file://llms.txt (at 43:3)
+[200] https://github.com/egohygiene/empathy (at 44:3) | OK (cached)
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/egohygiene/empathy.git (at 24:13) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-[200] https://realm.github.io/SwiftLint/rule-directory.html (at 12:5)
-[200] https://osv.dev/ (at 426:58)
-[200] https://google.github.io/osv-scanner/ (at 27:5)
-[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/validation-checklist.md (at 95:5)
-[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/authoring-guide.md (at 97:1)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[EXCLUDED] https://example.test/branch-protection (at 4:34) | This is due to your 'exclude' values
+[EXCLUDED] https://example.test/security-policy (at 10:34) | This is due to your 'exclude' values
+[EXCLUDED] https://example.test/signed-releases (at 16:34) | This is due to your 'exclude' values
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://PURPOSE.md (at 128:30)
-[200] file://VISION.md (at 128:61)
-[200] https://github.com/bats-core/bats-core (at 12:3)
-[200] https://json.schemastore.org/markdownlint.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/markdownlint.json --[301]--> https://www.schemastore.org/markdownlint.json
-[200] https://www.checkov.io/ (at 11:5) | OK (cached)
-[200] https://github.com/rhysd/actionlint/blob/main/docs/config.md (at 17:3)
-[200] https://www.checkov.io/2.Basics/CLI%20Command%20Reference.html (at 12:5)
-[200] https://json.schemastore.org/sarif-2.1.0.json (at 419:35) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/sarif-2.1.0.json --[301]--> https://www.schemastore.org/sarif-2.1.0.json
-[200] https://info.arxiv.org/help/submit_tex.html (at 7:3)
-[200] https://github.com/sponsors/szmyty (at 34:13)
-[200] file://VISION.md (at 195:26)
-[200] file://PILLARS.md (at 195:52)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://github.com/egohygiene/empathy (at 9:13) | OK (cached)
-[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json (at 2:33)
-[200] https://info.arxiv.org/help/ancillary_files.html (at 8:3)
-[200] https://docs.rubocop.org/rubocop/latest/configuration.html (at 13:5)
+[200] https://www.schemastore.org/markdown-link-check.json (at 2:15)
 [200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://rubystyle.guide/ (at 14:5)
+[200] file://DESIGN.md (at 36:1)
+[200] file://ONTOLOGY.md (at 147:31)
+[200] file://DESIGN.md (at 186:1)
+[200] file://DESIGN.md (at 224:56)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://quartz.jzhao.xyz/configuration (at 6:19)
+[200] file://egolint/.config/toolchain/complementary-tools.json (at 15:1)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://github.com/realm/SwiftLint (at 11:5) | OK (cached)
+[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml (at 10:12)
+[200] file://egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md (at 29:11)
+[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 29:108)
+[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] file://SYSTEM.md (at 34:1)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://ls-lint.org/ (at 11:5)
+[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
+[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
+[404] https://egohygiene.github.io/identity/contracts/candidate-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] file://ARCHITECTURE.md (at 29:53)
+[200] https://realm.github.io/SwiftLint/rule-directory.html (at 12:5)
+[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml/badge.svg?branch=main (at 10:90)
+[200] https://github.com/egohygiene/empathy/discussions (at 27:10) | OK (cached)
+[200] https://docs.github.com/issues/tracking-your-work-with-issues (at 18:5) | 200 OK | Followed 1 redirect. Redirects: https://docs.github.com/issues/tracking-your-work-with-issues --[302]--> https://docs.github.com/en/issues/tracking-your-work-with-issues
+[200] https://docs.stoplight.io/docs/spectral/e5b9616d6d50c-rulesets (at 16:3)
+[200] https://github.com/egohygiene/empathy/blob/main/.github/workflows/mantle.yml (at 11:12)
+[200] https://json.schemastore.org/github-issue-config.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-issue-config.json --[301]--> https://www.schemastore.org/github-issue-config.json
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] file://DESIGN_SYSTEM.md (at 145:46)
+[200] file://mindgarden/contracts/garden.schema.json (at 37:3)
+[200] file://mindgarden/contracts/note.schema.json (at 39:3)
+[200] file://mindgarden/contracts/obsidian-profile.schema.json (at 41:3)
+[200] file://mindgarden/contracts/provenance.schema.json (at 43:3)
+[200] file://mindgarden/contracts/context-pack.schema.json (at 45:3)
+[200] file://mindgarden/contracts/index.schema.json (at 46:7)
+[200] file://mindgarden/contracts/publish-profile.schema.json (at 48:3)
+[200] file://mindgarden/scripts/validate_garden.py (at 50:3)
+[200] file://mindgarden/scripts/garden_agent.py (at 52:3)
+[200] file://mindgarden/scripts/publish_garden.py (at 54:3)
+[200] file://mindgarden/scripts/quartz_site.py (at 55:3)
+[200] file://mindgarden/templates/note.md (at 57:3)
+[200] file://mindgarden/PROVENANCE.md (at 74:1)
+[200] file://mindgarden/EXTRACTION.md (at 76:1)
+[200] file://mindgarden/profiles/obsidian (at 80:37)
+[200] file://mindgarden/profiles/agent (at 84:37)
+[200] file://mindgarden/profiles/quartz (at 88:34)
+[200] https://www.schemastore.org/coffeelint.json (at 2:15)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/.shellrc (at 13:12)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/tests/README.md (at 12:12)
+[200] https://www.checkov.io/ (at 11:5) | OK (cached)
+[200] https://www.checkov.io/2.Basics/CLI%20Command%20Reference.html (at 12:5)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://github.com/overtrue/phplint (at 9:3) | OK (cached)
 [200] https://www.rubyschema.org/rubocop.json (at 2:33)
-[200] https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html (at 8:6)
-[200] https://raw.githubusercontent.com/editorconfig-checker/editorconfig-checker/main/.editorconfig-checker.schema.json (at 2:15)
-[200] https://github.com/btford/write-good (at 1:12)
-[200] https://developer.mozilla.org/en-US/docs/Glossary/Favicon (at 7:6)
-[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip (at 6:11) | 200 OK | Followed 3 redirects. Redirects: https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip --[301]--> https://github.com/vale-cli/proselint/releases/latest/download/proselint.zip --[302]--> https://github.com/vale-cli/proselint/releases/download/v0.3.4/proselint.zip --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/189305362/4395a0e6-cc11-4ea3-84a4-25cf080bb429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-14T22%3A28%3A25Z&rscd=attachment%3B+filename%3Dproselint.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-14T21%3A27%3A46Z&ske=2026-08-14T22%3A28%3A25Z&sks=b&skv=2018-11-09&sig=hyJhQrhD40B0Xz7WAE5lrViLR3jI%2Bp3HKMcLkNIt3hA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njc0MzUxMCwibmJmIjoxNzg2NzQzMjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PwNDXYz5UXOhrOxFRmyeTc9lRX7I1ovle9HdR_WNy_U&response-content-disposition=attachment%3B%20filename%3Dproselint.zip&response-content-type=application%2Foctet-stream
-[200] https://github.com/errata-ai/proselint/releases.atom (at 7:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/proselint/releases.atom --[301]--> https://github.com/vale-cli/proselint/releases.atom
-[200] https://github.com/errata-ai/proselint/issues/new (at 8:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/errata-ai/proselint/issues/new --[301]--> https://github.com/vale-cli/proselint/issues/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fvale-cli%2Fproselint%2Fissues%2Fnew
-[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 7:19)
-[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 3130:14)
-[200] https://github.com/hadolint/hadolint#configure (at 21:3)
-[200] https://github.com/hadolint/hadolint#rules (at 24:3)
-[200] https://github.com/jackyzha0/quartz.git (at 10:20) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
-[200] https://github.com/jackyzha0/quartz.git (at 53:17) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
-[200] https://github.com/errata-ai/write-good/releases.atom (at 2:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/write-good/releases.atom --[301]--> https://github.com/vale-cli/write-good/releases.atom
-[200] https://github.com/cmhughes/latexindent.pl (at 11:5)
+[200] https://docs.rubocop.org/rubocop/latest/configuration.html (at 13:5)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/platforms/README.md (at 14:12)
+[200] https://rubystyle.guide/ (at 14:5)
+[200] https://github.com/aws-cloudformation/cfn-lint#configuration (at 18:3)
+[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
+[200] https://github.com/rhysd/actionlint/blob/main/docs/config.md (at 17:3)
+[200] https://github.com/wagoid/commitlint-github-action (at 287:3)
 [404] https://github.com/egohygiene/empathy/actions/runs/101 (at 27:18) | Rejected status code: 404 Not Found
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/osv (at 24:16) | Rejected status code: 404 Not Found
+[200] https://github.com/egohygiene/mindgarden (at 5:31)
+[200] https://github.com/hadolint/hadolint (at 255:11) | OK (cached)
+[200] https://github.com/blacksmithgu/obsidian-dataview (at 24:18)
+[200] https://github.com/bats-core/bats-core (at 12:3)
+[200] https://github.com/egohygiene/empathy/discussions/categories/ideas (at 31:10)
+[200] https://github.com/egohygiene/empathy/discussions/categories/documentation (at 35:10)
+[200] https://github.com/StepanKropachev/obsidian-pm (at 17:18)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://www.schemastore.org/npmpackagejsonlintrc.json (at 2:15)
+[200] https://github.com/egohygiene/empathy/security/advisories/new (at 39:10) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy/security/advisories/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fegohygiene%2Fempathy%2Fsecurity%2Fadvisories%2Fnew
+[200] https://www.schemastore.org/github-action.json (at 2:33)
+[200] https://github.com/anchore/grype (at 12:5) | OK (cached)
+[200] https://raw.githubusercontent.com/nvuillam/npm-groovy-lint/refs/heads/main/docs/groovy-lint.jsonschema.json (at 2:15)
+[200] file://mindgarden/profiles/obsidian/README.md (at 31:1)
+[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 3130:14) | OK (cached)
+[200] https://github.com/gitleaks/gitleaks (at 29:11)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] file://.github/actions/normalize-repository-report/repository-report-summary.schema.json (at 8:1)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://oss.anchore.com/docs/reference/grype/configuration/ (at 11:5)
+[200] https://developer.mozilla.org/en-US/docs/Glossary/Favicon (at 7:6)
+[200] https://unpkg.com/knip@6/schema.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://unpkg.com/knip@6/schema.json --[302]--> https://unpkg.com/knip@6.32.2/schema.json
+[200] https://github.com/trufflesecurity/trufflehog (at 12:5) | OK (cached)
+[200] https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html (at 8:6)
+[200] file://mantle/config/architecture/layers.tsv (at 14:1)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://ogp.me/ (at 6:19) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://github.com/Yelp/detect-secrets (at 39:11)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[404] https://docs.github.com/en/copilot/customizing-copilot/using-github-copilot-extensions/about-github-copilot-agents (at 13:2) | Rejected status code: 404 Not Found
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://github.com/astral-sh/ruff-pre-commit (at 162:11)
+[200] https://github.com/pre-commit/pre-commit-hooks (at 71:11)
+[200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json (at 2:33)
+[200] https://json.schemastore.org/remarkrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/remarkrc.json --[301]--> https://www.schemastore.org/remarkrc.json
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://oss.anchore.com/docs/reference/syft/configuration/ (at 11:5)
+[200] https://megalinter.io/latest/descriptors/repository_syft/ (at 12:5) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible-lint-config.json (at 2:33)
+[200] https://github.com/google/addlicense (at 51:11)
+[200] https://docs.ansible.com/projects/lint/configuring/ (at 19:3)
+[200] https://docs.ansible.com/projects/lint/rules/ (at 22:3)
+[200] https://latexindentpl.readthedocs.io/ (at 10:5) | 200 OK | Followed 1 redirect. Redirects: https://latexindentpl.readthedocs.io/ --[302]--> https://latexindentpl.readthedocs.io/en/latest/
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://github.com/abravalheri/validate-pyproject (at 196:11)
+[200] file://PURPOSE.md (at 128:30)
+[200] file://VISION.md (at 128:61)
+[200] https://github.com/egohygiene/empathy (at 9:13) | OK (cached)
+[EXCLUDED] mailto:support@errata.ai (at 4:13) | This is due to your 'exclude' values
+[404] https://egohygiene.github.io/identity/contracts/profile.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://github.com/nbQA-dev/nbQA (at 179:11)
+[200] https://github.com/pre-commit/mirrors-prettier (at 206:11)
+[200] https://github.com/amperser/proselint (at 11:16) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] file://.obsidian/README.md (at 10:35)
+[200] file://.garden/dashboard.md (at 35:12)
+[200] file://.garden/home.md (at 36:1)
+[200] file://llms.txt (at 38:21)
+[200] file://mindgarden/profiles/agent/README.md (at 39:1)
+[200] https://egohygiene.github.io/empathy/ (at 42:24) | OK (cached)
+[200] file://mindgarden/profiles/quartz/README.md (at 44:1)
+[200] https://github.com/biomejs/pre-commit (at 217:11)
+[200] https://github.com/igorshubovych/markdownlint-cli (at 227:11)
+[200] https://github.com/shellcheck-py/shellcheck-py (at 245:11)
+[200] https://github.com/openstack/bashate (at 265:11)
+[200] https://github.com/executablebooks/mdformat (at 237:11) | 200 OK | Followed 1 redirect. Redirects: https://github.com/executablebooks/mdformat --[301]--> https://github.com/hukkin/mdformat
+[200] https://github.com/python-jsonschema/check-jsonschema (at 275:11)
+[200] https://github.com/codespell-project/codespell (at 291:11)
+[200] https://github.com/crate-ci/typos (at 303:11)
+[200] https://github.com/hadolint/hadolint#configure (at 21:3)
+[200] https://github.com/hadolint/hadolint#rules (at 24:3)
+[200] https://github.com/fsfe/reuse-tool (at 324:11)
+[200] https://github.com/btford/write-good (at 1:12)
 [404] https://github.com/rhysd/actionlint/releases/download/v$%7BACTIONLINT_VERSION%7D/$%7Barchive_name%7D (at 52:12) | Rejected status code: 404 Not Found
-[200] https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json (at 4:15) | 200 OK | Followed 1 redirect. Redirects: https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json --[302]--> https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.67.0/doc/json_schema.json
+[200] https://github.com/errata-ai/proselint/issues/new (at 8:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/errata-ai/proselint/issues/new --[301]--> https://github.com/vale-cli/proselint/issues/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fvale-cli%2Fproselint%2Fissues%2Fnew
+[200] https://github.com/cmhughes/latexindent.pl (at 11:5)
+[200] https://github.com/errata-ai/proselint/releases.atom (at 7:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/proselint/releases.atom --[301]--> https://github.com/vale-cli/proselint/releases.atom
+[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip (at 6:11) | 200 OK | Followed 3 redirects. Redirects: https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip --[301]--> https://github.com/vale-cli/proselint/releases/latest/download/proselint.zip --[302]--> https://github.com/vale-cli/proselint/releases/download/v0.3.4/proselint.zip --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/189305362/4395a0e6-cc11-4ea3-84a4-25cf080bb429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-14T22%3A29%3A17Z&rscd=attachment%3B+filename%3Dproselint.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-14T21%3A28%3A26Z&ske=2026-08-14T22%3A29%3A17Z&sks=b&skv=2018-11-09&sig=SiIui0LFmzFo%2BQ1NNXvmZLtRryuz4D%2BL6jqRz5vYkds%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njc0NDU3NiwibmJmIjoxNzg2NzQ0Mjc2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WLgyKUCZp-T9VaKHTUcpJMspI67iHvfVCL_sPSbUAjM&response-content-disposition=attachment%3B%20filename%3Dproselint.zip&response-content-type=application%2Foctet-stream
+[200] https://taskfile.dev/docs/guide#including-other-taskfiles (at 286:3)
+[200] https://trufflesecurity.com/docs/configuration-file-reference (at 13:5)
 📝 Summary
 ---------------------
-🔍 Total..........565
-🔗 Unique.........401
-✅ Successful.....526
+🔍 Total..........568
+🔗 Unique.........402
+✅ Successful.....529
 ⏳ Timeouts.........0
-🔀 Redirected......33
+🔀 Redirected......31
 👻 Excluded.........7
 ❓ Unknown..........0
 🚫 Errors..........32
@@ -606,8 +622,8 @@ https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/
 
 Errors in tests/fixtures/repository-intelligence-dashboard/megalinter/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
 
 Errors in tests/fixtures/repository-intelligence-dashboard/osv/summary.json
@@ -629,7 +645,7 @@ Host: github.com
   Total requests: 135
   Successful: 124 (91.9%)
   Client errors (4xx): 11
-  Median response time: 456ms
+  Median response time: 433ms
   Cache hit rate: 21.5%
   Cache hits: 29, misses: 106
 
@@ -637,127 +653,107 @@ Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 90ms
+  Median response time: 54ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
 Host: json.schemastore.org
   Total requests: 45
   Successful: 45 (100.0%)
-  Median response time: 21ms
+  Median response time: 111ms
   Cache hit rate: 77.8%
   Cache hits: 35, misses: 10
 
 Host: raw.githubusercontent.com
   Total requests: 14
   Successful: 14 (100.0%)
-  Median response time: 254ms
+  Median response time: 76ms
   Cache hit rate: 21.4%
   Cache hits: 3, misses: 11
 
 Host: json-schema.org
   Total requests: 13
   Successful: 13 (100.0%)
-  Median response time: 198ms
+  Median response time: 93ms
   Cache hit rate: 92.3%
   Cache hits: 12, misses: 1
 
 Host: egohygiene.github.io
-  Total requests: 7
-  Successful: 3 (42.9%)
+  Total requests: 10
+  Successful: 6 (60.0%)
   Client errors (4xx): 4
-  Median response time: 69ms
-  Cache hit rate: 28.6%
-  Cache hits: 2, misses: 5
+  Median response time: 57ms
+  Cache hit rate: 40.0%
+  Cache hits: 4, misses: 6
 
 Host: www.schemastore.org
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 77ms
+  Median response time: 65ms
 
 Host: taskfile.dev
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 156ms
-  Cache hit rate: 66.7%
-  Cache hits: 4, misses: 2
+  Median response time: 279ms
+  Cache hit rate: 57.1%
+  Cache hits: 4, misses: 3
 
 Host: img.shields.io
   Total requests: 5
   Successful: 5 (100.0%)
-  Median response time: 101ms
+  Median response time: 22ms
 
 Host: docs.github.com
   Total requests: 4
   Successful: 2 (50.0%)
   Client errors (4xx): 2
-  Median response time: 157ms
-
-Host: developer.mozilla.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 73ms
+  Median response time: 54ms
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 3ms
+  Median response time: 10ms
+
+Host: developer.mozilla.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 60ms
 
 Host: www.checkov.io
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 91ms
+  Median response time: 56ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
 Host: oss.anchore.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 142ms
+  Median response time: 121ms
 
-Host: prettier.io
+Host: eslint.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 132ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: info.arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 124ms
-
-Host: clang.llvm.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 99ms
+  Median response time: 188ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: ogp.me
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 212ms
+  Median response time: 72ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: docs.ansible.com
+Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 169ms
+  Median response time: 203ms
 
 Host: yamllint.readthedocs.io
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 181ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: developer.salesforce.com
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 84ms
+  Median response time: 226ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -765,192 +761,212 @@ Host: egohygiene.io
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 164ms
+  Median response time: 444ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: eslint.org
+Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 141ms
+  Median response time: 229ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: www.designtokens.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 448ms
+Host: docs.ansible.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 60ms
+
+Host: developer.salesforce.com
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 165ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 206ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
 Host: trivy.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 255ms
+  Median response time: 187ms
 
-Host: chris48s.github.io
+Host: www.rubyschema.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 112ms
+  Median response time: 218ms
+
+Host: web.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 365ms
+
+Host: protobuf.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 89ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 111ms
 
 Host: checkstyle.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 159ms
+  Median response time: 59ms
 
-Host: rubocop.org
+Host: unpkg.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 106ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1064ms
+  Median response time: 163ms
 
 Host: latexindentpl.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 298ms
+  Median response time: 225ms
 
-Host: golangci-lint.run
+Host: phpstan.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 142ms
+  Median response time: 137ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 230ms
+
+Host: quartz.jzhao.xyz
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 249ms
+
+Host: docs.rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 163ms
+
+Host: developer.apple.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 138ms
+
+Host: registry.npmjs.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 80ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 282ms
 
 Host: api.scorecard.dev
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 354ms
+  Median response time: 204ms
 
-Host: www.rubyschema.org
+Host: chris48s.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 175ms
-
-Host: unpkg.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 115ms
-
-Host: trufflesecurity.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 645ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 194ms
-
-Host: docs.rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 132ms
-
-Host: registry.npmjs.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 71ms
-
-Host: humanstxt.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 756ms
-
-Host: web.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 767ms
-
-Host: www.nongnu.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 243ms
-
-Host: google.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 120ms
-
-Host: zizmor.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 127ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 111ms
-
-Host: rubystyle.guide
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 131ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 114ms
-
-Host: ls-lint.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 200ms
+  Median response time: 121ms
 
 Host: stylelint.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 175ms
+  Median response time: 331ms
 
-Host: quartz.jzhao.xyz
+Host: rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 277ms
+  Median response time: 252ms
 
-Host: developer.apple.com
+Host: humanstxt.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 116ms
-
-Host: agentskills.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 179ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 101ms
-
-Host: api.github.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 175ms
-
-Host: phpstan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 53ms
-
-Host: realm.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 198ms
+  Median response time: 662ms
 
 Host: ansible.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 419ms
+  Median response time: 260ms
 
 Host: osv.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 60ms
+  Median response time: 200ms
 
-Host: docs.stoplight.io
+Host: realm.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 359ms
+  Median response time: 96ms
+
+Host: rubystyle.guide
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 252ms
+
+Host: api.github.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 128ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 205ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 233ms
+
+Host: www.nongnu.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 291ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 61ms
+
+Host: www.designtokens.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 150ms
+
+Host: zizmor.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 89ms
+
+Host: raku.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 947ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 147ms
+
+Host: ls-lint.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 332ms
+
+Host: psalm.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 226ms
 
 Host: github
   Total requests: 0
@@ -960,7 +976,7 @@ Host: egohygiene.dev
   Total requests: 0
   Successful: 0 (100.0%)
 
-(Truncated to last 44444 characters out of 58328)
+(Truncated to last 44444 characters out of 58251)
 ```
 
 </details>
@@ -1555,7 +1571,7 @@ unformatted: File would be reformatted
 ```
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-14T21:33:07Z	info-0	trufflehog	running source	{"source_manager_worker_id": "pCr89", "with_units": true}
+2026-08-14T21:50:57Z	info-0	trufflehog	running source	{"source_manager_worker_id": "r6iSV", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -1565,7 +1581,7 @@ File: egolint/.config/security/trufflehog/.trufflehogignore
 Line: 36
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-14T21:33:07Z	info-0	trufflehog	finished scanning	{"chunks": 1341, "bytes": 7544721, "verified_secrets": 1, "unverified_secrets": 0, "scan_duration": "597.88465ms", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":2,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":284}}
+2026-08-14T21:50:58Z	info-0	trufflehog	finished scanning	{"chunks": 1341, "bytes": 7548945, "verified_secrets": 1, "unverified_secrets": 0, "scan_duration": "726.128388ms", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":2,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":426}}
 ```
 
 </details>
@@ -1574,185 +1590,185 @@ Analyze: Run `trufflehog analyze` to analyze this key's permissions
 <summary>⚠️ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-2026-08-14 21:33:07,727 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-08-14 21:33:08,117 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
-2026-08-14 21:33:08,117 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-08-14 21:33:08,119 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-08-14 21:33:08,119 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-08-14 21:33:08,738 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-08-14 21:33:08,738 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-08-14 21:33:08,738 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-08-14 21:33:08,738 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-08-14 21:33:08,751 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-08-14 21:33:08,751 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-08-14 21:33:08,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
+2026-08-14 21:50:45,839 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-08-14 21:50:46,083 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
+2026-08-14 21:50:46,084 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-08-14 21:50:46,088 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-08-14 21:50:46,090 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-08-14 21:50:46,692 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-08-14 21:50:46,692 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-08-14 21:50:46,692 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-08-14 21:50:46,692 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-08-14 21:50:46,726 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-08-14 21:50:46,737 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-08-14 21:50:46,746 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,756 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
+2026-08-14 21:50:46,747 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,756 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
+2026-08-14 21:50:46,747 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,756 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
+2026-08-14 21:50:46,747 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,756 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
+2026-08-14 21:50:46,747 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
+2026-08-14 21:50:46,747 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
+2026-08-14 21:50:46,747 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
+2026-08-14 21:50:46,747 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
+2026-08-14 21:50:46,750 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
+2026-08-14 21:50:46,750 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,760 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
+2026-08-14 21:50:46,750 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,760 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
+2026-08-14 21:50:46,750 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,760 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
+2026-08-14 21:50:46,750 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,760 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
+2026-08-14 21:50:46,750 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,760 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,760 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
+2026-08-14 21:50:46,751 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,761 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
+2026-08-14 21:50:46,752 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
+2026-08-14 21:50:46,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
+2026-08-14 21:50:46,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
+2026-08-14 21:50:46,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
+2026-08-14 21:50:46,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+2026-08-14 21:50:46,756 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+2026-08-14 21:50:46,756 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-08-14 21:50:46,756 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-08-14 21:50:46,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-08-14 21:50:46,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,762 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-08-14 21:50:46,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,763 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-08-14 21:50:46,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,763 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-08-14 21:50:46,757 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,763 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-08-14 21:50:46,758 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,763 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-08-14 21:50:46,758 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 21:33:08,811 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-14 21:33:08,879 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-14 21:33:08,884 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-14 21:33:08,885 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-14 21:33:08,886 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-14 21:33:08,905 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-14 21:33:08,909 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-14 21:33:08,918 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-14 21:33:08,918 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-14 21:33:08,920 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-14 21:33:08,923 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-14 21:33:08,925 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-14 21:33:08,958 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 21:33:08,958 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-14 21:33:08,958 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 21:33:08,958 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-14 21:33:08,973 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-14 21:33:08,994 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-14 21:33:09,253 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-14 21:33:09,253 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 21:33:09,253 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-14 21:33:09,253 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 21:33:09,254 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-14 21:33:09,254 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-14 21:33:09,314 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-14 21:33:09,315 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-14 21:33:09,315 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-14 21:33:09,315 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-14 21:33:15,887 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-14 21:33:15,887 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-14 21:33:15,887 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-14 21:33:15,887 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-14 21:33:15,887 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-14 21:33:15,888 [MainThread  ] [INFO ]  Successfully created Ansible graph
-2026-08-14 21:33:15,899 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-14 21:33:15,902 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-14 21:50:46,806 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-14 21:50:46,978 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-14 21:50:46,978 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-14 21:50:47,007 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-14 21:50:47,027 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 21:50:47,030 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-14 21:50:47,030 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-14 21:50:47,030 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 21:50:47,033 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-14 21:50:47,085 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-14 21:50:47,086 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-14 21:50:47,102 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-14 21:50:47,103 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-14 21:50:47,131 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-14 21:50:47,141 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-14 21:50:47,145 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-14 21:50:47,150 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-14 21:50:47,152 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-14 21:50:47,207 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-14 21:50:47,208 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 21:50:47,208 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-14 21:50:47,209 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 21:50:47,217 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-14 21:50:47,218 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-14 21:50:47,280 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-14 21:50:47,280 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-14 21:50:47,280 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-14 21:50:47,281 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-14 21:50:56,411 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-14 21:50:56,412 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-14 21:50:56,491 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-14 21:50:56,494 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-14 21:50:56,494 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-14 21:50:56,494 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-14 21:50:56,494 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-14 21:50:56,495 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -1761,10 +1777,6 @@ Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
-Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
 Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -1773,6 +1785,10 @@ Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
 Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -2022,13 +2038,13 @@ step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.16.0   
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.16.0    github-action  GHSA-g699-3x6g-wm3g  Medium    0.3% (16th)  0.1    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.12.0    github-action  GHSA-mxr3-8whj-j74r  Medium    0.2% (12th)  0.1    
 elliptic                     6.6.1                                               npm            GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0071] ERROR discovered vulnerabilities at or above the severity threshold
+[0089] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 324 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 325 errors</summary>
 
 ```
 egolint/.agents/skills/architecture/create-ontology-document/references/validation-checklist.md:markdown [12:94 - 30:46] (19 lines, 146 tokens)
@@ -2629,7 +2645,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 227            │ 23703       │ 270123       │ 138          │ 1660 (7.00%)     │ 17050 (6.31%)     │
+│ markdown   │ 227            │ 23722       │ 270348       │ 138          │ 1660 (7.00%)     │ 17050 (6.31%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -2641,7 +2657,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 41             │ 10446       │ 80965        │ 17           │ 170 (1.63%)      │ 1201 (1.48%)      │
+│ python     │ 41             │ 10475       │ 81165        │ 17           │ 170 (1.62%)      │ 1201 (1.48%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -2663,16 +2679,16 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 233            │ 19359       │ 102269       │ 83           │ 981 (5.07%)      │ 6418 (6.28%)      │
+│ yaml       │ 233            │ 19399       │ 102629       │ 84           │ 986 (5.08%)      │ 6500 (6.33%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 816            │ 96908       │ 650105       │ 324          │ 4171 (4.30%)     │ 31597 (4.86%)     │
+│ Total:     │ 816            │ 96996       │ 650890       │ 325          │ 4176 (4.31%)     │ 31679 (4.87%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 324 clones.
+Found 325 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 1.41s
+time: 1.88s
 
-(Truncated to last 44444 characters out of 74674)
+(Truncated to last 44444 characters out of 74829)
 ```
 
 </details>
@@ -2724,7 +2740,7 @@ time: 1.41s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 406 errors</summary>
+<summary>⚠️ SPELL / proselint - 407 errors</summary>
 
 ```
 es “”, not straight quotes "".
@@ -3090,7 +3106,7 @@ mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
-(Truncated to last 44444 characters out of 56768)
+(Truncated to last 44444 characters out of 56949)
 ```
 
 </details>
@@ -3637,25 +3653,25 @@ tests/test_repository_intelligence_dashboard.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-14T21:32:50Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-14T21:32:50Z	INFO	[vulndb] Need to update DB
-2026-08-14T21:32:50Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-14T21:32:50Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-14.66 MiB / 106.97 MiB [-------->___________________________________________________] 13.70% ? p/s ?45.44 MiB / 106.97 MiB [------------------------->__________________________________] 42.48% ? p/s ?79.77 MiB / 106.97 MiB [-------------------------------------------->_______________] 74.57% ? p/s ?106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 153.78 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 153.78 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 153.78 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 143.86 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 143.86 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 143.86 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 134.58 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 134.58 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 134.58 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 125.89 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 125.89 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 125.89 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 117.77 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 117.77 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 117.77 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 110.17 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 110.17 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 110.17 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 103.07 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 103.07 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 103.07 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 96.42 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 96.42 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 96.42 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 90.20 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 90.20 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 90.20 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 84.38 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 84.38 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 84.38 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-----------------------------------------------] 100.00% 16.35 MiB p/s 6.7s2026-08-14T21:32:59Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-14T21:32:59Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-14T21:32:59Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-14T21:32:59Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-14T21:32:59Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 1.50 MiB p/s 400ms2026-08-14T21:33:04Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-14T21:33:04Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-14T21:33:04Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-14T21:33:04Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-14T21:33:04Z	INFO	Number of language-specific files	num=4
-2026-08-14T21:33:04Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-14T21:33:04Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-14T21:33:04Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-14T21:33:04Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-14T21:33:04Z	INFO	Detected config files	num=13
+2026-08-14T21:50:31Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-14T21:50:31Z	INFO	[vulndb] Need to update DB
+2026-08-14T21:50:31Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-14T21:50:31Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+1.37 MiB / 106.97 MiB [>_____________________________________________________________] 1.28% ? p/s ?13.36 MiB / 106.97 MiB [------->____________________________________________________] 12.49% ? p/s ?37.12 MiB / 106.97 MiB [-------------------->_______________________________________] 34.70% ? p/s ?63.28 MiB / 106.97 MiB [--------------------------->__________________] 59.15% 103.02 MiB p/s ETA 0s86.01 MiB / 106.97 MiB [------------------------------------>_________] 80.41% 103.02 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 103.02 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 101.07 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 101.07 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [------------------------------------------->] 100.00% 101.07 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 94.55 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 94.55 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 94.55 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 88.45 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 88.45 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 88.45 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 82.75 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 82.75 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 82.75 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 77.41 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 77.41 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 77.41 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 72.41 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 72.41 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 72.41 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 67.74 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 67.74 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 67.74 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 63.37 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 63.37 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 63.37 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 59.28 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-------------------------------------------->] 100.00% 59.28 MiB p/s ETA 0s106.97 MiB / 106.97 MiB [-----------------------------------------------] 100.00% 16.75 MiB p/s 6.6s2026-08-14T21:50:38Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-14T21:50:38Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-14T21:50:38Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-14T21:50:38Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-14T21:50:38Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.64 MiB p/s 300ms2026-08-14T21:50:43Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-14T21:50:44Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-14T21:50:44Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-14T21:50:44Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-14T21:50:44Z	INFO	Number of language-specific files	num=4
+2026-08-14T21:50:44Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-14T21:50:44Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-14T21:50:44Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-14T21:50:44Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-14T21:50:44Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -3864,8 +3880,6 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 
 ```
 write-good.TooWordy 
- 263:19  warning  'shall' is too wordy.                                                  write-good.TooWordy 
- 264:19  warning  'shall' is too wordy.                                                  write-good.TooWordy 
  265:19  warning  'shall' is too wordy.                                                  write-good.TooWordy 
  266:19  warning  'shall' is too wordy.                                                  write-good.TooWordy 
  268:19  warning  'shall' is too wordy.                                                  write-good.TooWordy 
@@ -4350,17 +4364,19 @@ write-good.TooWordy
 
 
  mindgarden/profiles/quartz/README.md
- 12:30  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
- 13:51  warning  'are omitted' may be passive voice. Use active voice if you can.   write-good.Passive  
- 16:45  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
- 26:36  warning  'are required' may be passive voice. Use active voice if you can.  write-good.Passive  
- 52:5   warning  'equivalent' is too wordy.                                         write-good.TooWordy 
- 62:57  warning  'it is' is too wordy.                                              write-good.TooWordy 
- 66:32  warning  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 12:30  warning  'are rejected' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 13:51  warning  'are omitted' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 16:45  warning  'are rejected' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 26:36  warning  'are required' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 52:5   warning  'equivalent' is too wordy.                                          write-good.TooWordy 
+ 62:69  warning  'is generated' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 66:49  warning  'are committed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
+ 74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 1991 warnings and 0 suggestions in 228 files.
+✖ 4 errors, 1993 warnings and 0 suggestions in 228 files.
 
-(Truncated to last 44444 characters out of 225457)
+(Truncated to last 44444 characters out of 225676)
 ```
 
 </details>

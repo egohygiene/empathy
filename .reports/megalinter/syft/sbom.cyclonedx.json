@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:1fa01b4a-901a-44e9-9720-0268ed33f6f8",
+  "serialNumber": "urn:uuid:52e5913d-5624-4c71-ac59-41ce96cab1b5",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-14T21:33:41Z",
+    "timestamp": "2026-08-14T21:51:32Z",
     "tools": {
       "components": [
         {
@@ -294,6 +294,86 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/repository-intelligence.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f91acad11e004238",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/generate-repository-intelligence-dashboard",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
         }
       ]
     },
@@ -259539,7 +259619,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "fe069e287aeca1cd71c1eab877313f484daca116ca2d50e40d7356622ddecefe"
+          "content": "6f74583c15cc60e22ba7ad1c17a808d6dbcd9b1d6507528bc96bf3357868b5e7"
         }
       ]
     },

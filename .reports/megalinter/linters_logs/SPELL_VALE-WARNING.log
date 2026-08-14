@@ -80,9 +80,9 @@ Linter raw log:
 
 
  .garden/dashboard.md
- 38:78  warning  'Methodology' is too wordy.                                        write-good.TooWordy 
- 59:1   warning  'be installed' may be passive voice. Use active voice if you can.  write-good.Passive  
- 60:24  warning  'are reviewed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 39:78  warning  'Methodology' is too wordy.                                        write-good.TooWordy 
+ 67:1   warning  'be installed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 68:24  warning  'are reviewed' may be passive voice. Use active voice if you can.  write-good.Passive  
 
 
  .garden/projects/README.md
@@ -2546,13 +2546,15 @@ Linter raw log:
 
 
  mindgarden/profiles/quartz/README.md
- 12:30  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
- 13:51  warning  'are omitted' may be passive voice. Use active voice if you can.   write-good.Passive  
- 16:45  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
- 26:36  warning  'are required' may be passive voice. Use active voice if you can.  write-good.Passive  
- 52:5   warning  'equivalent' is too wordy.                                         write-good.TooWordy 
- 62:57  warning  'it is' is too wordy.                                              write-good.TooWordy 
- 66:32  warning  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 12:30  warning  'are rejected' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 13:51  warning  'are omitted' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 16:45  warning  'are rejected' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 26:36  warning  'are required' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 52:5   warning  'equivalent' is too wordy.                                          write-good.TooWordy 
+ 62:69  warning  'is generated' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 66:49  warning  'are committed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
+ 74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 1991 warnings and 0 suggestions in 228 files.
+✖ 4 errors, 1993 warnings and 0 suggestions in 228 files.
 
