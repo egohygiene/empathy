@@ -167,7 +167,15 @@ class MegaLinterPolicyTests(unittest.TestCase):
         self.assertIn("PRE_COMMANDS", configuration)
         self.assertIsInstance(configuration["PRE_COMMANDS"], list)
         self.assertGreaterEqual(len(configuration["PRE_COMMANDS"]), 1)
-        command = configuration["PRE_COMMANDS"][0]
+        command = next(
+            (
+                candidate
+                for candidate in configuration["PRE_COMMANDS"]
+                if "@eslint/json@2.0.1" in candidate.get("command", "")
+            ),
+            None,
+        )
+        self.assertIsNotNone(command)
         self.assertEqual(command["cwd"], "workspace")
         self.assertIn("@eslint/json@2.0.1", command["command"])
         self.assertIn("--prefix egolint", command["command"])
