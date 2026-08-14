@@ -93,7 +93,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git rm --force --recursive --ignore-unmatch -- \
+          git rm --force -r --ignore-unmatch -- \
             ".reports/egolint/architecture"
 
       - name: Download architecture artifact
