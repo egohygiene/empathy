@@ -56,18 +56,18 @@ define which files are direct entrypoints.
 Dependencies flow from entrypoints and orchestration toward reusable policy and
 library layers. A lower-level library must never depend on a public entrypoint.
 
-| Consumer                    | May depend on                                                            |
-| --------------------------- | ------------------------------------------------------------------------ |
-| Shell entrypoint            | Initialization                                                           |
-| Initialization              | Config, core, shared/shell runtime, module loader, modules, platform, extensions |
-| Shared/shell runtime        | Core and Bash libraries; other shell-runtime files                       |
-| Module loader               | Modules                                                                  |
-| Modules and platforms       | Core APIs; platforms may source same-platform files                      |
-| Installer entrypoint        | A copied shell entrypoint during activation                              |
-| Installer implementations   | Install runtime and libraries                                            |
-| Install libraries           | Core and other install libraries                                         |
-| CLI dispatcher              | No source-time dependency; dispatch is process isolated                  |
-| Config CLI command          | Config library                                                           |
+| Consumer                  | May depend on                                                                    |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| Shell entrypoint          | Initialization                                                                   |
+| Initialization            | Config, core, shared/shell runtime, module loader, modules, platform, extensions |
+| Shared/shell runtime      | Core and Bash libraries; other shell-runtime files                               |
+| Module loader             | Modules                                                                          |
+| Modules and platforms     | Core APIs; platforms may source same-platform files                              |
+| Installer entrypoint      | A copied shell entrypoint during activation                                      |
+| Installer implementations | Install runtime and libraries                                                    |
+| Install libraries         | Core and other install libraries                                                 |
+| CLI dispatcher            | No source-time dependency; dispatch is process isolated                          |
+| Config CLI command        | Config library                                                                   |
 
 The complete allowed-dependency sets live in the layer registry. Adding a
 maintained shell file requires assigning exactly one layer. Adding a new

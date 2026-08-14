@@ -20,24 +20,16 @@ supersedes: []
 
 ## Purpose Statement
 
-
 ## Need
-
 
 ## Beneficiaries
 
-
 ## Enduring Value
-
 
 ## Scope Boundaries
 
-
 ## Assumptions
-
 
 ## Open Questions
 
-
 ## Validation
-

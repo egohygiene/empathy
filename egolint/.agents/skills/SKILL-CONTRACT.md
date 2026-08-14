@@ -1,15 +1,15 @@
 # Canonical Skill Frontmatter Contract
 
 This document defines the required and optional frontmatter fields for every
-`SKILL.md` in `library/organization/skills/`.  It is the authoritative
+`SKILL.md` in `library/organization/skills/`. It is the authoritative
 reference for contributors and validators.
 
 ---
 
 ## Specification source
 
-Aether skills conform to the **Agent Skills** specification.  The current
-published reference is <https://agentskills.io/specification>.  Hosts that
+Aether skills conform to the **Agent Skills** specification. The current
+published reference is <https://agentskills.io/specification>. Hosts that
 load skills include GitHub Copilot, GitHub CLI (`gh skill`), VS Code, and
 Codex-compatible runtimes.
 
@@ -51,16 +51,16 @@ Codex-compatible runtimes.
 
 #### Supported `metadata` keys
 
-| Key | Type | Description |
-|---|---|---|
-| `aether-version` | string (semver) | Skill version in Aether catalog |
-| `aether-status` | string | Lifecycle state: `draft`, `experimental`, `stable`, `deprecated`, `retired` |
-| `aether-spec-id` | string | ID of the Aether specification this skill implements |
-| `aether-scope` | string | `organization`, `repository`, or `personal` |
-| `aether-domain` | string | Primary domain: `architecture`, `authoring`, etc. |
-| `aether-owners` | string | Owning team or user handle |
-| `aether-created` | string (date) | ISO 8601 creation date |
-| `aether-updated` | string (date) | ISO 8601 last-updated date |
+| Key              | Type            | Description                                                                 |
+| ---------------- | --------------- | --------------------------------------------------------------------------- |
+| `aether-version` | string (semver) | Skill version in Aether catalog                                             |
+| `aether-status`  | string          | Lifecycle state: `draft`, `experimental`, `stable`, `deprecated`, `retired` |
+| `aether-spec-id` | string          | ID of the Aether specification this skill implements                        |
+| `aether-scope`   | string          | `organization`, `repository`, or `personal`                                 |
+| `aether-domain`  | string          | Primary domain: `architecture`, `authoring`, etc.                           |
+| `aether-owners`  | string          | Owning team or user handle                                                  |
+| `aether-created` | string (date)   | ISO 8601 creation date                                                      |
+| `aether-updated` | string (date)   | ISO 8601 last-updated date                                                  |
 
 ### `allowed-tools` (experimental, optional)
 
@@ -85,7 +85,7 @@ Move any Aether-specific values to `metadata`.
 ## Do not pre-populate install-tracking keys
 
 GitHub CLI injects installation metadata (`metadata.github-*`) into installed
-copies.  Canonical source files must **not** contain these keys.
+copies. Canonical source files must **not** contain these keys.
 
 ---
 

@@ -56,28 +56,21 @@
       "description": "Required human-centered design evidence is incomplete or absent.",
       "category": "insufficient-evidence",
       "trigger": "should-trigger",
-      "tags": [
-        "evidence",
-        "blocked"
-      ],
+      "tags": ["evidence", "blocked"],
       "expected": [
         "Does not invent design intent without evidence",
         "Labels assumptions and evidence gaps",
         "Reports blocked or provisional completion",
         "Requests the missing upstream design context"
       ],
-      "prohibited": [
-        "Fabricating experience intent without evidence"
-      ]
+      "prohibited": ["Fabricating experience intent without evidence"]
     },
     {
       "id": "design-negative-trigger",
       "description": "The request is for implementation details such as CSS tokens or component code, not experience design intent.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for implementation-level requests",
         "Identifies that DESIGN.md captures experience intent, not implementation",

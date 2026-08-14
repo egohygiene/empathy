@@ -178,7 +178,7 @@ def main():
     # Check dependency graph acyclicity
     cycles = find_cycles(dep_graph)
     for cycle in cycles:
-        errors.append("Dependency cycle detected: {}".format(" -> ".join(cycle)))
+        errors.append(f"Dependency cycle detected: {' -> '.join(cycle)}")
 
     # Validate skill spec references
     for skill_path in sorted(SKILLS_DIR.rglob("SKILL.md")):

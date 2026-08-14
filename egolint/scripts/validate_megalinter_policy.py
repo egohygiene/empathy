@@ -11,7 +11,7 @@ import argparse
 import json
 from pathlib import Path
 import re
-import subprocess
+import subprocess  # nosec B404
 import sys
 from typing import TYPE_CHECKING
 
@@ -141,7 +141,7 @@ def extract_removed_inventory(source_root: Path) -> tuple[list[str], list[str]]:
 
 def build_catalog(source_root: Path) -> dict[str, Any]:
     """Build a compact offline contract from an official MegaLinter checkout."""
-    checkout = subprocess.run(
+    checkout = subprocess.run(  # nosec B603 B607
         ["git", "-C", str(source_root), "rev-parse", "HEAD"],
         check=False,
         capture_output=True,
@@ -264,7 +264,7 @@ def as_string_list(value: Any, key: str) -> list[str]:
 
 def resolve_configuration_path(rules_path: str, config_file: str) -> Path:
     """Resolve a MegaLinter rules/config pair into the local workspace."""
-    normalized_rules_path = rules_path.removeprefix("/tmp/lint/")
+    normalized_rules_path = rules_path.removeprefix("/tmp/lint/")  # nosec B108
     rules_root = Path(normalized_rules_path)
     if not rules_root.is_absolute():
         rules_root = REPOSITORY_ROOT / rules_root

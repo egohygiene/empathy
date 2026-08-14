@@ -44,10 +44,7 @@
       "description": "Input material turns the manifesto into a requirements document, roadmap, or policy directive.",
       "category": "boundary",
       "trigger": "should-trigger",
-      "tags": [
-        "boundary",
-        "scope"
-      ],
+      "tags": ["boundary", "scope"],
       "expected": [
         "Identifies the document type confusion",
         "Keeps operational requirements out of the manifesto",
@@ -63,9 +60,7 @@
       "description": "The request is to produce a product requirements document rather than a statement of beliefs and commitments.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for requirements documentation",
         "Identifies the correct artifact for the request",

@@ -1,0 +1,7 @@
+.devcontainer/devcontainer.json
+egolint/.config/lint/groovy/.groovylintrc.json
+egolint/.config/lint/markdown/.markdown-link-check.json
+egolint/.config/lint/markdown/.remarkrc.json
+egolint/tasks/complementary.yml
+egolint/tasks/lint.yml
+egolint/tests/fixtures/commitlint/messages.json

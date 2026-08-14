@@ -55,9 +55,7 @@
       "description": "The request is to describe existing behavior as-is rather than define a normative contract.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for documentation of existing behavior without a normative intent",
         "Explains the difference between a specification and a description",

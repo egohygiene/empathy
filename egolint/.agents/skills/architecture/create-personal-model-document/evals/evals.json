@@ -44,11 +44,7 @@
       "description": "Insufficient personal identity evidence is available to model a person's strengths, constraints, or working style.",
       "category": "insufficient-evidence",
       "trigger": "should-trigger",
-      "tags": [
-        "evidence",
-        "blocked",
-        "privacy"
-      ],
+      "tags": ["evidence", "blocked", "privacy"],
       "expected": [
         "Does not invent personal attributes without evidence",
         "Labels assumptions and evidence gaps",
@@ -65,10 +61,7 @@
       "description": "The request is to produce a general user persona for a product rather than a personal working model for an individual contributor.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing",
-        "privacy"
-      ],
+      "tags": ["routing", "privacy"],
       "expected": [
         "Declines to use this skill for product persona design",
         "Identifies the correct artifact for the request",

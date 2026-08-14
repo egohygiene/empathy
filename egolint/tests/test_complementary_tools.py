@@ -9,6 +9,7 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+from typing import Any
 import unittest
 from unittest import mock
 
@@ -24,6 +25,9 @@ SPECIFICATION.loader.exec_module(COMPLEMENTARY_TOOLS)
 
 class ComplementaryToolContractTests(unittest.TestCase):
     """Verify inventory, applicability, task, and editor parity contracts."""
+
+    manifest: dict[str, Any]
+    tools: dict[str, dict[str, Any]]
 
     @classmethod
     def setUpClass(cls) -> None:

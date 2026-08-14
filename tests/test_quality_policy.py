@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-import subprocess
+import subprocess  # nosec B404
 import tomllib
 import unittest
 
@@ -40,7 +40,7 @@ class QualityPolicyTests(unittest.TestCase):
     def git(
         self, *arguments: str, input_text: str | None = None
     ) -> subprocess.CompletedProcess[str]:
-        return subprocess.run(
+        return subprocess.run(  # nosec B603 B607
             ["git", *arguments],
             check=False,
             cwd=REPOSITORY_ROOT,

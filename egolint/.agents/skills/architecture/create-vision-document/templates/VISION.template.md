@@ -20,24 +20,16 @@ supersedes: []
 
 ## Vision Statement
 
-
 ## Desired Future State
-
 
 ## Intended Impact
 
-
 ## Directional Signals
-
 
 ## Boundaries and Anti-Vision
 
-
 ## Assumptions
-
 
 ## Open Questions
 
-
 ## Validation
-

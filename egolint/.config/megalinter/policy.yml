@@ -43,10 +43,12 @@ disabled_reasons:
   PYTHON_ISORT: Ruff import rules are the canonical import sorter.
   PYTHON_NBQA_MYPY: Requires a deterministic notebook dependency environment.
   REPOSITORY_DEVSKIM: Awaiting ownership and false-positive review.
+  REPOSITORY_GIT_DIFF: Generated report snapshots dirty the workspace during the holistic run.
   REPOSITORY_KINGFISHER: Awaiting overlap analysis with Betterleaks and Secretlint.
   REPOSITORY_OSV_SCANNER: The dedicated OSV workflow owns this signal.
   REPOSITORY_SEMGREP: Awaiting review of the initial local semantic-security ruleset.
   SPELL_CODESPELL: Awaiting repository spelling-baseline classification.
+  TYPESCRIPT_STANDARD: ESLint and Prettier own TypeScript analysis and formatting.
 
 tools:
   ACTION_ZIZMOR:

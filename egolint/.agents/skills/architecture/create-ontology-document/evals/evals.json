@@ -44,28 +44,21 @@
       "description": "Required concept definitions or relationship evidence is absent or self-contradictory.",
       "category": "insufficient-evidence",
       "trigger": "should-trigger",
-      "tags": [
-        "evidence",
-        "blocked"
-      ],
+      "tags": ["evidence", "blocked"],
       "expected": [
         "Does not invent concept definitions without evidence",
         "Labels inference and evidence gaps",
         "Reports provisional or blocked completion",
         "Requests missing concept or relationship evidence"
       ],
-      "prohibited": [
-        "Fabricating ontological concepts without evidence"
-      ]
+      "prohibited": ["Fabricating ontological concepts without evidence"]
     },
     {
       "id": "ontology-negative-trigger",
       "description": "The request is to create a database schema or data dictionary rather than define organizational concepts and relationships.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for database or data schema design",
         "Identifies the correct artifact for the request",

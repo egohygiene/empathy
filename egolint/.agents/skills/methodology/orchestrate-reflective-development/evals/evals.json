@@ -55,9 +55,7 @@
       "description": "The request is to execute a single targeted task without a reflective development cycle.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to initiate reflective development orchestration for a single targeted task",
         "Identifies that a full development cycle is not warranted",

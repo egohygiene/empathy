@@ -20,9 +20,7 @@
       "description": "A first attempted fix exists but new evidence shows the regression test or boundary handling is incomplete.",
       "category": "positive",
       "trigger": "should-trigger",
-      "tags": [
-        "update"
-      ],
+      "tags": ["update"],
       "expected": [
         "Revisits the root cause using the new evidence",
         "Tightens the fix or regression coverage without broadening scope unnecessarily",

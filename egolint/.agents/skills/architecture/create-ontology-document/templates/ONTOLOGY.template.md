@@ -19,9 +19,13 @@ supersedes: []
 # Ontology
 
 ## Domain Scope
+
 ## Domain Boundaries
+
 ## Canonical Concepts
+
 ### Concept — Replace With Canonical Term
+
 - Identifier:
 - Definition:
 - Type:
@@ -30,10 +34,17 @@ supersedes: []
 - Deprecated Terms:
 - Invariants:
 - Evidence and Provenance:
+
 ## Relationship Model
+
 ## Ubiquitous Language
+
 ## Aliases and Deprecated Terms
+
 ## Conceptual Invariants
+
 ## Open Questions
+
 ## Migration Notes
+
 ## Validation

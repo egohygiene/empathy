@@ -278,12 +278,12 @@ is required. Copy [`config/example.conf`](config/example.conf) to get started.
 
 ### Built-in profiles
 
-| Profile      | Intended use                                                                    |
-| ------------ | ------------------------------------------------------------------------------- |
-| `minimal`    | Required environment only; no interactive conveniences.                        |
-| `standard`   | Default low-surprise aliases and history for everyday development.              |
+| Profile      | Intended use                                                                     |
+| ------------ | -------------------------------------------------------------------------------- |
+| `minimal`    | Required environment only; no interactive conveniences.                          |
+| `standard`   | Default low-surprise aliases and history for everyday development.               |
 | `full`       | Maintained safe, network, and system helpers without historical name collisions. |
-| `workbench`  | Explicit complete experience, including legacy and familiar-command aliases.    |
+| `workbench`  | Explicit complete experience, including legacy and familiar-command aliases.     |
 | `ci`         | Noninteractive CI policy with supported automatic update checks suppressed.      |
 | `share-safe` | Low-surprise helpers plus a presentation policy for shareable terminal output.   |
 
@@ -312,35 +312,35 @@ Boolean profile overrides accept `1`, `0`, `true`, `false`, `yes`, `no`, `on`,
 or `off`. The table below focuses on public or user-relevant variables that
 shape runtime behavior.
 
-| Variable                                 | Default                             | Purpose                                                           | Example                                              |
-| ---------------------------------------- | ----------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- |
-| `MANTLE_ROOT`                            | Resolved from the entrypoint or CLI | Absolute path to the Mantle installation root                     | `export MANTLE_ROOT="$HOME/src/mantle"`              |
-| `MANTLE_SHELL_NAME`                      | Detected (`bash`, `zsh`, `fish`)    | Active shell runtime identifier                                   | `export MANTLE_SHELL_NAME="bash"`                    |
-| `MANTLE_INTERACTIVE`                     | Detected from the current shell     | Distinguishes interactive and noninteractive initialization       | `export MANTLE_INTERACTIVE="1"`                      |
-| `MANTLE_PROFILE`                         | `standard`                          | Selects a built-in typed profile                                  | `export MANTLE_PROFILE="share-safe"`                 |
-| `MANTLE_CONFIG_FILE`                     | XDG config path                     | Selects an explicit absolute configuration file                   | `export MANTLE_CONFIG_FILE="$HOME/.mantle.conf"`     |
-| `MANTLE_ENABLE_SAFE_ALIASES`             | Profile value                       | Overrides low-surprise interactive helpers                        | `export MANTLE_ENABLE_SAFE_ALIASES="true"`           |
-| `MANTLE_ENABLE_NETWORK_ALIASES`          | Profile value                       | Overrides network inspection helpers                              | `export MANTLE_ENABLE_NETWORK_ALIASES="true"`        |
-| `MANTLE_ENABLE_SYSTEM_ALIASES`           | Profile value                       | Overrides OS mutation and privileged helpers                      | `export MANTLE_ENABLE_SYSTEM_ALIASES="false"`        |
-| `MANTLE_ENABLE_LEGACY_ALIASES`           | Profile value                       | Overrides the historical all-in-one alias corpus                  | `export MANTLE_ENABLE_LEGACY_ALIASES="false"`        |
-| `MANTLE_ENABLE_SAFETY_ALIASES`           | Profile value                       | Overrides prompting replacements for `cp`, `mv`, and `rm`         | `export MANTLE_ENABLE_SAFETY_ALIASES="true"`         |
-| `MANTLE_ENABLE_HISTORY`                  | Profile value                       | Overrides Mantle-owned interactive history policy                 | `export MANTLE_ENABLE_HISTORY="false"`               |
+| Variable                                 | Default                             | Purpose                                                             | Example                                              |
+| ---------------------------------------- | ----------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------- |
+| `MANTLE_ROOT`                            | Resolved from the entrypoint or CLI | Absolute path to the Mantle installation root                       | `export MANTLE_ROOT="$HOME/src/mantle"`              |
+| `MANTLE_SHELL_NAME`                      | Detected (`bash`, `zsh`, `fish`)    | Active shell runtime identifier                                     | `export MANTLE_SHELL_NAME="bash"`                    |
+| `MANTLE_INTERACTIVE`                     | Detected from the current shell     | Distinguishes interactive and noninteractive initialization         | `export MANTLE_INTERACTIVE="1"`                      |
+| `MANTLE_PROFILE`                         | `standard`                          | Selects a built-in typed profile                                    | `export MANTLE_PROFILE="share-safe"`                 |
+| `MANTLE_CONFIG_FILE`                     | XDG config path                     | Selects an explicit absolute configuration file                     | `export MANTLE_CONFIG_FILE="$HOME/.mantle.conf"`     |
+| `MANTLE_ENABLE_SAFE_ALIASES`             | Profile value                       | Overrides low-surprise interactive helpers                          | `export MANTLE_ENABLE_SAFE_ALIASES="true"`           |
+| `MANTLE_ENABLE_NETWORK_ALIASES`          | Profile value                       | Overrides network inspection helpers                                | `export MANTLE_ENABLE_NETWORK_ALIASES="true"`        |
+| `MANTLE_ENABLE_SYSTEM_ALIASES`           | Profile value                       | Overrides OS mutation and privileged helpers                        | `export MANTLE_ENABLE_SYSTEM_ALIASES="false"`        |
+| `MANTLE_ENABLE_LEGACY_ALIASES`           | Profile value                       | Overrides the historical all-in-one alias corpus                    | `export MANTLE_ENABLE_LEGACY_ALIASES="false"`        |
+| `MANTLE_ENABLE_SAFETY_ALIASES`           | Profile value                       | Overrides prompting replacements for `cp`, `mv`, and `rm`           | `export MANTLE_ENABLE_SAFETY_ALIASES="true"`         |
+| `MANTLE_ENABLE_HISTORY`                  | Profile value                       | Overrides Mantle-owned interactive history policy                   | `export MANTLE_ENABLE_HISTORY="false"`               |
 | `MANTLE_PRESENTATION_MODE`               | Profile value                       | Publishes `private`, `share-safe`, `ci`, or `off` presentation mode | `export MANTLE_PRESENTATION_MODE="share-safe"`       |
-| `MANTLE_DISABLE_TELEMETRY`               | `1`                                 | Enables Mantle's telemetry opt-out defaults when set to `1`       | `export MANTLE_DISABLE_TELEMETRY="1"`                |
-| `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS` | `0`                                 | Opts into the update-check suppression module                     | `export MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS="1"`  |
-| `MANTLE_ENABLE_PROJECT_PATH`             | `0`                                 | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled | `export MANTLE_ENABLE_PROJECT_PATH="1"`              |
-| `MANTLE_CREATE_XDG_DIRECTORIES`          | `1`                                 | Creates missing XDG directories and `XDG_BIN_HOME`                | `export MANTLE_CREATE_XDG_DIRECTORIES="0"`           |
-| `MANTLE_HISTORY_SIZE`                    | `50000`                             | Controls interactive shell and REPL history sizing                | `export MANTLE_HISTORY_SIZE="100000"`                |
-| `MANTLE_DEBUG`                           | `0`                                 | Enables additional debug logging and loader diagnostics           | `export MANTLE_DEBUG="1"`                            |
-| `XDG_CONFIG_HOME`                        | `"$HOME/.config"`                   | XDG config root                                                   | `export XDG_CONFIG_HOME="$HOME/.config"`             |
-| `XDG_CACHE_HOME`                         | `"$HOME/.cache"`                    | XDG cache root                                                    | `export XDG_CACHE_HOME="$HOME/.cache"`               |
-| `XDG_DATA_HOME`                          | `"$HOME/.local/share"`              | XDG data root and default base for many managed tool directories  | `export XDG_DATA_HOME="$HOME/.local/share"`          |
-| `XDG_STATE_HOME`                         | `"$HOME/.local/state"`              | XDG state root, including history storage                         | `export XDG_STATE_HOME="$HOME/.local/state"`         |
-| `XDG_RUNTIME_DIR`                        | Platform-specific secure fallback   | Private runtime directory for transient state                     | `export XDG_RUNTIME_DIR="/run/user/1000"`            |
-| `XDG_BIN_HOME`                           | `"$HOME/.local/bin"`                | User-owned executable destination added to PATH                   | `export XDG_BIN_HOME="$HOME/.local/bin"`             |
-| `TALISMAN_HOME`                          | `"$XDG_DATA_HOME/talisman"`         | Example installer destination override for `talisman`             | `export TALISMAN_HOME="$HOME/.local/share/talisman"` |
-| `MANTLE_GITHUB_CONNECT_TIMEOUT`          | `10`                                | Optional GitHub extension request connect timeout                 | `export MANTLE_GITHUB_CONNECT_TIMEOUT="5"`           |
-| `MANTLE_GITHUB_REQUEST_TIMEOUT`          | `30`                                | Optional GitHub extension request total timeout                   | `export MANTLE_GITHUB_REQUEST_TIMEOUT="15"`          |
+| `MANTLE_DISABLE_TELEMETRY`               | `1`                                 | Enables Mantle's telemetry opt-out defaults when set to `1`         | `export MANTLE_DISABLE_TELEMETRY="1"`                |
+| `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS` | `0`                                 | Opts into the update-check suppression module                       | `export MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS="1"`  |
+| `MANTLE_ENABLE_PROJECT_PATH`             | `0`                                 | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled   | `export MANTLE_ENABLE_PROJECT_PATH="1"`              |
+| `MANTLE_CREATE_XDG_DIRECTORIES`          | `1`                                 | Creates missing XDG directories and `XDG_BIN_HOME`                  | `export MANTLE_CREATE_XDG_DIRECTORIES="0"`           |
+| `MANTLE_HISTORY_SIZE`                    | `50000`                             | Controls interactive shell and REPL history sizing                  | `export MANTLE_HISTORY_SIZE="100000"`                |
+| `MANTLE_DEBUG`                           | `0`                                 | Enables additional debug logging and loader diagnostics             | `export MANTLE_DEBUG="1"`                            |
+| `XDG_CONFIG_HOME`                        | `"$HOME/.config"`                   | XDG config root                                                     | `export XDG_CONFIG_HOME="$HOME/.config"`             |
+| `XDG_CACHE_HOME`                         | `"$HOME/.cache"`                    | XDG cache root                                                      | `export XDG_CACHE_HOME="$HOME/.cache"`               |
+| `XDG_DATA_HOME`                          | `"$HOME/.local/share"`              | XDG data root and default base for many managed tool directories    | `export XDG_DATA_HOME="$HOME/.local/share"`          |
+| `XDG_STATE_HOME`                         | `"$HOME/.local/state"`              | XDG state root, including history storage                           | `export XDG_STATE_HOME="$HOME/.local/state"`         |
+| `XDG_RUNTIME_DIR`                        | Platform-specific secure fallback   | Private runtime directory for transient state                       | `export XDG_RUNTIME_DIR="/run/user/1000"`            |
+| `XDG_BIN_HOME`                           | `"$HOME/.local/bin"`                | User-owned executable destination added to PATH                     | `export XDG_BIN_HOME="$HOME/.local/bin"`             |
+| `TALISMAN_HOME`                          | `"$XDG_DATA_HOME/talisman"`         | Example installer destination override for `talisman`               | `export TALISMAN_HOME="$HOME/.local/share/talisman"` |
+| `MANTLE_GITHUB_CONNECT_TIMEOUT`          | `10`                                | Optional GitHub extension request connect timeout                   | `export MANTLE_GITHUB_CONNECT_TIMEOUT="5"`           |
+| `MANTLE_GITHUB_REQUEST_TIMEOUT`          | `30`                                | Optional GitHub extension request total timeout                     | `export MANTLE_GITHUB_REQUEST_TIMEOUT="15"`          |
 
 Notes:
 

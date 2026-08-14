@@ -58,17 +58,17 @@ and VS Code with the Copilot extension.
 
 #### Supported `metadata` keys
 
-| Key | Type | Description |
-|---|---|---|
-| `aether-version` | string (semver) | Agent version in Aether catalog |
-| `aether-status` | string | Lifecycle state: `draft`, `stable`, `deprecated`, `retired` |
-| `aether-scope` | string | `organization` or `repository` |
-| `aether-domain` | string | Primary domain: `architecture`, `authoring`, `quality`, `publishing`, `methodology` |
-| `aether-owners` | string | Owning GitHub org or username |
-| `aether-created` | string (`YYYY-MM-DD`) | Date first created |
-| `aether-updated` | string (`YYYY-MM-DD`) | Date of most recent significant change |
-| `aether-skills` | list of strings | Canonical skill IDs this agent depends on |
-| `aether-specs` | list of strings | Canonical spec IDs this agent references |
+| Key              | Type                  | Description                                                                         |
+| ---------------- | --------------------- | ----------------------------------------------------------------------------------- |
+| `aether-version` | string (semver)       | Agent version in Aether catalog                                                     |
+| `aether-status`  | string                | Lifecycle state: `draft`, `stable`, `deprecated`, `retired`                         |
+| `aether-scope`   | string                | `organization` or `repository`                                                      |
+| `aether-domain`  | string                | Primary domain: `architecture`, `authoring`, `quality`, `publishing`, `methodology` |
+| `aether-owners`  | string                | Owning GitHub org or username                                                       |
+| `aether-created` | string (`YYYY-MM-DD`) | Date first created                                                                  |
+| `aether-updated` | string (`YYYY-MM-DD`) | Date of most recent significant change                                              |
+| `aether-skills`  | list of strings       | Canonical skill IDs this agent depends on                                           |
+| `aether-specs`   | list of strings       | Canonical spec IDs this agent references                                            |
 
 ---
 
@@ -92,12 +92,12 @@ Projection is performed by `build-projections.py`. For each source `AGENT.md`:
 
 1. The `aether-id` field is removed.
 2. The entire `metadata` block is removed.
-3. Internal skill links (``../skills/<domain>/<skill>/SKILL.md``) are rewritten
-   to the consumer-local path ``.agents/skills/<skill>/SKILL.md`` for both
+3. Internal skill links (`../skills/<domain>/<skill>/SKILL.md`) are rewritten
+   to the consumer-local path `.agents/skills/<skill>/SKILL.md` for both
    repository and organization projections.
-4. Internal spec links (``../specs/<path>/<file>.spec.md``) are rewritten to
-   ``.github/specs/<path>/<file>.spec.md`` for repository projections and
-   ``specs/<path>/<file>.spec.md`` for organization projections.
+4. Internal spec links (`../specs/<path>/<file>.spec.md`) are rewritten to
+   `.github/specs/<path>/<file>.spec.md` for repository projections and
+   `specs/<path>/<file>.spec.md` for organization projections.
 
 ---
 

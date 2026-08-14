@@ -17,30 +17,30 @@ schema: aether.specification/v1
 
 ## Required fields
 
-| Field     | Type               | Description                                                        |
-|-----------|--------------------|--------------------------------------------------------------------|
-| `schema`  | string             | Must be `aether.specification/v1`.                                 |
-| `id`      | string             | Stable, unique kebab-case identifier for this specification.       |
-| `title`   | string             | Human-readable name.                                               |
-| `kind`    | string             | Artifact kind. Typically `specification`.                          |
-| `version` | string (semver)    | Semantic version (e.g. `1.0.0`, `2.1.0`).                        |
-| `status`  | string             | Lifecycle status: `draft`, `stable`, `deprecated`, or `retired`.  |
-| `owners`  | list of strings    | One or more owner handles (e.g. GitHub org or username).           |
-| `created` | date (`YYYY-MM-DD`)| Date the specification was first created.                          |
-| `updated` | date (`YYYY-MM-DD`)| Date of the most recent significant change.                        |
-| `domain`  | string             | Top-level domain this specification belongs to (e.g. `architecture`). |
-| `tags`    | list of strings    | Searchable tags.                                                   |
+| Field     | Type                | Description                                                           |
+| --------- | ------------------- | --------------------------------------------------------------------- |
+| `schema`  | string              | Must be `aether.specification/v1`.                                    |
+| `id`      | string              | Stable, unique kebab-case identifier for this specification.          |
+| `title`   | string              | Human-readable name.                                                  |
+| `kind`    | string              | Artifact kind. Typically `specification`.                             |
+| `version` | string (semver)     | Semantic version (e.g. `1.0.0`, `2.1.0`).                             |
+| `status`  | string              | Lifecycle status: `draft`, `stable`, `deprecated`, or `retired`.      |
+| `owners`  | list of strings     | One or more owner handles (e.g. GitHub org or username).              |
+| `created` | date (`YYYY-MM-DD`) | Date the specification was first created.                             |
+| `updated` | date (`YYYY-MM-DD`) | Date of the most recent significant change.                           |
+| `domain`  | string              | Top-level domain this specification belongs to (e.g. `architecture`). |
+| `tags`    | list of strings     | Searchable tags.                                                      |
 
 ---
 
 ## Optional relationship fields
 
-| Field        | Type             | Semantic                                                                 |
-|--------------|------------------|--------------------------------------------------------------------------|
+| Field        | Type             | Semantic                                                                                          |
+| ------------ | ---------------- | ------------------------------------------------------------------------------------------------- |
 | `applies_to` | list of strings  | Descriptive artifact categories this specification governs. Not validated against the ID catalog. |
-| `depends_on` | list of spec IDs | Normative prerequisites. Must resolve to known spec IDs. Must remain acyclic. |
-| `related`    | list of IDs      | Non-normative cross-references to spec IDs or skill IDs. May be cyclic.  |
-| `supersedes` | list of spec IDs | Specs that this spec replaces. Must resolve to known or intentionally retired IDs. |
+| `depends_on` | list of spec IDs | Normative prerequisites. Must resolve to known spec IDs. Must remain acyclic.                     |
+| `related`    | list of IDs      | Non-normative cross-references to spec IDs or skill IDs. May be cyclic.                           |
+| `supersedes` | list of spec IDs | Specs that this spec replaces. Must resolve to known or intentionally retired IDs.                |
 
 ---
 
@@ -111,7 +111,7 @@ title: My Specification
 
 ```yaml
 ---
-schema: aether.specification/v0   # ERROR: not the accepted schema URI
+schema: aether.specification/v0 # ERROR: not the accepted schema URI
 id: my-spec
 ---
 ```
@@ -124,7 +124,7 @@ schema: aether.specification/v1
 id: my-spec
 # ...
 depends_on:
-  - nonexistent-spec-id   # ERROR: no spec with this ID exists
+  - nonexistent-spec-id # ERROR: no spec with this ID exists
 ---
 ```
 
@@ -167,13 +167,13 @@ frontmatter shape with only `title`, `version`, `date_created`, `last_updated`,
 
 **Stable IDs assigned:**
 
-| File                         | Stable ID                   |
-|------------------------------|-----------------------------|
-| `architecture.spec.md`       | `architecture-architecture` |
-| `foundations.spec.md`        | `architecture-foundations`  |
-| `methodology.spec.md`        | `architecture-methodology`  |
-| `roadmap.spec.md`            | `architecture-roadmap`      |
-| `system.spec.md`             | `architecture-system`       |
+| File                   | Stable ID                   |
+| ---------------------- | --------------------------- |
+| `architecture.spec.md` | `architecture-architecture` |
+| `foundations.spec.md`  | `architecture-foundations`  |
+| `methodology.spec.md`  | `architecture-methodology`  |
+| `roadmap.spec.md`      | `architecture-roadmap`      |
+| `system.spec.md`       | `architecture-system`       |
 
 ---
 

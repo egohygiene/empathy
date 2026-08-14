@@ -8,8 +8,9 @@ from __future__ import annotations
 import importlib.util
 from pathlib import Path
 import sys
+from typing import Any
 import unittest
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET  # nosec B405
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = (
@@ -29,6 +30,10 @@ SPECIFICATION.loader.exec_module(GENERATOR)
 class LintArchitectureContractTests(unittest.TestCase):
     """Verify source fidelity, determinism, and artifact validity."""
 
+    inventory: Any
+    markdown_path: Path
+    svg_path: Path
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.inventory = GENERATOR.build_inventory(REPOSITORY_ROOT)
@@ -38,7 +43,7 @@ class LintArchitectureContractTests(unittest.TestCase):
     def test_inventory_reads_both_canonical_matrices(self) -> None:
         self.assertEqual(self.inventory.megalinter_total, 124)
         self.assertEqual(self.inventory.megalinter_fast, 12)
-        self.assertEqual(self.inventory.megalinter_holistic, 107)
+        self.assertEqual(self.inventory.megalinter_holistic, 105)
         self.assertEqual(self.inventory.complementary_total, 18)
         self.assertEqual(
             self.inventory.megalinter_enabled
@@ -65,7 +70,7 @@ class LintArchitectureContractTests(unittest.TestCase):
 
     def test_svg_is_valid_xml_with_accessible_metadata(self) -> None:
         # The parsed SVG is a trusted artifact generated in this test suite.
-        root = ET.parse(self.svg_path).getroot()  # noqa: S314
+        root = ET.parse(self.svg_path).getroot()  # noqa: S314  # nosec B314
         namespace = {"svg": "http://www.w3.org/2000/svg"}
         self.assertIsNotNone(root.find("svg:title", namespace))
         self.assertIsNotNone(root.find("svg:desc", namespace))

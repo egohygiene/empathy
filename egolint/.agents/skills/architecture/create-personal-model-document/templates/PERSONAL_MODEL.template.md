@@ -19,17 +19,31 @@ supersedes: []
 # Personal Model
 
 ## Introduction
+
 ## Human Assumptions
+
 ## Person and Representation
+
 ## Agency and Autonomy
+
 ## Identity and Self-Description
+
 ## Context and Relationships
+
 ## Needs, Intentions, and Motivations
+
 ## Growth and Change
+
 ## Consent
+
 ## Privacy and Inference Boundaries
+
 ## Correction and Contestability
+
 ## Limits of the Model
+
 ## Architectural Implications
+
 ## Assumptions and Open Questions
+
 ## Validation

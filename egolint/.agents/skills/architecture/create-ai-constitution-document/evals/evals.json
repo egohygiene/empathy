@@ -44,9 +44,7 @@
       "description": "The request is to write general governance policy prose rather than define AI behavior constraints in a canonical AI_CONSTITUTION.md.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for general policy writing",
         "Identifies the document type mismatch",

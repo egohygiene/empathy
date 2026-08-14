@@ -51,6 +51,9 @@ $RECYCLE.BIN/
 !.reports/egolint/architecture/
 !.reports/egolint/architecture/README.md
 !.reports/egolint/architecture/lint-architecture.svg
+!.reports/megalinter/
+.reports/megalinter/*
+!.reports/megalinter/remediation.md
 .tmp/
 coverage/
 temp/
@@ -209,4 +212,3 @@ _minted*/
 
 # Preserve placeholders in otherwise ignored directories.
 !**/.gitkeep
-

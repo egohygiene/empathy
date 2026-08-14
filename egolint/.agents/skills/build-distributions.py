@@ -256,7 +256,7 @@ def main() -> int:
         help="Base output directory for generated distributions.",
     )
     args = parser.parse_args()
-    return build(check=args.check, output_directory=(REPO_ROOT / args.output_directory))
+    return build(check=args.check, output_directory=REPO_ROOT / args.output_directory)
 
 
 def _normalized_display_path(path: Path) -> str:

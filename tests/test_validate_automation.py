@@ -26,6 +26,9 @@ SPEC.loader.exec_module(validate_automation)
 
 class ValidateAutomationTests(unittest.TestCase):
     def setUp(self) -> None:
+        # unittest owns cleanup across each test; a context manager cannot span
+        # the setup/test/teardown lifecycle.
+        # pylint: disable-next=consider-using-with
         self.temporary_directory = tempfile.TemporaryDirectory()
         self.repository_root = Path(self.temporary_directory.name)
         (self.repository_root / ".github" / "workflows").mkdir(parents=True)
