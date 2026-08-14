@@ -134,7 +134,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git rm --force --recursive --ignore-unmatch -- ".reports/megalinter"
+          git rm --force -r --ignore-unmatch -- ".reports/megalinter"
 
       - name: Download MegaLinter reports
         # actions/download-artifact v8.0.1

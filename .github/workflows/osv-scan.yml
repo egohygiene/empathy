@@ -745,7 +745,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git rm --force --recursive --ignore-unmatch -- ".reports/osv"
+          git rm --force -r --ignore-unmatch -- ".reports/osv"
 
       - name: "📦 Download generated reports"
         # actions/download-artifact v8.0.1; immutable release pin.
