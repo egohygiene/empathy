@@ -1,8 +1,8 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-14T01-27-29Z`
+- Generated: `2026-08-14T01-37-33Z`
 - Repository: `egohygiene/empathy`
-- Commit: `aff007deadd35b149c0d1212fd0a6698bb5913db`
+- Commit: `6c7adeed771b33fa6a1d1eaba685124b6b5907ec`
 - Severity gate: `high`
 - Duration: `8s`
 
@@ -11,16 +11,17 @@
 | Severity | Count |
 | --- | ---: |
 | Critical | 0 |
-| High | 2 |
+| High | 0 |
 | Medium | 2 |
 | Low | 0 |
 | Unknown | 0 |
-| **Total** | **4** |
+| **Total** | **2** |
 
 ## Discovery
 
-Discovered 16 artifact(s) across 5 ecosystem label(s).
+Discovered 17 artifact(s) across 6 ecosystem label(s).
 
+- `.reports/megalinter/syft/sbom.spdx.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/Cargo.lock`
 - `egolint/package.json`
@@ -46,6 +47,7 @@ Discovered 16 artifact(s) across 5 ecosystem label(s).
 
 ## Skipped Discovered Files
 
+- `.reports/megalinter/syft/sbom.spdx.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/package.json`
 - `egolint/pyproject.toml`
@@ -63,12 +65,10 @@ Discovered 16 artifact(s) across 5 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 4 packages affected by 4 known vulnerabilities (0 Critical, 2 High, 2 Medium, 0 Low, 0 Unknown) from 2 ecosystems.
+Total 2 packages affected by 2 known vulnerabilities (0 Critical, 0 High, 2 Medium, 0 Low, 0 Unknown) from 1 ecosystem.
 0 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
-| https://osv.dev/PYSEC-2026-1325<br/>https://osv.dev/GHSA-wj6h-64fc-37mp | 7.4 | PyPI | ecdsa | 0.19.2 | -- | egolint/uv.lock |
-| https://osv.dev/PYSEC-2023-242 | 7.4 | PyPI | httpie | 3.2.4 | -- | egolint/uv.lock |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-g3ch-rx76-35fx | 4.2 | npm | vue-template-compiler | 2.7.16 | -- | egolint/pnpm-lock.yaml |

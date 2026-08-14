@@ -1,8 +1,9 @@
 {
-  "commit": "aff007deadd35b149c0d1212fd0a6698bb5913db",
+  "commit": "6c7adeed771b33fa6a1d1eaba685124b6b5907ec",
   "discovery": {
-    "artifact_count": 16,
+    "artifact_count": 17,
     "artifacts": [
+      ".reports/megalinter/syft/sbom.spdx.json",
       "egolint/.config/lint/python/pyproject.toml",
       "egolint/Cargo.lock",
       "egolint/package.json",
@@ -20,17 +21,18 @@
       "egolint/uv.lock",
       "pyproject.toml"
     ],
-    "ecosystem_count": 5,
+    "ecosystem_count": 6,
     "ecosystems": [
       "Dart",
       "Go",
       "Node.js",
       "Python",
-      "Rust"
+      "Rust",
+      "SBOM"
     ]
   },
   "event": "push",
-  "generated_at": "2026-08-14T01:27:29Z",
+  "generated_at": "2026-08-14T01:37:33Z",
   "reports": {
     "json": ".reports/osv/latest.json",
     "markdown": ".reports/osv/latest.md",
@@ -38,13 +40,14 @@
   },
   "repository": "egohygiene/empathy",
   "scan": {
-    "affected_packages": 4,
+    "affected_packages": 2,
     "files_scanned": [
       "egolint/Cargo.lock",
       "egolint/pnpm-lock.yaml",
       "egolint/uv.lock"
     ],
     "files_skipped": [
+      ".reports/megalinter/syft/sbom.spdx.json",
       "egolint/.config/lint/python/pyproject.toml",
       "egolint/package.json",
       "egolint/pyproject.toml",
@@ -61,13 +64,13 @@
     ],
     "severity": {
       "critical": 0,
-      "high": 2,
+      "high": 0,
       "low": 0,
       "medium": 2,
-      "total": 4,
+      "total": 2,
       "unknown": 0
     },
-    "vulnerabilities": 4
+    "vulnerabilities": 2
   },
   "scan_duration_seconds": 8,
   "scanner": {
