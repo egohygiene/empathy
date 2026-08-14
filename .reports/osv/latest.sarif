@@ -1,0 +1,347 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "addresses": [],
+      "artifacts": [
+        {
+          "length": -1,
+          "location": {
+            "index": -1,
+            "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+          },
+          "parentIndex": -1,
+          "roles": []
+        },
+        {
+          "length": -1,
+          "location": {
+            "index": -1,
+            "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+          },
+          "parentIndex": -1,
+          "roles": []
+        }
+      ],
+      "graphs": [],
+      "invocations": [],
+      "language": "en-US",
+      "logicalLocations": [],
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ],
+      "policies": [],
+      "redactionTokens": [],
+      "results": [
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "eb6d60a0704163e31c559e9ce32371840f5a744b28bd5ec81ad837c1ae098fe8"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'elliptic@6.6.1' is vulnerable to 'CVE-2025-14505' (also known as 'GHSA-848j-6mx2-7j84')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2025-14505",
+          "ruleIndex": 0,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "4b01d1ce69b05f91378d2ec738fdab4e65b66f782142f5ca8e331694afff56c8"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'vue-template-compiler@2.7.16' is vulnerable to 'CVE-2024-6783' (also known as 'GHSA-g3ch-rx76-35fx')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2024-6783",
+          "ruleIndex": 1,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "39aaebe1b8e10ba0a885f47e5e95e80ea054998f2835d88e358ab2adbd7027b4"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'ecdsa@0.19.2' is vulnerable to 'CVE-2024-23342' (also known as 'PYSEC-2026-1325', 'GHSA-wj6h-64fc-37mp')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2024-23342",
+          "ruleIndex": 2,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "c08e0df4aef8a5e65fdb8253b5dd52d9bd2bb58b58baffc3195706df3b8c5b9a"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'httpie@3.2.4' is vulnerable to 'CVE-2023-48052' (also known as 'PYSEC-2023-242', 'GHSA-8r96-8889-qg2x')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2023-48052",
+          "ruleIndex": 3,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "39aaebe1b8e10ba0a885f47e5e95e80ea054998f2835d88e358ab2adbd7027b4"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'ecdsa@0.19.2' is vulnerable to 'CVE-2024-23342' (also known as 'PYSEC-2026-1325', 'GHSA-wj6h-64fc-37mp')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2024-23342",
+          "ruleIndex": 2,
+          "stacks": [],
+          "taxa": []
+        }
+      ],
+      "runAggregates": [],
+      "taxonomies": [],
+      "threadFlowLocations": [],
+      "tool": {
+        "driver": {
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "informationUri": "https://github.com/google/osv-scanner",
+          "isComprehensive": false,
+          "language": "en-US",
+          "locations": [],
+          "name": "osv-scanner",
+          "notifications": [],
+          "rules": [
+            {
+              "deprecatedIds": [
+                "CVE-2025-14505",
+                "GHSA-848j-6mx2-7j84"
+              ],
+              "fullDescription": {
+                "markdown": "The ECDSA implementation of the Elliptic package generates incorrect signatures if an interim value of 'k' (as computed based on step 3.2 of  RFC 6979 https://datatracker.ietf.org/doc/html/rfc6979 ) has leading zeros and is susceptible to cryptanalysis, which can lead to secret key exposure. This happens, because the byte-length of 'k' is incorrectly computed, resulting in its getting truncated during the computation. Legitimate transactions or communications will be broken as a result. Furthermore, due to the nature of the fault, attackers could–under certain conditions–derive the secret key, if they could get their hands on both a faulty signature generated by a vulnerable version of Elliptic and a correct signature for the same inputs.\n\nThis issue affects all known versions of Elliptic (at the time of writing, versions less than or equal to 6.6.1).",
+                "text": "The ECDSA implementation of the Elliptic package generates incorrect signatures if an interim value of 'k' (as computed based on step 3.2 of  RFC 6979 https://datatracker.ietf.org/doc/html/rfc6979 ) has leading zeros and is susceptible to cryptanalysis, which can lead to secret key exposure. This happens, because the byte-length of 'k' is incorrectly computed, resulting in its getting truncated during the computation. Legitimate transactions or communications will be broken as a result. Furthermore, due to the nature of the fault, attackers could–under certain conditions–derive the secret key, if they could get their hands on both a faulty signature generated by a vulnerable version of Elliptic and a correct signature for the same inputs.\n\nThis issue affects all known versions of Elliptic (at the time of writing, versions less than or equal to 6.6.1)."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2025-14505](https://osv.dev/CVE-2025-14505)**.\n\n## [GHSA-848j-6mx2-7j84](https://osv.dev/GHSA-848j-6mx2-7j84)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e The ECDSA implementation of the Elliptic package generates incorrect signatures if an interim value of 'k' (as computed based on step 3.2 of  RFC 6979 https://datatracker.ietf.org/doc/html/rfc6979 ) has leading zeros and is susceptible to cryptanalysis, which can lead to secret key exposure. This happens, because the byte-length of 'k' is incorrectly computed, resulting in its getting truncated during the computation. Legitimate transactions or communications will be broken as a result. Furthermore, due to the nature of the fault, attackers could–under certain conditions–derive the secret key, if they could get their hands on both a faulty signature generated by a vulnerable version of Elliptic and a correct signature for the same inputs.\n\u003e \n\u003e This issue affects all known versions of Elliptic (at the time of writing, versions less than or equal to 6.6.1).\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | elliptic | 6.6.1 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-14505\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2025-14505](https://osv.dev/CVE-2025-14505)**.\n\n## [GHSA-848j-6mx2-7j84](https://osv.dev/GHSA-848j-6mx2-7j84)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e The ECDSA implementation of the Elliptic package generates incorrect signatures if an interim value of 'k' (as computed based on step 3.2 of  RFC 6979 https://datatracker.ietf.org/doc/html/rfc6979 ) has leading zeros and is susceptible to cryptanalysis, which can lead to secret key exposure. This happens, because the byte-length of 'k' is incorrectly computed, resulting in its getting truncated during the computation. Legitimate transactions or communications will be broken as a result. Furthermore, due to the nature of the fault, attackers could–under certain conditions–derive the secret key, if they could get their hands on both a faulty signature generated by a vulnerable version of Elliptic and a correct signature for the same inputs.\n\u003e \n\u003e This issue affects all known versions of Elliptic (at the time of writing, versions less than or equal to 6.6.1).\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | elliptic | 6.6.1 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-14505\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2025-14505",
+              "name": "CVE-2025-14505",
+              "properties": {
+                "security-severity": "5.6"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2025-14505: Elliptic Uses a Cryptographic Primitive with a Risky Implementation",
+                "text": "CVE-2025-14505: Elliptic Uses a Cryptographic Primitive with a Risky Implementation"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2024-6783",
+                "GHSA-g3ch-rx76-35fx"
+              ],
+              "fullDescription": {
+                "markdown": "A vulnerability has been discovered in vue-template-compiler, that allows an attacker to perform XSS via prototype pollution. The attacker could change the prototype chain of some properties such as `Object.prototype.staticClass` or `Object.prototype.staticStyle` to execute arbitrary JavaScript code. Vue 2 has reached End-of-Life. This vulnerability has been patched in Vue 3.",
+                "text": "A vulnerability has been discovered in vue-template-compiler, that allows an attacker to perform XSS via prototype pollution. The attacker could change the prototype chain of some properties such as `Object.prototype.staticClass` or `Object.prototype.staticStyle` to execute arbitrary JavaScript code. Vue 2 has reached End-of-Life. This vulnerability has been patched in Vue 3."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2024-6783](https://osv.dev/CVE-2024-6783)**.\n\n## [GHSA-g3ch-rx76-35fx](https://osv.dev/GHSA-g3ch-rx76-35fx)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e A vulnerability has been discovered in vue-template-compiler, that allows an attacker to perform XSS via prototype pollution. The attacker could change the prototype chain of some properties such as `Object.prototype.staticClass` or `Object.prototype.staticStyle` to execute arbitrary JavaScript code. Vue 2 has reached End-of-Life. This vulnerability has been patched in Vue 3.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | vue-template-compiler | 2.7.16 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2024-6783\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2024-6783](https://osv.dev/CVE-2024-6783)**.\n\n## [GHSA-g3ch-rx76-35fx](https://osv.dev/GHSA-g3ch-rx76-35fx)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e A vulnerability has been discovered in vue-template-compiler, that allows an attacker to perform XSS via prototype pollution. The attacker could change the prototype chain of some properties such as `Object.prototype.staticClass` or `Object.prototype.staticStyle` to execute arbitrary JavaScript code. Vue 2 has reached End-of-Life. This vulnerability has been patched in Vue 3.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | vue-template-compiler | 2.7.16 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2024-6783\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2024-6783",
+              "name": "CVE-2024-6783",
+              "properties": {
+                "security-severity": "4.2"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2024-6783: vue-template-compiler vulnerable to client-side Cross-Site Scripting (XSS)",
+                "text": "CVE-2024-6783: vue-template-compiler vulnerable to client-side Cross-Site Scripting (XSS)"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2024-23342",
+                "PYSEC-2026-1325",
+                "GHSA-wj6h-64fc-37mp"
+              ],
+              "fullDescription": {
+                "markdown": "python-ecdsa has been found to be subject to a Minerva timing attack on the P-256 curve. Using the `ecdsa.SigningKey.sign_digest()` API function and timing signatures an attacker can leak the internal nonce which may allow for private key discovery. Both ECDSA signatures, key generation, and ECDH operations are affected. ECDSA signature verification is unaffected. The python-ecdsa project considers side channel attacks out of scope for the project and there is no planned fix.",
+                "text": "python-ecdsa has been found to be subject to a Minerva timing attack on the P-256 curve. Using the `ecdsa.SigningKey.sign_digest()` API function and timing signatures an attacker can leak the internal nonce which may allow for private key discovery. Both ECDSA signatures, key generation, and ECDH operations are affected. ECDSA signature verification is unaffected. The python-ecdsa project considers side channel attacks out of scope for the project and there is no planned fix."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2024-23342](https://osv.dev/CVE-2024-23342)**\n(Also published as: [PYSEC-2026-1325](https://osv.dev/PYSEC-2026-1325), [GHSA-wj6h-64fc-37mp](https://osv.dev/GHSA-wj6h-64fc-37mp), ).\n\n## [PYSEC-2026-1325](https://osv.dev/PYSEC-2026-1325)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e python-ecdsa has been found to be subject to a Minerva timing attack on the P-256 curve. Using the `ecdsa.SigningKey.sign_digest()` API function and timing signatures an attacker can leak the internal nonce which may allow for private key discovery. Both ECDSA signatures, key generation, and ECDH operations are affected. ECDSA signature verification is unaffected. The python-ecdsa project considers side channel attacks out of scope for the project and there is no planned fix.\n\n\u003c/details\u003e\n\n## [GHSA-wj6h-64fc-37mp](https://osv.dev/GHSA-wj6h-64fc-37mp)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e python-ecdsa has been found to be subject to a Minerva timing attack on the P-256 curve. Using the `ecdsa.SigningKey.sign_digest()` API function and timing signatures an attacker can leak the internal nonce which may allow for private key discovery. Both ECDSA signatures, key generation, and ECDH operations are affected. ECDSA signature verification is unaffected. The python-ecdsa project considers side channel attacks out of scope for the project and there is no planned fix.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | ecdsa | 0.19.2 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2024-23342\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2024-23342](https://osv.dev/CVE-2024-23342)**\n(Also published as: [PYSEC-2026-1325](https://osv.dev/PYSEC-2026-1325), [GHSA-wj6h-64fc-37mp](https://osv.dev/GHSA-wj6h-64fc-37mp), ).\n\n## [PYSEC-2026-1325](https://osv.dev/PYSEC-2026-1325)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e python-ecdsa has been found to be subject to a Minerva timing attack on the P-256 curve. Using the `ecdsa.SigningKey.sign_digest()` API function and timing signatures an attacker can leak the internal nonce which may allow for private key discovery. Both ECDSA signatures, key generation, and ECDH operations are affected. ECDSA signature verification is unaffected. The python-ecdsa project considers side channel attacks out of scope for the project and there is no planned fix.\n\n\u003c/details\u003e\n\n## [GHSA-wj6h-64fc-37mp](https://osv.dev/GHSA-wj6h-64fc-37mp)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e python-ecdsa has been found to be subject to a Minerva timing attack on the P-256 curve. Using the `ecdsa.SigningKey.sign_digest()` API function and timing signatures an attacker can leak the internal nonce which may allow for private key discovery. Both ECDSA signatures, key generation, and ECDH operations are affected. ECDSA signature verification is unaffected. The python-ecdsa project considers side channel attacks out of scope for the project and there is no planned fix.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | ecdsa | 0.19.2 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2024-23342\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2024-23342",
+              "name": "CVE-2024-23342",
+              "properties": {
+                "security-severity": "7.4"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2024-23342: Minerva timing attack on P-256 in python-ecdsa",
+                "text": "CVE-2024-23342: Minerva timing attack on P-256 in python-ecdsa"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2023-48052",
+                "PYSEC-2023-242",
+                "GHSA-8r96-8889-qg2x"
+              ],
+              "fullDescription": {
+                "markdown": "Missing SSL certificate validation in HTTPie v3.2.2 allows attackers to eavesdrop on communications between the host and server via a man-in-the-middle attack.",
+                "text": "Missing SSL certificate validation in HTTPie v3.2.2 allows attackers to eavesdrop on communications between the host and server via a man-in-the-middle attack."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2023-48052](https://osv.dev/CVE-2023-48052)**.\n\n## [PYSEC-2023-242](https://osv.dev/PYSEC-2023-242)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e Missing SSL certificate validation in HTTPie v3.2.2 allows attackers to eavesdrop on communications between the host and server via a man-in-the-middle attack.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | httpie | 3.2.4 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2023-48052\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2023-48052](https://osv.dev/CVE-2023-48052)**.\n\n## [PYSEC-2023-242](https://osv.dev/PYSEC-2023-242)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e Missing SSL certificate validation in HTTPie v3.2.2 allows attackers to eavesdrop on communications between the host and server via a man-in-the-middle attack.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | httpie | 3.2.4 |\n\n## Remediation\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2023-48052\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2023-48052",
+              "name": "CVE-2023-48052",
+              "properties": {
+                "security-severity": "7.4"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2023-48052",
+                "text": "CVE-2023-48052"
+              }
+            }
+          ],
+          "supportedTaxonomies": [],
+          "taxa": [],
+          "version": "2.5.0"
+        },
+        "extensions": []
+      },
+      "translations": [],
+      "versionControlProvenance": [],
+      "webRequests": [],
+      "webResponses": []
+    }
+  ],
+  "properties": {}
+}
