@@ -1,9 +1,0 @@
-Results of ls-lint linter (version 2.3.1)
-See documentation on https://megalinter.io/10.0.0/descriptors/repository_ls_lint/
------------------------------------------------
-
-❌ [ERROR] for workspace /github/workspace
-Linter raw log:
-REUSE.toml failed for `.toml` rules: kebabcase | snakecase
-Taskfile.yml failed for `.yml` rules: kebabcase | snakecase | camelcase
-

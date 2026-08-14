@@ -166,6 +166,7 @@ task-tags = [
   # a deliberately branchy schema/policy validator.
   "PERF401",
   "PLR0912",
+  "PLR0915",
   "S108",
   "S603",
   "S607",

@@ -4,5 +4,9 @@ See documentation on https://megalinter.io/10.0.0/descriptors/rust_clippy/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-error: could not find `Cargo.toml` in `/github/workspace` or any parent directory
+error: unexpected argument 'identity/Cargo.toml' found
+
+Usage: cargo check [OPTIONS]
+
+For more information, try '--help'.
 
