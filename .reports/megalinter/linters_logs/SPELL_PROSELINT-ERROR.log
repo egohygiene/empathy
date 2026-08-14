@@ -415,4 +415,12 @@ mantle/tests/README.md:369:41: typography.symbols.curly_quotes: Use curly quotes
 mantle/tests/README.md:371:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/tests/README.md:390:38: lexical_illusions: There's a lexical illusion in 'bats
    bats' - a phrase is repeated.
+mindgarden/profiles/agent/README.md:26:4: lexical_illusions: There's a lexical illusion in 'Search
+
+Search' - a phrase is repeated.
+mindgarden/profiles/agent/README.md:36:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mindgarden/profiles/agent/README.md:54:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 

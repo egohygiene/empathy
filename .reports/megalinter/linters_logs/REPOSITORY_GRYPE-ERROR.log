@@ -14,5 +14,5 @@ decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (4
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
 decompress             4.2.1      npm     GHSA-jwp9-9v96-94mx  Medium    0.3% (25th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0108] ERROR discovered vulnerabilities at or above the severity threshold
+[0116] ERROR discovered vulnerabilities at or above the severity threshold
 

@@ -5,22 +5,6 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff_format
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 unformatted: File would be reformatted
-   --> mindgarden/scripts/validate_garden.py:230:43
-    |
-229 |         raise ContractError(
-    -             f"{path}: note fields differ; "
-    -             f"missing={sorted(missing)}, unknown={sorted(unknown)}"
-230 +             f"{path}: note fields differ; missing={sorted(missing)}, unknown={sorted(unknown)}"
-231 |         )
---------------------------------------------------------------------------------
-359 |             raise ContractError(
-    -                 f"{note_path}: duplicate note id {note_id}; "
-    -                 f"first seen in {notes[note_id][0]}"
-360 +                 f"{note_path}: duplicate note id {note_id}; first seen in {notes[note_id][0]}"
-361 |             )
-    |
-
-unformatted: File would be reformatted
   --> tests/test_mindgarden_obsidian_integration.py:16:14
    |
 15 |         profile = json.loads(
@@ -77,5 +61,5 @@ unformatted: File would be reformatted
    -
    |
 
-2 files would be reformatted, 33 files already formatted
+1 file would be reformatted, 38 files already formatted
 
