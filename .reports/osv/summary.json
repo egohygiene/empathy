@@ -1,5 +1,5 @@
 {
-  "commit": "8953de0e3f4267bfb1e89356a4a0e8043667479f",
+  "commit": "51501dd5116228e8daf29a3a7acc235ab5c24664",
   "discovery": {
     "artifact_count": 17,
     "artifacts": [
@@ -32,7 +32,7 @@
     ]
   },
   "event": "push",
-  "generated_at": "2026-08-14T16:28:50Z",
+  "generated_at": "2026-08-14T16:55:03Z",
   "reports": {
     "json": ".reports/osv/latest.json",
     "markdown": ".reports/osv/latest.md",
