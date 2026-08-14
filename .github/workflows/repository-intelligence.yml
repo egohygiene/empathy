@@ -67,6 +67,7 @@ jobs:
         uses: ./.github/actions/generate-repository-intelligence-dashboard
         with:
           reports-root: ".reports"
+          analytics-summary: "${{ inputs.output-root }}/analytics/summary.json"
           output-root: "${{ inputs.dashboard-output-root }}"
           repository: "${{ github.repository }}"
           default-branch: "${{ github.event.repository.default_branch }}"

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://egohygiene.dev/schemas/repository-intelligence-dashboard/v1.json",
+  "$id": "https://egohygiene.dev/schemas/repository-intelligence-dashboard/v2.json",
   "title": "Ego Hygiene repository intelligence dashboard",
   "type": "object",
   "additionalProperties": false,
@@ -11,11 +11,12 @@
     "repository",
     "states",
     "producers",
+    "analytics",
     "vitality"
   ],
   "properties": {
     "schema": {
-      "const": "egohygiene.repository-intelligence-dashboard/v1"
+      "const": "egohygiene.repository-intelligence-dashboard/v2"
     },
     "schema_version": {
       "const": 1
@@ -57,6 +58,9 @@
         "megalinter": { "$ref": "#/$defs/producer" },
         "scorecard": { "$ref": "#/$defs/producer" }
       }
+    },
+    "analytics": {
+      "$ref": "#/$defs/analyticsProjection"
     },
     "vitality": {
       "type": "object",
@@ -121,10 +125,54 @@
             "by_severity": { "type": "object" }
           }
         },
-        "freshness": { "$ref": "#/$defs/status" },
+        "freshness": { "$ref": "#/$defs/freshness" },
         "links": { "type": "object" },
         "metrics": { "type": "object" }
       }
+    },
+    "freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "message",
+        "expires_at",
+        "stale_after_days",
+        "elapsed_percent",
+        "remaining_days"
+      ],
+      "properties": {
+        "state": { "enum": ["fresh", "stale", "unknown"] },
+        "message": { "type": "string" },
+        "expires_at": { "type": ["string", "null"] },
+        "stale_after_days": { "type": ["integer", "null"], "minimum": 1 },
+        "elapsed_percent": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "remaining_days": { "type": ["integer", "null"] }
+      }
+    },
+    "analyticsProjection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["availability", "message", "summary"],
+      "properties": {
+        "availability": { "enum": ["available", "unavailable", "invalid"] },
+        "message": { "type": "string" },
+        "summary": { "type": ["object", "null"] }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "availability": { "const": "available" } },
+            "required": ["availability"]
+          },
+          "then": { "properties": { "summary": { "type": "object" } } },
+          "else": { "properties": { "summary": { "type": "null" } } }
+        }
+      ]
     }
   }
 }

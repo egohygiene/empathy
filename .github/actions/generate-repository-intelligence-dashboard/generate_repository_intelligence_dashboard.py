@@ -9,7 +9,7 @@ import argparse
 from datetime import UTC, datetime, timedelta
 import html
 import json
-from math import isfinite
+from math import ceil, isfinite, pi
 import os
 from pathlib import Path
 import re
@@ -18,8 +18,9 @@ import tempfile
 from typing import Any
 from urllib.parse import urlparse
 
-DASHBOARD_SCHEMA = "egohygiene.repository-intelligence-dashboard/v1"
+DASHBOARD_SCHEMA = "egohygiene.repository-intelligence-dashboard/v2"
 REPORT_SCHEMA = "egohygiene.repository-report-summary/v1"
+ANALYTICS_SCHEMA = "egohygiene.repository-analytics/v1"
 PRODUCERS = ("osv", "megalinter", "scorecard")
 PRODUCER_NAMES = {
     "osv": "Dependency risk",
@@ -43,6 +44,7 @@ def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repository-root", required=True)
     parser.add_argument("--reports-root", required=True)
+    parser.add_argument("--analytics-summary", default="")
     parser.add_argument("--output-root", required=True)
     parser.add_argument("--repository", required=True)
     parser.add_argument("--default-branch", required=True)
@@ -155,7 +157,13 @@ def unavailable_projection(producer: str) -> dict[str, Any]:
             "advisory": None,
             "by_severity": {},
         },
-        "freshness": unknown_status("unknown", "Freshness cannot be determined."),
+        "freshness": {
+            **unknown_status("unknown", "Freshness cannot be determined."),
+            "expires_at": None,
+            "stale_after_days": None,
+            "elapsed_percent": None,
+            "remaining_days": None,
+        },
         "links": {},
         "metrics": {},
     }
@@ -297,6 +305,10 @@ def validate_report(
         if freshness_state == "stale"
         else f"Valid through {format_timestamp(expires_at)}."
     )
+    elapsed_seconds = max(0.0, (as_of - generated_at).total_seconds())
+    freshness_window_seconds = (expires_at - generated_at).total_seconds()
+    elapsed_percent = round(min(1.0, elapsed_seconds / freshness_window_seconds) * 100)
+    remaining_days = ceil((expires_at - as_of).total_seconds() / 86400)
 
     provenance = require_object(document, "provenance")
     if not all(isinstance(provenance.get(key), str) for key in ("event", "workflow")):
@@ -316,9 +328,7 @@ def validate_report(
         raise DashboardInputError(
             "links must declare detail, workflow, security, and source strings."
         )
-    links = {
-        key: safe_url(report_links.get(key)) for key in link_keys
-    }
+    links = {key: safe_url(report_links.get(key)) for key in link_keys}
     payload = require_object(document, producer)
     return {
         "producer": producer,
@@ -334,7 +344,14 @@ def validate_report(
             "advisory": advisory,
             "by_severity": normalized_severity,
         },
-        "freshness": {"state": freshness_state, "message": freshness_message},
+        "freshness": {
+            "state": freshness_state,
+            "message": freshness_message,
+            "expires_at": format_timestamp(expires_at),
+            "stale_after_days": stale_after_days,
+            "elapsed_percent": elapsed_percent,
+            "remaining_days": remaining_days,
+        },
         "links": {key: value for key, value in links.items() if value},
         "metrics": producer_metrics(producer, payload),
     }
@@ -358,6 +375,227 @@ def load_report(
         return validate_report(document, producer, repository, as_of)
     except DashboardInputError as error:
         return invalid_projection(producer, str(error))
+
+
+def analytics_projection(availability: str, message: str) -> dict[str, Any]:
+    """Build an explicit analytics availability wrapper."""
+
+    return {"availability": availability, "message": message, "summary": None}
+
+
+def analytics_integer(value: Any, label: str) -> int:
+    """Validate one non-negative analytics integer."""
+
+    if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+        raise DashboardInputError(f"{label} must be a non-negative integer.")
+    return value
+
+
+def analytics_signed_integer(value: Any, label: str) -> int:
+    """Validate one analytics integer that may be negative."""
+
+    if isinstance(value, bool) or not isinstance(value, int):
+        raise DashboardInputError(f"{label} must be an integer.")
+    return value
+
+
+def analytics_rows(
+    value: Any,
+    *,
+    label: str,
+    identity_key: str,
+    metric_keys: tuple[str, ...],
+    limit: int,
+) -> list[dict[str, Any]]:
+    """Validate and bound one public analytics row collection."""
+
+    if not isinstance(value, list):
+        raise DashboardInputError(f"{label} must be an array.")
+    rows: list[dict[str, Any]] = []
+    for index, candidate in enumerate(value[:limit]):
+        if not isinstance(candidate, dict):
+            raise DashboardInputError(f"{label}[{index}] must be an object.")
+        identity = candidate.get(identity_key)
+        if not isinstance(identity, str) or not identity:
+            raise DashboardInputError(f"{label}[{index}].{identity_key} must be non-empty.")
+        row: dict[str, Any] = {identity_key: identity}
+        for metric_key in metric_keys:
+            row[metric_key] = analytics_integer(
+                candidate.get(metric_key),
+                f"{label}[{index}].{metric_key}",
+            )
+        rows.append(row)
+    if len({row[identity_key] for row in rows}) != len(rows):
+        raise DashboardInputError(f"{label} identities must be unique.")
+    return rows
+
+
+def validate_analytics(document: dict[str, Any], source_commit: str) -> dict[str, Any]:
+    """Project the versioned public analytics contract used by the charts."""
+
+    if document.get("schema") != ANALYTICS_SCHEMA or document.get("schema_version") != 1:
+        raise DashboardInputError("Analytics uses an incompatible schema.")
+    source = require_object(document, "source")
+    if source.get("revision") != source_commit:
+        raise DashboardInputError("Analytics does not represent the dashboard source commit.")
+    source_ref = source.get("ref")
+    source_committed_at = source.get("committed_at")
+    if not isinstance(source_ref, str) or not source_ref:
+        raise DashboardInputError("Analytics source.ref must be non-empty.")
+    if not isinstance(source_committed_at, str):
+        raise DashboardInputError("Analytics source.committed_at must be RFC 3339.")
+    committed_at = format_timestamp(
+        parse_timestamp(source_committed_at, "analytics source.committed_at")
+    )
+
+    privacy = require_object(document, "privacy")
+    if privacy != {
+        "public_safe": True,
+        "contributor_identities_included": False,
+        "commit_messages_included": False,
+    }:
+        raise DashboardInputError("Analytics privacy declaration is not public-safe.")
+
+    scope = require_object(document, "scope")
+    since = scope.get("since")
+    resolved_since = scope.get("resolved_since")
+    if not isinstance(since, str) or not since or not isinstance(resolved_since, str):
+        raise DashboardInputError("Analytics scope must declare since and resolved_since.")
+
+    repository = require_object(document, "repository")
+    activity = require_object(document, "activity")
+    changes = require_object(document, "changes")
+    filters = require_object(document, "filters")
+    weekly = analytics_rows(
+        activity.get("weekly"),
+        label="analytics.activity.weekly",
+        identity_key="week",
+        metric_keys=("commits", "merges"),
+        limit=260,
+    )
+    if any(row["merges"] > row["commits"] for row in weekly):
+        raise DashboardInputError("Weekly merge counts cannot exceed commit counts.")
+    if weekly != sorted(weekly, key=lambda row: row["week"]):
+        raise DashboardInputError("Weekly analytics must be ordered by week.")
+
+    repository_areas = analytics_rows(
+        repository.get("areas"),
+        label="analytics.repository.areas",
+        identity_key="name",
+        metric_keys=("file_count",),
+        limit=100,
+    )
+    change_areas = analytics_rows(
+        changes.get("areas"),
+        label="analytics.changes.areas",
+        identity_key="name",
+        metric_keys=("commit_touches", "insertions", "deletions", "binary_changes"),
+        limit=100,
+    )
+    hotspots = analytics_rows(
+        changes.get("hotspots"),
+        label="analytics.changes.hotspots",
+        identity_key="path",
+        metric_keys=("commit_touches", "insertions", "deletions", "binary_changes"),
+        limit=20,
+    )
+    first_commit_at = activity.get("first_commit_at")
+    last_commit_at = activity.get("last_commit_at")
+    for value, label in (
+        (first_commit_at, "analytics.activity.first_commit_at"),
+        (last_commit_at, "analytics.activity.last_commit_at"),
+    ):
+        if value is not None and not isinstance(value, str):
+            raise DashboardInputError(f"{label} must be an RFC 3339 string or null.")
+        if isinstance(value, str):
+            parse_timestamp(value, label)
+
+    tracked_files = analytics_integer(
+        repository.get("tracked_files"), "analytics.repository.tracked_files"
+    )
+    if sum(row["file_count"] for row in repository_areas) != tracked_files:
+        raise DashboardInputError("Repository area file counts must sum to tracked_files.")
+    activity_commits = analytics_integer(activity.get("commits"), "analytics.activity.commits")
+    activity_merges = analytics_integer(activity.get("merges"), "analytics.activity.merges")
+    if activity_merges > activity_commits:
+        raise DashboardInputError("Analytics merge count cannot exceed commit count.")
+
+    return {
+        "source": {
+            "revision": source_commit,
+            "ref": source_ref,
+            "committed_at": committed_at,
+        },
+        "scope": {
+            "since": since,
+            "resolved_since": format_timestamp(
+                parse_timestamp(resolved_since, "analytics scope.resolved_since")
+            ),
+        },
+        "repository": {
+            "tracked_files": tracked_files,
+            "areas": repository_areas,
+        },
+        "activity": {
+            "commits": activity_commits,
+            "merges": activity_merges,
+            "contributors": analytics_integer(
+                activity.get("contributors"), "analytics.activity.contributors"
+            ),
+            "first_commit_at": first_commit_at,
+            "last_commit_at": last_commit_at,
+            "weekly": weekly,
+        },
+        "changes": {
+            "files_changed": analytics_integer(
+                changes.get("files_changed"), "analytics.changes.files_changed"
+            ),
+            "insertions": analytics_integer(
+                changes.get("insertions"), "analytics.changes.insertions"
+            ),
+            "deletions": analytics_integer(changes.get("deletions"), "analytics.changes.deletions"),
+            "net_lines": analytics_signed_integer(
+                changes.get("net_lines"), "analytics.changes.net_lines"
+            ),
+            "areas": change_areas,
+            "hotspots": hotspots,
+        },
+        "filters": {
+            "excluded_tracked_files": analytics_integer(
+                filters.get("excluded_tracked_files"),
+                "analytics.filters.excluded_tracked_files",
+            ),
+            "excluded_change_records": analytics_integer(
+                filters.get("excluded_change_records"),
+                "analytics.filters.excluded_change_records",
+            ),
+        },
+    }
+
+
+def load_analytics(path: Path | None, source_commit: str) -> dict[str, Any]:
+    """Load the public analytics summary with honest missing and invalid states."""
+
+    if path is None or not path.is_file() or path.stat().st_size == 0:
+        return analytics_projection(
+            "unavailable",
+            "No commit-scoped repository analytics summary is available.",
+        )
+    try:
+        document = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return analytics_projection("invalid", "Repository analytics is malformed JSON.")
+    if not isinstance(document, dict):
+        return analytics_projection("invalid", "Repository analytics must be an object.")
+    try:
+        summary = validate_analytics(document, source_commit)
+    except DashboardInputError as error:
+        return analytics_projection("invalid", str(error))
+    return {
+        "availability": "available",
+        "message": "Commit-scoped repository analytics is available.",
+        "summary": summary,
+    }
 
 
 def run_git(repository_root: Path, *arguments: str) -> str:
@@ -503,6 +741,7 @@ def build_dashboard(
     default_branch: str,
     source_commit: str,
     as_of: datetime,
+    analytics_summary: Path | None = None,
 ) -> dict[str, Any]:
     """Build the complete public dashboard model."""
 
@@ -511,12 +750,9 @@ def build_dashboard(
     if not repository or not default_branch:
         raise DashboardInputError("repository and default-branch must be non-empty")
     producers = {
-        producer: load_report(reports_root, producer, repository, as_of)
-        for producer in PRODUCERS
+        producer: load_report(reports_root, producer, repository, as_of) for producer in PRODUCERS
     }
-    vitality = collect_vitality(
-        repository_root, repository, default_branch, source_commit, as_of
-    )
+    vitality = collect_vitality(repository_root, repository, default_branch, source_commit, as_of)
     return {
         "schema": DASHBOARD_SCHEMA,
         "schema_version": 1,
@@ -528,6 +764,7 @@ def build_dashboard(
         },
         "states": count_states(producers),
         "producers": producers,
+        "analytics": load_analytics(analytics_summary, source_commit),
         "vitality": vitality,
     }
 
@@ -547,10 +784,7 @@ def display_count(value: Any) -> str:
 def badge(label: str, state: str) -> str:
     """Render a textual state badge whose meaning is not color-only."""
 
-    return (
-        f'<span class="badge state-{escaped(state)}">'
-        f"{escaped(label)}: {escaped(state)}</span>"
-    )
+    return f'<span class="badge state-{escaped(state)}">{escaped(label)}: {escaped(state)}</span>'
 
 
 def metric_rows(producer: str, projection: dict[str, Any]) -> list[tuple[str, str]]:
@@ -638,18 +872,475 @@ def render_producer_card(producer: str, projection: dict[str, Any]) -> str:
     )
     return f"""<article class="producer-card" aria-labelledby="{producer}-title">
   <p class="card-kicker">{escaped(producer)}</p>
-  <h3 id="{producer}-title">{escaped(projection['name'])}</h3>
+  <h3 id="{producer}-title">{escaped(projection["name"])}</h3>
   <div class="badge-row">
-    {badge("Availability", projection['availability'])}
-    {badge("Execution", projection['execution']['state'])}
-    {badge("Findings", projection['findings']['state'])}
-    {badge("Freshness", projection['freshness']['state'])}
+    {badge("Availability", projection["availability"])}
+    {badge("Execution", projection["execution"]["state"])}
+    {badge("Findings", projection["findings"]["state"])}
+    {badge("Freshness", projection["freshness"]["state"])}
   </div>
   <p class="headline-metric">{escaped(headline_metric(producer, projection))}</p>
-  <p class="card-message">{escaped(projection['execution']['message'])}</p>
+  <p class="card-message">{escaped(projection["execution"]["message"])}</p>
   <dl class="metric-list">{rows}</dl>
-  <div class="link-row">{render_links(projection['links'])}</div>
+  <div class="link-row">{render_links(projection["links"])}</div>
 </article>"""
+
+
+def compact_number(value: int) -> str:
+    """Render a compact, deterministic integer label."""
+
+    if abs(value) < 1_000:
+        return str(value)
+    for divisor, suffix in ((1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")):
+        if abs(value) >= divisor:
+            scaled = value / divisor
+            precision = 0 if abs(scaled) >= 10 else 1
+            return f"{scaled:.{precision}f}{suffix}".replace(".0", "")
+    return str(value)
+
+
+def render_data_table(
+    caption: str,
+    headers: tuple[str, ...],
+    rows: list[tuple[Any, ...]],
+) -> str:
+    """Render a compact table fallback for a visual chart."""
+
+    header_cells = "".join(f'<th scope="col">{escaped(header)}</th>' for header in headers)
+    body_rows = "".join(
+        "<tr>"
+        + "".join(
+            f'<th scope="row">{escaped(value)}</th>' if index == 0 else f"<td>{escaped(value)}</td>"
+            for index, value in enumerate(row)
+        )
+        + "</tr>"
+        for row in rows
+    )
+    return f"""<details class="data-table">
+  <summary>View data table</summary>
+  <div class="table-scroll">
+    <table>
+      <caption class="sr-only">{escaped(caption)}</caption>
+      <thead><tr>{header_cells}</tr></thead>
+      <tbody>{body_rows}</tbody>
+    </table>
+  </div>
+</details>"""
+
+
+def chart_card(
+    *,
+    identifier: str,
+    kicker: str,
+    title: str,
+    description: str,
+    visualization: str,
+    table: str,
+    wide: bool = False,
+) -> str:
+    """Wrap one chart and its table fallback in the shared visual system."""
+
+    wide_class = " chart-card-wide" if wide else ""
+    return f"""<article class="chart-card{wide_class}" aria-labelledby="{identifier}-heading">
+  <div class="chart-card-heading">
+    <div>
+      <p class="card-kicker">{escaped(kicker)}</p>
+      <h3 id="{identifier}-heading">{escaped(title)}</h3>
+    </div>
+    <p>{escaped(description)}</p>
+  </div>
+  {visualization}
+  {table}
+</article>"""
+
+
+def render_activity_chart(summary: dict[str, Any]) -> str:
+    """Render weekly commits and merges as an ordered line chart."""
+
+    weekly = summary["activity"]["weekly"]
+    if not weekly:
+        return chart_card(
+            identifier="activity-chart",
+            kicker="Ordered trend",
+            title="Weekly activity",
+            description="No commits fall inside the represented activity window.",
+            visualization='<div class="chart-empty">No activity points available.</div>',
+            table="",
+            wide=True,
+        )
+    width = 820
+    height = 320
+    left = 52
+    right = 24
+    top = 28
+    bottom = 54
+    plot_width = width - left - right
+    plot_height = height - top - bottom
+    maximum = max(1, *(row["commits"] for row in weekly))
+
+    def coordinates(metric: str) -> list[tuple[float, float]]:
+        points: list[tuple[float, float]] = []
+        for index, row in enumerate(weekly):
+            x = left + (
+                plot_width / 2 if len(weekly) == 1 else plot_width * index / (len(weekly) - 1)
+            )
+            y = top + plot_height * (1 - row[metric] / maximum)
+            points.append((x, y))
+        return points
+
+    commit_points = coordinates("commits")
+    merge_points = coordinates("merges")
+    grid = []
+    for index in range(5):
+        y = top + plot_height * index / 4
+        value = round(maximum * (1 - index / 4))
+        grid.append(
+            f'<line class="chart-grid-line" x1="{left}" y1="{y:.1f}" x2="{width - right}" y2="{y:.1f}" />'
+            f'<text class="chart-axis-label" x="{left - 10}" y="{y + 4:.1f}" text-anchor="end">{value}</text>'
+        )
+    label_count = min(6, len(weekly))
+    label_indexes = (
+        {0}
+        if label_count == 1
+        else {round(index * (len(weekly) - 1) / (label_count - 1)) for index in range(label_count)}
+    )
+    x_labels = []
+    for index in sorted(label_indexes):
+        date = datetime.fromisoformat(weekly[index]["week"])
+        label = f"{date.strftime('%b')} {date.day}"
+        x_labels.append(
+            f'<text class="chart-axis-label" x="{commit_points[index][0]:.1f}" y="{height - 20}" text-anchor="middle">{escaped(label)}</text>'
+        )
+
+    def polyline(points: list[tuple[float, float]], css_class: str) -> str:
+        serialized = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+        markers = "".join(
+            f'<circle class="{css_class}-point" cx="{x:.1f}" cy="{y:.1f}" r="4" />'
+            for x, y in points
+        )
+        return f'<polyline class="{css_class}" points="{serialized}" />{markers}'
+
+    visualization = f"""<figure class="chart-figure">
+  <svg class="chart-svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="activity-svg-title activity-svg-desc">
+    <title id="activity-svg-title">Weekly repository commits and merges</title>
+    <desc id="activity-svg-desc">An ordered line chart containing every weekly point in the public analytics window.</desc>
+    {"".join(grid)}
+    {polyline(commit_points, "chart-line-commits")}
+    {polyline(merge_points, "chart-line-merges")}
+    {"".join(x_labels)}
+  </svg>
+  <figcaption class="chart-legend">
+    <span><i class="legend-line commits"></i>Commits</span>
+    <span><i class="legend-line merges"></i>Merges</span>
+  </figcaption>
+</figure>"""
+    table = render_data_table(
+        "Weekly repository activity",
+        ("Week", "Commits", "Merges"),
+        [(row["week"], row["commits"], row["merges"]) for row in weekly],
+    )
+    return chart_card(
+        identifier="activity-chart",
+        kicker="Ordered trend",
+        title="Weekly activity",
+        description=(
+            f"{summary['activity']['commits']} commits and "
+            f"{summary['activity']['merges']} merges since {summary['scope']['resolved_since'][:10]}."
+        ),
+        visualization=visualization,
+        table=table,
+        wide=True,
+    )
+
+
+def repository_composition(summary: dict[str, Any]) -> list[dict[str, Any]]:
+    """Bound repository composition to five named slices plus Other."""
+
+    areas = summary["repository"]["areas"]
+    top = areas[:5]
+    remainder = max(
+        0,
+        summary["repository"]["tracked_files"] - sum(row["file_count"] for row in top),
+    )
+    return [*top, *([{"name": "Other", "file_count": remainder}] if remainder else [])]
+
+
+def render_composition_chart(summary: dict[str, Any]) -> str:
+    """Render repository file composition as a bounded donut chart."""
+
+    composition = repository_composition(summary)
+    total = sum(row["file_count"] for row in composition)
+    radius = 82
+    circumference = 2 * pi * radius
+    offset = 0.0
+    segments = []
+    legend = []
+    for index, row in enumerate(composition):
+        fraction = row["file_count"] / total if total else 0
+        length = circumference * fraction
+        segments.append(
+            f'<circle class="donut-slice slice-{index}" cx="140" cy="140" r="{radius}" '
+            f'stroke-dasharray="{length:.3f} {circumference - length:.3f}" '
+            f'stroke-dashoffset="{-offset:.3f}" />'
+        )
+        percentage = fraction * 100
+        legend.append(
+            f'<li><i class="legend-swatch slice-{index}"></i><span>{escaped(row["name"])}</span>'
+            f"<strong>{row['file_count']} · {percentage:.1f}%</strong></li>"
+        )
+        offset += length
+    visualization = f"""<figure class="chart-figure donut-figure">
+  <svg class="donut-chart" viewBox="0 0 280 280" role="img" aria-labelledby="composition-svg-title composition-svg-desc">
+    <title id="composition-svg-title">Repository file composition</title>
+    <desc id="composition-svg-desc">A donut chart showing the five largest repository areas and an Other slice.</desc>
+    <circle class="donut-track" cx="140" cy="140" r="{radius}" />
+    <g transform="rotate(-90 140 140)">{"".join(segments)}</g>
+    <text class="donut-total" x="140" y="132" text-anchor="middle">{compact_number(total)}</text>
+    <text class="donut-label" x="140" y="158" text-anchor="middle">source files</text>
+  </svg>
+  <figcaption><ul class="composition-legend">{"".join(legend)}</ul></figcaption>
+</figure>"""
+    table = render_data_table(
+        "Repository composition by area",
+        ("Area", "Files", "Share"),
+        [
+            (
+                row["name"],
+                row["file_count"],
+                f"{(row['file_count'] / total * 100 if total else 0):.1f}%",
+            )
+            for row in composition
+        ],
+    )
+    return chart_card(
+        identifier="composition-chart",
+        kicker="Part to whole",
+        title="Repository composition",
+        description="Generated reports, caches, build outputs, and vendored dependencies are excluded.",
+        visualization=visualization,
+        table=table,
+    )
+
+
+def render_hotspot_chart(summary: dict[str, Any]) -> str:
+    """Render repository-area change concentration as horizontal bars."""
+
+    rows = summary["changes"]["areas"][:8]
+    maximum = max(1, *(row["commit_touches"] for row in rows))
+    width = 820
+    row_height = 48
+    height = 46 + row_height * len(rows)
+    label_width = 165
+    bar_width = 535
+    bars = []
+    for index, row in enumerate(rows):
+        y = 28 + index * row_height
+        rendered_width = bar_width * row["commit_touches"] / maximum
+        display_name = row["name"] if len(row["name"]) <= 20 else row["name"][:18] + "…"
+        bars.append(
+            f'<text class="bar-label" x="0" y="{y + 17}">{escaped(display_name)}</text>'
+            f'<rect class="bar-track" x="{label_width}" y="{y}" width="{bar_width}" height="22" rx="7" />'
+            f'<rect class="bar-value" x="{label_width}" y="{y}" width="{rendered_width:.1f}" height="22" rx="7" />'
+            f'<text class="bar-count" x="{label_width + bar_width + 18}" y="{y + 17}">{row["commit_touches"]}</text>'
+        )
+    visualization = f"""<figure class="chart-figure">
+  <svg class="chart-svg hotspot-chart" viewBox="0 0 {width} {height}" role="img" aria-labelledby="hotspot-svg-title hotspot-svg-desc">
+    <title id="hotspot-svg-title">Repository change hotspots</title>
+    <desc id="hotspot-svg-desc">A horizontal bar chart ranking repository areas by commit touches.</desc>
+    {"".join(bars)}
+  </svg>
+  <figcaption class="chart-note">Commit touches count how many commits changed files in each repository area.</figcaption>
+</figure>"""
+    table = render_data_table(
+        "Repository change hotspots",
+        ("Area", "Commit touches", "Insertions", "Deletions", "Binary changes"),
+        [
+            (
+                row["name"],
+                row["commit_touches"],
+                row["insertions"],
+                row["deletions"],
+                row["binary_changes"],
+            )
+            for row in rows
+        ],
+    )
+    return chart_card(
+        identifier="hotspot-chart",
+        kicker="Ranked comparison",
+        title="Change hotspots",
+        description=(
+            f"{summary['changes']['files_changed']} source files changed; "
+            f"{summary['filters']['excluded_change_records']} generated change records were filtered."
+        ),
+        visualization=visualization,
+        table=table,
+        wide=True,
+    )
+
+
+def render_findings_chart(producers: dict[str, dict[str, Any]]) -> str:
+    """Render blocking and advisory findings without turning unknown into zero."""
+
+    known_totals = [
+        projection["findings"]["total"]
+        for projection in producers.values()
+        if projection["findings"]["total"] is not None
+    ]
+    maximum = max(1, *known_totals)
+    width = 720
+    label_width = 130
+    bar_width = 420
+    rows = []
+    table_rows = []
+    for index, producer in enumerate(PRODUCERS):
+        projection = producers[producer]
+        findings = projection["findings"]
+        y = 34 + index * 58
+        total = findings["total"]
+        table_rows.append(
+            (
+                producer.upper(),
+                projection["availability"],
+                display_count(total),
+                display_count(findings["blocking"]),
+                display_count(findings["advisory"]),
+            )
+        )
+        rows.append(f'<text class="bar-label" x="0" y="{y + 17}">{producer.upper()}</text>')
+        if total is None:
+            rows.append(
+                f'<rect class="finding-unknown" x="{label_width}" y="{y}" width="{bar_width}" height="22" rx="7" />'
+                f'<text class="bar-count" x="{label_width + bar_width + 18}" y="{y + 17}">unknown</text>'
+            )
+            continue
+        blocking = findings["blocking"] or 0
+        advisory = findings["advisory"] or 0
+        blocking_width = bar_width * blocking / maximum
+        advisory_width = bar_width * advisory / maximum
+        rows.append(
+            f'<rect class="bar-track" x="{label_width}" y="{y}" width="{bar_width}" height="22" rx="7" />'
+            f'<rect class="finding-blocking" x="{label_width}" y="{y}" width="{blocking_width:.1f}" height="22" rx="7" />'
+            f'<rect class="finding-advisory" x="{label_width + blocking_width:.1f}" y="{y}" width="{advisory_width:.1f}" height="22" rx="7" />'
+            f'<text class="bar-count" x="{label_width + bar_width + 18}" y="{y + 17}">{total}</text>'
+        )
+    visualization = f"""<figure class="chart-figure">
+  <svg class="chart-svg findings-chart" viewBox="0 0 {width} 220" role="img" aria-labelledby="findings-svg-title findings-svg-desc">
+    <title id="findings-svg-title">Scanner findings by producer</title>
+    <desc id="findings-svg-desc">Horizontal bars distinguish blocking, advisory, clear, and unknown evidence.</desc>
+    {"".join(rows)}
+  </svg>
+  <figcaption class="chart-legend">
+    <span><i class="legend-box blocking"></i>Blocking</span>
+    <span><i class="legend-box advisory"></i>Advisory</span>
+    <span><i class="legend-box unknown"></i>Unknown</span>
+  </figcaption>
+</figure>"""
+    return chart_card(
+        identifier="findings-chart",
+        kicker="Evidence distribution",
+        title="Scanner findings",
+        description="Unavailable evidence remains visibly unknown rather than becoming a misleading zero.",
+        visualization=visualization,
+        table=render_data_table(
+            "Scanner findings by producer",
+            ("Producer", "Availability", "Total", "Blocking", "Advisory"),
+            table_rows,
+        ),
+    )
+
+
+def freshness_label(freshness: dict[str, Any]) -> str:
+    """Describe one producer freshness window in human units."""
+
+    remaining = freshness.get("remaining_days")
+    if remaining is None:
+        return "No freshness evidence"
+    if remaining > 1:
+        return f"{remaining} days until stale"
+    if remaining == 1:
+        return "1 day until stale"
+    if remaining == 0:
+        return "Freshness boundary reached"
+    if remaining == -1:
+        return "1 day stale"
+    return f"{abs(remaining)} days stale"
+
+
+def render_freshness_panel(producers: dict[str, dict[str, Any]]) -> str:
+    """Render evidence clocks as accessible progress meters."""
+
+    rows = []
+    table_rows = []
+    for producer in PRODUCERS:
+        freshness = producers[producer]["freshness"]
+        percent = freshness.get("elapsed_percent")
+        label = freshness_label(freshness)
+        meter = (
+            f'<progress value="{percent}" max="100" aria-label="{escaped(producer.upper())} freshness window: {escaped(label)}">{percent}%</progress>'
+            if percent is not None
+            else '<div class="unknown-meter" aria-hidden="true"></div>'
+        )
+        rows.append(
+            f"""<div class="freshness-row">
+  <div><strong>{producer.upper()}</strong>{badge("Freshness", freshness["state"])}</div>
+  {meter}
+  <p>{escaped(label)}</p>
+</div>"""
+        )
+        table_rows.append(
+            (
+                producer.upper(),
+                freshness["state"],
+                display_count(freshness.get("expires_at")),
+                label,
+            )
+        )
+    return chart_card(
+        identifier="freshness-chart",
+        kicker="Evidence clocks",
+        title="Report freshness",
+        description="Meters show elapsed evidence windows, not a synthetic health score.",
+        visualization=f'<div class="freshness-list">{"".join(rows)}</div>',
+        table=render_data_table(
+            "Report freshness by producer",
+            ("Producer", "State", "Expires at", "Window"),
+            table_rows,
+        ),
+    )
+
+
+def render_analytics_section(dashboard: dict[str, Any]) -> str:
+    """Render repository statistics and scanner evidence visualizations."""
+
+    analytics = dashboard["analytics"]
+    summary = analytics.get("summary")
+    if analytics["availability"] == "available" and isinstance(summary, dict):
+        repository_charts = (
+            render_activity_chart(summary)
+            + render_composition_chart(summary)
+            + render_hotspot_chart(summary)
+        )
+    else:
+        repository_charts = f"""<article class="chart-card chart-card-wide chart-empty-card">
+  <p class="card-kicker">Repository analytics</p>
+  <h3>Statistical snapshots unavailable</h3>
+  <p>{escaped(analytics["message"])}</p>
+</article>"""
+    return f"""<section class="section" aria-labelledby="analytics-heading">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Statistical snapshots</p>
+      <h2 id="analytics-heading">Repository analytics</h2>
+    </div>
+    <p>{escaped(analytics["message"])} Generated and vendored noise is excluded before visualization.</p>
+  </div>
+  <div class="analytics-grid">{repository_charts}</div>
+  <div class="evidence-grid">
+    {render_findings_chart(dashboard["producers"])}
+    {render_freshness_panel(dashboard["producers"])}
+  </div>
+</section>"""
 
 
 def render_html(dashboard: dict[str, Any]) -> str:
@@ -658,8 +1349,7 @@ def render_html(dashboard: dict[str, Any]) -> str:
     repository = dashboard["repository"]
     states = dashboard["states"]
     producer_cards = "\n".join(
-        render_producer_card(producer, dashboard["producers"][producer])
-        for producer in PRODUCERS
+        render_producer_card(producer, dashboard["producers"][producer]) for producer in PRODUCERS
     )
     vitality = dashboard["vitality"]
     vitality_metrics = vitality.get("metrics", {})
@@ -693,21 +1383,21 @@ def render_html(dashboard: dict[str, Any]) -> str:
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="description" content="Repository intelligence for {escaped(repository['name'])}." />
-    <title>Repository intelligence · {escaped(repository['name'])}</title>
+    <meta name="description" content="Repository intelligence for {escaped(repository["name"])}." />
+    <title>Repository intelligence · {escaped(repository["name"])}</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to dashboard</a>
     <header class="hero">
       <div class="shell">
-        <p class="eyebrow">{escaped(repository['name'])}</p>
+        <p class="eyebrow">{escaped(repository["name"])}</p>
         <h1 class="gradient-text">Repository intelligence</h1>
         <p class="lede">A transparent view of dependency risk, code quality, supply-chain posture, and repository vitality. Scanner execution and findings remain separate.</p>
         <div class="meta-row">
-          <span class="meta-chip">Branch: {escaped(repository['default_branch'])}</span>
-          <span class="meta-chip">Commit: {escaped(repository['source_commit'][:12])}</span>
-          <span class="meta-chip">As of: {escaped(dashboard['generated_at'])}</span>
+          <span class="meta-chip">Branch: {escaped(repository["default_branch"])}</span>
+          <span class="meta-chip">Commit: {escaped(repository["source_commit"][:12])}</span>
+          <span class="meta-chip">As of: {escaped(dashboard["generated_at"])}</span>
         </div>
       </div>
     </header>
@@ -723,18 +1413,19 @@ def render_html(dashboard: dict[str, Any]) -> str:
         <div class="status-grid">
           <article class="panel">
             <p class="panel-label">Execution</p>
-            <p class="panel-value">{states['execution']['success']} successful · {states['execution']['failure']} failed · {states['execution']['cancelled']} cancelled · {states['execution']['unknown']} unknown</p>
+            <p class="panel-value">{states["execution"]["success"]} successful · {states["execution"]["failure"]} failed · {states["execution"]["cancelled"]} cancelled · {states["execution"]["unknown"]} unknown</p>
           </article>
           <article class="panel">
             <p class="panel-label">Findings</p>
-            <p class="panel-value">{states['findings']['clear']} clear · {states['findings']['attention']} attention · {states['findings']['blocked']} blocked · {states['findings']['unknown']} unknown</p>
+            <p class="panel-value">{states["findings"]["clear"]} clear · {states["findings"]["attention"]} attention · {states["findings"]["blocked"]} blocked · {states["findings"]["unknown"]} unknown</p>
           </article>
           <article class="panel">
             <p class="panel-label">Freshness</p>
-            <p class="panel-value">{states['freshness']['fresh']} fresh · {states['freshness']['stale']} stale · {states['freshness']['unknown']} unknown</p>
+            <p class="panel-value">{states["freshness"]["fresh"]} fresh · {states["freshness"]["stale"]} stale · {states["freshness"]["unknown"]} unknown</p>
           </article>
         </div>
       </section>
+      {render_analytics_section(dashboard)}
       <section class="section" aria-labelledby="producer-heading">
         <div class="section-heading">
           <div>
@@ -751,14 +1442,14 @@ def render_html(dashboard: dict[str, Any]) -> str:
             <p class="eyebrow">Local collector</p>
             <h2 id="vitality-heading">Repository vitality</h2>
           </div>
-          <p>{escaped(vitality['execution']['message'])}</p>
+          <p>{escaped(vitality["execution"]["message"])}</p>
         </div>
         <div class="vitality-grid">{vitality_cards}</div>
       </section>
       <aside class="panel provenance" aria-label="Dashboard provenance">
         <div>
           <p class="card-kicker">Provenance</p>
-          <p><code>{escaped(repository['source_commit'])}</code> · {escaped(commit_subject)}</p>
+          <p><code>{escaped(repository["source_commit"])}</code> · {escaped(commit_subject)}</p>
         </div>
         <p><a href="./summary.json">View public JSON</a></p>
       </aside>
@@ -805,9 +1496,7 @@ def write_dashboard_bundle(
         json.dumps(dashboard, allow_nan=False, indent=2, sort_keys=True) + "\n",
     )
     atomic_write_text(output_root / "index.html", render_html(dashboard))
-    atomic_write_text(
-        output_root / "styles.css", stylesheet_source.read_text(encoding="utf-8")
-    )
+    atomic_write_text(output_root / "styles.css", stylesheet_source.read_text(encoding="utf-8"))
 
 
 def main() -> int:
@@ -816,11 +1505,17 @@ def main() -> int:
     args = parse_arguments()
     repository_root = Path(args.repository_root).resolve()
     reports_root = Path(args.reports_root).resolve()
+    analytics_summary = Path(args.analytics_summary).resolve() if args.analytics_summary else None
     output_root = Path(args.output_root).resolve()
     stylesheet_source = Path(args.stylesheet_source).resolve()
     if not repository_root.is_dir():
         raise SystemExit(f"Repository root is not a directory: {repository_root}")
-    validate_paths(repository_root, reports_root, output_root)
+    validate_paths(
+        repository_root,
+        reports_root,
+        output_root,
+        *([analytics_summary] if analytics_summary is not None else []),
+    )
     if not stylesheet_source.is_file():
         raise SystemExit(f"Stylesheet source is unavailable: {stylesheet_source}")
     as_of = parse_timestamp(args.as_of, "as-of")
@@ -831,6 +1526,7 @@ def main() -> int:
         default_branch=args.default_branch,
         source_commit=args.source_commit,
         as_of=as_of,
+        analytics_summary=analytics_summary,
     )
     write_dashboard_bundle(output_root, dashboard, stylesheet_source)
     print(
