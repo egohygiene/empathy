@@ -665,6 +665,13 @@ jobs:
               output.write(f"- Machine summary: `{report_root}/summary.json`\n")
           PY
 
+      - name: "🧭 Normalize repository-intelligence summary"
+        uses: ./.github/actions/normalize-repository-report
+        with:
+          producer: osv
+          input: .reports/osv/summary.json
+          output: .reports/osv/summary.json
+
       - name: "⬆️ Upload SARIF to GitHub Code Scanning"
         if: >-
           env.UPLOAD_SARIF == 'true' &&

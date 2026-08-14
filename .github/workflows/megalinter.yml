@@ -63,6 +63,15 @@ jobs:
           VALIDATE_ALL_CODEBASE: >-
             ${{ github.event_name != 'pull_request' }}
 
+      - name: Normalize repository-intelligence summary
+        if: always()
+        uses: ./.github/actions/normalize-repository-report
+        with:
+          producer: megalinter
+          input: .reports/megalinter/mega-linter-report.json
+          output: .reports/megalinter/summary.json
+          policy-input: egolint/.config/megalinter/tool-matrix.json
+
       - name: Publish MegaLinter summary
         if: always()
         shell: bash

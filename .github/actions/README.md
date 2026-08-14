@@ -29,6 +29,7 @@ token policy.
 | `flutter-setup`                    | Install pinned Flutter and resolve pub dependencies                | Tool/cache installation          |
 | `generate-repository-intelligence` | Produce deterministic tree, activity, and SVG artifacts            | Writes selected output directory |
 | `install-linux-build-deps`         | Install Flutter desktop build packages on Debian-family runners    | System packages                  |
+| `normalize-repository-report`      | Normalize scanner outputs into a versioned intelligence contract   | Writes one summary JSON          |
 | `python-poetry-setup`              | Install pinned Python/Poetry and locked dependencies               | Tool/cache installation          |
 | `setup-environment`                | Detect and prepare Node.js, Python/Poetry, and Flutter projects    | Tool/dependency installation     |
 | `setup-osv-scanner`                | Install a checksum-verified OSV Scanner release                    | Temporary tool installation      |

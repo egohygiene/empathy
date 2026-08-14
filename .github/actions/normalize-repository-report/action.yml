@@ -1,0 +1,76 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Normalize repository report
+description: >-
+  Convert supported scanner output into the versioned repository-intelligence
+  summary contract without replacing the scanner's canonical report.
+
+inputs:
+  producer:
+    description: "Supported producer name: osv, megalinter, or scorecard."
+    required: true
+  input:
+    description: Repository-relative path to the producer's canonical input.
+    required: true
+  output:
+    description: Repository-relative path for the normalized summary.
+    required: true
+  policy-input:
+    description: Optional repository-relative producer policy or tool matrix.
+    required: false
+    default: ""
+  scorecard-api-input:
+    description: Optional path to a cached OpenSSF Scorecard API response.
+    required: false
+    default: ""
+  stale-after-days:
+    description: Number of days after generation when the snapshot becomes stale.
+    required: false
+    default: "8"
+  detail-url:
+    description: Optional canonical detail URL override.
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Normalize producer report
+      shell: bash
+      env:
+        INPUT_DETAIL_URL: "${{ inputs.detail-url }}"
+        INPUT_PATH: "${{ inputs.input }}"
+        INPUT_OUTPUT: "${{ inputs.output }}"
+        INPUT_POLICY_PATH: "${{ inputs.policy-input }}"
+        INPUT_PRODUCER: "${{ inputs.producer }}"
+        INPUT_SCORECARD_API_PATH: "${{ inputs.scorecard-api-input }}"
+        INPUT_STALE_AFTER_DAYS: "${{ inputs.stale-after-days }}"
+      run: |
+        set -euo pipefail
+
+        arguments=(
+          --producer "${INPUT_PRODUCER}"
+          --input "${GITHUB_WORKSPACE}/${INPUT_PATH}"
+          --output "${GITHUB_WORKSPACE}/${INPUT_OUTPUT}"
+          --repository "${GITHUB_REPOSITORY}"
+          --commit "${GITHUB_SHA}"
+          --event "${GITHUB_EVENT_NAME}"
+          --workflow "${GITHUB_WORKFLOW}"
+          --run-id "${GITHUB_RUN_ID}"
+          --run-attempt "${GITHUB_RUN_ATTEMPT}"
+          --server-url "${GITHUB_SERVER_URL}"
+          --stale-after-days "${INPUT_STALE_AFTER_DAYS}"
+        )
+
+        if [[ -n "${INPUT_POLICY_PATH}" ]]; then
+          arguments+=(--policy-input "${GITHUB_WORKSPACE}/${INPUT_POLICY_PATH}")
+        fi
+        if [[ -n "${INPUT_SCORECARD_API_PATH}" ]]; then
+          arguments+=(--scorecard-api-input "${INPUT_SCORECARD_API_PATH}")
+        fi
+        if [[ -n "${INPUT_DETAIL_URL}" ]]; then
+          arguments+=(--detail-url "${INPUT_DETAIL_URL}")
+        fi
+
+        python3 "${GITHUB_ACTION_PATH}/normalize_repository_report.py" "${arguments[@]}"
