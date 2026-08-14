@@ -12,6 +12,9 @@ owners:
 created: 2026-08-14
 updated: 2026-08-14
 sources:
+  - ../../.github/actions/normalize-repository-report/README.md
+  - ../../.github/actions/normalize-repository-report/action.yml
+  - ../../.github/actions/normalize-repository-report/repository-report-summary.schema.json
   - ../../.github/workflows/ossf-scorecard.yml
   - ../../.github/workflows/osv-scan.yml
   - ../../.github/workflows/megalinter.yml
@@ -65,13 +68,40 @@ Required common fields:
 
 ```json
 {
+  "schema": "egohygiene.repository-report-summary/v1",
   "schema_version": 1,
   "producer": "osv",
+  "repository": "egohygiene/empathy",
   "generated_at": "2026-08-14T12:41:52Z",
   "commit": "<40-character-sha>",
-  "execution": { "state": "success" },
-  "findings": { "total": 2 },
-  "links": { "detail": "/empathy/reports/osv/" }
+  "freshness": {
+    "expires_at": "2026-08-22T12:41:52Z",
+    "stale_after_days": 8
+  },
+  "execution": {
+    "state": "success",
+    "message": "Canonical OSV JSON and SARIF outputs were validated."
+  },
+  "findings": {
+    "state": "attention",
+    "total": 2,
+    "blocking": 0,
+    "advisory": 2,
+    "by_severity": { "medium": 2 }
+  },
+  "provenance": {
+    "event": "push",
+    "workflow": "OSV Vulnerability Scan",
+    "run_id": "123456789",
+    "run_attempt": 1
+  },
+  "links": {
+    "detail": "https://github.com/egohygiene/empathy/tree/<sha>/.reports/osv",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/123456789",
+    "security": "https://github.com/egohygiene/empathy/security/code-scanning",
+    "source": "https://github.com/egohygiene/empathy/commit/<sha>"
+  },
+  "osv": {}
 }
 ```
 
@@ -98,12 +128,14 @@ configuration.
 ## Delivery slices
 
 1. Promote the universal dependency-review gate and record the staging
-   migration decisions. **This slice.**
-2. Define and generate a compact OpenSSF Scorecard summary; reuse the existing
-   trusted report-publication action for the stable snapshot.
+   migration decisions. **Complete.**
+2. Define a shared, versioned producer contract; normalize OSV and MegaLinter;
+   and publish a compact OpenSSF Scorecard summary through the existing trusted
+   report-publication action. **Complete.**
 3. Add a dashboard builder action with fixtures for OSV, MegaLinter, Scorecard,
-   and unavailable/stale inputs. Emit `summary.json`, `index.html`, and a small
-   accessible stylesheet with no client-side framework.
+   repository vitality, and unavailable/stale inputs. Emit `summary.json`,
+   `index.html`, and a small accessible stylesheet with no client-side
+   framework. **Next.**
 4. Extend the Mindgarden Pages build job to place the generated dashboard at
    `intelligence/` beside the Quartz site and add a garden link to it.
 5. Extract the stable builder and caller contract to Relay, then instantiate

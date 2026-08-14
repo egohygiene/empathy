@@ -24,6 +24,7 @@ The source contracts currently reserve this hierarchy:
 │   ├── README.md
 │   └── lint-architecture.svg
 ├── megalinter/
+│   ├── summary.json
 │   ├── remediation.md
 │   ├── grype/
 │   ├── syft/
@@ -31,6 +32,9 @@ The source contracts currently reserve this hierarchy:
 │   │   └── sbom.spdx.json
 │   └── trivy/
 ├── osv/
+│   └── summary.json
+├── scorecard/
+│   └── summary.json
 └── supply-chain/
     ├── licenses/
     ├── sbom/
@@ -42,6 +46,17 @@ Grype, Trivy, and OSV retain separate native outputs so source licensing,
 dependency licensing, inventories, and vulnerability findings are never
 collapsed into one ambiguous signal. The architecture snapshot is generated
 from both canonical tool matrices rather than maintained manually.
+
+OSV, MegaLinter, and OpenSSF Scorecard each publish a compact `summary.json`
+using `egohygiene.repository-report-summary/v1`. The JSON Schema and producer
+normalizer live in `.github/actions/normalize-repository-report/`. These
+summaries keep execution, findings, freshness, provenance, and links separate;
+producer-native JSON and SARIF remain authoritative and continue through their
+existing artifact and Security-tab paths.
+
+Scorecard's aggregate is copied from the official API only when the API result
+names the exact commit evaluated by the workflow. A late, stale, or unavailable
+API response produces a `null` aggregate rather than a locally invented score.
 
 `.reports/megalinter/remediation.md` is the stable, human-readable assessment
 of the latest cleanup pass. Unlike generated scanner payloads, it is curated and

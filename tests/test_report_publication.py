@@ -32,6 +32,7 @@ class ReportPublicationPolicyTests(unittest.TestCase):
         for workflow_name in (
             "lint-architecture.yml",
             "megalinter.yml",
+            "ossf-scorecard.yml",
             "osv-scan.yml",
         ):
             with self.subTest(workflow=workflow_name):
@@ -51,6 +52,7 @@ class ReportPublicationPolicyTests(unittest.TestCase):
 
     def test_report_only_commits_do_not_retrigger_scanners(self) -> None:
         self.assertIn('- ".reports/**"', self.workflow("megalinter.yml"))
+        self.assertIn('- ".reports/**"', self.workflow("ossf-scorecard.yml"))
         self.assertIn('- ".reports/**"', self.workflow("osv-scan.yml"))
         architecture_workflow = self.workflow("lint-architecture.yml")
         self.assertNotIn('".reports/egolint/**"', architecture_workflow)
@@ -72,6 +74,22 @@ class ReportPublicationPolicyTests(unittest.TestCase):
         self.assertIn("Timestamped history directories are forbidden", action)
         self.assertIn("git add --force --all", action)
         self.assertIn("git pull --rebase", action)
+
+    def test_scorecard_normalization_runs_outside_the_attested_job(self) -> None:
+        workflow = self.workflow("ossf-scorecard.yml")
+        scorecard_job, summary_job = workflow.split("\n  publish-summary:\n", maxsplit=1)
+        self.assertNotIn("normalize-repository-report", scorecard_job)
+        self.assertIn("normalize-repository-report", summary_job)
+        self.assertIn("publish-report-snapshot", summary_job)
+        self.assertIn(".repo.commit == $commit", summary_job)
+
+    def test_existing_producers_emit_normalized_summaries(self) -> None:
+        for workflow_name in ("megalinter.yml", "osv-scan.yml", "ossf-scorecard.yml"):
+            with self.subTest(workflow=workflow_name):
+                self.assertIn(
+                    "./.github/actions/normalize-repository-report",
+                    self.workflow(workflow_name),
+                )
 
 
 if __name__ == "__main__":
