@@ -27,6 +27,12 @@ jobs:
       contents: read
 
     steps:
+      - name: Harden Runner
+        # step-security/harden-runner v2.20.0; observe egress before enforcing.
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+
       - name: Review dependency changes
         # actions/dependency-review-action v5.0.0
         uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294
