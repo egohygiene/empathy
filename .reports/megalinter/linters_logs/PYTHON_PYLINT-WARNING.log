@@ -7,6 +7,9 @@ Linter raw log:
 ************* Module generate_lint_infographic
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:150:0: R0913: Too many arguments (8/7) (too-many-arguments)
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:171:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module generate_repository_intelligence_dashboard
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:238:0: R0914: Too many local variables (30/20) (too-many-locals)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:238:0: R0912: Too many branches (17/12) (too-many-branches)
 ************* Module normalize_repository_report
 .github/actions/normalize-repository-report/normalize_repository_report.py:139:0: R0913: Too many arguments (11/7) (too-many-arguments)
 .github/actions/normalize-repository-report/normalize_repository_report.py:232:0: R0914: Too many local variables (22/20) (too-many-locals)
@@ -38,6 +41,8 @@ egolint/scripts/validate_megalinter_policy.py:452:0: R0914: Too many local varia
 mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
+************* Module test_repository_intelligence_dashboard
+tests/test_repository_intelligence_dashboard.py:80:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 
 -----------------------------------
 Your code has been rated at 9.92/10

@@ -25,46 +25,46 @@ reviewed' - a phrase is repeated.
 reviewed' - a phrase is repeated.
 .garden/projects/repository-intelligence-dashboard.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
 reviewed' - a phrase is repeated.
-.garden/projects/repository-intelligence-dashboard.md:52:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-.garden/projects/repository-intelligence-dashboard.md:53:141: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-.garden/projects/repository-intelligence-dashboard.md:54:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-.garden/projects/repository-intelligence-dashboard.md:54:129: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-.garden/projects/repository-intelligence-dashboard.md:71:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:72:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:73:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:73:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:55:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.garden/projects/repository-intelligence-dashboard.md:56:141: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.garden/projects/repository-intelligence-dashboard.md:57:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+.garden/projects/repository-intelligence-dashboard.md:57:129: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .garden/projects/repository-intelligence-dashboard.md:74:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:75:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:76:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:76:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:77:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:78:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:79:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:81:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:78:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:79:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:80:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:81:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:82:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:82:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:83:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:85:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:84:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:85:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:85:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:86:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:86:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:87:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:88:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:88:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:89:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:89:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:90:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:90:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:92:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:91:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:92:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:93:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:93:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:94:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:94:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:95:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:95:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:93:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:95:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:96:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:98:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:96:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:97:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:97:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:98:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:98:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:99:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:100:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:101:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:101:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:102:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:104:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:103:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:104:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:105:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:107:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .github/actions/normalize-repository-report/README.md:30:138: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .github/actions/normalize-repository-report/README.md:31:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.lowercase_periods: It's standard to use periods for lowercase 'a.m.' or 'p.m.'.

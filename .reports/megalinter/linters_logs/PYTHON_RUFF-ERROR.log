@@ -4,6 +4,168 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:103:55
+    |
+101 |     if isinstance(value, bool) or not isinstance(value, (int, float)):
+102 |         return None
+103 |     return value if isfinite(value) and 0 <= value <= 10 else None
+    |                                                       ^^
+
+PLR0912 Too many branches (17 > 12)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:238:5
+    |
+238 | def validate_report(
+    |     ^^^^^^^^^^^^^^^
+239 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
+240 | ) -> dict[str, Any]:
+    |
+
+PLR0915 Too many statements (60 > 50)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:238:5
+    |
+238 | def validate_report(
+    |     ^^^^^^^^^^^^^^^
+239 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
+240 | ) -> dict[str, Any]:
+    |
+
+SIM102 Use a single `if` statement instead of nested `if` statements
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:270:5
+    |
+268 |       blocking = safe_integer(report_findings.get("blocking"), allow_none=allow_none)
+269 |       advisory = safe_integer(report_findings.get("advisory"), allow_none=allow_none)
+270 | /     if total is not None and blocking is not None and advisory is not None:
+271 | |         if blocking + advisory != total:
+    | |________________________________________^
+272 |               raise DashboardInputError("blocking and advisory counts must sum to total.")
+273 |       by_severity = report_findings.get("by_severity")
+    |
+help: Combine `if` statements using `and`
+
+S603 `subprocess` call: check for execution of untrusted input
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:366:14
+    |
+364 |     """Run a read-only Git query and return normalized stdout."""
+365 |
+366 |     result = subprocess.run(
+    |              ^^^^^^^^^^^^^^
+367 |         ["git", "-C", str(repository_root), *arguments],
+368 |         check=True,
+    |
+
+S607 Starting a process with a partial executable path
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:367:9
+    |
+366 |     result = subprocess.run(
+367 |         ["git", "-C", str(repository_root), *arguments],
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+368 |         check=True,
+369 |         capture_output=True,
+    |
+
+TRY301 Abstract `raise` to an inner function
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:387:13
+    |
+385 |         resolved_commit = run_git(repository_root, "rev-parse", source_commit)
+386 |         if not FULL_SHA_PATTERN.fullmatch(resolved_commit):
+387 |             raise DashboardInputError("Git did not resolve a full source commit.")
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+388 |         committed_at = run_git(
+389 |             repository_root, "show", "--no-patch", "--format=%cI", resolved_commit
+    |
+
+PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:436:36
+    |
+434 |             path.startswith(".github/actions/")
+435 |             and path.endswith("/action.yml")
+436 |             and path.count("/") == 3
+    |                                    ^
+437 |             for path in tracked_paths
+438 |         )
+    |
+
+C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:485:25
+    |
+484 |     counts = {
+485 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+486 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+487 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+    |
+help: Replace with `dict.fromkeys(iterable)`)
+    |
+484 |     counts = {
+    -         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+485 +         "availability": dict.fromkeys(sorted(AVAILABILITY_STATES), 0),
+486 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+    |
+
+C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:486:22
+    |
+484 |     counts = {
+485 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+486 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+487 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+488 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+    |
+help: Replace with `dict.fromkeys(iterable)`)
+    |
+485 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+    -         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+486 +         "execution": dict.fromkeys(sorted(EXECUTION_STATES), 0),
+487 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+    |
+
+C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:487:21
+    |
+485 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+486 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+487 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+488 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+489 |     }
+    |
+help: Replace with `dict.fromkeys(iterable)`)
+    |
+486 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+    -         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+487 +         "findings": dict.fromkeys(sorted(FINDING_STATES), 0),
+488 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+    |
+
+C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:488:22
+    |
+486 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+487 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+488 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+489 |     }
+490 |     for projection in producers.values():
+    |
+help: Replace with `dict.fromkeys(iterable)`)
+    |
+487 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+    -         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+488 +         "freshness": dict.fromkeys(sorted(FRESHNESS_STATES), 0),
+489 |     }
+    |
+
+PLR0913 Too many arguments in function definition (6 > 5)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:498:5
+    |
+498 | def build_dashboard(
+    |     ^^^^^^^^^^^^^^^
+499 |     *,
+500 |     repository_root: Path,
+    |
+
 PLR0913 Too many arguments in function definition (6 > 5)
    --> .github/actions/normalize-repository-report/normalize_repository_report.py:112:5
     |
@@ -103,6 +265,27 @@ TRY301 Abstract `raise` to an inner function
 492 |             normalize_megalinter(document, policy, summary)
     |
 
-Found 9 errors.
-[*] 1 fixable with the `--fix` option.
+S603 `subprocess` call: check for execution of untrusted input
+  --> tests/test_repository_intelligence_dashboard.py:37:14
+   |
+35 |     """Run one deterministic Git command in a fixture repository."""
+36 |
+37 |     result = subprocess.run(
+   |              ^^^^^^^^^^^^^^
+38 |         ["git", "-C", str(repository), *arguments],
+39 |         check=True,
+   |
+
+S607 Starting a process with a partial executable path
+  --> tests/test_repository_intelligence_dashboard.py:38:9
+   |
+37 |     result = subprocess.run(
+38 |         ["git", "-C", str(repository), *arguments],
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+39 |         check=True,
+40 |         capture_output=True,
+   |
+
+Found 24 errors.
+[*] 5 fixable with the `--fix` option.
 

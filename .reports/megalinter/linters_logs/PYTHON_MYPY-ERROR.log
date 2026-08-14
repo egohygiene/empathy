@@ -1,0 +1,89 @@
+Results of mypy linter (version 1.19.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_mypy/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting types-PyYAML
+  Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl.metadata (1.7 kB)
+Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl (20 kB)
+Installing collected packages: types-PyYAML
+Successfully installed types-PyYAML-6.0.12.20260724
+tests/test_repository_intelligence_dashboard.py: note: In member "build" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:89:9: error: Returning Any from
+function declared to return "dict[str, object]"  [no-any-return]
+            return dashboard_builder.build_dashboard(
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_complete_reports_preserve_independent_states" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:108:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["execution"]["success"], ...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:109:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["execution"]["failure"], ...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:110:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["findings"]["attention"],...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:111:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["findings"]["clear"], 1)
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:112:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["freshness"]["fresh"], 2)
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:113:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["freshness"]["stale"], 1)
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:114:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["producers"]["scorecard"]["metrics"...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_missing_reports_are_unavailable_and_unknown" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:119:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["availability"]["unavaila...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:120:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["execution"]["unknown"], ...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:121:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["findings"]["unknown"], 3...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:122:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["states"]["freshness"]["unknown"], ...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_malformed_report_is_invalid_instead_of_green" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:132:21: error: Value of type
+"object" is not indexable  [index]
+            scorecard = dashboard["producers"]["scorecard"]
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_stale_boundary_is_inclusive" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:147:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["producers"]["osv"]["freshness"]["s...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_bundle_is_deterministic_and_contains_no_contributor_identities" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:188:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(first["vitality"]["metrics"]["contributors_90...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_vitality_uses_the_represented_commit_not_untracked_files" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:200:19: error: Value of type
+"object" is not indexable  [index]
+            metrics = dashboard["vitality"]["metrics"]
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installing missing stub packages:
+/venvs/mypy/bin/python3 -m pip install types-PyYAML
+
+
+Found 16 errors in 1 file (checked 34 source files)
+

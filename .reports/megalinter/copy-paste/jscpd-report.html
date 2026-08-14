@@ -58,19 +58,19 @@
         <div class="dashboard">
           <div class="stat-card stat-blue">
             <h3>Total Files</h3>
-            <div class="val">805</div>
+            <div class="val">816</div>
           </div>
           <div class="stat-card stat-green">
             <h3>Total Lines of Code</h3>
-            <div class="val">94866</div>
+            <div class="val">96908</div>
           </div>
           <div class="stat-card stat-yellow">
             <h3>Number of Clones</h3>
-            <div class="val">322</div>
+            <div class="val">324</div>
           </div>
           <div class="stat-card stat-red">
             <h3>Duplicated Lines</h3>
-            <div class="val">4147 (4.37%)</div>
+            <div class="val">4171 (4.30%)</div>
           </div>
         </div>
       </section>
@@ -139,8 +139,8 @@
             
             <tr>
               <td><a href="#css-clones">css</a></td>
-              <td>2</td>
-              <td>102</td>
+              <td>3</td>
+              <td>511</td>
               <td>0</td>
               <td>0 (0.00%)</td>
               <td>0 (0.00%)</td>
@@ -238,11 +238,11 @@
             
             <tr>
               <td><a href="#json-clones">json</a></td>
-              <td>90</td>
-              <td>14495</td>
-              <td>23</td>
-              <td>556 (3.84%)</td>
-              <td>2040 (3.30%)</td>
+              <td>94</td>
+              <td>14779</td>
+              <td>24</td>
+              <td>567 (3.84%)</td>
+              <td>2094 (3.30%)</td>
             </tr>
             
             <tr>
@@ -265,11 +265,11 @@
             
             <tr>
               <td><a href="#markdown-clones">markdown</a></td>
-              <td>226</td>
-              <td>23632</td>
+              <td>227</td>
+              <td>23703</td>
               <td>138</td>
-              <td>1660 (7.02%)</td>
-              <td>17050 (6.33%)</td>
+              <td>1660 (7.00%)</td>
+              <td>17050 (6.31%)</td>
             </tr>
             
             <tr>
@@ -319,11 +319,11 @@
             
             <tr>
               <td><a href="#python-clones">python</a></td>
-              <td>39</td>
-              <td>9372</td>
-              <td>16</td>
-              <td>157 (1.68%)</td>
-              <td>1112 (1.56%)</td>
+              <td>41</td>
+              <td>10446</td>
+              <td>17</td>
+              <td>170 (1.63%)</td>
+              <td>1201 (1.48%)</td>
             </tr>
             
             <tr>
@@ -382,8 +382,8 @@
             
             <tr>
               <td><a href="#text-clones">text</a></td>
-              <td>8</td>
-              <td>1761</td>
+              <td>9</td>
+              <td>1788</td>
               <td>0</td>
               <td>0 (0.00%)</td>
               <td>0 (0.00%)</td>
@@ -418,20 +418,20 @@
             
             <tr>
               <td><a href="#yaml-clones">yaml</a></td>
-              <td>231</td>
-              <td>19182</td>
+              <td>233</td>
+              <td>19359</td>
               <td>83</td>
-              <td>981 (5.11%)</td>
-              <td>6418 (6.34%)</td>
+              <td>981 (5.07%)</td>
+              <td>6418 (6.28%)</td>
             </tr>
             
             <tr style="font-weight: 700;">
               <td>Total</td>
-              <td>805</td>
-              <td>94866</td>
-              <td>322</td>
-              <td>4147 (4.37%)</td>
-              <td>31454 (4.96%)</td>
+              <td>816</td>
+              <td>96908</td>
+              <td>324</td>
+              <td>4171 (4.30%)</td>
+              <td>31597 (4.86%)</td>
             </tr>
           </tbody>
         </table>
@@ -2625,6 +2625,28 @@ while (($# &#62; 0)); do
       &#34;fixtures&#34;: {
         &#34;positive&#34;: [
           &#34;egolint/tests/fixtures/interrogate/documented.py&#34;</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              tests/fixtures/repository-intelligence-dashboard/osv/summary.json (Line 13:15 - Line 24:15),
+              tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json (Line 11:16 - Line 22:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-json-24')">Show code</button>
+            </div>
+            <pre id="code-json-24" class="code-block">      &#34;medium&#34;: 2
+    },
+    &#34;state&#34;: &#34;attention&#34;,
+    &#34;total&#34;: 2
+  },
+  &#34;freshness&#34;: {
+    &#34;expires_at&#34;: &#34;2026-08-22T12:00:00Z&#34;,
+    &#34;stale_after_days&#34;: 8
+  },
+  &#34;generated_at&#34;: &#34;2026-08-14T12:00:00Z&#34;,
+  &#34;links&#34;: {
+    &#34;detail&#34;: &#34;https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/osv&#34;,</pre>
           </div>
           
         </div>
@@ -5827,13 +5849,37 @@ Source: `install.sh` (observed in installed file).
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/agents/build-projections.py (Line 32:1 - Line 42:48),
-              egolint/.agents/skills/build-distributions.py (Line 44:1 - Line 54:48)
+              .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py (Line 775:96 - Line 788:5),
+              .github/actions/generate-repository-intelligence/generate_repository_intelligence.py (Line 268:5 - Line 282:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-python-1')">Show code</button>
             </div>
-            <pre id="code-python-1" class="code-block">from pathlib import Path
+            <pre id="code-python-1" class="code-block">    file_descriptor, temporary_name = tempfile.mkstemp(dir=path.parent, prefix=f&#34;.{path.name}.&#34;)
+    temporary_path = Path(temporary_name)
+    try:
+        with os.fdopen(file_descriptor, &#34;w&#34;, encoding=&#34;utf-8&#34;, newline=&#34;&#34;) as handle:
+            handle.write(content)
+            handle.flush()
+            os.fsync(handle.fileno())
+        temporary_path.replace(path)
+    except BaseException:
+        temporary_path.unlink(missing_ok=True)
+        raise
+
+
+def validate_paths(repository_root: Path, *paths: Path) -&#62; None:</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/agents/build-projections.py (Line 32:1 - Line 42:48),
+              egolint/.agents/skills/build-distributions.py (Line 44:1 - Line 54:48)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-python-2')">Show code</button>
+            </div>
+            <pre id="code-python-2" class="code-block">from pathlib import Path
 import re
 import sys
 
@@ -5852,9 +5898,9 @@ REPO_ROOT = Path(__file__).resolve().parents[3]</pre>
               egolint/.agents/skills/build-distributions.py (Line 256:66 - Line 270:21)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-2')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-3')">Show code</button>
             </div>
-            <pre id="code-python-2" class="code-block">        help=&#34;Base output directory for generated projections.&#34;,
+            <pre id="code-python-3" class="code-block">        help=&#34;Base output directory for generated projections.&#34;,
     )
     args = parser.parse_args()
     return build(check=args.check, output_directory=REPO_ROOT / args.output_directory)
@@ -5877,9 +5923,9 @@ if __name__ == &#34;__main__&#34;:
               egolint/.agents/skills/validate-skills.py (Line 13:1 - Line 23:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-3')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-4')">Show code</button>
             </div>
-            <pre id="code-python-3" class="code-block">from pathlib import Path
+            <pre id="code-python-4" class="code-block">from pathlib import Path
 import re
 import sys
 
@@ -5898,9 +5944,9 @@ BASE = Path(__file__).resolve().parent</pre>
               egolint/.agents/skills/build-distributions.py (Line 173:1 - Line 179:21)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-4')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-5')">Show code</button>
             </div>
-            <pre id="code-python-4" class="code-block">    for companion in COMPANION_DIRS:
+            <pre id="code-python-5" class="code-block">    for companion in COMPANION_DIRS:
         src = source_dir / companion
         if src.is_dir():
             for f in sorted(src.rglob(&#34;*&#34;)):
@@ -5915,9 +5961,9 @@ BASE = Path(__file__).resolve().parent</pre>
               egolint/.agents/specs/build-distributions.py (Line 69:41 - Line 83:29)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-5')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-6')">Show code</button>
             </div>
-            <pre id="code-python-5" class="code-block">            display_path = _normalized_display_path(out_path)
+            <pre id="code-python-6" class="code-block">            display_path = _normalized_display_path(out_path)
             if check:
                 if not out_path.exists():
                     print(f&#34;DRIFT  missing: {display_path}&#34;)
@@ -5940,9 +5986,9 @@ BASE = Path(__file__).resolve().parent</pre>
               egolint/.agents/specs/build-distributions.py (Line 104:98 - Line 111:87)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-6')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-7')">Show code</button>
             </div>
-            <pre id="code-python-6" class="code-block">    )
+            <pre id="code-python-7" class="code-block">    )
     parser.add_argument(
         &#34;--output-directory&#34;,
         default=&#34;dist&#34;,
@@ -5958,9 +6004,9 @@ BASE = Path(__file__).resolve().parent</pre>
               mindgarden/scripts/publish_garden.py (Line 85:52 - Line 94:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-7')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-8')">Show code</button>
             </div>
-            <pre id="code-python-7" class="code-block">    &#34;&#34;&#34;Serialize JSON with stable keys, indentation, and a final newline.&#34;&#34;&#34;
+            <pre id="code-python-8" class="code-block">    &#34;&#34;&#34;Serialize JSON with stable keys, indentation, and a final newline.&#34;&#34;&#34;
     return json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + &#34;\n&#34;
 
 
@@ -5978,9 +6024,9 @@ def normalize_text(value: str) -&#62; str:</pre>
               mindgarden/tests/test_validate_garden.py (Line 8:1 - Line 18:14)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-8')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-9')">Show code</button>
             </div>
-            <pre id="code-python-8" class="code-block">import json
+            <pre id="code-python-9" class="code-block">import json
 from pathlib import Path
 import sys
 from tempfile import TemporaryDirectory
@@ -5999,9 +6045,9 @@ from scripts.garden_agent import (  # noqa: E402</pre>
               mindgarden/tests/test_publish_garden.py (Line 8:1 - Line 17:14)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-9')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-10')">Show code</button>
             </div>
-            <pre id="code-python-9" class="code-block">from pathlib import Path
+            <pre id="code-python-10" class="code-block">from pathlib import Path
 import sys
 from tempfile import TemporaryDirectory
 import textwrap
@@ -6019,9 +6065,9 @@ from scripts.garden_agent import (  # noqa: E402</pre>
               mindgarden/tests/test_publish_garden.py (Line 24:1 - Line 38:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-10')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-11')">Show code</button>
             </div>
-            <pre id="code-python-10" class="code-block">MANIFEST = &#34;&#34;&#34;
+            <pre id="code-python-11" class="code-block">MANIFEST = &#34;&#34;&#34;
 schema: mindgarden.garden/v0
 id: example-repository
 title: Example Garden
@@ -6044,9 +6090,9 @@ content_roots:
               mindgarden/tests/test_garden_agent.py (Line 179:57 - Line 186:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-11')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-12')">Show code</button>
             </div>
-            <pre id="code-python-11" class="code-block">    def test_index_is_byte_deterministic_and_contains_no_host_state(self) -&#62; None:
+            <pre id="code-python-12" class="code-block">    def test_index_is_byte_deterministic_and_contains_no_host_state(self) -&#62; None:
         with TemporaryDirectory() as directory:
             fixture = AgentFixture(Path(directory))
             (fixture.garden / &#34;concepts/architecture.md&#34;).write_text(
@@ -6063,9 +6109,9 @@ content_roots:
               mindgarden/tests/test_garden_agent.py (Line 272:46 - Line 277:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-12')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-13')">Show code</button>
             </div>
-            <pre id="code-python-12" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
+            <pre id="code-python-13" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
         with TemporaryDirectory() as directory:
             fixture = AgentFixture(Path(directory))
             input_path = fixture.root / &#34;input.md&#34;
@@ -6079,9 +6125,9 @@ content_roots:
               mindgarden/tests/test_garden_agent.py (Line 288:58 - Line 301:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-13')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-14')">Show code</button>
             </div>
-            <pre id="code-python-13" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
+            <pre id="code-python-14" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
         with TemporaryDirectory() as directory:
             fixture = AgentFixture(Path(directory))
             input_path = fixture.root / &#34;input.md&#34;
@@ -6103,9 +6149,9 @@ content_roots:
               mindgarden/tests/test_validate_garden.py (Line 71:1 - Line 76:48)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-14')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-15')">Show code</button>
             </div>
-            <pre id="code-python-14" class="code-block">    if related:
+            <pre id="code-python-15" class="code-block">    if related:
         lines.append(&#34;related:&#34;)
         lines.extend(f&#34;  - {value}&#34; for value in related)
     else:
@@ -6119,9 +6165,9 @@ content_roots:
               tests/test_validate_automation.py (Line 108:47 - Line 120:32)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-15')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-16')">Show code</button>
             </div>
-            <pre id="code-python-15" class="code-block">    def test_accepts_pinned_least_privilege_workflow(self) -&#62; None:
+            <pre id="code-python-16" class="code-block">    def test_accepts_pinned_least_privilege_workflow(self) -&#62; None:
         self.write_workflow(
             &#34;&#34;&#34;---
 name: CI
@@ -6142,9 +6188,9 @@ jobs:
               tests/test_validate_automation.py (Line 64:16 - Line 75:32)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-16')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-17')">Show code</button>
             </div>
-            <pre id="code-python-16" class="code-block">        self.write_workflow(
+            <pre id="code-python-17" class="code-block">        self.write_workflow(
             &#34;&#34;&#34;---
 name: CI
 on: workflow_dispatch
@@ -6472,7 +6518,7 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           <div class="clone-item">
             <div class="clone-info">
               .github/workflows/automation.yml (Line 53:1 - Line 63:24),
-              .github/workflows/repository-intelligence.yml (Line 35:1 - Line 45:24)
+              .github/workflows/repository-intelligence.yml (Line 40:1 - Line 50:24)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-9')">Show code</button>
@@ -6788,7 +6834,7 @@ pedantic = { level = &#34;warn&#34;, priority = -1 }</pre>
           <div class="clone-item">
             <div class="clone-info">
               .github/workflows/mindgarden-pages.yml (Line 38:1 - Line 52:15),
-              .github/workflows/repository-intelligence.yml (Line 38:1 - Line 52:15)
+              .github/workflows/repository-intelligence.yml (Line 43:1 - Line 57:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-yaml-22')">Show code</button>

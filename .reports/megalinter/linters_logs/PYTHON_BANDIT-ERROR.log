@@ -1,0 +1,74 @@
+Results of bandit linter (version 1.9.4)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_bandit/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:269
+[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
+[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
+[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
+Run started:2026-08-14 21:33:22.894726+00:00
+
+Test results:
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tests/test_repository_intelligence_dashboard.py:14:0
+13	import shutil
+14	import subprocess
+15	import tempfile
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_repository_intelligence_dashboard.py:37:13
+36	
+37	    result = subprocess.run(
+38	        ["git", "-C", str(repository), *arguments],
+39	        check=True,
+40	        capture_output=True,
+41	        text=True,
+42	        env=environment,
+43	    )
+44	    return result.stdout.strip()
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_repository_intelligence_dashboard.py:37:13
+36	
+37	    result = subprocess.run(
+38	        ["git", "-C", str(repository), *arguments],
+39	        check=True,
+40	        capture_output=True,
+41	        text=True,
+42	        env=environment,
+43	    )
+44	    return result.stdout.strip()
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 6116
+	Total lines skipped (#nosec): 1
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 3
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 3
+Files skipped (0):
+
