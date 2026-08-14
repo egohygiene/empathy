@@ -12,6 +12,9 @@ owners:
 created: 2026-08-14
 updated: 2026-08-14
 sources:
+  - ../../.github/actions/generate-repository-intelligence-dashboard/README.md
+  - ../../.github/actions/generate-repository-intelligence-dashboard/action.yml
+  - ../../.github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json
   - ../../.github/actions/normalize-repository-report/README.md
   - ../../.github/actions/normalize-repository-report/action.yml
   - ../../.github/actions/normalize-repository-report/repository-report-summary.schema.json
@@ -135,9 +138,9 @@ configuration.
 3. Add a dashboard builder action with fixtures for OSV, MegaLinter, Scorecard,
    repository vitality, and unavailable/stale inputs. Emit `summary.json`,
    `index.html`, and a small accessible stylesheet with no client-side
-   framework. **Next.**
+   framework. **Complete.**
 4. Extend the Mindgarden Pages build job to place the generated dashboard at
-   `intelligence/` beside the Quartz site and add a garden link to it.
+   `intelligence/` beside the Quartz site and add a garden link to it. **Next.**
 5. Extract the stable builder and caller contract to Relay, then instantiate
    it in each repository through its declared capability profile.
 

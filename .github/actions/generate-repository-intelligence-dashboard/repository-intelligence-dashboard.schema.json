@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.dev/schemas/repository-intelligence-dashboard/v1.json",
+  "title": "Ego Hygiene repository intelligence dashboard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schema_version",
+    "generated_at",
+    "repository",
+    "states",
+    "producers",
+    "vitality"
+  ],
+  "properties": {
+    "schema": {
+      "const": "egohygiene.repository-intelligence-dashboard/v1"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "default_branch", "source_commit"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "default_branch": { "type": "string", "minLength": 1 },
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    },
+    "states": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["availability", "execution", "findings", "freshness"],
+      "properties": {
+        "availability": { "$ref": "#/$defs/stateCounts" },
+        "execution": { "$ref": "#/$defs/stateCounts" },
+        "findings": { "$ref": "#/$defs/stateCounts" },
+        "freshness": { "$ref": "#/$defs/stateCounts" }
+      }
+    },
+    "producers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["osv", "megalinter", "scorecard"],
+      "properties": {
+        "osv": { "$ref": "#/$defs/producer" },
+        "megalinter": { "$ref": "#/$defs/producer" },
+        "scorecard": { "$ref": "#/$defs/producer" }
+      }
+    },
+    "vitality": {
+      "type": "object",
+      "required": ["execution", "repository", "default_branch", "source_commit", "metrics"],
+      "properties": {
+        "execution": { "$ref": "#/$defs/status" },
+        "repository": { "type": "string" },
+        "default_branch": { "type": "string" },
+        "source_commit": { "type": "string" },
+        "latest_commit": { "type": "object" },
+        "metrics": { "type": "object" }
+      }
+    }
+  },
+  "$defs": {
+    "stateCounts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "message"],
+      "properties": {
+        "state": { "type": "string" },
+        "message": { "type": "string" }
+      }
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "name",
+        "availability",
+        "generated_at",
+        "commit",
+        "execution",
+        "findings",
+        "freshness",
+        "links",
+        "metrics"
+      ],
+      "properties": {
+        "producer": { "enum": ["osv", "megalinter", "scorecard"] },
+        "name": { "type": "string" },
+        "availability": { "enum": ["available", "unavailable", "invalid"] },
+        "generated_at": { "type": ["string", "null"] },
+        "commit": { "type": ["string", "null"] },
+        "execution": { "$ref": "#/$defs/status" },
+        "findings": {
+          "type": "object",
+          "required": ["state", "total", "blocking", "advisory", "by_severity"],
+          "properties": {
+            "state": { "enum": ["clear", "attention", "blocked", "unknown"] },
+            "total": { "type": ["integer", "null"], "minimum": 0 },
+            "blocking": { "type": ["integer", "null"], "minimum": 0 },
+            "advisory": { "type": ["integer", "null"], "minimum": 0 },
+            "by_severity": { "type": "object" }
+          }
+        },
+        "freshness": { "$ref": "#/$defs/status" },
+        "links": { "type": "object" },
+        "metrics": { "type": "object" }
+      }
+    }
+  }
+}

@@ -7,9 +7,14 @@ on:
   workflow_dispatch:
     inputs:
       output-root:
-        description: Repository-relative artifact directory.
+        description: Repository-relative directory for tree and activity artifacts.
         required: true
         default: "docs/generated"
+        type: string
+      dashboard-output-root:
+        description: Repository-relative directory for the static dashboard bundle.
+        required: true
+        default: ".cache/mindgarden/site/intelligence"
         type: string
       max-depth:
         description: Maximum tree depth.
@@ -58,12 +63,23 @@ jobs:
           activity-ref: "HEAD"
           require-full-history: "true"
 
+      - name: Generate static intelligence dashboard
+        uses: ./.github/actions/generate-repository-intelligence-dashboard
+        with:
+          reports-root: ".reports"
+          output-root: "${{ inputs.dashboard-output-root }}"
+          repository: "${{ github.repository }}"
+          default-branch: "${{ github.event.repository.default_branch }}"
+          source-commit: "${{ github.sha }}"
+
       - name: Upload intelligence artifacts
         # actions/upload-artifact v7.0.1
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "repository-intelligence-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: "${{ inputs.output-root }}"
+          path: |
+            ${{ inputs.output-root }}
+            ${{ inputs.dashboard-output-root }}
           if-no-files-found: error
           retention-days: 30
           compression-level: 9

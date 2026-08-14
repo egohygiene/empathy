@@ -21,21 +21,22 @@ token policy.
 
 ## Catalog
 
-| Action                             | Responsibility                                                     | Side effects                     |
-| ---------------------------------- | ------------------------------------------------------------------ | -------------------------------- |
-| `commit-if-changed`                | Stage explicit pathspecs and create one conditional commit         | Optional push                    |
-| `contributors`                     | Hydrate All Contributors metadata and regenerate `CONTRIBUTORS.md` | Working-tree changes             |
-| `flutter-generate`                 | Run selected Flutter source generators and formatting              | Working-tree changes             |
-| `flutter-setup`                    | Install pinned Flutter and resolve pub dependencies                | Tool/cache installation          |
-| `generate-repository-intelligence` | Produce deterministic tree, activity, and SVG artifacts            | Writes selected output directory |
-| `install-linux-build-deps`         | Install Flutter desktop build packages on Debian-family runners    | System packages                  |
-| `normalize-repository-report`      | Normalize scanner outputs into a versioned intelligence contract   | Writes one summary JSON          |
-| `python-poetry-setup`              | Install pinned Python/Poetry and locked dependencies               | Tool/cache installation          |
-| `setup-environment`                | Detect and prepare Node.js, Python/Poetry, and Flutter projects    | Tool/dependency installation     |
-| `setup-osv-scanner`                | Install a checksum-verified OSV Scanner release                    | Temporary tool installation      |
-| `generate-lint-infographic`        | Generate architecture SVG and legend from canonical tool matrices  | `.reports/egolint/architecture/` |
-| `publish-report-snapshot`          | Guard and publish stable reports from trusted default-branch runs  | Explicit `.reports/` paths       |
-| `validate-automation`              | Run actionlint, action metadata validation, and repository policy  | Temporary tool downloads         |
+| Action                                       | Responsibility                                                               | Side effects                     |
+| -------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------- |
+| `commit-if-changed`                          | Stage explicit pathspecs and create one conditional commit                   | Optional push                    |
+| `contributors`                               | Hydrate All Contributors metadata and regenerate `CONTRIBUTORS.md`           | Working-tree changes             |
+| `flutter-generate`                           | Run selected Flutter source generators and formatting                        | Working-tree changes             |
+| `flutter-setup`                              | Install pinned Flutter and resolve pub dependencies                          | Tool/cache installation          |
+| `generate-repository-intelligence`           | Produce deterministic tree, activity, and SVG artifacts                      | Writes selected output directory |
+| `generate-repository-intelligence-dashboard` | Aggregate normalized reports and repository vitality into a static dashboard | Writes selected output directory |
+| `install-linux-build-deps`                   | Install Flutter desktop build packages on Debian-family runners              | System packages                  |
+| `normalize-repository-report`                | Normalize scanner outputs into a versioned intelligence contract             | Writes one summary JSON          |
+| `python-poetry-setup`                        | Install pinned Python/Poetry and locked dependencies                         | Tool/cache installation          |
+| `setup-environment`                          | Detect and prepare Node.js, Python/Poetry, and Flutter projects              | Tool/dependency installation     |
+| `setup-osv-scanner`                          | Install a checksum-verified OSV Scanner release                              | Temporary tool installation      |
+| `generate-lint-infographic`                  | Generate architecture SVG and legend from canonical tool matrices            | `.reports/egolint/architecture/` |
+| `publish-report-snapshot`                    | Guard and publish stable reports from trusted default-branch runs            | Explicit `.reports/` paths       |
+| `validate-automation`                        | Run actionlint, action metadata validation, and repository policy            | Temporary tool downloads         |
 
 ## Selection guide
 

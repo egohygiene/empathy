@@ -1,0 +1,95 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Generate repository intelligence dashboard
+description: >-
+  Validate normalized report summaries and generate a deterministic, accessible,
+  framework-free repository intelligence dashboard.
+
+inputs:
+  reports-root:
+    description: Repository-relative root containing normalized producer reports.
+    required: false
+    default: ".reports"
+  output-root:
+    description: Repository-relative directory for index.html, styles.css, and summary.json.
+    required: false
+    default: ".cache/mindgarden/site/intelligence"
+  repository:
+    description: Repository name in owner/name form; defaults to the workflow repository.
+    required: false
+    default: ""
+  default-branch:
+    description: Repository default branch shown by the vitality card.
+    required: false
+    default: "main"
+  source-commit:
+    description: Full commit SHA represented by the dashboard; defaults to the workflow SHA.
+    required: false
+    default: ""
+  as-of:
+    description: Optional RFC 3339 instant used for deterministic freshness evaluation.
+    required: false
+    default: ""
+
+outputs:
+  index:
+    description: Repository-relative path to the generated HTML dashboard.
+    value: "${{ inputs.output-root }}/index.html"
+  stylesheet:
+    description: Repository-relative path to the generated stylesheet.
+    value: "${{ inputs.output-root }}/styles.css"
+  summary:
+    description: Repository-relative path to the aggregate public JSON summary.
+    value: "${{ inputs.output-root }}/summary.json"
+
+runs:
+  using: composite
+  steps:
+    - name: Generate static dashboard bundle
+      shell: bash
+      env:
+        INPUT_AS_OF: "${{ inputs.as-of }}"
+        INPUT_DEFAULT_BRANCH: "${{ inputs.default-branch }}"
+        INPUT_OUTPUT_ROOT: "${{ inputs.output-root }}"
+        INPUT_REPORTS_ROOT: "${{ inputs.reports-root }}"
+        INPUT_REPOSITORY: "${{ inputs.repository }}"
+        INPUT_SOURCE_COMMIT: "${{ inputs.source-commit }}"
+      run: |
+        set -euo pipefail
+
+        validate_relative_path() {
+          local label="$1"
+          local value="$2"
+          if [[ -z "${value}" || "${value}" == /* || "/${value}/" == */../* ]]; then
+            printf '%s must be a non-empty repository-relative path: %s\n' \
+              "${label}" "${value}" >&2
+            return 2
+          fi
+        }
+
+        validate_relative_path "reports-root" "${INPUT_REPORTS_ROOT}"
+        validate_relative_path "output-root" "${INPUT_OUTPUT_ROOT}"
+
+        repository="${INPUT_REPOSITORY:-${GITHUB_REPOSITORY:-}}"
+        source_commit="${INPUT_SOURCE_COMMIT:-${GITHUB_SHA:-}}"
+        if [[ -z "${source_commit}" ]]; then
+          source_commit="$(git rev-parse HEAD)"
+        fi
+        if [[ -z "${repository}" ]]; then
+          repository="local/$(basename "${GITHUB_WORKSPACE}")"
+        fi
+        as_of="${INPUT_AS_OF}"
+        if [[ -z "${as_of}" ]]; then
+          as_of="$(git show --no-patch --format=%cI "${source_commit}")"
+        fi
+
+        python3 "${GITHUB_ACTION_PATH}/generate_repository_intelligence_dashboard.py" \
+          --repository-root "${GITHUB_WORKSPACE}" \
+          --reports-root "${GITHUB_WORKSPACE}/${INPUT_REPORTS_ROOT}" \
+          --output-root "${GITHUB_WORKSPACE}/${INPUT_OUTPUT_ROOT}" \
+          --repository "${repository}" \
+          --default-branch "${INPUT_DEFAULT_BRANCH}" \
+          --source-commit "${source_commit}" \
+          --as-of "${as_of}" \
+          --stylesheet-source "${GITHUB_ACTION_PATH}/dashboard.css"
