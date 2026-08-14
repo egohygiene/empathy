@@ -15,6 +15,7 @@ sources:
   - ../README.md
 related:
   - empathy-garden-dashboard
+  - repository-intelligence-dashboard
 supersedes: []
 tags:
   - empathy
@@ -38,6 +39,7 @@ contributors, automation, and AI agents.
 ## Public interfaces
 
 - [Published Mindgarden](https://egohygiene.github.io/empathy/)
+- [Repository intelligence](https://egohygiene.github.io/empathy/intelligence/)
 - [Agent discovery](../llms.txt)
 - [Repository source](https://github.com/egohygiene/empathy)
 

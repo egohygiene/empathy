@@ -15,6 +15,7 @@ sources:
   - home.md
 related:
   - empathy-garden-home
+  - repository-intelligence-dashboard
 supersedes: []
 tags:
   - dashboard
@@ -38,6 +39,13 @@ cssclasses:
 | [Garden contract](README.md)       | [Architecture](../ARCHITECTURE.md) | [Methodology](../METHODOLOGY.md)   |
 | [Note template](templates/note.md) | [System](../SYSTEM.md)             | [Decisions](../DECISIONS.md)       |
 | [[projects/README\|Projects]]      | [Roadmap](../ROADMAP.md)           | [Epistemology](../EPISTEMOLOGY.md) |
+
+## Repository intelligence
+
+[Open the live repository intelligence dashboard](https://egohygiene.github.io/empathy/intelligence/)
+for current dependency risk, code quality, supply-chain posture, report
+freshness, and repository vitality. Each signal preserves execution and finding
+state independently rather than collapsing them into one health score.
 
 ## Knowledge
 
