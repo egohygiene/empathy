@@ -1,0 +1,93 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Validate identity
+
+on:
+  pull_request:
+    paths:
+      - ".identity/**"
+      - ".github/workflows/identity.yml"
+      - "identity/**"
+      - "tests/test_identity_integration.py"
+      - "Taskfile.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - ".identity/**"
+      - ".github/workflows/identity.yml"
+      - "identity/**"
+      - "tests/test_identity_integration.py"
+      - "Taskfile.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "identity-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Rust holon and Empathy contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Rust toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          rustup toolchain install "1.97.1" \
+            --profile "minimal" \
+            --component "clippy,rustfmt"
+
+      - name: Verify formatting
+        run: cargo fmt --manifest-path "identity/Cargo.toml" --all --check
+
+      - name: Run Clippy
+        run: >-
+          cargo clippy
+          --manifest-path "identity/Cargo.toml"
+          --all-targets
+          --all-features
+          --
+          -D warnings
+
+      - name: Run Rust tests
+        run: cargo test --manifest-path "identity/Cargo.toml" --all-features
+
+      - name: Validate Empathy integration contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest tests.test_identity_integration --verbose
+          cargo run \
+            --quiet \
+            --manifest-path "identity/Cargo.toml" \
+            -- \
+            validate \
+            --repository-root "."
+
+      - name: Exercise deterministic handoff
+        shell: bash
+        run: |
+          set -euo pipefail
+          cargo run \
+            --quiet \
+            --manifest-path "identity/Cargo.toml" \
+            -- \
+            handoff \
+            --repository-root "." \
+            --output-directory ".cache/identity/ci-handoff"
+          test -s ".cache/identity/ci-handoff/identity-handoff.md"
+          test -s ".cache/identity/ci-handoff/candidate-manifest.template.json"
+          test -s ".cache/identity/ci-handoff/handoff-manifest.json"

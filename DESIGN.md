@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-14
 governed_by:
   - architecture-design
 depends_on:
@@ -122,8 +122,11 @@ The shared aesthetic is clean, warm, spacious, and information-first. It may use
 details, but never at the cost of readability or product individuality. Consumer projects may adopt
 distinct visual worlds while preserving the same semantic and accessibility commitments.
 
-Empathy does not yet define a branded visual-token palette. Current generated visuals use accessible
-semantic hierarchy and a system sans-serif stack; exact implementation values remain downstream.
+Empathy now defines a project-specific creative direction in `.identity/brief.md`, while shared
+consumer commitments remain semantic and brand-neutral. No candidate artwork or branded token
+palette is canonical yet. Current generated visuals use accessible semantic hierarchy and a system
+sans-serif stack; exact implementation values remain downstream until human-approved identity
+sources exist.
 
 ## Design Anti-Goals
 

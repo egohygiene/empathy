@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-14
 governed_by:
   - architecture-system
 depends_on:
@@ -93,6 +93,22 @@ contributor can reproduce canonical repository behavior.
 - **Target owner:** portable environment capabilities should align with Realm; Empathy retains only
   the integration profile and consumer-specific adapter.
 
+### Visual Identity System
+
+Defines project-owned creative intent, canonical source requirements, versioned
+platform targets, tool-neutral creative handoffs, and the future deterministic
+generation and verification lifecycle for branded assets.
+
+- **Current evidence:** the reusable Rust holon under `identity/`, Empathy's
+  `.identity/` consumer contract, target profiles, integration tests, and
+  identity validation workflow.
+- **Boundary:** designers and AI tools may author candidates, but only explicit
+  human approval promotes canonical sources; generated assets never replace
+  their source contract.
+- **State:** foundation implemented for initialization, validation, planning,
+  and handoff; rendering, import, visual checks, framework adapters, and
+  Renderflow integration remain future work.
+
 ### Evidence and Observability System
 
 Separates ephemeral tool output, normalized reports, durable audits, architecture decisions, and
@@ -122,15 +138,16 @@ consumer conformance results.
 
 ## Responsibilities and Capability Ownership
 
-| Capability                                             | Primary logical owner | Empathy responsibility                                              |
-| ------------------------------------------------------ | --------------------- | ------------------------------------------------------------------- |
-| Repository foundation identity and profile composition | Empathy               | Define, integrate, validate, and document                           |
-| Reusable intelligence artifacts                        | Aether                | Consume a pinned source or projection and test compatibility        |
-| Cross-language quality policy                          | Egolint               | Integrate the stable task/configuration boundary                    |
-| Reusable GitHub automation                             | Relay target          | Prove behavior in the integration profile and avoid permanent forks |
-| Reproducible development environment                   | Realm target          | Define the Empathy profile and validate repository use              |
-| Organization desired state and materialization         | Holon target          | Supply reusable profile content; do not own consumer identity       |
-| Consumer application and policy extensions             | Consumer repository   | Provide documented extension and exception points                   |
+| Capability                                             | Primary logical owner | Empathy responsibility                                               |
+| ------------------------------------------------------ | --------------------- | -------------------------------------------------------------------- |
+| Repository foundation identity and profile composition | Empathy               | Define, integrate, validate, and document                            |
+| Reusable intelligence artifacts                        | Aether                | Consume a pinned source or projection and test compatibility         |
+| Cross-language quality policy                          | Egolint               | Integrate the stable task/configuration boundary                     |
+| Reusable GitHub automation                             | Relay target          | Prove behavior in the integration profile and avoid permanent forks  |
+| Reproducible development environment                   | Realm target          | Define the Empathy profile and validate repository use               |
+| Reusable visual-identity compiler                      | Identity holon        | Own the Empathy specification, approve sources, and test projections |
+| Organization desired state and materialization         | Holon target          | Supply reusable profile content; do not own consumer identity        |
+| Consumer application and policy extensions             | Consumer repository   | Provide documented extension and exception points                    |
 
 Target ownership labels describe the intended architecture and remain provisional until accepted and
 implemented in the corresponding repository.
