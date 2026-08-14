@@ -44,10 +44,7 @@
       "description": "Input material conflates the vision with a roadmap, OKR plan, or strategy document.",
       "category": "boundary",
       "trigger": "should-trigger",
-      "tags": [
-        "boundary",
-        "scope"
-      ],
+      "tags": ["boundary", "scope"],
       "expected": [
         "Identifies the conflation with planning artifacts",
         "Keeps roadmap and OKR detail out of the vision document",
@@ -63,17 +60,13 @@
       "description": "The request is to produce a quarterly roadmap or OKR document rather than a compelling future-state narrative.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for planning or OKR documentation",
         "Identifies the correct artifact for the request",
         "Avoids producing VISION.md for a planning-only request"
       ],
-      "prohibited": [
-        "Producing VISION.md for a roadmap or OKR request"
-      ]
+      "prohibited": ["Producing VISION.md for a roadmap or OKR request"]
     }
   ]
 }

@@ -20,17 +20,31 @@ supersedes: []
 # Replace With Specification Title
 
 ## Introduction
+
 ## 1. Purpose and Scope
+
 ## 2. Goals
+
 ## 3. Non-Goals
+
 ## 4. Context and Evidence
+
 ## 5. Definitions
+
 ## 6. Requirements
+
 ## 7. Architecture or Operating Model
+
 ## 8. Interfaces and Dependencies
+
 ## 9. Implementation Plan
+
 ## 10. Validation Plan
+
 ## 11. Risks and Edge Cases
+
 ## 12. Acceptance Criteria
+
 ## 13. Open Questions
+
 ## 14. Related Artifacts

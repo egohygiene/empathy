@@ -44,10 +44,7 @@
       "description": "Input material attempts to encode implementation rules or operational procedures as organizational pillars.",
       "category": "boundary",
       "trigger": "should-trigger",
-      "tags": [
-        "boundary",
-        "scope"
-      ],
+      "tags": ["boundary", "scope"],
       "expected": [
         "Identifies the boundary violation",
         "Keeps implementation rules out of the pillars document",
@@ -63,17 +60,13 @@
       "description": "The request is to document a project roadmap or feature backlog rather than capture organizational commitments.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for roadmap or backlog documentation",
         "Identifies the correct artifact for the request",
         "Avoids producing PILLARS.md for a planning request"
       ],
-      "prohibited": [
-        "Producing PILLARS.md for a roadmap or backlog request"
-      ]
+      "prohibited": ["Producing PILLARS.md for a roadmap or backlog request"]
     }
   ]
 }

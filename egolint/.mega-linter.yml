@@ -54,8 +54,10 @@ DISABLE_LINTERS:
   - MARKDOWN_RUMDL
   - PYTHON_NBQA_MYPY
   - REPOSITORY_KINGFISHER
+  - REPOSITORY_GIT_DIFF
   - REPOSITORY_SEMGREP
   - SPELL_CODESPELL
+  - TYPESCRIPT_STANDARD
 
   # DevSkim is currently excluded while its configuration and responsibility
   # within the wider security pipeline are reviewed.
@@ -456,6 +458,9 @@ CSS_STYLELINT_CONFIG_FILE: stylelint.json
 # https://megalinter.io/latest/descriptors/dart_dartanalyzer/
 DART_DARTANALYZER_RULES_PATH: egolint/.config/lint/dart
 DART_DARTANALYZER_CONFIG_FILE: analysis_options.yaml
+DART_DARTANALYZER_COMMAND_REMOVE_ARGUMENTS:
+  - -c
+  - egolint/.config/lint/dart/analysis_options.yaml
 
 # ==============================================================================
 # Dockerfile static analysis
@@ -765,6 +770,11 @@ RAKU_RAKU_CONFIG_FILE: LINTER_DEFAULT
 REPOSITORY_LS_LINT_RULES_PATH: egolint/.config/lint/repo
 REPOSITORY_LS_LINT_CONFIG_FILE: .ls-lint.yml
 
+# The repository policy already excludes every directory MegaLinter would
+# forward through a second config file. ls-lint does not merge two root-level
+# `ignore` mappings, so forwarding produces an invalid rule named `ignore`.
+REPOSITORY_LS_LINT_FORWARD_EXCLUDED_DIRECTORIES: false
+
 # ==============================================================================
 # Repository spell checking
 # ==============================================================================
@@ -895,10 +905,7 @@ REPOSITORY_TRUFFLEHOG_CONFIG_FILE: .trufflehog.yml
 
 REPOSITORY_TRUFFLEHOG_ARGUMENTS: >-
   --exclude-paths=egolint/.config/security/trufflehog/.trufflehogignore
-  --results=verified,unknown
-  --fail
   --fail-on-scan-errors
-  --no-update
   --no-color
   --force-skip-binaries
   --archive-max-depth=1
@@ -1069,7 +1076,7 @@ KUBERNETES_KUBESCAPE_ARGUMENTS:
 # TFLint
 # https://github.com/terraform-linters/tflint
 # https://megalinter.io/latest/descriptors/terraform_tflint/
-TERRAFORM_TFLINT_RULES_PATH: /tmp/lint/egolint/.config/lint/terraform
+TERRAFORM_TFLINT_RULES_PATH: egolint/.config/lint/terraform
 TERRAFORM_TFLINT_CONFIG_FILE: .tflint.hcl
 
 # Terragrunt

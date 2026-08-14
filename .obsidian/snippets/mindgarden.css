@@ -1,4 +1,5 @@
 /* Copyright 2026 Ego Hygiene */
+
 /* SPDX-License-Identifier: MIT */
 
 .mindgarden-dashboard {
@@ -14,6 +15,7 @@
 }
 
 .mindgarden-dashboard .markdown-preview-sizer,
+/* stylelint-disable-next-line selector-class-pattern -- Obsidian owns this class. */
 .mindgarden-dashboard .cm-contentContainer {
   --file-line-width: 1120px;
 }
@@ -38,6 +40,7 @@
 
 .mindgarden-dashboard .callout[data-callout="abstract"] {
   --callout-color: 86, 212, 181;
+
   background: linear-gradient(
     135deg,
     color-mix(in srgb, var(--mindgarden-mint) 12%, var(--background-primary)),
@@ -56,11 +59,7 @@
 }
 
 .mindgarden-dashboard thead {
-  background: color-mix(
-    in srgb,
-    var(--mindgarden-violet) 10%,
-    var(--background-secondary)
-  );
+  background: color-mix(in srgb, var(--mindgarden-violet) 10%, var(--background-secondary));
 }
 
 .mindgarden-dashboard .bases-embed {

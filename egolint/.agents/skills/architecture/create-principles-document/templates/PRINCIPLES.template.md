@@ -20,18 +20,12 @@ supersedes: []
 
 ## Introduction
 
-
 ## Principle 1 — Replace With Name
-
 
 ## Principle Conflicts and Precedence
 
-
 ## Exceptions
-
 
 ## Open Questions
 
-
 ## Validation
-

@@ -6,8 +6,9 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
-import subprocess
+import subprocess  # nosec B404
 import sys
+from typing import Any
 import unittest
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
@@ -21,6 +22,10 @@ SPEC.loader.exec_module(megalinter_policy)
 
 
 class MegaLinterPolicyTests(unittest.TestCase):
+    catalog: dict[str, Any]
+    matrix: dict[str, Any]
+    matrix_by_id: dict[str, dict[str, Any]]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.catalog = json.loads(megalinter_policy.CATALOG_PATH.read_text(encoding="utf-8"))
@@ -28,7 +33,7 @@ class MegaLinterPolicyTests(unittest.TestCase):
         cls.matrix_by_id = {tool["id"]: tool for tool in cls.matrix["tools"]}
 
     def test_generated_contracts_are_current(self) -> None:
-        result = subprocess.run(
+        result = subprocess.run(  # nosec B603
             [sys.executable, str(MODULE_PATH), "--check"],
             cwd=REPOSITORY_ROOT,
             check=False,

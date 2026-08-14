@@ -20,9 +20,7 @@
       "description": "A cleanup pass must be updated after one candidate file is found to be generated rather than handwritten.",
       "category": "positive",
       "trigger": "should-trigger",
-      "tags": [
-        "update"
-      ],
+      "tags": ["update"],
       "expected": [
         "Reclassifies the candidate accurately",
         "Removes or adjusts the planned edit",

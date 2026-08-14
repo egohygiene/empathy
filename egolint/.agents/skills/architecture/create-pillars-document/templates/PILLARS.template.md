@@ -20,18 +20,12 @@ supersedes: []
 
 ## Introduction
 
-
 ## Pillar 1 — Replace With Name
-
 
 ## Relationships Between Pillars
 
-
 ## Initiative Alignment
-
 
 ## Open Questions
 
-
 ## Validation
-

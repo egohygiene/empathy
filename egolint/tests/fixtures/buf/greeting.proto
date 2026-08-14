@@ -7,5 +7,6 @@ package egohygiene.greeting.v1;
 
 // GreetingRequest identifies the person to greet.
 message GreetingRequest {
+  // name is the person who should receive the greeting.
   string name = 1;
 }

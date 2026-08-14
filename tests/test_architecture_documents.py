@@ -115,6 +115,8 @@ def find_dependency_cycle(graph: dict[str, list[str]]) -> list[str] | None:
 
 
 class ArchitectureDocumentContractTests(unittest.TestCase):
+    documents: dict[str, dict[str, str | list[str]]]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.documents = {
@@ -193,7 +195,7 @@ class ArchitectureDocumentContractTests(unittest.TestCase):
             for relationship in [dependencies, related_documents, superseded_documents]:
                 self.assertTrue(set(relationship).issubset(known_ids), filename)
                 self.assertNotIn(document_id, relationship, filename)
-            dependency_graph[document_id] = dependencies
+            dependency_graph[document_id] = [str(dependency) for dependency in dependencies]
 
         self.assertIsNone(find_dependency_cycle(dependency_graph))
 

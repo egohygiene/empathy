@@ -20,21 +20,14 @@ supersedes: []
 
 ## Opening Declaration
 
-
 ## What We Believe
-
 
 ## What We Commit To
 
-
 ## What We Refuse to Normalize
-
 
 ## Invitation
 
-
 ## Closing Statement
 
-
 ## Provenance and Alignment
-

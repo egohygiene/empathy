@@ -55,9 +55,7 @@
       "description": "The request is to write a blog post or informal summary rather than produce a formal arXiv submission.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for informal writing or blog posts",
         "Identifies the correct skill or artifact for the request",

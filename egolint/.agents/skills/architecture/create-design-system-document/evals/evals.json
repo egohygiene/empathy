@@ -56,10 +56,7 @@
       "description": "Required design system evidence across products is incomplete or contradictory.",
       "category": "insufficient-evidence",
       "trigger": "should-trigger",
-      "tags": [
-        "evidence",
-        "blocked"
-      ],
+      "tags": ["evidence", "blocked"],
       "expected": [
         "Does not invent cross-product patterns without evidence",
         "Labels missing evidence explicitly",
@@ -75,9 +72,7 @@
       "description": "The request is to build a component library or token dictionary, not to define design system philosophy.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for a component or token library request",
         "Identifies that DESIGN_SYSTEM.md captures cross-product philosophy, not component implementations",

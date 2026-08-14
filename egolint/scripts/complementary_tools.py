@@ -15,10 +15,10 @@ import json
 import os
 from pathlib import Path
 import shutil
-import subprocess
+import subprocess  # nosec B404
 import sys
 import time
-from typing import Any
+from typing import Any, cast
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 MANIFEST_PATH = REPOSITORY_ROOT / "egolint/.config/toolchain/complementary-tools.json"
@@ -50,7 +50,10 @@ class ToolState:
 def load_manifest() -> dict[str, Any]:
     """Load the canonical complementary-tool manifest."""
 
-    return json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    return cast(
+        dict[str, Any],
+        json.loads(MANIFEST_PATH.read_text(encoding="utf-8")),
+    )
 
 
 def is_excluded(path: Path) -> bool:
@@ -362,7 +365,7 @@ def runtime_version_matches(tool: dict[str, Any], environment: dict[str, str]) -
     if tool["runtime"] in {"go", "pre-commit", "uvx"}:
         return True
     try:
-        completed = subprocess.run(
+        completed = subprocess.run(  # nosec B603
             tool["version_command"],
             cwd=REPOSITORY_ROOT,
             env=environment,
@@ -409,7 +412,7 @@ def run_tool(tool: dict[str, Any], timeout_seconds: int) -> int:
         return 3
     started_at = time.monotonic()
     try:
-        completed = subprocess.run(
+        completed = subprocess.run(  # nosec B603
             command,
             cwd=REPOSITORY_ROOT,
             env=environment,

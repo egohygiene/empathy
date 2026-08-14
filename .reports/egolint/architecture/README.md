@@ -10,9 +10,9 @@ configuration and regenerate it; do not hand-edit the SVG or this legend.
 <!-- prettier-ignore -->
 | Layer | Total | Enabled / selected | Conditional / disabled |
 | --- | ---: | ---: | ---: |
-| MegaLinter-native | 124 | 96 enabled | 11 conditional; 17 disabled |
+| MegaLinter-native | 124 | 94 enabled | 11 conditional; 19 disabled |
 | MegaLinter fast profile | 124 | 12 selected | 112 excluded |
-| MegaLinter holistic profile | 124 | 107 selected | 17 not selected |
+| MegaLinter holistic profile | 124 | 105 selected | 19 not selected |
 | Complementary | 18 | 6 enabled | 12 conditional; 0 disabled |
 
 ## Execution paths
@@ -54,4 +54,4 @@ requests never receive report write permissions.
 
 - MegaLinter source: `egolint/.config/megalinter/tool-matrix.json`
 - Complementary source: `egolint/.config/toolchain/tool-matrix.json`
-- Source digest: `8a69af7c221f599cb87c60675564f408b74030c88eb215669a089d4bf2966e2a`
+- Source digest: `3ca51df9d76b4448e8a92d8b24b1d1c179d06b86fe15c74a4bbce0794f41a4f5`

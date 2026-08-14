@@ -15,15 +15,27 @@ recursion_budget:
 # Reflective Development Cycle
 
 ## Scope
+
 ## Exclusions
+
 ## Source Artifacts
+
 ## Current State
+
 ## Execution Plan
+
 ## Produced Artifacts
+
 ## Validation Results
+
 ## Reflective Audit
+
 ## Drift Indicators
+
 ## Unresolved Decisions
+
 ## Budget Consumption
+
 ## Safe Resume Point
+
 ## Synchronization Request

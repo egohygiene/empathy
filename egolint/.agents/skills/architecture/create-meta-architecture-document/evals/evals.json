@@ -44,10 +44,7 @@
       "description": "Input material conflates meta-architecture decisions with implementation choices or per-system architecture.",
       "category": "boundary",
       "trigger": "should-trigger",
-      "tags": [
-        "boundary",
-        "scope"
-      ],
+      "tags": ["boundary", "scope"],
       "expected": [
         "Identifies the conflation with lower-level concerns",
         "Keeps implementation detail out of the meta-architecture document",
@@ -63,9 +60,7 @@
       "description": "The request is to design the architecture of a single repository rather than document patterns that govern how all repositories are structured.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for per-repository architecture design",
         "Identifies that META.md captures cross-repository patterns",

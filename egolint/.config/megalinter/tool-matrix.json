@@ -1507,16 +1507,16 @@
       "applicability": [],
       "cli_lint_mode": "project",
       "configuration_path": null,
-      "configuration_state": "enabled",
+      "configuration_state": "disabled",
       "descriptor": "REPOSITORY",
       "fixtures": {},
       "id": "REPOSITORY_GIT_DIFF",
       "name": "git_diff",
       "profiles": {
         "fast": "disabled_by_profile",
-        "holistic": "selected"
+        "holistic": "disabled_by_configuration"
       },
-      "reason": "Selected by the holistic MegaLinter profile.",
+      "reason": "Generated report snapshots dirty the workspace during the holistic run.",
       "report_path": ".reports/megalinter/linters_logs/REPOSITORY_GIT_DIFF.log",
       "version": "2.54.0"
     },
@@ -2225,16 +2225,16 @@
       "applicability": [],
       "cli_lint_mode": "list_of_files",
       "configuration_path": null,
-      "configuration_state": "enabled",
+      "configuration_state": "disabled",
       "descriptor": "TYPESCRIPT",
       "fixtures": {},
       "id": "TYPESCRIPT_STANDARD",
       "name": "ts-standard",
       "profiles": {
         "fast": "disabled_by_profile",
-        "holistic": "selected"
+        "holistic": "disabled_by_configuration"
       },
-      "reason": "Selected by the holistic MegaLinter profile.",
+      "reason": "ESLint and Prettier own TypeScript analysis and formatting.",
       "report_path": ".reports/megalinter/linters_logs/TYPESCRIPT_STANDARD.log",
       "version": "12.0.2"
     },

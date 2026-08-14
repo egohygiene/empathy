@@ -20,9 +20,7 @@
       "description": "A previously accepted plan must be updated after one approved architecture decision changes sequencing.",
       "category": "positive",
       "trigger": "should-trigger",
-      "tags": [
-        "update"
-      ],
+      "tags": ["update"],
       "expected": [
         "Revises dependency order to match the new decision",
         "Keeps unaffected phases stable",

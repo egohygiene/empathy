@@ -20,9 +20,7 @@
       "description": "An existing issue draft must be revised after new audit evidence changes scope or dependencies.",
       "category": "positive",
       "trigger": "should-trigger",
-      "tags": [
-        "update"
-      ],
+      "tags": ["update"],
       "expected": [
         "Updates scope and validation to match the new evidence",
         "Keeps earlier intent only when still supported",

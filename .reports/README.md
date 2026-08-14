@@ -11,7 +11,9 @@ schedules, and manual runs may commit curated stable snapshots through
 Artifacts and Git history preserve historical results. Report generators must not
 accumulate timestamped history trees in this directory.
 
-Human-authored findings and architectural analysis belong in `.audits/`, not here.
+Human-authored findings and architectural analysis generally belong in
+`.audits/`. Stable remediation summaries may live beside their generated tool
+output when they are part of that report namespace's lifecycle contract.
 
 The source contracts currently reserve this hierarchy:
 
@@ -22,6 +24,7 @@ The source contracts currently reserve this hierarchy:
 │   ├── README.md
 │   └── lint-architecture.svg
 ├── megalinter/
+│   ├── remediation.md
 │   ├── grype/
 │   ├── syft/
 │   │   ├── sbom.cyclonedx.json
@@ -39,6 +42,10 @@ Grype, Trivy, and OSV retain separate native outputs so source licensing,
 dependency licensing, inventories, and vulnerability findings are never
 collapsed into one ambiguous signal. The architecture snapshot is generated
 from both canonical tool matrices rather than maintained manually.
+
+`.reports/megalinter/remediation.md` is the stable, human-readable assessment
+of the latest cleanup pass. Unlike generated scanner payloads, it is curated and
+versioned so future runs can distinguish acknowledged debt from regressions.
 
 Only report-publication jobs receive `contents: write`. Every scanner and
 generator job runs with read-only repository access, and no pull-request job can

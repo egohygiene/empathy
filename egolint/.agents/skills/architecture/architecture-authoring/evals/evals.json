@@ -30,10 +30,7 @@
       "description": "Repository provides no meaningful context for selecting or sequencing architecture documents.",
       "category": "insufficient-evidence",
       "trigger": "should-trigger",
-      "tags": [
-        "routing",
-        "evidence"
-      ],
+      "tags": ["routing", "evidence"],
       "expected": [
         "Does not fabricate document selection rationale",
         "Labels missing context explicitly",
@@ -50,9 +47,7 @@
       "description": "The request is to evaluate the quality of an existing document, not to select or sequence architecture documents.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use architecture-authoring as the primary skill",
         "Explains why this skill is not appropriate",

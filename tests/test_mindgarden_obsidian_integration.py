@@ -13,18 +13,16 @@ REPOSITORY_ROOT = Path(__file__).parents[1]
 class MindgardenObsidianIntegrationTests(unittest.TestCase):
     def test_profile_uses_native_features_and_no_required_community_plugins(self) -> None:
         profile = json.loads(
-            (
-                REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json"
-            ).read_text(encoding="utf8")
+            (REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json").read_text(
+                encoding="utf8"
+            )
         )
         self.assertEqual(profile["schema"], "mindgarden.obsidian-profile/v0")
         self.assertEqual(profile["vaultRoot"], ".")
         self.assertIn("bases", profile["nativeFeatures"])
         self.assertEqual(profile["requiredCommunityPlugins"], [])
 
-        optional_plugins = {
-            plugin["id"]: plugin for plugin in profile["optionalCommunityPlugins"]
-        }
+        optional_plugins = {plugin["id"]: plugin for plugin in profile["optionalCommunityPlugins"]}
         self.assertEqual(optional_plugins["project-manager"]["version"], "1.8.0")
         self.assertEqual(
             optional_plugins["project-manager"]["source"],
@@ -33,9 +31,9 @@ class MindgardenObsidianIntegrationTests(unittest.TestCase):
 
     def test_profile_paths_resolve_in_empathy(self) -> None:
         profile = json.loads(
-            (
-                REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json"
-            ).read_text(encoding="utf8")
+            (REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json").read_text(
+                encoding="utf8"
+            )
         )
         for field in (
             "gardenRoot",
@@ -64,15 +62,9 @@ class MindgardenObsidianIntegrationTests(unittest.TestCase):
             self.assertIn(ignored_path, ignore_policy)
 
     def test_dashboard_uses_native_base_and_scoped_css(self) -> None:
-        dashboard = (REPOSITORY_ROOT / ".garden/dashboard.md").read_text(
-            encoding="utf8"
-        )
-        base = (REPOSITORY_ROOT / ".garden/views/knowledge.base").read_text(
-            encoding="utf8"
-        )
-        css = (
-            REPOSITORY_ROOT / ".obsidian/snippets/mindgarden.css"
-        ).read_text(encoding="utf8")
+        dashboard = (REPOSITORY_ROOT / ".garden/dashboard.md").read_text(encoding="utf8")
+        base = (REPOSITORY_ROOT / ".garden/views/knowledge.base").read_text(encoding="utf8")
+        css = (REPOSITORY_ROOT / ".obsidian/snippets/mindgarden.css").read_text(encoding="utf8")
 
         self.assertIn("mindgarden-dashboard", dashboard)
         self.assertIn("![[views/knowledge.base#Knowledge]]", dashboard)
@@ -83,14 +75,12 @@ class MindgardenObsidianIntegrationTests(unittest.TestCase):
 
     def test_obsidian_profile_schema_is_valid_json(self) -> None:
         schema = json.loads(
-            (
-                REPOSITORY_ROOT
-                / "mindgarden/contracts/obsidian-profile.schema.json"
-            ).read_text(encoding="utf8")
+            (REPOSITORY_ROOT / "mindgarden/contracts/obsidian-profile.schema.json").read_text(
+                encoding="utf8"
+            )
         )
         self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema")
 
 
 if __name__ == "__main__":
     unittest.main()
-

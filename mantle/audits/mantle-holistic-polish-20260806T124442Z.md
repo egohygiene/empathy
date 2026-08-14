@@ -6,19 +6,19 @@
 
 ## 1. Report Metadata and Status
 
-| Field | Value |
-|---|---|
-| **Report name** | mantle-holistic-polish |
-| **Report file** | `audits/mantle-holistic-polish-20260806T124442Z.md` |
-| **Status** | `partial` |
-| **Audit execution time (UTC)** | 2026-08-06T12:44:42Z |
-| **Audited commit SHA** | `3ba37090c483034a5ecd249a099467ab4f1b9e6e` |
-| **Audited branch** | `copilot/chore-readiness-add-portable-mantle-installer` |
-| **Auditor** | GitHub Copilot Coding Agent |
-| **Strategy** | holistic |
-| **Phase 1 (installer)** | complete |
-| **Phase 2 (audit)** | partial — macOS validation unverified; Fish and Zsh unavailable in audit environment |
-| **Reason for partial status** | Bats, Zsh, and Fish were not installed in the audit environment; no macOS runner was available; behavioral test suite could not be executed. Static validation (Bash syntax, ShellCheck, shfmt) passed for `install.sh`. |
+| Field                          | Value                                                                                                                                                                                                                    |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Report name**                | mantle-holistic-polish                                                                                                                                                                                                   |
+| **Report file**                | `audits/mantle-holistic-polish-20260806T124442Z.md`                                                                                                                                                                      |
+| **Status**                     | `partial`                                                                                                                                                                                                                |
+| **Audit execution time (UTC)** | 2026-08-06T12:44:42Z                                                                                                                                                                                                     |
+| **Audited commit SHA**         | `3ba37090c483034a5ecd249a099467ab4f1b9e6e`                                                                                                                                                                               |
+| **Audited branch**             | `copilot/chore-readiness-add-portable-mantle-installer`                                                                                                                                                                  |
+| **Auditor**                    | GitHub Copilot Coding Agent                                                                                                                                                                                              |
+| **Strategy**                   | holistic                                                                                                                                                                                                                 |
+| **Phase 1 (installer)**        | complete                                                                                                                                                                                                                 |
+| **Phase 2 (audit)**            | partial — macOS validation unverified; Fish and Zsh unavailable in audit environment                                                                                                                                     |
+| **Reason for partial status**  | Bats, Zsh, and Fish were not installed in the audit environment; no macOS runner was available; behavioral test suite could not be executed. Static validation (Bash syntax, ShellCheck, shfmt) passed for `install.sh`. |
 
 ---
 
@@ -72,13 +72,13 @@ constraints:
 
 **Inferred defaults applied:**
 
-| Setting | Inferred value | Reason |
-|---|---|---|
-| `report_status` | `partial` | Bats/Zsh/Fish unavailable; macOS unverified |
-| `finding_id_prefix` | `AUDIT` | Specification default |
-| `severity_floor` | `informational` | Record all nontrivial findings |
-| `existing_audits` | none | No `audits/` directory existed before this PR |
-| `historical_findings` | none | First audit for this repository |
+| Setting               | Inferred value  | Reason                                        |
+| --------------------- | --------------- | --------------------------------------------- |
+| `report_status`       | `partial`       | Bats/Zsh/Fish unavailable; macOS unverified   |
+| `finding_id_prefix`   | `AUDIT`         | Specification default                         |
+| `severity_floor`      | `informational` | Record all nontrivial findings                |
+| `existing_audits`     | none            | No `audits/` directory existed before this PR |
+| `historical_findings` | none            | First audit for this repository               |
 
 ---
 
@@ -101,32 +101,32 @@ constraints:
 
 ## 5. Repository and Commit Context
 
-| Field | Value |
-|---|---|
-| **Repository** | `egohygiene/mantle` |
-| **Commit** | `3ba37090c483034a5ecd249a099467ab4f1b9e6e` |
-| **Branch** | `copilot/chore-readiness-add-portable-mantle-installer` |
-| **PR title** | [WIP] Add portable Mantle installer and generate holistic audit |
-| **Prior audits** | None (this is the first audit report) |
-| **CI status at audit time** | `action_required` (manual review gate) |
+| Field                       | Value                                                           |
+| --------------------------- | --------------------------------------------------------------- |
+| **Repository**              | `egohygiene/mantle`                                             |
+| **Commit**                  | `3ba37090c483034a5ecd249a099467ab4f1b9e6e`                      |
+| **Branch**                  | `copilot/chore-readiness-add-portable-mantle-installer`         |
+| **PR title**                | [WIP] Add portable Mantle installer and generate holistic audit |
+| **Prior audits**            | None (this is the first audit report)                           |
+| **CI status at audit time** | `action_required` (manual review gate)                          |
 
 **Repository census (observed):**
 
-| Area | Count |
-|---|---|
-| `bin/` public commands | 72 |
+| Area                          | Count                                                 |
+| ----------------------------- | ----------------------------------------------------- |
+| `bin/` public commands        | 72                                                    |
 | `tests/bin/*.bats` test files | 71 (one per bin/ command minus `coverage-guard.bats`) |
-| `tests/integration/*.bats` | 6 |
-| `tests/contract/*.bats` | 5 |
-| `lib/bash/` libraries | 11 |
-| `lib/core/` libraries | 8 |
-| `lib/install/` utilities | 10 |
-| `lib/extensions/` | 3 |
-| `modules/` | 8 |
-| `platforms/` | 3 (darwin, linux, windows) |
-| `runtime/shells/` | 4 (bash, fish, posix, zsh) |
-| `libexec/mantle/commands/` | 3 (help, version, install) |
-| `libexec/mantle/installers/` | 30+ individual tool installers |
+| `tests/integration/*.bats`    | 6                                                     |
+| `tests/contract/*.bats`       | 5                                                     |
+| `lib/bash/` libraries         | 11                                                    |
+| `lib/core/` libraries         | 8                                                     |
+| `lib/install/` utilities      | 10                                                    |
+| `lib/extensions/`             | 3                                                     |
+| `modules/`                    | 8                                                     |
+| `platforms/`                  | 3 (darwin, linux, windows)                            |
+| `runtime/shells/`             | 4 (bash, fish, posix, zsh)                            |
+| `libexec/mantle/commands/`    | 3 (help, version, install)                            |
+| `libexec/mantle/installers/`  | 30+ individual tool installers                        |
 
 ---
 
@@ -150,15 +150,15 @@ Inspection followed the required order:
 
 **Tools available in audit environment:**
 
-| Tool | Available | Notes |
-|---|---|---|
-| `bash` | yes | GNU bash 5.1 |
-| `zsh` | no | Not installed |
-| `fish` | no | Not installed |
-| `shellcheck` | yes | 0.9.0 |
-| `shfmt` | yes | 3.8.0 (installed during audit) |
-| `bats` | no | Not installed |
-| macOS | no | Linux (Ubuntu 22.04) |
+| Tool         | Available | Notes                          |
+| ------------ | --------- | ------------------------------ |
+| `bash`       | yes       | GNU bash 5.1                   |
+| `zsh`        | no        | Not installed                  |
+| `fish`       | no        | Not installed                  |
+| `shellcheck` | yes       | 0.9.0                          |
+| `shfmt`      | yes       | 3.8.0 (installed during audit) |
+| `bats`       | no        | Not installed                  |
+| macOS        | no        | Linux (Ubuntu 22.04)           |
 
 ---
 
@@ -198,50 +198,50 @@ Mantle is a well-engineered project that is not yet release-ready but is approac
 
 Each row records: status, evidence basis, and remaining validation needed.
 
-| Scenario | Status | Evidence | Basis | Remaining validation |
-|---|---|---|---|---|
-| Linux clean install | ✅ Validated | Smoke tests with isolated `HOME`; payload present | Executed | None for basic flow |
-| Linux update (over installer-owned) | ✅ Validated | Idempotent install tests passed | Executed | None |
-| Linux uninstall | ✅ Validated | `--uninstall` test passed; prefix removed, blocks cleaned | Executed | None |
-| macOS clean install | ⚠️ Unverified | Code path branches on `uname -s Darwin`; `.bash_profile` selected | Static inspection | Execute on real macOS runner |
-| macOS update | ⚠️ Unverified | Same code path as Linux update | Static inspection | Execute on real macOS runner |
-| macOS uninstall | ⚠️ Unverified | Same uninstall path | Static inspection | Execute on real macOS runner |
-| Bash activation | ✅ Validated | Managed block appended to `~/.bashrc`; idempotency verified | Executed | None |
-| Zsh activation | ⚠️ Unverified | Code path exists; `$ZDOTDIR/.zshrc` targeted | Static inspection | Execute with zsh installed |
-| Fish activation | ⚠️ Unverified | `conf.d/mantle.fish` generated; content correct | Static inspection | Execute with fish installed |
-| Copy installation | ✅ Validated | Payload files and directories present in prefix | Executed | None |
-| Symlink installation | ⚠️ Unverified | `ln -sf` branches present; not exercised | Static inspection | Execute `--method symlink` |
-| Custom prefix | ✅ Validated | `--prefix "/path with spaces"` test passed | Executed | None |
-| Prefix with spaces | ✅ Validated | Tested with embedded space in path | Executed | None |
-| Dry-run | ✅ Validated | `--dry-run` prints plan; no files created | Executed | None |
-| Status mode | ✅ Validated | `--status` reports installed/not-installed state | Executed | None |
-| No-shell-hook mode | ✅ Validated | `--no-shell-hook` skips all activation | Executed | None |
-| Environment diff | ✅ Validated | `--environment-diff` shows PATH diff and MANTLE_* vars | Executed | Verify on macOS |
-| Container/CI behavior | ✅ Validated | `--no-shell-hook` fully functional; non-interactive assumed | Executed | None |
-| Non-interactive behavior | ✅ Validated | No interactive prompts; all options supply complete intent | Executed | None |
-| Rollback after failure | ⚠️ Unverified | Backup/restore logic present in `_publish_staged` | Static inspection | Inject failure and verify rollback |
-| Reject non-owned destination | ✅ Validated | Returns error when `.mantle-installer` absent in existing dir | Code review | None |
+| Scenario                            | Status        | Evidence                                                          | Basis             | Remaining validation               |
+| ----------------------------------- | ------------- | ----------------------------------------------------------------- | ----------------- | ---------------------------------- |
+| Linux clean install                 | ✅ Validated  | Smoke tests with isolated `HOME`; payload present                 | Executed          | None for basic flow                |
+| Linux update (over installer-owned) | ✅ Validated  | Idempotent install tests passed                                   | Executed          | None                               |
+| Linux uninstall                     | ✅ Validated  | `--uninstall` test passed; prefix removed, blocks cleaned         | Executed          | None                               |
+| macOS clean install                 | ⚠️ Unverified | Code path branches on `uname -s Darwin`; `.bash_profile` selected | Static inspection | Execute on real macOS runner       |
+| macOS update                        | ⚠️ Unverified | Same code path as Linux update                                    | Static inspection | Execute on real macOS runner       |
+| macOS uninstall                     | ⚠️ Unverified | Same uninstall path                                               | Static inspection | Execute on real macOS runner       |
+| Bash activation                     | ✅ Validated  | Managed block appended to `~/.bashrc`; idempotency verified       | Executed          | None                               |
+| Zsh activation                      | ⚠️ Unverified | Code path exists; `$ZDOTDIR/.zshrc` targeted                      | Static inspection | Execute with zsh installed         |
+| Fish activation                     | ⚠️ Unverified | `conf.d/mantle.fish` generated; content correct                   | Static inspection | Execute with fish installed        |
+| Copy installation                   | ✅ Validated  | Payload files and directories present in prefix                   | Executed          | None                               |
+| Symlink installation                | ⚠️ Unverified | `ln -sf` branches present; not exercised                          | Static inspection | Execute `--method symlink`         |
+| Custom prefix                       | ✅ Validated  | `--prefix "/path with spaces"` test passed                        | Executed          | None                               |
+| Prefix with spaces                  | ✅ Validated  | Tested with embedded space in path                                | Executed          | None                               |
+| Dry-run                             | ✅ Validated  | `--dry-run` prints plan; no files created                         | Executed          | None                               |
+| Status mode                         | ✅ Validated  | `--status` reports installed/not-installed state                  | Executed          | None                               |
+| No-shell-hook mode                  | ✅ Validated  | `--no-shell-hook` skips all activation                            | Executed          | None                               |
+| Environment diff                    | ✅ Validated  | `--environment-diff` shows PATH diff and MANTLE_* vars            | Executed          | Verify on macOS                    |
+| Container/CI behavior               | ✅ Validated  | `--no-shell-hook` fully functional; non-interactive assumed       | Executed          | None                               |
+| Non-interactive behavior            | ✅ Validated  | No interactive prompts; all options supply complete intent        | Executed          | None                               |
+| Rollback after failure              | ⚠️ Unverified | Backup/restore logic present in `_publish_staged`                 | Static inspection | Inject failure and verify rollback |
+| Reject non-owned destination        | ✅ Validated  | Returns error when `.mantle-installer` absent in existing dir     | Code review       | None                               |
 
 ---
 
 ## 10. Findings Summary Table
 
-| ID | Title | Severity | Confidence | Status | Area | Effort |
-|---|---|---|---|---|---|---|
-| AUDIT-001 | Pre-existing shfmt failures block static CI job | high | high | confirmed | ci-and-automation | medium |
-| AUDIT-002 | No automated test coverage for `install.sh` | high | high | confirmed | testing | medium |
-| AUDIT-003 | Installer version reads git SHA instead of semantic version | medium | high | confirmed | installer safety | small |
-| AUDIT-004 | No `CONTRIBUTING.md` or documented contribution workflow | medium | high | confirmed | developer-experience | small |
-| AUDIT-005 | No versioning scheme, changelog, or release process | medium | high | confirmed | ci-and-automation | medium |
-| AUDIT-006 | macOS Bash startup file detection silently incorrect on some configurations | medium | medium | probable | portability | small |
-| AUDIT-007 | Fish entrypoint requires manual `MANTLE_ROOT` wiring; no auto-detection | medium | high | confirmed | architecture | medium |
-| AUDIT-008 | `install.sh` rollback path untested | medium | medium | needs-validation | installer safety | small |
-| AUDIT-009 | `--environment-diff` captures color escape codes as `MANTLE_COLOR_*` variables | low | high | confirmed | installer safety | small |
-| AUDIT-010 | No release automation, no version file, no checksums | medium | high | confirmed | ci-and-automation | large |
-| AUDIT-011 | `tests/run.sh static` shfmt check scope includes all `.sh` files | low | high | confirmed | ci-and-automation | small |
-| AUDIT-012 | Windows platform support undocumented and partially tested | low | high | confirmed | portability | medium |
-| AUDIT-013 | shdoc convention partially applied in `install.sh` (no full shdoc coverage) | low | medium | probable | documentation | small |
-| AUDIT-014 | `--environment-diff` diff output uses `diff` format but is computed manually | low | medium | needs-validation | developer-experience | small |
+| ID        | Title                                                                          | Severity | Confidence | Status           | Area                 | Effort |
+| --------- | ------------------------------------------------------------------------------ | -------- | ---------- | ---------------- | -------------------- | ------ |
+| AUDIT-001 | Pre-existing shfmt failures block static CI job                                | high     | high       | confirmed        | ci-and-automation    | medium |
+| AUDIT-002 | No automated test coverage for `install.sh`                                    | high     | high       | confirmed        | testing              | medium |
+| AUDIT-003 | Installer version reads git SHA instead of semantic version                    | medium   | high       | confirmed        | installer safety     | small  |
+| AUDIT-004 | No `CONTRIBUTING.md` or documented contribution workflow                       | medium   | high       | confirmed        | developer-experience | small  |
+| AUDIT-005 | No versioning scheme, changelog, or release process                            | medium   | high       | confirmed        | ci-and-automation    | medium |
+| AUDIT-006 | macOS Bash startup file detection silently incorrect on some configurations    | medium   | medium     | probable         | portability          | small  |
+| AUDIT-007 | Fish entrypoint requires manual `MANTLE_ROOT` wiring; no auto-detection        | medium   | high       | confirmed        | architecture         | medium |
+| AUDIT-008 | `install.sh` rollback path untested                                            | medium   | medium     | needs-validation | installer safety     | small  |
+| AUDIT-009 | `--environment-diff` captures color escape codes as `MANTLE_COLOR_*` variables | low      | high       | confirmed        | installer safety     | small  |
+| AUDIT-010 | No release automation, no version file, no checksums                           | medium   | high       | confirmed        | ci-and-automation    | large  |
+| AUDIT-011 | `tests/run.sh static` shfmt check scope includes all `.sh` files               | low      | high       | confirmed        | ci-and-automation    | small  |
+| AUDIT-012 | Windows platform support undocumented and partially tested                     | low      | high       | confirmed        | portability          | medium |
+| AUDIT-013 | shdoc convention partially applied in `install.sh` (no full shdoc coverage)    | low      | medium     | probable         | documentation        | small  |
+| AUDIT-014 | `--environment-diff` diff output uses `diff` format but is computed manually   | low      | medium     | needs-validation | developer-experience | small  |
 
 ---
 
@@ -266,6 +266,7 @@ Each row records: status, evidence basis, and remaining validation needed.
 Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d "${MANTLE_ROOT}"` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
 
 **Evidence:**
+
 ```
 $ ./tests/run.sh static 2>&1 | head -10
 === Static Validation ===
@@ -278,6 +279,7 @@ Running shfmt...
 +++ /home/runner/work/mantle/mantle/bin/apt-base
 ✗ shfmt found formatting issues (run: shfmt -w .)
 ```
+
 Exit status: 1
 
 The `install.sh` file itself passes `shfmt -d` with no diffs (verified: exit 0).
@@ -307,10 +309,12 @@ The `install.sh` file itself passes `shfmt -d` with no diffs (verified: exit 0).
 No Bats test file for `install.sh` exists in `tests/`. The issue specification acknowledges this and directs recording validation in the PR summary rather than adding test files in this issue. However, the absence of durable automated coverage is a risk that must be captured.
 
 **Evidence:**
+
 ```
 $ find /home/runner/work/mantle/mantle/tests -name "*install*"
 /home/runner/work/mantle/mantle/tests/integration/installers.bats
 ```
+
 The `installers.bats` file tests `libexec/mantle/installers/*.sh` (tool-specific installers for eza, shfmt, etc.), not the root-level `install.sh`.
 
 **Why it matters:** Without automated tests, regressions in installation, activation, idempotency, or rollback behavior cannot be detected by CI.
@@ -340,12 +344,15 @@ The `installers.bats` file tests `libexec/mantle/installers/*.sh` (tool-specific
 
 **Observation:** `observed`  
 `./install.sh --version` outputs `3ba3709` (the short git commit SHA). This is produced by:
+
 ```bash
 git -C "${MANTLE_INSTALLER_SOURCE}" rev-parse --short HEAD 2>/dev/null
 ```
+
 A semantic version (e.g., `0.1.0`) or the installer's own constant is more appropriate for a public-facing version string. The git SHA is also unavailable in detached or shallow clones with no `.git/` directory.
 
 **Evidence:**
+
 ```
 $ ./install.sh --version
 3ba3709
@@ -376,11 +383,13 @@ $ ./install.sh --version
 The repository has no `CONTRIBUTING.md`, `DEVELOPMENT.md`, or equivalent file. Adding a new bin/ command, module, or platform adapter requires reading multiple source files to understand the conventions (coverage map, shdoc requirements, ShellCheck configuration, shfmt formatting).
 
 **Evidence:**
+
 ```
 $ ls /home/runner/work/mantle/mantle/
 LICENSE  README.md  assets  bin  init  install.sh  lib  libexec
 modules  platforms  runtime  tests
 ```
+
 No `CONTRIBUTING.md` found.
 
 **Why it matters:** New contributors and external reviewers cannot determine how to add features, run tests, or understand the project conventions without reading through source code.
@@ -406,6 +415,7 @@ No `CONTRIBUTING.md` found.
 There are no git tags, no `CHANGELOG.md`, and no release workflow in `.github/workflows/`. The installer's `--version` reads a git SHA (see AUDIT-003). There is no `VERSION` file, `mantle version` output matches a hardcoded string in `libexec/mantle/commands/version.sh`.
 
 **Evidence:**
+
 ```
 $ git -C /home/runner/work/mantle/mantle tag -l
 (empty)
@@ -438,6 +448,7 @@ The installer detects macOS via `uname -s` returning `Darwin` and selects `~/.ba
 Additionally, the macOS default Bash is version 3.2 (the installer requires Bash 4). Users running the system Bash will receive an error. This is correct behavior (the guard exists) but the diagnostic mentions `brew install bash` which may not be appropriate for all users.
 
 **Evidence:**
+
 ```bash
 # install.sh _bash_startup_file()
 if [[ "${uname_s}" == "Darwin" ]]; then
@@ -446,6 +457,7 @@ else
     printf "%s\n" "${HOME}/.bashrc"
 fi
 ```
+
 Source: `install.sh` (observed in installed file).
 
 **Why it matters:** Mantle activation would silently fail for macOS users who launch non-login Bash sessions without a `.bash_profile` → `.bashrc` chain.
@@ -473,6 +485,7 @@ The Bash/Zsh entrypoint (`.shellrc`) auto-detects `MANTLE_ROOT` from its own loc
 This architectural asymmetry means that the Fish entrypoint cannot be sourced safely in isolation without external setup, unlike the Bash/Zsh entrypoints.
 
 **Evidence:**
+
 ```fish
 # runtime/shells/fish/runtime.fish
 if not set -q MANTLE_ROOT; or not string match --quiet --regex '^/' -- "$MANTLE_ROOT"; ...
@@ -480,6 +493,7 @@ if not set -q MANTLE_ROOT; or not string match --quiet --regex '^/' -- "$MANTLE_
     return 1
 end
 ```
+
 Observed in `runtime/shells/fish/runtime.fish` lines 11–15.
 
 **Why it matters:** The asymmetry creates a different mental model for Fish users and requires the installer to generate wrapper content rather than simply adding a `source` line.
@@ -505,6 +519,7 @@ Observed in `runtime/shells/fish/runtime.fish` lines 11–15.
 The `_publish_staged` function in `install.sh` moves the existing prefix to a `${prefix}.mantle-backup-$$` path before publishing the new stage, and restores it if the `mv` fails. This logic is present but was not exercised by injecting a failure during the audit.
 
 **Evidence:**
+
 ```bash
 # install.sh _publish_staged()
 if [[ -e "${prefix}" ]]; then
@@ -546,12 +561,14 @@ fi
 `--environment-diff` filters for `MANTLE_*` variables. In a non-interactive shell (no tty), `MANTLE_COLOR_*` variables are exported but contain empty strings. The diff output shows many `MANTLE_COLOR_*=` lines that add no meaningful information.
 
 **Evidence:**
+
 ```
 +MANTLE_COLOR_BLUE=
 +MANTLE_COLOR_BOLD=
 +MANTLE_COLOR_BOLD_BLUE=
 ... (many more)
 ```
+
 Observed in actual `--environment-diff` output during audit validation.
 
 **Why it matters:** The color variable noise obscures the meaningful signal (PATH changes, initialization state variables).
@@ -564,7 +581,7 @@ Observed in actual `--environment-diff` output during audit validation.
 
 #### AUDIT-010: No release automation, no version file, no checksums
 
-- *(Captured under AUDIT-005 as the primary finding; this entry notes the checksums and provenance gap.)*
+- _(Captured under AUDIT-005 as the primary finding; this entry notes the checksums and provenance gap.)_
 - **Classification:** maintainability risk
 - **Severity:** medium
 - **Confidence:** high
@@ -592,6 +609,7 @@ Observed in actual `--environment-diff` output during audit validation.
 `tests/run.sh` runs `shfmt -d "${MANTLE_ROOT}"` which scans all `.sh` files recursively. Several `bin/` scripts use 2-space indentation while shfmt's default is tabs. The test runner logs a warning when shfmt is not available but fails when it is — a behavior difference between CI environments with and without shfmt installed.
 
 **Evidence:**
+
 ```bash
 # tests/run.sh _run_static()
 if shfmt -d "${MANTLE_ROOT}" 2>/dev/null; then
@@ -601,6 +619,7 @@ else
     static_status=1
 fi
 ```
+
 CI installs shfmt 3.8.0, so the check always runs (and currently fails) in CI.
 
 **Why it matters:** Pre-existing formatting issues silently accumulated, and the static job only started failing after shfmt was added to CI.
@@ -624,6 +643,7 @@ CI installs shfmt 3.8.0, so the check always runs (and currently fails) in CI.
 `platforms/windows/runtime.sh` exists and is noted in the README as experimental (MSYS2/Git Bash only). No Windows CI runner or workflow exists. The installer does not include Windows-specific logic (correct for POSIX-only scope).
 
 **Evidence:**
+
 ```
 $ ls platforms/
 darwin  linux  windows
@@ -675,6 +695,7 @@ Consistent with the repository pattern in `lib/core/core.sh` where only public A
 The `--environment-diff` output uses `diff -u` between two temp files capturing environment dumps. The output is a standard unified diff of the complete environment variable list (filtered to `PATH` and `MANTLE_*`). The format is clear, but it requires users to understand unified diff syntax.
 
 **Evidence:**
+
 ```
 --- before
 +++ after
@@ -682,6 +703,7 @@ The `--environment-diff` output uses `diff -u` between two temp files capturing 
 -PATH=/snap/bin:/home/runner/...
 +PATH=/tmp/.../mantle/bin:/tmp/...
 ```
+
 Observed in validation output.
 
 **Why it matters:** Minor UX consideration; not a blocker.
@@ -960,29 +982,29 @@ Issues are ordered from highest to lowest priority within each tier.
 
 ## 17. Evidence Index
 
-| ID | Type | Path / Description |
-|---|---|---|
-| E-001 | observed | `install.sh` — static validation: `bash -n`, `shellcheck`, `shfmt -d` all pass |
-| E-002 | observed | `./install.sh --help` output — captured during validation |
-| E-003 | observed | `./install.sh --version` output: `3ba3709` |
-| E-004 | observed | `./install.sh --dry-run` output — plan printed, no files created |
-| E-005 | observed | `./install.sh --no-shell-hook` — payload installed, `.mantle-installer` written |
-| E-006 | observed | Idempotent install — second run succeeds, no duplicate blocks |
-| E-007 | observed | `./install.sh --status` — reports `installed: yes`, `ownership: installer-owned` |
-| E-008 | observed | `./install.sh --uninstall` — prefix removed, no activation blocks found |
-| E-009 | observed | `./install.sh --shell bash` — managed block written to `~/.bashrc` |
-| E-010 | observed | `./install.sh --environment-diff` — PATH diff and 40+ `MANTLE_*` vars shown |
-| E-011 | observed | `./install.sh --prefix "/path with spaces"` — installs correctly |
-| E-012 | observed | `./tests/run.sh static` — exits 1; shfmt failures in pre-existing `bin/` scripts |
-| E-013 | observed | `install.sh` passes `shfmt -d` with exit 0 |
-| E-014 | observed | `tests/bin/coverage-map.tsv` — 72 commands all registered |
-| E-015 | observed | `.github/workflows/test.yml` — Linux and macOS CI jobs present |
-| E-016 | observed | `lib/modules.sh` — idempotent module loader with cycle detection |
-| E-017 | inferred | macOS `.bash_profile` selection — code path present, not executed |
+| ID    | Type     | Path / Description                                                                |
+| ----- | -------- | --------------------------------------------------------------------------------- |
+| E-001 | observed | `install.sh` — static validation: `bash -n`, `shellcheck`, `shfmt -d` all pass    |
+| E-002 | observed | `./install.sh --help` output — captured during validation                         |
+| E-003 | observed | `./install.sh --version` output: `3ba3709`                                        |
+| E-004 | observed | `./install.sh --dry-run` output — plan printed, no files created                  |
+| E-005 | observed | `./install.sh --no-shell-hook` — payload installed, `.mantle-installer` written   |
+| E-006 | observed | Idempotent install — second run succeeds, no duplicate blocks                     |
+| E-007 | observed | `./install.sh --status` — reports `installed: yes`, `ownership: installer-owned`  |
+| E-008 | observed | `./install.sh --uninstall` — prefix removed, no activation blocks found           |
+| E-009 | observed | `./install.sh --shell bash` — managed block written to `~/.bashrc`                |
+| E-010 | observed | `./install.sh --environment-diff` — PATH diff and 40+ `MANTLE_*` vars shown       |
+| E-011 | observed | `./install.sh --prefix "/path with spaces"` — installs correctly                  |
+| E-012 | observed | `./tests/run.sh static` — exits 1; shfmt failures in pre-existing `bin/` scripts  |
+| E-013 | observed | `install.sh` passes `shfmt -d` with exit 0                                        |
+| E-014 | observed | `tests/bin/coverage-map.tsv` — 72 commands all registered                         |
+| E-015 | observed | `.github/workflows/test.yml` — Linux and macOS CI jobs present                    |
+| E-016 | observed | `lib/modules.sh` — idempotent module loader with cycle detection                  |
+| E-017 | inferred | macOS `.bash_profile` selection — code path present, not executed                 |
 | E-018 | inferred | Fish activation — `conf.d/mantle.fish` generation code path present, not executed |
-| E-019 | inferred | Rollback path — `_publish_staged` backup/restore code present, not injected |
-| E-020 | observed | No `CONTRIBUTING.md` in repository root |
-| E-021 | observed | No git tags; no `CHANGELOG.md`; no release workflow |
+| E-019 | inferred | Rollback path — `_publish_staged` backup/restore code present, not injected       |
+| E-020 | observed | No `CONTRIBUTING.md` in repository root                                           |
+| E-021 | observed | No git tags; no `CHANGELOG.md`; no release workflow                               |
 
 ---
 
@@ -1073,14 +1095,14 @@ env HOME="${ISOLATED_HOME}" XDG_DATA_HOME="${XDG_DATA_HOME}" \
 
 This report is marked **partial** due to the following missing validations:
 
-| Missing validation | Blocking issue | Required to close |
-|---|---|---|
-| Zsh activation (Zsh not installed) | AUDIT-002 | Run ISSUE-02 tests with Zsh available |
-| Fish activation (Fish not installed) | AUDIT-002 | Run ISSUE-02 tests with Fish available |
-| macOS clean install | AUDIT-006 | Run on a real macOS runner |
-| `--method symlink` | AUDIT-002 | Include in ISSUE-02 test suite |
-| Rollback after injected failure | AUDIT-008 | Include in ISSUE-02 test suite |
-| Full behavioral test suite (`bats`) | AUDIT-002 | Bats must be installed in CI and locally |
+| Missing validation                   | Blocking issue | Required to close                        |
+| ------------------------------------ | -------------- | ---------------------------------------- |
+| Zsh activation (Zsh not installed)   | AUDIT-002      | Run ISSUE-02 tests with Zsh available    |
+| Fish activation (Fish not installed) | AUDIT-002      | Run ISSUE-02 tests with Fish available   |
+| macOS clean install                  | AUDIT-006      | Run on a real macOS runner               |
+| `--method symlink`                   | AUDIT-002      | Include in ISSUE-02 test suite           |
+| Rollback after injected failure      | AUDIT-008      | Include in ISSUE-02 test suite           |
+| Full behavioral test suite (`bats`)  | AUDIT-002      | Bats must be installed in CI and locally |
 
 **To upgrade this report to `complete`:**
 
@@ -1093,4 +1115,4 @@ This report is marked **partial** due to the following missing validations:
 
 ---
 
-*End of audit report. Report status: `partial`. Audited commit: `3ba37090c483034a5ecd249a099467ab4f1b9e6e`.*
+_End of audit report. Report status: `partial`. Audited commit: `3ba37090c483034a5ecd249a099467ab4f1b9e6e`._

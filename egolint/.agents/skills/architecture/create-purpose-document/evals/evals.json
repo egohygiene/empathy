@@ -44,10 +44,7 @@
       "description": "Input material turns the purpose document into a feature list, roadmap, or technical overview.",
       "category": "boundary",
       "trigger": "should-trigger",
-      "tags": [
-        "boundary",
-        "scope"
-      ],
+      "tags": ["boundary", "scope"],
       "expected": [
         "Identifies the document type confusion",
         "Keeps feature and implementation detail out of PURPOSE.md",
@@ -63,9 +60,7 @@
       "description": "The request is to produce a product requirements document or a project pitch rather than define enduring organizational identity.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for a requirements or pitch document",
         "Identifies the correct artifact for the request",

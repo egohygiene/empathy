@@ -20,9 +20,7 @@
       "description": "An existing test must be updated because new evidence shows the current assertions are flaky or too weak.",
       "category": "positive",
       "trigger": "should-trigger",
-      "tags": [
-        "update"
-      ],
+      "tags": ["update"],
       "expected": [
         "Revises the test to remove the flaky mechanism",
         "Strengthens or clarifies assertions instead of weakening them",

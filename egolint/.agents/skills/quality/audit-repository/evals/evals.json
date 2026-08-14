@@ -55,9 +55,7 @@
       "description": "The request is to perform a targeted code review of a single file rather than a structured repository audit.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to initiate a full repository audit for a single-file review request",
         "Routes toward a targeted code-review or validation skill",

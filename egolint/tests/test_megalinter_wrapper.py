@@ -6,7 +6,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 import stat
-import subprocess
+import subprocess  # nosec B404
 import tempfile
 import unittest
 
@@ -28,7 +28,7 @@ class MegaLinterWrapperTests(unittest.TestCase):
         if environment:
             process_environment.update(environment)
 
-        return subprocess.run(
+        return subprocess.run(  # nosec B603 B607
             ["bash", str(WRAPPER_PATH), *arguments],
             cwd=REPOSITORY_ROOT,
             env=process_environment,
@@ -46,7 +46,10 @@ class MegaLinterWrapperTests(unittest.TestCase):
         self.assertIn("MEGALINTER_CONFIG", result.stdout)
 
     def test_rejects_report_directory_outside_workspace(self) -> None:
-        result = self.run_wrapper("--report-directory", "/tmp/unsafe-reports")
+        result = self.run_wrapper(
+            "--report-directory",
+            "/tmp/unsafe-reports",  # nosec
+        )
 
         self.assertEqual(result.returncode, 2)
         self.assertIn("must be relative", result.stderr)

@@ -20,9 +20,7 @@
       "description": "An existing canonical skill must be updated after reviewing staged synonyms and overlaps.",
       "category": "positive",
       "trigger": "should-trigger",
-      "tags": [
-        "update"
-      ],
+      "tags": ["update"],
       "expected": [
         "Compares the current skill against legacy variants",
         "Records source-delta and disposition decisions",

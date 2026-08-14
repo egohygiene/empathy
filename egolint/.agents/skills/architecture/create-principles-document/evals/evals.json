@@ -44,10 +44,7 @@
       "description": "Input material conflates actionable principles with aspirational values or detailed procedures.",
       "category": "boundary",
       "trigger": "should-trigger",
-      "tags": [
-        "boundary",
-        "scope"
-      ],
+      "tags": ["boundary", "scope"],
       "expected": [
         "Identifies the conflation between principles, values, and procedures",
         "Keeps non-actionable material out of the principles document",
@@ -63,9 +60,7 @@
       "description": "The request is to document company values or a code of conduct rather than operational principles that guide decisions.",
       "category": "negative",
       "trigger": "should-not-trigger",
-      "tags": [
-        "routing"
-      ],
+      "tags": ["routing"],
       "expected": [
         "Declines to use this skill for values or conduct documentation",
         "Identifies the correct artifact for the request",
