@@ -268,7 +268,7 @@ def resolve_configuration_path(rules_path: str, config_file: str) -> Path:
     for workspace_prefix in (
         "${GITHUB_WORKSPACE}/",
         "/github/workspace/",
-        "/tmp/lint/",  # noqa: S108  # nosec B108
+        "/tmp/lint/",  # nosec B108
     ):
         candidate = normalized_rules_path.removeprefix(workspace_prefix)
         if candidate != normalized_rules_path:

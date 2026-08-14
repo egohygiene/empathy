@@ -22,17 +22,17 @@ print_usage() {
 # @description Execute pre-commit through an installed command, Python module, or uvx.
 # @arg $@ string Arguments forwarded to the pre-commit CLI.
 run_pre_commit() {
-  if command -v pre-commit > /dev/null 2>&1; then
+  if command -v pre-commit >/dev/null 2>&1; then
     pre-commit "$@"
     return
   fi
 
-  if python3 -c "import pre_commit" > /dev/null 2>&1; then
+  if python3 -c "import pre_commit" >/dev/null 2>&1; then
     python3 -m pre_commit "$@"
     return
   fi
 
-  if command -v uvx > /dev/null 2>&1; then
+  if command -v uvx >/dev/null 2>&1; then
     uvx --from "pre-commit==${PRE_COMMIT_VERSION}" pre-commit "$@"
     return
   fi
@@ -67,16 +67,16 @@ main() {
   )
 
   case "${mode}" in
-    staged)
-      arguments+=(--hook-stage pre-commit)
-      ;;
-    all)
-      arguments+=(--all-files --hook-stage manual)
-      ;;
-    *)
-      print_usage >&2
-      return 2
-      ;;
+  staged)
+    arguments+=(--hook-stage pre-commit)
+    ;;
+  all)
+    arguments+=(--all-files --hook-stage manual)
+    ;;
+  *)
+    print_usage >&2
+    return 2
+    ;;
   esac
 
   run_pre_commit "${arguments[@]}"

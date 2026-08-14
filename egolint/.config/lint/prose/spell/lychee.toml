@@ -84,8 +84,10 @@ fallback_extensions = [
 # Validate heading and text fragments.
 include_fragments = "full"
 
-# Validate mail links when the bundled build supports email checking.
-include_mail = true
+# Mail link validation via MX-record lookup is unreliable in CI environments
+# where DNS is restricted or cached. Email addresses in metadata are not
+# actionable links; use secretlint for credential scanning instead.
+include_mail = false
 
 # Mindgarden validates Obsidian wikilinks against the local garden graph. Lychee
 # owns standard Markdown, local-file, fragment, mail, and external links.
@@ -139,6 +141,9 @@ exclude_path = [
   "(^|/)target/",
   "(^|/)coverage/",
   "(^|/)generated/",
+  # Lock files may contain email addresses and URLs from package metadata
+  # that are not real links and not representative of the repository's content.
+  "pnpm-lock\\.yaml",
 ]
 
 # ------------------------------------------------------------------------------

@@ -5,11 +5,11 @@ set -eu
 
 # @description Run the repository-pinned pnpm through Corepack when available.
 # @arg $@ string Arguments forwarded to pnpm.
-if command -v corepack > /dev/null 2>&1; then
+if command -v corepack >/dev/null 2>&1; then
   exec corepack pnpm "$@"
 fi
 
-if command -v pnpm > /dev/null 2>&1; then
+if command -v pnpm >/dev/null 2>&1; then
   exec pnpm "$@"
 fi
 

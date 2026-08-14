@@ -23,12 +23,12 @@ print_usage() {
 # @arg $1 string Repository-relative path.
 is_excluded_path() {
   case "$1" in
-    ./.git/* | ./.cache/* | ./.reports/* | ./.staging/* | */node_modules/* | */vendor/* | */.venv/* | */venv/* | */dist/* | */build/* | */coverage/* | */target/* | */tests/fixtures/*)
-      return 0
-      ;;
-    *)
-      return 1
-      ;;
+  ./.git/* | ./.cache/* | ./.reports/* | ./.staging/* | */node_modules/* | */vendor/* | */.venv/* | */venv/* | */dist/* | */build/* | */coverage/* | */target/* | */tests/fixtures/*)
+    return 0
+    ;;
+  *)
+    return 1
+    ;;
   esac
 }
 
@@ -42,7 +42,7 @@ render_file() {
   latexindent \
     --local="${CONFIGURATION_PATH}" \
     "${input_file}" \
-    > "${output_file}"
+    >"${output_file}"
 
   if test ! -s "${output_file}"; then
     printf 'latexindent produced empty output: %s\n' "${input_file}" >&2
@@ -61,7 +61,7 @@ check_files() {
   find . -type f \
     \( -name "*.tex" -o -name "*.sty" -o -name "*.cls" -o -name "*.bib" \) \
     -print0 \
-    > "${discovery_file}"
+    >"${discovery_file}"
 
   while IFS= read -r -d '' latex_file; do
     # This predicate intentionally participates in control flow.
@@ -80,7 +80,7 @@ check_files() {
       status=1
     fi
     rm --force "${temporary_file}"
-  done < "${discovery_file}"
+  done <"${discovery_file}"
 
   rm --force "${discovery_file}"
 
@@ -121,26 +121,26 @@ format_file() {
 # @arg $1 string Operation: check or format.
 # @arg $2 string Optional file for format mode.
 main() {
-  if ! command -v latexindent > /dev/null 2>&1; then
+  if ! command -v latexindent >/dev/null 2>&1; then
     printf '%s\n' "latexindent 4.0 is required on PATH." >&2
     return 3
   fi
 
   case "${1:-}" in
-    check)
-      check_files
-      ;;
-    format)
-      if test -z "${2:-}"; then
-        print_usage >&2
-        return 2
-      fi
-      format_file "$2"
-      ;;
-    *)
+  check)
+    check_files
+    ;;
+  format)
+    if test -z "${2:-}"; then
       print_usage >&2
       return 2
-      ;;
+    fi
+    format_file "$2"
+    ;;
+  *)
+    print_usage >&2
+    return 2
+    ;;
   esac
 }
 

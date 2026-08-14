@@ -233,3 +233,12 @@ ignore:
 
   - ".engineering/resources"
   - ".engineering/resources/**"
+
+  # ---------------------------------------------------------------------------
+  # Conventional root-level filenames that do not follow extension rules
+  # ---------------------------------------------------------------------------
+
+  # REUSE.toml and Taskfile.yml are externally-defined conventional names that
+  # do not follow the repository's .toml / .yml kebab-case or snake_case rules.
+  - "REUSE.toml"
+  - "Taskfile.yml"

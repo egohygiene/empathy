@@ -16,12 +16,12 @@
   ],
   "homepage": "https://egohygiene.io",
   "bugs": {
-    "url": "https://github.com/egohygiene/egohygiene/issues",
+    "url": "https://github.com/egohygiene/empathy/issues",
     "email": "szmyty@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/egohygiene/egohygiene.git"
+    "url": "https://github.com/egohygiene/empathy.git"
   },
   "license": "Apache-2.0",
   "author": {

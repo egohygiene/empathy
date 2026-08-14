@@ -32,6 +32,11 @@
 ^\.reports/
 ^egolint/tests/fixtures/negative/
 
+# test_quality_policy.py contains test function names (e.g.
+# test_commit_tools_share_the_emoji_policy) that match the Lob API key pattern
+# as a false positive. The file contains only policy assertions, no credentials.
+^tests/test_quality_policy\.py$
+
 \.map$
 \.min\.js$
 \.min\.css$
