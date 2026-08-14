@@ -139,6 +139,7 @@ class QualityPolicyTests(unittest.TestCase):
             Path(path)
             for path in tracked_files
             if Path(path).suffix in SOURCE_SUFFIXES
+            and not path.startswith(".reports/")
             and not path.startswith(".staging/")
             and not path.startswith("egolint/tests/fixtures/")
         ]

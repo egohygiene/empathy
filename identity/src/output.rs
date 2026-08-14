@@ -34,7 +34,11 @@ pub fn render_plan_markdown(plan: &ResolvedPlan) -> String {
         .expect("writing to String cannot fail");
         writeln!(output, "| --- | --- | --- | --- | --- | --- |")
             .expect("writing to String cannot fail");
-        for target in plan.targets.iter().filter(|target| target.profile == profile.id) {
+        for target in plan
+            .targets
+            .iter()
+            .filter(|target| target.profile == profile.id)
+        {
             writeln!(
                 output,
                 "| `{}` | `{}` | {} | `{}` | {} | {} |",

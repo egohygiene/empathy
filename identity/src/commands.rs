@@ -20,15 +20,12 @@ pub fn init(arguments: InitArguments) -> Result<()> {
     if !valid_identifier(&arguments.project_id) {
         bail!("project id must use lowercase letters, digits, and hyphens");
     }
-    let repository_root = arguments
-        .repository_root
-        .canonicalize()
-        .with_context(|| {
-            format!(
-                "repository root does not exist: {}",
-                arguments.repository_root.display()
-            )
-        })?;
+    let repository_root = arguments.repository_root.canonicalize().with_context(|| {
+        format!(
+            "repository root does not exist: {}",
+            arguments.repository_root.display()
+        )
+    })?;
     let identity_root = repository_root.join(".identity");
     let source_root = identity_root.join("sources");
     fs::create_dir_all(&source_root)
@@ -112,10 +109,7 @@ pub fn handoff(arguments: HandoffArguments) -> Result<()> {
         &output_directory.join("candidate-manifest.template.json"),
         &candidate_manifest,
     )?;
-    write_json(
-        &output_directory.join("handoff-manifest.json"),
-        &manifest,
-    )?;
+    write_json(&output_directory.join("handoff-manifest.json"), &manifest)?;
 
     println!("Wrote identity handoff to {}", output_directory.display());
     Ok(())
@@ -291,9 +285,9 @@ fn handoff_manifest(project: &ValidatedProject) -> Result<HandoffManifest> {
     );
 
     for path in paths {
-        let relative = path.strip_prefix(&project.repository_root).with_context(|| {
-            format!("input escaped repository root: {}", path.display())
-        })?;
+        let relative = path
+            .strip_prefix(&project.repository_root)
+            .with_context(|| format!("input escaped repository root: {}", path.display()))?;
         let bytes = fs::read(&path).with_context(|| format!("cannot hash {}", path.display()))?;
         inputs.insert(relative.to_string_lossy().into_owned(), sha256_hex(&bytes));
     }
@@ -302,8 +296,8 @@ fn handoff_manifest(project: &ValidatedProject) -> Result<HandoffManifest> {
         .profiles
         .iter()
         .map(|profile| {
-            let canonical = serde_json::to_vec(profile)
-                .expect("serializing a validated profile cannot fail");
+            let canonical =
+                serde_json::to_vec(profile).expect("serializing a validated profile cannot fail");
             (
                 format!("{}@{}", profile.id, profile.version),
                 sha256_hex(&canonical),

@@ -151,9 +151,12 @@ pub struct ValidatedProject {
 }
 
 pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
-    let repository_root = repository_root
-        .canonicalize()
-        .with_context(|| format!("repository root does not exist: {}", repository_root.display()))?;
+    let repository_root = repository_root.canonicalize().with_context(|| {
+        format!(
+            "repository root does not exist: {}",
+            repository_root.display()
+        )
+    })?;
     let spec_path = repository_root.join(".identity/identity.toml");
     let contents = fs::read_to_string(&spec_path)
         .with_context(|| format!("cannot read project specification: {}", spec_path.display()))?;
@@ -193,7 +196,9 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
     for path in &spec.context.files {
         if let Err(error) = validate_relative_path(path, "context.files entry") {
             errors.push(error.to_string());
-        } else if let Err(error) = validate_existing_path(&repository_root, path, true, "context file") {
+        } else if let Err(error) =
+            validate_existing_path(&repository_root, path, true, "context file")
+        {
             errors.push(error.to_string());
         }
     }
@@ -201,9 +206,12 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
     if let Err(error) = validate_existing_path(&repository_root, &spec.paths.brief, true, "brief") {
         errors.push(error.to_string());
     }
-    if let Err(error) =
-        validate_existing_path(&repository_root, &spec.paths.source_root, false, "source root")
-    {
+    if let Err(error) = validate_existing_path(
+        &repository_root,
+        &spec.paths.source_root,
+        false,
+        "source root",
+    ) {
         errors.push(error.to_string());
     }
 
@@ -316,7 +324,10 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
                 ));
             }
             if !source_roles.contains(target.source_role.as_str())
-                && !matches!(target.source_role.as_str(), "project-spec" | "identity-brief")
+                && !matches!(
+                    target.source_role.as_str(),
+                    "project-spec" | "identity-brief"
+                )
             {
                 errors.push(format!(
                     "{composite_id} requires undeclared source role {:?}",
@@ -329,7 +340,9 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
                 ));
             }
             if target.width == Some(0) || target.height == Some(0) {
-                errors.push(format!("{composite_id} dimensions must be greater than zero"));
+                errors.push(format!(
+                    "{composite_id} dimensions must be greater than zero"
+                ));
             }
             if target.format.trim().is_empty() || target.description.trim().is_empty() {
                 errors.push(format!(
@@ -340,7 +353,10 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
     }
 
     if !errors.is_empty() {
-        bail!("identity specification failed validation:\n- {}", errors.join("\n- "));
+        bail!(
+            "identity specification failed validation:\n- {}",
+            errors.join("\n- ")
+        );
     }
 
     Ok(ValidatedProject {
@@ -420,8 +436,14 @@ pub fn reject_symlink_components(repository_root: &Path, path: &Path, label: &st
     for component in path.components() {
         if let Component::Normal(segment) = component {
             current.push(segment);
-            if current.symlink_metadata().is_ok_and(|metadata| metadata.file_type().is_symlink()) {
-                bail!("{label} may not traverse a symbolic link: {}", path.display());
+            if current
+                .symlink_metadata()
+                .is_ok_and(|metadata| metadata.file_type().is_symlink())
+            {
+                bail!(
+                    "{label} may not traverse a symbolic link: {}",
+                    path.display()
+                );
             }
         }
     }
@@ -477,9 +499,8 @@ pub(crate) fn valid_identifier(value: &str) -> bool {
 }
 
 fn valid_semantic_version(value: &str) -> bool {
-    let valid_segment = |segment: &str| {
-        !segment.is_empty() && segment.bytes().all(|byte| byte.is_ascii_digit())
-    };
+    let valid_segment =
+        |segment: &str| !segment.is_empty() && segment.bytes().all(|byte| byte.is_ascii_digit());
     let mut segments = value.split('.');
     segments.next().is_some_and(valid_segment)
         && segments.next().is_some_and(valid_segment)
