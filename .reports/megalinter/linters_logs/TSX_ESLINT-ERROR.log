@@ -9,7 +9,7 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error: Cannot find module '@eslint/json'
+Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - egolint/.config/lint/javascript/eslint.config.mjs
     at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
@@ -20,6 +20,20 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786716641634:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
+
+[TSX_ESLINT_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config (e.g. `eslint-plugin-react`, `eslint-plugin-react-hooks`, `@eslint-react/eslint-plugin`, `@typescript-eslint/eslint-plugin`). The plugin is not installed in MegaLinter's bundled `node_modules`.
+Resolutions:
+  - Pre-install the missing plugin via a pre-command in your .mega-linter.yml:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-react eslint-plugin-react-hooks"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's dependencies and run the project-local ESLint binary:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TSX_ESLINT_CLI_EXECUTABLE: node_modules/.bin/eslint

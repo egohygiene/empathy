@@ -4,5 +4,5 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_truffle
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026-08-14T13:38:34Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
+2026-08-14T14:11:54Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
 

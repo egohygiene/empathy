@@ -12,8 +12,24 @@ The MegaLinter documentation can be found at:
 MegaLinter will analyze workspace [/github/workspace]
 GITHUB_REPOSITORY: egohygiene/empathy
 GITHUB_REF: refs/heads/main
-GITHUB_RUN_ID: 31805365627
+GITHUB_RUN_ID: 31807983917
 PAT: not set
+
+[Pre] run: [if ! test -d "egolint/node_modules/@eslint/json"; then
+  npm install
+  --prefix egolint
+  --no-save
+  --package-lock=false
+  --no-audit
+  --no-fund
+  @eslint/json@2.0.1
+  || printf '%s\n'
+  'MegaLinter: unable to install @eslint/json; continuing with optional JSON plugin disabled.'
+  >&2;
+fi] in cwd [/github/workspace]
+[Pre] error:
+/bin/bash: -c: line 9: syntax error near unexpected token `||'
+/bin/bash: -c: line 9: `  || printf '%s\n''
 
 [Activation] JSON_NPM_PACKAGE_JSON_LINT has been set inactive, as none of these files has been found: ['package.json']
 [Activation] SALESFORCE_CODE_ANALYZER_APEX has been set inactive, as subdirectory has not been found: force-app (set value "any" to always activate)
@@ -49,18 +65,18 @@ Listing all files in directory [/github/workspace], then filter with:
   \.min\.[^/]+$
 )
 - Excluding .gitignored files [0]: 
-Kept [878] files on [945] found files
+Kept [881] files on [948] found files
 
 +----MATCHING LINTERS-----------------------+------------------------------------------------------------------------+----------------+------------+
 | Descriptor     | Linter                   | Criteria                                                               | Matching files | Format/Fix |
 +----------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
-| PYTHON         | pylint                   | .py|.pyi                                                               | 43             | no         |
-| PYTHON         | bandit                   | .py|.pyi|.ipynb                                                        | 44             | no         |
+| PYTHON         | pylint                   | .py|.pyi                                                               | 44             | no         |
+| PYTHON         | bandit                   | .py|.pyi|.ipynb                                                        | 45             | no         |
 | PYTHON         | mypy                     | .py|.pyi                                                               | project        | no         |
 | PYTHON         | pyright                  | .py|.pyi                                                               | project        | no         |
-| PYTHON         | ruff                     | .py|.pyi|.ipynb                                                        | 44             | no         |
-| PYTHON         | ruff-format              | .py|.pyi|.ipynb                                                        | 44             | no         |
-| ACTION         | actionlint               | .yml|.yaml                                                             | 13             | no         |
+| PYTHON         | ruff                     | .py|.pyi|.ipynb                                                        | 45             | no         |
+| PYTHON         | ruff-format              | .py|.pyi|.ipynb                                                        | 45             | no         |
+| ACTION         | actionlint               | .yml|.yaml                                                             | 14             | no         |
 | ANSIBLE        | ansible-lint             | .yml|.yaml                                                             | project        | no         |
 | ARM            | arm-ttk                  | .json                                                                  | 1              | no         |
 | BASH           | bash-exec                | .sh|.bash|.dash|.ksh                                                   | 60             | no         |
@@ -80,7 +96,7 @@ Kept [878] files on [945] found files
 | CSS            | stylelint                | .css|.scss|.saas                                                       | 2              | no         |
 | DART           | dartanalyzer             | .dart                                                                  | 1              | no         |
 | DOCKERFILE     | hadolint                 | Containerfile|(.*\.)?Dockerfile                                        | 2              | no         |
-| EDITORCONFIG   | editorconfig-checker     | *                                                                      | 878            | no         |
+| EDITORCONFIG   | editorconfig-checker     | *                                                                      | 881            | no         |
 | ENV            | dotenv-linter            | .env                                                                   | 1              | no         |
 | GHERKIN        | gherkin-lint             | .feature                                                               | 1              | no         |
 | GO             | revive                   | .go                                                                    | 2              | no         |
@@ -97,8 +113,8 @@ Kept [878] files on [945] found files
 | LATEX          | chktex                   | .tex                                                                   | 2              | no         |
 | LUA            | luacheck                 | .lua                                                                   | 1              | no         |
 | LUA            | stylua                   | .lua                                                                   | 1              | no         |
-| MARKDOWN       | markdownlint             | .md                                                                    | 226            | no         |
-| MARKDOWN       | markdown-table-formatter | .md                                                                    | 226            | no         |
+| MARKDOWN       | markdownlint             | .md                                                                    | 227            | no         |
+| MARKDOWN       | markdown-table-formatter | .md                                                                    | 227            | no         |
 | PHP            | phpcs                    | .php                                                                   | 1              | no         |
 | PHP            | phpstan                  | .php                                                                   | 1              | no         |
 | PHP            | psalm                    | .php                                                                   | 1              | no         |
@@ -127,9 +143,9 @@ Kept [878] files on [945] found files
 | SCALA          | scalafix                 | .scala                                                                 | 1              | no         |
 | SNAKEMAKE      | snakemake                | .smk|Snakefile                                                         | 1              | no         |
 | SNAKEMAKE      | snakefmt                 | .smk|Snakefile                                                         | 1              | no         |
-| SPELL          | proselint                | .md|.txt                                                               | 233            | no         |
-| SPELL          | vale                     | .md|.rst|.txt                                                          | 235            | no         |
-| SPELL          | lychee                   | .md|.mdx|.markdown|.html|.htm|.rst|.txt|.json|.jsonc|.json5|.yaml|.yml | 475            | no         |
+| SPELL          | proselint                | .md|.txt                                                               | 234            | no         |
+| SPELL          | vale                     | .md|.rst|.txt                                                          | 236            | no         |
+| SPELL          | lychee                   | .md|.mdx|.markdown|.html|.htm|.rst|.txt|.json|.jsonc|.json5|.yaml|.yml | 477            | no         |
 | SQL            | sqlfluff                 | .sql                                                                   | 1              | no         |
 | SWIFT          | swiftlint                | .swift                                                                 | project        | no         |
 | TEKTON         | tekton-lint              | .yml|.yaml                                                             | 1              | no         |
@@ -140,21 +156,21 @@ Kept [878] files on [945] found files
 | TYPESCRIPT     | eslint                   | .ts                                                                    | 2              | no         |
 | TYPESCRIPT     | prettier                 | .ts                                                                    | 2              | no         |
 | XML            | xmllint                  | .xml|.xsd                                                              | 6              | no         |
-| YAML           | prettier                 | .yml|.yaml                                                             | 138            | no         |
-| YAML           | yamllint                 | .yml|.yaml                                                             | 138            | no         |
-| YAML           | v8r                      | .yml|.yaml                                                             | 138            | no         |
+| YAML           | prettier                 | .yml|.yaml                                                             | 139            | no         |
+| YAML           | yamllint                 | .yml|.yaml                                                             | 139            | no         |
+| YAML           | v8r                      | .yml|.yaml                                                             | 139            | no         |
 +----------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
 ::endgroup::
 Processing linters on [4] parallel cores… (according to variable PARALLEL_PROCESS_NUMBER)
-::group::[32m✅ Linted [ACTION] files with [actionlint] successfully - (0.47s)[0m (expand for details)
+::group::[32m✅ Linted [ACTION] files with [actionlint] successfully - (0.32s)[0m (expand for details)
 - Using [actionlint v1.7.12] https://megalinter.io/10.0.0/descriptors/action_actionlint
 - MegaLinter key: [ACTION_ACTIONLINT]
 - Rules config: [egolint/.config/lint/actions/actionlint.yml]
-- Number of files analyzed: [13]
+- Number of files analyzed: [14]
 - CWD: [/github/workspace]
-- Command: [actionlint -config-file egolint/.config/lint/actions/actionlint.yml .github/workflows/automation.yml .github/workflows/codeql.yml .github/workflows/commitlint.yml .github/workflows/contributors.yml .github/workflows/identity.yml .github/workflows/lin...(truncated)]
+- Command: [actionlint -config-file egolint/.config/lint/actions/actionlint.yml .github/workflows/automation.yml .github/workflows/codeql.yml .github/workflows/commitlint.yml .github/workflows/contributors.yml .github/workflows/dependency-review.yml .github/work...(truncated)]
 ::endgroup::
-::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (8.9s)[0m (expand for details)
+::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (8.52s)[0m (expand for details)
 - Using [ansible-lint v26.6.0] https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint
 - MegaLinter key: [ANSIBLE_ANSIBLE_LINT]
 - Rules config: [egolint/.config/lint/ansible/ansible-lint.yml]
@@ -162,7 +178,7 @@ Processing linters on [4] parallel cores… (according to variable PARALLEL_PROC
 - Command: [ansible-lint .ansible -c egolint/.config/lint/ansible/ansible-lint.yml -v --exclude .cache --exclude .git --exclude .reports --exclude .reports/megalinter]
 [Excluded directories] Forwarded EXCLUDED_DIRECTORIES to ansible-lint through --exclude (disable with ANSIBLE_ANSIBLE_LINT_FORWARD_EXCLUDED_DIRECTORIES: false)
 ::endgroup::
-::group::[32m✅ Linted [ARM] files with [arm-ttk] successfully - (3.94s)[0m (expand for details)
+::group::[32m✅ Linted [ARM] files with [arm-ttk] successfully - (3.84s)[0m (expand for details)
 - Using [arm-ttk v0.0.0] https://megalinter.io/10.0.0/descriptors/arm_arm_ttk
 - MegaLinter key: [ARM_ARM_TTK]
 - Rules config: [egolint/.config/lint/arm/arm-ttk.psd1]
@@ -172,7 +188,7 @@ Processing linters on [4] parallel cores… (according to variable PARALLEL_PROC
 ${config} = $(Import-PowerShellDataFile -Path "egolint/.config/lint/arm/arm-ttk.psd1") ;
 Test-AzTemplate @config -TemplatePath 'egolint/tests/fixtures/arm-tt...(truncated)]
 ::endgroup::
-::group::[31m❌ Linted [BASH] files with [bash-exec]: Found 14 error(s) and 0 warning(s) - (0.36s)[0m (expand for details)
+::group::[31m❌ Linted [BASH] files with [bash-exec]: Found 14 error(s) and 0 warning(s) - (0.34s)[0m (expand for details)
 - Using [bash-exec v5.3.9] https://megalinter.io/10.0.0/descriptors/bash_bash_exec
 - MegaLinter key: [BASH_EXEC]
 - Rules config: identified by [bash-exec]
@@ -296,7 +312,7 @@ Error: File:[mantle/tests/test_helper/fixtures.bash] is not executable
 Error: File:[mantle/tests/test_helper/stubs.bash] is not executable
 [0m
 ::endgroup::
-::group::[32m✅ Linted [BASH] files with [shellcheck] successfully - (8.38s)[0m (expand for details)
+::group::[32m✅ Linted [BASH] files with [shellcheck] successfully - (9.24s)[0m (expand for details)
 - Using [shellcheck v0.11.0] https://megalinter.io/10.0.0/descriptors/bash_shellcheck
 - MegaLinter key: [BASH_SHELLCHECK]
 - Rules config: [/github/workspace/.shellcheckrc]
@@ -1861,7 +1877,7 @@ Error: File:[mantle/tests/test_helper/stubs.bash] is not executable
  main "$@"
 
 ::endgroup::
-::group::[32m✅ Linted [C] files with [clang-format] successfully - (0.19s)[0m (expand for details)
+::group::[32m✅ Linted [C] files with [clang-format] successfully - (0.24s)[0m (expand for details)
 - Using [clang-format v22.1.3] https://megalinter.io/10.0.0/descriptors/c_clang_format
 - MegaLinter key: [C_CLANG_FORMAT]
 - Rules config: [egolint/.config/lint/cpp/.clang-format]
@@ -1897,7 +1913,7 @@ Done processing egolint/tests/fixtures/clang-format/valid.c
 Total errors found: 8
 
 ::endgroup::
-::group::[32m✅ Linted [CLOJURE] files with [cljstyle] successfully - (0.04s)[0m (expand for details)
+::group::[32m✅ Linted [CLOJURE] files with [cljstyle] successfully - (0.07s)[0m (expand for details)
 - Using [cljstyle v0.17.642] https://megalinter.io/10.0.0/descriptors/clojure_cljstyle
 - MegaLinter key: [CLOJURE_CLJSTYLE]
 - Rules config: [egolint/.config/lint/clojure/cljstyle.edn]
@@ -1905,7 +1921,7 @@ Total errors found: 8
 - CWD: [/github/workspace]
 - Command: [cljstyle check egolint/tests/fixtures/cljstyle/valid.clj]
 ::endgroup::
-::group::[32m✅ Linted [CLOJURE] files with [clj-kondo] successfully - (0.03s)[0m (expand for details)
+::group::[32m✅ Linted [CLOJURE] files with [clj-kondo] successfully - (0.05s)[0m (expand for details)
 - Using [clj-kondo v2025.01.16] https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo
 - MegaLinter key: [CLOJURE_CLJ_KONDO]
 - Rules config: [egolint/.config/lint/clojure/.clj-kondo/config.edn]
@@ -1913,7 +1929,7 @@ Total errors found: 8
 - CWD: [/github/workspace]
 - Command: [clj-kondo --config egolint/.config/lint/clojure/.clj-kondo/config.edn --lint egolint/tests/fixtures/cljstyle/valid.clj]
 ::endgroup::
-::group::[32m✅ Linted [CLOUDFORMATION] files with [cfn-lint] successfully - (9.87s)[0m (expand for details)
+::group::[32m✅ Linted [CLOUDFORMATION] files with [cfn-lint] successfully - (8.21s)[0m (expand for details)
 - Using [cfn-lint v1.54.0] https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint
 - MegaLinter key: [CLOUDFORMATION_CFN_LINT]
 - Rules config: [egolint/.config/lint/cloudformation/cfnlint.yml]
@@ -1921,7 +1937,7 @@ Total errors found: 8
 - CWD: [/github/workspace]
 - Command: [cfn-lint --config-file egolint/.config/lint/cloudformation/cfnlint.yml egolint/tests/fixtures/cloudformation/valid-template.yml]
 ::endgroup::
-::group::[32m✅ Linted [COFFEE] files with [coffeelint] successfully - (0.31s)[0m (expand for details)
+::group::[32m✅ Linted [COFFEE] files with [coffeelint] successfully - (0.32s)[0m (expand for details)
 - Using [coffeelint v5.2.11] https://megalinter.io/10.0.0/descriptors/coffee_coffeelint
 - MegaLinter key: [COFFEE_COFFEELINT]
 - Rules config: [egolint/.config/lint/coffee/coffeelint.json]
@@ -1929,7 +1945,7 @@ Total errors found: 8
 - CWD: [/github/workspace]
 - Command: [coffeelint -f egolint/.config/lint/coffee/coffeelint.json egolint/tests/fixtures/coffeescript/valid.coffee]
 ::endgroup::
-::group::[31m❌ Linted [COPYPASTE] files with [jscpd]: Found 310 error(s) and 0 warning(s) - (3.66s)[0m (expand for details)
+::group::[31m❌ Linted [COPYPASTE] files with [jscpd]: Found 310 error(s) and 0 warning(s) - (3.22s)[0m (expand for details)
 - Using [jscpd v5.0.14] https://megalinter.io/10.0.0/descriptors/copypaste_jscpd
 - MegaLinter key: [COPYPASTE_JSCPD]
 - Rules config: [egolint/.config/lint/copypaste/jscpd.json]
@@ -1945,9 +1961,6 @@ config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
 [1mClone found (markdown)[22m
  - [1m[32m.audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown[39m[22m [27:12 - 32:65] (6 lines, 196 tokens)
    ONTOLOGY.md:markdown [89:27 - 90:12]
-[1mClone found (markdown)[22m
- - [1m[32m.audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown[39m[22m [94:10 - 101:61] (8 lines, 253 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [10:3 - 11:3]
 [1mClone found (markdown)[22m
  - [1m[32m.audits/egolint/2026-08-11-integration-audit.md:markdown[39m[22m [171:101 - 176:36] (6 lines, 201 tokens)
    mantle/README.md:markdown [109:198 - 111:3]
@@ -1987,6 +2000,9 @@ config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
 [1mClone found (yaml)[22m
  - [1m[32m.github/workflows/automation.yml[39m[22m [53:1 - 63:15] (11 lines, 56 tokens)
    .github/workflows/identity.yml [35:1 - 45:15]
+[1mClone found (yaml)[22m
+ - [1m[32m.github/workflows/dependency-review.yml[39m[22m [30:1 - 43:11] (14 lines, 96 tokens)
+   .staging/github/workflows/security-optional/dependency-review.yml [29:1 - 42:11]
 [1mClone found (yaml)[22m
  - [1m[32m.github/workflows/lint-architecture.yml[39m[22m [49:1 - 59:15] (11 lines, 56 tokens)
    .staging/github/workflows/security-optional/dependency-review.yml [19:1 - 29:15]
@@ -2585,8 +2601,8 @@ config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
  - [1m[32megolint/.config/toolchain/tool-matrix.json[39m[22m [272:25 - 286:11] (15 lines, 51 tokens)
    egolint/.config/toolchain/tool-matrix.json [494:24 - 508:11]
 [1mClone found (yaml)[22m
- - [1m[32megolint/.mega-linter.yml[39m[22m [1196:37 - 1208:5] (13 lines, 53 tokens)
-   egolint/.mega-linter.yml [1225:32 - 1237:5]
+ - [1m[32megolint/.mega-linter.yml[39m[22m [1215:37 - 1227:5] (13 lines, 53 tokens)
+   egolint/.mega-linter.yml [1244:32 - 1256:5]
 [1mClone found (toml)[22m
  - [1m[32megolint/poetry.toml[39m[22m [1:1 - 107:15] (107 lines, 185 tokens)
    poetry.toml [1:1 - 107:15]
@@ -2902,15 +2918,15 @@ config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m java       [90m│[39m 2              [90m│[39m 54          [90m│[39m 504          [90m│[39m 1            [90m│[39m 7 (12.96%)       [90m│[39m 62 (12.30%)       [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m javascript [90m│[39m 6              [90m│[39m 658         [90m│[39m 2169         [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
+[90m│[39m javascript [90m│[39m 6              [90m│[39m 674         [90m│[39m 2231         [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m json       [90m│[39m 84             [90m│[39m 14011       [90m│[39m 59330        [90m│[39m 21           [90m│[39m 536 (3.83%)      [90m│[39m 1922 (3.24%)      [90m│[39m
+[90m│[39m json       [90m│[39m 85             [90m│[39m 14086       [90m│[39m 59394        [90m│[39m 21           [90m│[39m 536 (3.81%)      [90m│[39m 1922 (3.24%)      [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m jsx        [90m│[39m 1              [90m│[39m 10          [90m│[39m 52           [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m latex      [90m│[39m 2              [90m│[39m 46          [90m│[39m 202          [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m markdown   [90m│[39m 223            [90m│[39m 23365       [90m│[39m 265812       [90m│[39m 139          [90m│[39m 1667 (7.13%)     [90m│[39m 17303 (6.51%)     [90m│[39m
+[90m│[39m markdown   [90m│[39m 224            [90m│[39m 23517       [90m│[39m 267874       [90m│[39m 138          [90m│[39m 1660 (7.06%)     [90m│[39m 17050 (6.36%)     [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m markup     [90m│[39m 7              [90m│[39m 821         [90m│[39m 8543         [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
@@ -2922,7 +2938,7 @@ config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m protobuf   [90m│[39m 1              [90m│[39m 31          [90m│[39m 99           [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m python     [90m│[39m 36             [90m│[39m 8436        [90m│[39m 63545        [90m│[39m 16           [90m│[39m 157 (1.86%)      [90m│[39m 1112 (1.75%)      [90m│[39m
+[90m│[39m python     [90m│[39m 37             [90m│[39m 8630        [90m│[39m 64877        [90m│[39m 16           [90m│[39m 157 (1.82%)      [90m│[39m 1112 (1.71%)      [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m r          [90m│[39m 1              [90m│[39m 14          [90m│[39m 54           [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
@@ -2936,25 +2952,25 @@ config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m swift      [90m│[39m 1              [90m│[39m 15          [90m│[39m 67           [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m text       [90m│[39m 7              [90m│[39m 1642        [90m│[39m 1703         [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
+[90m│[39m text       [90m│[39m 8              [90m│[39m 1731        [90m│[39m 1761         [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m toml       [90m│[39m 21             [90m│[39m 1945        [90m│[39m 5850         [90m│[39m 2            [90m│[39m 111 (5.71%)      [90m│[39m 242 (4.14%)       [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m txt        [90m│[39m 5              [90m│[39m 135         [90m│[39m 2089         [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
+[90m│[39m txt        [90m│[39m 5              [90m│[39m 138         [90m│[39m 2136         [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
 [90m│[39m typescript [90m│[39m 2              [90m│[39m 23          [90m│[39m 121          [90m│[39m 0            [90m│[39m 0 (0.00%)        [90m│[39m 0 (0.00%)         [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m yaml       [90m│[39m 227            [90m│[39m 18676       [90m│[39m 98095        [90m│[39m 72           [90m│[39m 822 (4.40%)      [90m│[39m 5463 (5.57%)      [90m│[39m
+[90m│[39m yaml       [90m│[39m 229            [90m│[39m 18772       [90m│[39m 98629        [90m│[39m 73           [90m│[39m 835 (4.45%)      [90m│[39m 5559 (5.64%)      [90m│[39m
 [90m├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤[39m
-[90m│[39m [1mTotal:[22m     [90m│[39m 788            [90m│[39m 92528       [90m│[39m 617087       [90m│[39m 310          [90m│[39m 3975 (4.30%)     [90m│[39m 30634 (4.96%)     [90m│[39m
+[90m│[39m [1mTotal:[22m     [90m│[39m 794            [90m│[39m 93153       [90m│[39m 621246       [90m│[39m 310          [90m│[39m 3981 (4.27%)     [90m│[39m 30477 (4.91%)     [90m│[39m
 [90m└────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘[39m
 [90mFound 310 clones.[39m
 [32mHTML report saved to .reports/megalinter/copy-paste/jscpd-report.html[39m
 ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-[90mtime: 1.59s[39m
+[90mtime: 1.32s[39m
 
 ::endgroup::
-::group::[32m✅ Linted [CPP] files with [clang-format] successfully - (0.06s)[0m (expand for details)
+::group::[32m✅ Linted [CPP] files with [clang-format] successfully - (0.07s)[0m (expand for details)
 - Using [clang-format v22.1.3] https://megalinter.io/10.0.0/descriptors/cpp_clang_format
 - MegaLinter key: [CPP_CLANG_FORMAT]
 - Rules config: [egolint/.config/lint/cpp/.clang-format]
@@ -2970,7 +2986,7 @@ ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
 - CWD: [/github/workspace]
 - Command: [cppcheck --error-exitcode=1 --enable=warning,style,performance,portability --error-exitcode=1 --inline-suppr --std=c++20 egolint/tests/fixtures/clang-format/valid.cpp]
 ::endgroup::
-::group::[31m❌ Linted [CPP] files with [cpplint]: Found 10 error(s) and 0 warning(s) - (0.15s)[0m (expand for details)
+::group::[31m❌ Linted [CPP] files with [cpplint]: Found 10 error(s) and 0 warning(s) - (0.16s)[0m (expand for details)
 - Using [cpplint v2.0.2] https://megalinter.io/10.0.0/descriptors/cpp_cpplint
 - MegaLinter key: [CPP_CPPLINT]
 - Rules config: identified by [cpplint]
@@ -2992,7 +3008,7 @@ Done processing egolint/tests/fixtures/clang-format/valid.cpp
 Total errors found: 10
 
 ::endgroup::
-::group::[32m✅ Linted [CSS] files with [stylelint] successfully - (1.12s)[0m (expand for details)
+::group::[32m✅ Linted [CSS] files with [stylelint] successfully - (1.24s)[0m (expand for details)
 - Using [stylelint v17.14.1] https://megalinter.io/10.0.0/descriptors/css_stylelint
 - MegaLinter key: [CSS_STYLELINT]
 - Rules config: [egolint/.config/lint/css/stylelint.json]
@@ -3000,7 +3016,7 @@ Total errors found: 10
 - CWD: [/github/workspace]
 - Command: [stylelint --config egolint/.config/lint/css/stylelint.json .obsidian/snippets/mindgarden.css egolint/tests/fixtures/stylelint/valid.css --config-basedir /node-deps]
 ::endgroup::
-::group::[31m❌ Linted [DART] files with [dartanalyzer]: Found 1 error(s) and 0 warning(s) - (0.79s)[0m (expand for details)
+::group::[31m❌ Linted [DART] files with [dartanalyzer]: Found 1 error(s) and 0 warning(s) - (0.77s)[0m (expand for details)
 - Using [dartanalyzer v3.12.2] https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer
 - MegaLinter key: [DART_DARTANALYZER]
 - Rules config: [egolint/.config/lint/dart/analysis_options.yaml]
@@ -3016,7 +3032,7 @@ Analyzing greeeting_service.dart...
 2 issues found.
 
 ::endgroup::
-::group::[31m❌ Linted [DOCKERFILE] files with [hadolint]: Found 1 error(s) and 0 warning(s) - (0.18s)[0m (expand for details)
+::group::[31m❌ Linted [DOCKERFILE] files with [hadolint]: Found 1 error(s) and 0 warning(s) - (0.1s)[0m (expand for details)
 - Using [hadolint v2.15.1] https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint
 - MegaLinter key: [DOCKERFILE_HADOLINT]
 - Rules config: [egolint/.config/lint/dockerfile/hadolint.yaml]
@@ -3029,11 +3045,11 @@ egolint/tests/fixtures/checkov/Dockerfile:10 DL3066 info: Non-numeric user-id ma
 egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id may not be resolvable by host system
 
 ::endgroup::
-::group::[32m✅ Linted [EDITORCONFIG] files with [editorconfig-checker] successfully - (0.8s)[0m (expand for details)
+::group::[32m✅ Linted [EDITORCONFIG] files with [editorconfig-checker] successfully - (0.94s)[0m (expand for details)
 - Using [editorconfig-checker v3.10.0] https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker
 - MegaLinter key: [EDITORCONFIG_EDITORCONFIG_CHECKER]
 - Rules config: [egolint/.config/lint/editorconfig/editorconfig-checker.json]
-- Number of files analyzed: [878]
+- Number of files analyzed: [881]
 - CWD: [/github/workspace]
 - Command: [editorconfig-checker -config egolint/.config/lint/editorconfig/editorconfig-checker.json .actrc .allcontributorsrc .audits/egolint/2026-08-11-complementary-toolchain-audit.md .audits/egolint/2026-08-11-integration-audit.md .audits/egolint/2026-08-11-...(truncated)]
 ::endgroup::
@@ -3045,7 +3061,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 - CWD: [/github/workspace]
 - Command: [dotenv-linter check egolint/tests/fixtures/dotenv-linter/valid.env]
 ::endgroup::
-::group::[32m✅ Linted [GHERKIN] files with [gherkin-lint] successfully - (0.34s)[0m (expand for details)
+::group::[32m✅ Linted [GHERKIN] files with [gherkin-lint] successfully - (0.36s)[0m (expand for details)
 - Using [gherkin-lint v0.0.0] https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint
 - MegaLinter key: [GHERKIN_GHERKIN_LINT]
 - Rules config: [egolint/.config/lint/gherkin/gherkin-lint.json]
@@ -3053,7 +3069,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 - CWD: [/github/workspace]
 - Command: [gherkin-lint -c egolint/.config/lint/gherkin/gherkin-lint.json egolint/tests/fixtures/gherkin/greeting-service.feature]
 ::endgroup::
-::group::[32m✅ Linted [GO] files with [revive] successfully - (10.32s)[0m (expand for details)
+::group::[32m✅ Linted [GO] files with [revive] successfully - (10.35s)[0m (expand for details)
 - Using [revive v1.15.0] https://megalinter.io/10.0.0/descriptors/go_revive
 - MegaLinter key: [GO_REVIVE]
 - Rules config: [egolint/.config/lint/go/revive.toml]
@@ -3061,7 +3077,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 - CWD: [/github/workspace]
 - Command: [revive -set_exit_status -config egolint/.config/lint/go/revive.toml egolint/tests/fixtures/govulncheck/main.go egolint/tests/fixtures/revive/greeting_service.go]
 ::endgroup::
-::group::[32m✅ Linted [GRAPHQL] files with [graphql-schema-linter] successfully - (0.36s)[0m (expand for details)
+::group::[32m✅ Linted [GRAPHQL] files with [graphql-schema-linter] successfully - (0.54s)[0m (expand for details)
 - Using [graphql-schema-linter v3.0.1] https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter
 - MegaLinter key: [GRAPHQL_GRAPHQL_SCHEMA_LINTER]
 - Rules config: [egolint/.config/lint/graphql/.graphql-schema-linterrc]
@@ -3069,7 +3085,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 - CWD: [/github/workspace]
 - Command: [graphql-schema-linter --config-directory egolint/.config/lint/graphql egolint/tests/fixtures/graphql-schema-linter/schema.graphql]
 ::endgroup::
-::group::[32m✅ Linted [GROOVY] files with [npm-groovy-lint] successfully - (14.34s)[0m (expand for details)
+::group::[32m✅ Linted [GROOVY] files with [npm-groovy-lint] successfully - (15.19s)[0m (expand for details)
 - Using [npm-groovy-lint v18.0.0] https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint
 - MegaLinter key: [GROOVY_NPM_GROOVY_LINT]
 - Rules config: [egolint/.config/lint/groovy/.groovylintrc.json]
@@ -3077,7 +3093,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 - CWD: [/github/workspace]
 - Command: [npm-groovy-lint --javaexecutable /usr/lib/jvm/java-21-openjdk/bin/java --failon error -c egolint/.config/lint/groovy/.groovylintrc.json egolint/tests/fixtures/npm-groovy-lint/GreetingService.groovy]
 ::endgroup::
-::group::[32m✅ Linted [HTML] files with [htmlhint] successfully - (0.3s)[0m (expand for details)
+::group::[32m✅ Linted [HTML] files with [htmlhint] successfully - (0.44s)[0m (expand for details)
 - Using [htmlhint v1.9.2] https://megalinter.io/10.0.0/descriptors/html_htmlhint
 - MegaLinter key: [HTML_HTMLHINT]
 - Rules config: [egolint/.config/lint/html/htmlhint.json]
@@ -3085,7 +3101,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 - CWD: [/github/workspace]
 - Command: [htmlhint --config egolint/.config/lint/html/htmlhint.json egolint/tests/fixtures/htmlhint/valid.html]
 ::endgroup::
-::group::[32m✅ Linted [JAVA] files with [checkstyle] successfully - (3.14s)[0m (expand for details)
+::group::[32m✅ Linted [JAVA] files with [checkstyle] successfully - (2.65s)[0m (expand for details)
 - Using [checkstyle v12.1.0] https://megalinter.io/10.0.0/descriptors/java_checkstyle
 - MegaLinter key: [JAVA_CHECKSTYLE]
 - Rules config: [egolint/.config/lint/java/checkstyle/checkstyle.xml]
@@ -3093,15 +3109,15 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 - CWD: [/github/workspace]
 - Command: [java -jar /usr/bin/checkstyle -c egolint/.config/lint/java/checkstyle/checkstyle.xml egolint/tests/fixtures/checkstyle/GreetingService.java egolint/tests/fixtures/pmd/GreetingService.java]
 ::endgroup::
-::group::[32m✅ Linted [JAVA] files with [pmd] successfully - (6.72s)[0m (expand for details)
+::group::[32m✅ Linted [JAVA] files with [pmd] successfully - (7.24s)[0m (expand for details)
 - Using [pmd v7.26.0] https://megalinter.io/10.0.0/descriptors/java_pmd
 - MegaLinter key: [JAVA_PMD]
 - Rules config: [egolint/.config/lint/java/pmd/java-pmd-ruleset.xml]
 - Number of files analyzed: [2]
 - CWD: [/github/workspace]
-- Command: [/usr/bin/pmd/bin/pmd check --rulesets egolint/.config/lint/java/pmd/java-pmd-ruleset.xml --file-list /tmp/78ab0cc3-8d23-4a15-85ad-29ffbfa02524-pmd-files.txt]
+- Command: [/usr/bin/pmd/bin/pmd check --rulesets egolint/.config/lint/java/pmd/java-pmd-ruleset.xml --file-list /tmp/04d7b61b-014c-45cd-8fb5-e292e8516fc4-pmd-files.txt]
 ::endgroup::
-::group::[31m❌ Linted [JAVASCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.59s)[0m (expand for details)
+::group::[31m❌ Linted [JAVASCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (3.32s)[0m (expand for details)
 - Using [eslint v10.8.0] https://megalinter.io/10.0.0/descriptors/javascript_eslint
 - MegaLinter key: [JAVASCRIPT_ES]
 - Rules config: [egolint/.config/lint/javascript/eslint.config.mjs]
@@ -3117,7 +3133,7 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error: Cannot find module '@eslint/json'
+Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - /github/workspace/egolint/.config/lint/javascript/eslint.config.mjs
     at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
@@ -3128,11 +3144,26 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file:///github/workspace/egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
+    at file:///github/workspace/egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786716641634:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
+
+[JAVASCRIPT_ES_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config. The plugin is not installed in MegaLinter's bundled `node_modules` (`/node-deps/node_modules`).
+Resolutions:
+  - Pre-install the missing plugin into MegaLinter's npm root via a pre-command in your .mega-linter.yml:
+      JAVASCRIPT_ES_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-NAME"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's full dependency tree and run ESLint from the workspace `node_modules`:
+      JAVASCRIPT_ES_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      JAVASCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
+  - Verify the plugin name in your ESLint config matches the published npm package name.
 ::endgroup::
-::group::[32m✅ Linted [JAVASCRIPT] files with [prettier] successfully - (0.53s)[0m (expand for details)
+::group::[32m✅ Linted [JAVASCRIPT] files with [prettier] successfully - (0.51s)[0m (expand for details)
 - Using [prettier v3.9.6] https://megalinter.io/10.0.0/descriptors/javascript_prettier
 - MegaLinter key: [JAVASCRIPT_PRETTIER]
 - Rules config: [egolint/.config/lint/javascript/prettier.config.mjs]
@@ -3140,7 +3171,7 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [prettier --check --config egolint/.config/lint/javascript/prettier.config.mjs egolint/tests/fixtures/eslint/valid.js egolint/tests/fixtures/knip/src/index.js]
 ::endgroup::
-::group::[32m✅ Linted [JSON] files with [jsonlint] successfully - (0.39s)[0m (expand for details)
+::group::[32m✅ Linted [JSON] files with [jsonlint] successfully - (0.36s)[0m (expand for details)
 - Using [jsonlint v17.0.1] https://megalinter.io/10.0.0/descriptors/json_jsonlint
 - MegaLinter key: [JSON_JSONLINT]
 - Rules config: [egolint/.config/lint/json/jsonlint.json]
@@ -3148,7 +3179,7 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [jsonlint --quiet --config egolint/.config/lint/json/jsonlint.json .devcontainer/devcontainer.json .markdownlint.json .obsidian/app.json .obsidian/appearance.json .obsidian/templates.json .prettierrc.json .vscode/extensions.json .vscode/settings.json ...(truncated)]
 ::endgroup::
-::group::[32m✅ Linted [JSON] files with [prettier] successfully - (4.03s)[0m (expand for details)
+::group::[32m✅ Linted [JSON] files with [prettier] successfully - (2.8s)[0m (expand for details)
 - Using [prettier v3.9.6] https://megalinter.io/10.0.0/descriptors/json_prettier
 - MegaLinter key: [JSON_PRETTIER]
 - Rules config: [egolint/.config/lint/javascript/prettier.config.mjs]
@@ -3156,7 +3187,7 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [prettier --check --config egolint/.config/lint/javascript/prettier.config.mjs .devcontainer/devcontainer.json .markdownlint.json .obsidian/app.json .obsidian/appearance.json .obsidian/templates.json .prettierrc.json .vscode/extensions.json .vscode/se...(truncated)]
 ::endgroup::
-::group::[32m✅ Linted [JSON] files with [v8r] successfully - (31.03s)[0m (expand for details)
+::group::[32m✅ Linted [JSON] files with [v8r] successfully - (32.9s)[0m (expand for details)
 - Using [v8r v6.1.0] https://megalinter.io/10.0.0/descriptors/json_v8r
 - MegaLinter key: [JSON_V8R]
 - Rules config: [egolint/.config/lint/yaml/.v8rrc.yml]
@@ -3164,7 +3195,7 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [v8r --ignore-errors .devcontainer/devcontainer.json .markdownlint.json .obsidian/app.json .obsidian/appearance.json .obsidian/templates.json .prettierrc.json .vscode/extensions.json .vscode/settings.json .vscode/tasks.json egolint/.agents/agents/cata...(truncated)]
 ::endgroup::
-::group::[32m✅ Linted [LATEX] files with [chktex] successfully - (0.02s)[0m (expand for details)
+::group::[32m✅ Linted [LATEX] files with [chktex] successfully - (0.03s)[0m (expand for details)
 - Using [chktex v1.7.8] https://megalinter.io/10.0.0/descriptors/latex_chktex
 - MegaLinter key: [LATEX_CHKTEX]
 - Rules config: [egolint/.config/lint/latex/.chktexrc]
@@ -3174,7 +3205,7 @@ Require stack:
   [chktex -q -l egolint/.config/lint/latex/.chktexrc egolint/tests/fixtures/chktex/valid.tex]
   [chktex -q -l egolint/.config/lint/latex/.chktexrc egolint/tests/fixtures/latexindent/example.tex]
 ::endgroup::
-::group::[32m✅ Linted [LUA] files with [luacheck] successfully - (0.09s)[0m (expand for details)
+::group::[32m✅ Linted [LUA] files with [luacheck] successfully - (0.1s)[0m (expand for details)
 - Using [luacheck v1.2.0] https://megalinter.io/10.0.0/descriptors/lua_luacheck
 - MegaLinter key: [LUA_LUACHECK]
 - Rules config: [egolint/.config/lint/lua/.luacheckrc]
@@ -3182,7 +3213,7 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [luacheck --config egolint/.config/lint/lua/.luacheckrc egolint/tests/fixtures/luacheck/valid.lua]
 ::endgroup::
-::group::[32m✅ Linted [LUA] files with [stylua] successfully - (0.06s)[0m (expand for details)
+::group::[32m✅ Linted [LUA] files with [stylua] successfully - (0.05s)[0m (expand for details)
 - Using [stylua v2.5.2] https://megalinter.io/10.0.0/descriptors/lua_stylua
 - MegaLinter key: [LUA_STYLUA]
 - Rules config: identified by [stylua]
@@ -3190,11 +3221,11 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [stylua --check egolint/tests/fixtures/luacheck/valid.lua]
 ::endgroup::
-::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 20 error(s) and 0 warning(s) - (3.84s)[0m (expand for details)
+::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 20 error(s) and 0 warning(s) - (4.03s)[0m (expand for details)
 - Using [markdownlint v0.49.1] https://megalinter.io/10.0.0/descriptors/markdown_markdownlint
 - MegaLinter key: [MARKDOWN_MARKDOWNLINT]
 - Rules config: [/github/workspace/.markdownlint.json]
-- Number of files analyzed: [226]
+- Number of files analyzed: [227]
 - CWD: [/github/workspace]
 - Command: [markdownlint --ignore-path egolint/.markdownlintignore -c /github/workspace/.markdownlint.json .audits/egolint/2026-08-11-complementary-toolchain-audit.md .audits/egolint/2026-08-11-integration-audit.md .audits/egolint/2026-08-11-megalinter-v10-polic...(truncated)]
 --Error detail:
@@ -3220,20 +3251,21 @@ egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxi
 egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxiv-baseline.md:8:3 error MD034/no-bare-urls Bare URL used [Context: "https://info.arxiv.org/help/an..."]
 
 ::endgroup::
-::group::[31m❌ Linted [MARKDOWN] files with [markdown-table-formatter]: Found 1 error(s) and 0 warning(s) - (0.65s)[0m (expand for details)
+::group::[31m❌ Linted [MARKDOWN] files with [markdown-table-formatter]: Found 1 error(s) and 0 warning(s) - (0.47s)[0m (expand for details)
 - Using [markdown-table-formatter v1.7.0] https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter
 - MegaLinter key: [MARKDOWN_MARKDOWN_TABLE_FORMATTER]
 - Rules config: identified by [markdown-table-formatter]
-- Number of files analyzed: [226]
+- Number of files analyzed: [227]
 - CWD: [/github/workspace]
 - Command: [markdown-table-formatter --check .audits/egolint/2026-08-11-complementary-toolchain-audit.md .audits/egolint/2026-08-11-integration-audit.md .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md .audits/egolint/2026-08-11-reporting-and-dependency...(truncated)]
 --Error detail:
-34 files contain markdown tables to format:
+35 files contain markdown tables to format:
 - .audits/egolint/2026-08-11-complementary-toolchain-audit.md
 - .audits/egolint/2026-08-11-integration-audit.md
 - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md
 - .audits/egolint/2026-08-11-reporting-and-dependency-audit.md
 - .garden/dashboard.md
+- .garden/projects/repository-intelligence-dashboard.md
 - .github/actions/README.md
 - AI_CONSTITUTION.md
 - ARCHITECTURE.md
@@ -3265,7 +3297,7 @@ egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxi
 - mantle/tests/README.md
 
 ::endgroup::
-::group::[32m✅ Linted [PHP] files with [phpcs] successfully - (0.23s)[0m (expand for details)
+::group::[32m✅ Linted [PHP] files with [phpcs] successfully - (0.19s)[0m (expand for details)
 - Using [phpcs v4.0.4] https://megalinter.io/10.0.0/descriptors/php_phpcs
 - MegaLinter key: [PHP_PHPCS]
 - Rules config: [egolint/.config/lint/php/phpcs.xml]
@@ -3273,7 +3305,7 @@ egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxi
 - CWD: [/github/workspace]
 - Command: [phpcs --standard=egolint/.config/lint/php/phpcs.xml egolint/tests/fixtures/php/ValidGreetingService.php]
 ::endgroup::
-::group::[32m✅ Linted [PHP] files with [php-cs-fixer] successfully - (0.38s)[0m (expand for details)
+::group::[32m✅ Linted [PHP] files with [php-cs-fixer] successfully - (0.32s)[0m (expand for details)
 - Using [php-cs-fixer v3.95.18] https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer
 - MegaLinter key: [PHP_PHPCSFIXER]
 - Rules config: [.php-cs-fixer.dist.php]
@@ -3289,7 +3321,7 @@ egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxi
 - CWD: [/github/workspace]
 - Command: [phplint -c egolint/.config/lint/php/.phplint.yml egolint/tests/fixtures/php/ValidGreetingService.php]
 ::endgroup::
-::group::[32m✅ Linted [PHP] files with [phpstan] successfully - (2.97s)[0m (expand for details)
+::group::[32m✅ Linted [PHP] files with [phpstan] successfully - (3.33s)[0m (expand for details)
 - Using [phpstan v2.2.8] https://megalinter.io/10.0.0/descriptors/php_phpstan
 - MegaLinter key: [PHP_PHPSTAN]
 - Rules config: [egolint/.config/lint/php/phpstan.neon.dist]
@@ -3297,7 +3329,7 @@ egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxi
 - CWD: [/github/workspace]
 - Command: [phpstan analyse --no-progress --no-ansi --memory-limit 1G -c egolint/.config/lint/php/phpstan.neon.dist egolint/tests/fixtures/php/ValidGreetingService.php]
 ::endgroup::
-::group::[32m✅ Linted [PHP] files with [psalm] successfully - (3.16s)[0m (expand for details)
+::group::[32m✅ Linted [PHP] files with [psalm] successfully - (3.27s)[0m (expand for details)
 - Using [psalm vPsalm.6.16.1@] https://megalinter.io/10.0.0/descriptors/php_psalm
 - MegaLinter key: [PHP_PSALM]
 - Rules config: [egolint/.config/lint/php/psalm.xml]
@@ -3305,7 +3337,7 @@ egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxi
 - CWD: [/github/workspace]
 - Command: [psalm --output-format=console --config=egolint/.config/lint/php/psalm.xml egolint/tests/fixtures/php/ValidGreetingService.php]
 ::endgroup::
-::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 2 error(s) and 0 warning(s) - (4.72s)[0m (expand for details)
+::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 2 error(s) and 0 warning(s) - (4.89s)[0m (expand for details)
 - Using [powershell v7.6.4] https://megalinter.io/10.0.0/descriptors/powershell_powershell
 - MegaLinter key: [POWERSHELL_POWERSHELL]
 - Rules config: [egolint/.config/lint/powershell/powershell-psscriptanalyzer.psd1]
@@ -3336,7 +3368,7 @@ Warning  PSUseBOMForUnicodeEncodedFile powershell-psscriptanalyzer.psd1      Mis
 
 [0m
 ::endgroup::
-::group::[32m✅ Linted [POWERSHELL] files with [powershell_formatter] successfully - (3.87s)[0m (expand for details)
+::group::[32m✅ Linted [POWERSHELL] files with [powershell_formatter] successfully - (4.03s)[0m (expand for details)
 - Using [powershell_formatter v7.6.4] https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter
 - MegaLinter key: [POWERSHELL_POWERSHELL_FORMATTER]
 - Rules config: [egolint/.config/lint/powershell/powershell-formatter.psd1]
@@ -3356,15 +3388,15 @@ Warning  PSUseBOMForUnicodeEncodedFile powershell-psscriptanalyzer.psd1      Mis
 - CWD: [/github/workspace]
 - Command: [protolint lint --config_path egolint/.config/lint/protobuf/.protolintrc.yml egolint/tests/fixtures/buf/greeting.proto egolint/tests/fixtures/protolint/greeting_service.proto]
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [bandit]: Found 2 error(s) and 0 warning(s) - (2.68s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [bandit]: Found 3 error(s) and 0 warning(s) - (2.52s)[0m (expand for details)
 - Using [bandit v1.9.4] https://megalinter.io/10.0.0/descriptors/python_bandit
 - MegaLinter key: [PYTHON_BANDIT]
 - Rules config: [egolint/.config/lint/python/.bandit.yml]
-- Number of files analyzed: [44]
+- Number of files analyzed: [45]
 - CWD: [/github/workspace]
 - Command: [bandit --quiet -c egolint/.config/lint/python/.bandit.yml .github/actions/generate-lint-infographic/generate_lint_infographic.py .github/actions/generate-repository-intelligence/generate_repository_intelligence.py .github/actions/validate-automation/...(truncated)]
 --Error detail:
-Run started:2026-08-14 13:38:41.257503+00:00
+Run started:2026-08-14 14:11:59.887666+00:00
 
 Test results:
 >> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
@@ -3385,37 +3417,53 @@ Test results:
    Severity: Medium   Confidence: Medium
    CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
-   Location: ./egolint/tests/test_megalinter_policy.py:121:12
-120	            "/github/workspace/egolint/.config/lint/terraform",
-121	            "/tmp/lint/egolint/.config/lint/terraform",
-122	        ):
-123	            with self.subTest(rules_path=rules_path):
-124	                resolved = megalinter_policy.resolve_configuration_path(
-125	                    rules_path,
-126	                    ".tflint.hcl",
+   Location: ./egolint/tests/test_megalinter_policy.py:126:12
+125	            "/github/workspace/egolint/.config/lint/terraform",
+126	            "/tmp/lint/egolint/.config/lint/terraform",
+127	        ):
+128	            with self.subTest(rules_path=rules_path):
+129	                resolved = megalinter_policy.resolve_configuration_path(
+130	                    rules_path,
+131	                    ".tflint.hcl",
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./egolint/tests/test_megalinter_policy.py:280:17
+279	        ).strip()
+280	        result = subprocess.run(  # nosec B603
+281	            ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
+282	            cwd=config_path.parent,
+283	            check=False,
+284	            capture_output=True,
+285	            text=True,
+286	        )
+287	        self.assertEqual(result.returncode, 0, f"{result.stdout}\n{result.stderr}")
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 5643
+	Total lines of code: 5814
 	Total lines skipped (#nosec): 1
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 19
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 20
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 0
+		Low: 1
 		Medium: 2
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 2
-		High: 0
+		High: 1
 Files skipped (0):
 
 ::endgroup::
-::group::[32m✅ Linted [PYTHON] files with [mypy] successfully - (12.07s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [mypy]: Found 5 error(s) and 0 warning(s) - (12.37s)[0m (expand for details)
 - Using [mypy v1.19.1] https://megalinter.io/10.0.0/descriptors/python_mypy
 - MegaLinter key: [PYTHON_MYPY]
 - Rules config: [egolint/.config/lint/python/.mypy.ini]
@@ -3425,12 +3473,47 @@ Files skipped (0):
 [Pre][PYTHON_MYPY] result:
 
 [Excluded directories] Forwarded EXCLUDED_DIRECTORIES to mypy through --exclude (disable with PYTHON_MYPY_FORWARD_EXCLUDED_DIRECTORIES: false)
+--Error detail:
+[33mWARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.[0m[33m
+[0mCollecting types-PyYAML
+  Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl.metadata (1.7 kB)
+Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl (20 kB)
+Installing collected packages: types-PyYAML
+Successfully installed types-PyYAML-6.0.12.20260724
+egolint/tests/test_megalinter_policy.py: note: In member "test_root_policy_best_effort_installs_optional_json_plugin" of class "MegaLinterPolicyTests":
+egolint/tests/test_megalinter_policy.py:179:26: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertEqual(command["cwd"], "workspace")
+                             ^~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:180:45: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertIn("@eslint/json@2.0.1", command["command"])
+                                                ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:181:43: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertIn("--prefix egolint", command["command"])
+                                              ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:184:13: error: Value of type
+"Any | None" is not indexable  [index]
+                command["command"],
+                ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py: note: In member "_load_eslint_languages" of class "MegaLinterPolicyTests":
+egolint/tests/test_megalinter_policy.py:291:9: error: Returning Any from
+function declared to return "list[str]"  [no-any-return]
+            return languages
+            ^~~~~~~~~~~~~~~~
+Installing missing stub packages:
+/venvs/mypy/bin/python3 -m pip install types-PyYAML
+
+
+Found 5 errors in 1 file (checked 32 source files)
+
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [pylint]: Found 19 error(s) and 0 warning(s) - (11.77s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [pylint]: Found 19 error(s) and 0 warning(s) - (14.04s)[0m (expand for details)
 - Using [pylint v4.0.6] https://megalinter.io/10.0.0/descriptors/python_pylint
 - MegaLinter key: [PYTHON_PYLINT]
 - Rules config: [egolint/.config/lint/python/.pylintrc]
-- Number of files analyzed: [43]
+- Number of files analyzed: [44]
 - CWD: [/github/workspace]
 - Command: [pylint --rcfile egolint/.config/lint/python/.pylintrc .github/actions/generate-lint-infographic/generate_lint_infographic.py .github/actions/generate-repository-intelligence/generate_repository_intelligence.py .github/actions/validate-automation/vali...(truncated)]
 --Error detail:
@@ -3469,7 +3552,7 @@ Your code has been rated at 9.93/10
 
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [pyright]: Found 615 error(s) and 0 warning(s) - (7.93s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [pyright]: Found 622 error(s) and 0 warning(s) - (8.66s)[0m (expand for details)
 - Using [pyright v1.1.411] https://megalinter.io/10.0.0/descriptors/python_pyright
 - MegaLinter key: [PYTHON_PYRIGHT]
 - Rules config: [egolint/.config/lint/python/pyrightconfig.json]
@@ -4129,6 +4212,20 @@ Your code has been rated at 9.93/10
   /github/workspace/egolint/tests/fixtures/python/test_greeting_service.py:3:30 - error: Type of "format_greeting" is unknown (reportUnknownVariableType)
 /github/workspace/egolint/tests/test_complementary_tools.py
   /github/workspace/egolint/tests/test_complementary_tools.py:86:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
+/github/workspace/egolint/tests/test_megalinter_policy.py
+  /github/workspace/egolint/tests/test_megalinter_policy.py:179:26 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  /github/workspace/egolint/tests/test_megalinter_policy.py:180:45 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  /github/workspace/egolint/tests/test_megalinter_policy.py:180:45 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "Any | Unknown" (reportUnknownArgumentType)
+  /github/workspace/egolint/tests/test_megalinter_policy.py:181:43 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  /github/workspace/egolint/tests/test_megalinter_policy.py:181:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "Any | Unknown" (reportUnknownArgumentType)
+  /github/workspace/egolint/tests/test_megalinter_policy.py:184:13 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  /github/workspace/egolint/tests/test_megalinter_policy.py:184:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "Any | Unknown" (reportUnknownArgumentType)
 /github/workspace/mindgarden/scripts/garden_agent.py
   /github/workspace/mindgarden/scripts/garden_agent.py:37:9 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
   /github/workspace/mindgarden/scripts/garden_agent.py:38:9 - error: Type of "discover_note_paths" is unknown (reportUnknownVariableType)
@@ -4629,14 +4726,14 @@ Your code has been rated at 9.93/10
 /github/workspace/tests/test_repository_intelligence.py
   /github/workspace/tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-615 errors, 10 warnings, 0 informations
+622 errors, 10 warnings, 0 informations
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [ruff]: Found 1 error(s) and 0 warning(s) - (0.17s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [ruff]: Found 2 error(s) and 0 warning(s) - (0.17s)[0m (expand for details)
 - Using [ruff v0.16.2] https://megalinter.io/10.0.0/descriptors/python_ruff
 - MegaLinter key: [PYTHON_RUFF]
 - Rules config: [egolint/.config/lint/python/ruff.toml]
-- Number of files analyzed: [44]
+- Number of files analyzed: [45]
 - CWD: [/github/workspace]
 - Command: [ruff check --config egolint/.config/lint/python/ruff.toml .github/actions/generate-lint-infographic/generate_lint_infographic.py .github/actions/generate-repository-intelligence/generate_repository_intelligence.py .github/actions/validate-automation/...(truncated)]
 [Pre][PYTHON_RUFF] run: [mkdir -p ".cache/ruff"] in cwd [/github/workspace]
@@ -4644,36 +4741,47 @@ Your code has been rated at 9.93/10
 
 --Error detail:
 [1m[91mS108[0m[1m Probable insecure usage of temporary file or directory: "/tmp/lint/egolint/.config/lint/terraform"[0m
-   [1m[94m--> [0megolint/tests/test_megalinter_policy.py:121:13
+   [1m[94m--> [0megolint/tests/test_megalinter_policy.py:126:13
     [1m[94m|[0m
-[1m[94m119[0m [1m[94m|[0m             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
-[1m[94m120[0m [1m[94m|[0m             "/github/workspace/egolint/.config/lint/terraform",
-[1m[94m121[0m [1m[94m|[0m             "/tmp/lint/egolint/.config/lint/terraform",
+[1m[94m124[0m [1m[94m|[0m             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
+[1m[94m125[0m [1m[94m|[0m             "/github/workspace/egolint/.config/lint/terraform",
+[1m[94m126[0m [1m[94m|[0m             "/tmp/lint/egolint/.config/lint/terraform",
     [1m[94m|[0m             [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-[1m[94m122[0m [1m[94m|[0m         ):
-[1m[94m123[0m [1m[94m|[0m             with self.subTest(rules_path=rules_path):
+[1m[94m127[0m [1m[94m|[0m         ):
+[1m[94m128[0m [1m[94m|[0m             with self.subTest(rules_path=rules_path):
     [1m[94m|[0m
 
-Found 1 error.
+[1m[91mS607[0m[1m Starting a process with a partial executable path[0m
+   [1m[94m--> [0megolint/tests/test_megalinter_policy.py:281:13
+    [1m[94m|[0m
+[1m[94m279[0m [1m[94m|[0m         ).strip()
+[1m[94m280[0m [1m[94m|[0m         result = subprocess.run(  # nosec B603
+[1m[94m281[0m [1m[94m|[0m             ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
+    [1m[94m|[0m             [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[1m[94m282[0m [1m[94m|[0m             cwd=config_path.parent,
+[1m[94m283[0m [1m[94m|[0m             check=False,
+    [1m[94m|[0m
+
+Found 2 errors.
 
 ::endgroup::
 ::group::[31m❌ Linted [PYTHON] files with [ruff-format]: Found 1 error(s) and 0 warning(s) - (0.04s)[0m (expand for details)
 - Using [ruff-format v0.16.2] https://megalinter.io/10.0.0/descriptors/python_ruff_format
 - MegaLinter key: [PYTHON_RUFF_FORMAT]
 - Rules config: [egolint/.config/lint/python/ruff.toml]
-- Number of files analyzed: [44]
+- Number of files analyzed: [45]
 - CWD: [/github/workspace]
 - Command: [ruff format --check --config egolint/.config/lint/python/ruff.toml .github/actions/generate-lint-infographic/generate_lint_infographic.py .github/actions/generate-repository-intelligence/generate_repository_intelligence.py .github/actions/validate-au...(truncated)]
 --Error detail:
 [1m[91munformatted:[0m[1m File would be reformatted[0m
-   [1m[94m--> [0megolint/tests/test_megalinter_policy.py:115:20
+   [1m[94m--> [0megolint/tests/test_megalinter_policy.py:120:20
 [1m[94m   [0m [1m[94m|[0m
-[1m[94m114[0m [1m[94m|[0m     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
+[1m[94m119[0m [1m[94m|[0m     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
 [1m[94m   [0m [1m[31m-[0m [31m        expected = [0m[1m[31m([0m[0m[31m
 [0m[1m[94m   [0m [1m[31m-[0m [1m[31m            [0m[0m[31mREPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
 [0m[1m[94m   [0m [1m[31m-[0m [1m[31m        )[0m[0m[31m
-[0m[1m[94m115[0m [1m[32m+[0m [32m        expected = [0m[32mREPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
-[0m[1m[94m116[0m [1m[94m|[0m         for rules_path in (
+[0m[1m[94m120[0m [1m[32m+[0m [32m        expected = [0m[32mREPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
+[0m[1m[94m121[0m [1m[94m|[0m         for rules_path in (
 [1m[94m   [0m [1m[94m|[0m
 
 [1m[91munformatted:[0m[1m File would be reformatted[0m
@@ -4714,10 +4822,10 @@ Found 1 error.
 [0m[1m[94m83[0m [1m[94m|[0m
 [1m[94m  [0m [1m[94m|[0m
 
-2 files would be reformatted, 42 files already formatted
+2 files would be reformatted, 43 files already formatted
 
 ::endgroup::
-::group::[32m✅ Linted [R] files with [lintr] successfully - (0.92s)[0m (expand for details)
+::group::[32m✅ Linted [R] files with [lintr] successfully - (1.02s)[0m (expand for details)
 - Using [lintr v0.0.0] https://megalinter.io/10.0.0/descriptors/r_lintr
 - MegaLinter key: [R_LINTR]
 - Rules config: [egolint/.config/lint/r/.lintr]
@@ -4725,7 +4833,7 @@ Found 1 error.
 - CWD: [/github/workspace]
 - Command: [R --slave -e options('lintr.linter_file' = 'egolint/.config/lint/r/.lintr');setwd('egolint/tests/fixtures/lintr');lintr:::read_settings('.lintr');lints <- lintr::lint('valid.R');print(lints);quit(save = 'no', status = if (length(lints) > 0) 1 else 0)...(truncated)]
 ::endgroup::
-::group::[31m❌ Linted [RAKU] files with [raku]: Found 1 error(s) and 0 warning(s) - (0.8s)[0m (expand for details)
+::group::[31m❌ Linted [RAKU] files with [raku]: Found 1 error(s) and 0 warning(s) - (0.91s)[0m (expand for details)
 - Using [raku v2026.03] https://megalinter.io/10.0.0/descriptors/raku_raku
 - MegaLinter key: [RAKU_RAKU]
 - Rules config: identified by [raku]
@@ -4744,13 +4852,13 @@ Could not find EgoHygiene::Greeting in:
     /opt/rakudo-pkg/share/perl6/site
     /opt/rakudo-pkg/share/perl6/vendor
     /opt/rakudo-pkg/share/perl6/core
-    CompUnit::Repository::AbsolutePath<3443324549840>
-    CompUnit::Repository::NQP<3443200173680>
-    CompUnit::Repository::Perl5<3443200173720>
+    CompUnit::Repository::AbsolutePath<3121738107600>
+    CompUnit::Repository::NQP<3121614489120>
+    CompUnit::Repository::Perl5<3121614489160>
 at /github/workspace/egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 [0m
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [betterleaks] successfully - (1.25s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [betterleaks] successfully - (1.2s)[0m (expand for details)
 - Using [betterleaks v1.7.3] https://megalinter.io/10.0.0/descriptors/repository_betterleaks
 - MegaLinter key: [REPOSITORY_BETTERLEAKS]
 - Rules config: [egolint/.config/security/gitleaks/.gitleaks.toml]
@@ -4758,7 +4866,7 @@ at /github/workspace/egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 - Command: [betterleaks --redact --verbose -c .reports/megalinter/betterleaks-config.toml dir .]
 [Excluded directories] Generated .reports/megalinter/betterleaks-config.toml extending egolint/.config/security/gitleaks/.gitleaks.toml with EXCLUDED_DIRECTORIES as allowlist paths (disable with REPOSITORY_BETTERLEAKS_FORWARD_EXCLUDED_DIRECTORIES: false)
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 57 error(s) and 0 warning(s) - (35.48s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 57 error(s) and 0 warning(s) - (37.16s)[0m (expand for details)
 - Using [checkov v3.3.9] https://megalinter.io/10.0.0/descriptors/repository_checkov
 - MegaLinter key: [REPOSITORY_CHECKOV]
 - Rules config: [egolint/.config/security/checkov/.checkov.yml]
@@ -4766,185 +4874,185 @@ at /github/workspace/egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 - Command: [checkov --config-file egolint/.config/security/checkov/.checkov.yml --skip-path (^|/)\.git(/|$) --skip-path (^|/)node_modules(/|$) --skip-path (^|/)vendor(/|$) --skip-path (^|/)\.venv(/|$) --skip-path (^|/)venv(/|$) --skip-path (^|/)\.cache(/|$) --sk...(truncated)]
 [Excluded directories] Forwarded EXCLUDED_DIRECTORIES to checkov through --skip-path (disable with REPOSITORY_CHECKOV_FORWARD_EXCLUDED_DIRECTORIES: false)
 --Error detail:
-2026-08-14 13:38:22,153 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-08-14 13:38:22,314 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
-2026-08-14 13:38:22,315 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-08-14 13:38:22,316 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-08-14 13:38:22,316 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-08-14 13:38:22,609 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-08-14 13:38:22,610 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-08-14 13:38:22,610 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-08-14 13:38:22,610 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-08-14 13:38:22,624 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-08-14 13:38:22,625 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
+2026-08-14 14:11:41,432 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-08-14 14:11:41,647 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
+2026-08-14 14:11:41,648 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-08-14 14:11:41,650 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-08-14 14:11:41,650 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-08-14 14:11:41,903 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-08-14 14:11:41,903 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-08-14 14:11:41,903 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-08-14 14:11:41,903 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-08-14 14:11:41,916 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-08-14 14:11:41,919 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-08-14 14:11:41,925 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
+2026-08-14 14:11:41,925 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
+2026-08-14 14:11:41,925 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
+2026-08-14 14:11:41,925 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
+2026-08-14 14:11:41,925 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
+2026-08-14 14:11:41,925 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
+2026-08-14 14:11:41,925 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,631 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,632 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,632 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,632 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,632 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,632 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,632 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,632 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
+2026-08-14 14:11:41,926 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,635 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
+2026-08-14 14:11:41,927 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,635 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
+2026-08-14 14:11:41,927 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,635 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
+2026-08-14 14:11:41,930 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
+2026-08-14 14:11:41,930 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
+2026-08-14 14:11:41,930 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
+2026-08-14 14:11:41,930 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
+2026-08-14 14:11:41,930 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
+2026-08-14 14:11:41,930 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,636 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
+2026-08-14 14:11:41,931 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,667 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-14 13:38:22,731 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-14 13:38:22,731 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-14 13:38:22,807 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-14 13:38:22,808 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-14 13:38:22,828 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-14 13:38:22,829 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-14 13:38:22,819 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-14 13:38:22,872 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-14 13:38:22,874 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-14 13:38:22,877 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-14 13:38:22,881 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-14 13:38:22,882 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-14 13:38:22,891 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-14 13:38:22,904 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-14 13:38:23,021 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 13:38:23,023 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-14 13:38:23,024 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-14 13:38:31,480 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-14 13:38:31,481 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-14 13:38:31,569 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,569 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-14 14:11:41,983 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-14 14:11:42,088 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-14 14:11:42,088 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-14 14:11:42,091 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-14 14:11:42,092 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-14 14:11:42,102 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-14 14:11:42,102 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-14 14:11:42,104 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-14 14:11:42,139 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-14 14:11:42,140 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-14 14:11:42,146 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-14 14:11:42,165 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 14:11:42,166 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-14 14:11:42,166 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 14:11:42,166 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-14 14:11:42,168 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-14 14:11:42,172 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-14 14:11:42,185 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-14 14:11:42,551 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-14 14:11:42,551 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 14:11:42,552 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-14 14:11:42,552 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 14:11:42,571 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-14 14:11:42,572 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-14 14:11:42,643 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-14 14:11:42,643 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-14 14:11:42,643 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-14 14:11:42,644 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-14 14:11:49,956 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-14 14:11:49,957 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-14 14:11:50,080 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-14 14:11:50,086 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -5194,14 +5302,14 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (2.33s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (2.25s)[0m (expand for details)
 - Using [dustilock v1.2.0] https://megalinter.io/10.0.0/descriptors/repository_dustilock
 - MegaLinter key: [REPOSITORY_DUSTILOCK]
 - Rules config: identified by [dustilock]
 - CWD: [/github/workspace]
 - Command: [dustilock --recursive]
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [grype]: Found 8 error(s) and 0 warning(s) - (109.32s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [grype]: Found 8 error(s) and 0 warning(s) - (116.3s)[0m (expand for details)
 - Using [grype v0.116.1] https://megalinter.io/10.0.0/descriptors/repository_grype
 - MegaLinter key: [REPOSITORY_GRYPE]
 - Rules config: [egolint/.config/security/grype/.grype.yaml]
@@ -5222,17 +5330,17 @@ decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (4
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
 decompress             4.2.1      npm     GHSA-jwp9-9v96-94mx  Medium    0.3% (25th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0109] ERROR [31mdiscovered vulnerabilities at or above the severity threshold[0m
+[0116] ERROR [31mdiscovered vulnerabilities at or above the severity threshold[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [ls-lint]: Found 5 error(s) and 0 warning(s) - (0.02s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [ls-lint]: Found 5 error(s) and 0 warning(s) - (0.01s)[0m (expand for details)
 - Using [ls-lint v2.3.1] https://megalinter.io/10.0.0/descriptors/repository_ls_lint
 - MegaLinter key: [REPOSITORY_LS_LINT]
 - Rules config: [egolint/.config/lint/repo/.ls-lint.yml]
 - CWD: [/github/workspace]
 - Command: [ls-lint --config egolint/.config/lint/repo/.ls-lint.yml]
 --Error detail:
-2026/08/14 13:39:22 rule ignore not exists
+2026/08/14 14:12:44 rule ignore not exists
 
 
 [REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.
@@ -5240,7 +5348,7 @@ Resolutions:
   - Validate the YAML syntax of `.ls-lint.yml`.
   - Check that each rule (e.g. `camelCase`, `snake_case`, `regex:...`) is supported by the installed ls-lint version.
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [secretlint] successfully - (23.66s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [secretlint] successfully - (26.21s)[0m (expand for details)
 - Using [secretlint v13.0.4] https://megalinter.io/10.0.0/descriptors/repository_secretlint
 - MegaLinter key: [REPOSITORY_SECRETLINT]
 - Rules config: [egolint/.config/security/secretlint/.secretlintrc.json]
@@ -5248,7 +5356,7 @@ Resolutions:
 - CWD: [/github/workspace]
 - Command: [secretlint --secretlintignore egolint/.config/security/secretlint/.secretlintignore --secretlintrc egolint/.config/security/secretlint/.secretlintrc.json --no-gitignore **/*]
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [syft] successfully - (6.75s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [syft] successfully - (6.03s)[0m (expand for details)
 - Using [syft v1.50.0] https://megalinter.io/10.0.0/descriptors/repository_syft
 - MegaLinter key: [REPOSITORY_SYFT]
 - Rules config: [egolint/.config/security/syft/.syft.yaml]
@@ -5259,7 +5367,7 @@ Resolutions:
 
 [Excluded directories] Forwarded EXCLUDED_DIRECTORIES to syft through --exclude (disable with REPOSITORY_SYFT_FORWARD_EXCLUDED_DIRECTORIES: false)
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [trivy]: Found 1 error(s) and 0 warning(s) - (12.72s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [trivy]: Found 1 error(s) and 0 warning(s) - (14.58s)[0m (expand for details)
 - Using [trivy v0.73.0] https://megalinter.io/10.0.0/descriptors/repository_trivy
 - MegaLinter key: [REPOSITORY_TRIVY]
 - Rules config: [egolint/.config/security/trivy/trivy.yaml]
@@ -5270,25 +5378,25 @@ Resolutions:
 
 [Excluded directories] Forwarded EXCLUDED_DIRECTORIES to trivy through --skip-dirs (disable with REPOSITORY_TRIVY_FORWARD_EXCLUDED_DIRECTORIES: false)
 --Error detail:
-2026-08-14T13:38:07Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-14T13:38:07Z	INFO	[vulndb] Need to update DB
-2026-08-14T13:38:07Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-14T13:38:07Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-20.95 MiB / 106.87 MiB [----------->________________________________________________] 19.60% ? p/s ?46.42 MiB / 106.87 MiB [-------------------------->_________________________________] 43.43% ? p/s ?75.84 MiB / 106.87 MiB [------------------------------------------>_________________] 70.97% ? p/s ?99.09 MiB / 106.87 MiB [------------------------------------------>___] 92.72% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 71.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 71.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 17.06 MiB p/s 6.5s2026-08-14T13:38:14Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-14T13:38:14Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-14T13:38:14Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-14T13:38:14Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-14T13:38:14Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 100ms2026-08-14T13:38:18Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-14T13:38:19Z	INFO	Number of language-specific files	num=4
-2026-08-14T13:38:19Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	Detected config files	num=13
+2026-08-14T14:11:23Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-14T14:11:23Z	INFO	[vulndb] Need to update DB
+2026-08-14T14:11:23Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-14T14:11:23Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+27.47 MiB / 106.87 MiB [--------------->____________________________________________] 25.70% ? p/s ?59.37 MiB / 106.87 MiB [--------------------------------->__________________________] 55.56% ? p/s ?89.81 MiB / 106.87 MiB [-------------------------------------------------->_________] 84.04% ? p/s ?106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 132.09 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 132.09 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 132.09 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 123.57 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 123.57 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 123.57 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 115.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 115.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 115.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 108.14 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 108.14 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 108.14 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 101.16 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 101.16 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 101.16 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 94.64 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 94.64 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 94.64 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 88.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 88.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 88.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 77.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 77.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 77.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 72.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 72.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 72.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 16.48 MiB p/s 6.7s2026-08-14T14:11:31Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-14T14:11:31Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-14T14:11:31Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-14T14:11:31Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-14T14:11:31Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-14T14:11:36Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-14T14:11:37Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-14T14:11:37Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-14T14:11:37Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-14T14:11:37Z	INFO	Number of language-specific files	num=4
+2026-08-14T14:11:37Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -5491,7 +5599,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (43.55s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (48.46s)[0m (expand for details)
 - Using [trivy-sbom v0.73.0] https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom
 - MegaLinter key: [REPOSITORY_TRIVY_SBOM]
 - Rules config: [egolint/.config/security/trivy/trivy-sbom.yaml]
@@ -5502,17 +5610,17 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 
 [Excluded directories] Forwarded EXCLUDED_DIRECTORIES to trivy-sbom through --skip-dirs (disable with REPOSITORY_TRIVY_SBOM_FORWARD_EXCLUDED_DIRECTORIES: false)
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (7.6s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (3.94s)[0m (expand for details)
 - Using [trufflehog v3.96.0] https://megalinter.io/10.0.0/descriptors/repository_trufflehog
 - MegaLinter key: [REPOSITORY_TRUFFLEHOG]
 - Rules config: [egolint/.config/security/trufflehog/.trufflehog.yml]
 - CWD: [/github/workspace]
 - Command: [trufflehog --fail --only-verified --no-update filesystem --exclude-paths=egolint/.config/security/trufflehog/.trufflehogignore --fail-on-scan-errors --no-color --force-skip-binaries --archive-max-depth=1 --archive-max-size=100MB --archive-timeout=30s...(truncated)]
 --Error detail:
-2026-08-14T13:38:34Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
+2026-08-14T14:11:54Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
 
 ::endgroup::
-::group::[32m✅ Linted [RST] files with [rstcheck] successfully - (9.77s)[0m (expand for details)
+::group::[32m✅ Linted [RST] files with [rstcheck] successfully - (8.48s)[0m (expand for details)
 - Using [rstcheck v6.3.0] https://megalinter.io/10.0.0/descriptors/rst_rstcheck
 - MegaLinter key: [RST_RSTCHECK]
 - Rules config: [egolint/.config/lint/rst/.rstcheck.cfg]
@@ -5520,7 +5628,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 - CWD: [/github/workspace]
 - Command: [rstcheck --config egolint/.config/lint/rst/.rstcheck.cfg egolint/tests/fixtures/prose/valid.rst egolint/tests/fixtures/rstcheck/valid.rst]
 ::endgroup::
-::group::[31m❌ Linted [RST] files with [rstfmt]: Found 1 error(s) and 0 warning(s) - (4.62s)[0m (expand for details)
+::group::[31m❌ Linted [RST] files with [rstfmt]: Found 1 error(s) and 0 warning(s) - (3.4s)[0m (expand for details)
 - Using [rstfmt v0.0.14] https://megalinter.io/10.0.0/descriptors/rst_rstfmt
 - MegaLinter key: [RST_RSTFMT]
 - Rules config: identified by [rstfmt]
@@ -5532,7 +5640,7 @@ egolint/tests/fixtures/prose/valid.rst is not correctly formatted!
 egolint/tests/fixtures/rstcheck/valid.rst is not correctly formatted!
 
 ::endgroup::
-::group::[31m❌ Linted [RST] files with [rst-lint]: Found 1 error(s) and 0 warning(s) - (0.41s)[0m (expand for details)
+::group::[31m❌ Linted [RST] files with [rst-lint]: Found 1 error(s) and 0 warning(s) - (0.38s)[0m (expand for details)
 - Using [rst-lint v2.0.2] https://megalinter.io/10.0.0/descriptors/rst_rst_lint
 - MegaLinter key: [RST_RST_LINT]
 - Rules config: identified by [rst-lint]
@@ -5544,7 +5652,7 @@ ERROR egolint/tests/fixtures/rstcheck/valid.rst:32 Unknown directive type "autom
 ERROR egolint/tests/fixtures/rstcheck/valid.rst:35 Unknown interpreted text role "doc".
 
 ::endgroup::
-::group::[32m✅ Linted [RUBY] files with [rubocop] successfully - (3.22s)[0m (expand for details)
+::group::[32m✅ Linted [RUBY] files with [rubocop] successfully - (2.85s)[0m (expand for details)
 - Using [rubocop v1.89.0] https://megalinter.io/10.0.0/descriptors/ruby_rubocop
 - MegaLinter key: [RUBY_RUBOCOP]
 - Rules config: [egolint/.config/lint/ruby/.rubocop.yml]
@@ -5555,7 +5663,7 @@ ERROR egolint/tests/fixtures/rstcheck/valid.rst:35 Unknown interpreted text role
 [Pre][RUBY_RUBOCOP] result:
 
 ::endgroup::
-::group::[31m❌ Linted [RUST] files with [clippy]: Found 1 error(s) and 0 warning(s) - (0.39s)[0m (expand for details)
+::group::[31m❌ Linted [RUST] files with [clippy]: Found 1 error(s) and 0 warning(s) - (0.44s)[0m (expand for details)
 - Using [clippy v0.1.97] https://megalinter.io/10.0.0/descriptors/rust_clippy
 - MegaLinter key: [RUST_CLIPPY]
 - Rules config: [egolint/.config/lint/rust/.clippy.toml]
@@ -5574,7 +5682,7 @@ info: default toolchain set to stable-x86_64-unknown-linux-musl
 error: could not find `Cargo.toml` in `/github/workspace` or any parent directory
 
 ::endgroup::
-::group::[32m✅ Linted [SCALA] files with [scalafix] successfully - (4.69s)[0m (expand for details)
+::group::[32m✅ Linted [SCALA] files with [scalafix] successfully - (4.76s)[0m (expand for details)
 - Using [scalafix v0.14.7] https://megalinter.io/10.0.0/descriptors/scala_scalafix
 - MegaLinter key: [SCALA_SCALAFIX]
 - Rules config: [egolint/.config/lint/scala/.scalafix.conf]
@@ -5582,7 +5690,7 @@ error: could not find `Cargo.toml` in `/github/workspace` or any parent director
 - CWD: [/github/workspace]
 - Command: [scalafix --check --config egolint/.config/lint/scala/.scalafix.conf egolint/tests/fixtures/scalafix/GreetingService.scala]
 ::endgroup::
-::group::[31m❌ Linted [SNAKEMAKE] files with [snakemake]: Found 1 error(s) and 0 warning(s) - (9.21s)[0m (expand for details)
+::group::[31m❌ Linted [SNAKEMAKE] files with [snakemake]: Found 1 error(s) and 0 warning(s) - (9.32s)[0m (expand for details)
 - Using [snakemake v9.25.1] https://megalinter.io/10.0.0/descriptors/snakemake_snakemake
 - MegaLinter key: [SNAKEMAKE_LINT]
 - Rules config: identified by [snakemake]
@@ -5600,7 +5708,7 @@ Resolutions:
   - Run `snakemake --lint -s Snakefile` locally and fix the underlying syntax/workflow error.
   - Validate any included sub-Snakefiles and `configfile:` references resolve relative to the workflow root.[0m
 ::endgroup::
-::group::[32m✅ Linted [SNAKEMAKE] files with [snakefmt] successfully - (1.48s)[0m (expand for details)
+::group::[32m✅ Linted [SNAKEMAKE] files with [snakefmt] successfully - (1.71s)[0m (expand for details)
 - Using [snakefmt v2.0.3] https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt
 - MegaLinter key: [SNAKEMAKE_SNAKEFMT]
 - Rules config: [egolint/.config/lint/snakemake/.snakefmt.toml]
@@ -5608,11 +5716,11 @@ Resolutions:
 - CWD: [/github/workspace]
 - Command: [snakefmt --check --compact-diff --config egolint/.config/lint/snakemake/.snakefmt.toml egolint/tests/fixtures/snakefmt/Snakefile]
 ::endgroup::
-::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (0.09s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (0.07s)[0m (expand for details)
 - Using [lychee v0.24.2] https://megalinter.io/10.0.0/descriptors/spell_lychee
 - MegaLinter key: [SPELL_LYCHEE]
 - Rules config: [egolint/.config/lint/prose/spell/lychee.toml]
-- Number of files analyzed: [475]
+- Number of files analyzed: [477]
 - CWD: [/github/workspace]
 - Command: [lychee --format detailed --no-progress --config egolint/.config/lint/prose/spell/lychee.toml .audits/egolint/2026-08-11-complementary-toolchain-audit.md .audits/egolint/2026-08-11-integration-audit.md .audits/egolint/2026-08-11-megalinter-v10-policy-...(truncated)]
 --Error detail:
@@ -5622,11 +5730,11 @@ Caused by:
     Invalid base URL for WikiLink checking: Base must be specified for wikilink checking
 
 ::endgroup::
-::group::[31m❌ Linted [SPELL] files with [proselint]: Found 361 error(s) and 0 warning(s) - (5.75s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [proselint]: Found 378 error(s) and 0 warning(s) - (6.7s)[0m (expand for details)
 - Using [proselint v0.16.0] https://megalinter.io/10.0.0/descriptors/spell_proselint
 - MegaLinter key: [SPELL_PROSELINT]
 - Rules config: [egolint/.config/lint/prose/.proselintrc]
-- Number of files analyzed: [233]
+- Number of files analyzed: [234]
 - CWD: [/github/workspace]
 - Command: [proselint check --config egolint/.config/lint/prose/.proselintrc .audits/egolint/2026-08-11-complementary-toolchain-audit.md .audits/egolint/2026-08-11-integration-audit.md .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md .audits/egolint/202...(truncated)]
 --Error detail:
@@ -5649,6 +5757,24 @@ reviewed' - a phrase is repeated.
 reviewed' - a phrase is repeated.
 /github/workspace/.garden/projects/README.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
 reviewed' - a phrase is repeated.
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
+reviewed' - a phrase is repeated.
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:49:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:50:141: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:51:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:51:129: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:68:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:69:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:69:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:70:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:71:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:72:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:72:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:72:27: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:73:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:73:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:74:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+/github/workspace/.garden/projects/repository-intelligence-dashboard.md:74:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 /github/workspace/ARCHITECTURE.md:105:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 /github/workspace/ARCHITECTURE.md:105:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 /github/workspace/ARCHITECTURE.md:106:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -6055,11 +6181,11 @@ Search' - a phrase is repeated.
 /github/workspace/mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
 ::endgroup::
-::group::[31m❌ Linted [SPELL] files with [vale]: Found 4 error(s) and 1977 warning(s) - (7.24s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [vale]: Found 4 error(s) and 1978 warning(s) - (6.7s)[0m (expand for details)
 - Using [vale v3.17.1] https://megalinter.io/10.0.0/descriptors/spell_vale
 - MegaLinter key: [SPELL_VALE]
 - Rules config: [egolint/.config/lint/prose/.vale.ini]
-- Number of files analyzed: [235]
+- Number of files analyzed: [236]
 - CWD: [/github/workspace]
 - Command: [vale --no-global --no-wrap --config egolint/.config/lint/prose/.vale.ini .audits/egolint/2026-08-11-complementary-toolchain-audit.md .audits/egolint/2026-08-11-integration-audit.md .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md .audits/ego...(truncated)]
 --Error detail:
@@ -6146,6 +6272,10 @@ Search' - a phrase is repeated.
 
  [4m.garden/projects/README.md[0m
  30:42  [33mwarning[0m  'is documented' may be passive voice. Use active voice if you can.  write-good.Passive 
+
+
+ [4m.garden/projects/repository-intelligence-dashboard.md[0m
+ 51:68  [33mwarning[0m  'Overall' is too wordy.  write-good.TooWordy 
 
 
  [4m.github/PULL_REQUEST_TEMPLATE.md[0m
@@ -8593,10 +8723,10 @@ Search' - a phrase is repeated.
  62:57  [33mwarning[0m  'it is' is too wordy.                                              write-good.TooWordy 
  66:32  [33mwarning[0m  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive  
 
-✖ [31m4 errors[0m, [33m1977 warnings[0m and [34m0 suggestions[0m in 235 files.
+✖ [31m4 errors[0m, [33m1978 warnings[0m and [34m0 suggestions[0m in 236 files.
 
 ::endgroup::
-::group::[32m✅ Linted [SQL] files with [sqlfluff] successfully - (4.42s)[0m (expand for details)
+::group::[32m✅ Linted [SQL] files with [sqlfluff] successfully - (4.63s)[0m (expand for details)
 - Using [sqlfluff v4.3.0] https://megalinter.io/10.0.0/descriptors/sql_sqlfluff
 - MegaLinter key: [SQL_SQLFLUFF]
 - Rules config: [egolint/.config/lint/sql/.sqlfluff.ini]
@@ -8612,7 +8742,7 @@ Search' - a phrase is repeated.
 - Command: [swiftlint lint --strict --config .reports/megalinter/swiftlint-config.yml]
 [Excluded directories] Generated .reports/megalinter/swiftlint-config.yml to forward EXCLUDED_DIRECTORIES to swiftlint as excluded paths (disable with SWIFT_SWIFTLINT_FORWARD_EXCLUDED_DIRECTORIES: false)
 ::endgroup::
-::group::[32m✅ Linted [TEKTON] files with [tekton-lint] successfully - (0.71s)[0m (expand for details)
+::group::[32m✅ Linted [TEKTON] files with [tekton-lint] successfully - (0.57s)[0m (expand for details)
 - Using [tekton-lint v1.2.0] https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint
 - MegaLinter key: [TEKTON_TEKTON_LINT]
 - Rules config: [egolint/.config/lint/tekton/.tektonlintrc.yaml]
@@ -8620,7 +8750,7 @@ Search' - a phrase is repeated.
 - CWD: [/github/workspace]
 - Command: [tekton-lint --max-warnings 0 --color false egolint/tests/fixtures/tekton-lint/task.yaml]
 ::endgroup::
-::group::[32m✅ Linted [TERRAFORM] files with [terraform-fmt] successfully - (0.32s)[0m (expand for details)
+::group::[32m✅ Linted [TERRAFORM] files with [terraform-fmt] successfully - (0.4s)[0m (expand for details)
 - Using [terraform-fmt v1.15.8] https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt
 - MegaLinter key: [TERRAFORM_TERRAFORM_FMT]
 - Rules config: identified by [terraform-fmt]
@@ -8632,7 +8762,7 @@ Search' - a phrase is repeated.
   [terraform fmt --diff --check egolint/tests/fixtures/tflint/outputs.tf]
   [terraform fmt --diff --check egolint/tests/fixtures/tflint/variables.tf]
 ::endgroup::
-::group::[32m✅ Linted [TERRAFORM] files with [terragrunt] successfully - (0.6s)[0m (expand for details)
+::group::[32m✅ Linted [TERRAFORM] files with [terragrunt] successfully - (0.52s)[0m (expand for details)
 - Using [terragrunt v1.1.2] https://megalinter.io/10.0.0/descriptors/terraform_terragrunt
 - MegaLinter key: [TERRAFORM_TERRAGRUNT]
 - Rules config: identified by [terragrunt]
@@ -8640,7 +8770,7 @@ Search' - a phrase is repeated.
 - CWD: [/github/workspace]
 - Command: [terragrunt hcl fmt --check --file egolint/tests/fixtures/terragrunt/terragrunt.hcl]
 ::endgroup::
-::group::[31m❌ Linted [TERRAFORM] files with [tflint]: Found 1 error(s) and 0 warning(s) - (2.78s)[0m (expand for details)
+::group::[31m❌ Linted [TERRAFORM] files with [tflint]: Found 1 error(s) and 0 warning(s) - (2.95s)[0m (expand for details)
 - Using [tflint v0.64.0] https://megalinter.io/10.0.0/descriptors/terraform_tflint
 - MegaLinter key: [TERRAFORM_TFLINT]
 - Rules config: [.tflint.hcl]
@@ -8654,7 +8784,7 @@ Failed to install a plugin; Failed to fetch GitHub releases: GET https://api.git
 --Error detail:
 │ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to initialize plugins; Plugin "google" not found. Did you run "tflint --init"?
 
 │ Failed to run in egolint/tests/fixtures/negative/terraform-fmt; exit status 1
 
@@ -8666,7 +8796,7 @@ Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --
 
 
 ::endgroup::
-::group::[31m❌ Linted [TSX] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.42s)[0m (expand for details)
+::group::[31m❌ Linted [TSX] files with [eslint]: Found 1 error(s) and 0 warning(s) - (1.71s)[0m (expand for details)
 - Using [eslint v10.8.0] https://megalinter.io/10.0.0/descriptors/tsx_eslint
 - MegaLinter key: [TSX_ESLINT]
 - Rules config: [egolint/.config/lint/javascript/eslint.config.mjs]
@@ -8682,7 +8812,7 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error: Cannot find module '@eslint/json'
+Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - /github/workspace/egolint/.config/lint/javascript/eslint.config.mjs
     at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
@@ -8693,11 +8823,25 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file:///github/workspace/egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
+    at file:///github/workspace/egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786716641634:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
+
+[TSX_ESLINT_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config (e.g. `eslint-plugin-react`, `eslint-plugin-react-hooks`, `@eslint-react/eslint-plugin`, `@typescript-eslint/eslint-plugin`). The plugin is not installed in MegaLinter's bundled `node_modules`.
+Resolutions:
+  - Pre-install the missing plugin via a pre-command in your .mega-linter.yml:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-react eslint-plugin-react-hooks"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's dependencies and run the project-local ESLint binary:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TSX_ESLINT_CLI_EXECUTABLE: node_modules/.bin/eslint
 ::endgroup::
-::group::[31m❌ Linted [TYPESCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.35s)[0m (expand for details)
+::group::[31m❌ Linted [TYPESCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (1.61s)[0m (expand for details)
 - Using [eslint v10.8.0] https://megalinter.io/10.0.0/descriptors/typescript_eslint
 - MegaLinter key: [TYPESCRIPT_ES]
 - Rules config: [egolint/.config/lint/javascript/eslint.config.mjs]
@@ -8713,7 +8857,7 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error: Cannot find module '@eslint/json'
+Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - /github/workspace/egolint/.config/lint/javascript/eslint.config.mjs
     at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
@@ -8724,11 +8868,25 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file:///github/workspace/egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
+    at file:///github/workspace/egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786716641634:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
+
+[TYPESCRIPT_ES_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config. The plugin is not installed in MegaLinter's bundled `node_modules` (`/node-deps/node_modules`).
+Resolutions:
+  - Pre-install the missing plugin into MegaLinter's npm root via a pre-command in your .mega-linter.yml:
+      TYPESCRIPT_ES_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-NAME"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's full dependency tree and run ESLint from the workspace `node_modules`:
+      TYPESCRIPT_ES_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TYPESCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
 ::endgroup::
-::group::[32m✅ Linted [TYPESCRIPT] files with [prettier] successfully - (0.48s)[0m (expand for details)
+::group::[32m✅ Linted [TYPESCRIPT] files with [prettier] successfully - (0.62s)[0m (expand for details)
 - Using [prettier v3.9.6] https://megalinter.io/10.0.0/descriptors/typescript_prettier
 - MegaLinter key: [TYPESCRIPT_PRETTIER]
 - Rules config: [egolint/.config/lint/javascript/prettier.config.mjs]
@@ -8736,7 +8894,7 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [prettier --check --config egolint/.config/lint/javascript/prettier.config.mjs egolint/tests/fixtures/eslint/valid.ts egolint/tests/fixtures/prettier/valid.ts]
 ::endgroup::
-::group::[32m✅ Linted [XML] files with [xmllint] successfully - (0.3s)[0m (expand for details)
+::group::[32m✅ Linted [XML] files with [xmllint] successfully - (0.42s)[0m (expand for details)
 - Using [xmllint v21309] https://megalinter.io/10.0.0/descriptors/xml_xmllint
 - MegaLinter key: [XML_XMLLINT]
 - Rules config: identified by [xmllint]
@@ -8744,27 +8902,27 @@ Require stack:
 - CWD: [/github/workspace]
 - Command: [xmllint egolint/.config/lint/java/checkstyle/checkstyle.xml egolint/.config/lint/java/pmd/java-pmd-ruleset.xml egolint/.config/lint/php/phpcs.xml egolint/.config/lint/php/psalm.xml egolint/.config/lint/salesforce/apex-pmd-ruleset.xml egolint/tests/fi...(truncated)]
 ::endgroup::
-::group::[32m✅ Linted [YAML] files with [prettier] successfully - (3.45s)[0m (expand for details)
+::group::[32m✅ Linted [YAML] files with [prettier] successfully - (3.57s)[0m (expand for details)
 - Using [prettier v3.9.6] https://megalinter.io/10.0.0/descriptors/yaml_prettier
 - MegaLinter key: [YAML_PRETTIER]
 - Rules config: [egolint/.config/lint/javascript/prettier.config.mjs]
-- Number of files analyzed: [138]
+- Number of files analyzed: [139]
 - CWD: [/github/workspace]
 - Command: [prettier --check --config egolint/.config/lint/javascript/prettier.config.mjs .garden/context-packs/agent-default.yaml .garden/garden.yaml .github/FUNDING.yml .github/ISSUE_TEMPLATE/architecture.yml .github/ISSUE_TEMPLATE/bootstrap-repository.yml .gi...(truncated)]
 ::endgroup::
-::group::[32m✅ Linted [YAML] files with [v8r] successfully - (38.6s)[0m (expand for details)
+::group::[32m✅ Linted [YAML] files with [v8r] successfully - (47.25s)[0m (expand for details)
 - Using [v8r v6.1.0] https://megalinter.io/10.0.0/descriptors/yaml_v8r
 - MegaLinter key: [YAML_V8R]
 - Rules config: [egolint/.config/lint/yaml/.v8rrc.yml]
-- Number of files analyzed: [138]
+- Number of files analyzed: [139]
 - CWD: [/github/workspace]
 - Command: [v8r --ignore-errors .garden/context-packs/agent-default.yaml .garden/garden.yaml .github/FUNDING.yml .github/ISSUE_TEMPLATE/architecture.yml .github/ISSUE_TEMPLATE/bootstrap-repository.yml .github/ISSUE_TEMPLATE/bug-report.yml .github/ISSUE_TEMPLATE/...(truncated)]
 ::endgroup::
-::group::[32m✅ Linted [YAML] files with [yamllint] successfully - (8.69s)[0m (expand for details)
+::group::[32m✅ Linted [YAML] files with [yamllint] successfully - (10.38s)[0m (expand for details)
 - Using [yamllint v1.38.0] https://megalinter.io/10.0.0/descriptors/yaml_yamllint
 - MegaLinter key: [YAML_YAMLLINT]
 - Rules config: [/github/workspace/.yamllint.yml]
-- Number of files analyzed: [138]
+- Number of files analyzed: [139]
 - CWD: [/github/workspace]
 - Command: [yamllint --format standard -c /github/workspace/.yamllint.yml .garden/context-packs/agent-default.yaml .garden/garden.yaml .github/FUNDING.yml .github/ISSUE_TEMPLATE/architecture.yml .github/ISSUE_TEMPLATE/bootstrap-repository.yml .github/ISSUE_TEMPL...(truncated)]
 ::endgroup::
@@ -8776,99 +8934,99 @@ MegaLinter completed successfully.
 +----SUMMARY--------+--------------------------+---------------+-------+-------+--------+------------+----------+--------------+
 | Descriptor        | Linter                   | Mode          | Files | Fixed | Errors | Max errors | Warnings | Elapsed time |
 +-------------------+--------------------------+---------------+-------+-------+--------+------------+----------+--------------+
-| ✅ ACTION         | actionlint               | list_of_files |    13 |       |      0 |            |        0 | 0.47s        |
-| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |            |        0 | 8.9s         |
-| ✅ ARM            | arm-ttk                  | file          |     1 |       |      0 |            |        0 | 3.94s        |
-| ❌ BASH           | bash-exec                | file          |    60 |       |     14 |            |        0 | 0.36s        |
-| ✅ BASH           | shellcheck               | list_of_files |   116 |       |      0 |            |        0 | 8.38s        |
+| ✅ ACTION         | actionlint               | list_of_files |    14 |       |      0 |            |        0 | 0.32s        |
+| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |            |        0 | 8.52s        |
+| ✅ ARM            | arm-ttk                  | file          |     1 |       |      0 |            |        0 | 3.84s        |
+| ❌ BASH           | bash-exec                | file          |    60 |       |     14 |            |        0 | 0.34s        |
+| ✅ BASH           | shellcheck               | list_of_files |   116 |       |      0 |            |        0 | 9.24s        |
 | ❌ BASH           | shfmt                    | list_of_files |     4 |       |      4 |            |        0 | 0.03s        |
-| ✅ C              | clang-format             | list_of_files |     1 |       |      0 |            |        0 | 0.19s        |
+| ✅ C              | clang-format             | list_of_files |     1 |       |      0 |            |        0 | 0.24s        |
 | ✅ C              | cppcheck                 | list_of_files |     1 |       |      0 |            |        0 | 0.05s        |
 | ❌ C              | cpplint                  | list_of_files |     1 |       |      8 |            |        0 | 0.3s         |
-| ✅ CLOJURE        | cljstyle                 | list_of_files |     1 |       |      0 |            |        0 | 0.04s        |
-| ✅ CLOJURE        | clj-kondo                | file          |     1 |       |      0 |            |        0 | 0.03s        |
-| ✅ CLOUDFORMATION | cfn-lint                 | list_of_files |     1 |       |      0 |            |        0 | 9.87s        |
-| ✅ COFFEE         | coffeelint               | list_of_files |     1 |       |      0 |            |        0 | 0.31s        |
-| ❌ COPYPASTE      | jscpd                    | project       |   n/a |       |    310 |            |        0 | 3.66s        |
-| ✅ CPP            | clang-format             | list_of_files |     1 |       |      0 |            |        0 | 0.06s        |
+| ✅ CLOJURE        | cljstyle                 | list_of_files |     1 |       |      0 |            |        0 | 0.07s        |
+| ✅ CLOJURE        | clj-kondo                | file          |     1 |       |      0 |            |        0 | 0.05s        |
+| ✅ CLOUDFORMATION | cfn-lint                 | list_of_files |     1 |       |      0 |            |        0 | 8.21s        |
+| ✅ COFFEE         | coffeelint               | list_of_files |     1 |       |      0 |            |        0 | 0.32s        |
+| ❌ COPYPASTE      | jscpd                    | project       |   n/a |       |    310 |            |        0 | 3.22s        |
+| ✅ CPP            | clang-format             | list_of_files |     1 |       |      0 |            |        0 | 0.07s        |
 | ✅ CPP            | cppcheck                 | list_of_files |     1 |       |      0 |            |        0 | 0.04s        |
-| ❌ CPP            | cpplint                  | list_of_files |     1 |       |     10 |            |        0 | 0.15s        |
-| ✅ CSS            | stylelint                | list_of_files |     2 |       |      0 |            |        0 | 1.12s        |
-| ❌ DART           | dartanalyzer             | list_of_files |     1 |       |      1 |            |        0 | 0.79s        |
-| ❌ DOCKERFILE     | hadolint                 | list_of_files |     2 |       |      1 |            |        0 | 0.18s        |
-| ✅ EDITORCONFIG   | editorconfig-checker     | list_of_files |   878 |       |      0 |            |        0 | 0.8s         |
+| ❌ CPP            | cpplint                  | list_of_files |     1 |       |     10 |            |        0 | 0.16s        |
+| ✅ CSS            | stylelint                | list_of_files |     2 |       |      0 |            |        0 | 1.24s        |
+| ❌ DART           | dartanalyzer             | list_of_files |     1 |       |      1 |            |        0 | 0.77s        |
+| ❌ DOCKERFILE     | hadolint                 | list_of_files |     2 |       |      1 |            |        0 | 0.1s         |
+| ✅ EDITORCONFIG   | editorconfig-checker     | list_of_files |   881 |       |      0 |            |        0 | 0.94s        |
 | ✅ ENV            | dotenv-linter            | list_of_files |     1 |       |      0 |            |        0 | 0.01s        |
-| ✅ GHERKIN        | gherkin-lint             | list_of_files |     1 |       |      0 |            |        0 | 0.34s        |
-| ✅ GO             | revive                   | list_of_files |     2 |       |      0 |            |        0 | 10.32s       |
-| ✅ GRAPHQL        | graphql-schema-linter    | list_of_files |     1 |       |      0 |            |        0 | 0.36s        |
-| ✅ GROOVY         | npm-groovy-lint          | list_of_files |     1 |       |      0 |            |        0 | 14.34s       |
-| ✅ HTML           | htmlhint                 | list_of_files |     1 |       |      0 |            |        0 | 0.3s         |
-| ✅ JAVA           | checkstyle               | list_of_files |     2 |       |      0 |            |        0 | 3.14s        |
-| ✅ JAVA           | pmd                      | list_of_files |     2 |       |      0 |            |        0 | 6.72s        |
-| ❌ JAVASCRIPT     | eslint                   | list_of_files |     2 |       |      1 |            |        0 | 0.59s        |
-| ✅ JAVASCRIPT     | prettier                 | list_of_files |     2 |       |      0 |            |        0 | 0.53s        |
-| ✅ JSON           | jsonlint                 | list_of_files |    99 |       |      0 |            |        0 | 0.39s        |
-| ✅ JSON           | prettier                 | list_of_files |    99 |       |      0 |            |        0 | 4.03s        |
-| ✅ JSON           | v8r                      | list_of_files |    99 |       |      0 |            |        0 | 31.03s       |
-| ✅ LATEX          | chktex                   | file          |     2 |       |      0 |            |        0 | 0.02s        |
-| ✅ LUA            | luacheck                 | list_of_files |     1 |       |      0 |            |        0 | 0.09s        |
-| ✅ LUA            | stylua                   | file          |     1 |       |      0 |            |        0 | 0.06s        |
-| ❌ MARKDOWN       | markdownlint             | list_of_files |   226 |       |     20 |            |        0 | 3.84s        |
-| ❌ MARKDOWN       | markdown-table-formatter | list_of_files |   226 |       |      1 |            |        0 | 0.65s        |
-| ✅ PHP            | phpcs                    | list_of_files |     1 |       |      0 |            |        0 | 0.23s        |
-| ✅ PHP            | php-cs-fixer             | project       |   n/a |       |      0 |            |        0 | 0.38s        |
+| ✅ GHERKIN        | gherkin-lint             | list_of_files |     1 |       |      0 |            |        0 | 0.36s        |
+| ✅ GO             | revive                   | list_of_files |     2 |       |      0 |            |        0 | 10.35s       |
+| ✅ GRAPHQL        | graphql-schema-linter    | list_of_files |     1 |       |      0 |            |        0 | 0.54s        |
+| ✅ GROOVY         | npm-groovy-lint          | list_of_files |     1 |       |      0 |            |        0 | 15.19s       |
+| ✅ HTML           | htmlhint                 | list_of_files |     1 |       |      0 |            |        0 | 0.44s        |
+| ✅ JAVA           | checkstyle               | list_of_files |     2 |       |      0 |            |        0 | 2.65s        |
+| ✅ JAVA           | pmd                      | list_of_files |     2 |       |      0 |            |        0 | 7.24s        |
+| ❌ JAVASCRIPT     | eslint                   | list_of_files |     2 |       |      1 |            |        0 | 3.32s        |
+| ✅ JAVASCRIPT     | prettier                 | list_of_files |     2 |       |      0 |            |        0 | 0.51s        |
+| ✅ JSON           | jsonlint                 | list_of_files |    99 |       |      0 |            |        0 | 0.36s        |
+| ✅ JSON           | prettier                 | list_of_files |    99 |       |      0 |            |        0 | 2.8s         |
+| ✅ JSON           | v8r                      | list_of_files |    99 |       |      0 |            |        0 | 32.9s        |
+| ✅ LATEX          | chktex                   | file          |     2 |       |      0 |            |        0 | 0.03s        |
+| ✅ LUA            | luacheck                 | list_of_files |     1 |       |      0 |            |        0 | 0.1s         |
+| ✅ LUA            | stylua                   | file          |     1 |       |      0 |            |        0 | 0.05s        |
+| ❌ MARKDOWN       | markdownlint             | list_of_files |   227 |       |     20 |            |        0 | 4.03s        |
+| ❌ MARKDOWN       | markdown-table-formatter | list_of_files |   227 |       |      1 |            |        0 | 0.47s        |
+| ✅ PHP            | phpcs                    | list_of_files |     1 |       |      0 |            |        0 | 0.19s        |
+| ✅ PHP            | php-cs-fixer             | project       |   n/a |       |      0 |            |        0 | 0.32s        |
 | ✅ PHP            | phplint                  | list_of_files |     1 |       |      0 |            |        0 | 0.11s        |
-| ✅ PHP            | phpstan                  | list_of_files |     1 |       |      0 |            |        0 | 2.97s        |
-| ✅ PHP            | psalm                    | list_of_files |     1 |       |      0 |            |        0 | 3.16s        |
-| ❌ POWERSHELL     | powershell               | file          |     4 |       |      2 |            |        0 | 4.72s        |
-| ✅ POWERSHELL     | powershell_formatter     | file          |     4 |       |      0 |            |        0 | 3.87s        |
+| ✅ PHP            | phpstan                  | list_of_files |     1 |       |      0 |            |        0 | 3.33s        |
+| ✅ PHP            | psalm                    | list_of_files |     1 |       |      0 |            |        0 | 3.27s        |
+| ❌ POWERSHELL     | powershell               | file          |     4 |       |      2 |            |        0 | 4.89s        |
+| ✅ POWERSHELL     | powershell_formatter     | file          |     4 |       |      0 |            |        0 | 4.03s        |
 | ✅ PROTOBUF       | protolint                | list_of_files |     2 |       |      0 |            |        0 | 0.13s        |
-| ❌ PYTHON         | bandit                   | list_of_files |    44 |       |      2 |            |        0 | 2.68s        |
-| ✅ PYTHON         | mypy                     | project       |   n/a |       |      0 |            |        0 | 12.07s       |
-| ❌ PYTHON         | pylint                   | list_of_files |    43 |       |     19 |            |        0 | 11.77s       |
-| ❌ PYTHON         | pyright                  | project       |   n/a |       |    615 |            |        0 | 7.93s        |
-| ❌ PYTHON         | ruff                     | list_of_files |    44 |       |      1 |            |        0 | 0.17s        |
-| ❌ PYTHON         | ruff-format              | list_of_files |    44 |       |      1 |            |        0 | 0.04s        |
-| ✅ R              | lintr                    | file          |     1 |       |      0 |            |        0 | 0.92s        |
-| ❌ RAKU           | raku                     | file          |     2 |       |      1 |            |        0 | 0.8s         |
-| ✅ REPOSITORY     | betterleaks              | project       |   n/a |       |      0 |            |        0 | 1.25s        |
-| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |     57 |            |        0 | 35.48s       |
-| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |            |        0 | 2.33s        |
-| ❌ REPOSITORY     | grype                    | project       |   n/a |       |      8 |            |        0 | 109.32s      |
-| ❌ REPOSITORY     | ls-lint                  | project       |   n/a |       |      5 |            |        0 | 0.02s        |
-| ✅ REPOSITORY     | secretlint               | project       |   n/a |       |      0 |            |        0 | 23.66s       |
-| ✅ REPOSITORY     | syft                     | project       |   n/a |       |      0 |            |        0 | 6.75s        |
-| ❌ REPOSITORY     | trivy                    | project       |   n/a |       |      1 |            |        0 | 12.72s       |
-| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |            |        0 | 43.55s       |
-| ❌ REPOSITORY     | trufflehog               | project       |   n/a |       |      1 |            |        0 | 7.6s         |
-| ✅ RST            | rstcheck                 | list_of_files |     2 |       |      0 |            |        0 | 9.77s        |
-| ❌ RST            | rstfmt                   | list_of_files |     2 |       |      1 |            |        0 | 4.62s        |
-| ❌ RST            | rst-lint                 | list_of_files |     2 |       |      1 |            |        0 | 0.41s        |
-| ✅ RUBY           | rubocop                  | list_of_files |     1 |       |      0 |            |        0 | 3.22s        |
-| ❌ RUST           | clippy                   | project       |   n/a |       |      1 |            |        0 | 0.39s        |
-| ✅ SCALA          | scalafix                 | list_of_files |     1 |       |      0 |            |        0 | 4.69s        |
-| ❌ SNAKEMAKE      | snakemake                | file          |     1 |       |      1 |            |        0 | 9.21s        |
-| ✅ SNAKEMAKE      | snakefmt                 | file          |     1 |       |      0 |            |        0 | 1.48s        |
-| ❌ SPELL          | lychee                   | list_of_files |   475 |       |      1 |            |        0 | 0.09s        |
-| ❌ SPELL          | proselint                | list_of_files |   233 |       |    361 |            |        0 | 5.75s        |
-| ❌ SPELL          | vale                     | list_of_files |   235 |       |      4 |            |     1977 | 7.24s        |
-| ✅ SQL            | sqlfluff                 | list_of_files |     1 |       |      0 |            |        0 | 4.42s        |
+| ❌ PYTHON         | bandit                   | list_of_files |    45 |       |      3 |            |        0 | 2.52s        |
+| ❌ PYTHON         | mypy                     | project       |   n/a |       |      5 |            |        0 | 12.37s       |
+| ❌ PYTHON         | pylint                   | list_of_files |    44 |       |     19 |            |        0 | 14.04s       |
+| ❌ PYTHON         | pyright                  | project       |   n/a |       |    622 |            |        0 | 8.66s        |
+| ❌ PYTHON         | ruff                     | list_of_files |    45 |       |      2 |            |        0 | 0.17s        |
+| ❌ PYTHON         | ruff-format              | list_of_files |    45 |       |      1 |            |        0 | 0.04s        |
+| ✅ R              | lintr                    | file          |     1 |       |      0 |            |        0 | 1.02s        |
+| ❌ RAKU           | raku                     | file          |     2 |       |      1 |            |        0 | 0.91s        |
+| ✅ REPOSITORY     | betterleaks              | project       |   n/a |       |      0 |            |        0 | 1.2s         |
+| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |     57 |            |        0 | 37.16s       |
+| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |            |        0 | 2.25s        |
+| ❌ REPOSITORY     | grype                    | project       |   n/a |       |      8 |            |        0 | 116.3s       |
+| ❌ REPOSITORY     | ls-lint                  | project       |   n/a |       |      5 |            |        0 | 0.01s        |
+| ✅ REPOSITORY     | secretlint               | project       |   n/a |       |      0 |            |        0 | 26.21s       |
+| ✅ REPOSITORY     | syft                     | project       |   n/a |       |      0 |            |        0 | 6.03s        |
+| ❌ REPOSITORY     | trivy                    | project       |   n/a |       |      1 |            |        0 | 14.58s       |
+| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |            |        0 | 48.46s       |
+| ❌ REPOSITORY     | trufflehog               | project       |   n/a |       |      1 |            |        0 | 3.94s        |
+| ✅ RST            | rstcheck                 | list_of_files |     2 |       |      0 |            |        0 | 8.48s        |
+| ❌ RST            | rstfmt                   | list_of_files |     2 |       |      1 |            |        0 | 3.4s         |
+| ❌ RST            | rst-lint                 | list_of_files |     2 |       |      1 |            |        0 | 0.38s        |
+| ✅ RUBY           | rubocop                  | list_of_files |     1 |       |      0 |            |        0 | 2.85s        |
+| ❌ RUST           | clippy                   | project       |   n/a |       |      1 |            |        0 | 0.44s        |
+| ✅ SCALA          | scalafix                 | list_of_files |     1 |       |      0 |            |        0 | 4.76s        |
+| ❌ SNAKEMAKE      | snakemake                | file          |     1 |       |      1 |            |        0 | 9.32s        |
+| ✅ SNAKEMAKE      | snakefmt                 | file          |     1 |       |      0 |            |        0 | 1.71s        |
+| ❌ SPELL          | lychee                   | list_of_files |   477 |       |      1 |            |        0 | 0.07s        |
+| ❌ SPELL          | proselint                | list_of_files |   234 |       |    378 |            |        0 | 6.7s         |
+| ❌ SPELL          | vale                     | list_of_files |   236 |       |      4 |            |     1978 | 6.7s         |
+| ✅ SQL            | sqlfluff                 | list_of_files |     1 |       |      0 |            |        0 | 4.63s        |
 | ✅ SWIFT          | swiftlint                | project       |   n/a |       |      0 |            |        0 | 0.53s        |
-| ✅ TEKTON         | tekton-lint              | list_of_files |     1 |       |      0 |            |        0 | 0.71s        |
-| ✅ TERRAFORM      | terraform-fmt            | file          |     4 |       |      0 |            |        0 | 0.32s        |
-| ✅ TERRAFORM      | terragrunt               | file          |     1 |       |      0 |            |        0 | 0.6s         |
-| ❌ TERRAFORM      | tflint                   | project       |   n/a |       |      1 |            |        0 | 2.78s        |
-| ❌ TSX            | eslint                   | list_of_files |     1 |       |      1 |            |        0 | 0.42s        |
-| ❌ TYPESCRIPT     | eslint                   | list_of_files |     2 |       |      1 |            |        0 | 0.35s        |
-| ✅ TYPESCRIPT     | prettier                 | list_of_files |     2 |       |      0 |            |        0 | 0.48s        |
-| ✅ XML            | xmllint                  | list_of_files |     6 |       |      0 |            |        0 | 0.3s         |
-| ✅ YAML           | prettier                 | list_of_files |   138 |       |      0 |            |        0 | 3.45s        |
-| ✅ YAML           | v8r                      | list_of_files |   138 |       |      0 |            |        0 | 38.6s        |
-| ✅ YAML           | yamllint                 | list_of_files |   138 |       |      0 |            |        0 | 8.69s        |
+| ✅ TEKTON         | tekton-lint              | list_of_files |     1 |       |      0 |            |        0 | 0.57s        |
+| ✅ TERRAFORM      | terraform-fmt            | file          |     4 |       |      0 |            |        0 | 0.4s         |
+| ✅ TERRAFORM      | terragrunt               | file          |     1 |       |      0 |            |        0 | 0.52s        |
+| ❌ TERRAFORM      | tflint                   | project       |   n/a |       |      1 |            |        0 | 2.95s        |
+| ❌ TSX            | eslint                   | list_of_files |     1 |       |      1 |            |        0 | 1.71s        |
+| ❌ TYPESCRIPT     | eslint                   | list_of_files |     2 |       |      1 |            |        0 | 1.61s        |
+| ✅ TYPESCRIPT     | prettier                 | list_of_files |     2 |       |      0 |            |        0 | 0.62s        |
+| ✅ XML            | xmllint                  | list_of_files |     6 |       |      0 |            |        0 | 0.42s        |
+| ✅ YAML           | prettier                 | list_of_files |   139 |       |      0 |            |        0 | 3.57s        |
+| ✅ YAML           | v8r                      | list_of_files |   139 |       |      0 |            |        0 | 47.25s       |
+| ✅ YAML           | yamllint                 | list_of_files |   139 |       |      0 |            |        0 | 10.38s       |
 +-------------------+--------------------------+---------------+-------+-------+--------+------------+----------+--------------+
 
 [MARKDOWN_SUMMARY Reporter] Generated MARKDOWN_SUMMARY report: .reports/megalinter/megalinter-summary.md
-[MARKDOWN_SUMMARY Reporter] Also appended to GITHUB_STEP_SUMMARY: /github/file_commands/step_summary_7729028c-4028-4130-b17f-c7e53db5237a
+[MARKDOWN_SUMMARY Reporter] Also appended to GITHUB_STEP_SUMMARY: /github/file_commands/step_summary_84096f7d-1d72-481c-a7ba-15821018489d
 [JSON Reporter] Generated JSON report: .reports/megalinter/mega-linter-report.json
 [SARIF Reporter] Generated SARIF report: .reports/megalinter/megalinter-report.sarif
 [31m❌ Error(s) have been found during linting[0m

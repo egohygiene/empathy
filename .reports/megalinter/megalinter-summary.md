@@ -4,103 +4,103 @@
 
 |   Descriptor    |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |-----------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   13|     |     0|          |       0|       0.47s|
-|✅ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|        8.9s|
-|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       3.94s|
-|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.36s|
-|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       8.38s|
+|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   14|     |     0|          |       0|       0.32s|
+|✅ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       8.52s|
+|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       3.84s|
+|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.34s|
+|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       9.24s|
 |❌ BASH          |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     4|          |       0|       0.03s|
-|✅ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     0|          |       0|       0.19s|
+|✅ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     0|          |       0|       0.24s|
 |✅ C             |[cppcheck](https://megalinter.io/10.0.0/descriptors/c_cppcheck)                                       |    1|     |     0|          |       0|       0.05s|
 |❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|        0.3s|
-|✅ CLOJURE       |[cljstyle](https://megalinter.io/10.0.0/descriptors/clojure_cljstyle)                                 |    1|     |     0|          |       0|       0.04s|
-|✅ CLOJURE       |[clj-kondo](https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo)                               |    1|     |     0|          |       0|       0.03s|
-|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       9.87s|
-|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.31s|
-|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   310|          |      no|       3.66s|
-|✅ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     0|          |       0|       0.06s|
+|✅ CLOJURE       |[cljstyle](https://megalinter.io/10.0.0/descriptors/clojure_cljstyle)                                 |    1|     |     0|          |       0|       0.07s|
+|✅ CLOJURE       |[clj-kondo](https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo)                               |    1|     |     0|          |       0|       0.05s|
+|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       8.21s|
+|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.32s|
+|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   310|          |      no|       3.22s|
+|✅ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     0|          |       0|       0.07s|
 |✅ CPP           |[cppcheck](https://megalinter.io/10.0.0/descriptors/cpp_cppcheck)                                     |    1|     |     0|          |       0|       0.04s|
-|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |    10|          |       0|       0.15s|
-|✅ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |     0|          |       0|       1.12s|
-|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       0.79s|
-|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.18s|
-|✅ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  878|     |     0|          |       0|        0.8s|
+|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |    10|          |       0|       0.16s|
+|✅ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |     0|          |       0|       1.24s|
+|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       0.77s|
+|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|        0.1s|
+|✅ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  881|     |     0|          |       0|       0.94s|
 |✅ ENV           |[dotenv-linter](https://megalinter.io/10.0.0/descriptors/env_dotenv_linter)                           |    1|     |     0|          |       0|       0.01s|
-|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.34s|
-|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|      10.32s|
-|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.36s|
-|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      14.34s|
-|✅ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     0|          |       0|        0.3s|
-|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|       3.14s|
-|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       6.72s|
-|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.59s|
-|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.53s|
-|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   99|     |     0|          |       0|       0.39s|
-|✅ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   99|     |     0|          |       0|       4.03s|
-|✅ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   99|     |     0|          |       0|      31.03s|
-|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.02s|
-|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.09s|
-|✅ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     0|          |       0|       0.06s|
-|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  226|     |    20|          |       0|       3.84s|
-|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  226|     |     1|          |       0|       0.65s|
-|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.23s|
-|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.38s|
+|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.36s|
+|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|      10.35s|
+|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.54s|
+|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      15.19s|
+|✅ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     0|          |       0|       0.44s|
+|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|       2.65s|
+|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       7.24s|
+|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       3.32s|
+|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.51s|
+|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   99|     |     0|          |       0|       0.36s|
+|✅ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   99|     |     0|          |       0|        2.8s|
+|✅ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   99|     |     0|          |       0|       32.9s|
+|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.03s|
+|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|        0.1s|
+|✅ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     0|          |       0|       0.05s|
+|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  227|     |    20|          |       0|       4.03s|
+|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  227|     |     1|          |       0|       0.47s|
+|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.19s|
+|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.32s|
 |✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.11s|
-|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       2.97s|
-|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.16s|
-|❌ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     2|          |       0|       4.72s|
-|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       3.87s|
+|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.33s|
+|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.27s|
+|❌ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     2|          |       0|       4.89s|
+|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       4.03s|
 |✅ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     0|          |       0|       0.13s|
-|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   44|     |     2|          |       0|       2.68s|
-|✅ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    no|          |      no|      12.07s|
-|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   43|     |    19|          |       0|      11.77s|
-|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   615|          |      no|       7.93s|
-|❌ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   44|     |     1|          |       0|       0.17s|
-|❌ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   44|     |     1|          |       0|       0.04s|
-|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       0.92s|
-|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|        0.8s|
-|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.25s|
-|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      35.48s|
-|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       2.33s|
-|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     8|          |      no|     109.32s|
-|❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.02s|
-|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      23.66s|
-|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.75s|
-|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      12.72s|
-|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.55s|
-|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|        7.6s|
-|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|       9.77s|
-|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       4.62s|
-|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.41s|
-|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       3.22s|
-|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.39s|
-|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|       4.69s|
-|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       9.21s|
-|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       1.48s|
-|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  475|     |     1|          |       0|       0.09s|
-|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  233|     |   361|          |       0|       5.75s|
-|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  235|     |     4|          |    1977|       7.24s|
-|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       4.42s|
+|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   45|     |     3|          |       0|       2.52s|
+|❌ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |     5|          |      no|      12.37s|
+|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   44|     |    19|          |       0|      14.04s|
+|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   622|          |      no|       8.66s|
+|❌ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   45|     |     2|          |       0|       0.17s|
+|❌ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   45|     |     1|          |       0|       0.04s|
+|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       1.02s|
+|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       0.91s|
+|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|        1.2s|
+|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      37.16s|
+|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       2.25s|
+|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     8|          |      no|      116.3s|
+|❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.01s|
+|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      26.21s|
+|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.03s|
+|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      14.58s|
+|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      48.46s|
+|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       3.94s|
+|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|       8.48s|
+|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|        3.4s|
+|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.38s|
+|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.85s|
+|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.44s|
+|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|       4.76s|
+|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       9.32s|
+|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       1.71s|
+|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  477|     |     1|          |       0|       0.07s|
+|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  234|     |   378|          |       0|        6.7s|
+|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  236|     |     4|          |    1978|        6.7s|
+|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       4.63s|
 |✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.53s|
-|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.71s|
-|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.32s|
-|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|        0.6s|
-|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       2.78s|
-|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       0.42s|
-|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       0.35s|
-|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.48s|
-|✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|        0.3s|
-|✅ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  138|     |     0|          |       0|       3.45s|
-|✅ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  138|     |     0|          |       0|       38.6s|
-|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  138|     |     0|          |       0|       8.69s|
+|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.57s|
+|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|        0.4s|
+|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|       0.52s|
+|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       2.95s|
+|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       1.71s|
+|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       1.61s|
+|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.62s|
+|✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|       0.42s|
+|✅ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  139|     |     0|          |       0|       3.57s|
+|✅ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  139|     |     0|          |       0|      47.25s|
+|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  139|     |     0|          |       0|      10.38s|
 
 ## Detailed Issues
 
 <details>
-<summary>❌ PYTHON / bandit - 2 errors</summary>
+<summary>❌ PYTHON / bandit - 3 errors</summary>
 
 ```
-Run started:2026-08-14 13:38:41.257503+00:00
+Run started:2026-08-14 14:11:59.887666+00:00
 
 Test results:
 >> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
@@ -121,33 +121,49 @@ Test results:
    Severity: Medium   Confidence: Medium
    CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
-   Location: ./egolint/tests/test_megalinter_policy.py:121:12
-120	            "egolint/.config/lint/terraform",
-121	            "egolint/.config/lint/terraform",
-122	        ):
-123	            with self.subTest(rules_path=rules_path):
-124	                resolved = megalinter_policy.resolve_configuration_path(
-125	                    rules_path,
-126	                    ".tflint.hcl",
+   Location: ./egolint/tests/test_megalinter_policy.py:126:12
+125	            "egolint/.config/lint/terraform",
+126	            "egolint/.config/lint/terraform",
+127	        ):
+128	            with self.subTest(rules_path=rules_path):
+129	                resolved = megalinter_policy.resolve_configuration_path(
+130	                    rules_path,
+131	                    ".tflint.hcl",
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./egolint/tests/test_megalinter_policy.py:280:17
+279	        ).strip()
+280	        result = subprocess.run(  # nosec B603
+281	            ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
+282	            cwd=config_path.parent,
+283	            check=False,
+284	            capture_output=True,
+285	            text=True,
+286	        )
+287	        self.assertEqual(result.returncode, 0, f"{result.stdout}\n{result.stderr}")
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 5643
+	Total lines of code: 5814
 	Total lines skipped (#nosec): 1
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 19
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 20
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 0
+		Low: 1
 		Medium: 2
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 2
-		High: 0
+		High: 1
 Files skipped (0):
 ```
 
@@ -256,75 +272,68 @@ See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
 <summary>❌ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-ding/module_finder.py:63: FutureWarning: Possible set union at position 338
+ne
+
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-08-14 14:11:41,932 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-08-14 14:11:41,935 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 13:38:22,667 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-14 13:38:22,731 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-14 13:38:22,731 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-14 13:38:22,807 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-14 13:38:22,808 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-14 13:38:22,828 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-14 13:38:22,829 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-14 13:38:22,819 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-14 13:38:22,872 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-14 13:38:22,874 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-14 13:38:22,877 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-14 13:38:22,881 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-14 13:38:22,882 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-14 13:38:22,891 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-14 13:38:22,904 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-14 13:38:23,021 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 13:38:23,023 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-14 13:38:23,024 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-14 13:38:31,480 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-14 13:38:31,481 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-14 13:38:31,569 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,569 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-14 14:11:41,983 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-14 14:11:42,088 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-14 14:11:42,088 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-14 14:11:42,091 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-14 14:11:42,092 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-14 14:11:42,102 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-14 14:11:42,102 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-14 14:11:42,104 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-14 14:11:42,139 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-14 14:11:42,140 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-14 14:11:42,146 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-14 14:11:42,165 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 14:11:42,166 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-14 14:11:42,166 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 14:11:42,166 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-14 14:11:42,168 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-14 14:11:42,172 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-14 14:11:42,185 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-14 14:11:42,551 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-14 14:11:42,551 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 14:11:42,552 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-14 14:11:42,552 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 14:11:42,571 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-14 14:11:42,572 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-14 14:11:42,643 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-14 14:11:42,643 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-14 14:11:42,643 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-14 14:11:42,644 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-14 14:11:49,956 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-14 14:11:49,957 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-14 14:11:50,080 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-14 14:11:50,085 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-14 14:11:50,086 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -572,7 +581,7 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 25000 characters out of 36188)
+(Truncated to last 24242 characters out of 36188)
 ```
 
 </details>
@@ -646,7 +655,7 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error: Cannot find module '@eslint/json'
+Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - egolint/.config/lint/javascript/eslint.config.mjs
     at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
@@ -657,8 +666,24 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786716641634:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+
+
+[JAVASCRIPT_ES_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config. The plugin is not installed in MegaLinter's bundled `node_modules` (`/node-deps/node_modules`).
+Resolutions:
+  - Pre-install the missing plugin into MegaLinter's npm root via a pre-command in your .mega-linter.yml:
+      JAVASCRIPT_ES_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-NAME"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's full dependency tree and run ESLint from the workspace `node_modules`:
+      JAVASCRIPT_ES_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      JAVASCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
+  - Verify the plugin name in your ESLint config matches the published npm package name.
 ```
 
 </details>
@@ -671,7 +696,7 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error: Cannot find module '@eslint/json'
+Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - egolint/.config/lint/javascript/eslint.config.mjs
     at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
@@ -682,8 +707,23 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786716641634:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+
+
+[TSX_ESLINT_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config (e.g. `eslint-plugin-react`, `eslint-plugin-react-hooks`, `@eslint-react/eslint-plugin`, `@typescript-eslint/eslint-plugin`). The plugin is not installed in MegaLinter's bundled `node_modules`.
+Resolutions:
+  - Pre-install the missing plugin via a pre-command in your .mega-linter.yml:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-react eslint-plugin-react-hooks"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's dependencies and run the project-local ESLint binary:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TSX_ESLINT_CLI_EXECUTABLE: node_modules/.bin/eslint
 ```
 
 </details>
@@ -696,7 +736,7 @@ Oops! Something went wrong! :(
 
 ESLint: 10.8.0
 
-Error: Cannot find module '@eslint/json'
+Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - egolint/.config/lint/javascript/eslint.config.mjs
     at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
@@ -707,8 +747,23 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786716641634:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+
+
+[TYPESCRIPT_ES_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config. The plugin is not installed in MegaLinter's bundled `node_modules` (`/node-deps/node_modules`).
+Resolutions:
+  - Pre-install the missing plugin into MegaLinter's npm root via a pre-command in your .mega-linter.yml:
+      TYPESCRIPT_ES_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-NAME"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's full dependency tree and run ESLint from the workspace `node_modules`:
+      TYPESCRIPT_ES_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TYPESCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
 ```
 
 </details>
@@ -727,7 +782,7 @@ decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (4
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
 decompress             4.2.1      npm     GHSA-jwp9-9v96-94mx  Medium    0.3% (25th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0109] ERROR discovered vulnerabilities at or above the severity threshold
+[0116] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
@@ -747,22 +802,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 <summary>❌ COPYPASTE / jscpd - 310 errors</summary>
 
 ```
-d (toml)
- - egolint/poetry.toml [1:1 - 107:15] (107 lines, 185 tokens)
-   poetry.toml [1:1 - 107:15]
-Clone found (java)
- - egolint/tests/fixtures/checkstyle/GreetingService.java [27:1 - 34:2] (8 lines, 62 tokens)
-   egolint/tests/fixtures/pmd/GreetingService.java [13:1 - 20:2]
-Clone found (toml)
- - egolint/tests/fixtures/clippy/Cargo.toml [10:1 - 15:45] (6 lines, 57 tokens)
-   identity/Cargo.toml [22:1 - 27:45]
-Clone found (yaml)
- - mantle/.github/workflows/test.yml [66:1 - 91:34] (26 lines, 248 tokens)
-   mantle/.github/workflows/test.yml [115:1 - 140:34]
-Clone found (markdown)
- - mantle/CONTRIBUTING.md:markdown [14:41 - 19:32] (6 lines, 319 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [270:1 - 281:4]
-Clone found (markdown)
+arkdown)
  - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [261:1 - 266:2] (6 lines, 103 tokens)
    mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [304:1 - 309:2]
 Clone found (markdown)
@@ -1062,15 +1102,15 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java       │ 2              │ 54          │ 504          │ 1            │ 7 (12.96%)       │ 62 (12.30%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript │ 6              │ 658         │ 2169         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ javascript │ 6              │ 674         │ 2231         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 84             │ 14011       │ 59330        │ 21           │ 536 (3.83%)      │ 1922 (3.24%)      │
+│ json       │ 85             │ 14086       │ 59394        │ 21           │ 536 (3.81%)      │ 1922 (3.24%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx        │ 1              │ 10          │ 52           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 223            │ 23365       │ 265812       │ 139          │ 1667 (7.13%)     │ 17303 (6.51%)     │
+│ markdown   │ 224            │ 23517       │ 267874       │ 138          │ 1660 (7.06%)     │ 17050 (6.36%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1082,7 +1122,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 36             │ 8436        │ 63545        │ 16           │ 157 (1.86%)      │ 1112 (1.75%)      │
+│ python     │ 37             │ 8630        │ 64877        │ 16           │ 157 (1.82%)      │ 1112 (1.71%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1096,24 +1136,24 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift      │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text       │ 7              │ 1642        │ 1703         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ text       │ 8              │ 1731        │ 1761         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml       │ 21             │ 1945        │ 5850         │ 2            │ 111 (5.71%)      │ 242 (4.14%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ txt        │ 5              │ 135         │ 2089         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ txt        │ 5              │ 138         │ 2136         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 227            │ 18676       │ 98095        │ 72           │ 822 (4.40%)      │ 5463 (5.57%)      │
+│ yaml       │ 229            │ 18772       │ 98629        │ 73           │ 835 (4.45%)      │ 5559 (5.64%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 788            │ 92528       │ 617087       │ 310          │ 3975 (4.30%)     │ 30634 (4.96%)     │
+│ Total:     │ 794            │ 93153       │ 621246       │ 310          │ 3981 (4.27%)     │ 30477 (4.91%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 310 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 1.59s
+time: 1.32s
 
-(Truncated to last 25000 characters out of 72437)
+(Truncated to last 24242 characters out of 72403)
 ```
 
 </details>
@@ -1122,7 +1162,7 @@ time: 1.59s
 <summary>❌ REPOSITORY / ls-lint - 5 errors</summary>
 
 ```
-2026/08/14 13:39:22 rule ignore not exists
+2026/08/14 14:12:44 rule ignore not exists
 
 
 [REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.
@@ -1149,12 +1189,13 @@ Caused by:
 <summary>❌ MARKDOWN / markdown-table-formatter - 1 error</summary>
 
 ```
-34 files contain markdown tables to format:
+35 files contain markdown tables to format:
 - .audits/egolint/2026-08-11-complementary-toolchain-audit.md
 - .audits/egolint/2026-08-11-integration-audit.md
 - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md
 - .audits/egolint/2026-08-11-reporting-and-dependency-audit.md
 - .garden/dashboard.md
+- .garden/projects/repository-intelligence-dashboard.md
 - .github/actions/README.md
 - AI_CONSTITUTION.md
 - ARCHITECTURE.md
@@ -1217,6 +1258,47 @@ egolint/.agents/skills/publishing/prepare-arxiv-release/references/official-arxi
 </details>
 
 <details>
+<summary>❌ PYTHON / mypy - 5 errors</summary>
+
+```
+WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting types-PyYAML
+  Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl.metadata (1.7 kB)
+Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl (20 kB)
+Installing collected packages: types-PyYAML
+Successfully installed types-PyYAML-6.0.12.20260724
+egolint/tests/test_megalinter_policy.py: note: In member "test_root_policy_best_effort_installs_optional_json_plugin" of class "MegaLinterPolicyTests":
+egolint/tests/test_megalinter_policy.py:179:26: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertEqual(command["cwd"], "workspace")
+                             ^~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:180:45: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertIn("@eslint/json@2.0.1", command["command"])
+                                                ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:181:43: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertIn("--prefix egolint", command["command"])
+                                              ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:184:13: error: Value of type
+"Any | None" is not indexable  [index]
+                command["command"],
+                ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py: note: In member "_load_eslint_languages" of class "MegaLinterPolicyTests":
+egolint/tests/test_megalinter_policy.py:291:9: error: Returning Any from
+function declared to return "list[str]"  [no-any-return]
+            return languages
+            ^~~~~~~~~~~~~~~~
+Installing missing stub packages:
+/venvs/mypy/bin/python3 -m pip install types-PyYAML
+
+
+Found 5 errors in 1 file (checked 32 source files)
+```
+
+</details>
+
+<details>
 <summary>❌ POWERSHELL / powershell - 2 errors</summary>
 
 ```
@@ -1244,15 +1326,10 @@ See documentation on https://megalinter.io/10.0.0/descriptors/powershell_powersh
 </details>
 
 <details>
-<summary>❌ SPELL / proselint - 361 errors</summary>
+<summary>❌ SPELL / proselint - 378 errors</summary>
 
 ```
-e curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/create-specification-file/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/create-specification-file/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/authoring/create-specification-file/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/authoring/create-specification-file/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/authoring/create-specification-file/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -1475,7 +1552,7 @@ mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
-(Truncated to last 25000 characters out of 50395)
+(Truncated to last 24242 characters out of 52871)
 ```
 
 </details>
@@ -1521,19 +1598,10 @@ Your code has been rated at 9.93/10
 </details>
 
 <details>
-<summary>❌ PYTHON / pyright - 615 errors</summary>
+<summary>❌ PYTHON / pyright - 622 errors</summary>
 
 ```
-t[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:187:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:188:9 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:191:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+str, Any] | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/publish_garden.py:192:9 - error: Argument type is partially unknown
     Argument corresponds to parameter "metadata" in function "require_string"
     Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
@@ -1789,9 +1857,9 @@ tests/test_mindgarden_publishing_integration.py
 tests/test_repository_intelligence.py
   tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-615 errors, 10 warnings, 0 informations
+622 errors, 10 warnings, 0 informations
 
-(Truncated to last 25000 characters out of 116446)
+(Truncated to last 24242 characters out of 117687)
 ```
 
 </details>
@@ -1814,9 +1882,9 @@ See documentation on https://megalinter.io/10.0.0/descriptors/raku_raku/
         /opt/rakudo-pkg/share/perl6/site
         /opt/rakudo-pkg/share/perl6/vendor
         /opt/rakudo-pkg/share/perl6/core
-        CompUnit::Repository::AbsolutePath<3443324549840>
-        CompUnit::Repository::NQP<3443200173680>
-        CompUnit::Repository::Perl5<3443200173720>
+        CompUnit::Repository::AbsolutePath<3121738107600>
+        CompUnit::Repository::NQP<3121614489120>
+        CompUnit::Repository::Perl5<3121614489160>
     at egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 ```
 
@@ -1843,21 +1911,32 @@ egolint/tests/fixtures/rstcheck/valid.rst is not correctly formatted!
 </details>
 
 <details>
-<summary>❌ PYTHON / ruff - 1 error</summary>
+<summary>❌ PYTHON / ruff - 2 errors</summary>
 
 ```
 S108 Probable insecure usage of temporary file or directory: "egolint/.config/lint/terraform"
-   --> egolint/tests/test_megalinter_policy.py:121:13
+   --> egolint/tests/test_megalinter_policy.py:126:13
     |
-119 |             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
-120 |             "egolint/.config/lint/terraform",
-121 |             "egolint/.config/lint/terraform",
+124 |             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
+125 |             "egolint/.config/lint/terraform",
+126 |             "egolint/.config/lint/terraform",
     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-122 |         ):
-123 |             with self.subTest(rules_path=rules_path):
+127 |         ):
+128 |             with self.subTest(rules_path=rules_path):
     |
 
-Found 1 error.
+S607 Starting a process with a partial executable path
+   --> egolint/tests/test_megalinter_policy.py:281:13
+    |
+279 |         ).strip()
+280 |         result = subprocess.run(  # nosec B603
+281 |             ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+282 |             cwd=config_path.parent,
+283 |             check=False,
+    |
+
+Found 2 errors.
 ```
 
 </details>
@@ -1867,14 +1946,14 @@ Found 1 error.
 
 ```
 unformatted: File would be reformatted
-   --> egolint/tests/test_megalinter_policy.py:115:20
+   --> egolint/tests/test_megalinter_policy.py:120:20
     |
-114 |     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
+119 |     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
     -         expected = (
     -             REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
     -         )
-115 +         expected = REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
-116 |         for rules_path in (
+120 +         expected = REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
+121 |         for rules_path in (
     |
 
 unformatted: File would be reformatted
@@ -1915,7 +1994,7 @@ unformatted: File would be reformatted
 83 |
    |
 
-2 files would be reformatted, 42 files already formatted
+2 files would be reformatted, 43 files already formatted
 ```
 
 </details>
@@ -1924,25 +2003,7 @@ unformatted: File would be reformatted
 <summary>❌ BASH / shfmt - 4 errors</summary>
 
 ```
-; then
-+        CONFIG_FILE=""
-+        return 0
-+    fi
-+
-+    [[ -f ${candidate} ]] || die "MegaLinter config does not exist: ${candidate}"
-+    candidate="$(cd "$(dirname "${candidate}")" && pwd -P)/$(basename "${candidate}")"
-+    path_is_within_workspace "${candidate}" ||
-+        die "MegaLinter config must be inside the workspace: ${candidate}"
-+    CONFIG_FILE="${candidate}"
- }
- 
- # @description Validate and normalize the repository-relative report directory.
- validate_report_directory() {
--  [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
--  [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
--  case "${REPORT_DIRECTORY}" in
-+    [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
-+    [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
+eport directory cannot be empty."
 +    case "${REPORT_DIRECTORY}" in
      /*) die "Report directory must be relative to the workspace." ;;
      */../* | ../* | */..) die "Report directory may not contain a '..' segment: ${REPORT_DIRECTORY}" ;;
@@ -2689,7 +2750,7 @@ diff egolint/scripts/precommit.sh.orig egolint/scripts/precommit.sh
  
  main "$@"
 
-(Truncated to last 25000 characters out of 47476)
+(Truncated to last 24242 characters out of 47476)
 ```
 
 </details>
@@ -2721,7 +2782,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/snakemake_snakemak
 ```
 │ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to initialize plugins; Plugin "google" not found. Did you run "tflint --init"?
 
 │ Failed to run in egolint/tests/fixtures/negative/terraform-fmt; exit status 1
 
@@ -2738,25 +2799,25 @@ Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --
 <summary>❌ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-14T13:38:07Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-14T13:38:07Z	INFO	[vulndb] Need to update DB
-2026-08-14T13:38:07Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-14T13:38:07Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-20.95 MiB / 106.87 MiB [----------->________________________________________________] 19.60% ? p/s ?46.42 MiB / 106.87 MiB [-------------------------->_________________________________] 43.43% ? p/s ?75.84 MiB / 106.87 MiB [------------------------------------------>_________________] 70.97% ? p/s ?99.09 MiB / 106.87 MiB [------------------------------------------>___] 92.72% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 71.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 71.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 17.06 MiB p/s 6.5s2026-08-14T13:38:14Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-14T13:38:14Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-14T13:38:14Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-14T13:38:14Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-14T13:38:14Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 100ms2026-08-14T13:38:18Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-14T13:38:19Z	INFO	Number of language-specific files	num=4
-2026-08-14T13:38:19Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-14T13:38:19Z	INFO	Detected config files	num=13
+2026-08-14T14:11:23Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-14T14:11:23Z	INFO	[vulndb] Need to update DB
+2026-08-14T14:11:23Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-14T14:11:23Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+27.47 MiB / 106.87 MiB [--------------->____________________________________________] 25.70% ? p/s ?59.37 MiB / 106.87 MiB [--------------------------------->__________________________] 55.56% ? p/s ?89.81 MiB / 106.87 MiB [-------------------------------------------------->_________] 84.04% ? p/s ?106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 132.09 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 132.09 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 132.09 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 123.57 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 123.57 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 123.57 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 115.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 115.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 115.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 108.14 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 108.14 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 108.14 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 101.16 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 101.16 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 101.16 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 94.64 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 94.64 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 94.64 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 88.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 88.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 88.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 77.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 77.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 77.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 72.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 72.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 72.48 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 16.48 MiB p/s 6.7s2026-08-14T14:11:31Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-14T14:11:31Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-14T14:11:31Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-14T14:11:31Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-14T14:11:31Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-14T14:11:36Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-14T14:11:37Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-14T14:11:37Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-14T14:11:37Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-14T14:11:37Z	INFO	Number of language-specific files	num=4
+2026-08-14T14:11:37Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-14T14:11:37Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -2964,7 +3025,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 <summary>❌ REPOSITORY / trufflehog - 1 error</summary>
 
 ```
-2026-08-14T13:38:34Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
+2026-08-14T14:11:54Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
 ```
 
 </details>
@@ -2973,16 +3034,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 <summary>❌ SPELL / vale - 4 errors</summary>
 
 ```
-ated' may be passive voice. Use active voice if you can.     write-good.Passive  
- 346:40  warning  'are validated' may be passive voice. Use active voice if you can.   write-good.Passive  
- 347:47  warning  'are detected' may be passive voice. Use active voice if you can.    write-good.Passive  
- 349:28  warning  'is preserved' may be passive voice. Use active voice if you can.    write-good.Passive  
- 350:28  warning  'is required' may be passive voice. Use active voice if you can.     write-good.Passive  
- 351:37  warning  'are generated' may be passive voice. Use active voice if you can.   write-good.Passive  
-
-
- egolint/.agents/specs/quality/auditor.spec.md
- 47:7    warning  'shall' is too wordy.                                                 write-good.TooWordy 
+write-good.TooWordy 
  47:26   warning  'be audited' may be passive voice. Use active voice if you can.       write-good.Passive  
  54:13   warning  'authorize' is too wordy.                                             write-good.TooWordy 
  59:13   warning  'shall' is too wordy.                                                 write-good.TooWordy 
@@ -3286,9 +3338,9 @@ ated' may be passive voice. Use active voice if you can.     write-good.Passive
  62:57  warning  'it is' is too wordy.                                              write-good.TooWordy 
  66:32  warning  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive  
 
-✖ 4 errors, 1977 warnings and 0 suggestions in 235 files.
+✖ 4 errors, 1978 warnings and 0 suggestions in 236 files.
 
-(Truncated to last 25000 characters out of 223850)
+(Truncated to last 24242 characters out of 223970)
 ```
 
 </details>

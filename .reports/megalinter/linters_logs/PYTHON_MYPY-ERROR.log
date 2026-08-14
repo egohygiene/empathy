@@ -1,0 +1,40 @@
+Results of mypy linter (version 1.19.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_mypy/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting types-PyYAML
+  Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl.metadata (1.7 kB)
+Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl (20 kB)
+Installing collected packages: types-PyYAML
+Successfully installed types-PyYAML-6.0.12.20260724
+egolint/tests/test_megalinter_policy.py: note: In member "test_root_policy_best_effort_installs_optional_json_plugin" of class "MegaLinterPolicyTests":
+egolint/tests/test_megalinter_policy.py:179:26: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertEqual(command["cwd"], "workspace")
+                             ^~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:180:45: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertIn("@eslint/json@2.0.1", command["command"])
+                                                ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:181:43: error: Value of type
+"Any | None" is not indexable  [index]
+            self.assertIn("--prefix egolint", command["command"])
+                                              ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py:184:13: error: Value of type
+"Any | None" is not indexable  [index]
+                command["command"],
+                ^~~~~~~~~~~~~~~~~~
+egolint/tests/test_megalinter_policy.py: note: In member "_load_eslint_languages" of class "MegaLinterPolicyTests":
+egolint/tests/test_megalinter_policy.py:291:9: error: Returning Any from
+function declared to return "list[str]"  [no-any-return]
+            return languages
+            ^~~~~~~~~~~~~~~~
+Installing missing stub packages:
+/venvs/mypy/bin/python3 -m pip install types-PyYAML
+
+
+Found 5 errors in 1 file (checked 32 source files)
+

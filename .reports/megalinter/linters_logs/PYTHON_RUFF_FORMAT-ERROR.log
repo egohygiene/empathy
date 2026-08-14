@@ -5,14 +5,14 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff_format
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 unformatted: File would be reformatted
-   --> egolint/tests/test_megalinter_policy.py:115:20
+   --> egolint/tests/test_megalinter_policy.py:120:20
     |
-114 |     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
+119 |     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
     -         expected = (
     -             REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
     -         )
-115 +         expected = REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
-116 |         for rules_path in (
+120 +         expected = REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
+121 |         for rules_path in (
     |
 
 unformatted: File would be reformatted
@@ -53,5 +53,5 @@ unformatted: File would be reformatted
 83 |
    |
 
-2 files would be reformatted, 42 files already formatted
+2 files would be reformatted, 43 files already formatted
 

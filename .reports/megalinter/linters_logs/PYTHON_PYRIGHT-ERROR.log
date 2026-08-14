@@ -657,6 +657,20 @@ egolint/tests/fixtures/python/test_greeting_service.py
   egolint/tests/fixtures/python/test_greeting_service.py:3:30 - error: Type of "format_greeting" is unknown (reportUnknownVariableType)
 egolint/tests/test_complementary_tools.py
   egolint/tests/test_complementary_tools.py:86:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
+egolint/tests/test_megalinter_policy.py
+  egolint/tests/test_megalinter_policy.py:179:26 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  egolint/tests/test_megalinter_policy.py:180:45 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  egolint/tests/test_megalinter_policy.py:180:45 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "Any | Unknown" (reportUnknownArgumentType)
+  egolint/tests/test_megalinter_policy.py:181:43 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  egolint/tests/test_megalinter_policy.py:181:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "Any | Unknown" (reportUnknownArgumentType)
+  egolint/tests/test_megalinter_policy.py:184:13 - error: Object of type "None" is not subscriptable (reportOptionalSubscript)
+  egolint/tests/test_megalinter_policy.py:184:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "Any | Unknown" (reportUnknownArgumentType)
 mindgarden/scripts/garden_agent.py
   mindgarden/scripts/garden_agent.py:37:9 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
   mindgarden/scripts/garden_agent.py:38:9 - error: Type of "discover_note_paths" is unknown (reportUnknownVariableType)
@@ -1157,5 +1171,5 @@ tests/test_mindgarden_publishing_integration.py
 tests/test_repository_intelligence.py
   tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-615 errors, 10 warnings, 0 informations
+622 errors, 10 warnings, 0 informations
 

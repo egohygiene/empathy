@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:100d25f6-92a6-4309-894e-f4bb30c795b9",
+  "serialNumber": "urn:uuid:272aab0a-2a20-462c-a62b-4e9e77547b36",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-14T13:39:28Z",
+    "timestamp": "2026-08-14T14:12:49Z",
     "tools": {
       "components": [
         {
@@ -80451,6 +80451,71 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/mindgarden-pages.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294?package-id=42c4c682224e12d0",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/dependency-review-action",
+      "version": "a1d282b36b6f3519aa1f3fc636f609c47dddb294",
+      "cpe": "cpe:2.3:a:actions\\/dependency-review-action:actions\\/dependency-review-action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency-review-action:actions\\/dependency_review_action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency_review_action:actions\\/dependency-review-action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency_review_action:actions\\/dependency_review_action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency-review:actions\\/dependency-review-action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency-review:actions\\/dependency_review_action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency_review:actions\\/dependency-review-action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency_review:actions\\/dependency_review_action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency:actions\\/dependency-review-action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/dependency:actions\\/dependency_review_action:a1d282b36b6f3519aa1f3fc636f609c47dddb294:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/dependency-review.yml"
         }
       ]
     },
@@ -258103,6 +258168,17 @@
         {
           "alg": "SHA-256",
           "content": "064abb7d1ea55a21d7c5a4f65ca2463c5431bd156a1a2647ddc713bd4bd99215"
+        }
+      ]
+    },
+    {
+      "bom-ref": "11769e63aa84e323",
+      "type": "file",
+      "name": "/github/workspace/.github/workflows/dependency-review.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "188c1e8335ba415f1f4f7f0163819cd53d37e954ce84de0c6a910878e4fe126f"
         }
       ]
     },

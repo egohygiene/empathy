@@ -5,15 +5,26 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 S108 Probable insecure usage of temporary file or directory: "egolint/.config/lint/terraform"
-   --> egolint/tests/test_megalinter_policy.py:121:13
+   --> egolint/tests/test_megalinter_policy.py:126:13
     |
-119 |             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
-120 |             "egolint/.config/lint/terraform",
-121 |             "egolint/.config/lint/terraform",
+124 |             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
+125 |             "egolint/.config/lint/terraform",
+126 |             "egolint/.config/lint/terraform",
     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-122 |         ):
-123 |             with self.subTest(rules_path=rules_path):
+127 |         ):
+128 |             with self.subTest(rules_path=rules_path):
     |
 
-Found 1 error.
+S607 Starting a process with a partial executable path
+   --> egolint/tests/test_megalinter_policy.py:281:13
+    |
+279 |         ).strip()
+280 |         result = subprocess.run(  # nosec B603
+281 |             ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+282 |             cwd=config_path.parent,
+283 |             check=False,
+    |
+
+Found 2 errors.
 
