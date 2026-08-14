@@ -203,6 +203,17 @@ repos:
         stages:
           - manual
 
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.9.6
+    hooks:
+      - id: prettier
+        name: "formatting · enforce prettier code style"
+        args:
+          - --config=egolint/.config/lint/javascript/prettier.config.mjs
+        stages:
+          - manual
+          - pre-commit
+
   - repo: https://github.com/biomejs/pre-commit
     rev: v0.6.1
     hooks:
