@@ -13,6 +13,9 @@ import unittest
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
 MODULE_PATH = REPOSITORY_ROOT / "egolint" / "scripts" / "validate_megalinter_policy.py"
+ESLINT_CONFIG_PATH = (
+    REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "javascript" / "eslint.config.mjs"
+)
 SPEC = importlib.util.spec_from_file_location("validate_megalinter_policy", MODULE_PATH)
 if SPEC is None or SPEC.loader is None:
     raise RuntimeError(f"Unable to load MegaLinter policy module from {MODULE_PATH}")
@@ -154,6 +157,13 @@ class MegaLinterPolicyTests(unittest.TestCase):
             self.matrix_by_id["PYTHON_RUFF_FORMAT"]["profiles"]["holistic"],
             "selected",
         )
+
+    def test_eslint_config_handles_optional_json_plugin(self) -> None:
+        config = ESLINT_CONFIG_PATH.read_text(encoding="utf-8")
+        self.assertIn('require("@eslint/json")', config)
+        self.assertIn('error?.code === "MODULE_NOT_FOUND"', config)
+        self.assertIn('String(error.message).includes("@eslint/json")', config)
+        self.assertIn("...jsonConfigs,", config)
 
 
 if __name__ == "__main__":
