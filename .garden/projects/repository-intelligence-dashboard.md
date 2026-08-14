@@ -12,6 +12,10 @@ owners:
 created: 2026-08-14
 updated: 2026-08-14
 sources:
+  - ../../.github/actions/generate-repository-intelligence/README.md
+  - ../../.github/actions/generate-repository-intelligence/action.yml
+  - ../../.github/actions/generate-repository-intelligence/repository-analytics.schema.json
+  - ../../.github/actions/generate-repository-intelligence/repository-tree.schema.json
   - ../../.github/actions/generate-repository-intelligence-dashboard/README.md
   - ../../.github/actions/generate-repository-intelligence-dashboard/action.yml
   - ../../.github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json
@@ -144,6 +148,19 @@ configuration.
    **Complete.**
 5. Extract the stable builder and caller contract to Relay, then instantiate
    it in each repository through its declared capability profile.
+
+## Dashboard expansion roadmap
+
+1. Create commit-scoped, versioned repository-tree and public analytics
+   contracts. Normalize historical paths, remove generated and vendored churn,
+   and guarantee that public projections contain no contributor identities or
+   commit messages. **Complete.**
+2. Render accessible line, donut, and horizontal-bar statistical snapshots from
+   the public analytics contract, with semantic table fallbacks.
+3. Add a searchable, collapsible repository anatomy explorer sourced from the
+   commit-scoped tree contract, with source-pinned links and consistent icons.
+4. Add historical scanner deltas, sparklines, deterministic insight callouts,
+   and final responsive and accessibility polish.
 
 ## Grafana and Prometheus
 

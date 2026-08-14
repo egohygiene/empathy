@@ -478,7 +478,7 @@ collect_statistics() {
   FILE_COUNT="$(awk 'NR > 1 { count++ } END { print count + 0 }' "${STAGING_DIR}/files.tsv")"
   INSERTIONS="$(awk -F '\t' 'NR > 1 { total += $2 } END { print total + 0 }' "${STAGING_DIR}/files.tsv")"
   DELETIONS="$(awk -F '\t' 'NR > 1 { total += $3 } END { print total + 0 }' "${STAGING_DIR}/files.tsv")"
-  first_commit_sha="$(git -C "${REPO_ROOT}" rev-list --max-count=1 --reverse "${revision}" "${GIT_FILTERS[@]}" || true)"
+  first_commit_sha="$(git -C "${REPO_ROOT}" rev-list --reverse "${revision}" "${GIT_FILTERS[@]}" | sed -n '1p' || true)"
   if [[ -n ${first_commit_sha} ]]; then
     FIRST_COMMIT="$(git -C "${REPO_ROOT}" --no-pager show -s --format='%aI' "${first_commit_sha}")"
   else

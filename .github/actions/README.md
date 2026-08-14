@@ -27,7 +27,7 @@ token policy.
 | `contributors`                               | Hydrate All Contributors metadata and regenerate `CONTRIBUTORS.md`           | Working-tree changes             |
 | `flutter-generate`                           | Run selected Flutter source generators and formatting                        | Working-tree changes             |
 | `flutter-setup`                              | Install pinned Flutter and resolve pub dependencies                          | Tool/cache installation          |
-| `generate-repository-intelligence`           | Produce deterministic tree, activity, and SVG artifacts                      | Writes selected output directory |
+| `generate-repository-intelligence`           | Produce commit-scoped tree, public analytics, activity, and SVG artifacts    | Writes selected output directory |
 | `generate-repository-intelligence-dashboard` | Aggregate normalized reports and repository vitality into a static dashboard | Writes selected output directory |
 | `install-linux-build-deps`                   | Install Flutter desktop build packages on Debian-family runners              | System packages                  |
 | `normalize-repository-report`                | Normalize scanner outputs into a versioned intelligence contract             | Writes one summary JSON          |

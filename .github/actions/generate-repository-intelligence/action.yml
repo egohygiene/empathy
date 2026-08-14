@@ -3,8 +3,9 @@
 name: "🧠 Generate Repository Intelligence"
 
 description: >-
-  Generate deterministic repository structure, Git activity, and SVG
-  visualization artifacts under a repository-relative output directory.
+  Generate deterministic repository structure, Git activity, public-safe
+  analytics, and SVG visualization artifacts under a repository-relative
+  output directory.
 
 inputs:
   output-root:
@@ -19,8 +20,16 @@ inputs:
     description: "Comma-separated repository-relative paths or directory names to exclude."
     required: false
     default: ".git,.staging,.cache,.venv,docs/generated,node_modules,vendor,dist,build,coverage,__pycache__,site"
+  analytics-excluded-paths:
+    description: >-
+      Comma-separated generated, cached, or vendored paths excluded from
+      public analytics while remaining eligible for the repository tree.
+    required: false
+    default: ".git,.staging,.cache,.venv,.tox,.mypy_cache,.ruff_cache,.reports,docs/generated,node_modules,vendor,dist,build,coverage,__pycache__,site,target"
   activity-since:
-    description: "Git-compatible start date for the activity report."
+    description: >-
+      Activity window as an ISO-8601 date/timestamp or a deterministic relative
+      value such as '1 year ago', anchored to the inspected commit.
     required: false
     default: "1 year ago"
   activity-ref:
@@ -54,6 +63,12 @@ outputs:
   repository-tree:
     description: "Repository-relative path to the Markdown repository tree."
     value: "${{ inputs.output-root }}/tree/repo.md"
+  repository-tree-json:
+    description: "Repository-relative path to the public-safe, commit-scoped tree contract."
+    value: "${{ inputs.output-root }}/tree/repo.json"
+  analytics-summary:
+    description: "Repository-relative path to the public-safe analytics contract."
+    value: "${{ inputs.output-root }}/analytics/summary.json"
   repository-visualization:
     description: "Repository-relative path to the generated SVG."
     value: "${{ inputs.output-root }}/visualization/repository.svg"
@@ -93,6 +108,7 @@ runs:
 
         mkdir -p "${GITHUB_WORKSPACE}/${OUTPUT_ROOT}/tree"
         mkdir -p "${GITHUB_WORKSPACE}/${OUTPUT_ROOT}/activity"
+        mkdir -p "${GITHUB_WORKSPACE}/${OUTPUT_ROOT}/analytics"
         mkdir -p "${GITHUB_WORKSPACE}/${OUTPUT_ROOT}/visualization"
 
     - name: "🌳 Generate repository tree"
@@ -101,11 +117,13 @@ runs:
         OUTPUT_ROOT: "${{ inputs.output-root }}"
         MAX_DEPTH: "${{ inputs.max-depth }}"
         EXCLUDED_PATHS: "${{ inputs.excluded-paths }}"
+        ACTIVITY_REF: "${{ inputs.activity-ref }}"
       run: |
         set -euo pipefail
         python3 "${GITHUB_ACTION_PATH}/generate_repository_intelligence.py" \
           --repo-root "${GITHUB_WORKSPACE}" \
           --output-root "${GITHUB_WORKSPACE}/${OUTPUT_ROOT}" \
+          --ref "${ACTIVITY_REF}" \
           --max-depth "${MAX_DEPTH}" \
           --excluded-paths "${EXCLUDED_PATHS},${OUTPUT_ROOT}"
 
@@ -144,3 +162,20 @@ runs:
         fi
 
         bash "${GITHUB_ACTION_PATH}/repo-activity" "${args[@]}"
+
+    - name: "🪩 Generate public repository analytics"
+      shell: bash
+      env:
+        OUTPUT_ROOT: "${{ inputs.output-root }}"
+        ACTIVITY_SINCE: "${{ inputs.activity-since }}"
+        ACTIVITY_REF: "${{ inputs.activity-ref }}"
+        ANALYTICS_EXCLUDED_PATHS: "${{ inputs.analytics-excluded-paths }}"
+      run: |
+        set -euo pipefail
+
+        python3 "${GITHUB_ACTION_PATH}/generate_repository_analytics.py" \
+          --repo-root "${GITHUB_WORKSPACE}" \
+          --output "${GITHUB_WORKSPACE}/${OUTPUT_ROOT}/analytics/summary.json" \
+          --ref "${ACTIVITY_REF}" \
+          --since "${ACTIVITY_SINCE}" \
+          --excluded-paths "${ANALYTICS_EXCLUDED_PATHS},${OUTPUT_ROOT}"
