@@ -1,87 +1,124 @@
 {
-  "commit": "f22f5f7cd9248876fa80ff7842c304c2d93a9a80",
-  "discovery": {
-    "artifact_count": 17,
-    "artifacts": [
-      ".reports/megalinter/syft/sbom.spdx.json",
-      "egolint/.config/lint/python/pyproject.toml",
-      "egolint/Cargo.lock",
-      "egolint/package.json",
-      "egolint/pnpm-lock.yaml",
-      "egolint/pyproject.toml",
-      "egolint/tests/fixtures/dart-analyzer/pubspec.lock",
-      "egolint/tests/fixtures/deptry/pyproject.toml",
-      "egolint/tests/fixtures/govulncheck/go.mod",
-      "egolint/tests/fixtures/knip/package.json",
-      "egolint/tests/fixtures/negative/deptry/pyproject.toml",
-      "egolint/tests/fixtures/negative/knip/package.json",
-      "egolint/tests/fixtures/negative/v8r/package.json",
-      "egolint/tests/fixtures/npm-package-json-lint/package.json",
-      "egolint/tests/fixtures/v8r/package.json",
-      "egolint/uv.lock",
-      "pyproject.toml"
-    ],
-    "ecosystem_count": 6,
-    "ecosystems": [
-      "Dart",
-      "Go",
-      "Node.js",
-      "Python",
-      "Rust",
-      "SBOM"
-    ]
+  "commit": "4e6d0eaae86397fe779d737685957db72f4ebd96",
+  "execution": {
+    "message": "Canonical OSV JSON and SARIF outputs were validated.",
+    "state": "success"
   },
-  "event": "push",
-  "generated_at": "2026-08-14T18:04:06Z",
-  "reports": {
-    "json": ".reports/osv/latest.json",
-    "markdown": ".reports/osv/latest.md",
-    "sarif": ".reports/osv/latest.sarif"
-  },
-  "repository": "egohygiene/empathy",
-  "scan": {
-    "affected_packages": 2,
-    "files_scanned": [
-      "egolint/Cargo.lock",
-      "egolint/pnpm-lock.yaml",
-      "egolint/uv.lock"
-    ],
-    "files_skipped": [
-      ".reports/megalinter/syft/sbom.spdx.json",
-      "egolint/.config/lint/python/pyproject.toml",
-      "egolint/package.json",
-      "egolint/pyproject.toml",
-      "egolint/tests/fixtures/dart-analyzer/pubspec.lock",
-      "egolint/tests/fixtures/deptry/pyproject.toml",
-      "egolint/tests/fixtures/govulncheck/go.mod",
-      "egolint/tests/fixtures/knip/package.json",
-      "egolint/tests/fixtures/negative/deptry/pyproject.toml",
-      "egolint/tests/fixtures/negative/knip/package.json",
-      "egolint/tests/fixtures/negative/v8r/package.json",
-      "egolint/tests/fixtures/npm-package-json-lint/package.json",
-      "egolint/tests/fixtures/v8r/package.json",
-      "pyproject.toml"
-    ],
-    "severity": {
+  "findings": {
+    "advisory": 2,
+    "blocking": 0,
+    "by_severity": {
       "critical": 0,
       "high": 0,
       "low": 0,
       "medium": 2,
-      "total": 2,
       "unknown": 0
     },
-    "vulnerabilities": 2
+    "state": "attention",
+    "total": 2
   },
-  "scan_duration_seconds": 9,
-  "scanner": {
-    "name": "osv-scanner",
-    "version": "2.5.0"
+  "freshness": {
+    "expires_at": "2026-08-22T20:26:25Z",
+    "stale_after_days": 8
   },
-  "scanner_step_outcomes": {
-    "json": "failure",
-    "markdown": "failure",
-    "sarif": "failure"
+  "generated_at": "2026-08-14T20:26:25Z",
+  "links": {
+    "detail": "https://github.com/egohygiene/empathy/tree/4e6d0eaae86397fe779d737685957db72f4ebd96/.reports/osv",
+    "security": "https://github.com/egohygiene/empathy/security/code-scanning",
+    "source": "https://github.com/egohygiene/empathy/commit/4e6d0eaae86397fe779d737685957db72f4ebd96",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/31837874913"
   },
-  "schema_version": 1,
-  "severity_threshold": "high"
+  "osv": {
+    "discovery": {
+      "artifact_count": 17,
+      "artifacts": [
+        ".reports/megalinter/syft/sbom.spdx.json",
+        "egolint/.config/lint/python/pyproject.toml",
+        "egolint/Cargo.lock",
+        "egolint/package.json",
+        "egolint/pnpm-lock.yaml",
+        "egolint/pyproject.toml",
+        "egolint/tests/fixtures/dart-analyzer/pubspec.lock",
+        "egolint/tests/fixtures/deptry/pyproject.toml",
+        "egolint/tests/fixtures/govulncheck/go.mod",
+        "egolint/tests/fixtures/knip/package.json",
+        "egolint/tests/fixtures/negative/deptry/pyproject.toml",
+        "egolint/tests/fixtures/negative/knip/package.json",
+        "egolint/tests/fixtures/negative/v8r/package.json",
+        "egolint/tests/fixtures/npm-package-json-lint/package.json",
+        "egolint/tests/fixtures/v8r/package.json",
+        "egolint/uv.lock",
+        "pyproject.toml"
+      ],
+      "ecosystem_count": 6,
+      "ecosystems": [
+        "Dart",
+        "Go",
+        "Node.js",
+        "Python",
+        "Rust",
+        "SBOM"
+      ]
+    },
+    "event": "push",
+    "reports": {
+      "json": ".reports/osv/latest.json",
+      "markdown": ".reports/osv/latest.md",
+      "sarif": ".reports/osv/latest.sarif"
+    },
+    "scan": {
+      "affected_packages": 2,
+      "files_scanned": [
+        "egolint/Cargo.lock",
+        "egolint/pnpm-lock.yaml",
+        "egolint/uv.lock"
+      ],
+      "files_skipped": [
+        ".reports/megalinter/syft/sbom.spdx.json",
+        "egolint/.config/lint/python/pyproject.toml",
+        "egolint/package.json",
+        "egolint/pyproject.toml",
+        "egolint/tests/fixtures/dart-analyzer/pubspec.lock",
+        "egolint/tests/fixtures/deptry/pyproject.toml",
+        "egolint/tests/fixtures/govulncheck/go.mod",
+        "egolint/tests/fixtures/knip/package.json",
+        "egolint/tests/fixtures/negative/deptry/pyproject.toml",
+        "egolint/tests/fixtures/negative/knip/package.json",
+        "egolint/tests/fixtures/negative/v8r/package.json",
+        "egolint/tests/fixtures/npm-package-json-lint/package.json",
+        "egolint/tests/fixtures/v8r/package.json",
+        "pyproject.toml"
+      ],
+      "severity": {
+        "critical": 0,
+        "high": 0,
+        "low": 0,
+        "medium": 2,
+        "total": 2,
+        "unknown": 0
+      },
+      "vulnerabilities": 2
+    },
+    "scan_duration_seconds": 9,
+    "scanner": {
+      "name": "osv-scanner",
+      "version": "2.5.0"
+    },
+    "scanner_step_outcomes": {
+      "json": "failure",
+      "markdown": "failure",
+      "sarif": "failure"
+    },
+    "severity_threshold": "high"
+  },
+  "producer": "osv",
+  "provenance": {
+    "event": "push",
+    "run_attempt": 1,
+    "run_id": "31837874913",
+    "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
+  },
+  "repository": "egohygiene/empathy",
+  "schema": "egohygiene.repository-report-summary/v1",
+  "schema_version": 1
 }
