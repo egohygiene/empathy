@@ -329,6 +329,7 @@ jobs:
           osv-scanner scan source \
             --recursive \
             --allow-no-lockfiles \
+            --config=osv-scanner.toml \
             --format=json \
             --all-packages \
             --verbosity="${OSV_VERBOSITY}" \
@@ -352,6 +353,7 @@ jobs:
           osv-scanner scan source \
             --recursive \
             --allow-no-lockfiles \
+            --config=osv-scanner.toml \
             --format=sarif \
             --verbosity="${OSV_VERBOSITY}" \
             --output-file=.reports/osv/latest.sarif \
@@ -374,6 +376,7 @@ jobs:
           osv-scanner scan source \
             --recursive \
             --allow-no-lockfiles \
+            --config=osv-scanner.toml \
             --format=markdown \
             --verbosity="${OSV_VERBOSITY}" \
             --output-file=.reports/osv/.raw-report.md \
