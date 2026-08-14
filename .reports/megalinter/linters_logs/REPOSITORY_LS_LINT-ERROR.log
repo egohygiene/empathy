@@ -4,10 +4,6 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_ls_lint
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026/08/14 14:40:49 rule ignore not exists
+REUSE.toml failed for `.toml` rules: kebabcase | snakecase
+Taskfile.yml failed for `.yml` rules: kebabcase | snakecase | camelcase
 
-
-[REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.
-Resolutions:
-  - Validate the YAML syntax of `.ls-lint.yml`.
-  - Check that each rule (e.g. `camelCase`, `snake_case`, `regex:...`) is supported by the installed ls-lint version.

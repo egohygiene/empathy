@@ -7,380 +7,108 @@ Linter raw log:
 diff egolint/scripts/latexindent.sh.orig egolint/scripts/latexindent.sh
 --- egolint/scripts/latexindent.sh.orig
 +++ egolint/scripts/latexindent.sh
-@@ -11,25 +11,25 @@
- 
- # @description Print the command contract for the latexindent runner.
- print_usage() {
--  printf '%s\n' \
--    "Usage: latexindent.sh <check|format> [file]" \
--    "" \
--    "Modes:" \
--    "  check   Verify every first-party LaTeX file." \
--    "  format  Format one explicitly supplied LaTeX file."
-+    printf '%s\n' \
-+        "Usage: latexindent.sh <check|format> [file]" \
-+        "" \
-+        "Modes:" \
-+        "  check   Verify every first-party LaTeX file." \
-+        "  format  Format one explicitly supplied LaTeX file."
- }
- 
- # @description Return whether a path belongs to generated, vendored, or fixture data.
+@@ -23,12 +23,12 @@
  # @arg $1 string Repository-relative path.
  is_excluded_path() {
--  case "$1" in
-+    case "$1" in
-     ./.git/* | ./.cache/* | ./.reports/* | ./.staging/* | */node_modules/* | */vendor/* | */.venv/* | */venv/* | */dist/* | */build/* | */coverage/* | */target/* | */tests/fixtures/*)
+   case "$1" in
+-    ./.git/* | ./.cache/* | ./.reports/* | ./.staging/* | */node_modules/* | */vendor/* | */.venv/* | */venv/* | */dist/* | */build/* | */coverage/* | */target/* | */tests/fixtures/*)
 -      return 0
 -      ;;
 -    *)
 -      return 1
 -      ;;
--  esac
-+        return 0
-+        ;;
-+    *)
-+        return 1
-+        ;;
-+    esac
++  ./.git/* | ./.cache/* | ./.reports/* | ./.staging/* | */node_modules/* | */vendor/* | */.venv/* | */venv/* | */dist/* | */build/* | */coverage/* | */target/* | */tests/fixtures/*)
++    return 0
++    ;;
++  *)
++    return 1
++    ;;
+   esac
  }
  
- # @description Render one file through the canonical latexindent configuration.
-@@ -36,85 +36,85 @@
- # @arg $1 string Input file.
- # @arg $2 string Output file.
- render_file() {
--  local input_file="$1"
--  local output_file="$2"
--
--  latexindent \
--    --local="${CONFIGURATION_PATH}" \
--    "${input_file}" \
+@@ -42,7 +42,7 @@
+   latexindent \
+     --local="${CONFIGURATION_PATH}" \
+     "${input_file}" \
 -    > "${output_file}"
--
--  if test ! -s "${output_file}"; then
--    printf 'latexindent produced empty output: %s\n' "${input_file}" >&2
--    return 1
--  fi
-+    local input_file="$1"
-+    local output_file="$2"
-+
-+    latexindent \
-+        --local="${CONFIGURATION_PATH}" \
-+        "${input_file}" \
-+        >"${output_file}"
-+
-+    if test ! -s "${output_file}"; then
-+        printf 'latexindent produced empty output: %s\n' "${input_file}" >&2
-+        return 1
-+    fi
- }
++    >"${output_file}"
  
- # @description Check every applicable first-party LaTeX file.
- check_files() {
--  local discovery_file
--  local status=0
--  local latex_file
--  local temporary_file
--
--  discovery_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-files.XXXXXX")"
--  find . -type f \
--    \( -name "*.tex" -o -name "*.sty" -o -name "*.cls" -o -name "*.bib" \) \
--    -print0 \
+   if test ! -s "${output_file}"; then
+     printf 'latexindent produced empty output: %s\n' "${input_file}" >&2
+@@ -61,7 +61,7 @@
+   find . -type f \
+     \( -name "*.tex" -o -name "*.sty" -o -name "*.cls" -o -name "*.bib" \) \
+     -print0 \
 -    > "${discovery_file}"
--
--  while IFS= read -r -d '' latex_file; do
--    # This predicate intentionally participates in control flow.
--    # shellcheck disable=SC2310
--    if is_excluded_path "${latex_file}"; then
--      continue
--    fi
--
--    temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-check.XXXXXX")"
--    # A render failure is accumulated so every applicable file is checked.
--    # shellcheck disable=SC2310
--    if ! render_file "${latex_file}" "${temporary_file}"; then
--      status=1
--    elif ! cmp --silent "${latex_file}" "${temporary_file}"; then
--      printf 'Formatting required: %s\n' "${latex_file}"
--      status=1
--    fi
--    rm --force "${temporary_file}"
++    >"${discovery_file}"
+ 
+   while IFS= read -r -d '' latex_file; do
+     # This predicate intentionally participates in control flow.
+@@ -80,7 +80,7 @@
+       status=1
+     fi
+     rm --force "${temporary_file}"
 -  done < "${discovery_file}"
--
--  rm --force "${discovery_file}"
--
--  return "${status}"
-+    local discovery_file
-+    local status=0
-+    local latex_file
-+    local temporary_file
-+
-+    discovery_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-files.XXXXXX")"
-+    find . -type f \
-+        \( -name "*.tex" -o -name "*.sty" -o -name "*.cls" -o -name "*.bib" \) \
-+        -print0 \
-+        >"${discovery_file}"
-+
-+    while IFS= read -r -d '' latex_file; do
-+        # This predicate intentionally participates in control flow.
-+        # shellcheck disable=SC2310
-+        if is_excluded_path "${latex_file}"; then
-+            continue
-+        fi
-+
-+        temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-check.XXXXXX")"
-+        # A render failure is accumulated so every applicable file is checked.
-+        # shellcheck disable=SC2310
-+        if ! render_file "${latex_file}" "${temporary_file}"; then
-+            status=1
-+        elif ! cmp --silent "${latex_file}" "${temporary_file}"; then
-+            printf 'Formatting required: %s\n' "${latex_file}"
-+            status=1
-+        fi
-+        rm --force "${temporary_file}"
-+    done <"${discovery_file}"
-+
-+    rm --force "${discovery_file}"
-+
-+    return "${status}"
- }
++  done <"${discovery_file}"
  
- # @description Format one explicitly supplied file through a temporary output.
- # @arg $1 string Input file.
- format_file() {
--  local input_file="$1"
--  local temporary_file
--
--  if test ! -f "${input_file}"; then
--    printf 'The requested LaTeX file does not exist: %s\n' "${input_file}" >&2
--    return 2
--  fi
--
--  temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-format.XXXXXX")"
--  # Failure is handled here so the temporary file can be removed first.
--  # shellcheck disable=SC2310
--  if ! render_file "${input_file}" "${temporary_file}"; then
--    rm --force "${temporary_file}"
--    return 1
--  fi
--
--  if cmp --silent "${input_file}" "${temporary_file}"; then
--    rm --force "${temporary_file}"
--    printf 'Already formatted: %s\n' "${input_file}"
--    return 0
--  fi
--
--  cp "${temporary_file}" "${input_file}"
--  rm --force "${temporary_file}"
--  printf 'Formatted: %s\n' "${input_file}"
-+    local input_file="$1"
-+    local temporary_file
-+
-+    if test ! -f "${input_file}"; then
-+        printf 'The requested LaTeX file does not exist: %s\n' "${input_file}" >&2
-+        return 2
-+    fi
-+
-+    temporary_file="$(mktemp "${TMPDIR:-/tmp}/latexindent-format.XXXXXX")"
-+    # Failure is handled here so the temporary file can be removed first.
-+    # shellcheck disable=SC2310
-+    if ! render_file "${input_file}" "${temporary_file}"; then
-+        rm --force "${temporary_file}"
-+        return 1
-+    fi
-+
-+    if cmp --silent "${input_file}" "${temporary_file}"; then
-+        rm --force "${temporary_file}"
-+        printf 'Already formatted: %s\n' "${input_file}"
-+        return 0
-+    fi
-+
-+    cp "${temporary_file}" "${input_file}"
-+    rm --force "${temporary_file}"
-+    printf 'Formatted: %s\n' "${input_file}"
- }
+   rm --force "${discovery_file}"
  
- # @description Dispatch the latexindent runner.
-@@ -121,27 +121,27 @@
+@@ -121,26 +121,26 @@
  # @arg $1 string Operation: check or format.
  # @arg $2 string Optional file for format mode.
  main() {
 -  if ! command -v latexindent > /dev/null 2>&1; then
--    printf '%s\n' "latexindent 4.0 is required on PATH." >&2
--    return 3
--  fi
--
--  case "${1:-}" in
-+    if ! command -v latexindent >/dev/null 2>&1; then
-+        printf '%s\n' "latexindent 4.0 is required on PATH." >&2
-+        return 3
-+    fi
-+
-+    case "${1:-}" in
-     check)
++  if ! command -v latexindent >/dev/null 2>&1; then
+     printf '%s\n' "latexindent 4.0 is required on PATH." >&2
+     return 3
+   fi
+ 
+   case "${1:-}" in
+-    check)
 -      check_files
 -      ;;
-+        check_files
-+        ;;
-     format)
+-    format)
 -      if test -z "${2:-}"; then
-+        if test -z "${2:-}"; then
-+            print_usage >&2
-+            return 2
-+        fi
-+        format_file "$2"
-+        ;;
-+    *)
-         print_usage >&2
-         return 2
+-        print_usage >&2
+-        return 2
 -      fi
 -      format_file "$2"
 -      ;;
 -    *)
--      print_usage >&2
--      return 2
++  check)
++    check_files
++    ;;
++  format)
++    if test -z "${2:-}"; then
+       print_usage >&2
+       return 2
 -      ;;
--  esac
-+        ;;
-+    esac
++    fi
++    format_file "$2"
++    ;;
++  *)
++    print_usage >&2
++    return 2
++    ;;
+   esac
  }
  
- main "$@"
 diff egolint/scripts/megalinter.sh.orig egolint/scripts/megalinter.sh
 --- egolint/scripts/megalinter.sh.orig
 +++ egolint/scripts/megalinter.sh
-@@ -11,9 +11,9 @@
- # MegaLinter documentation: https://megalinter.io/latest/
- 
- if [[ ${BASH_SOURCE[0]} == "${0}" ]]; then
--  set -o errexit
--  set -o nounset
--  set -o pipefail
-+    set -o errexit
-+    set -o nounset
-+    set -o pipefail
- fi
- 
- SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}")"
-@@ -60,29 +60,29 @@
- # @description Write an informational wrapper message unless quiet mode is active.
- # @arg $@ string Message fragments.
- log_info() {
--  if [[ ${QUIET_MODE} != "true" ]]; then
--    printf "[%s] %s\n" "${SCRIPT_NAME}" "$*"
--  fi
-+    if [[ ${QUIET_MODE} != "true" ]]; then
-+        printf "[%s] %s\n" "${SCRIPT_NAME}" "$*"
-+    fi
- }
- 
- # @description Write a diagnostic message when debug mode is active.
- # @arg $@ string Message fragments.
- log_debug() {
--  if [[ ${DEBUG_MODE} == "true" ]]; then
--    printf "[%s][debug] %s\n" "${SCRIPT_NAME}" "$*" >&2
--  fi
-+    if [[ ${DEBUG_MODE} == "true" ]]; then
-+        printf "[%s][debug] %s\n" "${SCRIPT_NAME}" "$*" >&2
-+    fi
- }
- 
- # @description Write a warning message to standard error.
- # @arg $@ string Message fragments.
- log_warn() {
--  printf "[%s][warning] %s\n" "${SCRIPT_NAME}" "$*" >&2
-+    printf "[%s][warning] %s\n" "${SCRIPT_NAME}" "$*" >&2
- }
- 
- # @description Write an error message to standard error.
- # @arg $@ string Message fragments.
- log_error() {
--  printf "[%s][error] %s\n" "${SCRIPT_NAME}" "$*" >&2
-+    printf "[%s][error] %s\n" "${SCRIPT_NAME}" "$*" >&2
- }
- 
- # @description Write a fatal error and exit with an explicit status.
-@@ -89,16 +89,16 @@
- # @arg $1 string Error message.
- # @arg $2 integer Optional exit status; defaults to the usage status.
- die() {
--  local message="$1"
--  local exit_code="${2:-${EXIT_USAGE}}"
--  log_error "${message}"
--  exit "${exit_code}"
-+    local message="$1"
-+    local exit_code="${2:-${EXIT_USAGE}}"
-+    log_error "${message}"
-+    exit "${exit_code}"
- }
- 
+@@ -98,7 +98,7 @@
  # @description Print the wrapper command reference.
  # @stdout Usage, option, environment, and example documentation.
  show_help() {
 -  cat << 'EOF'
-+    cat <<'EOF'
++  cat <<'EOF'
  Usage:
    megalinter [options] [-- runtime-argument ...]
  
-@@ -179,8 +179,8 @@
- # @description Print wrapper and default MegaLinter versions.
- # @stdout Version information.
- show_version() {
--  printf "%s wrapper 1.0.0\n" "${SCRIPT_NAME}"
--  printf "Default MegaLinter version: %s\n" "${DEFAULT_VERSION}"
-+    printf "%s wrapper 1.0.0\n" "${SCRIPT_NAME}"
-+    printf "Default MegaLinter version: %s\n" "${DEFAULT_VERSION}"
- }
- 
- # @description Require a non-option value for a command-line option.
-@@ -187,11 +187,11 @@
- # @arg $1 string Option name.
- # @arg $2 string Candidate value.
- require_option_value() {
--  local option="$1"
--  local value="${2:-}"
--  if [[ -z ${value} || ${value} == --* ]]; then
--    die "${option} requires a value."
--  fi
-+    local option="$1"
-+    local value="${2:-}"
-+    if [[ -z ${value} || ${value} == --* ]]; then
-+        die "${option} requires a value."
-+    fi
- }
- 
- # @description Validate a comma-separated MegaLinter key list.
-@@ -198,11 +198,11 @@
- # @arg $1 string Option name used in diagnostics.
- # @arg $2 string Normalized key list.
- validate_list() {
--  local option="$1"
--  local value="$2"
--  if [[ ! ${value} =~ ^[A-Za-z0-9_,-]+$ ]]; then
--    die "${option} accepts only comma-separated MegaLinter keys."
--  fi
-+    local option="$1"
-+    local value="$2"
-+    if [[ ! ${value} =~ ^[A-Za-z0-9_,-]+$ ]]; then
-+        die "${option} accepts only comma-separated MegaLinter keys."
-+    fi
- }
- 
- # @description Remove whitespace and uppercase a MegaLinter key list.
-@@ -209,172 +209,172 @@
- # @arg $1 string Raw key list.
- # @stdout Normalized comma-separated key list.
- normalize_list() {
--  printf "%s" "$1" | tr -d '[:space:]' | tr '[:lower:]' '[:upper:]'
-+    printf "%s" "$1" | tr -d '[:space:]' | tr '[:lower:]' '[:upper:]'
- }
- 
- # @description Parse wrapper arguments into validated global option state.
- # @arg $@ string Wrapper command-line arguments.
+@@ -217,162 +217,162 @@
  parse_arguments() {
--  while [[ $# -gt 0 ]]; do
--    case "$1" in
+   while [[ $# -gt 0 ]]; do
+     case "$1" in
 -      --descriptors)
 -        require_option_value "$1" "${2:-}"
 -        ENABLE_DESCRIPTORS="$(normalize_list "$2")"
@@ -537,1018 +265,376 @@ diff egolint/scripts/megalinter.sh.orig egolint/scripts/megalinter.sh
 -      *)
 -        die "Unknown option: $1. Run ${SCRIPT_NAME} --help for usage."
 -        ;;
--    esac
--  done
-+    while [[ $# -gt 0 ]]; do
-+        case "$1" in
-+        --descriptors)
-+            require_option_value "$1" "${2:-}"
-+            ENABLE_DESCRIPTORS="$(normalize_list "$2")"
-+            validate_list "$1" "${ENABLE_DESCRIPTORS}"
-+            shift 2
-+            ;;
-+        --linters)
-+            require_option_value "$1" "${2:-}"
-+            ENABLE_LINTERS="$(normalize_list "$2")"
-+            validate_list "$1" "${ENABLE_LINTERS}"
-+            shift 2
-+            ;;
-+        --disable-descriptors)
-+            require_option_value "$1" "${2:-}"
-+            DISABLE_DESCRIPTORS="$(normalize_list "$2")"
-+            validate_list "$1" "${DISABLE_DESCRIPTORS}"
-+            shift 2
-+            ;;
-+        --disable-linters)
-+            require_option_value "$1" "${2:-}"
-+            DISABLE_LINTERS="$(normalize_list "$2")"
-+            validate_list "$1" "${DISABLE_LINTERS}"
-+            shift 2
-+            ;;
-+        --changed-only)
-+            CHANGED_ONLY="true"
-+            shift
-+            ;;
-+        --fix)
-+            FIX_VALUE="all"
-+            shift
-+            ;;
-+        --fix=*)
-+            FIX_VALUE="$(normalize_list "${1#*=}")"
-+            [[ -n ${FIX_VALUE} ]] || die "--fix requires a non-empty value after '='."
-+            validate_list "--fix" "${FIX_VALUE}"
-+            shift
-+            ;;
-+        --workspace)
-+            require_option_value "$1" "${2:-}"
-+            WORKSPACE="$2"
-+            shift 2
-+            ;;
-+        --config)
-+            require_option_value "$1" "${2:-}"
-+            CONFIG_FILE="$2"
-+            shift 2
-+            ;;
-+        --report-directory)
-+            require_option_value "$1" "${2:-}"
-+            REPORT_DIRECTORY="$2"
-+            shift 2
-+            ;;
-+        --no-reports)
-+            REPORT_DIRECTORY="none"
-+            shift
-+            ;;
-+        --runtime)
-+            require_option_value "$1" "${2:-}"
-+            RUNTIME="$2"
-+            shift 2
-+            ;;
-+        --flavor)
-+            require_option_value "$1" "${2:-}"
-+            FLAVOR="$2"
-+            shift 2
-+            ;;
-+        --version)
-+            require_option_value "$1" "${2:-}"
-+            MEGALINTER_VERSION="$2"
-+            shift 2
-+            ;;
-+        --image)
-+            require_option_value "$1" "${2:-}"
-+            IMAGE="$2"
-+            shift 2
-+            ;;
-+        --pull)
-+            require_option_value "$1" "${2:-}"
-+            PULL_POLICY="$2"
-+            shift 2
-+            ;;
-+        --platform)
-+            require_option_value "$1" "${2:-}"
-+            PLATFORM="$2"
-+            shift 2
-+            ;;
-+        --tty)
-+            require_option_value "$1" "${2:-}"
-+            TTY_MODE="$2"
-+            shift 2
-+            ;;
-+        --user)
-+            require_option_value "$1" "${2:-}"
-+            USER_MODE="$2"
-+            shift 2
-+            ;;
-+        --env)
-+            require_option_value "$1" "${2:-}"
-+            [[ $2 == *=* && $2 != =* ]] || die "--env requires NAME=VALUE."
-+            EXTRA_ENVS+=("$2")
-+            shift 2
-+            ;;
-+        --env-file)
-+            require_option_value "$1" "${2:-}"
-+            ENV_FILE="$2"
-+            shift 2
-+            ;;
-+        --volume)
-+            require_option_value "$1" "${2:-}"
-+            EXTRA_VOLUMES+=("$2")
-+            shift 2
-+            ;;
-+        --mount-docker-socket)
-+            DOCKER_SOCKET="true"
-+            shift
-+            ;;
-+        --runtime-arg)
-+            [[ $# -ge 2 ]] || die "--runtime-arg requires a value."
-+            RUNTIME_ARGS+=("$2")
-+            shift 2
-+            ;;
-+        --doctor)
-+            DOCTOR_MODE="true"
-+            shift
-+            ;;
-+        --dry-run)
-+            DRY_RUN="true"
-+            shift
-+            ;;
-+        --debug)
-+            DEBUG_MODE="true"
-+            shift
-+            ;;
-+        --quiet)
-+            QUIET_MODE="true"
-+            shift
-+            ;;
-+        --help)
-+            show_help
-+            exit "${EXIT_SUCCESS}"
-+            ;;
-+        --wrapper-version)
-+            show_version
-+            exit "${EXIT_SUCCESS}"
-+            ;;
-+        --)
-+            shift
-+            while [[ $# -gt 0 ]]; do
-+                RUNTIME_ARGS+=("$1")
-+                shift
-+            done
-+            ;;
-+        *)
-+            die "Unknown option: $1. Run ${SCRIPT_NAME} --help for usage."
-+            ;;
-+        esac
-+    done
++    --descriptors)
++      require_option_value "$1" "${2:-}"
++      ENABLE_DESCRIPTORS="$(normalize_list "$2")"
++      validate_list "$1" "${ENABLE_DESCRIPTORS}"
++      shift 2
++      ;;
++    --linters)
++      require_option_value "$1" "${2:-}"
++      ENABLE_LINTERS="$(normalize_list "$2")"
++      validate_list "$1" "${ENABLE_LINTERS}"
++      shift 2
++      ;;
++    --disable-descriptors)
++      require_option_value "$1" "${2:-}"
++      DISABLE_DESCRIPTORS="$(normalize_list "$2")"
++      validate_list "$1" "${DISABLE_DESCRIPTORS}"
++      shift 2
++      ;;
++    --disable-linters)
++      require_option_value "$1" "${2:-}"
++      DISABLE_LINTERS="$(normalize_list "$2")"
++      validate_list "$1" "${DISABLE_LINTERS}"
++      shift 2
++      ;;
++    --changed-only)
++      CHANGED_ONLY="true"
++      shift
++      ;;
++    --fix)
++      FIX_VALUE="all"
++      shift
++      ;;
++    --fix=*)
++      FIX_VALUE="$(normalize_list "${1#*=}")"
++      [[ -n ${FIX_VALUE} ]] || die "--fix requires a non-empty value after '='."
++      validate_list "--fix" "${FIX_VALUE}"
++      shift
++      ;;
++    --workspace)
++      require_option_value "$1" "${2:-}"
++      WORKSPACE="$2"
++      shift 2
++      ;;
++    --config)
++      require_option_value "$1" "${2:-}"
++      CONFIG_FILE="$2"
++      shift 2
++      ;;
++    --report-directory)
++      require_option_value "$1" "${2:-}"
++      REPORT_DIRECTORY="$2"
++      shift 2
++      ;;
++    --no-reports)
++      REPORT_DIRECTORY="none"
++      shift
++      ;;
++    --runtime)
++      require_option_value "$1" "${2:-}"
++      RUNTIME="$2"
++      shift 2
++      ;;
++    --flavor)
++      require_option_value "$1" "${2:-}"
++      FLAVOR="$2"
++      shift 2
++      ;;
++    --version)
++      require_option_value "$1" "${2:-}"
++      MEGALINTER_VERSION="$2"
++      shift 2
++      ;;
++    --image)
++      require_option_value "$1" "${2:-}"
++      IMAGE="$2"
++      shift 2
++      ;;
++    --pull)
++      require_option_value "$1" "${2:-}"
++      PULL_POLICY="$2"
++      shift 2
++      ;;
++    --platform)
++      require_option_value "$1" "${2:-}"
++      PLATFORM="$2"
++      shift 2
++      ;;
++    --tty)
++      require_option_value "$1" "${2:-}"
++      TTY_MODE="$2"
++      shift 2
++      ;;
++    --user)
++      require_option_value "$1" "${2:-}"
++      USER_MODE="$2"
++      shift 2
++      ;;
++    --env)
++      require_option_value "$1" "${2:-}"
++      [[ $2 == *=* && $2 != =* ]] || die "--env requires NAME=VALUE."
++      EXTRA_ENVS+=("$2")
++      shift 2
++      ;;
++    --env-file)
++      require_option_value "$1" "${2:-}"
++      ENV_FILE="$2"
++      shift 2
++      ;;
++    --volume)
++      require_option_value "$1" "${2:-}"
++      EXTRA_VOLUMES+=("$2")
++      shift 2
++      ;;
++    --mount-docker-socket)
++      DOCKER_SOCKET="true"
++      shift
++      ;;
++    --runtime-arg)
++      [[ $# -ge 2 ]] || die "--runtime-arg requires a value."
++      RUNTIME_ARGS+=("$2")
++      shift 2
++      ;;
++    --doctor)
++      DOCTOR_MODE="true"
++      shift
++      ;;
++    --dry-run)
++      DRY_RUN="true"
++      shift
++      ;;
++    --debug)
++      DEBUG_MODE="true"
++      shift
++      ;;
++    --quiet)
++      QUIET_MODE="true"
++      shift
++      ;;
++    --help)
++      show_help
++      exit "${EXIT_SUCCESS}"
++      ;;
++    --wrapper-version)
++      show_version
++      exit "${EXIT_SUCCESS}"
++      ;;
++    --)
++      shift
++      while [[ $# -gt 0 ]]; do
++        RUNTIME_ARGS+=("$1")
++        shift
++      done
++      ;;
++    *)
++      die "Unknown option: $1. Run ${SCRIPT_NAME} --help for usage."
++      ;;
+     esac
+   done
  }
- 
- # @description Resolve an existing directory to a physical absolute path.
-@@ -381,258 +381,258 @@
- # @arg $1 string Candidate directory.
- # @stdout Physical absolute path when the directory exists.
- absolute_directory() {
--  local path="$1"
--  [[ -d ${path} ]] || return 1
--  (cd "${path}" && pwd -P)
-+    local path="$1"
-+    [[ -d ${path} ]] || return 1
-+    (cd "${path}" && pwd -P)
- }
- 
- # @description Resolve and validate the repository workspace.
+@@ -390,7 +390,7 @@
  resolve_workspace() {
--  local candidate="${WORKSPACE}"
--  if [[ -z ${candidate} ]]; then
+   local candidate="${WORKSPACE}"
+   if [[ -z ${candidate} ]]; then
 -    candidate="$(git rev-parse --show-toplevel 2> /dev/null || pwd -P)"
--  fi
--
--  WORKSPACE="$(absolute_directory "${candidate}")" ||
--    die "Workspace does not exist or is not a directory: ${candidate}"
--
--  [[ -r ${WORKSPACE} ]] || die "Workspace is not readable: ${WORKSPACE}"
-+    local candidate="${WORKSPACE}"
-+    if [[ -z ${candidate} ]]; then
-+        candidate="$(git rev-parse --show-toplevel 2>/dev/null || pwd -P)"
-+    fi
-+
-+    WORKSPACE="$(absolute_directory "${candidate}")" ||
-+        die "Workspace does not exist or is not a directory: ${candidate}"
-+
-+    [[ -r ${WORKSPACE} ]] || die "Workspace is not readable: ${WORKSPACE}"
- }
++    candidate="$(git rev-parse --show-toplevel 2>/dev/null || pwd -P)"
+   fi
  
- # @description Determine whether an absolute path is inside the workspace.
- # @arg $1 string Absolute path.
+   WORKSPACE="$(absolute_directory "${candidate}")" ||
+@@ -404,8 +404,8 @@
  path_is_within_workspace() {
--  local path="$1"
--  case "${path}" in
-+    local path="$1"
-+    case "${path}" in
-     "${WORKSPACE}" | "${WORKSPACE}"/*) return 0 ;;
-     *) return 1 ;;
--  esac
-+    esac
+   local path="$1"
+   case "${path}" in
+-    "${WORKSPACE}" | "${WORKSPACE}"/*) return 0 ;;
+-    *) return 1 ;;
++  "${WORKSPACE}" | "${WORKSPACE}"/*) return 0 ;;
++  *) return 1 ;;
+   esac
  }
  
- # @description Resolve an explicit or conventional MegaLinter configuration.
- resolve_config() {
--  local candidate=""
--
--  if [[ -n ${CONFIG_FILE} ]]; then
--    case "${CONFIG_FILE}" in
+@@ -415,8 +415,8 @@
+ 
+   if [[ -n ${CONFIG_FILE} ]]; then
+     case "${CONFIG_FILE}" in
 -      /*) candidate="${CONFIG_FILE}" ;;
 -      *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
--    esac
--  elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
--    candidate="${WORKSPACE}/.mega-linter.yml"
--  elif [[ -f "${WORKSPACE}/.mega-linter.yaml" ]]; then
--    candidate="${WORKSPACE}/.mega-linter.yaml"
--  fi
--
--  if [[ -z ${candidate} ]]; then
--    CONFIG_FILE=""
--    return 0
--  fi
--
--  [[ -f ${candidate} ]] || die "MegaLinter config does not exist: ${candidate}"
--  candidate="$(cd "$(dirname "${candidate}")" && pwd -P)/$(basename "${candidate}")"
--  path_is_within_workspace "${candidate}" ||
--    die "MegaLinter config must be inside the workspace: ${candidate}"
--  CONFIG_FILE="${candidate}"
-+    local candidate=""
-+
-+    if [[ -n ${CONFIG_FILE} ]]; then
-+        case "${CONFIG_FILE}" in
-+        /*) candidate="${CONFIG_FILE}" ;;
-+        *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
-+        esac
-+    elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
-+        candidate="${WORKSPACE}/.mega-linter.yml"
-+    elif [[ -f "${WORKSPACE}/.mega-linter.yaml" ]]; then
-+        candidate="${WORKSPACE}/.mega-linter.yaml"
-+    fi
-+
-+    if [[ -z ${candidate} ]]; then
-+        CONFIG_FILE=""
-+        return 0
-+    fi
-+
-+    [[ -f ${candidate} ]] || die "MegaLinter config does not exist: ${candidate}"
-+    candidate="$(cd "$(dirname "${candidate}")" && pwd -P)/$(basename "${candidate}")"
-+    path_is_within_workspace "${candidate}" ||
-+        die "MegaLinter config must be inside the workspace: ${candidate}"
-+    CONFIG_FILE="${candidate}"
++    /*) candidate="${CONFIG_FILE}" ;;
++    *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
+     esac
+   elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
+     candidate="${WORKSPACE}/.mega-linter.yml"
+@@ -441,8 +441,8 @@
+   [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
+   [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
+   case "${REPORT_DIRECTORY}" in
+-    /*) die "Report directory must be relative to the workspace." ;;
+-    */../* | ../* | */..) die "Report directory may not contain a '..' segment: ${REPORT_DIRECTORY}" ;;
++  /*) die "Report directory must be relative to the workspace." ;;
++  */../* | ../* | */..) die "Report directory may not contain a '..' segment: ${REPORT_DIRECTORY}" ;;
+   esac
+   REPORT_DIRECTORY="${REPORT_DIRECTORY#./}"
  }
+@@ -458,7 +458,7 @@
+   [[ -n ${MEGALINTER_VERSION} ]] || die "MegaLinter version cannot be empty."
  
- # @description Validate and normalize the repository-relative report directory.
- validate_report_directory() {
--  [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
--  [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
--  case "${REPORT_DIRECTORY}" in
-+    [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
-+    [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
-+    case "${REPORT_DIRECTORY}" in
-     /*) die "Report directory must be relative to the workspace." ;;
-     */../* | ../* | */..) die "Report directory may not contain a '..' segment: ${REPORT_DIRECTORY}" ;;
--  esac
--  REPORT_DIRECTORY="${REPORT_DIRECTORY#./}"
-+    esac
-+    REPORT_DIRECTORY="${REPORT_DIRECTORY#./}"
- }
- 
- # @description Validate enumerated options and option-dependent prerequisites.
- validate_options() {
--  case "${RUNTIME}" in auto | docker | podman) ;; *) die "Invalid runtime: ${RUNTIME}" ;; esac
--  case "${PULL_POLICY}" in always | missing | never) ;; *) die "Invalid pull policy: ${PULL_POLICY}" ;; esac
--  case "${TTY_MODE}" in auto | always | never) ;; *) die "Invalid TTY mode: ${TTY_MODE}" ;; esac
--  case "${USER_MODE}" in default | host) ;; *) die "Invalid user mode: ${USER_MODE}" ;; esac
--
--  [[ ${FLAVOR} =~ ^[a-z0-9][a-z0-9_-]*$ ]] || die "Invalid flavor: ${FLAVOR}"
--  [[ -n ${MEGALINTER_VERSION} ]] || die "MegaLinter version cannot be empty."
--
--  if [[ ${CHANGED_ONLY} == "true" && ! -d "${WORKSPACE}/.git" ]]; then
+   if [[ ${CHANGED_ONLY} == "true" && ! -d "${WORKSPACE}/.git" ]]; then
 -    git -C "${WORKSPACE}" rev-parse --git-dir > /dev/null 2>&1 ||
--      die "--changed-only requires a Git worktree."
--  fi
--
--  if [[ -n ${ENV_FILE} ]]; then
--    [[ -f ${ENV_FILE} ]] || die "Environment file does not exist: ${ENV_FILE}"
--    ENV_FILE="$(cd "$(dirname "${ENV_FILE}")" && pwd -P)/$(basename "${ENV_FILE}")"
--  fi
-+    case "${RUNTIME}" in auto | docker | podman) ;; *) die "Invalid runtime: ${RUNTIME}" ;; esac
-+    case "${PULL_POLICY}" in always | missing | never) ;; *) die "Invalid pull policy: ${PULL_POLICY}" ;; esac
-+    case "${TTY_MODE}" in auto | always | never) ;; *) die "Invalid TTY mode: ${TTY_MODE}" ;; esac
-+    case "${USER_MODE}" in default | host) ;; *) die "Invalid user mode: ${USER_MODE}" ;; esac
-+
-+    [[ ${FLAVOR} =~ ^[a-z0-9][a-z0-9_-]*$ ]] || die "Invalid flavor: ${FLAVOR}"
-+    [[ -n ${MEGALINTER_VERSION} ]] || die "MegaLinter version cannot be empty."
-+
-+    if [[ ${CHANGED_ONLY} == "true" && ! -d "${WORKSPACE}/.git" ]]; then
-+        git -C "${WORKSPACE}" rev-parse --git-dir >/dev/null 2>&1 ||
-+            die "--changed-only requires a Git worktree."
-+    fi
-+
-+    if [[ -n ${ENV_FILE} ]]; then
-+        [[ -f ${ENV_FILE} ]] || die "Environment file does not exist: ${ENV_FILE}"
-+        ENV_FILE="$(cd "$(dirname "${ENV_FILE}")" && pwd -P)/$(basename "${ENV_FILE}")"
-+    fi
- }
++    git -C "${WORKSPACE}" rev-parse --git-dir >/dev/null 2>&1 ||
+       die "--changed-only requires a Git worktree."
+   fi
  
+@@ -471,14 +471,14 @@
  # @description Select Docker or Podman and confirm the executable is available.
  select_runtime() {
--  if [[ ${RUNTIME} == "auto" ]]; then
+   if [[ ${RUNTIME} == "auto" ]]; then
 -    if command -v docker > /dev/null 2>&1; then
--      RUNTIME="docker"
++    if command -v docker >/dev/null 2>&1; then
+       RUNTIME="docker"
 -    elif command -v podman > /dev/null 2>&1; then
--      RUNTIME="podman"
--    else
--      die "Neither Docker nor Podman is installed." "${EXIT_DEPENDENCY}"
--    fi
++    elif command -v podman >/dev/null 2>&1; then
+       RUNTIME="podman"
+     else
+       die "Neither Docker nor Podman is installed." "${EXIT_DEPENDENCY}"
+     fi
 -  elif ! command -v "${RUNTIME}" > /dev/null 2>&1; then
--    die "Container runtime is not installed: ${RUNTIME}" "${EXIT_DEPENDENCY}"
--  fi
-+    if [[ ${RUNTIME} == "auto" ]]; then
-+        if command -v docker >/dev/null 2>&1; then
-+            RUNTIME="docker"
-+        elif command -v podman >/dev/null 2>&1; then
-+            RUNTIME="podman"
-+        else
-+            die "Neither Docker nor Podman is installed." "${EXIT_DEPENDENCY}"
-+        fi
-+    elif ! command -v "${RUNTIME}" >/dev/null 2>&1; then
-+        die "Container runtime is not installed: ${RUNTIME}" "${EXIT_DEPENDENCY}"
-+    fi
++  elif ! command -v "${RUNTIME}" >/dev/null 2>&1; then
+     die "Container runtime is not installed: ${RUNTIME}" "${EXIT_DEPENDENCY}"
+   fi
  }
- 
- # @description Resolve the MegaLinter image from flavor and version defaults.
- resolve_image() {
--  [[ -n ${IMAGE} ]] && return 0
--  if [[ ${FLAVOR} == "all" ]]; then
--    IMAGE="${DEFAULT_REGISTRY}/megalinter:${MEGALINTER_VERSION}"
--  else
--    IMAGE="${DEFAULT_REGISTRY}/megalinter-${FLAVOR}:${MEGALINTER_VERSION}"
--  fi
-+    [[ -n ${IMAGE} ]] && return 0
-+    if [[ ${FLAVOR} == "all" ]]; then
-+        IMAGE="${DEFAULT_REGISTRY}/megalinter:${MEGALINTER_VERSION}"
-+    else
-+        IMAGE="${DEFAULT_REGISTRY}/megalinter-${FLAVOR}:${MEGALINTER_VERSION}"
-+    fi
- }
+@@ -495,15 +495,15 @@
  
  # @description Check whether the selected container runtime service is ready.
  runtime_ready() {
 -  "${RUNTIME}" info > /dev/null 2>&1
-+    "${RUNTIME}" info >/dev/null 2>&1
++  "${RUNTIME}" info >/dev/null 2>&1
  }
  
  # @description Check whether the resolved MegaLinter image exists locally.
  image_exists() {
--  if [[ ${RUNTIME} == "docker" ]]; then
+   if [[ ${RUNTIME} == "docker" ]]; then
 -    docker image inspect "${IMAGE}" > /dev/null 2>&1
 -  else
 -    podman image exists "${IMAGE}" > /dev/null 2>&1
--  fi
-+    if [[ ${RUNTIME} == "docker" ]]; then
-+        docker image inspect "${IMAGE}" >/dev/null 2>&1
-+    else
-+        podman image exists "${IMAGE}" >/dev/null 2>&1
-+    fi
++    docker image inspect "${IMAGE}" >/dev/null 2>&1
++  else
++    podman image exists "${IMAGE}" >/dev/null 2>&1
+   fi
  }
  
- # @description Enforce the configured container-image pull policy.
- prepare_image() {
--  if [[ ${PULL_POLICY} == "always" ]]; then
--    log_info "Pulling ${IMAGE}"
--    "${RUNTIME}" pull "${IMAGE}"
--  elif [[ ${PULL_POLICY} == "missing" ]] && ! image_exists; then
--    log_info "Image is not present locally; pulling ${IMAGE}"
--    "${RUNTIME}" pull "${IMAGE}"
--  elif [[ ${PULL_POLICY} == "never" ]] && ! image_exists; then
--    die "Image is not present locally and --pull never was selected: ${IMAGE}" "${EXIT_RUNTIME}"
--  fi
-+    if [[ ${PULL_POLICY} == "always" ]]; then
-+        log_info "Pulling ${IMAGE}"
-+        "${RUNTIME}" pull "${IMAGE}"
-+    elif [[ ${PULL_POLICY} == "missing" ]] && ! image_exists; then
-+        log_info "Image is not present locally; pulling ${IMAGE}"
-+        "${RUNTIME}" pull "${IMAGE}"
-+    elif [[ ${PULL_POLICY} == "never" ]] && ! image_exists; then
-+        die "Image is not present locally and --pull never was selected: ${IMAGE}" "${EXIT_RUNTIME}"
-+    fi
- }
- 
- # @description Derive an owner/repository identifier from the origin remote.
- # @stdout GitHub repository identifier, or an empty line when unavailable.
+@@ -525,13 +525,13 @@
  github_repository() {
--  local remote_url=""
--  local repository=""
+   local remote_url=""
+   local repository=""
 -  remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2> /dev/null || true)"
--
--  case "${remote_url}" in
-+    local remote_url=""
-+    local repository=""
-+    remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2>/dev/null || true)"
-+
-+    case "${remote_url}" in
-     git@github.com:*) repository="${remote_url#git@github.com:}" ;;
-     ssh://git@github.com/*) repository="${remote_url#ssh://git@github.com/}" ;;
-     https://github.com/*) repository="${remote_url#https://github.com/}" ;;
-     http://github.com/*) repository="${remote_url#http://github.com/}" ;;
--  esac
--  repository="${repository%.git}"
--  printf "%s\n" "${repository}"
-+    esac
-+    repository="${repository%.git}"
-+    printf "%s\n" "${repository}"
- }
++  remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2>/dev/null || true)"
  
- # @description Derive the current symbolic Git branch as a full GitHub ref.
+   case "${remote_url}" in
+-    git@github.com:*) repository="${remote_url#git@github.com:}" ;;
+-    ssh://git@github.com/*) repository="${remote_url#ssh://git@github.com/}" ;;
+-    https://github.com/*) repository="${remote_url#https://github.com/}" ;;
+-    http://github.com/*) repository="${remote_url#http://github.com/}" ;;
++  git@github.com:*) repository="${remote_url#git@github.com:}" ;;
++  ssh://git@github.com/*) repository="${remote_url#ssh://git@github.com/}" ;;
++  https://github.com/*) repository="${remote_url#https://github.com/}" ;;
++  http://github.com/*) repository="${remote_url#http://github.com/}" ;;
+   esac
+   repository="${repository%.git}"
+   printf "%s\n" "${repository}"
+@@ -541,7 +541,7 @@
  # @stdout Full branch ref, or an empty line for detached worktrees.
  github_ref() {
--  local branch=""
+   local branch=""
 -  branch="$(git -C "${WORKSPACE}" symbolic-ref --quiet --short HEAD 2> /dev/null || true)"
--  if [[ -n ${branch} ]]; then
--    printf "refs/heads/%s\n" "${branch}"
--  fi
-+    local branch=""
-+    branch="$(git -C "${WORKSPACE}" symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
-+    if [[ -n ${branch} ]]; then
-+        printf "refs/heads/%s\n" "${branch}"
-+    fi
- }
++  branch="$(git -C "${WORKSPACE}" symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
+   if [[ -n ${branch} ]]; then
+     printf "refs/heads/%s\n" "${branch}"
+   fi
+@@ -562,12 +562,12 @@
+   RUN_COMMAND=("${RUNTIME}" "run" "--rm")
  
- # @description Append one environment assignment to the container command.
- # @arg $1 string NAME=VALUE assignment.
- append_env() {
--  RUN_COMMAND+=("--env" "$1")
-+    RUN_COMMAND+=("--env" "$1")
- }
- 
- # @description Build the complete container command as a shell-safe array.
- build_run_command() {
--  local repository=""
--  local ref=""
--  local item=""
--
--  RUN_COMMAND=("${RUNTIME}" "run" "--rm")
--
--  case "${TTY_MODE}" in
-+    local repository=""
-+    local ref=""
-+    local item=""
-+
-+    RUN_COMMAND=("${RUNTIME}" "run" "--rm")
-+
-+    case "${TTY_MODE}" in
-     always) RUN_COMMAND+=("--interactive" "--tty") ;;
-     auto)
+   case "${TTY_MODE}" in
+-    always) RUN_COMMAND+=("--interactive" "--tty") ;;
+-    auto)
 -      if [[ -t 0 && -t 1 ]]; then
 -        RUN_COMMAND+=("--interactive" "--tty")
 -      fi
 -      ;;
--  esac
--
--  RUN_COMMAND+=("--volume" "${WORKSPACE}:${CONTAINER_WORKSPACE}:rw")
--  RUN_COMMAND+=("--workdir" "${CONTAINER_WORKSPACE}")
--
--  if [[ ${USER_MODE} == "host" ]]; then
++  always) RUN_COMMAND+=("--interactive" "--tty") ;;
++  auto)
++    if [[ -t 0 && -t 1 ]]; then
++      RUN_COMMAND+=("--interactive" "--tty")
++    fi
++    ;;
+   esac
+ 
+   RUN_COMMAND+=("--volume" "${WORKSPACE}:${CONTAINER_WORKSPACE}:rw")
+@@ -574,7 +574,7 @@
+   RUN_COMMAND+=("--workdir" "${CONTAINER_WORKSPACE}")
+ 
+   if [[ ${USER_MODE} == "host" ]]; then
 -    command -v id > /dev/null 2>&1 || die "--user host requires the id command."
--    RUN_COMMAND+=("--user" "$(id -u):$(id -g)")
--  fi
--
--  [[ -z ${PLATFORM} ]] || RUN_COMMAND+=("--platform" "${PLATFORM}")
--  [[ -z ${ENV_FILE} ]] || RUN_COMMAND+=("--env-file" "${ENV_FILE}")
--
--  if [[ ${DOCKER_SOCKET} == "true" ]]; then
--    if [[ ${RUNTIME} == "docker" ]]; then
--      [[ -S "/var/run/docker.sock" ]] || die "Docker socket not found: /var/run/docker.sock"
--      RUN_COMMAND+=("--volume" "/var/run/docker.sock:/var/run/docker.sock:rw")
--    else
--      local podman_socket="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/podman/podman.sock"
--      [[ -S ${podman_socket} ]] || die "Podman socket not found: ${podman_socket}"
--      RUN_COMMAND+=("--volume" "${podman_socket}:/var/run/docker.sock:rw")
--    fi
--  fi
--
--  for item in "${EXTRA_VOLUMES[@]}"; do
--    RUN_COMMAND+=("--volume" "${item}")
--  done
--
--  append_env "GITHUB_WORKSPACE=${CONTAINER_WORKSPACE}"
--  append_env "VALIDATE_ALL_CODEBASE=$([[ ${CHANGED_ONLY} == "true" ]] && printf false || printf true)"
--
--  [[ -z ${ENABLE_DESCRIPTORS} ]] || append_env "ENABLE=${ENABLE_DESCRIPTORS}"
--  [[ -z ${ENABLE_LINTERS} ]] || append_env "ENABLE_LINTERS=${ENABLE_LINTERS}"
--  [[ -z ${DISABLE_DESCRIPTORS} ]] || append_env "DISABLE=${DISABLE_DESCRIPTORS}"
--  [[ -z ${DISABLE_LINTERS} ]] || append_env "DISABLE_LINTERS=${DISABLE_LINTERS}"
--  [[ -z ${FIX_VALUE} ]] || append_env "APPLY_FIXES=${FIX_VALUE}"
--
--  if [[ ${REPORT_DIRECTORY} == "none" ]]; then
--    append_env "REPORT_OUTPUT_FOLDER=none"
--  else
--    append_env "REPORT_OUTPUT_FOLDER=${CONTAINER_WORKSPACE}/${REPORT_DIRECTORY}"
--  fi
--
--  if [[ -n ${CONFIG_FILE} ]]; then
--    append_env "MEGALINTER_CONFIG=${CONTAINER_WORKSPACE}/${CONFIG_FILE#"${WORKSPACE}/"}"
--  fi
--
--  repository="$(github_repository)"
--  ref="$(github_ref)"
--  [[ -z ${repository} ]] || append_env "GITHUB_REPOSITORY=${repository}"
--  [[ -z ${ref} ]] || append_env "GITHUB_REF=${ref}"
--
--  if [[ ${DEBUG_MODE} == "true" ]]; then
--    append_env "LOG_LEVEL=DEBUG"
--    append_env "PRINT_ALL_FILES=true"
--  fi
--
--  for item in "${EXTRA_ENVS[@]}"; do
--    append_env "${item}"
--  done
--  for item in "${RUNTIME_ARGS[@]}"; do
--    RUN_COMMAND+=("${item}")
--  done
--
--  RUN_COMMAND+=("${IMAGE}")
-+        if [[ -t 0 && -t 1 ]]; then
-+            RUN_COMMAND+=("--interactive" "--tty")
-+        fi
-+        ;;
-+    esac
-+
-+    RUN_COMMAND+=("--volume" "${WORKSPACE}:${CONTAINER_WORKSPACE}:rw")
-+    RUN_COMMAND+=("--workdir" "${CONTAINER_WORKSPACE}")
-+
-+    if [[ ${USER_MODE} == "host" ]]; then
-+        command -v id >/dev/null 2>&1 || die "--user host requires the id command."
-+        RUN_COMMAND+=("--user" "$(id -u):$(id -g)")
-+    fi
-+
-+    [[ -z ${PLATFORM} ]] || RUN_COMMAND+=("--platform" "${PLATFORM}")
-+    [[ -z ${ENV_FILE} ]] || RUN_COMMAND+=("--env-file" "${ENV_FILE}")
-+
-+    if [[ ${DOCKER_SOCKET} == "true" ]]; then
-+        if [[ ${RUNTIME} == "docker" ]]; then
-+            [[ -S "/var/run/docker.sock" ]] || die "Docker socket not found: /var/run/docker.sock"
-+            RUN_COMMAND+=("--volume" "/var/run/docker.sock:/var/run/docker.sock:rw")
-+        else
-+            local podman_socket="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/podman/podman.sock"
-+            [[ -S ${podman_socket} ]] || die "Podman socket not found: ${podman_socket}"
-+            RUN_COMMAND+=("--volume" "${podman_socket}:/var/run/docker.sock:rw")
-+        fi
-+    fi
-+
-+    for item in "${EXTRA_VOLUMES[@]}"; do
-+        RUN_COMMAND+=("--volume" "${item}")
-+    done
-+
-+    append_env "GITHUB_WORKSPACE=${CONTAINER_WORKSPACE}"
-+    append_env "VALIDATE_ALL_CODEBASE=$([[ ${CHANGED_ONLY} == "true" ]] && printf false || printf true)"
-+
-+    [[ -z ${ENABLE_DESCRIPTORS} ]] || append_env "ENABLE=${ENABLE_DESCRIPTORS}"
-+    [[ -z ${ENABLE_LINTERS} ]] || append_env "ENABLE_LINTERS=${ENABLE_LINTERS}"
-+    [[ -z ${DISABLE_DESCRIPTORS} ]] || append_env "DISABLE=${DISABLE_DESCRIPTORS}"
-+    [[ -z ${DISABLE_LINTERS} ]] || append_env "DISABLE_LINTERS=${DISABLE_LINTERS}"
-+    [[ -z ${FIX_VALUE} ]] || append_env "APPLY_FIXES=${FIX_VALUE}"
-+
-+    if [[ ${REPORT_DIRECTORY} == "none" ]]; then
-+        append_env "REPORT_OUTPUT_FOLDER=none"
-+    else
-+        append_env "REPORT_OUTPUT_FOLDER=${CONTAINER_WORKSPACE}/${REPORT_DIRECTORY}"
-+    fi
-+
-+    if [[ -n ${CONFIG_FILE} ]]; then
-+        append_env "MEGALINTER_CONFIG=${CONTAINER_WORKSPACE}/${CONFIG_FILE#"${WORKSPACE}/"}"
-+    fi
-+
-+    repository="$(github_repository)"
-+    ref="$(github_ref)"
-+    [[ -z ${repository} ]] || append_env "GITHUB_REPOSITORY=${repository}"
-+    [[ -z ${ref} ]] || append_env "GITHUB_REF=${ref}"
-+
-+    if [[ ${DEBUG_MODE} == "true" ]]; then
-+        append_env "LOG_LEVEL=DEBUG"
-+        append_env "PRINT_ALL_FILES=true"
-+    fi
-+
-+    for item in "${EXTRA_ENVS[@]}"; do
-+        append_env "${item}"
-+    done
-+    for item in "${RUNTIME_ARGS[@]}"; do
-+        RUN_COMMAND+=("${item}")
-+    done
-+
-+    RUN_COMMAND+=("${IMAGE}")
- }
++    command -v id >/dev/null 2>&1 || die "--user host requires the id command."
+     RUN_COMMAND+=("--user" "$(id -u):$(id -g)")
+   fi
  
- # @description Render one command argument using conservative POSIX quoting.
-@@ -639,136 +639,136 @@
- # @arg $1 string Argument value.
- # @stdout Shell-quoted argument.
- shell_quote() {
--  local value="$1"
--  if [[ ${value} =~ ^[A-Za-z0-9_./:@%+=,-]+$ ]]; then
--    printf "%s" "${value}"
--  else
--    printf "'"
--    printf "%s" "${value}" | sed "s/'/'\\\\''/g"
--    printf "'"
--  fi
-+    local value="$1"
-+    if [[ ${value} =~ ^[A-Za-z0-9_./:@%+=,-]+$ ]]; then
-+        printf "%s" "${value}"
-+    else
-+        printf "'"
-+        printf "%s" "${value}" | sed "s/'/'\\\\''/g"
-+        printf "'"
-+    fi
- }
- 
- # @description Print the generated container command with environment values redacted.
- # @stdout Multiline shell command safe to share in diagnostics.
- print_redacted_command() {
--  local index=0
--  local argument=""
--  local redact_next="false"
--
--  while [[ ${index} -lt ${#RUN_COMMAND[@]} ]]; do
--    argument="${RUN_COMMAND[$index]}"
--    if [[ ${redact_next} == "true" ]]; then
--      if [[ ${argument} == *=* ]]; then
--        shell_quote "${argument%%=*}=<redacted>"
--      else
--        shell_quote "<redacted>"
--      fi
--      redact_next="false"
--    else
--      shell_quote "${argument}"
--      if [[ ${argument} == "--env" || ${argument} == "--env-file" ]]; then
--        redact_next="true"
--      fi
--    fi
--    index=$((index + 1))
--    if [[ ${index} -lt ${#RUN_COMMAND[@]} ]]; then
--      printf ' %b' '\134'
--      printf "\n  "
--    else
--      printf "\n"
--    fi
--  done
-+    local index=0
-+    local argument=""
-+    local redact_next="false"
-+
-+    while [[ ${index} -lt ${#RUN_COMMAND[@]} ]]; do
-+        argument="${RUN_COMMAND[$index]}"
-+        if [[ ${redact_next} == "true" ]]; then
-+            if [[ ${argument} == *=* ]]; then
-+                shell_quote "${argument%%=*}=<redacted>"
-+            else
-+                shell_quote "<redacted>"
-+            fi
-+            redact_next="false"
-+        else
-+            shell_quote "${argument}"
-+            if [[ ${argument} == "--env" || ${argument} == "--env-file" ]]; then
-+                redact_next="true"
-+            fi
-+        fi
-+        index=$((index + 1))
-+        if [[ ${index} -lt ${#RUN_COMMAND[@]} ]]; then
-+            printf ' %b' '\134'
-+            printf "\n  "
-+        else
-+            printf "\n"
-+        fi
-+    done
- }
- 
- # @description Report runtime, image, configuration, and report readiness.
- run_doctor() {
--  local failures=0
--
--  printf "MegaLinter wrapper doctor\n\n"
--  printf "%-14s %s\n" "workspace" "${WORKSPACE}"
--  printf "%-14s %s\n" "config" "${CONFIG_FILE:-not found (MegaLinter defaults apply)}"
--  printf "%-14s %s\n" "runtime" "${RUNTIME}"
--  printf "%-14s %s\n" "image" "${IMAGE}"
--  printf "%-14s %s\n" "reports" "${REPORT_DIRECTORY}"
--
--  if runtime_ready; then
--    printf "%-14s %s\n" "runtime state" "ready"
--  else
--    printf "%-14s %s\n" "runtime state" "unavailable"
--    failures=$((failures + 1))
--  fi
--
--  if image_exists; then
--    printf "%-14s %s\n" "image state" "available locally"
--  else
--    printf "%-14s %s\n" "image state" "not present locally (pull policy: ${PULL_POLICY})"
--    if [[ ${PULL_POLICY} == "never" ]]; then
--      failures=$((failures + 1))
--    fi
--  fi
--
--  if [[ ${failures} -ne 0 ]]; then
--    return "${EXIT_RUNTIME}"
--  fi
-+    local failures=0
-+
-+    printf "MegaLinter wrapper doctor\n\n"
-+    printf "%-14s %s\n" "workspace" "${WORKSPACE}"
-+    printf "%-14s %s\n" "config" "${CONFIG_FILE:-not found (MegaLinter defaults apply)}"
-+    printf "%-14s %s\n" "runtime" "${RUNTIME}"
-+    printf "%-14s %s\n" "image" "${IMAGE}"
-+    printf "%-14s %s\n" "reports" "${REPORT_DIRECTORY}"
-+
-+    if runtime_ready; then
-+        printf "%-14s %s\n" "runtime state" "ready"
-+    else
-+        printf "%-14s %s\n" "runtime state" "unavailable"
-+        failures=$((failures + 1))
-+    fi
-+
-+    if image_exists; then
-+        printf "%-14s %s\n" "image state" "available locally"
-+    else
-+        printf "%-14s %s\n" "image state" "not present locally (pull policy: ${PULL_POLICY})"
-+        if [[ ${PULL_POLICY} == "never" ]]; then
-+            failures=$((failures + 1))
-+        fi
-+    fi
-+
-+    if [[ ${failures} -ne 0 ]]; then
-+        return "${EXIT_RUNTIME}"
-+    fi
- }
- 
- # @description Execute MegaLinter or print its dry-run command.
- run_megalinter() {
--  local exit_code=0
--
--  if [[ ${DRY_RUN} == "true" ]]; then
--    printf "# Environment values are redacted.\n"
--    print_redacted_command
--    return 0
--  fi
--
--  runtime_ready || die "${RUNTIME} is installed but its service is not ready." "${EXIT_RUNTIME}"
--  prepare_image
--
--  log_info "Workspace: ${WORKSPACE}"
--  log_info "Image: ${IMAGE}"
--  log_info "Config: ${CONFIG_FILE:-MegaLinter defaults}"
--  log_info "Reports: ${REPORT_DIRECTORY}"
--  log_info "Running MegaLinter"
--
--  set +o errexit
--  "${RUN_COMMAND[@]}"
--  exit_code=$?
--  set -o errexit
--
--  if [[ ${exit_code} -eq 0 ]]; then
--    log_info "MegaLinter completed successfully."
--  else
--    log_error "MegaLinter exited with status ${exit_code}."
--  fi
--  return "${exit_code}"
-+    local exit_code=0
-+
-+    if [[ ${DRY_RUN} == "true" ]]; then
-+        printf "# Environment values are redacted.\n"
-+        print_redacted_command
-+        return 0
-+    fi
-+
-+    runtime_ready || die "${RUNTIME} is installed but its service is not ready." "${EXIT_RUNTIME}"
-+    prepare_image
-+
-+    log_info "Workspace: ${WORKSPACE}"
-+    log_info "Image: ${IMAGE}"
-+    log_info "Config: ${CONFIG_FILE:-MegaLinter defaults}"
-+    log_info "Reports: ${REPORT_DIRECTORY}"
-+    log_info "Running MegaLinter"
-+
-+    set +o errexit
-+    "${RUN_COMMAND[@]}"
-+    exit_code=$?
-+    set -o errexit
-+
-+    if [[ ${exit_code} -eq 0 ]]; then
-+        log_info "MegaLinter completed successfully."
-+    else
-+        log_error "MegaLinter exited with status ${exit_code}."
-+    fi
-+    return "${exit_code}"
- }
- 
- # @description Orchestrate argument parsing, validation, and MegaLinter execution.
- # @arg $@ string Wrapper command-line arguments.
- main() {
--  parse_arguments "$@"
--  resolve_workspace
--  resolve_config
--  validate_report_directory
--  validate_options
--  select_runtime
--  resolve_image
--  build_run_command
--
--  log_debug "Workspace resolved to ${WORKSPACE}"
--  log_debug "Container runtime resolved to ${RUNTIME}"
--  log_debug "MegaLinter image resolved to ${IMAGE}"
--
--  if [[ ${DOCTOR_MODE} == "true" ]]; then
--    run_doctor
--    return $?
--  fi
--
--  run_megalinter
--}
--
--if [[ ${BASH_SOURCE[0]} == "${0}" ]]; then
--  main "$@"
-+    parse_arguments "$@"
-+    resolve_workspace
-+    resolve_config
-+    validate_report_directory
-+    validate_options
-+    select_runtime
-+    resolve_image
-+    build_run_command
-+
-+    log_debug "Workspace resolved to ${WORKSPACE}"
-+    log_debug "Container runtime resolved to ${RUNTIME}"
-+    log_debug "MegaLinter image resolved to ${IMAGE}"
-+
-+    if [[ ${DOCTOR_MODE} == "true" ]]; then
-+        run_doctor
-+        return $?
-+    fi
-+
-+    run_megalinter
-+}
-+
-+if [[ ${BASH_SOURCE[0]} == "${0}" ]]; then
-+    main "$@"
- fi
 diff egolint/scripts/pnpm.sh.orig egolint/scripts/pnpm.sh
 --- egolint/scripts/pnpm.sh.orig
 +++ egolint/scripts/pnpm.sh
-@@ -5,12 +5,12 @@
+@@ -5,11 +5,11 @@
  
  # @description Run the repository-pinned pnpm through Corepack when available.
  # @arg $@ string Arguments forwarded to pnpm.
 -if command -v corepack > /dev/null 2>&1; then
--  exec corepack pnpm "$@"
--fi
--
--if command -v pnpm > /dev/null 2>&1; then
--  exec pnpm "$@"
 +if command -v corepack >/dev/null 2>&1; then
-+    exec corepack pnpm "$@"
-+fi
-+
-+if command -v pnpm >/dev/null 2>&1; then
-+    exec pnpm "$@"
+   exec corepack pnpm "$@"
  fi
  
- printf '%s\n' "Corepack or pnpm is required to run Egolint's Node toolchain." >&2
+-if command -v pnpm > /dev/null 2>&1; then
++if command -v pnpm >/dev/null 2>&1; then
+   exec pnpm "$@"
+ fi
+ 
 diff egolint/scripts/precommit.sh.orig egolint/scripts/precommit.sh
 --- egolint/scripts/precommit.sh.orig
 +++ egolint/scripts/precommit.sh
-@@ -11,36 +11,36 @@
- 
- # @description Print the command contract for this pre-commit runner.
- print_usage() {
--  printf '%s\n' \
--    "Usage: precommit.sh <staged|all> [hook-id]" \
--    "" \
--    "Modes:" \
--    "  staged  Run only the automatic structural/security profile." \
--    "  all     Run the complete manual profile against all tracked files."
-+    printf '%s\n' \
-+        "Usage: precommit.sh <staged|all> [hook-id]" \
-+        "" \
-+        "Modes:" \
-+        "  staged  Run only the automatic structural/security profile." \
-+        "  all     Run the complete manual profile against all tracked files."
- }
- 
+@@ -22,17 +22,17 @@
  # @description Execute pre-commit through an installed command, Python module, or uvx.
  # @arg $@ string Arguments forwarded to the pre-commit CLI.
  run_pre_commit() {
 -  if command -v pre-commit > /dev/null 2>&1; then
--    pre-commit "$@"
--    return
--  fi
--
--  if python3 -c "import pre_commit" > /dev/null 2>&1; then
--    python3 -m pre_commit "$@"
--    return
--  fi
--
--  if command -v uvx > /dev/null 2>&1; then
--    uvx --from "pre-commit==${PRE_COMMIT_VERSION}" pre-commit "$@"
--    return
--  fi
--
--  printf '%s\n' \
--    "pre-commit ${PRE_COMMIT_VERSION} is required." \
--    "Install the Egolint Python development dependencies or install uv." >&2
--  return 3
-+    if command -v pre-commit >/dev/null 2>&1; then
-+        pre-commit "$@"
-+        return
-+    fi
-+
-+    if python3 -c "import pre_commit" >/dev/null 2>&1; then
-+        python3 -m pre_commit "$@"
-+        return
-+    fi
-+
-+    if command -v uvx >/dev/null 2>&1; then
-+        uvx --from "pre-commit==${PRE_COMMIT_VERSION}" pre-commit "$@"
-+        return
-+    fi
-+
-+    printf '%s\n' \
-+        "pre-commit ${PRE_COMMIT_VERSION} is required." \
-+        "Install the Egolint Python development dependencies or install uv." >&2
-+    return 3
- }
++  if command -v pre-commit >/dev/null 2>&1; then
+     pre-commit "$@"
+     return
+   fi
  
- # @description Build the stage-specific pre-commit invocation.
-@@ -47,39 +47,39 @@
- # @arg $1 string Execution mode: staged or all.
- # @arg $2 string Optional hook identifier.
- main() {
--  local mode="${1:-}"
--  local hook_identifier="${2:-}"
--  local repository_root
--  repository_root="$(git rev-parse --show-toplevel)"
--  cd "${repository_root}"
--
--  local -a arguments=(
--    run
--  )
--
--  if [[ -n ${hook_identifier} ]]; then
--    arguments+=("${hook_identifier}")
--  fi
--
--  arguments+=(
--    --config
--    egolint/.pre-commit-config.yaml
--  )
--
--  case "${mode}" in
-+    local mode="${1:-}"
-+    local hook_identifier="${2:-}"
-+    local repository_root
-+    repository_root="$(git rev-parse --show-toplevel)"
-+    cd "${repository_root}"
-+
-+    local -a arguments=(
-+        run
-+    )
-+
-+    if [[ -n ${hook_identifier} ]]; then
-+        arguments+=("${hook_identifier}")
-+    fi
-+
-+    arguments+=(
-+        --config
-+        egolint/.pre-commit-config.yaml
-+    )
-+
-+    case "${mode}" in
-     staged)
+-  if python3 -c "import pre_commit" > /dev/null 2>&1; then
++  if python3 -c "import pre_commit" >/dev/null 2>&1; then
+     python3 -m pre_commit "$@"
+     return
+   fi
+ 
+-  if command -v uvx > /dev/null 2>&1; then
++  if command -v uvx >/dev/null 2>&1; then
+     uvx --from "pre-commit==${PRE_COMMIT_VERSION}" pre-commit "$@"
+     return
+   fi
+@@ -67,16 +67,16 @@
+   )
+ 
+   case "${mode}" in
+-    staged)
 -      arguments+=(--hook-stage pre-commit)
 -      ;;
-+        arguments+=(--hook-stage pre-commit)
-+        ;;
-     all)
+-    all)
 -      arguments+=(--all-files --hook-stage manual)
 -      ;;
-+        arguments+=(--all-files --hook-stage manual)
-+        ;;
-     *)
+-    *)
 -      print_usage >&2
 -      return 2
 -      ;;
--  esac
--
--  run_pre_commit "${arguments[@]}"
-+        print_usage >&2
-+        return 2
-+        ;;
-+    esac
-+
-+    run_pre_commit "${arguments[@]}"
- }
++  staged)
++    arguments+=(--hook-stage pre-commit)
++    ;;
++  all)
++    arguments+=(--all-files --hook-stage manual)
++    ;;
++  *)
++    print_usage >&2
++    return 2
++    ;;
+   esac
  
- main "$@"
+   run_pre_commit "${arguments[@]}"
 

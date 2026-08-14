@@ -3,6 +3,3 @@ See documentation on https://megalinter.io/10.0.0/descriptors/powershell_powersh
 -----------------------------------------------
 
 ✅ [SUCCESS] egolint/.config/lint/arm/arm-ttk.psd1
-✅ [SUCCESS] egolint/.config/lint/powershell/powershell-formatter.psd1
-✅ [SUCCESS] egolint/.config/lint/powershell/powershell-psscriptanalyzer.psd1
-✅ [SUCCESS] egolint/tests/fixtures/powershell/Get-Greeting.ps1

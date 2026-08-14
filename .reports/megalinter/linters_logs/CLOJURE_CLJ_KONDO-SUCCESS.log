@@ -1,5 +1,0 @@
-Results of clj-kondo linter (version 2025.01.16)
-See documentation on https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo/
------------------------------------------------
-
-✅ [SUCCESS] egolint/tests/fixtures/cljstyle/valid.clj

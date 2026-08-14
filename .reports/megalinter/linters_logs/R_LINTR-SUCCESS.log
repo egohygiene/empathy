@@ -1,5 +1,0 @@
-Results of lintr linter (version 0.0.0)
-See documentation on https://megalinter.io/10.0.0/descriptors/r_lintr/
------------------------------------------------
-
-✅ [SUCCESS] egolint/tests/fixtures/lintr/valid.R

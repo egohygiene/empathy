@@ -4,27 +4,33 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-S108 Probable insecure usage of temporary file or directory: "egolint/.config/lint/terraform"
-   --> egolint/tests/test_megalinter_policy.py:126:13
+RUF100 [*] Unused `noqa` directive (non-enabled: `S108`)
+   --> egolint/scripts/validate_megalinter_policy.py:271:24
     |
-124 |             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
-125 |             "egolint/.config/lint/terraform",
-126 |             "egolint/.config/lint/terraform",
-    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-127 |         ):
-128 |             with self.subTest(rules_path=rules_path):
+269 |         "${GITHUB_WORKSPACE}/",
+270 |         "",
+271 |         "",  # noqa: S108  # nosec B108
+    |                        ^^^^^^^^^^^^
+272 |     ):
+273 |         candidate = normalized_rules_path.removeprefix(workspace_prefix)
+    |
+help: Remove unused `noqa` directive
+    |
+270 |         "",
+    -         "",  # noqa: S108  # nosec B108
+271 +         "",  # nosec B108
+272 |     ):
     |
 
-S607 Starting a process with a partial executable path
-   --> egolint/tests/test_megalinter_policy.py:281:13
+PLR0915 Too many statements (51 > 50)
+   --> egolint/scripts/validate_megalinter_policy.py:359:5
     |
-279 |         ).strip()
-280 |         result = subprocess.run(  # nosec B603
-281 |             ["node", "--input-type=module", "--eval", script, config_path.as_uri()],
-    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-282 |             cwd=config_path.parent,
-283 |             check=False,
+359 | def validate_policy(
+    |     ^^^^^^^^^^^^^^^
+360 |     policy: Mapping[str, Any],
+361 |     catalog: Mapping[str, Any],
     |
 
 Found 2 errors.
+[*] 1 fixable with the `--fix` option.
 

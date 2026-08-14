@@ -1,5 +1,0 @@
-Results of terragrunt linter (version 1.1.2)
-See documentation on https://megalinter.io/10.0.0/descriptors/terraform_terragrunt/
------------------------------------------------
-
-✅ [SUCCESS] egolint/tests/fixtures/terragrunt/terragrunt.hcl

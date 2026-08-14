@@ -1,0 +1,41 @@
+Results of pylint linter (version 4.0.6)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_pylint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+************* Module generate_lint_infographic
+.github/actions/generate-lint-infographic/generate_lint_infographic.py:150:0: R0913: Too many arguments (8/7) (too-many-arguments)
+.github/actions/generate-lint-infographic/generate_lint_infographic.py:171:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module validate-agents
+egolint/.agents/agents/validate-agents.py:84:0: R0912: Too many branches (26/12) (too-many-branches)
+************* Module build-distributions
+egolint/.agents/skills/build-distributions.py:209:15: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module build-release-artifacts
+egolint/.agents/skills/build-release-artifacts.py:20:0: E0401: Unable to import 'jsonschema' (import-error)
+************* Module validate-skills
+egolint/.agents/skills/validate-skills.py:37:0: R0912: Too many branches (15/12) (too-many-branches)
+************* Module validate-specs
+egolint/.agents/specs/validate-specs.py:33:0: E0401: Unable to import 'yaml' (import-error)
+egolint/.agents/specs/validate-specs.py:115:0: R0914: Too many local variables (27/20) (too-many-locals)
+egolint/.agents/specs/validate-specs.py:115:0: R0912: Too many branches (33/12) (too-many-branches)
+egolint/.agents/specs/validate-specs.py:115:0: R0915: Too many statements (72/60) (too-many-statements)
+************* Module complementary_tools
+egolint/scripts/complementary_tools.py:138:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+egolint/scripts/complementary_tools.py:202:0: R0912: Too many branches (14/12) (too-many-branches)
+egolint/scripts/complementary_tools.py:531:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+************* Module validate_megalinter_policy
+egolint/scripts/validate_megalinter_policy.py:18:0: E0401: Unable to import 'yaml' (import-error)
+egolint/scripts/validate_megalinter_policy.py:301:0: R0912: Too many branches (15/12) (too-many-branches)
+egolint/scripts/validate_megalinter_policy.py:359:0: R0914: Too many local variables (22/20) (too-many-locals)
+egolint/scripts/validate_megalinter_policy.py:359:0: R0912: Too many branches (23/12) (too-many-branches)
+egolint/scripts/validate_megalinter_policy.py:452:0: R0914: Too many local variables (31/20) (too-many-locals)
+************* Module scripts.garden_agent
+mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+************* Module scripts.publish_garden
+mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
+
+-----------------------------------
+Your code has been rated at 9.92/10
+
+

@@ -1,5 +1,0 @@
-Results of stylua linter (version 2.5.2)
-See documentation on https://megalinter.io/10.0.0/descriptors/lua_stylua/
------------------------------------------------
-
-✅ [SUCCESS] egolint/tests/fixtures/luacheck/valid.lua

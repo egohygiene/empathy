@@ -1,9 +1,0 @@
-excluded:
-  - '/github/workspace/.cache'
-  - '/github/workspace/**/.cache'
-  - '/github/workspace/.git'
-  - '/github/workspace/**/.git'
-  - '/github/workspace/.reports'
-  - '/github/workspace/**/.reports'
-  - '/github/workspace/.reports/megalinter'
-  - '/github/workspace/**/.reports/megalinter'

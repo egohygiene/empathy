@@ -1,9 +1,0 @@
-Results of rst-lint linter (version 2.0.2)
-See documentation on https://megalinter.io/10.0.0/descriptors/rst_rst_lint/
------------------------------------------------
-
-❌ [ERROR] for workspace /github/workspace
-Linter raw log:
-ERROR egolint/tests/fixtures/rstcheck/valid.rst:32 Unknown directive type "automodule".
-ERROR egolint/tests/fixtures/rstcheck/valid.rst:35 Unknown interpreted text role "doc".
-

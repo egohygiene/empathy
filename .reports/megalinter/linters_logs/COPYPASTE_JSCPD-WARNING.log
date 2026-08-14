@@ -1,0 +1,1055 @@
+Results of jscpd linter (version 5.0.14)
+See documentation on https://megalinter.io/10.0.0/descriptors/copypaste_jscpd/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Using config from .reports/megalinter/jscpd-config.json
+config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
+Clone found (markdown)
+ - .audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown [27:5 - 34:58] (8 lines, 249 tokens)
+   ONTOLOGY.md:markdown [51:37 - 52:4]
+Clone found (markdown)
+ - .audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown [27:12 - 32:65] (6 lines, 196 tokens)
+   ONTOLOGY.md:markdown [89:27 - 90:12]
+Clone found (markdown)
+ - .audits/egolint/2026-08-11-integration-audit.md:markdown [171:101 - 176:36] (6 lines, 201 tokens)
+   mantle/README.md:markdown [109:198 - 111:3]
+Clone found (markdown)
+ - .audits/egolint/2026-08-11-integration-audit.md:markdown [202:1 - 208:2] (7 lines, 167 tokens)
+   mantle/README.md:markdown [316:44 - 317:4]
+Clone found (markdown)
+ - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [24:93 - 29:45] (6 lines, 170 tokens)
+   ONTOLOGY.md:markdown [127:167 - 129:3]
+Clone found (markdown)
+ - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [47:89 - 54:59] (8 lines, 209 tokens)
+   AI_CONSTITUTION.md:markdown [84:206 - 86:3]
+Clone found (markdown)
+ - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [105:1 - 117:21] (13 lines, 214 tokens)
+   ONTOLOGY.md:markdown [64:33 - 65:12]
+Clone found (yaml)
+ - .github/ISSUE_TEMPLATE/architecture.yml [107:1 - 113:18] (7 lines, 51 tokens)
+   .github/ISSUE_TEMPLATE/ci.yml [101:1 - 107:18]
+Clone found (yaml)
+ - .github/ISSUE_TEMPLATE/architecture.yml [107:1 - 113:18] (7 lines, 51 tokens)
+   .github/ISSUE_TEMPLATE/dx.yml [73:1 - 79:18]
+Clone found (yaml)
+ - .github/ISSUE_TEMPLATE/architecture.yml [107:1 - 113:18] (7 lines, 51 tokens)
+   .github/ISSUE_TEMPLATE/feature.yml [107:1 - 113:18]
+Clone found (yaml)
+ - .github/ISSUE_TEMPLATE/architecture.yml [107:1 - 114:26] (8 lines, 69 tokens)
+   .github/ISSUE_TEMPLATE/tech-debt.yml [100:1 - 107:18]
+Clone found (yaml)
+ - .github/actions/commit-if-changed/action.yml [14:63 - 23:69] (10 lines, 64 tokens)
+   .github/actions/publish-report-snapshot/action.yml [17:79 - 26:69]
+Clone found (yaml)
+ - .github/actions/python-poetry-setup/action.yml [10:1 - 15:49] (6 lines, 50 tokens)
+   .github/actions/setup-environment/action.yml [39:1 - 44:49]
+Clone found (yaml)
+ - .github/workflows/automation.yml [8:1 - 23:3] (16 lines, 60 tokens)
+   .github/workflows/automation.yml [26:1 - 41:3]
+Clone found (yaml)
+ - .github/workflows/automation.yml [53:1 - 69:15] (17 lines, 90 tokens)
+   .github/workflows/identity.yml [35:1 - 51:15]
+Clone found (yaml)
+ - .github/workflows/automation.yml [53:1 - 63:24] (11 lines, 61 tokens)
+   .github/workflows/repository-intelligence.yml [35:1 - 45:24]
+Clone found (yaml)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
+   .github/workflows/codeql.yml [40:1 - 53:15]
+Clone found (yaml)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
+   .github/workflows/lint-architecture.yml [52:1 - 65:15]
+Clone found (yaml)
+ - .github/workflows/automation.yml [56:1 - 67:11] (12 lines, 62 tokens)
+   .github/workflows/megalinter.yml [35:1 - 46:11]
+Clone found (yaml)
+ - .github/workflows/automation.yml [59:1 - 69:24] (11 lines, 62 tokens)
+   .github/workflows/mantle.yml [50:1 - 60:23]
+Clone found (yaml)
+ - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
+   .github/workflows/contributors.yml [19:1 - 29:24]
+Clone found (yaml)
+ - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
+   .github/workflows/lint-architecture.yml [49:1 - 59:24]
+Clone found (yaml)
+ - .github/workflows/contributors.yml [22:1 - 34:11] (13 lines, 71 tokens)
+   .github/workflows/megalinter-fix.yml [29:1 - 41:11]
+Clone found (yaml)
+ - .github/workflows/dependency-review.yml [36:1 - 49:11] (14 lines, 96 tokens)
+   .staging/github/workflows/security-optional/dependency-review.yml [29:1 - 42:11]
+Clone found (yaml)
+ - .github/workflows/lint-architecture.yml [82:1 - 104:34] (23 lines, 138 tokens)
+   .github/workflows/megalinter.yml [123:1 - 145:34]
+Clone found (yaml)
+ - .github/workflows/lint-architecture.yml [85:1 - 97:15] (13 lines, 58 tokens)
+   .github/workflows/osv-scan.yml [737:1 - 749:15]
+Clone found (yaml)
+ - .github/workflows/megalinter.yml [33:1 - 47:32] (15 lines, 81 tokens)
+   .github/workflows/ossf-scorecard.yml [31:1 - 46:15]
+Clone found (yaml)
+ - .github/workflows/mindgarden-pages.yml [38:1 - 52:15] (15 lines, 85 tokens)
+   .github/workflows/repository-intelligence.yml [38:1 - 52:15]
+Clone found (yaml)
+ - .github/workflows/osv-scan.yml [330:1 - 339:22] (10 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [354:1 - 363:22]
+Clone found (yaml)
+ - .github/workflows/osv-scan.yml [330:1 - 339:22] (10 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [377:1 - 386:22]
+Clone found (yaml)
+ - .github/workflows/osv-scan.yml [342:51 - 352:15] (11 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [365:52 - 375:15]
+Clone found (yaml)
+ - .github/workflows/osv-scan.yml [342:51 - 352:15] (11 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [388:54 - 398:15]
+Clone found (yaml)
+ - .staging/github/workflows/application-flutter/autofix.yml [39:1 - 53:15] (15 lines, 103 tokens)
+   .staging/github/workflows/release-strategies/changesets-release.yml [98:1 - 112:15]
+Clone found (yaml)
+ - .staging/github/workflows/application-flutter/copilot-setup-steps2.yml [10:7 - 15:60] (6 lines, 68 tokens)
+   .staging/github/workflows/application-flutter/copilot-setup-steps2.yml [16:15 - 21:60]
+Clone found (yaml)
+ - .staging/github/workflows/application-flutter/copilot-setup-steps2.yml [36:1 - 45:49] (10 lines, 84 tokens)
+   .staging/github/workflows/application-flutter/release-artifacts.yml [245:1 - 254:49]
+Clone found (yaml)
+ - .staging/github/workflows/application-flutter/release-artifacts.yml [25:1 - 42:15] (18 lines, 125 tokens)
+   .staging/github/workflows/application-flutter/release-artifacts.yml [151:1 - 168:15]
+Clone found (yaml)
+ - .staging/github/workflows/application-flutter/release-artifacts.yml [25:1 - 42:15] (18 lines, 125 tokens)
+   .staging/github/workflows/application-flutter/release-artifacts.yml [233:1 - 250:15]
+Clone found (yaml)
+ - .staging/github/workflows/application-flutter/release-artifacts.yml [26:20 - 46:15] (21 lines, 124 tokens)
+   .staging/github/workflows/application-flutter/release-artifacts.yml [190:19 - 209:15]
+Clone found (yaml)
+ - .staging/github/workflows/application-flutter/release-artifacts.yml [56:1 - 64:11] (9 lines, 77 tokens)
+   .staging/github/workflows/application-flutter/release-artifacts.yml [86:1 - 94:11]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/benchmark.yml [26:1 - 43:28] (18 lines, 94 tokens)
+   .staging/github/workflows/container-platform/publish.yml [28:1 - 45:28]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/benchmark.yml [58:1 - 76:16] (19 lines, 94 tokens)
+   .staging/github/workflows/container-platform/trivy-scan.yml [44:1 - 62:16]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/benchmark.yml [60:1 - 69:29] (10 lines, 52 tokens)
+   .staging/github/workflows/container-platform/publish.yml [64:1 - 73:29]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/benchmark.yml [159:45 - 168:19] (10 lines, 74 tokens)
+   .staging/github/workflows/container-platform/benchmark.yml [198:23 - 207:19]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/benchmark.yml [159:76 - 167:13] (9 lines, 60 tokens)
+   .staging/github/workflows/container-platform/benchmark.yml [234:89 - 242:13]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/devcontainer.yml [109:1 - 117:28] (9 lines, 63 tokens)
+   .staging/github/workflows/container-platform/devcontainer.yml [191:1 - 199:28]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/devcontainer.yml [202:41 - 209:52] (8 lines, 57 tokens)
+   .staging/github/workflows/container-platform/devcontainer.yml [216:42 - 223:52]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/devcontainer.yml [209:54 - 215:7] (7 lines, 58 tokens)
+   .staging/github/workflows/container-platform/devcontainer.yml [223:54 - 229:7]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/publish.yml [18:1 - 28:5] (11 lines, 84 tokens)
+   .staging/github/workflows/container-platform/trivy-scan.yml [27:1 - 37:5]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
+   .staging/github/workflows/container-platform/release-notes.yml [125:28 - 132:45]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
+   .staging/github/workflows/container-platform/release-notes.yml [138:27 - 145:45]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
+   .staging/github/workflows/container-platform/release-notes.yml [151:25 - 158:45]
+Clone found (yaml)
+ - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:7] (8 lines, 56 tokens)
+   .staging/github/workflows/container-platform/release-notes.yml [164:25 - 171:7]
+Clone found (yaml)
+ - .staging/github/workflows/content-and-docs/bookmarks-extract.yml [44:1 - 52:15] (9 lines, 91 tokens)
+   .staging/github/workflows/content-and-docs/bookmarks-extract.yml [70:1 - 78:15]
+Clone found (yaml)
+ - .staging/github/workflows/content-and-docs/docs.yml [43:1 - 61:7] (19 lines, 85 tokens)
+   .staging/github/workflows/content-and-docs/docs.yml [94:1 - 112:7]
+Clone found (yaml)
+ - .staging/github/workflows/source-specific/aether-pr-validation.yml [26:1 - 38:15] (13 lines, 110 tokens)
+   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [62:1 - 74:15]
+Clone found (yaml)
+ - .staging/github/workflows/source-specific/aether-pr-validation.yml [47:1 - 55:69] (9 lines, 123 tokens)
+   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [168:1 - 176:11]
+Clone found (yaml)
+ - .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [59:61 - 74:23] (16 lines, 122 tokens)
+   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [145:35 - 160:23]
+Clone found (yaml)
+ - .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [80:1 - 85:20] (6 lines, 85 tokens)
+   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [163:1 - 168:20]
+Clone found (markdown)
+ - DECISIONS.md:markdown [76:1 - 81:14] (6 lines, 51 tokens)
+   DECISIONS.md:markdown [121:1 - 126:14]
+Clone found (markdown)
+ - DECISIONS.md:markdown [76:1 - 81:14] (6 lines, 51 tokens)
+   DECISIONS.md:markdown [165:1 - 170:14]
+Clone found (markdown)
+ - DECISIONS.md:markdown [76:1 - 81:14] (6 lines, 51 tokens)
+   DECISIONS.md:markdown [204:1 - 209:14]
+Clone found (markdown)
+ - DECISIONS.md:markdown [76:1 - 81:14] (6 lines, 51 tokens)
+   DECISIONS.md:markdown [245:1 - 250:14]
+Clone found (markdown)
+ - DECISIONS.md:markdown [76:1 - 81:14] (6 lines, 51 tokens)
+   DECISIONS.md:markdown [286:1 - 291:14]
+Clone found (markdown)
+ - META.md:markdown [75:75 - 82:2] (8 lines, 156 tokens)
+   SYSTEM.md:markdown [141:153 - 143:3]
+Clone found (markdown)
+ - egolint/.agents/agents/AGENT-CONTRACT.md:markdown [22:15 - 28:53] (7 lines, 85 tokens)
+   egolint/.agents/skills/SKILL-CONTRACT.md:markdown [20:10 - 26:53]
+Clone found (yaml)
+ - egolint/.agents/agents/auditor/AGENT.md:yaml [8:1 - 17:7] (10 lines, 59 tokens)
+   egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml [10:1 - 19:7]
+Clone found (yaml)
+ - egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml [5:1 - 19:7] (15 lines, 77 tokens)
+   egolint/.agents/agents/cleanup-specialist/AGENT.md:yaml [5:1 - 19:7]
+Clone found (yaml)
+ - egolint/.agents/agents/bug-fix-teammate/AGENT.md:yaml [5:1 - 19:7] (15 lines, 77 tokens)
+   egolint/.agents/agents/test-specialist/AGENT.md:yaml [5:1 - 19:7]
+Clone found (python)
+ - egolint/.agents/agents/build-projections.py [32:1 - 42:48] (11 lines, 59 tokens)
+   egolint/.agents/skills/build-distributions.py [44:1 - 54:48]
+Clone found (python)
+ - egolint/.agents/agents/build-projections.py [152:64 - 166:21] (15 lines, 97 tokens)
+   egolint/.agents/skills/build-distributions.py [256:66 - 270:21]
+Clone found (yaml)
+ - egolint/.agents/agents/github-issue-creator/AGENT.md:yaml [8:1 - 18:7] (11 lines, 63 tokens)
+   egolint/.agents/agents/implementation-planner/AGENT.md:yaml [9:1 - 19:7]
+Clone found (yaml)
+ - egolint/.agents/agents/implementation-planner/AGENT.md:yaml [5:1 - 19:7] (15 lines, 77 tokens)
+   egolint/.agents/agents/specfile-creator/AGENT.md:yaml [5:1 - 19:7]
+Clone found (python)
+ - egolint/.agents/agents/validate-agents.py [14:1 - 24:39] (11 lines, 56 tokens)
+   egolint/.agents/skills/validate-skills.py [13:1 - 23:39]
+Clone found (yaml)
+ - egolint/.agents/skills/SKILL-CONTRACT.md:yaml [96:1 - 107:31] (12 lines, 128 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:yaml [2:1 - 13:31]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [24:85 - 36:3] (13 lines, 99 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown [24:119 - 36:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [24:85 - 36:3] (13 lines, 99 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown [24:88 - 36:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [41:1 - 53:14] (13 lines, 79 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown [41:1 - 53:14]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [41:1 - 53:4] (13 lines, 77 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown [41:1 - 53:4]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [66:19 - 90:18] (25 lines, 165 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown [66:16 - 90:18]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [66:19 - 75:20] (10 lines, 52 tokens)
+   egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [61:13 - 70:20]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [66:19 - 90:18] (25 lines, 165 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown [66:8 - 90:18]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [66:19 - 86:5] (21 lines, 145 tokens)
+   egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:markdown [60:11 - 78:15]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [66:19 - 86:5] (21 lines, 145 tokens)
+   egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown [59:14 - 77:15]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [66:19 - 86:5] (21 lines, 145 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown [59:11 - 77:15]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [66:19 - 86:5] (21 lines, 145 tokens)
+   egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown [58:10 - 76:15]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [92:1 - 100:44] (9 lines, 133 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown [92:1 - 100:44]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown [92:1 - 100:44] (9 lines, 133 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown [92:1 - 100:44]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown [5:87 - 18:3] (14 lines, 87 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/references/examples-and-antipatterns.md:markdown [5:121 - 18:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown [5:87 - 18:3] (14 lines, 87 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/references/examples-and-antipatterns.md:markdown [5:90 - 18:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown [23:1 - 29:49] (7 lines, 98 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/references/examples-and-antipatterns.md:markdown [23:1 - 29:49]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown [23:1 - 29:49] (7 lines, 98 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/references/examples-and-antipatterns.md:markdown [23:1 - 29:49]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [5:36 - 13:7] (9 lines, 71 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/references/validation-checklist.md:markdown [5:33 - 13:7]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [5:36 - 13:13] (9 lines, 73 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/references/validation-checklist.md:markdown [5:25 - 13:11]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [5:36 - 13:13] (9 lines, 73 tokens)
+   egolint/.agents/skills/architecture/create-pillars-document/references/validation-checklist.md:markdown [5:28 - 12:12]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [5:36 - 13:7] (9 lines, 71 tokens)
+   egolint/.agents/skills/architecture/create-principles-document/references/validation-checklist.md:markdown [5:31 - 12:7]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [5:36 - 13:7] (9 lines, 71 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/references/validation-checklist.md:markdown [5:28 - 12:7]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [5:36 - 13:13] (9 lines, 73 tokens)
+   egolint/.agents/skills/architecture/create-vision-document/references/validation-checklist.md:markdown [5:27 - 12:12]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [13:89 - 38:46] (26 lines, 234 tokens)
+   egolint/.agents/skills/architecture/create-epistemology-document/references/validation-checklist.md:markdown [13:123 - 38:46]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [13:89 - 38:46] (26 lines, 234 tokens)
+   egolint/.agents/skills/architecture/create-meta-architecture-document/references/validation-checklist.md:markdown [13:92 - 38:46]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown [20:70 - 27:22] (8 lines, 55 tokens)
+   egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown [19:63 - 26:22]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:markdown [92:80 - 98:67] (7 lines, 52 tokens)
+   egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:markdown [91:56 - 97:67]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:markdown [92:80 - 98:67] (7 lines, 52 tokens)
+   egolint/.agents/skills/architecture/create-methodology-document/SKILL.md:markdown [92:70 - 98:67]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:markdown [92:80 - 99:9] (8 lines, 53 tokens)
+   egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:markdown [92:51 - 98:68]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:markdown [92:80 - 98:67] (7 lines, 52 tokens)
+   egolint/.agents/skills/architecture/create-system-document/SKILL.md:markdown [92:49 - 98:67]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/SKILL.md:markdown [25:78 - 50:9] (26 lines, 180 tokens)
+   egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:markdown [25:111 - 50:9]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/SKILL.md:markdown [64:10 - 87:24] (24 lines, 169 tokens)
+   egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:markdown [65:17 - 88:24]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/SKILL.md:markdown [89:1 - 97:39] (9 lines, 126 tokens)
+   egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:markdown [90:1 - 98:39]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/SKILL.md:markdown [89:1 - 94:7] (6 lines, 62 tokens)
+   egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:markdown [82:1 - 87:7]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/SKILL.md:markdown [89:1 - 97:29] (9 lines, 123 tokens)
+   egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:markdown [82:1 - 90:39]
+Clone found (json)
+ - egolint/.agents/skills/architecture/create-design-document/evals/evals.json [8:83 - 55:13] (48 lines, 181 tokens)
+   egolint/.agents/skills/architecture/create-design-system-document/evals/evals.json [8:90 - 55:13]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown [5:27 - 12:7] (8 lines, 59 tokens)
+   egolint/.agents/skills/architecture/create-design-system-document/references/validation-checklist.md:markdown [5:34 - 12:7]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown [5:27 - 12:12] (8 lines, 61 tokens)
+   egolint/.agents/skills/architecture/create-ontology-document/references/validation-checklist.md:markdown [5:29 - 12:12]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown [5:27 - 12:12] (8 lines, 61 tokens)
+   egolint/.agents/skills/architecture/create-personal-model-document/references/validation-checklist.md:markdown [5:35 - 12:11]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown [12:82 - 38:52] (27 lines, 270 tokens)
+   egolint/.agents/skills/architecture/create-design-system-document/references/validation-checklist.md:markdown [12:115 - 38:52]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown [22:1 - 27:7] (6 lines, 50 tokens)
+   egolint/.agents/skills/architecture/create-ontology-document/references/validation-checklist.md:markdown [14:1 - 19:7]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [24:72 - 38:3] (15 lines, 86 tokens)
+   egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:markdown [24:73 - 38:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [24:72 - 37:3] (14 lines, 81 tokens)
+   egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown [24:70 - 37:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [24:72 - 35:3] (12 lines, 71 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown [24:74 - 35:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [24:72 - 36:3] (13 lines, 76 tokens)
+   egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown [24:72 - 36:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [48:1 - 57:3] (10 lines, 98 tokens)
+   egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [155:1 - 164:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [79:24 - 89:44] (11 lines, 133 tokens)
+   egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:markdown [78:22 - 88:44]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [79:24 - 89:44] (11 lines, 133 tokens)
+   egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown [77:25 - 87:44]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [79:24 - 89:44] (11 lines, 133 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown [77:22 - 87:44]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown [79:24 - 89:44] (11 lines, 133 tokens)
+   egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown [76:21 - 86:44]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown [5:74 - 18:5] (14 lines, 72 tokens)
+   egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown [5:75 - 18:5]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown [5:74 - 18:5] (14 lines, 72 tokens)
+   egolint/.agents/skills/architecture/create-principles-document/references/examples-and-antipatterns.md:markdown [5:72 - 18:5]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown [5:74 - 18:5] (14 lines, 72 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/references/examples-and-antipatterns.md:markdown [5:76 - 18:5]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown [5:74 - 18:5] (14 lines, 72 tokens)
+   egolint/.agents/skills/architecture/create-vision-document/references/examples-and-antipatterns.md:markdown [5:74 - 18:5]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown [24:1 - 30:69] (7 lines, 104 tokens)
+   egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown [24:1 - 30:69]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown [12:76 - 36:46] (25 lines, 216 tokens)
+   egolint/.agents/skills/architecture/create-pillars-document/references/validation-checklist.md:markdown [12:77 - 36:46]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown [12:76 - 36:46] (25 lines, 216 tokens)
+   egolint/.agents/skills/architecture/create-principles-document/references/validation-checklist.md:markdown [12:74 - 36:46]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown [12:76 - 36:46] (25 lines, 216 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/references/validation-checklist.md:markdown [12:78 - 36:46]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown [12:76 - 36:46] (25 lines, 216 tokens)
+   egolint/.agents/skills/architecture/create-vision-document/references/validation-checklist.md:markdown [12:76 - 36:46]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:markdown [24:90 - 43:4] (20 lines, 137 tokens)
+   egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:markdown [24:122 - 43:4]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:markdown [57:12 - 80:18] (24 lines, 158 tokens)
+   egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:markdown [57:18 - 80:18]
+Clone found (json)
+ - egolint/.agents/skills/architecture/create-ontology-document/evals/evals.json [8:76 - 43:13] (36 lines, 134 tokens)
+   egolint/.agents/skills/architecture/create-personal-model-document/evals/evals.json [8:82 - 43:13]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-ontology-document/references/validation-checklist.md:markdown [12:94 - 30:46] (19 lines, 146 tokens)
+   egolint/.agents/skills/architecture/create-personal-model-document/references/validation-checklist.md:markdown [12:126 - 30:46]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:markdown [47:1 - 56:3] (10 lines, 102 tokens)
+   egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown [156:1 - 165:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown [22:26 - 30:69] (9 lines, 105 tokens)
+   egolint/.agents/skills/architecture/create-principles-document/references/examples-and-antipatterns.md:markdown [22:39 - 30:69]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown [22:26 - 30:69] (9 lines, 105 tokens)
+   egolint/.agents/skills/architecture/create-purpose-document/references/examples-and-antipatterns.md:markdown [22:64 - 30:69]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown [22:26 - 30:69] (9 lines, 105 tokens)
+   egolint/.agents/skills/architecture/create-vision-document/references/examples-and-antipatterns.md:markdown [22:78 - 30:69]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown [46:1 - 55:3] (10 lines, 96 tokens)
+   egolint/.agents/specs/architecture/identity/principles.spec.md:markdown [152:1 - 161:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown [46:1 - 55:3] (10 lines, 112 tokens)
+   egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown [151:1 - 160:3]
+Clone found (markdown)
+ - egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown [46:1 - 54:3] (9 lines, 100 tokens)
+   egolint/.agents/specs/architecture/identity/vision.spec.md:markdown [151:1 - 159:3]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [24:82 - 42:4] (19 lines, 76 tokens)
+   egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:markdown [24:92 - 42:4]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [24:82 - 42:4] (19 lines, 76 tokens)
+   egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:markdown [24:94 - 42:4]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [24:82 - 42:11] (19 lines, 78 tokens)
+   egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown [24:94 - 42:12]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [56:23 - 81:40] (26 lines, 255 tokens)
+   egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown [56:40 - 81:40]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [58:1 - 77:58] (20 lines, 233 tokens)
+   egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:markdown [58:1 - 77:58]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [58:1 - 81:40] (24 lines, 253 tokens)
+   egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:markdown [59:1 - 82:40]
+Clone found (json)
+ - egolint/.agents/skills/authoring/create-specification-file/evals/evals.json [3:39 - 54:13] (52 lines, 203 tokens)
+   egolint/.agents/skills/methodology/orchestrate-reflective-development/evals/evals.json [3:48 - 54:13]
+Clone found (json)
+ - egolint/.agents/skills/authoring/create-specification-file/evals/evals.json [3:39 - 54:13] (52 lines, 203 tokens)
+   egolint/.agents/skills/publishing/prepare-arxiv-release/evals/evals.json [3:35 - 54:13]
+Clone found (json)
+ - egolint/.agents/skills/authoring/create-specification-file/evals/evals.json [3:39 - 54:13] (52 lines, 203 tokens)
+   egolint/.agents/skills/quality/audit-repository/evals/evals.json [3:30 - 54:13]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown [5:16 - 28:53] (24 lines, 245 tokens)
+   egolint/.agents/skills/methodology/orchestrate-reflective-development/references/validation-checklist.md:markdown [5:17 - 28:53]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown [5:16 - 28:53] (24 lines, 245 tokens)
+   egolint/.agents/skills/publishing/prepare-arxiv-release/references/validation-checklist.md:markdown [5:24 - 28:53]
+Clone found (markdown)
+ - egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown [5:16 - 28:53] (24 lines, 245 tokens)
+   egolint/.agents/skills/quality/audit-repository/references/validation-checklist.md:markdown [5:15 - 28:53]
+Clone found (yaml)
+ - egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:yaml [3:249 - 12:31] (10 lines, 56 tokens)
+   egolint/.agents/skills/authoring/implementation-planning/SKILL.md:yaml [3:277 - 12:31]
+Clone found (yaml)
+ - egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:yaml [3:249 - 12:31] (10 lines, 56 tokens)
+   egolint/.agents/skills/authoring/skill-authoring/SKILL.md:yaml [3:275 - 12:31]
+Clone found (python)
+ - egolint/.agents/skills/build-distributions.py [150:1 - 156:21] (7 lines, 66 tokens)
+   egolint/.agents/skills/build-distributions.py [173:1 - 179:21]
+Clone found (python)
+ - egolint/.agents/skills/build-distributions.py [216:52 - 230:29] (15 lines, 107 tokens)
+   egolint/.agents/specs/build-distributions.py [69:41 - 83:29]
+Clone found (python)
+ - egolint/.agents/skills/build-distributions.py [252:5 - 259:87] (8 lines, 53 tokens)
+   egolint/.agents/specs/build-distributions.py [104:98 - 111:87]
+Clone found (yaml)
+ - egolint/.agents/skills/quality/bug-fixing/SKILL.md:yaml [3:256 - 12:31] (10 lines, 56 tokens)
+   egolint/.agents/skills/quality/repository-cleanup/SKILL.md:yaml [3:239 - 12:31]
+Clone found (yaml)
+ - egolint/.agents/skills/quality/bug-fixing/SKILL.md:yaml [3:256 - 12:31] (10 lines, 56 tokens)
+   egolint/.agents/skills/quality/test-engineering/SKILL.md:yaml [3:248 - 12:31]
+Clone found (yaml)
+ - egolint/.agents/specs/SCHEMA.md:yaml [66:1 - 91:15] (26 lines, 123 tokens)
+   egolint/.agents/specs/architecture/foundation/system.spec.md:yaml [2:1 - 27:15]
+Clone found (yaml)
+ - egolint/.agents/specs/SCHEMA.md:yaml [68:14 - 80:5] (13 lines, 55 tokens)
+   egolint/.agents/specs/architecture/foundation/architecture.spec.md:yaml [4:20 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/SCHEMA.md:yaml [68:14 - 80:5] (13 lines, 55 tokens)
+   egolint/.agents/specs/architecture/foundation/foundations.spec.md:yaml [4:19 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/SCHEMA.md:yaml [68:14 - 80:5] (13 lines, 55 tokens)
+   egolint/.agents/specs/architecture/foundation/methodology.spec.md:yaml [4:19 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/SCHEMA.md:yaml [68:14 - 80:5] (13 lines, 55 tokens)
+   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:yaml [4:15 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml [4:16 - 16:5] (13 lines, 57 tokens)
+   egolint/.agents/specs/architecture/domain/personal-model.spec.md:yaml [4:22 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml [4:16 - 15:5] (12 lines, 53 tokens)
+   egolint/.agents/specs/architecture/experience/design-system.spec.md:yaml [4:21 - 15:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml [4:16 - 16:13] (13 lines, 58 tokens)
+   egolint/.agents/specs/architecture/experience/design.spec.md:yaml [4:14 - 16:11]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml [4:16 - 15:5] (12 lines, 53 tokens)
+   egolint/.agents/specs/architecture/governance/decisions.spec.md:yaml [4:17 - 15:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml [4:16 - 15:5] (12 lines, 53 tokens)
+   egolint/.agents/specs/architecture/meta/ai-constitution.spec.md:yaml [4:23 - 15:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml [4:16 - 16:5] (13 lines, 57 tokens)
+   egolint/.agents/specs/architecture/meta/epistemology.spec.md:yaml [4:20 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/domain/ontology.spec.md:yaml [4:16 - 16:5] (13 lines, 57 tokens)
+   egolint/.agents/specs/architecture/meta/meta.spec.md:yaml [4:12 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/experience/design-system.spec.md:yaml [4:43 - 16:12] (13 lines, 54 tokens)
+   egolint/.agents/specs/architecture/experience/design.spec.md:yaml [4:36 - 17:3]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [45:1 - 59:17] (15 lines, 64 tokens)
+   egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown [42:1 - 56:17]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [168:1 - 177:4] (10 lines, 50 tokens)
+   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [153:1 - 162:4]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [172:1 - 180:6] (9 lines, 54 tokens)
+   egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [245:1 - 253:6]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [237:25 - 249:4] (13 lines, 50 tokens)
+   egolint/.agents/specs/architecture/foundation/methodology.spec.md:markdown [225:8 - 237:4]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [237:25 - 250:4] (14 lines, 57 tokens)
+   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [221:52 - 234:4]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown [40:76 - 56:17] (17 lines, 65 tokens)
+   egolint/.agents/specs/architecture/foundation/methodology.spec.md:markdown [41:62 - 57:17]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown [40:76 - 56:17] (17 lines, 65 tokens)
+   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [40:78 - 56:17]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown [40:76 - 56:17] (17 lines, 65 tokens)
+   egolint/.agents/specs/architecture/foundation/system.spec.md:markdown [43:57 - 59:17]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [157:1 - 165:6] (9 lines, 54 tokens)
+   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [229:1 - 237:6]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [42:72 - 49:43] (8 lines, 51 tokens)
+   egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown [44:73 - 51:43]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [42:72 - 49:43] (8 lines, 51 tokens)
+   egolint/.agents/specs/architecture/identity/principles.spec.md:markdown [43:70 - 50:43]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [42:72 - 49:43] (8 lines, 51 tokens)
+   egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown [41:74 - 48:43]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [42:72 - 49:43] (8 lines, 51 tokens)
+   egolint/.agents/specs/architecture/identity/vision.spec.md:markdown [42:72 - 49:43]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [49:52 - 63:2] (15 lines, 115 tokens)
+   egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown [51:50 - 65:2]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [49:52 - 63:2] (15 lines, 115 tokens)
+   egolint/.agents/specs/architecture/identity/principles.spec.md:markdown [50:53 - 64:2]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [49:52 - 63:2] (15 lines, 115 tokens)
+   egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown [48:50 - 62:2]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [49:52 - 63:2] (15 lines, 115 tokens)
+   egolint/.agents/specs/architecture/identity/vision.spec.md:markdown [49:49 - 63:2]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [162:45 - 191:16] (30 lines, 211 tokens)
+   egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown [163:36 - 192:16]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [162:45 - 190:12] (29 lines, 206 tokens)
+   egolint/.agents/specs/architecture/identity/principles.spec.md:markdown [159:43 - 187:12]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [162:45 - 189:3] (28 lines, 198 tokens)
+   egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown [158:34 - 185:3]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [162:45 - 189:13] (28 lines, 201 tokens)
+   egolint/.agents/specs/architecture/identity/vision.spec.md:markdown [157:63 - 184:13]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [230:60 - 241:5] (12 lines, 103 tokens)
+   egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown [229:55 - 240:5]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [230:60 - 241:5] (12 lines, 103 tokens)
+   egolint/.agents/specs/architecture/identity/principles.spec.md:markdown [225:44 - 236:5]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [230:60 - 241:5] (12 lines, 103 tokens)
+   egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown [226:58 - 237:5]
+Clone found (markdown)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown [230:60 - 241:5] (12 lines, 103 tokens)
+   egolint/.agents/specs/architecture/identity/vision.spec.md:markdown [224:53 - 235:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml [4:17 - 16:5] (13 lines, 57 tokens)
+   egolint/.agents/specs/architecture/identity/pillars.spec.md:yaml [4:15 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml [4:17 - 16:5] (13 lines, 57 tokens)
+   egolint/.agents/specs/architecture/identity/principles.spec.md:yaml [4:18 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml [4:17 - 16:5] (13 lines, 57 tokens)
+   egolint/.agents/specs/architecture/identity/purpose.spec.md:yaml [4:15 - 16:5]
+Clone found (yaml)
+ - egolint/.agents/specs/architecture/identity/manifesto.spec.md:yaml [4:17 - 16:5] (13 lines, 57 tokens)
+   egolint/.agents/specs/architecture/identity/vision.spec.md:yaml [4:14 - 16:5]
+Clone found (hcl)
+ - egolint/.config/lint/terraform/.tflint.hcl [44:36 - 49:3] (6 lines, 91 tokens)
+   egolint/.config/lint/terraform/.tflint.hcl [52:33 - 57:3]
+Clone found (yaml)
+ - egolint/.config/megalinter/policy.yml [210:1 - 216:54] (7 lines, 60 tokens)
+   egolint/.config/megalinter/policy.yml [232:1 - 238:54]
+Clone found (json)
+ - egolint/.config/megalinter/snapshots/fast.json [7:18 - 26:5] (20 lines, 56 tokens)
+   egolint/.config/megalinter/snapshots/holistic.json [33:17 - 52:5]
+Clone found (json)
+ - egolint/.config/megalinter/snapshots/fast.json [80:25 - 99:5] (20 lines, 56 tokens)
+   egolint/.config/megalinter/snapshots/holistic.json [96:28 - 115:5]
+Clone found (json)
+ - egolint/.config/megalinter/tool-matrix.json [123:1 - 132:13] (10 lines, 53 tokens)
+   egolint/.config/megalinter/tool-matrix.json [141:1 - 150:13]
+Clone found (json)
+ - egolint/.config/megalinter/tool-matrix.json [1850:1 - 1859:13] (10 lines, 53 tokens)
+   egolint/.config/megalinter/tool-matrix.json [1868:1 - 1877:13]
+Clone found (json)
+ - egolint/.config/megalinter/tool-matrix.json [1956:90 - 1967:13] (12 lines, 59 tokens)
+   egolint/.config/megalinter/tool-matrix.json [1974:90 - 1985:13]
+Clone found (json)
+ - egolint/.config/megalinter/tool-matrix.json [1956:90 - 1967:13] (12 lines, 59 tokens)
+   egolint/.config/megalinter/tool-matrix.json [1992:90 - 2003:13]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [65:1 - 106:5] (42 lines, 124 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2721:1 - 2762:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [404:23 - 421:5] (18 lines, 50 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2761:43 - 2778:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [1146:41 - 1166:5] (21 lines, 59 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2833:41 - 2853:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [1185:52 - 1202:5] (18 lines, 50 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2852:28 - 2869:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [1451:49 - 1471:5] (21 lines, 59 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2897:26 - 2917:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [1728:38 - 1745:5] (18 lines, 50 tokens)
+   egolint/.config/megalinter/v10-catalog.json [2916:49 - 2933:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [2379:43 - 2411:5] (33 lines, 95 tokens)
+   egolint/.config/megalinter/v10-catalog.json [3020:34 - 3052:5]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [3308:42 - 3324:22] (17 lines, 58 tokens)
+   egolint/.config/megalinter/v10-catalog.json [3330:31 - 3346:22]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [3328:19 - 3346:22] (19 lines, 72 tokens)
+   egolint/.config/megalinter/v10-catalog.json [3350:18 - 3368:22]
+Clone found (json)
+ - egolint/.config/megalinter/v10-catalog.json [4462:41 - 4479:22] (18 lines, 61 tokens)
+   egolint/.config/megalinter/v10-catalog.json [4495:40 - 4512:22]
+Clone found (yaml)
+ - egolint/.config/security/trivy/trivy-sbom.yaml [39:1 - 84:24] (46 lines, 157 tokens)
+   egolint/.config/security/trivy/trivy.yaml [27:1 - 72:24]
+Clone found (json)
+ - egolint/.config/toolchain/tool-matrix.json [124:25 - 138:11] (15 lines, 51 tokens)
+   egolint/.config/toolchain/tool-matrix.json [186:26 - 200:11]
+Clone found (json)
+ - egolint/.config/toolchain/tool-matrix.json [272:25 - 286:11] (15 lines, 51 tokens)
+   egolint/.config/toolchain/tool-matrix.json [494:24 - 508:11]
+Clone found (yaml)
+ - egolint/.mega-linter.yml [1236:37 - 1248:5] (13 lines, 53 tokens)
+   egolint/.mega-linter.yml [1265:32 - 1277:5]
+Clone found (toml)
+ - egolint/poetry.toml [1:1 - 107:15] (107 lines, 185 tokens)
+   poetry.toml [1:1 - 107:15]
+Clone found (java)
+ - egolint/tests/fixtures/checkstyle/GreetingService.java [27:1 - 34:2] (8 lines, 62 tokens)
+   egolint/tests/fixtures/pmd/GreetingService.java [13:1 - 20:2]
+Clone found (toml)
+ - egolint/tests/fixtures/clippy/Cargo.toml [10:1 - 15:45] (6 lines, 57 tokens)
+   identity/Cargo.toml [22:1 - 27:45]
+Clone found (yaml)
+ - mantle/.github/workflows/test.yml [66:1 - 91:34] (26 lines, 248 tokens)
+   mantle/.github/workflows/test.yml [115:1 - 140:34]
+Clone found (markdown)
+ - mantle/CONTRIBUTING.md:markdown [14:41 - 19:32] (6 lines, 319 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [270:1 - 281:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [261:1 - 266:2] (6 lines, 103 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [304:1 - 309:2]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 276:7] (11 lines, 154 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:276 - 316:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 271:35] (6 lines, 58 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [352:211 - 359:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 276:14] (11 lines, 161 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [383:282 - 391:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:299 - 274:2] (9 lines, 116 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [415:267 - 424:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 277:17] (12 lines, 178 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [448:273 - 459:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 285:7] (20 lines, 353 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [519:264 - 537:21]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 274:3] (9 lines, 113 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [561:245 - 572:13]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 275:10] (10 lines, 135 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [695:293 - 707:13]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:274 - 318:55] (10 lines, 210 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [609:328 - 621:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [337:1 - 342:17] (6 lines, 130 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [406:1 - 411:15]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [340:27 - 345:19] (6 lines, 95 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [440:22 - 445:19]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [340:1 - 346:5] (7 lines, 136 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [513:1 - 519:5]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [356:1 - 361:21] (6 lines, 64 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [420:45 - 426:21]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [383:281 - 395:43] (13 lines, 231 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [643:229 - 654:27]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [405:1 - 410:15] (6 lines, 152 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [585:1 - 590:15]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [410:1 - 415:5] (6 lines, 109 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [478:1 - 483:5]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [448:272 - 463:25] (16 lines, 253 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [485:153 - 495:4]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [556:1 - 561:2] (6 lines, 102 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [604:1 - 609:2]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [556:1 - 561:5] (6 lines, 105 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [690:1 - 695:5]
+Clone found (markdown)
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [603:25 - 608:30] (6 lines, 106 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [666:21 - 671:30]
+Clone found (bash)
+ - mantle/init/init.sh [30:1 - 48:2] (19 lines, 112 tokens)
+   mantle/init/load-core.sh [51:1 - 69:2]
+Clone found (bash)
+ - mantle/install.sh [108:1 - 121:45] (14 lines, 122 tokens)
+   mantle/libexec/mantle/commands/version.sh [25:1 - 38:45]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [28:23 - 46:2] (19 lines, 103 tokens)
+   mantle/lib/bash/collection.sh [121:22 - 139:2]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
+   mantle/lib/bash/collection.sh [53:1 - 59:3]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
+   mantle/lib/bash/collection.sh [108:1 - 114:3]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [35:1 - 48:73] (14 lines, 70 tokens)
+   mantle/lib/bash/collection.sh [128:1 - 141:65]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 59:33] (11 lines, 76 tokens)
+   mantle/lib/bash/collection.sh [66:25 - 76:34]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 62:8] (14 lines, 91 tokens)
+   mantle/lib/bash/collection.sh [83:23 - 94:27]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 59:22] (11 lines, 73 tokens)
+   mantle/lib/bash/collection.sh [142:25 - 152:6]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [49:24 - 59:43] (11 lines, 81 tokens)
+   mantle/lib/bash/collection.sh [159:23 - 169:43]
+Clone found (bash)
+ - mantle/lib/bash/collection.sh [72:1 - 78:3] (7 lines, 64 tokens)
+   mantle/lib/bash/collection.sh [89:1 - 95:4]
+Clone found (bash)
+ - mantle/lib/bash/file.sh [54:21 - 61:3] (8 lines, 80 tokens)
+   mantle/lib/bash/file.sh [68:22 - 75:3]
+Clone found (bash)
+ - mantle/lib/core/core.sh [217:1 - 238:8] (22 lines, 137 tokens)
+   mantle/lib/core/core.sh [255:1 - 276:8]
+Clone found (bash)
+ - mantle/lib/extensions/wget.sh [195:52 - 201:5] (7 lines, 51 tokens)
+   mantle/lib/extensions/wget.sh [219:55 - 225:5]
+Clone found (bash)
+ - mantle/lib/install/github.sh [411:1 - 423:5] (13 lines, 51 tokens)
+   mantle/lib/install/python-tool.sh [76:1 - 88:5]
+Clone found (bash)
+ - mantle/lib/modules.sh [40:80 - 55:2] (16 lines, 84 tokens)
+   mantle/lib/modules.sh [143:85 - 158:2]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/asdf.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/calibre.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/ceres-solver.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/crush.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/docker-desktop.sh [8:1 - 18:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/dockerfmt.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/dust.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/e57format.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/eza.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/git-sim.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/gitinspector.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/google-fonts.sh [9:1 - 19:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/httpie.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/image-optim.sh [8:1 - 18:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/imagemagick.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/java.sh [8:1 - 18:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/linuxbrew.sh [9:1 - 19:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/lynis.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/mitmproxy.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/nerd-fonts.sh [9:1 - 19:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/nfpm.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/pdal.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/pyenv.sh [9:1 - 19:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/scc.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/shdoc.sh [8:1 - 18:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/shfmt.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/sqlfluff.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/talisman.sh [9:1 - 19:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/taskfile.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/terminus.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/typos.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/vale.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/image-optim.sh [42:41 - 52:4] (11 lines, 54 tokens)
+   mantle/libexec/mantle/installers/shdoc.sh [32:35 - 42:4]
+Clone found (bash)
+ - mantle/modules/aliases-network.sh [13:1 - 26:67] (14 lines, 137 tokens)
+   mantle/modules/aliases.sh [175:1 - 188:67]
+Clone found (bash)
+ - mantle/modules/aliases-network.sh [41:1 - 51:2] (11 lines, 120 tokens)
+   mantle/modules/aliases.sh [211:1 - 221:2]
+Clone found (bash)
+ - mantle/modules/aliases-safe.sh [13:1 - 23:72] (11 lines, 65 tokens)
+   mantle/modules/aliases.sh [26:1 - 38:72]
+Clone found (bash)
+ - mantle/modules/aliases-safe.sh [24:1 - 33:68] (10 lines, 61 tokens)
+   mantle/modules/aliases.sh [43:1 - 53:68]
+Clone found (bash)
+ - mantle/modules/aliases-safe.sh [56:1 - 65:2] (10 lines, 61 tokens)
+   mantle/modules/aliases.sh [94:1 - 103:2]
+Clone found (bash)
+ - mantle/modules/aliases-safe.sh [74:1 - 89:67] (16 lines, 148 tokens)
+   mantle/modules/aliases.sh [244:1 - 259:67]
+Clone found (bash)
+ - mantle/modules/aliases-safe.sh [90:1 - 103:2] (14 lines, 150 tokens)
+   mantle/modules/aliases.sh [262:1 - 275:2]
+Clone found (bash)
+ - mantle/modules/aliases-system.sh [13:1 - 37:2] (25 lines, 289 tokens)
+   mantle/modules/aliases.sh [351:1 - 380:2]
+Clone found (bash)
+ - mantle/modules/cache.sh [32:1 - 39:2] (8 lines, 51 tokens)
+   mantle/modules/tooling.sh [28:1 - 35:2]
+Clone found (python)
+ - mindgarden/scripts/garden_agent.py [58:75 - 67:5] (10 lines, 63 tokens)
+   mindgarden/scripts/publish_garden.py [85:52 - 94:5]
+Clone found (python)
+ - mindgarden/tests/test_garden_agent.py [12:1 - 22:14] (11 lines, 57 tokens)
+   mindgarden/tests/test_validate_garden.py [8:1 - 18:14]
+Clone found (python)
+ - mindgarden/tests/test_garden_agent.py [13:1 - 22:14] (10 lines, 54 tokens)
+   mindgarden/tests/test_publish_garden.py [8:1 - 17:14]
+Clone found (python)
+ - mindgarden/tests/test_garden_agent.py [33:1 - 47:5] (15 lines, 79 tokens)
+   mindgarden/tests/test_publish_garden.py [24:1 - 38:5]
+Clone found (python)
+ - mindgarden/tests/test_garden_agent.py [159:68 - 167:13] (9 lines, 64 tokens)
+   mindgarden/tests/test_garden_agent.py [179:57 - 186:13]
+Clone found (python)
+ - mindgarden/tests/test_garden_agent.py [257:58 - 262:13] (6 lines, 57 tokens)
+   mindgarden/tests/test_garden_agent.py [272:46 - 277:13]
+Clone found (python)
+ - mindgarden/tests/test_garden_agent.py [257:58 - 270:45] (14 lines, 125 tokens)
+   mindgarden/tests/test_garden_agent.py [288:58 - 301:13]
+Clone found (python)
+ - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
+   mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
+Clone found (python)
+ - tests/test_validate_automation.py [45:53 - 57:32] (13 lines, 66 tokens)
+   tests/test_validate_automation.py [108:47 - 120:32]
+Clone found (python)
+ - tests/test_validate_automation.py [46:9 - 57:32] (12 lines, 56 tokens)
+   tests/test_validate_automation.py [64:16 - 75:32]
+┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
+│ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ apex       │ 1              │ 13          │ 88           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ bash       │ 127            │ 19168       │ 90084        │ 58           │ 670 (3.50%)      │ 4439 (4.93%)      │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ c          │ 1              │ 50          │ 296          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ clojure    │ 2              │ 280         │ 919          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ cpp        │ 1              │ 44          │ 233          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ css        │ 2              │ 102         │ 908          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ dart       │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ diff       │ 1              │ 704         │ 59           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ gherkin    │ 1              │ 13          │ 155          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ go         │ 1              │ 29          │ 125          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ graphql    │ 1              │ 34          │ 177          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ groovy     │ 1              │ 20          │ 74           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ hcl        │ 2              │ 101         │ 1134         │ 1            │ 5 (4.95%)        │ 91 (8.02%)        │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ ini        │ 3              │ 233         │ 3111         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ java       │ 2              │ 54          │ 504          │ 1            │ 7 (12.96%)       │ 62 (12.30%)       │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ javascript │ 6              │ 674         │ 2231         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ json       │ 85             │ 14210       │ 60138        │ 23           │ 556 (3.91%)      │ 2040 (3.39%)      │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ jsx        │ 1              │ 10          │ 52           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ markdown   │ 225            │ 23546       │ 268328       │ 138          │ 1660 (7.05%)     │ 17050 (6.35%)     │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ mermaid    │ 2              │ 232         │ 283          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ php        │ 1              │ 19          │ 92           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ powershell │ 3              │ 163         │ 583          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ python     │ 37             │ 8672        │ 65226        │ 16           │ 157 (1.81%)      │ 1112 (1.70%)      │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ ruby       │ 1              │ 204         │ 810          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ rust       │ 7              │ 1181        │ 9458         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ scala      │ 1              │ 13          │ 63           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ sql        │ 2              │ 28          │ 133          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ swift      │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ text       │ 8              │ 1731        │ 1761         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ toml       │ 21             │ 1946        │ 5851         │ 2            │ 111 (5.70%)      │ 242 (4.14%)       │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ txt        │ 5              │ 138         │ 2136         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ yaml       │ 229            │ 18912       │ 99580        │ 82           │ 958 (5.07%)      │ 6270 (6.30%)      │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ Total:     │ 795            │ 93489       │ 623745       │ 321          │ 4124 (4.41%)     │ 31306 (5.02%)     │
+└────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
+Found 321 clones.
+HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
+ERROR: jscpd found too many duplicates (4.4%) over threshold (3.0%)
+time: 1.10s
+
