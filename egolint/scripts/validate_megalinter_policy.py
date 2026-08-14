@@ -270,7 +270,10 @@ def resolve_configuration_path(rules_path: str, config_file: str) -> Path:
         "/github/workspace/",
         "/tmp/lint/",
     ):
-        normalized_rules_path = normalized_rules_path.removeprefix(workspace_prefix)
+        candidate = normalized_rules_path.removeprefix(workspace_prefix)
+        if candidate != normalized_rules_path:
+            normalized_rules_path = candidate
+            break
     rules_root = Path(normalized_rules_path)
     if not rules_root.is_absolute():
         rules_root = REPOSITORY_ROOT / rules_root
