@@ -185,11 +185,7 @@ pub fn validate_repository(repository_root: &Path) -> Result<ValidatedProject> {
     })
 }
 
-fn validate_project_contract(
-    repository_root: &Path,
-    spec: &ProjectSpec,
-    errors: &mut Vec<String>,
-) {
+fn validate_project_contract(repository_root: &Path, spec: &ProjectSpec, errors: &mut Vec<String>) {
     if spec.schema != PROJECT_SCHEMA {
         errors.push(format!(
             "schema must be {PROJECT_SCHEMA:?}, found {:?}",
