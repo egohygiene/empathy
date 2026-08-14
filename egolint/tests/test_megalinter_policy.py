@@ -5,9 +5,12 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 from pathlib import Path
 import subprocess  # nosec B404
 import sys
+import tempfile
+import textwrap
 from typing import Any
 import unittest
 
@@ -159,11 +162,158 @@ class MegaLinterPolicyTests(unittest.TestCase):
         )
 
     def test_eslint_config_handles_optional_json_plugin(self) -> None:
-        config = ESLINT_CONFIG_PATH.read_text(encoding="utf-8")
-        self.assertIn('require("@eslint/json")', config)
-        self.assertIn('error?.code === "MODULE_NOT_FOUND"', config)
-        self.assertIn('String(error.message).includes("@eslint/json")', config)
-        self.assertIn("...jsonConfigs,", config)
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_root = Path(tmpdir)
+            config_path = temp_root / "eslint.config.mjs"
+            config_path.write_text(ESLINT_CONFIG_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+
+            def write_module(module_name: str, source: str) -> None:
+                module_path = temp_root / "node_modules" / Path(module_name.replace("/", os.sep))
+                module_path.parent.mkdir(parents=True, exist_ok=True)
+                module_path.write_text(textwrap.dedent(source).strip() + "\n", encoding="utf-8")
+
+            def write_package_manifest(package_name: str, manifest: dict[str, Any]) -> None:
+                package_root = temp_root / "node_modules" / package_name
+                package_root.mkdir(parents=True, exist_ok=True)
+                (package_root / "package.json").write_text(
+                    json.dumps(manifest),
+                    encoding="utf-8",
+                )
+
+            write_module(
+                "@eslint/js/index.js",
+                """
+                module.exports = {
+                  configs: {
+                    recommended: {
+                      rules: {},
+                    },
+                  },
+                };
+                """,
+            )
+            write_package_manifest(
+                "@eslint/js",
+                {"name": "@eslint/js", "type": "commonjs", "main": "index.js"},
+            )
+            write_module(
+                "@typescript-eslint/eslint-plugin/index.js",
+                """
+                module.exports = {
+                  configs: {
+                    recommended: {
+                      rules: {},
+                    },
+                  },
+                };
+                """,
+            )
+            write_package_manifest(
+                "@typescript-eslint/eslint-plugin",
+                {
+                    "name": "@typescript-eslint/eslint-plugin",
+                    "type": "commonjs",
+                    "main": "index.js",
+                },
+            )
+            write_module(
+                "@typescript-eslint/parser/index.js",
+                """
+                module.exports = {};
+                """,
+            )
+            write_package_manifest(
+                "@typescript-eslint/parser",
+                {
+                    "name": "@typescript-eslint/parser",
+                    "type": "commonjs",
+                    "main": "index.js",
+                },
+            )
+            write_module(
+                "eslint-plugin-react/index.js",
+                """
+                module.exports = {
+                  configs: {
+                    recommended: {
+                      rules: {},
+                    },
+                  },
+                };
+                """,
+            )
+            write_package_manifest(
+                "eslint-plugin-react",
+                {"name": "eslint-plugin-react", "type": "commonjs", "main": "index.js"},
+            )
+            write_module(
+                "eslint/config.js",
+                """
+                module.exports = {
+                  defineConfig(config) {
+                    return Array.isArray(config) ? config.flat(Infinity) : config;
+                  },
+                  globalIgnores(patterns, name) {
+                    return { ignores: patterns, name };
+                  },
+                };
+                """,
+            )
+            write_package_manifest(
+                "eslint",
+                {
+                    "name": "eslint",
+                    "type": "commonjs",
+                    "exports": {"./config": "./config.js"},
+                },
+            )
+            write_module(
+                "globals/index.js",
+                """
+                module.exports = {
+                  es2024: {},
+                  browser: {},
+                  node: {},
+                  vitest: {},
+                  jest: {},
+                  mocha: {},
+                };
+                """,
+            )
+            write_package_manifest(
+                "globals",
+                {"name": "globals", "type": "commonjs", "main": "index.js"},
+            )
+
+            node_script = textwrap.dedent(
+                f"""
+                import config from {json.dumps(config_path.as_posix())};
+
+                const containsJsonConfig = config.some(
+                  (entry) =>
+                    entry &&
+                    typeof entry === "object" &&
+                    (
+                      String(entry.language ?? "").startsWith("json/") ||
+                      (Array.isArray(entry.files) &&
+                        entry.files.some((pattern) => /^\\*\\*\\/\\*\\.json(c|5)?$/.test(pattern)))
+                    )
+                );
+                if (containsJsonConfig) {{
+                  console.error("JSON config blocks should be omitted when @eslint/json is unavailable.");
+                  process.exit(1);
+                }}
+                """
+            )
+
+            result = subprocess.run(  # nosec B603
+                ["node", "--input-type=module", "-e", node_script],
+                cwd=temp_root,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(result.returncode, 0, f"{result.stdout}\n{result.stderr}")
 
 
 if __name__ == "__main__":
