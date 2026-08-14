@@ -28,7 +28,8 @@ quality layers:
 - Taskfile-backed VS Code settings, extensions, and quality tasks;
 - separated source-license, SBOM, and vulnerability ownership contracts;
 - an incubated Mindgarden holon with versioned `.garden` contracts,
-  dependency-free validation, and Empathy as its first consumer.
+  dependency-free validation, deterministic agent access, a reviewed-public
+  Quartz projection, and Empathy as its first consumer.
 
 Imported workflows that still depend on a product, toolchain, secret set, or
 release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
@@ -39,6 +40,8 @@ and are intentionally inert.
 ```bash
 task check
 task garden:check
+task garden:publish:check
+task garden:site:serve
 task hooks:install
 task commit:test
 task precommit:staged
