@@ -47,6 +47,7 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
             self.assertNotIn(".garden.local", rendered)
             self.assertNotIn("status: draft", rendered)
             self.assertNotIn("status: proposed", rendered)
+            self.assertIn("https://egohygiene.github.io/empathy/intelligence/", rendered)
 
     def test_pages_workflow_uses_immutable_dependencies_and_main_only_deploy(self) -> None:
         workflow = (REPOSITORY_ROOT / ".github/workflows/mindgarden-pages.yml").read_text(
@@ -62,6 +63,33 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
         self.assertIn("github.ref == 'refs/heads/main'", workflow)
         self.assertIn("environment:\n      name: github-pages", workflow)
 
+    def test_pages_workflow_composes_and_refreshes_repository_intelligence(self) -> None:
+        workflow = (REPOSITORY_ROOT / ".github/workflows/mindgarden-pages.yml").read_text(
+            encoding="utf8"
+        )
+
+        self.assertIn("./.github/actions/generate-repository-intelligence-dashboard", workflow)
+        self.assertIn('output-root: ".cache/mindgarden/site/intelligence"', workflow)
+        self.assertIn('path: ".cache/mindgarden/site"', workflow)
+        self.assertIn('".reports/*/summary.json"', workflow)
+        self.assertIn("event != 'pull_request'", workflow)
+        self.assertIn("head_branch == github.event.repository.default_branch", workflow)
+        self.assertNotIn("workflow_run.conclusion", workflow)
+        for producer_workflow in (
+            "MegaLinter",
+            "OpenSSF Scorecard",
+            "🔍 OSV Vulnerability Scan",
+        ):
+            self.assertIn(producer_workflow, workflow)
+        self.assertLess(
+            workflow.index("Build the pinned Quartz site"),
+            workflow.index("Generate repository intelligence dashboard"),
+        )
+        self.assertLess(
+            workflow.index("Generate repository intelligence dashboard"),
+            workflow.index("Upload GitHub Pages artifact"),
+        )
+
     def test_task_and_documentation_surface_the_publish_contract(self) -> None:
         taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
         for task_name in (
@@ -76,6 +104,7 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
         )
         self.assertIn("Settings → Pages", profile_readme)
         self.assertIn("both `reviewed` and\n`public`", profile_readme)
+        self.assertIn("https://egohygiene.github.io/empathy/intelligence/", profile_readme)
 
 
 if __name__ == "__main__":

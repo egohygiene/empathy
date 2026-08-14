@@ -140,7 +140,8 @@ configuration.
    `index.html`, and a small accessible stylesheet with no client-side
    framework. **Complete.**
 4. Extend the Mindgarden Pages build job to place the generated dashboard at
-   `intelligence/` beside the Quartz site and add a garden link to it. **Next.**
+   `intelligence/` beside the Quartz site and add a garden link to it.
+   **Complete.**
 5. Extract the stable builder and caller contract to Relay, then instantiate
    it in each repository through its declared capability profile.
 
