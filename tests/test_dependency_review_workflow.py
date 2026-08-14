@@ -23,6 +23,7 @@ class DependencyReviewWorkflowTests(unittest.TestCase):
         self.assertIn("permissions: {}", workflow)
         self.assertIn("contents: read", workflow)
         self.assertNotIn("contents: write", workflow)
+        self.assertIn("vars.DEPENDENCY_REVIEW_ENABLED == 'true'", workflow)
         match = re.search(r"actions/dependency-review-action@([0-9a-f]{40})", workflow)
         self.assertIsNotNone(match)
         self.assertIn("fail-on-severity: high", workflow)
@@ -30,7 +31,7 @@ class DependencyReviewWorkflowTests(unittest.TestCase):
 
     def test_staging_ledger_records_the_promotion_boundary(self) -> None:
         ledger = (REPOSITORY_ROOT / ".staging/github/README.md").read_text(encoding="utf-8")
-        self.assertIn("Dependency review | Promoted in Empathy", ledger)
+        self.assertIn("Dependency review | Promoted as an opt-in profile", ledger)
         self.assertIn("Gitleaks | Not promoted", ledger)
         self.assertIn("Vitality audit | Redesign as dashboard collector", ledger)
 

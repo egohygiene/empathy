@@ -41,7 +41,7 @@ Do not copy staged workflows into a generated repository unchanged.
 
 | Capability | Status | Reason / owner |
 | --- | --- | --- |
-| Dependency review | Promoted in Empathy | A least-privilege pull-request gate with no product assumptions. It is a thin caller around GitHub's maintained action. |
+| Dependency review | Promoted as an opt-in profile | A least-privilege pull-request gate with no product assumptions. Set `DEPENDENCY_REVIEW_ENABLED=true` only after enabling GitHub Dependency Graph. |
 | OpenSSF Scorecard | Already active | Empathy's canonical workflow is newer than the staged copy and will gain a stable dashboard summary in a later slice. |
 | OSV, SBOM, and Trivy | Already owned by current reports | Do not duplicate scanners. The repository dashboard will consume compact published summaries from the canonical scanners. |
 | Gitleaks | Not promoted | MegaLinter already runs secret-scanning coverage; adding another default scanner would duplicate alerts until an explicit policy selects it. |

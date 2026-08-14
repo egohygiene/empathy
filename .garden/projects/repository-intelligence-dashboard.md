@@ -132,3 +132,5 @@ repository publishing.
 - Treat report freshness and schema validation as first-class states.
 - Keep PRs read-only; only trusted default-branch, scheduled, or manual runs
   may publish stable report snapshots.
+- Enable the dependency-review profile only after GitHub Dependency Graph is
+  enabled, by setting the repository variable `DEPENDENCY_REVIEW_ENABLED=true`.

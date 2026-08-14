@@ -19,6 +19,7 @@ concurrency:
 jobs:
   review:
     name: Review dependency risk
+    if: vars.DEPENDENCY_REVIEW_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
