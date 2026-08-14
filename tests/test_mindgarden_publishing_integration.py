@@ -23,14 +23,19 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
     def test_repository_projection_is_public_reviewed_and_deterministic(self) -> None:
         self.assertEqual(
             verify_projection(REPOSITORY_ROOT, Path("mindgarden/profiles/quartz/profile.yaml")),
-            3,
+            4,
         )
         with TemporaryDirectory() as directory:
             output = Path(directory) / "projection"
             paths = project_garden(REPOSITORY_ROOT, output)
             self.assertEqual(
                 [path.as_posix() for path in paths],
-                ["dashboard.md", "index.md", "projects/index.md"],
+                [
+                    "dashboard.md",
+                    "index.md",
+                    "projects/index.md",
+                    "projects/repository-intelligence-dashboard.md",
+                ],
             )
             marker = json.loads((output / ".mindgarden-projection.json").read_text(encoding="utf8"))
             self.assertEqual(marker["schema"], "mindgarden.projection/v0")
