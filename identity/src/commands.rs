@@ -97,7 +97,7 @@ pub fn handoff(arguments: &HandoffArguments) -> Result<()> {
         "handoff output directory",
     )?;
     let plan = resolve_plan(&project);
-    let output_directory = project.repository_root.join(arguments.output_directory);
+    let output_directory = project.repository_root.join(&arguments.output_directory);
     fs::create_dir_all(&output_directory)
         .with_context(|| format!("cannot create {}", output_directory.display()))?;
 

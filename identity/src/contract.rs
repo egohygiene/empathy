@@ -276,7 +276,7 @@ fn validate_source_selection<'a>(
     spec: &'a ProjectSpec,
     errors: &mut Vec<String>,
 ) -> BTreeSet<&'a str> {
-    let source_roles = spec
+    let source_roles: BTreeSet<&str> = spec
         .sources
         .required
         .iter()
