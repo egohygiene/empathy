@@ -49,32 +49,59 @@ Clone found (yaml)
  - .github/workflows/automation.yml [8:1 - 23:3] (16 lines, 60 tokens)
    .github/workflows/automation.yml [26:1 - 41:3]
 Clone found (yaml)
- - .github/workflows/automation.yml [53:1 - 63:15] (11 lines, 56 tokens)
-   .github/workflows/identity.yml [35:1 - 45:15]
+ - .github/workflows/automation.yml [53:1 - 69:15] (17 lines, 90 tokens)
+   .github/workflows/identity.yml [35:1 - 51:15]
 Clone found (yaml)
- - .github/workflows/dependency-review.yml [30:1 - 43:11] (14 lines, 96 tokens)
+ - .github/workflows/automation.yml [53:1 - 63:24] (11 lines, 61 tokens)
+   .github/workflows/repository-intelligence.yml [35:1 - 45:24]
+Clone found (yaml)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
+   .github/workflows/codeql.yml [40:1 - 53:15]
+Clone found (yaml)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
+   .github/workflows/lint-architecture.yml [52:1 - 65:15]
+Clone found (yaml)
+ - .github/workflows/automation.yml [56:1 - 67:11] (12 lines, 62 tokens)
+   .github/workflows/megalinter.yml [35:1 - 46:11]
+Clone found (yaml)
+ - .github/workflows/automation.yml [59:1 - 69:24] (11 lines, 62 tokens)
+   .github/workflows/mantle.yml [50:1 - 60:23]
+Clone found (yaml)
+ - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
+   .github/workflows/contributors.yml [19:1 - 29:24]
+Clone found (yaml)
+ - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
+   .github/workflows/lint-architecture.yml [49:1 - 59:24]
+Clone found (yaml)
+ - .github/workflows/contributors.yml [22:1 - 34:11] (13 lines, 71 tokens)
+   .github/workflows/megalinter-fix.yml [29:1 - 41:11]
+Clone found (yaml)
+ - .github/workflows/dependency-review.yml [36:1 - 49:11] (14 lines, 96 tokens)
    .staging/github/workflows/security-optional/dependency-review.yml [29:1 - 42:11]
 Clone found (yaml)
- - .github/workflows/lint-architecture.yml [49:1 - 59:15] (11 lines, 56 tokens)
-   .staging/github/workflows/security-optional/dependency-review.yml [19:1 - 29:15]
+ - .github/workflows/lint-architecture.yml [82:1 - 104:34] (23 lines, 138 tokens)
+   .github/workflows/megalinter.yml [123:1 - 145:34]
 Clone found (yaml)
- - .github/workflows/lint-architecture.yml [76:1 - 92:34] (17 lines, 104 tokens)
-   .github/workflows/megalinter.yml [117:1 - 133:34]
+ - .github/workflows/lint-architecture.yml [85:1 - 97:15] (13 lines, 58 tokens)
+   .github/workflows/osv-scan.yml [737:1 - 749:15]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [38:1 - 46:15] (9 lines, 51 tokens)
-   .github/workflows/repository-intelligence.yml [38:1 - 46:15]
+ - .github/workflows/megalinter.yml [33:1 - 47:32] (15 lines, 81 tokens)
+   .github/workflows/ossf-scorecard.yml [31:1 - 46:15]
 Clone found (yaml)
- - .github/workflows/osv-scan.yml [324:1 - 333:22] (10 lines, 85 tokens)
-   .github/workflows/osv-scan.yml [348:1 - 357:22]
+ - .github/workflows/mindgarden-pages.yml [38:1 - 52:15] (15 lines, 85 tokens)
+   .github/workflows/repository-intelligence.yml [38:1 - 52:15]
 Clone found (yaml)
- - .github/workflows/osv-scan.yml [324:1 - 333:22] (10 lines, 85 tokens)
-   .github/workflows/osv-scan.yml [371:1 - 380:22]
+ - .github/workflows/osv-scan.yml [330:1 - 339:22] (10 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [354:1 - 363:22]
 Clone found (yaml)
- - .github/workflows/osv-scan.yml [336:51 - 346:15] (11 lines, 85 tokens)
-   .github/workflows/osv-scan.yml [359:52 - 369:15]
+ - .github/workflows/osv-scan.yml [330:1 - 339:22] (10 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [377:1 - 386:22]
 Clone found (yaml)
- - .github/workflows/osv-scan.yml [336:51 - 346:15] (11 lines, 85 tokens)
-   .github/workflows/osv-scan.yml [382:54 - 392:15]
+ - .github/workflows/osv-scan.yml [342:51 - 352:15] (11 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [365:52 - 375:15]
+Clone found (yaml)
+ - .github/workflows/osv-scan.yml [342:51 - 352:15] (11 lines, 85 tokens)
+   .github/workflows/osv-scan.yml [388:54 - 398:15]
 Clone found (yaml)
  - .staging/github/workflows/application-flutter/autofix.yml [39:1 - 53:15] (15 lines, 103 tokens)
    .staging/github/workflows/release-strategies/changesets-release.yml [98:1 - 112:15]
@@ -977,7 +1004,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 224            │ 23517       │ 267874       │ 138          │ 1660 (7.06%)     │ 17050 (6.36%)     │
+│ markdown   │ 225            │ 23535       │ 268299       │ 138          │ 1660 (7.05%)     │ 17050 (6.35%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1011,12 +1038,12 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 229            │ 18772       │ 98629        │ 73           │ 835 (4.45%)      │ 5559 (5.64%)      │
+│ yaml       │ 229            │ 18880       │ 99241        │ 82           │ 958 (5.07%)      │ 6270 (6.32%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 794            │ 93153       │ 621246       │ 310          │ 3981 (4.27%)     │ 30477 (4.91%)     │
+│ Total:     │ 795            │ 93279       │ 622283       │ 319          │ 4104 (4.40%)     │ 31188 (5.01%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 310 clones.
+Found 319 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 1.32s
+ERROR: jscpd found too many duplicates (4.4%) over threshold (3.0%)
+time: 1.86s
 

@@ -6,7 +6,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/terraform_tflint/
 Linter raw log:
 │ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
 
-Failed to initialize plugins; Plugin "google" not found. Did you run "tflint --init"?
+Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
 
 │ Failed to run in egolint/tests/fixtures/negative/terraform-fmt; exit status 1
 
@@ -14,6 +14,6 @@ Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --
 
 │ Failed to run in egolint/tests/fixtures/tflint; exit status 1
 
-Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
+Failed to initialize plugins; Plugin "google" not found. Did you run "tflint --init"?
 
 

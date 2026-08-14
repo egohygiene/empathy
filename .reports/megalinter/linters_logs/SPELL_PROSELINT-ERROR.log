@@ -41,6 +41,8 @@ reviewed' - a phrase is repeated.
 .garden/projects/repository-intelligence-dashboard.md:73:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:74:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:74:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.lowercase_periods: It's standard to use periods for lowercase 'a.m.' or 'p.m.'.
+.github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.spacing: It's standard to put a space before 'a.m.' or 'p.m.'.
 ARCHITECTURE.md:105:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:105:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:106:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".

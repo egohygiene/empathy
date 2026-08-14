@@ -115,6 +115,15 @@ Linter raw log:
  141:1  warning  'Prioritize' is too wordy.  write-good.TooWordy 
 
 
+ .github/security/dependabot-dismissals.md
+ 4:29    warning  'It is' is too wordy.                                               write-good.TooWordy 
+ 5:24    warning  'is managed' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 6:1     warning  'equivalent' is too wordy.                                          write-good.TooWordy 
+ 12:361  warning  'is removed' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 13:287  warning  'is removed' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 17:75   warning  'be remediated' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+
  .identity/brief.md
  5:72   warning  'be built' may be passive voice. Use active voice if you can.  write-good.Passive 
  58:61  warning  'is read' may be passive voice. Use active voice if you can.   write-good.Passive 
@@ -2538,5 +2547,5 @@ Linter raw log:
  62:57  warning  'it is' is too wordy.                                              write-good.TooWordy 
  66:32  warning  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive  
 
-✖ 4 errors, 1978 warnings and 0 suggestions in 236 files.
+✖ 4 errors, 1984 warnings and 0 suggestions in 237 files.
 

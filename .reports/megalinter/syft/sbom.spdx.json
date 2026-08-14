@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-19629961-f7a7-40ab-8df9-b5b402014a69",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-03010263-4c25-4217-ac5b-196c7cdb0289",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.50.0"
   ],
-  "created": "2026-08-14T14:12:49Z"
+  "created": "2026-08-14T14:40:54Z"
  },
  "packages": [
   {
@@ -224495,6 +224495,986 @@
    ]
   },
   {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-f458fa4ce0bc5b29",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/automation.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-0b0cc97aa4c9896e",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/codeql.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-3acffac2429537bf",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/commitlint.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-6b97adfcc65356d3",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/contributors.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-0016a576c76b9d54",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/dependency-review.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-156d2de43befb11d",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/identity.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-e401c960dd77e6b5",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/lint-architecture.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-c81f32ed074a527c",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/mantle.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-4cfee176bd0b0546",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/megalinter-fix.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-5aabfd1f2fc76113",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/megalinter.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-6f0d70d81afdce78",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/mindgarden-pages.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-94e734d698382ca1",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/ossf-scorecard.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-dc5ead640ec0de17",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/osv-scan.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-991299fe8001ff4f",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/repository-intelligence.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
    "name": "stevedore",
    "SPDXID": "SPDXRef-Package-python-stevedore-fb53145ac743242d",
    "versionInfo": "5.9.0",
@@ -247706,7 +248686,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "d6583964f00e9166c117724bb6a93dca8a8994044d8a3572362368e75cf54c66"
+     "checksumValue": "a9b261ec334c98f19dd447febf0a0dec902948244edfcf11a8514a69e84f636a"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247724,7 +248704,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "85236d60f672b574c140ff6a22205e518518621c9b382babeffe9480c803b4bb"
+     "checksumValue": "2ee3915d349d8743c2d2cb1a64e1d7f9302005a17a37384e908f38bbdf9db8cd"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247742,7 +248722,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "538464ea89689592f50325aea13fbade4025055777c73ab4a29c0911d369bad8"
+     "checksumValue": "c3e8b61295fd1c9040a1b18a7220fdfbadebaca4bb0a7c50e4f2a788941bf511"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247760,7 +248740,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "064abb7d1ea55a21d7c5a4f65ca2463c5431bd156a1a2647ddc713bd4bd99215"
+     "checksumValue": "d0c401dd9bff690a604dd11ce99c0e37f2c908cecdd5eb2a849d459d96294a4d"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247778,7 +248758,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "188c1e8335ba415f1f4f7f0163819cd53d37e954ce84de0c6a910878e4fe126f"
+     "checksumValue": "a4409034844938a98f6debdd5f91f8f7544042cea68241399fa0b87f711b183e"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247796,7 +248776,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "ef8eaee8260cfa476360a192407bd88c2f1f15a0e2de071a1427a27fb36ef6cf"
+     "checksumValue": "bdedb66a160e06c8d869d0f7c85efe9bf51049ecc5096845d531089b603c2eaa"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247814,7 +248794,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "27709f0357cc462cbafae2236c139663a0ff5aa7d63a2a14d9a648d6bdba61f5"
+     "checksumValue": "f56830261a8fdb10f3c82591f065645863114efde2e4162b7ff31a2383190f8b"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247832,7 +248812,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "192ddbd4f9c9f3d80a5a5e219cb08ed6edc0f3eaca6f2c3af4f3f561c2b13047"
+     "checksumValue": "8d8a1e680f90fbbafd344a27736496cf3a232e0147919a84b725a4c57fb9ce2f"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247850,7 +248830,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "270f12846ccd02c0966bbd3e11f6142f27a06a47b71e0e903939c71fbf426682"
+     "checksumValue": "76ade052daa606513f3b612d3ac87107b3014e12bdb12a26fcf52b86f445c374"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247868,7 +248848,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "3934d6040ac075b64f874ab1272b1fc1680fb7fe5d7a4140a696da5e53624375"
+     "checksumValue": "efa7c8946baeb57a96c5f5ad4386df1ce4ce3832202a77c23151d7cd4360ba03"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247886,7 +248866,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "083ad4d57f0c0125736cdec34c89bd85e7f7dfc4a9a3c06ec02ece90511e2981"
+     "checksumValue": "fe069e287aeca1cd71c1eab877313f484daca116ca2d50e40d7356622ddecefe"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247904,7 +248884,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "265d9d0cce6575c00da279e03fc7980ad9df30e38d3563dd426a58896f07deaa"
+     "checksumValue": "c54df0f89c80e16d0a92327e532a273ea48b51393ea6dcbabce292bd8ff73b18"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247922,7 +248902,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "62ca65e8df59092c1ca486a4baf774aa0993baffd58949f58e9a1efa44e452a4"
+     "checksumValue": "e5d5cde23c30a94e3b5b4309431550b8328822956b97692e5fb769663c940a1a"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -247940,7 +248920,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "28a7c8e2b8a288a225d821d951eb8782aa4af96b76e75ceae1265b05c2bc35df"
+     "checksumValue": "babd4af31e671009a83afdb4c92f142c3b1f1b34cdf605928a762e7f20141636"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -338513,6 +339493,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-0016a576c76b9d54",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-dependency-review.yml-11769e63aa84e323",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-argparse-001a7e9df4a74294",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -339737,6 +340723,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-0b0cc97aa4c9896e",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-codeql.yml-f4fe0eee66e1ba99",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-body-parser-0b14559445efb35c",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -340825,6 +341817,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm--jest-transform-155c04c684cec552",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-156d2de43befb11d",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-identity.yml-a2eefa88a8e800a7",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -344495,6 +345493,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-3acffac2429537bf",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-commitlint.yml-bdd9655fdabfc0d9",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-validate-automation-3aea49439c36d6d6",
    "relatedSpdxElement": "SPDXRef-File-.github-workflows-automation.yml-df84964b9d8d4792",
    "relationshipType": "OTHER",
@@ -346403,6 +347407,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-4cfee176bd0b0546",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-megalinter-fix.yml-68fc38e13e38ae86",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-promise-retry-4d054bf771382b7d",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -347731,6 +348741,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-content-type-5aa298c0be19d86d",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-5aabfd1f2fc76113",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-megalinter.yml-e06c6f17a0229f7b",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -349487,6 +350503,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-6b97adfcc65356d3",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-contributors.yml-c15900e162c5d88b",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-mini-svg-data-uri-6bba4c207136d1ce",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -349819,6 +350841,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm--rollup-rollup-android-arm64-6eeea884cb69ce06",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-6f0d70d81afdce78",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -353735,6 +354763,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-94e734d698382ca1",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-is-relative-url-94e803159bdea69b",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -354235,6 +355269,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-global-agent-9909f5ff4990d77a",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-991299fe8001ff4f",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-repository-intelligence.yml-ff6bf8d1270a8b38",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -359063,6 +360103,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-c81f32ed074a527c",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mantle.yml-22aa7667ab573984",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-rfc3339-validator-c820d37c005818af",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
    "relationshipType": "OTHER",
@@ -361469,6 +362515,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-dc5ead640ec0de17",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-osv-scan.yml-28289e589bf36e7a",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-jupyter-dc5f63c06c71ced2",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
    "relationshipType": "OTHER",
@@ -362071,6 +363123,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-trivial-deferred-e3f9beed9f4fd156",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-e401c960dd77e6b5",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-lint-architecture.yml-bf105684464e79a1",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -363673,6 +364731,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm--jsonjoy.com-fs-node-to-fsa-f45881d9dceee228",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-f458fa4ce0bc5b29",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-automation.yml-df84964b9d8d4792",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -384184,6 +385248,76 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-npm-stdin-discarder-4dd64683b4997f37",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-f458fa4ce0bc5b29",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-0b0cc97aa4c9896e",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-3acffac2429537bf",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-6b97adfcc65356d3",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-0016a576c76b9d54",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-156d2de43befb11d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-e401c960dd77e6b5",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-c81f32ed074a527c",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-4cfee176bd0b0546",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-5aabfd1f2fc76113",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-6f0d70d81afdce78",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-94e734d698382ca1",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-dc5ead640ec0de17",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-991299fe8001ff4f",
    "relationshipType": "CONTAINS"
   },
   {

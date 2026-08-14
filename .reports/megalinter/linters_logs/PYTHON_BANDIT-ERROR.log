@@ -4,7 +4,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_bandit/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-Run started:2026-08-14 14:11:59.887666+00:00
+Run started:2026-08-14 14:40:03.767529+00:00
 
 Test results:
 >> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
