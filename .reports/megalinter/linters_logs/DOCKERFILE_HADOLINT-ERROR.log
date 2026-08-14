@@ -1,0 +1,10 @@
+Results of hadolint linter (version 2.15.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+egolint/tests/fixtures/checkov/Dockerfile:3 DL3025 warning: Use arguments JSON notation for CMD and ENTRYPOINT arguments
+egolint/tests/fixtures/checkov/Dockerfile:10 DL3066 info: Non-numeric user-id may not be resolvable by host system
+egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id may not be resolvable by host system
+

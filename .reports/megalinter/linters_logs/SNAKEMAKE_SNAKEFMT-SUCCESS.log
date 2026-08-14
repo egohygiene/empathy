@@ -1,0 +1,5 @@
+Results of snakefmt linter (version 2.0.3)
+See documentation on https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt/
+-----------------------------------------------
+
+✅ [SUCCESS] egolint/tests/fixtures/snakefmt/Snakefile

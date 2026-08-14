@@ -1,0 +1,11 @@
+Results of lychee linter (version 0.24.2)
+See documentation on https://megalinter.io/10.0.0/descriptors/spell_lychee/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Error: Failed to create request client
+
+Caused by:
+    Invalid base URL for WikiLink checking: Base must be specified for wikilink checking
+

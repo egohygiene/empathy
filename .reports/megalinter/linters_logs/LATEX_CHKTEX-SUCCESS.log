@@ -1,0 +1,6 @@
+Results of chktex linter (version 1.7.8)
+See documentation on https://megalinter.io/10.0.0/descriptors/latex_chktex/
+-----------------------------------------------
+
+✅ [SUCCESS] egolint/tests/fixtures/chktex/valid.tex
+✅ [SUCCESS] egolint/tests/fixtures/latexindent/example.tex

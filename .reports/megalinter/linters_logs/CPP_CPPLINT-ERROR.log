@@ -1,0 +1,18 @@
+Results of cpplint linter (version 2.0.2)
+See documentation on https://megalinter.io/10.0.0/descriptors/cpp_cpplint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+egolint/tests/fixtures/clang-format/valid.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
+egolint/tests/fixtures/clang-format/valid.cpp:6:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:9:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:13:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:17:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:19:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:33:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:42:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+egolint/tests/fixtures/clang-format/valid.cpp:12:  Add #include <utility> for move  [build/include_what_you_use] [4]
+Done processing egolint/tests/fixtures/clang-format/valid.cpp
+Total errors found: 9
+

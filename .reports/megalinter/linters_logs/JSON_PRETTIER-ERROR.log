@@ -1,0 +1,32 @@
+Results of prettier linter (version 3.9.6)
+See documentation on https://megalinter.io/10.0.0/descriptors/json_prettier/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Checking formatting...
+[warn] egolint/.agents/skills/architecture/architecture-authoring/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-ai-constitution-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-design-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-design-system-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-epistemology-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-manifesto-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-meta-architecture-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-ontology-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-personal-model-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-pillars-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-principles-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-purpose-document/evals/evals.json
+[warn] egolint/.agents/skills/architecture/create-vision-document/evals/evals.json
+[warn] egolint/.agents/skills/authoring/create-specification-file/evals/evals.json
+[warn] egolint/.agents/skills/authoring/github-issue-authoring/evals/evals.json
+[warn] egolint/.agents/skills/authoring/implementation-planning/evals/evals.json
+[warn] egolint/.agents/skills/authoring/skill-authoring/evals/evals.json
+[warn] egolint/.agents/skills/methodology/orchestrate-reflective-development/evals/evals.json
+[warn] egolint/.agents/skills/publishing/prepare-arxiv-release/evals/evals.json
+[warn] egolint/.agents/skills/quality/audit-repository/evals/evals.json
+[warn] egolint/.agents/skills/quality/bug-fixing/evals/evals.json
+[warn] egolint/.agents/skills/quality/repository-cleanup/evals/evals.json
+[warn] egolint/.agents/skills/quality/test-engineering/evals/evals.json
+[warn] Code style issues found in 23 files. Run Prettier with --write to fix.
+

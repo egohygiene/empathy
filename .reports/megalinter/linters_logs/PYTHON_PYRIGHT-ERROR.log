@@ -1,0 +1,669 @@
+Results of pyright linter (version 1.1.411)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_pyright/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Config contains unrecognized setting "$schema".
+.github/actions/generate-lint-infographic/generate_lint_infographic.py
+  .github/actions/generate-lint-infographic/generate_lint_infographic.py:64:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  .github/actions/generate-lint-infographic/generate_lint_infographic.py:73:43 - error: Type of "tool" is unknown (reportUnknownVariableType)
+  .github/actions/generate-lint-infographic/generate_lint_infographic.py:75:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+egolint/.agents/agents/build-projections.py
+  egolint/.agents/agents/build-projections.py:64:24 - error: Type of parameter "fm" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  egolint/.agents/agents/build-projections.py:64:28 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/agents/build-projections.py:66:5 - error: Type of "out" is partially unknown
+    Type of "out" is "dict[str, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/build-projections.py:76:5 - error: Type of "fm" is partially unknown
+    Type of "fm" is "Any | dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/build-projections.py:89:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/build-projections.py:90:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+egolint/.agents/agents/validate-agents.py
+  egolint/.agents/agents/validate-agents.py:52:5 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/agents/validate-agents.py:58:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:59:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:62:5 - error: Return type, "tuple[set[Unknown], set[Unknown]]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/agents/validate-agents.py:64:5 - error: Type of "skill_ids" is partially unknown
+    Type of "skill_ids" is "set[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:67:13 - error: Type of "add" is partially unknown
+    Type of "add" is "(element: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:69:5 - error: Type of "spec_ids" is partially unknown
+    Type of "spec_ids" is "set[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:75:17 - error: Type of "fm" is partially unknown
+    Type of "fm" is "Any | dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:77:21 - error: Type of "add" is partially unknown
+    Type of "add" is "(element: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:81:12 - error: Return type, "tuple[set[Unknown], set[Unknown]]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:84:5 - error: Return type, "list[str] | list[Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/agents/validate-agents.py:84:47 - error: Type of parameter "skill_ids" is partially unknown
+    Parameter type is "set[Unknown]" (reportUnknownParameterType)
+  egolint/.agents/agents/validate-agents.py:84:58 - error: Expected type arguments for generic class "set" (reportMissingTypeArgument)
+  egolint/.agents/agents/validate-agents.py:84:63 - error: Type of parameter "spec_ids" is partially unknown
+    Parameter type is "set[Unknown]" (reportUnknownParameterType)
+  egolint/.agents/agents/validate-agents.py:84:73 - error: Expected type arguments for generic class "set" (reportMissingTypeArgument)
+  egolint/.agents/agents/validate-agents.py:93:9 - error: Type of "fm" is partially unknown
+    Type of "fm" is "Any | dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:103:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:106:5 - error: Type of "aether_id" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:106:17 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:108:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:109:28 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:110:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:111:18 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:112:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:115:5 - error: Type of "tools" is partially unknown
+    Type of "tools" is "Unknown | None" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:115:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:117:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:121:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:123:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:127:13 - error: Type of "t" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:129:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:132:5 - error: Type of "meta" is partially unknown
+    Type of "meta" is "Unknown | None" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:132:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:135:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:139:21 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:141:13 - error: Type of "status" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:141:22 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:143:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:146:17 - error: Type of "skill_id" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:146:29 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:148:21 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:151:17 - error: Type of "spec_id" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:151:28 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:153:21 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:159:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:161:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:165:5 - error: Type of "agents" is partially unknown
+    Type of "agents" is "list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:170:5 - error: Type of "skill_ids" is partially unknown
+    Type of "skill_ids" is "set[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:170:16 - error: Type of "spec_ids" is partially unknown
+    Type of "spec_ids" is "set[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:175:9 - error: Type of "dir_name" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:175:19 - error: Type of "path" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:176:9 - error: Type of "errors" is partially unknown
+    Type of "errors" is "list[str] | list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:176:33 - error: Argument type is unknown
+    Argument corresponds to parameter "dir_name" in function "validate_agent" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:176:43 - error: Argument type is unknown
+    Argument corresponds to parameter "path" in function "validate_agent" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:177:9 - error: Type of "rel" is unknown (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:177:15 - error: Type of "relative_to" is unknown (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:179:17 - error: Type of "e" is partially unknown
+    Type of "e" is "str | Unknown" (reportUnknownVariableType)
+  egolint/.agents/agents/validate-agents.py:181:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[str] | list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:184:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/agents/validate-agents.py:184:24 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:187:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:187:28 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:187:32 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:192:57 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/agents/validate-agents.py:195:20 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+egolint/.agents/skills/build-distributions.py
+  egolint/.agents/skills/build-distributions.py:82:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/build-distributions.py:82:38 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-distributions.py:87:12 - error: Return type, "Any | dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:106:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/build-distributions.py:107:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:115:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/build-distributions.py:117:5 - error: Type of parameter "fm" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  egolint/.agents/skills/build-distributions.py:117:9 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-distributions.py:120:6 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-distributions.py:122:5 - error: Type of "artifact_version" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:122:24 - error: Type of "get" is partially unknown
+    Type of "get" is "Unknown | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-distributions.py:122:25 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-distributions.py:123:5 - error: Type of "compatibility" is partially unknown
+    Type of "compatibility" is "Unknown | dict[str, list[Unknown]]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:123:21 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-distributions.py:125:9 - error: Type of "compatibility" is partially unknown
+    Type of "compatibility" is "dict[str, list[Unknown]]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:127:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:164:5 - error: Type of "fm" is partially unknown
+    Type of "fm" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:182:5 - error: Type of "manifest" is partially unknown
+    Type of "manifest" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-distributions.py:183:39 - error: Argument type is partially unknown
+    Argument corresponds to parameter "data" in function "_canonical_json"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+egolint/.agents/skills/build-release-artifacts.py
+  egolint/.agents/skills/build-release-artifacts.py:37:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:37:31 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:41:5 - error: Return type, "list[dict[Unknown, Unknown]]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:41:55 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:42:5 - error: Type of "catalog" is partially unknown
+    Type of "catalog" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:44:9 - error: Type of "record" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:44:19 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:45:12 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:47:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Unknown | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:47:14 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:49:16 - error: Type of "get" is partially unknown
+    Type of "get" is "Unknown | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:49:17 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:51:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:51:24 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:52:12 - error: Return type, "list[dict[Unknown, Unknown]]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:52:19 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:52:32 - error: Argument type is partially unknown
+    Argument corresponds to parameter "key" in function "sorted"
+    Argument type is "(item: dict[Unknown, Unknown]) -> Unknown" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:52:39 - error: Type of parameter "item" is partially unknown (reportUnknownLambdaType)
+  egolint/.agents/skills/build-release-artifacts.py:52:45 - error: Return type of lambda is unknown (reportUnknownLambdaType)
+  egolint/.agents/skills/build-release-artifacts.py:55:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:55:77 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:59:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:62:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:62:47 - error: Type of parameter "records" is partially unknown
+    Parameter type is "list[dict[Unknown, Unknown]]" (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:62:61 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:62:95 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:64:9 - error: Type of "record" is partially unknown
+    Type of "record" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:65:9 - error: Type of "skill_name" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:65:22 - error: Type of "split" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:66:9 - error: Type of "dist_manifest" is partially unknown
+    Type of "dist_manifest" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:66:71 - error: Argument type is unknown
+    Argument corresponds to parameter "skill_name" in function "_load_distribution_manifest" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:67:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:70:20 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:72:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:75:20 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:77:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Unknown | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:77:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:78:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Unknown | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:78:14 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:81:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:95:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:102:32 - error: Type of parameter "release_manifest" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:102:50 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:103:5 - error: Type of "schema" is partially unknown
+    Type of "schema" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:104:38 - error: Argument type is partially unknown
+    Argument corresponds to parameter "schema" in function "__init__"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:105:21 - error: Type of "iter_errors" is partially unknown
+    Type of "iter_errors" is "Overload[(instance: str | int | float | bool | Mapping[str, _JsonParameter] | Sequence[_JsonParameter] | None) -> Generator[Any, None, None], (instance: Unknown, _schema: Unknown | None) -> Generator[Any, None, None]]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:105:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "instance" in function "iter_errors"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:117:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:118:22 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "join"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:121:28 - error: Type of parameter "records" is partially unknown
+    Parameter type is "list[dict[Unknown, Unknown]]" (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:121:42 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:130:9 - error: Type of "record" is partially unknown
+    Type of "record" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:132:82 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:153:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:158:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:159:22 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "join"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:162:44 - error: Type of parameter "release_manifest" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:162:62 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:165:13 - error: Type of "artifact" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:182:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:185:5 - error: Type of parameter "release_manifest" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  egolint/.agents/skills/build-release-artifacts.py:185:23 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:187:6 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  egolint/.agents/skills/build-release-artifacts.py:191:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/build-release-artifacts.py:197:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:211:5 - error: Type of "records" is partially unknown
+    Type of "records" is "list[dict[Unknown, Unknown]]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:215:5 - error: Type of "release_manifest" is partially unknown
+    Type of "release_manifest" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/build-release-artifacts.py:219:25 - error: Argument type is partially unknown
+    Argument corresponds to parameter "data" in function "_canonical_json"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/skills/build-release-artifacts.py:236:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "data" in function "_canonical_json"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+egolint/.agents/skills/validate-skills.py
+  egolint/.agents/skills/validate-skills.py:31:5 - error: Return type, "list[tuple[Unknown, Unknown]]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/validate-skills.py:31:17 - error: Type of parameter "base" is unknown (reportUnknownParameterType)
+  egolint/.agents/skills/validate-skills.py:31:17 - error: Type annotation is missing for parameter "base" (reportMissingParameterType)
+  egolint/.agents/skills/validate-skills.py:32:12 - error: Return type, "list[tuple[Unknown, Unknown]]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:33:9 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "Generator[tuple[Unknown, Unknown], None, None]" (reportUnknownArgumentType)
+  egolint/.agents/skills/validate-skills.py:33:10 - error: Type of "parent" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:33:10 - error: Type of "relative_to" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:33:63 - error: Type of "skill_path" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:33:77 - error: Type of "rglob" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:37:5 - error: Return type, "list[str] | list[Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/skills/validate-skills.py:37:20 - error: Type of parameter "rel" is unknown (reportUnknownParameterType)
+  egolint/.agents/skills/validate-skills.py:37:20 - error: Type annotation is missing for parameter "rel" (reportMissingParameterType)
+  egolint/.agents/skills/validate-skills.py:37:25 - error: Type of parameter "path" is unknown (reportUnknownParameterType)
+  egolint/.agents/skills/validate-skills.py:37:25 - error: Type annotation is missing for parameter "path" (reportMissingParameterType)
+  egolint/.agents/skills/validate-skills.py:38:5 - error: Type of "dir_name" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:38:16 - error: Type of "name" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:41:10 - error: Type of "open" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:41:41 - error: Type of "f" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:42:9 - error: Type of "content" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:42:19 - error: Type of "read" is unknown (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:44:30 - error: Argument type is unknown
+    Argument corresponds to parameter "string" in function "match" (reportUnknownArgumentType)
+  egolint/.agents/skills/validate-skills.py:58:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:61:20 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  egolint/.agents/skills/validate-skills.py:63:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:65:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:67:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:70:20 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  egolint/.agents/skills/validate-skills.py:72:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:74:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:76:9 - error: Type of "key" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:78:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:81:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/skills/validate-skills.py:83:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:92:9 - error: Type of "errs" is partially unknown
+    Type of "errs" is "list[str] | list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:96:13 - error: Type of "e" is partially unknown
+    Type of "e" is "str | Unknown" (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:99:28 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  egolint/.agents/skills/validate-skills.py:99:35 - error: Type of "v" is unknown (reportUnknownVariableType)
+  egolint/.agents/skills/validate-skills.py:104:55 - error: Type of "v" is unknown (reportUnknownVariableType)
+egolint/.agents/specs/validate-specs.py
+  egolint/.agents/specs/validate-specs.py:60:5 - error: Return type, "Any | dict[Unknown, Unknown] | None", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:60:23 - error: Type of parameter "path" is unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:60:23 - error: Type annotation is missing for parameter "path" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:62:5 - error: Type of "text" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:62:12 - error: Type of "read_text" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:63:45 - error: Argument type is unknown
+    Argument corresponds to parameter "string" in function "match" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:67:16 - error: Return type, "Any | dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:72:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:72:17 - error: Type of parameter "directory" is unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:72:17 - error: Type annotation is missing for parameter "directory" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:72:28 - error: Type of parameter "filename" is unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:72:28 - error: Type annotation is missing for parameter "filename" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:72:38 - error: Type annotation is missing for parameter "identity_field" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:75:9 - error: Type of "path" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:75:24 - error: Type of "rglob" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:75:24 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "sorted" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:76:9 - error: Type of "fm" is partially unknown
+    Type of "fm" is "Any | dict[Unknown, Unknown] | None" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:76:32 - error: Argument type is unknown
+    Argument corresponds to parameter "path" in function "parse_frontmatter" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:79:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:82:5 - error: Return type, "Unknown | bool", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:82:23 - error: Type of parameter "ref" is unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:82:23 - error: Type annotation is missing for parameter "ref" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:84:12 - error: Return type, "Unknown | bool", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:85:9 - error: Type of "startswith" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:87:25 - error: Argument type is unknown
+    Argument corresponds to parameter "args" in function "__init__" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:87:46 - error: Argument type is unknown
+    Argument corresponds to parameter "args" in function "__init__" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:91:5 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:91:17 - error: Type of parameter "graph" is unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:91:17 - error: Type annotation is missing for parameter "graph" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:93:5 - error: Type of "visited" is partially unknown
+    Type of "visited" is "set[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:94:5 - error: Type of "stack" is partially unknown
+    Type of "stack" is "set[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:97:13 - error: Type of parameter "node" is unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:97:13 - error: Type annotation is missing for parameter "node" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:97:19 - error: Type of parameter "path" is unknown (reportUnknownParameterType)
+  egolint/.agents/specs/validate-specs.py:97:19 - error: Type annotation is missing for parameter "path" (reportMissingParameterType)
+  egolint/.agents/specs/validate-specs.py:99:13 - error: Type of "idx" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:99:19 - error: Type of "index" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:100:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:104:9 - error: Type of "add" is partially unknown
+    Type of "add" is "(element: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:104:21 - error: Argument type is unknown
+    Argument corresponds to parameter "element" in function "add" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:105:9 - error: Type of "add" is partially unknown
+    Type of "add" is "(element: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:105:19 - error: Argument type is unknown
+    Argument corresponds to parameter "element" in function "add" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:106:13 - error: Type of "neighbour" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:106:26 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:107:17 - error: Argument type is unknown
+    Argument corresponds to parameter "node" in function "dfs" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:108:23 - error: Argument type is unknown
+    Argument corresponds to parameter "element" in function "discard" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:110:9 - error: Type of "node" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:110:22 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "__init__" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:111:13 - error: Argument type is unknown
+    Argument corresponds to parameter "node" in function "dfs" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:112:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:124:5 - error: Type of "skill_ids" is partially unknown
+    Type of "skill_ids" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:128:9 - error: Type of "fm" is partially unknown
+    Type of "fm" is "Any | dict[Unknown, Unknown] | None" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:130:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:136:9 - error: Type of "path" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:136:15 - error: Type of "fm" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:137:9 - error: Type of "rel" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:137:15 - error: Type of "relative_to" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:138:9 - error: Type of "schema" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:138:18 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:140:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:143:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:144:9 - error: Type of "spec_id" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:144:19 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:147:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:148:62 - error: Type of "relative_to" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:154:5 - error: Type of "update" is partially unknown
+    Type of "update" is "Overload[(m: SupportsKeysAndGetItem[Unknown, Unknown], /) -> None, (m: SupportsKeysAndGetItem[str, Unknown], /, **kwargs: Unknown) -> None, (m: Iterable[tuple[Unknown, Unknown]], /) -> None, (m: Iterable[tuple[str, Unknown]], /, **kwargs: Unknown) -> None, (**kwargs: Unknown) -> None]" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:155:5 - error: Type of "update" is partially unknown
+    Type of "update" is "Overload[(m: SupportsKeysAndGetItem[Unknown, Unknown], /) -> None, (m: SupportsKeysAndGetItem[str, Unknown], /, **kwargs: Unknown) -> None, (m: Iterable[tuple[Unknown, Unknown]], /) -> None, (m: Iterable[tuple[str, Unknown]], /, **kwargs: Unknown) -> None, (**kwargs: Unknown) -> None]" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:158:5 - error: Type of "dep_graph" is partially unknown
+    Type of "dep_graph" is "dict[Unknown, list[Unknown]]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:158:30 - error: Type of "sid" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:159:9 - error: Type of "path" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:159:15 - error: Type of "fm" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:160:9 - error: Type of "rel" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:160:15 - error: Type of "relative_to" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:161:9 - error: Type of "spec_id" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:161:19 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:163:13 - error: Type of "targets" is partially unknown
+    Type of "targets" is "Unknown | list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:163:23 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:166:17 - error: Type of "target" is partially unknown
+    Type of "target" is "str | Unknown" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:167:17 - error: Type of "setdefault" is partially unknown
+    Type of "setdefault" is "(key: Unknown, default: list[Unknown], /) -> list[Unknown]" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:167:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:167:38 - error: Argument type is unknown
+    Argument corresponds to parameter "key" in function "setdefault" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:169:21 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:171:13 - error: Type of "targets" is partially unknown
+    Type of "targets" is "Unknown | list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:171:23 - error: Type of "get" is unknown (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:174:17 - error: Type of "target" is partially unknown
+    Type of "target" is "str | Unknown" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:176:21 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:179:5 - error: Type of "cycles" is partially unknown
+    Type of "cycles" is "list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:180:9 - error: Type of "cycle" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:181:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:181:74 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "join" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:190:13 - error: Type of "skill_fm" is partially unknown
+    Type of "skill_fm" is "Any | dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:193:9 - error: Type of "refs" is partially unknown
+    Type of "refs" is "Unknown | Any | list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:193:16 - error: Type of "get" is partially unknown
+    Type of "get" is "Any | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:194:9 - error: Type of "implements" is partially unknown
+    Type of "implements" is "Unknown | Any | list[Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:194:22 - error: Type of "get" is partially unknown
+    Type of "get" is "Any | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:199:9 - error: Type of "metadata" is partially unknown
+    Type of "metadata" is "Unknown | Any | dict[Unknown, Unknown]" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:199:20 - error: Type of "get" is partially unknown
+    Type of "get" is "Any | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:200:9 - error: Type of "metadata_spec_id" is partially unknown
+    Type of "metadata_spec_id" is "Unknown | Any | None" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:200:28 - error: Type of "get" is partially unknown
+    Type of "get" is "Unknown | Any | Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:202:13 - error: Type of "append" is partially unknown
+    Type of "append" is "((object: str, /) -> None) | Unknown | Any" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:202:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "object" in function "append"
+    Argument type is "Unknown | Any" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:203:13 - error: Type of "ref" is partially unknown
+    Type of "ref" is "str | Unknown | Any" (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:207:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:211:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/.agents/specs/validate-specs.py:217:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/.agents/specs/validate-specs.py:218:13 - error: Type of "err" is unknown (reportUnknownVariableType)
+  egolint/.agents/specs/validate-specs.py:222:39 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+egolint/scripts/complementary_tools.py
+  egolint/scripts/complementary_tools.py:460:44 - error: Type of "endswith" is partially unknown
+    Type of "endswith" is "Unknown | Any | ((suffix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | ((suffix: Buffer | tuple[Buffer, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool)" (reportUnknownMemberType)
+  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "int"
+    Attribute "endswith" is unknown (reportAttributeAccessIssue)
+  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "float"
+    Attribute "endswith" is unknown (reportAttributeAccessIssue)
+  egolint/scripts/complementary_tools.py:460:62 - error: Cannot access attribute "endswith" for class "list[str]"
+    Attribute "endswith" is unknown (reportAttributeAccessIssue)
+  egolint/scripts/complementary_tools.py:460:71 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
+    Type "Literal['\n']" is not assignable to type "ReadableBuffer | tuple[ReadableBuffer, ...]"
+      "Literal['\n']" is incompatible with protocol "Buffer"
+        "__buffer__" is not present
+      "Literal['\n']" is not assignable to "tuple[ReadableBuffer, ...]" (reportArgumentType)
+  egolint/scripts/complementary_tools.py:463:59 - error: Type of "endswith" is partially unknown
+    Type of "endswith" is "Unknown | Any | ((suffix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | ((suffix: Buffer | tuple[Buffer, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool)" (reportUnknownMemberType)
+  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "int"
+    Attribute "endswith" is unknown (reportAttributeAccessIssue)
+  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "float"
+    Attribute "endswith" is unknown (reportAttributeAccessIssue)
+  egolint/scripts/complementary_tools.py:463:77 - error: Cannot access attribute "endswith" for class "list[str]"
+    Attribute "endswith" is unknown (reportAttributeAccessIssue)
+  egolint/scripts/complementary_tools.py:463:86 - error: Argument of type "Literal['\n']" cannot be assigned to parameter "suffix" of type "ReadableBuffer | tuple[ReadableBuffer, ...]" in function "endswith"
+    Type "Literal['\n']" is not assignable to type "ReadableBuffer | tuple[ReadableBuffer, ...]"
+      "Literal['\n']" is incompatible with protocol "Buffer"
+        "__buffer__" is not present
+      "Literal['\n']" is not assignable to "tuple[ReadableBuffer, ...]" (reportArgumentType)
+  egolint/scripts/complementary_tools.py:466:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
+    Type "int | Any | str | float | list[str] | bytes" is not assignable to type "ConvertibleToInt"
+      Type "list[str]" is not assignable to type "ConvertibleToInt"
+        "list[str]" is not assignable to "str"
+        "list[str]" is incompatible with protocol "Buffer"
+          "__buffer__" is not present
+        "list[str]" is incompatible with protocol "SupportsInt"
+          "__int__" is not present
+        "list[str]" is incompatible with protocol "SupportsIndex"
+    ... (reportArgumentType)
+  egolint/scripts/complementary_tools.py:466:16 - error: Argument of type "int | Any | str | float | list[str] | bytes" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"
+    Type "int | Any | str | float | list[str] | bytes" is not assignable to type "ConvertibleToInt"
+      Type "list[str]" is not assignable to type "ConvertibleToInt"
+        "list[str]" is not assignable to "str"
+        "list[str]" is incompatible with protocol "Buffer"
+          "__buffer__" is not present
+        "list[str]" is incompatible with protocol "SupportsInt"
+          "__int__" is not present
+        "list[str]" is incompatible with protocol "SupportsIndex" (reportArgumentType)
+  egolint/scripts/complementary_tools.py:475:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  egolint/scripts/complementary_tools.py:486:13 - error: Type of "row" is unknown (reportUnknownVariableType)
+egolint/scripts/validate_megalinter_policy.py
+  egolint/scripts/validate_megalinter_policy.py:77:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:88:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:177:61 - error: Argument type is partially unknown
+    Argument corresponds to parameter "linter" in function "normalized_linter_id"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  egolint/scripts/validate_megalinter_policy.py:179:34 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:180:37 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:182:36 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:185:37 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:188:32 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:189:32 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:194:21 - error: Argument type is partially unknown
+    Argument corresponds to parameter "linter" in function "extract_documented_version"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  egolint/scripts/validate_megalinter_policy.py:199:5 - error: Type of "deprecated_variables" is partially unknown
+    Type of "deprecated_variables" is "list[Unknown]" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:200:9 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  egolint/scripts/validate_megalinter_policy.py:201:13 - error: Type of "key" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:201:18 - error: Type of "value" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:202:40 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:210:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  egolint/scripts/validate_megalinter_policy.py:236:9 - error: Type of "reference" is partially unknown
+    Type of "reference" is "str | Unknown" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:260:66 - error: Type of "item" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:261:21 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  egolint/scripts/validate_megalinter_policy.py:360:5 - error: Type of "policy_release" is partially unknown
+    Type of "policy_release" is "Unknown | None" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:360:22 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:361:5 - error: Type of "policy_commit" is partially unknown
+    Type of "policy_commit" is "Unknown | None" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:361:21 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:381:9 - error: Type of "reason" is partially unknown
+    Type of "reason" is "Unknown | None" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:381:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:384:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:384:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  egolint/scripts/validate_megalinter_policy.py:391:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:391:20 - error: Type of "metadata" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:398:9 - error: Type of "configuration_path" is partially unknown
+    Type of "configuration_path" is "Unknown | None" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:398:30 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:407:9 - error: Type of "fixture_metadata" is partially unknown
+    Type of "fixture_metadata" is "Unknown | None" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:407:28 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:413:9 - error: Type of "positive" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:413:20 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:414:9 - error: Type of "negative" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:414:20 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:415:9 - error: Type of "blocker" is partially unknown
+    Type of "blocker" is "Unknown | None" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:415:19 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:420:13 - error: Type of "fixture_path" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:421:20 - error: Type of "is_file" is unknown (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:499:13 - error: Type of "disabled_for_profile" is partially unknown
+    Type of "disabled_for_profile" is "set[Unknown]" (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:507:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "set[Any] | set[Unknown]" (reportUnknownArgumentType)
+egolint/tests/fixtures/negative/complexipy/complex.py
+  egolint/tests/fixtures/negative/complexipy/complex.py:1:19 - error: Type of parameter "values" is unknown (reportUnknownParameterType)
+  egolint/tests/fixtures/negative/complexipy/complex.py:1:19 - error: Type annotation is missing for parameter "values" (reportMissingParameterType)
+  egolint/tests/fixtures/negative/complexipy/complex.py:3:9 - error: Type of "value" is unknown (reportUnknownVariableType)
+  egolint/tests/fixtures/negative/complexipy/complex.py:6:40 - error: Argument type is unknown
+    Argument corresponds to parameter "stop" in function "__new__" (reportUnknownArgumentType)
+egolint/tests/fixtures/negative/deptry/src/example/__init__.py
+  egolint/tests/fixtures/negative/deptry/src/example/__init__.py:1:8 - warning: Import "undeclared_dependency" could not be resolved (reportMissingImports)
+  egolint/tests/fixtures/negative/deptry/src/example/__init__.py:3:1 - error: Type of "VALUE" is unknown (reportUnknownVariableType)
+  egolint/tests/fixtures/negative/deptry/src/example/__init__.py:3:9 - error: Type of "value" is unknown (reportUnknownMemberType)
+egolint/tests/fixtures/negative/vulture/unused.py
+  egolint/tests/fixtures/negative/vulture/unused.py:1:8 - warning: Import "os" is not accessed (reportUnusedImport)
+egolint/tests/fixtures/python/test_greeting_service.py
+  egolint/tests/fixtures/python/test_greeting_service.py:3:6 - warning: Import "greeting_service" could not be resolved (reportMissingImports)
+  egolint/tests/fixtures/python/test_greeting_service.py:3:30 - error: Type of "format_greeting" is unknown (reportUnknownVariableType)
+egolint/tests/test_complementary_tools.py
+  egolint/tests/test_complementary_tools.py:82:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
+tests/test_architecture_documents.py
+  tests/test_architecture_documents.py:196:13 - error: Argument of type "str | list[str]" cannot be assigned to parameter "value" of type "list[str]" in function "__setitem__"
+    Type "str | list[str]" is not assignable to type "list[str]"
+      "str" is not assignable to "list[str]" (reportArgumentType)
+tests/test_repository_intelligence.py
+  tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
+    Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
+374 errors, 3 warnings, 0 informations
+

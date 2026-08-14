@@ -1,0 +1,26 @@
+Results of ansible-lint linter (version 26.6.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+WARNING: PATH altered to expand ~ in it. Read https://stackoverflow.com/a/44704799/99834 and correct your system configuration.
+INFO     Identified /github/workspace as project root due .git directory.
+/usr/local/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 304: 'Not Modified'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+INFO     Schema meta was updated
+INFO     Schema playbook was updated
+INFO     Schema tasks was updated
+INFO     Collection paths was patched to include extra directories /github/home/.ansible/collections,/usr/share/ansible/collections,/venvs/ansible-lint/lib/python3.14/site-packages
+INFO     Set ANSIBLE_LIBRARY=.ansible/modules:/github/home/.ansible/plugins/modules:/usr/share/ansible/plugins/modules
+INFO     Set ANSIBLE_COLLECTIONS_PATH=.ansible/collections:/github/home/.ansible/collections:/usr/share/ansible/collections:/venvs/ansible-lint/lib/python3.14/site-packages
+INFO     Set ANSIBLE_ROLES_PATH=.ansible/roles:/github/home/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles
+ERROR    Found incompatible custom yamllint configuration (.yamllint.yml), please either remove the file or edit it to comply with:
+  - comments.min-spaces-from-content must be 1
+  - comments-indentation must be false
+  - braces.max-spaces-inside must be 1
+  - octal-values.forbid-implicit-octal must be true
+  - octal-values.forbid-explicit-octal must be true.
+
+Read https://docs.ansible.com/projects/lint/rules/yaml/ for more details regarding why we have these requirements. Fix mode will not be available.
+

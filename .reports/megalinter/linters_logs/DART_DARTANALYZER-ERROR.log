@@ -1,0 +1,16 @@
+Results of dartanalyzer linter (version 3.12.2)
+See documentation on https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Could not find an option or flag "-c".
+
+Usage: dart analyze [arguments] [<directory>]
+-h, --help                   Print this usage information.
+    --fatal-infos            Treat info level issues as fatal.
+    --[no-]fatal-warnings    Treat warning level issues as fatal.
+                             (defaults to on)
+
+Run "dart help" to see global options.
+

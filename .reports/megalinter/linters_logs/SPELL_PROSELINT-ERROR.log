@@ -1,0 +1,412 @@
+Results of proselint linter (version 0.16.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/spell_proselint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:6:18: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:28:66: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:29:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:31:78: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:32:74: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:33:70: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:34:68: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:35:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/egolint/2026-08-11-complementary-toolchain-audit.md:91:4: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+.audits/egolint/2026-08-11-integration-audit.md:128:21: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+.audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:64:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+.audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:98:13: dates_times.dates.decade_apostrophes: Apostrophes aren't needed for decades.
+.audits/egolint/2026-08-11-reporting-and-dependency-audit.md:70:8: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+ARCHITECTURE.md:105:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:105:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:106:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:107:29: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:108:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:109:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:121:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+DECISIONS.md:313:87: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+DESIGN.md:126:33: misc.preferred_forms: 'sans serif' is the preferred form.
+DESIGN_SYSTEM.md:68:38: misc.preferred_forms: 'sans serif' is the preferred form.
+EPISTEMOLOGY.md:109:22: lexical_illusions: There's a lexical illusion in 'Knowledge
+
+Knowledge' - a phrase is repeated.
+LICENSES/BSD-3-Clause.txt:3:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+LICENSES/BSD-3-Clause.txt:20:69: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/MIT.txt:3:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+LICENSES/MIT.txt:6:58: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/MIT.txt:15:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+MANIFESTO.md:34:9: lexical_illusions: There's a lexical illusion in 'We Believe
+
+We believe' - a phrase is repeated.
+MANIFESTO.md:49:9: lexical_illusions: There's a lexical illusion in 'We Commit To
+
+We commit to' - a phrase is repeated.
+MANIFESTO.md:64:9: lexical_illusions: There's a lexical illusion in 'We Refuse to Normalize
+
+We refuse to normalize' - a phrase is repeated.
+META.md:114:19: lexical_illusions: There's a lexical illusion in 'system
+  system' - a phrase is repeated.
+METHODOLOGY.md:76:5: lexical_illusions: There's a lexical illusion in 'Review
+
+Review' - a phrase is repeated.
+PERSONAL_MODEL.md:106:4: lexical_illusions: There's a lexical illusion in 'Consent
+
+Consent' - a phrase is repeated.
+PILLARS.md:68:38: lexical_illusions: There's a lexical illusion in 'Automation
+
+Automation' - a phrase is repeated.
+README.md:19:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+SYSTEM.md:58:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+SYSTEM.md:157:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/architect/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/architect/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/architect/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/architect/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/arxiv-publisher/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/arxiv-publisher/AGENT.md:13:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/arxiv-publisher/AGENT.md:14:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/arxiv-publisher/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/arxiv-publisher/AGENT.md:16:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/auditor/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/auditor/AGENT.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/auditor/AGENT.md:11:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/auditor/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/auditor/AGENT.md:13:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/bug-fix-teammate/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/bug-fix-teammate/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/bug-fix-teammate/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/bug-fix-teammate/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/bug-fix-teammate/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/cleanup-specialist/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/cleanup-specialist/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/cleanup-specialist/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/cleanup-specialist/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/cleanup-specialist/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/github-issue-creator/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/github-issue-creator/AGENT.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/github-issue-creator/AGENT.md:12:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/github-issue-creator/AGENT.md:13:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/github-issue-creator/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/implementation-planner/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/implementation-planner/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/implementation-planner/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/implementation-planner/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/implementation-planner/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/implementation-planner/AGENT.md:47:14: needless_variants: Needless variant. 'oversize' is the preferred form.
+egolint/.agents/agents/specfile-creator/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/specfile-creator/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/specfile-creator/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/specfile-creator/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/specfile-creator/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/test-specialist/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/test-specialist/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/test-specialist/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/test-specialist/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/agents/test-specialist/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/SKILL-CONTRACT.md:44:7: typography.punctuation.spacing: Inconsistent spacing after period (1 vs. 2 spaces).
+egolint/.agents/skills/SKILL-CONTRACT.md:97:68: typography.punctuation.spacing: Inconsistent spacing after period (1 vs. 2 spaces).
+egolint/.agents/skills/SKILL-CONTRACT.md:101:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/SKILL-CONTRACT.md:103:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/SKILL-CONTRACT.md:104:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/SKILL-CONTRACT.md:105:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/architecture-authoring/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/architecture-authoring/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/architecture-authoring/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/architecture-authoring/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/architecture-authoring/SKILL.md:27:4: lexical_illusions: There's a lexical illusion in 'Use This Skill When
+
+Use this skill when' - a phrase is repeated.
+egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-architecture-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-decisions-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-decisions-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-decisions-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-decisions-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-decisions-document/references/decision-record-guide.md:63:17: lexical_illusions: There's a lexical illusion in 'superseded
+        superseded' - a phrase is repeated.
+egolint/.agents/skills/architecture/create-decisions-document/templates/ADR.template.md:6:9: lexical_illusions: There's a lexical illusion in 'accepted
+accepted' - a phrase is repeated.
+egolint/.agents/skills/architecture/create-design-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/references/authoring-guide.md:21:40: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-methodology-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-methodology-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-methodology-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-methodology-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-ontology-document/references/concept-modeling-guide.md:11:10: lexical_illusions: There's a lexical illusion in 'gardens
+    gardens' - a phrase is repeated.
+egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-principles-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-principles-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-principles-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-principles-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:25:27: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md:5:29: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md:12:31: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-system-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-vision-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/create-specification-file/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/implementation-planning/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:49:26: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/skills/methodology/orchestrate-reflective-development/templates/REFLECTIVE_CYCLE.template.md:28:9: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/test-engineering/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/test-engineering/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/test-engineering/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/test-engineering/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/specs/SCHEMA.md:22:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:23:95: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:24:55: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:25:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:26:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:28:91: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:29:76: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:30:78: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:32:51: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+egolint/.agents/specs/SCHEMA.md:125:3: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+egolint/.agents/specs/architecture/domain/ontology.spec.md:324:11: lexical_illusions: There's a lexical illusion in 'Concept
+
+    Concept' - a phrase is repeated.
+egolint/.agents/specs/architecture/domain/personal-model.spec.md:96:54: lexical_illusions: There's a lexical illusion in 'representation
+
+    Representation' - a phrase is repeated.
+egolint/.agents/specs/architecture/foundation/architecture.spec.md:293:9: lexical_illusions: There's a lexical illusion in 'Related Specifications
+
+Related specifications' - a phrase is repeated.
+egolint/.agents/specs/architecture/foundation/foundations.spec.md:280:9: lexical_illusions: There's a lexical illusion in 'Related Specifications
+
+Related specifications' - a phrase is repeated.
+egolint/.agents/specs/architecture/foundation/methodology.spec.md:287:9: lexical_illusions: There's a lexical illusion in 'Related Specifications
+
+Related specifications' - a phrase is repeated.
+egolint/.agents/specs/architecture/foundation/roadmap.spec.md:60:29: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/specs/architecture/foundation/roadmap.spec.md:281:9: lexical_illusions: There's a lexical illusion in 'Related Specifications
+
+Related specifications' - a phrase is repeated.
+egolint/.agents/specs/architecture/foundation/system.spec.md:285:9: lexical_illusions: There's a lexical illusion in 'Related Specifications
+
+Related specifications' - a phrase is repeated.
+egolint/.agents/specs/architecture/governance/decisions.spec.md:494:11: lexical_illusions: There's a lexical illusion in 'Decision
+
+    Decision' - a phrase is repeated.
+egolint/.agents/specs/architecture/meta/epistemology.spec.md:87:48: lexical_illusions: There's a lexical illusion in 'claim
+
+    claim' - a phrase is repeated.
+egolint/.agents/specs/authoring/specfile.spec.md:274:1: needless_variants: Needless variant. 'oversize' is the preferred form.
+egolint/.agents/specs/methodology/reflector.spec.md:68:33: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/specs/methodology/reflector.spec.md:186:8: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/specs/methodology/reflector.spec.md:198:13: lexical_illusions: There's a lexical illusion in 'Indicators
+
+Indicators' - a phrase is repeated.
+egolint/.agents/specs/methodology/reflector.spec.md:213:14: lexical_illusions: There's a lexical illusion in 'Synchronization
+
+Synchronization' - a phrase is repeated.
+egolint/.agents/specs/methodology/reflector.spec.md:240:28: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+egolint/.agents/specs/publishing/arxiv.spec.md:15:5: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+egolint/.agents/specs/publishing/arxiv.spec.md:20:5: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+egolint/.config/lint/prose/styles/proselint/README.md:19:69: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.config/lint/prose/styles/write-good/README.md:8:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+egolint/.config/lint/prose/styles/write-good/README.md:11:58: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.config/lint/prose/styles/write-good/README.md:20:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/README.md:3:36: needless_variants: Needless variant. 'extendable' is the preferred form.
+egolint/README.md:22:1: lexical_illusions: There's a lexical illusion in 'task lint
+task lint' - a phrase is repeated.
+egolint/README.md:67:5: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+egolint/README.md:79:39: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+mantle/ARCHITECTURE.md:22:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/ARCHITECTURE.md:23:116: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/ARCHITECTURE.md:24:117: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/ARCHITECTURE.md:25:122: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/ARCHITECTURE.md:26:132: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/ARCHITECTURE.md:28:141: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/ARCHITECTURE.md:29:144: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/ARCHITECTURE.md:30:149: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/CONTRIBUTING.md:1:19: lexical_illusions: There's a lexical illusion in 'Mantle
+
+Mantle' - a phrase is repeated.
+mantle/README.md:10:184: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:15:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:15:100: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:18:49: needless_variants: Needless variant. 'extendable' is the preferred form.
+mantle/README.md:111:149: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:112:171: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:113:162: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:115:152: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:116:157: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:117:177: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:118:180: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:153:52: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:154:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:204:1: lexical_illusions: There's a lexical illusion in 'mantle help
+mantle help' - a phrase is repeated.
+mantle/README.md:206:1: lexical_illusions: There's a lexical illusion in 'mantle version
+mantle version' - a phrase is repeated.
+mantle/README.md:209:1: lexical_illusions: There's a lexical illusion in 'mantle env
+mantle env' - a phrase is repeated.
+mantle/README.md:283:72: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:284:83: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:286:93: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:287:92: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:288:95: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+mantle/README.md:302:1: lexical_illusions: There's a lexical illusion in 'mantle config validate
+mantle config validate' - a phrase is repeated.
+mantle/README.md:305:1: lexical_illusions: There's a lexical illusion in 'mantle config explain
+mantle config explain' - a phrase is repeated.
+mantle/README.md:318:178: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:319:179: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:322:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:323:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:324:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:325:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:326:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:327:182: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:329:185: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:330:199: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:331:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:332:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:333:180: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:334:173: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:342:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:343:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:502:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:612:3: uncomparables: Comparison of an uncomparable: 'More complete' is not comparable.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:51:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:443:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:444:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:444:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:446:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:478:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:512:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:512:40: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:514:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:516:25: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:553:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:598:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:682:30: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:683:12: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:683:32: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/audits/mantle-holistic-polish-20260806T124442Z.md:953:87: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/lib/install/README.md:75:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/lib/install/README.md:77:34: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/runtime/shells/fish/README.md:9:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:81:35: lexical_illusions: There's a lexical illusion in 'bats
+bats' - a phrase is repeated.
+mantle/tests/README.md:82:37: lexical_illusions: There's a lexical illusion in 'bats
+bats' - a phrase is repeated.
+mantle/tests/README.md:101:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:101:75: lexical_illusions: There's a lexical illusion in 'bats
+bats' - a phrase is repeated.
+mantle/tests/README.md:159:34: lexical_illusions: There's a lexical illusion in 'bats
+bats' - a phrase is repeated.
+mantle/tests/README.md:215:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:253:39: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:253:50: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:253:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:254:18: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:269:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:271:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:282:42: lexical_illusions: There's a lexical illusion in 'stub
+stub' - a phrase is repeated.
+mantle/tests/README.md:283:48: lexical_illusions: There's a lexical illusion in 'stub
+stub' - a phrase is repeated.
+mantle/tests/README.md:367:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:369:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:369:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:371:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:390:38: lexical_illusions: There's a lexical illusion in 'bats
+   bats' - a phrase is repeated.
+

@@ -1,0 +1,92 @@
+Results of bash-exec linter (version 5.3.9)
+See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
+-----------------------------------------------
+
+✅ [SUCCESS] egolint/scripts/latexindent.sh
+✅ [SUCCESS] egolint/scripts/megalinter.sh
+❌ [ERROR] egolint/scripts/pnpm.sh
+    Error: File:[egolint/scripts/pnpm.sh] is not executable
+
+✅ [SUCCESS] egolint/scripts/precommit.sh
+✅ [SUCCESS] mantle/install.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/completion.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/config.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/doctor.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/env.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/fastfetch.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/help.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/install.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/path.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/version.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/addlicense.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/asdf.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/calibre.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/ceres-solver.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/crush.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/docker-desktop.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/dockerfmt.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/dust.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/e57format.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/eza.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/git-sim.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/gitinspector.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/google-fonts.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/httpie.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/image-optim.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/imagemagick.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/java.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/linuxbrew.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/lynis.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/mitmproxy.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/nerd-fonts.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/nfpm.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/pdal.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/pyenv.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/scc.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/shdoc.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/shfmt.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/sqlfluff.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/talisman.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/taskfile.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/terminus.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/typos.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/vale.sh
+❌ [ERROR] mantle/platforms/darwin/aliases.sh
+    Error: File:[mantle/platforms/darwin/aliases.sh] is not executable
+
+❌ [ERROR] mantle/platforms/darwin/runtime.sh
+    Error: File:[mantle/platforms/darwin/runtime.sh] is not executable
+
+❌ [ERROR] mantle/platforms/linux/aliases.sh
+    Error: File:[mantle/platforms/linux/aliases.sh] is not executable
+
+❌ [ERROR] mantle/platforms/linux/runtime.sh
+    Error: File:[mantle/platforms/linux/runtime.sh] is not executable
+
+❌ [ERROR] mantle/platforms/windows/runtime.sh
+    Error: File:[mantle/platforms/windows/runtime.sh] is not executable
+
+❌ [ERROR] mantle/runtime/shared/runtime.sh
+    Error: File:[mantle/runtime/shared/runtime.sh] is not executable
+
+❌ [ERROR] mantle/runtime/shells/bash/runtime.sh
+    Error: File:[mantle/runtime/shells/bash/runtime.sh] is not executable
+
+❌ [ERROR] mantle/runtime/shells/posix/runtime.sh
+    Error: File:[mantle/runtime/shells/posix/runtime.sh] is not executable
+
+❌ [ERROR] mantle/runtime/shells/zsh/runtime.sh
+    Error: File:[mantle/runtime/shells/zsh/runtime.sh] is not executable
+
+❌ [ERROR] mantle/tests/test_helper/assertions.bash
+    Error: File:[mantle/tests/test_helper/assertions.bash] is not executable
+
+❌ [ERROR] mantle/tests/test_helper/common.bash
+    Error: File:[mantle/tests/test_helper/common.bash] is not executable
+
+❌ [ERROR] mantle/tests/test_helper/fixtures.bash
+    Error: File:[mantle/tests/test_helper/fixtures.bash] is not executable
+
+❌ [ERROR] mantle/tests/test_helper/stubs.bash
+    Error: File:[mantle/tests/test_helper/stubs.bash] is not executable
+

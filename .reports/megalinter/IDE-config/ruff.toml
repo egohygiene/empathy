@@ -1,0 +1,280 @@
+# ==============================================================================
+# Ego Hygiene - Universal Ruff Configuration
+# ==============================================================================
+#
+# Purpose:
+#   Provide the primary Python linting, import-sorting, and formatting policy.
+#
+# References:
+#   https://docs.astral.sh/ruff/configuration/
+# ==============================================================================
+
+target-version = "py312"
+line-length = 100
+
+cache-dir = ".cache/ruff"
+
+respect-gitignore = true
+force-exclude = true
+
+show-fixes = true
+output-format = "full"
+
+src = [
+  ".",
+  "src",
+  "app",
+  "scripts",
+  "tests",
+]
+
+extend-exclude = [
+  ".cache",
+  ".git",
+  ".mypy_cache",
+  ".pytest_cache",
+  ".ruff_cache",
+  ".tox",
+  ".venv",
+  "__pycache__",
+  "build",
+  "coverage",
+  "dist",
+  "generated",
+  "egolint/tests/fixtures/negative",
+  "node_modules",
+  "out",
+  "site",
+  "target",
+  "vendor",
+  "venv",
+  ".reports",
+]
+
+[lint]
+
+# Explicit selection prevents new Ruff releases from silently enabling newly
+# introduced rules through `ALL`.
+select = [
+  "A",
+  "ARG",
+  "ASYNC",
+  "B",
+  "BLE",
+  "C4",
+  "DTZ",
+  "E",
+  "ERA",
+  "F",
+  "FAST",
+  "FLY",
+  "FURB",
+  "I",
+  "ICN",
+  "INP",
+  "ISC",
+  "LOG",
+  "N",
+  "PERF",
+  "PGH",
+  "PIE",
+  "PL",
+  "PTH",
+  "PT",
+  "Q",
+  "RET",
+  "RSE",
+  "RUF",
+  "S",
+  "SIM",
+  "SLOT",
+  "T10",
+  "T20",
+  "TCH",
+  "TID",
+  "TRY",
+  "UP",
+  "W",
+  "YTT",
+]
+
+ignore = [
+  # Ruff formatter owns physical line wrapping.
+  "E501",
+
+  # These conflict with formatter behavior.
+  "COM812",
+  "ISC001",
+
+  # Mypy and Pyright own comprehensive annotation policy.
+  "ANN",
+
+  # Vale, Proselint, and documentation profiles own prose policy.
+  "D",
+]
+
+fixable = ["ALL"]
+
+# Import removal can break re-exports, plugin registration, and package APIs.
+unfixable = ["F401"]
+
+task-tags = [
+  "TODO",
+  "FIXME",
+  "XXX",
+  "HACK",
+]
+
+[lint.per-file-ignores]
+
+".github/actions/**/*.py" = [
+  # Action entry points are standalone executables, not Python packages.
+  "INP001",
+  # Command-line actions intentionally write status and diagnostics.
+  "T201",
+  # argparse and CLI exits keep their actionable messages at the raise site.
+  "TRY003",
+]
+
+"tests/**/*.py" = [
+  "S101",
+  "PLR2004",
+]
+
+"test_*.py" = [
+  "S101",
+  "PLR2004",
+]
+
+"**/test_*.py" = [
+  "S101",
+  "PLR2004",
+  # The imported test suites use unittest-style assertions intentionally.
+  "PT009",
+]
+
+"egolint/tests/test_megalinter_wrapper.py" = [
+  # The wrapper tests exercise controlled subprocess arguments and unsafe-path
+  # rejection; no untrusted input is executed.
+  "S108",
+  "S603",
+  "S607",
+]
+
+"egolint/scripts/validate_megalinter_policy.py" = [
+  # The contract validator is a command-line boundary with explicit errors and
+  # a deliberately branchy schema/policy validator.
+  "PERF401",
+  "PLR0912",
+  "S108",
+  "S603",
+  "S607",
+  "T201",
+  "TRY003",
+]
+
+"egolint/scripts/complementary_tools.py" = [
+  # The contract runner is a command-line boundary with explicit diagnostics
+  # and an intentionally branchy manifest/state-machine validator. Commands
+  # come only from the repository-owned manifest and execute without a shell.
+  "PERF401",
+  "PLR0911",
+  "PLR0912",
+  "S603",
+  "T201",
+]
+
+"egolint/.agents/**/*.py" = [
+  # Imported Aether builders and validators are explicit command-line
+  # boundaries. They intentionally print human-readable diagnostics, collect
+  # validation errors imperatively, and keep schema state machines together so
+  # source/distribution failures remain understandable.
+  "PERF401",
+  "PLR0912",
+  "PLR0915",
+  "PLR2004",
+  "T201",
+  "TRY003",
+]
+
+"egolint/tests/test_megalinter_policy.py" = [
+  # The test invokes only the fixed local validator module and constructs one
+  # explicit module-load failure diagnostic.
+  "S603",
+  "TRY003",
+]
+
+"egolint/tests/test_complementary_tools.py" = [
+  # A clear module-load diagnostic is more useful than a custom exception type
+  # in this test-only dynamic import boundary.
+  "TRY003",
+]
+
+"egolint/tests/fixtures/**/*.py" = [
+  # Cross-tool fixtures are intentionally standalone source files, not Python
+  # packages that should gain synthetic __init__.py modules.
+  "INP001",
+]
+
+"tests/test_quality_policy.py" = [
+  # The policy tests only invoke the fixed local Git executable with
+  # test-controlled arguments.
+  "S603",
+  "S607",
+]
+
+"tests/test_architecture_documents.py" = [
+  # The small frontmatter parser raises assertion diagnostics directly so a
+  # malformed architecture file reports its exact path and field.
+  "TRY003",
+]
+
+"**/__init__.py" = [
+  "F401",
+]
+
+"scripts/**/*.py" = [
+  "T201",
+]
+
+[lint.flake8-bandit]
+
+hardcoded-tmp-directory = [
+  "/tmp",
+  "/var/tmp",
+  "/dev/shm",
+]
+
+[lint.flake8-builtins]
+
+builtins-ignorelist = ["id"]
+
+[lint.flake8-comprehensions]
+
+allow-dict-calls-with-keyword-arguments = false
+
+[lint.flake8-pytest-style]
+
+fixture-parentheses = false
+mark-parentheses = false
+
+[lint.isort]
+
+combine-as-imports = true
+force-sort-within-sections = true
+
+known-first-party = [
+  "app",
+  "src",
+]
+
+[format]
+
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+skip-magic-trailing-comma = false
+
+docstring-code-format = true
+docstring-code-line-length = "dynamic"

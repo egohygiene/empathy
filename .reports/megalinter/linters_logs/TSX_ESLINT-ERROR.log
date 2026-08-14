@@ -1,0 +1,34 @@
+Results of eslint linter (version 10.8.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/tsx_eslint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+
+Oops! Something went wrong! :(
+
+ESLint: 10.8.0
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@eslint/js' imported from egolint/.config/lint/javascript/eslint.config.mjs
+Did you mean to import "@eslint/js/src/index.js"?
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:859:18)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:724:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:762:56)
+    at #resolve (node:internal/modules/esm/loader:686:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:606:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33)
+
+
+[TSX_ESLINT_ERROR_FLAT_CONFIG_MODULE_NOT_FOUND] ESLint v9+/v10 flat config (`eslint.config.mjs`) uses native ESM resolution, which does not honor `NODE_PATH`. Bare imports like `import tsPlugin from '@typescript-eslint/eslint-plugin'` fail when ESLint runs from MegaLinter's bundled install.
+Resolutions:
+  - Use `createRequire` in your `eslint.config.mjs` (see the "ESLint v10" section in this linter's documentation above).
+  - Or install your project's dependencies and run the project-local ESLint binary:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TSX_ESLINT_CLI_EXECUTABLE: node_modules/.bin/eslint

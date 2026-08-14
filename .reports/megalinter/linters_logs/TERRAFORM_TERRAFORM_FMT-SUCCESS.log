@@ -1,0 +1,8 @@
+Results of terraform-fmt linter (version 1.15.8)
+See documentation on https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt/
+-----------------------------------------------
+
+✅ [SUCCESS] egolint/tests/fixtures/kics/terraform/main.tf
+✅ [SUCCESS] egolint/tests/fixtures/tflint/main.tf
+✅ [SUCCESS] egolint/tests/fixtures/tflint/outputs.tf
+✅ [SUCCESS] egolint/tests/fixtures/tflint/variables.tf

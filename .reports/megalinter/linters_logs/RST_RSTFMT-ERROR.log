@@ -1,0 +1,9 @@
+Results of rstfmt linter (version 0.0.14)
+See documentation on https://megalinter.io/10.0.0/descriptors/rst_rstfmt/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+egolint/tests/fixtures/prose/valid.rst is not correctly formatted!
+egolint/tests/fixtures/rstcheck/valid.rst is not correctly formatted!
+

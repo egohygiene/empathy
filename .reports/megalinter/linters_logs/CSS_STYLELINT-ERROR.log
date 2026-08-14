@@ -1,0 +1,14 @@
+Results of stylelint linter (version 17.14.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/css_stylelint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+
+egolint/tests/fixtures/stylelint/valid.css
+  18:1  ✖  Expected class selector ".greeting-card__title" to be kebab-case    selector-class-pattern
+  24:1  ✖  Expected class selector ".greeting-card__message" to be kebab-case  selector-class-pattern
+
+✖ 2 problems (2 errors, 0 warnings)
+
+

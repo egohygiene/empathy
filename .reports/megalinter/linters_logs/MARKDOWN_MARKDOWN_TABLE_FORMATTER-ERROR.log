@@ -1,0 +1,41 @@
+Results of markdown-table-formatter linter (version 1.7.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+33 files contain markdown tables to format:
+- .audits/egolint/2026-08-11-complementary-toolchain-audit.md
+- .audits/egolint/2026-08-11-integration-audit.md
+- .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md
+- .audits/egolint/2026-08-11-reporting-and-dependency-audit.md
+- .github/actions/README.md
+- AI_CONSTITUTION.md
+- ARCHITECTURE.md
+- DECISIONS.md
+- DESIGN_SYSTEM.md
+- EPISTEMOLOGY.md
+- META.md
+- ONTOLOGY.md
+- ROADMAP.md
+- SYSTEM.md
+- egolint/.agents/agents/AGENT-CONTRACT.md
+- egolint/.agents/skills/SKILL-CONTRACT.md
+- egolint/.agents/specs/SCHEMA.md
+- egolint/.agents/specs/architecture/document.spec.md
+- egolint/.agents/specs/architecture/domain/README.md
+- egolint/.agents/specs/architecture/experience/README.md
+- egolint/.agents/specs/architecture/governance/README.md
+- egolint/.agents/specs/architecture/identity/README.md
+- egolint/.agents/specs/architecture/meta/README.md
+- egolint/.agents/specs/architecture/meta/ai-constitution.spec.md
+- egolint/.agents/specs/architecture/meta/epistemology.spec.md
+- egolint/.agents/specs/architecture/meta/meta.spec.md
+- mantle/ARCHITECTURE.md
+- mantle/CONTRIBUTING.md
+- mantle/INSTALLER_ASSURANCE.md
+- mantle/README.md
+- mantle/audits/mantle-holistic-polish-20260806T124442Z.md
+- mantle/platforms/README.md
+- mantle/tests/README.md
+

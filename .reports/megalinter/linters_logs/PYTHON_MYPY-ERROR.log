@@ -1,0 +1,78 @@
+Results of mypy linter (version 1.19.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_mypy/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+egolint/.config/lint/python/.mypy.ini: Source contains parsing errors: 'egolint/.config/lint/python/.mypy.ini'
+	[line 108]: ')\n'
+WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting types-PyYAML
+  Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl.metadata (1.7 kB)
+Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl (20 kB)
+Installing collected packages: types-PyYAML
+Successfully installed types-PyYAML-6.0.12.20260724
+egolint/tests/fixtures/python/test_greeting_service.py:3: error: Cannot find implementation or library stub for module named "greeting_service"  [import-not-found]
+egolint/tests/fixtures/negative/deptry/src/example/__init__.py:1: error: Cannot find implementation or library stub for module named "undeclared_dependency"  [import-not-found]
+tests/test_lint_architecture.py:34: error: "type[LintArchitectureContractTests]" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:35: error: "type[LintArchitectureContractTests]" has no attribute "markdown_path"  [attr-defined]
+tests/test_lint_architecture.py:36: error: "type[LintArchitectureContractTests]" has no attribute "svg_path"  [attr-defined]
+tests/test_lint_architecture.py:39: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:40: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:41: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:42: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:44: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:45: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:46: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:47: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:50: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:51: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:52: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:53: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:58: error: "LintArchitectureContractTests" has no attribute "markdown_path"  [attr-defined]
+tests/test_lint_architecture.py:59: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:62: error: "LintArchitectureContractTests" has no attribute "svg_path"  [attr-defined]
+tests/test_lint_architecture.py:63: error: "LintArchitectureContractTests" has no attribute "inventory"  [attr-defined]
+tests/test_lint_architecture.py:68: error: "LintArchitectureContractTests" has no attribute "svg_path"  [attr-defined]
+tests/test_lint_architecture.py:75: error: "LintArchitectureContractTests" has no attribute "markdown_path"  [attr-defined]
+tests/test_architecture_documents.py:120: error: "type[ArchitectureDocumentContractTests]" has no attribute "documents"  [attr-defined]
+tests/test_architecture_documents.py:130: error: "ArchitectureDocumentContractTests" has no attribute "documents"  [attr-defined]
+tests/test_architecture_documents.py:172: error: "ArchitectureDocumentContractTests" has no attribute "documents"  [attr-defined]
+tests/test_architecture_documents.py:182: error: "ArchitectureDocumentContractTests" has no attribute "documents"  [attr-defined]
+tests/test_architecture_documents.py:185: error: "ArchitectureDocumentContractTests" has no attribute "documents"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:26: error: "type[MegaLinterPolicyTests]" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:27: error: "type[MegaLinterPolicyTests]" has no attribute "matrix"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:28: error: "type[MegaLinterPolicyTests]" has no attribute "matrix_by_id"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:28: error: "type[MegaLinterPolicyTests]" has no attribute "matrix"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:41: error: "MegaLinterPolicyTests" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:43: error: "MegaLinterPolicyTests" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:49: error: "MegaLinterPolicyTests" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:50: error: "MegaLinterPolicyTests" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:53: error: "MegaLinterPolicyTests" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:82: error: "MegaLinterPolicyTests" has no attribute "matrix_by_id"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:95: error: "MegaLinterPolicyTests" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:103: error: "MegaLinterPolicyTests" has no attribute "catalog"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:123: error: "MegaLinterPolicyTests" has no attribute "matrix"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:125: error: "MegaLinterPolicyTests" has no attribute "matrix_by_id"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:129: error: "MegaLinterPolicyTests" has no attribute "matrix_by_id"  [attr-defined]
+egolint/tests/test_megalinter_policy.py:133: error: "MegaLinterPolicyTests" has no attribute "matrix_by_id"  [attr-defined]
+egolint/tests/test_complementary_tools.py:30: error: "type[ComplementaryToolContractTests]" has no attribute "manifest"  [attr-defined]
+egolint/tests/test_complementary_tools.py:31: error: "type[ComplementaryToolContractTests]" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:31: error: "type[ComplementaryToolContractTests]" has no attribute "manifest"  [attr-defined]
+egolint/tests/test_complementary_tools.py:34: error: "ComplementaryToolContractTests" has no attribute "manifest"  [attr-defined]
+egolint/tests/test_complementary_tools.py:35: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:38: error: "ComplementaryToolContractTests" has no attribute "manifest"  [attr-defined]
+egolint/tests/test_complementary_tools.py:40: error: "ComplementaryToolContractTests" has no attribute "manifest"  [attr-defined]
+egolint/tests/test_complementary_tools.py:60: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:74: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:78: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:89: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:114: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:122: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+egolint/tests/test_complementary_tools.py:173: error: "ComplementaryToolContractTests" has no attribute "tools"  [attr-defined]
+Installing missing stub packages:
+/venvs/mypy/bin/python3 -m pip install types-PyYAML
+
+
+Found 58 errors in 6 files (checked 26 source files)
+
