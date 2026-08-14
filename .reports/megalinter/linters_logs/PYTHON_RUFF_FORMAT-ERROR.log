@@ -13,12 +13,69 @@ unformatted: File would be reformatted
 230 +             f"{path}: note fields differ; missing={sorted(missing)}, unknown={sorted(unknown)}"
 231 |         )
 --------------------------------------------------------------------------------
-352 |             raise ContractError(
+359 |             raise ContractError(
     -                 f"{note_path}: duplicate note id {note_id}; "
     -                 f"first seen in {notes[note_id][0]}"
-353 +                 f"{note_path}: duplicate note id {note_id}; first seen in {notes[note_id][0]}"
-354 |             )
+360 +                 f"{note_path}: duplicate note id {note_id}; first seen in {notes[note_id][0]}"
+361 |             )
     |
 
-1 file would be reformatted, 33 files already formatted
+unformatted: File would be reformatted
+  --> tests/test_mindgarden_obsidian_integration.py:16:14
+   |
+15 |         profile = json.loads(
+   -             (
+   -                 REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json"
+   -             ).read_text(encoding="utf8")
+16 +             (REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json").read_text(
+17 +                 encoding="utf8"
+18 +             )
+19 |         )
+--------------------------------------------------------------------------------
+24 |
+   -         optional_plugins = {
+   -             plugin["id"]: plugin for plugin in profile["optionalCommunityPlugins"]
+   -         }
+25 +         optional_plugins = {plugin["id"]: plugin for plugin in profile["optionalCommunityPlugins"]}
+26 |         self.assertEqual(optional_plugins["project-manager"]["version"], "1.8.0")
+--------------------------------------------------------------------------------
+33 |         profile = json.loads(
+   -             (
+   -                 REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json"
+   -             ).read_text(encoding="utf8")
+34 +             (REPOSITORY_ROOT / "mindgarden/profiles/obsidian/profile.json").read_text(
+35 +                 encoding="utf8"
+36 +             )
+37 |         )
+--------------------------------------------------------------------------------
+64 |     def test_dashboard_uses_native_base_and_scoped_css(self) -> None:
+   -         dashboard = (REPOSITORY_ROOT / ".garden/dashboard.md").read_text(
+   -             encoding="utf8"
+   -         )
+   -         base = (REPOSITORY_ROOT / ".garden/views/knowledge.base").read_text(
+   -             encoding="utf8"
+   -         )
+   -         css = (
+   -             REPOSITORY_ROOT / ".obsidian/snippets/mindgarden.css"
+   -         ).read_text(encoding="utf8")
+65 +         dashboard = (REPOSITORY_ROOT / ".garden/dashboard.md").read_text(encoding="utf8")
+66 +         base = (REPOSITORY_ROOT / ".garden/views/knowledge.base").read_text(encoding="utf8")
+67 +         css = (REPOSITORY_ROOT / ".obsidian/snippets/mindgarden.css").read_text(encoding="utf8")
+68 |
+--------------------------------------------------------------------------------
+77 |         schema = json.loads(
+   -             (
+   -                 REPOSITORY_ROOT
+   -                 / "mindgarden/contracts/obsidian-profile.schema.json"
+   -             ).read_text(encoding="utf8")
+78 +             (REPOSITORY_ROOT / "mindgarden/contracts/obsidian-profile.schema.json").read_text(
+79 +                 encoding="utf8"
+80 +             )
+81 |         )
+--------------------------------------------------------------------------------
+86 |     unittest.main()
+   -
+   |
+
+2 files would be reformatted, 33 files already formatted
 

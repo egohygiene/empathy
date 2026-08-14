@@ -5,10 +5,16 @@ See documentation on https://megalinter.io/10.0.0/descriptors/css_stylelint/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 
+.obsidian/snippets/mindgarden.css
+   2:1   ✖  Expected empty line before comment                               comment-empty-line-before
+  17:23  ✖  Expected class selector ".cm-contentContainer" to be kebab-case  selector-class-pattern
+  41:3   ✖  Expected empty line before declaration                           declaration-empty-line-before
+
 egolint/tests/fixtures/stylelint/valid.css
   18:1  ✖  Expected class selector ".greeting-card__title" to be kebab-case    selector-class-pattern
   24:1  ✖  Expected class selector ".greeting-card__message" to be kebab-case  selector-class-pattern
 
-✖ 2 problems (2 errors, 0 warnings)
+✖ 5 problems (5 errors, 0 warnings)
+  2 errors potentially fixable with the "--fix" option.
 
 

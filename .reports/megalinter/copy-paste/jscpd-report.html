@@ -58,19 +58,19 @@
         <div class="dashboard">
           <div class="stat-card stat-blue">
             <h3>Total Files</h3>
-            <div class="val">724</div>
+            <div class="val">734</div>
           </div>
           <div class="stat-card stat-green">
             <h3>Total Lines of Code</h3>
-            <div class="val">84457</div>
+            <div class="val">85044</div>
           </div>
           <div class="stat-card stat-yellow">
             <h3>Number of Clones</h3>
-            <div class="val">298</div>
+            <div class="val">299</div>
           </div>
           <div class="stat-card stat-red">
             <h3>Duplicated Lines</h3>
-            <div class="val">3870 (4.58%)</div>
+            <div class="val">3875 (4.56%)</div>
           </div>
         </div>
       </section>
@@ -139,8 +139,8 @@
             
             <tr>
               <td><a href="#css-clones">css</a></td>
-              <td>1</td>
-              <td>33</td>
+              <td>2</td>
+              <td>103</td>
               <td>0</td>
               <td>0 (0.00%)</td>
               <td>0 (0.00%)</td>
@@ -229,11 +229,11 @@
             
             <tr>
               <td><a href="#json-clones">json</a></td>
-              <td>66</td>
-              <td>12737</td>
+              <td>68</td>
+              <td>12905</td>
               <td>22</td>
-              <td>553 (4.34%)</td>
-              <td>1972 (3.73%)</td>
+              <td>553 (4.29%)</td>
+              <td>1972 (3.67%)</td>
             </tr>
             
             <tr>
@@ -256,11 +256,11 @@
             
             <tr>
               <td><a href="#markdown-clones">markdown</a></td>
-              <td>209</td>
-              <td>22602</td>
-              <td>137</td>
-              <td>1641 (7.26%)</td>
-              <td>16795 (6.65%)</td>
+              <td>213</td>
+              <td>22796</td>
+              <td>138</td>
+              <td>1646 (7.22%)</td>
+              <td>16996 (6.68%)</td>
             </tr>
             
             <tr>
@@ -310,11 +310,11 @@
             
             <tr>
               <td><a href="#python-clones">python</a></td>
-              <td>27</td>
-              <td>5448</td>
+              <td>28</td>
+              <td>5550</td>
               <td>8</td>
-              <td>84 (1.54%)</td>
-              <td>564 (1.38%)</td>
+              <td>84 (1.51%)</td>
+              <td>564 (1.36%)</td>
             </tr>
             
             <tr>
@@ -409,20 +409,20 @@
             
             <tr>
               <td><a href="#yaml-clones">yaml</a></td>
-              <td>220</td>
-              <td>18046</td>
+              <td>222</td>
+              <td>18099</td>
               <td>70</td>
-              <td>804 (4.46%)</td>
-              <td>5356 (5.66%)</td>
+              <td>804 (4.44%)</td>
+              <td>5356 (5.65%)</td>
             </tr>
             
             <tr style="font-weight: 700;">
               <td>Total</td>
-              <td>724</td>
-              <td>84457</td>
-              <td>298</td>
-              <td>3870 (4.58%)</td>
-              <td>29464 (5.27%)</td>
+              <td>734</td>
+              <td>85044</td>
+              <td>299</td>
+              <td>3875 (4.56%)</td>
+              <td>29665 (5.26%)</td>
             </tr>
           </tbody>
         </table>
@@ -2650,13 +2650,29 @@ while (($# &#62; 0)); do
           
           <div class="clone-item">
             <div class="clone-info">
-              .audits/egolint/2026-08-11-integration-audit.md:markdown (Line 202:1 - Line 207:77),
-              mantle/README.md:markdown (Line 316:44 - Line 317:4)
+              .audits/egolint/2026-08-11-integration-audit.md:markdown (Line 171:101 - Line 176:36),
+              mantle/README.md:markdown (Line 109:198 - Line 111:3)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-3')">Show code</button>
             </div>
-            <pre id="code-markdown-3" class="code-block">| ----------------------------------- | ----------------------------------- |
+            <pre id="code-markdown-3" class="code-block">| Existing direct dependency | Vulnerable transitive package | Remediation characteristic           |
+| -------------------------- | ----------------------------- | ------------------------------------ |
+| `shellcheck`               | `decompress@4.2.1`            | Critical; requires package migration |
+| `@cucumber/messages`       | `protobufjs@6.11.6`           | Critical; requires consumer upgrade  |
+| `nx`                       | `brace-expansion@5.0.8`       | High; upgrade parent dependency      |
+| `@vercel/python-analysis`  | `js-yaml`, `minimatch`        | High; upgrade the Vercel toolchain   |</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .audits/egolint/2026-08-11-integration-audit.md:markdown (Line 202:1 - Line 207:77),
+              mantle/README.md:markdown (Line 316:44 - Line 317:4)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-4')">Show code</button>
+            </div>
+            <pre id="code-markdown-4" class="code-block">| ----------------------------------- | ----------------------------------- |
 | Root unit tests                     | 9 passed                            |
 | Egolint wrapper unit tests          | 5 passed                            |
 | Automation policy                   | 9 workflows and 10 actions passed   |
@@ -2670,9 +2686,9 @@ while (($# &#62; 0)); do
               ONTOLOGY.md:markdown (Line 127:167 - Line 129:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-4')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-5')">Show code</button>
             </div>
-            <pre id="code-markdown-4" class="code-block">| Profile          | Configuration                   | Scope               | Selected tools |
+            <pre id="code-markdown-5" class="code-block">| Profile          | Configuration                   | Scope               | Selected tools |
 | ---------------- | ------------------------------- | ------------------- | -------------: |
 | Holistic/default | `.mega-linter.yml`              | Complete repository |            107 |
 | Fast             | `egolint/.mega-linter.fast.yml` | Changed files       |             12 |
@@ -2686,9 +2702,9 @@ while (($# &#62; 0)); do
               AI_CONSTITUTION.md:markdown (Line 84:206 - Line 86:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-5')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-6')">Show code</button>
             </div>
-            <pre id="code-markdown-5" class="code-block">| Tool                     | Activation blocker                                         |
+            <pre id="code-markdown-6" class="code-block">| Tool                     | Activation blocker                                         |
 | ------------------------ | ---------------------------------------------------------- |
 | `ACTION_ZIZMOR`          | Review existing workflow security findings                 |
 | `SPELL_CODESPELL`        | Classify repository spelling baseline                      |
@@ -2704,9 +2720,9 @@ while (($# &#62; 0)); do
               ONTOLOGY.md:markdown (Line 64:33 - Line 65:12)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-6')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-7')">Show code</button>
             </div>
-            <pre id="code-markdown-6" class="code-block">| ------------------- | ------------------------------------------- |
+            <pre id="code-markdown-7" class="code-block">| ------------------- | ------------------------------------------- |
 | Gitleaks descriptor | Betterleaks                                 |
 | KICS and Terrascan  | Checkov and Trivy                           |
 | TSQLLint            | SQLFluff with T-SQL dialect                 |
@@ -2727,22 +2743,6 @@ while (($# &#62; 0)); do
               DECISIONS.md:markdown (Line 121:1 - Line 126:14)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-7')">Show code</button>
-            </div>
-            <pre id="code-markdown-7" class="code-block">#### Metadata
-
-- **Status:** Accepted
-- **Accepted:** 2026-08-11
-- **Owners:** `egohygiene`
-- **Scope:** repository role and composition boundary</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              DECISIONS.md:markdown (Line 76:1 - Line 81:14),
-              DECISIONS.md:markdown (Line 165:1 - Line 170:14)
-            </div>
-            <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-8')">Show code</button>
             </div>
             <pre id="code-markdown-8" class="code-block">#### Metadata
@@ -2756,7 +2756,7 @@ while (($# &#62; 0)); do
           <div class="clone-item">
             <div class="clone-info">
               DECISIONS.md:markdown (Line 76:1 - Line 81:14),
-              DECISIONS.md:markdown (Line 204:1 - Line 209:14)
+              DECISIONS.md:markdown (Line 165:1 - Line 170:14)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-9')">Show code</button>
@@ -2772,7 +2772,7 @@ while (($# &#62; 0)); do
           <div class="clone-item">
             <div class="clone-info">
               DECISIONS.md:markdown (Line 76:1 - Line 81:14),
-              DECISIONS.md:markdown (Line 245:1 - Line 250:14)
+              DECISIONS.md:markdown (Line 204:1 - Line 209:14)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-10')">Show code</button>
@@ -2788,7 +2788,7 @@ while (($# &#62; 0)); do
           <div class="clone-item">
             <div class="clone-info">
               DECISIONS.md:markdown (Line 76:1 - Line 81:14),
-              DECISIONS.md:markdown (Line 286:1 - Line 291:14)
+              DECISIONS.md:markdown (Line 245:1 - Line 250:14)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-11')">Show code</button>
@@ -2803,13 +2803,29 @@ while (($# &#62; 0)); do
           
           <div class="clone-item">
             <div class="clone-info">
-              META.md:markdown (Line 75:75 - Line 81:76),
-              SYSTEM.md:markdown (Line 125:152 - Line 127:3)
+              DECISIONS.md:markdown (Line 76:1 - Line 81:14),
+              DECISIONS.md:markdown (Line 286:1 - Line 291:14)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-12')">Show code</button>
             </div>
-            <pre id="code-markdown-12" class="code-block">| Concern                                          | Canonical artifact   |
+            <pre id="code-markdown-12" class="code-block">#### Metadata
+
+- **Status:** Accepted
+- **Accepted:** 2026-08-11
+- **Owners:** `egohygiene`
+- **Scope:** repository role and composition boundary</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              META.md:markdown (Line 75:75 - Line 81:76),
+              SYSTEM.md:markdown (Line 125:152 - Line 127:3)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-13')">Show code</button>
+            </div>
+            <pre id="code-markdown-13" class="code-block">| Concern                                          | Canonical artifact   |
 | ------------------------------------------------ | -------------------- |
 | Why Empathy exists                               | `PURPOSE.md`         |
 | Desired future                                   | `VISION.md`          |
@@ -2824,9 +2840,9 @@ while (($# &#62; 0)); do
               egolint/.agents/skills/SKILL-CONTRACT.md:markdown (Line 20:10 - Line 26:53)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-13')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-14')">Show code</button>
             </div>
-            <pre id="code-markdown-13" class="code-block">### `aether-id` (required)
+            <pre id="code-markdown-14" class="code-block">### `aether-id` (required)
 
 - Type: string
 - Constraints:
@@ -2841,9 +2857,9 @@ while (($# &#62; 0)); do
               egolint/.agents/skills/SKILL-CONTRACT.md:markdown (Line 50:29 - Line 56:40)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-14')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-15')">Show code</button>
             </div>
-            <pre id="code-markdown-14" class="code-block">  prefix. This entire block is stripped from generated projections.
+            <pre id="code-markdown-15" class="code-block">  prefix. This entire block is stripped from generated projections.
 
 #### Supported `metadata` keys
 
@@ -2856,29 +2872,6 @@ while (($# &#62; 0)); do
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 24:85 - Line 36:3),
               egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown (Line 24:119 - Line 36:3)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-15')">Show code</button>
-            </div>
-            <pre id="code-markdown-15" class="code-block">&#62; Under what rules, authority, and oversight may AI systems participate in this work?
-
-## Use this skill when
-
-- the canonical document does not exist
-- the existing document is incomplete or inconsistent
-- upstream architecture changed materially
-- the repository architecture system is being established or repaired
-- a repeatable, validated authoring workflow is needed
-
-## Do not use this skill for
-
-- system prompt disguised as constitution</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 24:85 - Line 36:3),
-              egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown (Line 24:88 - Line 36:3)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-16')">Show code</button>
@@ -2900,31 +2893,31 @@ while (($# &#62; 0)); do
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 41:1 - Line 53:14),
-              egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown (Line 41:1 - Line 53:14)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 24:85 - Line 36:3),
+              egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown (Line 24:88 - Line 36:3)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-17')">Show code</button>
             </div>
-            <pre id="code-markdown-17" class="code-block">## Required inputs
+            <pre id="code-markdown-17" class="code-block">&#62; Under what rules, authority, and oversight may AI systems participate in this work?
 
-- governing specification and version
-- required upstream architecture documents
-- applicable policies and decisions
-- existing repository evidence
-- known conflicts, assumptions, and open questions
+## Use this skill when
 
-Missing evidence must be recorded rather than invented.
+- the canonical document does not exist
+- the existing document is incomplete or inconsistent
+- upstream architecture changed materially
+- the repository architecture system is being established or repaired
+- a repeatable, validated authoring workflow is needed
 
-## Workflow
+## Do not use this skill for
 
-1. inventory current and expected AI use cases</pre>
+- system prompt disguised as constitution</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 41:1 - Line 53:4),
-              egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown (Line 41:1 - Line 53:4)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 41:1 - Line 53:14),
+              egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown (Line 41:1 - Line 53:14)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-18')">Show code</button>
@@ -2946,13 +2939,36 @@ Missing evidence must be recorded rather than invented.
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 66:19 - Line 90:18),
-              egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown (Line 66:16 - Line 90:18)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 41:1 - Line 53:4),
+              egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown (Line 41:1 - Line 53:4)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-19')">Show code</button>
             </div>
-            <pre id="code-markdown-19" class="code-block">- `AI_CONSTITUTION.md`
+            <pre id="code-markdown-19" class="code-block">## Required inputs
+
+- governing specification and version
+- required upstream architecture documents
+- applicable policies and decisions
+- existing repository evidence
+- known conflicts, assumptions, and open questions
+
+Missing evidence must be recorded rather than invented.
+
+## Workflow
+
+1. inventory current and expected AI use cases</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 66:19 - Line 90:18),
+              egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown (Line 66:16 - Line 90:18)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-20')">Show code</button>
+            </div>
+            <pre id="code-markdown-20" class="code-block">- `AI_CONSTITUTION.md`
 - governing specification identifier and version
 - assumptions and unresolved questions
 - validation results
@@ -2985,9 +3001,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown (Line 61:13 - Line 70:20)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-20')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-21')">Show code</button>
             </div>
-            <pre id="code-markdown-20" class="code-block">- `AI_CONSTITUTION.md`
+            <pre id="code-markdown-21" class="code-block">- `AI_CONSTITUTION.md`
 - governing specification identifier and version
 - assumptions and unresolved questions
 - validation results
@@ -3005,9 +3021,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown (Line 66:8 - Line 90:18)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-21')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-22')">Show code</button>
             </div>
-            <pre id="code-markdown-21" class="code-block">- `AI_CONSTITUTION.md`
+            <pre id="code-markdown-22" class="code-block">- `AI_CONSTITUTION.md`
 - governing specification identifier and version
 - assumptions and unresolved questions
 - validation results
@@ -3040,37 +3056,6 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:markdown (Line 60:11 - Line 78:15)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-22')">Show code</button>
-            </div>
-            <pre id="code-markdown-22" class="code-block">- `AI_CONSTITUTION.md`
-- governing specification identifier and version
-- assumptions and unresolved questions
-- validation results
-- downstream review recommendations
-
-## Constraints
-
-- Preserve canonical terminology.
-- Separate evidence, inference, proposal, and decision.
-- Do not invent organizational intent or authority.
-- Do not silently resolve contradictions.
-- Do not claim completion when required inputs are missing.
-- Keep implementation detail outside the document unless the specification
-  explicitly requires it.
-
-## Validation
-
-Use:
-
-    references/validation-checklist.md</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 66:19 - Line 86:5),
-              egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown (Line 59:14 - Line 77:15)
-            </div>
-            <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-23')">Show code</button>
             </div>
             <pre id="code-markdown-23" class="code-block">- `AI_CONSTITUTION.md`
@@ -3099,7 +3084,7 @@ Use:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 66:19 - Line 86:5),
-              egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown (Line 59:11 - Line 77:15)
+              egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown (Line 59:14 - Line 77:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-24')">Show code</button>
@@ -3130,7 +3115,7 @@ Use:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 66:19 - Line 86:5),
-              egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown (Line 58:10 - Line 76:15)
+              egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown (Line 59:11 - Line 77:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-25')">Show code</button>
@@ -3160,27 +3145,39 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 92:1 - Line 100:44),
-              egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown (Line 92:1 - Line 100:44)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 66:19 - Line 86:5),
+              egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown (Line 58:10 - Line 76:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-26')">Show code</button>
             </div>
-            <pre id="code-markdown-26" class="code-block">## Completion criteria
+            <pre id="code-markdown-26" class="code-block">- `AI_CONSTITUTION.md`
+- governing specification identifier and version
+- assumptions and unresolved questions
+- validation results
+- downstream review recommendations
 
-- [ ] The governing specification is identified.
-- [ ] Required upstream evidence has been read.
-- [ ] The document answers its primary question.
-- [ ] Responsibilities and non-responsibilities are respected.
-- [ ] Assumptions and unresolved questions are visible.
-- [ ] Structural, semantic, relationship, and evidence checks pass.
-- [ ] Downstream review needs are reported.</pre>
+## Constraints
+
+- Preserve canonical terminology.
+- Separate evidence, inference, proposal, and decision.
+- Do not invent organizational intent or authority.
+- Do not silently resolve contradictions.
+- Do not claim completion when required inputs are missing.
+- Keep implementation detail outside the document unless the specification
+  explicitly requires it.
+
+## Validation
+
+Use:
+
+    references/validation-checklist.md</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 92:1 - Line 100:44),
-              egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown (Line 92:1 - Line 100:44)
+              egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:markdown (Line 92:1 - Line 100:44)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-27')">Show code</button>
@@ -3198,32 +3195,27 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown (Line 5:87 - Line 18:3),
-              egolint/.agents/skills/architecture/create-epistemology-document/references/examples-and-antipatterns.md:markdown (Line 5:121 - Line 18:3)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/SKILL.md:markdown (Line 92:1 - Line 100:44),
+              egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:markdown (Line 92:1 - Line 100:44)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-28')">Show code</button>
             </div>
-            <pre id="code-markdown-28" class="code-block">    Under what rules, authority, and oversight may AI systems participate in this work?
+            <pre id="code-markdown-28" class="code-block">## Completion criteria
 
-## Strong output characteristics
-
-- specific enough to guide real work
-- durable across provider and implementation changes
-- aligned with upstream identity and governance
-- honest about uncertainty and authority
-- bounded against adjacent documents
-- understandable without source-code knowledge
-
-## Anti-patterns
-
-- system prompt disguised as constitution</pre>
+- [ ] The governing specification is identified.
+- [ ] Required upstream evidence has been read.
+- [ ] The document answers its primary question.
+- [ ] Responsibilities and non-responsibilities are respected.
+- [ ] Assumptions and unresolved questions are visible.
+- [ ] Structural, semantic, relationship, and evidence checks pass.
+- [ ] Downstream review needs are reported.</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown (Line 5:87 - Line 18:3),
-              egolint/.agents/skills/architecture/create-meta-architecture-document/references/examples-and-antipatterns.md:markdown (Line 5:90 - Line 18:3)
+              egolint/.agents/skills/architecture/create-epistemology-document/references/examples-and-antipatterns.md:markdown (Line 5:121 - Line 18:3)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-29')">Show code</button>
@@ -3246,25 +3238,32 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown (Line 23:1 - Line 29:49),
-              egolint/.agents/skills/architecture/create-epistemology-document/references/examples-and-antipatterns.md:markdown (Line 23:1 - Line 29:49)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown (Line 5:87 - Line 18:3),
+              egolint/.agents/skills/architecture/create-meta-architecture-document/references/examples-and-antipatterns.md:markdown (Line 5:90 - Line 18:3)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-30')">Show code</button>
             </div>
-            <pre id="code-markdown-30" class="code-block">## Review questions
+            <pre id="code-markdown-30" class="code-block">    Under what rules, authority, and oversight may AI systems participate in this work?
 
-- Does the document answer the primary question directly?
-- Is any content owned by another architecture document or policy?
-- Would the guidance remain valid with different tools or providers?
-- Are claims, authority, and provenance supported?
-- Are conflicts and missing information visible?</pre>
+## Strong output characteristics
+
+- specific enough to guide real work
+- durable across provider and implementation changes
+- aligned with upstream identity and governance
+- honest about uncertainty and authority
+- bounded against adjacent documents
+- understandable without source-code knowledge
+
+## Anti-patterns
+
+- system prompt disguised as constitution</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown (Line 23:1 - Line 29:49),
-              egolint/.agents/skills/architecture/create-meta-architecture-document/references/examples-and-antipatterns.md:markdown (Line 23:1 - Line 29:49)
+              egolint/.agents/skills/architecture/create-epistemology-document/references/examples-and-antipatterns.md:markdown (Line 23:1 - Line 29:49)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-31')">Show code</button>
@@ -3280,27 +3279,25 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:7),
-              egolint/.agents/skills/architecture/create-epistemology-document/references/validation-checklist.md:markdown (Line 5:33 - Line 13:7)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/examples-and-antipatterns.md:markdown (Line 23:1 - Line 29:49),
+              egolint/.agents/skills/architecture/create-meta-architecture-document/references/examples-and-antipatterns.md:markdown (Line 23:1 - Line 29:49)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-32')">Show code</button>
             </div>
-            <pre id="code-markdown-32" class="code-block">- [ ] `architecture-ai-constitution` is identified as the governing specification.
-- [ ] The applicable specification version is known.
-- [ ] Required upstream documents have been read.
+            <pre id="code-markdown-32" class="code-block">## Review questions
 
-## Primary question
-
-- [ ] The document clearly answers:
-
-      Under what rules, authority, and oversight may AI systems participate in this work?</pre>
+- Does the document answer the primary question directly?
+- Is any content owned by another architecture document or policy?
+- Would the guidance remain valid with different tools or providers?
+- Are claims, authority, and provenance supported?
+- Are conflicts and missing information visible?</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:13),
-              egolint/.agents/skills/architecture/create-meta-architecture-document/references/validation-checklist.md:markdown (Line 5:25 - Line 13:11)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:7),
+              egolint/.agents/skills/architecture/create-epistemology-document/references/validation-checklist.md:markdown (Line 5:33 - Line 13:7)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-33')">Show code</button>
@@ -3319,7 +3316,7 @@ Use:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:13),
-              egolint/.agents/skills/architecture/create-pillars-document/references/validation-checklist.md:markdown (Line 5:28 - Line 12:12)
+              egolint/.agents/skills/architecture/create-meta-architecture-document/references/validation-checklist.md:markdown (Line 5:25 - Line 13:11)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-34')">Show code</button>
@@ -3337,8 +3334,8 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:7),
-              egolint/.agents/skills/architecture/create-principles-document/references/validation-checklist.md:markdown (Line 5:31 - Line 12:7)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:13),
+              egolint/.agents/skills/architecture/create-pillars-document/references/validation-checklist.md:markdown (Line 5:28 - Line 12:12)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-35')">Show code</button>
@@ -3357,7 +3354,7 @@ Use:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:7),
-              egolint/.agents/skills/architecture/create-purpose-document/references/validation-checklist.md:markdown (Line 5:28 - Line 12:7)
+              egolint/.agents/skills/architecture/create-principles-document/references/validation-checklist.md:markdown (Line 5:31 - Line 12:7)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-36')">Show code</button>
@@ -3375,8 +3372,8 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:13),
-              egolint/.agents/skills/architecture/create-vision-document/references/validation-checklist.md:markdown (Line 5:27 - Line 12:12)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:7),
+              egolint/.agents/skills/architecture/create-purpose-document/references/validation-checklist.md:markdown (Line 5:28 - Line 12:7)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-37')">Show code</button>
@@ -3394,44 +3391,27 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 13:89 - Line 38:46),
-              egolint/.agents/skills/architecture/create-epistemology-document/references/validation-checklist.md:markdown (Line 13:123 - Line 38:46)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 5:36 - Line 13:13),
+              egolint/.agents/skills/architecture/create-vision-document/references/validation-checklist.md:markdown (Line 5:27 - Line 12:12)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-38')">Show code</button>
             </div>
-            <pre id="code-markdown-38" class="code-block">      Under what rules, authority, and oversight may AI systems participate in this work?
+            <pre id="code-markdown-38" class="code-block">- [ ] `architecture-ai-constitution` is identified as the governing specification.
+- [ ] The applicable specification version is known.
+- [ ] Required upstream documents have been read.
 
-## Boundaries
+## Primary question
 
-- [ ] Responsibilities are explicit.
-- [ ] Non-responsibilities are respected.
-- [ ] The document does not duplicate another architecture concern.
-- [ ] Provider or implementation details are excluded unless required.
+- [ ] The document clearly answers:
 
-## Evidence
-
-- [ ] Observations and inference are distinguishable.
-- [ ] Assumptions are labeled.
-- [ ] Missing evidence is acknowledged.
-- [ ] Contradictions remain visible.
-- [ ] No authority or provenance is fabricated.
-
-## Durability
-
-- [ ] The document remains useful across technology changes.
-- [ ] Temporary capabilities do not define enduring governance.
-- [ ] Language is clear to humans and agents.
-
-## Completion
-
-- [ ] Acceptance criteria from `architecture-ai-constitution` pass.</pre>
+      Under what rules, authority, and oversight may AI systems participate in this work?</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 13:89 - Line 38:46),
-              egolint/.agents/skills/architecture/create-meta-architecture-document/references/validation-checklist.md:markdown (Line 13:92 - Line 38:46)
+              egolint/.agents/skills/architecture/create-epistemology-document/references/validation-checklist.md:markdown (Line 13:123 - Line 38:46)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-39')">Show code</button>
@@ -3466,13 +3446,49 @@ Use:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 20:70 - Line 27:22),
-              egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown (Line 19:63 - Line 26:22)
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 13:89 - Line 38:46),
+              egolint/.agents/skills/architecture/create-meta-architecture-document/references/validation-checklist.md:markdown (Line 13:92 - Line 38:46)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-40')">Show code</button>
             </div>
-            <pre id="code-markdown-40" class="code-block">- [ ] Provider or implementation details are excluded unless required.
+            <pre id="code-markdown-40" class="code-block">      Under what rules, authority, and oversight may AI systems participate in this work?
+
+## Boundaries
+
+- [ ] Responsibilities are explicit.
+- [ ] Non-responsibilities are respected.
+- [ ] The document does not duplicate another architecture concern.
+- [ ] Provider or implementation details are excluded unless required.
+
+## Evidence
+
+- [ ] Observations and inference are distinguishable.
+- [ ] Assumptions are labeled.
+- [ ] Missing evidence is acknowledged.
+- [ ] Contradictions remain visible.
+- [ ] No authority or provenance is fabricated.
+
+## Durability
+
+- [ ] The document remains useful across technology changes.
+- [ ] Temporary capabilities do not define enduring governance.
+- [ ] Language is clear to humans and agents.
+
+## Completion
+
+- [ ] Acceptance criteria from `architecture-ai-constitution` pass.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/architecture/create-ai-constitution-document/references/validation-checklist.md:markdown (Line 20:70 - Line 27:22),
+              egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown (Line 19:63 - Line 26:22)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-41')">Show code</button>
+            </div>
+            <pre id="code-markdown-41" class="code-block">- [ ] Provider or implementation details are excluded unless required.
 
 ## Evidence
 
@@ -3488,9 +3504,9 @@ Use:
               egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:markdown (Line 91:56 - Line 97:67)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-41')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-42')">Show code</button>
             </div>
-            <pre id="code-markdown-41" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
+            <pre id="code-markdown-42" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
 
 ## Validation
 
@@ -3505,9 +3521,9 @@ for mandatory checks and
               egolint/.agents/skills/architecture/create-methodology-document/SKILL.md:markdown (Line 92:70 - Line 98:67)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-42')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-43')">Show code</button>
             </div>
-            <pre id="code-markdown-42" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
+            <pre id="code-markdown-43" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
 
 ## Validation
 
@@ -3522,9 +3538,9 @@ for mandatory checks and
               egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:markdown (Line 92:51 - Line 98:68)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-43')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-44')">Show code</button>
             </div>
-            <pre id="code-markdown-43" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
+            <pre id="code-markdown-44" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
 
 ## Validation
 
@@ -3540,9 +3556,9 @@ boundary, evidence, and anti-pattern guidance.</pre>
               egolint/.agents/skills/architecture/create-system-document/SKILL.md:markdown (Line 92:49 - Line 98:67)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-44')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-45')">Show code</button>
             </div>
-            <pre id="code-markdown-44" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
+            <pre id="code-markdown-45" class="code-block">rationale owned by `DECISIONS.md`, roadmap sequencing, or implementation detail.
 
 ## Validation
 
@@ -3557,9 +3573,9 @@ for mandatory checks and
               egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:markdown (Line 25:111 - Line 50:9)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-45')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-46')">Show code</button>
             </div>
-            <pre id="code-markdown-45" class="code-block">&#62; What kind of experience should this create, and why should it feel that way?
+            <pre id="code-markdown-46" class="code-block">&#62; What kind of experience should this create, and why should it feel that way?
 
 ## Use This Skill When
 
@@ -3593,9 +3609,9 @@ Missing evidence must be recorded rather than invented.
               egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:markdown (Line 65:17 - Line 88:24)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-46')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-47')">Show code</button>
             </div>
-            <pre id="code-markdown-46" class="code-block">- `DESIGN.md`
+            <pre id="code-markdown-47" class="code-block">- `DESIGN.md`
 - governing specification identifier and version
 - evidence, assumptions, and unresolved questions
 - validation results
@@ -3627,9 +3643,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:markdown (Line 90:1 - Line 98:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-47')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-48')">Show code</button>
             </div>
-            <pre id="code-markdown-47" class="code-block">## Completion Criteria
+            <pre id="code-markdown-48" class="code-block">## Completion Criteria
 
 - [ ] The governing specification is identified.
 - [ ] Required upstream artifacts have been read.
@@ -3646,9 +3662,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:markdown (Line 82:1 - Line 87:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-48')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-49')">Show code</button>
             </div>
-            <pre id="code-markdown-48" class="code-block">## Completion Criteria
+            <pre id="code-markdown-49" class="code-block">## Completion Criteria
 
 - [ ] The governing specification is identified.
 - [ ] Required upstream artifacts have been read.
@@ -3662,9 +3678,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:markdown (Line 82:1 - Line 90:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-49')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-50')">Show code</button>
             </div>
-            <pre id="code-markdown-49" class="code-block">## Completion Criteria
+            <pre id="code-markdown-50" class="code-block">## Completion Criteria
 
 - [ ] The governing specification is identified.
 - [ ] Required upstream artifacts have been read.
@@ -3679,24 +3695,6 @@ and the acceptance criteria in:
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown (Line 5:27 - Line 12:7),
               egolint/.agents/skills/architecture/create-design-system-document/references/validation-checklist.md:markdown (Line 5:34 - Line 12:7)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-50')">Show code</button>
-            </div>
-            <pre id="code-markdown-50" class="code-block">- [ ] `architecture-design` is identified.
-- [ ] The governing version is known.
-- [ ] Required upstream artifacts have been read.
-
-## Primary Question
-
-- [ ] The document answers:
-      What kind of experience should this create, and why should it feel that way?</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown (Line 5:27 - Line 12:12),
-              egolint/.agents/skills/architecture/create-ontology-document/references/validation-checklist.md:markdown (Line 5:29 - Line 12:12)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-51')">Show code</button>
@@ -3714,7 +3712,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown (Line 5:27 - Line 12:12),
-              egolint/.agents/skills/architecture/create-personal-model-document/references/validation-checklist.md:markdown (Line 5:35 - Line 12:11)
+              egolint/.agents/skills/architecture/create-ontology-document/references/validation-checklist.md:markdown (Line 5:29 - Line 12:12)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-52')">Show code</button>
@@ -3731,13 +3729,31 @@ and the acceptance criteria in:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown (Line 12:82 - Line 38:52),
-              egolint/.agents/skills/architecture/create-design-system-document/references/validation-checklist.md:markdown (Line 12:115 - Line 38:52)
+              egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown (Line 5:27 - Line 12:12),
+              egolint/.agents/skills/architecture/create-personal-model-document/references/validation-checklist.md:markdown (Line 5:35 - Line 12:11)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-53')">Show code</button>
             </div>
-            <pre id="code-markdown-53" class="code-block">      What kind of experience should this create, and why should it feel that way?
+            <pre id="code-markdown-53" class="code-block">- [ ] `architecture-design` is identified.
+- [ ] The governing version is known.
+- [ ] Required upstream artifacts have been read.
+
+## Primary Question
+
+- [ ] The document answers:
+      What kind of experience should this create, and why should it feel that way?</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/architecture/create-design-document/references/validation-checklist.md:markdown (Line 12:82 - Line 38:52),
+              egolint/.agents/skills/architecture/create-design-system-document/references/validation-checklist.md:markdown (Line 12:115 - Line 38:52)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-54')">Show code</button>
+            </div>
+            <pre id="code-markdown-54" class="code-block">      What kind of experience should this create, and why should it feel that way?
 
 ## Human-Centered Validation
 
@@ -3772,9 +3788,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-ontology-document/references/validation-checklist.md:markdown (Line 14:1 - Line 19:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-54')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-55')">Show code</button>
             </div>
-            <pre id="code-markdown-54" class="code-block">## Boundaries
+            <pre id="code-markdown-55" class="code-block">## Boundaries
 
 - [ ] Responsibilities are explicit.
 - [ ] Non-responsibilities are respected.
@@ -3788,9 +3804,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:markdown (Line 24:73 - Line 38:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-55')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-56')">Show code</button>
             </div>
-            <pre id="code-markdown-55" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
+            <pre id="code-markdown-56" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
 
 ## Use This Skill When
 
@@ -3813,9 +3829,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown (Line 24:70 - Line 37:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-56')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-57')">Show code</button>
             </div>
-            <pre id="code-markdown-56" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
+            <pre id="code-markdown-57" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
 
 ## Use This Skill When
 
@@ -3837,9 +3853,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown (Line 24:74 - Line 35:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-57')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-58')">Show code</button>
             </div>
-            <pre id="code-markdown-57" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
+            <pre id="code-markdown-58" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
 
 ## Use This Skill When
 
@@ -3859,9 +3875,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown (Line 24:72 - Line 36:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-58')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-59')">Show code</button>
             </div>
-            <pre id="code-markdown-58" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
+            <pre id="code-markdown-59" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
 
 ## Use This Skill When
 
@@ -3882,9 +3898,9 @@ and the acceptance criteria in:
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 155:1 - Line 164:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-59')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-60')">Show code</button>
             </div>
-            <pre id="code-markdown-59" class="code-block">1. Read every upstream identity document.
+            <pre id="code-markdown-60" class="code-block">1. Read every upstream identity document.
 2. Identify convictions repeated across them.
 3. Distinguish beliefs from features and policies.
 4. Express beliefs in human language.
@@ -3900,27 +3916,6 @@ and the acceptance criteria in:
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown (Line 79:24 - Line 89:44),
               egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:markdown (Line 78:22 - Line 88:44)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-60')">Show code</button>
-            </div>
-            <pre id="code-markdown-60" class="code-block">`architecture-manifesto`.
-
-## Completion Criteria
-
-- [ ] The governing specification is identified.
-- [ ] Required upstream evidence has been read.
-- [ ] The document answers its primary identity question.
-- [ ] Non-responsibilities are respected.
-- [ ] Assumptions and open questions are visible.
-- [ ] Structural, semantic, relationship, and evidence checks pass.
-- [ ] Downstream review needs are reported.</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown (Line 79:24 - Line 89:44),
-              egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown (Line 77:25 - Line 87:44)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-61')">Show code</button>
@@ -3941,7 +3936,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown (Line 79:24 - Line 89:44),
-              egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown (Line 77:22 - Line 87:44)
+              egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown (Line 77:25 - Line 87:44)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-62')">Show code</button>
@@ -3962,7 +3957,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown (Line 79:24 - Line 89:44),
-              egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown (Line 76:21 - Line 86:44)
+              egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:markdown (Line 77:22 - Line 87:44)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-63')">Show code</button>
@@ -3982,32 +3977,29 @@ and the acceptance criteria in:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown (Line 5:74 - Line 18:5),
-              egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 5:75 - Line 18:5)
+              egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:markdown (Line 79:24 - Line 89:44),
+              egolint/.agents/skills/architecture/create-vision-document/SKILL.md:markdown (Line 76:21 - Line 86:44)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-64')">Show code</button>
             </div>
-            <pre id="code-markdown-64" class="code-block">    What do we believe strongly enough to state publicly and stand behind?
+            <pre id="code-markdown-64" class="code-block">`architecture-manifesto`.
 
-## Strong Output Characteristics
+## Completion Criteria
 
-- specific enough to guide decisions
-- durable across implementation changes
-- aligned with upstream identity
-- honest about uncertainty
-- bounded against adjacent documents
-- understandable without source-code knowledge
-
-## Strong Example
-
-    Knowledge should empower people rather than lock them into proprietary systems.</pre>
+- [ ] The governing specification is identified.
+- [ ] Required upstream evidence has been read.
+- [ ] The document answers its primary identity question.
+- [ ] Non-responsibilities are respected.
+- [ ] Assumptions and open questions are visible.
+- [ ] Structural, semantic, relationship, and evidence checks pass.
+- [ ] Downstream review needs are reported.</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown (Line 5:74 - Line 18:5),
-              egolint/.agents/skills/architecture/create-principles-document/references/examples-and-antipatterns.md:markdown (Line 5:72 - Line 18:5)
+              egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 5:75 - Line 18:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-65')">Show code</button>
@@ -4031,7 +4023,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown (Line 5:74 - Line 18:5),
-              egolint/.agents/skills/architecture/create-purpose-document/references/examples-and-antipatterns.md:markdown (Line 5:76 - Line 18:5)
+              egolint/.agents/skills/architecture/create-principles-document/references/examples-and-antipatterns.md:markdown (Line 5:72 - Line 18:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-66')">Show code</button>
@@ -4055,7 +4047,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown (Line 5:74 - Line 18:5),
-              egolint/.agents/skills/architecture/create-vision-document/references/examples-and-antipatterns.md:markdown (Line 5:74 - Line 18:5)
+              egolint/.agents/skills/architecture/create-purpose-document/references/examples-and-antipatterns.md:markdown (Line 5:76 - Line 18:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-67')">Show code</button>
@@ -4078,13 +4070,37 @@ and the acceptance criteria in:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown (Line 24:1 - Line 30:69),
-              egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 24:1 - Line 30:69)
+              egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown (Line 5:74 - Line 18:5),
+              egolint/.agents/skills/architecture/create-vision-document/references/examples-and-antipatterns.md:markdown (Line 5:74 - Line 18:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-68')">Show code</button>
             </div>
-            <pre id="code-markdown-68" class="code-block">## Review Questions
+            <pre id="code-markdown-68" class="code-block">    What do we believe strongly enough to state publicly and stand behind?
+
+## Strong Output Characteristics
+
+- specific enough to guide decisions
+- durable across implementation changes
+- aligned with upstream identity
+- honest about uncertainty
+- bounded against adjacent documents
+- understandable without source-code knowledge
+
+## Strong Example
+
+    Knowledge should empower people rather than lock them into proprietary systems.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/architecture/create-manifesto-document/references/examples-and-antipatterns.md:markdown (Line 24:1 - Line 30:69),
+              egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 24:1 - Line 30:69)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-69')">Show code</button>
+            </div>
+            <pre id="code-markdown-69" class="code-block">## Review Questions
 
 - Does the text answer the primary question directly?
 - Is any content owned by another identity document?
@@ -4097,41 +4113,6 @@ and the acceptance criteria in:
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown (Line 12:76 - Line 36:46),
               egolint/.agents/skills/architecture/create-pillars-document/references/validation-checklist.md:markdown (Line 12:77 - Line 36:46)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-69')">Show code</button>
-            </div>
-            <pre id="code-markdown-69" class="code-block">      What do we believe strongly enough to state publicly and stand behind?
-
-## Boundaries
-
-- [ ] Responsibilities are present.
-- [ ] Non-responsibilities are respected.
-- [ ] Implementation detail is excluded unless explicitly relevant.
-- [ ] The document does not duplicate another identity concern.
-
-## Evidence
-
-- [ ] Observations and inference are distinguishable.
-- [ ] Assumptions are labeled.
-- [ ] Missing evidence is acknowledged.
-- [ ] Contradictions are visible.
-
-## Durability
-
-- [ ] The document remains meaningful across technology changes.
-- [ ] Temporary initiatives do not define the identity concern.
-- [ ] Language is clear to humans and agents.
-
-## Completion
-
-- [ ] Acceptance criteria from `architecture-manifesto` pass.</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown (Line 12:76 - Line 36:46),
-              egolint/.agents/skills/architecture/create-principles-document/references/validation-checklist.md:markdown (Line 12:74 - Line 36:46)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-70')">Show code</button>
@@ -4166,7 +4147,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown (Line 12:76 - Line 36:46),
-              egolint/.agents/skills/architecture/create-purpose-document/references/validation-checklist.md:markdown (Line 12:78 - Line 36:46)
+              egolint/.agents/skills/architecture/create-principles-document/references/validation-checklist.md:markdown (Line 12:74 - Line 36:46)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-71')">Show code</button>
@@ -4201,7 +4182,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown (Line 12:76 - Line 36:46),
-              egolint/.agents/skills/architecture/create-vision-document/references/validation-checklist.md:markdown (Line 12:76 - Line 36:46)
+              egolint/.agents/skills/architecture/create-purpose-document/references/validation-checklist.md:markdown (Line 12:78 - Line 36:46)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-72')">Show code</button>
@@ -4235,13 +4216,48 @@ and the acceptance criteria in:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:markdown (Line 24:90 - Line 43:4),
-              egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:markdown (Line 24:122 - Line 43:4)
+              egolint/.agents/skills/architecture/create-manifesto-document/references/validation-checklist.md:markdown (Line 12:76 - Line 36:46),
+              egolint/.agents/skills/architecture/create-vision-document/references/validation-checklist.md:markdown (Line 12:76 - Line 36:46)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-73')">Show code</button>
             </div>
-            <pre id="code-markdown-73" class="code-block">&#62; What exists in this domain, what does each concept mean, and how do the concepts relate?
+            <pre id="code-markdown-73" class="code-block">      What do we believe strongly enough to state publicly and stand behind?
+
+## Boundaries
+
+- [ ] Responsibilities are present.
+- [ ] Non-responsibilities are respected.
+- [ ] Implementation detail is excluded unless explicitly relevant.
+- [ ] The document does not duplicate another identity concern.
+
+## Evidence
+
+- [ ] Observations and inference are distinguishable.
+- [ ] Assumptions are labeled.
+- [ ] Missing evidence is acknowledged.
+- [ ] Contradictions are visible.
+
+## Durability
+
+- [ ] The document remains meaningful across technology changes.
+- [ ] Temporary initiatives do not define the identity concern.
+- [ ] Language is clear to humans and agents.
+
+## Completion
+
+- [ ] Acceptance criteria from `architecture-manifesto` pass.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/architecture/create-ontology-document/SKILL.md:markdown (Line 24:90 - Line 43:4),
+              egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:markdown (Line 24:122 - Line 43:4)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-74')">Show code</button>
+            </div>
+            <pre id="code-markdown-74" class="code-block">&#62; What exists in this domain, what does each concept mean, and how do the concepts relate?
 
 ## Use This Skill When
 
@@ -4269,9 +4285,9 @@ Missing evidence must be recorded rather than invented.
               egolint/.agents/skills/architecture/create-personal-model-document/SKILL.md:markdown (Line 57:18 - Line 80:18)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-74')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-75')">Show code</button>
             </div>
-            <pre id="code-markdown-74" class="code-block">- `ONTOLOGY.md`
+            <pre id="code-markdown-75" class="code-block">- `ONTOLOGY.md`
 - governing specification identifier and version
 - assumptions and unresolved questions
 - validation results
@@ -4303,9 +4319,9 @@ and the acceptance criteria in:
               egolint/.agents/skills/architecture/create-personal-model-document/references/validation-checklist.md:markdown (Line 12:126 - Line 30:46)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-75')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-76')">Show code</button>
             </div>
-            <pre id="code-markdown-75" class="code-block">      What exists in this domain, what does each concept mean, and how do the concepts relate?
+            <pre id="code-markdown-76" class="code-block">      What exists in this domain, what does each concept mean, and how do the concepts relate?
 
 ## Boundaries
 
@@ -4332,9 +4348,9 @@ and the acceptance criteria in:
               egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown (Line 156:1 - Line 165:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-76')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-77')">Show code</button>
             </div>
-            <pre id="code-markdown-76" class="code-block">1. Read upstream identity documents.
+            <pre id="code-markdown-77" class="code-block">1. Read upstream identity documents.
 2. Identify recurring capabilities needed across multiple initiatives.
 3. Remove temporary projects and technologies.
 4. Group overlapping capabilities.
@@ -4350,25 +4366,6 @@ and the acceptance criteria in:
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 22:26 - Line 30:69),
               egolint/.agents/skills/architecture/create-principles-document/references/examples-and-antipatterns.md:markdown (Line 22:39 - Line 30:69)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-77')">Show code</button>
-            </div>
-            <pre id="code-markdown-77" class="code-block">    Migrate to Kubernetes.
-
-## Review Questions
-
-- Does the text answer the primary question directly?
-- Is any content owned by another identity document?
-- Would this still make sense after a major implementation change?
-- Are claims supported or labeled as assumptions?
-- Could a contributor use this document to evaluate a real decision?</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 22:26 - Line 30:69),
-              egolint/.agents/skills/architecture/create-purpose-document/references/examples-and-antipatterns.md:markdown (Line 22:64 - Line 30:69)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-78')">Show code</button>
@@ -4387,7 +4384,7 @@ and the acceptance criteria in:
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 22:26 - Line 30:69),
-              egolint/.agents/skills/architecture/create-vision-document/references/examples-and-antipatterns.md:markdown (Line 22:78 - Line 30:69)
+              egolint/.agents/skills/architecture/create-purpose-document/references/examples-and-antipatterns.md:markdown (Line 22:64 - Line 30:69)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-79')">Show code</button>
@@ -4405,13 +4402,32 @@ and the acceptance criteria in:
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown (Line 46:1 - Line 55:3),
-              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 152:1 - Line 161:3)
+              egolint/.agents/skills/architecture/create-pillars-document/references/examples-and-antipatterns.md:markdown (Line 22:26 - Line 30:69),
+              egolint/.agents/skills/architecture/create-vision-document/references/examples-and-antipatterns.md:markdown (Line 22:78 - Line 30:69)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-80')">Show code</button>
             </div>
-            <pre id="code-markdown-80" class="code-block">1. Read purpose and vision.
+            <pre id="code-markdown-80" class="code-block">    Migrate to Kubernetes.
+
+## Review Questions
+
+- Does the text answer the primary question directly?
+- Is any content owned by another identity document?
+- Would this still make sense after a major implementation change?
+- Are claims supported or labeled as assumptions?
+- Could a contributor use this document to evaluate a real decision?</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/architecture/create-principles-document/SKILL.md:markdown (Line 46:1 - Line 55:3),
+              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 152:1 - Line 161:3)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-81')">Show code</button>
+            </div>
+            <pre id="code-markdown-81" class="code-block">1. Read purpose and vision.
 2. Identify recurring decisions and tensions.
 3. Convert durable lessons into heuristics.
 4. Remove technology-specific language.
@@ -4429,9 +4445,9 @@ and the acceptance criteria in:
               egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 151:1 - Line 160:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-81')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-82')">Show code</button>
             </div>
-            <pre id="code-markdown-81" class="code-block">1. Gather evidence about founding intent and beneficiary needs.
+            <pre id="code-markdown-82" class="code-block">1. Gather evidence about founding intent and beneficiary needs.
 2. Separate enduring intent from implementation and current features.
 3. Identify the core need.
 4. Identify beneficiaries without overgeneralizing.
@@ -4449,9 +4465,9 @@ and the acceptance criteria in:
               egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 151:1 - Line 159:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-82')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-83')">Show code</button>
             </div>
-            <pre id="code-markdown-82" class="code-block">1. Read and preserve purpose.
+            <pre id="code-markdown-83" class="code-block">1. Read and preserve purpose.
 2. Describe the future condition rather than current activities.
 3. Identify the enduring impact sought.
 4. Remove implementation and scheduling language.
@@ -4466,35 +4482,6 @@ and the acceptance criteria in:
             <div class="clone-info">
               egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown (Line 24:82 - Line 42:4),
               egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:markdown (Line 24:92 - Line 42:4)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-83')">Show code</button>
-            </div>
-            <pre id="code-markdown-83" class="code-block">&#62; What implementation contract is required, and how will conformance be validated?
-
-## Required Inputs
-
-Resolve:
-
-- governing specification and version
-- current source or repository state
-- scope and constraints
-- upstream architecture or evidence
-- output location
-- validation expectations
-- unresolved decisions
-
-Missing evidence must remain visible.
-
-## Workflow
-
-1. gather source context and identify the problem</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown (Line 24:82 - Line 42:4),
-              egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:markdown (Line 24:94 - Line 42:4)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-84')">Show code</button>
@@ -4522,8 +4509,8 @@ Missing evidence must remain visible.
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown (Line 24:82 - Line 42:11),
-              egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown (Line 24:94 - Line 42:12)
+              egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown (Line 24:82 - Line 42:4),
+              egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:markdown (Line 24:94 - Line 42:4)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-85')">Show code</button>
@@ -4551,13 +4538,42 @@ Missing evidence must remain visible.
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown (Line 56:23 - Line 81:40),
-              egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown (Line 56:40 - Line 81:40)
+              egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown (Line 24:82 - Line 42:11),
+              egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown (Line 24:94 - Line 42:12)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-86')">Show code</button>
             </div>
-            <pre id="code-markdown-86" class="code-block">    &#60;artifact-id&#62;.spec.md
+            <pre id="code-markdown-86" class="code-block">&#62; What implementation contract is required, and how will conformance be validated?
+
+## Required Inputs
+
+Resolve:
+
+- governing specification and version
+- current source or repository state
+- scope and constraints
+- upstream architecture or evidence
+- output location
+- validation expectations
+- unresolved decisions
+
+Missing evidence must remain visible.
+
+## Workflow
+
+1. gather source context and identify the problem</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown (Line 56:23 - Line 81:40),
+              egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown (Line 56:40 - Line 81:40)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-87')">Show code</button>
+            </div>
+            <pre id="code-markdown-87" class="code-block">    &#60;artifact-id&#62;.spec.md
 
 Also report assumptions, evidence gaps, validation status, unresolved
 questions, and downstream actions requiring separate authorization.
@@ -4591,9 +4607,9 @@ A staged candidate at `.staging/skills/spec-authoring/` covers similar</pre>
               egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:markdown (Line 58:1 - Line 77:58)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-87')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-88')">Show code</button>
             </div>
-            <pre id="code-markdown-87" class="code-block">Also report assumptions, evidence gaps, validation status, unresolved
+            <pre id="code-markdown-88" class="code-block">Also report assumptions, evidence gaps, validation status, unresolved
 questions, and downstream actions requiring separate authorization.
 
 ## Constraints
@@ -4621,9 +4637,9 @@ questions, and downstream actions requiring separate authorization.
               egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:markdown (Line 59:1 - Line 82:40)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-88')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-89')">Show code</button>
             </div>
-            <pre id="code-markdown-88" class="code-block">Also report assumptions, evidence gaps, validation status, unresolved
+            <pre id="code-markdown-89" class="code-block">Also report assumptions, evidence gaps, validation status, unresolved
 questions, and downstream actions requiring separate authorization.
 
 ## Constraints
@@ -4653,40 +4669,6 @@ A staged candidate at `.staging/skills/spec-authoring/` covers similar</pre>
             <div class="clone-info">
               egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown (Line 5:16 - Line 28:53),
               egolint/.agents/skills/methodology/orchestrate-reflective-development/references/validation-checklist.md:markdown (Line 5:17 - Line 28:53)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-89')">Show code</button>
-            </div>
-            <pre id="code-markdown-89" class="code-block">- [ ] `specfile` is identified.
-- [ ] The governing version is known.
-- [ ] Scope and constraints are explicit.
-
-## Evidence
-
-- [ ] Required sources were inspected.
-- [ ] Facts, assumptions, inference, and proposals are distinguishable.
-- [ ] Missing evidence is acknowledged.
-- [ ] Contradictions remain visible.
-
-## Execution
-
-- [ ] Work remained within authorized scope.
-- [ ] Required artifacts were produced.
-- [ ] No prohibited side effects occurred.
-- [ ] Downstream work was not silently authorized.
-
-## Validation
-
-- [ ] Specification acceptance criteria pass.
-- [ ] Partial or blocked state is recorded when applicable.
-- [ ] Canonical ownership is clear.
-- [ ] Another reviewer can reproduce the conclusion.</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown (Line 5:16 - Line 28:53),
-              egolint/.agents/skills/publishing/prepare-arxiv-release/references/validation-checklist.md:markdown (Line 5:24 - Line 28:53)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-90')">Show code</button>
@@ -4720,7 +4702,7 @@ A staged candidate at `.staging/skills/spec-authoring/` covers similar</pre>
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown (Line 5:16 - Line 28:53),
-              egolint/.agents/skills/quality/audit-repository/references/validation-checklist.md:markdown (Line 5:15 - Line 28:53)
+              egolint/.agents/skills/publishing/prepare-arxiv-release/references/validation-checklist.md:markdown (Line 5:24 - Line 28:53)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-91')">Show code</button>
@@ -4753,13 +4735,47 @@ A staged candidate at `.staging/skills/spec-authoring/` covers similar</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown (Line 45:1 - Line 59:17),
-              egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown (Line 42:1 - Line 56:17)
+              egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown (Line 5:16 - Line 28:53),
+              egolint/.agents/skills/quality/audit-repository/references/validation-checklist.md:markdown (Line 5:15 - Line 28:53)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-92')">Show code</button>
             </div>
-            <pre id="code-markdown-92" class="code-block">---
+            <pre id="code-markdown-92" class="code-block">- [ ] `specfile` is identified.
+- [ ] The governing version is known.
+- [ ] Scope and constraints are explicit.
+
+## Evidence
+
+- [ ] Required sources were inspected.
+- [ ] Facts, assumptions, inference, and proposals are distinguishable.
+- [ ] Missing evidence is acknowledged.
+- [ ] Contradictions remain visible.
+
+## Execution
+
+- [ ] Work remained within authorized scope.
+- [ ] Required artifacts were produced.
+- [ ] No prohibited side effects occurred.
+- [ ] Downstream work was not silently authorized.
+
+## Validation
+
+- [ ] Specification acceptance criteria pass.
+- [ ] Partial or blocked state is recorded when applicable.
+- [ ] Canonical ownership is clear.
+- [ ] Another reviewer can reproduce the conclusion.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown (Line 45:1 - Line 59:17),
+              egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown (Line 42:1 - Line 56:17)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-93')">Show code</button>
+            </div>
+            <pre id="code-markdown-93" class="code-block">---
 
 ### Conformance
 
@@ -4782,9 +4798,9 @@ The purpose of `ARCHITECTURE.md` is to define the structural organization of</pr
               egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 153:1 - Line 162:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-93')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-94')">Show code</button>
             </div>
-            <pre id="code-markdown-93" class="code-block">#### Inputs
+            <pre id="code-markdown-94" class="code-block">#### Inputs
 
 Authoring should consider:
 
@@ -4802,9 +4818,9 @@ Authoring should consider:
               egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown (Line 245:1 - Line 253:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-94')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-95')">Show code</button>
             </div>
-            <pre id="code-markdown-94" class="code-block">- `PURPOSE.md`
+            <pre id="code-markdown-95" class="code-block">- `PURPOSE.md`
 - `VISION.md`
 - `PRINCIPLES.md`
 - `FOUNDATIONS.md`
@@ -4821,9 +4837,9 @@ Authoring should consider:
               egolint/.agents/specs/architecture/foundation/methodology.spec.md:markdown (Line 225:8 - Line 237:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-95')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-96')">Show code</button>
             </div>
-            <pre id="code-markdown-95" class="code-block">or infrastructure detail.
+            <pre id="code-markdown-96" class="code-block">or infrastructure detail.
 
 ---
 
@@ -4844,9 +4860,9 @@ Authoring should consider:
               egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 221:52 - Line 234:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-96')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-97')">Show code</button>
             </div>
-            <pre id="code-markdown-96" class="code-block">or infrastructure detail.
+            <pre id="code-markdown-97" class="code-block">or infrastructure detail.
 
 ---
 
@@ -4866,33 +4882,6 @@ Authoring should consider:
             <div class="clone-info">
               egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown (Line 40:76 - Line 56:17),
               egolint/.agents/specs/architecture/foundation/methodology.spec.md:markdown (Line 41:62 - Line 57:17)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-97')">Show code</button>
-            </div>
-            <pre id="code-markdown-97" class="code-block">`FOUNDATIONS.md` describes what the architecture assumes to already be true.
-
----
-
-### Conformance
-
-This specification conforms to:
-
-    .github/specs/architecture/document.spec.md
-
-Any justified deviations shall be explicitly documented.
-
----
-
-### 1. Purpose &#38; Scope
-
-The purpose of `FOUNDATIONS.md` is to define the architectural baseline that</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown (Line 40:76 - Line 56:17),
-              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 40:78 - Line 56:17)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-98')">Show code</button>
@@ -4919,7 +4908,7 @@ The purpose of `FOUNDATIONS.md` is to define the architectural baseline that</pr
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown (Line 40:76 - Line 56:17),
-              egolint/.agents/specs/architecture/foundation/system.spec.md:markdown (Line 43:57 - Line 59:17)
+              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 40:78 - Line 56:17)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-99')">Show code</button>
@@ -4945,13 +4934,40 @@ The purpose of `FOUNDATIONS.md` is to define the architectural baseline that</pr
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 157:1 - Line 165:6),
-              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 229:1 - Line 237:6)
+              egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown (Line 40:76 - Line 56:17),
+              egolint/.agents/specs/architecture/foundation/system.spec.md:markdown (Line 43:57 - Line 59:17)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-100')">Show code</button>
             </div>
-            <pre id="code-markdown-100" class="code-block">- `PURPOSE.md`
+            <pre id="code-markdown-100" class="code-block">`FOUNDATIONS.md` describes what the architecture assumes to already be true.
+
+---
+
+### Conformance
+
+This specification conforms to:
+
+    .github/specs/architecture/document.spec.md
+
+Any justified deviations shall be explicitly documented.
+
+---
+
+### 1. Purpose &#38; Scope
+
+The purpose of `FOUNDATIONS.md` is to define the architectural baseline that</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 157:1 - Line 165:6),
+              egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown (Line 229:1 - Line 237:6)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-101')">Show code</button>
+            </div>
+            <pre id="code-markdown-101" class="code-block">- `PURPOSE.md`
 - `VISION.md`
 - `PRINCIPLES.md`
 - `FOUNDATIONS.md`
@@ -4966,24 +4982,6 @@ The purpose of `FOUNDATIONS.md` is to define the architectural baseline that</pr
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 42:72 - Line 49:43),
               egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown (Line 44:73 - Line 51:43)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-101')">Show code</button>
-            </div>
-            <pre id="code-markdown-101" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
-
-The document is part of the architecture identity system and conforms to
-`architecture-document`.
-
-## 1. Purpose and Scope
-
-This specification governs the canonical `manifesto` concern for a</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 42:72 - Line 49:43),
-              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 43:70 - Line 50:43)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-102')">Show code</button>
@@ -5001,7 +4999,7 @@ This specification governs the canonical `manifesto` concern for a</pre>
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 42:72 - Line 49:43),
-              egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 41:74 - Line 48:43)
+              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 43:70 - Line 50:43)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-103')">Show code</button>
@@ -5019,7 +5017,7 @@ This specification governs the canonical `manifesto` concern for a</pre>
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 42:72 - Line 49:43),
-              egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 42:72 - Line 49:43)
+              egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 41:74 - Line 48:43)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-104')">Show code</button>
@@ -5036,33 +5034,26 @@ This specification governs the canonical `manifesto` concern for a</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 49:52 - Line 63:2),
-              egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown (Line 51:50 - Line 65:2)
+              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 42:72 - Line 49:43),
+              egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 42:72 - Line 49:43)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-105')">Show code</button>
             </div>
-            <pre id="code-markdown-105" class="code-block">This specification governs the canonical `manifesto` concern for a
-repository, product, platform, or organization.
+            <pre id="code-markdown-105" class="code-block">&#62; What do we believe strongly enough to state publicly and stand behind?
 
-It should remain durable across implementation, technology, team, and delivery
-changes.
+The document is part of the architecture identity system and conforms to
+`architecture-document`.
 
-## 2. Conceptual Model
+## 1. Purpose and Scope
 
-The document must make its primary identity concern explicit, preserve its
-boundary against adjacent identity documents, and provide enough context for
-humans and agents to apply it consistently.
-
-## 3. Responsibilities
-
-`MANIFESTO.md` owns:</pre>
+This specification governs the canonical `manifesto` concern for a</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 49:52 - Line 63:2),
-              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 50:53 - Line 64:2)
+              egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown (Line 51:50 - Line 65:2)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-106')">Show code</button>
@@ -5087,7 +5078,7 @@ humans and agents to apply it consistently.
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 49:52 - Line 63:2),
-              egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 48:50 - Line 62:2)
+              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 50:53 - Line 64:2)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-107')">Show code</button>
@@ -5112,7 +5103,7 @@ humans and agents to apply it consistently.
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 49:52 - Line 63:2),
-              egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 49:49 - Line 63:2)
+              egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 48:50 - Line 62:2)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-108')">Show code</button>
@@ -5136,13 +5127,38 @@ humans and agents to apply it consistently.
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 162:45 - Line 191:16),
-              egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown (Line 163:36 - Line 192:16)
+              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 49:52 - Line 63:2),
+              egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 49:49 - Line 63:2)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-109')">Show code</button>
             </div>
-            <pre id="code-markdown-109" class="code-block">8. Review tone, accessibility, and longevity.
+            <pre id="code-markdown-109" class="code-block">This specification governs the canonical `manifesto` concern for a
+repository, product, platform, or organization.
+
+It should remain durable across implementation, technology, team, and delivery
+changes.
+
+## 2. Conceptual Model
+
+The document must make its primary identity concern explicit, preserve its
+boundary against adjacent identity documents, and provide enough context for
+humans and agents to apply it consistently.
+
+## 3. Responsibilities
+
+`MANIFESTO.md` owns:</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 162:45 - Line 191:16),
+              egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown (Line 163:36 - Line 192:16)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-110')">Show code</button>
+            </div>
+            <pre id="code-markdown-110" class="code-block">8. Review tone, accessibility, and longevity.
 
 ### Update Conditions
 
@@ -5180,9 +5196,9 @@ required evidence is unavailable.
               egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 159:43 - Line 187:12)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-110')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-111')">Show code</button>
             </div>
-            <pre id="code-markdown-110" class="code-block">8. Review tone, accessibility, and longevity.
+            <pre id="code-markdown-111" class="code-block">8. Review tone, accessibility, and longevity.
 
 ### Update Conditions
 
@@ -5219,9 +5235,9 @@ required evidence is unavailable.
               egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 158:34 - Line 185:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-111')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-112')">Show code</button>
             </div>
-            <pre id="code-markdown-111" class="code-block">8. Review tone, accessibility, and longevity.
+            <pre id="code-markdown-112" class="code-block">8. Review tone, accessibility, and longevity.
 
 ### Update Conditions
 
@@ -5257,9 +5273,9 @@ required evidence is unavailable.
               egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 157:63 - Line 184:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-112')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-113')">Show code</button>
             </div>
-            <pre id="code-markdown-112" class="code-block">8. Review tone, accessibility, and longevity.
+            <pre id="code-markdown-113" class="code-block">8. Review tone, accessibility, and longevity.
 
 ### Update Conditions
 
@@ -5295,28 +5311,6 @@ required evidence is unavailable.
               egolint/.agents/specs/architecture/identity/pillars.spec.md:markdown (Line 229:55 - Line 240:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-113')">Show code</button>
-            </div>
-            <pre id="code-markdown-113" class="code-block">- [ ] The text retains meaning outside a temporary campaign.
-
-- [ ] The governing specification and version are recorded.
-- [ ] Required upstream artifacts are available or explicitly marked missing.
-- [ ] Assumptions and open questions are visible.
-- [ ] Markdown and metadata pass repository quality gates.
-
-## 13. Examples and Edge Cases
-
-### Strong Direction
-
-    Knowledge should empower people rather than lock them into proprietary systems.</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 230:60 - Line 241:5),
-              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 225:44 - Line 236:5)
-            </div>
-            <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-114')">Show code</button>
             </div>
             <pre id="code-markdown-114" class="code-block">- [ ] The text retains meaning outside a temporary campaign.
@@ -5336,7 +5330,7 @@ required evidence is unavailable.
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 230:60 - Line 241:5),
-              egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 226:58 - Line 237:5)
+              egolint/.agents/specs/architecture/identity/principles.spec.md:markdown (Line 225:44 - Line 236:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-115')">Show code</button>
@@ -5358,7 +5352,7 @@ required evidence is unavailable.
           <div class="clone-item">
             <div class="clone-info">
               egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 230:60 - Line 241:5),
-              egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 224:53 - Line 235:5)
+              egolint/.agents/specs/architecture/identity/purpose.spec.md:markdown (Line 226:58 - Line 237:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-116')">Show code</button>
@@ -5379,13 +5373,35 @@ required evidence is unavailable.
           
           <div class="clone-item">
             <div class="clone-info">
-              mantle/CONTRIBUTING.md:markdown (Line 14:41 - Line 19:10),
-              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 269:1 - Line 280:4)
+              egolint/.agents/specs/architecture/identity/manifesto.spec.md:markdown (Line 230:60 - Line 241:5),
+              egolint/.agents/specs/architecture/identity/vision.spec.md:markdown (Line 224:53 - Line 235:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-117')">Show code</button>
             </div>
-            <pre id="code-markdown-117" class="code-block">| Validation executable | `tests/run.sh`                                                    | Executable     | `#!/usr/bin/env bash` |
+            <pre id="code-markdown-117" class="code-block">- [ ] The text retains meaning outside a temporary campaign.
+
+- [ ] The governing specification and version are recorded.
+- [ ] Required upstream artifacts are available or explicitly marked missing.
+- [ ] Assumptions and open questions are visible.
+- [ ] Markdown and metadata pass repository quality gates.
+
+## 13. Examples and Edge Cases
+
+### Strong Direction
+
+    Knowledge should empower people rather than lock them into proprietary systems.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              mantle/CONTRIBUTING.md:markdown (Line 14:41 - Line 19:10),
+              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 269:1 - Line 280:4)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-118')">Show code</button>
+            </div>
+            <pre id="code-markdown-118" class="code-block">| Validation executable | `tests/run.sh`                                                    | Executable     | `#!/usr/bin/env bash` |
 | Source-only runtime   | `.shellrc`, `init/`, `lib/`, `modules/`, `platforms/`, `runtime/` | Non-executable | Copyright header      |
 | Test source           | `tests/**/*.bats`, `tests/**/*.bash`                              | Non-executable | Copyright header      |
 
@@ -5399,9 +5415,9 @@ execution, conflicts with their guarded source contract, and causes executable</
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 302:1 - Line 307:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-118')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-119')">Show code</button>
             </div>
-            <pre id="code-markdown-118" class="code-block">- **Effort:** medium
+            <pre id="code-markdown-119" class="code-block">- **Effort:** medium
 - **Impact:** high
 - **Historical classification:** new
 
@@ -5413,26 +5429,6 @@ Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -
             <div class="clone-info">
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 266:303 - Line 275:7),
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 307:276 - Line 313:4)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-119')">Show code</button>
-            </div>
-            <pre id="code-markdown-119" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
-
-**Evidence:**
-```
-$ ./tests/run.sh static 2&#62;&#38;1 | head -10
-=== Static Validation ===
-Checking Bash syntax...
-✓ Bash syntax
-Checking ShellCheck...
-✓ ShellCheck</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 266:303 - Line 275:14),
-              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 376:282 - Line 383:4)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-120')">Show code</button>
@@ -5451,13 +5447,33 @@ Checking ShellCheck...
           
           <div class="clone-item">
             <div class="clone-info">
-              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 266:299 - Line 273:2),
-              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 406:267 - Line 414:4)
+              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 266:303 - Line 275:14),
+              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 376:282 - Line 383:4)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-121')">Show code</button>
             </div>
             <pre id="code-markdown-121" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
+
+**Evidence:**
+```
+$ ./tests/run.sh static 2&#62;&#38;1 | head -10
+=== Static Validation ===
+Checking Bash syntax...
+✓ Bash syntax
+Checking ShellCheck...
+✓ ShellCheck</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 266:299 - Line 273:2),
+              mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 406:267 - Line 414:4)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-122')">Show code</button>
+            </div>
+            <pre id="code-markdown-122" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
 
 **Evidence:**
 ```
@@ -5473,9 +5489,9 @@ Checking Bash syntax...
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 438:273 - Line 448:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-122')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-123')">Show code</button>
             </div>
-            <pre id="code-markdown-122" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
+            <pre id="code-markdown-123" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
 
 **Evidence:**
 ```
@@ -5495,9 +5511,9 @@ Running shfmt...
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 505:264 - Line 522:21)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-123')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-124')">Show code</button>
             </div>
-            <pre id="code-markdown-123" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
+            <pre id="code-markdown-124" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
 
 **Evidence:**
 ```
@@ -5523,9 +5539,9 @@ The `install.sh` file itself passes `shfmt -d` with no diffs (verified: exit 0).
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 546:245 - Line 555:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-124')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-125')">Show code</button>
             </div>
-            <pre id="code-markdown-124" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
+            <pre id="code-markdown-125" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
 
 **Evidence:**
 ```
@@ -5541,9 +5557,9 @@ Checking Bash syntax...
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 675:293 - Line 685:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-125')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-126')">Show code</button>
             </div>
-            <pre id="code-markdown-125" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
+            <pre id="code-markdown-126" class="code-block">Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -d &#34;${MANTLE_ROOT}&#34;` reports formatting differences for pre-existing files in `bin/` (e.g., `bin/apt-base`, `bin/apt-freeze`, and other large bin scripts). These diffs are pre-existing and are not introduced by `install.sh`.
 
 **Evidence:**
 ```
@@ -5560,9 +5576,9 @@ Checking ShellCheck...</pre>
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 592:328 - Line 603:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-126')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-127')">Show code</button>
             </div>
-            <pre id="code-markdown-126" class="code-block">No Bats test file for `install.sh` exists in `tests/`. The issue specification acknowledges this and directs recording validation in the PR summary rather than adding test files in this issue. However, the absence of durable automated coverage is a risk that must be captured.
+            <pre id="code-markdown-127" class="code-block">No Bats test file for `install.sh` exists in `tests/`. The issue specification acknowledges this and directs recording validation in the PR summary rather than adding test files in this issue. However, the absence of durable automated coverage is a risk that must be captured.
 
 **Evidence:**
 ```
@@ -5578,9 +5594,9 @@ The `installers.bats` file tests `libexec/mantle/installers/*.sh` (tool-specific
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 397:1 - Line 402:15)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-127')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-128')">Show code</button>
             </div>
-            <pre id="code-markdown-127" class="code-block">- **Severity:** medium
+            <pre id="code-markdown-128" class="code-block">- **Severity:** medium
 - **Confidence:** high
 - **Status:** confirmed
 - **Area:** installer safety
@@ -5594,9 +5610,9 @@ The `installers.bats` file tests `libexec/mantle/installers/*.sh` (tool-specific
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 430:22 - Line 435:19)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-128')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-129')">Show code</button>
             </div>
-            <pre id="code-markdown-128" class="code-block">- **Area:** installer safety
+            <pre id="code-markdown-129" class="code-block">- **Area:** installer safety
 - **Effort:** small
 - **Impact:** medium
 - **Historical classification:** new
@@ -5610,9 +5626,9 @@ The `installers.bats` file tests `libexec/mantle/installers/*.sh` (tool-specific
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 499:1 - Line 505:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-129')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-130')">Show code</button>
             </div>
-            <pre id="code-markdown-129" class="code-block">- **Area:** installer safety
+            <pre id="code-markdown-130" class="code-block">- **Area:** installer safety
 - **Effort:** small
 - **Impact:** medium
 - **Historical classification:** new
@@ -5627,9 +5643,9 @@ The `installers.bats` file tests `libexec/mantle/installers/*.sh` (tool-specific
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 411:5 - Line 416:21)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-130')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-131')">Show code</button>
             </div>
-            <pre id="code-markdown-130" class="code-block">```
+            <pre id="code-markdown-131" class="code-block">```
 $ ./install.sh --version
 3ba3709
 ```
@@ -5643,9 +5659,9 @@ $ ./install.sh --version
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 624:229 - Line 634:27)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-131')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-132')">Show code</button>
             </div>
-            <pre id="code-markdown-131" class="code-block">The repository has no `CONTRIBUTING.md`, `DEVELOPMENT.md`, or equivalent file. Adding a new bin/ command, module, or platform adapter requires reading multiple source files to understand the conventions (coverage map, shdoc requirements, ShellCheck configuration, shfmt formatting).
+            <pre id="code-markdown-132" class="code-block">The repository has no `CONTRIBUTING.md`, `DEVELOPMENT.md`, or equivalent file. Adding a new bin/ command, module, or platform adapter requires reading multiple source files to understand the conventions (coverage map, shdoc requirements, ShellCheck configuration, shfmt formatting).
 
 **Evidence:**
 ```
@@ -5664,9 +5680,9 @@ No `CONTRIBUTING.md` found.
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 568:1 - Line 573:15)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-132')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-133')">Show code</button>
             </div>
-            <pre id="code-markdown-132" class="code-block">- **Classification:** maintainability risk
+            <pre id="code-markdown-133" class="code-block">- **Classification:** maintainability risk
 - **Severity:** medium
 - **Confidence:** high
 - **Status:** confirmed
@@ -5680,9 +5696,9 @@ No `CONTRIBUTING.md` found.
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 466:1 - Line 471:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-133')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-134')">Show code</button>
             </div>
-            <pre id="code-markdown-133" class="code-block">- **Effort:** medium
+            <pre id="code-markdown-134" class="code-block">- **Effort:** medium
 - **Impact:** medium
 - **Historical classification:** new
 
@@ -5696,9 +5712,9 @@ There are no git tags, no `CHANGELOG.md`, and no release workflow in `.github/wo
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 473:153 - Line 482:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-134')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-135')">Show code</button>
             </div>
-            <pre id="code-markdown-134" class="code-block">Additionally, the macOS default Bash is version 3.2 (the installer requires Bash 4). Users running the system Bash will receive an error. This is correct behavior (the guard exists) but the diagnostic mentions `brew install bash` which may not be appropriate for all users.
+            <pre id="code-markdown-135" class="code-block">Additionally, the macOS default Bash is version 3.2 (the installer requires Bash 4). Users running the system Bash will receive an error. This is correct behavior (the guard exists) but the diagnostic mentions `brew install bash` which may not be appropriate for all users.
 
 **Evidence:**
 ```bash
@@ -5720,9 +5736,9 @@ Source: `install.sh` (observed in installed file).
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 587:1 - Line 592:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-135')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-136')">Show code</button>
             </div>
-            <pre id="code-markdown-135" class="code-block">- **Effort:** small
+            <pre id="code-markdown-136" class="code-block">- **Effort:** small
 - **Impact:** low
 - **Historical classification:** new
 
@@ -5736,9 +5752,9 @@ Source: `install.sh` (observed in installed file).
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 670:1 - Line 675:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-136')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-137')">Show code</button>
             </div>
-            <pre id="code-markdown-136" class="code-block">- **Effort:** small
+            <pre id="code-markdown-137" class="code-block">- **Effort:** small
 - **Impact:** low
 - **Historical classification:** new
 
@@ -5752,9 +5768,9 @@ Source: `install.sh` (observed in installed file).
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 646:21 - Line 651:30)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-137')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-138')">Show code</button>
             </div>
-            <pre id="code-markdown-137" class="code-block">- **Area:** ci-and-automation
+            <pre id="code-markdown-138" class="code-block">- **Area:** ci-and-automation
 - **Effort:** small
 - **Impact:** low
 - **Historical classification:** new

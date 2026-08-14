@@ -6,6 +6,19 @@ See documentation on https://megalinter.io/10.0.0/descriptors/json_v8r/
 Linter raw log:
 ✖ .devcontainer/devcontainer.json is invalid
 
+.devcontainer/devcontainer.json# must have required property 'build'
+.devcontainer/devcontainer.json# must have required property 'dockerFile'
+.devcontainer/devcontainer.json# must match exactly one schema in oneOf
+.devcontainer/devcontainer.json# must have required property 'image'
+.devcontainer/devcontainer.json# must match exactly one schema in oneOf
+.devcontainer/devcontainer.json# must have required property 'dockerComposeFile'
+.devcontainer/devcontainer.json# must have required property 'service'
+.devcontainer/devcontainer.json# must have required property 'workspaceFolder'
+.devcontainer/devcontainer.json# must match exactly one schema in oneOf
+.devcontainer/devcontainer.json# must NOT have additional properties, found additional property '$schema'
+.devcontainer/devcontainer.json# must NOT have additional properties, found additional property 'name'
+.devcontainer/devcontainer.json# must match exactly one schema in oneOf
+
 ✖ egolint/.config/lint/groovy/.groovylintrc.json is invalid
 
 egolint/.config/lint/groovy/.groovylintrc.json# must NOT have additional properties, found additional property '$schema'

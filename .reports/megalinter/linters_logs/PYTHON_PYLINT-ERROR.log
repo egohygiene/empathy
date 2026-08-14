@@ -38,9 +38,11 @@ egolint/scripts/validate_megalinter_policy.py:350:0: R0912: Too many branches (1
 egolint/scripts/validate_megalinter_policy.py:426:0: R0914: Too many local variables (28/20) (too-many-locals)
 ************* Module scripts.validate_garden
 mindgarden/scripts/validate_garden.py:216:0: R0912: Too many branches (16/12) (too-many-branches)
-mindgarden/scripts/validate_garden.py:309:0: R0912: Too many branches (13/12) (too-many-branches)
+mindgarden/scripts/validate_garden.py:316:0: R0912: Too many branches (13/12) (too-many-branches)
 ************* Module test_validate_garden
 mindgarden/tests/test_validate_garden.py:16:0: C0413: Import "from scripts.validate_garden import ContractError, validate_repository" should be placed at the top of the module (wrong-import-position)
+************* Module test_mindgarden_obsidian_integration
+tests/test_mindgarden_obsidian_integration.py:96:0: C0305: Trailing newlines (trailing-newlines)
 ************* Module test_validate_automation
 tests/test_validate_automation.py:29:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 

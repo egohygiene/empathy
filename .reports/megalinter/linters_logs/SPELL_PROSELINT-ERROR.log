@@ -17,7 +17,11 @@ Linter raw log:
 .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:64:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:98:13: dates_times.dates.decade_apostrophes: Apostrophes aren't needed for decades.
 .audits/egolint/2026-08-11-reporting-and-dependency-audit.md:70:8: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+.garden/dashboard.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
+reviewed' - a phrase is repeated.
 .garden/home.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
+reviewed' - a phrase is repeated.
+.garden/projects/README.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
 reviewed' - a phrase is repeated.
 ARCHITECTURE.md:105:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:105:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
