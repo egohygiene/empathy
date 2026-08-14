@@ -2,7 +2,7 @@
 schema: mindgarden.garden/v0
 id: egohygiene-empathy
 title: Empathy Garden
-version: 0.1.0
+version: 0.2.0
 status: incubating
 owners:
   - egohygiene
@@ -20,4 +20,6 @@ content_roots:
   - sources
 generated_roots:
   - .index
+provenance_root: provenance
+context_pack_root: context-packs
 private_overlay: ../.garden.local

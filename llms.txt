@@ -1,0 +1,31 @@
+# Empathy Garden
+
+> A public, repository-local Mindgarden for maintainers, contributors, automation, and
+> AI agents.
+
+Canonical knowledge is Markdown under `.garden/`. Generated indexes and context packs
+are disposable projections. Prefer reviewed notes, retain their provenance and
+confidence metadata, and do not silently promote agent-authored drafts.
+
+## Core knowledge
+
+- [Empathy Garden](.garden/home.md): map knowledge; high confidence; stable id
+  `empathy-garden-home`.
+- [Empathy Garden Dashboard](.garden/dashboard.md): map knowledge; high confidence;
+  stable id `empathy-garden-dashboard`.
+- [Empathy Garden Projects](.garden/projects/README.md): map knowledge; high confidence;
+  stable id `empathy-garden-projects`.
+
+## Agent access
+
+- [Agent profile](mindgarden/profiles/agent/README.md): Deterministic ingestion,
+  indexing, search, context, and verification commands.
+- [Mindgarden contract](mindgarden/README.md): Knowledge ownership and adapter
+  boundaries.
+- [Empathy Agent Context](.garden/context-packs/agent-default.yaml): Context-pack
+  profile `empathy-agent-default`.
+
+## Optional
+
+- [Obsidian profile](.obsidian/README.md): Human-facing vault and native Bases
+  dashboard.

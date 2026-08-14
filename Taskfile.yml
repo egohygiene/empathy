@@ -70,6 +70,38 @@ tasks:
       - >-
         python3 mindgarden/scripts/validate_garden.py
         --repository-root .
+      - >-
+        python3 mindgarden/scripts/garden_agent.py
+        --repository-root .
+        verify
+
+  garden:index:
+    desc: Materialize the disposable deterministic Mindgarden catalog
+    cmds:
+      - >-
+        python3 mindgarden/scripts/garden_agent.py
+        --repository-root .
+        index
+        --write
+
+  garden:context:
+    desc: Render Empathy's default reviewed context pack
+    cmds:
+      - >-
+        python3 mindgarden/scripts/garden_agent.py
+        --repository-root .
+        context
+        --pack "empathy-agent-default"
+        --format "markdown"
+
+  garden:llms:write:
+    desc: Regenerate the committed llms.txt agent entrypoint
+    cmds:
+      - >-
+        python3 mindgarden/scripts/garden_agent.py
+        --repository-root .
+        llms
+        --write
 
   hooks:install:
     desc: Install Husky as the repository's sole Git hook manager
