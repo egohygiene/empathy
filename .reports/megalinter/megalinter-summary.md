@@ -4,97 +4,154 @@
 
 |   Descriptor    |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |-----------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   13|     |     0|          |       0|       0.52s|
-|✅ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|      10.99s|
-|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       4.75s|
-|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|        0.5s|
-|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|      11.99s|
-|❌ BASH          |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     4|          |       0|       0.05s|
-|✅ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     0|          |       0|       0.27s|
-|✅ C             |[cppcheck](https://megalinter.io/10.0.0/descriptors/c_cppcheck)                                       |    1|     |     0|          |       0|       0.06s|
-|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|       0.36s|
+|✅ ACTION        |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   13|     |     0|          |       0|       0.47s|
+|✅ ANSIBLE       |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|        8.9s|
+|✅ ARM           |[arm-ttk](https://megalinter.io/10.0.0/descriptors/arm_arm_ttk)                                       |    1|     |     0|          |       0|       3.94s|
+|❌ BASH          |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   60|     |    14|          |       0|       0.36s|
+|✅ BASH          |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       8.38s|
+|❌ BASH          |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     4|          |       0|       0.03s|
+|✅ C             |[clang-format](https://megalinter.io/10.0.0/descriptors/c_clang_format)                               |    1|     |     0|          |       0|       0.19s|
+|✅ C             |[cppcheck](https://megalinter.io/10.0.0/descriptors/c_cppcheck)                                       |    1|     |     0|          |       0|       0.05s|
+|❌ C             |[cpplint](https://megalinter.io/10.0.0/descriptors/c_cpplint)                                         |    1|     |     8|          |       0|        0.3s|
 |✅ CLOJURE       |[cljstyle](https://megalinter.io/10.0.0/descriptors/clojure_cljstyle)                                 |    1|     |     0|          |       0|       0.04s|
-|✅ CLOJURE       |[clj-kondo](https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo)                               |    1|     |     0|          |       0|       0.04s|
-|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|      10.63s|
-|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.35s|
-|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   310|          |      no|       3.64s|
-|✅ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     0|          |       0|       0.09s|
+|✅ CLOJURE       |[clj-kondo](https://megalinter.io/10.0.0/descriptors/clojure_clj_kondo)                               |    1|     |     0|          |       0|       0.03s|
+|✅ CLOUDFORMATION|[cfn-lint](https://megalinter.io/10.0.0/descriptors/cloudformation_cfn_lint)                          |    1|     |     0|          |       0|       9.87s|
+|✅ COFFEE        |[coffeelint](https://megalinter.io/10.0.0/descriptors/coffee_coffeelint)                              |    1|     |     0|          |       0|       0.31s|
+|❌ COPYPASTE     |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   310|          |      no|       3.66s|
+|✅ CPP           |[clang-format](https://megalinter.io/10.0.0/descriptors/cpp_clang_format)                             |    1|     |     0|          |       0|       0.06s|
 |✅ CPP           |[cppcheck](https://megalinter.io/10.0.0/descriptors/cpp_cppcheck)                                     |    1|     |     0|          |       0|       0.04s|
-|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |    10|          |       0|       0.17s|
-|✅ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |     0|          |       0|       1.47s|
-|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       1.02s|
-|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.27s|
-|✅ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  878|     |     0|          |       0|       1.03s|
-|✅ ENV           |[dotenv-linter](https://megalinter.io/10.0.0/descriptors/env_dotenv_linter)                           |    1|     |     0|          |       0|       0.02s|
-|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.39s|
-|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|      13.28s|
-|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.89s|
-|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      20.14s|
-|✅ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     0|          |       0|       0.45s|
-|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|        3.5s|
-|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       9.92s|
-|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.99s|
-|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.68s|
-|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   99|     |     0|          |       0|       0.32s|
-|✅ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   99|     |     0|          |       0|       5.01s|
-|✅ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   99|     |     0|          |       0|       38.6s|
-|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.03s|
-|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.13s|
+|❌ CPP           |[cpplint](https://megalinter.io/10.0.0/descriptors/cpp_cpplint)                                       |    1|     |    10|          |       0|       0.15s|
+|✅ CSS           |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |     0|          |       0|       1.12s|
+|❌ DART          |[dartanalyzer](https://megalinter.io/10.0.0/descriptors/dart_dartanalyzer)                            |    1|     |     1|          |       0|       0.79s|
+|❌ DOCKERFILE    |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.18s|
+|✅ EDITORCONFIG  |[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  878|     |     0|          |       0|        0.8s|
+|✅ ENV           |[dotenv-linter](https://megalinter.io/10.0.0/descriptors/env_dotenv_linter)                           |    1|     |     0|          |       0|       0.01s|
+|✅ GHERKIN       |[gherkin-lint](https://megalinter.io/10.0.0/descriptors/gherkin_gherkin_lint)                         |    1|     |     0|          |       0|       0.34s|
+|✅ GO            |[revive](https://megalinter.io/10.0.0/descriptors/go_revive)                                          |    2|     |     0|          |       0|      10.32s|
+|✅ GRAPHQL       |[graphql-schema-linter](https://megalinter.io/10.0.0/descriptors/graphql_graphql_schema_linter)       |    1|     |     0|          |       0|       0.36s|
+|✅ GROOVY        |[npm-groovy-lint](https://megalinter.io/10.0.0/descriptors/groovy_npm_groovy_lint)                    |    1|     |     0|          |       0|      14.34s|
+|✅ HTML          |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     0|          |       0|        0.3s|
+|✅ JAVA          |[checkstyle](https://megalinter.io/10.0.0/descriptors/java_checkstyle)                                |    2|     |     0|          |       0|       3.14s|
+|✅ JAVA          |[pmd](https://megalinter.io/10.0.0/descriptors/java_pmd)                                              |    2|     |     0|          |       0|       6.72s|
+|❌ JAVASCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       0.59s|
+|✅ JAVASCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.53s|
+|✅ JSON          |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |   99|     |     0|          |       0|       0.39s|
+|✅ JSON          |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |   99|     |     0|          |       0|       4.03s|
+|✅ JSON          |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |   99|     |     0|          |       0|      31.03s|
+|✅ LATEX         |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |     0|          |       0|       0.02s|
+|✅ LUA           |[luacheck](https://megalinter.io/10.0.0/descriptors/lua_luacheck)                                     |    1|     |     0|          |       0|       0.09s|
 |✅ LUA           |[stylua](https://megalinter.io/10.0.0/descriptors/lua_stylua)                                         |    1|     |     0|          |       0|       0.06s|
-|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  226|     |    20|          |       0|       5.09s|
-|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  226|     |     1|          |       0|       0.84s|
-|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.29s|
-|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.37s|
-|✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.12s|
-|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       3.77s|
-|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.77s|
-|❌ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     2|          |       0|       5.74s|
-|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       4.48s|
-|✅ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     0|          |       0|       0.18s|
-|✅ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   44|     |     0|          |       0|       3.32s|
-|✅ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    no|          |      no|      15.26s|
-|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   43|     |    19|          |       0|      15.98s|
-|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   615|          |      no|      10.99s|
-|✅ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   44|     |     0|          |       0|       0.17s|
-|❌ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   44|     |     1|          |       0|       0.06s|
-|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       1.12s|
-|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|       1.02s|
-|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.53s|
-|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      46.98s|
-|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       2.14s|
-|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     8|          |      no|     130.49s|
-|❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.01s|
-|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      38.81s|
-|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.58s|
-|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      23.63s|
-|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.49s|
-|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       8.72s|
-|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|      10.57s|
-|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       4.29s|
-|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.51s|
-|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       4.04s|
-|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.53s|
-|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|       6.49s|
-|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|      10.86s|
-|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       2.02s|
-|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  475|     |     1|          |       0|       0.07s|
-|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  233|     |   361|          |       0|       6.33s|
-|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  235|     |     4|          |    1977|       6.84s|
-|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       5.62s|
-|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.57s|
-|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.64s|
-|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.49s|
-|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|       0.47s|
-|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       3.65s|
-|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|        0.4s|
-|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|        0.4s|
-|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.56s|
+|❌ MARKDOWN      |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  226|     |    20|          |       0|       3.84s|
+|❌ MARKDOWN      |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  226|     |     1|          |       0|       0.65s|
+|✅ PHP           |[phpcs](https://megalinter.io/10.0.0/descriptors/php_phpcs)                                           |    1|     |     0|          |       0|       0.23s|
+|✅ PHP           |[php-cs-fixer](https://megalinter.io/10.0.0/descriptors/php_php_cs_fixer)                             |  yes|     |    no|          |      no|       0.38s|
+|✅ PHP           |[phplint](https://megalinter.io/10.0.0/descriptors/php_phplint)                                       |    1|     |     0|          |       0|       0.11s|
+|✅ PHP           |[phpstan](https://megalinter.io/10.0.0/descriptors/php_phpstan)                                       |    1|     |     0|          |       0|       2.97s|
+|✅ PHP           |[psalm](https://megalinter.io/10.0.0/descriptors/php_psalm)                                           |    1|     |     0|          |       0|       3.16s|
+|❌ POWERSHELL    |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    4|     |     2|          |       0|       4.72s|
+|✅ POWERSHELL    |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    4|     |     0|          |       0|       3.87s|
+|✅ PROTOBUF      |[protolint](https://megalinter.io/10.0.0/descriptors/protobuf_protolint)                              |    2|     |     0|          |       0|       0.13s|
+|❌ PYTHON        |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   44|     |     2|          |       0|       2.68s|
+|✅ PYTHON        |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    no|          |      no|      12.07s|
+|❌ PYTHON        |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   43|     |    19|          |       0|      11.77s|
+|❌ PYTHON        |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   615|          |      no|       7.93s|
+|❌ PYTHON        |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   44|     |     1|          |       0|       0.17s|
+|❌ PYTHON        |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   44|     |     1|          |       0|       0.04s|
+|✅ R             |[lintr](https://megalinter.io/10.0.0/descriptors/r_lintr)                                             |    1|     |     0|          |       0|       0.92s|
+|❌ RAKU          |[raku](https://megalinter.io/10.0.0/descriptors/raku_raku)                                            |    2|     |     1|          |       0|        0.8s|
+|✅ REPOSITORY    |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.25s|
+|❌ REPOSITORY    |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      35.48s|
+|✅ REPOSITORY    |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       2.33s|
+|❌ REPOSITORY    |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |     8|          |      no|     109.32s|
+|❌ REPOSITORY    |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     5|          |      no|       0.02s|
+|✅ REPOSITORY    |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      23.66s|
+|✅ REPOSITORY    |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.75s|
+|❌ REPOSITORY    |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      12.72s|
+|✅ REPOSITORY    |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.55s|
+|❌ REPOSITORY    |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|        7.6s|
+|✅ RST           |[rstcheck](https://megalinter.io/10.0.0/descriptors/rst_rstcheck)                                     |    2|     |     0|          |       0|       9.77s|
+|❌ RST           |[rstfmt](https://megalinter.io/10.0.0/descriptors/rst_rstfmt)                                         |    2|     |     1|          |       0|       4.62s|
+|❌ RST           |[rst-lint](https://megalinter.io/10.0.0/descriptors/rst_rst_lint)                                     |    2|     |     1|          |       0|       0.41s|
+|✅ RUBY          |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       3.22s|
+|❌ RUST          |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.39s|
+|✅ SCALA         |[scalafix](https://megalinter.io/10.0.0/descriptors/scala_scalafix)                                   |    1|     |     0|          |       0|       4.69s|
+|❌ SNAKEMAKE     |[snakemake](https://megalinter.io/10.0.0/descriptors/snakemake_snakemake)                             |    1|     |     1|          |       0|       9.21s|
+|✅ SNAKEMAKE     |[snakefmt](https://megalinter.io/10.0.0/descriptors/snakemake_snakefmt)                               |    1|     |     0|          |       0|       1.48s|
+|❌ SPELL         |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  475|     |     1|          |       0|       0.09s|
+|❌ SPELL         |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  233|     |   361|          |       0|       5.75s|
+|❌ SPELL         |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  235|     |     4|          |    1977|       7.24s|
+|✅ SQL           |[sqlfluff](https://megalinter.io/10.0.0/descriptors/sql_sqlfluff)                                     |    1|     |     0|          |       0|       4.42s|
+|✅ SWIFT         |[swiftlint](https://megalinter.io/10.0.0/descriptors/swift_swiftlint)                                 |  yes|     |    no|          |      no|       0.53s|
+|✅ TEKTON        |[tekton-lint](https://megalinter.io/10.0.0/descriptors/tekton_tekton_lint)                            |    1|     |     0|          |       0|       0.71s|
+|✅ TERRAFORM     |[terraform-fmt](https://megalinter.io/10.0.0/descriptors/terraform_terraform_fmt)                     |    4|     |     0|          |       0|       0.32s|
+|✅ TERRAFORM     |[terragrunt](https://megalinter.io/10.0.0/descriptors/terraform_terragrunt)                           |    1|     |     0|          |       0|        0.6s|
+|❌ TERRAFORM     |[tflint](https://megalinter.io/10.0.0/descriptors/terraform_tflint)                                   |  yes|     |     1|          |      no|       2.78s|
+|❌ TSX           |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |    1|     |     1|          |       0|       0.42s|
+|❌ TYPESCRIPT    |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |    2|     |     1|          |       0|       0.35s|
+|✅ TYPESCRIPT    |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |    2|     |     0|          |       0|       0.48s|
 |✅ XML           |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    6|     |     0|          |       0|        0.3s|
-|✅ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  138|     |     0|          |       0|       4.04s|
-|✅ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  138|     |     0|          |       0|      51.32s|
-|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  138|     |     0|          |       0|      10.63s|
+|✅ YAML          |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  138|     |     0|          |       0|       3.45s|
+|✅ YAML          |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  138|     |     0|          |       0|       38.6s|
+|✅ YAML          |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  138|     |     0|          |       0|       8.69s|
 
 ## Detailed Issues
+
+<details>
+<summary>❌ PYTHON / bandit - 2 errors</summary>
+
+```
+Run started:2026-08-14 13:38:41.257503+00:00
+
+Test results:
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
+   Location: ./egolint/scripts/validate_megalinter_policy.py:271:8
+270	        "",
+271	        "",
+272	    ):
+273	        candidate = normalized_rules_path.removeprefix(workspace_prefix)
+274	        if candidate != normalized_rules_path:
+275	            normalized_rules_path = candidate
+276	            break
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
+   Location: ./egolint/tests/test_megalinter_policy.py:121:12
+120	            "egolint/.config/lint/terraform",
+121	            "egolint/.config/lint/terraform",
+122	        ):
+123	            with self.subTest(rules_path=rules_path):
+124	                resolved = megalinter_policy.resolve_configuration_path(
+125	                    rules_path,
+126	                    ".tflint.hcl",
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 5643
+	Total lines skipped (#nosec): 1
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 19
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 2
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 2
+		High: 0
+Files skipped (0):
+```
+
+</details>
 
 <details>
 <summary>❌ BASH / bash-exec - 14 errors</summary>
@@ -199,92 +256,75 @@ See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
 <summary>❌ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-= re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 12:49:46,974 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
+ding/module_finder.py:63: FutureWarning: Possible set union at position 338
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,974 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
+2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,974 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
+2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
+2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,977 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
+2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
+2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+2026-08-14 13:38:22,637 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,978 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-08-14 13:38:22,638 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 12:49:46,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-14 12:49:47,028 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-14 12:49:47,087 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-14 12:49:47,087 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-14 12:49:47,353 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-14 12:49:47,359 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-14 12:49:47,367 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-14 12:49:47,371 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-14 12:49:47,375 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-14 12:49:47,375 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-14 12:49:47,382 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-14 12:49:47,430 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 12:49:47,431 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-14 12:49:47,431 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 12:49:47,431 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-14 12:49:47,429 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-14 12:49:47,450 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-14 12:49:47,562 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-14 12:49:47,592 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-14 12:49:48,187 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-14 12:49:48,190 [MainThread  ] [INFO ]  Creating vertices
-2026-08-14 12:49:48,215 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-14 12:49:48,215 [MainThread  ] [INFO ]  Creating edges
-2026-08-14 12:49:48,216 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-14 12:49:48,244 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-14 12:49:48,456 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-14 12:49:48,461 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-14 12:49:48,467 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-14 12:49:48,482 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-14 12:50:01,493 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-14 12:50:01,494 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-14 12:50:01,727 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-14 12:50:01,729 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-14 12:50:01,730 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-14 13:38:22,667 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-14 13:38:22,731 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-14 13:38:22,731 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-14 13:38:22,807 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-14 13:38:22,808 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-14 13:38:22,828 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-14 13:38:22,829 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-14 13:38:22,819 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 13:38:22,830 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-14 13:38:22,872 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-14 13:38:22,874 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-14 13:38:22,877 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-14 13:38:22,881 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-14 13:38:22,882 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-14 13:38:22,891 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-14 13:38:22,904 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-14 13:38:23,021 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  Creating vertices
+2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-14 13:38:23,022 [MainThread  ] [INFO ]  Creating edges
+2026-08-14 13:38:23,023 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-14 13:38:23,024 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-14 13:38:23,105 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-14 13:38:31,480 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-14 13:38:31,481 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-14 13:38:31,569 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-14 13:38:31,569 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-14 13:38:31,570 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -293,6 +333,10 @@ Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
 Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -301,10 +345,6 @@ Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
-Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
 Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -532,7 +572,7 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 26666 characters out of 36188)
+(Truncated to last 25000 characters out of 36188)
 ```
 
 </details>
@@ -617,7 +657,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786711719252:10:20
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 ```
 
@@ -642,7 +682,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786711719252:10:20
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 ```
 
@@ -667,7 +707,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786711719252:10:20
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786714647677:10:20
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 ```
 
@@ -687,7 +727,7 @@ decompress             4.2.1      npm     GHSA-h39j-r5qq-r9mm  Medium    0.5% (4
 vue-template-compiler  2.7.16     npm     GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)  0.2    
 decompress             4.2.1      npm     GHSA-jwp9-9v96-94mx  Medium    0.3% (25th)  0.2    
 elliptic               6.6.1      npm     GHSA-848j-6mx2-7j84  Low       0.2% (6th)   < 0.1
-[0130] ERROR discovered vulnerabilities at or above the severity threshold
+[0109] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
@@ -707,36 +747,7 @@ egolint/tests/fixtures/hadolint/Dockerfile:12 DL3066 info: Non-numeric user-id m
 <summary>❌ COPYPASTE / jscpd - 310 errors</summary>
 
 ```
-t/.config/megalinter/v10-catalog.json [1451:49 - 1471:5] (21 lines, 59 tokens)
-   egolint/.config/megalinter/v10-catalog.json [2897:26 - 2917:5]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [1728:38 - 1745:5] (18 lines, 50 tokens)
-   egolint/.config/megalinter/v10-catalog.json [2916:49 - 2933:5]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [2379:43 - 2411:5] (33 lines, 95 tokens)
-   egolint/.config/megalinter/v10-catalog.json [3020:34 - 3052:5]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [3308:42 - 3324:22] (17 lines, 58 tokens)
-   egolint/.config/megalinter/v10-catalog.json [3330:31 - 3346:22]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [3328:19 - 3346:22] (19 lines, 72 tokens)
-   egolint/.config/megalinter/v10-catalog.json [3350:18 - 3368:22]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [4462:41 - 4479:22] (18 lines, 61 tokens)
-   egolint/.config/megalinter/v10-catalog.json [4495:40 - 4512:22]
-Clone found (yaml)
- - egolint/.config/security/trivy/trivy-sbom.yaml [39:1 - 84:24] (46 lines, 157 tokens)
-   egolint/.config/security/trivy/trivy.yaml [27:1 - 72:24]
-Clone found (json)
- - egolint/.config/toolchain/tool-matrix.json [124:25 - 138:11] (15 lines, 51 tokens)
-   egolint/.config/toolchain/tool-matrix.json [186:26 - 200:11]
-Clone found (json)
- - egolint/.config/toolchain/tool-matrix.json [272:25 - 286:11] (15 lines, 51 tokens)
-   egolint/.config/toolchain/tool-matrix.json [494:24 - 508:11]
-Clone found (yaml)
- - egolint/.mega-linter.yml [1196:37 - 1208:5] (13 lines, 53 tokens)
-   egolint/.mega-linter.yml [1225:32 - 1237:5]
-Clone found (toml)
+d (toml)
  - egolint/poetry.toml [1:1 - 107:15] (107 lines, 185 tokens)
    poetry.toml [1:1 - 107:15]
 Clone found (java)
@@ -1071,7 +1082,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 36             │ 8411        │ 63401        │ 16           │ 157 (1.87%)      │ 1112 (1.75%)      │
+│ python     │ 36             │ 8436        │ 63545        │ 16           │ 157 (1.86%)      │ 1112 (1.75%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1093,16 +1104,16 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 227            │ 18676       │ 98090        │ 72           │ 822 (4.40%)      │ 5463 (5.57%)      │
+│ yaml       │ 227            │ 18676       │ 98095        │ 72           │ 822 (4.40%)      │ 5463 (5.57%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 788            │ 92503       │ 616938       │ 310          │ 3975 (4.30%)     │ 30634 (4.97%)     │
+│ Total:     │ 788            │ 92528       │ 617087       │ 310          │ 3975 (4.30%)     │ 30634 (4.96%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 310 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 1.56s
+time: 1.59s
 
-(Truncated to last 26666 characters out of 72437)
+(Truncated to last 25000 characters out of 72437)
 ```
 
 </details>
@@ -1111,7 +1122,7 @@ time: 1.56s
 <summary>❌ REPOSITORY / ls-lint - 5 errors</summary>
 
 ```
-2026/08/14 12:51:05 rule ignore not exists
+2026/08/14 13:39:22 rule ignore not exists
 
 
 [REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.
@@ -1236,17 +1247,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/powershell_powersh
 <summary>❌ SPELL / proselint - 361 errors</summary>
 
 ```
-L.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:25:27: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
-egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md:5:29: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
-egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md:12:31: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+e curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-vision-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-vision-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-vision-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -1474,7 +1475,7 @@ mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
-(Truncated to last 26666 characters out of 50395)
+(Truncated to last 25000 characters out of 50395)
 ```
 
 </details>
@@ -1505,16 +1506,16 @@ egolint/scripts/complementary_tools.py:202:0: R0912: Too many branches (14/12) (
 egolint/scripts/complementary_tools.py:531:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 ************* Module validate_megalinter_policy
 egolint/scripts/validate_megalinter_policy.py:18:0: E0401: Unable to import 'yaml' (import-error)
-egolint/scripts/validate_megalinter_policy.py:292:0: R0912: Too many branches (15/12) (too-many-branches)
-egolint/scripts/validate_megalinter_policy.py:350:0: R0912: Too many branches (18/12) (too-many-branches)
-egolint/scripts/validate_megalinter_policy.py:426:0: R0914: Too many local variables (28/20) (too-many-locals)
+egolint/scripts/validate_megalinter_policy.py:301:0: R0912: Too many branches (15/12) (too-many-branches)
+egolint/scripts/validate_megalinter_policy.py:359:0: R0912: Too many branches (18/12) (too-many-branches)
+egolint/scripts/validate_megalinter_policy.py:435:0: R0914: Too many local variables (28/20) (too-many-locals)
 ************* Module scripts.garden_agent
 mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 
 -----------------------------------
-Your code has been rated at 9.92/10
+Your code has been rated at 9.93/10
 ```
 
 </details>
@@ -1523,26 +1524,7 @@ Your code has been rated at 9.92/10
 <summary>❌ PYTHON / pyright - 615 errors</summary>
 
 ```
-tially unknown
-    Type of "quartz_commit" is "str | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:171:36 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:172:33 - error: Argument type is partially unknown
-    Argument corresponds to parameter "string" in function "fullmatch"
-    Argument type is "str | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:175:5 - error: Type of "node_major" is partially unknown
-    Type of "node_major" is "Any | Unknown | None" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:175:18 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: str, default: None = None, /) -> (Any | None), (key: str, default: Any, /) -> Any, (key: str, default: _T@get, /) -> (Any | _T@get)] | Unknown" (reportUnknownMemberType)
-  mindgarden/scripts/publish_garden.py:182:31 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:183:31 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:186:5 - error: Type of "manifest" is partially unknown
-    Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
+t[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
   mindgarden/scripts/publish_garden.py:187:23 - error: Argument type is partially unknown
     Argument corresponds to parameter "metadata" in function "require_string"
     Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
@@ -1809,7 +1791,7 @@ tests/test_repository_intelligence.py
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
 615 errors, 10 warnings, 0 informations
 
-(Truncated to last 26666 characters out of 116446)
+(Truncated to last 25000 characters out of 116446)
 ```
 
 </details>
@@ -1832,9 +1814,9 @@ See documentation on https://megalinter.io/10.0.0/descriptors/raku_raku/
         /opt/rakudo-pkg/share/perl6/site
         /opt/rakudo-pkg/share/perl6/vendor
         /opt/rakudo-pkg/share/perl6/core
-        CompUnit::Repository::AbsolutePath<6086910603872>
-        CompUnit::Repository::NQP<6086786098680>
-        CompUnit::Repository::Perl5<6086786098720>
+        CompUnit::Repository::AbsolutePath<3443324549840>
+        CompUnit::Repository::NQP<3443200173680>
+        CompUnit::Repository::Perl5<3443200173720>
     at egolint/tests/fixtures/raku/t/01-greeting.rakutest:6
 ```
 
@@ -1861,9 +1843,40 @@ egolint/tests/fixtures/rstcheck/valid.rst is not correctly formatted!
 </details>
 
 <details>
+<summary>❌ PYTHON / ruff - 1 error</summary>
+
+```
+S108 Probable insecure usage of temporary file or directory: "egolint/.config/lint/terraform"
+   --> egolint/tests/test_megalinter_policy.py:121:13
+    |
+119 |             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
+120 |             "egolint/.config/lint/terraform",
+121 |             "egolint/.config/lint/terraform",
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+122 |         ):
+123 |             with self.subTest(rules_path=rules_path):
+    |
+
+Found 1 error.
+```
+
+</details>
+
+<details>
 <summary>❌ PYTHON / ruff-format - 1 error</summary>
 
 ```
+unformatted: File would be reformatted
+   --> egolint/tests/test_megalinter_policy.py:115:20
+    |
+114 |     def test_resolve_configuration_path_accepts_workspace_anchored_rules(self) -> None:
+    -         expected = (
+    -             REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
+    -         )
+115 +         expected = REPOSITORY_ROOT / "egolint" / ".config" / "lint" / "terraform" / ".tflint.hcl"
+116 |         for rules_path in (
+    |
+
 unformatted: File would be reformatted
   --> tests/test_identity_integration.py:33:29
    |
@@ -1902,7 +1915,7 @@ unformatted: File would be reformatted
 83 |
    |
 
-1 file would be reformatted, 43 files already formatted
+2 files would be reformatted, 42 files already formatted
 ```
 
 </details>
@@ -1911,58 +1924,7 @@ unformatted: File would be reformatted
 <summary>❌ BASH / shfmt - 4 errors</summary>
 
 ```
-Determine whether an absolute path is inside the workspace.
- # @arg $1 string Absolute path.
- path_is_within_workspace() {
--  local path="$1"
--  case "${path}" in
-+    local path="$1"
-+    case "${path}" in
-     "${WORKSPACE}" | "${WORKSPACE}"/*) return 0 ;;
-     *) return 1 ;;
--  esac
-+    esac
- }
- 
- # @description Resolve an explicit or conventional MegaLinter configuration.
- resolve_config() {
--  local candidate=""
--
--  if [[ -n ${CONFIG_FILE} ]]; then
--    case "${CONFIG_FILE}" in
--      /*) candidate="${CONFIG_FILE}" ;;
--      *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
--    esac
--  elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
--    candidate="${WORKSPACE}/.mega-linter.yml"
--  elif [[ -f "${WORKSPACE}/.mega-linter.yaml" ]]; then
--    candidate="${WORKSPACE}/.mega-linter.yaml"
--  fi
--
--  if [[ -z ${candidate} ]]; then
--    CONFIG_FILE=""
--    return 0
--  fi
--
--  [[ -f ${candidate} ]] || die "MegaLinter config does not exist: ${candidate}"
--  candidate="$(cd "$(dirname "${candidate}")" && pwd -P)/$(basename "${candidate}")"
--  path_is_within_workspace "${candidate}" ||
--    die "MegaLinter config must be inside the workspace: ${candidate}"
--  CONFIG_FILE="${candidate}"
-+    local candidate=""
-+
-+    if [[ -n ${CONFIG_FILE} ]]; then
-+        case "${CONFIG_FILE}" in
-+        /*) candidate="${CONFIG_FILE}" ;;
-+        *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
-+        esac
-+    elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
-+        candidate="${WORKSPACE}/.mega-linter.yml"
-+    elif [[ -f "${WORKSPACE}/.mega-linter.yaml" ]]; then
-+        candidate="${WORKSPACE}/.mega-linter.yaml"
-+    fi
-+
-+    if [[ -z ${candidate} ]]; then
+; then
 +        CONFIG_FILE=""
 +        return 0
 +    fi
@@ -2727,7 +2689,7 @@ diff egolint/scripts/precommit.sh.orig egolint/scripts/precommit.sh
  
  main "$@"
 
-(Truncated to last 26666 characters out of 47476)
+(Truncated to last 25000 characters out of 47476)
 ```
 
 </details>
@@ -2757,567 +2719,17 @@ See documentation on https://megalinter.io/10.0.0/descriptors/snakemake_snakemak
 <summary>❌ TERRAFORM / tflint - 1 error</summary>
 
 ```
-run in egolint/tests/fixtures/negative/djlint; exit status 1
+│ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
 
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/dotenv-linter; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/golangci-lint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/interrogate; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/kingfisher; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/knip; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/knip/src; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/latexindent; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/kubernetes; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/nbqa-mypy; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/regal; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/ruff-format; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/semgrep; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/rumdl; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/v8r; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
 
 │ Failed to run in egolint/tests/fixtures/negative/terraform-fmt; exit status 1
 
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/tombi; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/vacuum; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/zizmor; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/negative/vulture; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/npm-groovy-lint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/npm-package-json-lint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/php; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/pmd; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/powershell; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/protolint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/prose; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/prettier; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/python; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/puppet; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/raku; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/raku/lib; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/raku/lib/EgoHygiene; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/raku/t; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/remark-lint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/regal; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/revive; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/rstcheck; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/salesforce-apex; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/rubocop; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app/main/default; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app/main; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/salesforce-apex/force-app/main/default/classes; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/scalafix; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/snakefmt/data; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/secretlint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/sqlfluff; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/snakefmt; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/stylelint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/libexec/mantle/installers; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/tekton-lint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/terragrunt; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
+Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
 
 │ Failed to run in egolint/tests/fixtures/tflint; exit status 1
 
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/trufflehog; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/tombi; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/vacuum; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/tsqllint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/vulture; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/v8r; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in identity/profiles; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in identity/contracts; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/yamllint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in identity; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in identity/src; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in lib; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/assets; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/assets/branding; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/assets/presentation; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/audits; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/config; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/bin; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/config/architecture; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/config/fastfetch; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/lib/bash; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/init; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/lib; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/lib/config; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/lib/extensions; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/lib/core; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/libexec; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/lib/install; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/libexec/mantle; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/modules; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/bin; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/libexec/mantle/commands; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/platforms; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/platforms/linux; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/platforms/darwin; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/platforms/windows; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shared; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells/fish; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells/bash; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells/fish/completions; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells/fish/conf.d; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells/fish/functions; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells/zsh; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/runtime/shells/posix; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/integration; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/contract; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/smoke; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/test_helper; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/unit; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/unit/core; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/unit/install; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mantle/tests/unit/config; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/profiles; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/contracts; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/profiles/obsidian; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/profiles/agent; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/checkmake; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/scripts; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tasks; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/arm-ttk; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/buf; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/htmlhint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/gherkin; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/govulncheck; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/scripts; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/gitleaks; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/hadolint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/graphql-schema-linter; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in LICENSES; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/profiles/quartz; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/templates; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/interrogate; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/kics; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in mindgarden/tests; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/jsonlint; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/kics/terraform; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in tests; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-│ Failed to run in egolint/tests/fixtures/knip; exit status 1
-
-Failed to load TFLint config; failed to load file: open egolint/.config/lint/terraform/.tflint.hcl: no such file or directory
-
-(Truncated to last 26666 characters out of 35385)
+Failed to initialize plugins; Plugin "azurerm" not found. Did you run "tflint --init"?
 ```
 
 </details>
@@ -3326,25 +2738,25 @@ Failed to load TFLint config; failed to load file: open egolint/.config/lint/ter
 <summary>❌ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-14T12:49:32Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-14T12:49:32Z	INFO	[vulndb] Need to update DB
-2026-08-14T12:49:32Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-14T12:49:32Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-1.39 MiB / 106.87 MiB [>_____________________________________________________________] 1.30% ? p/s ?17.25 MiB / 106.87 MiB [--------->__________________________________________________] 16.14% ? p/s ?44.14 MiB / 106.87 MiB [------------------------>___________________________________] 41.30% ? p/s ?69.93 MiB / 106.87 MiB [------------------------------>_______________] 65.43% 114.05 MiB p/s ETA 0s92.93 MiB / 106.87 MiB [--------------------------------------->______] 86.95% 114.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 110.67 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 103.53 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 96.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 90.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.76 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.76 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 84.76 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 79.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 74.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 74.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 74.17 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 69.39 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 69.39 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 69.39 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 64.91 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 64.91 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 64.91 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 60.72 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 15.74 MiB p/s 7.0s2026-08-14T12:49:40Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-14T12:49:40Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-14T12:49:40Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-14T12:49:40Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-14T12:49:40Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 4.33 MiB p/s 300ms2026-08-14T12:49:51Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-14T12:49:51Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-14T12:49:51Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-14T12:49:52Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-14T12:49:53Z	INFO	Number of language-specific files	num=4
-2026-08-14T12:49:53Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-14T12:49:53Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-14T12:49:53Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-14T12:49:54Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-14T12:49:54Z	INFO	Detected config files	num=13
+2026-08-14T13:38:07Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-14T13:38:07Z	INFO	[vulndb] Need to update DB
+2026-08-14T13:38:07Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-14T13:38:07Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+20.95 MiB / 106.87 MiB [----------->________________________________________________] 19.60% ? p/s ?46.42 MiB / 106.87 MiB [-------------------------->_________________________________] 43.43% ? p/s ?75.84 MiB / 106.87 MiB [------------------------------------------>_________________] 70.97% ? p/s ?99.09 MiB / 106.87 MiB [------------------------------------------>___] 92.72% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 130.05 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 122.51 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 114.60 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 107.21 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [------------------------------------------->] 100.00% 100.29 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 93.82 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 87.77 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 82.11 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 76.81 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 71.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-------------------------------------------->] 100.00% 71.85 MiB p/s ETA 0s106.87 MiB / 106.87 MiB [-----------------------------------------------] 100.00% 17.06 MiB p/s 6.5s2026-08-14T13:38:14Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-14T13:38:14Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-14T13:38:14Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-14T13:38:14Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-14T13:38:14Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 100ms2026-08-14T13:38:18Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-14T13:38:18Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-14T13:38:19Z	INFO	Number of language-specific files	num=4
+2026-08-14T13:38:19Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-14T13:38:19Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-14T13:38:19Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-14T13:38:19Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-14T13:38:19Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -3552,7 +2964,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 <summary>❌ REPOSITORY / trufflehog - 1 error</summary>
 
 ```
-2026-08-14T12:50:04Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
+2026-08-14T13:38:34Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"concurrency\""}
 ```
 
 </details>
@@ -3561,23 +2973,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 <summary>❌ SPELL / vale - 4 errors</summary>
 
 ```
-rite-good.Passive  
- 246:17  warning  'shall' is too wordy.                                                write-good.TooWordy 
- 267:13  warning  'shall' is too wordy.                                                write-good.TooWordy 
- 267:19  warning  'be reported' may be passive voice. Use active voice if you can.     write-good.Passive  
- 271:14  warning  'shall' is too wordy.                                                write-good.TooWordy 
- 274:4   warning  'shall' is too wordy.                                                write-good.TooWordy 
- 295:1   warning  'Validate' is too wordy.                                             write-good.TooWordy 
- 315:11  warning  'shall' is too wordy.                                                write-good.TooWordy 
- 316:56  warning  'is found' may be passive voice. Use active voice if you can.        write-good.Passive  
- 317:1   warning  'be generated' may be passive voice. Use active voice if you can.    write-good.Passive  
- 317:35  warning  'was mutated' may be passive voice. Use active voice if you can.     write-good.Passive  
- 319:11  warning  'shall' is too wordy.                                                write-good.TooWordy 
- 319:52  warning  'shall' is too wordy.                                                write-good.TooWordy 
- 323:36  warning  'additional' is too wordy.                                           write-good.TooWordy 
- 335:20  warning  'shall' is too wordy.                                                write-good.TooWordy 
- 337:14  warning  'prioritize' is too wordy.                                           write-good.TooWordy 
- 343:23  warning  'is isolated' may be passive voice. Use active voice if you can.     write-good.Passive  
+ated' may be passive voice. Use active voice if you can.     write-good.Passive  
  346:40  warning  'are validated' may be passive voice. Use active voice if you can.   write-good.Passive  
  347:47  warning  'are detected' may be passive voice. Use active voice if you can.    write-good.Passive  
  349:28  warning  'is preserved' may be passive voice. Use active voice if you can.    write-good.Passive  
@@ -3892,7 +3288,7 @@ rite-good.Passive
 
 ✖ 4 errors, 1977 warnings and 0 suggestions in 235 files.
 
-(Truncated to last 26666 characters out of 223850)
+(Truncated to last 25000 characters out of 223850)
 ```
 
 </details>

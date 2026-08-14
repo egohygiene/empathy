@@ -597,47 +597,47 @@ egolint/scripts/validate_megalinter_policy.py
   egolint/scripts/validate_megalinter_policy.py:261:21 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:360:5 - error: Type of "policy_release" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:369:5 - error: Type of "policy_release" is partially unknown
     Type of "policy_release" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:360:22 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:369:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:361:5 - error: Type of "policy_commit" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:370:5 - error: Type of "policy_commit" is partially unknown
     Type of "policy_commit" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:361:21 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:370:21 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:381:9 - error: Type of "reason" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:390:9 - error: Type of "reason" is partially unknown
     Type of "reason" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:381:18 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:390:18 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:384:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:384:29 - error: Argument type is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:393:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:393:29 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  egolint/scripts/validate_megalinter_policy.py:391:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:391:20 - error: Type of "metadata" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:398:9 - error: Type of "configuration_path" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:400:9 - error: Type of "linter_id" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:400:20 - error: Type of "metadata" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:407:9 - error: Type of "configuration_path" is partially unknown
     Type of "configuration_path" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:398:30 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:407:30 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:407:9 - error: Type of "fixture_metadata" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:416:9 - error: Type of "fixture_metadata" is partially unknown
     Type of "fixture_metadata" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:407:28 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:416:28 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:413:9 - error: Type of "positive" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:413:20 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:422:9 - error: Type of "positive" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:422:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:414:9 - error: Type of "negative" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:414:20 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:423:9 - error: Type of "negative" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:423:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:415:9 - error: Type of "blocker" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:424:9 - error: Type of "blocker" is partially unknown
     Type of "blocker" is "Unknown | None" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:415:19 - error: Type of "get" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:424:19 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:420:13 - error: Type of "fixture_path" is unknown (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:421:20 - error: Type of "is_file" is unknown (reportUnknownMemberType)
-  egolint/scripts/validate_megalinter_policy.py:499:13 - error: Type of "disabled_for_profile" is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:429:13 - error: Type of "fixture_path" is unknown (reportUnknownVariableType)
+  egolint/scripts/validate_megalinter_policy.py:430:20 - error: Type of "is_file" is unknown (reportUnknownMemberType)
+  egolint/scripts/validate_megalinter_policy.py:508:13 - error: Type of "disabled_for_profile" is partially unknown
     Type of "disabled_for_profile" is "set[Unknown]" (reportUnknownVariableType)
-  egolint/scripts/validate_megalinter_policy.py:507:43 - error: Argument type is partially unknown
+  egolint/scripts/validate_megalinter_policy.py:516:43 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "set[Any] | set[Unknown]" (reportUnknownArgumentType)
 egolint/tests/fixtures/negative/complexipy/complex.py

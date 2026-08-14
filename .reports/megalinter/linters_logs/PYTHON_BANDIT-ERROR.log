@@ -1,0 +1,56 @@
+Results of bandit linter (version 1.9.4)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_bandit/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Run started:2026-08-14 13:38:41.257503+00:00
+
+Test results:
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
+   Location: ./egolint/scripts/validate_megalinter_policy.py:271:8
+270	        "",
+271	        "",
+272	    ):
+273	        candidate = normalized_rules_path.removeprefix(workspace_prefix)
+274	        if candidate != normalized_rules_path:
+275	            normalized_rules_path = candidate
+276	            break
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b108_hardcoded_tmp_directory.html
+   Location: ./egolint/tests/test_megalinter_policy.py:121:12
+120	            "egolint/.config/lint/terraform",
+121	            "egolint/.config/lint/terraform",
+122	        ):
+123	            with self.subTest(rules_path=rules_path):
+124	                resolved = megalinter_policy.resolve_configuration_path(
+125	                    rules_path,
+126	                    ".tflint.hcl",
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 5643
+	Total lines skipped (#nosec): 1
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 19
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 2
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 2
+		High: 0
+Files skipped (0):
+

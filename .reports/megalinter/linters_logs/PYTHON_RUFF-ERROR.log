@@ -1,0 +1,19 @@
+Results of ruff linter (version 0.16.2)
+See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+S108 Probable insecure usage of temporary file or directory: "egolint/.config/lint/terraform"
+   --> egolint/tests/test_megalinter_policy.py:121:13
+    |
+119 |             "${GITHUB_WORKSPACE}/egolint/.config/lint/terraform",
+120 |             "egolint/.config/lint/terraform",
+121 |             "egolint/.config/lint/terraform",
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+122 |         ):
+123 |             with self.subTest(rules_path=rules_path):
+    |
+
+Found 1 error.
+

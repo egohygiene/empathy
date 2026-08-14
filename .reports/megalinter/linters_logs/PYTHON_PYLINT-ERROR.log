@@ -26,15 +26,15 @@ egolint/scripts/complementary_tools.py:202:0: R0912: Too many branches (14/12) (
 egolint/scripts/complementary_tools.py:531:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 ************* Module validate_megalinter_policy
 egolint/scripts/validate_megalinter_policy.py:18:0: E0401: Unable to import 'yaml' (import-error)
-egolint/scripts/validate_megalinter_policy.py:292:0: R0912: Too many branches (15/12) (too-many-branches)
-egolint/scripts/validate_megalinter_policy.py:350:0: R0912: Too many branches (18/12) (too-many-branches)
-egolint/scripts/validate_megalinter_policy.py:426:0: R0914: Too many local variables (28/20) (too-many-locals)
+egolint/scripts/validate_megalinter_policy.py:301:0: R0912: Too many branches (15/12) (too-many-branches)
+egolint/scripts/validate_megalinter_policy.py:359:0: R0912: Too many branches (18/12) (too-many-branches)
+egolint/scripts/validate_megalinter_policy.py:435:0: R0914: Too many local variables (28/20) (too-many-locals)
 ************* Module scripts.garden_agent
 mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 
 -----------------------------------
-Your code has been rated at 9.92/10
+Your code has been rated at 9.93/10
 
 
