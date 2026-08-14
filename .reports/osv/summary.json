@@ -1,5 +1,5 @@
 {
-  "commit": "53b18b4e9c33827fbc299f33dc251564fcd7fe64",
+  "commit": "c19c765bf489ed17b663c8b174f3b4e896c8b867",
   "discovery": {
     "artifact_count": 17,
     "artifacts": [
@@ -32,7 +32,7 @@
     ]
   },
   "event": "push",
-  "generated_at": "2026-08-14T12:45:26Z",
+  "generated_at": "2026-08-14T13:34:51Z",
   "reports": {
     "json": ".reports/osv/latest.json",
     "markdown": ".reports/osv/latest.md",
@@ -72,7 +72,7 @@
     },
     "vulnerabilities": 2
   },
-  "scan_duration_seconds": 8,
+  "scan_duration_seconds": 7,
   "scanner": {
     "name": "osv-scanner",
     "version": "2.5.0"
