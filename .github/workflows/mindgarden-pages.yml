@@ -36,6 +36,12 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Harden Runner
+        # step-security/harden-runner v2.20.0; observe egress before enforcing.
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+
       - name: Checkout complete repository history
         # actions/checkout v7.0.1
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -88,6 +94,12 @@ jobs:
       url: "${{ steps.deployment.outputs.page_url }}"
 
     steps:
+      - name: Harden Runner
+        # step-security/harden-runner v2.20.0; observe egress before enforcing.
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+
       - name: Deploy to GitHub Pages
         id: deployment
         # actions/deploy-pages v5.0.0
