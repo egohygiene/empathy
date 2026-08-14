@@ -59,6 +59,10 @@ temp.txt
 tmp/
 /docs/generated/
 
+# Mindgarden local overlays and generated indexes
+.garden.local/
+.garden/.index/
+
 # Python
 __pycache__/
 *.py[cod]
