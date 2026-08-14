@@ -1008,6 +1008,7 @@ RUST_CLIPPY_RULES_PATH: egolint/.config/lint/rust
 RUST_CLIPPY_CONFIG_FILE: .clippy.toml
 
 RUST_CLIPPY_ARGUMENTS: >-
+  --manifest-path identity/Cargo.toml
   --workspace
   --all-targets
   --all-features

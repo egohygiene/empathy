@@ -32,6 +32,10 @@
 ^\.reports/
 ^egolint/tests/fixtures/negative/
 
+# The root-level tests/ directory contains unit tests. Function and variable
+# names in tests may trigger secret detectors as false positives.
+^tests/
+
 \.map$
 \.min\.js$
 \.min\.css$

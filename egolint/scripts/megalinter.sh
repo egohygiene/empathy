@@ -98,7 +98,7 @@ die() {
 # @description Print the wrapper command reference.
 # @stdout Usage, option, environment, and example documentation.
 show_help() {
-  cat << 'EOF'
+  cat <<'EOF'
 Usage:
   megalinter [options] [-- runtime-argument ...]
 
@@ -217,162 +217,162 @@ normalize_list() {
 parse_arguments() {
   while [[ $# -gt 0 ]]; do
     case "$1" in
-      --descriptors)
-        require_option_value "$1" "${2:-}"
-        ENABLE_DESCRIPTORS="$(normalize_list "$2")"
-        validate_list "$1" "${ENABLE_DESCRIPTORS}"
-        shift 2
-        ;;
-      --linters)
-        require_option_value "$1" "${2:-}"
-        ENABLE_LINTERS="$(normalize_list "$2")"
-        validate_list "$1" "${ENABLE_LINTERS}"
-        shift 2
-        ;;
-      --disable-descriptors)
-        require_option_value "$1" "${2:-}"
-        DISABLE_DESCRIPTORS="$(normalize_list "$2")"
-        validate_list "$1" "${DISABLE_DESCRIPTORS}"
-        shift 2
-        ;;
-      --disable-linters)
-        require_option_value "$1" "${2:-}"
-        DISABLE_LINTERS="$(normalize_list "$2")"
-        validate_list "$1" "${DISABLE_LINTERS}"
-        shift 2
-        ;;
-      --changed-only)
-        CHANGED_ONLY="true"
+    --descriptors)
+      require_option_value "$1" "${2:-}"
+      ENABLE_DESCRIPTORS="$(normalize_list "$2")"
+      validate_list "$1" "${ENABLE_DESCRIPTORS}"
+      shift 2
+      ;;
+    --linters)
+      require_option_value "$1" "${2:-}"
+      ENABLE_LINTERS="$(normalize_list "$2")"
+      validate_list "$1" "${ENABLE_LINTERS}"
+      shift 2
+      ;;
+    --disable-descriptors)
+      require_option_value "$1" "${2:-}"
+      DISABLE_DESCRIPTORS="$(normalize_list "$2")"
+      validate_list "$1" "${DISABLE_DESCRIPTORS}"
+      shift 2
+      ;;
+    --disable-linters)
+      require_option_value "$1" "${2:-}"
+      DISABLE_LINTERS="$(normalize_list "$2")"
+      validate_list "$1" "${DISABLE_LINTERS}"
+      shift 2
+      ;;
+    --changed-only)
+      CHANGED_ONLY="true"
+      shift
+      ;;
+    --fix)
+      FIX_VALUE="all"
+      shift
+      ;;
+    --fix=*)
+      FIX_VALUE="$(normalize_list "${1#*=}")"
+      [[ -n ${FIX_VALUE} ]] || die "--fix requires a non-empty value after '='."
+      validate_list "--fix" "${FIX_VALUE}"
+      shift
+      ;;
+    --workspace)
+      require_option_value "$1" "${2:-}"
+      WORKSPACE="$2"
+      shift 2
+      ;;
+    --config)
+      require_option_value "$1" "${2:-}"
+      CONFIG_FILE="$2"
+      shift 2
+      ;;
+    --report-directory)
+      require_option_value "$1" "${2:-}"
+      REPORT_DIRECTORY="$2"
+      shift 2
+      ;;
+    --no-reports)
+      REPORT_DIRECTORY="none"
+      shift
+      ;;
+    --runtime)
+      require_option_value "$1" "${2:-}"
+      RUNTIME="$2"
+      shift 2
+      ;;
+    --flavor)
+      require_option_value "$1" "${2:-}"
+      FLAVOR="$2"
+      shift 2
+      ;;
+    --version)
+      require_option_value "$1" "${2:-}"
+      MEGALINTER_VERSION="$2"
+      shift 2
+      ;;
+    --image)
+      require_option_value "$1" "${2:-}"
+      IMAGE="$2"
+      shift 2
+      ;;
+    --pull)
+      require_option_value "$1" "${2:-}"
+      PULL_POLICY="$2"
+      shift 2
+      ;;
+    --platform)
+      require_option_value "$1" "${2:-}"
+      PLATFORM="$2"
+      shift 2
+      ;;
+    --tty)
+      require_option_value "$1" "${2:-}"
+      TTY_MODE="$2"
+      shift 2
+      ;;
+    --user)
+      require_option_value "$1" "${2:-}"
+      USER_MODE="$2"
+      shift 2
+      ;;
+    --env)
+      require_option_value "$1" "${2:-}"
+      [[ $2 == *=* && $2 != =* ]] || die "--env requires NAME=VALUE."
+      EXTRA_ENVS+=("$2")
+      shift 2
+      ;;
+    --env-file)
+      require_option_value "$1" "${2:-}"
+      ENV_FILE="$2"
+      shift 2
+      ;;
+    --volume)
+      require_option_value "$1" "${2:-}"
+      EXTRA_VOLUMES+=("$2")
+      shift 2
+      ;;
+    --mount-docker-socket)
+      DOCKER_SOCKET="true"
+      shift
+      ;;
+    --runtime-arg)
+      [[ $# -ge 2 ]] || die "--runtime-arg requires a value."
+      RUNTIME_ARGS+=("$2")
+      shift 2
+      ;;
+    --doctor)
+      DOCTOR_MODE="true"
+      shift
+      ;;
+    --dry-run)
+      DRY_RUN="true"
+      shift
+      ;;
+    --debug)
+      DEBUG_MODE="true"
+      shift
+      ;;
+    --quiet)
+      QUIET_MODE="true"
+      shift
+      ;;
+    --help)
+      show_help
+      exit "${EXIT_SUCCESS}"
+      ;;
+    --wrapper-version)
+      show_version
+      exit "${EXIT_SUCCESS}"
+      ;;
+    --)
+      shift
+      while [[ $# -gt 0 ]]; do
+        RUNTIME_ARGS+=("$1")
         shift
-        ;;
-      --fix)
-        FIX_VALUE="all"
-        shift
-        ;;
-      --fix=*)
-        FIX_VALUE="$(normalize_list "${1#*=}")"
-        [[ -n ${FIX_VALUE} ]] || die "--fix requires a non-empty value after '='."
-        validate_list "--fix" "${FIX_VALUE}"
-        shift
-        ;;
-      --workspace)
-        require_option_value "$1" "${2:-}"
-        WORKSPACE="$2"
-        shift 2
-        ;;
-      --config)
-        require_option_value "$1" "${2:-}"
-        CONFIG_FILE="$2"
-        shift 2
-        ;;
-      --report-directory)
-        require_option_value "$1" "${2:-}"
-        REPORT_DIRECTORY="$2"
-        shift 2
-        ;;
-      --no-reports)
-        REPORT_DIRECTORY="none"
-        shift
-        ;;
-      --runtime)
-        require_option_value "$1" "${2:-}"
-        RUNTIME="$2"
-        shift 2
-        ;;
-      --flavor)
-        require_option_value "$1" "${2:-}"
-        FLAVOR="$2"
-        shift 2
-        ;;
-      --version)
-        require_option_value "$1" "${2:-}"
-        MEGALINTER_VERSION="$2"
-        shift 2
-        ;;
-      --image)
-        require_option_value "$1" "${2:-}"
-        IMAGE="$2"
-        shift 2
-        ;;
-      --pull)
-        require_option_value "$1" "${2:-}"
-        PULL_POLICY="$2"
-        shift 2
-        ;;
-      --platform)
-        require_option_value "$1" "${2:-}"
-        PLATFORM="$2"
-        shift 2
-        ;;
-      --tty)
-        require_option_value "$1" "${2:-}"
-        TTY_MODE="$2"
-        shift 2
-        ;;
-      --user)
-        require_option_value "$1" "${2:-}"
-        USER_MODE="$2"
-        shift 2
-        ;;
-      --env)
-        require_option_value "$1" "${2:-}"
-        [[ $2 == *=* && $2 != =* ]] || die "--env requires NAME=VALUE."
-        EXTRA_ENVS+=("$2")
-        shift 2
-        ;;
-      --env-file)
-        require_option_value "$1" "${2:-}"
-        ENV_FILE="$2"
-        shift 2
-        ;;
-      --volume)
-        require_option_value "$1" "${2:-}"
-        EXTRA_VOLUMES+=("$2")
-        shift 2
-        ;;
-      --mount-docker-socket)
-        DOCKER_SOCKET="true"
-        shift
-        ;;
-      --runtime-arg)
-        [[ $# -ge 2 ]] || die "--runtime-arg requires a value."
-        RUNTIME_ARGS+=("$2")
-        shift 2
-        ;;
-      --doctor)
-        DOCTOR_MODE="true"
-        shift
-        ;;
-      --dry-run)
-        DRY_RUN="true"
-        shift
-        ;;
-      --debug)
-        DEBUG_MODE="true"
-        shift
-        ;;
-      --quiet)
-        QUIET_MODE="true"
-        shift
-        ;;
-      --help)
-        show_help
-        exit "${EXIT_SUCCESS}"
-        ;;
-      --wrapper-version)
-        show_version
-        exit "${EXIT_SUCCESS}"
-        ;;
-      --)
-        shift
-        while [[ $# -gt 0 ]]; do
-          RUNTIME_ARGS+=("$1")
-          shift
-        done
-        ;;
-      *)
-        die "Unknown option: $1. Run ${SCRIPT_NAME} --help for usage."
-        ;;
+      done
+      ;;
+    *)
+      die "Unknown option: $1. Run ${SCRIPT_NAME} --help for usage."
+      ;;
     esac
   done
 }
@@ -390,7 +390,7 @@ absolute_directory() {
 resolve_workspace() {
   local candidate="${WORKSPACE}"
   if [[ -z ${candidate} ]]; then
-    candidate="$(git rev-parse --show-toplevel 2> /dev/null || pwd -P)"
+    candidate="$(git rev-parse --show-toplevel 2>/dev/null || pwd -P)"
   fi
 
   WORKSPACE="$(absolute_directory "${candidate}")" ||
@@ -404,8 +404,8 @@ resolve_workspace() {
 path_is_within_workspace() {
   local path="$1"
   case "${path}" in
-    "${WORKSPACE}" | "${WORKSPACE}"/*) return 0 ;;
-    *) return 1 ;;
+  "${WORKSPACE}" | "${WORKSPACE}"/*) return 0 ;;
+  *) return 1 ;;
   esac
 }
 
@@ -415,8 +415,8 @@ resolve_config() {
 
   if [[ -n ${CONFIG_FILE} ]]; then
     case "${CONFIG_FILE}" in
-      /*) candidate="${CONFIG_FILE}" ;;
-      *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
+    /*) candidate="${CONFIG_FILE}" ;;
+    *) candidate="${WORKSPACE}/${CONFIG_FILE}" ;;
     esac
   elif [[ -f "${WORKSPACE}/.mega-linter.yml" ]]; then
     candidate="${WORKSPACE}/.mega-linter.yml"
@@ -441,8 +441,8 @@ validate_report_directory() {
   [[ ${REPORT_DIRECTORY} == "none" ]] && return 0
   [[ -n ${REPORT_DIRECTORY} ]] || die "Report directory cannot be empty."
   case "${REPORT_DIRECTORY}" in
-    /*) die "Report directory must be relative to the workspace." ;;
-    */../* | ../* | */..) die "Report directory may not contain a '..' segment: ${REPORT_DIRECTORY}" ;;
+  /*) die "Report directory must be relative to the workspace." ;;
+  */../* | ../* | */..) die "Report directory may not contain a '..' segment: ${REPORT_DIRECTORY}" ;;
   esac
   REPORT_DIRECTORY="${REPORT_DIRECTORY#./}"
 }
@@ -458,7 +458,7 @@ validate_options() {
   [[ -n ${MEGALINTER_VERSION} ]] || die "MegaLinter version cannot be empty."
 
   if [[ ${CHANGED_ONLY} == "true" && ! -d "${WORKSPACE}/.git" ]]; then
-    git -C "${WORKSPACE}" rev-parse --git-dir > /dev/null 2>&1 ||
+    git -C "${WORKSPACE}" rev-parse --git-dir >/dev/null 2>&1 ||
       die "--changed-only requires a Git worktree."
   fi
 
@@ -471,14 +471,14 @@ validate_options() {
 # @description Select Docker or Podman and confirm the executable is available.
 select_runtime() {
   if [[ ${RUNTIME} == "auto" ]]; then
-    if command -v docker > /dev/null 2>&1; then
+    if command -v docker >/dev/null 2>&1; then
       RUNTIME="docker"
-    elif command -v podman > /dev/null 2>&1; then
+    elif command -v podman >/dev/null 2>&1; then
       RUNTIME="podman"
     else
       die "Neither Docker nor Podman is installed." "${EXIT_DEPENDENCY}"
     fi
-  elif ! command -v "${RUNTIME}" > /dev/null 2>&1; then
+  elif ! command -v "${RUNTIME}" >/dev/null 2>&1; then
     die "Container runtime is not installed: ${RUNTIME}" "${EXIT_DEPENDENCY}"
   fi
 }
@@ -495,15 +495,15 @@ resolve_image() {
 
 # @description Check whether the selected container runtime service is ready.
 runtime_ready() {
-  "${RUNTIME}" info > /dev/null 2>&1
+  "${RUNTIME}" info >/dev/null 2>&1
 }
 
 # @description Check whether the resolved MegaLinter image exists locally.
 image_exists() {
   if [[ ${RUNTIME} == "docker" ]]; then
-    docker image inspect "${IMAGE}" > /dev/null 2>&1
+    docker image inspect "${IMAGE}" >/dev/null 2>&1
   else
-    podman image exists "${IMAGE}" > /dev/null 2>&1
+    podman image exists "${IMAGE}" >/dev/null 2>&1
   fi
 }
 
@@ -525,13 +525,13 @@ prepare_image() {
 github_repository() {
   local remote_url=""
   local repository=""
-  remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2> /dev/null || true)"
+  remote_url="$(git -C "${WORKSPACE}" remote get-url origin 2>/dev/null || true)"
 
   case "${remote_url}" in
-    git@github.com:*) repository="${remote_url#git@github.com:}" ;;
-    ssh://git@github.com/*) repository="${remote_url#ssh://git@github.com/}" ;;
-    https://github.com/*) repository="${remote_url#https://github.com/}" ;;
-    http://github.com/*) repository="${remote_url#http://github.com/}" ;;
+  git@github.com:*) repository="${remote_url#git@github.com:}" ;;
+  ssh://git@github.com/*) repository="${remote_url#ssh://git@github.com/}" ;;
+  https://github.com/*) repository="${remote_url#https://github.com/}" ;;
+  http://github.com/*) repository="${remote_url#http://github.com/}" ;;
   esac
   repository="${repository%.git}"
   printf "%s\n" "${repository}"
@@ -541,7 +541,7 @@ github_repository() {
 # @stdout Full branch ref, or an empty line for detached worktrees.
 github_ref() {
   local branch=""
-  branch="$(git -C "${WORKSPACE}" symbolic-ref --quiet --short HEAD 2> /dev/null || true)"
+  branch="$(git -C "${WORKSPACE}" symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
   if [[ -n ${branch} ]]; then
     printf "refs/heads/%s\n" "${branch}"
   fi
@@ -562,19 +562,19 @@ build_run_command() {
   RUN_COMMAND=("${RUNTIME}" "run" "--rm")
 
   case "${TTY_MODE}" in
-    always) RUN_COMMAND+=("--interactive" "--tty") ;;
-    auto)
-      if [[ -t 0 && -t 1 ]]; then
-        RUN_COMMAND+=("--interactive" "--tty")
-      fi
-      ;;
+  always) RUN_COMMAND+=("--interactive" "--tty") ;;
+  auto)
+    if [[ -t 0 && -t 1 ]]; then
+      RUN_COMMAND+=("--interactive" "--tty")
+    fi
+    ;;
   esac
 
   RUN_COMMAND+=("--volume" "${WORKSPACE}:${CONTAINER_WORKSPACE}:rw")
   RUN_COMMAND+=("--workdir" "${CONTAINER_WORKSPACE}")
 
   if [[ ${USER_MODE} == "host" ]]; then
-    command -v id > /dev/null 2>&1 || die "--user host requires the id command."
+    command -v id >/dev/null 2>&1 || die "--user host requires the id command."
     RUN_COMMAND+=("--user" "$(id -u):$(id -g)")
   fi
 
