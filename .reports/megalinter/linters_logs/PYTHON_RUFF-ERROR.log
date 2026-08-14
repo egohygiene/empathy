@@ -166,6 +166,74 @@ PLR0913 Too many arguments in function definition (6 > 5)
 500 |     repository_root: Path,
     |
 
+S603 `subprocess` call: check for execution of untrusted input
+  --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:68:17
+   |
+67 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
+68 |     completed = subprocess.run(
+   |                 ^^^^^^^^^^^^^^
+69 |         ["git", "-C", str(repo_root), *arguments],
+70 |         check=True,
+   |
+
+S607 Starting a process with a partial executable path
+  --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:69:9
+   |
+67 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
+68 |     completed = subprocess.run(
+69 |         ["git", "-C", str(repo_root), *arguments],
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+70 |         check=True,
+71 |         capture_output=True,
+   |
+
+FURB110 [*] Replace ternary `if` expression with `or` operator
+   --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:161:12
+    |
+159 | def extension_name(relative_path: str) -> str:
+160 |     suffix = Path(relative_path).suffix.casefold()
+161 |     return suffix if suffix else "[no extension]"
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: Replace with `or` operator
+    |
+160 |     suffix = Path(relative_path).suffix.casefold()
+    -     return suffix if suffix else "[no extension]"
+161 +     return suffix or "[no extension]"
+162 |
+    |
+
+PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
+   --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:267:27
+    |
+265 |             continue
+266 |         fields = record.split(b"\t", maxsplit=2)
+267 |         if len(fields) != 3:
+    |                           ^
+268 |             continue
+269 |         raw_insertions, raw_deletions, raw_path = fields
+    |
+
+S603 `subprocess` call: check for execution of untrusted input
+  --> .github/actions/generate-repository-intelligence/generate_repository_intelligence.py:89:17
+   |
+88 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
+89 |     completed = subprocess.run(
+   |                 ^^^^^^^^^^^^^^
+90 |         ["git", "-C", str(repo_root), *arguments],
+91 |         check=True,
+   |
+
+S607 Starting a process with a partial executable path
+  --> .github/actions/generate-repository-intelligence/generate_repository_intelligence.py:90:9
+   |
+88 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
+89 |     completed = subprocess.run(
+90 |         ["git", "-C", str(repo_root), *arguments],
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+91 |         check=True,
+92 |         capture_output=True,
+   |
+
 PLR0913 Too many arguments in function definition (6 > 5)
    --> .github/actions/normalize-repository-report/normalize_repository_report.py:112:5
     |
@@ -266,6 +334,84 @@ TRY301 Abstract `raise` to an inner function
     |
 
 S603 `subprocess` call: check for execution of untrusted input
+  --> tests/test_repository_analytics.py:30:12
+   |
+28 |         environment["GIT_AUTHOR_DATE"] = date
+29 |         environment["GIT_COMMITTER_DATE"] = date
+30 |     return subprocess.run(
+   |            ^^^^^^^^^^^^^^
+31 |         ["git", "-C", str(repository_root), *arguments],
+32 |         check=True,
+   |
+
+S607 Starting a process with a partial executable path
+  --> tests/test_repository_analytics.py:31:9
+   |
+29 |         environment["GIT_COMMITTER_DATE"] = date
+30 |     return subprocess.run(
+31 |         ["git", "-C", str(repository_root), *arguments],
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+32 |         check=True,
+33 |         capture_output=True,
+   |
+
+S603 `subprocess` call: check for execution of untrusted input
+   --> tests/test_repository_analytics.py:141:13
+    |
+139 |             create_repository(repository_root)
+140 |
+141 |             subprocess.run(
+    |             ^^^^^^^^^^^^^^
+142 |                 [
+143 |                     "bash",
+    |
+
+S607 Starting a process with a partial executable path
+   --> tests/test_repository_analytics.py:142:17
+    |
+141 |               subprocess.run(
+142 | /                 [
+143 | |                     "bash",
+144 | |                     str(ACTION_ROOT / "repo-activity"),
+145 | |                     "--repo",
+146 | |                     str(repository_root),
+147 | |                     "--output",
+148 | |                     ".cache/activity",
+149 | |                     "--since",
+150 | |                     "2 years ago",
+151 | |                     "--ref",
+152 | |                     "HEAD",
+153 | |                     "--color",
+154 | |                     "never",
+155 | |                     "--quiet",
+156 | |                 ],
+    | |_________________^
+157 |                   check=True,
+158 |                   capture_output=True,
+    |
+
+S603 `subprocess` call: check for execution of untrusted input
+  --> tests/test_repository_intelligence.py:28:12
+   |
+27 | def git(repository_root: Path, *arguments: str) -> str:
+28 |     return subprocess.run(
+   |            ^^^^^^^^^^^^^^
+29 |         ["git", "-C", str(repository_root), *arguments],
+30 |         check=True,
+   |
+
+S607 Starting a process with a partial executable path
+  --> tests/test_repository_intelligence.py:29:9
+   |
+27 | def git(repository_root: Path, *arguments: str) -> str:
+28 |     return subprocess.run(
+29 |         ["git", "-C", str(repository_root), *arguments],
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+30 |         check=True,
+31 |         capture_output=True,
+   |
+
+S603 `subprocess` call: check for execution of untrusted input
   --> tests/test_repository_intelligence_dashboard.py:37:14
    |
 35 |     """Run one deterministic Git command in a fixture repository."""
@@ -286,6 +432,6 @@ S607 Starting a process with a partial executable path
 40 |         capture_output=True,
    |
 
-Found 24 errors.
-[*] 5 fixable with the `--fix` option.
+Found 36 errors.
+[*] 6 fixable with the `--fix` option.
 

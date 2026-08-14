@@ -58,19 +58,19 @@
         <div class="dashboard">
           <div class="stat-card stat-blue">
             <h3>Total Files</h3>
-            <div class="val">816</div>
+            <div class="val">822</div>
           </div>
           <div class="stat-card stat-green">
             <h3>Total Lines of Code</h3>
-            <div class="val">96996</div>
+            <div class="val">98140</div>
           </div>
           <div class="stat-card stat-yellow">
             <h3>Number of Clones</h3>
-            <div class="val">325</div>
+            <div class="val">330</div>
           </div>
           <div class="stat-card stat-red">
             <h3>Duplicated Lines</h3>
-            <div class="val">4176 (4.31%)</div>
+            <div class="val">4226 (4.31%)</div>
           </div>
         </div>
       </section>
@@ -238,11 +238,11 @@
             
             <tr>
               <td><a href="#json-clones">json</a></td>
-              <td>94</td>
-              <td>14779</td>
-              <td>24</td>
-              <td>567 (3.84%)</td>
-              <td>2094 (3.30%)</td>
+              <td>96</td>
+              <td>15028</td>
+              <td>26</td>
+              <td>584 (3.89%)</td>
+              <td>2266 (3.47%)</td>
             </tr>
             
             <tr>
@@ -265,11 +265,11 @@
             
             <tr>
               <td><a href="#markdown-clones">markdown</a></td>
-              <td>227</td>
-              <td>23722</td>
+              <td>228</td>
+              <td>23783</td>
               <td>138</td>
-              <td>1660 (7.00%)</td>
-              <td>17050 (6.31%)</td>
+              <td>1660 (6.98%)</td>
+              <td>17050 (6.29%)</td>
             </tr>
             
             <tr>
@@ -319,11 +319,11 @@
             
             <tr>
               <td><a href="#python-clones">python</a></td>
-              <td>41</td>
-              <td>10475</td>
-              <td>17</td>
-              <td>170 (1.62%)</td>
-              <td>1201 (1.48%)</td>
+              <td>43</td>
+              <td>11226</td>
+              <td>20</td>
+              <td>203 (1.81%)</td>
+              <td>1454 (1.67%)</td>
             </tr>
             
             <tr>
@@ -383,7 +383,7 @@
             <tr>
               <td><a href="#text-clones">text</a></td>
               <td>9</td>
-              <td>1788</td>
+              <td>1792</td>
               <td>0</td>
               <td>0 (0.00%)</td>
               <td>0 (0.00%)</td>
@@ -418,20 +418,20 @@
             
             <tr>
               <td><a href="#yaml-clones">yaml</a></td>
-              <td>233</td>
-              <td>19399</td>
+              <td>234</td>
+              <td>19478</td>
               <td>84</td>
-              <td>986 (5.08%)</td>
-              <td>6500 (6.33%)</td>
+              <td>986 (5.06%)</td>
+              <td>6500 (6.31%)</td>
             </tr>
             
             <tr style="font-weight: 700;">
               <td>Total</td>
-              <td>816</td>
-              <td>96996</td>
-              <td>325</td>
-              <td>4176 (4.31%)</td>
-              <td>31679 (4.87%)</td>
+              <td>822</td>
+              <td>98140</td>
+              <td>330</td>
+              <td>4226 (4.31%)</td>
+              <td>32104 (4.87%)</td>
             </tr>
           </tbody>
         </table>
@@ -1820,13 +1820,52 @@ while (($# &#62; 0)); do
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/skills/architecture/create-design-document/evals/evals.json (Line 8:83 - Line 55:13),
-              egolint/.agents/skills/architecture/create-design-system-document/evals/evals.json (Line 8:90 - Line 55:13)
+              .github/actions/generate-repository-intelligence/repository-analytics.schema.json (Line 128:5 - Line 139:5),
+              .github/actions/generate-repository-intelligence/repository-tree.schema.json (Line 10:36 - Line 21:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-json-1')">Show code</button>
             </div>
-            <pre id="code-json-1" class="code-block">      &#34;description&#34;: &#34;Create a valid DESIGN.md from sufficient upstream evidence.&#34;,
+            <pre id="code-json-1" class="code-block">    },
+    &#34;source&#34;: {
+      &#34;type&#34;: &#34;object&#34;,
+      &#34;additionalProperties&#34;: false,
+      &#34;required&#34;: [&#34;revision&#34;, &#34;ref&#34;, &#34;committed_at&#34;],
+      &#34;properties&#34;: {
+        &#34;revision&#34;: { &#34;type&#34;: &#34;string&#34;, &#34;pattern&#34;: &#34;^[0-9a-f]{40}$&#34; },
+        &#34;ref&#34;: { &#34;type&#34;: &#34;string&#34;, &#34;minLength&#34;: 1 },
+        &#34;committed_at&#34;: { &#34;type&#34;: &#34;string&#34;, &#34;format&#34;: &#34;date-time&#34; }
+      }
+    },
+    &#34;fileCount&#34;: {</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .github/actions/generate-repository-intelligence/repository-analytics.schema.json (Line 153:15 - Line 159:6),
+              .github/actions/generate-repository-intelligence/repository-analytics.schema.json (Line 165:15 - Line 171:6)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-json-2')">Show code</button>
+            </div>
+            <pre id="code-json-2" class="code-block">        &#34;name&#34;: { &#34;type&#34;: &#34;string&#34;, &#34;minLength&#34;: 1 },
+        &#34;commit_touches&#34;: { &#34;$ref&#34;: &#34;#/$defs/nonNegativeInteger&#34; },
+        &#34;insertions&#34;: { &#34;$ref&#34;: &#34;#/$defs/nonNegativeInteger&#34; },
+        &#34;deletions&#34;: { &#34;$ref&#34;: &#34;#/$defs/nonNegativeInteger&#34; },
+        &#34;binary_changes&#34;: { &#34;$ref&#34;: &#34;#/$defs/nonNegativeInteger&#34; }
+      }
+    },</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/architecture/create-design-document/evals/evals.json (Line 8:83 - Line 55:13),
+              egolint/.agents/skills/architecture/create-design-system-document/evals/evals.json (Line 8:90 - Line 55:13)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-json-3')">Show code</button>
+            </div>
+            <pre id="code-json-3" class="code-block">      &#34;description&#34;: &#34;Create a valid DESIGN.md from sufficient upstream evidence.&#34;,
       &#34;category&#34;: &#34;positive&#34;,
       &#34;trigger&#34;: &#34;should-trigger&#34;,
       &#34;expected&#34;: [
@@ -1882,9 +1921,9 @@ while (($# &#62; 0)); do
               egolint/.agents/skills/architecture/create-personal-model-document/evals/evals.json (Line 8:82 - Line 43:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-2')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-4')">Show code</button>
             </div>
-            <pre id="code-json-2" class="code-block">      &#34;description&#34;: &#34;Create a valid ONTOLOGY.md from sufficient evidence.&#34;,
+            <pre id="code-json-4" class="code-block">      &#34;description&#34;: &#34;Create a valid ONTOLOGY.md from sufficient evidence.&#34;,
       &#34;category&#34;: &#34;positive&#34;,
       &#34;trigger&#34;: &#34;should-trigger&#34;,
       &#34;expected&#34;: [
@@ -1926,130 +1965,6 @@ while (($# &#62; 0)); do
             <div class="clone-info">
               egolint/.agents/skills/authoring/create-specification-file/evals/evals.json (Line 3:39 - Line 54:13),
               egolint/.agents/skills/methodology/orchestrate-reflective-development/evals/evals.json (Line 3:48 - Line 54:13)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-json-3')">Show code</button>
-            </div>
-            <pre id="code-json-3" class="code-block">  &#34;skill&#34;: &#34;create-specification-file&#34;,
-  &#34;version&#34;: &#34;1.0.0&#34;,
-  &#34;cases&#34;: [
-    {
-      &#34;id&#34;: &#34;valid-complete&#34;,
-      &#34;description&#34;: &#34;Sufficient evidence and authority exist for complete execution.&#34;,
-      &#34;category&#34;: &#34;positive&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Follows the governing specification&#34;,
-        &#34;Produces the canonical output&#34;,
-        &#34;Runs required validation&#34;,
-        &#34;Reports completion accurately&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;missing-evidence&#34;,
-      &#34;description&#34;: &#34;Required evidence is incomplete or contradictory.&#34;,
-      &#34;category&#34;: &#34;insufficient-evidence&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Does not fabricate information&#34;,
-        &#34;Labels assumptions and uncertainty&#34;,
-        &#34;Uses partial or blocked status when appropriate&#34;,
-        &#34;Identifies follow-up&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;scope-expansion&#34;,
-      &#34;description&#34;: &#34;Useful work is discovered beyond authorized scope.&#34;,
-      &#34;category&#34;: &#34;boundary&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Completes only authorized work&#34;,
-        &#34;Records additional work as a proposal&#34;,
-        &#34;Does not silently execute expansion&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;validation-failure&#34;,
-      &#34;description&#34;: &#34;Required validation cannot pass.&#34;,
-      &#34;category&#34;: &#34;failure&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Does not claim success&#34;,
-        &#34;Preserves diagnostics&#34;,
-        &#34;Reports safe next steps&#34;,
-        &#34;Avoids destructive recovery&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;specification-negative-trigger&#34;,</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/authoring/create-specification-file/evals/evals.json (Line 3:39 - Line 54:13),
-              egolint/.agents/skills/publishing/prepare-arxiv-release/evals/evals.json (Line 3:35 - Line 54:13)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-json-4')">Show code</button>
-            </div>
-            <pre id="code-json-4" class="code-block">  &#34;skill&#34;: &#34;create-specification-file&#34;,
-  &#34;version&#34;: &#34;1.0.0&#34;,
-  &#34;cases&#34;: [
-    {
-      &#34;id&#34;: &#34;valid-complete&#34;,
-      &#34;description&#34;: &#34;Sufficient evidence and authority exist for complete execution.&#34;,
-      &#34;category&#34;: &#34;positive&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Follows the governing specification&#34;,
-        &#34;Produces the canonical output&#34;,
-        &#34;Runs required validation&#34;,
-        &#34;Reports completion accurately&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;missing-evidence&#34;,
-      &#34;description&#34;: &#34;Required evidence is incomplete or contradictory.&#34;,
-      &#34;category&#34;: &#34;insufficient-evidence&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Does not fabricate information&#34;,
-        &#34;Labels assumptions and uncertainty&#34;,
-        &#34;Uses partial or blocked status when appropriate&#34;,
-        &#34;Identifies follow-up&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;scope-expansion&#34;,
-      &#34;description&#34;: &#34;Useful work is discovered beyond authorized scope.&#34;,
-      &#34;category&#34;: &#34;boundary&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Completes only authorized work&#34;,
-        &#34;Records additional work as a proposal&#34;,
-        &#34;Does not silently execute expansion&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;validation-failure&#34;,
-      &#34;description&#34;: &#34;Required validation cannot pass.&#34;,
-      &#34;category&#34;: &#34;failure&#34;,
-      &#34;trigger&#34;: &#34;should-trigger&#34;,
-      &#34;expected&#34;: [
-        &#34;Does not claim success&#34;,
-        &#34;Preserves diagnostics&#34;,
-        &#34;Reports safe next steps&#34;,
-        &#34;Avoids destructive recovery&#34;
-      ]
-    },
-    {
-      &#34;id&#34;: &#34;specification-negative-trigger&#34;,</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              egolint/.agents/skills/authoring/create-specification-file/evals/evals.json (Line 3:39 - Line 54:13),
-              egolint/.agents/skills/quality/audit-repository/evals/evals.json (Line 3:30 - Line 54:13)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-json-5')">Show code</button>
@@ -2110,13 +2025,137 @@ while (($# &#62; 0)); do
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.config/megalinter/snapshots/fast.json (Line 7:18 - Line 26:5),
-              egolint/.config/megalinter/snapshots/holistic.json (Line 33:17 - Line 52:5)
+              egolint/.agents/skills/authoring/create-specification-file/evals/evals.json (Line 3:39 - Line 54:13),
+              egolint/.agents/skills/publishing/prepare-arxiv-release/evals/evals.json (Line 3:35 - Line 54:13)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-json-6')">Show code</button>
             </div>
-            <pre id="code-json-6" class="code-block">    &#34;ARM_ARM_TTK&#34;,
+            <pre id="code-json-6" class="code-block">  &#34;skill&#34;: &#34;create-specification-file&#34;,
+  &#34;version&#34;: &#34;1.0.0&#34;,
+  &#34;cases&#34;: [
+    {
+      &#34;id&#34;: &#34;valid-complete&#34;,
+      &#34;description&#34;: &#34;Sufficient evidence and authority exist for complete execution.&#34;,
+      &#34;category&#34;: &#34;positive&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Follows the governing specification&#34;,
+        &#34;Produces the canonical output&#34;,
+        &#34;Runs required validation&#34;,
+        &#34;Reports completion accurately&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;missing-evidence&#34;,
+      &#34;description&#34;: &#34;Required evidence is incomplete or contradictory.&#34;,
+      &#34;category&#34;: &#34;insufficient-evidence&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Does not fabricate information&#34;,
+        &#34;Labels assumptions and uncertainty&#34;,
+        &#34;Uses partial or blocked status when appropriate&#34;,
+        &#34;Identifies follow-up&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;scope-expansion&#34;,
+      &#34;description&#34;: &#34;Useful work is discovered beyond authorized scope.&#34;,
+      &#34;category&#34;: &#34;boundary&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Completes only authorized work&#34;,
+        &#34;Records additional work as a proposal&#34;,
+        &#34;Does not silently execute expansion&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;validation-failure&#34;,
+      &#34;description&#34;: &#34;Required validation cannot pass.&#34;,
+      &#34;category&#34;: &#34;failure&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Does not claim success&#34;,
+        &#34;Preserves diagnostics&#34;,
+        &#34;Reports safe next steps&#34;,
+        &#34;Avoids destructive recovery&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;specification-negative-trigger&#34;,</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/skills/authoring/create-specification-file/evals/evals.json (Line 3:39 - Line 54:13),
+              egolint/.agents/skills/quality/audit-repository/evals/evals.json (Line 3:30 - Line 54:13)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-json-7')">Show code</button>
+            </div>
+            <pre id="code-json-7" class="code-block">  &#34;skill&#34;: &#34;create-specification-file&#34;,
+  &#34;version&#34;: &#34;1.0.0&#34;,
+  &#34;cases&#34;: [
+    {
+      &#34;id&#34;: &#34;valid-complete&#34;,
+      &#34;description&#34;: &#34;Sufficient evidence and authority exist for complete execution.&#34;,
+      &#34;category&#34;: &#34;positive&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Follows the governing specification&#34;,
+        &#34;Produces the canonical output&#34;,
+        &#34;Runs required validation&#34;,
+        &#34;Reports completion accurately&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;missing-evidence&#34;,
+      &#34;description&#34;: &#34;Required evidence is incomplete or contradictory.&#34;,
+      &#34;category&#34;: &#34;insufficient-evidence&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Does not fabricate information&#34;,
+        &#34;Labels assumptions and uncertainty&#34;,
+        &#34;Uses partial or blocked status when appropriate&#34;,
+        &#34;Identifies follow-up&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;scope-expansion&#34;,
+      &#34;description&#34;: &#34;Useful work is discovered beyond authorized scope.&#34;,
+      &#34;category&#34;: &#34;boundary&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Completes only authorized work&#34;,
+        &#34;Records additional work as a proposal&#34;,
+        &#34;Does not silently execute expansion&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;validation-failure&#34;,
+      &#34;description&#34;: &#34;Required validation cannot pass.&#34;,
+      &#34;category&#34;: &#34;failure&#34;,
+      &#34;trigger&#34;: &#34;should-trigger&#34;,
+      &#34;expected&#34;: [
+        &#34;Does not claim success&#34;,
+        &#34;Preserves diagnostics&#34;,
+        &#34;Reports safe next steps&#34;,
+        &#34;Avoids destructive recovery&#34;
+      ]
+    },
+    {
+      &#34;id&#34;: &#34;specification-negative-trigger&#34;,</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.config/megalinter/snapshots/fast.json (Line 7:18 - Line 26:5),
+              egolint/.config/megalinter/snapshots/holistic.json (Line 33:17 - Line 52:5)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-json-8')">Show code</button>
+            </div>
+            <pre id="code-json-8" class="code-block">    &#34;ARM_ARM_TTK&#34;,
     &#34;BICEP_BICEP_LINTER&#34;,
     &#34;CLOJURE_CLJSTYLE&#34;,
     &#34;CLOJURE_CLJ_KONDO&#34;,
@@ -2144,9 +2183,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/snapshots/holistic.json (Line 96:28 - Line 115:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-7')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-9')">Show code</button>
             </div>
-            <pre id="code-json-7" class="code-block">    &#34;REPOSITORY_SEMGREP&#34;,
+            <pre id="code-json-9" class="code-block">    &#34;REPOSITORY_SEMGREP&#34;,
     &#34;REPOSITORY_SYFT&#34;,
     &#34;REPOSITORY_TRIVY&#34;,
     &#34;REPOSITORY_TRIVY_SBOM&#34;,
@@ -2174,9 +2213,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/tool-matrix.json (Line 141:1 - Line 150:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-8')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-10')">Show code</button>
             </div>
-            <pre id="code-json-8" class="code-block">    },
+            <pre id="code-json-10" class="code-block">    },
     {
       &#34;applicability&#34;: [],
       &#34;cli_lint_mode&#34;: &#34;list_of_files&#34;,
@@ -2194,9 +2233,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/tool-matrix.json (Line 1868:1 - Line 1877:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-9')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-11')">Show code</button>
             </div>
-            <pre id="code-json-9" class="code-block">    },
+            <pre id="code-json-11" class="code-block">    },
     {
       &#34;applicability&#34;: [],
       &#34;cli_lint_mode&#34;: &#34;list_of_files&#34;,
@@ -2214,9 +2253,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/tool-matrix.json (Line 1974:90 - Line 1985:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-10')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-12')">Show code</button>
             </div>
-            <pre id="code-json-10" class="code-block">      &#34;report_path&#34;: &#34;.reports/megalinter/linters_logs/SALESFORCE_CODE_ANALYZER_APEX.log&#34;,
+            <pre id="code-json-12" class="code-block">      &#34;report_path&#34;: &#34;.reports/megalinter/linters_logs/SALESFORCE_CODE_ANALYZER_APEX.log&#34;,
       &#34;version&#34;: &#34;5.15.0&#34;
     },
     {
@@ -2236,9 +2275,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/tool-matrix.json (Line 1992:90 - Line 2003:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-11')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-13')">Show code</button>
             </div>
-            <pre id="code-json-11" class="code-block">      &#34;report_path&#34;: &#34;.reports/megalinter/linters_logs/SALESFORCE_CODE_ANALYZER_APEX.log&#34;,
+            <pre id="code-json-13" class="code-block">      &#34;report_path&#34;: &#34;.reports/megalinter/linters_logs/SALESFORCE_CODE_ANALYZER_APEX.log&#34;,
       &#34;version&#34;: &#34;5.15.0&#34;
     },
     {
@@ -2258,9 +2297,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 2721:1 - Line 2762:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-12')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-14')">Show code</button>
             </div>
-            <pre id="code-json-12" class="code-block">    &#34;API_FILTER_REGEX_EXCLUDE&#34;,
+            <pre id="code-json-14" class="code-block">    &#34;API_FILTER_REGEX_EXCLUDE&#34;,
     &#34;API_FILTER_REGEX_INCLUDE&#34;,
     &#34;API_POST_COMMANDS&#34;,
     &#34;API_PRE_COMMANDS&#34;,
@@ -2310,9 +2349,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 2761:43 - Line 2778:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-13')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-15')">Show code</button>
             </div>
-            <pre id="code-json-13" class="code-block">    &#34;CSS_PRE_COMMANDS&#34;,
+            <pre id="code-json-15" class="code-block">    &#34;CSS_PRE_COMMANDS&#34;,
     &#34;CSS_SCSS_LINT_ARGUMENTS&#34;,
     &#34;CSS_SCSS_LINT_CLI_EXECUTABLE&#34;,
     &#34;CSS_SCSS_LINT_CLI_LINT_MODE&#34;,
@@ -2338,9 +2377,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 2833:41 - Line 2853:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-14')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-16')">Show code</button>
             </div>
-            <pre id="code-json-14" class="code-block">    &#34;LUA_STYLUA_UNSECURED_ENV_VARIABLES&#34;,
+            <pre id="code-json-16" class="code-block">    &#34;LUA_STYLUA_UNSECURED_ENV_VARIABLES&#34;,
     &#34;MAKEFILE_CHECKMAKE_ARGUMENTS&#34;,
     &#34;MAKEFILE_CHECKMAKE_CLI_EXECUTABLE&#34;,
     &#34;MAKEFILE_CHECKMAKE_CLI_LINT_MODE&#34;,
@@ -2369,9 +2408,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 2852:28 - Line 2869:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-15')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-17')">Show code</button>
             </div>
-            <pre id="code-json-15" class="code-block">    &#34;MARKDOWN_MARKDOWNLINT_UNSECURED_ENV_VARIABLES&#34;,
+            <pre id="code-json-17" class="code-block">    &#34;MARKDOWN_MARKDOWNLINT_UNSECURED_ENV_VARIABLES&#34;,
     &#34;MARKDOWN_MARKDOWN_LINK_CHECK_ARGUMENTS&#34;,
     &#34;MARKDOWN_MARKDOWN_LINK_CHECK_CLI_EXECUTABLE&#34;,
     &#34;MARKDOWN_MARKDOWN_LINK_CHECK_CLI_LINT_MODE&#34;,
@@ -2397,9 +2436,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 2897:26 - Line 2917:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-16')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-18')">Show code</button>
             </div>
-            <pre id="code-json-16" class="code-block">    &#34;PROTOBUF_PROTOLINT_UNSECURED_ENV_VARIABLES&#34;,
+            <pre id="code-json-18" class="code-block">    &#34;PROTOBUF_PROTOLINT_UNSECURED_ENV_VARIABLES&#34;,
     &#34;PUPPET_FILTER_REGEX_EXCLUDE&#34;,
     &#34;PUPPET_FILTER_REGEX_INCLUDE&#34;,
     &#34;PUPPET_POST_COMMANDS&#34;,
@@ -2428,9 +2467,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 2916:49 - Line 2933:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-17')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-19')">Show code</button>
             </div>
-            <pre id="code-json-17" class="code-block">    &#34;REPOSITORY_FILTER_REGEX_INCLUDE&#34;,
+            <pre id="code-json-19" class="code-block">    &#34;REPOSITORY_FILTER_REGEX_INCLUDE&#34;,
     &#34;REPOSITORY_GITLEAKS_ARGUMENTS&#34;,
     &#34;REPOSITORY_GITLEAKS_CLI_EXECUTABLE&#34;,
     &#34;REPOSITORY_GITLEAKS_CLI_LINT_MODE&#34;,
@@ -2456,9 +2495,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 3020:34 - Line 3052:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-18')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-20')">Show code</button>
             </div>
-            <pre id="code-json-18" class="code-block">    &#34;SQL_SQLFLUFF_UNSECURED_ENV_VARIABLES&#34;,
+            <pre id="code-json-20" class="code-block">    &#34;SQL_SQLFLUFF_UNSECURED_ENV_VARIABLES&#34;,
     &#34;SQL_SQL_LINT_ARGUMENTS&#34;,
     &#34;SQL_SQL_LINT_CLI_EXECUTABLE&#34;,
     &#34;SQL_SQL_LINT_CLI_LINT_MODE&#34;,
@@ -2499,9 +2538,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 3330:31 - Line 3346:22)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-19')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-21')">Show code</button>
             </div>
-            <pre id="code-json-19" class="code-block">      &#34;config_file_name&#34;: &#34;.clang-format&#34;,
+            <pre id="code-json-21" class="code-block">      &#34;config_file_name&#34;: &#34;.clang-format&#34;,
       &#34;descriptor&#34;: &#34;CPP&#34;,
       &#34;file_extensions&#34;: [
         &#34;.cpp&#34;,
@@ -2526,9 +2565,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 3350:18 - Line 3368:22)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-20')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-22')">Show code</button>
             </div>
-            <pre id="code-json-20" class="code-block">    &#34;CPP_CPPCHECK&#34;: {
+            <pre id="code-json-22" class="code-block">    &#34;CPP_CPPCHECK&#34;: {
       &#34;cli_lint_mode&#34;: &#34;list_of_files&#34;,
       &#34;config_file_name&#34;: null,
       &#34;descriptor&#34;: &#34;CPP&#34;,
@@ -2555,9 +2594,9 @@ while (($# &#62; 0)); do
               egolint/.config/megalinter/v10-catalog.json (Line 4495:40 - Line 4512:22)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-21')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-23')">Show code</button>
             </div>
-            <pre id="code-json-21" class="code-block">      &#34;config_file_name&#34;: &#34;.codespellrc&#34;,
+            <pre id="code-json-23" class="code-block">      &#34;config_file_name&#34;: &#34;.codespellrc&#34;,
       &#34;descriptor&#34;: &#34;SPELL&#34;,
       &#34;file_extensions&#34;: [
         &#34;.md&#34;,
@@ -2583,9 +2622,9 @@ while (($# &#62; 0)); do
               egolint/.config/toolchain/tool-matrix.json (Line 186:26 - Line 200:11)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-22')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-24')">Show code</button>
             </div>
-            <pre id="code-json-22" class="code-block">      &#34;version&#34;: &#34;7.0.0&#34;,
+            <pre id="code-json-24" class="code-block">      &#34;version&#34;: &#34;7.0.0&#34;,
       &#34;configuration_path&#34;: null,
       &#34;declared_state&#34;: &#34;conditional&#34;,
       &#34;repository_applicability&#34;: &#34;not_applicable&#34;,
@@ -2608,9 +2647,9 @@ while (($# &#62; 0)); do
               egolint/.config/toolchain/tool-matrix.json (Line 494:24 - Line 508:11)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-23')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-25')">Show code</button>
             </div>
-            <pre id="code-json-23" class="code-block">      &#34;version&#34;: &#34;1.7.0&#34;,
+            <pre id="code-json-25" class="code-block">      &#34;version&#34;: &#34;1.7.0&#34;,
       &#34;configuration_path&#34;: &#34;egolint/.config/lint/python/complementary.toml&#34;,
       &#34;declared_state&#34;: &#34;conditional&#34;,
       &#34;repository_applicability&#34;: &#34;not_applicable&#34;,
@@ -2633,9 +2672,9 @@ while (($# &#62; 0)); do
               tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json (Line 11:16 - Line 22:15)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-json-24')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-json-26')">Show code</button>
             </div>
-            <pre id="code-json-24" class="code-block">      &#34;medium&#34;: 2
+            <pre id="code-json-26" class="code-block">      &#34;medium&#34;: 2
     },
     &#34;state&#34;: &#34;attention&#34;,
     &#34;total&#34;: 2
@@ -5850,7 +5889,7 @@ Source: `install.sh` (observed in installed file).
           <div class="clone-item">
             <div class="clone-info">
               .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py (Line 775:96 - Line 788:5),
-              .github/actions/generate-repository-intelligence/generate_repository_intelligence.py (Line 268:5 - Line 282:5)
+              .github/actions/generate-repository-intelligence/generate_repository_intelligence.py (Line 335:5 - Line 349:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-python-1')">Show code</button>
@@ -5873,13 +5912,79 @@ def validate_paths(repository_root: Path, *paths: Path) -&#62; None:</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              egolint/.agents/agents/build-projections.py (Line 32:1 - Line 42:48),
-              egolint/.agents/skills/build-distributions.py (Line 44:1 - Line 54:48)
+              .github/actions/generate-repository-intelligence/generate_repository_analytics.py (Line 67:1 - Line 76:5),
+              .github/actions/generate-repository-intelligence/generate_repository_intelligence.py (Line 88:1 - Line 97:5)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-python-2')">Show code</button>
             </div>
-            <pre id="code-python-2" class="code-block">from pathlib import Path
+            <pre id="code-python-2" class="code-block">def run_git(repo_root: Path, arguments: Sequence[str]) -&#62; bytes:
+    completed = subprocess.run(
+        [&#34;git&#34;, &#34;-C&#34;, str(repo_root), *arguments],
+        check=True,
+        capture_output=True,
+    )
+    return completed.stdout
+
+
+def normalize_excluded_paths(raw_paths: str) -&#62; list[str]:</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .github/actions/generate-repository-intelligence/generate_repository_analytics.py (Line 80:51 - Line 97:5),
+              .github/actions/generate-repository-intelligence/generate_repository_intelligence.py (Line 70:21 - Line 88:5)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-python-3')">Show code</button>
+            </div>
+            <pre id="code-python-3" class="code-block">        if candidate and candidate not in excluded:
+            excluded.append(candidate)
+    return excluded
+
+
+def is_excluded_path(relative_path: str, excluded_paths: Iterable[str]) -&#62; bool:
+    parts = Path(relative_path).parts
+
+    for excluded_path in excluded_paths:
+        if &#34;/&#34; not in excluded_path and excluded_path in parts:
+            return True
+        if relative_path == excluded_path or relative_path.startswith(f&#34;{excluded_path}/&#34;):
+            return True
+
+    return False
+
+
+def normalize_git_path(path: str) -&#62; str:</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .github/actions/generate-repository-intelligence/generate_repository_analytics.py (Line 287:36 - Line 294:5),
+              .github/actions/generate-repository-intelligence/generate_repository_analytics.py (Line 295:36 - Line 302:5)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-python-4')">Show code</button>
+            </div>
+            <pre id="code-python-4" class="code-block">    counts = Counter(top_level_area(path) for path in paths)
+    return [
+        {&#34;name&#34;: name, &#34;file_count&#34;: count}
+        for name, count in sorted(counts.items(), key=lambda item: (-item[1], item[0]))
+    ]
+
+
+def extension_file_counts(paths: Iterable[str]) -&#62; list[JsonObject]:</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              egolint/.agents/agents/build-projections.py (Line 32:1 - Line 42:48),
+              egolint/.agents/skills/build-distributions.py (Line 44:1 - Line 54:48)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-python-5')">Show code</button>
+            </div>
+            <pre id="code-python-5" class="code-block">from pathlib import Path
 import re
 import sys
 
@@ -5898,9 +6003,9 @@ REPO_ROOT = Path(__file__).resolve().parents[3]</pre>
               egolint/.agents/skills/build-distributions.py (Line 256:66 - Line 270:21)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-3')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-6')">Show code</button>
             </div>
-            <pre id="code-python-3" class="code-block">        help=&#34;Base output directory for generated projections.&#34;,
+            <pre id="code-python-6" class="code-block">        help=&#34;Base output directory for generated projections.&#34;,
     )
     args = parser.parse_args()
     return build(check=args.check, output_directory=REPO_ROOT / args.output_directory)
@@ -5923,9 +6028,9 @@ if __name__ == &#34;__main__&#34;:
               egolint/.agents/skills/validate-skills.py (Line 13:1 - Line 23:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-4')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-7')">Show code</button>
             </div>
-            <pre id="code-python-4" class="code-block">from pathlib import Path
+            <pre id="code-python-7" class="code-block">from pathlib import Path
 import re
 import sys
 
@@ -5944,9 +6049,9 @@ BASE = Path(__file__).resolve().parent</pre>
               egolint/.agents/skills/build-distributions.py (Line 173:1 - Line 179:21)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-5')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-8')">Show code</button>
             </div>
-            <pre id="code-python-5" class="code-block">    for companion in COMPANION_DIRS:
+            <pre id="code-python-8" class="code-block">    for companion in COMPANION_DIRS:
         src = source_dir / companion
         if src.is_dir():
             for f in sorted(src.rglob(&#34;*&#34;)):
@@ -5961,9 +6066,9 @@ BASE = Path(__file__).resolve().parent</pre>
               egolint/.agents/specs/build-distributions.py (Line 69:41 - Line 83:29)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-6')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-9')">Show code</button>
             </div>
-            <pre id="code-python-6" class="code-block">            display_path = _normalized_display_path(out_path)
+            <pre id="code-python-9" class="code-block">            display_path = _normalized_display_path(out_path)
             if check:
                 if not out_path.exists():
                     print(f&#34;DRIFT  missing: {display_path}&#34;)
@@ -5986,9 +6091,9 @@ BASE = Path(__file__).resolve().parent</pre>
               egolint/.agents/specs/build-distributions.py (Line 104:98 - Line 111:87)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-7')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-10')">Show code</button>
             </div>
-            <pre id="code-python-7" class="code-block">    )
+            <pre id="code-python-10" class="code-block">    )
     parser.add_argument(
         &#34;--output-directory&#34;,
         default=&#34;dist&#34;,
@@ -6004,9 +6109,9 @@ BASE = Path(__file__).resolve().parent</pre>
               mindgarden/scripts/publish_garden.py (Line 85:52 - Line 94:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-8')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-11')">Show code</button>
             </div>
-            <pre id="code-python-8" class="code-block">    &#34;&#34;&#34;Serialize JSON with stable keys, indentation, and a final newline.&#34;&#34;&#34;
+            <pre id="code-python-11" class="code-block">    &#34;&#34;&#34;Serialize JSON with stable keys, indentation, and a final newline.&#34;&#34;&#34;
     return json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + &#34;\n&#34;
 
 
@@ -6024,9 +6129,9 @@ def normalize_text(value: str) -&#62; str:</pre>
               mindgarden/tests/test_validate_garden.py (Line 8:1 - Line 18:14)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-9')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-12')">Show code</button>
             </div>
-            <pre id="code-python-9" class="code-block">import json
+            <pre id="code-python-12" class="code-block">import json
 from pathlib import Path
 import sys
 from tempfile import TemporaryDirectory
@@ -6045,9 +6150,9 @@ from scripts.garden_agent import (  # noqa: E402</pre>
               mindgarden/tests/test_publish_garden.py (Line 8:1 - Line 17:14)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-10')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-13')">Show code</button>
             </div>
-            <pre id="code-python-10" class="code-block">from pathlib import Path
+            <pre id="code-python-13" class="code-block">from pathlib import Path
 import sys
 from tempfile import TemporaryDirectory
 import textwrap
@@ -6065,9 +6170,9 @@ from scripts.garden_agent import (  # noqa: E402</pre>
               mindgarden/tests/test_publish_garden.py (Line 24:1 - Line 38:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-11')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-14')">Show code</button>
             </div>
-            <pre id="code-python-11" class="code-block">MANIFEST = &#34;&#34;&#34;
+            <pre id="code-python-14" class="code-block">MANIFEST = &#34;&#34;&#34;
 schema: mindgarden.garden/v0
 id: example-repository
 title: Example Garden
@@ -6090,9 +6195,9 @@ content_roots:
               mindgarden/tests/test_garden_agent.py (Line 179:57 - Line 186:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-12')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-15')">Show code</button>
             </div>
-            <pre id="code-python-12" class="code-block">    def test_index_is_byte_deterministic_and_contains_no_host_state(self) -&#62; None:
+            <pre id="code-python-15" class="code-block">    def test_index_is_byte_deterministic_and_contains_no_host_state(self) -&#62; None:
         with TemporaryDirectory() as directory:
             fixture = AgentFixture(Path(directory))
             (fixture.garden / &#34;concepts/architecture.md&#34;).write_text(
@@ -6109,9 +6214,9 @@ content_roots:
               mindgarden/tests/test_garden_agent.py (Line 272:46 - Line 277:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-13')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-16')">Show code</button>
             </div>
-            <pre id="code-python-13" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
+            <pre id="code-python-16" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
         with TemporaryDirectory() as directory:
             fixture = AgentFixture(Path(directory))
             input_path = fixture.root / &#34;input.md&#34;
@@ -6125,9 +6230,9 @@ content_roots:
               mindgarden/tests/test_garden_agent.py (Line 288:58 - Line 301:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-14')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-17')">Show code</button>
             </div>
-            <pre id="code-python-14" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
+            <pre id="code-python-17" class="code-block">    def test_public_ingest_requires_explicit_confirmation(self) -&#62; None:
         with TemporaryDirectory() as directory:
             fixture = AgentFixture(Path(directory))
             input_path = fixture.root / &#34;input.md&#34;
@@ -6149,9 +6254,9 @@ content_roots:
               mindgarden/tests/test_validate_garden.py (Line 71:1 - Line 76:48)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-15')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-18')">Show code</button>
             </div>
-            <pre id="code-python-15" class="code-block">    if related:
+            <pre id="code-python-18" class="code-block">    if related:
         lines.append(&#34;related:&#34;)
         lines.extend(f&#34;  - {value}&#34; for value in related)
     else:
@@ -6165,9 +6270,9 @@ content_roots:
               tests/test_validate_automation.py (Line 108:47 - Line 120:32)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-16')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-19')">Show code</button>
             </div>
-            <pre id="code-python-16" class="code-block">    def test_accepts_pinned_least_privilege_workflow(self) -&#62; None:
+            <pre id="code-python-19" class="code-block">    def test_accepts_pinned_least_privilege_workflow(self) -&#62; None:
         self.write_workflow(
             &#34;&#34;&#34;---
 name: CI
@@ -6188,9 +6293,9 @@ jobs:
               tests/test_validate_automation.py (Line 64:16 - Line 75:32)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-python-17')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-python-20')">Show code</button>
             </div>
-            <pre id="code-python-17" class="code-block">        self.write_workflow(
+            <pre id="code-python-20" class="code-block">        self.write_workflow(
             &#34;&#34;&#34;---
 name: CI
 on: workflow_dispatch

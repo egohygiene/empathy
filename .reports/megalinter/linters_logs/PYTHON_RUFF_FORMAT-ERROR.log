@@ -140,5 +140,5 @@ unformatted: File would be reformatted
 179 |         self.assertNotIn("fixture@example.test", first_json)
     |
 
-2 files would be reformatted, 39 files already formatted
+2 files would be reformatted, 41 files already formatted
 

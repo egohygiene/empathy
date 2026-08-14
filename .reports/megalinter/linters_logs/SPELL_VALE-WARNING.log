@@ -90,7 +90,7 @@ Linter raw log:
 
 
  .garden/projects/repository-intelligence-dashboard.md
- 57:68  warning  'Overall' is too wordy.  write-good.TooWordy 
+ 61:68  warning  'Overall' is too wordy.  write-good.TooWordy 
 
 
  .github/PULL_REQUEST_TEMPLATE.md
@@ -114,6 +114,13 @@ Linter raw log:
  28:68  warning  'It is' is too wordy.                                            write-good.TooWordy 
  37:13  warning  'is derived' may be passive voice. Use active voice if you can.  write-good.Passive  
  40:7   warning  'aggregate' is too wordy.                                        write-good.TooWordy 
+
+
+ .github/actions/generate-repository-intelligence/README.md
+ 14:16  warning  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive 
+ 16:49  warning  'are resolved' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 20:7   warning  'are excluded' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 44:24  warning  'is enabled' may be passive voice. Use active voice if you can.    write-good.Passive 
 
 
  .github/actions/normalize-repository-report/README.md
@@ -2556,5 +2563,5 @@ Linter raw log:
  70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
  74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 1993 warnings and 0 suggestions in 228 files.
+✖ 4 errors, 1997 warnings and 0 suggestions in 229 files.
 

@@ -44,7 +44,22 @@ Clone found (yaml)
    .github/actions/publish-report-snapshot/action.yml [17:79 - 26:69]
 Clone found (python)
  - .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py [775:96 - 788:5] (14 lines, 89 tokens)
-   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py [268:5 - 282:5]
+   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py [335:5 - 349:5]
+Clone found (python)
+ - .github/actions/generate-repository-intelligence/generate_repository_analytics.py [67:1 - 76:5] (10 lines, 71 tokens)
+   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py [88:1 - 97:5]
+Clone found (python)
+ - .github/actions/generate-repository-intelligence/generate_repository_analytics.py [80:51 - 97:5] (18 lines, 109 tokens)
+   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py [70:21 - 88:5]
+Clone found (python)
+ - .github/actions/generate-repository-intelligence/generate_repository_analytics.py [287:36 - 294:5] (8 lines, 73 tokens)
+   .github/actions/generate-repository-intelligence/generate_repository_analytics.py [295:36 - 302:5]
+Clone found (json)
+ - .github/actions/generate-repository-intelligence/repository-analytics.schema.json [128:5 - 139:5] (12 lines, 100 tokens)
+   .github/actions/generate-repository-intelligence/repository-tree.schema.json [10:36 - 21:5]
+Clone found (json)
+ - .github/actions/generate-repository-intelligence/repository-analytics.schema.json [153:15 - 159:6] (7 lines, 72 tokens)
+   .github/actions/generate-repository-intelligence/repository-analytics.schema.json [165:15 - 171:6]
 Clone found (yaml)
  - .github/actions/python-poetry-setup/action.yml [10:1 - 15:49] (6 lines, 50 tokens)
    .github/actions/setup-environment/action.yml [39:1 - 44:49]
@@ -1016,13 +1031,13 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript │ 6              │ 674         │ 2231         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 94             │ 14779       │ 63486        │ 24           │ 567 (3.84%)      │ 2094 (3.30%)      │
+│ json       │ 96             │ 15028       │ 65389        │ 26           │ 584 (3.89%)      │ 2266 (3.47%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx        │ 1              │ 10          │ 52           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 2              │ 46          │ 202          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 227            │ 23722       │ 270348       │ 138          │ 1660 (7.00%)     │ 17050 (6.31%)     │
+│ markdown   │ 228            │ 23783       │ 271217       │ 138          │ 1660 (6.98%)     │ 17050 (6.29%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 7              │ 821         │ 8543         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1034,7 +1049,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 41             │ 10475       │ 81165        │ 17           │ 170 (1.62%)      │ 1201 (1.48%)      │
+│ python     │ 43             │ 11226       │ 86960        │ 20           │ 203 (1.81%)      │ 1454 (1.67%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1048,7 +1063,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift      │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text       │ 9              │ 1788        │ 1818         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ text       │ 9              │ 1792        │ 1818         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml       │ 21             │ 1952        │ 5863         │ 2            │ 111 (5.69%)      │ 242 (4.13%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1056,12 +1071,12 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 233            │ 19399       │ 102629       │ 84           │ 986 (5.08%)      │ 6500 (6.33%)      │
+│ yaml       │ 234            │ 19478       │ 103049       │ 84           │ 986 (5.06%)      │ 6500 (6.31%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 816            │ 96996       │ 650890       │ 325          │ 4176 (4.31%)     │ 31679 (4.87%)     │
+│ Total:     │ 822            │ 98140       │ 659877       │ 330          │ 4226 (4.31%)     │ 32104 (4.87%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 325 clones.
+Found 330 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 1.88s
+time: 1.87s
 
