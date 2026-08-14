@@ -1076,7 +1076,7 @@ KUBERNETES_KUBESCAPE_ARGUMENTS:
 # TFLint
 # https://github.com/terraform-linters/tflint
 # https://megalinter.io/latest/descriptors/terraform_tflint/
-TERRAFORM_TFLINT_RULES_PATH: egolint/.config/lint/terraform
+TERRAFORM_TFLINT_RULES_PATH: ${GITHUB_WORKSPACE}/egolint/.config/lint/terraform
 TERRAFORM_TFLINT_CONFIG_FILE: .tflint.hcl
 
 # Terragrunt
