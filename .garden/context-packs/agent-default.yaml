@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../mindgarden/contracts/context-pack.schema.json
+schema: mindgarden.context-pack/v0
+id: empathy-agent-default
+title: Empathy Agent Context
+description: Reviewed repository knowledge for general agent orientation.
+query: empathy purpose principles architecture system decisions roadmap methodology
+include:
+  - empathy-garden-home
+  - empathy-garden-dashboard
+exclude: []
+statuses:
+  - reviewed
+kinds: []
+max_notes: 8
+max_characters: 24000

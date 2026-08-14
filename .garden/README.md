@@ -33,3 +33,7 @@ generated artifacts are outside those content roots.
 
 Start from [`dashboard.md`](dashboard.md) for the visual knowledge view or
 [`home.md`](home.md) for the compact garden map.
+
+Agents can begin at [`../llms.txt`](../llms.txt) or use the deterministic
+[agent profile](../mindgarden/profiles/agent/README.md) for validated search and
+bounded context packs.
