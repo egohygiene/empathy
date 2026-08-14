@@ -36,12 +36,14 @@ egolint/scripts/validate_megalinter_policy.py:18:0: E0401: Unable to import 'yam
 egolint/scripts/validate_megalinter_policy.py:292:0: R0912: Too many branches (15/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:350:0: R0912: Too many branches (18/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:426:0: R0914: Too many local variables (28/20) (too-many-locals)
+************* Module scripts.publish_garden
+mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 ************* Module test_mindgarden_obsidian_integration
 tests/test_mindgarden_obsidian_integration.py:96:0: C0305: Trailing newlines (trailing-newlines)
 ************* Module test_validate_automation
 tests/test_validate_automation.py:29:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 
 -----------------------------------
-Your code has been rated at 9.90/10
+Your code has been rated at 9.91/10
 
 

@@ -4,7 +4,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_ls_lint
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026/08/14 10:11:21 rule ignore not exists
+2026/08/14 11:06:43 rule ignore not exists
 
 
 [REPOSITORY_LS_LINT_ERROR_CONFIG_INVALID] ls-lint could not parse `.ls-lint.yml`. The YAML is malformed or references an unknown naming rule.

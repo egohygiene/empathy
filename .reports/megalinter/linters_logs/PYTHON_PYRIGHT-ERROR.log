@@ -829,6 +829,172 @@ mindgarden/scripts/garden_agent.py
     Type of "note_count" is "int | Unknown" (reportUnknownVariableType)
   mindgarden/scripts/garden_agent.py:940:74 - error: Type of "error" is partially unknown
     Type of "error" is "Unknown | OSError | ValueError | JSONDecodeError" (reportUnknownVariableType)
+mindgarden/scripts/publish_garden.py
+  mindgarden/scripts/publish_garden.py:39:9 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:40:9 - error: Type of "discover_note_paths" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:41:9 - error: Type of "parse_manifest" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:42:9 - error: Type of "parse_note" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:43:9 - error: Type of "parse_simple_yaml" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:44:9 - error: Type of "require_string" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:45:9 - error: Type of "require_string_list" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:46:9 - error: Type of "validate_repository" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:117:5 - error: Type of "observed" is partially unknown
+    Type of "observed" is "list[str] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:120:12 - error: Return type, "list[str] | Unknown", is partially unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:135:5 - error: Type of "profile" is partially unknown
+    Type of "profile" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:138:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:139:56 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:140:28 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:145:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:147:5 - error: Type of "profile_id" is partially unknown
+    Type of "profile_id" is "str | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:147:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:148:37 - error: Argument type is partially unknown
+    Argument corresponds to parameter "string" in function "fullmatch"
+    Argument type is "str | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:150:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:152:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:155:5 - error: Type of "repository_url" is partially unknown
+    Type of "repository_url" is "str | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:155:37 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:156:34 - error: Argument type is partially unknown
+    Argument corresponds to parameter "url" in function "urlsplit"
+    Argument type is "str | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:163:20 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:165:5 - error: Type of "base_url" is partially unknown
+    Type of "base_url" is "str | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:165:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:166:29 - error: Type of "startswith" is partially unknown
+    Type of "startswith" is "((prefix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:166:57 - error: Type of "endswith" is partially unknown
+    Type of "endswith" is "((suffix: str | tuple[str, ...], start: SupportsIndex | None = None, end: SupportsIndex | None = None, /) -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:168:5 - error: Type of "quartz_repository" is partially unknown
+    Type of "quartz_repository" is "str | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:168:40 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:171:5 - error: Type of "quartz_commit" is partially unknown
+    Type of "quartz_commit" is "str | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:171:36 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:172:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "string" in function "fullmatch"
+    Argument type is "str | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:175:5 - error: Type of "node_major" is partially unknown
+    Type of "node_major" is "Any | Unknown | None" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:175:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: str, default: None = None, /) -> (Any | None), (key: str, default: Any, /) -> Any, (key: str, default: _T@get, /) -> (Any | _T@get)] | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:182:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:183:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:186:5 - error: Type of "manifest" is partially unknown
+    Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:187:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:188:9 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:191:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:192:9 - error: Argument type is partially unknown
+    Argument corresponds to parameter "metadata" in function "require_string"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:196:12 - error: Return type, "tuple[Path, dict[str, Any] | Unknown]", is partially unknown (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:449:5 - error: Type of "manifest" is partially unknown
+    Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:450:5 - error: Type of "content_roots" is partially unknown
+    Type of "content_roots" is "list[str] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:450:41 - error: Argument of type "dict[str, str | bool | int | list[str]] | Unknown" cannot be assigned to parameter "metadata" of type "dict[str, object]" in function "require_string_list"
+    Type "dict[str, str | bool | int | list[str]] | Unknown" is not assignable to type "dict[str, object]"
+      "dict[str, str | bool | int | list[str]]" is not assignable to "dict[str, object]"
+        Type parameter "_VT@dict" is invariant, but "str | bool | int | list[str]" is not the same as "object"
+        Consider switching from "dict" to "Mapping" which is covariant in the value type (reportArgumentType)
+  mindgarden/scripts/publish_garden.py:451:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "args" in function "__init__"
+    Argument type is "str | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:453:5 - error: Type of "all_source_files" is partially unknown
+    Type of "all_source_files" is "list[Path] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:453:57 - error: Argument type is partially unknown
+    Argument corresponds to parameter "content_roots" in function "discover_note_paths"
+    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:457:9 - error: Type of "source_file" is partially unknown
+    Type of "source_file" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:458:12 - error: Type of "is_symlink" is partially unknown
+    Type of "is_symlink" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:458:44 - error: Type of "is_file" is partially unknown
+    Type of "is_file" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:460:9 - error: Type of "relative" is partially unknown
+    Type of "relative" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/publish_garden.py:460:20 - error: Type of "relative_to" is partially unknown
+    Type of "relative_to" is "Overload[(other: str | PathLike[str], /, *, walk_up: bool = False) -> Path, (other: str | PathLike[str], /, *_deprecated: str | PathLike[str], walk_up: bool = False) -> Path] | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/publish_garden.py:461:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "element" in function "add"
+    Argument type is "Path | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:463:49 - error: Argument type is partially unknown
+    Argument corresponds to parameter "path" in function "parse_note"
+    Argument type is "Path | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:465:20 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:466:24 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/publish_garden.py:596:76 - error: Type of "error" is partially unknown
+    Type of "error" is "Unknown | OSError | UnicodeError | JSONDecodeError" (reportUnknownVariableType)
+mindgarden/scripts/quartz_site.py
+  mindgarden/scripts/quartz_site.py:31:9 - error: Type of "DEFAULT_OUTPUT_PATH" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:32:9 - error: Type of "DEFAULT_PROFILE_PATH" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:33:9 - error: Type of "load_publish_profile" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:34:9 - error: Type of "project_garden" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:158:5 - error: Type of "resolved_profile" is partially unknown
+    Type of "resolved_profile" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:158:23 - error: Type of "profile" is partially unknown
+    Type of "profile" is "dict[str, Any] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:161:5 - error: Type of "expected_node_major" is partially unknown
+    Type of "expected_node_major" is "Any | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:175:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "profile" in function "prepare_engine"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/quartz_site.py:176:5 - error: Type of "configuration_path" is partially unknown
+    Type of "configuration_path" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:176:26 - error: Type of "parent" is partially unknown
+    Type of "parent" is "Path | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:177:12 - error: Type of "is_file" is partially unknown
+    Type of "is_file" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:177:44 - error: Type of "is_symlink" is partially unknown
+    Type of "is_symlink" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:179:21 - error: Argument type is partially unknown
+    Argument corresponds to parameter "src" in function "copyfile"
+    Argument type is "Path | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/quartz_site.py:252:10 - error: Type of "error" is partially unknown
+    Type of "error" is "Unknown | OSError | UnicodeError | JSONDecodeError | CalledProcessError" (reportUnknownVariableType)
 mindgarden/scripts/validate_garden.py
   mindgarden/scripts/validate_garden.py:194:85 - error: Type of "item" is unknown (reportUnknownVariableType)
   mindgarden/scripts/validate_garden.py:198:12 - error: Argument type is partially unknown
@@ -1128,6 +1294,24 @@ mindgarden/tests/test_garden_agent.py
   mindgarden/tests/test_garden_agent.py:306:41 - error: Argument type is unknown
     Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
   mindgarden/tests/test_garden_agent.py:312:13 - error: Type of "index" is unknown (reportUnknownVariableType)
+mindgarden/tests/test_publish_garden.py
+  mindgarden/tests/test_publish_garden.py:17:6 - warning: Import "scripts.publish_garden" could not be resolved (reportMissingImports)
+  mindgarden/tests/test_publish_garden.py:18:5 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_publish_garden.py:19:5 - error: Type of "project_garden" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_publish_garden.py:20:5 - error: Type of "projection_digests" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_publish_garden.py:21:5 - error: Type of "verify_projection" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_publish_garden.py:157:13 - error: Type of "first_paths" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_publish_garden.py:158:13 - error: Type of "second_paths" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_publish_garden.py:163:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
+  mindgarden/tests/test_publish_garden.py:163:38 - error: Type of "path" is unknown (reportUnknownVariableType)
+  mindgarden/tests/test_publish_garden.py:198:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_publish_garden.py:208:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_publish_garden.py:215:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
+  mindgarden/tests/test_publish_garden.py:227:41 - error: Argument type is unknown
+    Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
 mindgarden/tests/test_validate_garden.py
   mindgarden/tests/test_validate_garden.py:18:6 - warning: Import "scripts.validate_garden" could not be resolved (reportMissingImports)
   mindgarden/tests/test_validate_garden.py:18:37 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
@@ -1174,8 +1358,15 @@ tests/test_mindgarden_agent_integration.py
     Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
   tests/test_mindgarden_agent_integration.py:47:43 - error: Argument type is unknown
     Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+tests/test_mindgarden_publishing_integration.py
+  tests/test_mindgarden_publishing_integration.py:19:6 - warning: Import "scripts.publish_garden" could not be resolved (reportMissingImports)
+  tests/test_mindgarden_publishing_integration.py:19:36 - error: Type of "project_garden" is unknown (reportUnknownVariableType)
+  tests/test_mindgarden_publishing_integration.py:19:52 - error: Type of "verify_projection" is unknown (reportUnknownVariableType)
+  tests/test_mindgarden_publishing_integration.py:30:13 - error: Type of "paths" is unknown (reportUnknownVariableType)
+  tests/test_mindgarden_publishing_integration.py:32:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
+  tests/test_mindgarden_publishing_integration.py:32:38 - error: Type of "path" is unknown (reportUnknownVariableType)
 tests/test_repository_intelligence.py
   tests/test_repository_intelligence.py:59:13 - error: Type of "tree" is partially unknown
     Type of "tree" is "dict[str, str | list[Unknown]]" (reportUnknownVariableType)
-572 errors, 8 warnings, 0 informations
+662 errors, 10 warnings, 0 informations
 

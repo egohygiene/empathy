@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:221a9050-094f-4efc-b1b5-ecfebcccce49",
+  "serialNumber": "urn:uuid:97e5c46d-6397-4022-b679-14e48ad1781a",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-14T10:11:27Z",
+    "timestamp": "2026-08-14T11:06:50Z",
     "tools": {
       "components": [
         {
@@ -80232,6 +80232,35 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=9b0f5decdf7ccea1",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=56b215dea49da7dc",
       "type": "library",
       "supplier": {
@@ -80344,6 +80373,104 @@
         {
           "name": "syft:location:0:path",
           "value": "/mantle/.github/workflows/test.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d?package-id=bd141a41ebee3284",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/configure-pages",
+      "version": "45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+      "cpe": "cpe:2.3:a:actions\\/configure-pages:actions\\/configure-pages:45bfe0192ca1faeb007ade9deae92b16b8254a0d:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/configure-pages:actions\\/configure_pages:45bfe0192ca1faeb007ade9deae92b16b8254a0d:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/configure_pages:actions\\/configure-pages:45bfe0192ca1faeb007ade9deae92b16b8254a0d:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/configure_pages:actions\\/configure_pages:45bfe0192ca1faeb007ade9deae92b16b8254a0d:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/configure:actions\\/configure-pages:45bfe0192ca1faeb007ade9deae92b16b8254a0d:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/configure:actions\\/configure_pages:45bfe0192ca1faeb007ade9deae92b16b8254a0d:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128?package-id=14e99c60b7c7b566",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/deploy-pages",
+      "version": "cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+      "cpe": "cpe:2.3:a:actions\\/deploy-pages:actions\\/deploy-pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/deploy-pages:actions\\/deploy_pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/deploy_pages:actions\\/deploy-pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/deploy_pages:actions\\/deploy_pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/deploy:actions\\/deploy-pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/deploy:actions\\/deploy_pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
         }
       ]
     },
@@ -80638,6 +80765,55 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/commitlint.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38?package-id=71454600f0754ba4",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/setup-node",
+      "version": "249970729cb0ef3589644e2896645e5dc5ba9c38",
+      "cpe": "cpe:2.3:a:actions\\/setup-node:actions\\/setup-node:249970729cb0ef3589644e2896645e5dc5ba9c38:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/setup-node:actions\\/setup_node:249970729cb0ef3589644e2896645e5dc5ba9c38:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup-node:249970729cb0ef3589644e2896645e5dc5ba9c38:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup_node:249970729cb0ef3589644e2896645e5dc5ba9c38:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup-node:249970729cb0ef3589644e2896645e5dc5ba9c38:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup_node:249970729cb0ef3589644e2896645e5dc5ba9c38:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
         }
       ]
     },
@@ -81079,6 +81255,71 @@
         {
           "name": "syft:location:0:path",
           "value": "/mantle/.github/workflows/test.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9?package-id=14b1b6144d26dc85",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/upload-pages-artifact",
+      "version": "fc324d3547104276b827a68afc52ff2a11cc49c9",
+      "cpe": "cpe:2.3:a:actions\\/upload-pages-artifact:actions\\/upload-pages-artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload-pages-artifact:actions\\/upload_pages_artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_pages_artifact:actions\\/upload-pages-artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_pages_artifact:actions\\/upload_pages_artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload-pages:actions\\/upload-pages-artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload-pages:actions\\/upload_pages_artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_pages:actions\\/upload-pages-artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_pages:actions\\/upload_pages_artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-pages-artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_pages_artifact:fc324d3547104276b827a68afc52ff2a11cc49c9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
         }
       ]
     },
@@ -257877,6 +258118,17 @@
         {
           "alg": "SHA-256",
           "content": "3934d6040ac075b64f874ab1272b1fc1680fb7fe5d7a4140a696da5e53624375"
+        }
+      ]
+    },
+    {
+      "bom-ref": "8c89efc4702a5fab",
+      "type": "file",
+      "name": "/github/workspace/.github/workflows/mindgarden-pages.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "083ad4d57f0c0125736cdec34c89bd85e7f7dfc4a9a3c06ec02ece90511e2981"
         }
       ]
     },

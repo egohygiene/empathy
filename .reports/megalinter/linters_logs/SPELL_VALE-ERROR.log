@@ -74,15 +74,15 @@ Linter raw log:
 
 
  .garden/README.md
- 4:63   warning  'be viewed' may be passive voice. Use active voice if you can.     write-good.Passive 
- 5:24   warning  'be published' may be passive voice. Use active voice if you can.  write-good.Passive 
- 21:47  warning  'be committed' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 4:63   warning  'be viewed' may be passive voice. Use active voice if you can.       write-good.Passive 
+ 22:47  warning  'be committed' may be passive voice. Use active voice if you can.    write-good.Passive 
+ 43:55  warning  'are documented' may be passive voice. Use active voice if you can.  write-good.Passive 
 
 
  .garden/dashboard.md
  38:78  warning  'Methodology' is too wordy.                                        write-good.TooWordy 
- 56:1   warning  'be installed' may be passive voice. Use active voice if you can.  write-good.Passive  
- 57:24  warning  'are reviewed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 59:1   warning  'be installed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 60:24  warning  'are reviewed' may be passive voice. Use active voice if you can.  write-good.Passive  
 
 
  .garden/projects/README.md
@@ -351,11 +351,11 @@ Linter raw log:
 
  README.md
  8:53   warning  'are extracted' may be passive voice. Use active voice if you can.  write-good.Passive  
- 34:18  warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
- 61:58  warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
- 86:34  warning  'validate' is too wordy.                                            write-good.TooWordy 
- 91:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
- 92:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 35:18  warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 64:58  warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 89:34  warning  'validate' is too wordy.                                            write-good.TooWordy 
+ 94:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 95:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
 
 
  ROADMAP.md
@@ -2457,7 +2457,8 @@ Linter raw log:
 
 
  mindgarden/ARCHITECTURE.md
- 30:34  warning  'are bounded' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 30:34  warning  'are bounded' may be passive voice. Use active voice if you can.   write-good.Passive 
+ 35:10  warning  'is committed' may be passive voice. Use active voice if you can.  write-good.Passive 
 
 
  mindgarden/EXTRACTION.md
@@ -2469,15 +2470,16 @@ Linter raw log:
  5:12   warning  'was incubated' may be passive voice. Use active voice if you can.  write-good.Passive 
  14:17  warning  'is retained' may be passive voice. Use active voice if you can.    write-good.Passive 
  14:50  warning  'was expanded' may be passive voice. Use active voice if you can.   write-good.Passive 
- 33:31  warning  'be evaluated' may be passive voice. Use active voice if you can.   write-good.Passive 
+ 35:31  warning  'be evaluated' may be passive voice. Use active voice if you can.   write-good.Passive 
+ 40:65  warning  'are vendored' may be passive voice. Use active voice if you can.   write-good.Passive 
 
 
  mindgarden/README.md
  30:35  warning  'multiple' is too wordy.                                              write-good.TooWordy 
- 54:1   warning  'Validate' is too wordy.                                              write-good.TooWordy 
- 67:50  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
- 69:47  warning  'are defined' may be passive voice. Use active voice if you can.      write-good.Passive  
- 72:36  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 59:1   warning  'Validate' is too wordy.                                              write-good.TooWordy 
+ 73:50  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 75:47  warning  'are defined' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 78:36  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive  
 
 
  mindgarden/profiles/agent/README.md
@@ -2492,5 +2494,15 @@ Linter raw log:
  28:17  warning  'is declared' may be passive voice. Use active voice if you can.  write-good.Passive 
  44:49  warning  'are copied' may be passive voice. Use active voice if you can.   write-good.Passive 
 
-✖ 4 errors, 1956 warnings and 0 suggestions in 226 files.
+
+ mindgarden/profiles/quartz/README.md
+ 12:30  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 13:51  warning  'are omitted' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 16:45  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 26:36  warning  'are required' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 52:5   warning  'equivalent' is too wordy.                                         write-good.TooWordy 
+ 62:57  warning  'it is' is too wordy.                                              write-good.TooWordy 
+ 66:32  warning  'are pinned' may be passive voice. Use active voice if you can.    write-good.Passive  
+
+✖ 4 errors, 1965 warnings and 0 suggestions in 227 files.
 
