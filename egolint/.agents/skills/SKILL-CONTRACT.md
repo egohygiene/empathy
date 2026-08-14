@@ -126,7 +126,7 @@ Exit code `0` means all skills are valid.
 
 Skill directories follow the pattern:
 
-```
+```text
 library/organization/skills/<domain>/<name>/SKILL.md
 ```
 

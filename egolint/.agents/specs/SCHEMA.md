@@ -9,7 +9,7 @@ conforms to this schema.
 
 ## Schema identifier
 
-```
+```yaml
 schema: aether.specification/v1
 ```
 
