@@ -267,7 +267,7 @@ Running `./tests/run.sh static` produces a non-zero exit status because `shfmt -
 
 **Evidence:**
 
-```
+```console
 $ ./tests/run.sh static 2>&1 | head -10
 === Static Validation ===
 Checking Bash syntax...
@@ -310,7 +310,7 @@ No Bats test file for `install.sh` exists in `tests/`. The issue specification a
 
 **Evidence:**
 
-```
+```console
 $ find /home/runner/work/mantle/mantle/tests -name "*install*"
 /home/runner/work/mantle/mantle/tests/integration/installers.bats
 ```
@@ -353,7 +353,7 @@ A semantic version (e.g., `0.1.0`) or the installer's own constant is more appro
 
 **Evidence:**
 
-```
+```console
 $ ./install.sh --version
 3ba3709
 ```
@@ -384,7 +384,7 @@ The repository has no `CONTRIBUTING.md`, `DEVELOPMENT.md`, or equivalent file. A
 
 **Evidence:**
 
-```
+```console
 $ ls /home/runner/work/mantle/mantle/
 LICENSE  README.md  assets  bin  init  install.sh  lib  libexec
 modules  platforms  runtime  tests
@@ -416,7 +416,7 @@ There are no git tags, no `CHANGELOG.md`, and no release workflow in `.github/wo
 
 **Evidence:**
 
-```
+```console
 $ git -C /home/runner/work/mantle/mantle tag -l
 (empty)
 $ ls .github/workflows/
@@ -562,7 +562,7 @@ fi
 
 **Evidence:**
 
-```
+```text
 +MANTLE_COLOR_BLUE=
 +MANTLE_COLOR_BOLD=
 +MANTLE_COLOR_BOLD_BLUE=
@@ -644,7 +644,7 @@ CI installs shfmt 3.8.0, so the check always runs (and currently fails) in CI.
 
 **Evidence:**
 
-```
+```console
 $ ls platforms/
 darwin  linux  windows
 $ cat README.md | grep -i windows | head -3
@@ -696,7 +696,7 @@ The `--environment-diff` output uses `diff -u` between two temp files capturing 
 
 **Evidence:**
 
-```
+```diff
 --- before
 +++ after
 @@ -1 +1,66 @@

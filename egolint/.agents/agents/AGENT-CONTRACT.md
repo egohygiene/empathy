@@ -129,7 +129,7 @@ Projection is performed by `build-projections.py`. For each source `AGENT.md`:
 
 The canonical bounded handoff flow is:
 
-```
+```text
 Architect
   -> Specfile Creator
   -> Implementation Planner

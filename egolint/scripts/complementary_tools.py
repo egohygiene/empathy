@@ -51,7 +51,7 @@ def load_manifest() -> dict[str, Any]:
     """Load the canonical complementary-tool manifest."""
 
     return cast(
-        dict[str, Any],
+        "dict[str, Any]",
         json.loads(MANIFEST_PATH.read_text(encoding="utf-8")),
     )
 
