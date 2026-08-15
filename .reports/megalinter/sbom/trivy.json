@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.7",
-    "serialNumber": "urn:uuid:8893450c-a60a-477c-89d7-acf1cc393494",
+    "serialNumber": "urn:uuid:3d64fdbe-92c4-43e1-a251-12cd49b76bad",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-08-15T16:27:21+00:00",
+        "timestamp": "2026-08-15T16:42:44+00:00",
         "tools": {
             "components": [
                 {
@@ -20,7 +20,7 @@
             ]
         },
         "component": {
-            "bom-ref": "5e7571e3-f014-408a-8c5f-ef485e752b99",
+            "bom-ref": "c600ba0f-3428-4936-a725-0f3ce576d17a",
             "type": "application",
             "name": ".",
             "properties": [
@@ -33,180 +33,7 @@
     },
     "components": [
         {
-            "bom-ref": "08de4ca2-17f5-4b27-8cb2-8aecbefddbae",
-            "type": "library",
-            "name": "fdir",
-            "version": "6.5.0",
-            "purl": "pkg:npm/fdir@6.5.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "fdir@6.5.0(picomatch@4.0.5)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "30850509-61a1-438c-b94f-2a09e8e979f9",
-            "type": "library",
-            "name": "ts-api-utils",
-            "version": "2.5.0",
-            "purl": "pkg:npm/ts-api-utils@2.5.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "ts-api-utils@2.5.0(typescript@6.0.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "3f40f3ef-6e85-457d-9026-4b47bf4d3fc6",
-            "type": "library",
-            "group": "@rollup",
-            "name": "pluginutils",
-            "version": "3.1.0",
-            "purl": "pkg:npm/%40rollup/pluginutils@3.1.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@rollup/pluginutils@3.1.0(rollup@2.80.0)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "57cf12c8-b942-49c2-8253-f254698162af",
-            "type": "application",
-            "name": "egolint/tests/fixtures/govulncheck/go.mod",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "gomod"
-                }
-            ]
-        },
-        {
-            "bom-ref": "58031c2c-e713-40eb-b204-3284d998fe7d",
-            "type": "library",
-            "group": "@tapjs",
-            "name": "typescript",
-            "version": "3.5.11",
-            "purl": "pkg:npm/%40tapjs/typescript@3.5.11",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@tapjs/typescript@3.5.11(@swc/core@1.15.47)(@tapjs/core@4.5.9(@swc/core@1.15.47)(@types/node@26.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@26.2.0)(typescript@5.9.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "5a7b03bc-1cf8-4337-8384-11aee4d84857",
-            "type": "library",
-            "group": "@typescript-eslint",
-            "name": "tsconfig-utils",
-            "version": "8.66.0",
-            "purl": "pkg:npm/%40typescript-eslint/tsconfig-utils@8.66.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@typescript-eslint/tsconfig-utils@8.66.0(typescript@5.9.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "5de54a97-f70e-4faa-8156-dde268600735",
-            "type": "library",
-            "group": "@napi-rs",
-            "name": "wasm-runtime",
-            "version": "1.2.2",
-            "purl": "pkg:npm/%40napi-rs/wasm-runtime@1.2.2",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@napi-rs/wasm-runtime@1.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "75ede625-4caf-46fd-b368-637592b36c24",
-            "type": "library",
-            "name": "terser-webpack-plugin",
-            "version": "5.6.1",
-            "purl": "pkg:npm/terser-webpack-plugin@5.6.1",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "terser-webpack-plugin@5.6.1(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3)(webpack@5.105.2(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3))"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "7bd272d0-2bfc-4cd0-af88-138a2beab1a4",
-            "type": "library",
-            "name": "file-loader",
-            "version": "6.2.0",
-            "purl": "pkg:npm/file-loader@6.2.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "file-loader@6.2.0(webpack@4.47.0)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "7fc4b97b-a4e8-426d-88a0-6673d934e091",
-            "type": "library",
-            "group": "@napi-rs",
-            "name": "wasm-runtime",
-            "version": "1.2.2",
-            "purl": "pkg:npm/%40napi-rs/wasm-runtime@1.2.2",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@napi-rs/wasm-runtime@1.2.2(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "83a4d167-a000-414c-afdc-50c2b9840540",
+            "bom-ref": "05715e20-14b0-4068-a9ed-e6db6d342ae2",
             "type": "library",
             "group": "@typescript-eslint",
             "name": "typescript-estree",
@@ -224,128 +51,7 @@
             ]
         },
         {
-            "bom-ref": "861b3f6d-174d-4032-b361-c07972b61974",
-            "type": "application",
-            "name": "egolint/pnpm-lock.yaml",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "959de06e-24df-43f8-8d3b-64dbb7b02909",
-            "type": "library",
-            "group": "@typescript-eslint",
-            "name": "tsconfig-utils",
-            "version": "8.66.0",
-            "purl": "pkg:npm/%40typescript-eslint/tsconfig-utils@8.66.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@typescript-eslint/tsconfig-utils@8.66.0(typescript@6.0.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "a49eec01-96df-484f-b2b4-860fc251e8e6",
-            "type": "library",
-            "group": "@typescript-eslint",
-            "name": "project-service",
-            "version": "8.66.0",
-            "purl": "pkg:npm/%40typescript-eslint/project-service@8.66.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@typescript-eslint/project-service@8.66.0(supports-color@7.2.0)(typescript@5.9.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "b187073e-7ea3-4252-8ef3-6c6151150c26",
-            "type": "library",
-            "name": "ts-api-utils",
-            "version": "2.5.0",
-            "purl": "pkg:npm/ts-api-utils@2.5.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "ts-api-utils@2.5.0(typescript@5.9.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "b3775aab-c0f6-433c-a96f-aceabd86a6d7",
-            "type": "library",
-            "group": "@isaacs",
-            "name": "ts-node-temp-fork-for-pr-2009",
-            "version": "10.9.7",
-            "purl": "pkg:npm/%40isaacs/ts-node-temp-fork-for-pr-2009@10.9.7",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@isaacs/ts-node-temp-fork-for-pr-2009@10.9.7(@swc/core@1.15.47)(@types/node@26.2.0)(typescript@6.0.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "b7b7bd16-6e8b-4b61-a9b4-e17750d1d2ff",
-            "type": "library",
-            "name": "terser-webpack-plugin",
-            "version": "5.6.1",
-            "purl": "pkg:npm/terser-webpack-plugin@5.6.1",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "terser-webpack-plugin@5.6.1(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3)(webpack@5.109.2(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3))"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "be3b7cd3-cbd8-4ffd-9adf-205aad9ee1a8",
-            "type": "library",
-            "group": "@typescript-eslint",
-            "name": "project-service",
-            "version": "8.66.0",
-            "purl": "pkg:npm/%40typescript-eslint/project-service@8.66.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@typescript-eslint/project-service@8.66.0(supports-color@7.2.0)(typescript@6.0.3)"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "c0825034-acbc-4a06-a304-4281f6e5b80e",
+            "bom-ref": "0942eafe-34c2-4ec3-85e0-7518e5359ba7",
             "type": "library",
             "group": "@typescript-eslint",
             "name": "typescript-estree",
@@ -363,7 +69,42 @@
             ]
         },
         {
-            "bom-ref": "cced6f95-b0cf-4ca1-874e-5d8c4afd6161",
+            "bom-ref": "0d7dfcc8-e577-499d-b3ee-e875a3510b15",
+            "type": "library",
+            "name": "terser-webpack-plugin",
+            "version": "5.6.1",
+            "purl": "pkg:npm/terser-webpack-plugin@5.6.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "terser-webpack-plugin@5.6.1(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3)(webpack@5.109.2(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3))"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "11e12114-f087-485c-8a03-8e4beaf44bea",
+            "type": "library",
+            "group": "@typescript-eslint",
+            "name": "project-service",
+            "version": "8.66.0",
+            "purl": "pkg:npm/%40typescript-eslint/project-service@8.66.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@typescript-eslint/project-service@8.66.0(supports-color@7.2.0)(typescript@6.0.3)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "1739a63d-2b5d-4dbb-84ee-d32470352477",
             "type": "library",
             "group": "@tapjs",
             "name": "typescript",
@@ -381,7 +122,25 @@
             ]
         },
         {
-            "bom-ref": "cd8e0906-e3be-456b-a1f3-4a50431086c5",
+            "bom-ref": "1aa5d515-345b-4e10-b229-59a2b077693a",
+            "type": "library",
+            "group": "@typescript-eslint",
+            "name": "tsconfig-utils",
+            "version": "8.66.0",
+            "purl": "pkg:npm/%40typescript-eslint/tsconfig-utils@8.66.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@typescript-eslint/tsconfig-utils@8.66.0(typescript@5.9.3)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "317cd9ed-4fe1-438b-9414-946f456896f6",
             "type": "library",
             "name": "ajv-errors",
             "version": "1.0.1",
@@ -398,7 +157,90 @@
             ]
         },
         {
-            "bom-ref": "cff8e1d6-66f3-406e-a29a-2da40f0bd495",
+            "bom-ref": "3246e358-501c-4509-9291-e744f8085ec8",
+            "type": "library",
+            "name": "ajv-errors",
+            "version": "1.0.1",
+            "purl": "pkg:npm/ajv-errors@1.0.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "ajv-errors@1.0.1(ajv@6.14.0)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "3632ead0-e684-48e9-9bc2-ad700b10ecf6",
+            "type": "library",
+            "name": "",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "3a3513152c9f0605"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "cargo"
+                }
+            ]
+        },
+        {
+            "bom-ref": "46142f5a-c61b-4580-8650-76b695a8c910",
+            "type": "library",
+            "group": "@tapjs",
+            "name": "typescript",
+            "version": "3.5.11",
+            "purl": "pkg:npm/%40tapjs/typescript@3.5.11",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@tapjs/typescript@3.5.11(@swc/core@1.15.47)(@tapjs/core@4.5.9(@swc/core@1.15.47)(@types/node@26.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@26.2.0)(typescript@5.9.3)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "465986ee-fe80-4a79-a180-817d8b95944e",
+            "type": "library",
+            "group": "@napi-rs",
+            "name": "wasm-runtime",
+            "version": "1.2.2",
+            "purl": "pkg:npm/%40napi-rs/wasm-runtime@1.2.2",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@napi-rs/wasm-runtime@1.2.2(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "53259737-210c-4a2c-bc12-4f3de321d02a",
+            "type": "application",
+            "name": "egolint/pnpm-lock.yaml",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "59d7a60c-05f3-4d18-ab88-1cf9531294b1",
             "type": "library",
             "group": "@rollup",
             "name": "pluginutils",
@@ -416,15 +258,16 @@
             ]
         },
         {
-            "bom-ref": "d115418d-437c-4aa5-af08-23df11d341a2",
+            "bom-ref": "78de47df-5641-4abb-b175-f38375064ba1",
             "type": "library",
-            "name": "ajv-errors",
-            "version": "1.0.1",
-            "purl": "pkg:npm/ajv-errors@1.0.1",
+            "group": "@napi-rs",
+            "name": "wasm-runtime",
+            "version": "1.2.2",
+            "purl": "pkg:npm/%40napi-rs/wasm-runtime@1.2.2",
             "properties": [
                 {
                     "name": "aquasecurity:trivy:PkgID",
-                    "value": "ajv-errors@1.0.1(ajv@6.14.0)"
+                    "value": "@napi-rs/wasm-runtime@1.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)"
                 },
                 {
                     "name": "aquasecurity:trivy:PkgType",
@@ -433,30 +276,16 @@
             ]
         },
         {
-            "bom-ref": "d11c309b-f66e-4e50-9795-8ddf3f1ad359",
+            "bom-ref": "7d8852dd-413a-46c9-8014-0cfa6e956689",
             "type": "library",
-            "name": "",
+            "group": "@typescript-eslint",
+            "name": "project-service",
+            "version": "8.66.0",
+            "purl": "pkg:npm/%40typescript-eslint/project-service@8.66.0",
             "properties": [
                 {
                     "name": "aquasecurity:trivy:PkgID",
-                    "value": "3a3513152c9f0605"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "cargo"
-                }
-            ]
-        },
-        {
-            "bom-ref": "d903b3d6-de20-4746-a264-155ae4f13f54",
-            "type": "library",
-            "name": "file-loader",
-            "version": "6.2.0",
-            "purl": "pkg:npm/file-loader@6.2.0",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "file-loader@6.2.0(webpack@5.109.2(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3))"
+                    "value": "@typescript-eslint/project-service@8.66.0(supports-color@7.2.0)(typescript@5.9.3)"
                 },
                 {
                     "name": "aquasecurity:trivy:PkgType",
@@ -465,7 +294,7 @@
             ]
         },
         {
-            "bom-ref": "eaceffb1-a769-46f2-8000-64d57f9c4c2f",
+            "bom-ref": "87fa5502-d317-4230-8394-fbf1028d6917",
             "type": "library",
             "group": "@isaacs",
             "name": "ts-node-temp-fork-for-pr-2009",
@@ -483,7 +312,7 @@
             ]
         },
         {
-            "bom-ref": "f40d2c0a-7054-440f-9c2d-75294a193a0a",
+            "bom-ref": "8ae98471-8c1a-4fa4-b838-e052041bd2e5",
             "type": "application",
             "name": "egolint/uv.lock",
             "properties": [
@@ -498,7 +327,7 @@
             ]
         },
         {
-            "bom-ref": "f45578a0-e126-47bf-8cf7-c63efc8c760d",
+            "bom-ref": "8b942430-2d7b-4564-8372-ec2633b85c8e",
             "type": "application",
             "name": "egolint/Cargo.lock",
             "properties": [
@@ -513,7 +342,161 @@
             ]
         },
         {
-            "bom-ref": "fccacc3a-3638-41a5-a5f3-b65efeb80ac1",
+            "bom-ref": "8cc18601-719b-4bb7-805a-76d20b9f5519",
+            "type": "library",
+            "name": "terser-webpack-plugin",
+            "version": "5.6.1",
+            "purl": "pkg:npm/terser-webpack-plugin@5.6.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "terser-webpack-plugin@5.6.1(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3)(webpack@5.105.2(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3))"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "95ae1578-28e6-4b20-9361-b0c1c4613dfe",
+            "type": "library",
+            "name": "file-loader",
+            "version": "6.2.0",
+            "purl": "pkg:npm/file-loader@6.2.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "file-loader@6.2.0(webpack@4.47.0)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "ad18f7d9-4980-4c12-8086-ed8d8343a9fc",
+            "type": "application",
+            "name": "egolint/tests/fixtures/govulncheck/go.mod",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "gomod"
+                }
+            ]
+        },
+        {
+            "bom-ref": "b0b7b6c5-24a6-49ea-be12-4e181c60a70d",
+            "type": "library",
+            "name": "ts-api-utils",
+            "version": "2.5.0",
+            "purl": "pkg:npm/ts-api-utils@2.5.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "ts-api-utils@2.5.0(typescript@6.0.3)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "b458d379-2c28-4bda-889f-408f95f4c3e8",
+            "type": "library",
+            "name": "file-loader",
+            "version": "6.2.0",
+            "purl": "pkg:npm/file-loader@6.2.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "file-loader@6.2.0(webpack@5.109.2(@swc/core@1.15.47)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(esbuild@0.27.2)(html-minifier-terser@7.2.0)(lightningcss@1.33.0)(postcss@8.5.26)(uglify-js@3.19.3))"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "bc9dd8d7-1017-4699-bcee-62cdca38249b",
+            "type": "library",
+            "group": "@rollup",
+            "name": "pluginutils",
+            "version": "3.1.0",
+            "purl": "pkg:npm/%40rollup/pluginutils@3.1.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@rollup/pluginutils@3.1.0(rollup@2.80.0)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "ceb3f2c4-efcd-48c1-abb1-fa91d535eae9",
+            "type": "library",
+            "group": "@typescript-eslint",
+            "name": "tsconfig-utils",
+            "version": "8.66.0",
+            "purl": "pkg:npm/%40typescript-eslint/tsconfig-utils@8.66.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@typescript-eslint/tsconfig-utils@8.66.0(typescript@6.0.3)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "d940808b-ac33-4326-8cae-d0b73c76068f",
+            "type": "library",
+            "group": "@isaacs",
+            "name": "ts-node-temp-fork-for-pr-2009",
+            "version": "10.9.7",
+            "purl": "pkg:npm/%40isaacs/ts-node-temp-fork-for-pr-2009@10.9.7",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@isaacs/ts-node-temp-fork-for-pr-2009@10.9.7(@swc/core@1.15.47)(@types/node@26.2.0)(typescript@6.0.3)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "f0d3ab2d-f084-40d4-94a8-76de2604ee12",
+            "type": "library",
+            "name": "fdir",
+            "version": "6.5.0",
+            "purl": "pkg:npm/fdir@6.5.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "fdir@6.5.0(picomatch@4.0.5)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "f171e928-c029-4d8a-9ef9-0dd6e4b1fe1a",
             "type": "library",
             "name": "fdir",
             "version": "6.5.0",
@@ -522,6 +505,23 @@
                 {
                     "name": "aquasecurity:trivy:PkgID",
                     "value": "fdir@6.5.0(picomatch@4.0.4)"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "fdb12c1d-d7fe-4bb5-9a3b-eedf0afdb1ea",
+            "type": "library",
+            "name": "ts-api-utils",
+            "version": "2.5.0",
+            "purl": "pkg:npm/ts-api-utils@2.5.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "ts-api-utils@2.5.0(typescript@5.9.3)"
                 },
                 {
                     "name": "aquasecurity:trivy:PkgType",
@@ -74833,64 +74833,37 @@
     ],
     "dependencies": [
         {
-            "ref": "08de4ca2-17f5-4b27-8cb2-8aecbefddbae",
+            "ref": "05715e20-14b0-4068-a9ed-e6db6d342ae2",
             "dependsOn": [
-                "pkg:npm/picomatch@4.0.5"
-            ]
-        },
-        {
-            "ref": "30850509-61a1-438c-b94f-2a09e8e979f9",
-            "dependsOn": [
-                "pkg:npm/typescript@6.0.3"
-            ]
-        },
-        {
-            "ref": "3f40f3ef-6e85-457d-9026-4b47bf4d3fc6",
-            "dependsOn": [
-                "pkg:npm/%40types/estree@0.0.39",
-                "pkg:npm/estree-walker@1.0.1",
-                "pkg:npm/picomatch@2.3.2",
-                "pkg:npm/rollup@2.80.0"
-            ]
-        },
-        {
-            "ref": "57cf12c8-b942-49c2-8253-f254698162af",
-            "dependsOn": [
-                "pkg:golang/example.com/egohygiene/govulncheck-fixture"
-            ]
-        },
-        {
-            "ref": "58031c2c-e713-40eb-b204-3284d998fe7d",
-            "dependsOn": [
-                "eaceffb1-a769-46f2-8000-64d57f9c4c2f",
-                "pkg:npm/%40tapjs/core@4.5.9"
-            ]
-        },
-        {
-            "ref": "5a7b03bc-1cf8-4337-8384-11aee4d84857",
-            "dependsOn": [
+                "1aa5d515-345b-4e10-b229-59a2b077693a",
+                "7d8852dd-413a-46c9-8014-0cfa6e956689",
+                "fdb12c1d-d7fe-4bb5-9a3b-eedf0afdb1ea",
+                "pkg:npm/%40typescript-eslint/types@8.66.0",
+                "pkg:npm/%40typescript-eslint/visitor-keys@8.66.0",
+                "pkg:npm/debug@4.4.3",
+                "pkg:npm/minimatch@10.2.6",
+                "pkg:npm/semver@7.8.5",
+                "pkg:npm/tinyglobby@0.2.17",
                 "pkg:npm/typescript@5.9.3"
             ]
         },
         {
-            "ref": "5de54a97-f70e-4faa-8156-dde268600735",
+            "ref": "0942eafe-34c2-4ec3-85e0-7518e5359ba7",
             "dependsOn": [
-                "pkg:npm/%40emnapi/core@1.10.0",
-                "pkg:npm/%40emnapi/runtime@1.10.0",
-                "pkg:npm/%40tybys/wasm-util@0.10.3"
+                "11e12114-f087-485c-8a03-8e4beaf44bea",
+                "b0b7b6c5-24a6-49ea-be12-4e181c60a70d",
+                "ceb3f2c4-efcd-48c1-abb1-fa91d535eae9",
+                "pkg:npm/%40typescript-eslint/types@8.66.0",
+                "pkg:npm/%40typescript-eslint/visitor-keys@8.66.0",
+                "pkg:npm/debug@4.4.3",
+                "pkg:npm/minimatch@10.2.6",
+                "pkg:npm/semver@7.8.5",
+                "pkg:npm/tinyglobby@0.2.17",
+                "pkg:npm/typescript@6.0.3"
             ]
         },
         {
-            "ref": "5e7571e3-f014-408a-8c5f-ef485e752b99",
-            "dependsOn": [
-                "57cf12c8-b942-49c2-8253-f254698162af",
-                "861b3f6d-174d-4032-b361-c07972b61974",
-                "f40d2c0a-7054-440f-9c2d-75294a193a0a",
-                "f45578a0-e126-47bf-8cf7-c63efc8c760d"
-            ]
-        },
-        {
-            "ref": "75ede625-4caf-46fd-b368-637592b36c24",
+            "ref": "0d7dfcc8-e577-499d-b3ee-e875a3510b15",
             "dependsOn": [
                 "pkg:npm/%40jridgewell/trace-mapping@0.3.31",
                 "pkg:npm/%40swc/core@1.15.47",
@@ -74905,19 +74878,58 @@
                 "pkg:npm/schema-utils@4.3.3",
                 "pkg:npm/terser@5.49.2",
                 "pkg:npm/uglify-js@3.19.3",
-                "pkg:npm/webpack@5.105.2"
+                "pkg:npm/webpack@5.109.2"
             ]
         },
         {
-            "ref": "7bd272d0-2bfc-4cd0-af88-138a2beab1a4",
+            "ref": "11e12114-f087-485c-8a03-8e4beaf44bea",
             "dependsOn": [
-                "pkg:npm/loader-utils@2.0.4",
-                "pkg:npm/schema-utils@3.3.0",
-                "pkg:npm/webpack@4.47.0"
+                "ceb3f2c4-efcd-48c1-abb1-fa91d535eae9",
+                "pkg:npm/%40typescript-eslint/types@8.66.0",
+                "pkg:npm/debug@4.4.3",
+                "pkg:npm/typescript@6.0.3"
             ]
         },
         {
-            "ref": "7fc4b97b-a4e8-426d-88a0-6673d934e091",
+            "ref": "1739a63d-2b5d-4dbb-84ee-d32470352477",
+            "dependsOn": [
+                "d940808b-ac33-4326-8cae-d0b73c76068f",
+                "pkg:npm/%40tapjs/core@4.5.9"
+            ]
+        },
+        {
+            "ref": "1aa5d515-345b-4e10-b229-59a2b077693a",
+            "dependsOn": [
+                "pkg:npm/typescript@5.9.3"
+            ]
+        },
+        {
+            "ref": "317cd9ed-4fe1-438b-9414-946f456896f6",
+            "dependsOn": [
+                "pkg:npm/ajv@6.15.0"
+            ]
+        },
+        {
+            "ref": "3246e358-501c-4509-9291-e744f8085ec8",
+            "dependsOn": [
+                "pkg:npm/ajv@6.14.0"
+            ]
+        },
+        {
+            "ref": "3632ead0-e684-48e9-9bc2-ad700b10ecf6",
+            "dependsOn": [
+                "pkg:cargo/egohygiene-clippy-fixture@0.1.0"
+            ]
+        },
+        {
+            "ref": "46142f5a-c61b-4580-8650-76b695a8c910",
+            "dependsOn": [
+                "87fa5502-d317-4230-8394-fbf1028d6917",
+                "pkg:npm/%40tapjs/core@4.5.9"
+            ]
+        },
+        {
+            "ref": "465986ee-fe80-4a79-a180-817d8b95944e",
             "dependsOn": [
                 "pkg:npm/%40emnapi/core@1.11.2",
                 "pkg:npm/%40emnapi/runtime@1.11.2",
@@ -74925,22 +74937,7 @@
             ]
         },
         {
-            "ref": "83a4d167-a000-414c-afdc-50c2b9840540",
-            "dependsOn": [
-                "5a7b03bc-1cf8-4337-8384-11aee4d84857",
-                "a49eec01-96df-484f-b2b4-860fc251e8e6",
-                "b187073e-7ea3-4252-8ef3-6c6151150c26",
-                "pkg:npm/%40typescript-eslint/types@8.66.0",
-                "pkg:npm/%40typescript-eslint/visitor-keys@8.66.0",
-                "pkg:npm/debug@4.4.3",
-                "pkg:npm/minimatch@10.2.6",
-                "pkg:npm/semver@7.8.5",
-                "pkg:npm/tinyglobby@0.2.17",
-                "pkg:npm/typescript@5.9.3"
-            ]
-        },
-        {
-            "ref": "861b3f6d-174d-4032-b361-c07972b61974",
+            "ref": "53259737-210c-4a2c-bc12-4f3de321d02a",
             "dependsOn": [
                 "pkg:npm/%40actions/core@3.0.1",
                 "pkg:npm/%40actions/github@9.1.1",
@@ -75127,103 +75124,7 @@
             ]
         },
         {
-            "ref": "959de06e-24df-43f8-8d3b-64dbb7b02909",
-            "dependsOn": [
-                "pkg:npm/typescript@6.0.3"
-            ]
-        },
-        {
-            "ref": "a49eec01-96df-484f-b2b4-860fc251e8e6",
-            "dependsOn": [
-                "5a7b03bc-1cf8-4337-8384-11aee4d84857",
-                "pkg:npm/%40typescript-eslint/types@8.66.0",
-                "pkg:npm/debug@4.4.3",
-                "pkg:npm/typescript@5.9.3"
-            ]
-        },
-        {
-            "ref": "b187073e-7ea3-4252-8ef3-6c6151150c26",
-            "dependsOn": [
-                "pkg:npm/typescript@5.9.3"
-            ]
-        },
-        {
-            "ref": "b3775aab-c0f6-433c-a96f-aceabd86a6d7",
-            "dependsOn": [
-                "pkg:npm/%40cspotcode/source-map-support@0.8.1",
-                "pkg:npm/%40swc/core@1.15.47",
-                "pkg:npm/%40tsconfig/node14@14.1.8",
-                "pkg:npm/%40tsconfig/node16@16.1.8",
-                "pkg:npm/%40tsconfig/node18@18.2.6",
-                "pkg:npm/%40tsconfig/node20@20.1.9",
-                "pkg:npm/%40types/node@26.2.0",
-                "pkg:npm/acorn-walk@8.3.5",
-                "pkg:npm/acorn@8.18.0",
-                "pkg:npm/arg@4.1.3",
-                "pkg:npm/diff@4.0.4",
-                "pkg:npm/make-error@1.3.6",
-                "pkg:npm/typescript@6.0.3",
-                "pkg:npm/v8-compile-cache-lib@3.0.1"
-            ]
-        },
-        {
-            "ref": "b7b7bd16-6e8b-4b61-a9b4-e17750d1d2ff",
-            "dependsOn": [
-                "pkg:npm/%40jridgewell/trace-mapping@0.3.31",
-                "pkg:npm/%40swc/core@1.15.47",
-                "pkg:npm/clean-css@5.3.3",
-                "pkg:npm/cssnano@6.1.2",
-                "pkg:npm/csso@5.0.5",
-                "pkg:npm/esbuild@0.27.2",
-                "pkg:npm/html-minifier-terser@7.2.0",
-                "pkg:npm/jest-worker@27.5.1",
-                "pkg:npm/lightningcss@1.33.0",
-                "pkg:npm/postcss@8.5.26",
-                "pkg:npm/schema-utils@4.3.3",
-                "pkg:npm/terser@5.49.2",
-                "pkg:npm/uglify-js@3.19.3",
-                "pkg:npm/webpack@5.109.2"
-            ]
-        },
-        {
-            "ref": "be3b7cd3-cbd8-4ffd-9adf-205aad9ee1a8",
-            "dependsOn": [
-                "959de06e-24df-43f8-8d3b-64dbb7b02909",
-                "pkg:npm/%40typescript-eslint/types@8.66.0",
-                "pkg:npm/debug@4.4.3",
-                "pkg:npm/typescript@6.0.3"
-            ]
-        },
-        {
-            "ref": "c0825034-acbc-4a06-a304-4281f6e5b80e",
-            "dependsOn": [
-                "30850509-61a1-438c-b94f-2a09e8e979f9",
-                "959de06e-24df-43f8-8d3b-64dbb7b02909",
-                "be3b7cd3-cbd8-4ffd-9adf-205aad9ee1a8",
-                "pkg:npm/%40typescript-eslint/types@8.66.0",
-                "pkg:npm/%40typescript-eslint/visitor-keys@8.66.0",
-                "pkg:npm/debug@4.4.3",
-                "pkg:npm/minimatch@10.2.6",
-                "pkg:npm/semver@7.8.5",
-                "pkg:npm/tinyglobby@0.2.17",
-                "pkg:npm/typescript@6.0.3"
-            ]
-        },
-        {
-            "ref": "cced6f95-b0cf-4ca1-874e-5d8c4afd6161",
-            "dependsOn": [
-                "b3775aab-c0f6-433c-a96f-aceabd86a6d7",
-                "pkg:npm/%40tapjs/core@4.5.9"
-            ]
-        },
-        {
-            "ref": "cd8e0906-e3be-456b-a1f3-4a50431086c5",
-            "dependsOn": [
-                "pkg:npm/ajv@6.15.0"
-            ]
-        },
-        {
-            "ref": "cff8e1d6-66f3-406e-a29a-2da40f0bd495",
+            "ref": "59d7a60c-05f3-4d18-ab88-1cf9531294b1",
             "dependsOn": [
                 "pkg:npm/%40types/estree@0.0.39",
                 "pkg:npm/estree-walker@1.0.1",
@@ -75232,27 +75133,24 @@
             ]
         },
         {
-            "ref": "d115418d-437c-4aa5-af08-23df11d341a2",
+            "ref": "78de47df-5641-4abb-b175-f38375064ba1",
             "dependsOn": [
-                "pkg:npm/ajv@6.14.0"
+                "pkg:npm/%40emnapi/core@1.10.0",
+                "pkg:npm/%40emnapi/runtime@1.10.0",
+                "pkg:npm/%40tybys/wasm-util@0.10.3"
             ]
         },
         {
-            "ref": "d11c309b-f66e-4e50-9795-8ddf3f1ad359",
+            "ref": "7d8852dd-413a-46c9-8014-0cfa6e956689",
             "dependsOn": [
-                "pkg:cargo/egohygiene-clippy-fixture@0.1.0"
+                "1aa5d515-345b-4e10-b229-59a2b077693a",
+                "pkg:npm/%40typescript-eslint/types@8.66.0",
+                "pkg:npm/debug@4.4.3",
+                "pkg:npm/typescript@5.9.3"
             ]
         },
         {
-            "ref": "d903b3d6-de20-4746-a264-155ae4f13f54",
-            "dependsOn": [
-                "pkg:npm/loader-utils@2.0.4",
-                "pkg:npm/schema-utils@3.3.0",
-                "pkg:npm/webpack@5.109.2"
-            ]
-        },
-        {
-            "ref": "eaceffb1-a769-46f2-8000-64d57f9c4c2f",
+            "ref": "87fa5502-d317-4230-8394-fbf1028d6917",
             "dependsOn": [
                 "pkg:npm/%40cspotcode/source-map-support@0.8.1",
                 "pkg:npm/%40swc/core@1.15.47",
@@ -75271,22 +75169,124 @@
             ]
         },
         {
-            "ref": "f40d2c0a-7054-440f-9c2d-75294a193a0a",
+            "ref": "8ae98471-8c1a-4fa4-b838-e052041bd2e5",
             "dependsOn": [
                 "pkg:pypi/egohygiene@0.0.1",
                 "pkg:pypi/packaging@23.2"
             ]
         },
         {
-            "ref": "f45578a0-e126-47bf-8cf7-c63efc8c760d",
+            "ref": "8b942430-2d7b-4564-8372-ec2633b85c8e",
             "dependsOn": [
-                "d11c309b-f66e-4e50-9795-8ddf3f1ad359"
+                "3632ead0-e684-48e9-9bc2-ad700b10ecf6"
             ]
         },
         {
-            "ref": "fccacc3a-3638-41a5-a5f3-b65efeb80ac1",
+            "ref": "8cc18601-719b-4bb7-805a-76d20b9f5519",
+            "dependsOn": [
+                "pkg:npm/%40jridgewell/trace-mapping@0.3.31",
+                "pkg:npm/%40swc/core@1.15.47",
+                "pkg:npm/clean-css@5.3.3",
+                "pkg:npm/cssnano@6.1.2",
+                "pkg:npm/csso@5.0.5",
+                "pkg:npm/esbuild@0.27.2",
+                "pkg:npm/html-minifier-terser@7.2.0",
+                "pkg:npm/jest-worker@27.5.1",
+                "pkg:npm/lightningcss@1.33.0",
+                "pkg:npm/postcss@8.5.26",
+                "pkg:npm/schema-utils@4.3.3",
+                "pkg:npm/terser@5.49.2",
+                "pkg:npm/uglify-js@3.19.3",
+                "pkg:npm/webpack@5.105.2"
+            ]
+        },
+        {
+            "ref": "95ae1578-28e6-4b20-9361-b0c1c4613dfe",
+            "dependsOn": [
+                "pkg:npm/loader-utils@2.0.4",
+                "pkg:npm/schema-utils@3.3.0",
+                "pkg:npm/webpack@4.47.0"
+            ]
+        },
+        {
+            "ref": "ad18f7d9-4980-4c12-8086-ed8d8343a9fc",
+            "dependsOn": [
+                "pkg:golang/example.com/egohygiene/govulncheck-fixture"
+            ]
+        },
+        {
+            "ref": "b0b7b6c5-24a6-49ea-be12-4e181c60a70d",
+            "dependsOn": [
+                "pkg:npm/typescript@6.0.3"
+            ]
+        },
+        {
+            "ref": "b458d379-2c28-4bda-889f-408f95f4c3e8",
+            "dependsOn": [
+                "pkg:npm/loader-utils@2.0.4",
+                "pkg:npm/schema-utils@3.3.0",
+                "pkg:npm/webpack@5.109.2"
+            ]
+        },
+        {
+            "ref": "bc9dd8d7-1017-4699-bcee-62cdca38249b",
+            "dependsOn": [
+                "pkg:npm/%40types/estree@0.0.39",
+                "pkg:npm/estree-walker@1.0.1",
+                "pkg:npm/picomatch@2.3.2",
+                "pkg:npm/rollup@2.80.0"
+            ]
+        },
+        {
+            "ref": "c600ba0f-3428-4936-a725-0f3ce576d17a",
+            "dependsOn": [
+                "53259737-210c-4a2c-bc12-4f3de321d02a",
+                "8ae98471-8c1a-4fa4-b838-e052041bd2e5",
+                "8b942430-2d7b-4564-8372-ec2633b85c8e",
+                "ad18f7d9-4980-4c12-8086-ed8d8343a9fc"
+            ]
+        },
+        {
+            "ref": "ceb3f2c4-efcd-48c1-abb1-fa91d535eae9",
+            "dependsOn": [
+                "pkg:npm/typescript@6.0.3"
+            ]
+        },
+        {
+            "ref": "d940808b-ac33-4326-8cae-d0b73c76068f",
+            "dependsOn": [
+                "pkg:npm/%40cspotcode/source-map-support@0.8.1",
+                "pkg:npm/%40swc/core@1.15.47",
+                "pkg:npm/%40tsconfig/node14@14.1.8",
+                "pkg:npm/%40tsconfig/node16@16.1.8",
+                "pkg:npm/%40tsconfig/node18@18.2.6",
+                "pkg:npm/%40tsconfig/node20@20.1.9",
+                "pkg:npm/%40types/node@26.2.0",
+                "pkg:npm/acorn-walk@8.3.5",
+                "pkg:npm/acorn@8.18.0",
+                "pkg:npm/arg@4.1.3",
+                "pkg:npm/diff@4.0.4",
+                "pkg:npm/make-error@1.3.6",
+                "pkg:npm/typescript@6.0.3",
+                "pkg:npm/v8-compile-cache-lib@3.0.1"
+            ]
+        },
+        {
+            "ref": "f0d3ab2d-f084-40d4-94a8-76de2604ee12",
+            "dependsOn": [
+                "pkg:npm/picomatch@4.0.5"
+            ]
+        },
+        {
+            "ref": "f171e928-c029-4d8a-9ef9-0dd6e4b1fe1a",
             "dependsOn": [
                 "pkg:npm/picomatch@4.0.4"
+            ]
+        },
+        {
+            "ref": "fdb12c1d-d7fe-4bb5-9a3b-eedf0afdb1ea",
+            "dependsOn": [
+                "pkg:npm/typescript@5.9.3"
             ]
         },
         {
@@ -77924,8 +77924,8 @@
         {
             "ref": "pkg:npm/%40docusaurus/bundler@3.10.2",
             "dependsOn": [
-                "b7b7bd16-6e8b-4b61-a9b4-e17750d1d2ff",
-                "d903b3d6-de20-4746-a264-155ae4f13f54",
+                "0d7dfcc8-e577-499d-b3ee-e875a3510b15",
+                "b458d379-2c28-4bda-889f-408f95f4c3e8",
                 "pkg:npm/%40babel/core@7.29.7",
                 "pkg:npm/%40docusaurus/babel@3.10.2",
                 "pkg:npm/%40docusaurus/cssnano-preset@3.10.2",
@@ -78017,7 +78017,7 @@
         {
             "ref": "pkg:npm/%40docusaurus/mdx-loader@3.10.2",
             "dependsOn": [
-                "d903b3d6-de20-4746-a264-155ae4f13f54",
+                "b458d379-2c28-4bda-889f-408f95f4c3e8",
                 "pkg:npm/%40docusaurus/logger@3.10.2",
                 "pkg:npm/%40docusaurus/utils-validation@3.10.2",
                 "pkg:npm/%40docusaurus/utils@3.10.2",
@@ -78363,7 +78363,7 @@
         {
             "ref": "pkg:npm/%40docusaurus/utils@3.10.2",
             "dependsOn": [
-                "d903b3d6-de20-4746-a264-155ae4f13f54",
+                "b458d379-2c28-4bda-889f-408f95f4c3e8",
                 "pkg:npm/%4011ty/gray-matter@1.0.0",
                 "pkg:npm/%40docusaurus/logger@3.10.2",
                 "pkg:npm/%40docusaurus/types@3.10.2",
@@ -81163,7 +81163,7 @@
         {
             "ref": "pkg:npm/%40oxc-parser/binding-wasm32-wasi@0.142.0",
             "dependsOn": [
-                "7fc4b97b-a4e8-426d-88a0-6673d934e091",
+                "465986ee-fe80-4a79-a180-817d8b95944e",
                 "pkg:npm/%40emnapi/core@1.11.2",
                 "pkg:npm/%40emnapi/runtime@1.11.2"
             ]
@@ -81255,7 +81255,7 @@
         {
             "ref": "pkg:npm/%40oxc-resolver/binding-wasm32-wasi@11.24.2",
             "dependsOn": [
-                "7fc4b97b-a4e8-426d-88a0-6673d934e091",
+                "465986ee-fe80-4a79-a180-817d8b95944e",
                 "pkg:npm/%40emnapi/core@1.11.2",
                 "pkg:npm/%40emnapi/runtime@1.11.2"
             ]
@@ -81654,7 +81654,7 @@
         {
             "ref": "pkg:npm/%40rollup/plugin-commonjs@22.0.2",
             "dependsOn": [
-                "3f40f3ef-6e85-457d-9026-4b47bf4d3fc6",
+                "bc9dd8d7-1017-4699-bcee-62cdca38249b",
                 "pkg:npm/commondir@1.0.1",
                 "pkg:npm/estree-walker@2.0.2",
                 "pkg:npm/glob@7.2.3",
@@ -81679,7 +81679,7 @@
         {
             "ref": "pkg:npm/%40rollup/plugin-commonjs@29.0.3",
             "dependsOn": [
-                "08de4ca2-17f5-4b27-8cb2-8aecbefddbae",
+                "f0d3ab2d-f084-40d4-94a8-76de2604ee12",
                 "pkg:npm/%40rollup/pluginutils@5.4.0",
                 "pkg:npm/commondir@1.0.1",
                 "pkg:npm/estree-walker@2.0.2",
@@ -81729,7 +81729,7 @@
         {
             "ref": "pkg:npm/%40rollup/plugin-replace@2.4.2",
             "dependsOn": [
-                "cff8e1d6-66f3-406e-a29a-2da40f0bd495",
+                "59d7a60c-05f3-4d18-ab88-1cf9531294b1",
                 "pkg:npm/magic-string@0.25.9",
                 "pkg:npm/rollup@4.62.4"
             ]
@@ -83181,8 +83181,8 @@
         {
             "ref": "pkg:npm/%40tapjs/test@4.4.9",
             "dependsOn": [
-                "58031c2c-e713-40eb-b204-3284d998fe7d",
-                "eaceffb1-a769-46f2-8000-64d57f9c4c2f",
+                "46142f5a-c61b-4580-8650-76b695a8c910",
+                "87fa5502-d317-4230-8394-fbf1028d6917",
                 "pkg:npm/%40tapjs/after-each@4.3.11",
                 "pkg:npm/%40tapjs/after@3.3.11",
                 "pkg:npm/%40tapjs/asserts@4.3.11",
@@ -83932,7 +83932,7 @@
         {
             "ref": "pkg:npm/%40typescript-eslint/eslint-plugin@8.66.0",
             "dependsOn": [
-                "30850509-61a1-438c-b94f-2a09e8e979f9",
+                "b0b7b6c5-24a6-49ea-be12-4e181c60a70d",
                 "pkg:npm/%40eslint-community/regexpp@4.12.2",
                 "pkg:npm/%40typescript-eslint/parser@8.66.0",
                 "pkg:npm/%40typescript-eslint/scope-manager@8.66.0",
@@ -83948,7 +83948,7 @@
         {
             "ref": "pkg:npm/%40typescript-eslint/parser@8.66.0",
             "dependsOn": [
-                "c0825034-acbc-4a06-a304-4281f6e5b80e",
+                "0942eafe-34c2-4ec3-85e0-7518e5359ba7",
                 "pkg:npm/%40typescript-eslint/scope-manager@8.66.0",
                 "pkg:npm/%40typescript-eslint/types@8.66.0",
                 "pkg:npm/%40typescript-eslint/visitor-keys@8.66.0",
@@ -83967,8 +83967,8 @@
         {
             "ref": "pkg:npm/%40typescript-eslint/type-utils@8.66.0",
             "dependsOn": [
-                "30850509-61a1-438c-b94f-2a09e8e979f9",
-                "c0825034-acbc-4a06-a304-4281f6e5b80e",
+                "0942eafe-34c2-4ec3-85e0-7518e5359ba7",
+                "b0b7b6c5-24a6-49ea-be12-4e181c60a70d",
                 "pkg:npm/%40typescript-eslint/types@8.66.0",
                 "pkg:npm/%40typescript-eslint/utils@8.66.0",
                 "pkg:npm/debug@4.4.3",
@@ -83983,7 +83983,7 @@
         {
             "ref": "pkg:npm/%40typescript-eslint/utils@8.66.0",
             "dependsOn": [
-                "c0825034-acbc-4a06-a304-4281f6e5b80e",
+                "0942eafe-34c2-4ec3-85e0-7518e5359ba7",
                 "pkg:npm/%40eslint-community/eslint-utils@4.10.1",
                 "pkg:npm/%40typescript-eslint/scope-manager@8.66.0",
                 "pkg:npm/%40typescript-eslint/types@8.66.0",
@@ -84117,7 +84117,7 @@
         {
             "ref": "pkg:npm/%40unrs/resolver-binding-wasm32-wasi@1.12.2",
             "dependsOn": [
-                "5de54a97-f70e-4faa-8156-dde268600735",
+                "78de47df-5641-4abb-b175-f38375064ba1",
                 "pkg:npm/%40emnapi/core@1.10.0",
                 "pkg:npm/%40emnapi/runtime@1.10.0"
             ]
@@ -87807,7 +87807,7 @@
         {
             "ref": "pkg:npm/detective-typescript@14.1.2",
             "dependsOn": [
-                "83a4d167-a000-414c-afdc-50c2b9840540",
+                "05715e20-14b0-4068-a9ed-e6db6d342ae2",
                 "pkg:npm/ast-module-types@6.0.2",
                 "pkg:npm/node-source-walk@7.0.2",
                 "pkg:npm/typescript@5.9.3"
@@ -92472,7 +92472,7 @@
         {
             "ref": "pkg:npm/knip@6.32.1",
             "dependsOn": [
-                "08de4ca2-17f5-4b27-8cb2-8aecbefddbae",
+                "f0d3ab2d-f084-40d4-94a8-76de2604ee12",
                 "pkg:npm/formatly@0.3.0",
                 "pkg:npm/get-tsconfig@4.14.1",
                 "pkg:npm/jiti@2.7.0",
@@ -95027,7 +95027,7 @@
         {
             "ref": "pkg:npm/npm-package-json-lint@10.4.1",
             "dependsOn": [
-                "d115418d-437c-4aa5-af08-23df11d341a2",
+                "3246e358-501c-4509-9291-e744f8085ec8",
                 "pkg:npm/ajv@6.14.0",
                 "pkg:npm/chalk@4.1.2",
                 "pkg:npm/cosmiconfig@8.3.6",
@@ -99143,7 +99143,7 @@
         {
             "ref": "pkg:npm/schema-utils@1.0.0",
             "dependsOn": [
-                "cd8e0906-e3be-456b-a1f3-4a50431086c5",
+                "317cd9ed-4fe1-438b-9414-946f456896f6",
                 "pkg:npm/ajv-keywords@3.5.2",
                 "pkg:npm/ajv@6.15.0"
             ]
@@ -100637,7 +100637,7 @@
         {
             "ref": "pkg:npm/tap@21.7.5",
             "dependsOn": [
-                "cced6f95-b0cf-4ca1-874e-5d8c4afd6161",
+                "1739a63d-2b5d-4dbb-84ee-d32470352477",
                 "pkg:npm/%40tapjs/after-each@4.3.11",
                 "pkg:npm/%40tapjs/after@3.3.11",
                 "pkg:npm/%40tapjs/asserts@4.3.11",
@@ -100952,7 +100952,7 @@
         {
             "ref": "pkg:npm/tinyglobby@0.2.17",
             "dependsOn": [
-                "fccacc3a-3638-41a5-a5f3-b65efeb80ac1",
+                "f171e928-c029-4d8a-9ef9-0dd6e4b1fe1a",
                 "pkg:npm/picomatch@4.0.4"
             ]
         },
@@ -101338,7 +101338,7 @@
         {
             "ref": "pkg:npm/typescript-eslint@8.66.0",
             "dependsOn": [
-                "c0825034-acbc-4a06-a304-4281f6e5b80e",
+                "0942eafe-34c2-4ec3-85e0-7518e5359ba7",
                 "pkg:npm/%40typescript-eslint/eslint-plugin@8.66.0",
                 "pkg:npm/%40typescript-eslint/parser@8.66.0",
                 "pkg:npm/%40typescript-eslint/utils@8.66.0",
@@ -101755,7 +101755,7 @@
         {
             "ref": "pkg:npm/url-loader@4.1.1",
             "dependsOn": [
-                "7bd272d0-2bfc-4cd0-af88-138a2beab1a4",
+                "95ae1578-28e6-4b20-9361-b0c1c4613dfe",
                 "pkg:npm/loader-utils@2.0.4",
                 "pkg:npm/mime-types@2.1.35",
                 "pkg:npm/schema-utils@3.3.0",
@@ -102225,7 +102225,7 @@
         {
             "ref": "pkg:npm/webpack@5.105.2",
             "dependsOn": [
-                "75ede625-4caf-46fd-b368-637592b36c24",
+                "8cc18601-719b-4bb7-805a-76d20b9f5519",
                 "pkg:npm/%40types/eslint-scope@3.7.7",
                 "pkg:npm/%40types/estree@1.0.9",
                 "pkg:npm/%40types/json-schema@7.0.15",

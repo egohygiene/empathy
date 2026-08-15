@@ -123,6 +123,12 @@ beacon/CLI.md:16:36: typography.symbols.curly_quotes: Use curly quotes “”, n
 beacon/CLI.md:17:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/CLI.md:18:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/CLI.md:51:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/README.md:44:44: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/README.md:45:44: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/README.md:46:44: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/README.md:47:44: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/README.md:48:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/README.md:49:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/templates/research-paper/example/paper.md:2:8: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/templates/research-paper/example/paper.md:3:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".

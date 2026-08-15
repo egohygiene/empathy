@@ -406,11 +406,11 @@ Linter raw log:
 
  README.md
  8:53    warning  'are extracted' may be passive voice. Use active voice if you can.  write-good.Passive  
- 38:18   warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
- 70:58   warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
- 97:34   warning  'validate' is too wordy.                                            write-good.TooWordy 
- 102:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
- 103:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 41:18   warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 75:58   warning  'be authored' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 103:34  warning  'validate' is too wordy.                                            write-good.TooWordy 
+ 108:65  warning  'is preserved' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 109:29  warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive  
 
 
  ROADMAP.md
@@ -471,8 +471,10 @@ Linter raw log:
 
 
  beacon/README.md
+ 8:58   warning  'validate' is too wordy.                                           write-good.TooWordy 
  19:24  warning  'is described' may be passive voice. Use active voice if you can.  write-good.Passive  
- 33:1   warning  'assistance' is too wordy.                                         write-good.TooWordy 
+ 36:43  warning  'assistance' is too wordy.                                         write-good.TooWordy 
+ 37:1   warning  'additional' is too wordy.                                         write-good.TooWordy 
 
 
  beacon/templates/research-paper/README.md
@@ -2604,5 +2606,5 @@ Linter raw log:
  70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
  74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 2017 warnings and 0 suggestions in 236 files.
+✖ 4 errors, 2019 warnings and 0 suggestions in 236 files.
 
