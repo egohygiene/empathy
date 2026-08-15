@@ -4,223 +4,100 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_trivy/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026-08-15T21:14:45Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-15T21:14:45Z	INFO	[vulndb] Need to update DB
-2026-08-15T21:14:45Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-15T21:14:45Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-17.12 MiB / 107.72 MiB [--------->__________________________________________________] 15.90% ? p/s ?58.66 MiB / 107.72 MiB [-------------------------------->___________________________] 54.46% ? p/s ?100.70 MiB / 107.72 MiB [------------------------------------------------------->___] 93.48% ? p/s ?107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 151.16 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 151.16 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 151.16 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 141.41 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 141.41 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 141.41 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 132.28 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 132.28 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 132.28 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 123.75 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 123.75 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 123.75 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 115.76 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 115.76 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 115.76 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 108.30 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 108.30 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 108.30 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 101.31 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 101.31 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 101.31 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 94.77 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 94.77 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 94.77 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 88.66 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 88.66 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-----------------------------------------------] 100.00% 19.15 MiB p/s 5.8s2026-08-15T21:14:53Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-15T21:14:53Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-15T21:14:53Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-15T21:14:53Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-15T21:14:53Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.13 MiB p/s 300ms2026-08-15T21:14:58Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-15T21:14:59Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-15T21:14:59Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-15T21:14:59Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-15T21:14:59Z	INFO	Number of language-specific files	num=4
-2026-08-15T21:14:59Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-15T21:14:59Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-15T21:14:59Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-15T21:14:59Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-15T21:15:00Z	INFO	Detected config files	num=13
-
-Report Summary
-
-┌───────────────────────────────────────────────────────────────────┬────────────────┬─────────────────┬───────────────────┐
-│                              Target                               │      Type      │ Vulnerabilities │ Misconfigurations │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/Cargo.lock                                                │     cargo      │        0        │         -         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/pnpm-lock.yaml                                            │      pnpm      │        3        │         -         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/govulncheck/go.mod                         │     gomod      │        0        │         -         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/uv.lock                                                   │       uv       │        1        │         -         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/checkov/Dockerfile                         │   dockerfile   │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/cloudformation/valid-template.yml          │ cloudformation │        -        │         1         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/conftest/valid.yml                         │   kubernetes   │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/hadolint/Dockerfile                        │   dockerfile   │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/kics/terraform                             │   terraform    │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/kics/terraform/main.tf                     │   terraform    │        -        │         1         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/kubernetes/valid-deployment.yml            │   kubernetes   │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/negative/conftest/invalid.yml              │   kubernetes   │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml │   kubernetes   │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml     │   kubernetes   │        -        │         3         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/negative/terraform-fmt                     │   terraform    │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/tekton-lint/task.yaml                      │   kubernetes   │        -        │         0         │
-├───────────────────────────────────────────────────────────────────┼────────────────┼─────────────────┼───────────────────┤
-│ egolint/tests/fixtures/tflint                                     │   terraform    │        -        │         0         │
-└───────────────────────────────────────────────────────────────────┴────────────────┴─────────────────┴───────────────────┘
-Legend:
-- '-': Not scanned
-- '0': Clean (no security findings detected)
-
-
-For OSS Maintainers: VEX Notice
---------------------------------
-If you're an OSS maintainer and Trivy has detected vulnerabilities in your project that you believe are not actually exploitable, consider issuing a VEX (Vulnerability Exploitability eXchange) statement.
-VEX allows you to communicate the actual status of vulnerabilities in your project, improving security transparency and reducing false positives for your users.
-Learn more and start using VEX: https://trivy.dev/docs/v0.73/guide/supply-chain/vex/repo#publishing-vex-documents
-
-To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
-
-
-egolint/pnpm-lock.yaml (pnpm)
-=============================
-Total: 3 (HIGH: 2, CRITICAL: 1)
-
-┌────────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
-│  Library   │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                            Title                             │
-├────────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ decompress │ CVE-2026-53486 │ CRITICAL │ affected │ 4.2.1             │               │ decompress: @xhmikosr/decompress: Decompress: Arbitrary file │
-│            │                │          │          │                   │               │ read/write via crafted archive extraction                    │
-│            │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-53486                   │
-├────────────┼────────────────┼──────────┤          ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ image-size │ CVE-2025-71329 │ HIGH     │          │ 2.0.2             │               │ image-size: image-size: Denial of Service via crafted image  │
-│            │                │          │          │                   │               │ buffer with zero-valued size...                              │
-│            │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-71329                   │
-│            ├────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
-│            │ CVE-2025-71330 │          │          │                   │               │ image-size: image-size: Denial of Service via crafted ICNS   │
-│            │                │          │          │                   │               │ image buffer                                                 │
-│            │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-71330                   │
-└────────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
-
-egolint/uv.lock (uv)
-====================
-Total: 1 (HIGH: 1, CRITICAL: 0)
-
-┌─────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬────────────────────────────────────────────────┐
-│ Library │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                     Title                      │
-├─────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼────────────────────────────────────────────────┤
-│ ecdsa   │ CVE-2024-23342 │ HIGH     │ affected │ 0.19.2            │               │ python-ecdsa: vulnerable to the Minerva attack │
-│         │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2024-23342     │
-└─────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴────────────────────────────────────────────────┘
-
-egolint/tests/fixtures/cloudformation/valid-template.yml (cloudformation)
-=========================================================================
-Tests: 13 (SUCCESSES: 12, FAILURES: 1)
-Failures: 1 (HIGH: 1, CRITICAL: 0)
-
-AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
-════════════════════════════════════════
-Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
-Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
-
-
-See https://avd.aquasec.com/misconfig/aws-0132
-────────────────────────────────────────
- egolint/tests/fixtures/cloudformation/valid-template.yml:7-20
-────────────────────────────────────────
-   7 ┌   ExampleBucket:
-   8 │     Type: AWS::S3::Bucket
-   9 │     DeletionPolicy: Delete
-  10 │     UpdateReplacePolicy: Delete
-  11 │     Properties:
-  12 │       BucketEncryption:
-  13 │         ServerSideEncryptionConfiguration:
-  14 │           - ServerSideEncryptionByDefault:
-  15 └               SSEAlgorithm: AES256
-  ..   
-────────────────────────────────────────
-
-
-
-egolint/tests/fixtures/kics/terraform/main.tf (terraform)
-=========================================================
-Tests: 1 (SUCCESSES: 0, FAILURES: 1)
-Failures: 1 (HIGH: 1, CRITICAL: 0)
-
-AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
-════════════════════════════════════════
-Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
-Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
-
-
-See https://avd.aquasec.com/misconfig/aws-0132
-────────────────────────────────────────
- egolint/tests/fixtures/kics/terraform/main.tf:25-33
-────────────────────────────────────────
-  25 ┌ resource "aws_s3_bucket_server_side_encryption_configuration" "fixture" {
-  26 │   bucket = aws_s3_bucket.fixture.id
-  27 │ 
-  28 │   rule {
-  29 │     apply_server_side_encryption_by_default {
-  30 │       sse_algorithm = "AES256"
-  31 │     }
-  32 │   }
-  33 └ }
-────────────────────────────────────────
-
-
-
-egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml (kubernetes)
-==========================================================================
-Tests: 22 (SUCCESSES: 19, FAILURES: 3)
-Failures: 3 (HIGH: 3, CRITICAL: 0)
-
-KSV-0014 (HIGH): Container 'privileged' of Pod 'privileged-pod' should set 'securityContext.readOnlyRootFilesystem' to true
-════════════════════════════════════════
-An immutable root file system prevents applications from writing to their local disk. This can limit intrusions, as attackers will not be able to tamper with the file system or write foreign executables to disk.
-
-See https://avd.aquasec.com/misconfig/ksv-0014
-────────────────────────────────────────
- egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:8-11
-────────────────────────────────────────
-   8 ┌     - name: privileged
-   9 │       image: "ghcr.io/example/privileged:1.0.0"
-  10 │       securityContext:
-  11 └         privileged: true
-────────────────────────────────────────
-
-
-KSV-0017 (HIGH): Container 'privileged' of Pod 'privileged-pod' should set 'securityContext.privileged' to false
-════════════════════════════════════════
-Privileged containers share namespaces with the host system and do not offer any security. They should be used exclusively for system containers that require high privileges.
-
-See https://avd.aquasec.com/misconfig/ksv-0017
-────────────────────────────────────────
- egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:8-11
-────────────────────────────────────────
-   8 ┌     - name: privileged
-   9 │       image: "ghcr.io/example/privileged:1.0.0"
-  10 │       securityContext:
-  11 └         privileged: true
-────────────────────────────────────────
-
-
-KSV-0118 (HIGH): pod privileged-pod in default namespace is using the default security context, which allows root privileges
-════════════════════════════════════════
-Security context controls the allocation of security parameters for the pod/container/volume, ensuring the appropriate level of protection. Relying on default security context may expose vulnerabilities to potential attacks that rely on privileged access.
-
-See https://avd.aquasec.com/misconfig/ksv-0118
-────────────────────────────────────────
- egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:6-11
-────────────────────────────────────────
-   6 ┌ spec:
-   7 │   containers:
-   8 │     - name: privileged
-   9 │       image: "ghcr.io/example/privileged:1.0.0"
-  10 │       securityContext:
-  11 └         privileged: true
-────────────────────────────────────────
-
-
+2026-08-15T21:41:34Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-15T21:41:34Z	INFO	[vulndb] Need to update DB
+2026-08-15T21:41:34Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-15T21:41:34Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+24.75 MiB / 107.72 MiB [------------->______________________________________________] 22.98% ? p/s ?60.16 MiB / 107.72 MiB [--------------------------------->__________________________] 55.84% ? p/s ?95.63 MiB / 107.72 MiB [----------------------------------------------------->______] 88.77% ? p/s ?107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 138.64 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 138.64 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 138.64 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 129.69 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 129.69 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 129.69 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 121.33 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 121.33 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 121.33 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 113.50 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 113.50 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 113.50 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 106.18 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 106.18 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 106.18 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 99.33 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 99.33 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 99.33 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 92.92 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 92.92 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 92.92 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 86.92 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 86.92 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 86.92 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 81.31 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 81.31 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-----------------------------------------------] 100.00% 18.75 MiB p/s 5.9s2026-08-15T21:41:41Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-15T21:41:41Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-15T21:41:41Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-15T21:41:41Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-15T21:41:41Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-15T21:41:46Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-15T21:41:46Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-15T21:41:46Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-15T21:41:46Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-15T21:41:47Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 
 📣 Notices:
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
 
 To suppress version checks, run Trivy scans with the --skip-version-check flag
 
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2616cf2]
+
+goroutine 1 [running]:
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x37f5eee6ad70)
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:74 +0x32
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x37f5ef4f1200?, 0x6, 0x4252f4?})
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:118 +0x12e
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x37f5f1b2e8c0, 0x7fb0345df108?)
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:73 +0x57
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:68
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x37f5f4c64fb6, 0x37f5f1b2e8c0)
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x37f5f4c64fb6, {0x5aa9040?, 0x37f5f0955f43?}, {0x67caaa0?, 0x37f5efd70750?}, {0x37f5f173aaf0, 0x43})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x37f5eee6aa00}, {0x0, 0x0})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
+io/fs.walkDir({0x67cb5e0, 0x37f5f2edc7f8}, {0x37f5f173aaf0, 0x43}, {0x6831f78, 0x37f5eee6aa00}, 0x37f5ef792ba8)
+	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:73 +0x6c
+io/fs.walkDir({0x67cb5e0, 0x37f5f2edc7f8}, {0x37f5f0955f20, 0x2d}, {0x6831f78, 0x37f5f0927748}, 0x37f5ef792ba8)
+	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
+io/fs.walkDir({0x67cb5e0, 0x37f5f2edc7f8}, {0x37f5f56a9200, 0x22}, {0x6831f78, 0x37f5f34df568}, 0x37f5ef792ba8)
+	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
+io/fs.walkDir({0x67cb5e0, 0x37f5f2edc7f8}, {0x37f5f3add248, 0x17}, {0x6831f78, 0x37f5f34de708}, 0x37f5ef792ba8)
+	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
+io/fs.walkDir({0x67cb5e0, 0x37f5f2edc7f8}, {0x37f5f5d909b0, 0x8}, {0x6831f78, 0x37f5f34de488}, 0x37f5ef792ba8)
+	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
+io/fs.walkDir({0x67cb5e0, 0x37f5f2edc7f8}, {0x67a84f8, 0x1}, {0x6831370, 0x37f5f1894d80}, 0x37f5ef792ba8)
+	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
+io/fs.WalkDir({0x67cb5e0, 0x37f5f2edc7f8}, {0x67a84f8, 0x1}, 0x37f5ef792ba8)
+	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:122 +0x9a
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x37f5f4ce7c80}, {0x67cb5e0, 0x37f5f2edc7f8}, {0x67a84f8, 0x1})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x37f5f4ce7c80}, {0x67cb5e0, 0x37f5f2edc7f8}, {0x67a84f8, 0x1?})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x37f5f4dad640, {0x68311b0, 0x37f5eea5c000}, {0x67cb5e0, 0x37f5f2edc570})
+	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x37f5f4dd0520, {0x68311b0?, 0x37f5eea5c000?}, {{0x67cb5e0, 0x37f5f2edc570}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x37f5f4dbf500, {0x37f5f4dee200, 0x1f, 0x20}, {0x37f5f4dee400, 0x19, 0x20}, 0x37f5f4dcde00, {0x37f5ee90b1a7, 0x7}}, ...)
+	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x37f5f4dbf500, {0x37f5f4dee200, 0x1f, 0x20}, {0x37f5f4dee400, 0x19, 0x20}, 0x37f5f4dcde00, {0x37f5ee90b1a7, 0x7}}, ...)
+	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffd570fe12f, 0x1}, 0x37f5f4dbfdb0, {0x7faf6d3c6300, 0x37f5f001f740}, {0x67cb520, 0xa3125e0}, {0x37f5f4dbf500, {0x37f5f4dee200, 0x1f, ...}, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x37f5ef685320, 0x2, 0x2}, {0x37f5ef4a1580, ...}, ...})
+	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffd570fdf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffd570fdf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffd570fdf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffd570fdf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffd570fdf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffd570fdf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x37f5eeadac08, {0x37f5ef461888, 0x1, 0x33})
+	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
+github.com/spf13/cobra.(*Command).execute(0x37f5eeadac08, {0x37f5ef461508, 0x33, 0x33})
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
+github.com/spf13/cobra.(*Command).ExecuteC(0x37f5eeada608)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
+github.com/spf13/cobra.(*Command).Execute(...)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
+github.com/spf13/cobra.(*Command).ExecuteContext(...)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
+github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x37f5eed6fa40})
+	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
+main.run()
+	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c
+main.main()
+	/home/runner/work/trivy/trivy/cmd/trivy/main.go:19 +0x1f
 
