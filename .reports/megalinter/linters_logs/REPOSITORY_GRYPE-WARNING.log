@@ -67,5 +67,5 @@ cryptography                 45.0.4                                    46.0.6   
 pygments                     2.19.2                                    2.20.0    python         GHSA-5239-wwwm-4pmq  Low       0.2% (5th)    < 0.1  
 virtualenv                   20.31.2                                   20.36.1   python         GHSA-597g-3phw-6986  Medium    < 0.1% (0th)  < 0.1  
 cryptography                 45.0.4                                    48.0.1    python         GHSA-537c-gmf6-5ccf  High      N/A           N/A
-[0113] ERROR discovered vulnerabilities at or above the severity threshold
+[0105] ERROR discovered vulnerabilities at or above the severity threshold
 

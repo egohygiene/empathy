@@ -415,6 +415,9 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
+   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
+Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 510:27] (14 lines, 479 tokens)
    .staging/.github/agents/awesome/gem-mobile-tester.agent.md:markdown [84:36 - 98:4]
 Clone found (markdown)
@@ -889,14 +892,14 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [24:124 - 128:4] (105 lines, 250 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [22:119 - 127:4]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [28:53 - 116:8] (89 lines, 103 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [26:53 - 114:12]
+Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 114:28] (84 lines, 1122 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [29:1 - 112:28]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
-Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [59:1 - 116:2] (58 lines, 795 tokens)
-   .staging/.github/skills/create-specification/SKILL.md:markdown [57:1 - 114:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1696,8 +1699,14 @@ Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [124:22 - 131:3] (8 lines, 64 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [96:22 - 103:3]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [130:35 - 141:3] (12 lines, 179 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [102:35 - 113:3]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [140:35 - 148:124] (9 lines, 156 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [112:35 - 120:124]
 Clone found (markdown)
  - .staging/.github/skills/create-llms/SKILL.md:markdown [53:32 - 108:13] (56 lines, 562 tokens)
    .staging/.github/skills/update-llms/SKILL.md:markdown [47:42 - 96:13]
@@ -1710,9 +1719,6 @@ Clone found (txt)
 Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
-Clone found (markdown)
- - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
 Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
@@ -2760,9 +2766,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
-Clone found (markdown)
- - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
-   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -3579,6 +3582,18 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.specify/templates/tasks-template.md:markdown [102:49 - 108:26] (7 lines, 63 tokens)
    .staging/.specify/templates/tasks-template.md:markdown [124:49 - 130:26]
+Clone found (json)
+ - .staging/.vscode/extensions.json [1:1 - 62:2] (62 lines, 187 tokens)
+   .staging/.vscode2/extensions.json [1:1 - 62:2]
+Clone found (json)
+ - .staging/.vscode/launch.json [1:1 - 26:2] (26 lines, 116 tokens)
+   .staging/.vscode2/launch.json [1:1 - 26:2]
+Clone found (json)
+ - .staging/.vscode/settings.json [1:1 - 575:2] (575 lines, 3051 tokens)
+   .staging/.vscode2/settings.json [1:1 - 575:2]
+Clone found (json)
+ - .staging/.vscode/tasks.json [1:1 - 86:2] (86 lines, 396 tokens)
+   .staging/.vscode2/tasks.json [1:1 - 86:2]
 Clone found (markdown)
  - .staging/devenvironment/.devcontainer/features/devtools/README.md:markdown [11:1 - 18:4] (8 lines, 72 tokens)
    .staging/devenvironment/.devcontainer/features/docker-proxy/README.md:markdown [15:1 - 22:4]
@@ -3693,6 +3708,207 @@ Clone found (typescript)
 Clone found (typescript)
  - .staging/react-template/universal/apps/ui/src/components/kepler/Map/Map.types.ts [1:22 - 11:53] (11 lines, 92 tokens)
    .staging/react-template/universal/apps/ui/src/pages/HomePage/HomePage.types.ts [1:27 - 11:53]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 31:76] (11 lines, 52 tokens)
+   .staging/specs2/architecture/domain/personal-model.spec.md:markdown [28:67 - 38:76]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/experience/design-system.spec.md:markdown [29:59 - 46:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/experience/design.spec.md:markdown [29:28 - 46:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/foundation/architecture.spec.md:markdown [30:8 - 47:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/foundation/foundations.spec.md:markdown [29:65 - 46:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/foundation/roadmap.spec.md:markdown [29:63 - 46:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/foundation/system.spec.md:markdown [28:46 - 45:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/identity/principles.spec.md:markdown [31:7 - 48:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/identity/purpose.spec.md:markdown [29:35 - 46:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/meta/epistemology.spec.md:markdown [31:48 - 48:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [21:152 - 37:16] (17 lines, 75 tokens)
+   .staging/specs2/architecture/meta/meta.spec.md:markdown [27:68 - 44:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [23:1 - 37:16] (15 lines, 74 tokens)
+   .staging/specs2/architecture/governance/decisions.spec.md:markdown [30:1 - 45:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [23:1 - 37:16] (15 lines, 74 tokens)
+   .staging/specs2/architecture/identity/manifesto.spec.md:markdown [33:1 - 48:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [264:36 - 272:31] (9 lines, 65 tokens)
+   .staging/specs2/architecture/identity/principles.spec.md:markdown [297:53 - 305:31]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [265:50 - 272:38] (8 lines, 51 tokens)
+   .staging/specs2/architecture/domain/personal-model.spec.md:markdown [302:54 - 309:38]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [265:50 - 273:31] (9 lines, 69 tokens)
+   .staging/specs2/architecture/experience/design.spec.md:markdown [292:59 - 300:31]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/ontology.spec.md:markdown [265:33 - 273:18] (9 lines, 71 tokens)
+   .staging/specs2/architecture/foundation/system.spec.md:markdown [301:38 - 309:31]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/personal-model.spec.md:markdown [301:72 - 309:38] (9 lines, 65 tokens)
+   .staging/specs2/architecture/foundation/foundations.spec.md:markdown [278:58 - 286:42]
+Clone found (markdown)
+ - .staging/specs2/architecture/domain/personal-model.spec.md:markdown [302:15 - 309:31] (8 lines, 57 tokens)
+   .staging/specs2/architecture/foundation/architecture.spec.md:markdown [299:19 - 306:31]
+Clone found (markdown)
+ - .staging/specs2/architecture/experience/design-system.spec.md:markdown [29:45 - 46:17] (18 lines, 76 tokens)
+   .staging/specs2/architecture/identity/pillars.spec.md:markdown [31:1 - 48:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/experience/design-system.spec.md:markdown [29:44 - 46:17] (18 lines, 77 tokens)
+   .staging/specs2/architecture/identity/vision.spec.md:markdown [28:56 - 45:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/architecture.spec.md:markdown [30:1 - 47:17] (18 lines, 76 tokens)
+   .staging/specs2/architecture/foundation/methodology.spec.md:markdown [28:28 - 45:17]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/architecture.spec.md:markdown [86:71 - 96:43] (11 lines, 69 tokens)
+   egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [99:73 - 109:43]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/methodology.spec.md:markdown [226:9 - 240:3] (15 lines, 56 tokens)
+   .staging/specs2/architecture/identity/manifesto.spec.md:markdown [220:18 - 234:3]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/roadmap.spec.md:markdown [145:1 - 154:4] (10 lines, 50 tokens)
+   egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [168:1 - 177:4]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/roadmap.spec.md:markdown [145:1 - 154:20] (10 lines, 54 tokens)
+   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [153:1 - 162:20]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/roadmap.spec.md:markdown [226:1 - 233:20] (8 lines, 50 tokens)
+   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [227:1 - 234:20]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/roadmap.spec.md:markdown [289:10 - 297:31] (9 lines, 63 tokens)
+   .staging/specs2/architecture/identity/purpose.spec.md:markdown [288:21 - 296:31]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/system.spec.md:markdown [13:1 - 20:44] (8 lines, 54 tokens)
+   egolint/.agents/specs/architecture/foundation/system.spec.md:markdown [28:1 - 35:44]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/system.spec.md:markdown [149:1 - 159:13] (11 lines, 53 tokens)
+   egolint/.agents/specs/architecture/foundation/system.spec.md:markdown [165:1 - 175:13]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/system.spec.md:markdown [184:60 - 192:32] (9 lines, 72 tokens)
+   egolint/.agents/specs/architecture/foundation/system.spec.md:markdown [198:60 - 206:32]
+Clone found (markdown)
+ - .staging/specs2/architecture/foundation/system.spec.md:markdown [233:1 - 244:3] (12 lines, 60 tokens)
+   egolint/.agents/specs/architecture/foundation/system.spec.md:markdown [237:1 - 248:3]
+Clone found (markdown)
+ - .staging/specs2/architecture/governance/decisions.spec.md:markdown [284:62 - 292:42] (9 lines, 65 tokens)
+   .staging/specs2/architecture/meta/ai-constitution.spec.md:markdown [295:76 - 303:42]
+Clone found (markdown)
+ - .staging/specs2/architecture/identity/manifesto.spec.md:markdown [281:63 - 290:40] (10 lines, 83 tokens)
+   .staging/specs2/architecture/identity/pillars.spec.md:markdown [290:53 - 299:40]
+Clone found (markdown)
+ - .staging/specs2/architecture/identity/manifesto.spec.md:markdown [281:63 - 291:42] (11 lines, 101 tokens)
+   .staging/specs2/architecture/identity/principles.spec.md:markdown [298:62 - 308:40]
+Clone found (markdown)
+ - .staging/specs2/architecture/identity/pillars.spec.md:markdown [224:48 - 235:18] (12 lines, 53 tokens)
+   .staging/specs2/architecture/meta/ai-constitution.spec.md:markdown [230:64 - 241:18]
+Clone found (markdown)
+ - .staging/specs2/architecture/identity/pillars.spec.md:markdown [290:30 - 298:40] (9 lines, 71 tokens)
+   .staging/specs2/architecture/identity/vision.spec.md:markdown [285:33 - 293:40]
+Clone found (markdown)
+ - .staging/specs2/architecture/identity/principles.spec.md:markdown [31:1 - 48:17] (18 lines, 76 tokens)
+   .staging/specs2/architecture/meta/ai-constitution.spec.md:markdown [33:1 - 50:17]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [6:33 - 17:13] (12 lines, 80 tokens)
+   .staging/specs2/artifact-documentation.spec.md:markdown [6:41 - 17:13]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [6:33 - 17:16] (12 lines, 82 tokens)
+   .staging/specs2/artifact-domain.spec.md:markdown [6:34 - 17:15]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [6:33 - 17:16] (12 lines, 82 tokens)
+   .staging/specs2/artifact-practice.spec.md:markdown [6:36 - 17:15]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [6:33 - 17:16] (12 lines, 82 tokens)
+   .staging/specs2/artifact-research.spec.md:markdown [6:36 - 17:15]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [6:33 - 17:16] (12 lines, 82 tokens)
+   .staging/specs2/artifact-schema.spec.md:markdown [6:34 - 17:15]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [6:33 - 17:16] (12 lines, 82 tokens)
+   .staging/specs2/artifact-specification.spec.md:markdown [6:41 - 17:15]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [191:83 - 199:3] (9 lines, 50 tokens)
+   .staging/specs2/artifact-domain.spec.md:markdown [149:68 - 157:3]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [214:74 - 222:10] (9 lines, 61 tokens)
+   .staging/specs2/artifact-documentation.spec.md:markdown [218:84 - 226:10]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [214:97 - 222:10] (9 lines, 55 tokens)
+   .staging/specs2/artifact-domain.spec.md:markdown [169:75 - 177:10]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [214:97 - 222:10] (9 lines, 55 tokens)
+   .staging/specs2/artifact-research.spec.md:markdown [187:82 - 195:10]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [214:55 - 222:10] (9 lines, 66 tokens)
+   .staging/specs2/artifact-schema.spec.md:markdown [189:62 - 197:10]
+Clone found (markdown)
+ - .staging/specs2/artifact-agent.spec.md:markdown [214:97 - 222:10] (9 lines, 55 tokens)
+   .staging/specs2/artifact-specification.spec.md:markdown [210:82 - 218:10]
+Clone found (markdown)
+ - .staging/specs2/artifact-domain.spec.md:markdown [29:57 - 36:22] (8 lines, 52 tokens)
+   .staging/specs2/domain-framework.spec.md:markdown [29:79 - 36:22]
+Clone found (markdown)
+ - .staging/specs2/artifact-domain.spec.md:markdown [144:19 - 149:44] (6 lines, 62 tokens)
+   .staging/specs2/artifact-practice.spec.md:markdown [159:21 - 164:44]
+Clone found (markdown)
+ - .staging/specs2/artifact-domain.spec.md:markdown [149:50 - 157:29] (9 lines, 65 tokens)
+   .staging/specs2/artifact-practice.spec.md:markdown [164:52 - 172:29]
+Clone found (markdown)
+ - .staging/specs2/artifact-domain.spec.md:markdown [149:60 - 157:45] (9 lines, 66 tokens)
+   .staging/specs2/artifact-specification.spec.md:markdown [188:52 - 196:39]
+Clone found (markdown)
+ - .staging/specs2/artifact-domain.spec.md:markdown [157:35 - 166:7] (10 lines, 96 tokens)
+   .staging/specs2/artifact-practice.spec.md:markdown [172:37 - 181:7]
+Clone found (markdown)
+ - .staging/specs2/artifact-domain.spec.md:markdown [168:32 - 177:10] (10 lines, 95 tokens)
+   .staging/specs2/artifact-practice.spec.md:markdown [183:30 - 192:10]
+Clone found (markdown)
+ - .staging/specs2/artifact-practice.spec.md:markdown [29:59 - 36:22] (8 lines, 53 tokens)
+   .staging/specs2/practice-framework.spec.md:markdown [29:67 - 36:22]
+Clone found (markdown)
+ - .staging/specs2/auditor.spec.md:markdown [379:1 - 401:4] (23 lines, 71 tokens)
+   egolint/.agents/skills/quality/audit-repository/templates/AUDIT.template.md:markdown [18:1 - 40:4]
+Clone found (markdown)
+ - .staging/specs2/build-pipeline.spec.md:markdown [6:33 - 17:12] (12 lines, 80 tokens)
+   .staging/specs2/design-system.spec.md:markdown [6:32 - 17:12]
+Clone found (markdown)
+ - .staging/specs2/build-pipeline.spec.md:markdown [6:33 - 17:12] (12 lines, 80 tokens)
+   .staging/specs2/domain-framework.spec.md:markdown [6:35 - 17:12]
+Clone found (markdown)
+ - .staging/specs2/build-pipeline.spec.md:markdown [6:33 - 17:15] (12 lines, 82 tokens)
+   .staging/specs2/flutter-application-foundation.spec.md:markdown [6:49 - 17:22]
+Clone found (markdown)
+ - .staging/specs2/build-pipeline.spec.md:markdown [6:33 - 17:12] (12 lines, 80 tokens)
+   .staging/specs2/offline-first-storage.spec.md:markdown [6:40 - 17:12]
+Clone found (markdown)
+ - .staging/specs2/build-pipeline.spec.md:markdown [6:33 - 17:12] (12 lines, 80 tokens)
+   .staging/specs2/routing-navigation.spec.md:markdown [6:37 - 17:12]
+Clone found (markdown)
+ - .staging/specs2/build-pipeline.spec.md:markdown [6:33 - 17:12] (12 lines, 80 tokens)
+   .staging/specs2/testing-strategy.spec.md:markdown [6:35 - 17:12]
+Clone found (markdown)
+ - .staging/specs2/domain-framework.spec.md:markdown [6:25 - 17:8] (12 lines, 80 tokens)
+   .staging/specs2/insight-framework.spec.md:markdown [6:26 - 17:8]
+Clone found (markdown)
+ - .staging/specs2/domain-framework.spec.md:markdown [6:25 - 17:12] (12 lines, 82 tokens)
+   .staging/specs2/practice-framework.spec.md:markdown [6:27 - 17:12]
+Clone found (markdown)
+ - .staging/specs2/insight-framework.spec.md:markdown [199:1 - 206:28] (8 lines, 67 tokens)
+   .staging/specs2/practice-framework.spec.md:markdown [192:1 - 199:28]
 Clone found (yaml)
  - .staging/tasks/agents.yml [23:15 - 28:16] (6 lines, 60 tokens)
    .staging/tasks/agents.yml [32:23 - 37:16]
@@ -4257,9 +4473,6 @@ Clone found (yaml)
 Clone found (markdown)
  - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [45:1 - 59:17] (15 lines, 64 tokens)
    egolint/.agents/specs/architecture/foundation/foundations.spec.md:markdown [42:1 - 56:17]
-Clone found (markdown)
- - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [168:1 - 177:4] (10 lines, 50 tokens)
-   egolint/.agents/specs/architecture/foundation/roadmap.spec.md:markdown [153:1 - 162:4]
 Clone found (markdown)
  - egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [172:1 - 180:6] (9 lines, 54 tokens)
    egolint/.agents/specs/architecture/foundation/architecture.spec.md:markdown [245:1 - 253:6]
@@ -5204,7 +5417,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csv          │ 1              │ 5           │ 60           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ dart         │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ dart         │ 3              │ 420         │ 478          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ diff         │ 3              │ 1322        │ 4406         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5234,7 +5447,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 64             │ 22736       │ 62404        │ 58           │ 1321 (5.81%)     │ 5555 (8.90%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 216            │ 69126       │ 206131       │ 56           │ 1043 (1.51%)     │ 4655 (2.26%)      │
+│ json         │ 221            │ 70281       │ 209939       │ 60           │ 1788 (2.54%)     │ 8405 (4.00%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5248,7 +5461,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1677           │ 326996      │ 4170511      │ 684          │ 13131 (4.02%)    │ 176404 (4.23%)    │
+│ markdown     │ 1729           │ 345023      │ 4326905      │ 751          │ 13789 (4.00%)    │ 180327 (4.17%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 87             │ 28027       │ 96254        │ 25           │ 277 (0.99%)      │ 2408 (2.50%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5286,7 +5499,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 370            │ 84963       │ 197959       │ 29           │ 368 (0.43%)      │ 2477 (1.25%)      │
+│ text         │ 414            │ 96544       │ 208120       │ 29           │ 368 (0.38%)      │ 2477 (1.19%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 38             │ 6466        │ 13087        │ 8            │ 175 (2.71%)      │ 625 (4.78%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5300,12 +5513,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 529            │ 56013       │ 305330       │ 326          │ 9055 (16.17%)    │ 102890 (33.70%)   │
+│ yaml         │ 556            │ 57636       │ 307422       │ 326          │ 9055 (15.71%)    │ 102890 (33.47%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4154           │ 888405      │ 6277794      │ 1725         │ 33614 (3.78%)    │ 354120 (5.64%)    │
+│ Total:       │ 4284           │ 921196      │ 6450660      │ 1796         │ 35017 (3.80%)    │ 361793 (5.61%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 1725 clones.
+Found 1796 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (3.8%) over threshold (3.0%)
-time: 13.81s
+time: 13.22s
 
