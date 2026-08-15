@@ -1,0 +1,300 @@
+Results of yamllint linter (version 1.38.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/yaml_yamllint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+.garden/context-packs/agent-default.yaml
+  2:1       warning  missing document start "---"  (document-start)
+
+.garden/garden.yaml
+  2:1       warning  missing document start "---"  (document-start)
+
+.github/workflow-profiles/agent-environment/validate-copilot-setup.yml
+  106:1     error    trailing spaces  (trailing-spaces)
+  111:1     error    trailing spaces  (trailing-spaces)
+  259:1     error    trailing spaces  (trailing-spaces)
+  262:1     error    trailing spaces  (trailing-spaces)
+  265:1     error    trailing spaces  (trailing-spaces)
+  268:1     error    trailing spaces  (trailing-spaces)
+  271:1     error    trailing spaces  (trailing-spaces)
+  274:1     error    trailing spaces  (trailing-spaces)
+  277:1     error    trailing spaces  (trailing-spaces)
+  280:1     error    trailing spaces  (trailing-spaces)
+  283:1     error    trailing spaces  (trailing-spaces)
+  286:1     error    trailing spaces  (trailing-spaces)
+  295:1     error    trailing spaces  (trailing-spaces)
+  298:1     error    trailing spaces  (trailing-spaces)
+  302:1     error    trailing spaces  (trailing-spaces)
+  306:1     error    trailing spaces  (trailing-spaces)
+
+.github/workflow-profiles/application-flutter/copilot-setup-steps2.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+.github/workflow-profiles/application-flutter/release-artifacts.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+.github/workflow-profiles/container-platform/benchmark.yml
+  106:1     error    trailing spaces  (trailing-spaces)
+  108:1     error    trailing spaces  (trailing-spaces)
+  112:1     error    trailing spaces  (trailing-spaces)
+  116:1     error    trailing spaces  (trailing-spaces)
+  119:1     error    trailing spaces  (trailing-spaces)
+  128:1     error    trailing spaces  (trailing-spaces)
+  138:1     error    trailing spaces  (trailing-spaces)
+  140:1     error    trailing spaces  (trailing-spaces)
+  143:1     error    trailing spaces  (trailing-spaces)
+  146:1     error    trailing spaces  (trailing-spaces)
+  150:1     error    trailing spaces  (trailing-spaces)
+  153:1     error    trailing spaces  (trailing-spaces)
+  156:1     error    trailing spaces  (trailing-spaces)
+  161:1     error    trailing spaces  (trailing-spaces)
+  164:1     error    trailing spaces  (trailing-spaces)
+  166:1     error    trailing spaces  (trailing-spaces)
+  170:1     error    trailing spaces  (trailing-spaces)
+  173:1     error    trailing spaces  (trailing-spaces)
+  184:1     error    trailing spaces  (trailing-spaces)
+  186:1     error    trailing spaces  (trailing-spaces)
+  189:1     error    trailing spaces  (trailing-spaces)
+  193:1     error    trailing spaces  (trailing-spaces)
+  196:1     error    trailing spaces  (trailing-spaces)
+  200:1     error    trailing spaces  (trailing-spaces)
+  203:1     error    trailing spaces  (trailing-spaces)
+  205:1     error    trailing spaces  (trailing-spaces)
+  209:1     error    trailing spaces  (trailing-spaces)
+  212:1     error    trailing spaces  (trailing-spaces)
+  223:1     error    trailing spaces  (trailing-spaces)
+  225:1     error    trailing spaces  (trailing-spaces)
+  229:1     error    trailing spaces  (trailing-spaces)
+  232:1     error    trailing spaces  (trailing-spaces)
+  236:1     error    trailing spaces  (trailing-spaces)
+  239:1     error    trailing spaces  (trailing-spaces)
+  241:1     error    trailing spaces  (trailing-spaces)
+  244:1     error    trailing spaces  (trailing-spaces)
+  247:1     error    trailing spaces  (trailing-spaces)
+  258:1     error    trailing spaces  (trailing-spaces)
+  260:1     error    trailing spaces  (trailing-spaces)
+  263:1     error    trailing spaces  (trailing-spaces)
+  265:1     error    trailing spaces  (trailing-spaces)
+  268:1     error    trailing spaces  (trailing-spaces)
+  271:1     error    trailing spaces  (trailing-spaces)
+  274:1     error    trailing spaces  (trailing-spaces)
+  279:1     error    trailing spaces  (trailing-spaces)
+  285:1     error    trailing spaces  (trailing-spaces)
+  304:1     error    trailing spaces  (trailing-spaces)
+  307:1     error    trailing spaces  (trailing-spaces)
+  311:1     error    trailing spaces  (trailing-spaces)
+  317:1     error    trailing spaces  (trailing-spaces)
+  322:1     error    trailing spaces  (trailing-spaces)
+  327:1     error    trailing spaces  (trailing-spaces)
+  333:1     error    trailing spaces  (trailing-spaces)
+  343:1     error    trailing spaces  (trailing-spaces)
+  374:1     error    trailing spaces  (trailing-spaces)
+  385:1     error    trailing spaces  (trailing-spaces)
+  386:50    error    trailing spaces  (trailing-spaces)
+  387:47    error    trailing spaces  (trailing-spaces)
+  388:60    error    trailing spaces  (trailing-spaces)
+  389:40    error    trailing spaces  (trailing-spaces)
+  390:61    error    trailing spaces  (trailing-spaces)
+  392:1     error    trailing spaces  (trailing-spaces)
+  394:1     error    trailing spaces  (trailing-spaces)
+  400:1     error    trailing spaces  (trailing-spaces)
+  402:1     error    trailing spaces  (trailing-spaces)
+  408:1     error    trailing spaces  (trailing-spaces)
+  410:1     error    trailing spaces  (trailing-spaces)
+  416:1     error    trailing spaces  (trailing-spaces)
+  418:1     error    trailing spaces  (trailing-spaces)
+  422:1     error    trailing spaces  (trailing-spaces)
+  426:1     error    trailing spaces  (trailing-spaces)
+  429:1     error    trailing spaces  (trailing-spaces)
+  431:1     error    trailing spaces  (trailing-spaces)
+  435:1     error    trailing spaces  (trailing-spaces)
+  437:1     error    trailing spaces  (trailing-spaces)
+  440:1     error    trailing spaces  (trailing-spaces)
+  450:1     error    trailing spaces  (trailing-spaces)
+  453:1     error    trailing spaces  (trailing-spaces)
+  469:1     error    trailing spaces  (trailing-spaces)
+  554:1     error    trailing spaces  (trailing-spaces)
+  556:1     error    trailing spaces  (trailing-spaces)
+  568:1     error    trailing spaces  (trailing-spaces)
+  575:1     error    trailing spaces  (trailing-spaces)
+  580:1     error    trailing spaces  (trailing-spaces)
+  584:1     error    trailing spaces  (trailing-spaces)
+  592:1     error    trailing spaces  (trailing-spaces)
+  597:1     error    trailing spaces  (trailing-spaces)
+  599:1     error    trailing spaces  (trailing-spaces)
+  601:1     error    trailing spaces  (trailing-spaces)
+  603:1     error    trailing spaces  (trailing-spaces)
+  631:1     error    trailing spaces  (trailing-spaces)
+  634:1     error    trailing spaces  (trailing-spaces)
+  645:1     error    trailing spaces  (trailing-spaces)
+
+.github/workflow-profiles/container-platform/release-notes.yml
+  228:55    error    trailing spaces  (trailing-spaces)
+
+.github/workflow-profiles/container-platform/validate-changelog.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+.github/workflow-profiles/content-and-docs/bookmarks-extract.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+.github/workflow-profiles/content-and-docs/docs.yml
+  81:1      error    trailing spaces  (trailing-spaces)
+
+.github/workflow-profiles/content-and-docs/image-optimization.yml
+  137:1     error    trailing spaces  (trailing-spaces)
+  155:1     error    trailing spaces  (trailing-spaces)
+
+.github/workflow-profiles/release-strategies/changesets-release.yml
+  1:1       warning  missing document start "---"  (document-start)
+  57:1      error    too many blank lines (3 > 2)  (empty-lines)
+
+.github/workflow-profiles/release-strategies/release-please.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+.github/workflow-profiles/security-optional/ossf-scorecard-older.yml
+  111:40    error    no new line character at the end of file  (new-line-at-end-of-file)
+
+egolint/.config/lint/prose/styles/proselint/Airlinese.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/AnimalLabels.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Annotations.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Apologizing.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Archaisms.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/But.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Cliches.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/CorporateSpeak.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Currency.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Cursing.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/DateCase.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/DateMidnight.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/DateRedundancy.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/DateSpacing.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/DenizenLabels.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Diacritical.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/GenderBias.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/GroupTerms.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Hedging.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Hyperbole.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Jargon.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/LGBTOffensive.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/LGBTTerms.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Malapropisms.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Needless.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Nonwords.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Oxymorons.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/P-Value.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/RASSyndrome.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Skunked.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Spelling.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Typography.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Uncomparables.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/proselint/Very.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/Cliches.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/E-Prime.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/Illusions.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/Passive.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/So.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/ThereIs.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/TooWordy.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/prose/styles/write-good/Weasel.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+egolint/.config/lint/tekton/.tektonlintrc.yaml
+  54:28     warning  truthy value should be one of [false, on, true]  (truthy)
+  64:16     warning  truthy value should be one of [false, on, true]  (truthy)
+
+egolint/pnpm-lock.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
+mantle/.github/workflows/test.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+mindgarden/profiles/quartz/profile.yaml
+  2:1       warning  missing document start "---"  (document-start)
+
+mindgarden/profiles/quartz/quartz.config.yaml
+  2:1       warning  missing document start "---"  (document-start)
+
+

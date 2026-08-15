@@ -82,26 +82,107 @@ Clone found (yaml)
  - .github/actions/python-poetry-setup/action.yml [10:1 - 15:49] (6 lines, 50 tokens)
    .github/actions/setup-environment/action.yml [39:1 - 44:49]
 Clone found (yaml)
- - .github/workflows/automation.yml [8:1 - 23:3] (16 lines, 60 tokens)
-   .github/workflows/automation.yml [26:1 - 41:3]
+ - .github/actions/setup-agent-environment/action.yml [11:35 - 19:33] (9 lines, 79 tokens)
+   .github/actions/setup-environment/action.yml [12:36 - 20:33]
 Clone found (yaml)
- - .github/workflows/automation.yml [53:1 - 69:15] (17 lines, 90 tokens)
+ - .github/actions/setup-agent-environment/action.yml [22:1 - 27:32] (6 lines, 54 tokens)
+   .github/actions/setup-environment/action.yml [35:1 - 40:32]
+Clone found (yaml)
+ - .github/actions/setup-agent-environment/action.yml [30:1 - 35:18] (6 lines, 51 tokens)
+   .github/actions/setup-environment/action.yml [47:1 - 52:18]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/autofix.yml [39:1 - 53:15] (15 lines, 103 tokens)
+   .github/workflow-profiles/release-strategies/changesets-release.yml [98:1 - 112:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/copilot-setup-steps2.yml [10:7 - 15:60] (6 lines, 68 tokens)
+   .github/workflow-profiles/application-flutter/copilot-setup-steps2.yml [16:15 - 21:60]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/copilot-setup-steps2.yml [36:1 - 45:49] (10 lines, 84 tokens)
+   .github/workflow-profiles/application-flutter/release-artifacts.yml [245:1 - 254:49]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [25:1 - 42:15] (18 lines, 125 tokens)
+   .github/workflow-profiles/application-flutter/release-artifacts.yml [151:1 - 168:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [25:1 - 42:15] (18 lines, 125 tokens)
+   .github/workflow-profiles/application-flutter/release-artifacts.yml [233:1 - 250:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [26:20 - 46:15] (21 lines, 124 tokens)
+   .github/workflow-profiles/application-flutter/release-artifacts.yml [190:19 - 209:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [56:1 - 64:11] (9 lines, 77 tokens)
+   .github/workflow-profiles/application-flutter/release-artifacts.yml [86:1 - 94:11]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/benchmark.yml [26:1 - 43:28] (18 lines, 94 tokens)
+   .github/workflow-profiles/container-platform/publish.yml [28:1 - 45:28]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/benchmark.yml [58:1 - 76:16] (19 lines, 94 tokens)
+   .github/workflow-profiles/container-platform/trivy-scan.yml [44:1 - 62:16]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/benchmark.yml [60:1 - 69:29] (10 lines, 52 tokens)
+   .github/workflow-profiles/container-platform/publish.yml [64:1 - 73:29]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/benchmark.yml [159:45 - 168:19] (10 lines, 74 tokens)
+   .github/workflow-profiles/container-platform/benchmark.yml [198:23 - 207:19]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/benchmark.yml [159:76 - 167:13] (9 lines, 60 tokens)
+   .github/workflow-profiles/container-platform/benchmark.yml [234:89 - 242:13]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/devcontainer.yml [109:1 - 117:28] (9 lines, 63 tokens)
+   .github/workflow-profiles/container-platform/devcontainer.yml [191:1 - 199:28]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/devcontainer.yml [202:41 - 209:52] (8 lines, 57 tokens)
+   .github/workflow-profiles/container-platform/devcontainer.yml [216:42 - 223:52]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/devcontainer.yml [209:54 - 215:7] (7 lines, 58 tokens)
+   .github/workflow-profiles/container-platform/devcontainer.yml [223:54 - 229:7]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/publish.yml [18:1 - 28:5] (11 lines, 84 tokens)
+   .github/workflow-profiles/container-platform/trivy-scan.yml [27:1 - 37:5]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
+   .github/workflow-profiles/container-platform/release-notes.yml [125:28 - 132:45]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
+   .github/workflow-profiles/container-platform/release-notes.yml [138:27 - 145:45]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
+   .github/workflow-profiles/container-platform/release-notes.yml [151:25 - 158:45]
+Clone found (yaml)
+ - .github/workflow-profiles/container-platform/release-notes.yml [112:25 - 119:7] (8 lines, 56 tokens)
+   .github/workflow-profiles/container-platform/release-notes.yml [164:25 - 171:7]
+Clone found (yaml)
+ - .github/workflow-profiles/content-and-docs/bookmarks-extract.yml [44:1 - 52:15] (9 lines, 91 tokens)
+   .github/workflow-profiles/content-and-docs/bookmarks-extract.yml [70:1 - 78:15]
+Clone found (yaml)
+ - .github/workflow-profiles/content-and-docs/docs.yml [43:1 - 61:7] (19 lines, 85 tokens)
+   .github/workflow-profiles/content-and-docs/docs.yml [94:1 - 112:7]
+Clone found (yaml)
+ - .github/workflow-profiles/security-optional/dependency-review.yml [29:1 - 42:11] (14 lines, 96 tokens)
+   .github/workflows/dependency-review.yml [36:1 - 49:11]
+Clone found (yaml)
+ - .github/workflows/automation.yml [8:1 - 22:3] (15 lines, 56 tokens)
+   .github/workflows/automation.yml [25:1 - 39:3]
+Clone found (yaml)
+ - .github/workflows/automation.yml [51:1 - 67:15] (17 lines, 90 tokens)
    .github/workflows/identity.yml [35:1 - 51:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [53:1 - 63:24] (11 lines, 61 tokens)
+ - .github/workflows/automation.yml [51:1 - 61:24] (11 lines, 61 tokens)
    .github/workflows/repository-intelligence.yml [40:1 - 50:24]
 Clone found (yaml)
- - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
+ - .github/workflows/automation.yml [54:1 - 67:15] (14 lines, 74 tokens)
    .github/workflows/codeql.yml [40:1 - 53:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
+ - .github/workflows/automation.yml [54:1 - 67:15] (14 lines, 74 tokens)
    .github/workflows/lint-architecture.yml [52:1 - 65:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [56:1 - 67:11] (12 lines, 62 tokens)
+ - .github/workflows/automation.yml [54:1 - 65:11] (12 lines, 62 tokens)
    .github/workflows/megalinter.yml [35:1 - 46:11]
 Clone found (yaml)
- - .github/workflows/automation.yml [59:1 - 69:24] (11 lines, 62 tokens)
+ - .github/workflows/automation.yml [57:1 - 67:24] (11 lines, 62 tokens)
    .github/workflows/mantle.yml [50:1 - 60:23]
+Clone found (yaml)
+ - .github/workflows/automation.yml [57:1 - 67:15] (11 lines, 60 tokens)
+   .github/workflows/reusable-autofix.yml [52:1 - 62:15]
 Clone found (yaml)
  - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
    .github/workflows/contributors.yml [19:1 - 29:24]
@@ -112,8 +193,11 @@ Clone found (yaml)
  - .github/workflows/contributors.yml [22:1 - 34:11] (13 lines, 71 tokens)
    .github/workflows/megalinter-fix.yml [29:1 - 41:11]
 Clone found (yaml)
- - .github/workflows/dependency-review.yml [36:1 - 49:11] (14 lines, 96 tokens)
-   .staging/github/workflows/security-optional/dependency-review.yml [29:1 - 42:11]
+ - .github/workflows/copilot-setup-steps.yml [32:1 - 46:11] (15 lines, 78 tokens)
+   .github/workflows/reusable-autofix.yml [46:1 - 60:11]
+Clone found (yaml)
+ - .github/workflows/copilot-setup-steps.yml [38:1 - 46:24] (9 lines, 53 tokens)
+   .github/workflows/megalinter.yml [38:1 - 46:24]
 Clone found (yaml)
  - .github/workflows/lint-architecture.yml [82:1 - 104:34] (23 lines, 138 tokens)
    .github/workflows/megalinter.yml [132:1 - 154:34]
@@ -145,83 +229,14 @@ Clone found (yaml)
  - .github/workflows/osv-scan.yml [342:51 - 352:15] (11 lines, 85 tokens)
    .github/workflows/osv-scan.yml [388:54 - 398:15]
 Clone found (yaml)
- - .staging/github/workflows/application-flutter/autofix.yml [39:1 - 53:15] (15 lines, 103 tokens)
-   .staging/github/workflows/release-strategies/changesets-release.yml [98:1 - 112:15]
+ - .github/workflows/reusable-flutter-build.yml [52:1 - 68:15] (17 lines, 128 tokens)
+   .github/workflows/reusable-flutter-build.yml [85:1 - 101:15]
 Clone found (yaml)
- - .staging/github/workflows/application-flutter/copilot-setup-steps2.yml [10:7 - 15:60] (6 lines, 68 tokens)
-   .staging/github/workflows/application-flutter/copilot-setup-steps2.yml [16:15 - 21:60]
+ - .github/workflows/reusable-flutter-build.yml [52:1 - 72:21] (21 lines, 165 tokens)
+   .github/workflows/reusable-flutter-build.yml [120:1 - 140:21]
 Clone found (yaml)
- - .staging/github/workflows/application-flutter/copilot-setup-steps2.yml [36:1 - 45:49] (10 lines, 84 tokens)
-   .staging/github/workflows/application-flutter/release-artifacts.yml [245:1 - 254:49]
-Clone found (yaml)
- - .staging/github/workflows/application-flutter/release-artifacts.yml [25:1 - 42:15] (18 lines, 125 tokens)
-   .staging/github/workflows/application-flutter/release-artifacts.yml [151:1 - 168:15]
-Clone found (yaml)
- - .staging/github/workflows/application-flutter/release-artifacts.yml [25:1 - 42:15] (18 lines, 125 tokens)
-   .staging/github/workflows/application-flutter/release-artifacts.yml [233:1 - 250:15]
-Clone found (yaml)
- - .staging/github/workflows/application-flutter/release-artifacts.yml [26:20 - 46:15] (21 lines, 124 tokens)
-   .staging/github/workflows/application-flutter/release-artifacts.yml [190:19 - 209:15]
-Clone found (yaml)
- - .staging/github/workflows/application-flutter/release-artifacts.yml [56:1 - 64:11] (9 lines, 77 tokens)
-   .staging/github/workflows/application-flutter/release-artifacts.yml [86:1 - 94:11]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/benchmark.yml [26:1 - 43:28] (18 lines, 94 tokens)
-   .staging/github/workflows/container-platform/publish.yml [28:1 - 45:28]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/benchmark.yml [58:1 - 76:16] (19 lines, 94 tokens)
-   .staging/github/workflows/container-platform/trivy-scan.yml [44:1 - 62:16]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/benchmark.yml [60:1 - 69:29] (10 lines, 52 tokens)
-   .staging/github/workflows/container-platform/publish.yml [64:1 - 73:29]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/benchmark.yml [159:45 - 168:19] (10 lines, 74 tokens)
-   .staging/github/workflows/container-platform/benchmark.yml [198:23 - 207:19]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/benchmark.yml [159:76 - 167:13] (9 lines, 60 tokens)
-   .staging/github/workflows/container-platform/benchmark.yml [234:89 - 242:13]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/devcontainer.yml [109:1 - 117:28] (9 lines, 63 tokens)
-   .staging/github/workflows/container-platform/devcontainer.yml [191:1 - 199:28]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/devcontainer.yml [202:41 - 209:52] (8 lines, 57 tokens)
-   .staging/github/workflows/container-platform/devcontainer.yml [216:42 - 223:52]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/devcontainer.yml [209:54 - 215:7] (7 lines, 58 tokens)
-   .staging/github/workflows/container-platform/devcontainer.yml [223:54 - 229:7]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/publish.yml [18:1 - 28:5] (11 lines, 84 tokens)
-   .staging/github/workflows/container-platform/trivy-scan.yml [27:1 - 37:5]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
-   .staging/github/workflows/container-platform/release-notes.yml [125:28 - 132:45]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
-   .staging/github/workflows/container-platform/release-notes.yml [138:27 - 145:45]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:45] (8 lines, 70 tokens)
-   .staging/github/workflows/container-platform/release-notes.yml [151:25 - 158:45]
-Clone found (yaml)
- - .staging/github/workflows/container-platform/release-notes.yml [112:25 - 119:7] (8 lines, 56 tokens)
-   .staging/github/workflows/container-platform/release-notes.yml [164:25 - 171:7]
-Clone found (yaml)
- - .staging/github/workflows/content-and-docs/bookmarks-extract.yml [44:1 - 52:15] (9 lines, 91 tokens)
-   .staging/github/workflows/content-and-docs/bookmarks-extract.yml [70:1 - 78:15]
-Clone found (yaml)
- - .staging/github/workflows/content-and-docs/docs.yml [43:1 - 61:7] (19 lines, 85 tokens)
-   .staging/github/workflows/content-and-docs/docs.yml [94:1 - 112:7]
-Clone found (yaml)
- - .staging/github/workflows/source-specific/aether-pr-validation.yml [26:1 - 38:15] (13 lines, 110 tokens)
-   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [62:1 - 74:15]
-Clone found (yaml)
- - .staging/github/workflows/source-specific/aether-pr-validation.yml [47:1 - 55:69] (9 lines, 123 tokens)
-   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [168:1 - 176:11]
-Clone found (yaml)
- - .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [59:61 - 74:23] (16 lines, 122 tokens)
-   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [145:35 - 160:23]
-Clone found (yaml)
- - .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [80:1 - 85:20] (6 lines, 85 tokens)
-   .staging/github/workflows/source-specific/aether-release-first-party-skills.yml [163:1 - 168:20]
+ - .github/workflows/reusable-flutter-build.yml [59:1 - 72:21] (14 lines, 114 tokens)
+   .github/workflows/reusable-flutter-build.yml [156:1 - 169:21]
 Clone found (markdown)
  - DECISIONS.md:markdown [76:1 - 81:14] (6 lines, 51 tokens)
    DECISIONS.md:markdown [121:1 - 126:14]
@@ -1085,7 +1100,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 4              │ 258         │ 1602         │ 1            │ 105 (40.70%)     │ 700 (43.70%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 246            │ 24978       │ 283499       │ 138          │ 1660 (6.65%)     │ 17050 (6.01%)     │
+│ markdown   │ 246            │ 25002       │ 283500       │ 138          │ 1660 (6.64%)     │ 17050 (6.01%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 9              │ 972         │ 11251        │ 5            │ 53 (5.45%)       │ 945 (8.40%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1101,7 +1116,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ ruby       │ 1              │ 204         │ 810          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ ruby       │ 1              │ 206         │ 812          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ rust       │ 9              │ 1666        │ 13351        │ 1            │ 5 (0.30%)        │ 71 (0.53%)        │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1119,12 +1134,12 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 236            │ 19750       │ 103869       │ 84           │ 986 (4.99%)      │ 6500 (6.26%)      │
+│ yaml       │ 238            │ 19849       │ 103612       │ 89           │ 1044 (5.26%)     │ 6838 (6.60%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 868            │ 103908      │ 703275       │ 346          │ 4486 (4.32%)     │ 34633 (4.92%)     │
+│ Total:     │ 870            │ 104033      │ 703021       │ 351          │ 4544 (4.37%)     │ 34971 (4.97%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 346 clones.
+Found 351 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (4.3%) over threshold (3.0%)
-time: 2.08s
+ERROR: jscpd found too many duplicates (4.4%) over threshold (3.0%)
+time: 1.23s
 

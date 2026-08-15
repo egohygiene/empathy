@@ -75,6 +75,7 @@ reviewed' - a phrase is repeated.
 .github/actions/normalize-repository-report/README.md:31:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.lowercase_periods: It's standard to use periods for lowercase 'a.m.' or 'p.m.'.
 .github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.spacing: It's standard to put a space before 'a.m.' or 'p.m.'.
+.github/workflow-profiles/README.md:66:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 ARCHITECTURE.md:105:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:105:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:106:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".

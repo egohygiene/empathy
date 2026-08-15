@@ -197,6 +197,18 @@ trivy-sbom (REPOSITORY)
   - vscode:
     - VSCode Trivy: https://marketplace.visualstudio.com/items?itemName=AquaSecurityOfficial.trivy-vulnerability-scanner
 
+rubocop (RUBY)
+  - brackets:
+    - brackets-rubocop: https://github.com/smockle-archive/brackets-rubocop
+  - emacs:
+    - rubocop-emacs: https://github.com/rubocop-hq/rubocop-emacs
+    - flycheck: https://github.com/flycheck/flycheck
+  - vim:
+    - vim-rubocop: https://github.com/ngmy/vim-rubocop
+    - ale: https://github.com/w0rp/ale
+  - vscode:
+    - VSCode Ruby Extension: https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby
+
 clippy (RUST)
   - vscode:
     - rust-analyzer: https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer

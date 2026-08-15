@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:294416f5-fd2f-422c-b40e-a4639f0a24dd",
+  "serialNumber": "urn:uuid:bb252595-6c7c-4134-9ea4-98e28526b795",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-15T18:31:07Z",
+    "timestamp": "2026-08-15T21:15:48Z",
     "tools": {
       "components": [
         {
@@ -122,6 +122,54 @@
       ]
     },
     {
+      "bom-ref": "49b0feed7885b539",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/flutter-generate",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-generate:.\\/.github\\/actions\\/flutter-generate:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-generate:.\\/.github\\/actions\\/flutter_generate:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_generate:.\\/.github\\/actions\\/flutter-generate:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_generate:.\\/.github\\/actions\\/flutter_generate:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter-generate:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter_generate:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-flutter-build.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "f916b000c26cad56",
       "type": "library",
       "supplier": {
@@ -166,6 +214,54 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/actions/setup-environment/action.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1e99da4b99805ed7",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/flutter-setup",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-setup:.\\/.github\\/actions\\/flutter-setup:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-setup:.\\/.github\\/actions\\/flutter_setup:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_setup:.\\/.github\\/actions\\/flutter-setup:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_setup:.\\/.github\\/actions\\/flutter_setup:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter-setup:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter_setup:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-flutter-build.yml"
         }
       ]
     },
@@ -518,6 +614,166 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/repository-intelligence.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7c3aa98e5e389763",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/install-linux-build-deps",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/actions/setup-agent-environment/action.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "384a28d8711627be",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/install-linux-build-deps",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-flutter-build.yml"
         }
       ]
     },
@@ -1030,6 +1286,166 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/actions/setup-environment/action.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b3f27b811f25e089",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/setup-agent-environment",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent-environment:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent-environment:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent_environment:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent_environment:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/copilot-setup-steps.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "bb411dad76a56915",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/setup-environment",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/actions/setup-agent-environment/action.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7fd0e18e6c8a38cd",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "./.github/actions/setup-environment",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-autofix.yml"
         }
       ]
     },
@@ -80596,6 +81012,35 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=27feaa91f0c84e40",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/copilot-setup-steps.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=6d5fb011de1637ee",
       "type": "library",
       "supplier": {
@@ -80853,6 +81298,64 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/repository-intelligence.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=faec2ce168baa45e",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-autofix.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=3c9fbebacfc8cb0b",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-flutter-build.yml"
         }
       ]
     },
@@ -81829,6 +82332,55 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/repository-intelligence.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02?package-id=e1ba3e59b9386f71",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/upload-artifact",
+      "version": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-flutter-build.yml"
         }
       ]
     },
@@ -88861,6 +89413,55 @@
         {
           "name": "syft:location:0:path",
           "value": "/egolint/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a?package-id=06bac2361b212735",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "autofix-ci/action",
+      "version": "c5b2d67aa2274e7b5a18224e8171550871fc7e4a",
+      "cpe": "cpe:2.3:a:autofix-ci\\/action:autofix-ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*",
+      "purl": "pkg:github/autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:autofix-ci\\/action:autofix_ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:autofix_ci\\/action:autofix-ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:autofix_ci\\/action:autofix_ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:autofix:autofix-ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:autofix:autofix_ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-autofix.yml"
         }
       ]
     },
@@ -234063,6 +234664,71 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920?package-id=613a1d8a1f9a7b25",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/copilot-setup-steps.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920?package-id=0016a576c76b9d54",
       "type": "library",
       "supplier": {
@@ -234709,6 +235375,136 @@
         {
           "name": "syft:location:0:path",
           "value": "/.github/workflows/repository-intelligence.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920?package-id=085acb403ef80b2a",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-autofix.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920?package-id=c82f45121a88607f",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-flutter-build.yml"
         }
       ]
     },
@@ -259556,6 +260352,17 @@
       ]
     },
     {
+      "bom-ref": "59e08bf630842e1b",
+      "type": "file",
+      "name": "/github/workspace/.github/actions/setup-agent-environment/action.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ac582aa80afbcc9125a492927a41f5e0f88cc8623bfa7ebcf2320be62cea5175"
+        }
+      ]
+    },
+    {
       "bom-ref": "f82efb4c0366b135",
       "type": "file",
       "name": "/github/workspace/.github/actions/setup-environment/action.yml",
@@ -259573,7 +260380,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "a9b261ec334c98f19dd447febf0a0dec902948244edfcf11a8514a69e84f636a"
+          "content": "94536d47b4d3e5623dd6266d3459c7e80eef4cbd9a9bf22e2b61e199c9066477"
         }
       ]
     },
@@ -259607,6 +260414,17 @@
         {
           "alg": "SHA-256",
           "content": "d0c401dd9bff690a604dd11ce99c0e37f2c908cecdd5eb2a849d459d96294a4d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c2ed82168e304bc7",
+      "type": "file",
+      "name": "/github/workspace/.github/workflows/copilot-setup-steps.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "34b03521bbffa6617bf20b081d0879e3fb2944d16d1abce36267afe96d5b7ad6"
         }
       ]
     },
@@ -259717,6 +260535,28 @@
         {
           "alg": "SHA-256",
           "content": "4d8f6df21c9553c53dff1f93b52fde1e74877adac8da231ed36162cbf5f0f8bb"
+        }
+      ]
+    },
+    {
+      "bom-ref": "16fd571cb225215e",
+      "type": "file",
+      "name": "/github/workspace/.github/workflows/reusable-autofix.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ccbba97514e66f1d17202bd09515a2e8c5cc6ebf04ec5ca0bcec72565696a651"
+        }
+      ]
+    },
+    {
+      "bom-ref": "da961b9175df85a9",
+      "type": "file",
+      "name": "/github/workspace/.github/workflows/reusable-flutter-build.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a6cc31808e3554e2b8a9e07175dd79d92051c80c7009ae0af449b79a10b2dc45"
         }
       ]
     },
