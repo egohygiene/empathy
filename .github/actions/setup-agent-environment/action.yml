@@ -65,11 +65,13 @@ runs:
 
     - name: Report agent environment
       shell: bash
+      env:
+        WORKING_DIRECTORY: "${{ inputs.working-directory }}"
       run: |
         set -euo pipefail
         printf 'Repository: %s\n' "${GITHUB_REPOSITORY}"
         printf 'Runner OS: %s\n' "${RUNNER_OS}"
-        printf 'Working directory: %s\n' "${{ inputs.working-directory }}"
+        printf 'Working directory: %s\n' "${WORKING_DIRECTORY}"
         git --version
         gh --version
         python3 --version || true
