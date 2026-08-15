@@ -1,0 +1,55 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Copilot setup steps
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/actions/setup-agent-environment/**"
+      - ".github/actions/setup-environment/**"
+      - ".github/workflows/copilot-setup-steps.yml"
+      - ".devcontainer/**"
+  pull_request:
+    paths:
+      - ".github/actions/setup-agent-environment/**"
+      - ".github/actions/setup-environment/**"
+      - ".github/workflows/copilot-setup-steps.yml"
+      - ".devcontainer/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "copilot-setup-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  # GitHub Copilot coding agent requires this exact job identifier.
+  copilot-setup-steps:
+    name: Prepare portable coding-agent environment
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Harden Runner
+        # step-security/harden-runner v2.20.0
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up agent environment
+        uses: ./.github/actions/setup-agent-environment
+        with:
+          setup-node: "auto"
+          setup-python: "auto"
+          setup-flutter: "auto"
+          install-dependencies: "true"
