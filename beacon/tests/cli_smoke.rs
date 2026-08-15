@@ -1,3 +1,6 @@
+// Copyright 2026 Ego Hygiene
+// SPDX-License-Identifier: MIT
+
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
