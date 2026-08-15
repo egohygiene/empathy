@@ -18,6 +18,11 @@ tasks:
       - cargo clippy --all-targets --all-features -- -D warnings
       - cargo test --all-features
 
+  smoke:
+    desc: Exercise Beacon project generation through the compiled CLI
+    cmds:
+      - cargo test --all-features --test cli_smoke
+
   list:
     desc: List installed Beacon templates
     cmds:

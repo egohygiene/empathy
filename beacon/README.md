@@ -4,57 +4,68 @@
 research and technical documents.
 
 `beacon` is currently incubated inside Empathy as an independently extractable
-holon. This first vertical slice establishes the reusable template contract and
-imports the proven research-paper presentation layer from Renderflow without
-coupling Beacon to Renderflow's runtime.
+holon. It owns reusable template contracts, template packages, deterministic
+project generation, and the CLI surface used to inspect, validate, and
+instantiate those packages.
 
 ## Boundary
 
 `beacon/` owns reusable project-template contracts, template packages,
-validation rules, and eventually the Beacon CLI and local authoring experience.
-A generated project owns its manuscript, bibliography, figures, data, research
-notes, build configuration, and publication history.
+validation rules, the Beacon CLI, and eventually a lightweight local authoring
+experience. A generated project owns its manuscript, bibliography, figures,
+data, research notes, build configuration, and publication history.
 
 Renderflow remains a rendering engine and reference implementation. Beacon owns
 how a project template is described, discovered, validated, and instantiated.
 
 ## Current vertical slice
 
-This foundation provides:
+The current foundation provides:
 
 - a versioned, renderer-aware template manifest contract;
 - a canonical `research-paper` package derived from Renderflow's research
   templates;
 - explicit provenance and extraction notes;
-- deterministic, dependency-free validation using Python's standard library;
-- a minimal example research paper fixture.
+- deterministic template validation using Python's standard library;
+- a Rust CLI with `list`, `inspect`, `validate`, and `init` commands;
+- generated-project provenance through `beacon-project.toml`;
+- safe initialization that refuses non-empty destinations;
+- unit and binary-level smoke coverage for the built-in research template;
+- first-class integration with Empathy's root `task check` contract.
 
-The Rust CLI, project initialization, Git/GitHub integration, local LLM
-assistance, graphical authoring interface, and root Taskfile integration
-intentionally remain future work.
+Git/GitHub repository creation, local LLM assistance, graphical authoring, and
+additional template-library ingestion intentionally remain future work.
 
-## Layout
+## Commands
+
+From `beacon/`:
+
+```bash
+cargo run --quiet -- --templates-directory "templates" list
+cargo run --quiet -- --templates-directory "templates" inspect research-paper
+cargo run --quiet -- --templates-directory "templates" validate research-paper
+cargo run --quiet -- --templates-directory "templates" init research-paper ./paper \
+  --title "Research Paper" \
+  --author "Author"
+```
+
+## Generated research workspace
+
+The canonical research-paper template currently produces:
 
 ```text
-beacon/
-├── ARCHITECTURE.md
-├── EXTRACTION.md
-├── PROVENANCE.md
-├── README.md
-├── contracts/
-│   └── template-manifest.schema.json
-├── scripts/
-│   └── validate_templates.py
+paper/
+├── beacon-project.toml
+├── paper.md
+├── references.bib
 ├── templates/
-│   └── research-paper/
-│       ├── README.md
-│       ├── beacon-template.toml
-│       ├── template.html
-│       ├── template.tex
-│       └── example/
-│           └── paper.md
-└── tests/
-    └── test_templates.py
+│   ├── template.html
+│   └── template.tex
+├── figures/
+├── data/
+└── research/
+    ├── notes/
+    └── sources/
 ```
 
 ## Validation
@@ -62,9 +73,15 @@ beacon/
 From the Empathy repository root:
 
 ```bash
-python3 beacon/scripts/validate_templates.py --repository-root "."
-python3 -m unittest discover --start-directory beacon/tests --pattern "test_*.py" --verbose
+task beacon:check
+task beacon:smoke
+task check
 ```
+
+`beacon:check` validates template packages, formatting, Clippy, and the full
+Rust test suite. `beacon:smoke` exercises project generation through the compiled
+CLI against the real built-in research template. Root `task check` includes the
+complete Beacon check as part of Empathy's repository contract.
 
 ## Design principle
 
