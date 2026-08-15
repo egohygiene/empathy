@@ -1,0 +1,177 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Reusable Flutter build
+
+on:
+  workflow_call:
+    inputs:
+      working-directory:
+        description: Flutter project directory relative to the repository root.
+        required: false
+        default: "."
+        type: string
+      flutter-version:
+        description: Exact Flutter SDK version.
+        required: false
+        default: "3.44.2"
+        type: string
+      artifact-prefix:
+        description: Prefix for uploaded build artifact names.
+        required: false
+        default: "flutter"
+        type: string
+      build-web:
+        description: Build the Flutter web target.
+        required: false
+        default: true
+        type: boolean
+      build-linux:
+        description: Build the Flutter Linux target.
+        required: false
+        default: false
+        type: boolean
+      build-android:
+        description: Build the Flutter Android APK target.
+        required: false
+        default: false
+        type: boolean
+      build-ios:
+        description: Build the Flutter iOS target without code signing.
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  web:
+    name: Build Flutter web
+    if: inputs.build-web
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Flutter
+        uses: ./.github/actions/flutter-setup
+        with:
+          flutter-version: "${{ inputs.flutter-version }}"
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Generate Flutter sources
+        uses: ./.github/actions/flutter-generate
+        with:
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Build web release
+        shell: bash
+        working-directory: "${{ inputs.working-directory }}"
+        run: flutter build web --release
+      - name: Upload web artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: "${{ inputs.artifact-prefix }}-web"
+          path: "${{ inputs.working-directory }}/build/web"
+
+  linux:
+    name: Build Flutter Linux
+    if: inputs.build-linux
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Flutter
+        uses: ./.github/actions/flutter-setup
+        with:
+          flutter-version: "${{ inputs.flutter-version }}"
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Install Linux build dependencies
+        uses: ./.github/actions/install-linux-build-deps
+      - name: Generate Flutter sources
+        uses: ./.github/actions/flutter-generate
+        with:
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Build Linux release
+        shell: bash
+        working-directory: "${{ inputs.working-directory }}"
+        run: flutter build linux --release
+      - name: Upload Linux artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: "${{ inputs.artifact-prefix }}-linux"
+          path: "${{ inputs.working-directory }}/build/linux"
+
+  android:
+    name: Build Flutter Android APK
+    if: inputs.build-android
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Flutter
+        uses: ./.github/actions/flutter-setup
+        with:
+          flutter-version: "${{ inputs.flutter-version }}"
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Generate Flutter sources
+        uses: ./.github/actions/flutter-generate
+        with:
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Build Android release APK
+        shell: bash
+        working-directory: "${{ inputs.working-directory }}"
+        run: flutter build apk --release
+      - name: Upload Android artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: "${{ inputs.artifact-prefix }}-android"
+          path: "${{ inputs.working-directory }}/build/app/outputs/flutter-apk/app-release.apk"
+
+  ios:
+    name: Build Flutter iOS
+    if: inputs.build-ios
+    runs-on: macos-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Flutter
+        uses: ./.github/actions/flutter-setup
+        with:
+          flutter-version: "${{ inputs.flutter-version }}"
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Generate Flutter sources
+        uses: ./.github/actions/flutter-generate
+        with:
+          working-directory: "${{ inputs.working-directory }}"
+      - name: Build unsigned iOS release
+        shell: bash
+        working-directory: "${{ inputs.working-directory }}"
+        run: flutter build ios --release --no-codesign
+      - name: Upload iOS artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: "${{ inputs.artifact-prefix }}-ios"
+          path: "${{ inputs.working-directory }}/build/ios/iphoneos"
