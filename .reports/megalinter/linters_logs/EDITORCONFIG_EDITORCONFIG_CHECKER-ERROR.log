@@ -1,0 +1,124 @@
+Results of editorconfig-checker linter (version 3.10.0)
+See documentation on https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+.github/workflow-profiles/agent-environment/validate-copilot-setup.yml:
+	106: Trailing whitespace
+	111: Trailing whitespace
+	259: Trailing whitespace
+	262: Trailing whitespace
+	265: Trailing whitespace
+	268: Trailing whitespace
+	271: Trailing whitespace
+	274: Trailing whitespace
+	277: Trailing whitespace
+	280: Trailing whitespace
+	283: Trailing whitespace
+	286: Trailing whitespace
+	295: Trailing whitespace
+	298: Trailing whitespace
+	302: Trailing whitespace
+	306: Trailing whitespace
+.github/workflow-profiles/container-platform/benchmark.yml:
+	106: Trailing whitespace
+	108: Trailing whitespace
+	112: Trailing whitespace
+	116: Trailing whitespace
+	119: Trailing whitespace
+	128: Trailing whitespace
+	138: Trailing whitespace
+	140: Trailing whitespace
+	143: Trailing whitespace
+	146: Trailing whitespace
+	150: Trailing whitespace
+	153: Trailing whitespace
+	156: Trailing whitespace
+	161: Trailing whitespace
+	164: Trailing whitespace
+	166: Trailing whitespace
+	170: Trailing whitespace
+	173: Trailing whitespace
+	184: Trailing whitespace
+	186: Trailing whitespace
+	189: Trailing whitespace
+	193: Trailing whitespace
+	196: Trailing whitespace
+	200: Trailing whitespace
+	203: Trailing whitespace
+	205: Trailing whitespace
+	209: Trailing whitespace
+	212: Trailing whitespace
+	223: Trailing whitespace
+	225: Trailing whitespace
+	229: Trailing whitespace
+	232: Trailing whitespace
+	236: Trailing whitespace
+	239: Trailing whitespace
+	241: Trailing whitespace
+	244: Trailing whitespace
+	247: Trailing whitespace
+	258: Trailing whitespace
+	260: Trailing whitespace
+	263: Trailing whitespace
+	265: Trailing whitespace
+	268: Trailing whitespace
+	271: Trailing whitespace
+	274: Trailing whitespace
+	279: Trailing whitespace
+	285: Trailing whitespace
+	304: Trailing whitespace
+	307: Trailing whitespace
+	311: Trailing whitespace
+	317: Trailing whitespace
+	322: Trailing whitespace
+	327: Trailing whitespace
+	333: Trailing whitespace
+	343: Trailing whitespace
+	374: Trailing whitespace
+	385-390: Trailing whitespace
+	392: Trailing whitespace
+	394: Trailing whitespace
+	400: Trailing whitespace
+	402: Trailing whitespace
+	408: Trailing whitespace
+	410: Trailing whitespace
+	416: Trailing whitespace
+	418: Trailing whitespace
+	422: Trailing whitespace
+	426: Trailing whitespace
+	429: Trailing whitespace
+	431: Trailing whitespace
+	435: Trailing whitespace
+	437: Trailing whitespace
+	440: Trailing whitespace
+	450: Trailing whitespace
+	453: Trailing whitespace
+	469: Trailing whitespace
+	554: Trailing whitespace
+	556: Trailing whitespace
+	568: Trailing whitespace
+	575: Trailing whitespace
+	580: Trailing whitespace
+	584: Trailing whitespace
+	592: Trailing whitespace
+	597: Trailing whitespace
+	599: Trailing whitespace
+	601: Trailing whitespace
+	603: Trailing whitespace
+	631: Trailing whitespace
+	634: Trailing whitespace
+	645: Trailing whitespace
+.github/workflow-profiles/container-platform/release-notes.yml:
+	228: Trailing whitespace
+.github/workflow-profiles/content-and-docs/docs.yml:
+	81: Trailing whitespace
+.github/workflow-profiles/content-and-docs/image-optimization.yml:
+	137: Trailing whitespace
+	155: Trailing whitespace
+.github/workflow-profiles/security-optional/ossf-scorecard-older.yml:
+	Wrong line endings or no final newline
+
+109 errors found
+

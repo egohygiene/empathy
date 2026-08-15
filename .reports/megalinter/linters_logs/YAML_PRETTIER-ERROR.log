@@ -1,0 +1,23 @@
+Results of prettier linter (version 3.9.6)
+See documentation on https://megalinter.io/10.0.0/descriptors/yaml_prettier/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Checking formatting...
+[warn] .github/workflow-profiles/agent-environment/validate-copilot-setup.yml
+[warn] .github/workflow-profiles/container-platform/benchmark.yml
+[warn] .github/workflow-profiles/container-platform/bump-version.yml
+[warn] .github/workflow-profiles/container-platform/publish.yml
+[warn] .github/workflow-profiles/container-platform/release-notes.yml
+[warn] .github/workflow-profiles/container-platform/trivy-scan.yml
+[warn] .github/workflow-profiles/container-platform/validate-changelog.yml
+[warn] .github/workflow-profiles/content-and-docs/bookmarks-extract.yml
+[warn] .github/workflow-profiles/content-and-docs/docs.yml
+[warn] .github/workflow-profiles/content-and-docs/image-optimization.yml
+[warn] .github/workflow-profiles/release-strategies/changesets-release.yml
+[warn] .github/workflow-profiles/release-strategies/release-please.yml
+[warn] .github/workflow-profiles/release-strategies/semantic-release.yml
+[warn] .github/workflow-profiles/security-optional/ossf-scorecard-older.yml
+[warn] Code style issues found in 14 files. Run Prettier with --write to fix.
+

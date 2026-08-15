@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-04e732bb-a940-4650-9f81-245e71dc49a0",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-f153bc01-9249-4072-8378-9486a22708f9",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.50.0"
   ],
-  "created": "2026-08-15T18:31:07Z"
+  "created": "2026-08-15T21:15:48Z"
  },
  "packages": [
   {
@@ -99,6 +99,51 @@
    ]
   },
   {
+   "name": "./.github/actions/flutter-generate",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-flutter-generate-49b0feed7885b539",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-flutter-build.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-generate:.\\/.github\\/actions\\/flutter-generate:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-generate:.\\/.github\\/actions\\/flutter_generate:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_generate:.\\/.github\\/actions\\/flutter-generate:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_generate:.\\/.github\\/actions\\/flutter_generate:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter-generate:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter_generate:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
    "name": "./.github/actions/flutter-setup",
    "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-flutter-setup-f916b000c26cad56",
    "versionInfo": "UNKNOWN",
@@ -107,6 +152,51 @@
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
    "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/actions/setup-environment/action.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-setup:.\\/.github\\/actions\\/flutter-setup:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter-setup:.\\/.github\\/actions\\/flutter_setup:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_setup:.\\/.github\\/actions\\/flutter-setup:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter_setup:.\\/.github\\/actions\\/flutter_setup:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter-setup:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/flutter:.\\/.github\\/actions\\/flutter_setup:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/flutter-setup",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-flutter-setup-1e99da4b99805ed7",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-flutter-build.yml",
    "licenseConcluded": "NOASSERTION",
    "licenseDeclared": "NOASSERTION",
    "copyrightText": "NOASSERTION",
@@ -505,6 +595,176 @@
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
      "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/install-linux-build-deps",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-install-linux-build-deps-7c3aa98e5e389763",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/actions/setup-agent-environment/action.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/install-linux-build-deps",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-install-linux-build-deps-384a28d8711627be",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-flutter-build.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build-deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build_deps:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux-build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux_build:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install-linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install_linux:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install-linux-build-deps:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/install:.\\/.github\\/actions\\/install_linux_build_deps:*:*:*:*:*:*:*:*"
     }
    ]
   },
@@ -1025,6 +1285,161 @@
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
      "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/python:.\\/.github\\/actions\\/python_poetry_setup:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/setup-agent-environment",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-setup-agent-environment-b3f27b811f25e089",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/copilot-setup-steps.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent-environment:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent-environment:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent_environment:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent_environment:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-agent:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_agent:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup-agent-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup_agent_environment:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/setup-environment",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-setup-environment-bb411dad76a56915",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/actions/setup-agent-environment/action.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+    }
+   ]
+  },
+  {
+   "name": "./.github/actions/setup-environment",
+   "SPDXID": "SPDXRef-Package-github-action-.-.github-actions-setup-environment-7fd0e18e6c8a38cd",
+   "versionInfo": "UNKNOWN",
+   "supplier": "Organization: .",
+   "originator": "Organization: .",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-autofix.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup-environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup_environment:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup-environment:*:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:.\\/.github\\/actions\\/setup:.\\/.github\\/actions\\/setup_environment:*:*:*:*:*:*:*:*"
     }
    ]
   },
@@ -77264,6 +77679,31 @@
   },
   {
    "name": "actions/checkout",
+   "SPDXID": "SPDXRef-Package-github-action-actions-checkout-27feaa91f0c84e40",
+   "versionInfo": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/copilot-setup-steps.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+    }
+   ]
+  },
+  {
+   "name": "actions/checkout",
    "SPDXID": "SPDXRef-Package-github-action-actions-checkout-6d5fb011de1637ee",
    "versionInfo": "3d3c42e5aac5ba805825da76410c181273ba90b1",
    "supplier": "Organization: GitHub",
@@ -77471,6 +77911,56 @@
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
    "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/repository-intelligence.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+    }
+   ]
+  },
+  {
+   "name": "actions/checkout",
+   "SPDXID": "SPDXRef-Package-github-action-actions-checkout-faec2ce168baa45e",
+   "versionInfo": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-autofix.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+    }
+   ]
+  },
+  {
+   "name": "actions/checkout",
+   "SPDXID": "SPDXRef-Package-github-action-actions-checkout-3c9fbebacfc8cb0b",
+   "versionInfo": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-flutter-build.yml",
    "licenseConcluded": "NOASSERTION",
    "licenseDeclared": "NOASSERTION",
    "copyrightText": "NOASSERTION",
@@ -78479,6 +78969,56 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"
+    }
+   ]
+  },
+  {
+   "name": "actions/upload-artifact",
+   "SPDXID": "SPDXRef-Package-github-action-actions-upload-artifact-e1ba3e59b9386f71",
+   "versionInfo": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-flutter-build.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:ea165f8d65b6e75b540449e92b4886f43607fa02:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02"
     }
    ]
   },
@@ -85280,6 +85820,56 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:npm/auto-bind@5.0.1"
+    }
+   ]
+  },
+  {
+   "name": "autofix-ci/action",
+   "SPDXID": "SPDXRef-Package-github-action-autofix-ci-action-06bac2361b212735",
+   "versionInfo": "c5b2d67aa2274e7b5a18224e8171550871fc7e4a",
+   "supplier": "Organization: autofix-ci",
+   "originator": "Organization: autofix-ci",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-autofix.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:autofix-ci\\/action:autofix-ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:autofix-ci\\/action:autofix_ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:autofix_ci\\/action:autofix-ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:autofix_ci\\/action:autofix_ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:autofix:autofix-ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:autofix:autofix_ci\\/action:c5b2d67aa2274e7b5a18224e8171550871fc7e4a:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a"
     }
    ]
   },
@@ -225321,6 +225911,76 @@
   },
   {
    "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-613a1d8a1f9a7b25",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/copilot-setup-steps.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
    "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-0016a576c76b9d54",
    "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
    "supplier": "Organization: step-security",
@@ -225958,6 +226618,146 @@
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
    "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/repository-intelligence.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-085acb403ef80b2a",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-autofix.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step-security\\/harden-runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:step:step_security\\/harden_runner:bf7454d06d71f1098171f2acdf0cd4708d7b5920:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920"
+    }
+   ]
+  },
+  {
+   "name": "step-security/harden-runner",
+   "SPDXID": "SPDXRef-Package-github-action-step-security-harden-runner-c82f45121a88607f",
+   "versionInfo": "bf7454d06d71f1098171f2acdf0cd4708d7b5920",
+   "supplier": "Organization: step-security",
+   "originator": "Organization: step-security",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/reusable-flutter-build.yml",
    "licenseConcluded": "NOASSERTION",
    "licenseDeclared": "NOASSERTION",
    "copyrightText": "NOASSERTION",
@@ -249205,6 +250005,24 @@
    "copyrightText": "NOASSERTION"
   },
   {
+   "fileName": ".github/actions/setup-agent-environment/action.yml",
+   "SPDXID": "SPDXRef-File-...setup-agent-environment-action.yml-59e08bf630842e1b",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "ac582aa80afbcc9125a492927a41f5e0f88cc8623bfa7ebcf2320be62cea5175"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
    "fileName": ".github/actions/setup-environment/action.yml",
    "SPDXID": "SPDXRef-File-...actions-setup-environment-action.yml-f82efb4c0366b135",
    "fileTypes": [
@@ -249231,7 +250049,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a9b261ec334c98f19dd447febf0a0dec902948244edfcf11a8514a69e84f636a"
+     "checksumValue": "94536d47b4d3e5623dd6266d3459c7e80eef4cbd9a9bf22e2b61e199c9066477"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -249286,6 +250104,24 @@
     {
      "algorithm": "SHA256",
      "checksumValue": "d0c401dd9bff690a604dd11ce99c0e37f2c908cecdd5eb2a849d459d96294a4d"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": ".github/workflows/copilot-setup-steps.yml",
+   "SPDXID": "SPDXRef-File-...workflows-copilot-setup-steps.yml-c2ed82168e304bc7",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "34b03521bbffa6617bf20b081d0879e3fb2944d16d1abce36267afe96d5b7ad6"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -249466,6 +250302,42 @@
     {
      "algorithm": "SHA256",
      "checksumValue": "4d8f6df21c9553c53dff1f93b52fde1e74877adac8da231ed36162cbf5f0f8bb"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": ".github/workflows/reusable-autofix.yml",
+   "SPDXID": "SPDXRef-File-.github-workflows-reusable-autofix.yml-16fd571cb225215e",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "ccbba97514e66f1d17202bd09515a2e8c5cc6ebf04ec5ca0bcec72565696a651"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": ".github/workflows/reusable-flutter-build.yml",
+   "SPDXID": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "a6cc31808e3554e2b8a9e07175dd79d92051c80c7009ae0af449b79a10b2dc45"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -340770,6 +341642,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-autofix-ci-action-06bac2361b212735",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-reusable-autofix.yml-16fd571cb225215e",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-configargparse-06bdb9c97becf2ed",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
    "relationshipType": "OTHER",
@@ -340934,6 +341812,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-pino-085291e5f54ffab2",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-085acb403ef80b2a",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-reusable-autofix.yml-16fd571cb225215e",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -343272,6 +344156,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-flutter-setup-1e99da4b99805ed7",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-debug-1ea5f53814d45807",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -344156,6 +345046,12 @@
   {
    "spdxElementId": "SPDXRef-Package-github-action-actions-upload-artifact-27f697be23f772a7",
    "relatedSpdxElement": "SPDXRef-File-.github-workflows-megalinter-fix.yml-68fc38e13e38ae86",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-27feaa91f0c84e40",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-copilot-setup-steps.yml-c2ed82168e304bc7",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -345864,6 +346760,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-install-linux-build-deps-384a28d8711627be",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-strip-ansi-387a01384cd62e11",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -346256,6 +347158,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm--eslint-plugin-kit-3c7ea1e407fcbc3b",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-3c9fbebacfc8cb0b",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -347570,6 +348478,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-chardet-49b01b7ec89475e6",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-flutter-generate-49b0feed7885b539",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -349964,6 +350878,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-is-glob-613936d3b090b577",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-613a1d8a1f9a7b25",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-copilot-setup-steps.yml-c2ed82168e304bc7",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -352812,6 +353732,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-install-linux-build-deps-7c3aa98e5e389763",
+   "relatedSpdxElement": "SPDXRef-File-...setup-agent-environment-action.yml-59e08bf630842e1b",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--cacheable-memory-7c484fea394a1e97",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -353192,6 +354118,12 @@
   {
    "spdxElementId": "SPDXRef-Package-python-codespell-7fcc3d5ef16b5860",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-setup-environment-7fd0e18e6c8a38cd",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-reusable-autofix.yml-16fd571cb225215e",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -358386,6 +359318,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-setup-agent-environment-b3f27b811f25e089",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-copilot-setup-steps.yml-c2ed82168e304bc7",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--zkochan-js-yaml-b401f362bd1a2ec7",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -359114,6 +360052,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-cacheable-request-bb23fa9536ae946c",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-setup-environment-bb411dad76a56915",
+   "relatedSpdxElement": "SPDXRef-File-...setup-agent-environment-action.yml-59e08bf630842e1b",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -360680,6 +361624,12 @@
   {
    "spdxElementId": "SPDXRef-Package-python-rfc3339-validator-c820d37c005818af",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-step-security-harden-runner-c82f45121a88607f",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -363546,6 +364496,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-upload-artifact-e1ba3e59b9386f71",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--csstools-postcss-logical-resize-e1f56d1687594f0b",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -365886,6 +366842,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-faec2ce168baa45e",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-reusable-autofix.yml-16fd571cb225215e",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--ts-graphviz-core-faf5428b57cf0cf6",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -366335,7 +367297,17 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-flutter-generate-49b0feed7885b539",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-flutter-setup-f916b000c26cad56",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-flutter-setup-1e99da4b99805ed7",
    "relationshipType": "CONTAINS"
   },
   {
@@ -366361,6 +367333,16 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-generate-repository-intelligence-dashboard-4c7979ab13b82d2d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-install-linux-build-deps-7c3aa98e5e389763",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-install-linux-build-deps-384a28d8711627be",
    "relationshipType": "CONTAINS"
   },
   {
@@ -366401,6 +367383,21 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-python-poetry-setup-93f2e12608bd486d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-setup-agent-environment-b3f27b811f25e089",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-setup-environment-bb411dad76a56915",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-.-.github-actions-setup-environment-7fd0e18e6c8a38cd",
    "relationshipType": "CONTAINS"
   },
   {
@@ -373145,6 +374142,11 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-27feaa91f0c84e40",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-6d5fb011de1637ee",
    "relationshipType": "CONTAINS"
   },
@@ -373186,6 +374188,16 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-6ae1b89e5fce2b81",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-faec2ce168baa45e",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-3c9fbebacfc8cb0b",
    "relationshipType": "CONTAINS"
   },
   {
@@ -373286,6 +374298,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-upload-artifact-daf1493972415232",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-upload-artifact-e1ba3e59b9386f71",
    "relationshipType": "CONTAINS"
   },
   {
@@ -373866,6 +374883,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-npm-auto-bind-320d9abf62ce98f6",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-autofix-ci-action-06bac2361b212735",
    "relationshipType": "CONTAINS"
   },
   {
@@ -385905,6 +386927,11 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-613a1d8a1f9a7b25",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-0016a576c76b9d54",
    "relationshipType": "CONTAINS"
   },
@@ -385951,6 +386978,16 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-991299fe8001ff4f",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-085acb403ef80b2a",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-step-security-harden-runner-c82f45121a88607f",
    "relationshipType": "CONTAINS"
   },
   {
