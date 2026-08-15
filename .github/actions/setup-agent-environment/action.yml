@@ -1,0 +1,79 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+
+name: Set up agent environment
+description: >-
+  Prepare a portable repository development environment for Copilot or other
+  coding agents by composing the repository's canonical setup actions.
+
+inputs:
+  working-directory:
+    description: Project directory relative to the GitHub workspace.
+    required: false
+    default: "."
+  setup-node:
+    description: Set up Node.js. Accepted values are auto, true, and false.
+    required: false
+    default: "auto"
+  node-version:
+    description: Node.js version.
+    required: false
+    default: "22"
+  setup-python:
+    description: Set up Python. Accepted values are auto, true, and false.
+    required: false
+    default: "auto"
+  python-version:
+    description: Python version.
+    required: false
+    default: "3.12"
+  setup-flutter:
+    description: Set up Flutter. Accepted values are auto, true, and false.
+    required: false
+    default: "auto"
+  flutter-version:
+    description: Flutter SDK version.
+    required: false
+    default: "3.44.2"
+  install-dependencies:
+    description: Install detected project dependencies.
+    required: false
+    default: "true"
+  install-linux-build-deps:
+    description: Install Flutter/Linux desktop build dependencies.
+    required: false
+    default: "false"
+
+runs:
+  using: composite
+  steps:
+    - name: Set up detected repository toolchains
+      uses: ./.github/actions/setup-environment
+      with:
+        working-directory: "${{ inputs.working-directory }}"
+        setup-node: "${{ inputs.setup-node }}"
+        node-version: "${{ inputs.node-version }}"
+        setup-python: "${{ inputs.setup-python }}"
+        python-version: "${{ inputs.python-version }}"
+        setup-flutter: "${{ inputs.setup-flutter }}"
+        flutter-version: "${{ inputs.flutter-version }}"
+        install-dependencies: "${{ inputs.install-dependencies }}"
+
+    - name: Install Linux desktop build dependencies
+      if: inputs.install-linux-build-deps == 'true'
+      uses: ./.github/actions/install-linux-build-deps
+
+    - name: Report agent environment
+      shell: bash
+      env:
+        WORKING_DIRECTORY: "${{ inputs.working-directory }}"
+      run: |
+        set -euo pipefail
+        printf 'Repository: %s\n' "${GITHUB_REPOSITORY}"
+        printf 'Runner OS: %s\n' "${RUNNER_OS}"
+        printf 'Working directory: %s\n' "${WORKING_DIRECTORY}"
+        git --version
+        gh --version
+        python3 --version || true
+        node --version || true
+        flutter --version || true

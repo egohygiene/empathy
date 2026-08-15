@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # frozen_string_literal: true
 
 # ==============================================================================

@@ -32,6 +32,7 @@ token policy.
 | `install-linux-build-deps`                   | Install Flutter desktop build packages on Debian-family runners              | System packages                  |
 | `normalize-repository-report`                | Normalize scanner outputs into a versioned intelligence contract             | Writes one summary JSON          |
 | `python-poetry-setup`                        | Install pinned Python/Poetry and locked dependencies                         | Tool/cache installation          |
+| `setup-agent-environment`                    | Compose portable toolchain setup for Copilot and coding-agent environments   | Tool/dependency installation     |
 | `setup-environment`                          | Detect and prepare Node.js, Python/Poetry, and Flutter projects              | Tool/dependency installation     |
 | `setup-osv-scanner`                          | Install a checksum-verified OSV Scanner release                              | Temporary tool installation      |
 | `generate-lint-infographic`                  | Generate architecture SVG and legend from canonical tool matrices            | `.reports/egolint/architecture/` |
@@ -41,8 +42,10 @@ token policy.
 ## Selection guide
 
 Use `setup-environment` when a repository needs a convenient, auto-detected
-baseline. Use the technology-specific actions when a workflow needs explicit
-control over versions, dependency installation, or job boundaries.
+baseline. Use `setup-agent-environment` when that baseline is being prepared for
+Copilot or another coding agent and may also need Linux desktop build support.
+Use the technology-specific actions when a workflow needs explicit control over
+versions, dependency installation, or job boundaries.
 
 Use a reusable workflow instead of a composite action when the abstraction owns
 multiple jobs, permissions, environments, matrices, or deployment credentials.
