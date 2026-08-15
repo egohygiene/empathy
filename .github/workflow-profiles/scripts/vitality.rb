@@ -40,87 +40,167 @@
 require 'date'
 require 'optparse'
 
-DEFAULT_THRESHOLD_DAYS = 30
-TODO_PATTERN = /TODO(?:\((\d{4}-\d{2}-\d{2})\))?:?\s*(.*)/
+# ------------------------------------------------------------------------------
+# Logging Helpers
+# ------------------------------------------------------------------------------
 
-options = {
-  threshold: DEFAULT_THRESHOLD_DAYS,
-  path: '.'
-}
+def debug_log(message)
+  return unless ENV['DEBUG'] == '1'
 
-OptionParser.new do |parser|
-  parser.banner = 'Usage: vitality.rb [options]'
+  warn "[DEBUG] #{message}"
+end
 
-  parser.on('--threshold DAYS', Integer, 'Maximum allowed TODO age') do |days|
-    options[:threshold] = days
+def info_log(message)
+  $stdout.puts message
+end
+
+def warn_log(message)
+  warn message
+end
+
+def error_log(message)
+  warn message
+end
+
+# ------------------------------------------------------------------------------
+# Vitality Auditor
+# ------------------------------------------------------------------------------
+
+class VitalityAuditor
+  DEFAULT_THRESHOLD_DAYS = 30
+
+  def initialize(threshold_days:, root_path:)
+    @threshold_days = threshold_days
+    @root_path = root_path
+    @errors = []
+    @warnings = []
   end
 
-  parser.on('--path PATH', String, 'Directory to scan') do |path|
-    options[:path] = path
+  def run
+    info_log '### 🔍 Scanning Ruby files for TODOs...'
+    scan_files
+    report_and_exit
   end
 
-  parser.on('--help', 'Show help') do
-    puts parser
+  private
+
+  def scan_files
+    pattern = File.join(@root_path, '**', '*.rb')
+
+    Dir.glob(pattern).each do |file|
+      next if skip_file?(file)
+
+      debug_log "Scanning file: #{file}"
+
+      File.foreach(file).with_index(1) do |line, line_number|
+        check_line(line, file, line_number)
+      end
+    end
+  end
+
+  def skip_file?(file)
+    file.include?('/vendor/') || file.include?('/.git/')
+  end
+
+  def check_line(line, file, line_number)
+    # Match TODO(YYYY-MM-DD)
+    dated_match = line.match(/TODO\((\d{4}-\d{2}-\d{2})\)/)
+
+    if dated_match
+      handle_dated_todo(dated_match[1], file, line_number)
+    elsif line.include?('TODO')
+      handle_undated_todo(file, line_number)
+    end
+  end
+
+  def handle_dated_todo(date_string, file, line_number)
+    date_added = parse_date_safe(date_string)
+    return unless date_added
+
+    @errors << format_error(file, line_number, date_added) if expired?(date_added)
+  end
+
+  def handle_undated_todo(file, line_number)
+    @warnings << "⚠️  Undated TODO found in #{file}:#{line_number}"
+  end
+
+  def parse_date_safe(date_string)
+    Date.parse(date_string)
+  rescue ArgumentError
+    warn_log "⚠️  Invalid date format in TODO: #{date_string}"
+    nil
+  end
+
+  def expired?(date)
+    date < (Date.today - @threshold_days)
+  end
+
+  def format_error(file, line_number, date)
+    "⏰ Expired TODO in #{file}:#{line_number} (Added: #{date})"
+  end
+
+  def report_and_exit
+    info_log "\n## 📊 Audit Results"
+
+    @warnings.each do |warning|
+      warn_log warning
+    end
+
+    if @errors.any?
+      error_log "\n### ❌ Vitality Check Failed"
+      @errors.each do |error|
+        error_log "  - #{error}"
+      end
+      exit 1
+    end
+
+    info_log "\n### ✅ Project is Fresh!"
+    info_log "All TODOs are within the #{@threshold_days}-day limit."
     exit 0
   end
-end.parse!
-
-unless options[:threshold].positive?
-  warn 'threshold must be a positive number of days'
-  exit 2
 end
 
-root = File.expand_path(options[:path])
-unless Dir.exist?(root)
-  warn "path does not exist: #{root}"
-  exit 2
-end
+# ------------------------------------------------------------------------------
+# CLI Parsing
+# ------------------------------------------------------------------------------
 
-cutoff = Date.today - options[:threshold]
-expired = []
-undated = []
+options = {
+  threshold_days: VitalityAuditor::DEFAULT_THRESHOLD_DAYS,
+  root_path: '.',
+}
 
-Dir.glob(File.join(root, '**', '*'), File::FNM_DOTMATCH).sort.each do |path|
-  next unless File.file?(path)
-  next if path.include?('/.git/')
+parser = OptionParser.new do |opts|
+  opts.banner = 'Usage: vitality.rb [options]'
 
-  begin
-    File.foreach(path).with_index(1) do |line, line_number|
-      match = TODO_PATTERN.match(line)
-      next unless match
+  opts.on('--threshold DAYS', Integer, 'Max age of TODOs (default: 30)') do |value|
+    options[:threshold_days] = value
+  end
 
-      date_text = match[1]
-      if date_text.nil?
-        undated << [path, line_number, line.strip]
-        next
-      end
+  opts.on('--path PATH', String, 'Path to scan (default: .)') do |value|
+    options[:root_path] = value
+  end
 
-      begin
-        todo_date = Date.iso8601(date_text)
-      rescue Date::Error
-        undated << [path, line_number, line.strip]
-        next
-      end
-
-      expired << [path, line_number, line.strip, todo_date] if todo_date < cutoff
-    end
-  rescue ArgumentError, Encoding::InvalidByteSequenceError, Encoding::UndefinedConversionError
-    next
+  opts.on('--help', 'Show this help message') do
+    $stdout.puts opts
+    exit 0
   end
 end
 
-undated.each do |path, line_number, line|
-  warn "warning: #{path}:#{line_number}: undated TODO: #{line}"
+begin
+  parser.parse!
+rescue OptionParser::InvalidOption, OptionParser::MissingArgument => e
+  error_log e.message
+  error_log parser
+  exit 2
 end
 
-expired.each do |path, line_number, line, date|
-  warn "error: #{path}:#{line_number}: TODO from #{date} exceeds #{options[:threshold]} days: #{line}"
-end
+# ------------------------------------------------------------------------------
+# Execution
+# ------------------------------------------------------------------------------
 
-if ENV['DEBUG'] == '1'
-  warn "debug: scanned #{root}"
-  warn "debug: undated TODOs=#{undated.length}"
-  warn "debug: expired TODOs=#{expired.length}"
-end
+auditor = VitalityAuditor.new(
+  threshold_days: options[:threshold_days],
+  root_path: options[:root_path],
+)
 
-exit(expired.empty? ? 0 : 1)
+auditor.run
