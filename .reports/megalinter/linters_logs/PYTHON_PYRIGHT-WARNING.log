@@ -9,131 +9,172 @@ Linter raw log:
   .github/actions/generate-lint-infographic/generate_lint_infographic.py:73:43 - error: Type of "tool" is unknown (reportUnknownVariableType)
   .github/actions/generate-lint-infographic/generate_lint_infographic.py:75:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
 .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:114:9 - error: Type of "candidate" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:117:30 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:120:9 - error: Type of "candidate" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:123:30 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:118:30 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:124:30 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:120:13 - error: Type of "append" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:126:13 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:121:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:187:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:196:9 - error: Type of "severity" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:127:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:193:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:202:9 - error: Type of "severity" is partially unknown
     Type of "severity" is "Unknown | dict[Unknown, Unknown]" (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:196:20 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:202:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:198:47 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:204:47 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:201:49 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:207:49 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:204:42 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:210:42 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:209:21 - error: Argument type is unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:215:21 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:210:21 - error: Type of "key" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:210:26 - error: Type of "value" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:210:42 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:216:21 - error: Type of "key" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:216:26 - error: Type of "value" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:216:42 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "dict_items[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:222:21 - error: Argument type is unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:228:21 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:223:21 - error: Type of "key" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:223:26 - error: Type of "value" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:223:42 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:229:21 - error: Type of "key" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:229:26 - error: Type of "value" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:229:42 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "dict_items[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:229:21 - error: Argument type is unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:235:21 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:230:21 - error: Type of "key" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:230:26 - error: Type of "value" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:230:42 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:236:21 - error: Type of "key" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:236:26 - error: Type of "value" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:236:42 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "dict_items[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:285:13 - error: Argument type is unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:291:13 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:285:43 - error: Type of "key" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:285:48 - error: Type of "value" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:285:64 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:291:43 - error: Type of "key" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:291:48 - error: Type of "value" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:291:64 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "dict_items[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:375:32 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:381:32 - error: Argument type is partially unknown
     Argument corresponds to parameter "document" in function "validate_report"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:415:16 - error: Type of "candidate" is unknown (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:415:39 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:421:16 - error: Type of "candidate" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:421:39 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:418:9 - error: Type of "identity" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:424:9 - error: Type of "identity" is partially unknown
     Type of "identity" is "Unknown | None" (reportUnknownVariableType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:418:20 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:424:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:424:17 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:430:17 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:591:38 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:597:38 - error: Argument type is partially unknown
     Argument corresponds to parameter "document" in function "validate_analytics"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:798:39 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:657:5 - error: Type of "name" is partially unknown
+    Type of "name" is "Unknown | None" (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:657:12 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:799:35 - error: Type of "get" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:658:5 - error: Type of "node_type" is partially unknown
+    Type of "node_type" is "Unknown | None" (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:658:17 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:997:9 - error: Type of "append" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:672:9 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:686:26 - error: Argument type is unknown
+    Argument corresponds to parameter "x" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:687:29 - error: Argument type is unknown
+    Argument corresponds to parameter "x" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:688:31 - error: Argument type is unknown
+    Argument corresponds to parameter "x" in function "__new__" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:692:5 - error: Type of "children" is partially unknown
+    Type of "children" is "Unknown | None" (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:692:16 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:693:5 - error: Type of "descendants" is partially unknown
+    Type of "descendants" is "Unknown | None" (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:693:19 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:696:8 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:703:9 - error: Type of "child" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:721:25 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:733:8 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:792:44 - error: Argument type is partially unknown
+    Argument corresponds to parameter "document" in function "validate_repository_tree"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1001:39 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1002:35 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1200:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1011:9 - error: Type of "append" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1214:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1027:14 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1230:14 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "join"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1030:14 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1233:14 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "join"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1081:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1087:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1097:49 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "join"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1101:55 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "join"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1140:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1150:14 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "join"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1201:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1210:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1212:13 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1221:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1231:14 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "join"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1248:13 - error: Argument type is partially unknown
-    Argument corresponds to parameter "rows" in function "render_data_table"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
   .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1284:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1291:9 - error: Type of "append" is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1290:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1304:62 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1300:49 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "join"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1308:13 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1304:55 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "join"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1343:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1353:14 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "join"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1404:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1413:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1415:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1424:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1434:14 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "join"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1451:13 - error: Argument type is partially unknown
     Argument corresponds to parameter "rows" in function "render_data_table"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1320:35 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1487:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1494:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1507:62 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "join"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1511:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "rows" in function "render_data_table"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1523:35 - error: Argument type is partially unknown
     Argument corresponds to parameter "summary" in function "render_activity_chart"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1321:40 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1524:40 - error: Argument type is partially unknown
     Argument corresponds to parameter "summary" in function "render_composition_chart"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1322:36 - error: Argument type is partially unknown
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1525:36 - error: Argument type is partially unknown
     Argument corresponds to parameter "summary" in function "render_hotspot_chart"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1668:5 - error: Type of "tree" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1669:5 - error: Type of "counts" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1683:13 - error: Argument type is unknown
+    Argument corresponds to parameter "node" in function "render_tree_node" (reportUnknownArgumentType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1688:13 - error: Type of "child" is unknown (reportUnknownVariableType)
+  .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1690:30 - error: Argument type is unknown
+    Argument corresponds to parameter "arg2" in function "max" (reportUnknownArgumentType)
 .github/actions/generate-repository-intelligence/generate_repository_intelligence.py
   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py:152:13 - error: Argument of type "Literal[True]" cannot be assigned to parameter "value" of type "str" in function "__setitem__"
     "Literal[True]" is not assignable to "str" (reportArgumentType)
@@ -1474,24 +1515,28 @@ tests/test_mindgarden_publishing_integration.py
   tests/test_mindgarden_publishing_integration.py:32:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
   tests/test_mindgarden_publishing_integration.py:32:38 - error: Type of "path" is unknown (reportUnknownVariableType)
 tests/test_repository_intelligence_dashboard.py
-  tests/test_repository_intelligence_dashboard.py:197:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:198:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:199:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:200:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:201:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:202:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:203:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:208:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:209:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:210:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:211:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:220:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:238:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:250:9 - error: Type of "scorecard" is unknown (reportUnknownVariableType)
-  tests/test_repository_intelligence_dashboard.py:250:21 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:252:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:253:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:254:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:255:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:256:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:257:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:258:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:263:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:264:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
   tests/test_repository_intelligence_dashboard.py:265:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:299:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:311:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
-  tests/test_repository_intelligence_dashboard.py:311:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-789 errors, 10 warnings, 0 informations
+  tests/test_repository_intelligence_dashboard.py:266:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:275:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:292:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:293:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:313:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:328:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:342:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:354:9 - error: Type of "scorecard" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_dashboard.py:354:21 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:369:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:414:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+815 errors, 10 warnings, 0 informations
 

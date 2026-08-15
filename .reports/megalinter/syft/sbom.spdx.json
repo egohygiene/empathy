@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-4a3c05a2-405c-4452-b87c-97b4c9ecc75d",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-52035cdb-7afc-4511-aed7-d0f6cb2f7c5d",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.50.0"
   ],
-  "created": "2026-08-15T05:41:42Z"
+  "created": "2026-08-15T16:28:10Z"
  },
  "packages": [
   {
@@ -249411,7 +249411,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "f382f3351d6c15aa405233c75f28d418da5f7a4c6f721f884eb03ac994506943"
+     "checksumValue": "e8e4c6b0397cb3fd93142f8e5f79f1b4825b234ecb559daafcb95a7f79013733"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -249465,7 +249465,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "3117f688c9cc21123d0e09499f360032a14c33e4134eb1119958579c8b71b1af"
+     "checksumValue": "4d8f6df21c9553c53dff1f93b52fde1e74877adac8da231ed36162cbf5f0f8bb"
     }
    ],
    "licenseConcluded": "NOASSERTION",

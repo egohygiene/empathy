@@ -4,47 +4,49 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   14|     |     0|          |       0|       0.34s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       8.57s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   47|     |     0|          |       0|       0.39s|
-|✅ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|       9.91s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   14|     |     0|          |       0|       0.41s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       9.19s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   47|     |     0|          |       0|        0.3s|
+|✅ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  116|     |     0|          |       0|      10.31s|
 |✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     0|          |       0|       0.04s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   330|          |      no|       4.48s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |    65|          |       0|       1.64s|
-|✅ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  819|     |     0|          |       0|       0.92s|
-|✅ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     0|          |       0|       0.25s|
-|✅ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  103|     |     0|          |       0|       0.73s|
-|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  103|     |     1|          |       0|       2.28s|
-|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  103|     |     0|          |       0|      26.08s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    1|     |     5|          |       0|       0.04s|
-|✅ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  231|     |     0|          |       0|       3.69s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  231|     |     1|          |       0|       0.48s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|        1.2s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       1.02s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   45|     |    11|          |       0|       2.35s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    18|          |      no|      13.13s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   45|     |    33|          |       0|      15.04s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   789|          |      no|      11.33s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   45|     |    52|          |       0|       0.56s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   45|     |     1|          |       0|       0.06s|
-|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.35s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      40.01s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       2.44s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    13|          |      no|      95.78s|
-|✅ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |    no|          |      no|       0.55s|
-|✅ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      29.32s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.24s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      25.45s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.22s|
-|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|        5.3s|
-|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.37s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  469|     |    35|          |       0|      15.42s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  235|     |   413|          |       0|       4.77s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  235|     |     4|          |    2012|       4.97s|
-|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.32s|
-|✅ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  129|     |     0|          |       0|       3.73s|
-|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  129|     |     0|          |       0|      36.84s|
-|✅ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  129|     |     0|          |       0|      11.35s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |   340|          |      no|       3.92s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    2|     |   108|          |       0|       2.08s|
+|✅ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    |  825|     |     0|          |       0|        1.0s|
+|✅ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    1|     |     0|          |       0|       0.24s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    1|     |     1|          |       0|       2.29s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    1|     |     0|          |       0|        0.5s|
+|✅ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  103|     |     0|          |       0|       0.26s|
+|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  103|     |     1|          |       0|       2.78s|
+|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  103|     |     0|          |       0|      27.48s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    1|     |     5|          |       0|       0.05s|
+|✅ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  232|     |     0|          |       0|       4.21s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  232|     |     1|          |       0|       0.87s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.56s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       1.17s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   45|     |    11|          |       0|       2.41s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    22|          |      no|      13.91s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   45|     |    36|          |       0|      15.47s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |   815|          |      no|      11.76s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   45|     |    55|          |       0|       0.81s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   45|     |     1|          |       0|       0.07s|
+|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|        1.3s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      41.89s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       2.49s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    13|          |      no|      95.67s|
+|✅ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |    no|          |      no|       0.61s|
+|✅ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |    no|          |      no|      29.62s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.04s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      16.27s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      40.78s|
+|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|      11.99s|
+|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.46s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  471|     |    35|          |       0|      14.55s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  236|     |   421|          |       0|       6.41s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  236|     |     4|          |    2017|       5.14s|
+|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.28s|
+|✅ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  130|     |     0|          |       0|       4.05s|
+|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  130|     |     0|          |       0|      38.61s|
+|✅ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  130|     |     0|          |       0|      11.23s|
 
 ## Detailed Issues
 
@@ -56,7 +58,7 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-15 05:41:16.251657+00:00
+Run started:2026-08-15 16:27:43.278699+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -243,7 +245,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 6625
+	Total lines of code: 6740
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
@@ -306,292 +308,248 @@ For more information, try '--help'.
 </details>
 
 <details>
+<summary>❌ JAVASCRIPT / eslint - 1 error</summary>
+
+```
+Oops! Something went wrong! :(
+
+ESLint: 10.8.0
+
+Error: Cannot find module 'eslint-plugin-react'
+Require stack:
+- egolint/.config/lint/javascript/eslint.config.mjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)
+    at Module._load (node:internal/modules/cjs/loader:1296:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1619:12)
+    at require (node:internal/modules/helpers:191:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786811180811:25:21
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+
+
+[JAVASCRIPT_ES_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config. The plugin is not installed in MegaLinter's bundled `node_modules` (`/node-deps/node_modules`).
+Resolutions:
+  - Pre-install the missing plugin into MegaLinter's npm root via a pre-command in your .mega-linter.yml:
+      JAVASCRIPT_ES_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-NAME"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's full dependency tree and run ESLint from the workspace `node_modules`:
+      JAVASCRIPT_ES_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      JAVASCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
+  - Verify the plugin name in your ESLint config matches the published npm package name.
+```
+
+</details>
+
+<details>
 <summary>❌ SPELL / lychee - 35 errors</summary>
 
 ```
-ect. Redirects: https://json.schemastore.org/prettierrc.json --[301]--> https://www.schemastore.org/prettierrc.json
-[200] https://raw.githubusercontent.com/ (at 33:10) | 200 OK | Followed 1 redirect. Redirects: https://raw.githubusercontent.com/ --[301]--> https://github.com/
-[200] https://github.com/chris48s/v8r (at 11:5)
-[200] https://github.com/jackyzha0/quartz.git (at 53:17) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
-[200] https://github.com/btford/write-good (at 1:12)
-[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[200] https://trufflesecurity.com/docs/configuration-file-reference (at 13:5)
-[200] https://github.com/errata-ai/write-good/releases.atom (at 2:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/write-good/releases.atom --[301]--> https://github.com/vale-cli/write-good/releases.atom
-[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
-[200] https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json (at 4:15) | 200 OK | Followed 1 redirect. Redirects: https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json --[302]--> https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.67.0/doc/json_schema.json
-[200] https://github.com/realm/SwiftLint (at 11:5)
-[200] https://github.com/yoheimuta/protolint (at 11:5)
-[200] https://github.com/egohygiene/empathy/blob/main/mindgarden/profiles/agent/README.md (at 192:22)
-[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml/badge.svg?branch=main (at 10:90)
-[200] https://github.com/hadolint/hadolint (at 255:11)
-[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml (at 10:12)
-[200] https://github.com/egohygiene/empathy/blob/main/.github/workflows/mantle.yml (at 11:12)
-[200] https://github.com/ (at 31:10)
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/tests/README.md (at 12:12)
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/.shellrc (at 13:12)
+OK (cached)
+[200] file://EPISTEMOLOGY.md (at 54:35)
+[200] file://PRINCIPLES.md (at 159:18)
+[200] file://EPISTEMOLOGY.md (at 160:3)
+[200] https://megalinter.io/latest/descriptors/ruby_rubocop/ (at 989:3)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md (at 98:1)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://ls-lint.org/ (at 11:5)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] file://PURPOSE.md (at 54:3)
+[200] file://VISION.md (at 55:3)
+[200] file://PRINCIPLES.md (at 56:3)
+[200] file://PILLARS.md (at 57:3)
+[200] file://MANIFESTO.md (at 58:3)
+[200] file://EPISTEMOLOGY.md (at 59:3)
+[200] file://AI_CONSTITUTION.md (at 60:3)
+[200] file://ONTOLOGY.md (at 61:3)
+[200] file://PERSONAL_MODEL.md (at 62:3)
+[200] file://FOUNDATIONS.md (at 63:3)
+[200] file://SYSTEM.md (at 64:3)
+[200] file://ARCHITECTURE.md (at 65:3)
+[200] file://DESIGN.md (at 66:3)
+[200] file://DESIGN_SYSTEM.md (at 67:3)
+[200] file://METHODOLOGY.md (at 68:3)
+[200] file://DECISIONS.md (at 69:3)
+[200] file://ROADMAP.md (at 70:3)
+[200] file://META.md (at 71:3)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://www.schemastore.org/stylelintrc.json (at 2:15)
+[200] file://SYSTEM.md (at 34:1)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/quality/repository-cleanup/SKILL.md (at 30:11)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 7:19) | OK (cached)
+[200] file://PURPOSE.md (at 128:30)
+[200] file://VISION.md (at 128:61)
+[200] https://github.com/scalacenter/scalafix (at 1167:3)
+[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/ (at 1221:3)
+[200] https://trivy.dev/docs/latest/supply-chain/sbom/ (at 14:5)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://www.rubyschema.org/rubocop.json (at 2:33)
+[200] https://megalinter.io/latest/descriptors/spell_proselint/ (at 1233:3)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[404] https://egohygiene.github.io/contracts/repository-analytics/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] file://mantle/config/installers.lock.tsv (at 4:1)
+[200] https://rubystyle.guide/ (at 14:5)
+[200] https://docs.rubocop.org/rubocop/latest/configuration.html (at 13:5)
+[200] https://docs.stoplight.io/docs/spectral/e5b9616d6d50c-rulesets (at 16:3)
+[EXCLUDED] mailto:szmyty@gmail.com (at 20:15) | This is due to your 'exclude' values
+[200] https://json.schemastore.org/package.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
+[EXCLUDED] mailto:szmyty@gmail.com (at 29:15) | This is due to your 'exclude' values
+[200] https://megalinter.io/latest/descriptors/repository_betterleaks/ (at 1205:3)
+[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json (at 2:33)
+[200] https://registry.npmjs.org/ (at 45:18)
+[200] https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview (at 7:6)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] file://mindgarden/profiles/obsidian/profile.json (at 33:1)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://github.com/overtrue/phplint (at 9:3) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] file://mantle/assets/branding/mantle-banner-placeholder.svg (at 2:13)
+[200] https://github.com/snakemake/snakefmt (at 1194:3)
+[200] https://megalinter.io/latest/descriptors/spell_lychee/ (at 1286:3)
+[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
+[200] https://github.com/betterleaks/betterleaks (at 1204:3)
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 925:3)
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 15:5)
+[200] https://github.com/sqlfluff/sqlfluff (at 1220:3)
+[200] https://img.shields.io/badge/workflow-mantle.yml-181717?style=flat-square&logo=githubactions&logoColor=white (at 11:100)
+[200] https://megalinter.io/latest/descriptors/spell_vale/ (at 1253:3)
+[200] file://mantle/LICENSE (at 15:12)
+[200] https://img.shields.io/badge/license-MIT-blue?style=flat-square (at 15:31)
+[200] file://mantle/README.md#overview (at 21:12)
+[200] file://mantle/README.md#project-status (at 22:12)
+[200] file://mantle/README.md#features (at 23:12)
+[200] file://mantle/README.md#supported-environments (at 24:12)
+[200] file://mantle/README.md#quick-start (at 25:12)
+[200] file://mantle/README.md#cli-usage (at 26:12)
+[200] file://mantle/README.md#configuration (at 27:12)
+[200] file://mantle/README.md#architecture (at 28:12)
+[200] file://mantle/README.md#testing-and-validation (at 29:12)
+[200] file://mantle/README.md#contributing (at 30:12)
+[200] file://mantle/config/example.conf (at 277:19)
+[200] file://mantle/ARCHITECTURE.md (at 354:1)
+[200] file://mantle/PROVENANCE.md (at 355:26)
+[200] file://mantle/config/architecture/layers.tsv (at 357:1)
+[200] file://mantle/INSTALLER_ASSURANCE.md (at 477:101)
+[200] file://mantle/tests/README.md (at 572:91)
+[200] file://mantle/CONTRIBUTING.md (at 578:6)
+[200] file://mantle/CONTRIBUTING.md (at 605:1)
+[200] file://mantle/LICENSE (at 621:31)
+[200] https://img.shields.io/badge/shells-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25?style=flat-square (at 13:87)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/authoring/implementation-planning/SKILL.md (at 30:11)
+[200] https://github.com/yoheimuta/protolint (at 11:5) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/terraform_tflint/ (at 1119:3)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://www.schemastore.org/coffeelint.json (at 2:15)
+[200] https://github.com/amperser/proselint (at 1232:3)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Error (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/repository_secretlint/ (at 1403:3)
+[200] https://github.com/egohygiene/empathy (at 9:13) | OK (cached)
+[200] https://unpkg.com/knip@6/schema.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://unpkg.com/knip@6/schema.json --[302]--> https://unpkg.com/knip@6.32.2/schema.json
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://img.shields.io/badge/tests-Bats%20%2B%20ShellCheck-2E8B57?style=flat-square (at 12:94)
+[200] file://.staging/github/README.md (at 38:35)
+[200] file://egolint/README.md (at 75:5)
+[200] file://.github/actions/README.md (at 76:1)
+[200] file://mindgarden/README.md (at 77:5)
+[200] file://identity/README.md (at 78:1)
+[200] file://META.md (at 84:1)
+[200] file://PURPOSE.md (at 89:4)
+[200] file://VISION.md (at 89:32)
+[200] file://PRINCIPLES.md (at 90:4)
+[200] file://ONTOLOGY.md (at 91:4)
+[200] file://SYSTEM.md (at 92:4)
+[200] file://ARCHITECTURE.md (at 92:33)
+[200] file://DECISIONS.md (at 94:4)
+[200] file://ROADMAP.md (at 94:39)
+[200] https://json.schemastore.org/markdownlint.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/markdownlint.json --[301]--> https://www.schemastore.org/markdownlint.json
+[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v3.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
+[200] https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons (at 7:6)
+[200] https://protobuf.dev/programming-guides/style/ (at 12:5)
+[200] https://ogp.me/ (at 6:19)
+[200] https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20MSYS2%2FGit%20Bash-0A66C2?style=flat-square (at 14:98)
+[200] https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable (at 8:6)
+[200] https://github.com/lycheeverse/lychee (at 1285:3)
+[200] https://developer.mozilla.org/en-US/docs/Glossary/Favicon (at 7:6)
+[200] https://web.dev/articles/maskable-icon (at 9:6)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://ogp.me/ (at 6:19) | OK (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html (at 8:6)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[404] https://egohygiene.github.io/identity/contracts/handoff-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://github.com/secretlint/secretlint (at 1402:3)
+[200] https://yamllint.readthedocs.io/en/stable/ (at 11:5) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 12:5) | OK (cached)
+[200] file://README.md (at 33:3)
+[200] file://ARCHITECTURE.md (at 34:3)
+[200] file://SYSTEM.md (at 35:3)
+[200] file://DECISIONS.md (at 36:3)
+[200] file://ROADMAP.md (at 37:3)
+[200] https://egohygiene.github.io/empathy/ (at 41:3) | OK (cached)
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 42:3) | OK (cached)
+[200] file://llms.txt (at 43:3)
+[200] https://github.com/egohygiene/empathy (at 44:3) | OK (cached)
+[200] https://github.com/errata-ai/vale (at 1252:3) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
+[200] https://github.com/egohygiene/empathy.git (at 24:13) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Error (cached)
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Error (cached)
+[200] https://github.com/reconquest/shdoc.git (at 95:14) | 200 OK | Followed 1 redirect. Redirects: https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
+[200] https://github.com/reconquest/shdoc.git (at 43:50) | 200 OK | Followed 1 redirect. Redirects: https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://github.com/egohygiene/empathy/issues (at 19:13)
+[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/authoring/create-specification-file/SKILL.md (at 30:11)
+[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 30:117)
+[200] https://info.arxiv.org/help/ancillary_files.html (at 8:3)
+[200] file://PURPOSE.md (at 89:46)
+[200] file://VISION.md (at 89:74)
+[200] file://PRINCIPLES.md (at 90:1)
+[200] file://PILLARS.md (at 90:39)
+[EXCLUDED] http://localhost:8080/ (at 40:30) | This is due to your 'exclude' values
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 62:2) | OK (cached)
+[200] https://egohygiene.github.io/empathy/ (at 72:2) | OK (cached)
+[200] file://mindgarden/profiles/quartz/profile.yaml (at 75:42)
+[200] file://ARCHITECTURE.md (at 29:53)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://www.schemastore.org/npmpackagejsonlintrc.json (at 2:15)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
+[200] https://json.schemastore.org/prettierrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/prettierrc.json --[301]--> https://www.schemastore.org/prettierrc.json
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
 [404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Error (cached)
 [404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Error (cached)
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/platforms/README.md (at 14:12)
-[200] https://developer.mozilla.org/en-US/docs/Glossary/Favicon (at 7:6)
-[200] https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html (at 8:6)
-[200] file://mantle/config/architecture/layers.tsv (at 14:1)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[404] https://egohygiene.github.io/contracts/repository-analytics/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/trufflesecurity/trufflehog (at 12:5)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] file://ARCHITECTURE.md (at 29:53)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/Yelp/detect-secrets (at 39:11)
-[200] https://www.designtokens.org/tr/2025.10/format/ (at 6:19)
-[404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
-[200] https://github.com/gitleaks/gitleaks (at 29:11)
-[200] https://megalinter.io/latest/configuration/ (at 7:3)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33)
-[200] https://megalinter.io/latest/config-variables/ (at 10:3)
-[200] https://github.com/google/addlicense (at 51:11)
-[200] https://github.com/pre-commit/pre-commit-hooks (at 71:11)
-[200] https://megalinter.io/latest/descriptors/action_actionlint/ (at 324:3)
-[200] https://zizmor.sh/ (at 329:3)
-[200] https://megalinter.io/10.0.0/descriptors/action_zizmor/ (at 330:3)
-[200] https://github.com/astral-sh/ruff-pre-commit (at 162:11)
-[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/ (at 340:3)
-[200] https://ansible.readthedocs.io/projects/lint/ (at 339:3) | 200 OK | Followed 1 redirect. Redirects: https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
-[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/ (at 364:3)
-[200] https://github.com/nbQA-dev/nbQA (at 179:11)
-[200] https://github.com/aws-cloudformation/cfn-lint (at 423:3)
-[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/ (at 395:3)
-[200] https://github.com/abravalheri/validate-pyproject (at 196:11)
-[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/ (at 424:3)
-[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ (at 434:3) | Rejected status code: 404 Not Found
-[200] https://github.com/pre-commit/mirrors-prettier (at 206:11)
-[200] https://clang.llvm.org/docs/ClangFormat.html (at 453:3)
-[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/ (at 444:3)
-[200] https://clang.llvm.org/docs/ClangFormat.html (at 471:3) | OK (cached)
-[200] https://github.com/biomejs/pre-commit (at 217:11)
-[200] https://stylelint.io/ (at 487:3)
-[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/ (at 409:3)
-[200] https://dart.dev/tools/dart-analyze (at 497:3)
-[200] https://megalinter.io/latest/descriptors/cpp_clang_format/ (at 454:3)
-[200] https://github.com/hadolint/hadolint (at 510:3) | OK (cached)
-[200] https://github.com/igorshubovych/markdownlint-cli (at 227:11)
-[200] https://megalinter.io/latest/descriptors/c_clang_format/ (at 472:3)
-[200] https://github.com/shellcheck-py/shellcheck-py (at 245:11)
-[200] https://github.com/executablebooks/mdformat (at 237:11) | 200 OK | Followed 1 redirect. Redirects: https://github.com/executablebooks/mdformat --[301]--> https://github.com/hukkin/mdformat
-[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/ (at 498:3)
-[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/ (at 521:3)
-[200] https://github.com/openstack/bashate (at 265:11)
-[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/ (at 540:3)
-[200] https://github.com/codespell-project/codespell (at 291:11)
-[200] https://github.com/python-jsonschema/check-jsonschema (at 275:11)
-[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/ (at 511:3)
-[200] https://github.com/crate-ci/typos (at 303:11)
-[200] https://megalinter.io/latest/descriptors/css_stylelint/ (at 488:3)
-[200] https://eslint.org/ (at 606:3)
-[200] https://megalinter.io/latest/descriptors/go_revive/ (at 550:3)
-[200] https://htmlhint.com/ (at 588:3)
-[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/ (at 579:3)
-[200] https://prettier.io/ (at 626:3)
-[200] https://megalinter.io/latest/descriptors/html_htmlhint/ (at 589:3)
-[200] https://checkstyle.org/ (at 636:3)
-[200] https://github.com/fsfe/reuse-tool (at 324:11)
-[404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
-[200] https://pmd.github.io/ (at 646:3)
-[200] https://prettier.io/ (at 666:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/javascript_prettier/ (at 627:3)
-[200] https://eslint.org/ (at 681:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/java_checkstyle/ (at 637:3)
-[200] https://github.com/reconquest/shdoc.git (at 95:14) | 200 OK | Followed 1 redirect. Redirects: https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
-[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/ (at 565:3)
-[200] https://github.com/Azure/arm-ttk (at 363:3)
-[200] https://github.com/rhysd/actionlint (at 323:3)
-[200] https://megalinter.io/latest/descriptors/javascript_eslint/ (at 607:3)
-[200] https://github.com/greglook/cljstyle (at 394:3)
-[200] https://megalinter.io/latest/descriptors/java_pmd/ (at 647:3)
-[200] https://www.nongnu.org/chktex/ (at 701:3)
-[200] https://megalinter.io/latest/descriptors/json_jsonlint/ (at 657:3)
-[200] https://github.com/clj-kondo/clj-kondo (at 408:3)
-[200] https://megalinter.io/latest/descriptors/latex_chktex/ (at 702:3)
-[200] https://phpstan.org/ (at 752:3)
-[200] https://megalinter.io/latest/descriptors/lua_luacheck/ (at 712:3)
-[200] https://megalinter.io/latest/descriptors/json_prettier/ (at 667:3)
-[200] https://psalm.dev/ (at 759:3)
-[200] https://github.com/kucherenko/jscpd (at 443:3)
-[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/ (at 722:3)
-[200] https://megalinter.io/latest/descriptors/jsx_eslint/ (at 682:3)
-[200] https://github.com/yoheimuta/protolint (at 788:3) | OK (cached)
-[200] https://github.com/editorconfig-checker/editorconfig-checker (at 520:3)
-[200] https://megalinter.io/latest/descriptors/php_phpstan/ (at 753:3)
-[200] https://github.com/coffeelint/coffeelint (at 433:3)
-[200] https://github.com/loeffel-io/ls-lint (at 808:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/php_phpcs/ (at 739:3)
-[200] https://github.com/gherkin-lint/gherkin-lint (at 539:3)
-[200] https://megalinter.io/latest/descriptors/php_phplint/ (at 746:3)
-[200] https://www.checkov.io/ (at 874:3) | OK (cached)
-[200] https://github.com/mgechev/revive (at 549:3)
-[200] https://megalinter.io/latest/descriptors/php_psalm/ (at 760:3)
-[200] https://github.com/cjoudrey/graphql-schema-linter (at 564:3)
-[200] https://megalinter.io/latest/descriptors/protobuf_protolint/ (at 789:3)
-[200] https://megalinter.io/latest/descriptors/raku_raku/ (at 800:3)
-[200] https://megalinter.io/latest/descriptors/powershell_powershell/ (at 771:3)
-[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/ (at 778:3)
-[200] https://github.com/nvuillam/npm-groovy-lint (at 578:3)
-[200] https://megalinter.io/latest/descriptors/repository_ls_lint/ (at 809:3)
-[200] https://github.com/trufflesecurity/trufflehog (at 941:3) | OK (cached)
-[200] https://github.com/lunarmodules/luacheck (at 711:3)
-[200] https://github.com/DavidAnson/markdownlint (at 721:3)
-[200] https://megalinter.io/latest/descriptors/repository_syft/ (at 961:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/spell_cspell/ (at 824:3)
-[200] https://raku.org/ (at 799:3)
-[200] https://megalinter.io/latest/descriptors/repository_checkov/ (at 875:3)
-[200] https://github.com/prantlf/jsonlint (at 656:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy/ (at 912:3)
-[200] https://rubocop.org/ (at 988:3)
-[200] https://megalinter.io/latest/descriptors/repository_grype/ (at 895:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 925:3)
-[200] https://github.com/chris48s/v8r (at 1078:3) | OK (cached)
-[200] https://github.com/overtrue/phplint (at 745:3)
-[200] https://megalinter.io/latest/descriptors/rst_rstcheck/ (at 978:3)
-[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/ (at 738:3)
-[200] https://github.com/PowerShell/PSScriptAnalyzer (at 770:3)
-[200] https://github.com/PowerShell/PSScriptAnalyzer (at 777:3)
-[200] https://megalinter.io/latest/descriptors/ruby_rubocop/ (at 989:3)
-[200] https://yamllint.readthedocs.io/en/stable/ (at 1089:3)
-[200] https://github.com/streetsidesoftware/cspell (at 823:3)
-[200] https://megalinter.io/latest/descriptors/repository_devskim/ (at 885:3)
-[200] https://github.com/realm/SwiftLint (at 1157:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/r_lintr/ (at 1030:3)
-[200] https://github.com/anchore/grype (at 894:3)
-[200] https://megalinter.io/latest/descriptors/rust_clippy/ (at 1006:3)
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Rejected status code: 403 Forbidden
-[200] https://megalinter.io/latest/descriptors/repository_trufflehog/ (at 942:3)
-[200] https://github.com/microsoft/DevSkim (at 884:3)
-[200] https://github.com/aquasecurity/trivy (at 911:3)
-[200] https://github.com/aquasecurity/trivy (at 924:3)
-[200] https://megalinter.io/latest/descriptors/yaml_v8r/ (at 1079:3)
-[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/ (at 1125:3)
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 1141:3)
-[200] https://megalinter.io/latest/descriptors/swift_swiftlint/ (at 1158:3)
-[200] https://github.com/rstcheck/rstcheck (at 977:3)
-[200] https://github.com/rust-lang/rust-clippy (at 1005:3)
-[200] https://megalinter.io/latest/descriptors/terraform_tflint/ (at 1119:3)
-[200] https://github.com/anchore/syft (at 960:3)
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 1090:3)
-[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/ (at 1195:3)
-[200] https://megalinter.io/latest/descriptors/salesforce_code_analyzer_apex/ (at 1178:3)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://github.com/r-lib/lintr (at 1029:3)
-[200] https://unpkg.com/knip@6/schema.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://unpkg.com/knip@6/schema.json --[302]--> https://unpkg.com/knip@6.32.2/schema.json
+[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml/badge.svg?branch=main (at 10:90)
 [200] file://egolint/.config/toolchain/complementary-tools.json (at 15:1)
-[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/ (at 1221:3)
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 12:5) | OK (cached)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[EXCLUDED] mailto:support@errata.ai (at 4:13) | This is due to your 'exclude' values
-[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json (at 2:33)
-[200] https://megalinter.io/latest/descriptors/spell_proselint/ (at 1233:3)
-[200] https://github.com/terraform-linters/tflint (at 1118:3)
-[200] https://github.com/gruntwork-io/terragrunt (at 1124:3)
-[200] https://megalinter.io/latest/descriptors/spell_vale/ (at 1253:3)
-[200] https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible-lint-config.json (at 2:33)
-[200] https://megalinter.io/latest/descriptors/spell_lychee/ (at 1286:3)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://github.com/egohygiene/empathy (at 7:13) | OK (cached)
-[200] https://github.com/jackyzha0/quartz.git (at 10:20) | OK (cached)
-[200] https://docs.ansible.com/projects/lint/configuring/ (at 19:3)
-[200] https://github.com/IBM/tekton-lint (at 1140:3)
-[200] https://docs.ansible.com/projects/lint/rules/ (at 22:3)
-[200] https://github.com/IBM/tekton-lint (at 11:5)
-[200] https://github.com/overtrue/phplint (at 9:3) | OK (cached)
-[200] file://README.md (at 38:40)
-[200] file://PRINCIPLES.md (at 38:77)
-[200] file://.garden/README.md (at 39:3)
-[200] file://ARCHITECTURE.md (at 39:40)
-[200] file://METHODOLOGY.md (at 39:77)
-[200] file://.garden/templates/note.md (at 40:3)
-[200] file://SYSTEM.md (at 40:40)
-[200] file://DECISIONS.md (at 40:77)
-[200] file://ROADMAP.md (at 41:40)
-[200] file://EPISTEMOLOGY.md (at 41:77)
-[200] https://egohygiene.github.io/empathy/intelligence/ (at 45:1) | OK (cached)
-[200] file://.garden/views/knowledge.base#Knowledge (at 55:1)
-[200] file://.garden/views/knowledge.base#Needs%20review (at 62:1)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://.garden/views/knowledge.base#Projects (at 70:1)
-[200] https://json.schemastore.org/github-issue-config.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-issue-config.json --[301]--> https://www.schemastore.org/github-issue-config.json
-[200] https://megalinter.io/latest/descriptors/scala_scalafix/ (at 1168:3)
-[200] https://github.com/scalacenter/scalafix (at 1167:3)
-[200] https://info.arxiv.org/help/submit_tex.html (at 7:3)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/repository_betterleaks/ (at 1205:3)
-[200] https://info.arxiv.org/help/ancillary_files.html (at 8:3)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/repository_secretlint/ (at 1403:3)
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Error (cached)
-[200] https://github.com/ (at 35:20) | OK (cached)
-[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15)
-[200] https://github.com/egohygiene/empathy (at 11:13) | OK (cached)
-[200] https://github.com/betterleaks/betterleaks (at 1204:3)
-[200] https://docs.github.com/issues/tracking-your-work-with-issues (at 18:5) | 200 OK | Followed 1 redirect. Redirects: https://docs.github.com/issues/tracking-your-work-with-issues --[302]--> https://docs.github.com/en/issues/tracking-your-work-with-issues
-[200] https://github.com/sqlfluff/sqlfluff (at 1220:3)
-[200] file://egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md (at 29:11)
-[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 29:108)
-[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json (at 2:15)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[404] https://egohygiene.github.io/identity/contracts/profile.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/amperser/proselint (at 1232:3)
-[200] https://github.com/amperser/proselint (at 11:16)
-[200] https://github.com/snakemake/snakefmt (at 1194:3)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/package.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
-[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[200] https://github.com/errata-ai/vale (at 1252:3) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
-[EXCLUDED] mailto:szmyty@gmail.com (at 20:15) | This is due to your 'exclude' values
-[200] https://github.com/lycheeverse/lychee (at 1285:3)
-[EXCLUDED] mailto:szmyty@gmail.com (at 29:15) | This is due to your 'exclude' values
-[404] https://egohygiene.io/ (at 30:13) | Error (cached)
-[200] https://humanstxt.org/ (at 39:13)
-[200] https://registry.npmjs.org/ (at 45:18)
-[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip (at 6:11) | 200 OK | Followed 3 redirects. Redirects: https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip --[301]--> https://github.com/vale-cli/proselint/releases/latest/download/proselint.zip --[302]--> https://github.com/vale-cli/proselint/releases/download/v0.3.4/proselint.zip --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/189305362/4395a0e6-cc11-4ea3-84a4-25cf080bb429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-15T06%3A30%3A21Z&rscd=attachment%3B+filename%3Dproselint.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-15T05%3A29%3A36Z&ske=2026-08-15T06%3A30%3A21Z&sks=b&skv=2018-11-09&sig=wTzuCgykN1B9qys%2FnvL6h%2Bn9Ajv5KetRwxNnFhmxDLI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njc3Mjc4MywibmJmIjoxNzg2NzcyNDgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wglfr9bWonKOrVusVx4_oWmkM04hNReVNl4zRXGZAic&response-content-disposition=attachment%3B%20filename%3Dproselint.zip&response-content-type=application%2Foctet-stream
-[200] file://PURPOSE.md (at 103:33)
-[200] file://egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md (at 31:11)
-[200] file://egolint/.agents/specs/publishing/arxiv.spec.md (at 31:110)
-[200] https://www.schemastore.org/stylelintrc.json (at 2:15)
-[200] https://yamllint.readthedocs.io/en/stable/ (at 11:5) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 12:5) | OK (cached)
-[200] https://oss.anchore.com/docs/reference/grype/configuration/ (at 11:5)
-[200] https://github.com/anchore/grype (at 12:5) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/secretlint/secretlint (at 1402:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 15:5) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] file://egolint/.agents/skills/authoring/create-specification-file/SKILL.md (at 30:11)
-[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 30:117)
-[200] https://github.com/errata-ai/proselint/releases.atom (at 7:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/proselint/releases.atom --[301]--> https://github.com/vale-cli/proselint/releases.atom
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://trivy.dev/docs/latest/supply-chain/sbom/ (at 14:5)
-[200] https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview (at 7:6)
-[200] https://github.com/reconquest/shdoc.git (at 43:50) | OK (cached)
-[200] https://github.com/egohygiene/empathy/discussions (at 27:10)
-[200] https://github.com/egohygiene/empathy/discussions (at 13:14)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://github.com/errata-ai/proselint/issues/new (at 8:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/errata-ai/proselint/issues/new --[301]--> https://github.com/vale-cli/proselint/issues/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fvale-cli%2Fproselint%2Fissues%2Fnew
-[200] https://latexindentpl.readthedocs.io/ (at 10:5) | 200 OK | Followed 1 redirect. Redirects: https://latexindentpl.readthedocs.io/ --[302]--> https://latexindentpl.readthedocs.io/en/latest/
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://ogp.me/ (at 6:19) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://agentskills.io/specification (at 12:25)
-[200] https://www.rubyschema.org/rubocop.json (at 2:33)
-[200] https://github.com/egohygiene/empathy/discussions/categories/documentation (at 35:10)
-[200] file://VISION.md (at 195:26)
-[200] file://PILLARS.md (at 195:52)
+[404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
 [200] file://README.md (at 98:23)
 [200] file://PURPOSE.md (at 116:10)
 [200] file://SYSTEM.md (at 116:38)
@@ -612,54 +570,129 @@ ect. Redirects: https://json.schemastore.org/prettierrc.json --[301]--> https://
 [200] file://.github/actions/publish-report-snapshot/action.yml (at 282:1)
 [200] file://AI_CONSTITUTION.md (at 322:10)
 [200] file://tests/test_report_publication.py (at 323:1)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://rubystyle.guide/ (at 14:5)
-[200] file://PURPOSE.md (at 89:46)
-[200] file://VISION.md (at 89:74)
-[200] file://PRINCIPLES.md (at 90:1)
-[200] file://PILLARS.md (at 90:39)
-[200] file://egolint/.agents/skills/quality/bug-fixing/SKILL.md (at 30:11)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://docs.rubocop.org/rubocop/latest/configuration.html (at 13:5)
-[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md (at 98:1)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://docs.stoplight.io/docs/spectral/e5b9616d6d50c-rulesets (at 16:3)
-[404] https://egohygiene.github.io/contracts/repository-tree/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://github.com/egohygiene/empathy/discussions/categories/ideas (at 31:10)
-[200] https://github.com/egohygiene/empathy/security/advisories/new (at 39:10) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy/security/advisories/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fegohygiene%2Fempathy%2Fsecurity%2Fadvisories%2Fnew
-[200] https://github.com/StepanKropachev/obsidian-pm (at 17:18)
-[200] https://github.com/egohygiene/empathy/issues (at 12:9)
-[200] https://github.com/egohygiene/empathy/issues (at 19:13)
-[200] https://github.com/szmyty (at 5:9)
-[200] https://github.com/blacksmithgu/obsidian-dataview (at 24:18)
-[200] https://github.com/rhysd/actionlint/blob/main/docs/config.md (at 17:3)
-[200] https://github.com/egohygiene/empathy.git (at 24:13) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
+[200] https://info.arxiv.org/help/submit_tex.html (at 7:3)
+[200] https://agentskills.io/specification (at 12:25)
+[200] https://github.com/egohygiene/empathy/blob/main/.github/workflows/mantle.yml (at 11:12)
 [200] https://github.com/sponsors/szmyty (at 34:13)
-[200] https://github.com/cmhughes/latexindent.pl (at 11:5)
-[200] https://github.com/bats-core/bats-core (at 12:3)
-[404] https://github.com/rhysd/actionlint/releases/download/v$%7BACTIONLINT_VERSION%7D/$%7Barchive_name%7D (at 52:12) | Rejected status code: 404 Not Found
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/tests/README.md (at 12:12)
+[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml (at 10:12)
+[200] https://github.com/aws-cloudformation/cfn-lint#configuration (at 18:3)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/.shellrc (at 13:12)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/platforms/README.md (at 14:12)
+[200] https://github.com/egohygiene/mindgarden (at 5:31)
 [404] https://github.com/mvdan/sh/releases/download/v$%7BSHFMT_VERSION%7D/shfmt_v$%7BSHFMT_VERSION%7D_linux_amd64 (at 37:14) | Rejected status code: 404 Not Found
-[404] https://github.com/google/osv-scanner/releases/download/v$%7BOSV_SCANNER_VERSION%7D/osv-scanner_linux_amd64 (at 57:12) | Rejected status code: 404 Not Found
-[404] https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz (at 70:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
+[200] https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json (at 4:15) | 200 OK | Followed 1 redirect. Redirects: https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json --[302]--> https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.67.0/doc/json_schema.json
+[200] https://github.com/hadolint/hadolint (at 255:11) | OK (cached)
 [404] https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz (at 119:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
+[404] https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz (at 70:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
+[404] https://github.com/rhysd/actionlint/releases/download/v$%7BACTIONLINT_VERSION%7D/$%7Barchive_name%7D (at 52:12) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
+[EXCLUDED] https://example.test/branch-protection (at 4:34) | This is due to your 'exclude' values
+[EXCLUDED] https://example.test/security-policy (at 10:34) | This is due to your 'exclude' values
+[EXCLUDED] https://example.test/signed-releases (at 16:34) | This is due to your 'exclude' values
+[EXCLUDED] mailto:support@errata.ai (at 4:13) | This is due to your 'exclude' values
+[200] https://github.com/jackyzha0/quartz.git (at 53:17) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
+[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
+[200] https://github.com/gitleaks/gitleaks (at 29:11)
+[200] https://github.com/amperser/proselint (at 11:16) | OK (cached)
+[200] file://egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md (at 29:11)
+[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 29:108)
+[200] https://www.schemastore.org/htmlhint.json (at 2:15)
+[200] file://DESIGN_SYSTEM.md (at 145:46)
+[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/authoring-guide.md (at 98:1)
+[200] file://mindgarden/contracts/garden.schema.json (at 37:3)
+[200] file://mindgarden/contracts/note.schema.json (at 39:3)
+[200] file://mindgarden/contracts/obsidian-profile.schema.json (at 41:3)
+[200] file://mindgarden/contracts/provenance.schema.json (at 43:3)
+[200] file://mindgarden/contracts/context-pack.schema.json (at 45:3)
+[200] file://mindgarden/contracts/index.schema.json (at 46:7)
+[200] file://mindgarden/contracts/publish-profile.schema.json (at 48:3)
+[200] file://mindgarden/scripts/validate_garden.py (at 50:3)
+[200] file://mindgarden/scripts/garden_agent.py (at 52:3)
+[200] file://mindgarden/scripts/publish_garden.py (at 54:3)
+[200] file://mindgarden/scripts/quartz_site.py (at 55:3)
+[200] file://mindgarden/templates/note.md (at 57:3)
+[200] file://mindgarden/PROVENANCE.md (at 74:1)
+[200] file://mindgarden/EXTRACTION.md (at 76:1)
+[200] file://mindgarden/profiles/obsidian (at 80:37)
+[200] file://mindgarden/profiles/agent (at 84:37)
+[200] file://mindgarden/profiles/quartz (at 88:34)
+  [WARN] egolint/pnpm-lock.yaml: No files found for this input source
+[200] https://json.schemastore.org/dependabot-2.0.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/dependabot-2.0.json --[301]--> https://www.schemastore.org/dependabot-2.0.json
+[200] file://DESIGN.md (at 36:1)
+[200] file://ONTOLOGY.md (at 147:31)
+[200] file://DESIGN.md (at 186:1)
+[200] file://DESIGN.md (at 224:56)
+[200] https://github.com/google/addlicense (at 51:11)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] file://mindgarden/profiles/obsidian/README.md (at 31:1)
+[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/architecture/create-system-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-system-document/references/authoring-guide.md (at 98:1)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://github.com/egohygiene/empathy (at 7:13) | OK (cached)
+[200] https://github.com/jackyzha0/quartz.git (at 10:20) | OK (cached)
+[200] file://egolint/.agents/skills/quality/test-engineering/SKILL.md (at 30:11)
+[200] https://megalinter.io/10.0.0/configuration/ (at 283:3)
+[200] https://github.com/Yelp/detect-secrets (at 39:11)
+[200] https://megalinter.io/10.0.0/removed-linters/ (at 284:3)
+[200] https://github.com/pre-commit/pre-commit-hooks (at 71:11)
+[200] https://www.designtokens.org/tr/2025.10/format/ (at 6:19)
+[200] https://www.schemastore.org/jscpd.json (at 2:15)
+[200] https://github.com/trufflesecurity/trufflehog (at 12:5) | OK (cached)
+[200] https://github.com/astral-sh/ruff-pre-commit (at 162:11)
+[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://megalinter.io/10.0.0/descriptors/repository_betterleaks/ (at 285:3)
+[200] https://github.com/egohygiene/empathy (at 11:13) | OK (cached)
+[200] https://github.com/egohygiene/empathy/issues (at 12:9) | OK (cached)
+[200] https://github.com/egohygiene/empathy/discussions (at 13:14) | OK (cached)
+[200] https://github.com/nbQA-dev/nbQA (at 179:11)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/quality/audit-repository/SKILL.md (at 28:11)
+[200] file://egolint/.agents/specs/quality/auditor.spec.md (at 28:97)
+[200] https://json.schemastore.org/github-action.json (at 71:6) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 72:6) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 73:6) | OK (cached)
+[200] file://mantle/ARCHITECTURE.md (at 69:6)
+[200] file://mantle/config/architecture/layers.tsv (at 71:1)
+[200] file://mantle/PROVENANCE.md (at 80:8)
+[200] https://taskfile.dev/docs/guide#including-other-taskfiles (at 286:3)
+[200] https://github.com/abravalheri/validate-pyproject (at 196:11)
+[200] https://github.com/pre-commit/mirrors-prettier (at 206:11)
+[200] https://github.com/biomejs/pre-commit (at 217:11)
+[200] https://trufflesecurity.com/docs/configuration-file-reference (at 13:5)
+[200] https://github.com/igorshubovych/markdownlint-cli (at 227:11)
+[200] https://humanstxt.org/ (at 39:13)
+[200] https://github.com/shellcheck-py/shellcheck-py (at 245:11)
+[200] https://github.com/executablebooks/mdformat (at 237:11) | 200 OK | Followed 1 redirect. Redirects: https://github.com/executablebooks/mdformat --[301]--> https://github.com/hukkin/mdformat
+[200] https://github.com/openstack/bashate (at 265:11)
+[200] https://github.com/python-jsonschema/check-jsonschema (at 275:11)
+[200] https://github.com/codespell-project/codespell (at 291:11)
+[200] https://github.com/crate-ci/typos (at 303:11)
+[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip (at 6:11) | 200 OK | Followed 3 redirects. Redirects: https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip --[301]--> https://github.com/vale-cli/proselint/releases/latest/download/proselint.zip --[302]--> https://github.com/vale-cli/proselint/releases/download/v0.3.4/proselint.zip --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/189305362/4395a0e6-cc11-4ea3-84a4-25cf080bb429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-15T17%3A28%3A21Z&rscd=attachment%3B+filename%3Dproselint.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-15T16%3A27%3A32Z&ske=2026-08-15T17%3A28%3A21Z&sks=b&skv=2018-11-09&sig=kl5UXqtrXtU7XFmARRscHHDMnV9k05zvEyJKh51BljQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NjgxMTU3MiwibmJmIjoxNzg2ODExMjcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.h7VuS5vVfLQ5tb904EXK5O4qJIKIjVRRGt-BA1SoHEg&response-content-disposition=attachment%3B%20filename%3Dproselint.zip&response-content-type=application%2Foctet-stream
+[200] https://github.com/fsfe/reuse-tool (at 324:11)
+[200] https://github.com/errata-ai/proselint/issues/new (at 8:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/errata-ai/proselint/issues/new --[301]--> https://github.com/vale-cli/proselint/issues/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fvale-cli%2Fproselint%2Fissues%2Fnew
+[200] https://github.com/errata-ai/proselint/releases.atom (at 7:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/proselint/releases.atom --[301]--> https://github.com/vale-cli/proselint/releases.atom
+[200] https://github.com/wagoid/commitlint-github-action (at 287:3)
+[200] https://github.com/szmyty (at 5:9)
 📝 Summary
 ---------------------
-🔍 Total..........574
+🔍 Total..........575
 🔗 Unique.........405
-✅ Successful.....532
+✅ Successful.....533
 ⏳ Timeouts.........0
-🔀 Redirected......30
+🔀 Redirected......31
 👻 Excluded.........7
 ❓ Unknown..........0
 🚫 Errors..........35
 ⛔ Unsupported.....35
 
 Errors in .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json
-[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v2.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
+[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v3.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
 
 Errors in .github/actions/generate-repository-intelligence/repository-analytics.schema.json
 [404] https://egohygiene.github.io/contracts/repository-analytics/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
@@ -702,7 +735,7 @@ https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
 
 Errors in egolint/package.json
 [404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[404] https://egohygiene.io/ (at 30:13) | Error (cached)
+[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
 
 Redirects in egolint/package.json
 https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
@@ -728,6 +761,7 @@ Errors in mantle/.github/workflows/test.yml
 
 Redirects in mantle/.github/workflows/test.yml
 https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
+https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
 
 
 Errors in mindgarden/contracts/publish-profile.schema.json
@@ -739,7 +773,7 @@ https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/
 
 Errors in tests/fixtures/repository-intelligence-dashboard/megalinter/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Error (cached)
 [404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
 
@@ -762,36 +796,36 @@ Host: github.com
   Total requests: 135
   Successful: 124 (91.9%)
   Client errors (4xx): 11
-  Median response time: 497ms
-  Cache hit rate: 23.0%
-  Cache hits: 31, misses: 104
+  Median response time: 484ms
+  Cache hit rate: 22.2%
+  Cache hits: 30, misses: 105
 
 Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 93ms
+  Median response time: 97ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
 Host: json.schemastore.org
   Total requests: 45
   Successful: 45 (100.0%)
-  Median response time: 101ms
+  Median response time: 82ms
   Cache hit rate: 77.8%
   Cache hits: 35, misses: 10
 
 Host: json-schema.org
   Total requests: 16
   Successful: 16 (100.0%)
-  Median response time: 44ms
+  Median response time: 391ms
   Cache hit rate: 93.8%
   Cache hits: 15, misses: 1
 
 Host: raw.githubusercontent.com
   Total requests: 14
   Successful: 14 (100.0%)
-  Median response time: 122ms
+  Median response time: 119ms
   Cache hit rate: 21.4%
   Cache hits: 3, misses: 11
 
@@ -799,42 +833,37 @@ Host: egohygiene.github.io
   Total requests: 12
   Successful: 6 (50.0%)
   Client errors (4xx): 6
-  Median response time: 77ms
+  Median response time: 96ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
 
 Host: www.schemastore.org
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 79ms
+  Median response time: 97ms
 
 Host: taskfile.dev
-  Total requests: 6
-  Successful: 6 (100.0%)
-  Median response time: 130ms
-  Cache hit rate: 66.7%
-  Cache hits: 4, misses: 2
+  Total requests: 7
+  Successful: 7 (100.0%)
+  Median response time: 143ms
+  Cache hit rate: 71.4%
+  Cache hits: 5, misses: 2
 
 Host: img.shields.io
   Total requests: 5
   Successful: 5 (100.0%)
-  Median response time: 10ms
+  Median response time: 104ms
 
 Host: docs.github.com
   Total requests: 4
   Successful: 2 (50.0%)
   Client errors (4xx): 2
-  Median response time: 81ms
+  Median response time: 106ms
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 7ms
-
-Host: developer.mozilla.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 181ms
+  Median response time: 9ms
 
 Host: www.checkov.io
   Total requests: 3
@@ -843,54 +872,54 @@ Host: www.checkov.io
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
-Host: oss.anchore.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 59ms
-
-Host: ogp.me
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 121ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: clang.llvm.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 29ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: developer.mozilla.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 10ms
 
 Host: docs.ansible.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 118ms
+  Median response time: 102ms
 
 Host: yamllint.readthedocs.io
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 210ms
+  Median response time: 80ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: prettier.io
+Host: ogp.me
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 88ms
+  Median response time: 62ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 134ms
+  Median response time: 287ms
 
 Host: egohygiene.io
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 169ms
+  Median response time: 173ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 69ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: clang.llvm.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 204ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -898,208 +927,213 @@ Host: developer.salesforce.com
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 46ms
+  Median response time: 63ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
+
+Host: oss.anchore.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 106ms
 
 Host: eslint.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 30ms
+  Median response time: 145ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: humanstxt.org
+Host: docs.rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 747ms
+  Median response time: 186ms
 
-Host: rubocop.org
+Host: protobuf.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 99ms
+  Median response time: 219ms
 
-Host: ansible.readthedocs.io
+Host: agentskills.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 271ms
+  Median response time: 170ms
+
+Host: web.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 298ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 137ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 122ms
+
+Host: unpkg.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 79ms
+
+Host: osv.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 180ms
+
+Host: registry.npmjs.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 46ms
+
+Host: www.designtokens.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 259ms
+
+Host: www.nongnu.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1757ms
+
+Host: stylelint.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 180ms
+
+Host: raku.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1148ms
+
+Host: chris48s.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 151ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 111ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 168ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 171ms
+
+Host: checkstyle.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 112ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 267ms
 
 Host: api.scorecard.dev
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 236ms
-
-Host: api.github.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 52ms
-
-Host: agentskills.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 151ms
-
-Host: web.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 633ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 152ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 340ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 903ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 225ms
-
-Host: registry.npmjs.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 20ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 103ms
-
-Host: developer.apple.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 53ms
-
-Host: osv.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 166ms
-
-Host: www.designtokens.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 96ms
-
-Host: chris48s.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 114ms
-
-Host: phpstan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 29ms
-
-Host: zizmor.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 108ms
-
-Host: www.rubyschema.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 111ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1053ms
-
-Host: www.nongnu.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 325ms
-
-Host: docs.rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 124ms
-
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 108ms
+  Median response time: 168ms
 
 Host: realm.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 106ms
+  Median response time: 113ms
 
-Host: trufflesecurity.com
+Host: ansible.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 539ms
+  Median response time: 209ms
 
-Host: quartz.jzhao.xyz
+Host: phpstan.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 105ms
+  Median response time: 91ms
 
-Host: ls-lint.org
+Host: api.github.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 238ms
+  Median response time: 292ms
 
-Host: trivy.dev
+Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 98ms
+  Median response time: 166ms
 
-Host: protobuf.dev
+Host: developer.apple.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 199ms
+  Median response time: 138ms
 
-Host: google.github.io
+Host: latexindentpl.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 104ms
+  Median response time: 280ms
 
 Host: rubystyle.guide
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 114ms
+  Median response time: 151ms
 
-Host: stylelint.io
+Host: www.rubyschema.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 32ms
+  Median response time: 152ms
 
-Host: unpkg.com
+Host: humanstxt.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 57ms
+  Median response time: 754ms
 
-Host: golangci-lint.run
+Host: psalm.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 115ms
+  Median response time: 275ms
 
-Host: egohygiene.dev
-  Total requests: 0
-  Successful: 0 (100.0%)
+Host: rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 135ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 596ms
+
+Host: quartz.jzhao.xyz
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 392ms
+
+Host: ls-lint.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 101ms
 
 Host: github
   Total requests: 0
   Successful: 0 (100.0%)
 
-(Truncated to last 42105 characters out of 59195)
+Host: egohygiene.dev
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+(Truncated to last 40000 characters out of 59526)
 ```
 
 </details>
 
 <details>
-<summary>❌ PYTHON / mypy - 18 errors</summary>
+<summary>❌ PYTHON / mypy - 22 errors</summary>
 
 ```
 WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
@@ -1109,83 +1143,102 @@ Downloading types_pyyaml-6.0.12.20260815-py3-none-any.whl (21 kB)
 Installing collected packages: types-PyYAML
 Successfully installed types-PyYAML-6.0.12.20260815
 tests/test_repository_intelligence_dashboard.py: note: In member "build" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:93:9: error: Returning Any from
+tests/test_repository_intelligence_dashboard.py:94:9: error: Returning Any from
 function declared to return "dict[str, object]"  [no-any-return]
             return dashboard_builder.build_dashboard(
             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_complete_reports_preserve_independent_states" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:197:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:252:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["execution"]["success"], ...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:198:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:253:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["execution"]["failure"], ...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:199:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:254:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["findings"]["attention"],...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:200:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:255:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["findings"]["clear"], 1)
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:201:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:256:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["freshness"]["fresh"], 2)
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:202:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:257:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["freshness"]["stale"], 1)
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:203:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:258:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["producers"]["scorecard"]["metrics"...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_missing_reports_are_unavailable_and_unknown" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:208:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:263:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["availability"]["unavaila...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:209:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:264:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["execution"]["unknown"], ...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:210:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:265:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["findings"]["unknown"], 3...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:211:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:266:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["states"]["freshness"]["unknown"], ...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_public_analytics_renders_accessible_statistical_snapshots" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:220:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:275:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["analytics"]["availability"], "avai...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_repository_tree_renders_searchable_source_pinned_anatomy" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:292:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["anatomy"]["availability"], "availa...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py:293:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["anatomy"]["summary"]["node_count"]...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_repository_tree_for_another_commit_is_invalid_not_rendered" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:313:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["anatomy"]["availability"], "invali...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_dashboard.py: note: In member "test_repository_tree_names_are_escaped_and_source_paths_are_encoded" of class "RepositoryIntelligenceDashboardTests":
+tests/test_repository_intelligence_dashboard.py:328:26: error: Value of type
+"object" is not indexable  [index]
+            self.assertEqual(dashboard["anatomy"]["availability"], "availa...
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_analytics_for_another_commit_is_invalid_not_rendered" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:238:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:342:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["analytics"]["availability"], "inva...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_malformed_report_is_invalid_instead_of_green" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:250:21: error: Value of type
+tests/test_repository_intelligence_dashboard.py:354:21: error: Value of type
 "object" is not indexable  [index]
             scorecard = dashboard["producers"]["scorecard"]
                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_stale_boundary_is_inclusive" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:265:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:369:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(dashboard["producers"]["osv"]["freshness"]["s...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_bundle_is_deterministic_and_contains_no_contributor_identities" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:299:26: error: Value of type
+tests/test_repository_intelligence_dashboard.py:414:26: error: Value of type
 "object" is not indexable  [index]
             self.assertEqual(first["vitality"]["metrics"]["contributors_90...
                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "test_vitality_uses_the_represented_commit_not_untracked_files" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:311:19: error: Value of type
+tests/test_repository_intelligence_dashboard.py:427:19: error: Value of type
 "object" is not indexable  [index]
             metrics = dashboard["vitality"]["metrics"]
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1193,7 +1246,7 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 18 errors in 1 file (checked 37 source files)
+Found 22 errors in 1 file (checked 37 source files)
 ```
 
 </details>
@@ -1203,228 +1256,255 @@ Found 18 errors in 1 file (checked 37 source files)
 
 ```
 Checking formatting...
-[warn] .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json
 [warn] .github/actions/generate-repository-intelligence/repository-analytics.schema.json
 [warn] beacon/contracts/template-manifest.schema.json
-[warn] Code style issues found in 3 files. Run Prettier with --write to fix.
+[warn] Code style issues found in 2 files. Run Prettier with --write to fix.
 ```
 
 </details>
 
 <details>
-<summary>❌ PYTHON / ruff - 52 errors</summary>
+<summary>❌ PYTHON / ruff - 55 errors</summary>
 
 ```
 PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:105:55
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:111:55
     |
-103 |     if isinstance(value, bool) or not isinstance(value, (int, float)):
-104 |         return None
-105 |     return value if isfinite(value) and 0 <= value <= 10 else None
+109 |     if isinstance(value, bool) or not isinstance(value, (int, float)):
+110 |         return None
+111 |     return value if isfinite(value) and 0 <= value <= 10 else None
     |                                                       ^^
 
 PLR0912 Too many branches (17 > 12)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:246:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:5
     |
-246 | def validate_report(
+252 | def validate_report(
     |     ^^^^^^^^^^^^^^^
-247 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
-248 | ) -> dict[str, Any]:
+253 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
+254 | ) -> dict[str, Any]:
     |
 
 PLR0915 Too many statements (64 > 50)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:246:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:5
     |
-246 | def validate_report(
+252 | def validate_report(
     |     ^^^^^^^^^^^^^^^
-247 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
-248 | ) -> dict[str, Any]:
+253 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
+254 | ) -> dict[str, Any]:
     |
 
 SIM102 Use a single `if` statement instead of nested `if` statements
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:278:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:284:5
     |
-276 |       blocking = safe_integer(report_findings.get("blocking"), allow_none=allow_none)
-277 |       advisory = safe_integer(report_findings.get("advisory"), allow_none=allow_none)
-278 | /     if total is not None and blocking is not None and advisory is not None:
-279 | |         if blocking + advisory != total:
+282 |       blocking = safe_integer(report_findings.get("blocking"), allow_none=allow_none)
+283 |       advisory = safe_integer(report_findings.get("advisory"), allow_none=allow_none)
+284 | /     if total is not None and blocking is not None and advisory is not None:
+285 | |         if blocking + advisory != total:
     | |________________________________________^
-280 |               raise DashboardInputError("blocking and advisory counts must sum to total.")
-281 |       by_severity = report_findings.get("by_severity")
+286 |               raise DashboardInputError("blocking and advisory counts must sum to total.")
+287 |       by_severity = report_findings.get("by_severity")
     |
 help: Combine `if` statements using `and`
 
 PLR0912 Too many branches (13 > 12)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:433:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:439:5
     |
-433 | def validate_analytics(document: dict[str, Any], source_commit: str) -> dict[str, Any]:
+439 | def validate_analytics(document: dict[str, Any], source_commit: str) -> dict[str, Any]:
     |     ^^^^^^^^^^^^^^^^^^
-434 |     """Project the versioned public analytics contract used by the charts."""
+440 |     """Project the versioned public analytics contract used by the charts."""
+    |
+
+PLR0912 Too many branches (19 > 12)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:5
+    |
+640 | def validate_tree_node(
+    |     ^^^^^^^^^^^^^^^^^^
+641 |     candidate: Any,
+642 |     *,
+    |
+
+PLR0915 Too many statements (55 > 50)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:5
+    |
+640 | def validate_tree_node(
+    |     ^^^^^^^^^^^^^^^^^^
+641 |     candidate: Any,
+642 |     *,
     |
 
 S603 `subprocess` call: check for execution of untrusted input
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:604:14
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:805:14
     |
-602 |     """Run a read-only Git query and return normalized stdout."""
-603 |
-604 |     result = subprocess.run(
+803 |     """Run a read-only Git query and return normalized stdout."""
+804 |
+805 |     result = subprocess.run(
     |              ^^^^^^^^^^^^^^
-605 |         ["git", "-C", str(repository_root), *arguments],
-606 |         check=True,
+806 |         ["git", "-C", str(repository_root), *arguments],
+807 |         check=True,
     |
 
 S607 Starting a process with a partial executable path
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:605:9
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:806:9
     |
-604 |     result = subprocess.run(
-605 |         ["git", "-C", str(repository_root), *arguments],
+805 |     result = subprocess.run(
+806 |         ["git", "-C", str(repository_root), *arguments],
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-606 |         check=True,
-607 |         capture_output=True,
+807 |         check=True,
+808 |         capture_output=True,
     |
 
 TRY301 Abstract `raise` to an inner function
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:625:13
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:826:13
     |
-623 |         resolved_commit = run_git(repository_root, "rev-parse", source_commit)
-624 |         if not FULL_SHA_PATTERN.fullmatch(resolved_commit):
-625 |             raise DashboardInputError("Git did not resolve a full source commit.")
+824 |         resolved_commit = run_git(repository_root, "rev-parse", source_commit)
+825 |         if not FULL_SHA_PATTERN.fullmatch(resolved_commit):
+826 |             raise DashboardInputError("Git did not resolve a full source commit.")
     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-626 |         committed_at = run_git(
-627 |             repository_root, "show", "--no-patch", "--format=%cI", resolved_commit
+827 |         committed_at = run_git(
+828 |             repository_root, "show", "--no-patch", "--format=%cI", resolved_commit
     |
 
 PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:674:36
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:875:36
     |
-672 |             path.startswith(".github/actions/")
-673 |             and path.endswith("/action.yml")
-674 |             and path.count("/") == 3
+873 |             path.startswith(".github/actions/")
+874 |             and path.endswith("/action.yml")
+875 |             and path.count("/") == 3
     |                                    ^
-675 |             for path in tracked_paths
-676 |         )
+876 |             for path in tracked_paths
+877 |         )
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:723:25
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:924:25
     |
-722 |     counts = {
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+923 |     counts = {
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-722 |     counts = {
+923 |     counts = {
     -         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-723 +         "availability": dict.fromkeys(sorted(AVAILABILITY_STATES), 0),
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+924 +         "availability": dict.fromkeys(sorted(AVAILABILITY_STATES), 0),
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:724:22
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:925:22
     |
-722 |     counts = {
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+923 |     counts = {
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
     -         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-724 +         "execution": dict.fromkeys(sorted(EXECUTION_STATES), 0),
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+925 +         "execution": dict.fromkeys(sorted(EXECUTION_STATES), 0),
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:725:21
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:926:21
     |
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-727 |     }
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+928 |     }
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
     -         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-725 +         "findings": dict.fromkeys(sorted(FINDING_STATES), 0),
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+926 +         "findings": dict.fromkeys(sorted(FINDING_STATES), 0),
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:726:22
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:927:22
     |
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-727 |     }
-728 |     for projection in producers.values():
+928 |     }
+929 |     for projection in producers.values():
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     -         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-726 +         "freshness": dict.fromkeys(sorted(FRESHNESS_STATES), 0),
-727 |     }
+927 +         "freshness": dict.fromkeys(sorted(FRESHNESS_STATES), 0),
+928 |     }
     |
 
-PLR0913 Too many arguments in function definition (7 > 5)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:736:5
+PLR0913 Too many arguments in function definition (8 > 5)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:937:5
     |
-736 | def build_dashboard(
+937 | def build_dashboard(
     |     ^^^^^^^^^^^^^^^
-737 |     *,
-738 |     repository_root: Path,
+938 |     *,
+939 |     repository_root: Path,
     |
 
 PLR2004 Magic value used in comparison, consider replacing `1_000` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:892:21
-    |
-890 |     """Render a compact, deterministic integer label."""
-891 |
-892 |     if abs(value) < 1_000:
-    |                     ^^^^^
-893 |         return str(value)
-894 |     for divisor, suffix in ((1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")):
-    |
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1095:21
+     |
+1093 |     """Render a compact, deterministic integer label."""
+1094 |
+1095 |     if abs(value) < 1_000:
+     |                     ^^^^^
+1096 |         return str(value)
+1097 |     for divisor, suffix in ((1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")):
+     |
 
 PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:897:45
-    |
-895 |         if abs(value) >= divisor:
-896 |             scaled = value / divisor
-897 |             precision = 0 if abs(scaled) >= 10 else 1
-    |                                             ^^
-898 |             return f"{scaled:.{precision}f}{suffix}".replace(".0", "")
-899 |     return str(value)
-    |
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1100:45
+     |
+1098 |         if abs(value) >= divisor:
+1099 |             scaled = value / divisor
+1100 |             precision = 0 if abs(scaled) >= 10 else 1
+     |                                             ^^
+1101 |             return f"{scaled:.{precision}f}{suffix}".replace(".0", "")
+1102 |     return str(value)
+     |
 
 PLR0913 Too many arguments in function definition (7 > 5)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:931:5
-    |
-931 | def chart_card(
-    |     ^^^^^^^^^^
-932 |     *,
-933 |     identifier: str,
-    |
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1134:5
+     |
+1134 | def chart_card(
+     |     ^^^^^^^^^^
+1135 |     *,
+1136 |     identifier: str,
+     |
 
 PLR2004 Magic value used in comparison, consider replacing `20` with a constant variable
-    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1139:59
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1342:59
      |
-1137 |         y = 28 + index * row_height
-1138 |         rendered_width = bar_width * row["commit_touches"] / maximum
-1139 |         display_name = row["name"] if len(row["name"]) <= 20 else row["name"][:18] + "…"
+1340 |         y = 28 + index * row_height
+1341 |         rendered_width = bar_width * row["commit_touches"] / maximum
+1342 |         display_name = row["name"] if len(row["name"]) <= 20 else row["name"][:18] + "…"
      |                                                           ^^
-1140 |         bars.append(
-1141 |             f'<text class="bar-label" x="0" y="{y + 17}">{escaped(display_name)}</text>'
+1343 |         bars.append(
+1344 |             f'<text class="bar-label" x="0" y="{y + 17}">{escaped(display_name)}</text>'
+     |
+
+PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1558:22
+     |
+1557 |     parts = repository.split("/")
+1558 |     if len(parts) != 2 or not all(re.fullmatch(r"[A-Za-z0-9_.-]+", part) for part in parts):
+     |                      ^
+1559 |         return ""
+1560 |     owner, name = (quote(part, safe="") for part in parts)
      |
 
 S603 `subprocess` call: check for execution of untrusted input
@@ -1832,7 +1912,7 @@ S607 Starting a process with a partial executable path
 40 |         capture_output=True,
    |
 
-Found 52 errors.
+Found 55 errors.
 [*] 8 fixable with the `--fix` option (3 hidden fixes can be enabled with the `--unsafe-fixes` option).
 ```
 
@@ -1877,78 +1957,121 @@ unformatted: File would be reformatted
 </details>
 
 <details>
-<summary>❌ CSS / stylelint - 65 errors</summary>
+<summary>❌ CSS / stylelint - 108 errors</summary>
 
 ```
 .github/actions/generate-repository-intelligence-dashboard/dashboard.css
-    2:1   ✖  Expected empty line before comment                                                                            comment-empty-line-before
-    6:3   ✖  Expected empty line before custom property                                                                    custom-property-empty-line-before
-    7:14  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-    7:14  ✖  Expected modern color-function notation                                                                       color-function-notation
-    7:31  ✖  Expected "0.88" to be "88%"                                                                                   alpha-value-notation
-    9:13  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-    9:13  ✖  Expected modern color-function notation                                                                       color-function-notation
-    9:33  ✖  Expected "0.2" to be "20%"                                                                                    alpha-value-notation
-   25:25  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-   25:25  ✖  Expected modern color-function notation                                                                       color-function-notation
-   25:39  ✖  Expected "0.32" to be "32%"                                                                                   alpha-value-notation
-   43:40  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-   43:40  ✖  Expected modern color-function notation                                                                       color-function-notation
-   43:59  ✖  Expected "0.27" to be "27%"                                                                                   alpha-value-notation
-   44:39  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-   44:39  ✖  Expected modern color-function notation                                                                       color-function-notation
-   44:58  ✖  Expected "0.18" to be "18%"                                                                                   alpha-value-notation
-   71:1   ✖  Expected selector ".skip-link" to come before selector ".skip-link:focus-visible", at line 65                 no-descending-specificity
-  126:39  ✖  Expected "#ffffff" to be "#fff"                                                                               color-hex-length
-  155:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  155:15  ✖  Expected modern color-function notation                                                                       color-function-notation
-  155:32  ✖  Expected "0.8" to be "80%"                                                                                    alpha-value-notation
-  164:15  ✖  Expected "currentColor" to be "currentcolor"                                                                  value-keyword-case
-  256:39  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  256:39  ✖  Expected modern color-function notation                                                                       color-function-notation
-  256:56  ✖  Expected "0.9" to be "90%"                                                                                    alpha-value-notation
-  294:39  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  294:39  ✖  Expected modern color-function notation                                                                       color-function-notation
-  294:59  ✖  Expected "0.17" to be "17%"                                                                                   alpha-value-notation
-  334:28  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  334:28  ✖  Expected modern color-function notation                                                                       color-function-notation
-  334:48  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
-  420:11  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  420:11  ✖  Expected modern color-function notation                                                                       color-function-notation
-  420:31  ✖  Expected "0.16" to be "16%"                                                                                   alpha-value-notation
-  522:11  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  522:11  ✖  Expected modern color-function notation                                                                       color-function-notation
-  522:31  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
-  601:9   ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  601:9   ✖  Expected modern color-function notation                                                                       color-function-notation
-  601:29  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
-  617:9   ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  617:9   ✖  Expected modern color-function notation                                                                       color-function-notation
-  617:29  ✖  Expected "0.18" to be "18%"                                                                                   alpha-value-notation
-  632:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  632:15  ✖  Expected modern color-function notation                                                                       color-function-notation
-  632:35  ✖  Expected "0.18" to be "18%"                                                                                   alpha-value-notation
-  675:1   ✖  Expected selector ".freshness-row p" to come before selector ".chart-empty-card > p:last-child", at line 397  no-descending-specificity
-  689:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  689:15  ✖  Expected modern color-function notation                                                                       color-function-notation
-  689:35  ✖  Expected "0.14" to be "14%"                                                                                   alpha-value-notation
-  694:15  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  694:15  ✖  Expected modern color-function notation                                                                       color-function-notation
-  694:35  ✖  Expected "0.14" to be "14%"                                                                                   alpha-value-notation
-  713:25  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  713:25  ✖  Expected modern color-function notation                                                                       color-function-notation
-  713:45  ✖  Expected "0.12" to be "12%"                                                                                   alpha-value-notation
-  739:28  ✖  Expected "rgba" to be "rgb"                                                                                   color-function-alias-notation
-  739:28  ✖  Expected modern color-function notation                                                                       color-function-notation
-  739:48  ✖  Expected "0.1" to be "10%"                                                                                    alpha-value-notation
-  749:1   ✖  Expected selector ".data-table thead th" to come before selector ".data-table th:first-child", at line 744    no-descending-specificity
-  760:3   ✖  Deprecated property "clip"                                                                                    property-no-deprecated
-  774:1   ✖  Expected selector ".provenance p" to come before selector ".chart-empty-card > p:last-child", at line 397     no-descending-specificity
-  785:8   ✖  Expected "context" media feature range notation                                                               media-feature-range-notation
-  810:8   ✖  Expected "context" media feature range notation                                                               media-feature-range-notation
+     2:1   ✖  Expected empty line before comment                                                                                                              comment-empty-line-before
+     6:3   ✖  Expected empty line before custom property                                                                                                      custom-property-empty-line-before
+     7:14  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+     7:14  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+     7:31  ✖  Expected "0.88" to be "88%"                                                                                                                     alpha-value-notation
+     9:13  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+     9:13  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+     9:33  ✖  Expected "0.2" to be "20%"                                                                                                                      alpha-value-notation
+    25:25  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+    25:25  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+    25:39  ✖  Expected "0.32" to be "32%"                                                                                                                     alpha-value-notation
+    43:40  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+    43:40  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+    43:59  ✖  Expected "0.27" to be "27%"                                                                                                                     alpha-value-notation
+    44:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+    44:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+    44:58  ✖  Expected "0.18" to be "18%"                                                                                                                     alpha-value-notation
+    71:1   ✖  Expected selector ".skip-link" to come before selector ".skip-link:focus-visible", at line 65                                                   no-descending-specificity
+   126:39  ✖  Expected "#ffffff" to be "#fff"                                                                                                                 color-hex-length
+   155:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   155:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   155:32  ✖  Expected "0.8" to be "80%"                                                                                                                      alpha-value-notation
+   164:15  ✖  Expected "currentColor" to be "currentcolor"                                                                                                    value-keyword-case
+   256:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   256:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   256:56  ✖  Expected "0.9" to be "90%"                                                                                                                      alpha-value-notation
+   294:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   294:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   294:59  ✖  Expected "0.17" to be "17%"                                                                                                                     alpha-value-notation
+   334:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   334:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   334:48  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
+   420:11  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   420:11  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   420:31  ✖  Expected "0.16" to be "16%"                                                                                                                     alpha-value-notation
+   522:11  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   522:11  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   522:31  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
+   601:9   ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   601:9   ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   601:29  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
+   617:9   ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   617:9   ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   617:29  ✖  Expected "0.18" to be "18%"                                                                                                                     alpha-value-notation
+   632:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   632:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   632:35  ✖  Expected "0.18" to be "18%"                                                                                                                     alpha-value-notation
+   675:1   ✖  Expected selector ".freshness-row p" to come before selector ".chart-empty-card > p:last-child", at line 397                                    no-descending-specificity
+   689:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   689:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   689:35  ✖  Expected "0.14" to be "14%"                                                                                                                     alpha-value-notation
+   694:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   694:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   694:35  ✖  Expected "0.14" to be "14%"                                                                                                                     alpha-value-notation
+   713:25  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   713:25  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   713:45  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
+   739:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   739:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   739:48  ✖  Expected "0.1" to be "10%"                                                                                                                      alpha-value-notation
+   749:1   ✖  Expected selector ".data-table thead th" to come before selector ".data-table th:first-child", at line 744                                      no-descending-specificity
+   760:3   ✖  Deprecated property "clip"                                                                                                                      property-no-deprecated
+   769:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   769:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   769:56  ✖  Expected "0.94" to be "94%"                                                                                                                     alpha-value-notation
+   779:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   779:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   779:48  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
+   782:1   ✖  Expected selector ".anatomy-overview p" to come before selector ".chart-empty-card > p:last-child", at line 397                                 no-descending-specificity
+   786:1   ✖  Expected selector ".anatomy-overview > p" to come before selector ".chart-empty-card > p:last-child", at line 397                               no-descending-specificity
+   835:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   835:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   835:31  ✖  Expected "0.72" to be "72%"                                                                                                                     alpha-value-notation
+   841:29  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   841:29  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   841:48  ✖  Expected "0.16" to be "16%"                                                                                                                     alpha-value-notation
+   856:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   856:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   856:32  ✖  Expected "0.82" to be "82%"                                                                                                                     alpha-value-notation
+   884:21  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   884:21  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   884:41  ✖  Expected "0.14" to be "14%"                                                                                                                     alpha-value-notation
+   887:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   887:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   887:47  ✖  Expected "0.035" to be "3.5%"                                                                                                                   alpha-value-notation
+   887:77  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   887:77  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   887:92  ✖  Expected "0.72" to be "72%"                                                                                                                     alpha-value-notation
+   913:26  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   913:26  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   913:46  ✖  Expected "0.16" to be "16%"                                                                                                                     alpha-value-notation
+   917:17  ✖  Disallowed !important                                                                                                                           declaration-no-important
+   958:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   958:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   958:35  ✖  Expected "0.08" to be "8%"                                                                                                                      alpha-value-notation
+   969:11  ✖  Expected "currentColor" to be "currentcolor"                                                                                                    value-keyword-case
+   977:9   ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+   977:9   ✖  Expected modern color-function notation                                                                                                         color-function-notation
+   977:28  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
+   980:1   ✖  Expected selector ".tree-node-file .tree-icon" to come before selector ".tree-node-directory > details > summary .tree-icon", at line 975       no-descending-specificity
+   984:1   ✖  Expected selector ".tree-node-symlink .tree-icon" to come before selector ".tree-node-directory > details > summary .tree-icon", at line 975    no-descending-specificity
+   988:1   ✖  Expected selector ".tree-node-submodule .tree-icon" to come before selector ".tree-node-directory > details > summary .tree-icon", at line 975  no-descending-specificity
+  1013:21  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
+  1013:21  ✖  Expected modern color-function notation                                                                                                         color-function-notation
+  1013:41  ✖  Expected "0.15" to be "15%"                                                                                                                     alpha-value-notation
+  1056:1   ✖  Expected selector ".provenance p" to come before selector ".chart-empty-card > p:last-child", at line 397                                       no-descending-specificity
+  1067:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
+  1092:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
 
-✖ 65 problems (65 errors, 0 warnings)
-  61 errors potentially fixable with the "--fix" option.
+✖ 108 problems (108 errors, 0 warnings)
+  98 errors potentially fixable with the "--fix" option.
 ```
 
 </details>
@@ -1959,7 +2082,7 @@ unformatted: File would be reformatted
 ```
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-15T05:41:08Z	info-0	trufflehog	running source	{"source_manager_worker_id": "9sHqI", "with_units": true}
+2026-08-15T16:27:33Z	info-0	trufflehog	running source	{"source_manager_worker_id": "bpWR9", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -1978,7 +2101,7 @@ File: tests/test_repository_analytics.py
 Line: 84
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-15T05:41:09Z	info-0	trufflehog	finished scanning	{"chunks": 1364, "bytes": 7674046, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "991.589923ms", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":3,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":425}}
+2026-08-15T16:27:34Z	info-0	trufflehog	finished scanning	{"chunks": 1373, "bytes": 7731494, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "1.015667947s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":3,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":452}}
 ```
 
 </details>
@@ -1987,185 +2110,185 @@ Analyze: Run `trufflehog analyze` to analyze this key's permissions
 <summary>⚠️ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-2026-08-15 05:40:51,793 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-08-15 05:40:52,160 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
-2026-08-15 05:40:52,161 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-08-15 05:40:52,163 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-08-15 05:40:52,164 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-08-15 05:40:53,008 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-08-15 05:40:53,008 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-08-15 05:40:53,008 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-08-15 05:40:53,008 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-08-15 05:40:53,022 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-08-15 05:40:53,022 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-08-15 05:40:53,029 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
+2026-08-15 16:27:22,057 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-08-15 16:27:22,376 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
+2026-08-15 16:27:22,377 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-08-15 16:27:22,378 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-08-15 16:27:22,382 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-08-15 16:27:23,340 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-08-15 16:27:23,340 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-08-15 16:27:23,340 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-08-15 16:27:23,340 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-08-15 16:27:23,360 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-08-15 16:27:23,361 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-08-15 16:27:23,369 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,029 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
+2026-08-15 16:27:23,372 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,029 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
+2026-08-15 16:27:23,372 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,029 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
+2026-08-15 16:27:23,372 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,030 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
+2026-08-15 16:27:23,372 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,030 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
+2026-08-15 16:27:23,372 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,030 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
+2026-08-15 16:27:23,372 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,030 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
+2026-08-15 16:27:23,373 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,030 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
+2026-08-15 16:27:23,373 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,030 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
+2026-08-15 16:27:23,373 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,030 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
+2026-08-15 16:27:23,373 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,031 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
+2026-08-15 16:27:23,373 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,031 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
+2026-08-15 16:27:23,373 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,031 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
+2026-08-15 16:27:23,377 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,034 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
+2026-08-15 16:27:23,377 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,034 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
+2026-08-15 16:27:23,377 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,034 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
+2026-08-15 16:27:23,377 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,034 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
+2026-08-15 16:27:23,377 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,035 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
+2026-08-15 16:27:23,377 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,035 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
+2026-08-15 16:27:23,377 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,035 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
+2026-08-15 16:27:23,378 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,035 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
+2026-08-15 16:27:23,378 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,035 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
+2026-08-15 16:27:23,378 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,035 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
+2026-08-15 16:27:23,378 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,035 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
+2026-08-15 16:27:23,378 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,036 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
+2026-08-15 16:27:23,379 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,036 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
+2026-08-15 16:27:23,379 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,036 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
+2026-08-15 16:27:23,379 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,036 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
+2026-08-15 16:27:23,379 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,036 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
+2026-08-15 16:27:23,379 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,036 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
+2026-08-15 16:27:23,380 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,036 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
+2026-08-15 16:27:23,380 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,037 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
+2026-08-15 16:27:23,380 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,037 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
+2026-08-15 16:27:23,383 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,040 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+2026-08-15 16:27:23,383 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,040 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+2026-08-15 16:27:23,383 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,040 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-08-15 16:27:23,383 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,040 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-08-15 16:27:23,383 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,040 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-08-15 16:27:23,384 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,041 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-08-15 16:27:23,384 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,041 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-08-15 16:27:23,384 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,041 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-08-15 16:27:23,384 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,041 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-08-15 16:27:23,384 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,041 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-08-15 16:27:23,384 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-15 05:40:53,121 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-15 05:40:53,174 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-15 05:40:53,174 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-15 05:40:53,197 [MainThread  ] [INFO ]  Creating vertices
-2026-08-15 05:40:53,199 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-15 05:40:53,199 [MainThread  ] [INFO ]  Creating edges
-2026-08-15 05:40:53,199 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-15 05:40:53,294 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-15 05:40:53,295 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-15 05:40:53,313 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-15 05:40:53,314 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-15 05:40:53,328 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-15 05:40:53,328 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-15 05:40:53,328 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-15 05:40:53,330 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-15 05:40:53,345 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-15 05:40:53,370 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-15 05:40:53,406 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-15 05:40:53,748 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-15 05:40:53,748 [MainThread  ] [INFO ]  Creating vertices
-2026-08-15 05:40:53,748 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-15 05:40:53,748 [MainThread  ] [INFO ]  Creating edges
-2026-08-15 05:40:53,761 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-15 05:40:53,762 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-15 05:40:53,832 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-15 05:40:53,832 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-15 05:40:53,832 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-15 05:40:53,832 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-15 05:41:03,494 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-15 05:41:03,504 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-15 05:41:04,176 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-15 05:41:04,179 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-15 05:41:04,179 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-15 05:41:04,179 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-15 05:41:04,179 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-15 05:41:04,180 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-15 16:27:23,473 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-15 16:27:23,508 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-15 16:27:23,513 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-15 16:27:23,516 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-15 16:27:23,516 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-15 16:27:23,521 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-15 16:27:23,546 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-15 16:27:23,548 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-15 16:27:23,587 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-15 16:27:23,587 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-15 16:27:23,614 [MainThread  ] [INFO ]  Creating vertices
+2026-08-15 16:27:23,614 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-15 16:27:23,614 [MainThread  ] [INFO ]  Creating edges
+2026-08-15 16:27:23,614 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-15 16:27:23,668 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-15 16:27:23,687 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-15 16:27:23,698 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-15 16:27:23,708 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-15 16:27:24,199 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-15 16:27:24,214 [MainThread  ] [INFO ]  Creating vertices
+2026-08-15 16:27:24,214 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-15 16:27:24,214 [MainThread  ] [INFO ]  Creating edges
+2026-08-15 16:27:24,216 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-15 16:27:24,219 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-15 16:27:24,279 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-15 16:27:24,279 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-15 16:27:24,280 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-15 16:27:24,280 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-15 16:27:31,846 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-15 16:27:31,850 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-15 16:27:32,103 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-15 16:27:32,104 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-15 16:27:32,104 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-15 16:27:32,104 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-15 16:27:32,104 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-15 16:27:32,105 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -2441,37 +2564,10 @@ elliptic                     6.6.1                                              
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 330 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 340 errors</summary>
 
 ```
-42:4]
-Clone found (markdown)
- - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [24:82 - 42:4] (19 lines, 76 tokens)
-   egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:markdown [24:94 - 42:4]
-Clone found (markdown)
- - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [24:82 - 42:11] (19 lines, 78 tokens)
-   egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown [24:94 - 42:12]
-Clone found (markdown)
- - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [56:23 - 81:40] (26 lines, 255 tokens)
-   egolint/.agents/skills/quality/audit-repository/SKILL.md:markdown [56:40 - 81:40]
-Clone found (markdown)
- - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [58:1 - 77:58] (20 lines, 233 tokens)
-   egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:markdown [58:1 - 77:58]
-Clone found (markdown)
- - egolint/.agents/skills/authoring/create-specification-file/SKILL.md:markdown [58:1 - 81:40] (24 lines, 253 tokens)
-   egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:markdown [59:1 - 82:40]
-Clone found (json)
- - egolint/.agents/skills/authoring/create-specification-file/evals/evals.json [3:39 - 54:13] (52 lines, 203 tokens)
-   egolint/.agents/skills/methodology/orchestrate-reflective-development/evals/evals.json [3:48 - 54:13]
-Clone found (json)
- - egolint/.agents/skills/authoring/create-specification-file/evals/evals.json [3:39 - 54:13] (52 lines, 203 tokens)
-   egolint/.agents/skills/publishing/prepare-arxiv-release/evals/evals.json [3:35 - 54:13]
-Clone found (json)
- - egolint/.agents/skills/authoring/create-specification-file/evals/evals.json [3:39 - 54:13] (52 lines, 203 tokens)
-   egolint/.agents/skills/quality/audit-repository/evals/evals.json [3:30 - 54:13]
-Clone found (markdown)
- - egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown [5:16 - 28:53] (24 lines, 245 tokens)
-   egolint/.agents/skills/methodology/orchestrate-reflective-development/references/validation-checklist.md:markdown [5:17 - 28:53]
+7 - 28:53]
 Clone found (markdown)
  - egolint/.agents/skills/authoring/create-specification-file/references/validation-checklist.md:markdown [5:16 - 28:53] (24 lines, 245 tokens)
    egolint/.agents/skills/publishing/prepare-arxiv-release/references/validation-checklist.md:markdown [5:24 - 28:53]
@@ -2697,9 +2793,6 @@ Clone found (toml)
 Clone found (java)
  - egolint/tests/fixtures/checkstyle/GreetingService.java [27:1 - 34:2] (8 lines, 62 tokens)
    egolint/tests/fixtures/pmd/GreetingService.java [13:1 - 20:2]
-Clone found (toml)
- - egolint/tests/fixtures/clippy/Cargo.toml [10:1 - 15:45] (6 lines, 57 tokens)
-   identity/Cargo.toml [22:1 - 27:45]
 Clone found (yaml)
  - mantle/.github/workflows/test.yml [66:1 - 91:34] (26 lines, 248 tokens)
    mantle/.github/workflows/test.yml [115:1 - 140:34]
@@ -2971,6 +3064,9 @@ Clone found (json)
  - tests/fixtures/repository-intelligence-dashboard/osv/summary.json [13:15 - 24:15] (12 lines, 54 tokens)
    tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json [11:16 - 22:15]
 Clone found (python)
+ - tests/test_repository_intelligence_dashboard.py [308:1 - 313:64] (6 lines, 62 tokens)
+   tests/test_repository_intelligence_dashboard.py [323:1 - 328:64]
+Clone found (python)
  - tests/test_validate_automation.py [45:53 - 57:32] (13 lines, 66 tokens)
    tests/test_validate_automation.py [108:47 - 120:32]
 Clone found (python)
@@ -2981,7 +3077,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex       │ 1              │ 13          │ 88           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash       │ 127            │ 19168       │ 90066        │ 58           │ 670 (3.50%)      │ 4439 (4.93%)      │
+│ bash       │ 128            │ 19219       │ 90185        │ 58           │ 670 (3.49%)      │ 4439 (4.92%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ c          │ 1              │ 50          │ 296          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -2989,7 +3085,7 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ cpp        │ 1              │ 44          │ 233          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css        │ 3              │ 955         │ 6401         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css        │ 3              │ 1255        │ 8490         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ dart       │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3009,15 +3105,15 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java       │ 2              │ 54          │ 504          │ 1            │ 7 (12.96%)       │ 62 (12.30%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript │ 6              │ 674         │ 2231         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ javascript │ 7              │ 785         │ 2906         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 97             │ 15122       │ 66178        │ 26           │ 584 (3.86%)      │ 2266 (3.42%)      │
+│ json       │ 97             │ 15235       │ 67028        │ 32           │ 655 (4.30%)      │ 2863 (4.27%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx        │ 1              │ 10          │ 52           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ latex      │ 3              │ 152         │ 902          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown   │ 234            │ 24086       │ 274007       │ 138          │ 1660 (6.89%)     │ 17050 (6.22%)     │
+│ markdown   │ 235            │ 24178       │ 274888       │ 138          │ 1660 (6.87%)     │ 17050 (6.20%)     │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 8              │ 917         │ 9897         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3029,13 +3125,13 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf   │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 45             │ 12278       │ 95428        │ 20           │ 203 (1.65%)      │ 1454 (1.52%)      │
+│ python     │ 45             │ 12792       │ 99909        │ 21           │ 208 (1.63%)      │ 1516 (1.52%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r          │ 1              │ 14          │ 54           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ ruby       │ 1              │ 204         │ 810          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ rust       │ 7              │ 1181        │ 9458         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ rust       │ 8              │ 1541        │ 12504        │ 1            │ 5 (0.32%)        │ 71 (0.57%)        │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ scala      │ 1              │ 13          │ 63           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3043,24 +3139,24 @@ Clone found (python)
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift      │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text       │ 11             │ 1913        │ 2095         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ text       │ 12             │ 1956        │ 2200         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ toml       │ 22             │ 1984        │ 6024         │ 2            │ 111 (5.59%)      │ 242 (4.02%)       │
+│ toml       │ 23             │ 2013        │ 6208         │ 4            │ 132 (6.56%)      │ 396 (6.38%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ txt        │ 5              │ 138         │ 2136         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript │ 2              │ 23          │ 121          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 234            │ 19528       │ 103259       │ 84           │ 986 (5.05%)      │ 6500 (6.29%)      │
+│ yaml       │ 235            │ 19596       │ 103635       │ 84           │ 986 (5.03%)      │ 6500 (6.27%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 836            │ 100438      │ 677381       │ 330          │ 4226 (4.21%)     │ 32104 (4.74%)     │
+│ Total:     │ 843            │ 102119      │ 690187       │ 340          │ 4328 (4.24%)     │ 32988 (4.78%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 330 clones.
+Found 340 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (4.2%) over threshold (3.0%)
-time: 1.84s
+time: 1.76s
 
-(Truncated to last 42105 characters out of 76051)
+(Truncated to last 40000 characters out of 78212)
 ```
 
 </details>
@@ -3113,26 +3209,10 @@ time: 1.84s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 413 errors</summary>
+<summary>⚠️ SPELL / proselint - 421 errors</summary>
 
 ```
-”, not straight quotes "".
-egolint/.agents/agents/cleanup-specialist/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/cleanup-specialist/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/cleanup-specialist/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/cleanup-specialist/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/cleanup-specialist/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/github-issue-creator/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/github-issue-creator/AGENT.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/github-issue-creator/AGENT.md:12:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/github-issue-creator/AGENT.md:13:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/github-issue-creator/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/implementation-planner/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/implementation-planner/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/implementation-planner/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/implementation-planner/AGENT.md:14:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/implementation-planner/AGENT.md:15:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/agents/implementation-planner/AGENT.md:47:14: needless_variants: Needless variant. 'oversize' is the preferred form.
+s/agents/implementation-planner/AGENT.md:47:14: needless_variants: Needless variant. 'oversize' is the preferred form.
 egolint/.agents/agents/specfile-creator/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/specfile-creator/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/specfile-creator/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -3461,26 +3541,29 @@ mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
-(Truncated to last 42105 characters out of 57772)
+(Truncated to last 40000 characters out of 58564)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pylint - 33 errors</summary>
+<summary>⚠️ PYTHON / pylint - 36 errors</summary>
 
 ```
 ************* Module generate_lint_infographic
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:150:0: R0913: Too many arguments (8/7) (too-many-arguments)
 .github/actions/generate-lint-infographic/generate_lint_infographic.py:171:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
 ************* Module generate_repository_intelligence_dashboard
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1:0: C0302: Too many lines in module (1540/1000) (too-many-lines)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:246:0: R0914: Too many local variables (34/20) (too-many-locals)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:246:0: R0912: Too many branches (17/12) (too-many-branches)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:246:0: R0915: Too many statements (64/60) (too-many-statements)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:433:0: R0914: Too many local variables (25/20) (too-many-locals)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:433:0: R0912: Too many branches (13/12) (too-many-branches)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:957:0: R0914: Too many local variables (26/20) (too-many-locals)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1:0: C0302: Too many lines in module (1929/1000) (too-many-lines)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:0: R0914: Too many local variables (34/20) (too-many-locals)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:0: R0912: Too many branches (17/12) (too-many-branches)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:0: R0915: Too many statements (64/60) (too-many-statements)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:439:0: R0914: Too many local variables (25/20) (too-many-locals)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:439:0: R0912: Too many branches (13/12) (too-many-branches)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:0: R0914: Too many local variables (25/20) (too-many-locals)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:0: R0912: Too many branches (19/12) (too-many-branches)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:937:0: R0913: Too many arguments (8/7) (too-many-arguments)
+.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1160:0: R0914: Too many local variables (26/20) (too-many-locals)
 ************* Module normalize_repository_report
 .github/actions/normalize-repository-report/normalize_repository_report.py:139:0: R0913: Too many arguments (11/7) (too-many-arguments)
 .github/actions/normalize-repository-report/normalize_repository_report.py:232:0: R0914: Too many local variables (22/20) (too-many-locals)
@@ -3525,41 +3608,10 @@ Your code has been rated at 9.92/10
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pyright - 789 errors</summary>
+<summary>⚠️ PYTHON / pyright - 815 errors</summary>
 
 ```
-indgarden/scripts/garden_agent.py:152:62 - error: Argument type is partially unknown
-    Argument corresponds to parameter "source" in function "require_string"
-    Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:154:46 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:154:70 - error: Argument type is partially unknown
-    Argument corresponds to parameter "source" in function "require_string"
-    Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:155:46 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:155:70 - error: Argument type is partially unknown
-    Argument corresponds to parameter "source" in function "require_string"
-    Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:156:43 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:156:64 - error: Argument type is partially unknown
-    Argument corresponds to parameter "source" in function "require_string"
-    Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:157:47 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string_list"
-    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:157:67 - error: Argument type is partially unknown
-    Argument corresponds to parameter "source" in function "require_string_list"
-    Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:158:48 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string_list"
-    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/garden_agent.py:158:69 - error: Argument type is partially unknown
-    Argument corresponds to parameter "source" in function "require_string_list"
+require_string_list"
     Argument type is "Path | Unknown" (reportUnknownArgumentType)
   mindgarden/scripts/garden_agent.py:159:48 - error: Argument type is partially unknown
     Argument corresponds to parameter "metadata" in function "require_string_list"
@@ -3958,28 +4010,32 @@ tests/test_mindgarden_publishing_integration.py
   tests/test_mindgarden_publishing_integration.py:32:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
   tests/test_mindgarden_publishing_integration.py:32:38 - error: Type of "path" is unknown (reportUnknownVariableType)
 tests/test_repository_intelligence_dashboard.py
-  tests/test_repository_intelligence_dashboard.py:197:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:198:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:199:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:200:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:201:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:202:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:203:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:208:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:209:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:210:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:211:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:220:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:238:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:250:9 - error: Type of "scorecard" is unknown (reportUnknownVariableType)
-  tests/test_repository_intelligence_dashboard.py:250:21 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:252:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:253:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:254:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:255:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:256:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:257:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:258:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:263:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:264:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
   tests/test_repository_intelligence_dashboard.py:265:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:299:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:311:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
-  tests/test_repository_intelligence_dashboard.py:311:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-789 errors, 10 warnings, 0 informations
+  tests/test_repository_intelligence_dashboard.py:266:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:275:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:292:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:293:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:313:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:328:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:342:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:354:9 - error: Type of "scorecard" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_dashboard.py:354:21 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:369:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:414:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+  tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
+815 errors, 10 warnings, 0 informations
 
-(Truncated to last 42105 characters out of 159930)
+(Truncated to last 40000 characters out of 166711)
 ```
 
 </details>
@@ -3988,25 +4044,25 @@ tests/test_repository_intelligence_dashboard.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-15T05:40:38Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-15T05:40:38Z	INFO	[vulndb] Need to update DB
-2026-08-15T05:40:38Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-15T05:40:38Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-1.49 MiB / 107.01 MiB [>_____________________________________________________________] 1.39% ? p/s ?14.58 MiB / 107.01 MiB [-------->___________________________________________________] 13.63% ? p/s ?34.90 MiB / 107.01 MiB [------------------->________________________________________] 32.61% ? p/s ?57.89 MiB / 107.01 MiB [------------------------->_____________________] 54.09% 94.03 MiB p/s ETA 0s78.26 MiB / 107.01 MiB [---------------------------------->____________] 73.13% 94.03 MiB p/s ETA 0s99.08 MiB / 107.01 MiB [------------------------------------------->___] 92.59% 94.03 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 93.23 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 93.23 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 93.23 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 87.21 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 87.21 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 87.21 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 81.59 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 81.59 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 81.59 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 76.32 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 76.32 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 76.32 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 71.40 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 71.40 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 71.40 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 66.79 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 66.79 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 66.79 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 62.48 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 62.48 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 62.48 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 58.45 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 58.45 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 58.45 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 54.68 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 54.68 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 54.68 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 51.15 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 51.15 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 51.15 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 47.85 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-------------------------------------------->] 100.00% 47.85 MiB p/s ETA 0s107.01 MiB / 107.01 MiB [-----------------------------------------------] 100.00% 14.17 MiB p/s 7.8s2026-08-15T05:40:48Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-15T05:40:48Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-15T05:40:48Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-15T05:40:48Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-15T05:40:48Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.15 MiB p/s 300ms2026-08-15T05:40:55Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-15T05:40:55Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-15T05:40:55Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-15T05:40:59Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-15T05:41:00Z	INFO	Number of language-specific files	num=4
-2026-08-15T05:41:00Z	INFO	[cargo] Detecting vulnerabilities...
-2026-08-15T05:41:00Z	INFO	[gomod] Detecting vulnerabilities...
-2026-08-15T05:41:00Z	INFO	[pnpm] Detecting vulnerabilities...
-2026-08-15T05:41:01Z	INFO	[uv] Detecting vulnerabilities...
-2026-08-15T05:41:02Z	INFO	Detected config files	num=13
+2026-08-15T16:27:03Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-15T16:27:03Z	INFO	[vulndb] Need to update DB
+2026-08-15T16:27:03Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-15T16:27:03Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+9.83 MiB / 107.50 MiB [----->________________________________________________________] 9.14% ? p/s ?39.92 MiB / 107.50 MiB [---------------------->_____________________________________] 37.14% ? p/s ?67.74 MiB / 107.50 MiB [------------------------------------->______________________] 63.01% ? p/s ?96.49 MiB / 107.50 MiB [----------------------------------------->____] 89.76% 144.58 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 144.58 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 144.58 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 136.43 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 136.43 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 136.43 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 127.63 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 127.63 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 127.63 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 119.40 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 119.40 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 119.40 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 111.69 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 111.69 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 111.69 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 104.49 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 104.49 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [------------------------------------------->] 100.00% 104.49 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 97.75 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 97.75 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 97.75 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 91.44 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 91.44 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 91.44 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 85.54 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 85.54 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 85.54 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 80.02 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 80.02 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 80.02 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 74.86 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-------------------------------------------->] 100.00% 74.86 MiB p/s ETA 0s107.50 MiB / 107.50 MiB [-----------------------------------------------] 100.00% 15.55 MiB p/s 7.1s2026-08-15T16:27:12Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-15T16:27:12Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-15T16:27:12Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-15T16:27:12Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-15T16:27:12Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 1.12 MiB p/s 400ms2026-08-15T16:27:17Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-15T16:27:17Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-15T16:27:17Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-15T16:27:17Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-15T16:27:19Z	INFO	Number of language-specific files	num=4
+2026-08-15T16:27:19Z	INFO	[cargo] Detecting vulnerabilities...
+2026-08-15T16:27:19Z	INFO	[gomod] Detecting vulnerabilities...
+2026-08-15T16:27:19Z	INFO	[pnpm] Detecting vulnerabilities...
+2026-08-15T16:27:19Z	INFO	[uv] Detecting vulnerabilities...
+2026-08-15T16:27:19Z	INFO	Detected config files	num=13
 
 Report Summary
 
@@ -4214,26 +4270,7 @@ To suppress version checks, run Trivy scans with the --skip-version-check flag
 <summary>⚠️ SPELL / vale - 4 errors</summary>
 
 ```
-e passive voice. Use active voice if you can.         write-good.Passive  
- 151:43  warning  'it is' is too wordy.                                                   write-good.TooWordy 
- 188:47  warning  'substantial' is too wordy.                                             write-good.TooWordy 
- 192:19  warning  'are introduced' may be passive voice. Use active voice if you can.     write-good.Passive  
- 200:29  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 202:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 203:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 204:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 205:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 206:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 207:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 208:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 210:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 211:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 212:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 214:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 216:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 218:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 222:26  warning  'shall' is too wordy.                                                   write-good.TooWordy 
- 223:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
+wordy.                                                   write-good.TooWordy 
  224:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
  225:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
  226:19  warning  'shall' is too wordy.                                                   write-good.TooWordy 
@@ -4685,9 +4722,9 @@ e passive voice. Use active voice if you can.         write-good.Passive
  70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
  74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 2012 warnings and 0 suggestions in 235 files.
+✖ 4 errors, 2017 warnings and 0 suggestions in 236 files.
 
-(Truncated to last 42105 characters out of 227768)
+(Truncated to last 40000 characters out of 228305)
 ```
 
 </details>

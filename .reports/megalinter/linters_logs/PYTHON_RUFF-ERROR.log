@@ -5,215 +5,243 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:105:55
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:111:55
     |
-103 |     if isinstance(value, bool) or not isinstance(value, (int, float)):
-104 |         return None
-105 |     return value if isfinite(value) and 0 <= value <= 10 else None
+109 |     if isinstance(value, bool) or not isinstance(value, (int, float)):
+110 |         return None
+111 |     return value if isfinite(value) and 0 <= value <= 10 else None
     |                                                       ^^
 
 PLR0912 Too many branches (17 > 12)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:246:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:5
     |
-246 | def validate_report(
+252 | def validate_report(
     |     ^^^^^^^^^^^^^^^
-247 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
-248 | ) -> dict[str, Any]:
+253 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
+254 | ) -> dict[str, Any]:
     |
 
 PLR0915 Too many statements (64 > 50)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:246:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:5
     |
-246 | def validate_report(
+252 | def validate_report(
     |     ^^^^^^^^^^^^^^^
-247 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
-248 | ) -> dict[str, Any]:
+253 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
+254 | ) -> dict[str, Any]:
     |
 
 SIM102 Use a single `if` statement instead of nested `if` statements
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:278:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:284:5
     |
-276 |       blocking = safe_integer(report_findings.get("blocking"), allow_none=allow_none)
-277 |       advisory = safe_integer(report_findings.get("advisory"), allow_none=allow_none)
-278 | /     if total is not None and blocking is not None and advisory is not None:
-279 | |         if blocking + advisory != total:
+282 |       blocking = safe_integer(report_findings.get("blocking"), allow_none=allow_none)
+283 |       advisory = safe_integer(report_findings.get("advisory"), allow_none=allow_none)
+284 | /     if total is not None and blocking is not None and advisory is not None:
+285 | |         if blocking + advisory != total:
     | |________________________________________^
-280 |               raise DashboardInputError("blocking and advisory counts must sum to total.")
-281 |       by_severity = report_findings.get("by_severity")
+286 |               raise DashboardInputError("blocking and advisory counts must sum to total.")
+287 |       by_severity = report_findings.get("by_severity")
     |
 help: Combine `if` statements using `and`
 
 PLR0912 Too many branches (13 > 12)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:433:5
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:439:5
     |
-433 | def validate_analytics(document: dict[str, Any], source_commit: str) -> dict[str, Any]:
+439 | def validate_analytics(document: dict[str, Any], source_commit: str) -> dict[str, Any]:
     |     ^^^^^^^^^^^^^^^^^^
-434 |     """Project the versioned public analytics contract used by the charts."""
+440 |     """Project the versioned public analytics contract used by the charts."""
+    |
+
+PLR0912 Too many branches (19 > 12)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:5
+    |
+640 | def validate_tree_node(
+    |     ^^^^^^^^^^^^^^^^^^
+641 |     candidate: Any,
+642 |     *,
+    |
+
+PLR0915 Too many statements (55 > 50)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:5
+    |
+640 | def validate_tree_node(
+    |     ^^^^^^^^^^^^^^^^^^
+641 |     candidate: Any,
+642 |     *,
     |
 
 S603 `subprocess` call: check for execution of untrusted input
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:604:14
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:805:14
     |
-602 |     """Run a read-only Git query and return normalized stdout."""
-603 |
-604 |     result = subprocess.run(
+803 |     """Run a read-only Git query and return normalized stdout."""
+804 |
+805 |     result = subprocess.run(
     |              ^^^^^^^^^^^^^^
-605 |         ["git", "-C", str(repository_root), *arguments],
-606 |         check=True,
+806 |         ["git", "-C", str(repository_root), *arguments],
+807 |         check=True,
     |
 
 S607 Starting a process with a partial executable path
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:605:9
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:806:9
     |
-604 |     result = subprocess.run(
-605 |         ["git", "-C", str(repository_root), *arguments],
+805 |     result = subprocess.run(
+806 |         ["git", "-C", str(repository_root), *arguments],
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-606 |         check=True,
-607 |         capture_output=True,
+807 |         check=True,
+808 |         capture_output=True,
     |
 
 TRY301 Abstract `raise` to an inner function
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:625:13
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:826:13
     |
-623 |         resolved_commit = run_git(repository_root, "rev-parse", source_commit)
-624 |         if not FULL_SHA_PATTERN.fullmatch(resolved_commit):
-625 |             raise DashboardInputError("Git did not resolve a full source commit.")
+824 |         resolved_commit = run_git(repository_root, "rev-parse", source_commit)
+825 |         if not FULL_SHA_PATTERN.fullmatch(resolved_commit):
+826 |             raise DashboardInputError("Git did not resolve a full source commit.")
     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-626 |         committed_at = run_git(
-627 |             repository_root, "show", "--no-patch", "--format=%cI", resolved_commit
+827 |         committed_at = run_git(
+828 |             repository_root, "show", "--no-patch", "--format=%cI", resolved_commit
     |
 
 PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:674:36
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:875:36
     |
-672 |             path.startswith(".github/actions/")
-673 |             and path.endswith("/action.yml")
-674 |             and path.count("/") == 3
+873 |             path.startswith(".github/actions/")
+874 |             and path.endswith("/action.yml")
+875 |             and path.count("/") == 3
     |                                    ^
-675 |             for path in tracked_paths
-676 |         )
+876 |             for path in tracked_paths
+877 |         )
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:723:25
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:924:25
     |
-722 |     counts = {
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+923 |     counts = {
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-722 |     counts = {
+923 |     counts = {
     -         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-723 +         "availability": dict.fromkeys(sorted(AVAILABILITY_STATES), 0),
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+924 +         "availability": dict.fromkeys(sorted(AVAILABILITY_STATES), 0),
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:724:22
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:925:22
     |
-722 |     counts = {
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+923 |     counts = {
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
     -         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-724 +         "execution": dict.fromkeys(sorted(EXECUTION_STATES), 0),
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+925 +         "execution": dict.fromkeys(sorted(EXECUTION_STATES), 0),
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:725:21
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:926:21
     |
-723 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-727 |     }
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+928 |     }
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
     -         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-725 +         "findings": dict.fromkeys(sorted(FINDING_STATES), 0),
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+926 +         "findings": dict.fromkeys(sorted(FINDING_STATES), 0),
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
     |
 
 C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:726:22
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:927:22
     |
-724 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-726 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
+925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-727 |     }
-728 |     for projection in producers.values():
+928 |     }
+929 |     for projection in producers.values():
     |
 help: Replace with `dict.fromkeys(iterable)`)
     |
-725 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
+926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
     -         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-726 +         "freshness": dict.fromkeys(sorted(FRESHNESS_STATES), 0),
-727 |     }
+927 +         "freshness": dict.fromkeys(sorted(FRESHNESS_STATES), 0),
+928 |     }
     |
 
-PLR0913 Too many arguments in function definition (7 > 5)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:736:5
+PLR0913 Too many arguments in function definition (8 > 5)
+   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:937:5
     |
-736 | def build_dashboard(
+937 | def build_dashboard(
     |     ^^^^^^^^^^^^^^^
-737 |     *,
-738 |     repository_root: Path,
+938 |     *,
+939 |     repository_root: Path,
     |
 
 PLR2004 Magic value used in comparison, consider replacing `1_000` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:892:21
-    |
-890 |     """Render a compact, deterministic integer label."""
-891 |
-892 |     if abs(value) < 1_000:
-    |                     ^^^^^
-893 |         return str(value)
-894 |     for divisor, suffix in ((1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")):
-    |
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1095:21
+     |
+1093 |     """Render a compact, deterministic integer label."""
+1094 |
+1095 |     if abs(value) < 1_000:
+     |                     ^^^^^
+1096 |         return str(value)
+1097 |     for divisor, suffix in ((1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")):
+     |
 
 PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:897:45
-    |
-895 |         if abs(value) >= divisor:
-896 |             scaled = value / divisor
-897 |             precision = 0 if abs(scaled) >= 10 else 1
-    |                                             ^^
-898 |             return f"{scaled:.{precision}f}{suffix}".replace(".0", "")
-899 |     return str(value)
-    |
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1100:45
+     |
+1098 |         if abs(value) >= divisor:
+1099 |             scaled = value / divisor
+1100 |             precision = 0 if abs(scaled) >= 10 else 1
+     |                                             ^^
+1101 |             return f"{scaled:.{precision}f}{suffix}".replace(".0", "")
+1102 |     return str(value)
+     |
 
 PLR0913 Too many arguments in function definition (7 > 5)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:931:5
-    |
-931 | def chart_card(
-    |     ^^^^^^^^^^
-932 |     *,
-933 |     identifier: str,
-    |
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1134:5
+     |
+1134 | def chart_card(
+     |     ^^^^^^^^^^
+1135 |     *,
+1136 |     identifier: str,
+     |
 
 PLR2004 Magic value used in comparison, consider replacing `20` with a constant variable
-    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1139:59
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1342:59
      |
-1137 |         y = 28 + index * row_height
-1138 |         rendered_width = bar_width * row["commit_touches"] / maximum
-1139 |         display_name = row["name"] if len(row["name"]) <= 20 else row["name"][:18] + "…"
+1340 |         y = 28 + index * row_height
+1341 |         rendered_width = bar_width * row["commit_touches"] / maximum
+1342 |         display_name = row["name"] if len(row["name"]) <= 20 else row["name"][:18] + "…"
      |                                                           ^^
-1140 |         bars.append(
-1141 |             f'<text class="bar-label" x="0" y="{y + 17}">{escaped(display_name)}</text>'
+1343 |         bars.append(
+1344 |             f'<text class="bar-label" x="0" y="{y + 17}">{escaped(display_name)}</text>'
+     |
+
+PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
+    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1558:22
+     |
+1557 |     parts = repository.split("/")
+1558 |     if len(parts) != 2 or not all(re.fullmatch(r"[A-Za-z0-9_.-]+", part) for part in parts):
+     |                      ^
+1559 |         return ""
+1560 |     owner, name = (quote(part, safe="") for part in parts)
      |
 
 S603 `subprocess` call: check for execution of untrusted input
@@ -621,6 +649,6 @@ S607 Starting a process with a partial executable path
 40 |         capture_output=True,
    |
 
-Found 52 errors.
+Found 55 errors.
 [*] 8 fixable with the `--fix` option (3 hidden fixes can be enabled with the `--unsafe-fixes` option).
 

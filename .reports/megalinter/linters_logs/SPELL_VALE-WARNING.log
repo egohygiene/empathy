@@ -111,10 +111,13 @@ Linter raw log:
 
 
  .github/actions/generate-repository-intelligence-dashboard/README.md
- 32:68  warning  'It is' is too wordy.                                               write-good.TooWordy 
- 41:13  warning  'is derived' may be passive voice. Use active voice if you can.     write-good.Passive  
- 44:7   warning  'aggregate' is too wordy.                                           write-good.TooWordy 
- 71:53  warning  'is introduced' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 36:68  warning  'It is' is too wordy.                                               write-good.TooWordy 
+ 45:13  warning  'is derived' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 48:7   warning  'aggregate' is too wordy.                                           write-good.TooWordy 
+ 75:41  warning  'is introduced' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 90:10  warning  'is validated' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 91:48  warning  'maximum' is too wordy.                                             write-good.TooWordy 
+ 91:67  warning  'maximum' is too wordy.                                             write-good.TooWordy 
 
 
  .github/actions/generate-repository-intelligence/README.md
@@ -448,6 +451,11 @@ Linter raw log:
  beacon/ARCHITECTURE.md
  8:1   warning  'multiple' is too wordy.  write-good.TooWordy 
  71:3  warning  'validate' is too wordy.  write-good.TooWordy 
+
+
+ beacon/CLI.md
+ 68:24  warning  'be added' may be passive voice. Use active voice if you can.   write-good.Passive 
+ 68:69  warning  'is proven' may be passive voice. Use active voice if you can.  write-good.Passive 
 
 
  beacon/EXTRACTION.md
@@ -2596,5 +2604,5 @@ Linter raw log:
  70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
  74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 2012 warnings and 0 suggestions in 235 files.
+✖ 4 errors, 2017 warnings and 0 suggestions in 236 files.
 
