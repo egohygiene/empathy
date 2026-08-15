@@ -10,7 +10,7 @@ visibility: public
 owners:
   - egohygiene
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 sources:
   - ../../.github/actions/generate-repository-intelligence/README.md
   - ../../.github/actions/generate-repository-intelligence/action.yml
@@ -159,6 +159,7 @@ configuration.
    the public analytics contract, with semantic table fallbacks. **Complete.**
 3. Add a searchable, collapsible repository anatomy explorer sourced from the
    commit-scoped tree contract, with source-pinned links and consistent icons.
+   **Complete.**
 4. Add historical scanner deltas, sparklines, deterministic insight callouts,
    and final responsive and accessibility polish.
 

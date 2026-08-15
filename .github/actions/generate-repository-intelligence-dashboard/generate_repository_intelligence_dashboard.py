@@ -16,11 +16,15 @@ import re
 import subprocess
 import tempfile
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
-DASHBOARD_SCHEMA = "egohygiene.repository-intelligence-dashboard/v2"
+DASHBOARD_SCHEMA = "egohygiene.repository-intelligence-dashboard/v3"
 REPORT_SCHEMA = "egohygiene.repository-report-summary/v1"
 ANALYTICS_SCHEMA = "egohygiene.repository-analytics/v1"
+TREE_SCHEMA = "egohygiene.repository-tree/v1"
+TREE_NODE_TYPES = {"directory", "file", "symlink", "submodule"}
+MAX_TREE_DEPTH = 20
+MAX_TREE_NODES = 20_000
 PRODUCERS = ("osv", "megalinter", "scorecard")
 PRODUCER_NAMES = {
     "osv": "Dependency risk",
@@ -45,12 +49,14 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument("--repository-root", required=True)
     parser.add_argument("--reports-root", required=True)
     parser.add_argument("--analytics-summary", default="")
+    parser.add_argument("--repository-tree", default="")
     parser.add_argument("--output-root", required=True)
     parser.add_argument("--repository", required=True)
     parser.add_argument("--default-branch", required=True)
     parser.add_argument("--source-commit", required=True)
     parser.add_argument("--as-of", required=True)
     parser.add_argument("--stylesheet-source", required=True)
+    parser.add_argument("--script-source", required=True)
     return parser.parse_args()
 
 
@@ -598,6 +604,201 @@ def load_analytics(path: Path | None, source_commit: str) -> dict[str, Any]:
     }
 
 
+def anatomy_projection(availability: str, message: str) -> dict[str, Any]:
+    """Build an explicit repository-anatomy availability wrapper."""
+
+    return {"availability": availability, "message": message, "summary": None}
+
+
+def tree_count(value: Any, label: str) -> int:
+    """Validate one non-negative repository-tree count."""
+
+    if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+        raise DashboardInputError(f"{label} must be a non-negative integer.")
+    return value
+
+
+def validate_tree_path(value: Any, *, label: str, root: bool = False) -> str:
+    """Validate one canonical repository-relative POSIX path."""
+
+    if not isinstance(value, str) or not value:
+        raise DashboardInputError(f"{label} must be non-empty.")
+    try:
+        value.encode("utf-8")
+    except UnicodeEncodeError as error:
+        raise DashboardInputError(f"{label} must contain valid UTF-8 text.") from error
+    if root:
+        if value != ".":
+            raise DashboardInputError("The repository-tree root path must be '.'.")
+        return value
+    parts = value.split("/")
+    if value.startswith("/") or "\\" in value or any(part in {"", ".", ".."} for part in parts):
+        raise DashboardInputError(f"{label} must be a canonical repository-relative path.")
+    return value
+
+
+def validate_tree_node(
+    candidate: Any,
+    *,
+    parent_path: str | None,
+    depth: int,
+    budget: list[int],
+) -> tuple[dict[str, Any], dict[str, int], int]:
+    """Validate and sanitize one bounded repository-tree node recursively."""
+
+    if not isinstance(candidate, dict):
+        raise DashboardInputError("Repository-tree nodes must be objects.")
+    if depth > MAX_TREE_DEPTH:
+        raise DashboardInputError(f"Repository tree exceeds depth {MAX_TREE_DEPTH}.")
+    budget[0] += 1
+    if budget[0] > MAX_TREE_NODES:
+        raise DashboardInputError(f"Repository tree exceeds {MAX_TREE_NODES} nodes.")
+
+    name = candidate.get("name")
+    node_type = candidate.get("type")
+    if not isinstance(name, str) or not name or "/" in name or "\\" in name:
+        raise DashboardInputError("Repository-tree node names must be non-empty path segments.")
+    try:
+        name.encode("utf-8")
+    except UnicodeEncodeError as error:
+        raise DashboardInputError("Repository-tree node names must be valid UTF-8 text.") from error
+    if name in {".", ".."}:
+        raise DashboardInputError("Repository-tree node names may not be dot segments.")
+    if node_type not in TREE_NODE_TYPES:
+        raise DashboardInputError("Repository-tree nodes contain an unsupported type.")
+
+    is_root = parent_path is None
+    path = validate_tree_path(
+        candidate.get("path"), label="repository-tree node path", root=is_root
+    )
+    if not is_root:
+        expected_path = name if parent_path == "." else f"{parent_path}/{name}"
+        if path != expected_path:
+            raise DashboardInputError("Repository-tree child paths must match their hierarchy.")
+
+    if node_type != "directory":
+        if any(key in candidate for key in ("children", "descendants", "truncated")):
+            raise DashboardInputError(
+                "Repository-tree leaf nodes may not contain directory fields."
+            )
+        counts = {
+            "directories": 0,
+            "files": int(node_type == "file"),
+            "symlinks": int(node_type == "symlink"),
+            "submodules": int(node_type == "submodule"),
+        }
+        return {"name": name, "path": path, "type": node_type}, counts, depth
+
+    children = candidate.get("children")
+    descendants = candidate.get("descendants")
+    if not isinstance(children, list) or not isinstance(descendants, dict):
+        raise DashboardInputError("Repository-tree directories require children and descendants.")
+    if candidate.get("truncated") not in (None, True):
+        raise DashboardInputError("Repository-tree truncated may only be true when present.")
+
+    sanitized_children: list[dict[str, Any]] = []
+    calculated = {"directories": 0, "files": 0, "symlinks": 0, "submodules": 0}
+    deepest = depth
+    child_names: set[str] = set()
+    for child in children:
+        sanitized, child_counts, child_depth = validate_tree_node(
+            child,
+            parent_path=path,
+            depth=depth + 1,
+            budget=budget,
+        )
+        if sanitized["name"] in child_names:
+            raise DashboardInputError("Repository-tree sibling names must be unique.")
+        child_names.add(sanitized["name"])
+        sanitized_children.append(sanitized)
+        if sanitized["type"] == "directory":
+            calculated["directories"] += 1
+        for key, value in child_counts.items():
+            calculated[key] += value
+        deepest = max(deepest, child_depth)
+
+    declared = {
+        key: tree_count(descendants.get(key), f"repository-tree descendants.{key}")
+        for key in ("directories", "files", "symlinks", "submodules")
+    }
+    if declared != calculated:
+        raise DashboardInputError("Repository-tree descendant counts do not match visible nodes.")
+    sanitized_directory: dict[str, Any] = {
+        "name": name,
+        "path": path,
+        "type": node_type,
+        "children": sanitized_children,
+        "descendants": declared,
+    }
+    if candidate.get("truncated") is True:
+        sanitized_directory["truncated"] = True
+    return sanitized_directory, calculated, deepest
+
+
+def validate_repository_tree(document: dict[str, Any], source_commit: str) -> dict[str, Any]:
+    """Project the commit-scoped public repository tree used by the explorer."""
+
+    if document.get("schema") != TREE_SCHEMA or document.get("schema_version") != 1:
+        raise DashboardInputError("Repository tree uses an incompatible schema.")
+    source = require_object(document, "source")
+    if source.get("revision") != source_commit:
+        raise DashboardInputError("Repository tree does not represent the dashboard source commit.")
+    source_ref = source.get("ref")
+    source_committed_at = source.get("committed_at")
+    if not isinstance(source_ref, str) or not source_ref:
+        raise DashboardInputError("Repository-tree source.ref must be non-empty.")
+    if not isinstance(source_committed_at, str):
+        raise DashboardInputError("Repository-tree source.committed_at must be RFC 3339.")
+    committed_at = format_timestamp(
+        parse_timestamp(source_committed_at, "repository-tree source.committed_at")
+    )
+    budget = [0]
+    tree, counts, max_depth = validate_tree_node(
+        document.get("tree"),
+        parent_path=None,
+        depth=0,
+        budget=budget,
+    )
+    if tree["type"] != "directory":
+        raise DashboardInputError("Repository-tree root must be a directory.")
+    return {
+        "source": {
+            "revision": source_commit,
+            "ref": source_ref,
+            "committed_at": committed_at,
+        },
+        "counts": counts,
+        "node_count": budget[0],
+        "max_depth": max_depth,
+        "tree": tree,
+    }
+
+
+def load_repository_tree(path: Path | None, source_commit: str) -> dict[str, Any]:
+    """Load repository anatomy with honest missing and invalid states."""
+
+    if path is None or not path.is_file() or path.stat().st_size == 0:
+        return anatomy_projection(
+            "unavailable",
+            "No commit-scoped repository tree is available.",
+        )
+    try:
+        document = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return anatomy_projection("invalid", "Repository tree is malformed JSON.")
+    if not isinstance(document, dict):
+        return anatomy_projection("invalid", "Repository tree must be an object.")
+    try:
+        summary = validate_repository_tree(document, source_commit)
+    except DashboardInputError as error:
+        return anatomy_projection("invalid", str(error))
+    return {
+        "availability": "available",
+        "message": "Commit-scoped repository anatomy is available.",
+        "summary": summary,
+    }
+
+
 def run_git(repository_root: Path, *arguments: str) -> str:
     """Run a read-only Git query and return normalized stdout."""
 
@@ -742,6 +943,7 @@ def build_dashboard(
     source_commit: str,
     as_of: datetime,
     analytics_summary: Path | None = None,
+    repository_tree: Path | None = None,
 ) -> dict[str, Any]:
     """Build the complete public dashboard model."""
 
@@ -765,6 +967,7 @@ def build_dashboard(
         "states": count_states(producers),
         "producers": producers,
         "analytics": load_analytics(analytics_summary, source_commit),
+        "anatomy": load_repository_tree(repository_tree, source_commit),
         "vitality": vitality,
     }
 
@@ -1343,6 +1546,180 @@ def render_analytics_section(dashboard: dict[str, Any]) -> str:
 </section>"""
 
 
+def repository_source_url(
+    repository: str,
+    source_commit: str,
+    path: str,
+    node_type: str,
+) -> str:
+    """Build a source-pinned GitHub URL without accepting arbitrary origins."""
+
+    parts = repository.split("/")
+    if len(parts) != 2 or not all(re.fullmatch(r"[A-Za-z0-9_.-]+", part) for part in parts):
+        return ""
+    owner, name = (quote(part, safe="") for part in parts)
+    kind = "tree" if node_type in {"directory", "submodule"} else "blob"
+    base = f"https://github.com/{owner}/{name}/{kind}/{source_commit}"
+    return base if path == "." else f"{base}/{quote(path, safe='/')}"
+
+
+def tree_icon(node_type: str) -> str:
+    """Render one consistent icon from the page-local repository icon sprite."""
+
+    return (
+        '<svg class="tree-icon" aria-hidden="true" width="18" height="18">'
+        f'<use href="#tree-icon-{escaped(node_type)}"></use></svg>'
+    )
+
+
+def tree_icon_sprite() -> str:
+    """Define the repository icon set once without an external dependency."""
+
+    return """<svg class="tree-icon-sprite" aria-hidden="true">
+  <symbol id="tree-icon-directory" viewBox="0 0 24 24"><path d="M3 6.5a2 2 0 0 1 2-2h5l2 2H19a2 2 0 0 1 2 2v8.75a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 17.25Z" /></symbol>
+  <symbol id="tree-icon-file" viewBox="0 0 24 24"><path d="M6 3.5h7l5 5v12H6Z" /><path d="M13 3.5v5h5" /></symbol>
+  <symbol id="tree-icon-symlink" viewBox="0 0 24 24"><path d="M9.5 14.5 14.5 9.5" /><path d="M7.25 16.75 5.5 18.5a3.54 3.54 0 0 1-5-5l3-3a3.54 3.54 0 0 1 5 0" transform="translate(3 -1)" /><path d="m13.5 6.5 2-2a3.54 3.54 0 0 1 5 5l-3 3a3.54 3.54 0 0 1-5 0" /></symbol>
+  <symbol id="tree-icon-submodule" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" /></symbol>
+</svg>"""
+
+
+def render_tree_node(
+    node: dict[str, Any],
+    *,
+    repository: str,
+    source_commit: str,
+    depth: int,
+) -> str:
+    """Render one progressively enhanced, source-linked anatomy node."""
+
+    node_type = node["type"]
+    source_url = repository_source_url(repository, source_commit, node["path"], node_type)
+    source_link = (
+        f'<a class="tree-source-link" href="{escaped(source_url)}">View at source commit</a>'
+        if source_url
+        else ""
+    )
+    common = (
+        f'class="tree-node tree-node-{escaped(node_type)}" '
+        f'data-search="{escaped(node["path"].casefold())}" '
+        f'data-kind="{escaped(node_type)}"'
+    )
+    if node_type != "directory":
+        name = (
+            f'<a class="tree-entry-link" href="{escaped(source_url)}">{escaped(node["name"])}</a>'
+            if source_url
+            else f'<span class="tree-entry-name">{escaped(node["name"])}</span>'
+        )
+        return f"""<li {common}>
+  <div class="tree-leaf-row">{tree_icon(node_type)}{name}<span class="tree-type">{escaped(node_type)}</span></div>
+</li>"""
+
+    counts = node["descendants"]
+    entry_count = sum(counts.values())
+    children = "".join(
+        render_tree_node(
+            child,
+            repository=repository,
+            source_commit=source_commit,
+            depth=depth + 1,
+        )
+        for child in node["children"]
+    )
+    truncated = (
+        '<p class="tree-truncated">Additional depth was intentionally truncated.</p>'
+        if node.get("truncated")
+        else ""
+    )
+    open_attribute = " open" if depth == 0 else ""
+    return f"""<li {common}>
+  <details data-tree-directory{open_attribute}>
+    <summary>{tree_icon(node_type)}<span class="tree-entry-name">{escaped(node["name"])}</span><span class="tree-count">{entry_count} descendants</span></summary>
+    <div class="tree-directory-body">
+      {source_link}
+      {truncated}
+      <ul class="tree-children">{children}</ul>
+    </div>
+  </details>
+</li>"""
+
+
+def render_anatomy_section(dashboard: dict[str, Any]) -> str:
+    """Render the searchable repository anatomy explorer."""
+
+    anatomy = dashboard["anatomy"]
+    summary = anatomy.get("summary")
+    heading = """<div class="section-heading">
+    <div>
+      <p class="eyebrow">Repository anatomy</p>
+      <h2 id="anatomy-heading">Explore the source tree</h2>
+    </div>
+    <p>Search and expand a public-safe tree pinned to the exact dashboard commit.</p>
+  </div>"""
+    if anatomy["availability"] != "available" or not isinstance(summary, dict):
+        return f"""<section class="section" aria-labelledby="anatomy-heading">
+  {heading}
+  <article class="chart-card chart-empty-card">
+    <p class="card-kicker">Tree contract</p>
+    <h3>Repository anatomy unavailable</h3>
+    <p>{escaped(anatomy["message"])}</p>
+  </article>
+</section>"""
+
+    tree = summary["tree"]
+    counts = summary["counts"]
+    source_url = repository_source_url(
+        dashboard["repository"]["name"],
+        dashboard["repository"]["source_commit"],
+        ".",
+        "directory",
+    )
+    root_link = (
+        f'<a href="{escaped(source_url)}">Open complete tree at source commit</a>'
+        if source_url
+        else ""
+    )
+    children = "".join(
+        render_tree_node(
+            child,
+            repository=dashboard["repository"]["name"],
+            source_commit=dashboard["repository"]["source_commit"],
+            depth=0,
+        )
+        for child in tree["children"]
+    )
+    visible_entries = max(0, summary["node_count"] - 1)
+    return f"""<section class="section" aria-labelledby="anatomy-heading">
+  {heading}
+  <article class="anatomy-card" data-repository-explorer>
+    <div class="anatomy-overview">
+      <div>
+        <p class="card-kicker">{escaped(tree["name"])}</p>
+        <p class="anatomy-total">{visible_entries} visible entries</p>
+        <p class="anatomy-meta">{counts["directories"]} directories · {counts["files"]} files · {counts["symlinks"]} symlinks · {counts["submodules"]} submodules · depth {summary["max_depth"]}</p>
+      </div>
+      <p>{root_link}</p>
+    </div>
+    <div class="tree-toolbar">
+      <div class="tree-search-field">
+        <label for="repository-tree-search">Search paths</label>
+        <input id="repository-tree-search" type="search" placeholder="Filter files and directories…" autocomplete="off" spellcheck="false" data-tree-search />
+      </div>
+      <div class="tree-actions" aria-label="Tree controls">
+        <button type="button" data-tree-expand>Expand all</button>
+        <button type="button" data-tree-collapse>Collapse all</button>
+      </div>
+    </div>
+    <p class="tree-result-status" data-tree-status aria-live="polite">Showing all {visible_entries} entries.</p>
+    <div class="tree-viewport">
+      {tree_icon_sprite()}
+      <ul class="repository-tree" data-tree-root>{children}</ul>
+      <p class="tree-empty" data-tree-empty hidden>No paths match this search.</p>
+    </div>
+    <noscript><p class="tree-noscript">Search controls require JavaScript; the complete collapsible tree remains available.</p></noscript>
+  </article>
+</section>"""
+
+
 def render_html(dashboard: dict[str, Any]) -> str:
     """Render the complete framework-free dashboard document."""
 
@@ -1426,6 +1803,7 @@ def render_html(dashboard: dict[str, Any]) -> str:
         </div>
       </section>
       {render_analytics_section(dashboard)}
+      {render_anatomy_section(dashboard)}
       <section class="section" aria-labelledby="producer-heading">
         <div class="section-heading">
           <div>
@@ -1454,6 +1832,7 @@ def render_html(dashboard: dict[str, Any]) -> str:
         <p><a href="./summary.json">View public JSON</a></p>
       </aside>
     </main>
+    <script src="./explorer.js" defer></script>
   </body>
 </html>
 """
@@ -1487,7 +1866,10 @@ def validate_paths(repository_root: Path, *paths: Path) -> None:
 
 
 def write_dashboard_bundle(
-    output_root: Path, dashboard: dict[str, Any], stylesheet_source: Path
+    output_root: Path,
+    dashboard: dict[str, Any],
+    stylesheet_source: Path,
+    script_source: Path,
 ) -> None:
     """Write the public JSON, HTML, and stylesheet as one static bundle."""
 
@@ -1497,6 +1879,7 @@ def write_dashboard_bundle(
     )
     atomic_write_text(output_root / "index.html", render_html(dashboard))
     atomic_write_text(output_root / "styles.css", stylesheet_source.read_text(encoding="utf-8"))
+    atomic_write_text(output_root / "explorer.js", script_source.read_text(encoding="utf-8"))
 
 
 def main() -> int:
@@ -1506,8 +1889,10 @@ def main() -> int:
     repository_root = Path(args.repository_root).resolve()
     reports_root = Path(args.reports_root).resolve()
     analytics_summary = Path(args.analytics_summary).resolve() if args.analytics_summary else None
+    repository_tree = Path(args.repository_tree).resolve() if args.repository_tree else None
     output_root = Path(args.output_root).resolve()
     stylesheet_source = Path(args.stylesheet_source).resolve()
+    script_source = Path(args.script_source).resolve()
     if not repository_root.is_dir():
         raise SystemExit(f"Repository root is not a directory: {repository_root}")
     validate_paths(
@@ -1515,9 +1900,12 @@ def main() -> int:
         reports_root,
         output_root,
         *([analytics_summary] if analytics_summary is not None else []),
+        *([repository_tree] if repository_tree is not None else []),
     )
     if not stylesheet_source.is_file():
         raise SystemExit(f"Stylesheet source is unavailable: {stylesheet_source}")
+    if not script_source.is_file():
+        raise SystemExit(f"Explorer script source is unavailable: {script_source}")
     as_of = parse_timestamp(args.as_of, "as-of")
     dashboard = build_dashboard(
         repository_root=repository_root,
@@ -1527,8 +1915,9 @@ def main() -> int:
         source_commit=args.source_commit,
         as_of=as_of,
         analytics_summary=analytics_summary,
+        repository_tree=repository_tree,
     )
-    write_dashboard_bundle(output_root, dashboard, stylesheet_source)
+    write_dashboard_bundle(output_root, dashboard, stylesheet_source, script_source)
     print(
         f"Generated repository intelligence dashboard at {output_root} "
         f"for {args.repository}@{args.source_commit[:12]}"

@@ -17,6 +17,12 @@ inputs:
       egohygiene.repository-analytics/v1 public summary.
     required: false
     default: ""
+  repository-tree:
+    description: >-
+      Optional repository-relative path to an
+      egohygiene.repository-tree/v1 public tree.
+    required: false
+    default: ""
   output-root:
     description: Repository-relative directory for index.html, styles.css, and summary.json.
     required: false
@@ -42,6 +48,9 @@ outputs:
   index:
     description: Repository-relative path to the generated HTML dashboard.
     value: "${{ inputs.output-root }}/index.html"
+  explorer-script:
+    description: Repository-relative path to the progressive anatomy explorer script.
+    value: "${{ inputs.output-root }}/explorer.js"
   stylesheet:
     description: Repository-relative path to the generated stylesheet.
     value: "${{ inputs.output-root }}/styles.css"
@@ -61,6 +70,7 @@ runs:
         INPUT_OUTPUT_ROOT: "${{ inputs.output-root }}"
         INPUT_REPORTS_ROOT: "${{ inputs.reports-root }}"
         INPUT_REPOSITORY: "${{ inputs.repository }}"
+        INPUT_REPOSITORY_TREE: "${{ inputs.repository-tree }}"
         INPUT_SOURCE_COMMIT: "${{ inputs.source-commit }}"
       run: |
         set -euo pipefail
@@ -80,6 +90,9 @@ runs:
         if [[ -n "${INPUT_ANALYTICS_SUMMARY}" ]]; then
           validate_relative_path "analytics-summary" "${INPUT_ANALYTICS_SUMMARY}"
         fi
+        if [[ -n "${INPUT_REPOSITORY_TREE}" ]]; then
+          validate_relative_path "repository-tree" "${INPUT_REPOSITORY_TREE}"
+        fi
 
         repository="${INPUT_REPOSITORY:-${GITHUB_REPOSITORY:-}}"
         source_commit="${INPUT_SOURCE_COMMIT:-${GITHUB_SHA:-}}"
@@ -98,9 +111,11 @@ runs:
           --repository-root "${GITHUB_WORKSPACE}" \
           --reports-root "${GITHUB_WORKSPACE}/${INPUT_REPORTS_ROOT}" \
           --analytics-summary "${INPUT_ANALYTICS_SUMMARY:+${GITHUB_WORKSPACE}/${INPUT_ANALYTICS_SUMMARY}}" \
+          --repository-tree "${INPUT_REPOSITORY_TREE:+${GITHUB_WORKSPACE}/${INPUT_REPOSITORY_TREE}}" \
           --output-root "${GITHUB_WORKSPACE}/${INPUT_OUTPUT_ROOT}" \
           --repository "${repository}" \
           --default-branch "${INPUT_DEFAULT_BRANCH}" \
           --source-commit "${source_commit}" \
           --as-of "${as_of}" \
-          --stylesheet-source "${GITHUB_ACTION_PATH}/dashboard.css"
+          --stylesheet-source "${GITHUB_ACTION_PATH}/dashboard.css" \
+          --script-source "${GITHUB_ACTION_PATH}/explorer.js"

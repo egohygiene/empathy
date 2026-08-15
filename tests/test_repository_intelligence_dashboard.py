@@ -87,6 +87,7 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         self,
         reports_root: Path,
         analytics_summary: Path | None = None,
+        repository_tree: Path | None = None,
     ) -> dict[str, object]:
         """Build one dashboard against the fixture checkout."""
 
@@ -98,6 +99,7 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
             source_commit=self.source_commit,
             as_of=AS_OF,
             analytics_summary=analytics_summary,
+            repository_tree=repository_tree,
         )
 
     def copy_reports(self) -> Path:
@@ -191,6 +193,59 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         path.write_text(json.dumps(payload), encoding="utf-8")
         return path
 
+    def write_repository_tree(self) -> Path:
+        """Write one commit-scoped public repository-tree contract."""
+
+        path = self.repository_root / ".cache/intelligence/tree/repo.json"
+        path.parent.mkdir(parents=True)
+        payload = {
+            "schema": "egohygiene.repository-tree/v1",
+            "schema_version": 1,
+            "source": {
+                "revision": self.source_commit,
+                "ref": "HEAD",
+                "committed_at": "2026-08-14T10:00:00Z",
+            },
+            "tree": {
+                "name": "repository",
+                "path": ".",
+                "type": "directory",
+                "children": [
+                    {
+                        "name": "tests",
+                        "path": "tests",
+                        "type": "directory",
+                        "children": [
+                            {
+                                "name": "test_example.py",
+                                "path": "tests/test_example.py",
+                                "type": "file",
+                            }
+                        ],
+                        "descendants": {
+                            "directories": 0,
+                            "files": 1,
+                            "symlinks": 0,
+                            "submodules": 0,
+                        },
+                    },
+                    {
+                        "name": "README.md",
+                        "path": "README.md",
+                        "type": "file",
+                    },
+                ],
+                "descendants": {
+                    "directories": 1,
+                    "files": 2,
+                    "symlinks": 0,
+                    "submodules": 0,
+                },
+            },
+        }
+        path.write_text(json.dumps(payload), encoding="utf-8")
+        return path
+
     def test_complete_reports_preserve_independent_states(self) -> None:
         dashboard = self.build(self.copy_reports())
 
@@ -224,7 +279,56 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         self.assertIn("Scanner findings by producer", rendered)
         self.assertIn("<progress", rendered)
         self.assertGreaterEqual(rendered.count("<table>"), 5)
-        self.assertNotIn("<script", rendered)
+        self.assertIn('<script src="./explorer.js" defer></script>', rendered)
+
+    def test_repository_tree_renders_searchable_source_pinned_anatomy(self) -> None:
+        dashboard = self.build(
+            self.copy_reports(),
+            self.write_analytics_summary(),
+            self.write_repository_tree(),
+        )
+        rendered = dashboard_builder.render_html(dashboard)
+
+        self.assertEqual(dashboard["anatomy"]["availability"], "available")
+        self.assertEqual(dashboard["anatomy"]["summary"]["node_count"], 4)
+        self.assertIn("Explore the source tree", rendered)
+        self.assertIn("data-repository-explorer", rendered)
+        self.assertIn("data-tree-search", rendered)
+        self.assertIn("<details", rendered)
+        self.assertIn(
+            f"https://github.com/egohygiene/empathy/blob/{self.source_commit}/README.md",
+            rendered,
+        )
+        self.assertIn("Showing all 3 entries.", rendered)
+
+    def test_repository_tree_for_another_commit_is_invalid_not_rendered(self) -> None:
+        tree_path = self.write_repository_tree()
+        payload = json.loads(tree_path.read_text(encoding="utf-8"))
+        payload["source"]["revision"] = "b" * 40
+        tree_path.write_text(json.dumps(payload), encoding="utf-8")
+
+        dashboard = self.build(self.copy_reports(), repository_tree=tree_path)
+        rendered = dashboard_builder.render_html(dashboard)
+
+        self.assertEqual(dashboard["anatomy"]["availability"], "invalid")
+        self.assertIn("Repository anatomy unavailable", rendered)
+        self.assertNotIn("data-repository-explorer", rendered)
+
+    def test_repository_tree_names_are_escaped_and_source_paths_are_encoded(self) -> None:
+        tree_path = self.write_repository_tree()
+        payload = json.loads(tree_path.read_text(encoding="utf-8"))
+        leaf = payload["tree"]["children"][1]
+        leaf["name"] = "<script>.md"
+        leaf["path"] = "<script>.md"
+        tree_path.write_text(json.dumps(payload), encoding="utf-8")
+
+        dashboard = self.build(self.copy_reports(), repository_tree=tree_path)
+        rendered = dashboard_builder.render_html(dashboard)
+
+        self.assertEqual(dashboard["anatomy"]["availability"], "available")
+        self.assertIn("&lt;script&gt;.md", rendered)
+        self.assertIn("%3Cscript%3E.md", rendered)
+        self.assertNotIn("<script>.md", rendered)
 
     def test_analytics_for_another_commit_is_invalid_not_rendered(self) -> None:
         analytics_path = self.write_analytics_summary()
@@ -284,20 +388,32 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
     def test_bundle_is_deterministic_and_contains_no_contributor_identities(self) -> None:
         reports_root = self.copy_reports()
         analytics_summary = self.write_analytics_summary()
-        first = self.build(reports_root, analytics_summary)
-        second = self.build(reports_root, analytics_summary)
+        repository_tree = self.write_repository_tree()
+        first = self.build(reports_root, analytics_summary, repository_tree)
+        second = self.build(reports_root, analytics_summary, repository_tree)
         output_root = self.repository_root / "site/intelligence"
 
-        dashboard_builder.write_dashboard_bundle(output_root, first, ACTION_ROOT / "dashboard.css")
+        dashboard_builder.write_dashboard_bundle(
+            output_root,
+            first,
+            ACTION_ROOT / "dashboard.css",
+            ACTION_ROOT / "explorer.js",
+        )
         first_json = (output_root / "summary.json").read_text(encoding="utf-8")
         first_html = (output_root / "index.html").read_text(encoding="utf-8")
-        dashboard_builder.write_dashboard_bundle(output_root, second, ACTION_ROOT / "dashboard.css")
+        dashboard_builder.write_dashboard_bundle(
+            output_root,
+            second,
+            ACTION_ROOT / "dashboard.css",
+            ACTION_ROOT / "explorer.js",
+        )
 
         self.assertEqual(first_json, (output_root / "summary.json").read_text(encoding="utf-8"))
         self.assertEqual(first_html, (output_root / "index.html").read_text(encoding="utf-8"))
         self.assertNotIn("fixture@example.test", first_json)
         self.assertEqual(first["vitality"]["metrics"]["contributors_90_days"], 1)
         self.assertTrue((output_root / "styles.css").is_file())
+        self.assertTrue((output_root / "explorer.js").is_file())
 
     def test_vitality_uses_the_represented_commit_not_untracked_files(self) -> None:
         untracked_workflow = self.repository_root / ".github/workflows/untracked.yml"
@@ -326,6 +442,7 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         )
         self.assertIn("producers", schema["required"])
         self.assertIn("analytics", schema["required"])
+        self.assertIn("anatomy", schema["required"])
         self.assertIn("vitality", schema["required"])
 
     def test_artifact_workflow_generates_and_uploads_the_dashboard(self) -> None:
@@ -337,6 +454,10 @@ class RepositoryIntelligenceDashboardTests(unittest.TestCase):
         self.assertIn("generate-repository-intelligence-dashboard", workflow)
         self.assertIn(
             'analytics-summary: "${{ inputs.output-root }}/analytics/summary.json"',
+            workflow,
+        )
+        self.assertIn(
+            'repository-tree: "${{ inputs.output-root }}/tree/repo.json"',
             workflow,
         )
         self.assertIn("${{ inputs.dashboard-output-root }}", workflow)
