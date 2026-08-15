@@ -1,0 +1,14 @@
+schema_version = 1
+template = "research-paper"
+template_version = "0.1.0"
+title = "An Interpretable Semantic Framework for Personalized Adaptive Generative Audio"
+author = "Alan Szmyt"
+
+[project]
+codename = "antidote"
+status = "research-bootstrap"
+name_is_provisional = true
+
+[provenance]
+bootstrap_snapshot = "adaptive-generative-audio-research-snapshot-2026-08-15"
+beacon_source = "egohygiene/empathy/beacon"
