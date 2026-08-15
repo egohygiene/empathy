@@ -27,11 +27,11 @@ This foundation provides:
   templates;
 - explicit provenance and extraction notes;
 - deterministic, dependency-free validation using Python's standard library;
-- a minimal example research paper fixture;
-- root Taskfile integration through `task beacon:check`.
+- a minimal example research paper fixture.
 
 The Rust CLI, project initialization, Git/GitHub integration, local LLM
-assistance, and graphical authoring interface intentionally remain future work.
+assistance, graphical authoring interface, and root Taskfile integration
+intentionally remain future work.
 
 ## Layout
 
@@ -64,12 +64,6 @@ From the Empathy repository root:
 ```bash
 python3 beacon/scripts/validate_templates.py --repository-root "."
 python3 -m unittest discover --start-directory beacon/tests --pattern "test_*.py" --verbose
-```
-
-Or run the repository task:
-
-```bash
-task beacon:check
 ```
 
 ## Design principle
