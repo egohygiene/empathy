@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Validate Beacon template packages using only the Python standard library."""
 
 from __future__ import annotations

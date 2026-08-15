@@ -1,3 +1,6 @@
+// Copyright 2026 Ego Hygiene
+// SPDX-License-Identifier: MIT
+
 use anyhow::{bail, Context, Result};
 use clap::{Parser, Subcommand};
 use serde::Deserialize;
