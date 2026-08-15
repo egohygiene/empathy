@@ -445,6 +445,38 @@ Linter raw log:
  105:27  warning  'evaluate' is too wordy.                                             write-good.TooWordy 
 
 
+ beacon/ARCHITECTURE.md
+ 8:1   warning  'multiple' is too wordy.  write-good.TooWordy 
+ 71:3  warning  'validate' is too wordy.  write-good.TooWordy 
+
+
+ beacon/EXTRACTION.md
+ 25:27  warning  'validate' is too wordy.  write-good.TooWordy 
+
+
+ beacon/PROVENANCE.md
+ 5:52   warning  'is extracted' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 20:9   warning  'was preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 36:14  warning  'is owned' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 37:35  warning  'is treated' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 38:11  warning  'requirement' is too wordy.                                         write-good.TooWordy 
+
+
+ beacon/README.md
+ 19:24  warning  'is described' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 33:1   warning  'assistance' is too wordy.                                         write-good.TooWordy 
+
+
+ beacon/templates/research-paper/README.md
+ 3:52  warning  'It is' is too wordy.                                               write-good.TooWordy 
+ 3:55  warning  'is derived' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 5:40  warning  'is introduced' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+
+ beacon/templates/research-paper/example/paper.md
+ 5:38  warning  'validate' is too wordy.  write-good.TooWordy 
+
+
  egolint/.agents/agents/AGENT-CONTRACT.md
  4:47    warning  'It is' is too wordy.                                              write-good.TooWordy 
  14:29   warning  'is defined' may be passive voice. Use active voice if you can.    write-good.Passive  
@@ -2564,5 +2596,5 @@ Linter raw log:
  70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
  74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 1998 warnings and 0 suggestions in 229 files.
+✖ 4 errors, 2012 warnings and 0 suggestions in 235 files.
 

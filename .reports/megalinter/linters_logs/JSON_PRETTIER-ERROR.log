@@ -7,5 +7,6 @@ Linter raw log:
 Checking formatting...
 [warn] .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json
 [warn] .github/actions/generate-repository-intelligence/repository-analytics.schema.json
-[warn] Code style issues found in 2 files. Run Prettier with --write to fix.
+[warn] beacon/contracts/template-manifest.schema.json
+[warn] Code style issues found in 3 files. Run Prettier with --write to fix.
 

@@ -46,6 +46,14 @@ stylelint (CSS)
   - vscode:
     - vscode-stylelint: https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint
 
+htmlhint (HTML)
+  - brackets:
+    - brackets-htmlhint: https://github.com/htmlhint/brackets-htmlhint
+  - sublime:
+    - SublimeLinter-contrib-htmlhint: https://github.com/htmlhint/SublimeLinter-contrib-htmlhint
+  - vscode:
+    - vscode-htmlhint: https://marketplace.visualstudio.com/items?itemName=HTMLHint.vscode-htmlhint
+
 prettier (JSON)
   - emacs:
     - prettier-emacs: https://github.com/prettier/prettier-emacs
@@ -71,6 +79,10 @@ v8r (JSON)
     - vison: https://github.com/Quramy/vison
   - vscode:
     - native support: https://code.visualstudio.com/
+
+chktex (LATEX)
+  - vscode:
+    - latex-workshop: https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
 
 markdownlint (MARKDOWN)
   - sublime:

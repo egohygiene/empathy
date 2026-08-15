@@ -6,10 +6,10 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_mypy/
 Linter raw log:
 WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
 Collecting types-PyYAML
-  Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl.metadata (1.7 kB)
-Downloading types_pyyaml-6.0.12.20260724-py3-none-any.whl (20 kB)
+  Downloading types_pyyaml-6.0.12.20260815-py3-none-any.whl.metadata (1.8 kB)
+Downloading types_pyyaml-6.0.12.20260815-py3-none-any.whl (21 kB)
 Installing collected packages: types-PyYAML
-Successfully installed types-PyYAML-6.0.12.20260724
+Successfully installed types-PyYAML-6.0.12.20260815
 tests/test_repository_intelligence_dashboard.py: note: In member "build" of class "RepositoryIntelligenceDashboardTests":
 tests/test_repository_intelligence_dashboard.py:93:9: error: Returning Any from
 function declared to return "dict[str, object]"  [no-any-return]
@@ -95,5 +95,5 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 18 errors in 1 file (checked 35 source files)
+Found 18 errors in 1 file (checked 37 source files)
 

@@ -114,6 +114,9 @@ Automation' - a phrase is repeated.
 README.md:19:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:58:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:174:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+beacon/ARCHITECTURE.md:55:8: lexical_illusions: There's a lexical illusion in 'v             v' - a phrase is repeated.
+beacon/templates/research-paper/example/paper.md:2:8: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/templates/research-paper/example/paper.md:3:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
