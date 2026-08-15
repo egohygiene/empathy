@@ -89,6 +89,20 @@ Linter raw log:
  30:42  warning  'is documented' may be passive voice. Use active voice if you can.  write-good.Passive 
 
 
+ .garden/projects/egohygiene-web-namespace.md
+ 31:33   warning  'clearly' is a weasel word!                                           write-good.Weasel   
+ 154:28  warning  'being developed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 154:55  warning  'therefore' is too wordy.                                             write-good.TooWordy 
+ 155:78  warning  'are extracted' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 166:14  warning  'being developed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 208:28  warning  'being treated' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 217:22  warning  'be resolved' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 221:52  warning  'be implemented' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 222:19  warning  'retain' is too wordy.                                                write-good.TooWordy 
+ 224:15  warning  'minimum' is too wordy.                                               write-good.TooWordy 
+ 241:32  warning  'additional' is too wordy.                                            write-good.TooWordy 
+
+
  .garden/projects/repository-intelligence-dashboard.md
  61:68  warning  'Overall' is too wordy.  write-good.TooWordy 
 
@@ -2606,5 +2620,81 @@ Linter raw log:
  70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
  74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
 
-✖ 4 errors, 2019 warnings and 0 suggestions in 236 files.
+
+ research/antidote/README.md
+ 18:18  warning  'is treated' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 73:14  warning  'is frozen' may be passive voice. Use active voice if you can.   write-good.Passive 
+
+
+ research/antidote/paper.md
+ 16:72   warning  'be mapped' may be passive voice. Use active voice if you can.           write-good.Passive 
+ 28:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 32:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 36:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 40:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 44:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 49:77   warning  'be verified' may be passive voice. Use active voice if you can.         write-good.Passive 
+ 50:65   warning  'is frozen' may be passive voice. Use active voice if you can.           write-good.Passive 
+ 65:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 69:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 73:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 77:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 81:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 85:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 89:17   warning  'is expected' may be passive voice. Use active voice if you can.         write-good.Passive 
+ 91:54   warning  'be frozen' may be passive voice. Use active voice if you can.           write-good.Passive 
+ 96:18   warning  'been collected' may be passive voice. Use active voice if you can.      write-good.Passive 
+ 100:5   warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 100:30  warning  'are frozen' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 100:54  warning  'is collected' may be passive voice. Use active voice if you can.        write-good.Passive 
+ 106:24  warning  'be reduced' may be passive voice. Use active voice if you can.          write-good.Passive 
+ 107:50  warning  'be represented' may be passive voice. Use active voice if you can.      write-good.Passive 
+
+
+ research/antidote/research/bootstrap/01-research-concept-snapshot.md
+ 5:236   warning  'is treated' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 20:36   warning  'are analyzed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 21:54   warning  'are measured' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 22:18   warning  'are learned' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 47:286  warning  'all of' is too wordy.                                             write-good.TooWordy 
+
+
+ research/antidote/research/bootstrap/02-conceptual-system-model.md
+ 24:101  warning  'therefore' is too wordy.                                          write-good.TooWordy 
+ 24:111  warning  'be treated' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 24:194  warning  'be measured' may be passive voice. Use active voice if you can.   write-good.Passive  
+ 28:66   warning  'is generated' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 28:112  warning  'is desired' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 67:320  warning  'additional' is too wordy.                                         write-good.TooWordy 
+
+
+ research/antidote/research/bootstrap/03-scientific-boundaries.md
+ 30:94   warning  'It is' is too wordy.                                                 write-good.TooWordy 
+ 38:104  warning  'be tested' may be passive voice. Use active voice if you can.        write-good.Passive  
+ 42:48   warning  'be presented' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 42:121  warning  'be modeled' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 42:237  warning  'be investigated' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+
+ research/antidote/research/bootstrap/04-literature-scan-map.md
+ 3:49    warning  'It is' is too wordy.                                             write-good.TooWordy 
+ 3:113   warning  'be verified' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 51:191  warning  'be examined' may be passive voice. Use active voice if you can.  write-good.Passive  
+
+
+ research/antidote/research/bootstrap/05-paper-shape.md
+ 11:24  warning  'be chosen' may be passive voice. Use active voice if you can.  write-good.Passive 
+
+
+ research/antidote/research/bootstrap/07-beacon-and-renderflow-context.md
+ 17:63   warning  'is selected' may be passive voice. Use active voice if you can.    write-good.Passive 
+ 19:38   warning  'are rendered' may be passive voice. Use active voice if you can.   write-good.Passive 
+ 19:71   warning  'are invoked' may be passive voice. Use active voice if you can.    write-good.Passive 
+ 19:98   warning  'are validated' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 19:158  warning  'are produced' may be passive voice. Use active voice if you can.   write-good.Passive 
+ 21:18   warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive 
+ 21:139  warning  'be harmonized' may be passive voice. Use active voice if you can.  write-good.Passive 
+ 21:185  warning  'are proven' may be passive voice. Use active voice if you can.     write-good.Passive 
+
+✖ 4 errors, 2082 warnings and 0 suggestions in 247 files.
 

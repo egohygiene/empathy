@@ -20,3 +20,21 @@ See documentation on https://megalinter.io/10.0.0/descriptors/latex_chktex/
     \fancyhead[R]{\small\itshape $if(author)$$author$$endif$}  
                                                     ^^^^^^^^^
 
+❌ [ERROR] research/antidote/templates/template.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 45 in research/antidote/templates/template.tex line 16: Use \[ ... \] instead of $$ ... $$.
+    \documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$,$if(papersize)$$papersize$$else$a4paper$endif$]{article}  
+                                          ^^^^^^^^
+    Warning 45 in research/antidote/templates/template.tex line 16: Use \[ ... \] instead of $$ ... $$.
+    \documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$,$if(papersize)$$papersize$$else$a4paper$endif$]{article}  
+                                                                                      ^^^^^^^^
+    Warning 45 in research/antidote/templates/template.tex line 25: Use \[ ... \] instead of $$ ... $$.
+      $if(geometry)$$geometry$$else$  
+                             ^^^^^^^^
+    Warning 45 in research/antidote/templates/template.tex line 49: Use \[ ... \] instead of $$ ... $$.
+    \fancyhead[L]{\small\itshape $if(title)$$title$$endif$}  
+                                                  ^^^^^^^^^
+    Warning 45 in research/antidote/templates/template.tex line 50: Use \[ ... \] instead of $$ ... $$.
+    \fancyhead[R]{\small\itshape $if(author)$$author$$endif$}  
+                                                    ^^^^^^^^^
+

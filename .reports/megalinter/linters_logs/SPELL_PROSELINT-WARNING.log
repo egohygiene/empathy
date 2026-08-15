@@ -24,6 +24,8 @@ reviewed' - a phrase is repeated.
 reviewed' - a phrase is repeated.
 .garden/projects/README.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
 reviewed' - a phrase is repeated.
+.garden/projects/egohygiene-web-namespace.md:120:55: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/egohygiene-web-namespace.md:192:9: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
 .garden/projects/repository-intelligence-dashboard.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
 reviewed' - a phrase is repeated.
 .garden/projects/repository-intelligence-dashboard.md:59:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -494,4 +496,11 @@ mindgarden/profiles/agent/README.md:54:12: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
+research/antidote/paper.md:2:8: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+research/antidote/paper.md:3:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+research/antidote/paper.md:4:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+research/antidote/paper.md:52:52: needless_variants: Needless variant. 'extendable' is the preferred form.
+research/antidote/research/bootstrap/01-research-concept-snapshot.md:17:61: needless_variants: Needless variant. 'extendable' is the preferred form.
+research/antidote/research/bootstrap/03-scientific-boundaries.md:38:154: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 

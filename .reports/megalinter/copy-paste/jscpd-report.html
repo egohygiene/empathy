@@ -58,19 +58,19 @@
         <div class="dashboard">
           <div class="stat-card stat-blue">
             <h3>Total Files</h3>
-            <div class="val">845</div>
+            <div class="val">868</div>
           </div>
           <div class="stat-card stat-green">
             <h3>Total Lines of Code</h3>
-            <div class="val">102364</div>
+            <div class="val">103896</div>
           </div>
           <div class="stat-card stat-yellow">
             <h3>Number of Clones</h3>
-            <div class="val">340</div>
+            <div class="val">346</div>
           </div>
           <div class="stat-card stat-red">
             <h3>Duplicated Lines</h3>
-            <div class="val">4328 (4.23%)</div>
+            <div class="val">4486 (4.32%)</div>
           </div>
         </div>
       </section>
@@ -256,29 +256,29 @@
             
             <tr>
               <td><a href="#latex-clones">latex</a></td>
-              <td>3</td>
-              <td>152</td>
-              <td>0</td>
-              <td>0 (0.00%)</td>
-              <td>0 (0.00%)</td>
+              <td>4</td>
+              <td>258</td>
+              <td>1</td>
+              <td>105 (40.70%)</td>
+              <td>700 (43.70%)</td>
             </tr>
             
             <tr>
               <td><a href="#markdown-clones">markdown</a></td>
-              <td>235</td>
-              <td>24201</td>
+              <td>246</td>
+              <td>24978</td>
               <td>138</td>
-              <td>1660 (6.86%)</td>
-              <td>17050 (6.20%)</td>
+              <td>1660 (6.65%)</td>
+              <td>17050 (6.01%)</td>
             </tr>
             
             <tr>
               <td><a href="#markup-clones">markup</a></td>
-              <td>8</td>
-              <td>917</td>
-              <td>0</td>
-              <td>0 (0.00%)</td>
-              <td>0 (0.00%)</td>
+              <td>9</td>
+              <td>972</td>
+              <td>5</td>
+              <td>53 (5.45%)</td>
+              <td>945 (8.40%)</td>
             </tr>
             
             <tr>
@@ -382,8 +382,8 @@
             
             <tr>
               <td><a href="#text-clones">text</a></td>
-              <td>12</td>
-              <td>1967</td>
+              <td>20</td>
+              <td>2402</td>
               <td>0</td>
               <td>0 (0.00%)</td>
               <td>0 (0.00%)</td>
@@ -391,11 +391,11 @@
             
             <tr>
               <td><a href="#toml-clones">toml</a></td>
-              <td>23</td>
-              <td>2013</td>
+              <td>24</td>
+              <td>2027</td>
               <td>4</td>
-              <td>132 (6.56%)</td>
-              <td>396 (6.38%)</td>
+              <td>132 (6.51%)</td>
+              <td>396 (6.32%)</td>
             </tr>
             
             <tr>
@@ -418,20 +418,20 @@
             
             <tr>
               <td><a href="#yaml-clones">yaml</a></td>
-              <td>235</td>
-              <td>19605</td>
+              <td>236</td>
+              <td>19750</td>
               <td>84</td>
-              <td>986 (5.03%)</td>
-              <td>6500 (6.27%)</td>
+              <td>986 (4.99%)</td>
+              <td>6500 (6.26%)</td>
             </tr>
             
             <tr style="font-weight: 700;">
               <td>Total</td>
-              <td>845</td>
-              <td>102364</td>
-              <td>340</td>
-              <td>4328 (4.23%)</td>
-              <td>32988 (4.77%)</td>
+              <td>868</td>
+              <td>103896</td>
+              <td>346</td>
+              <td>4486 (4.32%)</td>
+              <td>34633 (4.92%)</td>
             </tr>
           </tbody>
         </table>
@@ -2823,6 +2823,132 @@ while (($# &#62; 0)); do
   &#34;generated_at&#34;: &#34;2026-08-14T12:00:00Z&#34;,
   &#34;links&#34;: {
     &#34;detail&#34;: &#34;https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/osv&#34;,</pre>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+    
+    <div class="card">
+      <section class="clone-section">
+        <a name="latex-clones"></a>
+        <h2>latex</h2>
+        <div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              beacon/templates/research-paper/template.tex (Line 1:1 - Line 106:15),
+              research/antidote/templates/template.tex (Line 1:1 - Line 106:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-latex-1')">Show code</button>
+            </div>
+            <pre id="code-latex-1" class="code-block">%% template.tex — Beacon research-paper template
+%% Extracted and generalized from egohygiene/renderflow.
+%%
+%% Usage:
+%%   pandoc input.md --template template.tex -o output.pdf
+%%
+%% Required metadata:
+%%   title: &#34;My Paper&#34;
+%%   author: &#34;Author Name&#34;
+%%
+%% Optional metadata:
+%%   date: &#34;2026&#34;
+%%   abstract: &#34;A short summary of the paper.&#34;
+%%   toc: true
+
+\documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$,$if(papersize)$$papersize$$else$a4paper$endif$]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{parskip}
+
+\usepackage[
+  $if(geometry)$$geometry$$else$
+  top=2.5cm, bottom=2.5cm,
+  left=3cm, right=3cm
+  $endif$
+]{geometry}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\usepackage[
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+]{hyperref}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{1em}{}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape $if(title)$$title$$endif$}
+\fancyhead[R]{\small\itshape $if(author)$$author$$endif$}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\usepackage{enumitem}
+\setlist{noitemsep, topsep=4pt}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage{fancyvrb}
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  frame=single,
+  framerule=0.4pt,
+  xleftmargin=0.5em,
+  xrightmargin=0.5em
+}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+$if(title)$
+\begin{center}
+  {\LARGE\bfseries $title$}\\[0.8em]
+  $if(author)${\large $author$}\\[0.4em]$endif$
+  $if(date)${\normalsize $date$}$endif$
+\end{center}
+\vspace{1em}
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+  \noindent $abstract$
+\end{abstract}
+\vspace{1em}
+$endif$
+
+$if(toc)$
+\tableofcontents
+\newpage
+$endif$
+
+$body$
+
+\end{document}</pre>
           </div>
           
         </div>
@@ -6011,6 +6137,124 @@ Source: `install.sh` (observed in installed file).
 - **Historical classification:** new
 
 **Observation:** `observed`  </pre>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+    
+    <div class="card">
+      <section class="clone-section">
+        <a name="markup-clones"></a>
+        <h2>markup</h2>
+        <div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              beacon/templates/research-paper/template.html (Line 1:1 - Line 9:11),
+              research/antidote/templates/template.html (Line 1:1 - Line 9:11)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markup-1')">Show code</button>
+            </div>
+            <pre id="code-markup-1" class="code-block">&#60;!DOCTYPE html&#62;
+&#60;html lang=&#34;en&#34;&#62;
+&#60;head&#62;
+  &#60;meta charset=&#34;UTF-8&#34;&#62;
+  &#60;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&#62;
+  &#60;title&#62;{{ title | default(value=&#34;Research Paper&#34;) }}&#60;/title&#62;
+  &#60;style&#62;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              beacon/templates/research-paper/template.html (Line 22:5 - Line 27:7),
+              research/antidote/templates/template.html (Line 11:125 - Line 15:17)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markup-2')">Show code</button>
+            </div>
+            <pre id="code-markup-2" class="code-block">    }
+    header.paper-header h1 { font-size: 1.9rem; line-height: 1.3; margin-bottom: 0.5rem; }
+    header.paper-header .author { font-size: 1.05rem; color: #333; margin-bottom: 0.25rem; }
+    header.paper-header .date { font-size: 0.95rem; color: #555; }
+    .abstract {
+      background: #f9f9f9;</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              beacon/templates/research-paper/template.html (Line 46:5 - Line 58:11),
+              research/antidote/templates/template.html (Line 17:120 - Line 29:11)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markup-3')">Show code</button>
+            </div>
+            <pre id="code-markup-3" class="code-block">    }
+    h1 { font-size: 1.6rem; border-bottom: 1px solid #ccc; padding-bottom: 0.3rem; }
+    h2 { font-size: 1.3rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.2rem; }
+    h3 { font-size: 1.1rem; }
+    h4, h5, h6 { font-size: 1rem; font-style: italic; }
+    p { margin-bottom: 1rem; }
+    a { color: #1a5276; text-decoration: underline; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.25rem; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem 0.75rem; text-align: left; }
+    th { background: #f0f0f0; font-weight: bold; }
+    code {</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              beacon/templates/research-paper/template.html (Line 64:5 - Line 71:19),
+              research/antidote/templates/template.html (Line 29:144 - Line 36:19)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markup-4')">Show code</button>
+            </div>
+            <pre id="code-markup-4" class="code-block">    }
+    pre { background: #f4f4f4; border: 1px solid #ddd; padding: 1rem; overflow-x: auto; margin-bottom: 1.5rem; }
+    pre code { background: none; padding: 0; font-size: 0.85em; }
+    blockquote { border-left: 4px solid #bbb; margin: 1rem 0; padding: 0.5rem 1rem; color: #555; font-style: italic; }
+    figure { margin: 1.5rem 0; text-align: center; }
+    figcaption { font-size: 0.88rem; color: #555; margin-top: 0.4rem; }
+    img { max-width: 100%; height: auto; }
+    @media print {</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              beacon/templates/research-paper/template.html (Line 75:5 - Line 96:8),
+              research/antidote/templates/template.html (Line 36:130 - Line 55:8)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markup-5')">Show code</button>
+            </div>
+            <pre id="code-markup-5" class="code-block">    }
+  &#60;/style&#62;
+&#60;/head&#62;
+&#60;body&#62;
+  &#60;div class=&#34;page&#34;&#62;
+    &#60;header class=&#34;paper-header&#34;&#62;
+      {% if title %}&#60;h1&#62;{{ title }}&#60;/h1&#62;{% endif %}
+      {% if author %}&#60;div class=&#34;author&#34;&#62;{{ author }}&#60;/div&#62;{% endif %}
+      {% if date %}&#60;div class=&#34;date&#34;&#62;{{ date }}&#60;/div&#62;{% endif %}
+    &#60;/header&#62;
+
+    {% if abstract %}
+    &#60;div class=&#34;abstract&#34;&#62;
+      &#60;div class=&#34;abstract-label&#34;&#62;Abstract&#60;/div&#62;
+      {{ abstract }}
+    &#60;/div&#62;
+    {% endif %}
+
+    {{ body }}
+  &#60;/div&#62;
+&#60;/body&#62;
+&#60;/html&#62;</pre>
           </div>
           
         </div>
