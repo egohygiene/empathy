@@ -1,0 +1,93 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Reusable autofix
+
+on:
+  workflow_call:
+    inputs:
+      working-directory:
+        description: Project directory relative to the repository root.
+        required: false
+        default: "."
+        type: string
+      setup-node:
+        description: Set up Node.js before running fixes.
+        required: false
+        default: "auto"
+        type: string
+      setup-python:
+        description: Set up Python before running fixes.
+        required: false
+        default: "auto"
+        type: string
+      setup-flutter:
+        description: Set up Flutter before running fixes.
+        required: false
+        default: "auto"
+        type: string
+      format-command:
+        description: Optional formatting command executed in the working directory.
+        required: false
+        default: ""
+        type: string
+      lint-fix-command:
+        description: Optional lint-fix command executed after formatting.
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  autofix:
+    name: Apply deterministic repository fixes
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Harden Runner
+        # step-security/harden-runner v2.20.0
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Set up repository environment
+        uses: ./.github/actions/setup-environment
+        with:
+          working-directory: "${{ inputs.working-directory }}"
+          setup-node: "${{ inputs.setup-node }}"
+          setup-python: "${{ inputs.setup-python }}"
+          setup-flutter: "${{ inputs.setup-flutter }}"
+          install-dependencies: "true"
+
+      - name: Run formatter
+        if: inputs.format-command != ''
+        shell: bash
+        working-directory: "${{ inputs.working-directory }}"
+        env:
+          FORMAT_COMMAND: "${{ inputs.format-command }}"
+        run: |
+          set -euo pipefail
+          bash -lc "${FORMAT_COMMAND}"
+
+      - name: Run lint fixes
+        if: inputs.lint-fix-command != ''
+        shell: bash
+        working-directory: "${{ inputs.working-directory }}"
+        env:
+          LINT_FIX_COMMAND: "${{ inputs.lint-fix-command }}"
+        run: |
+          set -euo pipefail
+          bash -lc "${LINT_FIX_COMMAND}"
+
+      - name: Push autofixes
+        # autofix-ci/action v1
+        uses: autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a
