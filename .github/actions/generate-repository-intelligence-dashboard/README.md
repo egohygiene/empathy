@@ -1,8 +1,9 @@
 # Repository intelligence dashboard builder
 
-This composite action turns normalized producer summaries into a small public
-dashboard bundle without a client-side framework, remote font, analytics script,
-or rendering service.
+This composite action turns normalized producer summaries and commit-scoped
+repository intelligence into a small public dashboard bundle without a
+client-side framework, remote dependency, analytics script, or rendering
+service.
 
 ## Inputs and outputs
 
@@ -15,20 +16,23 @@ The builder reads these inputs when present:
 └── scorecard/summary.json
 
 .cache/repository-intelligence/
-└── analytics/
-    └── summary.json
+├── analytics/
+│   └── summary.json
+└── tree/
+    └── repo.json
 ```
 
 It always writes:
 
 ```text
 <output-root>/
+├── explorer.js
 ├── index.html
 ├── styles.css
 └── summary.json
 ```
 
-`summary.json` uses `egohygiene.repository-intelligence-dashboard/v2`, declared
+`summary.json` uses `egohygiene.repository-intelligence-dashboard/v3`, declared
 by the checked-in `repository-intelligence-dashboard.schema.json`. It is a
 public projection, not another scanner report. Canonical producer JSON, SARIF,
 workflow artifacts, and GitHub Security integrations remain authoritative.
@@ -68,8 +72,25 @@ builder renders:
 
 Charts are inline SVG or native HTML progress elements. Each visualization has
 an accessible title, description, and expandable semantic table. No charting
-runtime, CDN, JavaScript, or synthetic health score is introduced. Missing or
+runtime, CDN, or synthetic health score is introduced. Missing or
 commit-mismatched analytics render as unavailable rather than zero.
+
+## Repository anatomy
+
+When `repository-tree` points to an `egohygiene.repository-tree/v1` document
+for the represented commit, the builder renders a collapsible source tree with:
+
+- local inline icons for directories, files, symlinks, and submodules;
+- source links pinned to the exact represented Git commit;
+- repository and node-count context;
+- native `<details>` disclosure that remains usable without JavaScript; and
+- progressive search, expand-all, and collapse-all controls from the local
+  `explorer.js` asset.
+
+The tree is validated for canonical repository-relative paths, hierarchy,
+declared descendant counts, commit provenance, maximum depth, and maximum node
+count before rendering. Missing or commit-mismatched trees remain explicitly
+unavailable.
 
 ## Workflow usage
 
@@ -79,6 +100,7 @@ commit-mismatched analytics render as unavailable rather than zero.
   with:
     reports-root: .reports
     analytics-summary: .cache/repository-intelligence/analytics/summary.json
+    repository-tree: .cache/repository-intelligence/tree/repo.json
     output-root: .cache/mindgarden/site/intelligence
     repository: "${{ github.repository }}"
     default-branch: "${{ github.event.repository.default_branch }}"

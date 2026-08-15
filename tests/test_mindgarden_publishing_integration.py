@@ -74,6 +74,10 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
             'analytics-summary: ".cache/mindgarden/repository-intelligence/analytics/summary.json"',
             workflow,
         )
+        self.assertIn(
+            'repository-tree: ".cache/mindgarden/repository-intelligence/tree/repo.json"',
+            workflow,
+        )
         self.assertIn('output-root: ".cache/mindgarden/site/intelligence"', workflow)
         self.assertIn('path: ".cache/mindgarden/site"', workflow)
         self.assertIn('".reports/*/summary.json"', workflow)
