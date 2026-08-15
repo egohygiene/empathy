@@ -1,0 +1,169 @@
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+  "name": "realm: ${localWorkspaceFolderBasename}",
+  "dockerComposeFile": [
+    "compose.yaml"
+  ],
+  "service": "workstation",
+  "runServices": [
+    "workstation"
+  ],
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "overrideCommand": false,
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
+  "updateRemoteUserUID": true,
+  "init": true,
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1.10.0": {
+      "version": "latest",
+      "moby": true,
+      "installDockerBuildx": true,
+      "installDockerComposeSwitch": true
+    },
+    "ghcr.io/devcontainers/features/github-cli:1.1.0": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:2.1.0": {
+      "version": "24"
+    }
+  },
+  "containerEnv": {
+    "REALM_IN_DEVCONTAINER": "1",
+    "REALM_ROOT": "/opt/realm",
+    "REALM_WORKSPACE": "/workspace",
+    "REALM_EMOJI_CACHE": "/home/vscode/.cache/realm/emoji"
+  },
+  "remoteEnv": {
+    "REALM_IN_DEVCONTAINER": "1"
+  },
+  "userEnvProbe": "loginInteractiveShell",
+  "initializeCommand": {
+    "realm-initialize": [
+      "/bin/bash",
+      ".devcontainer/scripts/initialize.sh"
+    ]
+  },
+  "onCreateCommand": {
+    "realm-on-create": [
+      "/bin/bash",
+      ".devcontainer/scripts/on-create.sh"
+    ]
+  },
+  "updateContentCommand": {
+    "realm-update-content": [
+      "/bin/bash",
+      ".devcontainer/scripts/update-content.sh"
+    ]
+  },
+  "postCreateCommand": {
+    "realm-post-create": [
+      "/bin/bash",
+      ".devcontainer/scripts/post-create.sh"
+    ]
+  },
+  "postStartCommand": {
+    "realm-post-start": [
+      "/bin/bash",
+      ".devcontainer/scripts/post-start.sh"
+    ]
+  },
+  "postAttachCommand": {
+    "realm-post-attach": [
+      "/bin/bash",
+      ".devcontainer/scripts/post-attach.sh"
+    ]
+  },
+  "waitFor": "postCreateCommand",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached,readonly",
+    "source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached,readonly",
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig.host,type=bind,consistency=cached,readonly",
+    "source=${localEnv:HOME}/.config/gh,target=/home/vscode/.config/gh,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.kube,target=/home/vscode/.kube,type=bind,consistency=cached,readonly",
+    "source=${localEnv:HOME}/.config/egohygiene/shell,target=/opt/realm/host-shell,type=bind,consistency=cached,readonly",
+    "source=realm-bash-history,target=/commandhistory,type=volume",
+    "source=realm-vscode-extensions,target=/home/vscode/.vscode-server/extensions,type=volume",
+    "source=realm-emoji-cache,target=/home/vscode/.cache/realm/emoji,type=volume"
+  ],
+  "forwardPorts": [],
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "notify"
+    },
+    "8000": {
+      "label": "API",
+      "onAutoForward": "notify"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "ms-azuretools.vscode-containers",
+        "redhat.vscode-yaml",
+        "timonwong.shellcheck",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "args": [
+              "--login"
+            ],
+            "icon": "terminal-bash"
+          },
+          "fish": {
+            "path": "/usr/bin/fish",
+            "icon": "terminal"
+          },
+          "zsh": {
+            "path": "/usr/bin/zsh",
+            "args": [
+              "--login"
+            ],
+            "icon": "terminal"
+          }
+        },
+        "terminal.integrated.enablePersistentSessions": true,
+        "terminal.integrated.gpuAcceleration": "off",
+        "terminal.integrated.scrollback": 10000,
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+          80,
+          120
+        ],
+        "files.eol": "\n",
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true,
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "search.exclude": {
+          "**/.cache": true,
+          "**/.git": true,
+          "**/.venv": true,
+          "**/__pycache__": true,
+          "**/build": true,
+          "**/dist": true,
+          "**/node_modules": true
+        },
+        "telemetry.telemetryLevel": "off"
+      }
+    }
+  }
+}

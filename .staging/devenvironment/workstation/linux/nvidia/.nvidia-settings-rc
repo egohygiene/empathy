@@ -1,0 +1,78 @@
+###############################################################################
+# NVIDIA Settings
+#
+# Portable defaults for NVIDIA Settings.
+#
+# NOTE:
+# This file intentionally avoids monitor-specific settings.
+# Display connector mappings (DP-0, HDMI-0, etc.) are hardware-dependent
+# and should be regenerated automatically by nvidia-settings.
+###############################################################################
+
+###############################################################################
+# UI Preferences
+###############################################################################
+
+RcFileLocale = C
+
+DisplayStatusBar = Yes
+SliderTextEntries = Yes
+
+IncludeDisplayNameInConfigFile = No
+ShowQuitDialog = Yes
+
+UpdateRulesOnProfileNameChange = Yes
+
+###############################################################################
+# Monitoring
+###############################################################################
+
+Timer = Memory_Used_(GPU_0),Yes,3000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+
+###############################################################################
+# OpenGL
+###############################################################################
+
+0/SyncToVBlank = 1
+
+0/AllowFlipping = 1
+
+0/OpenGLImageSettings = 1
+
+0/TextureClamping = 1
+
+###############################################################################
+# Anti-aliasing
+###############################################################################
+
+0/FSAA = 0
+0/FSAAAppControlled = 1
+0/FSAAAppEnhanced = 0
+
+0/FXAA = 0
+
+###############################################################################
+# Texture Filtering
+###############################################################################
+
+0/LogAniso = 0
+0/LogAnisoAppControlled = 1
+
+###############################################################################
+# Visual Indicators
+###############################################################################
+
+0/ShowGraphicsVisualIndicator = 0
+
+###############################################################################
+# Display-specific settings intentionally omitted.
+#
+# Examples:
+#
+#   [DPY:DP-0]
+#   [DPY:HDMI-0]
+#
+# These depend on the connected hardware and should not be versioned.
+###############################################################################

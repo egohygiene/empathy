@@ -1,0 +1,468 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
+
+######################################################################
+# docker-compose configuration for the devcontainer
+#
+# The dev service builds the image defined in Dockerfile and mounts the
+# repository into /workspace. The container is kept running with a
+# "sleep infinity" command so that VS Code can attach to it.
+######################################################################
+
+# Define common labels for Docker objects
+x-labels: &labels
+  labels:
+    app.name: development
+    app.scope: development
+
+# Security options applied to supporting services (not the privileged dev container)
+x-security-opts: &security-opts
+  security_opt:
+    - no-new-privileges:true
+
+# Shared settings for all services
+x-settings: &settings # Restart containers unless stopped manually
+  restart: unless-stopped
+  # Environment variables for all services
+  environment:
+    - TZ=${TZ:-UTC}
+  # Use a common .env file for environment variables
+  # env_file:
+  #   - .env.devcontainer
+  # Allow access to the host machine from the container
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
+  # Init system for graceful shutdown
+  init: true
+  # Pull policy for images
+  pull_policy: missing
+  # Attach the container to the project network
+  networks:
+    default:
+      aliases:
+        - development-network
+  # Use a specific platform for compatibility
+  platform: linux/amd64
+  # Apply the common labels to all services
+  <<: *labels
+
+# Define the Docker network for all services
+networks:
+  default:
+    # Name of the Docker network, based on the project name
+    name: development-network
+    # Use the bridge driver for the network (https://docs.docker.com/compose/networking/)
+    driver: bridge
+    # Allows containers to manually attach to this network
+    attachable: true
+    # Custom options for bridge network driver
+    driver_opts:
+      com.docker.network.bridge.enable_icc: "true"
+      com.docker.network.bridge.enable_ip_masquerade: "true"
+    <<: *labels
+
+# Define named volumes for persistent data storage
+volumes:
+  portainer_data:
+    name: portainer_data
+    <<: *labels
+  httpd_data:
+    name: httpd_data
+    <<: *labels
+  gitdiagram_node_modules:
+    name: gitdiagram_node_modules
+    <<: *labels
+  langfuse_postgres_data:
+    name: langfuse_postgres_data
+    <<: *labels
+  langfuse_clickhouse_data:
+    name: langfuse_clickhouse_data
+    <<: *labels
+  langfuse_clickhouse_logs:
+    name: langfuse_clickhouse_logs
+    <<: *labels
+  langfuse_minio_data:
+    name: langfuse_minio_data
+    <<: *labels
+  langfuse_redis_data:
+    name: langfuse_redis_data
+    <<: *labels
+  retropie_roms:
+    name: retropie_roms
+    <<: *labels
+  retropie_bios:
+    name: retropie_bios
+    <<: *labels
+
+# Shared environment variables for Langfuse web and worker
+x-langfuse-env: &langfuse-env
+  TZ: ${TZ:-UTC}
+  DATABASE_URL: postgresql://${LANGFUSE_POSTGRES_USER:-postgres}:${LANGFUSE_POSTGRES_PASSWORD:-postgres}@langfuse_postgres:5432/${LANGFUSE_POSTGRES_DB:-postgres}
+  NEXTAUTH_URL: ${LANGFUSE_NEXTAUTH_URL:-http://localhost:3001}
+  SALT: ${LANGFUSE_SALT:-mysalt}
+  ENCRYPTION_KEY: ${LANGFUSE_ENCRYPTION_KEY:-0000000000000000000000000000000000000000000000000000000000000000}
+  TELEMETRY_ENABLED: ${LANGFUSE_TELEMETRY_ENABLED:-true}
+  LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES: ${LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES:-false}
+  CLICKHOUSE_MIGRATION_URL: clickhouse://langfuse_clickhouse:9000
+  CLICKHOUSE_URL: http://langfuse_clickhouse:8123
+  CLICKHOUSE_USER: ${LANGFUSE_CLICKHOUSE_USER:-clickhouse}
+  CLICKHOUSE_PASSWORD: ${LANGFUSE_CLICKHOUSE_PASSWORD:-clickhouse}
+  CLICKHOUSE_CLUSTER_ENABLED: ${LANGFUSE_CLICKHOUSE_CLUSTER_ENABLED:-false}
+  LANGFUSE_USE_AZURE_BLOB: "false"
+  LANGFUSE_S3_EVENT_UPLOAD_BUCKET: ${LANGFUSE_S3_BUCKET:-langfuse}
+  LANGFUSE_S3_EVENT_UPLOAD_REGION: auto
+  LANGFUSE_S3_EVENT_UPLOAD_ACCESS_KEY_ID: ${LANGFUSE_MINIO_ROOT_USER:-minio}
+  LANGFUSE_S3_EVENT_UPLOAD_SECRET_ACCESS_KEY: ${LANGFUSE_MINIO_ROOT_PASSWORD:-miniosecret}
+  LANGFUSE_S3_EVENT_UPLOAD_ENDPOINT: http://langfuse_minio:9000
+  LANGFUSE_S3_EVENT_UPLOAD_FORCE_PATH_STYLE: "true"
+  LANGFUSE_S3_EVENT_UPLOAD_PREFIX: events/
+  LANGFUSE_S3_MEDIA_UPLOAD_BUCKET: ${LANGFUSE_S3_BUCKET:-langfuse}
+  LANGFUSE_S3_MEDIA_UPLOAD_REGION: auto
+  LANGFUSE_S3_MEDIA_UPLOAD_ACCESS_KEY_ID: ${LANGFUSE_MINIO_ROOT_USER:-minio}
+  LANGFUSE_S3_MEDIA_UPLOAD_SECRET_ACCESS_KEY: ${LANGFUSE_MINIO_ROOT_PASSWORD:-miniosecret}
+  LANGFUSE_S3_MEDIA_UPLOAD_ENDPOINT: http://langfuse_minio:9000
+  LANGFUSE_S3_MEDIA_UPLOAD_EXTERNAL_ENDPOINT: ${LANGFUSE_MINIO_EXTERNAL_ENDPOINT:-http://localhost:9090}
+  LANGFUSE_S3_MEDIA_UPLOAD_FORCE_PATH_STYLE: "true"
+  LANGFUSE_S3_MEDIA_UPLOAD_PREFIX: media/
+  LANGFUSE_S3_BATCH_EXPORT_ENABLED: ${LANGFUSE_S3_BATCH_EXPORT_ENABLED:-false}
+  LANGFUSE_S3_BATCH_EXPORT_BUCKET: ${LANGFUSE_S3_BUCKET:-langfuse}
+  LANGFUSE_S3_BATCH_EXPORT_PREFIX: exports/
+  LANGFUSE_S3_BATCH_EXPORT_REGION: auto
+  LANGFUSE_S3_BATCH_EXPORT_ENDPOINT: http://langfuse_minio:9000
+  LANGFUSE_S3_BATCH_EXPORT_EXTERNAL_ENDPOINT: ${LANGFUSE_MINIO_EXTERNAL_ENDPOINT:-http://localhost:9090}
+  LANGFUSE_S3_BATCH_EXPORT_ACCESS_KEY_ID: ${LANGFUSE_MINIO_ROOT_USER:-minio}
+  LANGFUSE_S3_BATCH_EXPORT_SECRET_ACCESS_KEY: ${LANGFUSE_MINIO_ROOT_PASSWORD:-miniosecret}
+  LANGFUSE_S3_BATCH_EXPORT_FORCE_PATH_STYLE: "true"
+  REDIS_HOST: langfuse_redis
+  REDIS_PORT: "6379"
+  REDIS_AUTH: ${LANGFUSE_REDIS_AUTH:-langfuse}
+  REDIS_TLS_ENABLED: "false"
+
+services:
+  development:
+    container_name: development
+    hostname: development
+    build:
+      context: ..
+      target: final
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        - INSTALL_RUST=${INSTALL_RUST:-false}
+        - INSTALL_GOOGLE_FONTS=${INSTALL_GOOGLE_FONTS:-false}
+        - INSTALL_IMAGEMAGICK=${INSTALL_IMAGEMAGICK:-false}
+        - INSTALL_E57FORMAT=${INSTALL_E57FORMAT:-false}
+        - INSTALL_PDAL=${INSTALL_PDAL:-false}
+        - INSTALL_CERES_SOLVER=${INSTALL_CERES_SOLVER:-false}
+        - INSTALL_SHDOC=${INSTALL_SHDOC:-true}
+        - INSTALL_GIT_SIM=${INSTALL_GIT_SIM:-true}
+        - INSTALL_GITINSPECTOR=${INSTALL_GITINSPECTOR:-true}
+        - INSTALL_SQLFLUFF=${INSTALL_SQLFLUFF:-true}
+        - INSTALL_MITMPROXY=${INSTALL_MITMPROXY:-true}
+        - INSTALL_LYNIS=${INSTALL_LYNIS:-true}
+        # Reproducible build args — set in .env or environment to pin the build.
+        # SOURCE_DATE_EPOCH clamps layer timestamps (unix seconds).
+        # SNAPSHOT_TIMESTAMP pins apt sources to an Ubuntu snapshot (YYYYMMDDTHHMMSSZ).
+        - SOURCE_DATE_EPOCH=${SOURCE_DATE_EPOCH:-}
+        - SNAPSHOT_TIMESTAMP=${SNAPSHOT_TIMESTAMP:-}
+    volumes:
+      # Mount the repository so that changes on the host are reflected inside the container
+      - ..:/workspace:cached
+    command: sleep infinity
+    privileged: true # required for docker-in-docker
+    user: vscode
+    sysctls:
+      kernel.perf_event_paranoid: -1
+    <<: *settings
+
+  portainer:
+    image: portainer/portainer-ce@sha256:d5b9eba8d4d2f4e952aee6a6fb154e618857a976f734bfcec5a5603b03f45acd
+    container_name: ${PORTAINER_CONTAINER_NAME:-portainer}
+    hostname: ${PORTAINER_HOSTNAME:-portainer}
+    ports:
+      - "${PORTAINER_EXPOSED_PORT:-9000}:9000"
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    <<: [*settings, *security-opts]
+
+  # Gitingest – turn any Git repo into an LLM-friendly text digest
+  # https://github.com/coderamp-labs/gitingest
+  gitingest:
+    image: ghcr.io/coderamp-labs/gitingest@sha256:eefdfb1d1241c05437ed8d900bca6a2009a1a44459e29239f6a7d6283f2ad72d
+    container_name: ${GITINGEST_CONTAINER_NAME:-gitingest}
+    hostname: ${GITINGEST_HOSTNAME:-gitingest}
+    ports:
+      - "${GITINGEST_EXPOSED_PORT:-8084}:8000"
+    environment:
+      - TZ=${TZ:-UTC}
+      - ALLOWED_HOSTS=${GITINGEST_ALLOWED_HOSTS:-localhost,127.0.0.1}
+    <<: [*settings, *security-opts]
+
+  # gitdiagram – generate interactive architecture diagrams from any GitHub repo
+  # https://github.com/ahmedkhaleel2004/gitdiagram
+  gitdiagram:
+    build:
+      context: ./services/gitdiagram
+      dockerfile: Dockerfile
+      args:
+        - GITDIAGRAM_REF=${GITDIAGRAM_REF:-main}
+    container_name: ${GITDIAGRAM_CONTAINER_NAME:-gitdiagram}
+    hostname: ${GITDIAGRAM_HOSTNAME:-gitdiagram}
+    ports:
+      - "${GITDIAGRAM_EXPOSED_PORT:-3000}:3000"
+    volumes:
+      # Cache node_modules in a named volume to avoid reinstalling on restart
+      - gitdiagram_node_modules:/app/node_modules
+    environment:
+      - TZ=${TZ:-UTC}
+      # Generation backend — "next" uses built-in Route Handlers (no separate
+      # FastAPI service required). Set to "fastapi" for production parity.
+      - NEXT_PUBLIC_GENERATION_BACKEND=${NEXT_PUBLIC_GENERATION_BACKEND:-next}
+      # AI provider — "openai" (default) or "openrouter"
+      - AI_PROVIDER=${AI_PROVIDER:-openai}
+      # OpenAI credentials (used when AI_PROVIDER=openai)
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+      # OpenRouter credentials (used when AI_PROVIDER=openrouter)
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+      - OPENROUTER_MODEL=${OPENROUTER_MODEL:-openai/gpt-4o}
+      - OPENROUTER_SITE_URL=${OPENROUTER_SITE_URL:-http://localhost:3000}
+      - OPENROUTER_APP_NAME=${OPENROUTER_APP_NAME:-GitDiagram}
+      # Optional: GitHub PAT raises rate limit from 60 → 5 000 requests/hr
+      - GITHUB_PAT=${GITHUB_PAT:-}
+    <<: [*settings, *security-opts]
+
+  # httpd – Apache HTTP Server 2.4
+  # https://github.com/docker-library/httpd/blob/master/2.4/Dockerfile
+  httpd:
+    image: httpd:2.4@sha256:331548c5249bdeced0f048bc2fb8c6b6427d2ec6508bed9c1fec6c57d0b27a60
+    container_name: ${HTTPD_CONTAINER_NAME:-httpd}
+    hostname: ${HTTPD_HOSTNAME:-httpd}
+    ports:
+      - "${HTTPD_EXPOSED_PORT:-8085}:80"
+    volumes:
+      - httpd_data:/usr/local/apache2/htdocs
+    <<: [*settings, *security-opts]
+
+  ######################################################################
+  # RetroPie – containerized retro-gaming emulation platform
+  # https://retropie.org.uk/
+  #
+  # EmulationStation requires a host X11 display.  Before starting this
+  # service, run on the host:
+  #
+  #   xhost +local:docker
+  #
+  # Then set RETROPIE_DISPLAY to the correct display (e.g. :0 or :1).
+  #
+  # See docs/retropie-runtime.md for full runtime flag documentation.
+  ######################################################################
+  retropie:
+    build:
+      context: ./services/retropie
+      dockerfile: Dockerfile
+      args:
+        - RETROPIE_SETUP_REF=${RETROPIE_SETUP_REF:-master}
+    container_name: ${RETROPIE_CONTAINER_NAME:-retropie}
+    hostname: ${RETROPIE_HOSTNAME:-retropie}
+    environment:
+      - TZ=${TZ:-UTC}
+      # Forward the host X11 display into the container.
+      # Set RETROPIE_DISPLAY on the host (e.g. export RETROPIE_DISPLAY=:0)
+      - DISPLAY=${RETROPIE_DISPLAY:-:0}
+    volumes:
+      # X11 socket – required for EmulationStation to render on the host display
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      # ROM storage – never bake ROMs into the image; mount them here
+      - retropie_roms:/home/pi/RetroPie/roms
+      # BIOS files for emulators that require them
+      - retropie_bios:/home/pi/RetroPie/BIOS
+    devices:
+      # DRM render node for GPU-accelerated rendering (Mesa / OpenGL)
+      - /dev/dri:/dev/dri
+      # Input devices (gamepads, keyboards) – evdev passthrough
+      - /dev/input:/dev/input
+    # profiles: [retropie]  # Uncomment to opt-in explicitly: docker compose --profile retropie up
+    <<: *settings
+
+  # pgAdmin service for managing the PostGIS database
+  # pgadmin:
+  #   image: dpage/pgadmin4@sha256:6b1c0db09695758c72abcd5160b7c4cc6d0847ab0c90a2403bdbf951f0defb5a
+  #   container_name: ${PGADMIN_CONTAINER_NAME:-pgadmin}
+  #   hostname: ${PGADMIN_HOSTNAME:-pgadmin}
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@${APP_NAME}.localhost}
+  #     PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-adminpassword}
+  #     PGADMIN_CONFIG_ALLOW_SPECIAL_EMAIL_DOMAINS: "['localhost']"
+  #     PGADMIN_LISTEN_PORT: ${PGADMIN_PORT:-5050}
+  #   ports:
+  #     - "${PGADMIN_EXPOSED_PORT:-5050}:${PGADMIN_PORT:-5050}"
+  #   volumes:
+  #     - pgadmin:/var/lib/pgadmin
+  #     - ./services/pgadmin/servers.json:/pgadmin4/servers.json:ro
+  #     - ./services/pgadmin/config_local.py:/pgadmin4/config_local.py:ro
+  #     - ./services/pgadmin/healthcheck.py:/pgadmin4/healthcheck.py:ro
+  #   depends_on:
+  #     database:
+  #       condition: service_healthy
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "python3 /pgadmin4/healthcheck.py"]
+  #     interval: 10s
+  #     timeout: 10s
+  #     retries: 10
+  #   <<: *settings
+
+  ######################################################################
+  # Langfuse – Open-source LLM Engineering Platform
+  # https://github.com/langfuse/langfuse
+  #
+  # Stack:
+  #   langfuse_postgres   – primary metadata store
+  #   langfuse_clickhouse – analytics / event store
+  #   langfuse_minio      – S3-compatible blob storage
+  #   langfuse_redis      – background job queue & cache
+  #   langfuse_worker     – background ingestion worker (port 3030)
+  #   langfuse_web        – web UI and API server  (port 3001)
+  #
+  # Default credentials are intentionally weak; override via .env for
+  # any environment that is reachable from outside localhost.
+  ######################################################################
+
+  # PostgreSQL – primary metadata store for Langfuse
+  langfuse_postgres:
+    image: postgres:17
+    container_name: ${LANGFUSE_POSTGRES_CONTAINER_NAME:-langfuse_postgres}
+    hostname: ${LANGFUSE_POSTGRES_HOSTNAME:-langfuse_postgres}
+    environment:
+      - TZ=${TZ:-UTC}
+      - POSTGRES_USER=${LANGFUSE_POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${LANGFUSE_POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${LANGFUSE_POSTGRES_DB:-postgres}
+    ports:
+      - "${LANGFUSE_POSTGRES_EXPOSED_PORT:-5432}:5432"
+    volumes:
+      - langfuse_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${LANGFUSE_POSTGRES_USER:-postgres}"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+    <<: [*settings, *security-opts]
+
+  # ClickHouse – analytics and event store for Langfuse
+  langfuse_clickhouse:
+    image: clickhouse/clickhouse-server:25
+    container_name: ${LANGFUSE_CLICKHOUSE_CONTAINER_NAME:-langfuse_clickhouse}
+    hostname: ${LANGFUSE_CLICKHOUSE_HOSTNAME:-langfuse_clickhouse}
+    user: "101:101"
+    environment:
+      - TZ=${TZ:-UTC}
+      - CLICKHOUSE_DB=default
+      - CLICKHOUSE_USER=${LANGFUSE_CLICKHOUSE_USER:-clickhouse}
+      - CLICKHOUSE_PASSWORD=${LANGFUSE_CLICKHOUSE_PASSWORD:-clickhouse}
+    ports:
+      - "${LANGFUSE_CLICKHOUSE_EXPOSED_PORT:-8123}:8123"
+    volumes:
+      - langfuse_clickhouse_data:/var/lib/clickhouse
+      - langfuse_clickhouse_logs:/var/log/clickhouse-server
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8123/ping || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 1s
+    <<: [*settings, *security-opts]
+
+  # MinIO – S3-compatible blob storage for Langfuse media and events
+  langfuse_minio:
+    image: minio/minio:RELEASE.2025-04-03T14-56-28Z
+    container_name: ${LANGFUSE_MINIO_CONTAINER_NAME:-langfuse_minio}
+    hostname: ${LANGFUSE_MINIO_HOSTNAME:-langfuse_minio}
+    entrypoint: sh
+    command: -c 'mkdir -p /data/langfuse && minio server --address ":9000" --console-address ":9001" /data'
+    environment:
+      - TZ=${TZ:-UTC}
+      - MINIO_ROOT_USER=${LANGFUSE_MINIO_ROOT_USER:-minio}
+      - MINIO_ROOT_PASSWORD=${LANGFUSE_MINIO_ROOT_PASSWORD:-miniosecret}
+    ports:
+      - "${LANGFUSE_MINIO_EXPOSED_PORT:-9090}:9000"
+      - "${LANGFUSE_MINIO_CONSOLE_EXPOSED_PORT:-9091}:9001"
+    volumes:
+      - langfuse_minio_data:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 1s
+      timeout: 5s
+      retries: 5
+      start_period: 1s
+    <<: [*settings, *security-opts]
+
+  # Redis – background job queue and cache for Langfuse
+  # Exposed on port 6380 to avoid conflicts with other Redis instances
+  langfuse_redis:
+    image: redis:7-alpine
+    container_name: ${LANGFUSE_REDIS_CONTAINER_NAME:-langfuse_redis}
+    hostname: ${LANGFUSE_REDIS_HOSTNAME:-langfuse_redis}
+    command: >
+      --requirepass ${LANGFUSE_REDIS_AUTH:-langfuse}
+      --maxmemory-policy noeviction
+    ports:
+      - "${LANGFUSE_REDIS_EXPOSED_PORT:-6380}:6379"
+    volumes:
+      - langfuse_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${LANGFUSE_REDIS_AUTH:-langfuse}", "ping"]
+      interval: 3s
+      timeout: 10s
+      retries: 10
+    <<: [*settings, *security-opts]
+
+  # Langfuse Worker – background ingestion and processing
+  langfuse_worker:
+    image: docker.io/langfuse/langfuse-worker:3
+    container_name: ${LANGFUSE_WORKER_CONTAINER_NAME:-langfuse_worker}
+    hostname: ${LANGFUSE_WORKER_HOSTNAME:-langfuse_worker}
+    depends_on:
+      langfuse_postgres:
+        condition: service_healthy
+      langfuse_clickhouse:
+        condition: service_healthy
+      langfuse_minio:
+        condition: service_healthy
+      langfuse_redis:
+        condition: service_healthy
+    ports:
+      - "${LANGFUSE_WORKER_EXPOSED_PORT:-3030}:3030"
+    environment:
+      <<: *langfuse-env
+    <<: [*settings, *security-opts]
+
+  # Langfuse Web – UI and API server; accessible at http://localhost:3001
+  langfuse_web:
+    image: docker.io/langfuse/langfuse:3
+    container_name: ${LANGFUSE_WEB_CONTAINER_NAME:-langfuse_web}
+    hostname: ${LANGFUSE_WEB_HOSTNAME:-langfuse_web}
+    depends_on:
+      langfuse_postgres:
+        condition: service_healthy
+      langfuse_clickhouse:
+        condition: service_healthy
+      langfuse_minio:
+        condition: service_healthy
+      langfuse_redis:
+        condition: service_healthy
+    ports:
+      - "${LANGFUSE_WEB_EXPOSED_PORT:-3001}:3000"
+    environment:
+      <<: *langfuse-env
+      NEXTAUTH_SECRET: ${LANGFUSE_NEXTAUTH_SECRET:-mysecret}
+      LANGFUSE_INIT_ORG_ID: ${LANGFUSE_INIT_ORG_ID:-}
+      LANGFUSE_INIT_ORG_NAME: ${LANGFUSE_INIT_ORG_NAME:-}
+      LANGFUSE_INIT_PROJECT_ID: ${LANGFUSE_INIT_PROJECT_ID:-}
+      LANGFUSE_INIT_PROJECT_NAME: ${LANGFUSE_INIT_PROJECT_NAME:-}
+      LANGFUSE_INIT_PROJECT_PUBLIC_KEY: ${LANGFUSE_INIT_PROJECT_PUBLIC_KEY:-}
+      LANGFUSE_INIT_PROJECT_SECRET_KEY: ${LANGFUSE_INIT_PROJECT_SECRET_KEY:-}
+      LANGFUSE_INIT_USER_EMAIL: ${LANGFUSE_INIT_USER_EMAIL:-}
+      LANGFUSE_INIT_USER_NAME: ${LANGFUSE_INIT_USER_NAME:-}
+      LANGFUSE_INIT_USER_PASSWORD: ${LANGFUSE_INIT_USER_PASSWORD:-}
+    <<: [*settings, *security-opts]

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+SHUTDOWN=0
+SHUTDOWN_TIME=10
+TRAPPED_SIGNAL=
+
+function onexit() {
+  TRAPPED_SIGNAL=$1
+  SHUTDOWN=1
+}
+
+for SIGNAL in SIGINT SIGTERM SIGHUP SIGPIPE SIGALRM SIGUSR1 SIGUSR2; do
+  trap "onexit $SIGNAL" $SIGNAL
+done
+
+echo >&2 "shutdowntest running"
+while ((!SHUTDOWN || SHUTDOWN_TIME>0)); do
+  if [[ -n "$TRAPPED_SIGNAL" ]]; then
+    echo >&2 "shutdowntest received signal $TRAPPED_SIGNAL"
+    TRAPPED_SIGNAL=
+  elif ((SHUTDOWN)); then
+    echo >&2 "shutdowntest Shutting down: $SHUTDOWN_TIME more sleeps"
+    SHUTDOWN_TIME=$((SHUTDOWN_TIME-1))
+    sleep 1
+  else
+    sleep 10
+  fi
+done
+echo >&2 "shutdowntest Finished shutting down; quitting"
+
+touch ~/shutdown-success
+
+# Kills all Google Chrome processes, so that sessions don't need to be restored.
+# killall chrome --wait > /dev/null 2> /dev/null
+
+# touch /home/alan/.cache/shutdown-success

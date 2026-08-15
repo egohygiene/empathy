@@ -1,0 +1,12 @@
+[Unit]
+Description=Daily AIDE Integrity Check
+
+[Timer]
+OnCalendar=daily
+
+Persistent=true
+
+Unit=aidecheck.service
+
+[Install]
+WantedBy=timers.target

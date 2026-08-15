@@ -1,0 +1,21 @@
+[Unit]
+Description=Lynis Security Audit
+Documentation=https://cisofy.com/lynis/
+
+[Service]
+Type=oneshot
+
+ExecStart=/usr/local/bin/lynis \
+    audit system \
+    --no-colors \
+    --quick \
+    --profile=/etc/lynis/default.prf
+
+StandardOutput=journal
+StandardError=journal
+
+Nice=10
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=multi-user.target

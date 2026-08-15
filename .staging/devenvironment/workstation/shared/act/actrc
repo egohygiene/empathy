@@ -1,0 +1,27 @@
+# -----------------------------------------------------------------------------
+# act Configuration
+# -----------------------------------------------------------------------------
+#
+# Ego Hygiene Engineering Standard
+#
+# Documentation:
+#   https://nektosact.com/
+#
+# Purpose:
+#   Provides portable defaults for local GitHub Actions execution.
+#
+# Notes:
+#   Repository-specific settings should live in a local .actrc file.
+# -----------------------------------------------------------------------------
+
+# Follow symbolic links when discovering the repository.
+--directory .
+
+# Prefer JSON output for tooling and automation.
+--json
+
+# Cache downloaded GitHub Actions.
+--action-cache-path ~/.cache/act/actions
+
+# Cache container layers.
+--cache-server-path ~/.cache/act/cache

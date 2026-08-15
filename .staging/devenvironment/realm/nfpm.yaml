@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://nfpm.goreleaser.com/static/schema.json
+# =============================================================================
+# nfpm.yaml — Experimental package configuration
+#
+# nfpm is a simple, 0-dependencies deb, rpm, apk, and arch linux packager.
+# This file serves as a starting point for packaging tooling from this repo.
+#
+# References:
+#   - https://github.com/goreleaser/nfpm
+#   - https://nfpm.goreleaser.com/configuration/
+#
+# Usage (once nfpm is installed via `task tools:install:nfpm`):
+#   nfpm package --packager deb --target /tmp/
+#   nfpm package --packager rpm --target /tmp/
+#   nfpm package --packager apk --target /tmp/
+#   nfpm package --packager archlinux --target /tmp/
+# =============================================================================
+
+name: egohygiene-base
+arch: amd64
+platform: linux
+version: "0.1.0"
+section: utils
+priority: optional
+maintainer: Ego Hygiene <hello@egohygiene.com>
+description: |-
+  Base development tooling, conventions, and shared configs for Ego Hygiene repositories.
+  Provides shell utilities, install scripts, and automation helpers.
+vendor: Ego Hygiene
+homepage: https://github.com/egohygiene/base
+license: MIT
+
+contents:
+  - src: shell/bin/
+    dst: /usr/local/lib/egohygiene-base/bin/
+    type: dir
+    file_info:
+      mode: 0755

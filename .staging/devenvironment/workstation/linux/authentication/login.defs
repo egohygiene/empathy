@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------
+# Login Defaults
+# ------------------------------------------------------------------------------
+#
+# Purpose:
+#   Sanctuary authentication baseline.
+#
+# Notes:
+#   These values are intended to supplement the distribution defaults.
+#   Review the system's default login.defs before applying.
+#
+# ------------------------------------------------------------------------------
+
+# Default permissions for newly created files.
+UMASK 027
+
+# Default permissions for newly created home directories.
+HOME_MODE 0750
+
+# Password hashing algorithm.
+#
+# Modern Linux distributions should prefer YESCRYPT.
+ENCRYPT_METHOD YESCRYPT
+
+# Optional account ranges.
+#
+# Uncomment if large system account ranges are required.
+#
+# SYS_UID_MAX 99999
+# SYS_GID_MAX 99999

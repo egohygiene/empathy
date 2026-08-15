@@ -1,0 +1,17 @@
+ffmpeg
+imagemagick
+imagemagick-full
+ghostscript
+gifsicle
+jpegoptim
+optipng
+oxipng
+pngcrush
+pngquant
+qpdf
+img2pdf
+mpv
+sox
+tesseract
+tesseract-lang
+resvg

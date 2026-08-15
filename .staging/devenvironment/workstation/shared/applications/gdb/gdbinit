@@ -1,0 +1,63 @@
+# -----------------------------------------------------------------------------
+# GNU Debugger (GDB)
+# -----------------------------------------------------------------------------
+#
+# Ego Hygiene Engineering Standard
+#
+# Documentation:
+#   https://sourceware.org/gdb/current/onlinedocs/gdb/
+#
+# Purpose:
+#   Opinionated defaults for interactive debugging.
+# -----------------------------------------------------------------------------
+
+###############################################################################
+# Command History
+###############################################################################
+
+set history save on
+set history size 10000
+set history filename ~/.cache/gdb/.gdb_history
+
+###############################################################################
+# Output Formatting
+###############################################################################
+
+# Pretty-print complex C++ and STL types.
+set print pretty on
+
+# Reduce noise from static class members.
+set print static-members off
+
+# Print object contents when possible.
+set print object on
+
+# Display array elements in full.
+set print elements 0
+
+###############################################################################
+# Character Encoding
+###############################################################################
+
+set charset UTF-8
+
+###############################################################################
+# Pagination
+###############################################################################
+
+# Never pause long output.
+set pagination off
+
+###############################################################################
+# Confirmation
+###############################################################################
+
+# Avoid confirmation prompts for common operations.
+set confirm off
+
+###############################################################################
+# Disassembly
+###############################################################################
+
+# Show the next instruction after stepping.
+set disassemble-next-line on

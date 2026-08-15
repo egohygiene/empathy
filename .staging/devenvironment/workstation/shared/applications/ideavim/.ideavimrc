@@ -1,0 +1,86 @@
+" =============================================================================
+" IdeaVim Configuration
+" =============================================================================
+"
+" Purpose:
+"   Shared IdeaVim configuration for the Sanctuary developer platform.
+"
+" Philosophy:
+"   - Minimal
+"   - Consistent
+"   - IDE-friendly
+"   - Cross-platform
+"
+" Documentation:
+"   https://github.com/JetBrains/ideavim
+"
+" =============================================================================
+
+" -----------------------------------------------------------------------------
+" General
+" -----------------------------------------------------------------------------
+
+set clipboard+=unnamedplus
+set number
+set relativenumber
+set scrolloff=5
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set showmode
+set visualbell
+
+" -----------------------------------------------------------------------------
+" Indentation
+" -----------------------------------------------------------------------------
+
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set smartindent
+
+" -----------------------------------------------------------------------------
+" Search
+" -----------------------------------------------------------------------------
+
+set incsearch
+set ignorecase
+set smartcase
+
+" -----------------------------------------------------------------------------
+" Leader
+" -----------------------------------------------------------------------------
+
+let mapleader = " "
+
+" -----------------------------------------------------------------------------
+" Useful Mappings
+" -----------------------------------------------------------------------------
+
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+nnoremap <leader>h :nohlsearch<CR>
+
+" -----------------------------------------------------------------------------
+" Optional Plugins
+" -----------------------------------------------------------------------------
+
+" set surround
+" set commentary
+" set easymotion
+" set multiple-cursors
+
+" -----------------------------------------------------------------------------
+" IDE Actions
+" -----------------------------------------------------------------------------
+
+" Uncomment as desired:
+"
+" map <leader>r <Action>(RenameElement)
+" map <leader>f <Action>(ReformatCode)
+" map <leader>a <Action>(GotoAction)
+" map <leader>o <Action>(OptimizeImports)
+

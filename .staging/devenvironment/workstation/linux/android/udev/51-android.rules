@@ -1,0 +1,15 @@
+# Xiaomi Android device
+#
+# Vendor:
+#   2717
+#
+# Product:
+#   ff48
+#
+# Create:
+#   /dev/androidX
+#
+# Allow:
+#   plugdev group access
+
+SUBSYSTEM=="usb", ATTR{idVendor}=="2717", ATTR{idProduct}=="ff48", MODE="0660", GROUP="plugdev", SYMLINK+="android%n"

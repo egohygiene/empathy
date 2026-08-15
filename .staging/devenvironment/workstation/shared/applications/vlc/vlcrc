@@ -1,0 +1,68 @@
+###############################################################################
+# VLC Configuration
+###############################################################################
+#
+# Purpose:
+#   Portable VLC defaults for the Sanctuary developer platform.
+#
+# Philosophy:
+#   - Preserve upstream defaults whenever possible.
+#   - Only override settings that improve the developer experience.
+#
+# Documentation:
+#   https://wiki.videolan.org/VLC_command-line_help/
+#
+###############################################################################
+
+# Resume playback where media was stopped.
+qt-continue=1
+
+# Save playback position.
+save-recentplay=1
+
+# Save recently opened files.
+qt-recentplay=1
+
+# Enable hardware decoding when available.
+avcodec-hw=any
+
+# Enable subtitle autoloading.
+sub-autodetect-file=1
+
+# Prefer embedded fonts when subtitles are available.
+freetype-rel-fontsize=16
+
+# Network caching (milliseconds).
+network-caching=1000
+
+# File caching (milliseconds).
+file-caching=300
+
+# Disc caching (milliseconds).
+disc-caching=300
+
+# Snapshot format.
+snapshot-format=png
+
+# Snapshot directory.
+# snapshot-path=~/Pictures/VLC
+
+###############################################################################
+# Optional Settings
+###############################################################################
+
+# Fullscreen by default.
+# fullscreen=1
+
+# Force dark interface where supported.
+# qt-dark-theme=1
+
+# Preferred audio output.
+# aout=
+
+# Preferred video output.
+# vout=
+
+# Disable automatic metadata lookups.
+# metadata-network-access=0
+

@@ -1,0 +1,434 @@
+exclude: |
+  (?x)^(
+      .*\{\{.*\}\}.*|     # Exclude any files with cookiecutter variables
+      docs/site/.*|       # Exclude mkdocs compiled files
+      \.history/.*|       # Exclude history files
+      .*cache.*/.*|       # Exclude cache directories
+      .*venv.*/.*|        # Exclude virtual environment directories
+      reports/.*|         # Exclude reports directory
+  )$
+fail_fast: true
+default_language_version:
+  python: python3.12
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+repos:
+  # ---------------------------- 📁 Filesystem Tools --------------------------- #
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # Filesystem Checks
+      # - id: check-executables-have-shebangs
+      #   name: "📁 filesystem/⚙️ exec · Verify shebang presence"
+      # - id: check-shebang-scripts-are-executable
+      #   name: "📁 filesystem/⚙️ exec · Verify script permissions"
+      - id: check-case-conflict
+        name: "📁 filesystem/📝 names · Check case sensitivity"
+      - id: check-illegal-windows-names
+        name: "📁 filesystem/📝 names · Validate Windows filenames"
+      - id: check-symlinks
+        name: "📁 filesystem/🔗 symlink · Check symlink validity"
+      - id: destroyed-symlinks
+        name: "📁 filesystem/🔗 symlink · Detect broken symlinks"
+      # ------------------------------- 🌳 Git Tools ------------------------------- #
+      - id: check-merge-conflict
+        name: "🌳 git · Detect conflict markers"
+      - id: forbid-new-submodules
+        name: "🌳 git · Prevent submodule creation"
+      # - id: no-commit-to-branch
+      #   name: "🌳 git · Protect main branches"
+      #   args: ["--branch", "main", "--branch", "master"]
+      - id: check-added-large-files
+        name: "🌳 git · Block large file commits"
+        args: ["--maxkb=5000"]
+      - id: trailing-whitespace
+        name: "🧹 fs · Trim trailing whitespace"
+      - id: end-of-file-fixer
+        name: "🧹 fs · Ensure newline at EOF"
+
+  # Talisman Security Checks
+  # - repo: https://github.com/thoughtworks/talisman
+  #   rev: v1.37.0
+  #   hooks:
+  #     - id: talisman-commit
+  #     - id: talisman-push
+
+  ### PNG Images ###
+  # - repo: https://github.com/shssoichiro/oxipng
+  #   rev: v9.1.5
+  #   hooks:
+  #     - id: oxipng
+  #       name: "🖼️ images · Optimize PNG files"
+  #       args: ["-o", "4", "--strip", "safe", "--alpha"]
+
+  - repo: local
+    hooks:
+      - id: commitlint
+        name: commitlint
+        entry: bash -c 'npx commitlint --config "$(git rev-parse --show-toplevel)/config/.commitlint.config.cjs" --edit "$1"' --
+        language: system
+        stages: [commit-msg]
+
+
+
+---
+# Pre-commit hooks for UBI repository
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+default_language_version:
+  python: python3.12
+
+repos:
+  # Core formatting and file hygiene hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      # Remove trailing whitespace
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      # Ensure files end with a newline
+      - id: end-of-file-fixer
+      # Normalize line endings to LF
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      # Prevent large files from being committed
+      - id: check-added-large-files
+        args: [--maxkb=500]
+      # Check for merge conflict markers
+      - id: check-merge-conflict
+      # Check YAML syntax (exclude GitHub Actions - they use yamllint below with custom rules)
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+        exclude: ^\.github/workflows/
+      # Check TOML syntax
+      - id: check-toml
+      # Check JSON syntax (exclude JSONC files)
+      - id: check-json
+        exclude: ^(\.vscode/.*\.json|\.devcontainer/.*\.json)$
+      # Prevent committing to main/master directly
+      - id: no-commit-to-branch
+        args: [--branch, main, --branch, master]
+
+  # YAML linting
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args:
+          - --config-data
+          - |
+            extends: default
+            rules:
+              line-length:
+                max: 120
+                level: warning
+              comments:
+                min-spaces-from-content: 1
+              indentation:
+                spaces: 2
+                indent-sequences: consistent
+              document-start: disable
+              truthy:
+                allowed-values: ['true', 'false', 'yes', 'no', 'on', 'off']
+                level: warning
+              braces:
+                min-spaces-inside: 0
+                max-spaces-inside: 1
+                level: warning
+        exclude: ^(tasks/.*\.yml|\.github/workflows/.*)$
+
+  # Markdown linting
+  # Note: CHANGELOG.md is excluded because it's auto-generated by bump-my-version
+  # and has a specific format that should not be manually modified
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.41.0
+    hooks:
+      - id: markdownlint
+        args:
+          - --fix
+          - --config
+          - .markdownlint.json
+        exclude: ^(CHANGELOG\.md|\.github/)
+
+  # Dockerfile linting
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.12.0
+    hooks:
+      - id: hadolint-docker
+        args:
+          - --ignore
+          - DL3008  # Pin versions in apt-get install (handled by base image)
+          - --ignore
+          - DL3009  # Delete apt cache (handled by base image)
+
+  # Shell script linting
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
+        args:
+          - --severity=warning
+          - --exclude=SC1091  # Not following sourced files
+
+  # Python formatting with Black
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        language_version: python3.12
+        args: [--config, pyproject.toml]
+
+  # Python linting with Ruff
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.10
+    hooks:
+      # Run the linter
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+      # Run the formatter
+      - id: ruff-format
+
+  # Check for secrets (additional security)
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args:
+          - --baseline
+          - .secrets.baseline
+        exclude: >
+          (?x)^(
+            poetry.lock|
+            package-lock.json|
+            \.vscode/.*|
+            \.git/.*
+          )$
+
+ci:
+  autofix_commit_msg: |
+    chore: auto-fix pre-commit hooks
+
+    [skip ci]
+  autofix_prs: true
+  autoupdate_commit_msg: 'chore: pre-commit autoupdate'
+  autoupdate_schedule: monthly
+  skip: []
+  submodules: false
+
+---
+# Documentation: https://pre-commit.com/
+# Reference: https://gatlenculp.github.io/gatlens-opinionated-template/precommit/
+exclude: |
+  (?x)^(
+    \.history/.*|
+    .*\.cache.*/.*|
+    .*venv.*/.*|
+    node_modules/.*|
+    reports/.*
+  )$
+default_language_version:
+  python: python3.12
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+repos:
+  # ---------------------------------------------------------------------------- #
+  #                              🔒 Security Tools                               #
+  # ---------------------------------------------------------------------------- #
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+        name: "🔒 security · Detect hardcoded secrets"
+
+  # ---------------------------------------------------------------------------- #
+  #                          📁 Filesystem & Git Checks                          #
+  # ---------------------------------------------------------------------------- #
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      # Filesystem Checks
+      - id: check-executables-have-shebangs
+        name: "📁 filesystem · Verify shebang presence"
+      - id: check-shebang-scripts-are-executable
+        name: "📁 filesystem · Verify script permissions"
+      - id: check-case-conflict
+        name: "📁 filesystem · Check case sensitivity conflicts"
+      - id: check-illegal-windows-names
+        name: "📁 filesystem · Validate Windows filenames"
+      - id: check-symlinks
+        name: "📁 filesystem · Check symlink validity"
+      - id: destroyed-symlinks
+        name: "📁 filesystem · Detect broken symlinks"
+      # Git Checks
+      - id: check-merge-conflict
+        name: "🌳 git · Detect conflict markers"
+      - id: forbid-new-submodules
+        name: "🌳 git · Prevent submodule creation"
+      - id: check-added-large-files
+        name: "🌳 git · Block large file commits"
+        args: ["--maxkb=5000"]
+      - id: no-commit-to-branch
+        name: "🌳 git · Protect main branches"
+        args: ["--branch", "main", "--branch", "master"]
+
+  # ---------------------------------------------------------------------------- #
+  #                            🔍 Code Quality Tools                             #
+  # ---------------------------------------------------------------------------- #
+
+  ### Python ###
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.9
+    hooks:
+      - id: ruff-format
+        name: "🐍 python · Format with Ruff"
+      - id: ruff
+        name: "🐍 python · Lint and auto-fix with Ruff"
+        args: [--fix]
+
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.9.1
+    hooks:
+      - id: nbqa-ruff-format
+        name: "📓 notebook · Format notebooks with Ruff"
+      - id: nbqa-ruff
+        name: "📓 notebook · Lint and auto-fix notebooks with Ruff"
+        args: [--fix]
+
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.25
+    hooks:
+      - id: validate-pyproject
+        name: "🐍 python · Validate pyproject.toml"
+        additional_dependencies: ["validate-pyproject-schema-store[all]"]
+
+  ### JavaScript & TypeScript ###
+  - repo: https://github.com/biomejs/pre-commit
+    rev: "v0.6.1"
+    hooks:
+      - id: biome-check
+        name: "🟨 javascript · Lint, format, and safe fixes with Biome"
+        additional_dependencies: ["@biomejs/biome@2.4.10"]
+
+  ### Markdown ###
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 1.0.0
+    hooks:
+      - id: mdformat
+        name: "📝 markdown · Format with mdformat"
+
+  ### Shell ###
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
+        name: "🐚 shell · Lint shell scripts"
+
+  ### Data & Config Validation ###
+  - repo: https://github.com/openstack/bashate
+    rev: 2.1.1
+    hooks:
+      - id: bashate
+        args: ["--ignore", "E006"]
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.37.1
+    hooks:
+      - id: check-github-workflows
+        name: "🐙 github-actions · Validate GitHub workflow files"
+      - id: check-github-actions
+        name: "🐙 github-actions · Validate GitHub action files"
+      - id: check-taskfile
+        name: "✅ taskfile · Validate Task configuration"
+
+  ### Spelling ###
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.2
+    hooks:
+      - id: codespell
+        name: "✏️ spelling · Check for misspellings with codespell"
+        additional_dependencies:
+          - tomli
+
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.32.0
+    hooks:
+      - id: typos
+        name: "✏️ spelling · Check for typos with typos"
+
+  ### License ###
+  - repo: https://github.com/google/addlicense
+    rev: v1.1.1
+    hooks:
+      - id: addlicense
+        name: "📄 license · Check and add license headers"
+        args: ["-c", "Ego Hygiene", "-l", "mit", "-ignore", "**/*.json", "-ignore", "**/*.yml", "-ignore", "**/*.yaml", "-ignore", "**/*.toml", "-ignore", "**/*.md", "-ignore", "**/*.txt", "-ignore", "reports/**"]
+
+  ### MegaLinter ###
+  - repo: https://github.com/oxsecurity/megalinter
+    rev: v8
+    hooks:
+      # Runs MegaLinter on changed files only (skips linters that run in project mode)
+      - id: megalinter-incremental
+        stages:
+          - pre-commit
+      # Runs full MegaLinter scan (all files)
+      # - id: megalinter-full
+      #   stages:
+      #     - pre-push
+
+  - repo: https://github.com/fsfe/reuse-tool
+    rev: v6.2.0
+    hooks:
+      - id: reuse
+        name: "📄 license · Validate REUSE compliance"
+
+exclude: |
+  (?x)^(
+    .*\.lock|
+    (.*/)?package-lock\.json|
+    (.*/)?pnpm-lock\.yaml|
+    (.*/)?npm-shrinkwrap\.json|
+    .*\.ico
+  )$
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-json
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.33.0
+    hooks:
+      - id: check-github-workflows
+
+  - repo: local
+    hooks:
+      - id: validate-repository-metadata
+        name: validate repository metadata
+        entry: python scripts/validate-metadata.py
+        language: python
+        additional_dependencies:
+          - pyyaml>=6.0
+        pass_filenames: false
+
+      - id: prevent-ds-store
+        name: prevent .DS_Store files
+        entry: ./scripts/prevent-ds-store.sh
+        language: system
+        pass_filenames: false
+
+      - id: latexindent-format
+        name: latexindent format (when available)
+        entry: ./scripts/format-latex.sh
+        language: system
+        files: \.(tex|bib)$

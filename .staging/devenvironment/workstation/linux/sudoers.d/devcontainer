@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------
+# Development Containers
+# ------------------------------------------------------------------------------
+#
+# Developer-friendly sudo configuration.
+#
+# Suitable for:
+#
+# - Dev Containers
+# - Local Docker development
+# - CI runners
+# - Disposable environments
+#
+# cspell:ignore badpass
+#
+# ------------------------------------------------------------------------------
+
+Defaults !requiretty
+Defaults !admin_flag
+
+Defaults lecture=never
+
+Defaults !syslog
+
+Defaults mail_badpass
+Defaults !mail_all
+
+Defaults env_keep += "DEBIAN_FRONTEND NODE_ENV PATH LANG LC_ALL PYTHONPATH NPM_CONFIG_PREFIX"
+
+%sudo ALL=(ALL) NOPASSWD:ALL

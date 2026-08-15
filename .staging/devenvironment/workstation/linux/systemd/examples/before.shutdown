@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# ------------------------------------------------------------------------------
+# System Shutdown Hook
+# ------------------------------------------------------------------------------
+#
+# Executed during system shutdown.
+#
+# Reference:
+# https://unix.stackexchange.com/questions/39226/how-to-run-a-script-with-systemd-right-before-shutdown
+#
+# Notes:
+# - Root filesystem may already be read-only.
+# - Network may already be unavailable.
+# - Keep execution fast.
+#
+# ------------------------------------------------------------------------------
+
+exit 0

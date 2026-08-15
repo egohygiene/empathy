@@ -1,0 +1,227 @@
+# ==============================================================================
+# Sanctuary — Universal Git Configuration
+# ==============================================================================
+#
+# Purpose:
+#   Portable, opinionated Git defaults for Linux, macOS, Dev Containers,
+#   Codespaces, and CI-oriented development environments.
+#
+# Requirements:
+#   Git 2.38+ is recommended. Some quality-of-life settings are ignored by
+#   older Git versions, but zdiff3 and push.autoSetupRemote require modern Git.
+#
+# Machine-local identity, credentials, signing, editor, and platform settings
+# belong in ~/.gitconfig.local, which is loaded at the end of this file.
+#
+# Example ~/.gitconfig.local:
+#
+#   [user]
+#       name = Alan Szmyt
+#       email = alan@example.com
+#
+# Documentation:
+#   https://git-scm.com/docs/git-config
+#
+# Validate after installation:
+#   git config --global --list --show-origin
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Core filesystem behavior
+# ------------------------------------------------------------------------------
+
+[core]
+    excludesFile = ~/.gitignore_global
+    attributesFile = ~/.gitattributes_global
+    whitespace = trailing-space,space-before-tab
+
+# ------------------------------------------------------------------------------
+# Repository initialization
+# ------------------------------------------------------------------------------
+
+[init]
+    defaultBranch = main
+
+# ------------------------------------------------------------------------------
+# User interface and discoverability
+# ------------------------------------------------------------------------------
+
+[color]
+    ui = auto
+
+[column]
+    ui = auto
+
+[help]
+    autocorrect = prompt
+
+[status]
+    branch = true
+    showStash = true
+    submoduleSummary = true
+
+# Show recently updated branches and version-like tags first.
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+# ------------------------------------------------------------------------------
+# Commit behavior
+# ------------------------------------------------------------------------------
+
+[commit]
+    verbose = true
+
+# ------------------------------------------------------------------------------
+# Fetch, pull, and push
+# ------------------------------------------------------------------------------
+
+[fetch]
+    prune = true
+    writeCommitGraph = true
+
+# Refuse ambiguous merge commits during pull. Rebase or merge explicitly when
+# local and upstream histories have diverged.
+[pull]
+    ff = only
+
+[push]
+    default = current
+    autoSetupRemote = true
+
+# ------------------------------------------------------------------------------
+# Rebase and merge
+# ------------------------------------------------------------------------------
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+
+[merge]
+    autoStash = true
+    conflictStyle = zdiff3
+
+# Remember conflict resolutions and automatically stage their reuse.
+[rerere]
+    enabled = true
+    autoUpdate = true
+
+# ------------------------------------------------------------------------------
+# Diff behavior
+# ------------------------------------------------------------------------------
+
+[diff]
+    algorithm = histogram
+    colorMoved = default
+    mnemonicPrefix = true
+    renames = true
+
+# ------------------------------------------------------------------------------
+# Transport
+# ------------------------------------------------------------------------------
+
+[protocol]
+    version = 2
+
+# ------------------------------------------------------------------------------
+# Aliases
+# ------------------------------------------------------------------------------
+
+[alias]
+    # Status
+    s = status --short --branch
+    ss = status --short
+    status-full = status
+
+    # Staging
+    a = add
+    aa = add --all
+    unstage = restore --staged
+
+    # Branches
+    b = branch
+    ba = branch --all
+    branches = branch --sort=-committerdate
+
+    # Switching and restoration
+    sw = switch
+    swc = switch --create
+    rs = restore
+
+    # Fetch and synchronization
+    f = fetch --all --prune
+    sync = "!f() { git fetch --all --prune && git pull --ff-only \"$@\"; }; f"
+
+    # Initialize and update every submodule to the commit recorded by the
+    # superproject.
+    subupdate = submodule update --init --recursive
+
+    # Update every submodule from its configured remote-tracking branch and
+    # merge the fetched commit into the current submodule branch.
+    subsync = submodule update --init --recursive --remote --merge
+
+    # Pull the current repository, then initialize/update all nested submodules.
+    pullall = "!f() { git pull \"$@\" && git submodule update --init --recursive; }; f"
+
+    # Push the current repository and any referenced submodule commits that are
+    # not yet available from their configured remotes.
+    pushall = push --recurse-submodules=on-demand
+
+    # Commit
+    c = commit
+    ca = commit --amend
+    amend = commit --amend --no-edit
+    fixup = commit --fixup
+
+    # Push and pull
+    pl = pull
+    ps = push
+
+    # Diff
+    d = diff
+    ds = diff --staged
+    dw = diff --word-diff
+
+    # Logs
+    lg = log --graph --decorate --oneline --all
+    lga = log --graph --decorate --abbrev-commit --all --pretty=format:"%C(auto)%h %C(cyan)%d%Creset %s %C(green)(%cr) %C(blue)<%an>%Creset"
+    last = log -1 --stat HEAD
+
+    # Stash
+    st = stash
+    sp = stash pop
+    sl = stash list
+    sa = stash push --include-untracked
+
+    # Tags
+    tags = tag --list
+
+    # Inspection
+    root = rev-parse --show-toplevel
+    aliases = config --get-regexp ^alias\\.
+    remotes = remote --verbose
+    contributors = shortlog --summary --numbered --all
+
+    # DESTRUCTIVE: discard tracked changes and remove untracked files and
+    # directories. Ignored files are intentionally preserved because -x is not
+    # used. An optional revision may be provided, for example:
+    #
+    #   git reset-hard origin/main
+    #
+    # Inspect `git status` and `git clean -nd` before running this alias.
+    reset-hard = "!f() { git reset --hard \"${1:-HEAD}\" && git clean -df; }; f"
+
+# ------------------------------------------------------------------------------
+# Machine-local overrides
+# ------------------------------------------------------------------------------
+#
+# This include is intentionally last so machine-specific values override the
+# portable defaults above. Git safely ignores the include when the file does
+# not exist.
+
+[include]
+    path = ~/.gitconfig.local

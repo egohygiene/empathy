@@ -1,0 +1,18 @@
+[Unit]
+Description=ACPI Wake Device Override (Razer Laptop)
+
+[Service]
+Type=oneshot
+
+# RP05 was identified as a problematic ACPI wake source on this machine.
+#
+# Verify current wake devices with:
+#
+#   cat /proc/acpi/wakeup
+#
+# Before enabling on other hardware.
+#
+ExecStart=/bin/sh -c "echo RP05 > /proc/acpi/wakeup"
+
+[Install]
+WantedBy=multi-user.target

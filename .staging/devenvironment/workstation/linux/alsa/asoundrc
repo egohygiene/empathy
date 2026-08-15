@@ -1,0 +1,18 @@
+# ------------------------------------------------------------------------------
+# ALSA User Configuration
+# ------------------------------------------------------------------------------
+#
+# This file intentionally contains no active configuration.
+#
+# Add hardware-specific ALSA configuration here when needed.
+#
+# Examples:
+#   - USB DAC default device
+#   - HDMI output
+#   - Loopback devices
+#   - Virtual microphones
+#
+# Documentation:
+#   https://www.alsa-project.org/wiki/Asoundrc
+#
+# ------------------------------------------------------------------------------

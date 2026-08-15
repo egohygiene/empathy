@@ -1,0 +1,17 @@
+# Core
+eval_all "Brewfile.core"
+
+# Development
+eval_all "Brewfile.dev"
+
+# AI
+eval_all "Brewfile.ai"
+
+# Media
+eval_all "Brewfile.media"
+
+# Desktop
+eval_all "Brewfile.desktop"
+
+# Personal
+eval_all "Brewfile.personal"

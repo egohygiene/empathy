@@ -1,0 +1,36 @@
+# ------------------------------------------------------------------------------
+# Production Hardening
+# ------------------------------------------------------------------------------
+#
+# Suitable for:
+#
+# - Traditional Linux servers
+# - Multi-user systems
+# - Security-focused environments
+#
+# Review carefully before use in:
+#
+# - Containers
+# - CI
+# - Automation
+# - Ansible-managed systems
+#
+# ------------------------------------------------------------------------------
+
+Defaults requiretty
+
+Defaults admin_flag
+
+Defaults lecture=always
+
+Defaults mail_all
+
+Defaults syslog
+
+Defaults env_reset
+
+Defaults timestamp_timeout=0
+
+Defaults !env_keep
+
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"

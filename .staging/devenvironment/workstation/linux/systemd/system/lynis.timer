@@ -1,0 +1,12 @@
+[Unit]
+Description=Weekly Lynis Security Audit
+
+[Timer]
+OnCalendar=weekly
+
+Persistent=true
+
+Unit=lynis.service
+
+[Install]
+WantedBy=timers.target

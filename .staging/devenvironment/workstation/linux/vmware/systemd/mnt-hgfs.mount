@@ -1,0 +1,19 @@
+[Unit]
+Description=VMware Shared Folders
+Documentation=https://github.com/vmware/open-vm-tools
+
+ConditionVirtualization=vmware
+
+After=sys-fs-fuse-connections.mount
+
+[Mount]
+What=vmhgfs-fuse
+
+Where=/mnt/hgfs
+
+Type=fuse
+
+Options=default_permissions,allow_other
+
+[Install]
+WantedBy=multi-user.target

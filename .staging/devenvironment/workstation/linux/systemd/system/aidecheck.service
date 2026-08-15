@@ -1,0 +1,16 @@
+[Unit]
+Description=AIDE Integrity Check
+Documentation=man:aide(1)
+
+[Service]
+Type=oneshot
+
+ExecStart=/usr/bin/aide \
+    --check \
+    --config=/etc/aide/aide.conf
+
+Nice=10
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=multi-user.target

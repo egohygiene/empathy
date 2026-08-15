@@ -1,0 +1,31 @@
+# ------------------------------------------------------------------------------
+# asdf Configuration
+# ------------------------------------------------------------------------------
+#
+# Purpose:
+#   Configure the asdf version manager with portable developer-friendly
+#   defaults.
+#
+# Documentation:
+#   https://asdf-vm.com/manage/configuration.html
+#
+# ------------------------------------------------------------------------------
+
+# Do not automatically fall back to legacy version files (e.g. .nvmrc,
+# .ruby-version) unless explicitly enabled.
+legacy_version_file = no
+
+# Use stable releases by default.
+use_release_candidates = no
+
+# Remove downloaded archives after successful installation.
+always_keep_download = no
+
+# Refresh the plugin repository every 60 minutes.
+plugin_repository_last_check_duration = 60
+
+# Allow the community short-name plugin repository.
+disable_plugin_short_name_repository = no
+
+# Automatically determine installation concurrency.
+concurrency = auto

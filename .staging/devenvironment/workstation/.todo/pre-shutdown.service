@@ -1,0 +1,14 @@
+[Unit]
+Description=Processes to run before system halt.
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target kexec.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/true
+ExecStop=/usr/local/bin/pre-shutdown
+TimeoutStartSec=0
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target kexec.target

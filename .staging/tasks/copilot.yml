@@ -1,0 +1,32 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+vars:
+  COPILOT_HOOK_CONFIG: '{{.COPILOT_HOOK_CONFIG | default (joinPath .ROOT_DIR ".github/hooks/ego-hygiene.json")}}'
+  COPILOT_HOOK_TEST: >-
+    {{.COPILOT_HOOK_TEST |
+    default (joinPath .ROOT_DIR
+    "scripts/copilot-hooks/tests/test-pre-tool-use.sh")}}
+
+tasks:
+  hooks:validate:
+    desc: Validate every Copilot hook configuration as JSON
+    preconditions:
+      - sh: command -v jq >/dev/null 2>&1
+        msg: jq is required to validate Copilot hook configuration.
+      - sh: test -f "{{.COPILOT_HOOK_CONFIG}}"
+        msg: 'Copilot hook configuration not found: {{.COPILOT_HOOK_CONFIG}}'
+    cmds:
+      - jq empty "{{.COPILOT_HOOK_CONFIG}}"
+
+  hooks:test:
+    desc: Run the Copilot hook test fixtures
+    preconditions:
+      - sh: command -v bash >/dev/null 2>&1
+        msg: Bash is required to run the Copilot hook tests.
+      - sh: test -f "{{.COPILOT_HOOK_TEST}}"
+        msg: 'Copilot hook test not found: {{.COPILOT_HOOK_TEST}}'
+    cmds:
+      - bash "{{.COPILOT_HOOK_TEST}}"

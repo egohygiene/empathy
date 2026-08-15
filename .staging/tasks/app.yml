@@ -1,0 +1,268 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+vars:
+  APP_DIR: '{{.APP_DIR | default (joinPath .ROOT_DIR "apps/egohygiene")}}'
+  INTEGRATION_TEST_SCRIPT: >-
+    {{.INTEGRATION_TEST_SCRIPT |
+    default (joinPath .ROOT_DIR
+    ".engineering/scripts/run-flutter-integration-tests.sh")}}
+  RIVE_OS: '{{if eq OS "darwin"}}macos{{else}}{{OS}}{{end}}'
+
+tasks:
+  _require-app:
+    internal: true
+    preconditions:
+      - sh: command -v fvm >/dev/null 2>&1
+        msg: FVM is not installed or is not available on PATH.
+      - sh: test -d "{{.APP_DIR}}"
+        msg: 'Flutter application directory not found: {{.APP_DIR}}'
+      - sh: test -f "{{.APP_DIR}}/pubspec.yaml"
+        msg: 'Flutter pubspec not found: {{.APP_DIR}}/pubspec.yaml'
+
+  setup:
+    desc: Install the configured Flutter SDK, dependencies, and Rive binaries
+    deps: [_require-app]
+    cmds:
+      - fvm install --setup
+      - task: pub-get
+      - task: setup:rive
+
+  setup:rive:
+    desc: Install the Rive native testing binaries for the current host
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - >-
+        fvm dart run rive_native:setup
+        --verbose
+        --clean
+        --platform "{{.RIVE_OS}}"
+
+  clean:
+    desc: Remove generated application artifacts while preserving the FVM SDK
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm flutter clean
+      - rm -rf ".dart_tool" "build" "coverage"
+
+  reset:
+    desc: Remove application artifacts and the project FVM SDK cache
+    summary: |
+      Performs the normal application clean and removes the project Flutter SDK
+      cache, which causes FVM to download SDK artifacts again.
+
+      Run with: task reset CONFIRM_RESET=yes
+    deps: [_require-app]
+    requires:
+      vars:
+        - name: CONFIRM_RESET
+          enum: ["yes"]
+    cmds:
+      - task: clean
+      - rm -rf ".fvm/flutter_sdk/bin/cache"
+
+  pub-get:
+    desc: Install application dependencies
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm flutter pub get
+
+  upgrade:
+    desc: Upgrade application dependencies across major versions
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm flutter pub upgrade --major-versions
+
+  outdated:
+    desc: Report outdated application dependencies
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm flutter pub outdated
+
+  generate:
+    desc: Generate Slang, Drift, Freezed, and other build_runner outputs
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm dart run slang
+      - fvm dart run build_runner build --delete-conflicting-outputs
+
+  analyze:
+    desc: Run strict Flutter static analysis
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm flutter analyze
+
+  dart:fix:
+    desc: Apply available Dart analyzer fixes
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm dart fix --apply
+
+  dart:format:
+    desc: Format the application with Dart's canonical formatter
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm dart format .
+
+  dart:format:check:
+    desc: Check Dart formatting without modifying files
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - >-
+        fvm dart format
+        --output=none
+        --set-exit-if-changed
+        "lib"
+        "test"
+        "integration_test"
+
+  test:
+    desc: Run unit and widget tests
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    env:
+      FLUTTER_TEST: "true"
+    cmds:
+      - fvm flutter test
+
+  test:list:
+    desc: List declared Flutter test and suite names without executing them
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    set: [pipefail]
+    env:
+      FLUTTER_TEST: "true"
+    preconditions:
+      - sh: command -v jq >/dev/null 2>&1
+        msg: jq is required to parse Flutter's JSON test reporter output.
+    cmds:
+      - >-
+        fvm flutter test --reporter=json
+        | jq --raw-output 'select(.type == "testStart") | .test.name'
+
+  test:coverage:
+    desc: Run tests and generate the LCOV coverage report
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    env:
+      FLUTTER_TEST: "true"
+    cmds:
+      - fvm flutter test --coverage
+
+  test:golden:
+    desc: Run golden visual-regression tests
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    env:
+      FLUTTER_TEST: "true"
+    cmds:
+      - fvm flutter test "test/golden"
+
+  test:golden:update:
+    desc: Regenerate golden references after intentional visual changes
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    env:
+      FLUTTER_TEST: "true"
+    cmds:
+      - fvm flutter test "test/golden" --update-goldens
+
+  test:integration:
+    desc: Run the complete Chrome integration-test suite
+    deps: [_require-app]
+    preconditions:
+      - sh: test -x "{{.INTEGRATION_TEST_SCRIPT}}"
+        msg: 'Integration-test runner is missing or not executable: {{.INTEGRATION_TEST_SCRIPT}}'
+    cmds:
+      - '"{{.INTEGRATION_TEST_SCRIPT}}" "{{.APP_DIR}}" all'
+
+  test:integration:ci:
+    desc: Run the CI Chrome integration-test subset on Linux
+    deps: [_require-app]
+    platforms: [linux]
+    env:
+      REQUIRE_XVFB: "1"
+    preconditions:
+      - sh: test -x "{{.INTEGRATION_TEST_SCRIPT}}"
+        msg: 'Integration-test runner is missing or not executable: {{.INTEGRATION_TEST_SCRIPT}}'
+      - sh: command -v xvfb-run >/dev/null 2>&1
+        msg: xvfb-run is required for the CI integration-test task.
+    cmds:
+      - '"{{.INTEGRATION_TEST_SCRIPT}}" "{{.APP_DIR}}" ci'
+
+  run:
+    desc: Run the application on the currently selected device
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    interactive: true
+    cmds:
+      - fvm flutter run
+
+  run:web:
+    desc: Run the application in Google Chrome
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    interactive: true
+    cmds:
+      - fvm flutter run --device-id chrome
+
+  build:web:
+    desc: Build the optimized production Web application
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm flutter build web --release
+
+  build:android:
+    desc: Build the production Android APK
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    cmds:
+      - fvm flutter build apk --release
+
+  build:ios:
+    desc: Build the unsigned production iOS application
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    platforms: [darwin]
+    cmds:
+      - fvm flutter build ios --release --no-codesign
+
+  build:linux:
+    desc: Build the production Linux desktop application
+    deps: [_require-app]
+    dir: "{{.APP_DIR}}"
+    platforms: [linux]
+    cmds:
+      - fvm flutter build linux --release
+
+  build:all:
+    desc: Build Web, Android, and supported host-native release targets
+    deps: [_require-app]
+    cmds:
+      - task: build:web
+      - task: build:android
+      - task: build:linux
+      - task: build:ios
+
+  ci:local:
+    desc: Run the local application validation sequence used by CI
+    deps: [_require-app]
+    cmds:
+      - task: pub-get
+      - task: generate
+      - task: dart:format:check
+      - task: analyze
+      - task: test:coverage

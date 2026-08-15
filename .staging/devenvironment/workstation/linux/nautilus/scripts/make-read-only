@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# ------------------------------------------------------------------------------
+# make-read-only
+#
+# Sets selected files and directories to read-only.
+#
+# Intended for use as a Nautilus script.
+#
+# ------------------------------------------------------------------------------
+
+chmod -R a-w "$@"

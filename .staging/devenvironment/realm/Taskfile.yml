@@ -1,0 +1,157 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# Taskfile for managing development tasks in a multi-platform environment
+
+version: "3"
+
+vars:
+  ARCH:
+    sh: uname -m
+  PLATFORM:
+    sh: uname -s
+
+includes:
+  lint: ./tasks/lint.yml
+  utils: ./tasks/utils.yml
+  dev: ./tasks/dev.yml
+  write: ./tasks/write.yml
+  security: ./tasks/security.yml
+
+tasks:
+  setup:
+    desc: Install dependencies and set up the environment
+    cmds:
+      - task install:pnpm
+      - task install:poetry
+      - task hooks:install
+    silent: true
+
+  install:poetry:
+    desc: Install Python dependencies using Poetry
+    cmds:
+      - poetry install --no-interaction --no-root
+    silent: true
+
+  install:pnpm:
+    desc: Install Node.js dependencies using pnpm
+    cmds:
+      - pnpm install --prefer-offline --ignore-workspace --frozen-lockfile
+    silent: true
+
+  pnpm:sync:
+    desc: Synchronize pnpm workspace dependencies
+    cmds:
+      - pnpm install --prefer-offline --ignore-workspace --lockfile-only
+      - task install:pnpm
+    silent: true
+
+  changeset:init:
+    desc: Initialize changesets for versioning
+    cmds:
+      - pnpm run changeset:init
+    silent: true
+
+  secrets:
+    desc: Scan for secrets using gitleaks
+    cmds:
+      - gitleaks detect --source . --config=.gitleaks.toml --redact
+
+  format:check:
+    cmds: ["pnpm run format:check"]
+
+  format:
+    cmds: ["pnpm run format"]
+
+  os:
+    cmds:
+      - 'echo "Running on {{OS}}/{{ARCH}}"'
+    silent: true
+
+  generate-tree:
+    desc: Generate docs/tree.md
+    cmds:
+      - bash ./scripts/generate-tree.sh
+    silent: true
+
+  act:sanity:
+    desc: Run act with correct container arch for Apple Silicon
+    cmds:
+      - |
+        echo "🧠 Detected: {{OS}}/{{ARCH}}"
+        if [[ "{{OS}}" == "darwin" && "{{ARCH}}" == "arm64" ]]; then
+          echo "⚙️  Apple Silicon detected — forcing container arch to linux/amd64"
+          act push --job sanity-check --container-architecture linux/amd64 --verbose
+        else
+          act push --job sanity-check --verbose
+        fi
+    silent: true
+
+  hooks:install:
+    desc: Install pre-commit hooks (inside Poetry venv)
+    cmds:
+      - poetry run pre-commit clean
+      - poetry run pre-commit install
+      - poetry run pre-commit autoupdate
+      - poetry run pre-commit install-hooks
+    silent: true
+
+  hooks:run:
+    desc: Run all pre-commit hooks on all files (Poetry)
+    cmds:
+      - poetry run pre-commit run --all-files
+    silent: true
+
+  hooks:ci:
+    desc: CI-safe pre-commit hook run (Poetry, no install)
+    cmds:
+      - poetry run pre-commit run --all-files --show-diff-on-failure --color always
+    silent: true
+
+  hooks:autoupdate:
+    desc: Update pre-commit hooks to latest versions
+    cmds:
+      - poetry run pre-commit autoupdate
+    silent: true
+
+  security:talisman:
+    desc: Run Talisman security checks
+    cmds:
+      - talisman --scan --loglevel warn --reportDirectory reports/talisman
+    silent: true
+
+  apps:ui:install:
+    desc: Install UI apps
+    cmds:
+      - task --dir apps/ui --taskfile apps/ui/Taskfile.yml setup
+    silent: true
+
+  ansible:test:
+    desc: Run local Ansible test playbook
+    dir: ansible
+    env:
+      ANSIBLE_CONFIG: "./.ansible.cfg"
+    cmds:
+      - ansible-playbook site.yml
+
+  linter:
+    desc: Run MegaLinter via Docker
+    cmds:
+      - docker compose --file .devcontainer/docker-compose.yml run --rm megalinter
+
+  devcontainer:backup:
+    desc: Backup devcontainer configuration
+    cmds:
+      - bash scripts/backup-container.sh
+    silent: true
+
+  docker:nuke:
+    desc: Remove all Docker containers, volumes, networks, and images
+    cmds:
+      - bash scripts/nuke-docker.sh --force
+    silent: true
+
+  docker:nuke:all:
+    desc: Remove all Docker containers, volumes, networks, and images
+    cmds:
+      - bash scripts/nuke-docker.sh --force --all --dangerous
+    silent: true

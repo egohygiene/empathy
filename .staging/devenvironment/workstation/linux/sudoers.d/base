@@ -1,0 +1,19 @@
+# ------------------------------------------------------------------------------
+# Base Configuration
+# ------------------------------------------------------------------------------
+#
+# General-purpose sudo configuration suitable for:
+#
+# - Workstations
+# - Development environments
+# - Shared images
+#
+# cspell:ignore badpass
+#
+# ------------------------------------------------------------------------------
+
+Defaults !requiretty
+Defaults !admin_flag
+Defaults lecture=never
+Defaults mail_badpass
+Defaults env_keep += "PATH LANG LC_ALL"

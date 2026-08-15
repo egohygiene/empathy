@@ -1,0 +1,146 @@
+---
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: "Sanctuary"
+site_description: "Documentation, knowledge garden, architecture, and generated repository intelligence."
+site_author: "Ego Hygiene"
+
+# Update per repository if desired.
+repo_name: "egohygiene/sanctuary"
+repo_url: "https://github.com/egohygiene/sanctuary"
+
+edit_uri: "edit/main/docs/"
+
+copyright: "Copyright © 2026 Ego Hygiene"
+
+theme:
+  name: "material"
+  language: "en"
+
+  palette:
+    - scheme: "default"
+      primary: "indigo"
+      accent: "indigo"
+      toggle:
+        icon: "material/brightness-7"
+        name: "Switch to dark mode"
+
+    - scheme: "slate"
+      primary: "indigo"
+      accent: "indigo"
+      toggle:
+        icon: "material/brightness-4"
+        name: "Switch to light mode"
+
+  features:
+    # General
+    - "announce.dismiss"
+
+    # Navigation
+    - "navigation.expand"
+    - "navigation.footer"
+    - "navigation.indexes"
+    - "navigation.instant"
+    - "navigation.instant.prefetch"
+    - "navigation.instant.progress"
+    - "navigation.path"
+    - "navigation.sections"
+    - "navigation.tabs"
+    - "navigation.tabs.sticky"
+    - "navigation.top"
+    - "navigation.tracking"
+
+    # Search
+    - "search.highlight"
+    - "search.share"
+    - "search.suggest"
+
+    # Content
+    - "content.action.edit"
+    - "content.action.view"
+    - "content.code.annotate"
+    - "content.code.copy"
+    - "content.tooltips"
+
+    # Table of Contents
+    - "toc.follow"
+
+  icon:
+    repo: "fontawesome/brands/github"
+
+plugins:
+  - "search"
+
+markdown_extensions:
+  - "abbr"
+  - "admonition"
+  - "attr_list"
+  - "def_list"
+  - "footnotes"
+  - "md_in_html"
+
+  - toc:
+      permalink: true
+      toc_depth: 4
+
+  - pymdownx.arithmatex:
+      generic: true
+
+  - pymdownx.betterem:
+      smart_enable: "all"
+
+  - "pymdownx.caret"
+  - "pymdownx.details"
+
+  - pymdownx.emoji:
+      emoji_index: pymdownx.emoji.twemoji
+      emoji_generator: pymdownx.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: "__span"
+      pygments_lang_class: true
+
+  - "pymdownx.inlinehilite"
+  - "pymdownx.keys"
+  - "pymdownx.mark"
+  - "pymdownx.smartsymbols"
+  - "pymdownx.snippets"
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: "mermaid"
+          class: "mermaid"
+          format: "pymdownx.superfences.fence_code_format"
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - "pymdownx.tilde"
+
+# Let directory structure drive navigation initially.
+# Add explicit navigation later when the repository stabilizes.
+#
+# nav:
+
+extra:
+  generator: false
+
+  social:
+    - icon: "fontawesome/brands/github"
+      link: "https://github.com/egohygiene/sanctuary"
+
+extra_css:
+  - "stylesheets/extra.css"
+
+extra_javascript:
+  - "javascripts/extra.js"
+
+watch:
+  - "docs"
+  - "garden"
+
+strict: false

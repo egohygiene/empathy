@@ -1,0 +1,64 @@
+# ==============================================================================
+# Lynis Profile
+# ==============================================================================
+#
+# Purpose:
+#   Baseline Lynis configuration for workstations, servers, containers, and
+#   golden images.
+#
+# Reference:
+#   https://github.com/CISOfy/lynis
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# General
+# ------------------------------------------------------------------------------
+
+# Disable ANSI color output for easier log processing.
+colors=no
+
+# Log file location.
+logfile=/var/log/lynis.log
+
+# Structured report output.
+report-file=/var/log/lynis-report.dat
+
+# Verbose output.
+verbose=no
+
+# Skip interactive prompts.
+quick=yes
+
+# ------------------------------------------------------------------------------
+# Auditor Information
+# ------------------------------------------------------------------------------
+
+# auditor=automated
+
+# ------------------------------------------------------------------------------
+# Test Selection
+# ------------------------------------------------------------------------------
+
+# Skip individual tests.
+# skip-test=AUTH-9328
+
+# Run only specific test groups.
+# tests-from-group=authentication,networking,storage
+
+# ------------------------------------------------------------------------------
+# Hardening Exceptions
+# ------------------------------------------------------------------------------
+
+# Allow compilers on systems where development tools are expected.
+# compiler-whitelist=/usr/bin/cc
+
+# ------------------------------------------------------------------------------
+# Reporting
+# ------------------------------------------------------------------------------
+
+# Include remediation guidance in reports.
+# show-report-solution=yes
+
+# Minimum security score before returning a non-zero exit code.
+# minimum-security-score=60

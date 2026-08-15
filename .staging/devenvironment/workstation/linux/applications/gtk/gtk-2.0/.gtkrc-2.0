@@ -1,0 +1,7 @@
+# GTK 2 legacy configuration.
+#
+# This file is preserved primarily for compatibility with older GTK2
+# applications. Most modern applications use GTK3 or GTK4 settings.
+
+gtk-recent-file-max-age = 0
+

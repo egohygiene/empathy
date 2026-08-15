@@ -1,0 +1,342 @@
+[tool.commitizen] # https://commitizen-tools.github.io/commitizen/config
+bump_message = "bump(release): v$current_version -> v$new_version"
+tag_format = "v$version"
+update_changelog_on_bump = true
+version = "0.0.1"
+version_files = ["pyproject.toml:version"]
+
+[tool.pytest.ini_options] # https://docs.pytest.org/en/latest/reference/reference.html#ini-options-ref
+minversion = "7.0"
+pythonpath = "."
+testpaths = ["assignment2/tests"]
+norecursedirs = ["assignment2/tests/helpers"]
+cache_dir = ".cache/.pytest_cache"
+addopts = "--color=yes --doctest-modules --exitfirst --failed-first --strict-config --strict-markers --verbosity=2"
+xfail_strict = true
+console_output_style = "progress"
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning"
+]
+required_plugins = "pytest-clarity>=1.0.1 pytest-cov>=4.0.0 pytest-deadfixtures>=2.2.1 pytest-dotenv>=0.5.2 pytest-forked>=1.6.0 pytest-instafail>=0.4.2 pytest-isort>=3.1.0 pytest-rerunfailures>=11.1.2 pytest-mock>=3.10.0 pytest-sugar>=0.9.6 pytest-xdist>=3.2.1"
+
+[tool.coverage.run] # https://coverage.readthedocs.io/en/latest/config.html#run
+branch = true
+command_line = "--module pytest"
+data_file = ".cache/coverage/.coverage"
+source = ["."]
+
+[tool.coverage.report] # https://coverage.readthedocs.io/en/latest/config.html#report
+fail_under = 80
+precision = 1
+show_missing = true
+skip_covered = false
+omit = [
+    "*conftest*",
+    "*/test*",
+]
+exclude_lines = [
+    "if __name__ == .__main__.:",
+    "def __subclasshook__",
+]
+
+[tool.coverage.html] # https://coverage.readthedocs.io/en/latest/config.html#html
+directory = ".cache/coverage/reports/html"
+
+[tool.coverage.xml] # https://coverage.readthedocs.io/en/latest/config.html#xml
+output = ".cache/coverage/reports/xml/coverage.xml"
+
+
+[tool.pylic] # https://github.com/ubersan/pylic
+safe_licenses = [
+    "Apache 2.0",
+    "Apache Software License",
+    "BSD 3-Clause",
+    "BSD License",
+    "BSD",
+    "Eclipse Public License 2.0 (EPL-2.0)",
+    "GNU General Public License v2 (GPLv2)",
+    "GNU Lesser General Public License v2 (LGPLv2)",
+    "GNU Library or Lesser General Public License (LGPL)",
+    "GPL v2",
+    "ISC License (ISCL)",
+    "MIT License",
+    "Mozilla Public License 2.0 (MPL 2.0)",
+    "Public Domain",
+    "Python Software Foundation License",
+    "The Unlicense (Unlicense)",
+]
+unsafe_packages = []
+
+[tool.flynt] # https://github.com/ikamensh/flynt
+line-length = 88
+verbose = true
+transform-concats = true
+exclude = [".venv"]
+
+
+
+# ---------------------------------------------------------
+# bump-my-version configuration
+# ---------------------------------------------------------
+[tool.bumpversion]
+current_version = "0.1.5"
+
+# SemVer parsing
+parse = "^(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)$"
+serialize = ["{major}.{minor}.{patch}"]
+
+# Replacement logic
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = true
+
+# Commit changes automatically
+commit = true
+message = "chore: bump version to {new_version}"
+allow_dirty = false
+
+# Tagging handled by CI publish workflow — keep disabled
+tag = false
+sign_tags = false
+tag_name = "{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+
+# ---------------------------------------------------------
+# Files to update
+# ---------------------------------------------------------
+
+# 1. VERSION file (source of truth)
+[[tool.bumpversion.files]]
+filename = "VERSION"
+search = "{current_version}"
+replace = "{new_version}"
+
+# 2. CHANGELOG insertion (inline block format like bump-my-version repo)
+#    This inserts the new version section ABOVE the existing top entry,
+#    matching exactly the style used by upstream bump-my-version.
+#    Pattern matches the first "## " after the "# Changelog" header.
+[[tool.bumpversion.files]]
+filename = "CHANGELOG.md"
+regex = true
+search = "(# Changelog\\n\\n)## "
+replace = "\\g<1>## {new_version} ({now:%Y-%m-%d})\n[Compare the full difference.](https://github.com/egohygiene/ubi/compare/{current_version}...{new_version})\n\n## "
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "-ra",
+    "--tb=short",
+    "--cov=.",
+    "--cov-report=term-missing",
+    "--cov-report=xml:.cache/coverage.xml",
+    "--cov-report=html:.cache/htmlcov",
+]
+log_cli = false
+log_cli_level = "INFO"
+
+[tool.coverage.run]
+branch = true
+source = ["."]
+omit = [
+    ".venv/*",
+    ".cache/*",
+    "tests/*",
+    "*/migrations/*",
+]
+data_file = ".cache/.coverage"
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 0
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+
+[tool.coverage.html]
+directory = ".cache/htmlcov"
+
+[tool.coverage.xml]
+output = ".cache/coverage.xml"
+
+[tool.codespell]
+skip = "poetry.lock,pnpm-lock.yaml,*.min.js,*.min.css"
+check-hidden = true
+
+[tool.mdformat]
+wrap = "keep"
+number = false
+end_of_line = "lf"
+
+[tool.poetry.scripts]
+licenses = "scripts.licenses:main"
+
+[tool.poetry.dependencies]
+# Project dependencies
+# Docs: https://python-poetry.org/docs/pyproject/#dependencies
+python = ">=3.10,<3.13"  # Specifies supported Python versions
+
+# Example dependencies
+art = "^5.9"
+bottleneck = "^1.3.7"
+cyberpandas = "^1.1.1"
+cython = "^0.29.34"
+geopandas = "^0.12.2"
+jupyter = "^1.0.0"
+jupyter-contrib-nbextensions = "^0.7.0"
+jupyterlab = "^3.6.2"
+itikz = "^0.1.5"
+kaleido = "0.2.1"
+lxml = "^4.9.2"
+matplotlib = "^3.7.1"
+more-itertools = "^9.1.0"
+notebook = {version = "^6.5.3", extras = ["json-logging"]}
+numpy = "^1.24.2"
+pandas = {extras = ["excel"], version = "^2.0.0"}
+pandas-path = "^0.3.0"
+plotly = "^5.14.1"
+plotly-geo = "^1.0.0"
+pydantic = "^1.10.6"
+pyjanitor = "^0.24.0"
+# pylatex = "1.4.0"
+pytest = "^7.2.2"
+scikit-learn = "^1.2.2"
+scipy = "^1.10.1"
+seaborn = "^0.12.2"
+statistics = "^1.0.3.5"
+tabulate = "^0.9.0"
+types-tabulate = "^0.9.0.1"
+wcmatch = "^8.4.1"
+jupyterlab-github = "^3.0.1"
+python-dotenv = "^1.0.0"
+marshmallow = "^3.19.0"
+spotipy = "^2.23.0"
+kneed = "^0.8.2"
+loguru = "^0.7.0"
+pydot = "^1.4.2"
+poethepoet = "^0.19.0"
+objsize = "^0.7.0"
+sqids = "^0.3.0"
+pylatex = "^1.4.2"
+opensource = "^1.0.2"
+
+
+[tool.commitizen]
+# Configuration for commitizen, a tool for managing conventional commits
+# Docs: https://commitizen-tools.github.io/commitizen/config
+bump_message = "bump(release): v$current_version -> v$new_version"
+tag_format = "v$version"
+update_changelog_on_bump = true
+version = "0.0.1"
+version_files = ["pyproject.toml:version"]
+
+[tool.pytest.ini_options]
+# Pytest configuration options
+# Docs: https://docs.pytest.org/en/latest/reference/reference.html#ini-options-ref
+minversion = "7.0"
+pythonpath = "."
+testpaths = ["app/tests"]
+norecursedirs = ["app/tests/helpers"]
+cache_dir = ".cache/.pytest_cache"
+addopts = "--color=yes --doctest-modules --exitfirst --failed-first --strict-config --strict-markers --verbosity=2"
+xfail_strict = true
+console_output_style = "progress"
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning"
+]
+required_plugins = "pytest-clarity>=1.0.1 pytest-cov>=4.0.0 pytest-deadfixtures>=2.2.1 pytest-dotenv>=0.5.2 pytest-forked>=1.6.0 pytest-instafail>=0.4.2 pytest-isort>=3.1.0 pytest-rerunfailures>=11.1.2 pytest-mock>=3.10.0 pytest-sugar>=0.9.6 pytest-xdist>=3.2.1"
+
+[tool.coverage.run]
+# Coverage.py run configuration
+# Docs: https://coverage.readthedocs.io/en/latest/config.html#run
+branch = true
+command_line = "--module pytest"
+data_file = ".cache/coverage/.coverage"
+source = ["."]
+
+[tool.coverage.report]
+# Coverage.py report configuration
+# Docs: https://coverage.readthedocs.io/en/latest/config.html#report
+fail_under = 80
+precision = 1
+show_missing = true
+skip_covered = false
+omit = [
+    "*conftest*",
+    "*/test*",
+]
+exclude_lines = [
+    "if __name__ == .__main__.:",
+    "def __subclasshook__",
+]
+
+[tool.coverage.html]
+# Coverage.py HTML report configuration
+# Docs: https://coverage.readthedocs.io/en/latest/config.html#html
+directory = ".cache/coverage/reports/html"
+
+[tool.coverage.xml]
+# Coverage.py XML report configuration
+# Docs: https://coverage.readthedocs.io/en/latest/config.html#xml
+output = ".cache/coverage/reports/xml/coverage.xml"
+
+[tool.poe]
+# Poethepoet configuration for task management
+# Docs: https://github.com/nat-n/poethepoet
+verbosity = -1
+include = ["tasks.toml"]
+envfile = "./config/poe.env"
+
+[tool.pylic]
+# Pylic configuration for license compliance checks
+# Docs: https://github.com/ubersan/pylic
+safe_licenses = [
+    "Apache 2.0",
+    "Apache Software License",
+    "BSD 3-Clause",
+    "BSD License",
+    "BSD",
+    "Eclipse Public License 2.0 (EPL-2.0)",
+    "GNU General Public License v2 (GPLv2)",
+    "GNU Lesser General Public License v2 (LGPLv2)",
+    "GNU Library or Lesser General Public License (LGPL)",
+    "GPL v2",
+    "ISC License (ISCL)",
+    "MIT License",
+    "Mozilla Public License 2.0 (MPL 2.0)",
+    "Public Domain",
+    "Python Software Foundation License",
+    "The Unlicense (Unlicense)",
+    "Historical Permission Notice and Disclaimer (HPND)",
+    "GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "BSD 3-Clause License",
+    "GNU Lesser General Public License v2 or later (LGPLv2+)",
+    "MPL-2.0",
+    "MIT",
+    "Apache License 2.0",
+]
+unsafe_packages = [
+    "kneed",
+    "pytoolconfig",
+    "app",
+    "python-lsp-jsonrpc",
+    "ypy-websocket",
+    "flynt"
+]
+
+[tool.flynt]
+# Flynt configuration for converting string formatting to f-strings
+# Docs: https://github.com/ikamensh/flynt
+line-length = 88
+verbose = true
+transform-concats = true
+exclude = [".venv"]

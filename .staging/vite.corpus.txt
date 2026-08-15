@@ -1,0 +1,2245 @@
+================================================================================
+BEGIN FILE: ego-hygiene/apps/egohygiene.io/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import react from "@vitejs/plugin-react";
+import fixReactVirtualized from 'esbuild-plugin-react-virtualized'
+
+export default defineConfig(() => {
+  return {
+    optimizeDeps: {
+      esbuildOptions: {
+        plugins: [fixReactVirtualized],
+      },
+    },
+    plugins: [
+      react(
+        {
+          jsxImportSource: "react",
+          jsxRuntime: "automatic",
+        }
+      )
+    ],
+    publicDir: "public",
+    server: {
+      port: 3000,
+      host: true,
+      strictPort: true,
+      cors: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*", // Allow all origins
+      },
+    },
+    resolve: {
+      alias: {
+        app: resolve(__dirname, "src", "app"),
+        components: resolve(__dirname, "src", "components"),
+        hooks: resolve(__dirname, "src", "hooks"),
+      },
+    },
+  };
+});
+================================================================================
+END FILE: ego-hygiene/apps/egohygiene.io/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: ego-hygiene/apps/map.gl/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import react from "@vitejs/plugin-react";
+import fixReactVirtualized from 'esbuild-plugin-react-virtualized'
+
+export default defineConfig(() => {
+  return {
+    optimizeDeps: {
+      esbuildOptions: {
+        plugins: [fixReactVirtualized],
+      },
+    },
+    plugins: [
+      react(
+        {
+          jsxImportSource: "react",
+          jsxRuntime: "automatic",
+        }
+      )
+    ],
+    publicDir: "public",
+    server: {
+      port: 3000,
+      host: true,
+      strictPort: true,
+      cors: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*", // Allow all origins
+      },
+    },
+    resolve: {
+      alias: {
+        app: resolve(__dirname, "src", "app"),
+        components: resolve(__dirname, "src", "components"),
+        hooks: resolve(__dirname, "src", "hooks"),
+      },
+    },
+  };
+});
+================================================================================
+END FILE: ego-hygiene/apps/map.gl/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: files/apps/vite-ts-react-template/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+    }),
+  ],
+  assetsInclude: ["/sb-preview/runtime.js"],
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
+});
+================================================================================
+END FILE: files/apps/vite-ts-react-template/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: files/deprecated/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+
+/**
+ * Vite Configuration File
+ *
+ * This configuration sets up a modern development environment for building a React component library.
+ * It includes support for TypeScript, React with SWC for faster builds, Tailwind CSS, path aliases,
+ * ESLint integration, PWA capabilities, and testing configurations using Vitest.
+ *
+ * @see https://vitejs.dev/config/
+ * @see https://vitest.dev/config/
+ */
+
+import { defineConfig } from "vite";
+import path, { resolve } from "node:path";
+import react from "@vitejs/plugin-react-swc";
+import dts from "vite-plugin-dts";
+import tailwindcss from "tailwindcss";
+import tsconfigPaths from "vite-tsconfig-paths";
+import eslintPlugin from "@nabla/vite-plugin-eslint";
+import { VitePWA } from "vite-plugin-pwa";
+import camelCase from "camelcase";
+import packageJson from "./package.json";
+
+// Helper function to get the package name in PascalCase
+const getPackageNameCamelCase = (): string => {
+  const name = packageJson.name;
+  if (!name) {
+    throw new Error("Name property in package.json is missing.");
+  }
+  return camelCase(name, { pascalCase: true });
+};
+
+// Get the package name from package.json
+const packageName = packageJson.name.split("/").pop() || packageJson.name;
+
+// Function to generate file names based on the format
+const fileName = (format: string): string => {
+  switch (format) {
+    case "es":
+      return `${packageName}.esm.js`;
+    case "cjs":
+      return `${packageName}.cjs.js`;
+    case "umd":
+      return `${packageName}.umd.js`;
+    case "iife":
+      return `${packageName}.iife.js`;
+    default:
+      return `${packageName}.${format}.js`;
+  }
+};
+
+// Export the Vite configuration
+export default defineConfig(({ mode }) => ({
+  // Base public path when serving in development or production
+  base: "./",
+
+  // Build options
+  build: {
+    // Directory to output built files
+    outDir: "./dist",
+
+    // Library mode configuration
+    lib: {
+      // Entry point of the library
+      entry: resolve(__dirname, "src/index.ts"),
+      // Library name in PascalCase (e.g., MyComponentLibrary)
+      name: getPackageNameCamelCase(),
+      // Output formats: ESM, CommonJS, UMD, and IIFE
+      formats: ["es", "cjs", "umd", "iife"],
+      // Output file names
+      fileName: (format) => fileName(format),
+    },
+    // Rollup options for externalizing dependencies and setting globals
+    rollupOptions: {
+      // External dependencies not to bundle into the library
+      external: ["react", "react-dom", "tailwindcss"],
+      output: {
+        // Global variables for UMD/IIFE builds
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          tailwindcss: "tailwindcss",
+        },
+      },
+    },
+    // Generate sourcemaps for better debugging
+    sourcemap: true,
+    // Empty the output directory before each build
+    emptyOutDir: true,
+    // Minification options using Terser
+    minify: "terser",
+    terserOptions: {
+      // Keep class names and function names (useful for debugging and class components)
+      keep_classnames: true,
+      keep_fnames: true,
+    },
+  },
+
+  // Plugins to use
+  plugins: [
+    // Resolve paths based on tsconfig paths
+    tsconfigPaths(),
+    // React plugin with SWC for faster builds
+    react(),
+    // Conditionally include plugins based on the mode
+    ...(mode === "test"
+      ? []
+      : [
+          // ESLint plugin for code linting
+          eslintPlugin(),
+          // PWA plugin for progressive web app features
+          VitePWA({
+            registerType: "autoUpdate",
+            includeAssets: [
+              "favicon.png",
+              "robots.txt",
+              "apple-touch-icon.png",
+              "icons/*.svg",
+              "fonts/*.woff2",
+            ],
+            manifest: {
+              theme_color: "#BD34FE",
+              icons: [
+                {
+                  src: "/android-chrome-192x192.png",
+                  sizes: "192x192",
+                  type: "image/png",
+                  purpose: "any maskable",
+                },
+                {
+                  src: "/android-chrome-512x512.png",
+                  sizes: "512x512",
+                  type: "image/png",
+                },
+              ],
+            },
+          }),
+        ]),
+    // Generate TypeScript declaration files
+    dts({
+      // Insert types entry in package.json
+      insertTypesEntry: true,
+      // Rollup types to a single declaration file
+      rollupTypes: true,
+    }),
+  ],
+
+  // CSS options
+  css: {
+    postcss: "./postcss.config.cjs",
+    // postcss: {
+    //   plugins: [tailwindcss],
+    // },
+  },
+
+  // Resolve options for path aliases
+  resolve: {
+    alias: [
+      // Alias '@' to './src' for easy imports
+      { find: "@", replacement: path.resolve(__dirname, "src") },
+      // Alias '@@' to project root
+      { find: "@@", replacement: path.resolve(__dirname) },
+    ],
+  },
+
+  // Test configuration for Vitest
+  test: {
+    // Enable global variables like 'describe' and 'it'
+    globals: true,
+    // Test environment ('jsdom' for browser-like environment)
+    environment: "jsdom",
+    // Setup files to run before each test suite
+    setupFiles: "src/setupTests.ts",
+    // Include patterns for test files
+    include: ["src/**/__tests__/*", "**/*.test.{ts,tsx}"],
+    // Clear mocks after each test
+    clearMocks: true,
+    // Coverage configuration
+    coverage: {
+      // Files to include in coverage
+      include: ["src/**/*"],
+      // Files to exclude from coverage
+      exclude: ["src/main.tsx"],
+      // Coverage thresholds
+      thresholds: {
+        statements: 100,
+        branches: 100,
+        functions: 100,
+        lines: 100,
+      },
+      // Coverage provider
+      provider: "istanbul",
+      // Enable coverage
+      enabled: true,
+      // Coverage reporters
+      reporter: ["text", "lcov"],
+      // Directory to output coverage reports
+      reportsDirectory: "coverage",
+    },
+  },
+
+  // Development server configuration
+  server: {
+    // Expose the server on all network interfaces
+    host: true,
+    // Port to run the development server
+    port: 3000,
+  },
+}));
+================================================================================
+END FILE: files/deprecated/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: files/example/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+});
+================================================================================
+END FILE: files/example/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: files/packages/common/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    // Enables React with SWC for faster builds
+    react(),
+    // Enables path aliasing based on tsconfig.json
+    tsconfigPaths(),
+  ],
+  build: {
+    lib: {
+      // Entry point for the library
+      entry: "./src/index.ts",
+      // Library name for UMD/IIFE builds
+      name: "ReactComponentsCommon",
+      // Output formats: ESM and CommonJS
+      formats: ["es", "cjs"],
+      // Output file names
+      fileName: (format) => `common.${format}.js`,
+    },
+    rollupOptions: {
+      // Externalize dependencies to prevent bundling
+      external: ["react", "react-dom", "@react-components/utils"],
+      output: {
+        // Global variables for UMD/IIFE builds
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "@react-components/utils": "ReactComponentsUtils",
+        },
+      },
+    },
+    sourcemap: true, // Optional: Enables source maps
+  },
+});
+================================================================================
+END FILE: files/packages/common/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: files/packages/utils/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    // Enables path aliasing based on tsconfig.json
+    tsconfigPaths(),
+  ],
+  css: {
+    postcss: "./postcss.config.cjs",
+  },
+  build: {
+    lib: {
+      // Entry point for the library
+      entry: "./src/index.ts",
+      // Library name for UMD/IIFE builds
+      name: "ReactComponentsUtils",
+      // Output formats: ESM and CommonJS
+      formats: ["es", "cjs"],
+      // Output file names
+      fileName: (format) => `utils.${format}.js`,
+    },
+    rollupOptions: {
+      // Externalize dependencies to prevent bundling
+      external: [],
+    },
+    sourcemap: true, // Optional: Enables source maps
+  },
+});
+================================================================================
+END FILE: files/packages/utils/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: files/ui/components/potree-viewer/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+
+/**
+ * Vite Configuration File
+ *
+ * This configuration sets up a modern development environment for building a React component library.
+ * It includes support for TypeScript, React with SWC for faster builds, Tailwind CSS, path aliases,
+ * ESLint integration, PWA capabilities, and testing configurations using Vitest.
+ *
+ * @see https://vitejs.dev/config/
+ * @see https://vitest.dev/config/
+ */
+
+import { defineConfig } from "vite";
+import path, { resolve } from "node:path";
+import react from "@vitejs/plugin-react-swc";
+import dts from "vite-plugin-dts";
+import tailwindcss from "tailwindcss";
+import tsconfigPaths from "vite-tsconfig-paths";
+import eslintPlugin from "@nabla/vite-plugin-eslint";
+import { VitePWA } from "vite-plugin-pwa";
+import camelCase from "camelcase";
+import packageJson from "./package.json";
+
+// Helper function to get the package name in PascalCase
+const getPackageNameCamelCase = (): string => {
+  const name = packageJson.name;
+  if (!name) {
+    throw new Error("Name property in package.json is missing.");
+  }
+  return camelCase(name, { pascalCase: true });
+};
+
+// Get the package name from package.json
+const packageName = packageJson.name.split("/").pop() || packageJson.name;
+
+// Function to generate file names based on the format
+const fileName = (format: string): string => {
+  switch (format) {
+    case "es":
+      return `${packageName}.esm.js`;
+    case "cjs":
+      return `${packageName}.cjs.js`;
+    case "umd":
+      return `${packageName}.umd.js`;
+    case "iife":
+      return `${packageName}.iife.js`;
+    default:
+      return `${packageName}.${format}.js`;
+  }
+};
+
+// Export the Vite configuration
+export default defineConfig(({ mode }) => ({
+  // Base public path when serving in development or production
+  base: "./",
+
+  // Build options
+  build: {
+    // Directory to output built files
+    outDir: "./dist",
+
+    // Library mode configuration
+    lib: {
+      // Entry point of the library
+      entry: resolve(__dirname, "src/index.ts"),
+      // Library name in PascalCase (e.g., MyComponentLibrary)
+      name: getPackageNameCamelCase(),
+      // Output formats: ESM, CommonJS, UMD, and IIFE
+      formats: ["es", "cjs", "umd", "iife"],
+      // Output file names
+      fileName: (format) => fileName(format),
+    },
+    // Rollup options for externalizing dependencies and setting globals
+    rollupOptions: {
+      // External dependencies not to bundle into the library
+      external: ["react", "react-dom", "tailwindcss"],
+      output: {
+        // Global variables for UMD/IIFE builds
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          tailwindcss: "tailwindcss",
+        },
+      },
+    },
+    // Generate sourcemaps for better debugging
+    sourcemap: true,
+    // Empty the output directory before each build
+    emptyOutDir: true,
+    // Minification options using Terser
+    minify: "terser",
+    terserOptions: {
+      // Keep class names and function names (useful for debugging and class components)
+      keep_classnames: true,
+      keep_fnames: true,
+    },
+  },
+
+  // Plugins to use
+  plugins: [
+    // Resolve paths based on tsconfig paths
+    tsconfigPaths(),
+    // React plugin with SWC for faster builds
+    react(),
+    // Conditionally include plugins based on the mode
+    ...(mode === "test"
+      ? []
+      : [
+          // ESLint plugin for code linting
+          eslintPlugin(),
+          // PWA plugin for progressive web app features
+          VitePWA({
+            registerType: "autoUpdate",
+            includeAssets: [
+              "favicon.png",
+              "robots.txt",
+              "apple-touch-icon.png",
+              "icons/*.svg",
+              "fonts/*.woff2",
+            ],
+            manifest: {
+              theme_color: "#BD34FE",
+              icons: [
+                {
+                  src: "/android-chrome-192x192.png",
+                  sizes: "192x192",
+                  type: "image/png",
+                  purpose: "any maskable",
+                },
+                {
+                  src: "/android-chrome-512x512.png",
+                  sizes: "512x512",
+                  type: "image/png",
+                },
+              ],
+            },
+          }),
+        ]),
+    // Generate TypeScript declaration files
+    dts({
+      // Insert types entry in package.json
+      insertTypesEntry: true,
+      // Rollup types to a single declaration file
+      rollupTypes: true,
+    }),
+  ],
+
+  // CSS options
+  css: {
+    postcss: {
+      plugins: [tailwindcss],
+    },
+  },
+
+  // Resolve options for path aliases
+  resolve: {
+    alias: [
+      // Alias '@' to './src' for easy imports
+      { find: "@", replacement: path.resolve(__dirname, "src") },
+      // Alias '@@' to project root
+      { find: "@@", replacement: path.resolve(__dirname) },
+    ],
+  },
+
+  // Test configuration for Vitest
+  test: {
+    // Enable global variables like 'describe' and 'it'
+    globals: true,
+    // Test environment ('jsdom' for browser-like environment)
+    environment: "jsdom",
+    // Setup files to run before each test suite
+    setupFiles: "src/setupTests.ts",
+    // Include patterns for test files
+    include: ["src/**/__tests__/*", "**/*.test.{ts,tsx}"],
+    // Clear mocks after each test
+    clearMocks: true,
+    // Coverage configuration
+    coverage: {
+      // Files to include in coverage
+      include: ["src/**/*"],
+      // Files to exclude from coverage
+      exclude: ["src/main.tsx"],
+      // Coverage thresholds
+      thresholds: {
+        statements: 100,
+        branches: 100,
+        functions: 100,
+        lines: 100,
+      },
+      // Coverage provider
+      provider: "istanbul",
+      // Enable coverage
+      enabled: true,
+      // Coverage reporters
+      reporter: ["text", "lcov"],
+      // Directory to output coverage reports
+      reportsDirectory: "coverage",
+    },
+  },
+
+  // Development server configuration
+  server: {
+    // Expose the server on all network interfaces
+    host: true,
+    // Port to run the development server
+    port: 3000,
+  },
+}));
+================================================================================
+END FILE: files/ui/components/potree-viewer/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: gitreport/dashboard/vite.config.ts
+================================================================================
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  base: './',
+});
+================================================================================
+END FILE: gitreport/dashboard/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: kepler/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import react from "@vitejs/plugin-react";
+import fixReactVirtualized from 'esbuild-plugin-react-virtualized'
+
+export default defineConfig(() => {
+  return {
+    optimizeDeps: {
+      esbuildOptions: {
+        plugins: [fixReactVirtualized],
+      },
+    },
+    plugins: [
+      react(
+        {
+          jsxImportSource: "react",
+          jsxRuntime: "automatic",
+        }
+      )
+    ],
+    publicDir: "public",
+    server: {
+      port: 3000,
+      host: true,
+      strictPort: true, 
+      cors: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*", // Allow all origins
+      },
+    },
+    resolve: {
+      alias: {
+        app: resolve(__dirname, "src", "app"),
+        components: resolve(__dirname, "src", "components"),
+        hooks: resolve(__dirname, "src", "hooks"),
+      },
+    },
+  };
+});
+================================================================================
+END FILE: kepler/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: keplergl-dev/apps/keplergl-dev/vite.config.ts
+================================================================================
+/// <reference types='vitest' />
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
+
+export default defineConfig({
+  root: __dirname,
+  cacheDir: '../../node_modules/.vite/apps/keplergl-dev',
+  server: {
+    port: 4200,
+    host: 'localhost',
+  },
+  preview: {
+    port: 4300,
+    host: 'localhost',
+  },
+  plugins: [react(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+  build: {
+    outDir: '../../dist/apps/keplergl-dev',
+    emptyOutDir: true,
+    reportCompressedSize: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+});
+================================================================================
+END FILE: keplergl-dev/apps/keplergl-dev/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: lab/potree/potree-viewer/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+import { join, resolve } from 'node:path';
+import react from '@vitejs/plugin-react-swc';
+import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
+
+import { peerDependencies } from './package.json';
+
+export default defineConfig({
+  plugins: [
+    react(),
+    dts({ rollupTypes: true }), // Output .d.ts files
+  ],
+  build: {
+    target: 'esnext',
+    minify: false,
+    lib: {
+      entry: resolve(__dirname, join('lib', 'index.ts')),
+      fileName: 'index',
+      formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      // Exclude peer dependencies from the bundle to reduce bundle size
+      external: ['react/jsx-runtime', ...Object.keys(peerDependencies)],
+    },
+  },
+  test: {
+    environment: 'jsdom',
+    setupFiles: './lib/test/setup.ts',
+    coverage: {
+      all: false,
+      enabled: true,
+    },
+  },
+});
+================================================================================
+END FILE: lab/potree/potree-viewer/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: lab/potree/vite-trial1/vite.config.ts
+================================================================================
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+
+export default defineConfig({
+  plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler', // or "modern"
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      '@/app': '/src/app',
+      '@/assets': '/src/assets',
+      '@/components': '/src/components',
+      '@/features': '/src/features',
+      '@/hooks': '/src/hooks',
+      '@/pages': '/src/pages',
+      '@/routes': '/src/routes',
+      '@/themes': '/src/themes',
+      '@/styles': '/src/styles',
+      '@/utils': '/src/utils',
+      '@/services': '/src/services',
+      '@/config': '/src/config',
+      '@/types': '/src/types',
+      '@/store': '/src/store',
+      '@/layout': '/src/layout',
+      '@/data': '/src/data',
+      '@/helper': '/src/helper',
+      '@/i18n': '/src/i18n',
+    },
+  },
+});
+================================================================================
+END FILE: lab/potree/vite-trial1/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: lab/vitamin/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+import eslintPlugin from '@nabla/vite-plugin-eslint'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
+import tsconfigPaths from 'vite-tsconfig-paths'
+
+export default defineConfig(({ mode }) => ({
+	test: {
+		css: false,
+		include: ['src/**/__tests__/*'],
+		globals: true,
+		environment: 'jsdom',
+		setupFiles: 'src/setupTests.ts',
+		clearMocks: true,
+		coverage: {
+			include: ['src/**/*'],
+			exclude: ['src/main.tsx'],
+			thresholds: {
+				'100': true
+			},
+			provider: 'istanbul',
+			enabled: true,
+			reporter: ['text', 'lcov'],
+			reportsDirectory: 'coverage'
+		}
+	},
+	plugins: [
+		tsconfigPaths(),
+		react(),
+		...(mode === 'test'
+			? []
+			: [
+					eslintPlugin(),
+					VitePWA({
+						registerType: 'autoUpdate',
+						includeAssets: [
+							'favicon.png',
+							'robots.txt',
+							'apple-touch-icon.png',
+							'icons/*.svg',
+							'fonts/*.woff2'
+						],
+						manifest: {
+							theme_color: '#BD34FE',
+							icons: [
+								{
+									src: '/android-chrome-192x192.png',
+									sizes: '192x192',
+									type: 'image/png',
+									purpose: 'any maskable'
+								},
+								{
+									src: '/android-chrome-512x512.png',
+									sizes: '512x512',
+									type: 'image/png'
+								}
+							]
+						}
+					})
+			  ])
+	]
+}))
+================================================================================
+END FILE: lab/vitamin/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: magazine/app/vite.config.ts
+================================================================================
+/// <reference types="vitest/config" />
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vite.dev/config/
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
+import { playwright } from '@vitest/browser-playwright';
+const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
+
+// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@magazine': path.join(dirname, 'src/components'),
+    },
+  },
+  test: {
+    projects: [{
+      extends: true,
+      plugins: [
+      // The plugin will run tests for the stories defined in your Storybook config
+      // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
+      storybookTest({
+        configDir: path.join(dirname, '.storybook')
+      })],
+      test: {
+        name: 'storybook',
+        browser: {
+          enabled: true,
+          headless: true,
+          provider: playwright({}),
+          instances: [{
+            browser: 'chromium'
+          }]
+        }
+      }
+    }]
+  }
+});
+================================================================================
+END FILE: magazine/app/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: playground/deckgl-demo/vite.config.ts
+================================================================================
+import * as path from 'path'
+
+import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite'
+import EnvironmentPlugin from 'vite-plugin-environment'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  build: {
+    sourcemap: true,
+  },
+  plugins: [react(), EnvironmentPlugin(['REACT_APP_TEXT'])],
+  publicDir: 'public',
+  server: {
+    host: true,
+    port: 3000,
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+})
+================================================================================
+END FILE: playground/deckgl-demo/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: project/example/vite.config.mjs
+================================================================================
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+// Uncomment below if you want to use tsconfig paths
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    react(), // Enable React
+    tsconfigPaths() // Use TypeScript paths for imports (optional)
+  ],
+  build: {
+    assetsDir: "assets", // Output directory for assets
+    assetsInlineLimit: 4096, // Inline assets smaller than 4kb
+    cssCodeSplit: true, // Enable CSS code splitting
+    sourcemap: true, // Generate sourcemaps for debugging
+    rollupOptions: {
+      external: [
+        "@emotion/cache",
+        "@babel/runtime/helpers/extends",
+        "@emotion/weak-memoize",
+        "hoist-non-react-statics",
+        "@emotion/utils",
+        "@emotion/serialize",
+        "@emotion/use-insertion-effect-with-fallbacks",
+        "scheduler"
+      ], // External dependencies
+    },
+    minify: "esbuild", // Minify using esbuild
+    // terserOptions: {}, // Terser options
+    write: true, // Write to disk
+    emptyOutDir: null, // Do not empty output directory
+    copyPublicDir: true, // Copy public directory to output
+    manifest: true, // Generate manifest.json
+    lib: false, // Do not generate library
+    ssr: false, // Do not generate server-side code
+    ssrManifest: false, // Do not generate server-side manifest
+    ssrEmitAssets: false, // Do not generate server-side assets
+    reportCompressedSize: true, // Report compressed size
+    chunkSizeWarningLimit: 500, // Warn if chunk size exceeds 500kb
+    watch: null,
+    modulePreload: {
+      polyfill: true, // Preload polyfills
+    },
+    cssMinify: {
+      safe: true, // Enable safe CSS minification
+    },
+    // commonjsOptions: {} TODO
+    // dynamicImportVarsOptions: {} TODO
+  },
+  server: {
+    preTransformRequests: true, // Pre-transform requests
+    port: 3009, // Development server port
+    // sourcemapIgnoreList: [] TODO
+    middlewareMode: false,
+    // fs: {} TODO
+  },
+  resolve: {
+    preserveSymlinks: true,
+    alias: {
+      "@my-monorepo/common": "../packages/common/dist/common.esm.js",
+      "@my-monorepo/utils": "../packages/utils/dist/utils.esm.js",
+    },
+  },
+});
+================================================================================
+END FILE: project/example/vite.config.mjs
+================================================================================
+
+================================================================================
+BEGIN FILE: react-vite-template/vite.config.ts
+================================================================================
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
+import envCompatible from 'vite-plugin-env-compatible';
+import eslint from 'vite-plugin-eslint';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+// Resolve __dirname since we're in ES module context
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Define constants
+const ESLINT_CONFIG_PATH = path.resolve(__dirname, 'eslint.config.cjs');
+
+export default defineConfig({
+    plugins: [
+        react({
+            jsxRuntime: 'automatic',
+        }),
+        svgr(),
+        envCompatible(),
+        eslint({
+            overrideConfigFile: ESLINT_CONFIG_PATH,
+            include: ['src/**/*.ts', 'src/**/*.tsx'],
+            cacheLocation: 'node_modules/.cache/eslint',
+            cache: true,
+            exclude: ['/virtual:/**', 'node_modules/**'],
+        }),
+        tsconfigPaths(),
+    ],
+});
+================================================================================
+END FILE: react-vite-template/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/incubate/universal/apps/ui/vite.config.mts
+================================================================================
+import path from "path";
+import process from "node:process";
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
+import envCompatible from "vite-plugin-env-compatible";
+import eslint from "vite-plugin-eslint";
+import tsconfigPaths from "vite-tsconfig-paths";
+import checker from "vite-plugin-checker";
+import { VitePWA } from "vite-plugin-pwa";
+import { visualizer } from "rollup-plugin-visualizer";
+import wasm from "vite-plugin-wasm";
+import fixReactVirtualized from "esbuild-plugin-react-virtualized";
+import pkg from "./package.json";
+import postcss from "./postcss.config.mjs";
+import ViteSitemapPlugin from "vite-plugin-sitemap";
+import tailwindcss from "@tailwindcss/vite";
+
+// Inject selected environment variables
+const env = {
+    NODE_ENV: process.env.NODE_ENV || "production",
+    NODE_DEBUG: process.env.NODE_DEBUG || "false",
+    VERSION: pkg.version,
+    BUILD_TIME: new Date().toISOString(),
+    MapboxAccessToken: process.env.MapboxAccessToken || "",
+    MapboxExportToken: process.env.MapboxExportToken || "",
+    DropboxClientId: process.env.DropboxClientId || "",
+    CartoClientId: process.env.CartoClientId || "",
+    FoursquareClientId: process.env.FoursquareClientId || "",
+    FoursquareDomain: process.env.FoursquareDomain || "",
+    FoursquareAPIURL:
+        process.env.FoursquareAPIURL || "https://api.foursquare.com/v2",
+    FoursquareUserMapsURL: process.env.FoursquareUserMapsURL || "",
+    OpenAIToken: process.env.OpenAIToken || "",
+    WEB_HTTPS_PORT: process.env.WEB_HTTPS_PORT || 443,
+    FQDN: process.env.FQDN || "localhost",
+    API_PREFIX: process.env.API_PREFIX || "/api",
+    MOCK_AUTH: process.env.MOCK_AUTH || "false",
+};
+
+export default defineConfig({
+    base: "/", // Base path for the application
+    publicDir: "public", // Directory for static assets
+    css: {
+        postcss,
+    },
+    plugins: [
+        react({ jsxRuntime: "automatic" }),
+        tsconfigPaths(),
+        svgr(),
+        envCompatible(),
+        eslint({
+            overrideConfigFile: path.resolve(__dirname, "eslint.config.mjs"),
+            include: ["src/**/*.ts", "src/**/*.tsx"],
+            cacheLocation: "node_modules/.cache/eslint",
+            cache: true,
+            exclude: ["node_modules/**", "/virtual:/**"],
+        }),
+        checker({ typescript: true }),
+        VitePWA(),
+        tailwindcss(),
+        wasm(),
+        visualizer({
+            filename: "stats.html",
+            open: false,
+            gzipSize: true,
+            brotliSize: true,
+            emitFile: true,
+        }),
+        // ViteSitemapPlugin({
+        //     hostname: "https://yourdomain.com",
+        // }),
+    ],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
+        dedupe: ["react", "react-dom", "styled-components"],
+    },
+    server: {
+        port: Number(process.env.UI_PORT) || 5173,
+        host: true,
+        strictPort: true,
+        cors: true,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
+        hmr: {
+            // protocol: "wss", // Because Apache uses HTTPS
+            // host: "localhost", // Browser will connect to Apache here
+            // port: 5174, // Internal WS server (you bind this)
+            // clientPort: 8085, // Browser will use this for WebSocket (Apache port)
+            path: "/hmr", // WS route used in dev-reverse-proxy.conf
+        },
+    },
+    define: {
+        global: "globalThis",
+        ...Object.fromEntries(
+            Object.entries(env).map(([key, val]) => [
+                `import.meta.env.${key}`,
+                JSON.stringify(val),
+            ]),
+        ),
+    },
+    optimizeDeps: {
+        esbuildOptions: {
+            plugins: [fixReactVirtualized],
+            define: {
+                global: "globalThis",
+            },
+        },
+        include: [
+            "react",
+            "react-dom",
+            "react-router-dom",
+            "zustand",
+            "react-query",
+            "@tanstack/react-query",
+            "@tanstack/react-router",
+        ],
+        exclude: ["@vitejs/plugin-react-refresh"],
+    },
+    build: {
+        outDir: "dist",
+        target: "esnext",
+        sourcemap: true,
+        minify: true,
+        commonjsOptions: {
+            include: [/node_modules/],
+            transformMixedEsModules: true,
+        },
+        rollupOptions: {
+            input: {
+                main: path.resolve(__dirname, "index.html"),
+            },
+            output: {
+                manualChunks: {
+                    vendor: ["react", "react-dom"],
+                },
+            },
+        },
+    },
+});
+================================================================================
+END FILE: realignment/incubate/universal/apps/ui/vite.config.mts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/swamp/files/apps/vite-ts-react-template/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+    }),
+  ],
+  assetsInclude: ["/sb-preview/runtime.js"],
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
+});
+================================================================================
+END FILE: realignment/swamp/files/apps/vite-ts-react-template/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/swamp/files/example/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+});
+================================================================================
+END FILE: realignment/swamp/files/example/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/swamp/files/packages/common/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    // Enables React with SWC for faster builds
+    react(),
+    // Enables path aliasing based on tsconfig.json
+    tsconfigPaths(),
+  ],
+  build: {
+    lib: {
+      // Entry point for the library
+      entry: "./src/index.ts",
+      // Library name for UMD/IIFE builds
+      name: "ReactComponentsCommon",
+      // Output formats: ESM and CommonJS
+      formats: ["es", "cjs"],
+      // Output file names
+      fileName: (format) => `common.${format}.js`,
+    },
+    rollupOptions: {
+      // Externalize dependencies to prevent bundling
+      external: ["react", "react-dom", "@react-components/utils"],
+      output: {
+        // Global variables for UMD/IIFE builds
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "@react-components/utils": "ReactComponentsUtils",
+        },
+      },
+    },
+    sourcemap: true, // Optional: Enables source maps
+  },
+});
+================================================================================
+END FILE: realignment/swamp/files/packages/common/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/swamp/files/packages/utils/vite.config.ts
+================================================================================
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    // Enables path aliasing based on tsconfig.json
+    tsconfigPaths(),
+  ],
+  css: {
+    postcss: "./postcss.config.cjs",
+  },
+  build: {
+    lib: {
+      // Entry point for the library
+      entry: "./src/index.ts",
+      // Library name for UMD/IIFE builds
+      name: "ReactComponentsUtils",
+      // Output formats: ESM and CommonJS
+      formats: ["es", "cjs"],
+      // Output file names
+      fileName: (format) => `utils.${format}.js`,
+    },
+    rollupOptions: {
+      // Externalize dependencies to prevent bundling
+      external: [],
+    },
+    sourcemap: true, // Optional: Enables source maps
+  },
+});
+================================================================================
+END FILE: realignment/swamp/files/packages/utils/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/swamp/files/ui/components/potree-viewer/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+
+/**
+ * Vite Configuration File
+ *
+ * This configuration sets up a modern development environment for building a React component library.
+ * It includes support for TypeScript, React with SWC for faster builds, Tailwind CSS, path aliases,
+ * ESLint integration, PWA capabilities, and testing configurations using Vitest.
+ *
+ * @see https://vitejs.dev/config/
+ * @see https://vitest.dev/config/
+ */
+
+import { defineConfig } from "vite";
+import path, { resolve } from "node:path";
+import react from "@vitejs/plugin-react-swc";
+import dts from "vite-plugin-dts";
+import tailwindcss from "tailwindcss";
+import tsconfigPaths from "vite-tsconfig-paths";
+import eslintPlugin from "@nabla/vite-plugin-eslint";
+import { VitePWA } from "vite-plugin-pwa";
+import camelCase from "camelcase";
+import packageJson from "./package.json";
+
+// Helper function to get the package name in PascalCase
+const getPackageNameCamelCase = (): string => {
+  const name = packageJson.name;
+  if (!name) {
+    throw new Error("Name property in package.json is missing.");
+  }
+  return camelCase(name, { pascalCase: true });
+};
+
+// Get the package name from package.json
+const packageName = packageJson.name.split("/").pop() || packageJson.name;
+
+// Function to generate file names based on the format
+const fileName = (format: string): string => {
+  switch (format) {
+    case "es":
+      return `${packageName}.esm.js`;
+    case "cjs":
+      return `${packageName}.cjs.js`;
+    case "umd":
+      return `${packageName}.umd.js`;
+    case "iife":
+      return `${packageName}.iife.js`;
+    default:
+      return `${packageName}.${format}.js`;
+  }
+};
+
+// Export the Vite configuration
+export default defineConfig(({ mode }) => ({
+  // Base public path when serving in development or production
+  base: "./",
+
+  // Build options
+  build: {
+    // Directory to output built files
+    outDir: "./dist",
+
+    // Library mode configuration
+    lib: {
+      // Entry point of the library
+      entry: resolve(__dirname, "src/index.ts"),
+      // Library name in PascalCase (e.g., MyComponentLibrary)
+      name: getPackageNameCamelCase(),
+      // Output formats: ESM, CommonJS, UMD, and IIFE
+      formats: ["es", "cjs", "umd", "iife"],
+      // Output file names
+      fileName: (format) => fileName(format),
+    },
+    // Rollup options for externalizing dependencies and setting globals
+    rollupOptions: {
+      // External dependencies not to bundle into the library
+      external: ["react", "react-dom", "tailwindcss"],
+      output: {
+        // Global variables for UMD/IIFE builds
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          tailwindcss: "tailwindcss",
+        },
+      },
+    },
+    // Generate sourcemaps for better debugging
+    sourcemap: true,
+    // Empty the output directory before each build
+    emptyOutDir: true,
+    // Minification options using Terser
+    minify: "terser",
+    terserOptions: {
+      // Keep class names and function names (useful for debugging and class components)
+      keep_classnames: true,
+      keep_fnames: true,
+    },
+  },
+
+  // Plugins to use
+  plugins: [
+    // Resolve paths based on tsconfig paths
+    tsconfigPaths(),
+    // React plugin with SWC for faster builds
+    react(),
+    // Conditionally include plugins based on the mode
+    ...(mode === "test"
+      ? []
+      : [
+          // ESLint plugin for code linting
+          eslintPlugin(),
+          // PWA plugin for progressive web app features
+          VitePWA({
+            registerType: "autoUpdate",
+            includeAssets: [
+              "favicon.png",
+              "robots.txt",
+              "apple-touch-icon.png",
+              "icons/*.svg",
+              "fonts/*.woff2",
+            ],
+            manifest: {
+              theme_color: "#BD34FE",
+              icons: [
+                {
+                  src: "/android-chrome-192x192.png",
+                  sizes: "192x192",
+                  type: "image/png",
+                  purpose: "any maskable",
+                },
+                {
+                  src: "/android-chrome-512x512.png",
+                  sizes: "512x512",
+                  type: "image/png",
+                },
+              ],
+            },
+          }),
+        ]),
+    // Generate TypeScript declaration files
+    dts({
+      // Insert types entry in package.json
+      insertTypesEntry: true,
+      // Rollup types to a single declaration file
+      rollupTypes: true,
+    }),
+  ],
+
+  // CSS options
+  css: {
+    postcss: {
+      plugins: [tailwindcss],
+    },
+  },
+
+  // Resolve options for path aliases
+  resolve: {
+    alias: [
+      // Alias '@' to './src' for easy imports
+      { find: "@", replacement: path.resolve(__dirname, "src") },
+      // Alias '@@' to project root
+      { find: "@@", replacement: path.resolve(__dirname) },
+    ],
+  },
+
+  // Test configuration for Vitest
+  test: {
+    // Enable global variables like 'describe' and 'it'
+    globals: true,
+    // Test environment ('jsdom' for browser-like environment)
+    environment: "jsdom",
+    // Setup files to run before each test suite
+    setupFiles: "src/setupTests.ts",
+    // Include patterns for test files
+    include: ["src/**/__tests__/*", "**/*.test.{ts,tsx}"],
+    // Clear mocks after each test
+    clearMocks: true,
+    // Coverage configuration
+    coverage: {
+      // Files to include in coverage
+      include: ["src/**/*"],
+      // Files to exclude from coverage
+      exclude: ["src/main.tsx"],
+      // Coverage thresholds
+      thresholds: {
+        statements: 100,
+        branches: 100,
+        functions: 100,
+        lines: 100,
+      },
+      // Coverage provider
+      provider: "istanbul",
+      // Enable coverage
+      enabled: true,
+      // Coverage reporters
+      reporter: ["text", "lcov"],
+      // Directory to output coverage reports
+      reportsDirectory: "coverage",
+    },
+  },
+
+  // Development server configuration
+  server: {
+    // Expose the server on all network interfaces
+    host: true,
+    // Port to run the development server
+    port: 3000,
+  },
+}));
+================================================================================
+END FILE: realignment/swamp/files/ui/components/potree-viewer/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/swamp/universal/apps/ui/vite.config.mts
+================================================================================
+import path from "path";
+import process from "node:process";
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
+import envCompatible from "vite-plugin-env-compatible";
+import eslint from "vite-plugin-eslint";
+import tsconfigPaths from "vite-tsconfig-paths";
+import checker from "vite-plugin-checker";
+import { VitePWA } from "vite-plugin-pwa";
+import { visualizer } from "rollup-plugin-visualizer";
+import wasm from "vite-plugin-wasm";
+import fixReactVirtualized from "esbuild-plugin-react-virtualized";
+import pkg from "./package.json";
+import postcss from "./postcss.config.mjs";
+import ViteSitemapPlugin from "vite-plugin-sitemap";
+import tailwindcss from "@tailwindcss/vite";
+
+// Inject selected environment variables
+const env = {
+    NODE_ENV: process.env.NODE_ENV || "production",
+    NODE_DEBUG: process.env.NODE_DEBUG || "false",
+    VERSION: pkg.version,
+    BUILD_TIME: new Date().toISOString(),
+    MapboxAccessToken: process.env.MapboxAccessToken || "",
+    MapboxExportToken: process.env.MapboxExportToken || "",
+    DropboxClientId: process.env.DropboxClientId || "",
+    CartoClientId: process.env.CartoClientId || "",
+    FoursquareClientId: process.env.FoursquareClientId || "",
+    FoursquareDomain: process.env.FoursquareDomain || "",
+    FoursquareAPIURL:
+        process.env.FoursquareAPIURL || "https://api.foursquare.com/v2",
+    FoursquareUserMapsURL: process.env.FoursquareUserMapsURL || "",
+    OpenAIToken: process.env.OpenAIToken || "",
+    WEB_HTTPS_PORT: process.env.WEB_HTTPS_PORT || 443,
+    FQDN: process.env.FQDN || "localhost",
+    API_PREFIX: process.env.API_PREFIX || "/api",
+    MOCK_AUTH: process.env.MOCK_AUTH || "false",
+};
+
+export default defineConfig({
+    base: "/", // Base path for the application
+    publicDir: "public", // Directory for static assets
+    css: {
+        postcss,
+    },
+    plugins: [
+        react({ jsxRuntime: "automatic" }),
+        tsconfigPaths(),
+        svgr(),
+        envCompatible(),
+        eslint({
+            overrideConfigFile: path.resolve(__dirname, "eslint.config.mjs"),
+            include: ["src/**/*.ts", "src/**/*.tsx"],
+            cacheLocation: "node_modules/.cache/eslint",
+            cache: true,
+            exclude: ["node_modules/**", "/virtual:/**"],
+        }),
+        checker({ typescript: true }),
+        VitePWA(),
+        tailwindcss(),
+        wasm(),
+        visualizer({
+            filename: "stats.html",
+            open: false,
+            gzipSize: true,
+            brotliSize: true,
+            emitFile: true,
+        }),
+        // ViteSitemapPlugin({
+        //     hostname: "https://yourdomain.com",
+        // }),
+    ],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
+        dedupe: ["react", "react-dom", "styled-components"],
+    },
+    server: {
+        port: Number(process.env.UI_PORT) || 5173,
+        host: true,
+        strictPort: true,
+        cors: true,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
+        hmr: {
+            // protocol: "wss", // Because Apache uses HTTPS
+            // host: "localhost", // Browser will connect to Apache here
+            // port: 5174, // Internal WS server (you bind this)
+            // clientPort: 8085, // Browser will use this for WebSocket (Apache port)
+            path: "/hmr", // WS route used in dev-reverse-proxy.conf
+        },
+    },
+    define: {
+        global: "globalThis",
+        ...Object.fromEntries(
+            Object.entries(env).map(([key, val]) => [
+                `import.meta.env.${key}`,
+                JSON.stringify(val),
+            ]),
+        ),
+    },
+    optimizeDeps: {
+        esbuildOptions: {
+            plugins: [fixReactVirtualized],
+            define: {
+                global: "globalThis",
+            },
+        },
+        include: [
+            "react",
+            "react-dom",
+            "react-router-dom",
+            "zustand",
+            "react-query",
+            "@tanstack/react-query",
+            "@tanstack/react-router",
+        ],
+        exclude: ["@vitejs/plugin-react-refresh"],
+    },
+    build: {
+        outDir: "dist",
+        target: "esnext",
+        sourcemap: true,
+        minify: true,
+        commonjsOptions: {
+            include: [/node_modules/],
+            transformMixedEsModules: true,
+        },
+        rollupOptions: {
+            input: {
+                main: path.resolve(__dirname, "index.html"),
+            },
+            output: {
+                manualChunks: {
+                    vendor: ["react", "react-dom"],
+                },
+            },
+        },
+    },
+});
+================================================================================
+END FILE: realignment/swamp/universal/apps/ui/vite.config.mts
+================================================================================
+
+================================================================================
+BEGIN FILE: realignment/templates/vite-ts-react/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+    }),
+  ],
+  assetsInclude: ["/sb-preview/runtime.js"],
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
+});
+================================================================================
+END FILE: realignment/templates/vite-ts-react/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: signal/ui/vite.config.ts
+================================================================================
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { defineConfig } from 'vite';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [tailwindcss(), react()],
+  resolve: {
+    alias: {
+      '@egohygiene/signal': path.resolve(__dirname, './src'),
+      pino: path.resolve(__dirname, './node_modules/pino/browser.js'),
+    },
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/test/setup.ts'],
+  },
+});
+================================================================================
+END FILE: signal/ui/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: skeleton/apps/ui/vite.config.ts
+================================================================================
+import { defineConfig, loadEnv } from "vite";
+import { resolve } from "path";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+import fixReactVirtualized from "esbuild-plugin-react-virtualized";
+import pkg from "./package.json";
+
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+
+  return {
+    define: {
+      __PACKAGE_VERSION__: JSON.stringify(pkg.version),
+      "process.env": env, // For legacy packages that rely on process.env.X
+      global: "globalThis" // Fix for deck.gl/loaders.gl compatibility
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        plugins: [fixReactVirtualized],
+      }
+    },
+    plugins: [
+      react({
+        jsxImportSource: "react",
+        jsxRuntime: "automatic",
+      }),
+      tailwindcss(),
+      tsconfigPaths()
+    ],
+    publicDir: "public",
+    server: {
+      port: 3000,
+      host: true,
+      strictPort: true,
+      cors: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    }
+  };
+});
+================================================================================
+END FILE: skeleton/apps/ui/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: template/apps/ui/vite-project/vite.config.ts
+================================================================================
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    host: true,
+    strictPort: true,
+    cors: true,
+    headers: {
+      "Access-Control-Allow-Origin": ["*"],
+      "Access-Control-Allow-Methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    }
+  },
+})
+================================================================================
+END FILE: template/apps/ui/vite-project/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: templates/vite-ts-react/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+    }),
+  ],
+  assetsInclude: ["/sb-preview/runtime.js"],
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
+});
+================================================================================
+END FILE: templates/vite-ts-react/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: universal-react/vite.config.mts
+================================================================================
+import path from "path";
+import process from "node:process";
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
+import envCompatible from "vite-plugin-env-compatible";
+import eslint from "vite-plugin-eslint";
+import tsconfigPaths from "vite-tsconfig-paths";
+import checker from "vite-plugin-checker";
+import { VitePWA } from "vite-plugin-pwa";
+import { visualizer } from "rollup-plugin-visualizer";
+import wasm from "vite-plugin-wasm";
+import fixReactVirtualized from "esbuild-plugin-react-virtualized";
+import pkg from "./package.json";
+import postcss from "./postcss.config.mjs";
+
+// Inject selected environment variables
+const env = {
+    NODE_ENV: process.env.NODE_ENV || "production",
+    NODE_DEBUG: process.env.NODE_DEBUG || "false",
+    VERSION: pkg.version,
+    BUILD_TIME: new Date().toISOString(),
+    MapboxAccessToken: process.env.MapboxAccessToken || "",
+    MapboxExportToken: process.env.MapboxExportToken || "",
+    DropboxClientId: process.env.DropboxClientId || "",
+    CartoClientId: process.env.CartoClientId || "",
+    FoursquareClientId: process.env.FoursquareClientId || "",
+    FoursquareDomain: process.env.FoursquareDomain || "",
+    FoursquareAPIURL:
+        process.env.FoursquareAPIURL || "https://api.foursquare.com/v2",
+    FoursquareUserMapsURL: process.env.FoursquareUserMapsURL || "",
+    OpenAIToken: process.env.OpenAIToken || "",
+};
+
+export default defineConfig({
+    css: {
+        postcss,
+    },
+    plugins: [
+        react({ jsxRuntime: "automatic" }),
+        tsconfigPaths(),
+        svgr(),
+        envCompatible(),
+        eslint({
+            overrideConfigFile: path.resolve(__dirname, "eslint.config.mjs"),
+            include: ["src/**/*.ts", "src/**/*.tsx"],
+            cacheLocation: "node_modules/.cache/eslint",
+            cache: true,
+            exclude: ["node_modules/**", "/virtual:/**"],
+        }),
+        checker({ typescript: true }),
+        VitePWA(),
+        wasm(),
+        visualizer({
+            filename: "stats.html",
+            open: false,
+            gzipSize: true,
+            brotliSize: true,
+            emitFile: true,
+        }),
+    ],
+
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
+        dedupe: ["react", "react-dom", "styled-components"],
+    },
+
+    server: {
+        port: Number(process.env.UI_PORT) || 5173,
+        host: true,
+        strictPort: true,
+        cors: true,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
+        // proxy: {
+        //     "/api": {
+        //         target: `http://localhost:${process.env.API_PORT || 8000}`,
+        //         changeOrigin: true,
+        //     },
+        // },
+    },
+
+    define: {
+        global: "globalThis",
+        "process.env": Object.fromEntries(
+            Object.entries(env).map(([key, val]) => [key, JSON.stringify(val)])
+        ),
+    },
+
+    optimizeDeps: {
+        esbuildOptions: {
+            plugins: [fixReactVirtualized],
+            define: {
+                global: "globalThis",
+            },
+        },
+        include: [
+            "react",
+            "react-dom",
+            "react-router-dom",
+            "zustand",
+            "react-query",
+            "@tanstack/react-query",
+            "@tanstack/react-router",
+        ],
+        exclude: ["@vitejs/plugin-react-refresh"],
+    },
+
+    build: {
+        outDir: "dist",
+        target: "esnext",
+        sourcemap: true,
+        minify: true,
+        commonjsOptions: {
+            include: [/node_modules/],
+            transformMixedEsModules: true,
+        },
+        rollupOptions: {
+            input: {
+                main: path.resolve(__dirname, "index.html"),
+            },
+            output: {
+                manualChunks: {
+                    vendor: ["react", "react-dom"],
+                },
+            },
+        },
+    },
+});
+================================================================================
+END FILE: universal-react/vite.config.mts
+================================================================================
+
+================================================================================
+BEGIN FILE: universal/apps/ui/vite.config.mts
+================================================================================
+import path from "path";
+import process from "node:process";
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
+import envCompatible from "vite-plugin-env-compatible";
+import eslint from "vite-plugin-eslint";
+import tsconfigPaths from "vite-tsconfig-paths";
+import checker from "vite-plugin-checker";
+import { VitePWA } from "vite-plugin-pwa";
+import { visualizer } from "rollup-plugin-visualizer";
+import wasm from "vite-plugin-wasm";
+import fixReactVirtualized from "esbuild-plugin-react-virtualized";
+import pkg from "./package.json";
+import postcss from "./postcss.config.mjs";
+import ViteSitemapPlugin from "vite-plugin-sitemap";
+import tailwindcss from "@tailwindcss/vite";
+
+// Inject selected environment variables
+const env = {
+    NODE_ENV: process.env.NODE_ENV || "production",
+    NODE_DEBUG: process.env.NODE_DEBUG || "false",
+    VERSION: pkg.version,
+    BUILD_TIME: new Date().toISOString(),
+    MapboxAccessToken: process.env.MapboxAccessToken || "",
+    MapboxExportToken: process.env.MapboxExportToken || "",
+    DropboxClientId: process.env.DropboxClientId || "",
+    CartoClientId: process.env.CartoClientId || "",
+    FoursquareClientId: process.env.FoursquareClientId || "",
+    FoursquareDomain: process.env.FoursquareDomain || "",
+    FoursquareAPIURL:
+        process.env.FoursquareAPIURL || "https://api.foursquare.com/v2",
+    FoursquareUserMapsURL: process.env.FoursquareUserMapsURL || "",
+    OpenAIToken: process.env.OpenAIToken || "",
+    WEB_HTTPS_PORT: process.env.WEB_HTTPS_PORT || 443,
+    FQDN: process.env.FQDN || "localhost",
+    API_PREFIX: process.env.API_PREFIX || "/api",
+    MOCK_AUTH: process.env.MOCK_AUTH || "false",
+};
+
+export default defineConfig({
+    base: "/", // Base path for the application
+    publicDir: "public", // Directory for static assets
+    css: {
+        postcss,
+    },
+    plugins: [
+        react({ jsxRuntime: "automatic" }),
+        tsconfigPaths(),
+        svgr(),
+        envCompatible(),
+        eslint({
+            overrideConfigFile: path.resolve(__dirname, "eslint.config.mjs"),
+            include: ["src/**/*.ts", "src/**/*.tsx"],
+            cacheLocation: "node_modules/.cache/eslint",
+            cache: true,
+            exclude: ["node_modules/**", "/virtual:/**"],
+        }),
+        checker({ typescript: true }),
+        VitePWA(),
+        tailwindcss(),
+        wasm(),
+        visualizer({
+            filename: "stats.html",
+            open: false,
+            gzipSize: true,
+            brotliSize: true,
+            emitFile: true,
+        }),
+        // ViteSitemapPlugin({
+        //     hostname: "https://yourdomain.com",
+        // }),
+    ],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
+        dedupe: ["react", "react-dom", "styled-components"],
+    },
+    server: {
+        port: Number(process.env.UI_PORT) || 5173,
+        host: true,
+        strictPort: true,
+        cors: true,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
+        hmr: {
+            // protocol: "wss", // Because Apache uses HTTPS
+            // host: "localhost", // Browser will connect to Apache here
+            // port: 5174, // Internal WS server (you bind this)
+            // clientPort: 8085, // Browser will use this for WebSocket (Apache port)
+            path: "/hmr", // WS route used in dev-reverse-proxy.conf
+        },
+    },
+    define: {
+        global: "globalThis",
+        ...Object.fromEntries(
+            Object.entries(env).map(([key, val]) => [
+                `import.meta.env.${key}`,
+                JSON.stringify(val),
+            ]),
+        ),
+    },
+    optimizeDeps: {
+        esbuildOptions: {
+            plugins: [fixReactVirtualized],
+            define: {
+                global: "globalThis",
+            },
+        },
+        include: [
+            "react",
+            "react-dom",
+            "react-router-dom",
+            "zustand",
+            "react-query",
+            "@tanstack/react-query",
+            "@tanstack/react-router",
+        ],
+        exclude: ["@vitejs/plugin-react-refresh"],
+    },
+    build: {
+        outDir: "dist",
+        target: "esnext",
+        sourcemap: true,
+        minify: true,
+        commonjsOptions: {
+            include: [/node_modules/],
+            transformMixedEsModules: true,
+        },
+        rollupOptions: {
+            input: {
+                main: path.resolve(__dirname, "index.html"),
+            },
+            output: {
+                manualChunks: {
+                    vendor: ["react", "react-dom"],
+                },
+            },
+        },
+    },
+});
+================================================================================
+END FILE: universal/apps/ui/vite.config.mts
+================================================================================
+
+================================================================================
+BEGIN FILE: vite-ts-react-template/vite.config.ts
+================================================================================
+/// <reference types="vitest" />
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+    }),
+  ],
+  assetsInclude: ["/sb-preview/runtime.js"],
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
+});
+================================================================================
+END FILE: vite-ts-react-template/vite.config.ts
+================================================================================
+
+================================================================================
+BEGIN FILE: wealth/apps/ui/vite.config.ts
+================================================================================
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+import tsconfigPaths from 'vite-tsconfig-paths'
+import checker from 'vite-plugin-checker'
+import svgr from 'vite-plugin-svgr'
+import { VitePWA } from 'vite-plugin-pwa'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    checker({ typescript: true, eslint: { files: ['./src'] } }),
+    svgr(),
+    VitePWA(),
+  ],
+  server: {
+    port: Number(process.env.UI_PORT) || 5173,
+    proxy: {
+      '/api': {
+        target: `http://localhost:${process.env.API_PORT || 8000}`,
+        changeOrigin: true,
+      },
+    },
+  },
+})
+================================================================================
+END FILE: wealth/apps/ui/vite.config.ts
+================================================================================
+

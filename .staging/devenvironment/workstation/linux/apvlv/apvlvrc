@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------
+# apvlv Configuration
+# ------------------------------------------------------------------------------
+#
+# Purpose:
+#   User configuration for the apvlv document viewer.
+#
+# Notes:
+#   This file intentionally contains no active configuration.
+#
+# Typical customizations include:
+#   - Key bindings
+#   - Colors
+#   - Default zoom level
+#   - Page layout
+#
+# Documentation:
+#   man apvlv
+#
+# ------------------------------------------------------------------------------

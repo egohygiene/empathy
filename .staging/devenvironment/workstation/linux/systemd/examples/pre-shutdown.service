@@ -1,0 +1,20 @@
+[Unit]
+Description=Pre-Shutdown Hook
+DefaultDependencies=no
+
+Before=shutdown.target
+Before=reboot.target
+Before=halt.target
+Before=kexec.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+
+ExecStart=/usr/bin/true
+
+[Install]
+WantedBy=shutdown.target
+WantedBy=reboot.target
+WantedBy=halt.target
+WantedBy=kexec.target

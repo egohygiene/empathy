@@ -1,0 +1,57 @@
+# ------------------------------------------------------------------------------
+# GNU Readline Configuration
+# ------------------------------------------------------------------------------
+#
+# Applies to:
+#   - Bash
+#   - Python REPL
+#   - PostgreSQL (psql)
+#   - MySQL
+#   - Other readline-enabled applications
+#
+# ------------------------------------------------------------------------------
+
+# Cycle through completion candidates using TAB.
+TAB: menu-complete
+
+# Disable terminal bells.
+set bell-style none
+
+# Use Emacs-style key bindings.
+set editing-mode emacs
+
+# Case-insensitive completion.
+set completion-ignore-case on
+
+# Show completion prefix before cycling candidates.
+set menu-complete-display-prefix on
+
+# Show completion matches immediately.
+set show-all-if-ambiguous on
+
+# Add trailing slash when completing symlinked directories.
+set mark-symlinked-directories on
+
+# Ignore hidden files unless explicitly requested.
+set match-hidden-files off
+
+# Show all completion results at once.
+set page-completions off
+
+# Prompt when completion results exceed this threshold.
+set completion-query-items 200
+
+# Display file metadata during completion.
+set visible-stats on
+
+# Smarter completion behavior.
+set skip-completed-text on
+
+# UTF-8 support.
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Color
+set colored-stats on
+set colored-completion-prefix on

@@ -1,0 +1,43 @@
+{
+    "id": "devtools",
+    "version": "1.0.0",
+    "name": "devtools",
+    "documentationURL": "",
+    "description": "Verifies devtools and installs MegaLinter Runner for the project.",
+    "options": {
+        "asdf_version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of asdf to install."
+        },
+        "taskfile_version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of Taskfile binary to install."
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "github.copilot.chat.codeGeneration.instructions": [
+                    {
+                        "text": "This dev container has asdf and Taskfile pre-installed. Use asdf to manage runtime versions and the `task` command for automation."
+                    }
+                ]
+            }
+        }
+    },
+    "containerEnv": {
+        "ASDF_DIR": "/home/vscode/.asdf",
+        "ASDF_DATA_DIR": "/home/vscode/.asdf/data",
+        "ASDF_SHIMS_DIR": "/home/vscode/.asdf/data/shims",
+        // "ASDF_CONFIG_FILE": "/home/vscode/.asdf/asdfrc",
+        "TASKFILE_HOME_DIR": "/home/vscode/.taskfile"
+    },
+    "mounts": [],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/docker-in-docker",
+        "ghcr.io/devcontainers/features/nix"
+    ]
+}

@@ -1,0 +1,152 @@
+\documentclass[11pt,letterpaper]{article}
+
+% ============================================================
+% Encoding and Typography
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[english]{babel}
+
+% ============================================================
+% Page Layout
+% ============================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+
+% ============================================================
+% Metadata Commands
+% ============================================================
+% TODO: Replace all metadata values below.
+\newcommand{\papertitle}{PAPER TITLE}
+\newcommand{\paperauthor}{AUTHOR NAME}
+\newcommand{\paperdate}{\today}
+\newcommand{\paperstatus}{Draft}
+% TODO: Replace with the canonical repository URL for this paper source.
+\newcommand{\paperrepository}{https://github.com/OWNER/REPO}
+% TODO: Replace with the author's ORCID iD (example placeholder format).
+\newcommand{\paperorcid}{0000-0000-0000-000X}
+\newcommand{\paperorcidurl}{https://orcid.org/{\paperorcid}}
+
+% ============================================================
+% Hyperlinks and PDF Metadata
+% ============================================================
+\usepackage[
+  unicode=true,
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={\papertitle},
+  pdfauthor={\paperauthor}
+]{hyperref}
+\usepackage{bookmark}
+
+% ============================================================
+% Bibliography
+% ============================================================
+\usepackage[
+  backend=biber,
+  style=ieee,
+  sorting=nyt,
+  giveninits=true,
+  maxbibnames=99,
+  doi=true,
+  url=true,
+  isbn=false,
+  eprint=true
+]{biblatex}
+\addbibresource{references.bib}
+
+% ============================================================
+% Graphics and Figures
+% ============================================================
+\usepackage{graphicx}
+\graphicspath{{figures/}{assets/}{diagrams/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{font=small,labelfont=bf,labelsep=period}
+% Accessibility note: use descriptive captions and keep an alt-text source note near each figure.
+
+% ============================================================
+% Tables
+% ============================================================
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+
+% ============================================================
+% Code Listings
+% ============================================================
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  commentstyle=\color{gray},
+  keywordstyle=\color{blue},
+  showstringspaces=false
+}
+
+% ============================================================
+% Math and Utilities
+% ============================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{makecell}
+
+% ============================================================
+% Title Metadata
+% ============================================================
+\title{\papertitle}
+\author{
+  \paperauthor\\
+  \small\href{\paperorcidurl}{ORCID: \paperorcid}\\
+  \small\href{\paperrepository}{\paperrepository}
+}
+\date{\paperdate}
+
+% ============================================================
+% Document
+% ============================================================
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \small Version: \paperstatus
+\end{center}
+
+\begin{abstract}
+  \input{sections/abstract}
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{sections/introduction}
+% TODO: Add additional section \input commands here
+\input{sections/future_work}
+\input{sections/conclusion}
+
+\printbibliography
+
+% ============================================================
+% Appendix
+% ============================================================
+% \appendix
+% \input{sections/appendix}
+
+\end{document}

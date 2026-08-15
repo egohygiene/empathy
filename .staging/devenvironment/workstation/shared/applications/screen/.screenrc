@@ -1,0 +1,43 @@
+###############################################################################
+# GNU Screen Configuration
+###############################################################################
+#
+# Purpose:
+#   Portable defaults for GNU Screen.
+#
+# Philosophy:
+#   - Minimal
+#   - UTF-8 first
+#   - Large history buffer
+#   - No unnecessary customization
+#
+# Documentation:
+#   https://www.gnu.org/software/screen/manual/
+#
+###############################################################################
+
+# Disable the startup splash screen.
+startup_message off
+
+# Enable UTF-8 support by default.
+defutf8 on
+
+# Increase the scrollback history.
+defscrollback 32000
+
+###############################################################################
+# Optional Settings
+###############################################################################
+
+# Automatically detach on hangup.
+# autodetach on
+
+# Bell behavior.
+# vbell off
+
+# Status line.
+# hardstatus alwayslastline
+
+# Shell.
+# shell /bin/bash
+
