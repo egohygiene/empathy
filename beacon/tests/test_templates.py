@@ -1,3 +1,6 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 from __future__ import annotations
 
 import importlib.util
