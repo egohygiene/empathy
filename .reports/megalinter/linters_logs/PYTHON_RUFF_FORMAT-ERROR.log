@@ -5,32 +5,32 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff_format
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 unformatted: File would be reformatted
-   --> beacon/scripts/validate_templates.py:52:72
+   --> beacon/scripts/validate_templates.py:55:72
     |
-51  |         errors.append(
+54  |         errors.append(
     -             f"{manifest_path}: id '{template_id}' must match directory "
     -             f"'{package_directory.name}'"
-52  +             f"{manifest_path}: id '{template_id}' must match directory '{package_directory.name}'"
-53  |         )
+55  +             f"{manifest_path}: id '{template_id}' must match directory '{package_directory.name}'"
+56  |         )
 --------------------------------------------------------------------------------
-82  |             if package_root not in candidate.parents:
+85  |             if package_root not in candidate.parents:
     -                 errors.append(
     -                     f"{manifest_path}: output template escapes package: {template_name}"
     -                 )
-83  +                 errors.append(f"{manifest_path}: output template escapes package: {template_name}")
-84  |             elif not candidate.is_file():
+86  +                 errors.append(f"{manifest_path}: output template escapes package: {template_name}")
+87  |             elif not candidate.is_file():
     -                 errors.append(
     -                     f"{manifest_path}: output template does not exist: {template_name}"
     -                 )
-85  +                 errors.append(f"{manifest_path}: output template does not exist: {template_name}")
-86  |
+88  +                 errors.append(f"{manifest_path}: output template does not exist: {template_name}")
+89  |
 --------------------------------------------------------------------------------
-123 |
+126 |
     -     package_directories = sorted(
     -         path for path in templates_directory.iterdir() if path.is_dir()
     -     )
-124 +     package_directories = sorted(path for path in templates_directory.iterdir() if path.is_dir())
-125 |     if not package_directories:
+127 +     package_directories = sorted(path for path in templates_directory.iterdir() if path.is_dir())
+128 |     if not package_directories:
     |
 
 1 file would be reformatted, 44 files already formatted

@@ -23,8 +23,8 @@ Linter raw log:
 .github/actions/normalize-repository-report/normalize_repository_report.py:232:0: R0914: Too many local variables (22/20) (too-many-locals)
 .github/actions/normalize-repository-report/normalize_repository_report.py:310:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 ************* Module validate_templates
-beacon/scripts/validate_templates.py:27:0: R0914: Too many local variables (24/20) (too-many-locals)
-beacon/scripts/validate_templates.py:27:0: R0912: Too many branches (26/12) (too-many-branches)
+beacon/scripts/validate_templates.py:30:0: R0914: Too many local variables (24/20) (too-many-locals)
+beacon/scripts/validate_templates.py:30:0: R0912: Too many branches (26/12) (too-many-branches)
 ************* Module validate-agents
 egolint/.agents/agents/validate-agents.py:84:0: R0912: Too many branches (26/12) (too-many-branches)
 ************* Module build-distributions

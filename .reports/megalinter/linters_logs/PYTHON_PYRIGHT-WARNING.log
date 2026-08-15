@@ -333,26 +333,26 @@ Linter raw log:
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown] | list[dict[str, Any]]" (reportUnknownArgumentType)
 beacon/scripts/validate_templates.py
-  beacon/scripts/validate_templates.py:66:16 - error: Type of "output" is unknown (reportUnknownVariableType)
-  beacon/scripts/validate_templates.py:66:36 - error: Argument type is partially unknown
+  beacon/scripts/validate_templates.py:69:16 - error: Type of "output" is unknown (reportUnknownVariableType)
+  beacon/scripts/validate_templates.py:69:36 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  beacon/scripts/validate_templates.py:72:31 - error: Type of "get" is partially unknown
+  beacon/scripts/validate_templates.py:75:31 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  beacon/scripts/validate_templates.py:72:60 - error: Type of "strip" is unknown (reportUnknownMemberType)
-  beacon/scripts/validate_templates.py:75:9 - error: Type of "template_name" is partially unknown
+  beacon/scripts/validate_templates.py:75:60 - error: Type of "strip" is unknown (reportUnknownMemberType)
+  beacon/scripts/validate_templates.py:78:9 - error: Type of "template_name" is partially unknown
     Type of "template_name" is "Unknown | None" (reportUnknownVariableType)
-  beacon/scripts/validate_templates.py:75:25 - error: Type of "get" is partially unknown
+  beacon/scripts/validate_templates.py:78:25 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  beacon/scripts/validate_templates.py:76:9 - error: Type of "renderer" is partially unknown
+  beacon/scripts/validate_templates.py:79:9 - error: Type of "renderer" is partially unknown
     Type of "renderer" is "Unknown | None" (reportUnknownVariableType)
-  beacon/scripts/validate_templates.py:76:20 - error: Type of "get" is partially unknown
+  beacon/scripts/validate_templates.py:79:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  beacon/scripts/validate_templates.py:97:13 - error: Type of "values" is partially unknown
+  beacon/scripts/validate_templates.py:100:13 - error: Type of "values" is partially unknown
     Type of "values" is "Unknown | None" (reportUnknownVariableType)
-  beacon/scripts/validate_templates.py:97:22 - error: Type of "get" is partially unknown
+  beacon/scripts/validate_templates.py:100:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  beacon/scripts/validate_templates.py:99:54 - error: Type of "value" is unknown (reportUnknownVariableType)
+  beacon/scripts/validate_templates.py:102:54 - error: Type of "value" is unknown (reportUnknownVariableType)
 egolint/.agents/agents/build-projections.py
   egolint/.agents/agents/build-projections.py:64:24 - error: Type of parameter "fm" is partially unknown
     Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)

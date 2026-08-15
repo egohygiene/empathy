@@ -412,103 +412,103 @@ TRY301 Abstract `raise` to an inner function
     |
 
 I001 [*] Import block is un-sorted or un-formatted
-  --> beacon/scripts/validate_templates.py:4:1
+  --> beacon/scripts/validate_templates.py:7:1
    |
- 2 |   """Validate Beacon template packages using only the Python standard library."""
- 3 |
- 4 | / from __future__ import annotations
- 5 | |
- 6 | | import argparse
- 7 | | import re
- 8 | | import sys
- 9 | | import tomllib
-10 | | from pathlib import Path
+ 5 |   """Validate Beacon template packages using only the Python standard library."""
+ 6 |
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | import argparse
+10 | | import re
+11 | | import sys
+12 | | import tomllib
+13 | | from pathlib import Path
    | |________________________^
-11 |
-12 |   REQUIRED_TOP_LEVEL_KEYS = {
+14 |
+15 |   REQUIRED_TOP_LEVEL_KEYS = {
    |
 help: Organize imports
    |
-6  | import argparse
-7  + from pathlib import Path
-8  | import re
-9  | import sys
-10 | import tomllib
+9  | import argparse
+10 + from pathlib import Path
+11 | import re
+12 | import sys
+13 | import tomllib
    - from pathlib import Path
-11 |
+14 |
    |
 
 PLR0912 Too many branches (26 > 12)
-  --> beacon/scripts/validate_templates.py:27:5
+  --> beacon/scripts/validate_templates.py:30:5
    |
-27 | def validate_package(package_directory: Path) -> list[str]:
+30 | def validate_package(package_directory: Path) -> list[str]:
    |     ^^^^^^^^^^^^^^^^
-28 |     """Return validation errors for one Beacon template package."""
+31 |     """Return validation errors for one Beacon template package."""
    |
 
 PLR0915 Too many statements (58 > 50)
-  --> beacon/scripts/validate_templates.py:27:5
+  --> beacon/scripts/validate_templates.py:30:5
    |
-27 | def validate_package(package_directory: Path) -> list[str]:
+30 | def validate_package(package_directory: Path) -> list[str]:
    |     ^^^^^^^^^^^^^^^^
-28 |     """Return validation errors for one Beacon template package."""
+31 |     """Return validation errors for one Beacon template package."""
    |
 
 PERF401 Use `list.extend` to create a transformed list
-  --> beacon/scripts/validate_templates.py:73:17
+  --> beacon/scripts/validate_templates.py:76:17
    |
-71 |         for key in ("format", "renderer", "template"):
-72 |             if not isinstance(output.get(key), str) or not output[key].strip():
-73 |                 errors.append(f"{manifest_path}: outputs[{index}].{key} is required")
+74 |         for key in ("format", "renderer", "template"):
+75 |             if not isinstance(output.get(key), str) or not output[key].strip():
+76 |                 errors.append(f"{manifest_path}: outputs[{index}].{key} is required")
    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-74 |
-75 |         template_name = output.get("template")
+77 |
+78 |         template_name = output.get("template")
    |
 help: Replace for loop with list.extend
 
 PERF401 Use `list.extend` to create a transformed list
-   --> beacon/scripts/validate_templates.py:108:17
+   --> beacon/scripts/validate_templates.py:111:17
     |
-106 |         for placeholder in ("$title$", "$author$", "$body$"):
-107 |             if placeholder not in tex:
-108 |                 errors.append(f"{tex_path}: missing Pandoc placeholder {placeholder}")
+109 |         for placeholder in ("$title$", "$author$", "$body$"):
+110 |             if placeholder not in tex:
+111 |                 errors.append(f"{tex_path}: missing Pandoc placeholder {placeholder}")
     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-109 |         if "\\begin{document}" not in tex or "\\end{document}" not in tex:
-110 |             errors.append(f"{tex_path}: incomplete LaTeX document boundary")
+112 |         if "\\begin{document}" not in tex or "\\end{document}" not in tex:
+113 |             errors.append(f"{tex_path}: incomplete LaTeX document boundary")
     |
 help: Replace for loop with list.extend
 
 PERF401 Use `list.extend` to create a transformed list
-   --> beacon/scripts/validate_templates.py:117:17
+   --> beacon/scripts/validate_templates.py:120:17
     |
-115 |         for placeholder in ("{{ title", "{{ body"):
-116 |             if placeholder not in html:
-117 |                 errors.append(f"{html_path}: missing Tera placeholder {placeholder}")
+118 |         for placeholder in ("{{ title", "{{ body"):
+119 |             if placeholder not in html:
+120 |                 errors.append(f"{html_path}: missing Tera placeholder {placeholder}")
     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-118 |
-119 |     return errors
+121 |
+122 |     return errors
     |
 help: Replace for loop with list.extend
 
 T201 `print` found
-   --> beacon/scripts/validate_templates.py:161:13
+   --> beacon/scripts/validate_templates.py:164:13
     |
-159 |     if errors:
-160 |         for error in errors:
-161 |             print(f"ERROR: {error}", file=sys.stderr)
+162 |     if errors:
+163 |         for error in errors:
+164 |             print(f"ERROR: {error}", file=sys.stderr)
     |             ^^^^^
-162 |         return 1
+165 |         return 1
     |
 help: Remove `print`
 
 T201 `print` found
-   --> beacon/scripts/validate_templates.py:164:5
+   --> beacon/scripts/validate_templates.py:167:5
     |
-162 |         return 1
-163 |
-164 |     print("Beacon template validation passed.")
+165 |         return 1
+166 |
+167 |     print("Beacon template validation passed.")
     |     ^^^^^
-165 |     return 0
+168 |     return 0
     |
 help: Remove `print`
 
@@ -516,37 +516,39 @@ INP001 File `beacon/tests/test_templates.py` is part of an implicit namespace pa
 --> beacon/tests/test_templates.py:1:1
 
 I001 [*] Import block is un-sorted or un-formatted
- --> beacon/tests/test_templates.py:1:1
-  |
-1 | / from __future__ import annotations
-2 | |
-3 | | import importlib.util
-4 | | import tempfile
-5 | | import unittest
-6 | | from pathlib import Path
-  | |________________________^
-7 |
-8 |   VALIDATOR_PATH = Path(__file__).parents[1] / "scripts" / "validate_templates.py"
-  |
+  --> beacon/tests/test_templates.py:4:1
+   |
+ 2 |   # SPDX-License-Identifier: MIT
+ 3 |
+ 4 | / from __future__ import annotations
+ 5 | |
+ 6 | | import importlib.util
+ 7 | | import tempfile
+ 8 | | import unittest
+ 9 | | from pathlib import Path
+   | |________________________^
+10 |
+11 |   VALIDATOR_PATH = Path(__file__).parents[1] / "scripts" / "validate_templates.py"
+   |
 help: Organize imports
-  |
-3 | import importlib.util
-4 + from pathlib import Path
-5 | import tempfile
-6 | import unittest
-  - from pathlib import Path
-7 |
-  |
+   |
+6  | import importlib.util
+7  + from pathlib import Path
+8  | import tempfile
+9  | import unittest
+   - from pathlib import Path
+10 |
+   |
 
 PT018 Assertion should be broken down into multiple parts
-  --> beacon/tests/test_templates.py:10:1
+  --> beacon/tests/test_templates.py:13:1
    |
- 8 | VALIDATOR_PATH = Path(__file__).parents[1] / "scripts" / "validate_templates.py"
- 9 | SPEC = importlib.util.spec_from_file_location("beacon_validate_templates", VALIDATOR_PATH)
-10 | assert SPEC is not None and SPEC.loader is not None
+11 | VALIDATOR_PATH = Path(__file__).parents[1] / "scripts" / "validate_templates.py"
+12 | SPEC = importlib.util.spec_from_file_location("beacon_validate_templates", VALIDATOR_PATH)
+13 | assert SPEC is not None and SPEC.loader is not None
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-11 | VALIDATOR = importlib.util.module_from_spec(SPEC)
-12 | SPEC.loader.exec_module(VALIDATOR)
+14 | VALIDATOR = importlib.util.module_from_spec(SPEC)
+15 | SPEC.loader.exec_module(VALIDATOR)
    |
 help: Break down assertion into multiple parts
 
