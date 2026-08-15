@@ -33,6 +33,9 @@ quality layers:
 - an incubated Rust `identity` holon with a consumer-owned `.identity/`
   contract, versioned asset profiles, deterministic planning, and a contextual
   creative handoff that keeps human approval canonical.
+- an incubated Rust `beacon` holon with versioned document-template packages,
+  deterministic project initialization, binary-level smoke coverage, and root
+  validation integration.
 
 Imported workflows that still depend on a product, toolchain, secret set, or
 release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
@@ -42,6 +45,8 @@ and are intentionally inert.
 
 ```bash
 task check
+task beacon:check
+task beacon:smoke
 task garden:check
 task garden:publish:check
 task garden:site:serve
@@ -70,12 +75,13 @@ because Husky owns the repository hook path.
 Commit messages use `type(scope): emoji subject` and can be authored through
 `task commit:create`.
 
-The standard check validates formatting, tests, and the changed-file Egolint
-profile. The complete and holistic commands expand that scope deliberately.
-See [the Egolint subsystem](egolint/README.md) and
+The standard check validates formatting, tests, the incubated holons, and the
+changed-file Egolint profile. The complete and holistic commands expand that
+scope deliberately. See [the Egolint subsystem](egolint/README.md) and
 [the composite action catalog](.github/actions/README.md) for their contracts.
-See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle and
-[`identity`](identity/README.md) for the visual identity lifecycle.
+See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle,
+[`identity`](identity/README.md) for the visual identity lifecycle, and
+[`beacon`](beacon/README.md) for reproducible document-project bootstrapping.
 
 ## Architecture
 
