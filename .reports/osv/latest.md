@@ -1,25 +1,25 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-16T10-09-40Z`
+- Generated: `2026-08-16T10-12-56Z`
 - Repository: `egohygiene/empathy`
-- Commit: `d9ac09d21729acd80f4df1c8c02bfaaaa94b489e`
+- Commit: `b8f17def3cbdac67b0b9064280096e8e79b0d7e0`
 - Severity gate: `high`
-- Duration: `13s`
+- Duration: `11s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
 | Critical | 2 |
-| High | 25 |
+| High | 26 |
 | Medium | 21 |
 | Low | 5 |
 | Unknown | 0 |
-| **Total** | **53** |
+| **Total** | **54** |
 
 ## Discovery
 
-Discovered 40 artifact(s) across 7 ecosystem label(s).
+Discovered 46 artifact(s) across 7 ecosystem label(s).
 
 - `.reports/megalinter/syft/sbom.spdx.json`
 - `.staging/.github/skills/drawio/scripts/package.json`
@@ -28,6 +28,12 @@ Discovered 40 artifact(s) across 7 ecosystem label(s).
 - `.staging/devenvironment/containers/services/api/poetry.lock`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
+- `.staging/react-template/store/apps/storefront/package.json`
+- `.staging/react-template/store/package.json`
+- `.staging/react-template/store/packages/commerce/package.json`
+- `.staging/react-template/store/packages/store-config/package.json`
+- `.staging/react-template/store/packages/store-ui/package.json`
+- `.staging/react-template/store/pnpm-lock.yaml`
 - `.staging/react-template/universal/apps/ui/package.json`
 - `.staging/react-template/universal/apps/ui/pyproject.toml`
 - `.staging/react-template/website/apps/docs/package.json`
@@ -66,6 +72,7 @@ Discovered 40 artifact(s) across 7 ecosystem label(s).
 
 - `.staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj`
 - `.staging/devenvironment/containers/services/api/poetry.lock`
+- `.staging/react-template/store/pnpm-lock.yaml`
 - `egolint/Cargo.lock`
 - `egolint/pnpm-lock.yaml`
 - `egolint/uv.lock`
@@ -77,6 +84,11 @@ Discovered 40 artifact(s) across 7 ecosystem label(s).
 - `.staging/.github/skills/md-to-docx/scripts/package.json`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
+- `.staging/react-template/store/apps/storefront/package.json`
+- `.staging/react-template/store/package.json`
+- `.staging/react-template/store/packages/commerce/package.json`
+- `.staging/react-template/store/packages/store-config/package.json`
+- `.staging/react-template/store/packages/store-ui/package.json`
 - `.staging/react-template/universal/apps/ui/package.json`
 - `.staging/react-template/universal/apps/ui/pyproject.toml`
 - `.staging/react-template/website/apps/docs/package.json`
@@ -111,8 +123,8 @@ Discovered 40 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 20 packages affected by 53 known vulnerabilities (2 Critical, 25 High, 21 Medium, 5 Low, 0 Unknown) from 2 ecosystems.
-50 vulnerabilities can be fixed.
+Total 21 packages affected by 54 known vulnerabilities (2 Critical, 26 High, 21 Medium, 5 Low, 0 Unknown) from 2 ecosystems.
+51 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -167,5 +179,6 @@ Total 20 packages affected by 53 known vulnerabilities (2 Critical, 25 High, 21 
 | https://osv.dev/PYSEC-2026-1996<br/>https://osv.dev/GHSA-38jv-5279-wg99 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.3 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-1998<br/>https://osv.dev/GHSA-gm62-xv2j-4w53 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.0 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2009<br/>https://osv.dev/GHSA-597g-3phw-6986 | 4.5 | PyPI | virtualenv (dev) | 20.31.2 | 20.36.1 | .staging/devenvironment/containers/services/api/poetry.lock |
+| https://osv.dev/GHSA-2v37-7h3g-55p8 | 8.2 | npm | nanoid | 3.3.16 | 3.3.18 | .staging/react-template/store/pnpm-lock.yaml |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-g3ch-rx76-35fx | 4.2 | npm | vue-template-compiler | 2.7.16 | -- | egolint/pnpm-lock.yaml |

@@ -1,36 +1,36 @@
 {
-  "commit": "d9ac09d21729acd80f4df1c8c02bfaaaa94b489e",
+  "commit": "b8f17def3cbdac67b0b9064280096e8e79b0d7e0",
   "execution": {
     "message": "Canonical OSV JSON and SARIF outputs were validated.",
     "state": "success"
   },
   "findings": {
     "advisory": 26,
-    "blocking": 27,
+    "blocking": 28,
     "by_severity": {
       "critical": 2,
-      "high": 25,
+      "high": 26,
       "low": 5,
       "medium": 21,
       "unknown": 0
     },
     "state": "blocked",
-    "total": 53
+    "total": 54
   },
   "freshness": {
-    "expires_at": "2026-08-24T10:09:53Z",
+    "expires_at": "2026-08-24T10:13:08Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-08-16T10:09:53Z",
+  "generated_at": "2026-08-16T10:13:08Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/d9ac09d21729acd80f4df1c8c02bfaaaa94b489e/.reports/osv",
+    "detail": "https://github.com/egohygiene/empathy/tree/b8f17def3cbdac67b0b9064280096e8e79b0d7e0/.reports/osv",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/d9ac09d21729acd80f4df1c8c02bfaaaa94b489e",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/31940926643"
+    "source": "https://github.com/egohygiene/empathy/commit/b8f17def3cbdac67b0b9064280096e8e79b0d7e0",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/31941068734"
   },
   "osv": {
     "discovery": {
-      "artifact_count": 40,
+      "artifact_count": 46,
       "artifacts": [
         ".reports/megalinter/syft/sbom.spdx.json",
         ".staging/.github/skills/drawio/scripts/package.json",
@@ -39,6 +39,12 @@
         ".staging/devenvironment/containers/services/api/poetry.lock",
         ".staging/devenvironment/containers/services/api/pyproject.toml",
         ".staging/devenvironment/realm/pyproject.toml",
+        ".staging/react-template/store/apps/storefront/package.json",
+        ".staging/react-template/store/package.json",
+        ".staging/react-template/store/packages/commerce/package.json",
+        ".staging/react-template/store/packages/store-config/package.json",
+        ".staging/react-template/store/packages/store-ui/package.json",
+        ".staging/react-template/store/pnpm-lock.yaml",
         ".staging/react-template/universal/apps/ui/package.json",
         ".staging/react-template/universal/apps/ui/pyproject.toml",
         ".staging/react-template/website/apps/docs/package.json",
@@ -91,10 +97,11 @@
       "sarif": ".reports/osv/latest.sarif"
     },
     "scan": {
-      "affected_packages": 20,
+      "affected_packages": 21,
       "files_scanned": [
         ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
         ".staging/devenvironment/containers/services/api/poetry.lock",
+        ".staging/react-template/store/pnpm-lock.yaml",
         "egolint/Cargo.lock",
         "egolint/pnpm-lock.yaml",
         "egolint/uv.lock"
@@ -105,6 +112,11 @@
         ".staging/.github/skills/md-to-docx/scripts/package.json",
         ".staging/devenvironment/containers/services/api/pyproject.toml",
         ".staging/devenvironment/realm/pyproject.toml",
+        ".staging/react-template/store/apps/storefront/package.json",
+        ".staging/react-template/store/package.json",
+        ".staging/react-template/store/packages/commerce/package.json",
+        ".staging/react-template/store/packages/store-config/package.json",
+        ".staging/react-template/store/packages/store-ui/package.json",
         ".staging/react-template/universal/apps/ui/package.json",
         ".staging/react-template/universal/apps/ui/pyproject.toml",
         ".staging/react-template/website/apps/docs/package.json",
@@ -138,15 +150,15 @@
       ],
       "severity": {
         "critical": 2,
-        "high": 25,
+        "high": 26,
         "low": 5,
         "medium": 21,
-        "total": 53,
+        "total": 54,
         "unknown": 0
       },
-      "vulnerabilities": 53
+      "vulnerabilities": 54
     },
-    "scan_duration_seconds": 13,
+    "scan_duration_seconds": 11,
     "scanner": {
       "name": "osv-scanner",
       "version": "2.5.0"
@@ -162,7 +174,7 @@
   "provenance": {
     "event": "push",
     "run_attempt": 1,
-    "run_id": "31940926643",
+    "run_id": "31941068734",
     "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
   },
   "repository": "egohygiene/empathy",

@@ -18,6 +18,15 @@
           "length": -1,
           "location": {
             "index": -1,
+            "uri": "file:///home/runner/work/empathy/empathy/.staging/react-template/store/pnpm-lock.yaml"
+          },
+          "parentIndex": -1,
+          "roles": []
+        },
+        {
+          "length": -1,
+          "location": {
+            "index": -1,
             "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
           },
           "parentIndex": -1,
@@ -109,6 +118,42 @@
         },
         {
           "partialFingerprints": {
+            "primaryLocationLineHash": "0ac09a85a7ad7d3d7f5b965184080250988e281b0178c14c0cc8d5a114decbf5"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/.staging/react-template/store/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'nanoid@3.3.16' is vulnerable to 'CVE-2026-67213' (also known as 'GHSA-2v37-7h3g-55p8')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-67213",
+          "ruleIndex": 2,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
             "primaryLocationLineHash": "302b46851815d32d1ca2f366c94117a087195a975258cb19c6025b476515db08"
           },
           "attachments": [],
@@ -139,7 +184,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66471",
-          "ruleIndex": 2,
+          "ruleIndex": 3,
           "stacks": [],
           "taxa": []
         },
@@ -175,7 +220,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-21441",
-          "ruleIndex": 3,
+          "ruleIndex": 4,
           "stacks": [],
           "taxa": []
         },
@@ -211,7 +256,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32274",
-          "ruleIndex": 4,
+          "ruleIndex": 5,
           "stacks": [],
           "taxa": []
         },
@@ -247,7 +292,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54911",
-          "ruleIndex": 5,
+          "ruleIndex": 6,
           "stacks": [],
           "taxa": []
         },
@@ -283,7 +328,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-4539",
-          "ruleIndex": 6,
+          "ruleIndex": 7,
           "stacks": [],
           "taxa": []
         },
@@ -319,7 +364,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-537c-gmf6-5ccf",
-          "ruleIndex": 7,
+          "ruleIndex": 8,
           "stacks": [],
           "taxa": []
         },
@@ -355,7 +400,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22702",
-          "ruleIndex": 8,
+          "ruleIndex": 9,
           "stacks": [],
           "taxa": []
         },
@@ -391,7 +436,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53539",
-          "ruleIndex": 9,
+          "ruleIndex": 10,
           "stacks": [],
           "taxa": []
         },
@@ -427,7 +472,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45409",
-          "ruleIndex": 10,
+          "ruleIndex": 11,
           "stacks": [],
           "taxa": []
         },
@@ -463,7 +508,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53538",
-          "ruleIndex": 11,
+          "ruleIndex": 12,
           "stacks": [],
           "taxa": []
         },
@@ -499,7 +544,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-71176",
-          "ruleIndex": 12,
+          "ruleIndex": 13,
           "stacks": [],
           "taxa": []
         },
@@ -535,7 +580,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32597",
-          "ruleIndex": 13,
+          "ruleIndex": 14,
           "stacks": [],
           "taxa": []
         },
@@ -571,7 +616,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-62727",
-          "ruleIndex": 14,
+          "ruleIndex": 15,
           "stacks": [],
           "taxa": []
         },
@@ -607,7 +652,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54283",
-          "ruleIndex": 15,
+          "ruleIndex": 16,
           "stacks": [],
           "taxa": []
         },
@@ -643,7 +688,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-14505",
-          "ruleIndex": 16,
+          "ruleIndex": 17,
           "stacks": [],
           "taxa": []
         },
@@ -679,7 +724,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48710",
-          "ruleIndex": 17,
+          "ruleIndex": 18,
           "stacks": [],
           "taxa": []
         },
@@ -715,7 +760,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 18,
+          "ruleIndex": 19,
           "stacks": [],
           "taxa": []
         },
@@ -751,7 +796,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 19,
+          "ruleIndex": 20,
           "stacks": [],
           "taxa": []
         },
@@ -787,7 +832,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 20,
+          "ruleIndex": 21,
           "stacks": [],
           "taxa": []
         },
@@ -823,7 +868,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 21,
+          "ruleIndex": 22,
           "stacks": [],
           "taxa": []
         },
@@ -859,7 +904,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 22,
+          "ruleIndex": 23,
           "stacks": [],
           "taxa": []
         },
@@ -895,7 +940,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 23,
+          "ruleIndex": 24,
           "stacks": [],
           "taxa": []
         },
@@ -931,7 +976,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 24,
+          "ruleIndex": 25,
           "stacks": [],
           "taxa": []
         },
@@ -967,7 +1012,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 25,
+          "ruleIndex": 26,
           "stacks": [],
           "taxa": []
         },
@@ -1003,7 +1048,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 26,
+          "ruleIndex": 27,
           "stacks": [],
           "taxa": []
         },
@@ -1039,7 +1084,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 27,
+          "ruleIndex": 28,
           "stacks": [],
           "taxa": []
         },
@@ -1075,7 +1120,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 28,
+          "ruleIndex": 29,
           "stacks": [],
           "taxa": []
         },
@@ -1111,7 +1156,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 29,
+          "ruleIndex": 30,
           "stacks": [],
           "taxa": []
         },
@@ -1147,7 +1192,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 30,
+          "ruleIndex": 31,
           "stacks": [],
           "taxa": []
         },
@@ -1183,7 +1228,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 31,
+          "ruleIndex": 32,
           "stacks": [],
           "taxa": []
         },
@@ -1219,7 +1264,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 32,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -1255,7 +1300,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 33,
+          "ruleIndex": 34,
           "stacks": [],
           "taxa": []
         },
@@ -1291,7 +1336,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 34,
+          "ruleIndex": 35,
           "stacks": [],
           "taxa": []
         },
@@ -1327,7 +1372,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 35,
+          "ruleIndex": 36,
           "stacks": [],
           "taxa": []
         },
@@ -1363,7 +1408,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 36,
+          "ruleIndex": 37,
           "stacks": [],
           "taxa": []
         },
@@ -1399,7 +1444,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 37,
+          "ruleIndex": 38,
           "stacks": [],
           "taxa": []
         },
@@ -1435,7 +1480,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
           "stacks": [],
           "taxa": []
         },
@@ -1471,7 +1516,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 39,
+          "ruleIndex": 40,
           "stacks": [],
           "taxa": []
         },
@@ -1507,7 +1552,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 40,
+          "ruleIndex": 41,
           "stacks": [],
           "taxa": []
         },
@@ -1543,7 +1588,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 41,
+          "ruleIndex": 42,
           "stacks": [],
           "taxa": []
         },
@@ -1579,7 +1624,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 42,
+          "ruleIndex": 43,
           "stacks": [],
           "taxa": []
         },
@@ -1615,7 +1660,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 43,
+          "ruleIndex": 44,
           "stacks": [],
           "taxa": []
         },
@@ -1651,7 +1696,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 44,
+          "ruleIndex": 45,
           "stacks": [],
           "taxa": []
         },
@@ -1687,7 +1732,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 45,
+          "ruleIndex": 46,
           "stacks": [],
           "taxa": []
         },
@@ -1723,7 +1768,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 46,
+          "ruleIndex": 47,
           "stacks": [],
           "taxa": []
         },
@@ -1759,7 +1804,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 47,
+          "ruleIndex": 48,
           "stacks": [],
           "taxa": []
         },
@@ -1795,7 +1840,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 48,
+          "ruleIndex": 49,
           "stacks": [],
           "taxa": []
         },
@@ -1831,7 +1876,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 49,
+          "ruleIndex": 50,
           "stacks": [],
           "taxa": []
         },
@@ -1867,7 +1912,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-45768",
-          "ruleIndex": 50,
+          "ruleIndex": 51,
           "stacks": [],
           "taxa": []
         },
@@ -1903,7 +1948,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 27,
+          "ruleIndex": 28,
           "stacks": [],
           "taxa": []
         },
@@ -1939,7 +1984,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32597",
-          "ruleIndex": 13,
+          "ruleIndex": 14,
           "stacks": [],
           "taxa": []
         },
@@ -1975,7 +2020,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
           "stacks": [],
           "taxa": []
         },
@@ -2011,7 +2056,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 44,
+          "ruleIndex": 45,
           "stacks": [],
           "taxa": []
         },
@@ -2047,7 +2092,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 37,
+          "ruleIndex": 38,
           "stacks": [],
           "taxa": []
         },
@@ -2083,7 +2128,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48710",
-          "ruleIndex": 17,
+          "ruleIndex": 18,
           "stacks": [],
           "taxa": []
         },
@@ -2119,7 +2164,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 18,
+          "ruleIndex": 19,
           "stacks": [],
           "taxa": []
         },
@@ -2155,7 +2200,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 29,
+          "ruleIndex": 30,
           "stacks": [],
           "taxa": []
         },
@@ -2191,7 +2236,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 21,
+          "ruleIndex": 22,
           "stacks": [],
           "taxa": []
         },
@@ -2227,7 +2272,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 43,
+          "ruleIndex": 44,
           "stacks": [],
           "taxa": []
         },
@@ -2263,7 +2308,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 49,
+          "ruleIndex": 50,
           "stacks": [],
           "taxa": []
         },
@@ -2299,7 +2344,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-71176",
-          "ruleIndex": 12,
+          "ruleIndex": 13,
           "stacks": [],
           "taxa": []
         },
@@ -2335,7 +2380,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 46,
+          "ruleIndex": 47,
           "stacks": [],
           "taxa": []
         },
@@ -2407,7 +2452,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-62727",
-          "ruleIndex": 14,
+          "ruleIndex": 15,
           "stacks": [],
           "taxa": []
         },
@@ -2443,7 +2488,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66471",
-          "ruleIndex": 2,
+          "ruleIndex": 3,
           "stacks": [],
           "taxa": []
         },
@@ -2479,7 +2524,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-21441",
-          "ruleIndex": 3,
+          "ruleIndex": 4,
           "stacks": [],
           "taxa": []
         },
@@ -2515,7 +2560,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 26,
+          "ruleIndex": 27,
           "stacks": [],
           "taxa": []
         },
@@ -2551,7 +2596,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22702",
-          "ruleIndex": 8,
+          "ruleIndex": 9,
           "stacks": [],
           "taxa": []
         },
@@ -2587,7 +2632,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31900",
-          "ruleIndex": 51,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -2623,7 +2668,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32274",
-          "ruleIndex": 4,
+          "ruleIndex": 5,
           "stacks": [],
           "taxa": []
         },
@@ -2659,7 +2704,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-7246",
-          "ruleIndex": 52,
+          "ruleIndex": 53,
           "stacks": [],
           "taxa": []
         },
@@ -2695,7 +2740,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 39,
+          "ruleIndex": 40,
           "stacks": [],
           "taxa": []
         },
@@ -2731,7 +2776,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45409",
-          "ruleIndex": 10,
+          "ruleIndex": 11,
           "stacks": [],
           "taxa": []
         },
@@ -2767,7 +2812,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 33,
+          "ruleIndex": 34,
           "stacks": [],
           "taxa": []
         },
@@ -2803,7 +2848,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 25,
+          "ruleIndex": 26,
           "stacks": [],
           "taxa": []
         },
@@ -2839,7 +2884,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 48,
+          "ruleIndex": 49,
           "stacks": [],
           "taxa": []
         },
@@ -2875,7 +2920,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 47,
+          "ruleIndex": 48,
           "stacks": [],
           "taxa": []
         },
@@ -2911,7 +2956,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 45,
+          "ruleIndex": 46,
           "stacks": [],
           "taxa": []
         },
@@ -2947,7 +2992,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 20,
+          "ruleIndex": 21,
           "stacks": [],
           "taxa": []
         },
@@ -2983,7 +3028,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 19,
+          "ruleIndex": 20,
           "stacks": [],
           "taxa": []
         },
@@ -3019,7 +3064,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54911",
-          "ruleIndex": 5,
+          "ruleIndex": 6,
           "stacks": [],
           "taxa": []
         },
@@ -3055,7 +3100,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 28,
+          "ruleIndex": 29,
           "stacks": [],
           "taxa": []
         },
@@ -3091,7 +3136,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54283",
-          "ruleIndex": 15,
+          "ruleIndex": 16,
           "stacks": [],
           "taxa": []
         },
@@ -3163,7 +3208,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-4539",
-          "ruleIndex": 6,
+          "ruleIndex": 7,
           "stacks": [],
           "taxa": []
         },
@@ -3199,7 +3244,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53539",
-          "ruleIndex": 9,
+          "ruleIndex": 10,
           "stacks": [],
           "taxa": []
         },
@@ -3235,7 +3280,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53538",
-          "ruleIndex": 11,
+          "ruleIndex": 12,
           "stacks": [],
           "taxa": []
         },
@@ -3271,7 +3316,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 34,
+          "ruleIndex": 35,
           "stacks": [],
           "taxa": []
         },
@@ -3307,7 +3352,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 36,
+          "ruleIndex": 37,
           "stacks": [],
           "taxa": []
         },
@@ -3343,7 +3388,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 41,
+          "ruleIndex": 42,
           "stacks": [],
           "taxa": []
         },
@@ -3379,7 +3424,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 42,
+          "ruleIndex": 43,
           "stacks": [],
           "taxa": []
         },
@@ -3415,7 +3460,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 32,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -3451,7 +3496,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 24,
+          "ruleIndex": 25,
           "stacks": [],
           "taxa": []
         },
@@ -3487,7 +3532,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 30,
+          "ruleIndex": 31,
           "stacks": [],
           "taxa": []
         },
@@ -3523,7 +3568,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 31,
+          "ruleIndex": 32,
           "stacks": [],
           "taxa": []
         },
@@ -3559,7 +3604,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 35,
+          "ruleIndex": 36,
           "stacks": [],
           "taxa": []
         },
@@ -3595,7 +3640,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 22,
+          "ruleIndex": 23,
           "stacks": [],
           "taxa": []
         },
@@ -3631,7 +3676,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 40,
+          "ruleIndex": 41,
           "stacks": [],
           "taxa": []
         }
@@ -3700,6 +3745,30 @@
               "shortDescription": {
                 "markdown": "CVE-2026-44307: Mako vulnerable to path traversal via backslash URI on Windows in TemplateLookup",
                 "text": "CVE-2026-44307: Mako vulnerable to path traversal via backslash URI on Windows in TemplateLookup"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-67213",
+                "GHSA-2v37-7h3g-55p8"
+              ],
+              "fullDescription": {
+                "markdown": "nanoid (Nano ID) before 5.1.6 contains an infinite loop in the customAlphabet and customRandom functions. When these functions are configured with a size of 0, the internal generation loop never satisfies its exit condition and spins indefinitely, hanging the calling thread. An application that passes an unvalidated, attacker-controlled size of 0 to these functions is exposed to a denial-of-service condition.",
+                "text": "nanoid (Nano ID) before 5.1.6 contains an infinite loop in the customAlphabet and customRandom functions. When these functions are configured with a size of 0, the internal generation loop never satisfies its exit condition and spins indefinitely, hanging the calling thread. An application that passes an unvalidated, attacker-controlled size of 0 to these functions is exposed to a denial-of-service condition."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-67213](https://osv.dev/CVE-2026-67213)**.\n\n## [GHSA-2v37-7h3g-55p8](https://osv.dev/GHSA-2v37-7h3g-55p8)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e nanoid (Nano ID) before 5.1.6 contains an infinite loop in the customAlphabet and customRandom functions. When these functions are configured with a size of 0, the internal generation loop never satisfies its exit condition and spins indefinitely, hanging the calling thread. An application that passes an unvalidated, attacker-controlled size of 0 to these functions is exposed to a denial-of-service condition.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/.staging/react-template/store/pnpm-lock.yaml | nanoid | 3.3.16 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-2v37-7h3g-55p8 | nanoid | 3.3.18, 5.1.6 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/.staging/react-template/store/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-67213\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-67213](https://osv.dev/CVE-2026-67213)**.\n\n## [GHSA-2v37-7h3g-55p8](https://osv.dev/GHSA-2v37-7h3g-55p8)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e nanoid (Nano ID) before 5.1.6 contains an infinite loop in the customAlphabet and customRandom functions. When these functions are configured with a size of 0, the internal generation loop never satisfies its exit condition and spins indefinitely, hanging the calling thread. An application that passes an unvalidated, attacker-controlled size of 0 to these functions is exposed to a denial-of-service condition.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/.staging/react-template/store/pnpm-lock.yaml | nanoid | 3.3.16 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-2v37-7h3g-55p8 | nanoid | 3.3.18, 5.1.6 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/.staging/react-template/store/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-67213\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-67213",
+              "name": "CVE-2026-67213",
+              "properties": {
+                "security-severity": "8.2"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-67213: nanoid: custom generators can loop indefinitely when size is zero",
+                "text": "CVE-2026-67213: nanoid: custom generators can loop indefinitely when size is zero"
               }
             },
             {
