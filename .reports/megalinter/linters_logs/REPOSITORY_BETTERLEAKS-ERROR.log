@@ -9,17 +9,6 @@ Linter raw log:
    ▾
  betterleaks 1.7.3
 
-┌─generic-api-key──○
-│
-│ 950 │             "secret": "REDACTED",
-│     │                        ^^^^^^^^
-│
-│ attributes:
-│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
-│   resource ...... fs.content
-└○
-
-
 ┌─stripe-access-token──○
 │
 │ 412 │ const API_KEY = 'REDACTED';
@@ -38,6 +27,17 @@ Linter raw log:
 │
 │ attributes:
 │   path .......... .staging/.github/instructions/awesome-copilot/code-review-generic.instructions.md
+│   resource ...... fs.content
+└○
+
+
+┌─generic-api-key──○
+│
+│ 950 │             "secret": "REDACTED",
+│     │                        ^^^^^^^^
+│
+│ attributes:
+│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
 │   resource ...... fs.content
 └○
 
@@ -64,6 +64,6 @@ Linter raw log:
 └○
 
 
-1:25PM INF scanned ~32579705 bytes (32.58 MB) in 2.5s
-1:25PM WRN leaks found: 5
+2:04PM INF scanned ~32075086 bytes (32.08 MB) in 2.5s
+2:04PM WRN leaks found: 5
 

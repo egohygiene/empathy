@@ -424,13 +424,47 @@ holon/packs/react-vite/template/packages/ui/src/styles/index.css
   112:1   ✖  Expected class selector ".eh-badge--available" to be kebab-case                          selector-class-pattern
   116:1   ✖  Expected class selector ".eh-badge--development" to be kebab-case                        selector-class-pattern
   120:1   ✖  Expected class selector ".eh-badge--planned" to be kebab-case                            selector-class-pattern
-  140:1   ✖  Expected class selector ".eh-theme-toggle__label" to be kebab-case                       selector-class-pattern
-  141:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
-  159:3   ✖  Deprecated property "clip"                                                               property-no-deprecated
-  173:1   ✖  Expected class selector ".eh-orbit__ring" to be kebab-case                               selector-class-pattern
-  180:1   ✖  Expected class selector ".eh-orbit__ring--inner" to be kebab-case                        selector-class-pattern
-  184:1   ✖  Expected class selector ".eh-orbit__core" to be kebab-case                               selector-class-pattern
-  191:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
+  132:1   ✖  Expected class selector ".eh-spinner--small" to be kebab-case                            selector-class-pattern
+  137:1   ✖  Expected class selector ".eh-spinner--medium" to be kebab-case                           selector-class-pattern
+  142:1   ✖  Expected class selector ".eh-spinner--large" to be kebab-case                            selector-class-pattern
+  153:21  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  156:34  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  159:1   ✖  Expected class selector ".eh-alert--info" to be kebab-case                               selector-class-pattern
+  163:1   ✖  Expected class selector ".eh-alert--success" to be kebab-case                            selector-class-pattern
+  167:1   ✖  Expected class selector ".eh-alert--warning" to be kebab-case                            selector-class-pattern
+  171:1   ✖  Expected class selector ".eh-alert--danger" to be kebab-case                             selector-class-pattern
+  175:1   ✖  Expected class selector ".eh-alert__content" to be kebab-case                            selector-class-pattern
+  180:1   ✖  Expected class selector ".eh-alert__message" to be kebab-case                            selector-class-pattern
+  184:1   ✖  Expected class selector ".eh-alert__actions" to be kebab-case                            selector-class-pattern
+  199:1   ✖  Expected class selector ".eh-empty-state__icon" to be kebab-case                         selector-class-pattern
+  204:1   ✖  Expected class selector ".eh-empty-state__title" to be kebab-case                        selector-class-pattern
+  208:1   ✖  Expected class selector ".eh-empty-state__description" to be kebab-case                  selector-class-pattern
+  213:1   ✖  Expected class selector ".eh-empty-state__actions" to be kebab-case                      selector-class-pattern
+  225:31  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  227:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  230:1   ✖  Expected class selector ".eh-environment-banner--development" to be kebab-case           selector-class-pattern
+  235:1   ✖  Expected class selector ".eh-environment-banner--preview" to be kebab-case               selector-class-pattern
+  240:1   ✖  Expected class selector ".eh-environment-banner--warning" to be kebab-case               selector-class-pattern
+  270:1   ✖  Expected class selector ".eh-loading-state--inline" to be kebab-case                     selector-class-pattern
+  274:1   ✖  Expected class selector ".eh-loading-state--section" to be kebab-case                    selector-class-pattern
+  279:1   ✖  Expected class selector ".eh-loading-state--page" to be kebab-case                       selector-class-pattern
+  282:18  ✖  Expected custom property name "--eh-typography-sizeLg" to be kebab-case                  custom-property-pattern
+  296:1   ✖  Expected class selector ".eh-media-card__image" to be kebab-case                         selector-class-pattern
+  303:1   ✖  Expected class selector ".eh-media-card__body" to be kebab-case                          selector-class-pattern
+  309:1   ✖  Expected class selector ".eh-media-card__title" to be kebab-case                         selector-class-pattern
+  313:1   ✖  Expected class selector ".eh-media-card__link" to be kebab-case                          selector-class-pattern
+  319:1   ✖  Expected class selector ".eh-media-card__description" to be kebab-case                   selector-class-pattern
+  323:1   ✖  Expected class selector ".eh-media-card__actions" to be kebab-case                       selector-class-pattern
+  342:1   ✖  Expected class selector ".eh-skeleton--line" to be kebab-case                            selector-class-pattern
+  347:1   ✖  Expected class selector ".eh-skeleton--rectangle" to be kebab-case                       selector-class-pattern
+  352:1   ✖  Expected class selector ".eh-skeleton--circle" to be kebab-case                          selector-class-pattern
+  364:1   ✖  Expected class selector ".eh-theme-toggle__label" to be kebab-case                       selector-class-pattern
+  365:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  383:3   ✖  Deprecated property "clip"                                                               property-no-deprecated
+  397:1   ✖  Expected class selector ".eh-orbit__ring" to be kebab-case                               selector-class-pattern
+  404:1   ✖  Expected class selector ".eh-orbit__ring--inner" to be kebab-case                        selector-class-pattern
+  408:1   ✖  Expected class selector ".eh-orbit__core" to be kebab-case                               selector-class-pattern
+  415:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
 
 notebooks/jupyter/themes/@jupyterlab/theme-dark-extension/index.css
   110:23  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
@@ -441,7 +475,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
   108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
   147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
 
-✖ 404 problems (404 errors, 0 warnings)
-  246 errors potentially fixable with the "--fix" option.
+✖ 438 problems (438 errors, 0 warnings)
+  249 errors potentially fixable with the "--fix" option.
 
 

@@ -4,55 +4,55 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.42s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       8.09s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   49|     |     0|          |       0|       0.33s|
-|❌ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  121|     |     7|          |       0|       8.87s|
-|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    6|     |     0|          |       0|       0.02s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3107|          |      no|      26.49s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |   23|     |   404|          |       0|        2.5s|
-|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    1|     |     1|          |       0|       0.17s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2434|     |     1|          |       0|       2.54s|
-|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   17|     |   356|          |       0|       1.07s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|       1.72s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.36s|
-|❌ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  185|     |     1|          |       0|       0.31s|
-|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  185|     |     1|          |       0|       3.44s|
-|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  185|     |     0|          |       0|      99.64s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  298|     | 67759|          |       0|     162.02s|
-|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  306|     |   400|          |       0|       4.18s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  306|     |     1|          |       0|        0.6s|
-|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.45s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.22s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.99s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   53|     |    14|          |       0|       2.28s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    34|          |      no|      16.79s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   53|     |   257|          |       0|      17.17s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8726|          |      no|       44.3s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   53|     |   778|          |       0|       6.93s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   53|     |     1|          |       0|       0.06s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.53s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       9.35s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   49|     |     0|          |       0|       0.41s|
+|❌ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  121|     |     7|          |       0|       8.85s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    6|     |     0|          |       0|       0.04s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3110|          |      no|      27.33s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |   23|     |   438|          |       0|       3.56s|
+|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    1|     |     1|          |       0|        0.2s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2467|     |     1|          |       0|       3.49s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   17|     |   356|          |       0|       1.33s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|       2.45s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.55s|
+|❌ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  185|     |     1|          |       0|       0.38s|
+|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  185|     |     1|          |       0|       3.95s|
+|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  185|     |     0|          |       0|      77.11s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  298|     | 67759|          |       0|     241.76s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  312|     |   400|          |       0|       4.15s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  312|     |     1|          |       0|       0.51s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.14s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.18s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       1.04s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   53|     |    14|          |       0|       2.83s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    34|          |      no|       17.3s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   53|     |   257|          |       0|      15.94s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8726|          |      no|      45.18s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   53|     |   778|          |       0|       6.87s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   53|     |     1|          |       0|        0.1s|
 |❌ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |     5|          |      no|       2.58s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      46.86s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       7.94s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    62|          |      no|     111.04s|
-|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.46s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.13s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       5.97s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      13.99s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      41.89s|
-|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|        9.6s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       4.16s|
-|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.45s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  724|     |   115|          |       0|      54.02s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  327|     |   674|          |       0|       8.32s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  327|     |     1|          |       0|       0.75s|
-|❌ TSX         |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |   75|     |     1|          |       0|       1.75s|
-|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |  131|     |     1|          |       0|       1.77s|
-|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |  131|     |     1|          |       0|       4.72s|
-|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.33s|
-|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  189|     |     1|          |      17|       5.21s|
-|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  189|     |     0|          |       0|      43.94s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  189|     |   213|          |       0|      15.32s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      47.02s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|        8.5s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    62|          |      no|     116.71s|
+|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.51s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.14s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.71s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      28.36s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      43.04s|
+|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|      10.71s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       3.06s|
+|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.38s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  730|     |   111|          |       0|      24.46s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  333|     |   678|          |       0|       8.07s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  333|     |     1|          |       0|       0.69s|
+|❌ TSX         |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.99s|
+|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|        2.4s|
+|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       5.97s|
+|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.39s|
+|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  189|     |     1|          |      17|       4.82s|
+|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  189|     |     0|          |       0|      40.55s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  189|     |   213|          |       0|      12.78s|
 
 ## Detailed Issues
 
@@ -66,7 +66,7 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-16 13:24:47.507183+00:00
+Run started:2026-08-16 14:03:25.044486+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -317,17 +317,6 @@ Files skipped (2):
    ▾
  betterleaks 1.7.3
 
-┌─generic-api-key──○
-│
-│ 950 │             "secret": "REDACTED",
-│     │                        ^^^^^^^^
-│
-│ attributes:
-│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
-│   resource ...... fs.content
-└○
-
-
 ┌─stripe-access-token──○
 │
 │ 412 │ const API_KEY = 'REDACTED';
@@ -346,6 +335,17 @@ Files skipped (2):
 │
 │ attributes:
 │   path .......... .staging/.github/instructions/awesome-copilot/code-review-generic.instructions.md
+│   resource ...... fs.content
+└○
+
+
+┌─generic-api-key──○
+│
+│ 950 │             "secret": "REDACTED",
+│     │                        ^^^^^^^^
+│
+│ attributes:
+│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
 │   resource ...... fs.content
 └○
 
@@ -372,8 +372,8 @@ Files skipped (2):
 └○
 
 
-1:25PM INF scanned ~32579705 bytes (32.58 MB) in 2.5s
-1:25PM WRN leaks found: 5
+2:04PM INF scanned ~32075086 bytes (32.08 MB) in 2.5s
+2:04PM WRN leaks found: 5
 ```
 
 </details>
@@ -1281,7 +1281,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786886524044:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786888842731:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1322,7 +1322,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786886524044:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786888842731:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1362,7 +1362,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786886524044:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786888842731:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1689,7 +1689,7 @@ L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 17 files, found 356 errors in 11 files (123 ms)
+Scanned 17 files, found 356 errors in 11 files (152 ms)
 
 (Truncated to last 23529 characters out of 67003)
 ```
@@ -1821,15 +1821,23 @@ Cargo.toml failed for `.toml` rules: kebabcase | snakecase
 </details>
 
 <details>
-<summary>❌ SPELL / lychee - 115 errors</summary>
+<summary>❌ SPELL / lychee - 111 errors</summary>
 
 ```
-de: 429 Too Many Requests | Followed 4 redirects. Redirects: https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Rejected status code: 403 Forbidden
+ing/github/README.md (at 186:1) | File not found. Check if file exists and path is correct
+
+Errors in egolint/.agents/agents/AGENT-CONTRACT.md
+[404] https://docs.github.com/en/copilot/customizing-copilot/using-github-copilot-extensions/about-github-copilot-agents (at 13:2) | Rejected status code: 404 Not Found
+
+Errors in egolint/.config/lint/salesforce/code-analyzer.yml
+[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Rejected status code: 403 Forbidden
+
+Errors in egolint/.mega-linter.yml
+[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Error (cached)
 [404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ (at 434:3) | Rejected status code: 404 Not Found
 
 Redirects in egolint/.mega-linter.yml
-https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
+https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
 https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
 
 
@@ -1855,7 +1863,7 @@ Errors in holon/packs/react-vite/template/apps/web/index.html
 
 Errors in holon/packs/react-vite/template/apps/web/public/llms.txt
 [404] https://egohygiene.io/ (at 11:17) | Error (cached)
-[404] https://egohygiene.io/ (at 7:7) | Error (cached)
+[404] https://egohygiene.io/ (at 7:7) | Rejected status code: 404 Not Found
 
 Errors in holon/packs/react-vite/template/apps/web/public/robots.txt
 [404] https://egohygiene.io/sitemap.xml (at 4:10) | Error (cached)
@@ -1865,7 +1873,7 @@ Errors in holon/packs/react-vite/template/docs/provenance/store-source-readme.md
 [ERROR] file://holon/packs/react-vite/template/docs/provenance/docs/fourthwall-setup.md (at 58:5) | File not found. Check if file exists and path is correct
 
 Errors in holon/packs/react-vite/template/package.json
-[404] https://egohygiene.io/ (at 33:13) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 33:13) | Error (cached)
 
 Redirects in holon/packs/react-vite/template/package.json
 https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
@@ -1895,6 +1903,10 @@ https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest
 
 Errors in mindgarden/contracts/publish-profile.schema.json
 [ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
+
+Redirects in mindgarden/contracts/publish-profile.schema.json
+https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
+
 
 Errors in PURPOSE.md
 [ERROR] file://.staging/github/README.md (at 97:48) | File not found. Check if file exists and path is correct
@@ -1927,14 +1939,14 @@ Host: github.com
   Total requests: 222
   Successful: 204 (91.9%)
   Client errors (4xx): 18
-  Median response time: 376ms
-  Cache hit rate: 23.0%
-  Cache hits: 51, misses: 171
+  Median response time: 363ms
+  Cache hit rate: 23.9%
+  Cache hits: 53, misses: 169
 
 Host: json.schemastore.org
   Total requests: 98
   Successful: 98 (100.0%)
-  Median response time: 83ms
+  Median response time: 70ms
   Cache hit rate: 88.8%
   Cache hits: 87, misses: 11
 
@@ -1942,7 +1954,7 @@ Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 25ms
+  Median response time: 29ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
@@ -1957,14 +1969,14 @@ Host: raw.githubusercontent.com
 Host: json-schema.org
   Total requests: 23
   Successful: 23 (100.0%)
-  Median response time: 206ms
+  Median response time: 94ms
   Cache hit rate: 95.7%
   Cache hits: 22, misses: 1
 
 Host: img.shields.io
   Total requests: 22
   Successful: 22 (100.0%)
-  Median response time: 14ms
+  Median response time: 17ms
   Cache hit rate: 4.5%
   Cache hits: 1, misses: 21
 
@@ -1972,71 +1984,65 @@ Host: creativecommons.org
   Total requests: 15
   Successful: 14 (93.3%)
   Client errors (4xx): 1
-  Median response time: 98ms
+  Median response time: 197ms
   Cache hit rate: 66.7%
   Cache hits: 10, misses: 5
+
+Host: www.schemastore.org
+  Total requests: 12
+  Successful: 12 (100.0%)
+  Median response time: 11ms
+  Cache hit rate: 33.3%
+  Cache hits: 4, misses: 8
 
 Host: egohygiene.github.io
   Total requests: 12
   Successful: 6 (50.0%)
   Client errors (4xx): 6
-  Median response time: 19ms
-  Cache hit rate: 33.3%
-  Cache hits: 4, misses: 8
-
-Host: www.schemastore.org
-  Total requests: 12
-  Successful: 12 (100.0%)
-  Median response time: 14ms
+  Median response time: 16ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
 
 Host: www.overleaf.com
   Total requests: 11
   Successful: 11 (100.0%)
-  Median response time: 42ms
+  Median response time: 47ms
   Cache hit rate: 9.1%
   Cache hits: 1, misses: 10
 
 Host: sourceforge.net
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 486ms
+  Median response time: 636ms
   Cache hit rate: 55.6%
   Cache hits: 5, misses: 4
 
 Host: scripts.sil.org
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 358ms
+  Median response time: 735ms
   Cache hit rate: 88.9%
   Cache hits: 8, misses: 1
 
 Host: i.creativecommons.org
   Total requests: 8
   Successful: 8 (100.0%)
-  Median response time: 68ms
+  Median response time: 279ms
   Cache hit rate: 87.5%
   Cache hits: 7, misses: 1
-
-Host: docs.ansible.com
-  Total requests: 8
-  Successful: 0 (0.0%)
-  Rate limited: 8 (429 Too Many Requests)
-  Median response time: 7ms
 
 Host: taskfile.dev
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 101ms
-  Cache hit rate: 62.5%
-  Cache hits: 5, misses: 3
+  Median response time: 114ms
+  Cache hit rate: 71.4%
+  Cache hits: 5, misses: 2
 
 Host: egohygiene.io
   Total requests: 7
   Successful: 5 (71.4%)
   Client errors (4xx): 2
-  Median response time: 41ms
+  Median response time: 89ms
   Cache hit rate: 71.4%
   Cache hits: 5, misses: 2
 
@@ -2044,28 +2050,28 @@ Host: www.latextemplates.com
   Total requests: 7
   Successful: 4 (57.1%)
   Client errors (4xx): 3
-  Median response time: 43ms
+  Median response time: 301ms
   Cache hit rate: 42.9%
   Cache hits: 3, misses: 4
 
 Host: sflogo.sourceforge.net
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 160ms
+  Median response time: 263ms
   Cache hit rate: 66.7%
   Cache hits: 4, misses: 2
 
 Host: www.latex-project.org
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 195ms
+  Median response time: 398ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
 
 Host: jdujava.github.io
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 75ms
+  Median response time: 70ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
 
@@ -2073,194 +2079,198 @@ Host: docs.github.com
   Total requests: 5
   Successful: 3 (60.0%)
   Client errors (4xx): 2
-  Median response time: 271ms
+  Median response time: 95ms
+
+Host: www.fontawesome.io
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 65ms
+  Cache hit rate: 75.0%
+  Cache hits: 3, misses: 1
 
 Host: api.github.com
   Total requests: 4
   Successful: 3 (75.0%)
   Client errors (4xx): 1
-  Median response time: 91ms
-
-Host: 3d.bk.tudelft.nl
-  Total requests: 4
-  Successful: 4 (100.0%)
-  Median response time: 334ms
-  Cache hit rate: 50.0%
-  Cache hits: 2, misses: 2
+  Median response time: 103ms
 
 Host: www.apostrophiclab.com
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 314ms
+  Median response time: 368ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
 
-Host: www.fontawesome.io
+Host: 3d.bk.tudelft.nl
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 207ms
-  Cache hit rate: 75.0%
-  Cache hits: 3, misses: 1
-
-Host: ansible.readthedocs.io
-  Total requests: 4
-  Successful: 0 (0.0%)
-  Rate limited: 4 (429 Too Many Requests)
-  Median response time: 22ms
-
-Host: www.checkov.io
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 28ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
+  Median response time: 405ms
+  Cache hit rate: 50.0%
+  Cache hits: 2, misses: 2
 
 Host: vite.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 7ms
-
-Host: i.imgur.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 14ms
-
-Host: api.star-history.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 119ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
+  Median response time: 39ms
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 6ms
-
-Host: developer.mozilla.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 191ms
+  Median response time: 8ms
 
 Host: www.ctan.org
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 646ms
+  Median response time: 468ms
 
-Host: clang.llvm.org
+Host: www.checkov.io
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 89ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
+
+Host: api.star-history.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 140ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
+
+Host: i.imgur.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 7ms
+
+Host: developer.mozilla.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 72ms
+
+Host: www.cyrius.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 276ms
+  Median response time: 471ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.amazon.ca
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 50ms
+
+Host: femto-physique.fr
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 364ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.nongnu.org
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Rate limited: 1 (429 Too Many Requests)
+  Median response time: 66ms
+
+Host: unpkg.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 70ms
+
+Host: www.mff.cuni.cz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 437ms
+
+Host: www.vel.nz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 605ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: tex.stackexchange.com
+  Total requests: 2
+  Successful: 0 (0.0%)
+  Client errors (4xx): 2
+  Median response time: 91ms
+
+Host: web.archive.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 806ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: paypal.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 958ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.sharelatex.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 99ms
+
+Host: info.arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 22ms
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 228ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: yamllint.readthedocs.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 207ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: ogp.me
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 18ms
+  Median response time: 275ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: unpkg.com
+Host: en.wikipedia.org
   Total requests: 2
   Successful: 2 (100.0%)
   Median response time: 56ms
 
-Host: www.amazon.ca
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 26ms
-
-Host: commons.wikimedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 19ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.cyrius.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 276ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
 Host: reuse.software
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 469ms
+  Median response time: 603ms
 
-Host: femto-physique.fr
+Host: oss.anchore.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 217ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.mff.cuni.cz
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 399ms
+  Median response time: 85ms
 
 Host: arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 11ms
+  Median response time: 18ms
 
-Host: paypal.me
+Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 686ms
+  Median response time: 274ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: info.arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 64ms
-
-Host: www.sharelatex.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 84ms
-
-Host: tex.stackexchange.com
-  Total requests: 2
-  Successful: 0 (0.0%)
-  Client errors (4xx): 2
-  Median response time: 73ms
-
-Host: yamllint.readthedocs.io
+Host: eslint.org
   Total requests: 2
   Successful: 2 (100.0%)
   Median response time: 50ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: typedoc.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 47ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: prettier.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 229ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: aquasecurity.github.io
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 27ms
-
-Host: web.archive.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 1518ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -2268,164 +2278,94 @@ Host: developer.salesforce.com
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 48ms
+  Median response time: 50ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: eslint.org
+Host: typedoc.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 22ms
+  Median response time: 59ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: oss.anchore.com
+Host: aquasecurity.github.io
   Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 70ms
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 49ms
 
-Host: www.vel.nz
+Host: docs.ansible.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 640ms
+  Median response time: 144ms
+
+Host: commons.wikimedia.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 40ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
-
-Host: en.wikipedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 84ms
 
 Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 63ms
+  Median response time: 348ms
 
-Host: developer.apple.com
+Host: trufflesecurity.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 128ms
+  Median response time: 277ms
 
-Host: fonts.google.com
+Host: www.chrisbehr.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 431ms
+  Median response time: 200ms
 
-Host: realm.github.io
+Host: protobuf.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 35ms
+  Median response time: 129ms
 
-Host: www.businessinsider.com
+Host: raku.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 27ms
+  Median response time: 729ms
 
-Host: turborepo.com
+Host: biomejs.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 96ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 216ms
-
-Host: www.paypal.me
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 599ms
-
-Host: humanstxt.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 451ms
-
-Host: texdoc.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 2406ms
-
-Host: openapi.vercel.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 117ms
-
-Host: tug.ctan.org
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 295ms
-
-Host: v3.tailwindcss.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 96ms
-
-Host: goss.rocks
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 119ms
-
-Host: install.python-poetry.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 51ms
+  Median response time: 90ms
 
 Host: git-lfs.github.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 37ms
+  Median response time: 73ms
 
-Host: resumake.io
+Host: micahrich.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 107ms
-
-Host: docs.rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 130ms
-
-Host: osv.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 100ms
-
-Host: www.tylerfinck.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1409ms
+  Median response time: 167ms
 
 Host: hemingwayapp.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 145ms
+  Median response time: 105ms
 
-Host: docs.stoplight.io
+Host: www.writelatex.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 226ms
+  Median response time: 157ms
 
-Host: www.grammarly.com
+Host: turborepo.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 150ms
+  Median response time: 203ms
 
-Host: google.github.io
+Host: psalm.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 49ms
-
-Host: rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 38ms
-
-Host: debarghyadas.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 403ms
+  Median response time: 223ms
 
 Host: apostrophiclab.pedroreina.net
   Total requests: 1
@@ -2433,271 +2373,343 @@ Host: apostrophiclab.pedroreina.net
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: clearlydefined.io
+Host: realm.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 216ms
-
-Host: www.wnd.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 55ms
-
-Host: trivy.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 150ms
-
-Host: docker.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 39ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 104ms
-
-Host: registry.npmjs.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 28ms
-
-Host: www.writelatex.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 103ms
-
-Host: www.reddit.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 23ms
-
-Host: quartz.jzhao.xyz
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 104ms
-
-Host: securityscorecards.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 29ms
-
-Host: www.designtokens.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 47ms
-
-Host: ls-lint.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 273ms
-
-Host: www.latofonts.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 638ms
-
-Host: pnpm.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 37ms
-
-Host: www.chrisbehr.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 117ms
-
-Host: developercertificate.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 195ms
-
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 49ms
-
-Host: biomejs.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 81ms
-
-Host: cyclonedx.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 83ms
-
-Host: kiwiirc.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 392ms
-
-Host: licensebuttons.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 14ms
-
-Host: trufflesecurity.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 224ms
-
-Host: api.clearlydefined.io
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 73ms
+  Median response time: 58ms
 
 Host: www.indeed.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 62ms
+  Median response time: 55ms
 
-Host: www.smashingmagazine.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 239ms
-
-Host: thetechresume.com
+Host: trivy.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 226ms
+  Median response time: 77ms
 
-Host: www.hadilaksono.com
+Host: securityscorecards.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 67ms
+  Median response time: 155ms
 
 Host: chris48s.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 53ms
+  Median response time: 52ms
 
-Host: www.nongnu.org
+Host: goss.rocks
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 88ms
+  Median response time: 95ms
 
-Host: fontawesome.com
+Host: scancode-toolkit.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 24ms
-
-Host: web.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 257ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 82ms
-
-Host: enhancv.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 218ms
-
-Host: prowritingaid.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 366ms
-
-Host: stylelint.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 180ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 59ms
+  Median response time: 136ms
 
 Host: api.scorecard.dev
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 191ms
+  Median response time: 136ms
 
-Host: rubystyle.guide
+Host: texdoc.net
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 137ms
+  Median response time: 2583ms
 
-Host: golangci-lint.run
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 43ms
-
-Host: www.rubyschema.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 238ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 631ms
-
-Host: micahrich.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 288ms
-
-Host: www.linkedin.com
+Host: www.smashingmagazine.com
   Total requests: 1
   Successful: 0 (0.0%)
-  Median response time: 234ms
+  Client errors (4xx): 1
+  Median response time: 215ms
+
+Host: www.latofonts.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 474ms
+
+Host: www.grammarly.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 170ms
 
 Host: phpstan.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 25ms
+  Median response time: 44ms
 
-Host: agentskills.io
+Host: stylelint.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 79ms
-
-Host: scancode-toolkit.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 262ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 184ms
-
-Host: www.apache.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 23ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 233ms
-
-Host: sahiljhawar.in
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 337ms
+  Median response time: 97ms
 
 Host: img.youtube.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 212ms
+  Median response time: 88ms
 
-Host: github
-  Total requests: 0
-  Successful: 0 (100.0%)
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 11ms
+
+Host: v3.tailwindcss.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 69ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 101ms
+
+Host: autofix.ci
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 396ms
+
+Host: install.python-poetry.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 67ms
+
+Host: openapi.vercel.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 244ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 93ms
+
+Host: www.businessinsider.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 89ms
+
+Host: developer.apple.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 157ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 104ms
+
+Host: checkstyle.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 40ms
+
+Host: fontawesome.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 64ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 39ms
+
+Host: thetechresume.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 330ms
+
+Host: debarghyadas.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 536ms
+
+Host: osv.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 135ms
+
+Host: ls-lint.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 293ms
+
+Host: cyclonedx.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 94ms
+
+Host: fonts.google.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 430ms
+
+Host: www.linkedin.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Median response time: 226ms
+
+Host: resumake.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 122ms
+
+Host: rubystyle.guide
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 91ms
+
+Host: sahiljhawar.in
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 402ms
+
+Host: enhancv.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 46ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 68ms
+
+Host: www.reddit.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 82ms
+
+Host: www.hadilaksono.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 85ms
+
+Host: ansible.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 249ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 62ms
+
+Host: registry.npmjs.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 85ms
+
+Host: tug.ctan.org
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 634ms
+
+Host: clearlydefined.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 121ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 238ms
+
+Host: api.clearlydefined.io
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 56ms
+
+Host: docker.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 84ms
+
+Host: www.paypal.me
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 762ms
+
+Host: humanstxt.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 446ms
+
+Host: developercertificate.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 158ms
+
+Host: www.designtokens.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 70ms
+
+Host: prowritingaid.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 296ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 152ms
+
+Host: www.apache.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 45ms
+
+Host: www.tylerfinck.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1266ms
+
+Host: docs.rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 55ms
+
+Host: web.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 713ms
+
+Host: rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 196ms
+
+Host: www.wnd.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 88ms
+
+Host: kiwiirc.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 480ms
 
 Host: mirrors.ctan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 626ms
+
+Host: pnpm.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 145ms
+
+Host: quartz.jzhao.xyz
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 112ms
+
+Host: 2by22.blog
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2705,15 +2717,7 @@ Host: www.youtube.com
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: 2by22.blog
-  Total requests: 0
-  Successful: 0 (100.0%)
-
 Host: www.businessinsider.my
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: x-access-token
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2721,9 +2725,15 @@ Host: egohygiene.dev
   Total requests: 0
   Successful: 0 (100.0%)
 
-Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."docs.ansible.com"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
+Host: x-access-token
+  Total requests: 0
+  Successful: 0 (100.0%)
 
-(Truncated to last 23529 characters out of 176228)
+Host: github
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+(Truncated to last 23529 characters out of 174179)
 ```
 
 </details>
@@ -3162,6 +3172,8 @@ Checking formatting...
 [warn] holon/packs/react-vite/template/packages/tailwind-config/src/preset.ts
 [warn] holon/packs/react-vite/template/packages/themes/src/hooks/useTheme.ts
 [warn] holon/packs/react-vite/template/packages/ui/src/components/Button/Button.types.ts
+[warn] holon/packs/react-vite/template/packages/ui/vite.config.ts
+[warn] holon/packs/react-vite/template/packages/ui/vitest.config.ts
 [warn] holon/packs/react-vite/template/packages/utilities/src/index.test.ts
 [warn] holon/packs/react-vite/template/packages/utilities/src/index.ts
 [warn] holon/packs/react-vite/template/packages/vite-config/src/index.ts
@@ -3184,7 +3196,7 @@ Checking formatting...
 [warn] holon/packs/react-vite/template/vitest.smoke.config.ts
 [warn] holon/packs/react-vite/template/vitest.unit.config.ts
 [warn] holon/packs/react-vite/template/vitest.workspace.ts
-[warn] Code style issues found in 79 files. Run Prettier with --write to fix.
+[warn] Code style issues found in 81 files. Run Prettier with --write to fix.
 ```
 
 </details>
@@ -4451,36 +4463,10 @@ For more information:
 </details>
 
 <details>
-<summary>❌ CSS / stylelint - 404 errors</summary>
+<summary>❌ CSS / stylelint - 438 errors</summary>
 
 ```
-ha-value-notation
-  280:1   ✖  Expected class selector ".hero-orbit__core" to be kebab-case                                                                  selector-class-pattern
-  305:1   ✖  Expected selector ".section-heading > a" to come before selector ".primary-navigation a:hover", at line 108                   no-descending-specificity
-  319:39  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
-  319:39  ✖  Expected modern color-function notation                                                                                       color-function-notation
-  319:59  ✖  Expected "0.055" to be "5.5%"                                                                                                 alpha-value-notation
-  319:67  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
-  319:67  ✖  Expected modern color-function notation                                                                                       color-function-notation
-  319:87  ✖  Expected "0.015" to be "1.5%"                                                                                                 alpha-value-notation
-  326:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
-  326:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
-  326:37  ✖  Expected "0.5" to be "50%"                                                                                                    alpha-value-notation
-  330:1   ✖  Expected class selector ".product-card__image-link" to be kebab-case                                                          selector-class-pattern
-  337:1   ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
-  344:21  ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
-  348:1   ✖  Expected class selector ".product-card__placeholder" to be kebab-case                                                         selector-class-pattern
-  355:1   ✖  Expected class selector ".product-card__body" to be kebab-case                                                                selector-class-pattern
-  359:1   ✖  Expected class selector ".product-card__meta" to be kebab-case                                                                selector-class-pattern
-  379:1   ✖  Expected class selector ".status-badge--accent" to be kebab-case                                                              selector-class-pattern
-  380:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
-  380:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
-  380:37  ✖  Expected "0.35" to be "35%"                                                                                                   alpha-value-notation
-  382:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
-  382:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
-  382:35  ✖  Expected "0.1" to be "10%"                                                                                                    alpha-value-notation
-  385:1   ✖  Expected class selector ".status-badge--success" to be kebab-case                                                             selector-class-pattern
-  394:1   ✖  Expected selector ".product-card h3 a" to come before selector ".primary-navigation a:hover", at line 108                     no-descending-specificity
+no-descending-specificity
   407:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
   407:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
   407:35  ✖  Expected "0.025" to be "2.5%"                                                                                                 alpha-value-notation
@@ -4634,13 +4620,47 @@ holon/packs/react-vite/template/packages/ui/src/styles/index.css
   112:1   ✖  Expected class selector ".eh-badge--available" to be kebab-case                          selector-class-pattern
   116:1   ✖  Expected class selector ".eh-badge--development" to be kebab-case                        selector-class-pattern
   120:1   ✖  Expected class selector ".eh-badge--planned" to be kebab-case                            selector-class-pattern
-  140:1   ✖  Expected class selector ".eh-theme-toggle__label" to be kebab-case                       selector-class-pattern
-  141:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
-  159:3   ✖  Deprecated property "clip"                                                               property-no-deprecated
-  173:1   ✖  Expected class selector ".eh-orbit__ring" to be kebab-case                               selector-class-pattern
-  180:1   ✖  Expected class selector ".eh-orbit__ring--inner" to be kebab-case                        selector-class-pattern
-  184:1   ✖  Expected class selector ".eh-orbit__core" to be kebab-case                               selector-class-pattern
-  191:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
+  132:1   ✖  Expected class selector ".eh-spinner--small" to be kebab-case                            selector-class-pattern
+  137:1   ✖  Expected class selector ".eh-spinner--medium" to be kebab-case                           selector-class-pattern
+  142:1   ✖  Expected class selector ".eh-spinner--large" to be kebab-case                            selector-class-pattern
+  153:21  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  156:34  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  159:1   ✖  Expected class selector ".eh-alert--info" to be kebab-case                               selector-class-pattern
+  163:1   ✖  Expected class selector ".eh-alert--success" to be kebab-case                            selector-class-pattern
+  167:1   ✖  Expected class selector ".eh-alert--warning" to be kebab-case                            selector-class-pattern
+  171:1   ✖  Expected class selector ".eh-alert--danger" to be kebab-case                             selector-class-pattern
+  175:1   ✖  Expected class selector ".eh-alert__content" to be kebab-case                            selector-class-pattern
+  180:1   ✖  Expected class selector ".eh-alert__message" to be kebab-case                            selector-class-pattern
+  184:1   ✖  Expected class selector ".eh-alert__actions" to be kebab-case                            selector-class-pattern
+  199:1   ✖  Expected class selector ".eh-empty-state__icon" to be kebab-case                         selector-class-pattern
+  204:1   ✖  Expected class selector ".eh-empty-state__title" to be kebab-case                        selector-class-pattern
+  208:1   ✖  Expected class selector ".eh-empty-state__description" to be kebab-case                  selector-class-pattern
+  213:1   ✖  Expected class selector ".eh-empty-state__actions" to be kebab-case                      selector-class-pattern
+  225:31  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  227:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  230:1   ✖  Expected class selector ".eh-environment-banner--development" to be kebab-case           selector-class-pattern
+  235:1   ✖  Expected class selector ".eh-environment-banner--preview" to be kebab-case               selector-class-pattern
+  240:1   ✖  Expected class selector ".eh-environment-banner--warning" to be kebab-case               selector-class-pattern
+  270:1   ✖  Expected class selector ".eh-loading-state--inline" to be kebab-case                     selector-class-pattern
+  274:1   ✖  Expected class selector ".eh-loading-state--section" to be kebab-case                    selector-class-pattern
+  279:1   ✖  Expected class selector ".eh-loading-state--page" to be kebab-case                       selector-class-pattern
+  282:18  ✖  Expected custom property name "--eh-typography-sizeLg" to be kebab-case                  custom-property-pattern
+  296:1   ✖  Expected class selector ".eh-media-card__image" to be kebab-case                         selector-class-pattern
+  303:1   ✖  Expected class selector ".eh-media-card__body" to be kebab-case                          selector-class-pattern
+  309:1   ✖  Expected class selector ".eh-media-card__title" to be kebab-case                         selector-class-pattern
+  313:1   ✖  Expected class selector ".eh-media-card__link" to be kebab-case                          selector-class-pattern
+  319:1   ✖  Expected class selector ".eh-media-card__description" to be kebab-case                   selector-class-pattern
+  323:1   ✖  Expected class selector ".eh-media-card__actions" to be kebab-case                       selector-class-pattern
+  342:1   ✖  Expected class selector ".eh-skeleton--line" to be kebab-case                            selector-class-pattern
+  347:1   ✖  Expected class selector ".eh-skeleton--rectangle" to be kebab-case                       selector-class-pattern
+  352:1   ✖  Expected class selector ".eh-skeleton--circle" to be kebab-case                          selector-class-pattern
+  364:1   ✖  Expected class selector ".eh-theme-toggle__label" to be kebab-case                       selector-class-pattern
+  365:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  383:3   ✖  Deprecated property "clip"                                                               property-no-deprecated
+  397:1   ✖  Expected class selector ".eh-orbit__ring" to be kebab-case                               selector-class-pattern
+  404:1   ✖  Expected class selector ".eh-orbit__ring--inner" to be kebab-case                        selector-class-pattern
+  408:1   ✖  Expected class selector ".eh-orbit__core" to be kebab-case                               selector-class-pattern
+  415:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
 
 notebooks/jupyter/themes/@jupyterlab/theme-dark-extension/index.css
   110:23  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
@@ -4651,10 +4671,10 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
   108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
   147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
 
-✖ 404 problems (404 errors, 0 warnings)
-  246 errors potentially fixable with the "--fix" option.
+✖ 438 problems (438 errors, 0 warnings)
+  249 errors potentially fixable with the "--fix" option.
 
-(Truncated to last 23529 characters out of 57766)
+(Truncated to last 23529 characters out of 62006)
 ```
 
 </details>
@@ -4665,7 +4685,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 ```
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-16T13:24:12Z	info-0	trufflehog	running source	{"source_manager_worker_id": "sy2K5", "with_units": true}
+2026-08-16T14:02:47Z	info-0	trufflehog	running source	{"source_manager_worker_id": "JCMfI", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -4684,7 +4704,7 @@ File: tests/test_repository_analytics.py
 Line: 84
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-16T13:24:18Z	info-0	trufflehog	finished scanning	{"chunks": 6153, "bytes": 39489856, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "5.705461372s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1308}}
+2026-08-16T14:02:52Z	info-0	trufflehog	finished scanning	{"chunks": 6094, "bytes": 39457198, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "5.469113666s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1374}}
 ```
 
 </details>
@@ -5084,51 +5104,51 @@ pnpm-workspace.yaml
 nThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 13:23:34,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-08-16 14:02:13,070 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 13:23:34,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-08-16 14:02:13,070 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 13:23:34,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-08-16 14:02:13,071 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 13:23:34,971 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-16 13:23:35,052 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-16 13:23:35,052 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-16 13:23:35,238 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-16 13:23:35,242 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-16 13:23:35,258 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-16 13:23:35,258 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-16 13:23:35,259 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-16 13:23:35,286 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-16 13:23:35,306 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-16 13:23:35,309 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-16 13:23:35,342 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-16 13:23:35,401 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-16 13:23:35,403 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-16 13:23:35,497 [MainThread  ] [INFO ]  Creating vertices
-2026-08-16 13:23:35,497 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-16 13:23:35,498 [MainThread  ] [INFO ]  Creating edges
-2026-08-16 13:23:35,498 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  Creating vertices
-2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  Creating edges
-2026-08-16 13:23:36,692 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-16 13:23:36,719 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-16 13:23:36,840 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-16 13:23:36,869 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-16 13:23:36,869 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-16 13:23:36,869 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-16 13:23:53,199 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-16 13:23:53,200 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-16 13:23:53,556 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-16 13:23:53,556 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-16 13:23:53,557 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-16 13:23:53,557 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-16 13:23:53,558 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-16 13:23:53,559 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-16 14:02:13,222 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-16 14:02:13,425 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-16 14:02:13,425 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-16 14:02:13,462 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-16 14:02:13,473 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-16 14:02:13,548 [MainThread  ] [INFO ]  Creating vertices
+2026-08-16 14:02:13,552 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-16 14:02:13,552 [MainThread  ] [INFO ]  Creating edges
+2026-08-16 14:02:13,552 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-16 14:02:13,588 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-16 14:02:13,606 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-16 14:02:13,607 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-16 14:02:13,607 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-16 14:02:13,631 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-16 14:02:13,761 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-16 14:02:13,768 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-16 14:02:13,880 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-16 14:02:13,913 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-16 14:02:14,801 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-16 14:02:14,801 [MainThread  ] [INFO ]  Creating vertices
+2026-08-16 14:02:14,802 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-16 14:02:14,802 [MainThread  ] [INFO ]  Creating edges
+2026-08-16 14:02:14,803 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-16 14:02:14,804 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-16 14:02:14,892 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-16 14:02:14,892 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-16 14:02:14,892 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-16 14:02:14,893 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-16 14:02:33,409 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-16 14:02:33,412 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-16 14:02:33,789 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-16 14:02:33,791 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-16 14:02:33,791 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-16 14:02:33,791 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-16 14:02:33,792 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-16 14:02:33,795 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -5137,10 +5157,6 @@ Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
-Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
 Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -5149,6 +5165,10 @@ Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
 Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -5355,14 +5375,14 @@ dockerfile scan results:
 
 Passed checks: 53, Failed checks: 2, Skipped checks: 0
 
-Check: CKV_DOCKER_2: "Ensure that HEALTHCHECK instructions have been added to container images"
-	FAILED for resource: /egolint/tests/fixtures/hadolint/Dockerfile.
-	File: /egolint/tests/fixtures/hadolint/Dockerfile:1-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images
 Check: CKV_DOCKER_3: "Ensure that a user for the container has been created"
 	FAILED for resource: /holon/packs/react-vite/template/infra/docker/Dockerfile.
 	File: /holon/packs/react-vite/template/infra/docker/Dockerfile:1-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-a-user-for-the-container-has-been-created
+Check: CKV_DOCKER_2: "Ensure that HEALTHCHECK instructions have been added to container images"
+	FAILED for resource: /egolint/tests/fixtures/hadolint/Dockerfile.
+	File: /egolint/tests/fixtures/hadolint/Dockerfile:1-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images
 openapi scan results:
 
 Passed checks: 6, Failed checks: 4, Skipped checks: 0
@@ -5457,13 +5477,13 @@ pygments                     2.19.2                                    2.20.0   
 virtualenv                   20.31.2                                   20.36.1   python         GHSA-597g-3phw-6986  Medium    < 0.1% (0th)  < 0.1  
 actions/download-artifact    v4                                        4.1.3     github-action  GHSA-cxww-7g56-2vh6  High      N/A           N/A    
 cryptography                 45.0.4                                    48.0.1    python         GHSA-537c-gmf6-5ccf  High      N/A           N/A
-[0110] ERROR discovered vulnerabilities at or above the severity threshold
+[0116] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 3107 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 3110 errors</summary>
 
 ```
 26] (13 lines, 63 tokens)
@@ -5635,7 +5655,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 406            │ 108294      │ 421790       │ 230          │ 3578 (3.30%)     │ 19321 (4.58%)     │
+│ bash         │ 406            │ 108295      │ 421686       │ 230          │ 3578 (3.30%)     │ 19321 (4.58%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5649,7 +5669,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csharp       │ 56             │ 14917       │ 43793        │ 22           │ 479 (3.21%)      │ 1936 (4.42%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css          │ 33             │ 7426        │ 30501        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css          │ 30             │ 7037        │ 26989        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csv          │ 2              │ 2346        │ 204424       │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5683,7 +5703,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 68             │ 22806       │ 62739        │ 58           │ 1321 (5.79%)     │ 5555 (8.85%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 242            │ 69466       │ 208010       │ 64           │ 1139 (1.64%)     │ 5120 (2.46%)      │
+│ json         │ 241            │ 69397       │ 207590       │ 64           │ 1139 (1.64%)     │ 5120 (2.47%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5697,9 +5717,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1714           │ 328162      │ 4213485      │ 683          │ 11725 (3.57%)    │ 173389 (4.12%)    │
+│ markdown     │ 1719           │ 328576      │ 4224718      │ 689          │ 11691 (3.56%)    │ 174119 (4.12%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markup       │ 100            │ 29894       │ 117680       │ 48           │ 964 (3.22%)      │ 7969 (6.77%)      │
+│ markup       │ 99             │ 29819       │ 117043       │ 48           │ 964 (3.23%)      │ 7969 (6.81%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ mermaid      │ 11             │ 2820        │ 5846         │ 12           │ 135 (4.79%)      │ 1061 (18.15%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5737,30 +5757,30 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 380            │ 86036       │ 199429       │ 32           │ 781 (0.91%)      │ 3098 (1.55%)      │
+│ text         │ 381            │ 86056       │ 199637       │ 32           │ 781 (0.91%)      │ 3098 (1.55%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ toml         │ 38             │ 6466        │ 13087        │ 8            │ 175 (2.71%)      │ 625 (4.78%)       │
+│ toml         │ 37             │ 6447        │ 12985        │ 8            │ 175 (2.71%)      │ 625 (4.81%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ tsx          │ 112            │ 5573        │ 21975        │ 1            │ 15 (0.27%)       │ 60 (0.27%)        │
+│ tsx          │ 88             │ 4825        │ 18013        │ 1            │ 15 (0.31%)       │ 60 (0.33%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ twig         │ 1              │ 573         │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ txt          │ 31             │ 5513        │ 70524        │ 78           │ 1955 (35.46%)    │ 23695 (33.60%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ typescript   │ 138            │ 16257       │ 48563        │ 12           │ 225 (1.38%)      │ 885 (1.82%)       │
+│ typescript   │ 113            │ 15342       │ 44030        │ 9            │ 196 (1.28%)      │ 687 (1.56%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 563            │ 57912       │ 319032       │ 351          │ 9396 (16.22%)    │ 105399 (33.04%)   │
+│ yaml         │ 562            │ 57833       │ 318727       │ 351          │ 9396 (16.25%)    │ 105399 (33.07%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4811           │ 982341      │ 7878763      │ 3107         │ 56921 (5.79%)    │ 744867 (9.45%)    │
+│ Total:       │ 4761           │ 980482      │ 7876629      │ 3110         │ 56858 (5.80%)    │ 745399 (9.46%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3107 clones.
+Found 3110 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
-time: 15.93s
+time: 16.66s
 
-(Truncated to last 23529 characters out of 690251)
+(Truncated to last 23529 characters out of 690972)
 ```
 
 </details>
@@ -5769,7 +5789,7 @@ time: 15.93s
 <summary>⚠️ MARKDOWN / markdown-table-formatter - 1 error</summary>
 
 ```
-45 files contain markdown tables to format:
+47 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
 - .audits/2026-08-15-staging-home-audit.md
 - .audits/egolint/2026-08-11-complementary-toolchain-audit.md
@@ -5805,7 +5825,9 @@ time: 15.93s
 - egolint/.agents/specs/architecture/meta/epistemology.spec.md
 - egolint/.agents/specs/architecture/meta/meta.spec.md
 - holon/packs/react-vite/template/README.md
+- holon/packs/react-vite/template/docs/architecture/component-library.md
 - holon/packs/react-vite/template/docs/architecture/package-status.md
+- holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md
 - holon/packs/react-vite/template/docs/tooling/vite.md
 - mantle/ARCHITECTURE.md
 - mantle/CONTRIBUTING.md
@@ -5820,13 +5842,10 @@ time: 15.93s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 674 errors</summary>
+<summary>⚠️ SPELL / proselint - 678 errors</summary>
 
 ```
-methodology/orchestrate-reflective-development/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:49:26: typography.diacritical_marks: Use diacritical marks in 'résumé'.
-egolint/.agents/skills/methodology/orchestrate-reflective-development/templates/REFLECTIVE_CYCLE.template.md:39:9: typography.diacritical_marks: Use diacritical marks in 'résumé'.
-egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+"".
 egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -5927,9 +5946,13 @@ holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:24:3: t
 holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:28:1: redundancy.misc.after_the_deadline: Redundancy. Use 'add' instead of 'Add an additional'.
 holon/packs/react-vite/template/docs/provenance/store-source-readme.md:69:1: lexical_illusions: There's a lexical illusion in 'pnpm test
 pnpm test' - a phrase is repeated.
+holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:59:9: typography.symbols.multiplication: Use the multiplication symbol ×, not the letter x.
+holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:60:9: typography.symbols.multiplication: Use the multiplication symbol ×, not the letter x.
 holon/packs/react-vite/template/docs/tooling/tailwind.md:38:26: lexical_illusions: There's a lexical illusion in '9 9' - a phrase is repeated.
 holon/packs/react-vite/template/docs/tooling/tailwind.md:38:29: lexical_illusions: There's a lexical illusion in '2 2' - a phrase is repeated.
-holon/packs/react-vite/template/docs/tooling/vite.md:36:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/docs/tooling/vite.md:53:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/packages/ui/README.md:22:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/packages/ui/README.md:22:33: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 identity/README.md:44:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/ARCHITECTURE.md:22:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 mantle/ARCHITECTURE.md:23:116: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -6049,7 +6072,7 @@ research/antidote/research/bootstrap/01-research-concept-snapshot.md:17:61: need
 research/antidote/research/bootstrap/03-scientific-boundaries.md:38:154: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 
-(Truncated to last 23529 characters out of 96377)
+(Truncated to last 23529 characters out of 96993)
 ```
 
 </details>
@@ -6451,20 +6474,16 @@ tools/staging_home_audit.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-16T13:23:54Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-16T13:23:54Z	INFO	[vulndb] Need to update DB
-2026-08-16T13:23:54Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-16T13:23:54Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-22.67 MiB / 107.76 MiB [------------>_______________________________________________] 21.04% ? p/s ?59.48 MiB / 107.76 MiB [--------------------------------->__________________________] 55.20% ? p/s ?100.52 MiB / 107.76 MiB [------------------------------------------------------->___] 93.27% ? p/s ?107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 132.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 132.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 132.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 108.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 108.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 108.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.76 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.76 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.76 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 72.75 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-----------------------------------------------] 100.00% 16.00 MiB p/s 6.9s2026-08-16T13:24:02Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-16T13:24:02Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-16T13:24:02Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-16T13:24:02Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-16T13:24:02Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.39 MiB p/s 300ms2026-08-16T13:24:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-16T13:24:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-16T13:24:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-16T13:24:08Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-08-16T13:24:08Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+2026-08-16T14:02:11Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-16T14:02:11Z	INFO	[vulndb] Need to update DB
+2026-08-16T14:02:11Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-16T14:02:11Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+20.25 MiB / 107.68 MiB [----------->________________________________________________] 18.81% ? p/s ?50.72 MiB / 107.68 MiB [---------------------------->_______________________________] 47.10% ? p/s ?79.13 MiB / 107.68 MiB [-------------------------------------------->_______________] 73.48% ? p/s ?107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 145.82 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 145.82 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 145.82 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 136.41 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 136.41 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 136.41 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 127.61 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 127.61 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 127.61 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 119.38 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 119.38 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 119.38 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 111.67 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 111.67 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 111.67 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 104.47 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 104.47 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [------------------------------------------->] 100.00% 104.47 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 97.73 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 97.73 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 97.73 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 91.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 91.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 91.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 85.53 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 85.53 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 85.53 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 80.01 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 80.01 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 80.01 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 74.85 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 74.85 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 74.85 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 70.02 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 70.02 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 70.02 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 65.50 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 65.50 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 65.50 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 61.27 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 61.27 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 61.27 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 57.32 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 57.32 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 57.32 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 53.62 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 53.62 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 53.62 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 50.16 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 50.16 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 50.16 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 46.93 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 46.93 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 46.93 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 43.90 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 43.90 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 43.90 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 41.07 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 41.07 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 41.07 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 38.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 38.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 38.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 35.94 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 35.94 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 35.94 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 33.62 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 33.62 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 33.62 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 31.45 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 31.45 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 31.45 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 29.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 29.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 29.42 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 27.52 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 27.52 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 27.52 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 25.75 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 25.75 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 25.75 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 24.09 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 24.09 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 24.09 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 22.53 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 22.53 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 22.53 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 21.08 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 21.08 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 21.08 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 19.72 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 19.72 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 19.72 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 18.45 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 18.45 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 18.45 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 17.26 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 17.26 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 17.26 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 16.14 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 16.14 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 16.14 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 15.10 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 15.10 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------->] 100.00% 15.10 MiB p/s ETA 0s107.68 MiB / 107.68 MiB [-------------------------------------------------] 100.00% 5.00 MiB p/s 22s2026-08-16T14:02:33Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-16T14:02:33Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-16T14:02:33Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-16T14:02:33Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-16T14:02:33Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 4.64 MiB p/s 200ms2026-08-16T14:02:38Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 
 📣 Notices:
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
@@ -6475,73 +6494,73 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2616cf2]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x34a957a42c80)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x1257232c500)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x34a9580e8b00?, 0x6, 0x4252f4?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x125709a4c00?, 0x6, 0x4252f4?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x34a956698c80, 0x7fc5d9c1d108?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x12572530820, 0x7ff9b3daea00?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x34a95992f089, 0x34a956698c80)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x125722c3596, 0x12572530820)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x34a95992f089, {0x5aa9040?, 0x34a957a6a2c3?}, {0x67caaa0?, 0x34a957d18ec8?}, {0x34a957bb1680, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x125722c3596, {0x5aa9040?, 0x125737f5433?}, {0x67caaa0?, 0x1256fd6cf70?}, {0x1256f4694f0, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x34a957a42a50}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x1257232c2d0}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957bb1680, 0x43}, {0x6831f78, 0x34a957a42a50}, 0x34a954492ba8)
+io/fs.walkDir({0x67cb5e0, 0x12572712870}, {0x1256f4694f0, 0x43}, {0x6831f78, 0x1257232c2d0}, 0x1256f9b2ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957a6a2a0, 0x2d}, {0x6831f78, 0x34a9578c4708}, 0x34a954492ba8)
+io/fs.walkDir({0x67cb5e0, 0x12572712870}, {0x125737f5410, 0x2d}, {0x6831f78, 0x12571c74168}, 0x1256f9b2ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957934180, 0x22}, {0x6831f78, 0x34a9566c11a8}, 0x34a954492ba8)
+io/fs.walkDir({0x67cb5e0, 0x12572712870}, {0x1257300f290, 0x22}, {0x6831f78, 0x12572517068}, 0x1256f9b2ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957843b78, 0x17}, {0x6831f78, 0x34a956fc3888}, 0x34a954492ba8)
+io/fs.walkDir({0x67cb5e0, 0x12572712870}, {0x12571326210, 0x17}, {0x6831f78, 0x12572516988}, 0x1256f9b2ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a956de7650, 0x8}, {0x6831f78, 0x34a956fc3248}, 0x34a954492ba8)
+io/fs.walkDir({0x67cb5e0, 0x12572712870}, {0x125722ce8a0, 0x8}, {0x6831f78, 0x12572516708}, 0x1256f9b2ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1}, {0x6831370, 0x34a95921f7a0}, 0x34a954492ba8)
+io/fs.walkDir({0x67cb5e0, 0x12572712870}, {0x67a84f8, 0x1}, {0x6831370, 0x12570adfdb0}, 0x1256f9b2ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1}, 0x34a954492ba8)
+io/fs.WalkDir({0x67cb5e0, 0x12572712870}, {0x67a84f8, 0x1}, 0x1256f9b2ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x34a956fbe270}, {0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x12570ce22d0}, {0x67cb5e0, 0x12572712870}, {0x67a84f8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x34a956fbe270}, {0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x12570ce22d0}, {0x67cb5e0, 0x12572712870}, {0x67a84f8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x34a953bad800, {0x68311b0, 0x34a9539ea770}, {0x67cb5e0, 0x34a959a5d800})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x125735f1080, {0x68311b0, 0x1256e77ae70}, {0x67cb5e0, 0x125727123d8})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x34a955ad6760, {0x68311b0?, 0x34a9539ea770?}, {{0x67cb5e0, 0x34a959a5d800}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x12572891260, {0x68311b0?, 0x1256e77ae70?}, {{0x67cb5e0, 0x125727123d8}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x34a954e80480, {0x34a959946800, 0x1f, 0x20}, {0x34a959946a00, 0x19, 0x20}, 0x34a957d47b30, {0x34a954083187, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x12571106950, {0x12574768c00, 0x1f, 0x20}, {0x12574768e00, 0x19, 0x20}, 0x1256ef1a600, {0x1256eb6b1b7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x34a954e80480, {0x34a959946800, 0x1f, 0x20}, {0x34a959946a00, 0x19, 0x20}, 0x34a957d47b30, {0x34a954083187, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x12571106950, {0x12574768c00, 0x1f, 0x20}, {0x12574768e00, 0x19, 0x20}, 0x1256ef1a600, {0x1256eb6b1b7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffe1e23212f, 0x1}, 0x34a954d66120, {0x7fc512bb8288, 0x34a956ecade0}, {0x67cb520, 0xa3125e0}, {0x34a954e80480, {0x34a959946800, 0x1f, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7fff2aaa812f, 0x1}, 0x12571107390, {0x7ff8ecce9720, 0x125724f3680}, {0x67cb520, 0xa3125e0}, {0x12571106950, {0x12574768c00, 0x1f, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x34a954447ca0, 0x2, 0x2}, {0x34a954412540, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x1256e74e4e0, 0x2, 0x2}, {0x1256f24a740, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7fff2aaa7f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7fff2aaa7f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7fff2aaa7f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7fff2aaa7f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7fff2aaa7f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7fff2aaa7f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x34a953936f08, {0x34a95429e388, 0x1, 0x33})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x1256e518908, {0x1256f4cae08, 0x1, 0x33})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0x34a953936f08, {0x34a95429e008, 0x33, 0x33})
+github.com/spf13/cobra.(*Command).execute(0x1256e518908, {0x1256f4caa88, 0x33, 0x33})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0x34a953936908)
+github.com/spf13/cobra.(*Command).ExecuteC(0x1256e518308)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x34a953af9640})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x1256edba300})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c

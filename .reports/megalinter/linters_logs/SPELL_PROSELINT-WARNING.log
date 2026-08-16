@@ -632,9 +632,13 @@ holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:24:3: t
 holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:28:1: redundancy.misc.after_the_deadline: Redundancy. Use 'add' instead of 'Add an additional'.
 holon/packs/react-vite/template/docs/provenance/store-source-readme.md:69:1: lexical_illusions: There's a lexical illusion in 'pnpm test
 pnpm test' - a phrase is repeated.
+holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:59:9: typography.symbols.multiplication: Use the multiplication symbol ×, not the letter x.
+holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:60:9: typography.symbols.multiplication: Use the multiplication symbol ×, not the letter x.
 holon/packs/react-vite/template/docs/tooling/tailwind.md:38:26: lexical_illusions: There's a lexical illusion in '9 9' - a phrase is repeated.
 holon/packs/react-vite/template/docs/tooling/tailwind.md:38:29: lexical_illusions: There's a lexical illusion in '2 2' - a phrase is repeated.
-holon/packs/react-vite/template/docs/tooling/vite.md:36:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/docs/tooling/vite.md:53:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/packages/ui/README.md:22:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/packages/ui/README.md:22:33: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 identity/README.md:44:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/ARCHITECTURE.md:22:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 mantle/ARCHITECTURE.md:23:116: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
