@@ -336,7 +336,7 @@
       "version": "4.0",
       "configuration_path": "egolint/.config/lint/latex/latexindent.yml",
       "declared_state": "conditional",
-      "repository_applicability": "not_applicable",
+      "repository_applicability": "applicable",
       "applicability_markers": [
         [
           "**/*.tex",
