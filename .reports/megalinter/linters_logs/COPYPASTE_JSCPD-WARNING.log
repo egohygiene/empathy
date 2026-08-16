@@ -445,9 +445,6 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
 Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
-   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
-Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 510:27] (14 lines, 479 tokens)
    .staging/.github/agents/awesome/gem-mobile-tester.agent.md:markdown [84:36 - 98:4]
 Clone found (markdown)
@@ -727,14 +724,8 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [73:1 - 157:3] (85 lines, 1124 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [69:1 - 156:42]
 Clone found (markdown)
- - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [75:25 - 95:4] (21 lines, 260 tokens)
-   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [99:25 - 119:4]
-Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [91:105 - 100:4] (10 lines, 116 tokens)
    .staging/.github/agents/awesome/specification.agent.md:markdown [54:70 - 63:4]
-Clone found (markdown)
- - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [96:1 - 106:12] (11 lines, 102 tokens)
-   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [120:1 - 130:8]
 Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [120:55 - 160:42] (41 lines, 421 tokens)
    .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [144:41 - 184:42]
@@ -936,9 +927,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
-Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [37:1 - 124:40] (88 lines, 101 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [35:1 - 122:40]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1260,6 +1248,9 @@ Clone found (json)
 Clone found (markdown)
  - .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [295:26 - 324:6] (30 lines, 757 tokens)
    .staging/.github/skills/web-design-reviewer/SKILL.md:markdown [231:25 - 274:4]
+Clone found (markdown)
+ - .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [295:24 - 300:38] (6 lines, 141 tokens)
+   .staging/react-template/website/README.md:markdown [25:18 - 34:4]
 Clone found (markdown)
  - .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [329:28 - 338:19] (10 lines, 181 tokens)
    .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [384:15 - 401:7]
@@ -1753,9 +1744,6 @@ Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
 Clone found (markdown)
- - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
-Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
 Clone found (markdown)
@@ -1806,6 +1794,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/dependabot/SKILL.md:markdown [149:12 - 160:17] (12 lines, 179 tokens)
    .staging/.github/skills/github-actions-runtime-upgrade-conventions/SKILL.md:markdown [32:11 - 40:2]
+Clone found (markdown)
+ - .staging/.github/skills/dependabot/SKILL.md:markdown [160:21 - 167:33] (8 lines, 120 tokens)
+   .staging/react-template/website/README.md:markdown [34:13 - 47:5]
 Clone found (markdown)
  - .staging/.github/skills/dependabot/SKILL.md:markdown [206:1 - 212:39] (7 lines, 82 tokens)
    .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [208:1 - 214:39]
@@ -2466,9 +2457,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [110:16 - 124:125] (15 lines, 576 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2526:50 - 2551:7]
-Clone found (markdown)
- - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [163:28 - 168:2] (6 lines, 50 tokens)
-   .staging/.github/skills/quality-playbook/SKILL.md:markdown [1282:112 - 1286:2]
 Clone found (yaml)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:yaml [59:1 - 178:48] (120 lines, 71 tokens)
    .staging/.github/skills/phoenix-evals/references/axial-coding.md:yaml [29:1 - 73:48]
@@ -2598,9 +2586,6 @@ Clone found (yaml)
 Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
-Clone found (markdown)
- - .staging/.github/skills/quality-playbook/SKILL.md:markdown [300:45 - 305:2] (6 lines, 50 tokens)
-   .staging/.github/skills/quality-playbook/SKILL.md:markdown [318:23 - 322:2]
 Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [1223:63 - 1244:14] (22 lines, 530 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2150:63 - 2166:62]
@@ -2805,9 +2790,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
-Clone found (markdown)
- - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
-   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -3517,6 +3499,18 @@ Clone found (yaml)
  - .staging/.github/workflows/pr-risk-scan-comment.yml [89:54 - 97:27] (9 lines, 68 tokens)
    .staging/.github/workflows/skill-check-comment.yml [216:44 - 224:27]
 Clone found (yaml)
+ - .staging/.github/workflows/pr-validation.yml [26:1 - 38:15] (13 lines, 110 tokens)
+   .staging/.github/workflows/release-first-party-skills.yml [62:1 - 74:15]
+Clone found (yaml)
+ - .staging/.github/workflows/pr-validation.yml [47:1 - 55:69] (9 lines, 123 tokens)
+   .staging/.github/workflows/release-first-party-skills.yml [168:1 - 176:11]
+Clone found (yaml)
+ - .staging/.github/workflows/release-first-party-skills.yml [59:61 - 74:23] (16 lines, 122 tokens)
+   .staging/.github/workflows/release-first-party-skills.yml [145:35 - 160:23]
+Clone found (yaml)
+ - .staging/.github/workflows/release-first-party-skills.yml [80:1 - 85:20] (6 lines, 85 tokens)
+   .staging/.github/workflows/release-first-party-skills.yml [163:1 - 168:20]
+Clone found (yaml)
  - .staging/.github/workflows/resource-staleness-report.lock.yml [101:80 - 108:15] (8 lines, 72 tokens)
    .staging/.github/workflows/resource-staleness-report.lock.yml [409:118 - 416:15]
 Clone found (yaml)
@@ -3729,6 +3723,27 @@ Clone found (markdown)
 Clone found (text)
  - .staging/misc/ROADMAP.md:text [50:1 - 341:16] (292 lines, 184 tokens)
    tools/ROADMAP.md:text [50:1 - 341:16]
+Clone found (json)
+ - .staging/react-template/store/.changeset/config.json [2:70 - 10:14] (9 lines, 50 tokens)
+   .staging/react-template/website/.changeset/config.json [2:64 - 10:14]
+Clone found (yaml)
+ - .staging/react-template/store/.github/workflows/ci.yml [20:1 - 41:15] (22 lines, 132 tokens)
+   .staging/react-template/store/.github/workflows/ci.yml [46:1 - 67:15]
+Clone found (markup)
+ - .staging/react-template/store/apps/storefront/index.html [12:29 - 18:8] (7 lines, 50 tokens)
+   .staging/react-template/website/apps/docs/index.html [15:28 - 21:8]
+Clone found (markup)
+ - .staging/react-template/store/apps/storefront/index.html [12:29 - 18:8] (7 lines, 50 tokens)
+   .staging/react-template/website/apps/egohygiene.io/index.html [21:23 - 27:8]
+Clone found (markup)
+ - .staging/react-template/store/apps/storefront/index.html [12:29 - 18:8] (7 lines, 50 tokens)
+   .staging/react-template/website/apps/playground/index.html [6:34 - 12:8]
+Clone found (json)
+ - .staging/react-template/store/packages/commerce/package.json [2:33 - 16:5] (15 lines, 69 tokens)
+   .staging/react-template/store/packages/store-config/package.json [2:37 - 16:5]
+Clone found (json)
+ - .staging/react-template/store/packages/commerce/package.json [2:33 - 12:13] (11 lines, 53 tokens)
+   .staging/react-template/store/packages/store-ui/package.json [2:33 - 12:13]
 Clone found (typescript)
  - .staging/react-template/universal/apps/ui/src/api/user.ts [14:37 - 22:92] (9 lines, 51 tokens)
    .staging/react-template/universal/apps/ui/src/utils/request.ts [32:32 - 40:92]
@@ -3738,6 +3753,39 @@ Clone found (typescript)
 Clone found (typescript)
  - .staging/react-template/universal/apps/ui/src/components/kepler/Map/Map.types.ts [1:22 - 11:53] (11 lines, 92 tokens)
    .staging/react-template/universal/apps/ui/src/pages/HomePage/HomePage.types.ts [1:27 - 11:53]
+Clone found (yaml)
+ - .staging/react-template/website/.github/workflows/ci.yml [12:11 - 21:14] (10 lines, 77 tokens)
+   .staging/react-template/website/.github/workflows/release.yml [10:26 - 19:14]
+Clone found (json)
+ - .staging/react-template/website/apps/docs/package.json [2:29 - 13:5] (12 lines, 56 tokens)
+   .staging/react-template/website/apps/egohygiene.io/package.json [2:38 - 13:5]
+Clone found (json)
+ - .staging/react-template/website/apps/docs/package.json [2:29 - 13:5] (12 lines, 56 tokens)
+   .staging/react-template/website/apps/playground/package.json [2:35 - 13:5]
+Clone found (tsx)
+ - .staging/react-template/website/apps/docs/src/main.tsx [7:47 - 22:3] (16 lines, 60 tokens)
+   .staging/react-template/website/apps/egohygiene.io/src/main.tsx [7:32 - 22:3]
+Clone found (typescript)
+ - .staging/react-template/website/apps/docs/vite.config.ts [1:1 - 15:10] (15 lines, 72 tokens)
+   .staging/react-template/website/apps/egohygiene.io/vite.config.ts [1:1 - 15:10]
+Clone found (typescript)
+ - .staging/react-template/website/apps/docs/vite.config.ts [1:1 - 15:10] (15 lines, 72 tokens)
+   .staging/react-template/website/apps/playground/vite.config.ts [1:1 - 15:10]
+Clone found (json)
+ - .staging/react-template/website/package.json [26:1 - 38:3] (13 lines, 60 tokens)
+   egolint/package.json [25:1 - 37:3]
+Clone found (json)
+ - .staging/react-template/website/packages/api-client/package.json [2:35 - 13:2] (12 lines, 51 tokens)
+   .staging/react-template/website/packages/utilities/package.json [2:34 - 13:2]
+Clone found (json)
+ - .staging/react-template/website/packages/config/package.json [2:31 - 16:2] (15 lines, 64 tokens)
+   .staging/react-template/website/packages/schemas/package.json [2:32 - 16:2]
+Clone found (json)
+ - .staging/react-template/website/packages/i18n/package.json [2:29 - 16:2] (15 lines, 64 tokens)
+   .staging/react-template/website/packages/icons/package.json [2:30 - 16:2]
+Clone found (yaml)
+ - .staging/react-template/website/pnpm-workspace.yaml [1:1 - 21:22] (21 lines, 136 tokens)
+   pnpm-workspace.yaml [1:1 - 21:22]
 Clone found (yaml)
  - .staging/tasks/agents.yml [23:15 - 28:16] (6 lines, 60 tokens)
    .staging/tasks/agents.yml [32:23 - 37:16]
@@ -9275,7 +9323,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 403            │ 108067      │ 421428       │ 230          │ 3578 (3.31%)     │ 19321 (4.58%)     │
+│ bash         │ 406            │ 108261      │ 421752       │ 230          │ 3578 (3.30%)     │ 19321 (4.58%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9289,7 +9337,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csharp       │ 56             │ 14917       │ 43793        │ 22           │ 479 (3.21%)      │ 1936 (4.42%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css          │ 20             │ 5969        │ 19497        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css          │ 32             │ 7357        │ 29646        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csv          │ 2              │ 2346        │ 204424       │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9321,9 +9369,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java         │ 34             │ 10376       │ 32325        │ 12           │ 152 (1.46%)      │ 843 (2.61%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript   │ 64             │ 22736       │ 62404        │ 58           │ 1321 (5.81%)     │ 5555 (8.90%)      │
+│ javascript   │ 66             │ 22768       │ 62549        │ 58           │ 1321 (5.80%)     │ 5555 (8.88%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 214            │ 68434       │ 202640       │ 56           │ 1043 (1.52%)     │ 4655 (2.30%)      │
+│ json         │ 242            │ 69432       │ 207842       │ 65           │ 1148 (1.65%)     │ 5178 (2.49%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9337,9 +9385,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1690           │ 327085      │ 4200894      │ 685          │ 11782 (3.60%)    │ 173935 (4.14%)    │
+│ markdown     │ 1706           │ 327695      │ 4207836      │ 679          │ 11621 (3.55%)    │ 173184 (4.12%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markup       │ 96             │ 29811       │ 116915       │ 45           │ 946 (3.17%)      │ 7819 (6.69%)      │
+│ markup       │ 100            │ 29889       │ 117608       │ 48           │ 964 (3.23%)      │ 7969 (6.78%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ mermaid      │ 11             │ 2820        │ 5846         │ 12           │ 135 (4.79%)      │ 1061 (18.15%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9377,26 +9425,26 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 376            │ 85814       │ 199095       │ 32           │ 781 (0.91%)      │ 3098 (1.56%)      │
+│ text         │ 379            │ 86014       │ 199327       │ 32           │ 781 (0.91%)      │ 3098 (1.55%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 38             │ 6466        │ 13087        │ 8            │ 175 (2.71%)      │ 625 (4.78%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ tsx          │ 42             │ 3282        │ 8836         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ tsx          │ 110            │ 5453        │ 21369        │ 1            │ 15 (0.28%)       │ 60 (0.28%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ twig         │ 1              │ 573         │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ txt          │ 30             │ 5502        │ 70405        │ 78           │ 1955 (35.53%)    │ 23695 (33.66%)    │
+│ txt          │ 31             │ 5513        │ 70524        │ 78           │ 1955 (35.46%)    │ 23695 (33.60%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ typescript   │ 80             │ 13750       │ 35187        │ 11           │ 216 (1.57%)      │ 825 (2.34%)       │
+│ typescript   │ 131            │ 15665       │ 45789        │ 13           │ 244 (1.56%)      │ 969 (2.12%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 548            │ 57219       │ 313718       │ 343          │ 9302 (16.26%)    │ 104618 (33.35%)   │
+│ yaml         │ 558            │ 57763       │ 318006       │ 350          │ 9392 (16.26%)    │ 105403 (33.14%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4587           │ 972671      │ 7816054      │ 3088         │ 56746 (5.83%)    │ 743897 (9.52%)    │
+│ Total:       │ 4785           │ 980812      │ 7867283      │ 3104         │ 56841 (5.80%)    │ 744808 (9.47%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3088 clones.
+Found 3104 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
-time: 15.88s
+time: 15.31s
 
