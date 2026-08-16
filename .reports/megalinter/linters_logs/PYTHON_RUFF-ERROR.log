@@ -8564,201 +8564,228 @@ S607 Starting a process with a partial executable path
 40 |         capture_output=True,
    |
 
-I001 [*] Import block is un-sorted or un-formatted
- --> tests/test_staging_home_audit.py:4:1
-  |
-2 |   # SPDX-License-Identifier: MIT
-3 |
-4 | / from __future__ import annotations
-5 | |
-6 | | import importlib.util
-7 | | from pathlib import Path
-8 | | import sys
-9 | | import unittest
-  | |_______________^
-help: Organize imports
+PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
+  --> tests/test_task_catalog.py:51:14
    |
-10 |
-   -
-11 | REPOSITORY_ROOT = Path(__file__).parents[1]
+50 |     def test_update_catalog_rejects_missing_markers(self) -> None:
+51 |         with self.assertRaisesRegex(RuntimeError, "exactly one generated region"):
+   |              ^^^^^^^^^^^^^^^^^^^^^^
+52 |             task_catalog.update_catalog("no generated region", "replacement")
    |
-
-I001 [*] Import block is un-sorted or un-formatted
-  --> tools/staging_home_audit.py:7:1
-   |
- 5 |   """Generate the deterministic file-level disposition ledger for ``.staging``."""
- 6 |
- 7 | / from __future__ import annotations
- 8 | |
- 9 | | import argparse
-10 | | import csv
-11 | | from dataclasses import asdict, dataclass
-12 | | import io
-13 | | from pathlib import Path
-14 | | import re
-15 | | import subprocess
-16 | | import sys
-   | |__________^
-help: Organize imports
-   |
-17 |
-   -
-18 | EMPTY_BLOB = "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
-   |
+help: Replace `assertRaisesRegex` with `pytest.raises`
 
 S603 `subprocess` call: check for execution of untrusted input
-   --> tools/staging_home_audit.py:189:12
+   --> tools/staging_home_audit.py:188:12
     |
-188 | def run_git(repository_root: Path, *arguments: str) -> bytes:
-189 |     return subprocess.check_output(
+187 | def run_git(repository_root: Path, *arguments: str) -> bytes:
+188 |     return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
     |            ^^^^^^^^^^^^^^^^^^^^^^^
-190 |         ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
-191 |     )
-    |
 
 S607 Starting a process with a partial executable path
-   --> tools/staging_home_audit.py:190:9
+   --> tools/staging_home_audit.py:188:36
     |
-188 | def run_git(repository_root: Path, *arguments: str) -> bytes:
-189 |     return subprocess.check_output(
-190 |         ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
-    |         ^^^^^^^^^^^^^^^^^^^
-191 |     )
-    |
+187 | def run_git(repository_root: Path, *arguments: str) -> bytes:
+188 |     return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
+    |                                    ^^^^^^^^^^^^^^^^^^^
 
 PLR0911 Too many return statements (15 > 6)
-   --> tools/staging_home_audit.py:206:5
+   --> tools/staging_home_audit.py:203:5
     |
-206 | def file_kind(path: str, size: int) -> str:
+203 | def file_kind(path: str, size: int) -> str:
     |     ^^^^^^^^^
-207 |     if size == 0:
-208 |         return "empty-placeholder"
+204 |     if size == 0:
+205 |         return "empty-placeholder"
     |
 
 PLR0912 Too many branches (14 > 12)
-   --> tools/staging_home_audit.py:206:5
+   --> tools/staging_home_audit.py:203:5
     |
-206 | def file_kind(path: str, size: int) -> str:
+203 | def file_kind(path: str, size: int) -> str:
     |     ^^^^^^^^^
-207 |     if size == 0:
-208 |         return "empty-placeholder"
+204 |     if size == 0:
+205 |         return "empty-placeholder"
     |
 
 PLR0911 Too many return statements (7 > 6)
-   --> tools/staging_home_audit.py:258:5
+   --> tools/staging_home_audit.py:255:5
     |
-258 | def classify_workflow(path: str, relative: str) -> Classification:
+255 | def classify_workflow(path: str, relative: str) -> Classification:
     |     ^^^^^^^^^^^^^^^^^
-259 |     name = Path(relative).name
-260 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
+256 |     name = Path(relative).name
+257 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
     |
 
 ARG001 Unused function argument: `path`
-   --> tools/staging_home_audit.py:258:23
+   --> tools/staging_home_audit.py:255:23
     |
-258 | def classify_workflow(path: str, relative: str) -> Classification:
+255 | def classify_workflow(path: str, relative: str) -> Classification:
     |                       ^^^^
-259 |     name = Path(relative).name
-260 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
+256 |     name = Path(relative).name
+257 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
     |
 
 PLR0912 Too many branches (16 > 12)
-   --> tools/staging_home_audit.py:380:5
+   --> tools/staging_home_audit.py:389:5
     |
-380 | def classify_devenvironment(relative: str) -> Classification:
+389 | def classify_devenvironment(relative: str) -> Classification:
     |     ^^^^^^^^^^^^^^^^^^^^^^^
-381 |     inner = relative.removeprefix("devenvironment/")
-382 |     if inner.startswith("containers/services/api/"):
+390 |     inner = relative.removeprefix("devenvironment/")
+391 |     if inner.startswith("containers/services/api/"):
     |
 
 PLR0915 Too many statements (68 > 50)
-   --> tools/staging_home_audit.py:380:5
+   --> tools/staging_home_audit.py:389:5
     |
-380 | def classify_devenvironment(relative: str) -> Classification:
+389 | def classify_devenvironment(relative: str) -> Classification:
     |     ^^^^^^^^^^^^^^^^^^^^^^^
-381 |     inner = relative.removeprefix("devenvironment/")
-382 |     if inner.startswith("containers/services/api/"):
+390 |     inner = relative.removeprefix("devenvironment/")
+391 |     if inner.startswith("containers/services/api/"):
     |
 
-PLR0911 Too many return statements (36 > 6)
-   --> tools/staging_home_audit.py:599:5
+PLR0911 Too many return statements (38 > 6)
+   --> tools/staging_home_audit.py:610:5
     |
-599 | def classify(path: str) -> Classification:
+610 | def classify(path: str) -> Classification:
     |     ^^^^^^^^
-600 |     relative = path.removeprefix(".staging/")
+611 |     relative = path.removeprefix(".staging/")
     |
 
-PLR0912 Too many branches (36 > 12)
-   --> tools/staging_home_audit.py:599:5
+PLR0912 Too many branches (38 > 12)
+   --> tools/staging_home_audit.py:610:5
     |
-599 | def classify(path: str) -> Classification:
+610 | def classify(path: str) -> Classification:
     |     ^^^^^^^^
-600 |     relative = path.removeprefix(".staging/")
+611 |     relative = path.removeprefix(".staging/")
     |
 
-PLR0915 Too many statements (55 > 50)
-   --> tools/staging_home_audit.py:599:5
+PLR0915 Too many statements (57 > 50)
+   --> tools/staging_home_audit.py:610:5
     |
-599 | def classify(path: str) -> Classification:
+610 | def classify(path: str) -> Classification:
     |     ^^^^^^^^
-600 |     relative = path.removeprefix(".staging/")
+611 |     relative = path.removeprefix(".staging/")
     |
 
 PLR0911 Too many return statements (8 > 6)
-    --> tools/staging_home_audit.py:1004:5
+    --> tools/staging_home_audit.py:1049:5
      |
-1004 | def duplicate_policy(path: str, blob: str, duplicate_of: str) -> tuple[str, str]:
+1049 | def duplicate_policy(path: str, blob: str, duplicate_of: str) -> tuple[str, str]:
      |     ^^^^^^^^^^^^^^^^
-1005 |     if not duplicate_of or blob == EMPTY_BLOB:
-1006 |         return "", ""
+1050 |     if not duplicate_of or blob == EMPTY_BLOB:
+1051 |         return "", ""
      |
 
 T201 `print` found
-    --> tools/staging_home_audit.py:1108:13
+    --> tools/staging_home_audit.py:1162:13
      |
-1106 |     if arguments.check:
-1107 |         if not output.exists():
-1108 |             print(f"Missing generated ledger: {output}", file=sys.stderr)
+1160 |     if arguments.check:
+1161 |         if not output.exists():
+1162 |             print(f"Missing generated ledger: {output}", file=sys.stderr)
      |             ^^^^^
-1109 |             return 1
-1110 |         if output.read_text(encoding="utf-8") != rendered:
+1163 |             return 1
+1164 |         if output.read_text(encoding="utf-8") != rendered:
      |
 help: Remove `print`
 
 T201 `print` found
-    --> tools/staging_home_audit.py:1111:13
+    --> tools/staging_home_audit.py:1165:13
      |
-1109 |             return 1
-1110 |         if output.read_text(encoding="utf-8") != rendered:
-1111 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
+1163 |             return 1
+1164 |         if output.read_text(encoding="utf-8") != rendered:
+1165 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
      |             ^^^^^
-1112 |             return 1
-1113 |         print(f"Staging ledger is current: {output}")
+1166 |             return 1
+1167 |         print(f"Staging ledger is current: {output}")
      |
 help: Remove `print`
 
 T201 `print` found
-    --> tools/staging_home_audit.py:1113:9
+    --> tools/staging_home_audit.py:1167:9
      |
-1111 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
-1112 |             return 1
-1113 |         print(f"Staging ledger is current: {output}")
+1165 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
+1166 |             return 1
+1167 |         print(f"Staging ledger is current: {output}")
      |         ^^^^^
-1114 |         return 0
+1168 |         return 0
      |
 help: Remove `print`
 
 T201 `print` found
-    --> tools/staging_home_audit.py:1118:5
+    --> tools/staging_home_audit.py:1172:5
      |
-1116 |     output.parent.mkdir(parents=True, exist_ok=True)
-1117 |     output.write_text(rendered, encoding="utf-8")
-1118 |     print(f"Wrote {len(rendered.splitlines()) - 1} staging dispositions to {output}")
+1170 |     output.parent.mkdir(parents=True, exist_ok=True)
+1171 |     output.write_text(rendered, encoding="utf-8")
+1172 |     print(f"Wrote {len(rendered.splitlines()) - 1} staging dispositions to {output}")
      |     ^^^^^
-1119 |     return 0
+1173 |     return 0
      |
 help: Remove `print`
 
-Found 778 errors.
-[*] 46 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
+TRY003 Avoid specifying long messages outside the exception class
+  --> tools/task_catalog.py:41:15
+   |
+39 |     resolved = shutil.which(configured)
+40 |     if resolved is None:
+41 |         raise RuntimeError(f"Task executable is unavailable: {configured}")
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+42 |     return resolved
+   |
+
+S603 `subprocess` call: check for execution of untrusted input
+  --> tools/task_catalog.py:47:17
+   |
+45 | def public_tasks(repository_root: Path) -> list[dict[str, object]]:
+46 |     """Return public described tasks from Task's canonical JSON output."""
+47 |     completed = subprocess.run(
+   |                 ^^^^^^^^^^^^^^
+48 |         [task_binary(), "--dir", str(repository_root), "--list", "--json"],
+49 |         check=True,
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> tools/task_catalog.py:89:15
+   |
+87 |     """Replace the generated region in TASKS.md."""
+88 |     if document.count(START_MARKER) != 1 or document.count(END_MARKER) != 1:
+89 |         raise RuntimeError("TASKS.md must contain exactly one generated region")
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+90 |     prefix, remainder = document.split(START_MARKER, maxsplit=1)
+91 |     _, suffix = remainder.split(END_MARKER, maxsplit=1)
+   |
+
+T201 `print` found
+   --> tools/task_catalog.py:105:9
+    |
+103 |     if arguments.write:
+104 |         catalog_path.write_text(expected, encoding="utf-8")
+105 |         print(f"Updated {catalog_path.relative_to(repository_root)}")
+    |         ^^^^^
+106 |         return 0
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> tools/task_catalog.py:109:9
+    |
+108 |     if current != expected:
+109 |         print(
+    |         ^^^^^
+110 |             "TASKS.md is stale; run `task taskfile:catalog:write`.",
+111 |             file=sys.stderr,
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> tools/task_catalog.py:115:5
+    |
+113 |         return 1
+114 |
+115 |     print("TASKS.md matches the public Taskfile command surface.")
+    |     ^^^^^
+116 |     return 0
+    |
+help: Remove `print`
+
+Found 783 errors.
+[*] 44 fixable with the `--fix` option (12 hidden fixes can be enabled with the `--unsafe-fixes` option).
 

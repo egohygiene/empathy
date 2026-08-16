@@ -10,7 +10,7 @@ Linter raw log:
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-16 14:03:25.044486+00:00
+Run started:2026-08-16 14:30:59.515685+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -209,43 +209,64 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tools/staging_home_audit.py:189:11
-188	def run_git(repository_root: Path, *arguments: str) -> bytes:
-189	    return subprocess.check_output(
-190	        ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
-191	    )
-192	
+   Location: ./tools/staging_home_audit.py:188:11
+187	def run_git(repository_root: Path, *arguments: str) -> bytes:
+188	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
+189	
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tools/staging_home_audit.py:189:11
-188	def run_git(repository_root: Path, *arguments: str) -> bytes:
-189	    return subprocess.check_output(
-190	        ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
-191	    )
-192	
+   Location: ./tools/staging_home_audit.py:188:11
+187	def run_git(repository_root: Path, *arguments: str) -> bytes:
+188	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
+189	
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tools/task_catalog.py:14:0
+13	import shutil
+14	import subprocess
+15	import sys
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tools/task_catalog.py:47:16
+46	    """Return public described tasks from Task's canonical JSON output."""
+47	    completed = subprocess.run(
+48	        [task_binary(), "--dir", str(repository_root), "--list", "--json"],
+49	        check=True,
+50	        capture_output=True,
+51	        text=True,
+52	    )
+53	    payload = json.loads(completed.stdout)
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 9083
+	Total lines of code: 9275
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 14
+		Low: 16
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 14
+		High: 16
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)

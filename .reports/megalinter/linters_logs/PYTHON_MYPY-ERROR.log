@@ -10,60 +10,61 @@ Collecting types-PyYAML
 Downloading types_pyyaml-6.0.12.20260815-py3-none-any.whl (21 kB)
 Installing collected packages: types-PyYAML
 Successfully installed types-PyYAML-6.0.12.20260815
+tools/task_catalog.py: note: In function "render_catalog":
+tools/task_catalog.py:75:71: error: "object" has no attribute "__iter__"; maybe
+"__dir__" or "__str__"? (not iterable)  [attr-defined]
+    ...alias_text = ", ".join(f"`{escape_cell(alias)}`" for alias in aliases)
+                                                                     ^~~~~~~
 tests/test_staging_home_audit.py: note: In member "setUpClass" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:25:9: error: "type[StagingHomeAuditTests]" has
+tests/test_staging_home_audit.py:24:9: error: "type[StagingHomeAuditTests]" has
 no attribute "rows"  [attr-defined]
             cls.rows = staging_home_audit.build_rows(REPOSITORY_ROOT)
             ^~~~~~~~
-tests/test_staging_home_audit.py:26:9: error: "type[StagingHomeAuditTests]" has
+tests/test_staging_home_audit.py:25:9: error: "type[StagingHomeAuditTests]" has
 no attribute "by_path"  [attr-defined]
             cls.by_path = {row.source_path: row for row in cls.rows}
             ^~~~~~~~~~~
-tests/test_staging_home_audit.py:26:56: error: "type[StagingHomeAuditTests]"
+tests/test_staging_home_audit.py:25:56: error: "type[StagingHomeAuditTests]"
 has no attribute "rows"  [attr-defined]
             cls.by_path = {row.source_path: row for row in cls.rows}
                                                            ^~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_every_staged_file_has_a_concrete_home" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:35:30: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:34:30: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
             self.assertEqual(set(self.by_path), tracked_staging_paths)
                                  ^~~~~~~~~~~~
-tests/test_staging_home_audit.py:36:75: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:35:75: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
     ...sertNotIn("manual-review", {row.canonical_owner for row in self.rows})
                                                                   ^~~~~~~~~
-tests/test_staging_home_audit.py:37:64: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:36:64: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
     ...    self.assertNotIn("TBD", {row.canonical_home for row in self.rows})
                                                                   ^~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_realm_devcontainer_variants_share_one_destination" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:40:17: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:39:17: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
             first = self.by_path[".staging/devenvironment/.devcontainer/de...
                     ^~~~~~~~~~~~
-tests/test_staging_home_audit.py:41:18: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:40:18: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
             second = self.by_path[".staging/devenvironment/.devcontainer/d...
                      ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_product_fixtures_are_kept_out_of_realm" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:49:15: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py: note: In member "test_product_fixture_is_kept_out_of_realm" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:48:15: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
-            api = self.by_path[
+            api = self.by_path[".staging/devenvironment/containers/service...
                   ^~~~~~~~~~~~
-tests/test_staging_home_audit.py:52:14: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            ui = self.by_path[".staging/react-template/universal/apps/ui/p...
-                 ^~~~~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_cross_cutting_sources_follow_capability_ownership" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:71:34: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:65:34: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
                     self.assertEqual(self.by_path[path].canonical_owner, e...
                                      ^~~~~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_community_instructions_remain_quarantined" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:76:24: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:68:42: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
-                for row in self.rows
-                           ^~~~~~~~~
+            community_rows = [row for row in self.rows if row.collection.s...
+                                             ^~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "build" of class "RepositoryIntelligenceDashboardTests":
 tests/test_repository_intelligence_dashboard.py:94:9: error: Returning Any from
 function declared to return "dict[str, object]"  [no-any-return]
@@ -168,5 +169,5 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 34 errors in 2 files (checked 39 source files)
+Found 34 errors in 3 files (checked 41 source files)
 

@@ -12218,8 +12218,14 @@ tests/test_repository_intelligence_dashboard.py
   tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
   tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
 tools/staging_home_audit.py
-  tools/staging_home_audit.py:1082:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]" in function "writerow"
+  tools/staging_home_audit.py:1136:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]" in function "writerow"
     "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]"
       Type parameter "_KT@Mapping" is invariant, but "str" is not the same as "Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags']" (reportArgumentType)
-8726 errors, 420 warnings, 0 informations
+tools/task_catalog.py
+  tools/task_catalog.py:75:48 - error: Argument type is unknown
+    Argument corresponds to parameter "value" in function "escape_cell" (reportUnknownArgumentType)
+  tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
+  tools/task_catalog.py:75:71 - error: "object" is not iterable
+    "__iter__" method not defined (reportGeneralTypeIssues)
+8729 errors, 420 warnings, 0 informations
 
