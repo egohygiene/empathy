@@ -615,6 +615,26 @@ egolint/README.md:22:1: lexical_illusions: There's a lexical illusion in 'task l
 task lint' - a phrase is repeated.
 egolint/README.md:67:5: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 egolint/README.md:79:39: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+holon/packs/react-vite/template/README.md:35:28: typography.diacritical_marks: Use diacritical marks in 'façade'.
+holon/packs/react-vite/template/docs/contributing/local-development.md:5:80: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:16:12: lexical_illusions: There's a lexical illusion in 'source
+
+Source' - a phrase is repeated.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:26:10: lexical_illusions: There's a lexical illusion in 'source
+
+Source' - a phrase is repeated.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:43:20: typography.diacritical_marks: Use diacritical marks in 'façade'.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:61:14: lexical_illusions: There's a lexical illusion in 'source
+
+Source' - a phrase is repeated.
+holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:23:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:24:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:28:1: redundancy.misc.after_the_deadline: Redundancy. Use 'add' instead of 'Add an additional'.
+holon/packs/react-vite/template/docs/provenance/store-source-readme.md:69:1: lexical_illusions: There's a lexical illusion in 'pnpm test
+pnpm test' - a phrase is repeated.
+holon/packs/react-vite/template/docs/tooling/tailwind.md:38:26: lexical_illusions: There's a lexical illusion in '9 9' - a phrase is repeated.
+holon/packs/react-vite/template/docs/tooling/tailwind.md:38:29: lexical_illusions: There's a lexical illusion in '2 2' - a phrase is repeated.
+holon/packs/react-vite/template/docs/tooling/vite.md:36:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 identity/README.md:44:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/ARCHITECTURE.md:22:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 mantle/ARCHITECTURE.md:23:116: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.

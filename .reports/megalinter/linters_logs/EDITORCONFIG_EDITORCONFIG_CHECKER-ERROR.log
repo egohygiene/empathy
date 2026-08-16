@@ -3141,10 +3141,12 @@ beacon/.staging/latex/Title Pages/stylish-title-page/main.tex:
 	79: Trailing whitespace
 	83: Trailing whitespace
 	85: Trailing whitespace
+holon/packs/react-vite/template/test-results/.last-run.json:
+	Wrong line endings or no final newline
 mantle/bin/list-vscode-language-ids:
 	Wrong line endings or no final newline
 notebooks/jupyter/.gitignore:
 	Wrong line endings or no final newline
 
-2778 errors found
+2779 errors found
 

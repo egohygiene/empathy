@@ -4,51 +4,55 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.39s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       7.23s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   49|     |     0|          |       0|       0.29s|
-|❌ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  121|     |     7|          |       0|       6.76s|
-|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    6|     |     0|          |       0|       0.03s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3104|          |      no|      25.48s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    6|     |   192|          |       0|       2.19s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2032|     |     1|          |       0|       2.31s|
-|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   11|     |   354|          |       0|       0.98s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|       1.95s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.45s|
-|✅ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  107|     |     0|          |       0|       0.23s|
-|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  107|     |     1|          |       0|       1.77s|
-|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  107|     |     0|          |       0|      29.44s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  298|     | 67759|          |       0|     161.29s|
-|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  266|     |   400|          |       0|       3.01s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  266|     |     1|          |       0|       0.45s|
-|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.19s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.21s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       1.06s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   53|     |    14|          |       0|       2.82s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    34|          |      no|      18.46s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   53|     |   257|          |       0|      16.41s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8726|          |      no|      47.37s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   53|     |   778|          |       0|        7.1s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   53|     |     1|          |       0|        0.1s|
-|❌ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |     5|          |      no|       2.51s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      36.22s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       8.42s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    63|          |      no|     111.71s|
-|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.42s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.14s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       6.06s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|       12.3s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      51.77s|
-|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|      11.15s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       3.21s|
-|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.27s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  577|     |   102|          |       0|      55.28s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  282|     |   661|          |       0|       8.24s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  282|     |     1|          |       0|       0.65s|
-|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.37s|
-|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  176|     |     1|          |      16|       4.52s|
-|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  176|     |     0|          |       0|      53.25s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  176|     |   200|          |       0|      16.18s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.42s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       8.09s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   49|     |     0|          |       0|       0.33s|
+|❌ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  121|     |     7|          |       0|       8.87s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    6|     |     0|          |       0|       0.02s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3107|          |      no|      26.49s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |   23|     |   404|          |       0|        2.5s|
+|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    1|     |     1|          |       0|       0.17s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2434|     |     1|          |       0|       2.54s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   17|     |   356|          |       0|       1.07s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|       1.72s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.36s|
+|❌ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  185|     |     1|          |       0|       0.31s|
+|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  185|     |     1|          |       0|       3.44s|
+|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  185|     |     0|          |       0|      99.64s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  298|     | 67759|          |       0|     162.02s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  306|     |   400|          |       0|       4.18s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  306|     |     1|          |       0|        0.6s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.45s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.22s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.99s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   53|     |    14|          |       0|       2.28s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    34|          |      no|      16.79s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   53|     |   257|          |       0|      17.17s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8726|          |      no|       44.3s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   53|     |   778|          |       0|       6.93s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   53|     |     1|          |       0|       0.06s|
+|❌ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |     5|          |      no|       2.58s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      46.86s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       7.94s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    62|          |      no|     111.04s|
+|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.46s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.13s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       5.97s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      13.99s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      41.89s|
+|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|        9.6s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       4.16s|
+|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.45s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  724|     |   115|          |       0|      54.02s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  327|     |   674|          |       0|       8.32s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  327|     |     1|          |       0|       0.75s|
+|❌ TSX         |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |   75|     |     1|          |       0|       1.75s|
+|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |  131|     |     1|          |       0|       1.77s|
+|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |  131|     |     1|          |       0|       4.72s|
+|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.33s|
+|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  189|     |     1|          |      17|       5.21s|
+|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  189|     |     0|          |       0|      43.94s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  189|     |   213|          |       0|      15.32s|
 
 ## Detailed Issues
 
@@ -62,7 +66,7 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-16 10:18:14.851246+00:00
+Run started:2026-08-16 13:24:47.507183+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -313,6 +317,17 @@ Files skipped (2):
    ▾
  betterleaks 1.7.3
 
+┌─generic-api-key──○
+│
+│ 950 │             "secret": "REDACTED",
+│     │                        ^^^^^^^^
+│
+│ attributes:
+│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
+│   resource ...... fs.content
+└○
+
+
 ┌─stripe-access-token──○
 │
 │ 412 │ const API_KEY = 'REDACTED';
@@ -357,19 +372,8 @@ Files skipped (2):
 └○
 
 
-┌─generic-api-key──○
-│
-│ 950 │             "secret": "REDACTED",
-│     │                        ^^^^^^^^
-│
-│ attributes:
-│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
-│   resource ...... fs.content
-└○
-
-
-10:19AM INF scanned ~32528117 bytes (32.53 MB) in 2.41s
-10:19AM WRN leaks found: 5
+1:25PM INF scanned ~32579705 bytes (32.58 MB) in 2.5s
+1:25PM WRN leaks found: 5
 ```
 
 </details>
@@ -378,24 +382,7 @@ Files skipped (2):
 <summary>❌ LATEX / chktex - 67759 errors</summary>
 
 ```
-impossible; so $p$ is not in the set. Hence a finite set $\{p_1,p_2,...,p_n\}$ cannot be the collection of all primes.  
-                                                                                                                                                                                                                                                                                                                  ^^^
-    Warning 11 in beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/chapter1.tex line 139: You should use \cdots or \ldots to achieve an ellipsis.
-    For any finite set $\{p_1,p_2,...,p_n\}$ of primes, consider $m = p_1p_2...p_n+1$. If $m$ is prime it is not in the set since $m > p_i$ for all $i$. If $m$ is not prime it has a prime divisor $p$. If $p$ is one of the $p_i$ then $p$ is a divisor of $p_1p_2...p_n$ and hence is a divisor of $(m - p_1p_2...p_n) = 1$, which is impossible; so $p$ is not in the set. Hence a finite set $\{p_1,p_2,...,p_n\}$ cannot be the collection of all primes.  
-                                                                                                                                                                                                                                                                                                                                                                                                             ^^^
-    Warning 17 in beacon/.staging/latex/Theses/maggi-memoir-thesis/thesis.tex line 233: Number of `(' doesn't match the number of `)'!
-
-✅ [SUCCESS] beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixA.tex
-✅ [SUCCESS] beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixTemplate.tex
-❌ [ERROR] beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex
-    chktex: WARNING -- Could not find global resource file.
-    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
-    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
-                                                                                                                                                                                                                                                                                                                                            ^
-    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
-    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
-                                                                                                                                                                                                                                                                                                                                                                      ^
-    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+ing space (`~') should have been used.
     If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
     Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 180: Interword spacing (`\ ') should perhaps be used.
@@ -511,7 +498,7 @@ impossible; so $p$ is not in the set. Hence a finite set $\{p_1,p_2,...,p_n\}$ c
 
 
 
-(Truncated to last 27586 characters out of 22918695)
+(Truncated to last 23529 characters out of 22918695)
 ```
 
 </details>
@@ -533,117 +520,7 @@ For more information, try '--help'.
 <summary>❌ EDITORCONFIG / editorconfig-checker - 1 error</summary>
 
 ```
-beacon/.staging/latex/Miscellaneous/article-notes/article_notes.tex:
-	Wrong line endings or no final newline
-	101: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/article-notes/sample.bib:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/canadian-forces-memo/CF_memo.tex:
-	20: Trailing whitespace
-	130: Trailing whitespace
-	196: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/cheatsheet/LICENSE:
-	1: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/cheatsheet/cheatsheet.tex:
-	Wrong line endings or no final newline
-	37-40: Trailing whitespace
-	60: Trailing whitespace
-	81: Trailing whitespace
-	91-92: Trailing whitespace
-	94: Trailing whitespace
-	108: Trailing whitespace
-	126: Trailing whitespace
-	150: Trailing whitespace
-	153-154: Trailing whitespace
-	175: Trailing whitespace
-	212: Trailing whitespace
-	214: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/chemical-equations/chemical_equations.tex:
-	Wrong line endings or no final newline
-	16: Trailing whitespace
-	29: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/code-snippet/Scripts/example.pl:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/code-snippet/main.tex:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/conference-booklet/conferencebooklet.cls:
-	10: Trailing whitespace
-	175: Trailing whitespace
-	177: Trailing whitespace
-	179: Trailing whitespace
-	181: Trailing whitespace
-	191: Trailing whitespace
-	194: Trailing whitespace
-	216: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/conference-booklet/main.tex:
-	10: Trailing whitespace
-	48: Trailing whitespace
-	50: Trailing whitespace
-	102: Trailing whitespace
-	125: Trailing whitespace
-	145: Trailing whitespace
-	178: Trailing whitespace
-	205: Trailing whitespace
-	224: Trailing whitespace
-	235: Trailing whitespace
-	238: Trailing whitespace
-	294: Trailing whitespace
-	302: Trailing whitespace
-	306: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/contract/contract.tex:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/contract/structure.tex:
-	Wrong line endings or no final newline
-	8: Trailing whitespace
-	37: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/custom-class/example.cls:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/custom-class/template.tex:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/dictionary/dictionary.tex:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/drake-certificate/CSDrakeCertificate.cls:
-	82: Trailing whitespace
-	86: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/drake-certificate/template.tex:
-	54: Trailing whitespace
-	87: Trailing whitespace
-	89: Trailing whitespace
-	99: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/engineering-calculation-paper/EngCalcPaper.tex:
-	Wrong line endings or no final newline
-	47: Trailing whitespace
-	71: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/frequently-asked-questions/faq.tex:
-	Wrong line endings or no final newline
-	141: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/memo/memo.tex:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/memo/texMemo.cls:
-	Wrong line endings or no final newline
-	4: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/minimal-memo/CSMinimalMemo.cls:
-	112: Trailing whitespace
-	114: Trailing whitespace
-	116: Trailing whitespace
-	118: Trailing whitespace
-	120: Trailing whitespace
-	127: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.bib:
-	23: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.tex:
-	Wrong line endings or no final newline
-	64: Trailing whitespace
-	118: Trailing whitespace
-	248: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/nih-grant-proposal/nihunsrt.bst:
-	12: Trailing whitespace
-	594: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/poems/poems.tex:
-	Wrong line endings or no final newline
-	Not all lines have the correct end of line character
-	20: Trailing whitespace
-	282: Trailing whitespace
+hitespace
 	289: Trailing whitespace
 beacon/.staging/latex/Miscellaneous/press-release/fancyhdr.sty:
 	3: Trailing whitespace
@@ -1371,14 +1248,16 @@ beacon/.staging/latex/Title Pages/stylish-title-page/main.tex:
 	79: Trailing whitespace
 	83: Trailing whitespace
 	85: Trailing whitespace
+holon/packs/react-vite/template/test-results/.last-run.json:
+	Wrong line endings or no final newline
 mantle/bin/list-vscode-language-ids:
 	Wrong line endings or no final newline
 notebooks/jupyter/.gitignore:
 	Wrong line endings or no final newline
 
-2778 errors found
+2779 errors found
 
-(Truncated to last 27586 characters out of 102318)
+(Truncated to last 23529 characters out of 102419)
 ```
 
 </details>
@@ -1402,7 +1281,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786875347317:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786886524044:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1425,71 +1304,99 @@ Resolutions:
 </details>
 
 <details>
-<summary>❌ HTML / htmlhint - 354 errors</summary>
+<summary>❌ TSX / eslint - 1 error</summary>
 
 ```
-he id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L352 |  <div id="body_footer">
-                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L371 |</body>
-            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
-      L100 |<div id="body_frame">
-            ^ Tag must be paired, missing: [ </div> ], start tag match failed [ <div id="body_frame"> ] on line 100. (tag-pair)
+Oops! Something went wrong! :(
 
-   Config loaded: egolint/.config/lint/html/htmlhint.json
+ESLint: 10.8.0
 
-   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/index.html
-      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
-          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
-      L30 |</body>
-           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
-      L31 |<div id="nav_bar">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L32 |  <div id="nav_bar_decor_1"></div>
-                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L33 |  <div id="nav_bar_decor_2"></div>
-                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L34 |  <div id="nav_bar_body">
-                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
-                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L38 |<div class="index_indent">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
-                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L43 |<div class="index_indent">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
-                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L48 |<div class="index_indent">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
-                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L53 |<div class="index_indent">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
-                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L60 |<div class="index_indent">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
-                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L65 |<div class="index_indent">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L72 |<div id="body_frame">
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L73 |  <div id="body_header">
-                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L75 |  <div id="body_main">
-                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L80 |<div id="simple_title" align=center>TrackChanges</div>
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L80 |<div id="simple_title" align=center>TrackChanges</div>
-                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
-      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
-               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
-                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
-      L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</span><span class="code_opti...
+Error: Cannot find module 'eslint-plugin-react'
+Require stack:
+- egolint/.config/lint/javascript/eslint.config.mjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)
+    at Module._load (node:internal/modules/cjs/loader:1296:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1619:12)
+    at require (node:internal/modules/helpers:191:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786886524044:25:21
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+
+
+[TSX_ESLINT_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config (e.g. `eslint-plugin-react`, `eslint-plugin-react-hooks`, `@eslint-react/eslint-plugin`, `@typescript-eslint/eslint-plugin`). The plugin is not installed in MegaLinter's bundled `node_modules`.
+Resolutions:
+  - Pre-install the missing plugin via a pre-command in your .mega-linter.yml:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-react eslint-plugin-react-hooks"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's dependencies and run the project-local ESLint binary:
+      TSX_ESLINT_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TSX_ESLINT_CLI_EXECUTABLE: node_modules/.bin/eslint
+```
+
+</details>
+
+<details>
+<summary>❌ TYPESCRIPT / eslint - 1 error</summary>
+
+```
+Oops! Something went wrong! :(
+
+ESLint: 10.8.0
+
+Error: Cannot find module 'eslint-plugin-react'
+Require stack:
+- egolint/.config/lint/javascript/eslint.config.mjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)
+    at Module._load (node:internal/modules/cjs/loader:1296:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1619:12)
+    at require (node:internal/modules/helpers:191:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786886524044:25:21
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+
+
+[TYPESCRIPT_ES_ERROR_PLUGIN_NOT_FOUND] ESLint could not load a plugin referenced in your config. The plugin is not installed in MegaLinter's bundled `node_modules` (`/node-deps/node_modules`).
+Resolutions:
+  - Pre-install the missing plugin into MegaLinter's npm root via a pre-command in your .mega-linter.yml:
+      TYPESCRIPT_ES_PRE_COMMANDS:
+        - command: "npm install eslint-plugin-NAME"
+          cwd: "root"
+          continue_if_failed: false
+  - Or install your project's full dependency tree and run ESLint from the workspace `node_modules`:
+      TYPESCRIPT_ES_PRE_COMMANDS:
+        - command: yarn install --frozen-lockfile --ignore-scripts
+          cwd: workspace
+          continue_if_failed: false
+      TYPESCRIPT_ES_CLI_EXECUTABLE: node_modules/.bin/eslint
+```
+
+</details>
+
+<details>
+<summary>❌ DOCKERFILE / hadolint - 1 error</summary>
+
+```
+holon/packs/react-vite/template/infra/docker/Dockerfile:9 DL3025 warning: Use arguments JSON notation for CMD and ENTRYPOINT arguments
+```
+
+</details>
+
+<details>
+<summary>❌ HTML / htmlhint - 356 errors</summary>
+
+```
+L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</span><span class="code_opti...
                    ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
       L121 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{The no...
                                                        ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
@@ -1762,9 +1669,144 @@ he id and class attribute values must be in lowercase and split by a dash. (id-c
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 11 files, found 354 errors in 9 files (106 ms)
+   holon/packs/react-vite/template/.storybook/manager-head.html
+      L1 |<meta name="color-scheme" content="dark">
+          ^ Doctype must be declared before any non-comment content. (doctype-first)
 
-(Truncated to last 27586 characters out of 66238)
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   holon/packs/react-vite/template/.storybook/preview-head.html
+      L1 |<meta name="color-scheme" content="dark light">
+          ^ Doctype must be declared before any non-comment content. (doctype-first)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+Scanned 17 files, found 356 errors in 11 files (123 ms)
+
+(Truncated to last 23529 characters out of 67003)
+```
+
+</details>
+
+<details>
+<summary>❌ JSON / jsonlint - 1 error</summary>
+
+```
+File: holon/packs/react-vite/template/tsconfig.base.json
+Parse error on line 4, column 5:
+...ilerOptions": {    // Language baseline...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/visualizations/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React, Canvas, SV...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/visualizations/tsconfig.storybook.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React, Canvas, SV...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/utilities/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/ui/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React components ...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/ui/tsconfig.storybook.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Storybook renders...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/themes/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser APIs used...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/schemas/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/icons/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React SVG and bro...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/i18n/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser APIs used...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/design-tokens/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/content/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/config/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/api-client/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // JavaScript plus s...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/web/tsconfig.app.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser environme...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/web/tsconfig.storybook.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Storybook renders...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/playground/tsconfig.app.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser environme...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/docs/tsconfig.app.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser environme...
+----------------------^
+Unexpected token "/"
 ```
 
 </details>
@@ -1779,81 +1821,10 @@ Cargo.toml failed for `.toml` rules: kebabcase | snakecase
 </details>
 
 <details>
-<summary>❌ SPELL / lychee - 102 errors</summary>
+<summary>❌ SPELL / lychee - 115 errors</summary>
 
 ```
-://tex.stackexchange.com/q/55437 --[302]--> https://tex.stackexchange.com/questions/55437/how-do-i-update-my-tex-distribution
-https://docker.com/ --[301]--> https://www.docker.com/
-https://github.com/adobe-fonts/source-sans-pro --[301]--> https://github.com/adobe-fonts/source-sans
-https://github.com/google/roboto --[301]--> https://github.com/googlefonts/roboto-2
-https://github.com/posquit0/Awesome-CV/raw/master/icon.png --[302]--> https://raw.githubusercontent.com/posquit0/Awesome-CV/master/icon.png
-https://tex.stackexchange.com/q/1092 --[302]--> https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
-https://www.paypal.me/posquit0 --[301]--> https://www.paypal.com/paypalme/posquit0
-https://www.sharelatex.com/templates/cv-or-resume/fancy-cv --[308]--> https://www.overleaf.com/latex/templates/friggeri-cv-template/hmnchbfmjgqh
-
-
-Errors in beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md
-[403] https://www.indeed.com/career-advice/resumes-cover-letters/resume-objective-examples (at 22:22) | Rejected status code: 403 Forbidden
-[999] https://www.linkedin.com/in/timmy-l-chan/ (at 31:1) | Rejected status code: 999 Unknown status code | Followed 1 redirect. Redirects: https://www.linkedin.com/in/timmy-l-chan/ --[301]--> https://www.linkedin.com/in/timmy-l-chan
-
-Redirects in beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md
-https://www.linkedin.com/in/timmy-l-chan/ --[301]--> https://www.linkedin.com/in/timmy-l-chan
-
-
-Errors in beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md
-[404] http://www.latextemplates.com/template/moderncv-cv-and-cover-letter (at 14:38) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: http://www.latextemplates.com/template/moderncv-cv-and-cover-letter --[302]--> https://www.latextemplates.com/template/moderncv-cv-and-cover-letter
-[404] https://github.com/afriggeri/cv (at 14:131) | Rejected status code: 404 Not Found
-[ERROR] https://www.writelatex.com/templates/deedy-resume/sqdbztjjghvz#.U2H9Kq1dV18 (at 35:79) | Cannot find fragment
-
-Redirects in beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md
-http://debarghyadas.com/resume/debarghya-das-resume.pdf --[301]--> https://debarghyadas.com/resume/debarghya-das-resume.pdf
-http://www.businessinsider.com/most-big-companies-have-a-tracking-system-that-scans-your-resume-for-keywords-2012-1 --[301]--> https://www.businessinsider.com/most-big-companies-have-a-tracking-system-that-scans-your-resume-for-keywords-2012-1
-http://www.latextemplates.com/template/moderncv-cv-and-cover-letter --[302]--> https://www.latextemplates.com/template/moderncv-cv-and-cover-letter
-https://github.com/deedydas/Deedy-Resume/raw/master/MacFonts/deedy_resume.pdf --[301]--> https://github.com/deedy/Deedy-Resume/raw/master/MacFonts/deedy_resume.pdf --[302]--> https://raw.githubusercontent.com/deedy/Deedy-Resume/master/MacFonts/deedy_resume.pdf
-https://github.com/deedydas/Deedy-Resume/raw/master/OpenFonts/deedy_resume-openfont.pdf --[301]--> https://github.com/deedy/Deedy-Resume/raw/master/OpenFonts/deedy_resume-openfont.pdf --[302]--> https://raw.githubusercontent.com/deedy/Deedy-Resume/master/OpenFonts/deedy_resume-openfont.pdf
-https://www.sharelatex.com/templates/cv-or-resume/deedy-resume --[308]--> https://www.overleaf.com/latex/templates/deedy-resume/sqdbztjjghvz
-
-
-Errors in beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Freebooterscript-license.txt
-[ERROR] http://apostrophiclab.pedroreina.net/info.html (at 5:11) | Error (cached)
-
-Errors in beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md
-[ERROR] https://2by22.blog/overhaul-resume-highly-effective-tips/ (at 49:75) | Connection failed. Check network connectivity and firewall settings
-[403] https://www.reddit.com/r/jobs/comments/cmezx2/ats_myths_and_facts_why_you_were_really_rejected/ (at 69:56) | Rejected status code: 403 Forbidden
-
-Redirects in beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md
-http://www.apache.org/licenses/ --[301]--> https://www.apache.org/licenses/
-https://i.imgur.com/92v0sxg.png --[302]--> https://i.imgur.com/removed.png
-
-
-Errors in beacon/.staging/latex/Theses/kaobook/README.md
-[ERROR] file://beacon/.staging/latex/Theses/kaobook/example_and_documentation.pdf (at 104:1) | File not found. Check if file exists and path is correct
-[ERROR] file://beacon/.staging/latex/Theses/kaobook/example_and_documentation.pdf (at 38:54) | File not found. Check if file exists and path is correct
-[ERROR] file://beacon/.staging/latex/Theses/kaobook/examples (at 42:8) | File not found. Check if file exists and path is correct
-[ERROR] file://beacon/.staging/latex/Theses/kaobook/instructions (at 174:21) | File not found. Check if file exists and path is correct
-[ERROR] file://beacon/.staging/latex/Theses/kaobook/instructions (at 87:25) | File not found. Check if file exists and path is correct
-[ERROR] file://beacon/.staging/latex/Theses/kaobook/instructions (at 97:15) | File not found. Check if file exists and path is correct
-[404] http://www.latextemplates.com/template/kaobook (at 36:38) | Error (cached)
-[404] https://www.latextemplates.com/template/kaobook (at 70:15) | Error (cached)
-
-Errors in beacon/contracts/template-manifest.schema.json
-[ERROR] https://egohygiene.dev/beacon/contracts/template-manifest.schema.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-
-Errors in DECISIONS.md
-[ERROR] file://.staging/github/README.md (at 186:1) | File not found. Check if file exists and path is correct
-
-Errors in egolint/.agents/agents/AGENT-CONTRACT.md
-[404] https://docs.github.com/en/copilot/customizing-copilot/using-github-copilot-extensions/about-github-copilot-agents (at 13:2) | Rejected status code: 404 Not Found
-
-Errors in egolint/.config/lint/ansible/ansible-lint.yml
-[429] https://docs.ansible.com/projects/lint/configuring/ (at 19:3) | Rejected status code: 429 Too Many Requests
-[429] https://docs.ansible.com/projects/lint/rules/ (at 22:3) | Rejected status code: 429 Too Many Requests
-
-Errors in egolint/.config/lint/salesforce/code-analyzer.yml
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Error (cached)
-
-Errors in egolint/.mega-linter.yml
-[429] https://ansible.readthedocs.io/projects/lint/ (at 339:3) | Rejected status code: 429 Too Many Requests | Followed 4 redirects. Redirects: https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
+de: 429 Too Many Requests | Followed 4 redirects. Redirects: https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
 [403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Rejected status code: 403 Forbidden
 [404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ (at 434:3) | Rejected status code: 404 Not Found
 
@@ -1863,12 +1834,41 @@ https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
 
 
 Errors in egolint/package.json
-[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 17:16) | Error (cached)
+[404] https://egohygiene.io/ (at 30:13) | Error (cached)
 
-Redirects in egolint/package.json
+Errors in holon/packs/react-vite/template/apps/docs/index.html
+[ERROR] file://docs/favicon.svg (at 8:28) | File not found. Check if file exists and path is correct
+[ERROR] file://docs/site.webmanifest (at 9:32) | File not found. Check if file exists and path is correct
+
+Errors in holon/packs/react-vite/template/apps/playground/index.html
+[ERROR] file://playground/favicon.svg (at 6:28) | File not found. Check if file exists and path is correct
+
+Errors in holon/packs/react-vite/template/apps/storefront/index.html
+[ERROR] file://holon/packs/react-vite/template/apps/storefront/favicon.svg (at 11:28) | File not found. Check if file exists and path is correct
+
+Errors in holon/packs/react-vite/template/apps/storefront/public/robots.txt
+[404] https://egohygiene.io/sitemap.xml (at 4:10) | Rejected status code: 404 Not Found
+
+Errors in holon/packs/react-vite/template/apps/web/index.html
+[ERROR] file://favicon.svg (at 11:28) | File not found. Check if file exists and path is correct
+
+Errors in holon/packs/react-vite/template/apps/web/public/llms.txt
+[404] https://egohygiene.io/ (at 11:17) | Error (cached)
+[404] https://egohygiene.io/ (at 7:7) | Error (cached)
+
+Errors in holon/packs/react-vite/template/apps/web/public/robots.txt
+[404] https://egohygiene.io/sitemap.xml (at 4:10) | Error (cached)
+
+Errors in holon/packs/react-vite/template/docs/provenance/store-source-readme.md
+[ERROR] file://holon/packs/react-vite/template/docs/provenance/docs/domain-routing.md (at 80:5) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/react-vite/template/docs/provenance/docs/fourthwall-setup.md (at 58:5) | File not found. Check if file exists and path is correct
+
+Errors in holon/packs/react-vite/template/package.json
+[404] https://egohygiene.io/ (at 33:13) | Rejected status code: 404 Not Found
+
+Redirects in holon/packs/react-vite/template/package.json
 https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
 
 
 Errors in identity/contracts/candidate-manifest.schema.json
@@ -1890,6 +1890,7 @@ Errors in mantle/.github/workflows/test.yml
 
 Redirects in mantle/.github/workflows/test.yml
 https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
+https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
 
 
 Errors in mindgarden/contracts/publish-profile.schema.json
@@ -1899,12 +1900,12 @@ Errors in PURPOSE.md
 [ERROR] file://.staging/github/README.md (at 97:48) | File not found. Check if file exists and path is correct
 
 Errors in README.md
-[ERROR] file://.staging/github/README.md (at 41:35) | File not found. Check if file exists and path is correct
+[ERROR] file://.staging/github/README.md (at 44:35) | File not found. Check if file exists and path is correct
 
 Errors in tests/fixtures/repository-intelligence-dashboard/megalinter/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
 
 Errors in tests/fixtures/repository-intelligence-dashboard/osv/summary.json
@@ -1923,55 +1924,55 @@ Errors in tests/fixtures/repository-intelligence-dashboard/scorecard/summary.jso
 ---------------------
 
 Host: github.com
-  Total requests: 217
-  Successful: 199 (91.7%)
+  Total requests: 222
+  Successful: 204 (91.9%)
   Client errors (4xx): 18
-  Median response time: 432ms
-  Cache hit rate: 22.6%
-  Cache hits: 49, misses: 168
+  Median response time: 376ms
+  Cache hit rate: 23.0%
+  Cache hits: 51, misses: 171
+
+Host: json.schemastore.org
+  Total requests: 98
+  Successful: 98 (100.0%)
+  Median response time: 83ms
+  Cache hit rate: 88.8%
+  Cache hits: 87, misses: 11
 
 Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 27ms
+  Median response time: 25ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
-
-Host: json.schemastore.org
-  Total requests: 69
-  Successful: 69 (100.0%)
-  Median response time: 67ms
-  Cache hit rate: 85.5%
-  Cache hits: 59, misses: 10
 
 Host: raw.githubusercontent.com
   Total requests: 37
   Successful: 36 (97.3%)
   Client errors (4xx): 1
-  Median response time: 46ms
+  Median response time: 50ms
   Cache hit rate: 29.7%
   Cache hits: 11, misses: 26
+
+Host: json-schema.org
+  Total requests: 23
+  Successful: 23 (100.0%)
+  Median response time: 206ms
+  Cache hit rate: 95.7%
+  Cache hits: 22, misses: 1
 
 Host: img.shields.io
   Total requests: 22
   Successful: 22 (100.0%)
-  Median response time: 11ms
+  Median response time: 14ms
   Cache hit rate: 4.5%
   Cache hits: 1, misses: 21
-
-Host: json-schema.org
-  Total requests: 16
-  Successful: 16 (100.0%)
-  Median response time: 250ms
-  Cache hit rate: 93.8%
-  Cache hits: 15, misses: 1
 
 Host: creativecommons.org
   Total requests: 15
   Successful: 14 (93.3%)
   Client errors (4xx): 1
-  Median response time: 547ms
+  Median response time: 98ms
   Cache hit rate: 66.7%
   Cache hits: 10, misses: 5
 
@@ -1979,14 +1980,14 @@ Host: egohygiene.github.io
   Total requests: 12
   Successful: 6 (50.0%)
   Client errors (4xx): 6
-  Median response time: 11ms
+  Median response time: 19ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
 
 Host: www.schemastore.org
   Total requests: 12
   Successful: 12 (100.0%)
-  Median response time: 7ms
+  Median response time: 14ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
 
@@ -1997,24 +1998,24 @@ Host: www.overleaf.com
   Cache hit rate: 9.1%
   Cache hits: 1, misses: 10
 
-Host: scripts.sil.org
-  Total requests: 9
-  Successful: 9 (100.0%)
-  Median response time: 249ms
-  Cache hit rate: 88.9%
-  Cache hits: 8, misses: 1
-
 Host: sourceforge.net
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 558ms
+  Median response time: 486ms
   Cache hit rate: 55.6%
   Cache hits: 5, misses: 4
+
+Host: scripts.sil.org
+  Total requests: 9
+  Successful: 9 (100.0%)
+  Median response time: 358ms
+  Cache hit rate: 88.9%
+  Cache hits: 8, misses: 1
 
 Host: i.creativecommons.org
   Total requests: 8
   Successful: 8 (100.0%)
-  Median response time: 94ms
+  Median response time: 68ms
   Cache hit rate: 87.5%
   Cache hits: 7, misses: 1
 
@@ -2024,39 +2025,47 @@ Host: docs.ansible.com
   Rate limited: 8 (429 Too Many Requests)
   Median response time: 7ms
 
+Host: taskfile.dev
+  Total requests: 7
+  Successful: 7 (100.0%)
+  Median response time: 101ms
+  Cache hit rate: 62.5%
+  Cache hits: 5, misses: 3
+
+Host: egohygiene.io
+  Total requests: 7
+  Successful: 5 (71.4%)
+  Client errors (4xx): 2
+  Median response time: 41ms
+  Cache hit rate: 71.4%
+  Cache hits: 5, misses: 2
+
 Host: www.latextemplates.com
   Total requests: 7
   Successful: 4 (57.1%)
   Client errors (4xx): 3
-  Median response time: 37ms
+  Median response time: 43ms
   Cache hit rate: 42.9%
   Cache hits: 3, misses: 4
-
-Host: taskfile.dev
-  Total requests: 7
-  Successful: 7 (100.0%)
-  Median response time: 39ms
-  Cache hit rate: 71.4%
-  Cache hits: 5, misses: 2
-
-Host: jdujava.github.io
-  Total requests: 6
-  Successful: 6 (100.0%)
-  Median response time: 91ms
-  Cache hit rate: 50.0%
-  Cache hits: 3, misses: 3
 
 Host: sflogo.sourceforge.net
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 121ms
+  Median response time: 160ms
   Cache hit rate: 66.7%
   Cache hits: 4, misses: 2
 
 Host: www.latex-project.org
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 99ms
+  Median response time: 195ms
+  Cache hit rate: 50.0%
+  Cache hits: 3, misses: 3
+
+Host: jdujava.github.io
+  Total requests: 6
+  Successful: 6 (100.0%)
+  Median response time: 75ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
 
@@ -2064,18 +2073,32 @@ Host: docs.github.com
   Total requests: 5
   Successful: 3 (60.0%)
   Client errors (4xx): 2
-  Median response time: 84ms
+  Median response time: 271ms
 
-Host: www.nongnu.org
+Host: api.github.com
   Total requests: 4
-  Successful: 1 (25.0%)
-  Rate limited: 3 (429 Too Many Requests)
-  Median response time: 54ms
+  Successful: 3 (75.0%)
+  Client errors (4xx): 1
+  Median response time: 91ms
+
+Host: 3d.bk.tudelft.nl
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 334ms
+  Cache hit rate: 50.0%
+  Cache hits: 2, misses: 2
+
+Host: www.apostrophiclab.com
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 314ms
+  Cache hit rate: 75.0%
+  Cache hits: 3, misses: 1
 
 Host: www.fontawesome.io
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 58ms
+  Median response time: 207ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
 
@@ -2083,199 +2106,70 @@ Host: ansible.readthedocs.io
   Total requests: 4
   Successful: 0 (0.0%)
   Rate limited: 4 (429 Too Many Requests)
-  Median response time: 21ms
-
-Host: 3d.bk.tudelft.nl
-  Total requests: 4
-  Successful: 4 (100.0%)
-  Median response time: 270ms
-  Cache hit rate: 50.0%
-  Cache hits: 2, misses: 2
-
-Host: www.apostrophiclab.com
-  Total requests: 4
-  Successful: 4 (100.0%)
-  Median response time: 298ms
-  Cache hit rate: 75.0%
-  Cache hits: 3, misses: 1
-
-Host: api.github.com
-  Total requests: 4
-  Successful: 3 (75.0%)
-  Client errors (4xx): 1
-  Median response time: 92ms
-
-Host: www.ctan.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 558ms
-
-Host: i.imgur.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 7ms
+  Median response time: 22ms
 
 Host: www.checkov.io
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 21ms
+  Median response time: 28ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
+
+Host: vite.dev
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 7ms
+
+Host: i.imgur.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 14ms
+
+Host: api.star-history.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 119ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 3ms
-
-Host: api.star-history.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 100ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
+  Median response time: 6ms
 
 Host: developer.mozilla.org
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 199ms
+  Median response time: 191ms
 
-Host: www.sharelatex.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 66ms
-
-Host: yamllint.readthedocs.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 37ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 15ms
-
-Host: en.wikipedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 181ms
-
-Host: ogp.me
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 21ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: www.ctan.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 646ms
 
 Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 287ms
+  Median response time: 276ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: www.mff.cuni.cz
+Host: ogp.me
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 331ms
-
-Host: www.vel.nz
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 618ms
+  Median response time: 18ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: info.arxiv.org
+Host: unpkg.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 61ms
-
-Host: developer.salesforce.com
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 34ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.cyrius.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 275ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: eslint.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 38ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: egohygiene.io
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 35ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: reuse.software
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 380ms
-
-Host: femto-physique.fr
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 138ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: oss.anchore.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 62ms
-
-Host: tex.stackexchange.com
-  Total requests: 2
-  Successful: 0 (0.0%)
-  Client errors (4xx): 2
-  Median response time: 65ms
+  Median response time: 56ms
 
 Host: www.amazon.ca
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 32ms
-
-Host: prettier.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 226ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: web.archive.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 347ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: aquasecurity.github.io
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 141ms
-
-Host: paypal.me
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 626ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+  Median response time: 26ms
 
 Host: commons.wikimedia.org
   Total requests: 2
@@ -2284,218 +2178,254 @@ Host: commons.wikimedia.org
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 207ms
+Host: www.cyrius.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 276ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: thetechresume.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 57ms
+Host: reuse.software
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 469ms
 
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 101ms
+Host: femto-physique.fr
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 217ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: humanstxt.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 370ms
+Host: www.mff.cuni.cz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 399ms
 
-Host: ls-lint.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 111ms
+Host: arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 11ms
 
-Host: quartz.jzhao.xyz
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 95ms
+Host: paypal.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 686ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: www.latofonts.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 451ms
+Host: info.arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 64ms
 
-Host: scancode-toolkit.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 76ms
+Host: www.sharelatex.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 84ms
 
-Host: pnpm.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 42ms
+Host: tex.stackexchange.com
+  Total requests: 2
+  Successful: 0 (0.0%)
+  Client errors (4xx): 2
+  Median response time: 73ms
 
-Host: www.businessinsider.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 36ms
+Host: yamllint.readthedocs.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 50ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: typedoc.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 47ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 229ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: aquasecurity.github.io
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 27ms
+
+Host: web.archive.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 1518ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: developer.salesforce.com
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 48ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: eslint.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 22ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: oss.anchore.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 70ms
+
+Host: www.vel.nz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 640ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: en.wikipedia.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 84ms
 
 Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 69ms
+  Median response time: 63ms
 
-Host: agentskills.io
+Host: developer.apple.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 152ms
-
-Host: www.paypal.me
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 494ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 88ms
-
-Host: golangci-lint.run
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 76ms
+  Median response time: 128ms
 
 Host: fonts.google.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 392ms
+  Median response time: 431ms
 
 Host: realm.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 36ms
+  Median response time: 35ms
 
-Host: registry.npmjs.org
+Host: www.businessinsider.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 23ms
+  Median response time: 27ms
 
-Host: img.youtube.com
+Host: turborepo.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 97ms
+  Median response time: 96ms
 
-Host: phpstan.org
+Host: psalm.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 29ms
+  Median response time: 216ms
 
-Host: developercertificate.org
+Host: www.paypal.me
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 153ms
+  Median response time: 599ms
 
-Host: latexindentpl.readthedocs.io
+Host: humanstxt.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 284ms
+  Median response time: 451ms
 
-Host: www.apache.org
+Host: texdoc.net
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 19ms
+  Median response time: 2406ms
 
-Host: trivy.dev
+Host: openapi.vercel.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 68ms
-
-Host: git-lfs.github.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 42ms
-
-Host: hemingwayapp.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 171ms
-
-Host: www.writelatex.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 104ms
+  Median response time: 117ms
 
 Host: tug.ctan.org
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 311ms
+  Median response time: 295ms
 
-Host: raku.org
+Host: v3.tailwindcss.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 339ms
+  Median response time: 96ms
 
-Host: kiwiirc.com
+Host: goss.rocks
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 380ms
+  Median response time: 119ms
 
-Host: www.chrisbehr.com
+Host: install.python-poetry.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 138ms
+  Median response time: 51ms
 
-Host: clearlydefined.io
+Host: git-lfs.github.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 91ms
+  Median response time: 37ms
 
-Host: www.indeed.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 33ms
-
-Host: micahrich.com
+Host: resumake.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 219ms
+  Median response time: 107ms
 
-Host: cyclonedx.org
+Host: docs.rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 64ms
+  Median response time: 130ms
 
-Host: mirrors.ctan.org
+Host: osv.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 318ms
+  Median response time: 100ms
 
-Host: pmd.github.io
+Host: www.tylerfinck.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 38ms
+  Median response time: 1409ms
 
-Host: api.scorecard.dev
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 174ms
-
-Host: protobuf.dev
+Host: hemingwayapp.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 32ms
+  Median response time: 145ms
 
 Host: docs.stoplight.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 242ms
+  Median response time: 226ms
 
-Host: www.rubyschema.org
+Host: www.grammarly.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 230ms
+  Median response time: 150ms
 
-Host: rubystyle.guide
+Host: google.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 98ms
+  Median response time: 49ms
+
+Host: rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 38ms
+
+Host: debarghyadas.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 403ms
 
 Host: apostrophiclab.pedroreina.net
   Total requests: 1
@@ -2503,15 +2433,40 @@ Host: apostrophiclab.pedroreina.net
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
+Host: clearlydefined.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 216ms
+
+Host: www.wnd.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 55ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 150ms
+
 Host: docker.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 41ms
+  Median response time: 39ms
 
-Host: goss.rocks
+Host: pmd.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 341ms
+  Median response time: 104ms
+
+Host: registry.npmjs.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 28ms
+
+Host: www.writelatex.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 103ms
 
 Host: www.reddit.com
   Total requests: 1
@@ -2519,154 +2474,234 @@ Host: www.reddit.com
   Client errors (4xx): 1
   Median response time: 23ms
 
-Host: osv.dev
+Host: quartz.jzhao.xyz
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 101ms
+  Median response time: 104ms
 
-Host: google.github.io
+Host: securityscorecards.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 14ms
-
-Host: sahiljhawar.in
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 293ms
+  Median response time: 29ms
 
 Host: www.designtokens.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 61ms
+  Median response time: 47ms
 
-Host: chris48s.github.io
+Host: ls-lint.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 45ms
+  Median response time: 273ms
+
+Host: www.latofonts.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 638ms
+
+Host: pnpm.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 37ms
+
+Host: www.chrisbehr.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 117ms
+
+Host: developercertificate.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 195ms
+
+Host: checkstyle.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 49ms
+
+Host: biomejs.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 81ms
+
+Host: cyclonedx.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 83ms
+
+Host: kiwiirc.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 392ms
+
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 14ms
 
 Host: trufflesecurity.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 238ms
+  Median response time: 224ms
 
 Host: api.clearlydefined.io
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 145ms
+  Median response time: 73ms
 
-Host: licensebuttons.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 23ms
-
-Host: install.python-poetry.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 250ms
-
-Host: resumake.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 187ms
-
-Host: rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 36ms
-
-Host: debarghyadas.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 439ms
-
-Host: prowritingaid.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 323ms
-
-Host: www.hadilaksono.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 156ms
-
-Host: www.grammarly.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 145ms
-
-Host: www.linkedin.com
+Host: www.indeed.com
   Total requests: 1
   Successful: 0 (0.0%)
-  Median response time: 207ms
-
-Host: unpkg.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 67ms
-
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 171ms
-
-Host: www.tylerfinck.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 978ms
-
-Host: fontawesome.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 38ms
-
-Host: stylelint.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 29ms
+  Client errors (4xx): 1
+  Median response time: 62ms
 
 Host: www.smashingmagazine.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 430ms
+  Median response time: 239ms
 
-Host: developer.apple.com
+Host: thetechresume.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 81ms
+  Median response time: 226ms
 
-Host: enhancv.com
+Host: www.hadilaksono.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 26ms
+  Median response time: 67ms
 
-Host: texdoc.net
+Host: chris48s.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 2194ms
+  Median response time: 53ms
 
-Host: securityscorecards.dev
+Host: www.nongnu.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 31ms
+  Median response time: 88ms
 
-Host: docs.rubocop.org
+Host: fontawesome.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 154ms
-
-Host: www.wnd.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 97ms
+  Median response time: 24ms
 
 Host: web.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 1138ms
+  Median response time: 257ms
 
-Host: x-access-token
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 82ms
+
+Host: enhancv.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 218ms
+
+Host: prowritingaid.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 366ms
+
+Host: stylelint.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 180ms
+
+Host: protobuf.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 59ms
+
+Host: api.scorecard.dev
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 191ms
+
+Host: rubystyle.guide
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 137ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 43ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 238ms
+
+Host: raku.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 631ms
+
+Host: micahrich.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 288ms
+
+Host: www.linkedin.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Median response time: 234ms
+
+Host: phpstan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 25ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 79ms
+
+Host: scancode-toolkit.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 262ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 184ms
+
+Host: www.apache.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 23ms
+
+Host: autofix.ci
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 233ms
+
+Host: sahiljhawar.in
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 337ms
+
+Host: img.youtube.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 212ms
+
+Host: github
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: mirrors.ctan.org
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: www.youtube.com
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2678,7 +2713,7 @@ Host: www.businessinsider.my
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: github
+Host: x-access-token
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2686,13 +2721,9 @@ Host: egohygiene.dev
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: www.youtube.com
-  Total requests: 0
-  Successful: 0 (100.0%)
+Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."docs.ansible.com"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
 
-Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."ansible.readthedocs.io"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
-
-(Truncated to last 27586 characters out of 166905)
+(Truncated to last 23529 characters out of 176228)
 ```
 
 </details>
@@ -2701,32 +2732,7 @@ Hint: Encountered rate limit responses. You might be able to work around this by
 <summary>❌ MARKDOWN / markdownlint - 400 errors</summary>
 
 ```
-Resumes/Awesome-CV/README.md:62:416 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:64 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:70:3 error MD049/emphasis-style Emphasis style [Expected: asterisk; Actual: underscore]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:70:9 error MD049/emphasis-style Emphasis style [Expected: asterisk; Actual: underscore]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:72 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:75 error MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h3; Actual: h4]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:86 error MD046/code-block-style Code block style [Expected: indented; Actual: fenced]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:92 error MD046/code-block-style Code block style [Expected: indented; Actual: fenced]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:98 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:109 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:114:132 error MD059/descriptive-link-text Link text should be descriptive [Context: "[here]"]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:118 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:119 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Maintainers"]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:120:1 error MD004/ul-style Unordered list style [Expected: asterisk; Actual: dash]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:120 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- [posquit0](https://github.co..."]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:121:1 error MD004/ul-style Unordered list style [Expected: asterisk; Actual: dash]
-beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:123 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:5:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.overleaf.com/latex..."]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:7:249 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:12:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.overleaf.com/latex..."]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:17:10 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:22:22 error MD034/no-bare-urls Bare URL used [Context: "https://www.indeed.com/career-..."]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:28:11 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:30:1 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/TimmyChan"]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:31:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.linkedin.com/in/ti..."]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:33:17 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
+ata-science-tech-resume-template/README.md:33:17 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
 beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:35:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/xiazeyu"]
 beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:36:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/iamgmujtaba"]
 beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:37:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/alejlatorre"]
@@ -2902,7 +2908,7 @@ beacon/.staging/latex/Theses/kaobook/README.md:226:68 error MD009/no-trailing-sp
 beacon/.staging/latex/Theses/kaobook/README.md:236:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailing-newline Files should end with a single newline character
 
-(Truncated to last 27586 characters out of 54345)
+(Truncated to last 23529 characters out of 54345)
 ```
 
 </details>
@@ -3087,7 +3093,98 @@ Found 34 errors in 2 files (checked 39 source files)
 Checking formatting...
 [warn] .github/actions/generate-repository-intelligence/repository-analytics.schema.json
 [warn] beacon/contracts/template-manifest.schema.json
-[warn] Code style issues found in 2 files. Run Prettier with --write to fix.
+[warn] holon/packs/react-vite/template/apps/storefront/tsconfig.json
+[warn] holon/packs/react-vite/template/test-results/.last-run.json
+[warn] Code style issues found in 4 files. Run Prettier with --write to fix.
+```
+
+</details>
+
+<details>
+<summary>❌ TYPESCRIPT / prettier - 1 error</summary>
+
+```
+Checking formatting...
+[warn] holon/packs/react-vite/template/.storybook/main.ts
+[warn] holon/packs/react-vite/template/.storybook/manager.ts
+[warn] holon/packs/react-vite/template/.storybook/preview.ts
+[warn] holon/packs/react-vite/template/.storybook/theme.ts
+[warn] holon/packs/react-vite/template/.vitest/setup.ts
+[warn] holon/packs/react-vite/template/apps/docs/src/vite-env.d.ts
+[warn] holon/packs/react-vite/template/apps/docs/vite.config.ts
+[warn] holon/packs/react-vite/template/apps/playground/vite.config.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/features/storefront/StorefrontContext.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/features/storefront/useStorefront.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/lib/money.test.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/lib/money.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/vite-env.d.ts
+[warn] holon/packs/react-vite/template/apps/storefront/vite.config.ts
+[warn] holon/packs/react-vite/template/apps/storefront/vitest.config.ts
+[warn] holon/packs/react-vite/template/apps/web/src/content/products.test.ts
+[warn] holon/packs/react-vite/template/apps/web/src/content/products.ts
+[warn] holon/packs/react-vite/template/apps/web/src/i18n/resources.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/analytics.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/api.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/logger.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/storage.ts
+[warn] holon/packs/react-vite/template/apps/web/vite.config.ts
+[warn] holon/packs/react-vite/template/packages/api-client/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/api-client/src/index.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/authorization.test.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/authorization.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/memory-adapter.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/types.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/create-commerce-client.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/errors.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/fourthwall/fourthwall-client.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/index.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/mock/mock-client.test.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/mock/mock-client.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/mock/mock-products.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/types.ts
+[warn] holon/packs/react-vite/template/packages/config/src/browser.ts
+[warn] holon/packs/react-vite/template/packages/config/src/environment.ts
+[warn] holon/packs/react-vite/template/packages/config/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/config/src/schema.ts
+[warn] holon/packs/react-vite/template/packages/content/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/content/src/index.ts
+[warn] holon/packs/react-vite/template/packages/design-tokens/scripts/build-tokens.ts
+[warn] holon/packs/react-vite/template/packages/design-tokens/src/generated.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/create-i18n.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/date.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/list.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/number.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/relative-time.ts
+[warn] holon/packs/react-vite/template/packages/icons/src/Icon.types.ts
+[warn] holon/packs/react-vite/template/packages/schemas/src/index.ts
+[warn] holon/packs/react-vite/template/packages/store-config/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/store-config/src/index.ts
+[warn] holon/packs/react-vite/template/packages/tailwind-config/src/preset.ts
+[warn] holon/packs/react-vite/template/packages/themes/src/hooks/useTheme.ts
+[warn] holon/packs/react-vite/template/packages/ui/src/components/Button/Button.types.ts
+[warn] holon/packs/react-vite/template/packages/utilities/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/utilities/src/index.ts
+[warn] holon/packs/react-vite/template/packages/vite-config/src/index.ts
+[warn] holon/packs/react-vite/template/playwright.config.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-circular-dependencies.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-locales.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-package-exports.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-workspace.ts
+[warn] holon/packs/react-vite/template/scripts/generators/create-app.ts
+[warn] holon/packs/react-vite/template/scripts/generators/create-component.ts
+[warn] holon/packs/react-vite/template/scripts/generators/create-package.ts
+[warn] holon/packs/react-vite/template/scripts/release/prepare-release.ts
+[warn] holon/packs/react-vite/template/tailwind.config.ts
+[warn] holon/packs/react-vite/template/tests/e2e/docs.spec.ts
+[warn] holon/packs/react-vite/template/tests/e2e/playground.spec.ts
+[warn] holon/packs/react-vite/template/tests/e2e/site.spec.ts
+[warn] holon/packs/react-vite/template/tests/e2e/storefront.spec.ts
+[warn] holon/packs/react-vite/template/tests/smoke/build.test.ts
+[warn] holon/packs/react-vite/template/vitest.accessibility.config.ts
+[warn] holon/packs/react-vite/template/vitest.smoke.config.ts
+[warn] holon/packs/react-vite/template/vitest.unit.config.ts
+[warn] holon/packs/react-vite/template/vitest.workspace.ts
+[warn] Code style issues found in 79 files. Run Prettier with --write to fix.
 ```
 
 </details>
@@ -3111,8 +3208,9 @@ Checking formatting...
 [warn] .github/workflow-profiles/release-strategies/release-please.yml
 [warn] .github/workflow-profiles/release-strategies/semantic-release.yml
 [warn] .github/workflow-profiles/security-optional/ossf-scorecard-older.yml
+[warn] holon/packs/react-vite/template/pnpm-workspace.yaml
 [warn] pnpm-workspace.yaml
-[warn] Code style issues found in 15 files. Run Prettier with --write to fix.
+[warn] Code style issues found in 16 files. Run Prettier with --write to fix.
 ```
 
 </details>
@@ -3121,104 +3219,7 @@ Checking formatting...
 <summary>❌ PYTHON / ruff - 778 errors</summary>
 
 ```
-|
-help: Remove trailing whitespace
-
-W293 Blank line contains whitespace
-   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:968:1
-    |
-966 |                     else:
-967 |                         raise Error
-968 |                     
-    | ^^^^^^^^^^^^^^^^^^^^
-969 |
-970 |                     print '%03d-%03d:%s: %s'%(
-    |
-help: Remove whitespace from blank line
-
-invalid-syntax: Simple statements must be separated by newlines or semicolons
-   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:970:27
-    |
-970 |                     print '%03d-%03d:%s: %s'%(
-    |                           ^^^^^^^^^^^^^^^^^^
-971 |                         span_full[0]
-972 |                         ,span_full[1]
-    |
-
-W291 Trailing whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1005:31
-     |
-1003 |                     elif trackchanges_main.current_action == 'cancel':
-1004 |                         self.emit(QtCore.SIGNAL('cancel'))
-1005 |                         return              
-     |                               ^^^^^^^^^^^^^^
-1006 |                     elif self.command in trackchanges_main.command_names:
-1007 |                         trackchanges_main.search_position = span_full[1]
-     |
-help: Remove trailing whitespace
-
-W291 Trailing whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1128:58
-     |
-1126 |         self.connect(self.text_main
-1127 |                      ,QtCore.SIGNAL('textChangedByUser')
-1128 |                      ,trackchanges_main.textChangeByUser)   
-     |                                                          ^^^
-1129 |
-1130 |         self.connect(self.button_old
-     |
-help: Remove trailing whitespace
-
-W293 Blank line contains whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1149:1
-     |
-1147 |     """Here QtGui.QTextEdit is reimplemented so I can figure out what the last
-1148 |     selection was before an edit wase done.
-1149 |     
-     | ^^^^
-1150 |     This only works for edits that are done with a keyboard or mouse command, 
-1151 |     not any commands given from the program.
-     |
-help: Remove whitespace from blank line
-
-W291 Trailing whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1150:78
-     |
-1148 |     selection was before an edit wase done.
-1149 |     
-1150 |     This only works for edits that are done with a keyboard or mouse command, 
-     |                                                                              ^
-1151 |     not any commands given from the program.
-1152 |     """
-     |
-help: Remove trailing whitespace
-
-W291 Trailing whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1156:37
-     |
-1154 |         QtGui.QTextEdit.__init__(self, *args)
-1155 |
-1156 |         # For now disable Undo/Redo.  
-     |                                     ^^
-1157 |         # To enable this is a lot of work.
-1158 |         # There are two ways to go about it:
-     |
-help: Remove trailing whitespace
-
-W291 Trailing whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1172:39
-     |
-1170 |         self.connect(self
-1171 |                      ,QtCore.SIGNAL('textChanged()')
-1172 |                      ,self.textChange)        
-     |                                       ^^^^^^^^
-1173 |
-1174 |     def textChange(self):
-     |
-help: Remove trailing whitespace
-
-W293 Blank line contains whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1255:1
+eacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1255:1
      |
 1254 |         ui_central_widget = UiCentralWindow(self)
 1255 |         
@@ -3910,7 +3911,7 @@ help: Remove `print`
 Found 778 errors.
 [*] 46 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
 
-(Truncated to last 27586 characters out of 372438)
+(Truncated to last 23529 characters out of 372438)
 ```
 
 </details>
@@ -3919,93 +3920,7 @@ Found 778 errors.
 <summary>❌ PYTHON / ruff-format - 1 error</summary>
 
 ```
-"\n")
-    - 	
-    - 	def addInteraction(self, addSegments):
-    - 		"""provides three options to the user:
-    - 		  - Accept: erase the \\add command and keep the added text 
-    - 		  - Reject: erase the \\add command together with the added text
-    - 		  - Ignore: ignore and leave the \\change command in the text"""
-    - 		self.printBuffer(addSegments)
-    - 		sys.stderr.write("Accept added text, Reject added text or Ignore? [A|r|i] ")
-    - 		inputStr = raw_input("")
-    - 		inputStr = inputStr.lower()
-    - 		if inputStr == "i":
-    - 			pass
-    - 		elif inputStr == "r": 
-    - 			self.removeAddedText(addSegments)
-    - 		else:
-    - 			self.keepAddedText(addSegments)
-    - 		sys.stderr.write("\n")
-    - 	
-    - 	def removeInteraction(self, removeSegments):
-    - 		"""provides three options to the user:
-    - 		  - Accept: erase the \\remove command together with the removed text
-    - 		  - Reject: erase the \\remove command but leave the removed text
-    - 		  - Ignore: ignore and leave the \\remove command in the text"""
-    - 		self.printBuffer(removeSegments)
-    - 		sys.stderr.write("Accept to remove text, Reject deletion or Ignore? [A|r|i] ")
-    - 		inputStr = raw_input("")
-    - 		inputStr = inputStr.lower()
-    - 		if inputStr == "i":
-    - 			pass
-    - 		elif inputStr == "r": 
-    - 			self.keepRemovedText(removeSegments)
-    - 		else:
-    - 			self.removeRemovedText(removeSegments)
-    - 		sys.stderr.write("\n")
-    - 	
-    - 	def changeInteraction(self, changeSegments):
-    - 		"""provides three options to the user:
-    - 		  - erase the \\change command and keep the new text (the replaced text)
-    - 		  - erase the \\change command and keep the original text
-    - 		  - ignore and leave the \\change command in the text"""
-    - 		self.printBuffer(changeSegments)
-    - 		sys.stderr.write("Accept change, Reject change or Ignore? [A|r|i] ")
-    - 		inputStr = raw_input("")
-    - 		inputStr = inputStr.lower()
-    - 		if inputStr == "i":
-    - 			pass
-    - 		elif inputStr == "r": 
-    - 			self.keepOriginalText(changeSegments)
-    - 		else:
-    - 			self.keepNewText(changeSegments)
-    - 		sys.stderr.write("\n")
-    - 	
-    - 		
-    - 	def processSegments(self):
-    - 		"""loops through the entire document and processes all segments.
-    - 		the goal is to hide segments that should not appear in the output.
-    - 		If interactive mode is enabled, after each \\annote or \\change command a user
-    - 		interaction is requested to decide how the correpsonding command should be handled."""
-    - 		
-    - 		env = ""          # stores the state the process is in 
-    - 		envBuffer = []    # stores all segments that belong to one command
-    - 		for segment in self.document:
-    - 			if segment.type in ("annoteCommand", "noteCommand", "addCommand", "removeCommand", "changeCommand"):
-    - 				# this is the first segment of an \add, \remove, \change, \note or \annote command ...
-    - 				env = segment.type
-    - 				envBuffer.append(segment)
-    - 				continue
-    - 			if (env == "changeCommand") and (segment.type == "endBrace"):
-    - 				# since \change commands have 2 arguments, we have to wait for a second endBrace ...
-    - 				env = "changeSecondArg"
-    - 				envBuffer.append(segment)
-    - 				continue
-    - 			if (env == "annoteCommand") and (segment.type == "endBrace"):
-    - 				# since \annote commands have 2 arguments, we have to wait for a second endBrace ...
-    - 				env = "annoteSecondArg"
-    - 				envBuffer.append(segment)
-    - 				continue
-    - 			if env in ( "annoteCommand", "noteCommand", "addCommand", "removeCommand", "changeCommand", "changeSecondArg", "annoteSecondArg"):
-    - 				# if we are currently processing segments belonging to a command
-    - 				# we have to add all segments to envBuffer
-    - 				envBuffer.append(segment)
-    - 				if segment.type == "endBrace":
-    - 					# we came to the end of an environment ...
-    - 					if self.processNotes and (env in ("noteCommand", "annoteSecondArg")):
-    - 						if self.interactive:
-    - 							self.noteInteraction(envBuffer)
+self.noteInteraction(envBuffer)
     - 						else:
     - 							self.eraseNote(envBuffer)
     - 					elif self.processChanges and (env == "addCommand"):
@@ -4476,7 +4391,7 @@ unformatted: File would be reformatted
 
 5 files would be reformatted, 46 files already formatted
 
-(Truncated to last 27586 characters out of 33052)
+(Truncated to last 23529 characters out of 33052)
 ```
 
 </details>
@@ -4536,200 +4451,196 @@ For more information:
 </details>
 
 <details>
-<summary>❌ CSS / stylelint - 192 errors</summary>
+<summary>❌ CSS / stylelint - 404 errors</summary>
 
 ```
-Expected empty line before comment                                                                                                              comment-empty-line-before
-     6:3   ✖  Expected empty line before custom property                                                                                                      custom-property-empty-line-before
-     7:14  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-     7:14  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-     7:31  ✖  Expected "0.88" to be "88%"                                                                                                                     alpha-value-notation
-     9:13  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-     9:13  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-     9:33  ✖  Expected "0.2" to be "20%"                                                                                                                      alpha-value-notation
-    25:25  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-    25:25  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-    25:39  ✖  Expected "0.32" to be "32%"                                                                                                                     alpha-value-notation
-    43:40  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-    43:40  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-    43:59  ✖  Expected "0.27" to be "27%"                                                                                                                     alpha-value-notation
-    44:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-    44:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-    44:58  ✖  Expected "0.18" to be "18%"                                                                                                                     alpha-value-notation
-    71:1   ✖  Expected selector ".skip-link" to come before selector ".skip-link:focus-visible", at line 65                                                   no-descending-specificity
-   126:39  ✖  Expected "#ffffff" to be "#fff"                                                                                                                 color-hex-length
-   155:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   155:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   155:32  ✖  Expected "0.8" to be "80%"                                                                                                                      alpha-value-notation
-   164:15  ✖  Expected "currentColor" to be "currentcolor"                                                                                                    value-keyword-case
-   256:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   256:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   256:56  ✖  Expected "0.9" to be "90%"                                                                                                                      alpha-value-notation
-   294:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   294:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   294:59  ✖  Expected "0.17" to be "17%"                                                                                                                     alpha-value-notation
-   334:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   334:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   334:48  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
-   420:11  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   420:11  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   420:31  ✖  Expected "0.16" to be "16%"                                                                                                                     alpha-value-notation
-   522:11  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   522:11  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   522:31  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
-   601:9   ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   601:9   ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   601:29  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
-   617:9   ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   617:9   ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   617:29  ✖  Expected "0.18" to be "18%"                                                                                                                     alpha-value-notation
-   632:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   632:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   632:35  ✖  Expected "0.18" to be "18%"                                                                                                                     alpha-value-notation
-   675:1   ✖  Expected selector ".freshness-row p" to come before selector ".chart-empty-card > p:last-child", at line 397                                    no-descending-specificity
-   689:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   689:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   689:35  ✖  Expected "0.14" to be "14%"                                                                                                                     alpha-value-notation
-   694:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   694:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   694:35  ✖  Expected "0.14" to be "14%"                                                                                                                     alpha-value-notation
-   713:25  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   713:25  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   713:45  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
-   739:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   739:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   739:48  ✖  Expected "0.1" to be "10%"                                                                                                                      alpha-value-notation
-   749:1   ✖  Expected selector ".data-table thead th" to come before selector ".data-table th:first-child", at line 744                                      no-descending-specificity
-   760:3   ✖  Deprecated property "clip"                                                                                                                      property-no-deprecated
-   769:39  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   769:39  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   769:56  ✖  Expected "0.94" to be "94%"                                                                                                                     alpha-value-notation
-   779:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   779:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   779:48  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
-   782:1   ✖  Expected selector ".anatomy-overview p" to come before selector ".chart-empty-card > p:last-child", at line 397                                 no-descending-specificity
-   786:1   ✖  Expected selector ".anatomy-overview > p" to come before selector ".chart-empty-card > p:last-child", at line 397                               no-descending-specificity
-   835:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   835:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   835:31  ✖  Expected "0.72" to be "72%"                                                                                                                     alpha-value-notation
-   841:29  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   841:29  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   841:48  ✖  Expected "0.16" to be "16%"                                                                                                                     alpha-value-notation
-   856:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   856:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   856:32  ✖  Expected "0.82" to be "82%"                                                                                                                     alpha-value-notation
-   884:21  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   884:21  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   884:41  ✖  Expected "0.14" to be "14%"                                                                                                                     alpha-value-notation
-   887:28  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   887:28  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   887:47  ✖  Expected "0.035" to be "3.5%"                                                                                                                   alpha-value-notation
-   887:77  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   887:77  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   887:92  ✖  Expected "0.72" to be "72%"                                                                                                                     alpha-value-notation
-   913:26  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   913:26  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   913:46  ✖  Expected "0.16" to be "16%"                                                                                                                     alpha-value-notation
-   917:17  ✖  Disallowed !important                                                                                                                           declaration-no-important
-   958:15  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   958:15  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   958:35  ✖  Expected "0.08" to be "8%"                                                                                                                      alpha-value-notation
-   969:11  ✖  Expected "currentColor" to be "currentcolor"                                                                                                    value-keyword-case
-   977:9   ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-   977:9   ✖  Expected modern color-function notation                                                                                                         color-function-notation
-   977:28  ✖  Expected "0.12" to be "12%"                                                                                                                     alpha-value-notation
-   980:1   ✖  Expected selector ".tree-node-file .tree-icon" to come before selector ".tree-node-directory > details > summary .tree-icon", at line 975       no-descending-specificity
-   984:1   ✖  Expected selector ".tree-node-symlink .tree-icon" to come before selector ".tree-node-directory > details > summary .tree-icon", at line 975    no-descending-specificity
-   988:1   ✖  Expected selector ".tree-node-submodule .tree-icon" to come before selector ".tree-node-directory > details > summary .tree-icon", at line 975  no-descending-specificity
-  1013:21  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
-  1013:21  ✖  Expected modern color-function notation                                                                                                         color-function-notation
-  1013:41  ✖  Expected "0.15" to be "15%"                                                                                                                     alpha-value-notation
-  1056:1   ✖  Expected selector ".provenance p" to come before selector ".chart-empty-card > p:last-child", at line 397                                       no-descending-specificity
-  1067:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
-  1092:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
+ha-value-notation
+  280:1   ✖  Expected class selector ".hero-orbit__core" to be kebab-case                                                                  selector-class-pattern
+  305:1   ✖  Expected selector ".section-heading > a" to come before selector ".primary-navigation a:hover", at line 108                   no-descending-specificity
+  319:39  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  319:39  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  319:59  ✖  Expected "0.055" to be "5.5%"                                                                                                 alpha-value-notation
+  319:67  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  319:67  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  319:87  ✖  Expected "0.015" to be "1.5%"                                                                                                 alpha-value-notation
+  326:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  326:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  326:37  ✖  Expected "0.5" to be "50%"                                                                                                    alpha-value-notation
+  330:1   ✖  Expected class selector ".product-card__image-link" to be kebab-case                                                          selector-class-pattern
+  337:1   ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
+  344:21  ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
+  348:1   ✖  Expected class selector ".product-card__placeholder" to be kebab-case                                                         selector-class-pattern
+  355:1   ✖  Expected class selector ".product-card__body" to be kebab-case                                                                selector-class-pattern
+  359:1   ✖  Expected class selector ".product-card__meta" to be kebab-case                                                                selector-class-pattern
+  379:1   ✖  Expected class selector ".status-badge--accent" to be kebab-case                                                              selector-class-pattern
+  380:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  380:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  380:37  ✖  Expected "0.35" to be "35%"                                                                                                   alpha-value-notation
+  382:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  382:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  382:35  ✖  Expected "0.1" to be "10%"                                                                                                    alpha-value-notation
+  385:1   ✖  Expected class selector ".status-badge--success" to be kebab-case                                                             selector-class-pattern
+  394:1   ✖  Expected selector ".product-card h3 a" to come before selector ".primary-navigation a:hover", at line 108                     no-descending-specificity
+  407:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  407:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  407:35  ✖  Expected "0.025" to be "2.5%"                                                                                                 alpha-value-notation
+  423:1   ✖  Expected selector ".prose-page p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422           no-descending-specificity
+  441:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
+  448:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
+  459:1   ✖  Expected class selector ".product-detail__description" to be kebab-case                                                       selector-class-pattern
+  488:1   ✖  Expected class selector ".product-detail__purchase" to be kebab-case                                                          selector-class-pattern
+  496:1   ✖  Expected class selector ".product-detail__purchase" to be kebab-case                                                          selector-class-pattern
+  518:1   ✖  Expected class selector ".cart-layer__backdrop" to be kebab-case                                                              selector-class-pattern
+  520:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  520:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  520:29  ✖  Expected "0.68" to be "68%"                                                                                                   alpha-value-notation
+  534:1   ✖  Expected class selector ".cart-drawer__header" to be kebab-case                                                               selector-class-pattern
+  535:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  539:1   ✖  Expected class selector ".cart-drawer__header" to be kebab-case                                                               selector-class-pattern
+  546:1   ✖  Expected class selector ".cart-drawer__header" to be kebab-case                                                               selector-class-pattern
+  589:1   ✖  Expected class selector ".cart-item__details" to be kebab-case                                                                selector-class-pattern
+  596:1   ✖  Expected class selector ".cart-item__details" to be kebab-case                                                                selector-class-pattern
+  622:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  627:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  631:1   ✖  Expected selector ".cart-drawer__footer p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422  no-descending-specificity
+  631:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  650:1   ✖  Expected class selector ".site-footer__inner" to be kebab-case                                                                selector-class-pattern
+  661:1   ✖  Expected selector ".site-footer p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422          no-descending-specificity
+  665:1   ✖  Expected class selector ".site-footer__links" to be kebab-case                                                                selector-class-pattern
+  702:8   ✖  Expected "context" media feature range notation                                                                               media-feature-range-notation
+  703:3   ✖  Expected class selector ".site-header__inner" to be kebab-case                                                                selector-class-pattern
+  715:3   ✖  Expected class selector ".hero-section__inner" to be kebab-case                                                               selector-class-pattern
+  735:3   ✖  Expected class selector ".cart-layer__backdrop" to be kebab-case                                                              selector-class-pattern
+  748:8   ✖  Expected "context" media feature range notation                                                                               media-feature-range-notation
+  754:3   ✖  Expected class selector ".product-detail__purchase" to be kebab-case                                                          selector-class-pattern
+  755:3   ✖  Expected class selector ".site-footer__inner" to be kebab-case                                                                selector-class-pattern
+  764:3   ✖  Expected class selector ".site-footer__inner" to be kebab-case                                                                selector-class-pattern
+  768:3   ✖  Expected class selector ".site-footer__links" to be kebab-case                                                                selector-class-pattern
 
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/doc.css
-    5:12  ✖  Expected "#555555" to be "#555"                           color-hex-length
-    7:25  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
-   15:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   19:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   23:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   27:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   38:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   47:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   51:1   ✖  Expected class selector ".tex_command" to be kebab-case   selector-class-pattern
-   52:12  ✖  Expected "#4444aa" to be "#44a"                           color-hex-length
-   53:18  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
-   57:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
-   61:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   62:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
-   66:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   67:12  ✖  Expected "#662222" to be "#622"                           color-hex-length
-   69:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   70:12  ✖  Expected "#aa2222" to be "#a22"                           color-hex-length
-   75:18  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
-   78:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   78:1   ✖  Expected class selector ".code_option" to be kebab-case   selector-class-pattern
-   85:1   ✖  Expected empty line before comment                        comment-empty-line-before
-   86:1   ✖  Expected class selector ".index_main" to be kebab-case    selector-class-pattern
-   90:1   ✖  Expected empty line before rule                           rule-empty-line-before
-   90:1   ✖  Expected class selector ".index_sub" to be kebab-case     selector-class-pattern
-   95:4   ✖  Expected class selector ".index_indent" to be kebab-case  selector-class-pattern
-  102:1   ✖  Expected empty line before comment                        comment-empty-line-before
-  103:1   ✖  Expected id selector "#simple_title" to be kebab-case     selector-id-pattern
-  103:1   ✖  Too many ID selectors in "#simple_title", maximum 0       selector-max-id
-  110:1   ✖  Expected id selector "#simple_subtitle" to be kebab-case  selector-id-pattern
-  110:1   ✖  Too many ID selectors in "#simple_subtitle", maximum 0    selector-max-id
-  118:1   ✖  Expected empty line before comment                        comment-empty-line-before
-  119:1   ✖  Expected id selector "#body_frame" to be kebab-case       selector-id-pattern
-  119:1   ✖  Too many ID selectors in "#body_frame", maximum 0         selector-max-id
-  126:1   ✖  Expected empty line before rule                           rule-empty-line-before
-  126:1   ✖  Expected id selector "#body_main" to be kebab-case        selector-id-pattern
-  126:1   ✖  Too many ID selectors in "#body_main", maximum 0          selector-max-id
-  130:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
-  132:1   ✖  Expected empty line before rule                           rule-empty-line-before
-  132:1   ✖  Expected id selector "#body_footer" to be kebab-case      selector-id-pattern
-  132:1   ✖  Too many ID selectors in "#body_footer", maximum 0        selector-max-id
-  136:12  ✖  Expected "#888888" to be "#888"                           color-hex-length
-  141:1   ✖  Expected empty line before rule                           rule-empty-line-before
-  141:1   ✖  Expected id selector "#nav_bar" to be kebab-case          selector-id-pattern
-  141:1   ✖  Too many ID selectors in "#nav_bar", maximum 0            selector-max-id
-  143:23  ✖  Expected "#ffffff" to be "#fff"                           color-hex-length
-  144:12  ✖  Disallowed unit                                           length-zero-no-unit
-  145:11  ✖  Disallowed unit                                           length-zero-no-unit
-  149:1   ✖  Expected empty line before rule                           rule-empty-line-before
-  149:1   ✖  Expected id selector "#nav_bar_decor_1" to be kebab-case  selector-id-pattern
-  149:1   ✖  Too many ID selectors in "#nav_bar_decor_1", maximum 0    selector-max-id
-  152:23  ✖  Expected "#eeeeee" to be "#eee"                           color-hex-length
-  158:1   ✖  Expected empty line before rule                           rule-empty-line-before
-  158:1   ✖  Expected id selector "#nav_bar_decor_2" to be kebab-case  selector-id-pattern
-  158:1   ✖  Too many ID selectors in "#nav_bar_decor_2", maximum 0    selector-max-id
-  161:23  ✖  Expected "#aaaaaa" to be "#aaa"                           color-hex-length
-  167:1   ✖  Expected empty line before rule                           rule-empty-line-before
-  167:1   ✖  Expected id selector "#nav_bar_body" to be kebab-case     selector-id-pattern
-  167:1   ✖  Too many ID selectors in "#nav_bar_body", maximum 0       selector-max-id
+holon/packs/react-vite/template/apps/storefront/src/styles/tokens.css
+   7:19  ✖  Expected "rgba" to be "rgb"              color-function-alias-notation
+   7:19  ✖  Expected modern color-function notation  color-function-notation
+   7:39  ✖  Expected "0.14" to be "14%"              alpha-value-notation
+  10:24  ✖  Expected "rgba" to be "rgb"              color-function-alias-notation
+  10:24  ✖  Expected modern color-function notation  color-function-notation
+  10:44  ✖  Expected "0.14" to be "14%"              alpha-value-notation
+  13:31  ✖  Expected "rgba" to be "rgb"              color-function-alias-notation
+  13:31  ✖  Expected modern color-function notation  color-function-notation
+  13:45  ✖  Expected "0.44" to be "44%"              alpha-value-notation
 
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/examples/highlight.css
-   5:28  ✖  Expected "#ffffff" to be "#fff"   color-hex-length
-   6:8   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
-   6:16  ✖  Expected "#000000" to be "#000"   color-hex-length
-   6:42  ✖  Expected "#ffffff" to be "#fff"   color-hex-length
-   6:79  ✖  Missing generic font family       font-family-no-missing-generic-family-keyword
-   7:9   ✖  Empty block                       block-no-empty
-   9:17  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
-  10:18  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
-  11:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
-  11:17  ✖  Expected "#cc5500" to be "#c50"   color-hex-length
-  12:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
-  12:17  ✖  Expected "#666666" to be "#666"   color-hex-length
-  14:17  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
-  15:18  ✖  Expected "#666666" to be "#666"   color-hex-length
-  16:29  ✖  Expected "#ffffbb" to be "#ffb"   color-hex-length
-  17:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
-  17:17  ✖  Expected "#0000aa" to be "#00a"   color-hex-length
-  18:17  ✖  Expected "#cc00ff" to be "#c0f"   color-hex-length
-  20:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
-  20:17  ✖  Expected "#000000" to be "#000"   color-hex-length
+holon/packs/react-vite/template/apps/web/src/styles/app.css
+    1:9   ✖  Expected ""./reset.css"" to be "url("./reset.css")"                      import-notation
+    2:9   ✖  Expected ""./fonts.css"" to be "url("./fonts.css")"                      import-notation
+    3:9   ✖  Expected ""./utilities.css"" to be "url("./utilities.css")"              import-notation
+   29:1   ✖  Expected class selector ".site-header__inner" to be kebab-case           selector-class-pattern
+   30:1   ✖  Expected class selector ".site-footer__inner" to be kebab-case           selector-class-pattern
+   50:1   ✖  Expected class selector ".site-footer__links" to be kebab-case           selector-class-pattern
+   59:1   ✖  Expected class selector ".site-nav__link" to be kebab-case               selector-class-pattern
+   63:1   ✖  Expected class selector ".site-nav__link" to be kebab-case               selector-class-pattern
+   87:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case  custom-property-pattern
+  110:8   ✖  Expected "context" media feature range notation                          media-feature-range-notation
+  111:3   ✖  Expected class selector ".site-header__inner" to be kebab-case           selector-class-pattern
+  112:3   ✖  Expected class selector ".site-footer__inner" to be kebab-case           selector-class-pattern
+
+holon/packs/react-vite/template/packages/design-tokens/src/generated.css
+   3:23  ✖  Expected "#ffffff" to be "#fff"                                                     color-hex-length
+   7:3   ✖  Expected custom property name "--eh-color-accentStrong" to be kebab-case            custom-property-pattern
+  13:3   ✖  Expected custom property name "--eh-color-darkBackground" to be kebab-case          custom-property-pattern
+  14:3   ✖  Expected custom property name "--eh-color-darkSurface" to be kebab-case             custom-property-pattern
+  15:3   ✖  Expected custom property name "--eh-color-darkForeground" to be kebab-case          custom-property-pattern
+  16:3   ✖  Expected custom property name "--eh-color-darkMuted" to be kebab-case               custom-property-pattern
+  17:3   ✖  Expected custom property name "--eh-color-highContrastBackground" to be kebab-case  custom-property-pattern
+  17:38  ✖  Expected "#000000" to be "#000"                                                     color-hex-length
+  18:3   ✖  Expected custom property name "--eh-color-highContrastSurface" to be kebab-case     custom-property-pattern
+  19:3   ✖  Expected custom property name "--eh-color-highContrastForeground" to be kebab-case  custom-property-pattern
+  19:38  ✖  Expected "#ffffff" to be "#fff"                                                     color-hex-length
+  20:3   ✖  Expected custom property name "--eh-color-highContrastAccent" to be kebab-case      custom-property-pattern
+  31:3   ✖  Expected custom property name "--eh-size-radiusSm" to be kebab-case                 custom-property-pattern
+  32:3   ✖  Expected custom property name "--eh-size-radiusMd" to be kebab-case                 custom-property-pattern
+  33:3   ✖  Expected custom property name "--eh-size-radiusLg" to be kebab-case                 custom-property-pattern
+  36:3   ✖  Expected custom property name "--eh-border-widthStrong" to be kebab-case            custom-property-pattern
+  37:33  ✖  Expected "rgba" to be "rgb"                                                         color-function-alias-notation
+  37:33  ✖  Expected modern color-function notation                                             color-function-notation
+  37:50  ✖  Expected "0.12" to be "12%"                                                         alpha-value-notation
+  38:32  ✖  Expected "rgba" to be "rgb"                                                         color-function-alias-notation
+  38:32  ✖  Expected modern color-function notation                                             color-function-notation
+  38:52  ✖  Expected "0.35" to be "35%"                                                         alpha-value-notation
+  39:3   ✖  Expected custom property name "--eh-typography-fontSans" to be kebab-case           custom-property-pattern
+  39:29  ✖  Expected "Inter" to be "inter"                                                      value-keyword-case
+  40:3   ✖  Expected custom property name "--eh-typography-fontMono" to be kebab-case           custom-property-pattern
+  40:43  ✖  Expected "SFMono-Regular" to be "sfmono-regular"                                    value-keyword-case
+  40:59  ✖  Expected "Menlo" to be "menlo"                                                      value-keyword-case
+  41:3   ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case             custom-property-pattern
+  42:3   ✖  Expected custom property name "--eh-typography-sizeMd" to be kebab-case             custom-property-pattern
+  43:3   ✖  Expected custom property name "--eh-typography-sizeLg" to be kebab-case             custom-property-pattern
+  44:3   ✖  Expected custom property name "--eh-typography-sizeXl" to be kebab-case             custom-property-pattern
+  47:3   ✖  Expected custom property name "--eh-typography-lineHeight" to be kebab-case         custom-property-pattern
+
+holon/packs/react-vite/template/packages/tailwind-config/src/styles.css
+   1:1   ✖  Unknown at-rule "@tailwind"                                          at-rule-no-unknown
+   2:1   ✖  Unknown at-rule "@tailwind"                                          at-rule-no-unknown
+   3:1   ✖  Unknown at-rule "@tailwind"                                          at-rule-no-unknown
+   8:5   ✖  Expected empty line before custom property                           custom-property-empty-line-before
+  45:5   ✖  Expected empty line before custom property                           custom-property-empty-line-before
+  55:57  ✖  Expected "0.24" to be "24%"                                          alpha-value-notation
+  62:18  ✖  Unknown value "theme("fontFamily.sans")" for property "font-family"  declaration-property-value-no-unknown
+  63:21  ✖  Expected "optimizeLegibility" to be "optimizelegibility"             value-keyword-case
+
+holon/packs/react-vite/template/packages/themes/src/styles.css
+  1:9  ✖  Expected ""./styles/base.css"" to be "url("./styles/base.css")"                    import-notation
+  2:9  ✖  Expected ""./styles/light.css"" to be "url("./styles/light.css")"                  import-notation
+  3:9  ✖  Expected ""./styles/dark.css"" to be "url("./styles/dark.css")"                    import-notation
+  4:9  ✖  Expected ""./styles/high-contrast.css"" to be "url("./styles/high-contrast.css")"  import-notation
+
+holon/packs/react-vite/template/packages/themes/src/styles/base.css
+   1:9   ✖  Expected ""@egohygiene/design-tokens/styles.css"" to be "url("@egohygiene/design-tokens/styles.css")"  import-notation
+  14:20  ✖  Expected custom property name "--eh-typography-fontSans" to be kebab-case                              custom-property-pattern
+  15:20  ✖  Expected custom property name "--eh-typography-fontMono" to be kebab-case                              custom-property-pattern
+  18:20  ✖  Expected custom property name "--eh-size-radiusSm" to be kebab-case                                    custom-property-pattern
+  19:20  ✖  Expected custom property name "--eh-size-radiusMd" to be kebab-case                                    custom-property-pattern
+  20:20  ✖  Expected custom property name "--eh-size-radiusLg" to be kebab-case                                    custom-property-pattern
+
+holon/packs/react-vite/template/packages/themes/src/styles/dark.css
+  3:3   ✖  Expected empty line before custom property                                  custom-property-empty-line-before
+  3:27  ✖  Expected custom property name "--eh-color-darkBackground" to be kebab-case  custom-property-pattern
+  4:24  ✖  Expected custom property name "--eh-color-darkSurface" to be kebab-case     custom-property-pattern
+  5:27  ✖  Expected custom property name "--eh-color-darkForeground" to be kebab-case  custom-property-pattern
+  6:22  ✖  Expected custom property name "--eh-color-darkMuted" to be kebab-case       custom-property-pattern
+  8:33  ✖  Expected "rgba" to be "rgb"                                                 color-function-alias-notation
+  8:33  ✖  Expected modern color-function notation                                     color-function-notation
+  8:47  ✖  Expected "0.35" to be "35%"                                                 alpha-value-notation
+
+holon/packs/react-vite/template/packages/themes/src/styles/high-contrast.css
+  3:3   ✖  Expected empty line before custom property                                          custom-property-empty-line-before
+  3:27  ✖  Expected custom property name "--eh-color-highContrastBackground" to be kebab-case  custom-property-pattern
+  4:24  ✖  Expected custom property name "--eh-color-highContrastSurface" to be kebab-case     custom-property-pattern
+  5:27  ✖  Expected custom property name "--eh-color-highContrastForeground" to be kebab-case  custom-property-pattern
+  7:23  ✖  Expected custom property name "--eh-color-highContrastAccent" to be kebab-case      custom-property-pattern
+  8:19  ✖  Expected "#ffffff" to be "#fff"                                                     color-hex-length
+
+holon/packs/react-vite/template/packages/ui/src/styles/index.css
+    1:9   ✖  Expected ""@egohygiene/themes/styles.css"" to be "url("@egohygiene/themes/styles.css")"  import-notation
+   10:20  ✖  Expected custom property name "--eh-typography-lineHeight" to be kebab-case              custom-property-pattern
+   12:36  ✖  Expected "rgba" to be "rgb"                                                              color-function-alias-notation
+   12:36  ✖  Expected modern color-function notation                                                  color-function-notation
+   12:55  ✖  Expected "0.16" to be "16%"                                                              alpha-value-notation
+   81:1   ✖  Expected class selector ".eh-button--primary" to be kebab-case                           selector-class-pattern
+   83:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
+   86:1   ✖  Expected class selector ".eh-button--secondary" to be kebab-case                         selector-class-pattern
+   92:1   ✖  Expected class selector ".eh-button--ghost" to be kebab-case                             selector-class-pattern
+   97:1   ✖  Expected class selector ".eh-button--disabled" to be kebab-case                          selector-class-pattern
+  108:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  109:21  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  112:1   ✖  Expected class selector ".eh-badge--available" to be kebab-case                          selector-class-pattern
+  116:1   ✖  Expected class selector ".eh-badge--development" to be kebab-case                        selector-class-pattern
+  120:1   ✖  Expected class selector ".eh-badge--planned" to be kebab-case                            selector-class-pattern
+  140:1   ✖  Expected class selector ".eh-theme-toggle__label" to be kebab-case                       selector-class-pattern
+  141:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  159:3   ✖  Deprecated property "clip"                                                               property-no-deprecated
+  173:1   ✖  Expected class selector ".eh-orbit__ring" to be kebab-case                               selector-class-pattern
+  180:1   ✖  Expected class selector ".eh-orbit__ring--inner" to be kebab-case                        selector-class-pattern
+  184:1   ✖  Expected class selector ".eh-orbit__core" to be kebab-case                               selector-class-pattern
+  191:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
 
 notebooks/jupyter/themes/@jupyterlab/theme-dark-extension/index.css
   110:23  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
@@ -4740,10 +4651,10 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
   108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
   147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
 
-✖ 192 problems (192 errors, 0 warnings)
-  144 errors potentially fixable with the "--fix" option.
+✖ 404 problems (404 errors, 0 warnings)
+  246 errors potentially fixable with the "--fix" option.
 
-(Truncated to last 27586 characters out of 27672)
+(Truncated to last 23529 characters out of 57766)
 ```
 
 </details>
@@ -4754,7 +4665,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 ```
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-16T10:17:35Z	info-0	trufflehog	running source	{"source_manager_worker_id": "IsJtV", "with_units": true}
+2026-08-16T13:24:12Z	info-0	trufflehog	running source	{"source_manager_worker_id": "sy2K5", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -4773,13 +4684,13 @@ File: tests/test_repository_analytics.py
 Line: 84
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-16T10:17:41Z	info-0	trufflehog	finished scanning	{"chunks": 6137, "bytes": 39542219, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "5.8011675s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":1,"Misses":16,"HitsWasted":0,"AttemptsSaved":1,"VerificationTimeSpentMS":1254}}
+2026-08-16T13:24:18Z	info-0	trufflehog	finished scanning	{"chunks": 6153, "bytes": 39489856, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "5.705461372s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1308}}
 ```
 
 </details>
 
 <details>
-<summary>❌ YAML / yamllint - 200 errors</summary>
+<summary>❌ YAML / yamllint - 213 errors</summary>
 
 ```
 .garden/context-packs/agent-default.yaml
@@ -5112,6 +5023,45 @@ egolint/.config/lint/tekton/.tektonlintrc.yaml
 egolint/pnpm-lock.yaml
   1:1       warning  missing document start "---"  (document-start)
 
+holon/packs/react-vite/pack.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/ISSUE_TEMPLATE/bug-report.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/ISSUE_TEMPLATE/config.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/ISSUE_TEMPLATE/feature-request.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/dependabot.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/workflows/ci.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/workflows/codeql.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/workflows/dependency-review.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/workflows/deploy.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/workflows/preview.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/.github/workflows/release.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/Taskfile.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+holon/packs/react-vite/template/pnpm-workspace.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
 mantle/.github/workflows/test.yml
   1:1       warning  missing document start "---"  (document-start)
 
@@ -5128,105 +5078,57 @@ pnpm-workspace.yaml
 </details>
 
 <details>
-<summary>⚠️ REPOSITORY / checkov - 57 errors</summary>
+<summary>⚠️ REPOSITORY / checkov - 58 errors</summary>
 
 ```
-at position 263
+nThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 10:17:03,478 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
+2026-08-16 13:23:34,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 10:17:03,478 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
+2026-08-16 13:23:34,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 10:17:03,479 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
+2026-08-16 13:23:34,753 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 10:17:03,479 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,479 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,479 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,479 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,479 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,479 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,480 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,480 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,483 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,483 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,483 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,483 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,484 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,484 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,484 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,484 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 10:17:03,650 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-16 10:17:03,651 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-16 10:17:03,662 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-16 10:17:03,729 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-16 10:17:03,730 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-16 10:17:03,768 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-16 10:17:03,774 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-16 10:17:03,781 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-16 10:17:03,783 [MainThread  ] [INFO ]  Creating vertices
-2026-08-16 10:17:03,784 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-16 10:17:03,790 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-16 10:17:03,791 [MainThread  ] [INFO ]  Creating edges
-2026-08-16 10:17:03,792 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-16 10:17:03,794 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-16 10:17:03,795 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-16 10:17:03,829 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-16 10:17:03,835 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-16 10:17:03,846 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-16 10:17:04,560 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-16 10:17:04,560 [MainThread  ] [INFO ]  Creating vertices
-2026-08-16 10:17:04,560 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-16 10:17:04,560 [MainThread  ] [INFO ]  Creating edges
-2026-08-16 10:17:04,561 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-16 10:17:04,561 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-16 10:17:04,633 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-16 10:17:04,643 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-16 10:17:04,643 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-16 10:17:04,643 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-16 10:17:12,755 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-16 10:17:12,759 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-16 10:17:12,759 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-16 10:17:12,759 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-16 10:17:12,759 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-16 10:17:12,760 [MainThread  ] [INFO ]  Successfully created Ansible graph
-2026-08-16 10:17:12,910 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-16 10:17:12,912 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-16 13:23:34,971 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-16 13:23:35,052 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-16 13:23:35,052 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-16 13:23:35,238 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-16 13:23:35,242 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-16 13:23:35,258 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-16 13:23:35,258 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-16 13:23:35,259 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-16 13:23:35,286 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-16 13:23:35,306 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-16 13:23:35,309 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-16 13:23:35,342 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-16 13:23:35,401 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-16 13:23:35,403 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-16 13:23:35,497 [MainThread  ] [INFO ]  Creating vertices
+2026-08-16 13:23:35,497 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-16 13:23:35,498 [MainThread  ] [INFO ]  Creating edges
+2026-08-16 13:23:35,498 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  Creating vertices
+2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-16 13:23:36,690 [MainThread  ] [INFO ]  Creating edges
+2026-08-16 13:23:36,692 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-16 13:23:36,719 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-16 13:23:36,840 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-16 13:23:36,869 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-16 13:23:36,869 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-16 13:23:36,869 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-16 13:23:53,199 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-16 13:23:53,200 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-16 13:23:53,556 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-16 13:23:53,556 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-16 13:23:53,557 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-16 13:23:53,557 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-16 13:23:53,558 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-16 13:23:53,559 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -5445,14 +5347,22 @@ Check: CKV2_K8S_6: "Minimize the admission of pods which lack an associated Netw
 Check: CKV2_K8S_6: "Minimize the admission of pods which lack an associated NetworkPolicy"
 	FAILED for resource: Pod.default.greeting-service.app-greeting-service
 	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+terraform_plan scan results:
+
+Passed checks: 0, Failed checks: 0, Skipped checks: 0, Parsing errors: 18
+
 dockerfile scan results:
 
-Passed checks: 30, Failed checks: 1, Skipped checks: 0
+Passed checks: 53, Failed checks: 2, Skipped checks: 0
 
 Check: CKV_DOCKER_2: "Ensure that HEALTHCHECK instructions have been added to container images"
 	FAILED for resource: /egolint/tests/fixtures/hadolint/Dockerfile.
 	File: /egolint/tests/fixtures/hadolint/Dockerfile:1-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images
+Check: CKV_DOCKER_3: "Ensure that a user for the container has been created"
+	FAILED for resource: /holon/packs/react-vite/template/infra/docker/Dockerfile.
+	File: /holon/packs/react-vite/template/infra/docker/Dockerfile:1-9
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-a-user-for-the-container-has-been-created
 openapi scan results:
 
 Passed checks: 6, Failed checks: 4, Skipped checks: 0
@@ -5474,13 +5384,13 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 27586 characters out of 36188)
+(Truncated to last 23529 characters out of 36683)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ REPOSITORY / grype - 63 errors</summary>
+<summary>⚠️ REPOSITORY / grype - 62 errors</summary>
 
 ```
 [0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal) from=syft
@@ -5514,7 +5424,6 @@ mako                         1.3.10                                    1.3.11   
 cryptography                 45.0.4                                    46.0.5    python         GHSA-r6ph-v2qm-q3c2  High      0.3% (27th)   0.3    
 urllib3                      2.5.0                                     2.7.0     python         GHSA-qccp-gfcp-xxvc  High      0.3% (26th)   0.2    
 vue-template-compiler        2.7.16                                              npm            GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)   0.2    
-nanoid                       3.3.16                                    3.3.18    npm            GHSA-2v37-7h3g-55p8  High      0.3% (24th)   0.2    
 idna                         3.10                                      3.15      python         GHSA-65pc-fj4g-8rjx  Medium    0.4% (34th)   0.2    
 pyjwt                        2.10.1                                    2.12.0    python         GHSA-752w-5fwx-jx9f  High      0.3% (19th)   0.2    
 pyjwt                        2.10.1                                    2.13.0    python         GHSA-w7vc-732c-9m39  Medium    0.4% (30th)   0.2    
@@ -5548,109 +5457,16 @@ pygments                     2.19.2                                    2.20.0   
 virtualenv                   20.31.2                                   20.36.1   python         GHSA-597g-3phw-6986  Medium    < 0.1% (0th)  < 0.1  
 actions/download-artifact    v4                                        4.1.3     github-action  GHSA-cxww-7g56-2vh6  High      N/A           N/A    
 cryptography                 45.0.4                                    48.0.1    python         GHSA-537c-gmf6-5ccf  High      N/A           N/A
-[0111] ERROR discovered vulnerabilities at or above the severity threshold
+[0110] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 3104 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 3107 errors</summary>
 
 ```
-- 292:2] (6 lines, 53 tokens)
-   mantle/bin/remove-pdf-password [211:1 - 216:2]
-Clone found (bash)
- - mantle/bin/nuke-docker [191:1 - 203:2] (13 lines, 51 tokens)
-   mantle/bin/sysinfo [76:1 - 88:2]
-Clone found (bash)
- - mantle/bin/passwordless-sudo [86:1 - 117:2] (32 lines, 108 tokens)
-   mantle/bin/textfind [105:1 - 136:2]
-Clone found (bash)
- - mantle/bin/passwordless-sudo [475:8 - 480:3] (6 lines, 58 tokens)
-   mantle/bin/passwordless-sudo [484:8 - 489:3]
-Clone found (python)
- - mantle/bin/pdf-title [94:1 - 105:5] (12 lines, 78 tokens)
-   mantle/bin/record-audio [49:1 - 60:5]
-Clone found (python)
- - mantle/bin/pdf-title [248:27 - 257:13] (10 lines, 78 tokens)
-   mantle/bin/record-audio [267:18 - 276:13]
-Clone found (python)
- - mantle/bin/pdf-title [843:1 - 852:29] (10 lines, 68 tokens)
-   mantle/bin/record-audio [770:1 - 779:29]
-Clone found (bash)
- - mantle/bin/pipes [112:1 - 120:2] (9 lines, 52 tokens)
-   mantle/bin/rotate-video [96:1 - 104:2]
-Clone found (bash)
- - mantle/bin/prettyp [177:35 - 194:5] (18 lines, 94 tokens)
-   mantle/bin/textfind [196:44 - 213:5]
-Clone found (bash)
- - mantle/bin/prettyp [322:12 - 328:2] (7 lines, 103 tokens)
-   mantle/bin/prettyp [376:10 - 382:2]
-Clone found (bash)
- - mantle/bin/prettyp [322:12 - 328:2] (7 lines, 103 tokens)
-   mantle/bin/prettyp [422:10 - 428:2]
-Clone found (bash)
- - mantle/bin/realpath [175:1 - 183:23] (9 lines, 73 tokens)
-   mantle/bin/realpath [211:1 - 219:23]
-Clone found (bash)
- - mantle/bin/repro-sources-list [145:1 - 160:4] (16 lines, 68 tokens)
-   mantle/bin/system-report [223:1 - 238:4]
-Clone found (bash)
- - mantle/bin/shell-banner [64:1 - 73:2] (10 lines, 55 tokens)
-   mantle/bin/shell-doctor [70:1 - 79:2]
-Clone found (bash)
- - mantle/bin/shell-banner [76:1 - 84:2] (9 lines, 86 tokens)
-   mantle/bin/shell-doctor [111:1 - 119:2]
-Clone found (bash)
- - mantle/init/init.sh [30:1 - 48:2] (19 lines, 112 tokens)
-   mantle/init/load-core.sh [51:1 - 69:2]
-Clone found (bash)
- - mantle/install.sh [108:1 - 121:45] (14 lines, 122 tokens)
-   mantle/libexec/mantle/commands/version.sh [25:1 - 38:45]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [28:23 - 46:2] (19 lines, 103 tokens)
-   mantle/lib/bash/collection.sh [121:22 - 139:2]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
-   mantle/lib/bash/collection.sh [53:1 - 59:3]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [33:1 - 39:3] (7 lines, 55 tokens)
-   mantle/lib/bash/collection.sh [108:1 - 114:3]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [35:1 - 48:73] (14 lines, 70 tokens)
-   mantle/lib/bash/collection.sh [128:1 - 141:65]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [49:24 - 59:33] (11 lines, 76 tokens)
-   mantle/lib/bash/collection.sh [66:25 - 76:34]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [49:24 - 62:8] (14 lines, 91 tokens)
-   mantle/lib/bash/collection.sh [83:23 - 94:27]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [49:24 - 59:22] (11 lines, 73 tokens)
-   mantle/lib/bash/collection.sh [142:25 - 152:6]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [49:24 - 59:43] (11 lines, 81 tokens)
-   mantle/lib/bash/collection.sh [159:23 - 169:43]
-Clone found (bash)
- - mantle/lib/bash/collection.sh [72:1 - 78:3] (7 lines, 64 tokens)
-   mantle/lib/bash/collection.sh [89:1 - 95:4]
-Clone found (bash)
- - mantle/lib/bash/file.sh [54:21 - 61:3] (8 lines, 80 tokens)
-   mantle/lib/bash/file.sh [68:22 - 75:3]
-Clone found (bash)
- - mantle/lib/core/core.sh [217:1 - 238:8] (22 lines, 137 tokens)
-   mantle/lib/core/core.sh [255:1 - 276:8]
-Clone found (bash)
- - mantle/lib/extensions/wget.sh [195:52 - 201:5] (7 lines, 51 tokens)
-   mantle/lib/extensions/wget.sh [219:55 - 225:5]
-Clone found (bash)
- - mantle/lib/install/github.sh [411:1 - 423:5] (13 lines, 51 tokens)
-   mantle/lib/install/python-tool.sh [76:1 - 88:5]
-Clone found (bash)
- - mantle/lib/modules.sh [40:80 - 55:2] (16 lines, 84 tokens)
-   mantle/lib/modules.sh [143:85 - 158:2]
-Clone found (bash)
- - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+26] (13 lines, 63 tokens)
    mantle/libexec/mantle/installers/asdf.sh [8:1 - 20:26]
 Clone found (bash)
  - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
@@ -5819,7 +5635,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 406            │ 108261      │ 421752       │ 230          │ 3578 (3.30%)     │ 19321 (4.58%)     │
+│ bash         │ 406            │ 108294      │ 421790       │ 230          │ 3578 (3.30%)     │ 19321 (4.58%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5833,7 +5649,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csharp       │ 56             │ 14917       │ 43793        │ 22           │ 479 (3.21%)      │ 1936 (4.42%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css          │ 32             │ 7357        │ 29646        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css          │ 33             │ 7426        │ 30501        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csv          │ 2              │ 2346        │ 204424       │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5865,9 +5681,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java         │ 34             │ 10376       │ 32325        │ 12           │ 152 (1.46%)      │ 843 (2.61%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript   │ 66             │ 22768       │ 62549        │ 58           │ 1321 (5.80%)     │ 5555 (8.88%)      │
+│ javascript   │ 68             │ 22806       │ 62739        │ 58           │ 1321 (5.79%)     │ 5555 (8.85%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 242            │ 69432       │ 207842       │ 65           │ 1148 (1.65%)     │ 5178 (2.49%)      │
+│ json         │ 242            │ 69466       │ 208010       │ 64           │ 1139 (1.64%)     │ 5120 (2.46%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5881,9 +5697,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1706           │ 327695      │ 4207836      │ 679          │ 11621 (3.55%)    │ 173184 (4.12%)    │
+│ markdown     │ 1714           │ 328162      │ 4213485      │ 683          │ 11725 (3.57%)    │ 173389 (4.12%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markup       │ 100            │ 29889       │ 117608       │ 48           │ 964 (3.23%)      │ 7969 (6.78%)      │
+│ markup       │ 100            │ 29894       │ 117680       │ 48           │ 964 (3.22%)      │ 7969 (6.77%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ mermaid      │ 11             │ 2820        │ 5846         │ 12           │ 135 (4.79%)      │ 1061 (18.15%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5921,30 +5737,30 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 379            │ 86014       │ 199327       │ 32           │ 781 (0.91%)      │ 3098 (1.55%)      │
+│ text         │ 380            │ 86036       │ 199429       │ 32           │ 781 (0.91%)      │ 3098 (1.55%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 38             │ 6466        │ 13087        │ 8            │ 175 (2.71%)      │ 625 (4.78%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ tsx          │ 110            │ 5453        │ 21369        │ 1            │ 15 (0.28%)       │ 60 (0.28%)        │
+│ tsx          │ 112            │ 5573        │ 21975        │ 1            │ 15 (0.27%)       │ 60 (0.27%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ twig         │ 1              │ 573         │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ txt          │ 31             │ 5513        │ 70524        │ 78           │ 1955 (35.46%)    │ 23695 (33.60%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ typescript   │ 131            │ 15665       │ 45789        │ 13           │ 244 (1.56%)      │ 969 (2.12%)       │
+│ typescript   │ 138            │ 16257       │ 48563        │ 12           │ 225 (1.38%)      │ 885 (1.82%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 558            │ 57763       │ 318006       │ 350          │ 9392 (16.26%)    │ 105403 (33.14%)   │
+│ yaml         │ 563            │ 57912       │ 319032       │ 351          │ 9396 (16.22%)    │ 105399 (33.04%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4785           │ 980812      │ 7867283      │ 3104         │ 56841 (5.80%)    │ 744808 (9.47%)    │
+│ Total:       │ 4811           │ 982341      │ 7878763      │ 3107         │ 56921 (5.79%)    │ 744867 (9.45%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3104 clones.
+Found 3107 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
-time: 15.31s
+time: 15.93s
 
-(Truncated to last 27586 characters out of 689519)
+(Truncated to last 23529 characters out of 690251)
 ```
 
 </details>
@@ -5953,7 +5769,7 @@ time: 15.31s
 <summary>⚠️ MARKDOWN / markdown-table-formatter - 1 error</summary>
 
 ```
-42 files contain markdown tables to format:
+45 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
 - .audits/2026-08-15-staging-home-audit.md
 - .audits/egolint/2026-08-11-complementary-toolchain-audit.md
@@ -5988,6 +5804,9 @@ time: 15.31s
 - egolint/.agents/specs/architecture/meta/ai-constitution.spec.md
 - egolint/.agents/specs/architecture/meta/epistemology.spec.md
 - egolint/.agents/specs/architecture/meta/meta.spec.md
+- holon/packs/react-vite/template/README.md
+- holon/packs/react-vite/template/docs/architecture/package-status.md
+- holon/packs/react-vite/template/docs/tooling/vite.md
 - mantle/ARCHITECTURE.md
 - mantle/CONTRIBUTING.md
 - mantle/INSTALLER_ASSURANCE.md
@@ -6001,49 +5820,10 @@ time: 15.31s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 661 errors</summary>
+<summary>⚠️ SPELL / proselint - 674 errors</summary>
 
 ```
-t/.agents/skills/architecture/create-roadmap-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:25:27: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
-egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md:5:29: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
-egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md:12:31: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-system-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-vision-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/create-specification-file/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/create-specification-file/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/create-specification-file/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/create-specification-file/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/create-specification-file/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/implementation-planning/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/implementation-planning/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/implementation-planning/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/implementation-planning/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/authoring/skill-authoring/templates/SKILL.template.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:8:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+methodology/orchestrate-reflective-development/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/methodology/orchestrate-reflective-development/SKILL.md:49:26: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 egolint/.agents/skills/methodology/orchestrate-reflective-development/templates/REFLECTIVE_CYCLE.template.md:39:9: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -6130,6 +5910,26 @@ egolint/README.md:22:1: lexical_illusions: There's a lexical illusion in 'task l
 task lint' - a phrase is repeated.
 egolint/README.md:67:5: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 egolint/README.md:79:39: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+holon/packs/react-vite/template/README.md:35:28: typography.diacritical_marks: Use diacritical marks in 'façade'.
+holon/packs/react-vite/template/docs/contributing/local-development.md:5:80: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:16:12: lexical_illusions: There's a lexical illusion in 'source
+
+Source' - a phrase is repeated.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:26:10: lexical_illusions: There's a lexical illusion in 'source
+
+Source' - a phrase is repeated.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:43:20: typography.diacritical_marks: Use diacritical marks in 'façade'.
+holon/packs/react-vite/template/docs/migration/staging-promotion-ledger.md:61:14: lexical_illusions: There's a lexical illusion in 'source
+
+Source' - a phrase is repeated.
+holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:23:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:24:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+holon/packs/react-vite/template/docs/profiles/commerce/domain-routing.md:28:1: redundancy.misc.after_the_deadline: Redundancy. Use 'add' instead of 'Add an additional'.
+holon/packs/react-vite/template/docs/provenance/store-source-readme.md:69:1: lexical_illusions: There's a lexical illusion in 'pnpm test
+pnpm test' - a phrase is repeated.
+holon/packs/react-vite/template/docs/tooling/tailwind.md:38:26: lexical_illusions: There's a lexical illusion in '9 9' - a phrase is repeated.
+holon/packs/react-vite/template/docs/tooling/tailwind.md:38:29: lexical_illusions: There's a lexical illusion in '2 2' - a phrase is repeated.
+holon/packs/react-vite/template/docs/tooling/vite.md:36:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 identity/README.md:44:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/ARCHITECTURE.md:22:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 mantle/ARCHITECTURE.md:23:116: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -6249,7 +6049,7 @@ research/antidote/research/bootstrap/01-research-concept-snapshot.md:17:61: need
 research/antidote/research/bootstrap/03-scientific-boundaries.md:38:154: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 
-(Truncated to last 27586 characters out of 94359)
+(Truncated to last 23529 characters out of 96377)
 ```
 
 </details>
@@ -6258,26 +6058,7 @@ research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritic
 <summary>⚠️ PYTHON / pylint - 257 errors</summary>
 
 ```
-ation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:140:23: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:140:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:141:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:142:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:143:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:144:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:145:0: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:146:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:147:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:151:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:152:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:153:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:154:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:155:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:156:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:157:23: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:157:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:158:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:159:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:159:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:160:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:161:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:162:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -6418,7 +6199,7 @@ tools/staging_home_audit.py:1004:0: R0911: Too many return statements (8/6) (too
 -----------------------------------
 Your code has been rated at 9.55/10
 
-(Truncated to last 27586 characters out of 52249)
+(Truncated to last 23529 characters out of 52249)
 ```
 
 </details>
@@ -6427,52 +6208,7 @@ Your code has been rated at 9.55/10
 <summary>⚠️ PYTHON / pyright - 8726 errors</summary>
 
 ```
-rtially unknown (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:449:5 - error: Type of "manifest" is partially unknown
-    Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:450:5 - error: Type of "content_roots" is partially unknown
-    Type of "content_roots" is "list[str] | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:450:41 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string_list"
-    Argument type is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:451:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "args" in function "__init__"
-    Argument type is "str | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:453:5 - error: Type of "all_source_files" is partially unknown
-    Type of "all_source_files" is "list[Path] | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:453:57 - error: Argument type is partially unknown
-    Argument corresponds to parameter "content_roots" in function "discover_note_paths"
-    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:457:9 - error: Type of "source_file" is partially unknown
-    Type of "source_file" is "Path | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:458:12 - error: Type of "is_symlink" is partially unknown
-    Type of "is_symlink" is "(() -> bool) | Unknown" (reportUnknownMemberType)
-  mindgarden/scripts/publish_garden.py:458:44 - error: Type of "is_file" is partially unknown
-    Type of "is_file" is "(() -> bool) | Unknown" (reportUnknownMemberType)
-  mindgarden/scripts/publish_garden.py:460:9 - error: Type of "relative" is partially unknown
-    Type of "relative" is "Path | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:460:20 - error: Type of "relative_to" is partially unknown
-    Type of "relative_to" is "Overload[(other: str | PathLike[str], /, *, walk_up: bool = False) -> Path, (other: str | PathLike[str], /, *_deprecated: str | PathLike[str], walk_up: bool = False) -> Path] | Unknown" (reportUnknownMemberType)
-  mindgarden/scripts/publish_garden.py:461:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "element" in function "add"
-    Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:463:49 - error: Argument type is partially unknown
-    Argument corresponds to parameter "path" in function "parse_note"
-    Argument type is "Path | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:465:20 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:466:24 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[str] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:596:76 - error: Type of "error" is partially unknown
-    Type of "error" is "Unknown | OSError | UnicodeError | JSONDecodeError" (reportUnknownVariableType)
-mindgarden/scripts/quartz_site.py
-  mindgarden/scripts/quartz_site.py:31:9 - error: Type of "DEFAULT_OUTPUT_PATH" is unknown (reportUnknownVariableType)
-  mindgarden/scripts/quartz_site.py:32:9 - error: Type of "DEFAULT_PROFILE_PATH" is unknown (reportUnknownVariableType)
-  mindgarden/scripts/quartz_site.py:33:9 - error: Type of "load_publish_profile" is unknown (reportUnknownVariableType)
-  mindgarden/scripts/quartz_site.py:34:9 - error: Type of "project_garden" is unknown (reportUnknownVariableType)
-  mindgarden/scripts/quartz_site.py:158:5 - error: Type of "resolved_profile" is partially unknown
+esolved_profile" is partially unknown
     Type of "resolved_profile" is "Path | Unknown" (reportUnknownVariableType)
   mindgarden/scripts/quartz_site.py:158:23 - error: Type of "profile" is partially unknown
     Type of "profile" is "dict[str, Any] | Unknown" (reportUnknownVariableType)
@@ -6706,7 +6442,7 @@ tools/staging_home_audit.py
       Type parameter "_KT@Mapping" is invariant, but "str" is not the same as "Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags']" (reportArgumentType)
 8726 errors, 420 warnings, 0 informations
 
-(Truncated to last 27586 characters out of 1653950)
+(Truncated to last 23529 characters out of 1653950)
 ```
 
 </details>
@@ -6715,16 +6451,20 @@ tools/staging_home_audit.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-16T10:17:17Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-16T10:17:17Z	INFO	[vulndb] Need to update DB
-2026-08-16T10:17:17Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-16T10:17:17Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-23.84 MiB / 107.76 MiB [------------->______________________________________________] 22.12% ? p/s ?46.31 MiB / 107.76 MiB [------------------------->__________________________________] 42.97% ? p/s ?66.29 MiB / 107.76 MiB [------------------------------------>_______________________] 61.52% ? p/s ?87.08 MiB / 107.76 MiB [------------------------------------->________] 80.80% 105.45 MiB p/s ETA 0s103.43 MiB / 107.76 MiB [------------------------------------------->_] 95.98% 105.45 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 105.45 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 100.87 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 100.87 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 100.87 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.36 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.36 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.36 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.27 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.27 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.27 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 82.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 82.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 82.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.25 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.25 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.25 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 72.26 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 72.26 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 72.26 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 67.60 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 67.60 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 67.60 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 63.24 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 63.24 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-----------------------------------------------] 100.00% 19.05 MiB p/s 5.9s2026-08-16T10:17:24Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-16T10:17:24Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-16T10:17:24Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-16T10:17:24Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-16T10:17:24Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-16T10:17:29Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+2026-08-16T13:23:54Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-16T13:23:54Z	INFO	[vulndb] Need to update DB
+2026-08-16T13:23:54Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-16T13:23:54Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+22.67 MiB / 107.76 MiB [------------>_______________________________________________] 21.04% ? p/s ?59.48 MiB / 107.76 MiB [--------------------------------->__________________________] 55.20% ? p/s ?100.52 MiB / 107.76 MiB [------------------------------------------------------->___] 93.27% ? p/s ?107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 132.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 132.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 132.58 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 108.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 108.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 108.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.76 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.76 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 77.76 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-------------------------------------------->] 100.00% 72.75 MiB p/s ETA 0s107.76 MiB / 107.76 MiB [-----------------------------------------------] 100.00% 16.00 MiB p/s 6.9s2026-08-16T13:24:02Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-16T13:24:02Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-16T13:24:02Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-16T13:24:02Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-16T13:24:02Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.39 MiB p/s 300ms2026-08-16T13:24:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-16T13:24:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-16T13:24:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-16T13:24:08Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-08-16T13:24:08Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 
 📣 Notices:
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
@@ -6735,73 +6475,73 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2616cf2]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x3dea07db5130)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x34a957a42c80)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x3dea051af680?, 0x6, 0x4252f4?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x34a9580e8b00?, 0x6, 0x4252f4?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x3dea04546960, 0x7f605c3e1a00?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x34a956698c80, 0x7fc5d9c1d108?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x3dea0a4ca1b9, 0x3dea04546960)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x34a95992f089, 0x34a956698c80)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x3dea0a4ca1b9, {0x5aa9040?, 0x3dea096bc8c3?}, {0x67caaa0?, 0x3dea08388448?}, {0x3dea09aab180, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x34a95992f089, {0x5aa9040?, 0x34a957a6a2c3?}, {0x67caaa0?, 0x34a957d18ec8?}, {0x34a957bb1680, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x3dea07db4f00}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x34a957a42a50}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x67cb5e0, 0x3dea05614c90}, {0x3dea09aab180, 0x43}, {0x6831f78, 0x3dea07db4f00}, 0x3dea03fd8ba8)
+io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957bb1680, 0x43}, {0x6831f78, 0x34a957a42a50}, 0x34a954492ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x67cb5e0, 0x3dea05614c90}, {0x3dea096bc8a0, 0x2d}, {0x6831f78, 0x3dea04bdeca8}, 0x3dea03fd8ba8)
+io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957a6a2a0, 0x2d}, {0x6831f78, 0x34a9578c4708}, 0x34a954492ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x3dea05614c90}, {0x3dea09dd46f0, 0x22}, {0x6831f78, 0x3dea0533f888}, 0x3dea03fd8ba8)
+io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957934180, 0x22}, {0x6831f78, 0x34a9566c11a8}, 0x34a954492ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x3dea05614c90}, {0x3dea05c07050, 0x17}, {0x6831f78, 0x3dea0533f068}, 0x3dea03fd8ba8)
+io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a957843b78, 0x17}, {0x6831f78, 0x34a956fc3888}, 0x34a954492ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x3dea05614c90}, {0x3dea06ed8130, 0x8}, {0x6831f78, 0x3dea0533ede8}, 0x3dea03fd8ba8)
+io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x34a956de7650, 0x8}, {0x6831f78, 0x34a956fc3248}, 0x34a954492ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x3dea05614c90}, {0x67a84f8, 0x1}, {0x6831370, 0x3dea0a1b35d0}, 0x3dea03fd8ba8)
+io/fs.walkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1}, {0x6831370, 0x34a95921f7a0}, 0x34a954492ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x67cb5e0, 0x3dea05614c90}, {0x67a84f8, 0x1}, 0x3dea03fd8ba8)
+io/fs.WalkDir({0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1}, 0x34a954492ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x3dea0a173ce0}, {0x67cb5e0, 0x3dea05614c90}, {0x67a84f8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x34a956fbe270}, {0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x3dea0a173ce0}, {0x67cb5e0, 0x3dea05614c90}, {0x67a84f8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x34a956fbe270}, {0x67cb5e0, 0x34a959a5dbc0}, {0x67a84f8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x3dea0a5b5040, {0x68311b0, 0x3dea039170a0}, {0x67cb5e0, 0x3dea048f2768})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x34a953bad800, {0x68311b0, 0x34a9539ea770}, {0x67cb5e0, 0x34a959a5d800})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x3dea0a5b6500, {0x68311b0?, 0x3dea039170a0?}, {{0x67cb5e0, 0x3dea048f2768}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x34a955ad6760, {0x68311b0?, 0x34a9539ea770?}, {{0x67cb5e0, 0x34a959a5d800}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x3dea0a5509c0, {0x3dea0a5c2000, 0x1f, 0x20}, {0x3dea0a5c2200, 0x19, 0x20}, 0x3dea0a5a9ad0, {0x3dea0454bea7, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x34a954e80480, {0x34a959946800, 0x1f, 0x20}, {0x34a959946a00, 0x19, 0x20}, 0x34a957d47b30, {0x34a954083187, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x3dea0a5509c0, {0x3dea0a5c2000, 0x1f, 0x20}, {0x3dea0a5c2200, 0x19, 0x20}, 0x3dea0a5a9ad0, {0x3dea0454bea7, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x34a954e80480, {0x34a959946800, 0x1f, 0x20}, {0x34a959946a00, 0x19, 0x20}, 0x34a957d47b30, {0x34a954083187, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffcb909912f, 0x1}, 0x3dea0a551270, {0x7f5fd513cc98, 0x3dea052a4ba0}, {0x67cb520, 0xa3125e0}, {0x3dea0a5509c0, {0x3dea0a5c2000, 0x1f, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffe1e23212f, 0x1}, 0x34a954d66120, {0x7fc512bb8288, 0x34a956ecade0}, {0x67cb520, 0xa3125e0}, {0x34a954e80480, {0x34a959946800, 0x1f, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x3dea038b1e60, 0x2, 0x2}, {0x3dea0479bc80, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x34a954447ca0, 0x2, 0x2}, {0x34a954412540, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffcb9098f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffcb9098f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffcb9098f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffcb9098f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffcb9098f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffcb9098f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffe1e231f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x3dea0402b208, {0x3dea0481ae08, 0x1, 0x33})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x34a953936f08, {0x34a95429e388, 0x1, 0x33})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0x3dea0402b208, {0x3dea0481aa88, 0x33, 0x33})
+github.com/spf13/cobra.(*Command).execute(0x34a953936f08, {0x34a95429e008, 0x33, 0x33})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0x3dea04063808)
+github.com/spf13/cobra.(*Command).ExecuteC(0x34a953936908)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x3dea044344c0})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x34a953af9640})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c

@@ -198,6 +198,240 @@ beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019
   20:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
   20:17  ✖  Expected "#000000" to be "#000"   color-hex-length
 
+holon/packs/react-vite/template/apps/docs/src/styles/app.css
+  46:8  ✖  Expected "context" media feature range notation  media-feature-range-notation
+
+holon/packs/react-vite/template/apps/storefront/src/styles/app.css
+    4:39  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+    4:39  ✖  Expected modern color-function notation                                                                                       color-function-notation
+    4:58  ✖  Expected "0.27" to be "27%"                                                                                                   alpha-value-notation
+    5:40  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+    5:40  ✖  Expected modern color-function notation                                                                                       color-function-notation
+    5:60  ✖  Expected "0.15" to be "15%"                                                                                                   alpha-value-notation
+   48:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+   48:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+   48:30  ✖  Expected "0.82" to be "82%"                                                                                                   alpha-value-notation
+   52:1   ✖  Expected class selector ".site-header__inner" to be kebab-case                                                                selector-class-pattern
+   67:1   ✖  Expected class selector ".brand__mark" to be kebab-case                                                                       selector-class-pattern
+  147:1   ✖  Expected class selector ".hero-section__inner" to be kebab-case                                                               selector-class-pattern
+  173:1   ✖  Expected class selector ".hero-copy__lede" to be kebab-case                                                                   selector-class-pattern
+  205:1   ✖  Expected class selector ".button--primary" to be kebab-case                                                                   selector-class-pattern
+  208:27  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  208:27  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  208:47  ✖  Expected "0.24" to be "24%"                                                                                                   alpha-value-notation
+  211:1   ✖  Expected class selector ".button--secondary" to be kebab-case                                                                 selector-class-pattern
+  214:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  214:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  214:35  ✖  Expected "0.04" to be "4%"                                                                                                    alpha-value-notation
+  217:1   ✖  Expected class selector ".button--ghost" to be kebab-case                                                                     selector-class-pattern
+  233:39  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  233:39  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  233:59  ✖  Expected "0.46" to be "46%"                                                                                                   alpha-value-notation
+  238:1   ✖  Expected class selector ".hero-orbit__ring" to be kebab-case                                                                  selector-class-pattern
+  240:21  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  240:21  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  240:41  ✖  Expected "0.18" to be "18%"                                                                                                   alpha-value-notation
+  244:1   ✖  Expected class selector ".hero-orbit__ring--one" to be kebab-case                                                             selector-class-pattern
+  249:1   ✖  Expected class selector ".hero-orbit__ring--one" to be kebab-case                                                             selector-class-pattern
+  250:1   ✖  Expected class selector ".hero-orbit__ring--two" to be kebab-case                                                             selector-class-pattern
+  262:1   ✖  Expected class selector ".hero-orbit__ring--two" to be kebab-case                                                             selector-class-pattern
+  268:1   ✖  Expected class selector ".hero-orbit__core" to be kebab-case                                                                  selector-class-pattern
+  274:21  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  274:21  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  274:41  ✖  Expected "0.3" to be "30%"                                                                                                    alpha-value-notation
+  276:39  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  276:39  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  276:59  ✖  Expected "0.88" to be "88%"                                                                                                   alpha-value-notation
+  276:66  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  276:66  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  276:84  ✖  Expected "0.9" to be "90%"                                                                                                    alpha-value-notation
+  280:1   ✖  Expected class selector ".hero-orbit__core" to be kebab-case                                                                  selector-class-pattern
+  305:1   ✖  Expected selector ".section-heading > a" to come before selector ".primary-navigation a:hover", at line 108                   no-descending-specificity
+  319:39  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  319:39  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  319:59  ✖  Expected "0.055" to be "5.5%"                                                                                                 alpha-value-notation
+  319:67  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  319:67  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  319:87  ✖  Expected "0.015" to be "1.5%"                                                                                                 alpha-value-notation
+  326:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  326:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  326:37  ✖  Expected "0.5" to be "50%"                                                                                                    alpha-value-notation
+  330:1   ✖  Expected class selector ".product-card__image-link" to be kebab-case                                                          selector-class-pattern
+  337:1   ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
+  344:21  ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
+  348:1   ✖  Expected class selector ".product-card__placeholder" to be kebab-case                                                         selector-class-pattern
+  355:1   ✖  Expected class selector ".product-card__body" to be kebab-case                                                                selector-class-pattern
+  359:1   ✖  Expected class selector ".product-card__meta" to be kebab-case                                                                selector-class-pattern
+  379:1   ✖  Expected class selector ".status-badge--accent" to be kebab-case                                                              selector-class-pattern
+  380:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  380:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  380:37  ✖  Expected "0.35" to be "35%"                                                                                                   alpha-value-notation
+  382:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  382:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  382:35  ✖  Expected "0.1" to be "10%"                                                                                                    alpha-value-notation
+  385:1   ✖  Expected class selector ".status-badge--success" to be kebab-case                                                             selector-class-pattern
+  394:1   ✖  Expected selector ".product-card h3 a" to come before selector ".primary-navigation a:hover", at line 108                     no-descending-specificity
+  407:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  407:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  407:35  ✖  Expected "0.025" to be "2.5%"                                                                                                 alpha-value-notation
+  423:1   ✖  Expected selector ".prose-page p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422           no-descending-specificity
+  441:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
+  448:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
+  459:1   ✖  Expected class selector ".product-detail__description" to be kebab-case                                                       selector-class-pattern
+  488:1   ✖  Expected class selector ".product-detail__purchase" to be kebab-case                                                          selector-class-pattern
+  496:1   ✖  Expected class selector ".product-detail__purchase" to be kebab-case                                                          selector-class-pattern
+  518:1   ✖  Expected class selector ".cart-layer__backdrop" to be kebab-case                                                              selector-class-pattern
+  520:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  520:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  520:29  ✖  Expected "0.68" to be "68%"                                                                                                   alpha-value-notation
+  534:1   ✖  Expected class selector ".cart-drawer__header" to be kebab-case                                                               selector-class-pattern
+  535:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  539:1   ✖  Expected class selector ".cart-drawer__header" to be kebab-case                                                               selector-class-pattern
+  546:1   ✖  Expected class selector ".cart-drawer__header" to be kebab-case                                                               selector-class-pattern
+  589:1   ✖  Expected class selector ".cart-item__details" to be kebab-case                                                                selector-class-pattern
+  596:1   ✖  Expected class selector ".cart-item__details" to be kebab-case                                                                selector-class-pattern
+  622:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  627:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  631:1   ✖  Expected selector ".cart-drawer__footer p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422  no-descending-specificity
+  631:1   ✖  Expected class selector ".cart-drawer__footer" to be kebab-case                                                               selector-class-pattern
+  650:1   ✖  Expected class selector ".site-footer__inner" to be kebab-case                                                                selector-class-pattern
+  661:1   ✖  Expected selector ".site-footer p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422          no-descending-specificity
+  665:1   ✖  Expected class selector ".site-footer__links" to be kebab-case                                                                selector-class-pattern
+  702:8   ✖  Expected "context" media feature range notation                                                                               media-feature-range-notation
+  703:3   ✖  Expected class selector ".site-header__inner" to be kebab-case                                                                selector-class-pattern
+  715:3   ✖  Expected class selector ".hero-section__inner" to be kebab-case                                                               selector-class-pattern
+  735:3   ✖  Expected class selector ".cart-layer__backdrop" to be kebab-case                                                              selector-class-pattern
+  748:8   ✖  Expected "context" media feature range notation                                                                               media-feature-range-notation
+  754:3   ✖  Expected class selector ".product-detail__purchase" to be kebab-case                                                          selector-class-pattern
+  755:3   ✖  Expected class selector ".site-footer__inner" to be kebab-case                                                                selector-class-pattern
+  764:3   ✖  Expected class selector ".site-footer__inner" to be kebab-case                                                                selector-class-pattern
+  768:3   ✖  Expected class selector ".site-footer__links" to be kebab-case                                                                selector-class-pattern
+
+holon/packs/react-vite/template/apps/storefront/src/styles/tokens.css
+   7:19  ✖  Expected "rgba" to be "rgb"              color-function-alias-notation
+   7:19  ✖  Expected modern color-function notation  color-function-notation
+   7:39  ✖  Expected "0.14" to be "14%"              alpha-value-notation
+  10:24  ✖  Expected "rgba" to be "rgb"              color-function-alias-notation
+  10:24  ✖  Expected modern color-function notation  color-function-notation
+  10:44  ✖  Expected "0.14" to be "14%"              alpha-value-notation
+  13:31  ✖  Expected "rgba" to be "rgb"              color-function-alias-notation
+  13:31  ✖  Expected modern color-function notation  color-function-notation
+  13:45  ✖  Expected "0.44" to be "44%"              alpha-value-notation
+
+holon/packs/react-vite/template/apps/web/src/styles/app.css
+    1:9   ✖  Expected ""./reset.css"" to be "url("./reset.css")"                      import-notation
+    2:9   ✖  Expected ""./fonts.css"" to be "url("./fonts.css")"                      import-notation
+    3:9   ✖  Expected ""./utilities.css"" to be "url("./utilities.css")"              import-notation
+   29:1   ✖  Expected class selector ".site-header__inner" to be kebab-case           selector-class-pattern
+   30:1   ✖  Expected class selector ".site-footer__inner" to be kebab-case           selector-class-pattern
+   50:1   ✖  Expected class selector ".site-footer__links" to be kebab-case           selector-class-pattern
+   59:1   ✖  Expected class selector ".site-nav__link" to be kebab-case               selector-class-pattern
+   63:1   ✖  Expected class selector ".site-nav__link" to be kebab-case               selector-class-pattern
+   87:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case  custom-property-pattern
+  110:8   ✖  Expected "context" media feature range notation                          media-feature-range-notation
+  111:3   ✖  Expected class selector ".site-header__inner" to be kebab-case           selector-class-pattern
+  112:3   ✖  Expected class selector ".site-footer__inner" to be kebab-case           selector-class-pattern
+
+holon/packs/react-vite/template/packages/design-tokens/src/generated.css
+   3:23  ✖  Expected "#ffffff" to be "#fff"                                                     color-hex-length
+   7:3   ✖  Expected custom property name "--eh-color-accentStrong" to be kebab-case            custom-property-pattern
+  13:3   ✖  Expected custom property name "--eh-color-darkBackground" to be kebab-case          custom-property-pattern
+  14:3   ✖  Expected custom property name "--eh-color-darkSurface" to be kebab-case             custom-property-pattern
+  15:3   ✖  Expected custom property name "--eh-color-darkForeground" to be kebab-case          custom-property-pattern
+  16:3   ✖  Expected custom property name "--eh-color-darkMuted" to be kebab-case               custom-property-pattern
+  17:3   ✖  Expected custom property name "--eh-color-highContrastBackground" to be kebab-case  custom-property-pattern
+  17:38  ✖  Expected "#000000" to be "#000"                                                     color-hex-length
+  18:3   ✖  Expected custom property name "--eh-color-highContrastSurface" to be kebab-case     custom-property-pattern
+  19:3   ✖  Expected custom property name "--eh-color-highContrastForeground" to be kebab-case  custom-property-pattern
+  19:38  ✖  Expected "#ffffff" to be "#fff"                                                     color-hex-length
+  20:3   ✖  Expected custom property name "--eh-color-highContrastAccent" to be kebab-case      custom-property-pattern
+  31:3   ✖  Expected custom property name "--eh-size-radiusSm" to be kebab-case                 custom-property-pattern
+  32:3   ✖  Expected custom property name "--eh-size-radiusMd" to be kebab-case                 custom-property-pattern
+  33:3   ✖  Expected custom property name "--eh-size-radiusLg" to be kebab-case                 custom-property-pattern
+  36:3   ✖  Expected custom property name "--eh-border-widthStrong" to be kebab-case            custom-property-pattern
+  37:33  ✖  Expected "rgba" to be "rgb"                                                         color-function-alias-notation
+  37:33  ✖  Expected modern color-function notation                                             color-function-notation
+  37:50  ✖  Expected "0.12" to be "12%"                                                         alpha-value-notation
+  38:32  ✖  Expected "rgba" to be "rgb"                                                         color-function-alias-notation
+  38:32  ✖  Expected modern color-function notation                                             color-function-notation
+  38:52  ✖  Expected "0.35" to be "35%"                                                         alpha-value-notation
+  39:3   ✖  Expected custom property name "--eh-typography-fontSans" to be kebab-case           custom-property-pattern
+  39:29  ✖  Expected "Inter" to be "inter"                                                      value-keyword-case
+  40:3   ✖  Expected custom property name "--eh-typography-fontMono" to be kebab-case           custom-property-pattern
+  40:43  ✖  Expected "SFMono-Regular" to be "sfmono-regular"                                    value-keyword-case
+  40:59  ✖  Expected "Menlo" to be "menlo"                                                      value-keyword-case
+  41:3   ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case             custom-property-pattern
+  42:3   ✖  Expected custom property name "--eh-typography-sizeMd" to be kebab-case             custom-property-pattern
+  43:3   ✖  Expected custom property name "--eh-typography-sizeLg" to be kebab-case             custom-property-pattern
+  44:3   ✖  Expected custom property name "--eh-typography-sizeXl" to be kebab-case             custom-property-pattern
+  47:3   ✖  Expected custom property name "--eh-typography-lineHeight" to be kebab-case         custom-property-pattern
+
+holon/packs/react-vite/template/packages/tailwind-config/src/styles.css
+   1:1   ✖  Unknown at-rule "@tailwind"                                          at-rule-no-unknown
+   2:1   ✖  Unknown at-rule "@tailwind"                                          at-rule-no-unknown
+   3:1   ✖  Unknown at-rule "@tailwind"                                          at-rule-no-unknown
+   8:5   ✖  Expected empty line before custom property                           custom-property-empty-line-before
+  45:5   ✖  Expected empty line before custom property                           custom-property-empty-line-before
+  55:57  ✖  Expected "0.24" to be "24%"                                          alpha-value-notation
+  62:18  ✖  Unknown value "theme("fontFamily.sans")" for property "font-family"  declaration-property-value-no-unknown
+  63:21  ✖  Expected "optimizeLegibility" to be "optimizelegibility"             value-keyword-case
+
+holon/packs/react-vite/template/packages/themes/src/styles.css
+  1:9  ✖  Expected ""./styles/base.css"" to be "url("./styles/base.css")"                    import-notation
+  2:9  ✖  Expected ""./styles/light.css"" to be "url("./styles/light.css")"                  import-notation
+  3:9  ✖  Expected ""./styles/dark.css"" to be "url("./styles/dark.css")"                    import-notation
+  4:9  ✖  Expected ""./styles/high-contrast.css"" to be "url("./styles/high-contrast.css")"  import-notation
+
+holon/packs/react-vite/template/packages/themes/src/styles/base.css
+   1:9   ✖  Expected ""@egohygiene/design-tokens/styles.css"" to be "url("@egohygiene/design-tokens/styles.css")"  import-notation
+  14:20  ✖  Expected custom property name "--eh-typography-fontSans" to be kebab-case                              custom-property-pattern
+  15:20  ✖  Expected custom property name "--eh-typography-fontMono" to be kebab-case                              custom-property-pattern
+  18:20  ✖  Expected custom property name "--eh-size-radiusSm" to be kebab-case                                    custom-property-pattern
+  19:20  ✖  Expected custom property name "--eh-size-radiusMd" to be kebab-case                                    custom-property-pattern
+  20:20  ✖  Expected custom property name "--eh-size-radiusLg" to be kebab-case                                    custom-property-pattern
+
+holon/packs/react-vite/template/packages/themes/src/styles/dark.css
+  3:3   ✖  Expected empty line before custom property                                  custom-property-empty-line-before
+  3:27  ✖  Expected custom property name "--eh-color-darkBackground" to be kebab-case  custom-property-pattern
+  4:24  ✖  Expected custom property name "--eh-color-darkSurface" to be kebab-case     custom-property-pattern
+  5:27  ✖  Expected custom property name "--eh-color-darkForeground" to be kebab-case  custom-property-pattern
+  6:22  ✖  Expected custom property name "--eh-color-darkMuted" to be kebab-case       custom-property-pattern
+  8:33  ✖  Expected "rgba" to be "rgb"                                                 color-function-alias-notation
+  8:33  ✖  Expected modern color-function notation                                     color-function-notation
+  8:47  ✖  Expected "0.35" to be "35%"                                                 alpha-value-notation
+
+holon/packs/react-vite/template/packages/themes/src/styles/high-contrast.css
+  3:3   ✖  Expected empty line before custom property                                          custom-property-empty-line-before
+  3:27  ✖  Expected custom property name "--eh-color-highContrastBackground" to be kebab-case  custom-property-pattern
+  4:24  ✖  Expected custom property name "--eh-color-highContrastSurface" to be kebab-case     custom-property-pattern
+  5:27  ✖  Expected custom property name "--eh-color-highContrastForeground" to be kebab-case  custom-property-pattern
+  7:23  ✖  Expected custom property name "--eh-color-highContrastAccent" to be kebab-case      custom-property-pattern
+  8:19  ✖  Expected "#ffffff" to be "#fff"                                                     color-hex-length
+
+holon/packs/react-vite/template/packages/ui/src/styles/index.css
+    1:9   ✖  Expected ""@egohygiene/themes/styles.css"" to be "url("@egohygiene/themes/styles.css")"  import-notation
+   10:20  ✖  Expected custom property name "--eh-typography-lineHeight" to be kebab-case              custom-property-pattern
+   12:36  ✖  Expected "rgba" to be "rgb"                                                              color-function-alias-notation
+   12:36  ✖  Expected modern color-function notation                                                  color-function-notation
+   12:55  ✖  Expected "0.16" to be "16%"                                                              alpha-value-notation
+   81:1   ✖  Expected class selector ".eh-button--primary" to be kebab-case                           selector-class-pattern
+   83:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
+   86:1   ✖  Expected class selector ".eh-button--secondary" to be kebab-case                         selector-class-pattern
+   92:1   ✖  Expected class selector ".eh-button--ghost" to be kebab-case                             selector-class-pattern
+   97:1   ✖  Expected class selector ".eh-button--disabled" to be kebab-case                          selector-class-pattern
+  108:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  109:21  ✖  Expected "currentColor" to be "currentcolor"                                             value-keyword-case
+  112:1   ✖  Expected class selector ".eh-badge--available" to be kebab-case                          selector-class-pattern
+  116:1   ✖  Expected class selector ".eh-badge--development" to be kebab-case                        selector-class-pattern
+  120:1   ✖  Expected class selector ".eh-badge--planned" to be kebab-case                            selector-class-pattern
+  140:1   ✖  Expected class selector ".eh-theme-toggle__label" to be kebab-case                       selector-class-pattern
+  141:18  ✖  Expected custom property name "--eh-typography-sizeSm" to be kebab-case                  custom-property-pattern
+  159:3   ✖  Deprecated property "clip"                                                               property-no-deprecated
+  173:1   ✖  Expected class selector ".eh-orbit__ring" to be kebab-case                               selector-class-pattern
+  180:1   ✖  Expected class selector ".eh-orbit__ring--inner" to be kebab-case                        selector-class-pattern
+  184:1   ✖  Expected class selector ".eh-orbit__core" to be kebab-case                               selector-class-pattern
+  191:10  ✖  Expected "#ffffff" to be "#fff"                                                          color-hex-length
+
 notebooks/jupyter/themes/@jupyterlab/theme-dark-extension/index.css
   110:23  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
   149:28  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
@@ -207,7 +441,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
   108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
   147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
 
-✖ 192 problems (192 errors, 0 warnings)
-  144 errors potentially fixable with the "--fix" option.
+✖ 404 problems (404 errors, 0 warnings)
+  246 errors potentially fixable with the "--fix" option.
 
 

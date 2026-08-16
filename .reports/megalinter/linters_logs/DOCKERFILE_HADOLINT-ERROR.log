@@ -1,0 +1,8 @@
+Results of hadolint linter (version 2.15.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+holon/packs/react-vite/template/infra/docker/Dockerfile:9 DL3025 warning: Use arguments JSON notation for CMD and ENTRYPOINT arguments
+

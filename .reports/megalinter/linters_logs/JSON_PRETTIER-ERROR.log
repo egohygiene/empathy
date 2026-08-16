@@ -7,5 +7,7 @@ Linter raw log:
 Checking formatting...
 [warn] .github/actions/generate-repository-intelligence/repository-analytics.schema.json
 [warn] beacon/contracts/template-manifest.schema.json
-[warn] Code style issues found in 2 files. Run Prettier with --write to fix.
+[warn] holon/packs/react-vite/template/apps/storefront/tsconfig.json
+[warn] holon/packs/react-vite/template/test-results/.last-run.json
+[warn] Code style issues found in 4 files. Run Prettier with --write to fix.
 

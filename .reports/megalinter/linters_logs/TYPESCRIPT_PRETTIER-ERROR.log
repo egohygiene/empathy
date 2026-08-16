@@ -1,0 +1,88 @@
+Results of prettier linter (version 3.9.6)
+See documentation on https://megalinter.io/10.0.0/descriptors/typescript_prettier/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Checking formatting...
+[warn] holon/packs/react-vite/template/.storybook/main.ts
+[warn] holon/packs/react-vite/template/.storybook/manager.ts
+[warn] holon/packs/react-vite/template/.storybook/preview.ts
+[warn] holon/packs/react-vite/template/.storybook/theme.ts
+[warn] holon/packs/react-vite/template/.vitest/setup.ts
+[warn] holon/packs/react-vite/template/apps/docs/src/vite-env.d.ts
+[warn] holon/packs/react-vite/template/apps/docs/vite.config.ts
+[warn] holon/packs/react-vite/template/apps/playground/vite.config.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/features/storefront/StorefrontContext.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/features/storefront/useStorefront.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/lib/money.test.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/lib/money.ts
+[warn] holon/packs/react-vite/template/apps/storefront/src/vite-env.d.ts
+[warn] holon/packs/react-vite/template/apps/storefront/vite.config.ts
+[warn] holon/packs/react-vite/template/apps/storefront/vitest.config.ts
+[warn] holon/packs/react-vite/template/apps/web/src/content/products.test.ts
+[warn] holon/packs/react-vite/template/apps/web/src/content/products.ts
+[warn] holon/packs/react-vite/template/apps/web/src/i18n/resources.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/analytics.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/api.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/logger.ts
+[warn] holon/packs/react-vite/template/apps/web/src/services/storage.ts
+[warn] holon/packs/react-vite/template/apps/web/vite.config.ts
+[warn] holon/packs/react-vite/template/packages/api-client/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/api-client/src/index.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/authorization.test.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/authorization.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/memory-adapter.ts
+[warn] holon/packs/react-vite/template/packages/auth/src/types.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/create-commerce-client.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/errors.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/fourthwall/fourthwall-client.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/index.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/mock/mock-client.test.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/mock/mock-client.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/mock/mock-products.ts
+[warn] holon/packs/react-vite/template/packages/commerce/src/types.ts
+[warn] holon/packs/react-vite/template/packages/config/src/browser.ts
+[warn] holon/packs/react-vite/template/packages/config/src/environment.ts
+[warn] holon/packs/react-vite/template/packages/config/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/config/src/schema.ts
+[warn] holon/packs/react-vite/template/packages/content/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/content/src/index.ts
+[warn] holon/packs/react-vite/template/packages/design-tokens/scripts/build-tokens.ts
+[warn] holon/packs/react-vite/template/packages/design-tokens/src/generated.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/create-i18n.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/date.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/list.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/number.ts
+[warn] holon/packs/react-vite/template/packages/i18n/src/format/relative-time.ts
+[warn] holon/packs/react-vite/template/packages/icons/src/Icon.types.ts
+[warn] holon/packs/react-vite/template/packages/schemas/src/index.ts
+[warn] holon/packs/react-vite/template/packages/store-config/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/store-config/src/index.ts
+[warn] holon/packs/react-vite/template/packages/tailwind-config/src/preset.ts
+[warn] holon/packs/react-vite/template/packages/themes/src/hooks/useTheme.ts
+[warn] holon/packs/react-vite/template/packages/ui/src/components/Button/Button.types.ts
+[warn] holon/packs/react-vite/template/packages/utilities/src/index.test.ts
+[warn] holon/packs/react-vite/template/packages/utilities/src/index.ts
+[warn] holon/packs/react-vite/template/packages/vite-config/src/index.ts
+[warn] holon/packs/react-vite/template/playwright.config.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-circular-dependencies.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-locales.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-package-exports.ts
+[warn] holon/packs/react-vite/template/scripts/checks/check-workspace.ts
+[warn] holon/packs/react-vite/template/scripts/generators/create-app.ts
+[warn] holon/packs/react-vite/template/scripts/generators/create-component.ts
+[warn] holon/packs/react-vite/template/scripts/generators/create-package.ts
+[warn] holon/packs/react-vite/template/scripts/release/prepare-release.ts
+[warn] holon/packs/react-vite/template/tailwind.config.ts
+[warn] holon/packs/react-vite/template/tests/e2e/docs.spec.ts
+[warn] holon/packs/react-vite/template/tests/e2e/playground.spec.ts
+[warn] holon/packs/react-vite/template/tests/e2e/site.spec.ts
+[warn] holon/packs/react-vite/template/tests/e2e/storefront.spec.ts
+[warn] holon/packs/react-vite/template/tests/smoke/build.test.ts
+[warn] holon/packs/react-vite/template/vitest.accessibility.config.ts
+[warn] holon/packs/react-vite/template/vitest.smoke.config.ts
+[warn] holon/packs/react-vite/template/vitest.unit.config.ts
+[warn] holon/packs/react-vite/template/vitest.workspace.ts
+[warn] Code style issues found in 79 files. Run Prettier with --write to fix.
+

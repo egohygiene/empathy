@@ -19,6 +19,7 @@ Checking formatting...
 [warn] .github/workflow-profiles/release-strategies/release-please.yml
 [warn] .github/workflow-profiles/release-strategies/semantic-release.yml
 [warn] .github/workflow-profiles/security-optional/ossf-scorecard-older.yml
+[warn] holon/packs/react-vite/template/pnpm-workspace.yaml
 [warn] pnpm-workspace.yaml
-[warn] Code style issues found in 15 files. Run Prettier with --write to fix.
+[warn] Code style issues found in 16 files. Run Prettier with --write to fix.
 

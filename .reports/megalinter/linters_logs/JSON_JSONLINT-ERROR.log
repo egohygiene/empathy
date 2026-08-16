@@ -1,0 +1,114 @@
+Results of jsonlint linter (version 17.0.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/json_jsonlint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+File: holon/packs/react-vite/template/tsconfig.base.json
+Parse error on line 4, column 5:
+...ilerOptions": {    // Language baseline...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/visualizations/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React, Canvas, SV...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/visualizations/tsconfig.storybook.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React, Canvas, SV...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/utilities/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/ui/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React components ...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/ui/tsconfig.storybook.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Storybook renders...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/themes/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser APIs used...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/schemas/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/icons/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // React SVG and bro...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/i18n/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser APIs used...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/design-tokens/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/content/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/config/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Buildable project...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/packages/api-client/tsconfig.build.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // JavaScript plus s...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/web/tsconfig.app.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser environme...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/web/tsconfig.storybook.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Storybook renders...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/playground/tsconfig.app.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser environme...
+----------------------^
+Unexpected token "/"
+
+File: holon/packs/react-vite/template/apps/docs/tsconfig.app.json
+Parse error on line 5, column 5:
+...ilerOptions": {    // Browser environme...
+----------------------^
+Unexpected token "/"
+

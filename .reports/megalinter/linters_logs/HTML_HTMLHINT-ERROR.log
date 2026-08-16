@@ -753,5 +753,25 @@ Linter raw log:
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 11 files, found 354 errors in 9 files (106 ms)
+   holon/packs/react-vite/template/.storybook/manager-head.html
+      L1 |<meta name="color-scheme" content="dark">
+          ^ Doctype must be declared before any non-comment content. (doctype-first)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   holon/packs/react-vite/template/.storybook/preview-head.html
+      L1 |<meta name="color-scheme" content="dark light">
+          ^ Doctype must be declared before any non-comment content. (doctype-first)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+Scanned 17 files, found 356 errors in 11 files (123 ms)
 
