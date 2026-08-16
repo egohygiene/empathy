@@ -40,50 +40,52 @@ reviewed' - a phrase is repeated.
 reviewed' - a phrase is repeated.
 .garden/projects/README.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
 reviewed' - a phrase is repeated.
+.garden/projects/egohygiene-web-namespace.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
+reviewed' - a phrase is repeated.
 .garden/projects/egohygiene-web-namespace.md:120:55: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/egohygiene-web-namespace.md:192:9: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
 .garden/projects/repository-intelligence-dashboard.md:6:9: lexical_illusions: There's a lexical illusion in 'reviewed
 reviewed' - a phrase is repeated.
-.garden/projects/repository-intelligence-dashboard.md:59:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-.garden/projects/repository-intelligence-dashboard.md:60:141: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-.garden/projects/repository-intelligence-dashboard.md:61:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-.garden/projects/repository-intelligence-dashboard.md:61:129: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.garden/projects/repository-intelligence-dashboard.md:58:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.garden/projects/repository-intelligence-dashboard.md:59:141: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.garden/projects/repository-intelligence-dashboard.md:60:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+.garden/projects/repository-intelligence-dashboard.md:60:129: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.garden/projects/repository-intelligence-dashboard.md:77:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:78:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:79:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:79:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:80:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:80:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:81:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:82:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:83:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:84:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:84:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:85:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:86:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:88:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:87:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:88:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:88:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:89:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:89:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:90:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:92:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:91:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:92:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:92:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:93:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:93:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:94:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:95:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:96:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:97:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:97:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:99:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:96:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:98:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:99:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:99:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:100:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:100:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:100:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:101:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:101:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:101:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:102:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:102:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:103:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:105:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:104:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:105:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:106:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:107:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:108:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:109:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.garden/projects/repository-intelligence-dashboard.md:111:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+.garden/projects/repository-intelligence-dashboard.md:110:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .github/actions/generate-repository-intelligence/README.md:38:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .github/actions/generate-repository-intelligence/README.md:39:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .github/actions/generate-repository-intelligence/README.md:40:27: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -719,7 +721,7 @@ mantle/README.md:350:191: typography.symbols.curly_quotes: Use curly quotes “�
 mantle/README.md:351:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:352:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:353:184: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:355:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/README.md:355:188: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:359:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:360:201: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/README.md:361:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -762,22 +764,22 @@ mantle/tests/README.md:101:75: lexical_illusions: There's a lexical illusion in 
 bats' - a phrase is repeated.
 mantle/tests/README.md:159:34: lexical_illusions: There's a lexical illusion in 'bats
 bats' - a phrase is repeated.
-mantle/tests/README.md:215:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:253:39: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:253:50: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:253:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:254:18: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:269:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:271:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:282:42: lexical_illusions: There's a lexical illusion in 'stub
+mantle/tests/README.md:217:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:255:39: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:255:50: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:255:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:256:18: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+mantle/tests/README.md:271:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:273:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:284:42: lexical_illusions: There's a lexical illusion in 'stub
 stub' - a phrase is repeated.
-mantle/tests/README.md:283:48: lexical_illusions: There's a lexical illusion in 'stub
+mantle/tests/README.md:285:48: lexical_illusions: There's a lexical illusion in 'stub
 stub' - a phrase is repeated.
-mantle/tests/README.md:367:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/tests/README.md:369:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:369:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mantle/tests/README.md:371:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:390:38: lexical_illusions: There's a lexical illusion in 'bats
+mantle/tests/README.md:371:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:373:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+mantle/tests/README.md:392:38: lexical_illusions: There's a lexical illusion in 'bats
    bats' - a phrase is repeated.
 mindgarden/profiles/agent/README.md:26:4: lexical_illusions: There's a lexical illusion in 'Search
 

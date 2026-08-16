@@ -11688,7 +11688,7 @@ egolint/tests/fixtures/python/test_greeting_service.py
   egolint/tests/fixtures/python/test_greeting_service.py:3:6 - warning: Import "greeting_service" could not be resolved (reportMissingImports)
   egolint/tests/fixtures/python/test_greeting_service.py:3:30 - error: Type of "format_greeting" is unknown (reportUnknownVariableType)
 egolint/tests/test_complementary_tools.py
-  egolint/tests/test_complementary_tools.py:86:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
+  egolint/tests/test_complementary_tools.py:91:32 - error: Type of parameter "pattern" is unknown (reportUnknownLambdaType)
 egolint/tests/test_megalinter_policy.py
   egolint/tests/test_megalinter_policy.py:192:45 - error: Argument type is unknown
     Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
@@ -11697,29 +11697,29 @@ egolint/tests/test_megalinter_policy.py
   egolint/tests/test_megalinter_policy.py:196:13 - error: Argument type is unknown
     Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
 mantle/tests/validate_fastfetch.py
-  mantle/tests/validate_fastfetch.py:85:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
-  mantle/tests/validate_fastfetch.py:114:38 - error: Type of "get" is partially unknown
+  mantle/tests/validate_fastfetch.py:91:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  mantle/tests/validate_fastfetch.py:120:38 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  mantle/tests/validate_fastfetch.py:116:5 - error: Type of "chafa" is partially unknown
+  mantle/tests/validate_fastfetch.py:122:5 - error: Type of "chafa" is partially unknown
     Type of "chafa" is "Unknown | None" (reportUnknownVariableType)
-  mantle/tests/validate_fastfetch.py:116:13 - error: Type of "get" is partially unknown
+  mantle/tests/validate_fastfetch.py:122:13 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  mantle/tests/validate_fastfetch.py:130:9 - error: Type of "module" is unknown (reportUnknownVariableType)
-  mantle/tests/validate_fastfetch.py:136:27 - error: Type of "get" is partially unknown
+  mantle/tests/validate_fastfetch.py:136:9 - error: Type of "module" is unknown (reportUnknownVariableType)
+  mantle/tests/validate_fastfetch.py:142:27 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  mantle/tests/validate_fastfetch.py:136:27 - error: Argument type is unknown
+  mantle/tests/validate_fastfetch.py:142:27 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
-  mantle/tests/validate_fastfetch.py:139:38 - error: Type of "get" is partially unknown
+  mantle/tests/validate_fastfetch.py:145:38 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  mantle/tests/validate_fastfetch.py:139:38 - error: Argument type is unknown
+  mantle/tests/validate_fastfetch.py:145:38 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
-  mantle/tests/validate_fastfetch.py:140:44 - error: Type of "get" is partially unknown
+  mantle/tests/validate_fastfetch.py:146:44 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  mantle/tests/validate_fastfetch.py:140:44 - error: Argument type is unknown
+  mantle/tests/validate_fastfetch.py:146:44 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
-  mantle/tests/validate_fastfetch.py:143:33 - error: Type of "get" is partially unknown
+  mantle/tests/validate_fastfetch.py:149:33 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  mantle/tests/validate_fastfetch.py:143:33 - error: Argument type is partially unknown
+  mantle/tests/validate_fastfetch.py:149:33 - error: Argument type is partially unknown
     Argument corresponds to parameter "object" in function "append"
     Argument type is "Unknown | None" (reportUnknownArgumentType)
 mindgarden/scripts/garden_agent.py
@@ -12244,7 +12244,7 @@ tests/test_repository_intelligence_dashboard.py
   tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
   tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
 tools/staging_home_audit.py
-  tools/staging_home_audit.py:1136:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]" in function "writerow"
+  tools/staging_home_audit.py:1138:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]" in function "writerow"
     "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]"
       Type parameter "_KT@Mapping" is invariant, but "str" is not the same as "Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags']" (reportArgumentType)
 tools/task_catalog.py

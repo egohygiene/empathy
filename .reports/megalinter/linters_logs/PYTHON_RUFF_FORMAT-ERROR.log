@@ -553,22 +553,30 @@ unformatted: File would be reformatted
     |
 
 unformatted: File would be reformatted
-   --> mantle/tests/validate_fastfetch.py:19:19
+   --> mantle/tests/validate_fastfetch.py:21:19
     |
-18  | TEXT_PATH = MANTLE_ROOT / "assets/presentation/mantle-banner.txt"
+20  | TEXT_PATH = MANTLE_ROOT / "assets/presentation/mantle-banner.txt"
     - EXPECTED_SCHEMA = (
     -     "https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json"
     - )
-19  + EXPECTED_SCHEMA = "https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json"
-20  | EXPECTED_COMMANDS = (
+21  + EXPECTED_SCHEMA = "https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json"
+22  | EXPECTED_COMMANDS = (
 --------------------------------------------------------------------------------
-137 |             command_texts.append(str(module.get("text", "")))
+143 |             command_texts.append(str(module.get("text", "")))
     -         if module_type == "custom" and str(module.get("format", "")).startswith(
     -             ("╭─", "├─", "╰─")
     -         ):
-138 +         if module_type == "custom" and str(module.get("format", "")).startswith(("╭─", "├─", "╰─")):
-139 |             section_keys.append(module.get("key"))
+144 +         if module_type == "custom" and str(module.get("format", "")).startswith(("╭─", "├─", "╰─")):
+145 |             section_keys.append(module.get("key"))
     |
 
-4 files would be reformatted, 52 files already formatted
+unformatted: File would be reformatted
+  --> tests/test_dependency_review_workflow.py:32:1
+   |
+31 |
+32 +
+33 | if __name__ == "__main__":
+   |
+
+5 files would be reformatted, 51 files already formatted
 

@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:b01852d1-581a-45cf-a007-9cb161b81283",
+  "serialNumber": "urn:uuid:13e3d9f3-0bec-42f0-a5e5-36de89b4c901",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-16T15:23:16Z",
+    "timestamp": "2026-08-16T19:00:51Z",
     "tools": {
       "components": [
         {
@@ -276098,7 +276098,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "c3e8b61295fd1c9040a1b18a7220fdfbadebaca4bb0a7c50e4f2a788941bf511"
+          "content": "3bfb5d9bda3303d979e600bb410b7f1e522171129cc894938b96da4633e20a65"
         }
       ]
     },
@@ -276164,7 +276164,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "8f217f1fc5d859efd2a17ab02b8a94bf59ff907faa376d6e53b9ec168f726849"
+          "content": "9cf70a1dfe5e69fa034bfd32dba4b79ad5755fdb28b19c717eeda346a81f5e09"
         }
       ]
     },
@@ -276186,7 +276186,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "05bcf4c976812b052216f2d281cc9deb5ba6e1e1e4be1c9e9622b4a40ec15365"
+          "content": "84caeb371407de89cfd292d600d1c5647caedb6eb1ad69f9ec38bd3ba28db338"
         }
       ]
     },

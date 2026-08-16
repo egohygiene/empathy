@@ -264,7 +264,7 @@ egolint/scripts/validate_megalinter_policy.py:359:0: R0914: Too many local varia
 egolint/scripts/validate_megalinter_policy.py:359:0: R0912: Too many branches (23/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:452:0: R0914: Too many local variables (31/20) (too-many-locals)
 ************* Module validate_fastfetch
-mantle/tests/validate_fastfetch.py:108:0: R0912: Too many branches (16/12) (too-many-branches)
+mantle/tests/validate_fastfetch.py:114:0: R0912: Too many branches (16/12) (too-many-branches)
 ************* Module scripts.garden_agent
 mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
@@ -272,17 +272,17 @@ mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (to
 ************* Module test_repository_intelligence_dashboard
 tests/test_repository_intelligence_dashboard.py:80:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module staging_home_audit
-tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1177/1000) (too-many-lines)
-tools/staging_home_audit.py:47:0: R0902: Too many instance attributes (17/12) (too-many-instance-attributes)
-tools/staging_home_audit.py:203:0: R0911: Too many return statements (15/6) (too-many-return-statements)
-tools/staging_home_audit.py:203:0: R0912: Too many branches (14/12) (too-many-branches)
-tools/staging_home_audit.py:255:0: R0911: Too many return statements (7/6) (too-many-return-statements)
-tools/staging_home_audit.py:255:22: W0613: Unused argument 'path' (unused-argument)
-tools/staging_home_audit.py:389:0: R0912: Too many branches (16/12) (too-many-branches)
-tools/staging_home_audit.py:389:0: R0915: Too many statements (69/60) (too-many-statements)
-tools/staging_home_audit.py:610:0: R0911: Too many return statements (38/6) (too-many-return-statements)
-tools/staging_home_audit.py:610:0: R0912: Too many branches (38/12) (too-many-branches)
-tools/staging_home_audit.py:1049:0: R0911: Too many return statements (8/6) (too-many-return-statements)
+tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1179/1000) (too-many-lines)
+tools/staging_home_audit.py:49:0: R0902: Too many instance attributes (17/12) (too-many-instance-attributes)
+tools/staging_home_audit.py:205:0: R0911: Too many return statements (15/6) (too-many-return-statements)
+tools/staging_home_audit.py:205:0: R0912: Too many branches (14/12) (too-many-branches)
+tools/staging_home_audit.py:257:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+tools/staging_home_audit.py:257:22: W0613: Unused argument 'path' (unused-argument)
+tools/staging_home_audit.py:391:0: R0912: Too many branches (16/12) (too-many-branches)
+tools/staging_home_audit.py:391:0: R0915: Too many statements (69/60) (too-many-statements)
+tools/staging_home_audit.py:612:0: R0911: Too many return statements (38/6) (too-many-return-statements)
+tools/staging_home_audit.py:612:0: R0912: Too many branches (38/12) (too-many-branches)
+tools/staging_home_audit.py:1051:0: R0911: Too many return statements (8/6) (too-many-return-statements)
 
 -----------------------------------
 Your code has been rated at 9.57/10

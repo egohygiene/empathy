@@ -238,6 +238,19 @@ task-tags = [
   "T201",
 ]
 
+"tools/staging_home_audit.py" = [
+  # This deterministic repository-maintenance CLI classifies a large imported
+  # corpus through explicit decision tables. Git receives only fixed operations
+  # and repository-controlled object identifiers, without a shell.
+  "ARG001",
+  "PLR0911",
+  "PLR0912",
+  "PLR0915",
+  "S603",
+  "S607",
+  "T201",
+]
+
 [lint.flake8-bandit]
 
 hardcoded-tmp-directory = [
