@@ -1,6 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2016 # Single-quoted fragments generate literal stub scripts.
 #
 # Stub helpers for bin/ CLI tests.
 #

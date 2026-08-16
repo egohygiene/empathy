@@ -1,6 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# shellcheck disable=SC2154 # Bats supplies output, lines, and status at runtime.
 #
 # Assertion helpers for bin/ CLI tests.
 #
