@@ -33,6 +33,17 @@ Linter raw log:
 
 ┌─generic-api-key──○
 │
+│ 950 │             "secret": "REDACTED",
+│     │                        ^^^^^^^^
+│
+│ attributes:
+│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
+│   resource ...... fs.content
+└○
+
+
+┌─generic-api-key──○
+│
 │ 564 │     {"rowKey": "REDACTED", "countryCode":"IN","regionCode":"IN-KA","cityName":"Bangalore"},
 │     │                 ^^^^^^^^
 │
@@ -53,17 +64,6 @@ Linter raw log:
 └○
 
 
-┌─generic-api-key──○
-│
-│ 950 │             "secret": "REDACTED",
-│     │                        ^^^^^^^^
-│
-│ attributes:
-│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
-│   resource ...... fs.content
-└○
-
-
-1:53AM INF scanned ~25392327 bytes (25.39 MB) in 2.03s
-1:53AM WRN leaks found: 5
+2:02AM INF scanned ~31404871 bytes (31.40 MB) in 1.43s
+2:02AM WRN leaks found: 5
 

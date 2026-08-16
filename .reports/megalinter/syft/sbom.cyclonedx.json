@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:e715131b-a606-4903-bc3b-fcca31b1d148",
+  "serialNumber": "urn:uuid:619ebbff-2cff-4693-b609-1f83fec00b08",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-16T01:53:06Z",
+    "timestamp": "2026-08-16T02:02:06Z",
     "tools": {
       "components": [
         {
@@ -82326,6 +82326,35 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/actions/checkout@v4?package-id=802f2718fe56e529",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "v4",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v4:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@v4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:github/actions/checkout@v4.2.2?package-id=32bec9a0db4be1a8",
       "type": "library",
       "supplier": {
@@ -82728,6 +82757,93 @@
         {
           "name": "syft:location:0:path",
           "value": "/.staging/.github/workflows/pinterest-rss-sync.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@v6?package-id=111c91e71204b61d",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "v6",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v6:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@v6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@v6?package-id=2742b3b308abeae3",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "v6",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v6:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@v6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@v6?package-id=26c83622e9513709",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/checkout",
+      "version": "v6",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v6:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@v6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml"
         }
       ]
     },
@@ -83548,6 +83664,55 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/actions/download-artifact@v4?package-id=f072b2abb50a8e78",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/download-artifact",
+      "version": "v4",
+      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:v4:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/download-artifact@v4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:github/actions/download-artifact@v8.0.1?package-id=cb1d2dfefcf67d6d",
       "type": "library",
       "supplier": {
@@ -83936,6 +84101,55 @@
         {
           "name": "syft:location:0:path",
           "value": "/.staging/.github/workflows/skill-check-comment.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/first-interaction@v1?package-id=a1b2da10272b196f",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/first-interaction",
+      "version": "v1",
+      "cpe": "cpe:2.3:a:actions\\/first-interaction:actions\\/first-interaction:v1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/first-interaction@v1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/first-interaction:actions\\/first_interaction:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/first_interaction:actions\\/first-interaction:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/first_interaction:actions\\/first_interaction:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/first:actions\\/first-interaction:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/first:actions\\/first_interaction:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/welcome.yaml"
         }
       ]
     },
@@ -84524,6 +84738,35 @@
         {
           "name": "syft:location:0:path",
           "value": "/.staging/.github/workflows/resource-staleness-report.lock.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/labeler@v6?package-id=58c5fad4d9d5ad96",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/labeler",
+      "version": "v6",
+      "cpe": "cpe:2.3:a:actions\\/labeler:actions\\/labeler:v6:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/labeler@v6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml"
         }
       ]
     },
@@ -85900,6 +86143,55 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/actions/upload-artifact@v4?package-id=3f6913603969f814",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/upload-artifact",
+      "version": "v4",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:v4:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@v4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:v4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:github/actions/upload-artifact@v4.6.2?package-id=83fdb15ba76b0be0",
       "type": "library",
       "supplier": {
@@ -85945,6 +86237,55 @@
         {
           "name": "syft:location:0:path",
           "value": "/mantle/.github/workflows/test.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/upload-artifact@v6?package-id=12e787a41c4b340a",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "actions/upload-artifact",
+      "version": "v6",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:v6:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@v6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:v6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:v6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:v6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:v6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:v6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml"
         }
       ]
     },
@@ -106622,6 +106963,71 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/codelytv/pr-size-labeler@v1?package-id=edf57c5027640d6e",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "codelytv/pr-size-labeler",
+      "version": "v1",
+      "cpe": "cpe:2.3:a:codelytv\\/pr-size-labeler:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/codelytv/pr-size-labeler@v1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr-size-labeler:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr_size_labeler:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr_size_labeler:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr-size:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr-size:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr_size:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr_size:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:codelytv\\/pr:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:pypi/codespell@2.4.3?package-id=7fcc3d5ef16b5860",
       "type": "library",
       "supplier": {
@@ -111861,6 +112267,87 @@
         {
           "name": "syft:location:0:path",
           "value": "/egolint/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/crazy-max/ghaction-github-labeler@v5?package-id=c4c4638a7f30e555",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "crazy-max/ghaction-github-labeler",
+      "version": "v5",
+      "cpe": "cpe:2.3:a:crazy-max\\/ghaction-github-labeler:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*",
+      "purl": "pkg:github/crazy-max/ghaction-github-labeler@v5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy-max\\/ghaction-github-labeler:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy_max\\/ghaction_github_labeler:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy_max\\/ghaction_github_labeler:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy-max\\/ghaction-github:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy-max\\/ghaction-github:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy_max\\/ghaction_github:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy_max\\/ghaction_github:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy-max\\/ghaction:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy-max\\/ghaction:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy_max\\/ghaction:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy_max\\/ghaction:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:crazy:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml"
         }
       ]
     },
@@ -121226,6 +121713,55 @@
         {
           "name": "syft:location:0:path",
           "value": "/egolint/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/dorny/paths-filter@v3?package-id=dd5da60baf6e00c2",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "dorny/paths-filter",
+      "version": "v3",
+      "cpe": "cpe:2.3:a:dorny\\/paths-filter:dorny\\/paths-filter:v3:*:*:*:*:*:*:*",
+      "purl": "pkg:github/dorny/paths-filter@v3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:dorny\\/paths-filter:dorny\\/paths_filter:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:dorny\\/paths_filter:dorny\\/paths-filter:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:dorny\\/paths_filter:dorny\\/paths_filter:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:dorny\\/paths:dorny\\/paths-filter:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:dorny\\/paths:dorny\\/paths_filter:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml"
         }
       ]
     },
@@ -273081,6 +273617,71 @@
       ]
     },
     {
+      "bom-ref": "pkg:github/xu-cheng/latex-action@v3?package-id=07fd6266ff51372b",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "xu-cheng/latex-action",
+      "version": "v3",
+      "cpe": "cpe:2.3:a:xu-cheng\\/latex-action:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*",
+      "purl": "pkg:github/xu-cheng/latex-action@v3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu-cheng\\/latex-action:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu_cheng\\/latex_action:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu_cheng\\/latex_action:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu-cheng\\/latex:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu-cheng\\/latex:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu_cheng\\/latex:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu_cheng\\/latex:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xu:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/xz-decompress@0.2.3?package-id=3fb23122b2a48b14",
       "type": "library",
       "supplier": {
@@ -275169,6 +275770,72 @@
         {
           "alg": "SHA-256",
           "content": "372a823da960f45f70db23e30a2804ca1c3d3caa40279df7629ba8876c3d87f6"
+        }
+      ]
+    },
+    {
+      "bom-ref": "65c5b19851c406c5",
+      "type": "file",
+      "name": "/github/workspace/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d24e97f1f6812d32462304f005a510eadc77ce637284aa3ef0740d8ba0d031f2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9d460d1d5fa2a38c",
+      "type": "file",
+      "name": "/github/workspace/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d188dbac1cf0d8f0309f738a0a06603e649e839790ceb9f5aff90b3a150d6612"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3decd7ee28468281",
+      "type": "file",
+      "name": "/github/workspace/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "952444a46bd8ccbccdfaa785c99e509fee1295383bccf930a0b846fb138d4443"
+        }
+      ]
+    },
+    {
+      "bom-ref": "78e651c554e825e9",
+      "type": "file",
+      "name": "/github/workspace/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e5579d47f7a06f0a7bdfa6eb4b881acf5675f0d6ea9007071c3ea25cb808ecfc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c4c50812f9ce1e6f",
+      "type": "file",
+      "name": "/github/workspace/beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/welcome.yaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5a97b81025af35b58fb55abd513c04a7d0aed0b52836d156f8b4ec1e21a08682"
+        }
+      ]
+    },
+    {
+      "bom-ref": "841e6974d609d182",
+      "type": "file",
+      "name": "/github/workspace/beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0e0e4c5c2c018542e3995a3bcf5e479ab538e184d55250c9e704eeaf86327caf"
         }
       ]
     },

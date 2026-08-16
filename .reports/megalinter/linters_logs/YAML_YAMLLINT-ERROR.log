@@ -155,6 +155,52 @@ Linter raw log:
 .github/workflow-profiles/security-optional/ossf-scorecard-older.yml
   111:40    error    no new line character at the end of file  (new-line-at-end-of-file)
 
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/dependabot.yml
+  1:1       warning  missing document start "---"  (document-start)
+  3:1       error    wrong indentation: expected at least 1  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/labels.yaml
+  2:1       warning  missing document start "---"  (document-start)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  6:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  22:5      error    wrong indentation: expected 6 but found 4  (indentation)
+  46:5      error    wrong indentation: expected 6 but found 4  (indentation)
+  51:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml
+  1:1       warning  missing document start "---"  (document-start)
+  13:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  4:1       error    wrong indentation: expected at least 1  (indentation)
+  11:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  6:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  8:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  15:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/welcome.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  6:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  9:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  16:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.yamllint.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  2:1       error    wrong indentation: expected at least 1  (indentation)
+
+beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml
+  1:1       warning  missing document start "---"  (document-start)
+  5:16      error    too many spaces inside brackets  (brackets)
+  5:23      error    too many spaces inside brackets  (brackets)
+  7:16      error    too many spaces inside brackets  (brackets)
+  7:23      error    too many spaces inside brackets  (brackets)
+
 egolint/.config/lint/prose/styles/proselint/Airlinese.yml
   1:1       warning  missing document start "---"  (document-start)
 

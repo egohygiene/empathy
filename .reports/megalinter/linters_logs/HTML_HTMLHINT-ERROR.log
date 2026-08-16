@@ -1,0 +1,757 @@
+Results of htmlhint linter (version 1.9.2)
+See documentation on https://megalinter.io/10.0.0/descriptors/html_htmlhint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/examples/trackchanges_source.html
+      L1 |<?xml version="1.0"?>
+          ^ Special characters must be escaped : [ < ]. (spec-char-escape)
+      L1 |<?xml version="1.0"?>
+                              ^ Special characters must be escaped : [ > ]. (spec-char-escape)
+      L1 |<?xml version="1.0"?>
+          ^ Doctype must be declared before any non-comment content. (doctype-first)
+      L2 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/help.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L41 |<br /><span class="index_main"><a href="help.html">HELP MAIN</a></span>
+                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L46 |<span class="index_main"><a href="help_stylefile.html">STYLE FILE</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |  <span class="index_sub"><a href="help_stylefile.html#commands">Commands</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L50 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L51 |  <span class="index_sub"><a href="help_stylefile.html#setup">Setup</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L54 |  <span class="index_sub"><a href="help_stylefile.html#options">Options</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L56 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L57 |  <span class="index_sub"><a href="help_stylefile.html#advanced_usage">Advanced Usage</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |  <span class="index_sub"><a href="help_stylefile.html#limitations">Limitations</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L62 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L63 |  <span class="index_sub"><a href="help_stylefile.html#troubleshooting">Troubleshooting</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L67 |<span class="index_main"><a href="help_gui.html">GUI</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L69 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L70 |        <span class="index_sub"><a href="help_gui.html#warnings">Warnings</a></span>
+                        ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L74 |  <span class="index_sub"><a href="help_gui.html#main_window">Main Window</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L77 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L78 |  <span class="index_sub"><a href="help_gui.html#editor">Editor</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L82 |  <span class="index_sub"><a href="help_gui.html#editing_controls">Editing Controls</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L85 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L86 |  <span class="index_sub"><a href="help_gui.html#more_editing_controls">Additional Controls</a></span...
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L89 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L90 |  <span class="index_sub"><a href="help_gui.html#main_menu">Main Menu</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L100 |<div id="body_frame">
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L101 |  <div id="body_header">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L103 |  <div id="body_main">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L108 |<div id="simple_title" align=center>TrackChanges Help</div>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L108 |<div id="simple_title" align=center>TrackChanges Help</div>
+                                  ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L109 |<div id="simple_subtitle" align=center>Overview</div>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L109 |<div id="simple_subtitle" align=center>Overview</div>
+                                     ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L132 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L151 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/help_gui.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L41 |<br /><span class="index_main"><a href="help.html">HELP MAIN</a></span>
+                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L46 |<span class="index_main"><a href="help_stylefile.html">STYLE FILE</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |  <span class="index_sub"><a href="help_stylefile.html#commands">Commands</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L50 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L51 |  <span class="index_sub"><a href="help_stylefile.html#setup">Setup</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L54 |  <span class="index_sub"><a href="help_stylefile.html#options">Options</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L56 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L57 |  <span class="index_sub"><a href="help_stylefile.html#advanced_usage">Advanced Usage</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |  <span class="index_sub"><a href="help_stylefile.html#limitations">Limitations</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L62 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L63 |  <span class="index_sub"><a href="help_stylefile.html#troubleshooting">Troubleshooting</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L67 |<span class="index_main"><a href="help_gui.html">GUI</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L69 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L70 |        <span class="index_sub"><a href="help_gui.html#warnings">Warnings</a></span>
+                        ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L74 |  <span class="index_sub"><a href="help_gui.html#main_window">Main Window</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L77 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L78 |  <span class="index_sub"><a href="help_gui.html#editor">Editor</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L82 |  <span class="index_sub"><a href="help_gui.html#editing_controls">Editing Controls</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L85 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L86 |  <span class="index_sub"><a href="help_gui.html#more_editing_controls">Additional Controls</a></span...
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L89 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L90 |  <span class="index_sub"><a href="help_gui.html#main_menu">Main Menu</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L100 |<div id="body_frame">
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L101 |  <div id="body_header">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L103 |  <div id="body_main">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L108 |<div id="simple_title" align=center>TrackChanges Help</div>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L108 |<div id="simple_title" align=center>TrackChanges Help</div>
+                                  ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L109 |<div id="simple_subtitle" align=center>GUI</div>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L109 |<div id="simple_subtitle" align=center>GUI</div>
+                                     ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L121 |...es.  This is particularly true for <span class="tex_command">\remove</span> commands.  This GUI does ...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L169 |      <br />This is valid for the <span class="tex_command">\add</span>, <span class="tex_command">\r...
+                                                   ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L169 |...n class="tex_command">\add</span>, <span class="tex_command">\remove</span> and <span class="tex_comm...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L169 |...s="tex_command">\remove</span> and <span class="tex_command">\change</span> commands.
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L174 |      <br />This is valid for the <span class="tex_command">\add</span>, <span class="tex_command">\r...
+                                                   ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L174 |...n class="tex_command">\add</span>, <span class="tex_command">\remove</span> and <span class="tex_comm...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L174 |...s="tex_command">\remove</span> and <span class="tex_command">\change</span> commands.
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L179 |      <br />This is valid for the <span class="tex_command">\note</span> and <span class="tex_command...
+                                                   ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L179 |...ass="tex_command">\note</span> and <span class="tex_command">\annote</span> commands.
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L226 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L245 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/help_stylefile.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L41 |<br /><span class="index_main"><a href="help.html">HELP MAIN</a></span>
+                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L46 |<span class="index_main"><a href="help_stylefile.html">STYLE FILE</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |  <span class="index_sub"><a href="help_stylefile.html#commands">Commands</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L50 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L51 |  <span class="index_sub"><a href="help_stylefile.html#setup">Setup</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L54 |  <span class="index_sub"><a href="help_stylefile.html#options">Options</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L56 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L57 |  <span class="index_sub"><a href="help_stylefile.html#advanced_usage">Advanced Usage</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |  <span class="index_sub"><a href="help_stylefile.html#limitations">Limitations</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L62 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L63 |  <span class="index_sub"><a href="help_stylefile.html#troubleshooting">Troubleshooting</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L67 |<span class="index_main"><a href="help_gui.html">GUI</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L69 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L70 |        <span class="index_sub"><a href="help_gui.html#warnings">Warnings</a></span>
+                        ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L74 |  <span class="index_sub"><a href="help_gui.html#main_window">Main Window</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L77 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L78 |  <span class="index_sub"><a href="help_gui.html#editor">Editor</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L82 |  <span class="index_sub"><a href="help_gui.html#editing_controls">Editing Controls</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L85 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L86 |  <span class="index_sub"><a href="help_gui.html#more_editing_controls">Additional Controls</a></span...
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L89 |<div class="index_indent vspace">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L90 |  <span class="index_sub"><a href="help_gui.html#main_menu">Main Menu</a></span>
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L100 |<div id="body_frame">
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L101 |  <div id="body_header">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L103 |  <div id="body_main">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L106 |<div id="simple_title" align=center>TrackChanges Help</div>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L106 |<div id="simple_title" align=center>TrackChanges Help</div>
+                                  ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L107 |<div id="simple_subtitle" align=center>Style File</div>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L107 |<div id="simple_subtitle" align=center>Style File</div>
+                                     ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L122 |        <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</span><span class="cod...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L122 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{The no...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L123 |  <br /><span class="tex_command">\annote</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L123 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L124 |  <br /><span class="tex_command">&nbsp;&nbsp;&nbsp;\add</span><span class="code">[</span><span class...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L124 |...d</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L125 |  <br /><span class="tex_command">\remove</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L125 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L126 |  <br /><span class="tex_command">\change</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L126 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L128 |...l cases <span class="code">[</span><span class="code_option">editor</span><span class="code">]</span>...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L137 |  <br /><span class="tex_command">\usepackage</span><span class="code">[</span><span class="code_opti...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L137 |...e</span><span class="code">[</span><span class="code_option">options</span><span class="code">]{track...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L145 |  <br /><span class="tex_command">\addeditor</span><span class="code">{</span><span class="code_optio...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L145 |...r</span><span class="code">{</span><span class="code_option">editor one</span><span class="code">}</s...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L146 |  <br /><span class="tex_command">\addeditor</span><span class="code">{</span><span class="code_optio...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L146 |...r</span><span class="code">{</span><span class="code_option">editor two</span><span class="code">}</s...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L211 |...rgin options to work properly, the <span class="tex_command">\usepackage</span><span class="code">{tr...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L236 |     <span class="tex_command">\tcignore</span><span class="code">{</span><span class="code_option">c...
+                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L236 |...e</span><span class="code">{</span><span class="code_option">command</span><span class="code">}{</spa...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L236 |...</span><span class="code">}{</span><span class="code_option">num args</span><span class="code">}{</sp...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L236 |...</span><span class="code">}{</span><span class="code_option">arg num to pass</span><span class="code"...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L241 |        If <span class="tex_command">\color</span> and <span class="tex_command">
+                            ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L241 |...ss="tex_command">\color</span> and <span class="tex_command">
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L247 |     <span class="tex_command">\tcignore</span><span class="code">{</span><span class="tex_command">\...
+                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L247 |...e</span><span class="code">{</span><span class="tex_command">\textcolor</span><span class="code">}{2}...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L248 |     <br /><span class="tex_command">\tcignore</span><span class="code">{</span><span class="tex_comm...
+                            ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L248 |...e</span><span class="code">{</span><span class="tex_command">\color</span><span class="code">}{1}{0}<...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L257 |     <span class="tex_command">\tcregister</span><span class="code">{</span><span class="code_option"...
+                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L257 |...r</span><span class="code">{</span><span class="code_option">command</span><span class="code">}{</spa...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L257 |...</span><span class="code">}{</span><span class="code_option">num args</span><span class="code">}</spa...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L260 |        default.  If <span class="tex_command">\bf</span> and 
+                                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L261 |        <span class="tex_command">\emph</span> were not already registered then
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L266 |     <span class="tex_command">\tcregister</span><span class="code">{</span><span class="tex_command"...
+                      ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L266 |...r</span><span class="code">{</span><span class="tex_command">\bf</span><span class="code">}{0}</span>
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L267 |     <br /><span class="tex_command">\tcregister</span><span class="code">{</span><span class="tex_co...
+                            ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L267 |...r</span><span class="code">{</span><span class="tex_command">\emph</span><span class="code">}{1}</spa...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L288 |... the edit commands.  In particular <span class="tex_command">\color</span>, 
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L289 |      <span class="tex_command">\textcolor</span> and 
+                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L293 | <li>
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L294 |   The <span class="code">ignoremode</span> option can be used.
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L298 |          the <span class="tex_command">\tcignore</span> command.
+                               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L299 |   See the <a href="#advanced_usage">Advanced Usage</a> section
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L300 |   for more details.
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L301 | </li>
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L302 | <li>
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L303 |   Put <span class="tex_command">\protect</span> in front of
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L303 |   Put <span class="tex_command">\protect</span> in front of
+                        ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L304 |   the problematic command. This will not always work, and 
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L305 |   may cause strange behavior.
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L306 | </li>
+            ^ Please use space for indentation. (space-tab-mixed-disabled)
+      L313 |...  font switching commands (such as <span class="tex_command">\emph</span>, 
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L314 |      <span class="tex_command">\textbf</span>, etc.)
+                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L316 |      using <span class="tex_command">\tcregister</span> to register the 
+                             ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L352 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L371 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L100 |<div id="body_frame">
+            ^ Tag must be paired, missing: [ </div> ], start tag match failed [ <div id="body_frame"> ] on line 100. (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/index.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</span><span class="code_opti...
+                   ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L121 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{The no...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L122 |  <br /><span class="tex_command">\annote</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L122 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L123 |  <br /><span class="tex_command">&nbsp;&nbsp;&nbsp;\add</span><span class="code">[</span><span class...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L123 |...d</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L124 |  <br /><span class="tex_command">\remove</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L124 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L125 |  <br /><span class="tex_command">\change</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L125 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L127 |...l cases <span class="code">[</span><span class="code_option">editor</span><span class="code">]</span>...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L134 |        <span class="tex_command">\addeditor</span><span class="code">{</span><span class="code_optio...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L134 |...r</span><span class="code">{</span><span class="code_option">editor one</span><span class="code">}</s...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L135 |  <br /><span class="tex_command">\addeditor</span><span class="code">{</span><span class="code_optio...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L135 |...r</span><span class="code">{</span><span class="code_option">editor two</span><span class="code">}</s...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L167 |...to LaTeX! This is the basic idea of the <SPAN class="code">TrackChanges</span> LaTeX package. But thi...
+                                                       ^ The html element name of [ SPAN ] must be in lowercase. (tagname-lowercase)
+      L180 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L205 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_contact.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Contact</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Contact</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Questions, comments and bug reports.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Questions, comments and bug reports.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L93 |  <div id="body_footer">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L118 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_credits.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Credits</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Credits</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>The people who made it happen.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>The people who made it happen.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L107 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L132 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_download.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Downloads</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Downloads</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Where to get it.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Where to get it.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L103 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L128 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_preview.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Preview</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Preview</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Screeshots, examples and other goodness.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Screeshots, examples and other goodness.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L105 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L130 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+Scanned 11 files, found 354 errors in 9 files (84 ms)
+

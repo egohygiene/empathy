@@ -4,11 +4,13 @@ See documentation on https://megalinter.io/10.0.0/descriptors/python_bandit/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+[_py_warnings]	WARNING	"\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:269
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-16 01:52:42.925236+00:00
+Run started:2026-08-16 02:01:26.929920+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -195,7 +197,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 6740
+	Total lines of code: 7954
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
@@ -210,5 +212,7 @@ Run metrics:
 		Low: 0
 		Medium: 0
 		High: 11
-Files skipped (0):
+Files skipped (2):
+	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
+	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)
 

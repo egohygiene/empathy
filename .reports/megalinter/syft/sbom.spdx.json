@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-6011a7e7-286a-4cd1-8d94-477c457b26dd",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-ee4117ab-7c65-4033-81cf-8db0e2f9e5c8",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.50.0"
   ],
-  "created": "2026-08-16T01:53:06Z"
+  "created": "2026-08-16T02:02:06Z"
  },
  "packages": [
   {
@@ -78894,6 +78894,31 @@
   },
   {
    "name": "actions/checkout",
+   "SPDXID": "SPDXRef-Package-github-action-actions-checkout-802f2718fe56e529",
+   "versionInfo": "v4",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/checkout@v4"
+    }
+   ]
+  },
+  {
+   "name": "actions/checkout",
    "SPDXID": "SPDXRef-Package-github-action-actions-checkout-32bec9a0db4be1a8",
    "versionInfo": "v4.2.2",
    "supplier": "Organization: GitHub",
@@ -79239,6 +79264,81 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:github/actions/checkout@v5"
+    }
+   ]
+  },
+  {
+   "name": "actions/checkout",
+   "SPDXID": "SPDXRef-Package-github-action-actions-checkout-111c91e71204b61d",
+   "versionInfo": "v6",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/checkout@v6"
+    }
+   ]
+  },
+  {
+   "name": "actions/checkout",
+   "SPDXID": "SPDXRef-Package-github-action-actions-checkout-2742b3b308abeae3",
+   "versionInfo": "v6",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/checkout@v6"
+    }
+   ]
+  },
+  {
+   "name": "actions/checkout",
+   "SPDXID": "SPDXRef-Package-github-action-actions-checkout-26c83622e9513709",
+   "versionInfo": "v6",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/checkout@v6"
     }
    ]
   },
@@ -80039,6 +80139,56 @@
   },
   {
    "name": "actions/download-artifact",
+   "SPDXID": "SPDXRef-Package-github-action-actions-download-artifact-f072b2abb50a8e78",
+   "versionInfo": "v4",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/download-artifact@v4"
+    }
+   ]
+  },
+  {
+   "name": "actions/download-artifact",
    "SPDXID": "SPDXRef-Package-github-action-actions-download-artifact-cb1d2dfefcf67d6d",
    "versionInfo": "v8.0.1",
    "supplier": "Organization: GitHub",
@@ -80434,6 +80584,56 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:github/actions/download-artifact@v8.0.1"
+    }
+   ]
+  },
+  {
+   "name": "actions/first-interaction",
+   "SPDXID": "SPDXRef-Package-github-action-actions-first-interaction-a1b2da10272b196f",
+   "versionInfo": "v1",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/welcome.yaml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/first-interaction:actions\\/first-interaction:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/first-interaction:actions\\/first_interaction:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/first_interaction:actions\\/first-interaction:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/first_interaction:actions\\/first_interaction:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/first:actions\\/first-interaction:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/first:actions\\/first_interaction:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/first-interaction@v1"
     }
    ]
   },
@@ -81034,6 +81234,31 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:github/actions/github-script@v9.0.0"
+    }
+   ]
+  },
+  {
+   "name": "actions/labeler",
+   "SPDXID": "SPDXRef-Package-github-action-actions-labeler-58c5fad4d9d5ad96",
+   "versionInfo": "v6",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/labeler:actions\\/labeler:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/labeler@v6"
     }
    ]
   },
@@ -82439,6 +82664,56 @@
   },
   {
    "name": "actions/upload-artifact",
+   "SPDXID": "SPDXRef-Package-github-action-actions-upload-artifact-3f6913603969f814",
+   "versionInfo": "v4",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:v4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/upload-artifact@v4"
+    }
+   ]
+  },
+  {
+   "name": "actions/upload-artifact",
    "SPDXID": "SPDXRef-Package-github-action-actions-upload-artifact-83fdb15ba76b0be0",
    "versionInfo": "v4.6.2",
    "supplier": "Organization: GitHub",
@@ -82484,6 +82759,56 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:github/actions/upload-artifact@v4.6.2"
+    }
+   ]
+  },
+  {
+   "name": "actions/upload-artifact",
+   "SPDXID": "SPDXRef-Package-github-action-actions-upload-artifact-12e787a41c4b340a",
+   "versionInfo": "v6",
+   "supplier": "Organization: GitHub",
+   "originator": "Organization: GitHub",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:v6:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/actions/upload-artifact@v6"
     }
    ]
   },
@@ -102375,6 +102700,76 @@
    ]
   },
   {
+   "name": "codelytv/pr-size-labeler",
+   "SPDXID": "SPDXRef-Package-github-action-codelytv-pr-size-labeler-edf57c5027640d6e",
+   "versionInfo": "v1",
+   "supplier": "Organization: codelytv",
+   "originator": "Organization: codelytv",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr-size-labeler:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr-size-labeler:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr_size_labeler:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr_size_labeler:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr-size:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr-size:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr_size:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr_size:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr:codelytv\\/pr-size-labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:codelytv\\/pr:codelytv\\/pr_size_labeler:v1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/codelytv/pr-size-labeler@v1"
+    }
+   ]
+  },
+  {
    "name": "codespell",
    "SPDXID": "SPDXRef-Package-python-codespell-7fcc3d5ef16b5860",
    "versionInfo": "2.4.3",
@@ -107223,6 +107618,96 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:npm/cpu-features@0.0.10"
+    }
+   ]
+  },
+  {
+   "name": "crazy-max/ghaction-github-labeler",
+   "SPDXID": "SPDXRef-Package-github-action-crazy-max-ghaction-github-labeler-c4c4638a7f30e555",
+   "versionInfo": "v5",
+   "supplier": "Organization: crazy-max",
+   "originator": "Organization: crazy-max",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy-max\\/ghaction-github-labeler:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy-max\\/ghaction-github-labeler:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy_max\\/ghaction_github_labeler:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy_max\\/ghaction_github_labeler:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy-max\\/ghaction-github:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy-max\\/ghaction-github:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy_max\\/ghaction_github:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy_max\\/ghaction_github:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy-max\\/ghaction:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy-max\\/ghaction:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy_max\\/ghaction:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy_max\\/ghaction:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy:crazy-max\\/ghaction-github-labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:crazy:crazy_max\\/ghaction_github_labeler:v5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/crazy-max/ghaction-github-labeler@v5"
     }
    ]
   },
@@ -116083,6 +116568,56 @@
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
      "referenceLocator": "pkg:npm/domutils@3.2.2"
+    }
+   ]
+  },
+  {
+   "name": "dorny/paths-filter",
+   "SPDXID": "SPDXRef-Package-github-action-dorny-paths-filter-dd5da60baf6e00c2",
+   "versionInfo": "v3",
+   "supplier": "Organization: dorny",
+   "originator": "Organization: dorny",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dorny\\/paths-filter:dorny\\/paths-filter:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dorny\\/paths-filter:dorny\\/paths_filter:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dorny\\/paths_filter:dorny\\/paths-filter:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dorny\\/paths_filter:dorny\\/paths_filter:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dorny\\/paths:dorny\\/paths-filter:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dorny\\/paths:dorny\\/paths_filter:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/dorny/paths-filter@v3"
     }
    ]
   },
@@ -263618,6 +264153,76 @@
    ]
   },
   {
+   "name": "xu-cheng/latex-action",
+   "SPDXID": "SPDXRef-Package-github-action-xu-cheng-latex-action-07fd6266ff51372b",
+   "versionInfo": "v3",
+   "supplier": "Organization: xu-cheng",
+   "originator": "Organization: xu-cheng",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu-cheng\\/latex-action:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu-cheng\\/latex-action:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu_cheng\\/latex_action:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu_cheng\\/latex_action:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu-cheng\\/latex:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu-cheng\\/latex:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu_cheng\\/latex:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu_cheng\\/latex:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu:xu-cheng\\/latex-action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:xu:xu_cheng\\/latex_action:v3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/xu-cheng/latex-action@v3"
+    }
+   ]
+  },
+  {
    "name": "xz-decompress",
    "SPDXID": "SPDXRef-Package-npm-xz-decompress-3fb23122b2a48b14",
    "versionInfo": "0.2.3",
@@ -265837,6 +266442,114 @@
     {
      "algorithm": "SHA256",
      "checksumValue": "372a823da960f45f70db23e30a2804ca1c3d3caa40279df7629ba8876c3d87f6"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": "beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml",
+   "SPDXID": "SPDXRef-File-....github-workflows-integration.yaml-65c5b19851c406c5",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "d24e97f1f6812d32462304f005a510eadc77ce637284aa3ef0740d8ba0d031f2"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": "beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml",
+   "SPDXID": "SPDXRef-File-...Awesome-CV-.github-workflows-main.yml-9d460d1d5fa2a38c",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "d188dbac1cf0d8f0309f738a0a06603e649e839790ceb9f5aff90b3a150d6612"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": "beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml",
+   "SPDXID": "SPDXRef-File-...workflows-pull-request-labeler.yaml-3decd7ee28468281",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "952444a46bd8ccbccdfaa785c99e509fee1295383bccf930a0b846fb138d4443"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": "beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml",
+   "SPDXID": "SPDXRef-File-....github-workflows-sync-labels.yaml-78e651c554e825e9",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "e5579d47f7a06f0a7bdfa6eb4b881acf5675f0d6ea9007071c3ea25cb808ecfc"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": "beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/welcome.yaml",
+   "SPDXID": "SPDXRef-File-....github-workflows-welcome.yaml-c4c50812f9ce1e6f",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "5a97b81025af35b58fb55abd513c04a7d0aed0b52836d156f8b4ec1e21a08682"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "licenseInfoInFiles": [
+    "NOASSERTION"
+   ],
+   "copyrightText": "NOASSERTION"
+  },
+  {
+   "fileName": "beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml",
+   "SPDXID": "SPDXRef-File-...TeXtured-.github-workflows-main.yml-841e6974d609d182",
+   "fileTypes": [
+    "TEXT"
+   ],
+   "checksums": [
+    {
+     "algorithm": "SHA256",
+     "checksumValue": "0e0e4c5c2c018542e3995a3bcf5e479ab538e184d55250c9e704eeaf86327caf"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -358412,6 +359125,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-xu-cheng-latex-action-07fd6266ff51372b",
+   "relatedSpdxElement": "SPDXRef-File-...TeXtured-.github-workflows-main.yml-841e6974d609d182",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-import-fresh-0821cd5b83a1f4a4",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -359432,6 +360151,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-111c91e71204b61d",
+   "relatedSpdxElement": "SPDXRef-File-....github-workflows-integration.yaml-65c5b19851c406c5",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-micromark-util-symbol-11274e5788220f7c",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -359614,6 +360339,12 @@
   {
    "spdxElementId": "SPDXRef-Package-python-pytest-emoji-12dcc247fc8d86fb",
    "relatedSpdxElement": "SPDXRef-File-...containers-services-api-poetry.lock-f8867f28aa133427",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-upload-artifact-12e787a41c4b340a",
+   "relatedSpdxElement": "SPDXRef-File-...Awesome-CV-.github-workflows-main.yml-9d460d1d5fa2a38c",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -361700,6 +362431,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-26c83622e9513709",
+   "relatedSpdxElement": "SPDXRef-File-....github-workflows-sync-labels.yaml-78e651c554e825e9",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--types-node-26ccfab753587d7f",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -361732,6 +362469,12 @@
   {
    "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-274119d5686f1dc4",
    "relatedSpdxElement": "SPDXRef-File-...workflows-pinterest-rss-sync.yml-b9cdd42e4dab0b82",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-2742b3b308abeae3",
+   "relatedSpdxElement": "SPDXRef-File-...Awesome-CV-.github-workflows-main.yml-9d460d1d5fa2a38c",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -364288,6 +365031,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-shelljs-3f528d976a315a5f",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-upload-artifact-3f6913603969f814",
+   "relatedSpdxElement": "SPDXRef-File-...TeXtured-.github-workflows-main.yml-841e6974d609d182",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -367024,6 +367773,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm--nx-nx-darwin-x64-58ad2fd3c1a413e1",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-labeler-58c5fad4d9d5ad96",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-pull-request-labeler.yaml-3decd7ee28468281",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -371408,6 +372163,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-802f2718fe56e529",
+   "relatedSpdxElement": "SPDXRef-File-...TeXtured-.github-workflows-main.yml-841e6974d609d182",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--cspell-dict-terraform-8037753166645ab2",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -374926,6 +375687,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm--docusaurus-module-type-aliases-a1956615f0ec5ce1",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-first-interaction-a1b2da10272b196f",
+   "relatedSpdxElement": "SPDXRef-File-....github-workflows-welcome.yaml-c4c50812f9ce1e6f",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -378746,6 +379513,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-crazy-max-ghaction-github-labeler-c4c4638a7f30e555",
+   "relatedSpdxElement": "SPDXRef-File-....github-workflows-sync-labels.yaml-78e651c554e825e9",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-react-c4dd5c033174d73f",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -381782,6 +382555,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-dorny-paths-filter-dd5da60baf6e00c2",
+   "relatedSpdxElement": "SPDXRef-File-....github-workflows-integration.yaml-65c5b19851c406c5",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--hapi-hoek-dd70736bb82e66b4",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -383294,6 +384073,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-codelytv-pr-size-labeler-edf57c5027640d6e",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-pull-request-labeler.yaml-3decd7ee28468281",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-ini-edf5a7f6a1a7d3a6",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -383560,6 +384345,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-is-alphanumerical-f067499c28100458",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-actions-download-artifact-f072b2abb50a8e78",
+   "relatedSpdxElement": "SPDXRef-File-...TeXtured-.github-workflows-main.yml-841e6974d609d182",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -392119,6 +392910,11 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-802f2718fe56e529",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-32bec9a0db4be1a8",
    "relationshipType": "CONTAINS"
   },
@@ -392185,6 +392981,21 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-274119d5686f1dc4",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-111c91e71204b61d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-2742b3b308abeae3",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-26c83622e9513709",
    "relationshipType": "CONTAINS"
   },
   {
@@ -392289,6 +393100,11 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-download-artifact-f072b2abb50a8e78",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-download-artifact-cb1d2dfefcf67d6d",
    "relationshipType": "CONTAINS"
   },
@@ -392325,6 +393141,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-download-artifact-a8fa52cba8e3100d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-first-interaction-a1b2da10272b196f",
    "relationshipType": "CONTAINS"
   },
   {
@@ -392385,6 +393206,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-github-script-4f71d00c7ac5ec86",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-labeler-58c5fad4d9d5ad96",
    "relationshipType": "CONTAINS"
   },
   {
@@ -392529,7 +393355,17 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-upload-artifact-3f6913603969f814",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-github-action-actions-upload-artifact-83fdb15ba76b0be0",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-actions-upload-artifact-12e787a41c4b340a",
    "relationshipType": "CONTAINS"
   },
   {
@@ -394279,6 +395115,11 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-codelytv-pr-size-labeler-edf57c5027640d6e",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-python-codespell-7fcc3d5ef16b5860",
    "relationshipType": "CONTAINS"
   },
@@ -394770,6 +395611,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-npm-cpu-features-e9598c13d86f5ba9",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-crazy-max-ghaction-github-labeler-c4c4638a7f30e555",
    "relationshipType": "CONTAINS"
   },
   {
@@ -395595,6 +396441,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-npm-domutils-dc24df70aee15fd7",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-dorny-paths-filter-dd5da60baf6e00c2",
    "relationshipType": "CONTAINS"
   },
   {
@@ -407915,6 +408766,11 @@
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
    "relatedSpdxElement": "SPDXRef-Package-npm-xtend-43064352748144ab",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-xu-cheng-latex-action-07fd6266ff51372b",
    "relationshipType": "CONTAINS"
   },
   {
