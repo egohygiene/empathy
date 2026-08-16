@@ -8564,6 +8564,201 @@ S607 Starting a process with a partial executable path
 40 |         capture_output=True,
    |
 
-Found 760 errors.
-[*] 44 fixable with the `--fix` option (4 hidden fixes can be enabled with the `--unsafe-fixes` option).
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests/test_staging_home_audit.py:4:1
+  |
+2 |   # SPDX-License-Identifier: MIT
+3 |
+4 | / from __future__ import annotations
+5 | |
+6 | | import importlib.util
+7 | | from pathlib import Path
+8 | | import sys
+9 | | import unittest
+  | |_______________^
+help: Organize imports
+   |
+10 |
+   -
+11 | REPOSITORY_ROOT = Path(__file__).parents[1]
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tools/staging_home_audit.py:7:1
+   |
+ 5 |   """Generate the deterministic file-level disposition ledger for ``.staging``."""
+ 6 |
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | import argparse
+10 | | import csv
+11 | | from dataclasses import asdict, dataclass
+12 | | import io
+13 | | from pathlib import Path
+14 | | import re
+15 | | import subprocess
+16 | | import sys
+   | |__________^
+help: Organize imports
+   |
+17 |
+   -
+18 | EMPTY_BLOB = "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   |
+
+S603 `subprocess` call: check for execution of untrusted input
+   --> tools/staging_home_audit.py:189:12
+    |
+188 | def run_git(repository_root: Path, *arguments: str) -> bytes:
+189 |     return subprocess.check_output(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^
+190 |         ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
+191 |     )
+    |
+
+S607 Starting a process with a partial executable path
+   --> tools/staging_home_audit.py:190:9
+    |
+188 | def run_git(repository_root: Path, *arguments: str) -> bytes:
+189 |     return subprocess.check_output(
+190 |         ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
+    |         ^^^^^^^^^^^^^^^^^^^
+191 |     )
+    |
+
+PLR0911 Too many return statements (15 > 6)
+   --> tools/staging_home_audit.py:206:5
+    |
+206 | def file_kind(path: str, size: int) -> str:
+    |     ^^^^^^^^^
+207 |     if size == 0:
+208 |         return "empty-placeholder"
+    |
+
+PLR0912 Too many branches (14 > 12)
+   --> tools/staging_home_audit.py:206:5
+    |
+206 | def file_kind(path: str, size: int) -> str:
+    |     ^^^^^^^^^
+207 |     if size == 0:
+208 |         return "empty-placeholder"
+    |
+
+PLR0911 Too many return statements (7 > 6)
+   --> tools/staging_home_audit.py:258:5
+    |
+258 | def classify_workflow(path: str, relative: str) -> Classification:
+    |     ^^^^^^^^^^^^^^^^^
+259 |     name = Path(relative).name
+260 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
+    |
+
+ARG001 Unused function argument: `path`
+   --> tools/staging_home_audit.py:258:23
+    |
+258 | def classify_workflow(path: str, relative: str) -> Classification:
+    |                       ^^^^
+259 |     name = Path(relative).name
+260 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
+    |
+
+PLR0912 Too many branches (16 > 12)
+   --> tools/staging_home_audit.py:380:5
+    |
+380 | def classify_devenvironment(relative: str) -> Classification:
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+381 |     inner = relative.removeprefix("devenvironment/")
+382 |     if inner.startswith("containers/services/api/"):
+    |
+
+PLR0915 Too many statements (68 > 50)
+   --> tools/staging_home_audit.py:380:5
+    |
+380 | def classify_devenvironment(relative: str) -> Classification:
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+381 |     inner = relative.removeprefix("devenvironment/")
+382 |     if inner.startswith("containers/services/api/"):
+    |
+
+PLR0911 Too many return statements (36 > 6)
+   --> tools/staging_home_audit.py:599:5
+    |
+599 | def classify(path: str) -> Classification:
+    |     ^^^^^^^^
+600 |     relative = path.removeprefix(".staging/")
+    |
+
+PLR0912 Too many branches (36 > 12)
+   --> tools/staging_home_audit.py:599:5
+    |
+599 | def classify(path: str) -> Classification:
+    |     ^^^^^^^^
+600 |     relative = path.removeprefix(".staging/")
+    |
+
+PLR0915 Too many statements (55 > 50)
+   --> tools/staging_home_audit.py:599:5
+    |
+599 | def classify(path: str) -> Classification:
+    |     ^^^^^^^^
+600 |     relative = path.removeprefix(".staging/")
+    |
+
+PLR0911 Too many return statements (8 > 6)
+    --> tools/staging_home_audit.py:1004:5
+     |
+1004 | def duplicate_policy(path: str, blob: str, duplicate_of: str) -> tuple[str, str]:
+     |     ^^^^^^^^^^^^^^^^
+1005 |     if not duplicate_of or blob == EMPTY_BLOB:
+1006 |         return "", ""
+     |
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1108:13
+     |
+1106 |     if arguments.check:
+1107 |         if not output.exists():
+1108 |             print(f"Missing generated ledger: {output}", file=sys.stderr)
+     |             ^^^^^
+1109 |             return 1
+1110 |         if output.read_text(encoding="utf-8") != rendered:
+     |
+help: Remove `print`
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1111:13
+     |
+1109 |             return 1
+1110 |         if output.read_text(encoding="utf-8") != rendered:
+1111 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
+     |             ^^^^^
+1112 |             return 1
+1113 |         print(f"Staging ledger is current: {output}")
+     |
+help: Remove `print`
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1113:9
+     |
+1111 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
+1112 |             return 1
+1113 |         print(f"Staging ledger is current: {output}")
+     |         ^^^^^
+1114 |         return 0
+     |
+help: Remove `print`
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1118:5
+     |
+1116 |     output.parent.mkdir(parents=True, exist_ok=True)
+1117 |     output.write_text(rendered, encoding="utf-8")
+1118 |     print(f"Wrote {len(rendered.splitlines()) - 1} staging dispositions to {output}")
+     |     ^^^^^
+1119 |     return 0
+     |
+help: Remove `print`
+
+Found 778 errors.
+[*] 46 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
 

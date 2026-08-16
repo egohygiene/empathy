@@ -11,17 +11,6 @@ Linter raw log:
 
 ┌─stripe-access-token──○
 │
-│ 412 │ const API_KEY = 'REDACTED';
-│     │                  ^^^^^^^^
-│
-│ attributes:
-│   path .......... .staging/.github/instructions/awesome-copilot/security-and-owasp.instructions.md
-│   resource ...... fs.content
-└○
-
-
-┌─stripe-access-token──○
-│
 │ 142 │ const API_KEY = "REDACTED";
 │     │                  ^^^^^^^^
 │
@@ -31,13 +20,13 @@ Linter raw log:
 └○
 
 
-┌─generic-api-key──○
+┌─stripe-access-token──○
 │
-│ 950 │             "secret": "REDACTED",
-│     │                        ^^^^^^^^
+│ 412 │ const API_KEY = 'REDACTED';
+│     │                  ^^^^^^^^
 │
 │ attributes:
-│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
+│   path .......... .staging/.github/instructions/awesome-copilot/security-and-owasp.instructions.md
 │   resource ...... fs.content
 └○
 
@@ -64,6 +53,17 @@ Linter raw log:
 └○
 
 
-2:02AM INF scanned ~31404871 bytes (31.40 MB) in 1.43s
-2:02AM WRN leaks found: 5
+┌─generic-api-key──○
+│
+│ 950 │             "secret": "REDACTED",
+│     │                        ^^^^^^^^
+│
+│ attributes:
+│   path .......... .staging/devenvironment/containers/services/keycloak/realms/development-realm.json
+│   resource ...... fs.content
+└○
+
+
+2:43AM INF scanned ~32262809 bytes (32.26 MB) in 2.46s
+2:43AM WRN leaks found: 5
 

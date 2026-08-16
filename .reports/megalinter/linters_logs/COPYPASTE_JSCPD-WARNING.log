@@ -7,8 +7,62 @@ Linter raw log:
 Using config from .reports/megalinter/jscpd-config.json
 config file .reports/megalinter/jscpd-config.json: unknown field '$schema'
 Clone found (markdown)
- - .audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown [27:27 - 35:27] (9 lines, 238 tokens)
-   .staging/.github/skills/eval-driven-dev/references/wrap-api.md:markdown [25:1 - 26:4]
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:23 - 224:9] (7 lines, 81 tokens)
+   .audits/2026-08-15-staging-home-audit.md:markdown [225:15 - 229:4]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 233:12] (16 lines, 403 tokens)
+   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:35 - 91:4]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 224:74] (7 lines, 141 tokens)
+   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [192:161 - 197:4]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 224:61] (7 lines, 128 tokens)
+   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [231:125 - 237:4]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 233:54] (16 lines, 445 tokens)
+   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:26 - 295:3]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 231:30] (14 lines, 266 tokens)
+   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [660:101 - 671:9]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 228:56] (11 lines, 224 tokens)
+   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [228:79 - 235:5]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 224:54] (7 lines, 121 tokens)
+   .staging/.github/skills/acreadiness-generate-instructions/SKILL.md:markdown [44:214 - 54:4]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 224:31] (7 lines, 98 tokens)
+   .staging/.github/skills/dependabot/SKILL.md:markdown [82:29 - 91:13]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 225:10] (8 lines, 151 tokens)
+   .staging/.github/skills/dependabot/SKILL.md:markdown [99:84 - 112:6]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 233:6] (16 lines, 397 tokens)
+   .staging/.github/skills/dependabot/SKILL.md:markdown [177:69 - 200:5]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 227:4] (10 lines, 165 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [1279:188 - 1286:2]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [218:28 - 228:12] (11 lines, 180 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [1286:81 - 1293:9]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [220:1 - 233:65] (14 lines, 455 tokens)
+   .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 203:4]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [220:1 - 225:8] (6 lines, 148 tokens)
+   .staging/.github/agents/awesome/terraform-azure-planning.agent.md:markdown [29:104 - 29:252]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [220:1 - 231:14] (12 lines, 249 tokens)
+   .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [296:1 - 306:5]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [220:1 - 232:34] (13 lines, 348 tokens)
+   .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [330:1 - 351:4]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [220:1 - 227:2] (8 lines, 162 tokens)
+   .staging/.github/skills/cli-mastery/references/module-4-agents.md:markdown [22:1 - 36:5]
+Clone found (markdown)
+ - .audits/2026-08-15-staging-home-audit.md:markdown [220:1 - 225:15] (6 lines, 155 tokens)
+   .staging/.github/skills/dependabot/SKILL.md:markdown [251:1 - 259:8]
 Clone found (markdown)
  - .audits/egolint/2026-08-11-complementary-toolchain-audit.md:markdown [93:105 - 101:52] (9 lines, 262 tokens)
    .staging/.github/skills/eval-driven-dev/references/5-run-tests.md:markdown [44:258 - 46:4]
@@ -298,48 +352,6 @@ Clone found (markdown)
  - .staging/.github/agents/agentic-workflows.md:markdown [183:18 - 189:16] (7 lines, 78 tokens)
    mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [229:19 - 229:97]
 Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 203:3] (19 lines, 454 tokens)
-   .staging/.github/agents/agentic-workflows.md:markdown [185:2 - 203:4]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 200:11] (16 lines, 402 tokens)
-   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [84:1 - 91:4]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 192:8] (8 lines, 137 tokens)
-   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [187:1 - 190:4]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 218:112] (34 lines, 1223 tokens)
-   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [631:1 - 658:4]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 205:22] (21 lines, 476 tokens)
-   .staging/.github/agents/awesome/custom-agent-foundry.agent.md:markdown [51:1 - 66:3]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 192:19] (8 lines, 148 tokens)
-   .staging/.github/agents/awesome/terraform-azure-planning.agent.md:markdown [29:104 - 29:252]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 210:57] (26 lines, 765 tokens)
-   .staging/.github/instructions/awesome-copilot/task-implementation.instructions.md:markdown [104:1 - 119:4]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 214:96] (30 lines, 1050 tokens)
-   .staging/.github/instructions/awesome-copilot/task-implementation.instructions.md:markdown [138:1 - 190:2]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 193:57] (9 lines, 249 tokens)
-   .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [296:1 - 306:5]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 197:3] (13 lines, 348 tokens)
-   .staging/.github/instructions/awesome-copilot/typespec-m365-copilot.instructions.md:markdown [330:1 - 351:4]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 192:33] (8 lines, 162 tokens)
-   .staging/.github/skills/cli-mastery/references/module-4-agents.md:markdown [22:1 - 36:5]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 209:35] (25 lines, 662 tokens)
-   .staging/.github/skills/copilot-cli-quickstart/SKILL.md:markdown [641:1 - 662:5]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 192:26] (8 lines, 155 tokens)
-   .staging/.github/skills/dependabot/SKILL.md:markdown [251:1 - 259:8]
-Clone found (markdown)
- - .staging/.github/agents/agentic-workflows.md:markdown [185:1 - 190:27] (6 lines, 127 tokens)
-   .staging/.github/skills/dependabot/SKILL.md:markdown [291:1 - 299:5]
-Clone found (markdown)
  - .staging/.github/agents/architect.agent.md:markdown [29:1 - 35:122] (7 lines, 129 tokens)
    egolint/.agents/agents/architect/AGENT.md:markdown [44:2 - 50:122]
 Clone found (markdown)
@@ -376,29 +388,14 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/ai-readiness-reporter.agent.md:markdown [142:1 - 150:12] (9 lines, 70 tokens)
    .staging/.github/skills/acreadiness-policy/SKILL.md:markdown [48:1 - 56:12]
 Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:34 - 98:54] (17 lines, 779 tokens)
-   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [155:87 - 177:4]
-Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:35 - 94:15] (13 lines, 445 tokens)
-   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:26 - 295:3]
-Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:35 - 87:75] (6 lines, 266 tokens)
-   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [660:101 - 671:9]
-Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:35 - 87:33] (6 lines, 224 tokens)
-   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [228:79 - 235:5]
-Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:35 - 96:107] (15 lines, 702 tokens)
-   .staging/.github/instructions/awesome-copilot/springboot-4-migration.instructions.md:markdown [971:50 - 993:5]
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:34 - 98:58] (17 lines, 783 tokens)
+   .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [155:87 - 179:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:34 - 101:45] (20 lines, 914 tokens)
    .staging/.github/instructions/awesome-copilot/terraform-azure.instructions.md:markdown [182:28 - 199:4]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:34 - 87:17] (6 lines, 209 tokens)
    .staging/.github/skills/dependabot/SKILL.md:markdown [67:110 - 78:2]
-Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:35 - 90:2] (9 lines, 397 tokens)
-   .staging/.github/skills/dependabot/SKILL.md:markdown [177:69 - 200:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [82:33 - 140:205] (59 lines, 3145 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [1116:271 - 1196:3]
@@ -730,8 +727,14 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [73:1 - 157:3] (85 lines, 1124 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [69:1 - 156:42]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [75:25 - 95:4] (21 lines, 260 tokens)
+   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [99:25 - 119:4]
+Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [91:105 - 100:4] (10 lines, 116 tokens)
    .staging/.github/agents/awesome/specification.agent.md:markdown [54:70 - 63:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [96:1 - 106:12] (11 lines, 102 tokens)
+   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [120:1 - 130:8]
 Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [120:55 - 160:42] (41 lines, 421 tokens)
    .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [144:41 - 184:42]
@@ -820,8 +823,8 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/project-documenter.agent.md:markdown [228:78 - 300:5] (73 lines, 2788 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [1049:251 - 1112:2]
 Clone found (markdown)
- - .staging/.github/agents/awesome/project-documenter.agent.md:markdown [237:81 - 244:63] (8 lines, 149 tokens)
-   .staging/.github/skills/dependabot/SKILL.md:markdown [269:70 - 279:4]
+ - .staging/.github/agents/awesome/project-documenter.agent.md:markdown [237:81 - 244:64] (8 lines, 150 tokens)
+   .staging/.github/skills/dependabot/SKILL.md:markdown [269:70 - 281:2]
 Clone found (markdown)
  - .staging/.github/agents/awesome/project-documenter.agent.md:markdown [237:81 - 250:94] (14 lines, 380 tokens)
    .staging/.github/skills/harness-engineering/SKILL.md:markdown [121:7 - 134:5]
@@ -925,17 +928,17 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [24:124 - 128:4] (105 lines, 250 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [22:119 - 127:4]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [28:53 - 116:8] (89 lines, 103 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [26:53 - 114:12]
+Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 114:28] (84 lines, 1122 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [29:1 - 112:28]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [59:1 - 116:2] (58 lines, 795 tokens)
-   .staging/.github/skills/create-specification/SKILL.md:markdown [57:1 - 114:5]
-Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [112:31 - 117:110] (6 lines, 54 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [110:31 - 115:110]
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [37:1 - 124:40] (88 lines, 101 tokens)
+   .staging/.github/skills/update-specification/SKILL.md:markdown [35:1 - 122:40]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1749,6 +1752,9 @@ Clone found (txt)
 Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
+Clone found (markdown)
+ - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
+   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
 Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
@@ -2593,6 +2599,9 @@ Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
 Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [300:45 - 305:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [318:23 - 322:2]
+Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [1223:63 - 1244:14] (22 lines, 530 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2150:63 - 2166:62]
 Clone found (markdown)
@@ -2665,8 +2674,8 @@ Clone found (jsx)
  - .staging/.github/skills/react19-source-patterns/references/api-migrations.md:jsx [365:59 - 396:42] (32 lines, 66 tokens)
    .staging/.github/skills/react19-source-patterns/references/api-migrations.md:jsx [405:6 - 426:42]
 Clone found (markdown)
- - .staging/.github/skills/refactor/SKILL.md:markdown [627:89 - 633:55] (7 lines, 175 tokens)
-   mantle/ARCHITECTURE.md:markdown [20:171 - 22:4]
+ - .staging/.github/skills/refactor/SKILL.md:markdown [627:89 - 633:56] (7 lines, 176 tokens)
+   mantle/ARCHITECTURE.md:markdown [20:171 - 22:5]
 Clone found (markdown)
  - .staging/.github/skills/reviewing-oracle-to-postgres-migration/references/oracle-parentheses-from-clause.md:markdown [119:19 - 125:7] (7 lines, 58 tokens)
    .staging/.github/skills/reviewing-oracle-to-postgres-migration/references/oracle-to-postgres-to-char-numeric.md:markdown [126:20 - 132:7]
@@ -8524,8 +8533,8 @@ Clone found (markdown)
  - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [266:303 - 275:10] (10 lines, 135 tokens)
    mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [695:293 - 707:13]
 Clone found (markdown)
- - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:274 - 318:56] (10 lines, 211 tokens)
-   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [609:328 - 623:2]
+ - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [309:274 - 318:58] (10 lines, 213 tokens)
+   mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [609:328 - 623:4]
 Clone found (markdown)
  - mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [337:1 - 342:17] (6 lines, 130 tokens)
    mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown [406:1 - 411:15]
@@ -9282,7 +9291,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ css          │ 20             │ 5969        │ 19497        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ csv          │ 1              │ 5           │ 60           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ csv          │ 2              │ 2346        │ 204424       │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ dart         │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9328,7 +9337,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1689           │ 326852      │ 4192051      │ 682          │ 11720 (3.59%)    │ 178361 (4.25%)    │
+│ markdown     │ 1690           │ 327085      │ 4200894      │ 685          │ 11782 (3.60%)    │ 173935 (4.14%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 96             │ 29811       │ 116915       │ 45           │ 946 (3.17%)      │ 7819 (6.69%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9350,7 +9359,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 284            │ 72918       │ 456032       │ 133          │ 1344 (1.84%)     │ 12605 (2.76%)     │
+│ python       │ 286            │ 74132       │ 463045       │ 133          │ 1344 (1.81%)     │ 12605 (2.72%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9368,7 +9377,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 375            │ 85724       │ 199017       │ 32           │ 781 (0.91%)      │ 3098 (1.56%)      │
+│ text         │ 376            │ 85814       │ 199095       │ 32           │ 781 (0.91%)      │ 3098 (1.56%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 38             │ 6466        │ 13087        │ 8            │ 175 (2.71%)      │ 625 (4.78%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9384,10 +9393,10 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ yaml         │ 548            │ 57219       │ 313718       │ 343          │ 9302 (16.26%)    │ 104618 (33.35%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4582           │ 968793      │ 7595756      │ 3085         │ 56684 (5.85%)    │ 748323 (9.85%)    │
+│ Total:       │ 4587           │ 972671      │ 7816054      │ 3088         │ 56746 (5.83%)    │ 743897 (9.52%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3085 clones.
+Found 3088 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (5.9%) over threshold (3.0%)
-time: 13.56s
+ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
+time: 15.88s
 

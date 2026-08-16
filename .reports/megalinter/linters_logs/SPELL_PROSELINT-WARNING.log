@@ -4,6 +4,8 @@ See documentation on https://megalinter.io/10.0.0/descriptors/spell_proselint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+.audits/2026-08-15-staging-home-audit.md:99:23: annotations.misc: Annotation left in text.
+.audits/2026-08-15-staging-home-audit.md:99:42: annotations.misc: Annotation left in text.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:6:18: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:28:66: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:29:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
