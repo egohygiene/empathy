@@ -3,7 +3,7 @@ schema: mindgarden.note/v0
 id: empathy-egohygiene-web-namespace
 title: Ego Hygiene web namespace and holon surfaces
 kind: project
-status: active
+status: reviewed
 reviewed: true
 confidence: medium
 visibility: public
@@ -13,7 +13,7 @@ created: 2026-08-15
 updated: 2026-08-15
 sources: []
 related:
-  - empathy-repository-intelligence-dashboard
+  - repository-intelligence-dashboard
 supersedes: []
 tags:
   - architecture

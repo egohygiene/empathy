@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 #
 # vpn-toggle - Toggle or wrap supported VPN command-line clients on Linux.
 #

@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Behavioral tests for bin/apt-freeze, bin/apt-install, and bin/apt-base.
 
 setup() {
@@ -65,9 +66,13 @@ teardown() {
 }
 
 @test "apt-install requires root and fails without sudo or root" {
+	local package_file="${BIN_TEST_HOME}/packages.txt"
+	printf "curl\n" >"${package_file}"
+	make_stub "id" 0 "1000"
 	make_stub "sudo" 1 ""
-	run_bin apt-install curl
+	run_bin apt-install --lock --packages-file "${package_file}" --yes
 	assert_failure
+	[[ "${status}" -eq 77 ]]
 }
 
 # ===========================================================================
@@ -87,7 +92,9 @@ teardown() {
 }
 
 @test "apt-base requires root and fails without sudo or root" {
+	make_stub "id" 0 "1000"
 	make_stub "sudo" 1 ""
-	run_bin apt-base
+	run_bin apt-base --yes
 	assert_failure
+	[[ "${status}" -eq 77 ]]
 }

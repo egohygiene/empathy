@@ -59,9 +59,11 @@ def validate_template(path: Path, required_sections: tuple[str, ...]) -> list[st
         failures.append(f"{path}: example.com must not appear in a publishing template")
 
     identifiers = heading_ids(source)
-    for required in required_sections:
-        if required not in identifiers:
-            failures.append(f"{path}: missing required section #{required}")
+    failures.extend(
+        f"{path}: missing required section #{required}"
+        for required in required_sections
+        if required not in identifiers
+    )
 
     if re.search(r"!\[\]\(", source):
         failures.append(f"{path}: Markdown image has empty alt text")
@@ -83,9 +85,11 @@ def validate_generated_regions(source: str, path: Path) -> list[str]:
 def validate() -> list[str]:
     """Return every pack validation failure."""
     failures: list[str] = []
-    for required_file in REQUIRED_FILES:
-        if not required_file.is_file() or required_file.stat().st_size == 0:
-            failures.append(f"missing or empty pack artifact: {required_file}")
+    failures.extend(
+        f"missing or empty pack artifact: {required_file}"
+        for required_file in REQUIRED_FILES
+        if not required_file.is_file() or required_file.stat().st_size == 0
+    )
     if failures:
         return failures
 
@@ -121,22 +125,24 @@ def validate() -> list[str]:
         )
     )
     profile_source = PROFILE_TEMPLATE.read_text(encoding="utf-8")
-    for stale_personal_fact in ("Alan Szmyt", "MIT Lincoln Laboratory"):
-        if stale_personal_fact in profile_source:
-            failures.append(
-                f"{PROFILE_TEMPLATE}: reusable template contains {stale_personal_fact!r}"
-            )
+    failures.extend(
+        f"{PROFILE_TEMPLATE}: reusable template contains {stale_personal_fact!r}"
+        for stale_personal_fact in ("Alan Szmyt", "MIT Lincoln Laboratory")
+        if stale_personal_fact in profile_source
+    )
     failures.extend(validate_generated_regions(profile_source, PROFILE_TEMPLATE))
 
     manifest = (PACK_ROOT / "pack.yaml").read_text(encoding="utf-8")
-    for required_reference in (
-        "./templates/project/README.md",
-        "./templates/profile/README.md",
-        "./references/research-and-design.md",
-        "./PROVENANCE.md",
-    ):
-        if required_reference not in manifest:
-            failures.append(f"pack.yaml does not reference {required_reference}")
+    failures.extend(
+        f"pack.yaml does not reference {required_reference}"
+        for required_reference in (
+            "./templates/project/README.md",
+            "./templates/profile/README.md",
+            "./references/research-and-design.md",
+            "./PROVENANCE.md",
+        )
+        if required_reference not in manifest
+    )
     if "snapshot" not in RESEARCH.read_text(encoding="utf-8").lower():
         failures.append("research brief must identify its corpus as a snapshot")
     return failures
@@ -146,10 +152,9 @@ def main() -> int:
     """Run validation and report failures."""
     failures = validate()
     if failures:
-        for failure in failures:
-            print(f"readme-pack: {failure}", file=sys.stderr)
+        sys.stderr.write("".join(f"readme-pack: {failure}\n" for failure in failures))
         return 1
-    print("Holon README pack is valid.")
+    sys.stdout.write("Holon README pack is valid.\n")
     return 0
 
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 #
 # clearport - Safely stop processes bound to a local TCP or UDP port.

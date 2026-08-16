@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# ruff: noqa: PLR0912, PLR2004, TRY003
+# Explicit contract diagnostics are clearer here than indirect exception constants.
 
 """Validate Mantle's pinned Fastfetch presentation contract without network access."""
 
@@ -25,6 +27,10 @@ EXPECTED_COMMANDS = (
     "mantle fastfetch toolchains",
     "mantle fastfetch contexts",
 )
+
+
+class ContractError(ValueError):
+    """Report a violated Fastfetch presentation contract."""
 
 
 def strip_json_comments(source: str) -> str:
@@ -81,7 +87,7 @@ def load_config() -> dict[str, object]:
     without_trailing_commas = re.sub(r",\s*([}\]])", r"\1", without_comments)
     payload = json.loads(without_trailing_commas)
     if not isinstance(payload, dict):
-        raise AssertionError("Fastfetch config root must be an object")
+        raise ContractError("Fastfetch config root must be an object")
     return payload
 
 
@@ -90,39 +96,39 @@ def validate_banner() -> None:
     with BANNER_PATH.open("rb") as banner:
         signature = banner.read(8)
         if signature != b"\x89PNG\r\n\x1a\n":
-            raise AssertionError("Mantle banner is not a PNG")
+            raise ContractError("Mantle banner is not a PNG")
         length = struct.unpack(">I", banner.read(4))[0]
         if banner.read(4) != b"IHDR" or length != 13:
-            raise AssertionError("Mantle banner is missing a canonical IHDR")
+            raise ContractError("Mantle banner is missing a canonical IHDR")
         width, height, _depth, color_type = struct.unpack(">IIBB", banner.read(10))
     if (width, height) != (400, 134):
-        raise AssertionError(f"Mantle banner dimensions changed: {width}x{height}")
+        raise ContractError(f"Mantle banner dimensions changed: {width}x{height}")
     if color_type not in {4, 6}:
-        raise AssertionError("Mantle banner no longer declares an alpha channel")
+        raise ContractError("Mantle banner no longer declares an alpha channel")
     if not TEXT_PATH.read_text(encoding="utf-8").strip():
-        raise AssertionError("Mantle text fallback must not be empty")
+        raise ContractError("Mantle text fallback must not be empty")
     if (MANTLE_ROOT / "assets/presentation/mantle.png").exists():
-        raise AssertionError("The future Fastfetch logo mantle.png must not be fabricated")
+        raise ContractError("The future Fastfetch logo mantle.png must not be fabricated")
 
 
 def validate_config(payload: dict[str, object]) -> None:
     """Validate pinned compatibility, privacy, and command-module boundaries."""
     if payload.get("$schema") != EXPECTED_SCHEMA:
-        raise AssertionError("Fastfetch schema must remain pinned to 2.67.0")
+        raise ContractError("Fastfetch schema must remain pinned to 2.67.0")
 
     logo = payload.get("logo")
     if not isinstance(logo, dict) or logo.get("source") != "mantle.png":
-        raise AssertionError("Fastfetch logo contract must reserve the bare mantle.png name")
+        raise ContractError("Fastfetch logo contract must reserve the bare mantle.png name")
     chafa = logo.get("chafa")
     if not isinstance(chafa, dict):
-        raise AssertionError("Fastfetch Chafa settings are missing")
+        raise ContractError("Fastfetch Chafa settings are missing")
     for forced_capability in ("canvasMode", "colorSpace", "ditherMode"):
         if forced_capability in chafa:
-            raise AssertionError(f"Chafa capability must be negotiated: {forced_capability}")
+            raise ContractError(f"Chafa capability must be negotiated: {forced_capability}")
 
     modules = payload.get("modules")
     if not isinstance(modules, list):
-        raise AssertionError("Fastfetch modules must be an array")
+        raise ContractError("Fastfetch modules must be an array")
 
     module_types: list[str] = []
     command_texts: list[str] = []
@@ -132,7 +138,7 @@ def validate_config(payload: dict[str, object]) -> None:
             module_types.append(module.lower())
             continue
         if not isinstance(module, dict):
-            raise AssertionError("Every Fastfetch module must be an object or shorthand string")
+            raise ContractError("Every Fastfetch module must be an object or shorthand string")
         module_type = str(module.get("type", "")).lower()
         module_types.append(module_type)
         if module_type == "command":
@@ -143,29 +149,29 @@ def validate_config(payload: dict[str, object]) -> None:
             section_keys.append(module.get("key"))
 
     if tuple(command_texts) != EXPECTED_COMMANDS:
-        raise AssertionError(f"Unexpected Fastfetch command modules: {command_texts}")
+        raise ContractError(f"Unexpected Fastfetch command modules: {command_texts}")
     if any(key != " " for key in section_keys):
-        raise AssertionError("Custom section headers must use a single-space key")
+        raise ContractError("Custom section headers must use a single-space key")
     for forbidden_module in ("publicip", "weather"):
         if forbidden_module in module_types:
-            raise AssertionError(f"Network-backed startup module is forbidden: {forbidden_module}")
+            raise ContractError(f"Network-backed startup module is forbidden: {forbidden_module}")
 
     serialized = json.dumps(payload)
     if "dsForceDrm" in serialized:
-        raise AssertionError("Linux-only dsForceDrm is forbidden in the universal config")
+        raise ContractError("Linux-only dsForceDrm is forbidden in the universal config")
 
 
 def main() -> int:
     """Run the offline contract validation."""
     validate_banner()
     validate_config(load_config())
-    print("Mantle Fastfetch presentation contract is valid.")
+    sys.stdout.write("Mantle Fastfetch presentation contract is valid.\n")
     return 0
 
 
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (AssertionError, json.JSONDecodeError, OSError) as error:
-        print(f"mantle-fastfetch-validation: {error}", file=sys.stderr)
+    except (ContractError, json.JSONDecodeError, OSError) as error:
+        sys.stderr.write(f"mantle-fastfetch-validation: {error}\n")
         raise SystemExit(1) from error

@@ -1,4 +1,3 @@
-#!/usr/bin/env bats
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # Integration tests for the mantle fastfetch collector family.
@@ -151,14 +150,14 @@ run_fastfetch() {
 	local kubectl_stub="${STUB_DIR}/kubectl"
 	{
 		printf "#!/bin/sh\n"
-		printf 'printf "docker:%s\\n" "$*" >> "$MANTLE_CONTEXT_CALLS"\n'
-		printf 'test "$*" = "context show"; or exit 99\n'
+		printf 'printf "docker:%%s\\n" "$*" >> "$MANTLE_CONTEXT_CALLS"\n'
+		printf 'test "$*" = "context show" || exit 99\n'
 		printf 'printf "desktop-linux\\n"\n'
 	} >"${docker_stub}"
 	{
 		printf "#!/bin/sh\n"
-		printf 'printf "kubectl:%s\\n" "$*" >> "$MANTLE_CONTEXT_CALLS"\n'
-		printf 'test "$*" = "config current-context"; or exit 99\n'
+		printf 'printf "kubectl:%%s\\n" "$*" >> "$MANTLE_CONTEXT_CALLS"\n'
+		printf 'test "$*" = "config current-context" || exit 99\n'
 		printf 'printf "local-dev\\n"\n'
 	} >"${kubectl_stub}"
 	chmod 0755 "${docker_stub}" "${kubectl_stub}"

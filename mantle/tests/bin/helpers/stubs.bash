@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 #
 # Stub helpers for bin/ CLI tests.
@@ -70,6 +71,22 @@ recording_stub_args() {
 	if [[ -f "${record_file}" ]]; then
 		cat "${record_file}"
 	fi
+}
+
+# make_clipboard_stub — create a recording stub that also drains standard input.
+# Clipboard commands consume their input before exiting; mirroring that contract
+# prevents the producer from observing a nondeterministic broken pipe.
+make_clipboard_stub() {
+	local name="${1:?make_clipboard_stub requires a name}"
+	local stub_path="${BIN_STUB_DIR:?}/${name}"
+	local record_file="${BIN_STUB_DIR}/${name}.calls"
+	{
+		printf "#!/bin/sh\n"
+		printf 'printf "%%s\\n" "$*" >> %q\n' "${record_file}"
+		printf 'cat > %q\n' "${BIN_STUB_DIR}/${name}.stdin"
+		printf "exit 0\n"
+	} >"${stub_path}"
+	chmod 0755 "${stub_path}"
 }
 
 # ---------------------------------------------------------------------------
@@ -200,22 +217,22 @@ stub_dpkg() {
 
 # stub_pbcopy — stub pbcopy to record calls and succeed.
 stub_pbcopy() {
-	make_recording_stub "pbcopy" 0 ""
+	make_clipboard_stub "pbcopy"
 }
 
 # stub_wl_copy — stub wl-copy to record calls and succeed.
 stub_wl_copy() {
-	make_recording_stub "wl-copy" 0 ""
+	make_clipboard_stub "wl-copy"
 }
 
 # stub_xclip — stub xclip to record calls and succeed.
 stub_xclip() {
-	make_recording_stub "xclip" 0 ""
+	make_clipboard_stub "xclip"
 }
 
 # stub_xsel — stub xsel to record calls and succeed.
 stub_xsel() {
-	make_recording_stub "xsel" 0 ""
+	make_clipboard_stub "xsel"
 }
 
 # stub_gcloud — stub gcloud to record calls and succeed.

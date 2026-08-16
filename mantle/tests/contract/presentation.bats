@@ -1,4 +1,3 @@
-#!/usr/bin/env bats
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # Contract tests for Mantle's startup presentation assets and configuration.

@@ -23,7 +23,7 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
     def test_repository_projection_is_public_reviewed_and_deterministic(self) -> None:
         self.assertEqual(
             verify_projection(REPOSITORY_ROOT, Path("mindgarden/profiles/quartz/profile.yaml")),
-            4,
+            5,
         )
         with TemporaryDirectory() as directory:
             output = Path(directory) / "projection"
@@ -34,6 +34,7 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
                     "dashboard.md",
                     "index.md",
                     "projects/index.md",
+                    "projects/egohygiene-web-namespace.md",
                     "projects/repository-intelligence-dashboard.md",
                 ],
             )

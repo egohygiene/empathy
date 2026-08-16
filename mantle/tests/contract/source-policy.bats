@@ -11,14 +11,21 @@ maintained_shell_files() {
 	find "${MANTLE_ROOT}" -type f \
 		\( -name "*.sh" -o -name "*.bash" -o -name "*.bats" -o -name "*.fish" -o -name ".shellrc" \) \
 		-print
-	printf "%s\n" "${MANTLE_ROOT}/bin/mantle"
+
+	local file_path=""
+	for file_path in "${MANTLE_ROOT}/bin"/*; do
+		[[ -f "${file_path}" ]] || continue
+		if [[ "$(head -n 1 "${file_path}")" == "#!/usr/bin/env bash" ]]; then
+			printf "%s\n" "${file_path}"
+		fi
+	done
 }
 
 is_executable_shell_role() {
 	local relative_path="${1:?}"
 
 	case "${relative_path}" in
-	bin/mantle | install.sh | tests/run.sh | libexec/mantle/commands/*.sh | libexec/mantle/installers/*.sh)
+	bin/* | install.sh | tests/run.sh | libexec/mantle/commands/*.sh | libexec/mantle/installers/*.sh)
 		return 0
 		;;
 	esac

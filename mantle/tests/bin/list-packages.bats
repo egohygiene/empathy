@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Behavioral tests for bin/list-fonts, bin/list-packages, and bin/list-package-versions.
 
 setup() {

@@ -32,7 +32,7 @@ Materialization checklist:
 
 # {{PROJECT_NAME}}
 
-**{{ONE_SENTENCE_PROMISE}}**
+> **{{ONE_SENTENCE_PROMISE}}**
 
 {{OVERVIEW}}
 

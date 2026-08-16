@@ -182,7 +182,9 @@ suite. Columns:
 1. Every regular executable in `bin/` has a coverage-map entry.
 2. Every test file listed in the map exists on disk.
 3. Every command in the map still exists in `bin/`.
-4. Every non-`none` exemption has a non-empty justification.
+4. Every row follows the documented five-column schema.
+5. Every non-`none` exemption has a non-empty justification.
+6. Command names are unique and the registry count matches `bin/`.
 
 The guard runs as part of `./tests/run.sh bin` and in CI. It fails when a new
 `bin/` command is added without registering it.

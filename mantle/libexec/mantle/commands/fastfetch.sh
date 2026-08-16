@@ -87,7 +87,7 @@ mantle_fastfetch_abbreviate_directory() {
 	if [[ -n "${HOME:-}" && "${directory}" == "${HOME}" ]]; then
 		printf "~\n"
 	elif [[ -n "${HOME:-}" && "${directory}" == "${HOME}/"* ]]; then
-		printf "~/%s\n" "${directory#"${HOME}/"}"
+		printf "%s/%s\n" "~" "${directory#"${HOME}/"}"
 	else
 		printf "%s\n" "${directory}"
 	fi
@@ -219,11 +219,11 @@ mantle_fastfetch_contexts() {
 	MANTLE_FASTFETCH_CONTEXTS=""
 
 	if command -v docker >/dev/null 2>&1; then
-		context_value="$(docker context show 2>/dev/null | mantle_fastfetch_first_line)"
+		context_value="$(docker context show 2>/dev/null | mantle_fastfetch_first_line || true)"
 		mantle_fastfetch_emit_context "docker" "${context_value}"
 	fi
 	if command -v kubectl >/dev/null 2>&1; then
-		context_value="$(kubectl config current-context 2>/dev/null | mantle_fastfetch_first_line)"
+		context_value="$(kubectl config current-context 2>/dev/null | mantle_fastfetch_first_line || true)"
 		mantle_fastfetch_emit_context "k8s" "${context_value}"
 	fi
 

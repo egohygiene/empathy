@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Behavioral tests for bin/inject-subtitles.
 
 setup() {
@@ -31,9 +32,10 @@ teardown() {
 	assert_failure
 }
 
-@test "inject-subtitles exits non-zero without arguments" {
+@test "inject-subtitles treats an empty discovery directory as a successful no-op" {
 	run_bin inject-subtitles
-	assert_failure
+	assert_success
+	assert_output_contains "No matching video/subtitle pairs found"
 }
 
 @test "inject-subtitles exits non-zero when ffmpeg is unavailable" {

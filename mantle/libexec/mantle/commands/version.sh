@@ -17,7 +17,7 @@ mantle_version_usage() {
 }
 
 # @description Resolve the best available Mantle version identifier.
-# @stdout Version identifier or development fallback.
+# @stdout Version identifier or semantic development fallback.
 mantle_version_resolve() {
 	local resolved_version="${MANTLE_VERSION:-}"
 	local version_file="${MANTLE_ROOT}/VERSION"
@@ -43,7 +43,7 @@ mantle_version_resolve() {
 		fi
 	fi
 
-	printf "development\n"
+	printf "0.0.0-development\n"
 }
 
 if [[ -z "${MANTLE_ROOT:-}" ]]; then
