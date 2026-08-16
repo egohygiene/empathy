@@ -4,9 +4,10 @@ See documentation on https://megalinter.io/10.0.0/descriptors/markdown_markdown_
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-50 files contain markdown tables to format:
+57 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
 - .audits/2026-08-15-staging-home-audit.md
+- .audits/2026-08-16-misc-promotion.md
 - .audits/2026-08-16-taskfile-promotion.md
 - .audits/egolint/2026-08-11-complementary-toolchain-audit.md
 - .audits/egolint/2026-08-11-integration-audit.md
@@ -47,9 +48,15 @@ Linter raw log:
 - holon/packs/react-vite/template/docs/architecture/package-status.md
 - holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md
 - holon/packs/react-vite/template/docs/tooling/vite.md
+- holon/packs/readme/PROVENANCE.md
+- holon/packs/readme/README.md
+- holon/packs/readme/references/research-and-design.md
+- holon/packs/readme/templates/profile/README.md
+- holon/packs/readme/templates/project/README.md
 - mantle/ARCHITECTURE.md
 - mantle/CONTRIBUTING.md
 - mantle/INSTALLER_ASSURANCE.md
+- mantle/PRESENTATION.md
 - mantle/README.md
 - mantle/audits/mantle-holistic-polish-20260806T124442Z.md
 - mantle/platforms/README.md

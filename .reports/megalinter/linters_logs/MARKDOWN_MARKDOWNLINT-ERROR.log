@@ -404,4 +404,18 @@ beacon/.staging/latex/Theses/kaobook/README.md:225:72 error MD009/no-trailing-sp
 beacon/.staging/latex/Theses/kaobook/README.md:226:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:236:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailing-newline Files should end with a single newline character
+holon/packs/readme/templates/profile/README.md:34 error MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "{{PRIMARY_POSITIONING_STATEMEN..."]
+holon/packs/readme/templates/profile/README.md:82 error MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "{{FEATURED_PROJECT_ONE_PROMISE..."]
+holon/packs/readme/templates/profile/README.md:92 error MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "{{FEATURED_PROJECT_TWO_PROMISE..."]
+holon/packs/readme/templates/profile/README.md:102 error MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "{{FEATURED_PROJECT_THREE_PROMI..."]
+holon/packs/readme/templates/profile/README.md:152 error MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "{{ROLE_DATES}} · {{ROLE_LOCATI..."]
+holon/packs/readme/templates/project/README.md:35 error MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "{{ONE_SENTENCE_PROMISE}}"]
+mantle/README.md:355:153 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+mantle/README.md:355:208 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+mantle/README.md:356:153 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+mantle/README.md:356:208 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+mantle/README.md:357:153 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+mantle/README.md:357:208 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+mantle/README.md:358:154 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+mantle/README.md:358:209 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
 

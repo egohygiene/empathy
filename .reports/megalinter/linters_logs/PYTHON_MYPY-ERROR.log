@@ -56,12 +56,12 @@ attribute "by_path"  [attr-defined]
             api = self.by_path[".staging/devenvironment/containers/service...
                   ^~~~~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_cross_cutting_sources_follow_capability_ownership" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:65:34: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:64:34: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
                     self.assertEqual(self.by_path[path].canonical_owner, e...
                                      ^~~~~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_community_instructions_remain_quarantined" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:68:42: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:67:42: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
             community_rows = [row for row in self.rows if row.collection.s...
                                              ^~~~~~~~~
@@ -169,5 +169,5 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 34 errors in 3 files (checked 41 source files)
+Found 34 errors in 3 files (checked 44 source files)
 

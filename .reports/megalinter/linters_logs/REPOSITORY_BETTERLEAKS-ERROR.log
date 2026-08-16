@@ -9,6 +9,28 @@ Linter raw log:
    ▾
  betterleaks 1.7.3
 
+┌─generic-api-key──○
+│
+│ 564 │     {"rowKey": "REDACTED", "countryCode":"IN","regionCode":"IN-KA","cityName":"Bangalore"},
+│     │                 ^^^^^^^^
+│
+│ attributes:
+│   path .......... .staging/.github/skills/geofeed-tuner/SKILL.md
+│   resource ...... fs.content
+└○
+
+
+┌─generic-api-key──○
+│
+│ 565 │     {"rowKey": "REDACTED", "countryCode":"IN","regionCode":"IN-KA"}
+│     │                 ^^^^^^^^
+│
+│ attributes:
+│   path .......... .staging/.github/skills/geofeed-tuner/SKILL.md
+│   resource ...... fs.content
+└○
+
+
 ┌─stripe-access-token──○
 │
 │ 412 │ const API_KEY = 'REDACTED';
@@ -42,28 +64,6 @@ Linter raw log:
 └○
 
 
-┌─generic-api-key──○
-│
-│ 564 │     {"rowKey": "REDACTED", "countryCode":"IN","regionCode":"IN-KA","cityName":"Bangalore"},
-│     │                 ^^^^^^^^
-│
-│ attributes:
-│   path .......... .staging/.github/skills/geofeed-tuner/SKILL.md
-│   resource ...... fs.content
-└○
-
-
-┌─generic-api-key──○
-│
-│ 565 │     {"rowKey": "REDACTED", "countryCode":"IN","regionCode":"IN-KA"}
-│     │                 ^^^^^^^^
-│
-│ attributes:
-│   path .......... .staging/.github/skills/geofeed-tuner/SKILL.md
-│   resource ...... fs.content
-└○
-
-
-2:32PM INF scanned ~32083423 bytes (32.08 MB) in 2.29s
-2:32PM WRN leaks found: 5
+3:23PM INF scanned ~32148435 bytes (32.15 MB) in 2.43s
+3:23PM WRN leaks found: 5
 

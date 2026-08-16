@@ -5,6 +5,11 @@ See documentation on https://megalinter.io/10.0.0/descriptors/bash_shellcheck/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 
+In mantle/libexec/mantle/commands/fastfetch.sh line 90:
+		printf "~/%s\n" "${directory#"${HOME}/"}"
+                        ^----^ SC2088 (warning): Tilde does not expand in quotes. Use $HOME.
+
+
 In mantle/tests/bin/helpers/assertions.bash line 20:
 	if [[ "${output}" != *"${expected}"* ]]; then
                ^-------^ SC2154 (warning): output is referenced but not assigned.
@@ -40,6 +45,7 @@ In mantle/tests/bin/helpers/stubs.bash line 130:
                        ^--------------^ SC2016 (info): Expressions don't expand in single quotes, use double quotes for that.
 
 For more information:
+  https://www.shellcheck.net/wiki/SC2088 -- Tilde does not expand in quotes. ...
   https://www.shellcheck.net/wiki/SC2154 -- lines is referenced but not assig...
   https://www.shellcheck.net/wiki/SC2016 -- Expressions don't expand in singl...
 

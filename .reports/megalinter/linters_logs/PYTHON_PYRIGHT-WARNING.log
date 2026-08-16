@@ -11696,6 +11696,32 @@ egolint/tests/test_megalinter_policy.py
     Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
   egolint/tests/test_megalinter_policy.py:196:13 - error: Argument type is unknown
     Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+mantle/tests/validate_fastfetch.py
+  mantle/tests/validate_fastfetch.py:85:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  mantle/tests/validate_fastfetch.py:114:38 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  mantle/tests/validate_fastfetch.py:116:5 - error: Type of "chafa" is partially unknown
+    Type of "chafa" is "Unknown | None" (reportUnknownVariableType)
+  mantle/tests/validate_fastfetch.py:116:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  mantle/tests/validate_fastfetch.py:130:9 - error: Type of "module" is unknown (reportUnknownVariableType)
+  mantle/tests/validate_fastfetch.py:136:27 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  mantle/tests/validate_fastfetch.py:136:27 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  mantle/tests/validate_fastfetch.py:139:38 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  mantle/tests/validate_fastfetch.py:139:38 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  mantle/tests/validate_fastfetch.py:140:44 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  mantle/tests/validate_fastfetch.py:140:44 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  mantle/tests/validate_fastfetch.py:143:33 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  mantle/tests/validate_fastfetch.py:143:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "object" in function "append"
+    Argument type is "Unknown | None" (reportUnknownArgumentType)
 mindgarden/scripts/garden_agent.py
   mindgarden/scripts/garden_agent.py:37:9 - error: Type of "ContractError" is unknown (reportUnknownVariableType)
   mindgarden/scripts/garden_agent.py:38:9 - error: Type of "discover_note_paths" is unknown (reportUnknownVariableType)
@@ -12227,5 +12253,5 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8729 errors, 420 warnings, 0 informations
+8742 errors, 420 warnings, 0 informations
 

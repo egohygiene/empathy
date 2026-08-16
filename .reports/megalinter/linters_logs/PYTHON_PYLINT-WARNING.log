@@ -263,6 +263,8 @@ egolint/scripts/validate_megalinter_policy.py:301:0: R0912: Too many branches (1
 egolint/scripts/validate_megalinter_policy.py:359:0: R0914: Too many local variables (22/20) (too-many-locals)
 egolint/scripts/validate_megalinter_policy.py:359:0: R0912: Too many branches (23/12) (too-many-branches)
 egolint/scripts/validate_megalinter_policy.py:452:0: R0914: Too many local variables (31/20) (too-many-locals)
+************* Module validate_fastfetch
+mantle/tests/validate_fastfetch.py:108:0: R0912: Too many branches (16/12) (too-many-branches)
 ************* Module scripts.garden_agent
 mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
@@ -283,6 +285,6 @@ tools/staging_home_audit.py:610:0: R0912: Too many branches (38/12) (too-many-br
 tools/staging_home_audit.py:1049:0: R0911: Too many return statements (8/6) (too-many-return-statements)
 
 -----------------------------------
-Your code has been rated at 9.56/10
+Your code has been rated at 9.57/10
 
 

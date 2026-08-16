@@ -373,6 +373,9 @@ holon/packs/react-vite/template/Taskfile.yml
 holon/packs/react-vite/template/pnpm-workspace.yaml
   1:1       warning  missing document start "---"  (document-start)
 
+holon/packs/readme/pack.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
 mantle/.github/workflows/test.yml
   1:1       warning  missing document start "---"  (document-start)
 

@@ -8465,6 +8465,342 @@ PT018 Assertion should be broken down into multiple parts
    |
 help: Break down assertion into multiple parts
 
+PERF401 Use `list.extend` to create a transformed list
+  --> holon/packs/readme/tools/validate.py:64:13
+   |
+62 |     for required in required_sections:
+63 |         if required not in identifiers:
+64 |             failures.append(f"{path}: missing required section #{required}")
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+65 |
+66 |     if re.search(r"!\[\]\(", source):
+   |
+help: Replace for loop with list.extend
+
+PERF401 Use a list comprehension to create a transformed list
+  --> holon/packs/readme/tools/validate.py:88:13
+   |
+86 |     for required_file in REQUIRED_FILES:
+87 |         if not required_file.is_file() or required_file.stat().st_size == 0:
+88 |             failures.append(f"missing or empty pack artifact: {required_file}")
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+89 |     if failures:
+90 |         return failures
+   |
+help: Replace for loop with list comprehension
+
+PERF401 Use `list.extend` to create a transformed list
+   --> holon/packs/readme/tools/validate.py:126:13
+    |
+124 |       for stale_personal_fact in ("Alan Szmyt", "MIT Lincoln Laboratory"):
+125 |           if stale_personal_fact in profile_source:
+126 | /             failures.append(
+127 | |                 f"{PROFILE_TEMPLATE}: reusable template contains {stale_personal_fact!r}"
+128 | |             )
+    | |_____________^
+129 |       failures.extend(validate_generated_regions(profile_source, PROFILE_TEMPLATE))
+    |
+help: Replace for loop with list.extend
+
+PERF401 Use `list.extend` to create a transformed list
+   --> holon/packs/readme/tools/validate.py:139:13
+    |
+137 |     ):
+138 |         if required_reference not in manifest:
+139 |             failures.append(f"pack.yaml does not reference {required_reference}")
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+140 |     if "snapshot" not in RESEARCH.read_text(encoding="utf-8").lower():
+141 |         failures.append("research brief must identify its corpus as a snapshot")
+    |
+help: Replace for loop with list.extend
+
+T201 `print` found
+   --> holon/packs/readme/tools/validate.py:150:13
+    |
+148 |     if failures:
+149 |         for failure in failures:
+150 |             print(f"readme-pack: {failure}", file=sys.stderr)
+    |             ^^^^^
+151 |         return 1
+152 |     print("Holon README pack is valid.")
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> holon/packs/readme/tools/validate.py:152:5
+    |
+150 |             print(f"readme-pack: {failure}", file=sys.stderr)
+151 |         return 1
+152 |     print("Holon README pack is valid.")
+    |     ^^^^^
+153 |     return 0
+    |
+help: Remove `print`
+
+TRY004 Prefer `TypeError` exception for invalid type
+  --> mantle/tests/validate_fastfetch.py:84:9
+   |
+82 |     payload = json.loads(without_trailing_commas)
+83 |     if not isinstance(payload, dict):
+84 |         raise AssertionError("Fastfetch config root must be an object")
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+85 |     return payload
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> mantle/tests/validate_fastfetch.py:84:15
+   |
+82 |     payload = json.loads(without_trailing_commas)
+83 |     if not isinstance(payload, dict):
+84 |         raise AssertionError("Fastfetch config root must be an object")
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+85 |     return payload
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> mantle/tests/validate_fastfetch.py:93:19
+   |
+91 |         signature = banner.read(8)
+92 |         if signature != b"\x89PNG\r\n\x1a\n":
+93 |             raise AssertionError("Mantle banner is not a PNG")
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+94 |         length = struct.unpack(">I", banner.read(4))[0]
+95 |         if banner.read(4) != b"IHDR" or length != 13:
+   |
+
+PLR2004 Magic value used in comparison, consider replacing `13` with a constant variable
+  --> mantle/tests/validate_fastfetch.py:95:51
+   |
+93 |             raise AssertionError("Mantle banner is not a PNG")
+94 |         length = struct.unpack(">I", banner.read(4))[0]
+95 |         if banner.read(4) != b"IHDR" or length != 13:
+   |                                                   ^^
+96 |             raise AssertionError("Mantle banner is missing a canonical IHDR")
+97 |         width, height, _depth, color_type = struct.unpack(">IIBB", banner.read(10))
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> mantle/tests/validate_fastfetch.py:96:19
+   |
+94 |         length = struct.unpack(">I", banner.read(4))[0]
+95 |         if banner.read(4) != b"IHDR" or length != 13:
+96 |             raise AssertionError("Mantle banner is missing a canonical IHDR")
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+97 |         width, height, _depth, color_type = struct.unpack(">IIBB", banner.read(10))
+98 |     if (width, height) != (400, 134):
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:99:15
+    |
+ 97 |         width, height, _depth, color_type = struct.unpack(">IIBB", banner.read(10))
+ 98 |     if (width, height) != (400, 134):
+ 99 |         raise AssertionError(f"Mantle banner dimensions changed: {width}x{height}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+100 |     if color_type not in {4, 6}:
+101 |         raise AssertionError("Mantle banner no longer declares an alpha channel")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:101:15
+    |
+ 99 |         raise AssertionError(f"Mantle banner dimensions changed: {width}x{height}")
+100 |     if color_type not in {4, 6}:
+101 |         raise AssertionError("Mantle banner no longer declares an alpha channel")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+102 |     if not TEXT_PATH.read_text(encoding="utf-8").strip():
+103 |         raise AssertionError("Mantle text fallback must not be empty")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:103:15
+    |
+101 |         raise AssertionError("Mantle banner no longer declares an alpha channel")
+102 |     if not TEXT_PATH.read_text(encoding="utf-8").strip():
+103 |         raise AssertionError("Mantle text fallback must not be empty")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+104 |     if (MANTLE_ROOT / "assets/presentation/mantle.png").exists():
+105 |         raise AssertionError("The future Fastfetch logo mantle.png must not be fabricated")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:105:15
+    |
+103 |         raise AssertionError("Mantle text fallback must not be empty")
+104 |     if (MANTLE_ROOT / "assets/presentation/mantle.png").exists():
+105 |         raise AssertionError("The future Fastfetch logo mantle.png must not be fabricated")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PLR0912 Too many branches (16 > 12)
+   --> mantle/tests/validate_fastfetch.py:108:5
+    |
+108 | def validate_config(payload: dict[str, object]) -> None:
+    |     ^^^^^^^^^^^^^^^
+109 |     """Validate pinned compatibility, privacy, and command-module boundaries."""
+110 |     if payload.get("$schema") != EXPECTED_SCHEMA:
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:111:15
+    |
+109 |     """Validate pinned compatibility, privacy, and command-module boundaries."""
+110 |     if payload.get("$schema") != EXPECTED_SCHEMA:
+111 |         raise AssertionError("Fastfetch schema must remain pinned to 2.67.0")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+112 |
+113 |     logo = payload.get("logo")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:115:15
+    |
+113 |     logo = payload.get("logo")
+114 |     if not isinstance(logo, dict) or logo.get("source") != "mantle.png":
+115 |         raise AssertionError("Fastfetch logo contract must reserve the bare mantle.png name")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+116 |     chafa = logo.get("chafa")
+117 |     if not isinstance(chafa, dict):
+    |
+
+TRY004 Prefer `TypeError` exception for invalid type
+   --> mantle/tests/validate_fastfetch.py:118:9
+    |
+116 |     chafa = logo.get("chafa")
+117 |     if not isinstance(chafa, dict):
+118 |         raise AssertionError("Fastfetch Chafa settings are missing")
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+119 |     for forced_capability in ("canvasMode", "colorSpace", "ditherMode"):
+120 |         if forced_capability in chafa:
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:118:15
+    |
+116 |     chafa = logo.get("chafa")
+117 |     if not isinstance(chafa, dict):
+118 |         raise AssertionError("Fastfetch Chafa settings are missing")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+119 |     for forced_capability in ("canvasMode", "colorSpace", "ditherMode"):
+120 |         if forced_capability in chafa:
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:121:19
+    |
+119 |     for forced_capability in ("canvasMode", "colorSpace", "ditherMode"):
+120 |         if forced_capability in chafa:
+121 |             raise AssertionError(f"Chafa capability must be negotiated: {forced_capability}")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+122 |
+123 |     modules = payload.get("modules")
+    |
+
+TRY004 Prefer `TypeError` exception for invalid type
+   --> mantle/tests/validate_fastfetch.py:125:9
+    |
+123 |     modules = payload.get("modules")
+124 |     if not isinstance(modules, list):
+125 |         raise AssertionError("Fastfetch modules must be an array")
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+126 |
+127 |     module_types: list[str] = []
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:125:15
+    |
+123 |     modules = payload.get("modules")
+124 |     if not isinstance(modules, list):
+125 |         raise AssertionError("Fastfetch modules must be an array")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+126 |
+127 |     module_types: list[str] = []
+    |
+
+TRY004 Prefer `TypeError` exception for invalid type
+   --> mantle/tests/validate_fastfetch.py:135:13
+    |
+133 |             continue
+134 |         if not isinstance(module, dict):
+135 |             raise AssertionError("Every Fastfetch module must be an object or shorthand string")
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+136 |         module_type = str(module.get("type", "")).lower()
+137 |         module_types.append(module_type)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:135:19
+    |
+133 |             continue
+134 |         if not isinstance(module, dict):
+135 |             raise AssertionError("Every Fastfetch module must be an object or shorthand string")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+136 |         module_type = str(module.get("type", "")).lower()
+137 |         module_types.append(module_type)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:146:15
+    |
+145 |     if tuple(command_texts) != EXPECTED_COMMANDS:
+146 |         raise AssertionError(f"Unexpected Fastfetch command modules: {command_texts}")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+147 |     if any(key != " " for key in section_keys):
+148 |         raise AssertionError("Custom section headers must use a single-space key")
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:148:15
+    |
+146 |         raise AssertionError(f"Unexpected Fastfetch command modules: {command_texts}")
+147 |     if any(key != " " for key in section_keys):
+148 |         raise AssertionError("Custom section headers must use a single-space key")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+149 |     for forbidden_module in ("publicip", "weather"):
+150 |         if forbidden_module in module_types:
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:151:19
+    |
+149 |     for forbidden_module in ("publicip", "weather"):
+150 |         if forbidden_module in module_types:
+151 |             raise AssertionError(f"Network-backed startup module is forbidden: {forbidden_module}")
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+152 |
+153 |     serialized = json.dumps(payload)
+    |
+
+TRY003 Avoid specifying long messages outside the exception class
+   --> mantle/tests/validate_fastfetch.py:155:15
+    |
+153 |     serialized = json.dumps(payload)
+154 |     if "dsForceDrm" in serialized:
+155 |         raise AssertionError("Linux-only dsForceDrm is forbidden in the universal config")
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+T201 `print` found
+   --> mantle/tests/validate_fastfetch.py:162:5
+    |
+160 |     validate_banner()
+161 |     validate_config(load_config())
+162 |     print("Mantle Fastfetch presentation contract is valid.")
+    |     ^^^^^
+163 |     return 0
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> mantle/tests/validate_fastfetch.py:170:9
+    |
+168 |         raise SystemExit(main())
+169 |     except (AssertionError, json.JSONDecodeError, OSError) as error:
+170 |         print(f"mantle-fastfetch-validation: {error}", file=sys.stderr)
+    |         ^^^^^
+171 |         raise SystemExit(1) from error
+    |
+help: Remove `print`
+
 S603 `subprocess` call: check for execution of untrusted input
   --> tests/test_repository_analytics.py:30:12
    |
@@ -8786,6 +9122,6 @@ T201 `print` found
     |
 help: Remove `print`
 
-Found 783 errors.
-[*] 44 fixable with the `--fix` option (12 hidden fixes can be enabled with the `--unsafe-fixes` option).
+Found 814 errors.
+[*] 44 fixable with the `--fix` option (16 hidden fixes can be enabled with the `--unsafe-fixes` option).
 
