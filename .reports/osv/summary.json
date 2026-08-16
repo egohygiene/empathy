@@ -1,5 +1,5 @@
 {
-  "commit": "be127f75e5fc9918f5d4cecaf26b44bd4e3a6e49",
+  "commit": "73fe3d4d58a4d25fab01dc6448686e1c08974e4f",
   "execution": {
     "message": "Canonical OSV JSON and SARIF outputs were validated.",
     "state": "success"
@@ -18,19 +18,19 @@
     "total": 53
   },
   "freshness": {
-    "expires_at": "2026-08-24T13:19:36Z",
+    "expires_at": "2026-08-24T13:58:11Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-08-16T13:19:36Z",
+  "generated_at": "2026-08-16T13:58:11Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/be127f75e5fc9918f5d4cecaf26b44bd4e3a6e49/.reports/osv",
+    "detail": "https://github.com/egohygiene/empathy/tree/73fe3d4d58a4d25fab01dc6448686e1c08974e4f/.reports/osv",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/be127f75e5fc9918f5d4cecaf26b44bd4e3a6e49",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/31949471967"
+    "source": "https://github.com/egohygiene/empathy/commit/73fe3d4d58a4d25fab01dc6448686e1c08974e4f",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/31951304491"
   },
   "osv": {
     "discovery": {
-      "artifact_count": 47,
+      "artifact_count": 45,
       "artifacts": [
         ".reports/megalinter/syft/sbom.spdx.json",
         ".staging/.github/skills/drawio/scripts/package.json",
@@ -39,8 +39,6 @@
         ".staging/devenvironment/containers/services/api/poetry.lock",
         ".staging/devenvironment/containers/services/api/pyproject.toml",
         ".staging/devenvironment/realm/pyproject.toml",
-        ".staging/react-template/universal/apps/ui/package.json",
-        ".staging/react-template/universal/apps/ui/pyproject.toml",
         "egolint/.config/lint/python/pyproject.toml",
         "egolint/Cargo.lock",
         "egolint/package.json",
@@ -112,8 +110,6 @@
         ".staging/.github/skills/md-to-docx/scripts/package.json",
         ".staging/devenvironment/containers/services/api/pyproject.toml",
         ".staging/devenvironment/realm/pyproject.toml",
-        ".staging/react-template/universal/apps/ui/package.json",
-        ".staging/react-template/universal/apps/ui/pyproject.toml",
         "egolint/.config/lint/python/pyproject.toml",
         "egolint/package.json",
         "egolint/pyproject.toml",
@@ -160,7 +156,7 @@
       },
       "vulnerabilities": 53
     },
-    "scan_duration_seconds": 11,
+    "scan_duration_seconds": 12,
     "scanner": {
       "name": "osv-scanner",
       "version": "2.5.0"
@@ -176,7 +172,7 @@
   "provenance": {
     "event": "push",
     "run_attempt": 1,
-    "run_id": "31949471967",
+    "run_id": "31951304491",
     "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
   },
   "repository": "egohygiene/empathy",

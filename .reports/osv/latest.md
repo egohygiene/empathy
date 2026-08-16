@@ -1,10 +1,10 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-16T13-19-24Z`
+- Generated: `2026-08-16T13-57-59Z`
 - Repository: `egohygiene/empathy`
-- Commit: `be127f75e5fc9918f5d4cecaf26b44bd4e3a6e49`
+- Commit: `73fe3d4d58a4d25fab01dc6448686e1c08974e4f`
 - Severity gate: `high`
-- Duration: `11s`
+- Duration: `12s`
 
 ## Findings
 
@@ -19,7 +19,7 @@
 
 ## Discovery
 
-Discovered 47 artifact(s) across 7 ecosystem label(s).
+Discovered 45 artifact(s) across 7 ecosystem label(s).
 
 - `.reports/megalinter/syft/sbom.spdx.json`
 - `.staging/.github/skills/drawio/scripts/package.json`
@@ -28,8 +28,6 @@ Discovered 47 artifact(s) across 7 ecosystem label(s).
 - `.staging/devenvironment/containers/services/api/poetry.lock`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
-- `.staging/react-template/universal/apps/ui/package.json`
-- `.staging/react-template/universal/apps/ui/pyproject.toml`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/Cargo.lock`
 - `egolint/package.json`
@@ -84,8 +82,6 @@ Discovered 47 artifact(s) across 7 ecosystem label(s).
 - `.staging/.github/skills/md-to-docx/scripts/package.json`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
-- `.staging/react-template/universal/apps/ui/package.json`
-- `.staging/react-template/universal/apps/ui/pyproject.toml`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/package.json`
 - `egolint/pyproject.toml`
