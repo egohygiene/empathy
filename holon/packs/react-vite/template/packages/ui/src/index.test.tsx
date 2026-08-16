@@ -1,7 +1,6 @@
+import { ThemeProvider } from "@egohygiene/themes";
 import { fireEvent, render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-
-import { ThemeProvider } from "@egohygiene/themes";
 
 import { StatusBadge, ThemeToggle } from "./index";
 

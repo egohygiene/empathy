@@ -7,12 +7,12 @@ passes can polish the defaults after real product usage proves them.
 
 ## Included applications
 
-| Application | Package | Default path | Purpose |
-| --- | --- | --- | --- |
-| `apps/web` | `@egohygiene/template-web` | `/` | Generic product/organization website |
-| `apps/docs` | `@egohygiene/docs` | `/docs/` | Repository and product documentation |
-| `apps/playground` | `@egohygiene/playground` | `/playground/` | Design-system and package integration lab |
-| `apps/storefront` | `@egohygiene/storefront` | `/store/` | Optional provider-neutral commerce profile |
+| Application       | Package                    | Default path   | Purpose                                    |
+| ----------------- | -------------------------- | -------------- | ------------------------------------------ |
+| `apps/web`        | `@egohygiene/template-web` | `/`            | Generic product/organization website       |
+| `apps/docs`       | `@egohygiene/docs`         | `/docs/`       | Repository and product documentation       |
+| `apps/playground` | `@egohygiene/playground`   | `/playground/` | Design-system and package integration lab  |
+| `apps/storefront` | `@egohygiene/storefront`   | `/store/`      | Optional provider-neutral commerce profile |
 
 ## Included platform packages
 
@@ -80,6 +80,11 @@ pnpm build:analyze
   CSS v3 preset, token contract, content scanning, and customization boundary.
 - [`docs/profiles/commerce/`](docs/profiles/commerce/) documents the optional
   storefront and its provider adapter.
+- [`docs/architecture/component-library.md`](docs/architecture/component-library.md)
+  defines the reusable React component contract and publication boundary.
+- [`docs/profiles/geospatial/roadmap.md`](docs/profiles/geospatial/roadmap.md)
+  and [`docs/profiles/auth/oidc-roadmap.md`](docs/profiles/auth/oidc-roadmap.md)
+  preserve optional profile intent without coupling it to the core UI package.
 - [`docs/migration/staging-promotion-ledger.md`](docs/migration/staging-promotion-ledger.md)
   records exactly what was promoted, retained, or removed from `.staging`.
 - [`docs/migration/first-pass-readiness.md`](docs/migration/first-pass-readiness.md)

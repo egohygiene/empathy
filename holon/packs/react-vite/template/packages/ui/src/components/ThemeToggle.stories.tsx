@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-
 import { ThemeProvider } from "@egohygiene/themes";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { ThemeToggle } from "../index";
 

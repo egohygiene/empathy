@@ -7,7 +7,7 @@ import plugin from "tailwindcss/plugin";
 const color = (name: string) => `rgb(var(--color-${name}) / <alpha-value>)`;
 
 const preset = {
-  darkMode: ["class", "[data-theme=\"dark\"]"],
+  darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     screens: {
       xs: "30rem",
@@ -58,13 +58,28 @@ const preset = {
       },
       fontFamily: {
         sans: ["Inter Variable", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Atkinson Hyperlegible", "Inter Variable", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: [
+          "Atkinson Hyperlegible",
+          "Inter Variable",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
         mono: ["JetBrains Mono Variable", "JetBrains Mono", "ui-monospace", "monospace"],
       },
       fontSize: {
-        "display-2xl": ["clamp(3.5rem, 8vw, 8rem)", { lineHeight: "0.92", letterSpacing: "-0.055em" }],
-        "display-xl": ["clamp(2.75rem, 6vw, 6rem)", { lineHeight: "0.96", letterSpacing: "-0.045em" }],
-        "display-lg": ["clamp(2.25rem, 5vw, 4.5rem)", { lineHeight: "1", letterSpacing: "-0.04em" }],
+        "display-2xl": [
+          "clamp(3.5rem, 8vw, 8rem)",
+          { lineHeight: "0.92", letterSpacing: "-0.055em" },
+        ],
+        "display-xl": [
+          "clamp(2.75rem, 6vw, 6rem)",
+          { lineHeight: "0.96", letterSpacing: "-0.045em" },
+        ],
+        "display-lg": [
+          "clamp(2.25rem, 5vw, 4.5rem)",
+          { lineHeight: "1", letterSpacing: "-0.04em" },
+        ],
       },
       borderRadius: {
         xs: "var(--radius-xs, 0.25rem)",
@@ -130,8 +145,8 @@ const preset = {
   },
   plugins: [
     forms({ strategy: "class" }),
-    typography(),
-    aspectRatio(),
+    typography,
+    aspectRatio,
     plugin(({ addBase, addUtilities }) => {
       addBase({
         ":focus-visible": {
@@ -150,6 +165,6 @@ const preset = {
       });
     }),
   ],
-} satisfies Config;
+} satisfies Omit<Config, "content">;
 
 export default preset;
