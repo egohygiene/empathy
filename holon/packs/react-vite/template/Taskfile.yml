@@ -1,0 +1,51 @@
+version: "3"
+
+silent: true
+
+tasks:
+  setup:
+    desc: Install the workspace dependencies.
+    cmds:
+      - corepack enable
+      - pnpm install --no-frozen-lockfile
+
+  dev:
+    desc: Run every template application locally.
+    cmds:
+      - pnpm dev
+
+  dev:web:
+    desc: Run the generic web application locally.
+    cmds:
+      - pnpm dev:web
+
+  dev:storefront:
+    desc: Run the optional commerce profile locally.
+    cmds:
+      - pnpm dev:storefront
+
+  check:
+    desc: Run all deterministic quality gates.
+    cmds:
+      - pnpm check
+
+  test:e2e:
+    desc: Run Playwright end-to-end tests.
+    cmds:
+      - pnpm exec playwright install chromium
+      - pnpm test:e2e
+
+  build:
+    desc: Build every application and package.
+    cmds:
+      - pnpm build
+
+  analyze:
+    desc: Build applications and emit bundle-analysis reports.
+    cmds:
+      - pnpm build:analyze
+
+  clean:
+    desc: Remove generated output.
+    cmds:
+      - pnpm clean
