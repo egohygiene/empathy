@@ -70,17 +70,30 @@ Promoted by synthesis:
 - Tailwind forms, typography, aspect ratio, font, and content-discovery ideas
   informed `@egohygiene/tailwind-config`
 - PWA, SVG, and WASM requirements informed the shared Vite factory
+- generic Button, error, loading, environment-banner, category-card, and
+  carousel ideas became polished, data-neutral components in `@egohygiene/ui`
+- the UI package gained a canonical library build, package metadata, stories,
+  semantic tests, architecture documentation, and a publication gate
 
-Retained in staging:
+Deferred by contract rather than copied:
 
-- Kepler/map UI, map state, cloud-provider, and map API code
-- universal-specific pages, routes, category content, and runtime API models
-- the original auth implementation for comparison until an OIDC adapter profile
-  is implemented and tested
-- icon corpus and map vendor assets pending identity/asset deduplication
+- Kepler/map UI, map state, cloud providers, and map API behavior are captured
+  by the geospatial profile roadmap
+- direct OIDC/Keycloak behavior is captured by the OIDC adapter roadmap while
+  provider-neutral behavior remains in `@egohygiene/auth`
 
-The retained material is not considered production-ready. It will be reviewed
-as maps, cloud, OIDC, and asset profiles rather than copied into the core.
+Retired after audit:
+
+- incomplete pages, routes, application shell, and product/demo content
+- broken cloud, map, and home-page imports that could not form a buildable app
+- duplicate root tooling, runtime config, API wrappers, and model-copy script
+- Universal-branded icons and manifest, which do not satisfy the identity spec
+- committed third-party map CSS, superseded by provider package imports
+
+The complete 108-file source map, missing-dependency evidence, asset checksums,
+and recovery commit are recorded in
+[`universal-ui-source-audit.md`](../provenance/universal-ui-source-audit.md).
+The universal staging subtree is now fully classified and removed.
 
 ## Vite corpus
 
@@ -100,6 +113,7 @@ those variants have explicit promote/defer/reject decisions.
    Generate and commit the first combined `pnpm-lock.yaml`, then restore frozen
    installation flags across CI, Task, container, and deployment examples.
 2. Genericize remaining Ego Hygiene website content into replaceable sample data.
-3. Classify the retained universal map/cloud assets into optional profiles.
+3. Validate the component library build and packed consumers after dependency
+   convergence; keep geospatial and OIDC work demand-driven.
 4. Review every Vite corpus variant against the canonical factory.
 5. Add a generator/instantiator and drift policy once the target shape stabilizes.

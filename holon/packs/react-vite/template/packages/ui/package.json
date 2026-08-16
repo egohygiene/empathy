@@ -3,13 +3,26 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "description": "Accessible, themeable React primitives and product-neutral interface patterns for Ego Hygiene applications.",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "./src/styles/index.css",
+    "./dist/styles.css"
+  ],
   "exports": {
-    ".": "./src/index.tsx",
+    ".": "./src/index.ts",
     "./styles.css": "./src/styles/index.css"
   },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "peerDependencies": {
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@egohygiene/icons": "workspace:*",
@@ -17,7 +30,21 @@
     "@egohygiene/utilities": "workspace:*"
   },
   "scripts": {
-    "build": "node -e \"process.stdout.write('workspace package validated by root typecheck\\n')\"",
-    "typecheck": "tsc -p tsconfig.build.json --noEmit"
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "test": "vitest run --config vitest.config.ts",
+    "typecheck": "tsc --project tsconfig.build.json --noEmit"
+  },
+  "devDependencies": {
+    "@egohygiene/vite-config": "workspace:*",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "jsdom": "^30.0.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10"
   }
 }

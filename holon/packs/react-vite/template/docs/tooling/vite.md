@@ -1,5 +1,22 @@
 # Canonical Vite configuration
 
+## Configuration factories
+
+`@egohygiene/vite-config` exposes two deliberate build boundaries:
+
+- `createReactViteConfig` for runnable browser applications;
+- `createReactLibraryConfig` for reusable React packages.
+
+The library factory uses Vite library mode, produces ESM and CommonJS bundles,
+emits one stable CSS artifact, keeps React and declared workspace packages
+external, deduplicates React at development time, and writes source maps. The
+package TypeScript project emits declarations after Vite so both artifact sets
+share one `dist/` tree.
+
+`@egohygiene/ui` is the first consumer. Its workspace exports continue to point
+to source during incubation; public publication requires conditional `dist`
+exports and packed-consumer validation.
+
 Every browser app composes `createReactViteConfig` from
 `@egohygiene/vite-config`. The package is the synthesized successor to the
 historical configurations in `.staging/vite.corpus.txt`; individual apps no
@@ -58,11 +75,11 @@ The factory loads two prefixes:
 
 Supported build switches:
 
-| Variable | Default | Behavior |
-| --- | --- | --- |
-| `TEMPLATE_ANALYZE` | `false` | Emits `dist/bundle-analysis.html` |
-| `TEMPLATE_SOURCE_MAPS` | `false` in production | Emits production source maps |
-| `TEMPLATE_PWA_DEV` | `false` | Enables the service worker during local development |
+| Variable               | Default               | Behavior                                            |
+| ---------------------- | --------------------- | --------------------------------------------------- |
+| `TEMPLATE_ANALYZE`     | `false`               | Emits `dist/bundle-analysis.html`                   |
+| `TEMPLATE_SOURCE_MAPS` | `false` in production | Emits production source maps                        |
+| `TEMPLATE_PWA_DEV`     | `false`               | Enables the service worker during local development |
 
 Use a server-side boundary or secret-bearing backend-for-frontend whenever a
 provider requires credentials that are not intended for every site visitor.

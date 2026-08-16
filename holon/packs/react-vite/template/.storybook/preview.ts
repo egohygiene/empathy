@@ -3,6 +3,8 @@ import type { Preview } from "@storybook/react-vite";
 
 import { egoHygieneTheme } from "./theme";
 
+import "../packages/ui/src/styles/index.css";
+
 const preview = {
   decorators: [
     withThemeByDataAttribute({

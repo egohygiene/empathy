@@ -48,6 +48,21 @@ modules.
 - The Storefront token is configured through Vite environment variables.
 - Checkout remains hosted by Fourthwall.
 
+## Component-library rules
+
+- `@egohygiene/ui` is the canonical reusable React component owner.
+- Keep product copy, routes, environment reads, API requests, authorization
+  policy, analytics, maps, commerce, and provider SDKs outside the core UI
+  package.
+- Prefer native HTML semantics and product-neutral props.
+- Colocate public component source, types, stories, and semantic tests.
+- Use the `eh-*` CSS namespace and semantic theme tokens.
+- Require keyboard support, visible focus, reduced motion, high contrast,
+  accessible names, and appropriate busy/disabled/live-region behavior.
+- Keep React and React DOM as peer dependencies for publishable libraries.
+- Do not flip `private` or publish a package until packed-consumer validation is
+  green and the release is explicitly authorized.
+
 ## Engineering standards
 
 - TypeScript strict mode.

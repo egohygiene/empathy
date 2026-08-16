@@ -1,8 +1,7 @@
-import { createContext, useEffect, useMemo, useState, type PropsWithChildren } from "react";
-
 import { isBrowser } from "@egohygiene/utilities";
+import { createContext, type PropsWithChildren, useEffect, useMemo, useState } from "react";
 
-import { themeNames, type ThemeName } from "../theme.types";
+import { type ThemeName, themeNames } from "../theme.types";
 
 const STORAGE_KEY = "egohygiene-theme";
 
@@ -30,7 +29,7 @@ export function applyTheme(theme: ThemeName): Exclude<ThemeName, "system"> {
   const resolvedTheme = resolveTheme(theme, prefersDark);
 
   if (isBrowser()) {
-    document.documentElement.dataset.theme = resolvedTheme;
+    document.documentElement.setAttribute("data-theme", resolvedTheme);
     document.documentElement.style.colorScheme = resolvedTheme === "light" ? "light" : "dark";
   }
 

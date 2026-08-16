@@ -1,7 +1,7 @@
+import { cn } from "@egohygiene/utilities";
 import type { AnchorHTMLAttributes } from "react";
 
-import { cn } from "@egohygiene/utilities";
-
+import { Spinner } from "../Spinner";
 import type { ButtonProps } from "./Button.types";
 
 function buttonClassName(tone: NonNullable<ButtonProps["tone"]>, disabled?: boolean) {
@@ -14,17 +14,19 @@ export function Button({
   disabled,
   icon,
   loading,
+  loadingLabel = "Loading",
   tone = "primary",
   ...props
 }: ButtonProps) {
   return (
     <button
+      aria-busy={loading || undefined}
       className={cn(buttonClassName(tone, disabled || loading), className)}
       disabled={disabled || loading}
       {...props}
     >
-      {loading ? <span className="eh-spinner" aria-hidden="true" /> : icon}
-      <span>{children}</span>
+      {loading ? <Spinner decorative size="small" /> : icon}
+      <span>{loading ? loadingLabel : children}</span>
     </button>
   );
 }
