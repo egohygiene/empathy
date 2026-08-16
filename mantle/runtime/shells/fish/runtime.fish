@@ -74,6 +74,22 @@ function __mantle_fish_runtime
         end
     end
 
+    # Use the same shell-independent presentation policy as Bash and Zsh, then
+    # export the once-per-session guard so nested shells do not retry it.
+    if test "$MANTLE_INTERACTIVE" = 1; and not set -q MANTLE_PRESENTATION_SHOWN
+        set -l presentation_command "$MANTLE_ROOT/bin/shell-banner"
+        if test -x "$presentation_command"
+            "$presentation_command"; or begin
+                if set -q MANTLE_DEBUG; and test "$MANTLE_DEBUG" = 1
+                    printf '[mantle:debug] optional startup presentation failed\n' >&2
+                end
+            end
+        else if set -q MANTLE_DEBUG; and test "$MANTLE_DEBUG" = 1
+            printf '[mantle:debug] startup presentation command is unavailable: %s\n' "$presentation_command" >&2
+        end
+        set -gx MANTLE_PRESENTATION_SHOWN 1
+    end
+
     set -g MANTLE_FISH_INITIALIZATION_STATE initialized
     return 0
 end

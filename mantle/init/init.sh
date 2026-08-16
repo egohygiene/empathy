@@ -92,6 +92,28 @@ if ((__mantle_init_status == 0)) && [[ "${MANTLE_DEBUG:-0}" == "1" ]]; then
 	unset __mantle_init_debug_path
 fi
 
+# Presentation is evaluated only after the runtime, profile, and PATH are ready.
+# The executable owns eligibility and rendering policy; this adapter only marks
+# the inherited session so nested Bash and Zsh processes do not retry it.
+if ((__mantle_init_status == 0)) &&
+	[[ "${MANTLE_INTERACTIVE:-0}" == "1" ]] &&
+	[[ "${MANTLE_PRESENTATION_SHOWN:-0}" != "1" ]]; then
+	__mantle_presentation_command="${MANTLE_ROOT}/bin/shell-banner"
+	if [[ -x "${__mantle_presentation_command}" ]]; then
+		"${__mantle_presentation_command}" || {
+			if [[ "${MANTLE_DEBUG:-0}" == "1" ]]; then
+				printf "[mantle:debug] optional startup presentation failed\n" >&2
+			fi
+		}
+	elif [[ "${MANTLE_DEBUG:-0}" == "1" ]]; then
+		printf "[mantle:debug] startup presentation command is unavailable: %s\n" \
+			"${__mantle_presentation_command}" >&2
+	fi
+	MANTLE_PRESENTATION_SHOWN="1"
+	export MANTLE_PRESENTATION_SHOWN
+	unset __mantle_presentation_command
+fi
+
 unset -f __mantle_init_source_required
 
 if ((__mantle_init_status == 0)); then

@@ -57,6 +57,8 @@ Mantle is an actively developed project with a real CLI, runtime modules, platfo
 - Portable shared/runtime bootstrapping, XDG directory management, privacy defaults, PATH construction, and interactive history policy.
 - Public help, version, diagnostics, environment, path, completion, Fastfetch,
   and installer command surfaces through `bin/mantle`.
+- Once-per-session Bash, Zsh, and Fish startup presentation with a
+  repository-owned banner, plain-text fallback, and explicit Fastfetch config.
 - Dynamic installer discovery and tested dry-run/help flows for representative installers such as `eza`, `shfmt`, `shdoc`, `pyenv`, `linuxbrew`, and `talisman`.
 - CI-backed validation on Linux and macOS, plus static validation for shell syntax, ShellCheck, and formatting when local tools are available.
 
@@ -69,7 +71,8 @@ Mantle is an actively developed project with a real CLI, runtime modules, platfo
 ### Planned but not yet complete
 
 - Broader platform validation coverage, especially around Windows environments.
-- Additional documentation depth, release/tag automation, and future permanent branding.
+- Additional documentation depth, release/tag automation, and the future
+  dedicated `mantle.png` Fastfetch logo.
 
 ## Features
 
@@ -89,6 +92,19 @@ Mantle is an actively developed project with a real CLI, runtime modules, platfo
 - Optional project-local PATH support gated behind `MANTLE_ENABLE_PROJECT_PATH=1`.
 - Privacy-conscious defaults that disable telemetry for many supported tools by default.
 - Separately configurable automatic update-check suppression.
+
+### Startup presentation
+
+- One shared `shell-banner` orchestrator for Bash, Zsh, and Fish.
+- Repository-owned 400×134 transparent banner with a plain-text fallback.
+- Banner-first, Fastfetch-second ordering with an explicit pinned configuration.
+- Once-per-session inheritance through `MANTLE_PRESENTATION_SHOWN=1`.
+- Silent defaults for noninteractive shells, redirected output, `TERM=dumb`,
+  CI, and disabled presentation profiles; `share-safe` defaults to banner-only.
+- Four deterministic, offline collectors exposed by `mantle fastfetch`.
+
+See [the presentation contract](PRESENTATION.md) for modes, manual replay,
+assets, optional dependencies, privacy boundaries, and validation.
 
 ### CLI and installers
 
@@ -123,6 +139,8 @@ Mantle is an actively developed project with a real CLI, runtime modules, platfo
 
 - Git
 - Bash, Zsh, or Fish
+- Optional: Fastfetch 2.67.0+, Chafa or another `imgcat` backend, and a Nerd
+  Font for the complete startup presentation
 - Optional: Bats, ShellCheck, and shfmt for local validation
 
 ### Install Mantle into a user-scoped prefix
@@ -168,6 +186,7 @@ mantle env
 mantle config show
 mantle config explain
 mantle install --list
+shell-banner --dry-run
 ```
 
 ### Fish initialization
@@ -214,6 +233,10 @@ mantle fastfetch runtime
 mantle fastfetch workspace
 mantle fastfetch toolchains
 mantle fastfetch contexts
+shell-banner --force
+shell-banner --banner-only --force
+shell-banner --fastfetch-only --force
+shell-banner --dry-run --verbose
 mantle completion bash
 mantle completion zsh
 mantle completion fish
@@ -255,6 +278,9 @@ Installer destinations are configurable per installer where supported. For examp
   prints the executable search path one entry per line.
 - `mantle fastfetch` exposes the four compact collectors referenced by the
   checked-in Fastfetch configuration without printing hostnames or addresses.
+- `shell-banner` owns startup presentation, invokes
+  `config/fastfetch/fastfetch.jsonc` explicitly, and never reads or overwrites
+  the user's default Fastfetch config.
 - `mantle completion bash|zsh|fish` generates completion definitions from the
   currently installed commands and installers.
 
@@ -326,6 +352,10 @@ shape runtime behavior.
 | `MANTLE_ENABLE_SAFETY_ALIASES`           | Profile value                       | Overrides prompting replacements for `cp`, `mv`, and `rm`           | `export MANTLE_ENABLE_SAFETY_ALIASES="true"`         |
 | `MANTLE_ENABLE_HISTORY`                  | Profile value                       | Overrides Mantle-owned interactive history policy                   | `export MANTLE_ENABLE_HISTORY="false"`               |
 | `MANTLE_PRESENTATION_MODE`               | Profile value                       | Publishes `private`, `share-safe`, `ci`, or `off` presentation mode | `export MANTLE_PRESENTATION_MODE="share-safe"`       |
+| `MANTLE_PRESENTATION_SHOWN`              | Unset at session start              | Inherited once-per-session startup guard                             | `export MANTLE_PRESENTATION_SHOWN="1"`               |
+| `MANTLE_BANNER_IMAGE`                    | Repository presentation PNG         | Overrides the banner image without changing installed assets         | `export MANTLE_BANNER_IMAGE="$HOME/banner.png"`      |
+| `MANTLE_BANNER_TEXT`                     | Repository text fallback            | Overrides the ANSI-free fallback                                     | `export MANTLE_BANNER_TEXT="$HOME/banner.txt"`       |
+| `MANTLE_FASTFETCH_CONFIG`                | Repository Fastfetch config         | Overrides the explicit config passed to Fastfetch                     | `export MANTLE_FASTFETCH_CONFIG="$HOME/view.jsonc"`  |
 | `MANTLE_DISABLE_TELEMETRY`               | `1`                                 | Enables Mantle's telemetry opt-out defaults when set to `1`         | `export MANTLE_DISABLE_TELEMETRY="1"`                |
 | `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS` | `0`                                 | Opts into the update-check suppression module                       | `export MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS="1"`  |
 | `MANTLE_ENABLE_PROJECT_PATH`             | `0`                                 | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled   | `export MANTLE_ENABLE_PROJECT_PATH="1"`              |
@@ -361,6 +391,10 @@ machine-readable layer registry lives at
 ```text
 .
 ├── .shellrc
+├── assets/
+│   └── presentation/
+├── config/
+│   └── fastfetch/
 ├── bin/
 │   └── mantle
 ├── init/
@@ -392,6 +426,9 @@ machine-readable layer registry lives at
 
 - `/.shellrc` — public Bash/Zsh entrypoint.
 - `/bin/mantle` — public CLI dispatcher.
+- `/bin/shell-banner` — shared startup presentation orchestrator.
+- `/assets/presentation/` — canonical banner image and plain-text fallback.
+- `/config/fastfetch/` — pinned repository-owned Fastfetch configuration.
 - `/init/` — initialization orchestration and loader boundaries.
 - `/lib/core/` — reusable shell libraries for detection, guards, logging, time, colors, and Bash helpers.
 - `/lib/config/` — non-executing typed profile parsing and effective-policy resolution.
@@ -439,7 +476,10 @@ At a high level, Mantle initialization follows this sequence:
 7. `init/bootstrap.sh` loads required noninteractive modules in order: `xdg`, `privacy`, `cache`, `tooling`, and `environment`.
 8. The platform adapter is loaded through `init/load-platform-runtime.sh`.
 9. Enabled interactive capability modules load when `MANTLE_INTERACTIVE=1`.
-10. If everything succeeds, `.shellrc` records `MANTLE_INITIALIZATION_STATE=initialized`.
+10. The shared presentation command is evaluated once for an eligible
+    interactive session; optional failures are ignored and the inherited guard
+    is exported.
+11. If everything succeeds, `.shellrc` records `MANTLE_INITIALIZATION_STATE=initialized`.
 
 Operational guarantees from the current implementation:
 

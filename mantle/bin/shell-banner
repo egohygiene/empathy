@@ -1,59 +1,80 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
+# Render Mantle's optional, offline startup presentation.
 
-set -euo pipefail
+set -o errexit
+set -o nounset
+set -o pipefail
 
 readonly PROGRAM_NAME="shell-banner"
-readonly VERSION="2.0.0"
+readonly VERSION="3.0.0"
 
 ROOT_DIRECTORY="${MANTLE_ROOT:-}"
-BANNER_FILE="${MANTLE_BANNER_FILE:-}"
-BANNER_FILE_EXPLICIT=false
-LOGO_ONLY=false
-SHOW_GIT=true
+BANNER_IMAGE="${MANTLE_BANNER_IMAGE:-}"
+BANNER_TEXT="${MANTLE_BANNER_TEXT:-${MANTLE_BANNER_FILE:-}}"
+FASTFETCH_CONFIG="${MANTLE_FASTFETCH_CONFIG:-}"
+PRESENTATION_MODE="${MANTLE_POLICY_PRESENTATION:-${MANTLE_PRESENTATION_MODE:-private}}"
+
+BANNER_IMAGE_EXPLICIT="0"
+BANNER_TEXT_EXPLICIT="0"
+FASTFETCH_CONFIG_EXPLICIT="0"
+FORCE_PRESENTATION="0"
+BANNER_ONLY="0"
+FASTFETCH_ONLY="0"
+DRY_RUN="0"
+VERBOSE="0"
+SKIP_REASON=""
 
 # @description Print CLI documentation.
-# @stdout Usage, options, environment variables, and exit codes.
+# @stdout Usage, options, environment variables, and safety behavior.
 print_help() {
-	cat <<'EOF'
-Usage: shell-banner [OPTIONS]
-
-Render an optional ANSI/text banner followed by concise workspace, host, time,
-and Git context. The command performs no network requests.
-
-Options:
-  --file PATH       Read the banner from PATH. Use - for standard input.
-  --root DIRECTORY  Mantle root used for the assets/banner.txt fallback.
-  --logo-only       Render only the banner, with no context lines.
-  --no-git          Omit Git repository context.
-  -h, --help        Show help and exit.
-  --version         Show version and exit.
-
-Environment:
-  MANTLE_BANNER_FILE  Default banner file.
-  MANTLE_ROOT         Default Mantle repository root.
-  XDG_CONFIG_HOME     Configuration root for mantle/banner.txt.
-
-Banner lookup order:
-  1. --file
-  2. MANTLE_BANNER_FILE
-  3. $XDG_CONFIG_HOME/mantle/banner.txt (or $HOME/.config/mantle/banner.txt)
-  4. $MANTLE_ROOT/assets/banner.txt
-
-The banner is optional unless --file is provided. Backslash escapes in trusted
-banner content are interpreted so stored ANSI escape sequences can be rendered.
-
-Exit codes:
-  0   Banner rendering completed.
-  64  Invalid command-line usage.
-  66  An explicitly selected banner could not be read.
-EOF
+	printf "%s\n" \
+		"Usage: ${PROGRAM_NAME} [OPTIONS]" \
+		"" \
+		"Render Mantle's banner, then its explicit Fastfetch configuration. The" \
+		"presentation is offline, optional, TTY-aware, and nonfatal by default." \
+		"" \
+		"Options:" \
+		"  --force            Replay and explicitly authorize redirected output." \
+		"  --banner-only      Render the banner without Fastfetch." \
+		"  --fastfetch-only   Run Fastfetch without the banner." \
+		"  --image PATH       Override the repository-owned banner image." \
+		"  --text PATH        Override the plain-text fallback." \
+		"  --config PATH      Override the repository-owned Fastfetch config." \
+		"  --root DIRECTORY   Override the Mantle installation root." \
+		"  --dry-run          Print the resolved plan without rendering or executing." \
+		"  --verbose          Explain skipped or failed optional components on stderr." \
+		"  --help             Show help and exit." \
+		"  --version          Show version and exit." \
+		"" \
+		"Compatibility aliases: --file PATH, --logo-only, and --no-git." \
+		"" \
+		"Environment:" \
+		"  MANTLE_PRESENTATION_MODE  private, share-safe, ci, or off." \
+		"  MANTLE_PRESENTATION_SHOWN Exported once-per-session startup guard." \
+		"  MANTLE_BANNER_IMAGE       Banner image override." \
+		"  MANTLE_BANNER_TEXT        Plain-text fallback override." \
+		"  MANTLE_FASTFETCH_CONFIG   Fastfetch config override." \
+		"" \
+		"Normal startup requires an interactive Mantle shell, a usable stdout TTY," \
+		"a non-dumb terminal, no CI marker, no prior guard, and a non-disabled mode." \
+		"Missing or failing image renderers and Fastfetch never break initialization."
 }
 
 # @description Print an error message.
 # @arg $1 string Explanation.
 log_error() {
-	printf '%s: error: %s\n' "$PROGRAM_NAME" "$1" >&2
+	printf "%s: error: %s\n" "${PROGRAM_NAME}" "$1" >&2
+}
+
+# @description Print an optional diagnostic.
+# @arg $1 string Diagnostic message.
+log_verbose() {
+	if [[ "${VERBOSE}" == "1" ]]; then
+		printf "%s: %s\n" "${PROGRAM_NAME}" "$1" >&2
+	fi
 }
 
 # @description Exit after reporting invalid usage.
@@ -61,7 +82,7 @@ log_error() {
 # @exitcode 64 Always.
 usage_error() {
 	log_error "$1"
-	printf "Try '%s --help' for more information.\n" "$PROGRAM_NAME" >&2
+	printf "Try '%s --help' for more information.\n" "${PROGRAM_NAME}" >&2
 	exit 64
 }
 
@@ -72,14 +93,13 @@ absolute_directory() {
 	(CDPATH="" cd -P -- "$1" 2>/dev/null && pwd -P)
 }
 
-# @description Discover and validate the Mantle root directory.
-discover_root() {
-	local script_directory
-	if [[ -z "$ROOT_DIRECTORY" ]]; then
-		script_directory=$(absolute_directory "$(dirname "${BASH_SOURCE[0]}")") || return 1
-		ROOT_DIRECTORY=$(absolute_directory "${script_directory}/..") || return 1
-	else
-		ROOT_DIRECTORY=$(absolute_directory "$ROOT_DIRECTORY") || return 1
+# @description Require a nonempty value for the current option.
+# @arg $1 string Option name.
+# @arg $2 integer Remaining argument count.
+# @arg $3 string|unset Candidate value.
+require_option_value() {
+	if (($2 < 2)) || [[ -z "${3-}" ]]; then
+		usage_error "$1 requires a nonempty value"
 	fi
 }
 
@@ -88,117 +108,309 @@ discover_root() {
 parse_arguments() {
 	while (($# > 0)); do
 		case "$1" in
-		--file)
-			(($# >= 2)) || usage_error "--file requires a value"
-			BANNER_FILE=$2
-			BANNER_FILE_EXPLICIT=true
+		--force)
+			FORCE_PRESENTATION="1"
+			;;
+		--banner-only | --logo-only)
+			BANNER_ONLY="1"
+			;;
+		--fastfetch-only)
+			FASTFETCH_ONLY="1"
+			;;
+		--image)
+			require_option_value "$1" "$#" "${2-}"
+			BANNER_IMAGE="$2"
+			BANNER_IMAGE_EXPLICIT="1"
+			shift
+			;;
+		--text | --file)
+			require_option_value "$1" "$#" "${2-}"
+			BANNER_TEXT="$2"
+			BANNER_TEXT_EXPLICIT="1"
+			shift
+			;;
+		--config)
+			require_option_value "$1" "$#" "${2-}"
+			FASTFETCH_CONFIG="$2"
+			FASTFETCH_CONFIG_EXPLICIT="1"
 			shift
 			;;
 		--root)
-			(($# >= 2)) || usage_error "--root requires a value"
-			ROOT_DIRECTORY=$2
+			require_option_value "$1" "$#" "${2-}"
+			ROOT_DIRECTORY="$2"
 			shift
 			;;
-		--logo-only) LOGO_ONLY=true ;;
-		--no-git) SHOW_GIT=false ;;
-		--force) ;; # Backward-compatible no-op from the original command.
-		-h | --help)
+		--dry-run)
+			DRY_RUN="1"
+			;;
+		--verbose)
+			VERBOSE="1"
+			;;
+		--no-git)
+			# Retained as a harmless compatibility alias. Context now comes only
+			# from Fastfetch's privacy-conscious Mantle collectors.
+			;;
+		--help | -h)
 			print_help
 			exit 0
 			;;
 		--version)
-			printf '%s %s\n' "$PROGRAM_NAME" "$VERSION"
+			printf "%s %s\n" "${PROGRAM_NAME}" "${VERSION}"
 			exit 0
+			;;
+		--)
+			shift
+			if (($# > 0)); then
+				usage_error "unexpected positional argument: $1"
+			fi
+			break
 			;;
 		-*) usage_error "unknown option: $1" ;;
 		*) usage_error "unexpected positional argument: $1" ;;
 		esac
 		shift
 	done
+
+	if [[ "${BANNER_ONLY}" == "1" && "${FASTFETCH_ONLY}" == "1" ]]; then
+		usage_error "--banner-only and --fastfetch-only cannot be combined"
+	fi
 }
 
-# @description Select the first readable banner according to lookup precedence.
-# @exitcode 66 If an explicitly selected banner is unreadable.
-select_banner_file() {
-	local configuration_root
-	if [[ "$BANNER_FILE_EXPLICIT" == true ]]; then
-		if [[ "$BANNER_FILE" != - && ! -r "$BANNER_FILE" ]]; then
-			log_error "banner file is not readable: $BANNER_FILE"
-			exit 66
-		fi
-		return 0
+# @description Apply the resolved privacy mode to the default sequence.
+apply_mode_policy() {
+	# The full Fastfetch view includes local workstation details. The share-safe
+	# profile therefore defaults to the repository-owned banner only; an
+	# intentional --fastfetch-only --force command remains available.
+	if [[ "${PRESENTATION_MODE}" == "share-safe" &&
+		"${BANNER_ONLY}" != "1" &&
+		"${FASTFETCH_ONLY}" != "1" ]]; then
+		BANNER_ONLY="1"
 	fi
+}
 
-	if [[ -n "$BANNER_FILE" ]]; then
-		[[ -r "$BANNER_FILE" ]] || {
-			log_error "MANTLE_BANNER_FILE is not readable: $BANNER_FILE"
-			exit 66
-		}
-		return 0
-	fi
+# @description Discover the Mantle root and canonical presentation files.
+resolve_paths() {
+	local script_directory=""
 
-	if [[ -n "${XDG_CONFIG_HOME:-}" ]]; then
-		configuration_root=$XDG_CONFIG_HOME
-	elif [[ -n "${HOME:-}" ]]; then
-		configuration_root="${HOME}/.config"
+	if [[ -z "${ROOT_DIRECTORY}" ]]; then
+		script_directory="$(absolute_directory "$(dirname -- "${BASH_SOURCE[0]}")")" || return 1
+		ROOT_DIRECTORY="$(absolute_directory "${script_directory}/..")" || return 1
 	else
-		configuration_root=""
+		ROOT_DIRECTORY="$(absolute_directory "${ROOT_DIRECTORY}")" || return 1
 	fi
 
-	if [[ -n "$configuration_root" && -r "${configuration_root}/mantle/banner.txt" ]]; then
-		BANNER_FILE="${configuration_root}/mantle/banner.txt"
-	elif [[ -r "${ROOT_DIRECTORY}/assets/banner.txt" ]]; then
-		BANNER_FILE="${ROOT_DIRECTORY}/assets/banner.txt"
+	if [[ -z "${BANNER_IMAGE}" ]]; then
+		BANNER_IMAGE="${ROOT_DIRECTORY}/assets/presentation/mantle-banner.png"
+	fi
+	if [[ -z "${BANNER_TEXT}" ]]; then
+		BANNER_TEXT="${ROOT_DIRECTORY}/assets/presentation/mantle-banner.txt"
+	fi
+	if [[ -z "${FASTFETCH_CONFIG}" ]]; then
+		FASTFETCH_CONFIG="${ROOT_DIRECTORY}/config/fastfetch/fastfetch.jsonc"
 	fi
 }
 
-# @description Render the selected banner when one is available.
+# @description Validate explicit path overrides without making defaults fatal.
+validate_explicit_paths() {
+	if [[ "${BANNER_IMAGE_EXPLICIT}" == "1" && ! -r "${BANNER_IMAGE}" ]]; then
+		log_error "banner image is not readable: ${BANNER_IMAGE}"
+		exit 66
+	fi
+	if [[ "${BANNER_TEXT_EXPLICIT}" == "1" && ! -r "${BANNER_TEXT}" ]]; then
+		log_error "banner text is not readable: ${BANNER_TEXT}"
+		exit 66
+	fi
+	if [[ "${FASTFETCH_CONFIG_EXPLICIT}" == "1" && ! -r "${FASTFETCH_CONFIG}" ]]; then
+		log_error "Fastfetch config is not readable: ${FASTFETCH_CONFIG}"
+		exit 66
+	fi
+}
+
+# @description Determine whether normal startup presentation is eligible.
+# @exitcode 0 Eligible or explicitly forced.
+# @exitcode 1 Safely skipped, with SKIP_REASON populated.
+presentation_is_eligible() {
+	if [[ "${FORCE_PRESENTATION}" == "1" ]]; then
+		return 0
+	fi
+
+	case "${PRESENTATION_MODE}" in
+	private | share-safe) ;;
+	ci)
+		SKIP_REASON="presentation mode is ci"
+		return 1
+		;;
+	off)
+		SKIP_REASON="presentation mode is off"
+		return 1
+		;;
+	*)
+		SKIP_REASON="presentation mode is invalid: ${PRESENTATION_MODE}"
+		return 1
+		;;
+	esac
+
+	if [[ "${MANTLE_INTERACTIVE:-0}" != "1" ]]; then
+		SKIP_REASON="Mantle shell is not interactive"
+		return 1
+	fi
+	if [[ -n "${CI:-}" || -n "${GITHUB_ACTIONS:-}" ]]; then
+		SKIP_REASON="CI environment is active"
+		return 1
+	fi
+	if [[ "${MANTLE_PRESENTATION_SHOWN:-0}" == "1" ]]; then
+		SKIP_REASON="presentation was already evaluated in this session"
+		return 1
+	fi
+	if [[ "${TERM:-dumb}" == "dumb" ]]; then
+		SKIP_REASON="TERM is dumb"
+		return 1
+	fi
+	if [[ ! -t 1 ]]; then
+		SKIP_REASON="standard output is not a terminal"
+		return 1
+	fi
+	return 0
+}
+
+# @description Report whether a path is readable.
+# @arg $1 string Path.
+# @stdout readable or unavailable.
+readability_label() {
+	if [[ -r "$1" ]]; then
+		printf "readable\n"
+	else
+		printf "unavailable\n"
+	fi
+}
+
+# @description Describe the selected component order.
+# @stdout Component sequence.
+sequence_label() {
+	if [[ "${BANNER_ONLY}" == "1" ]]; then
+		printf "banner\n"
+	elif [[ "${FASTFETCH_ONLY}" == "1" ]]; then
+		printf "fastfetch\n"
+	else
+		printf "banner -> fastfetch\n"
+	fi
+}
+
+# @description Print the resolved presentation plan without side effects.
+print_plan() {
+	local eligibility="eligible"
+	if ! presentation_is_eligible; then
+		eligibility="skipped: ${SKIP_REASON}"
+	fi
+
+	printf "presentation: %s\n" "${eligibility}"
+	printf "mode: %s\n" "${PRESENTATION_MODE}"
+	printf "banner-image: %s [%s]\n" "${BANNER_IMAGE}" "$(readability_label "${BANNER_IMAGE}")"
+	printf "banner-text: %s [%s]\n" "${BANNER_TEXT}" "$(readability_label "${BANNER_TEXT}")"
+	printf "fastfetch-config: %s [%s]\n" "${FASTFETCH_CONFIG}" "$(readability_label "${FASTFETCH_CONFIG}")"
+	if command -v fastfetch >/dev/null 2>&1; then
+		printf "fastfetch-command: %s\n" "$(command -v fastfetch)"
+	else
+		printf "fastfetch-command: unavailable\n"
+	fi
+	printf "sequence: %s\n" "$(sequence_label)"
+}
+
+# @description Render the canonical image through imgcat or the text fallback.
 render_banner() {
-	local banner_content
-	[[ -n "$BANNER_FILE" ]] || return 0
-	if [[ "$BANNER_FILE" == - ]]; then
-		banner_content=$(cat)
+	local imgcat_command="${ROOT_DIRECTORY}/bin/imgcat"
+	local imgcat_status=0
+	local imgcat_arguments=(--width 48)
+
+	if [[ "${VERBOSE}" == "1" ]]; then
+		imgcat_arguments+=(--verbose)
 	else
-		banner_content=$(<"$BANNER_FILE")
+		imgcat_arguments+=(--quiet)
 	fi
-	printf '%b\n' "$banner_content"
+
+	if [[ -r "${BANNER_IMAGE}" && -x "${imgcat_command}" ]]; then
+		if [[ "${FORCE_PRESENTATION}" == "1" && ! -t 1 ]]; then
+			imgcat_arguments+=(--force-terminal)
+		fi
+		if [[ "${VERBOSE}" == "1" ]]; then
+			"${imgcat_command}" "${imgcat_arguments[@]}" -- "${BANNER_IMAGE}" || imgcat_status=$?
+		else
+			"${imgcat_command}" "${imgcat_arguments[@]}" -- "${BANNER_IMAGE}" 2>/dev/null || imgcat_status=$?
+		fi
+		if ((imgcat_status == 0)); then
+			return 0
+		fi
+		log_verbose "image renderer failed with status ${imgcat_status}; using text fallback"
+	else
+		log_verbose "banner image or imgcat is unavailable; using text fallback"
+	fi
+
+	if [[ -r "${BANNER_TEXT}" ]]; then
+		cat -- "${BANNER_TEXT}"
+	else
+		log_verbose "plain-text banner fallback is unavailable: ${BANNER_TEXT}"
+	fi
+	return 0
 }
 
-# @description Render workspace, host, time, and optional Git context.
-render_context() {
-	local workspace host_value time_value repository_root branch_value commit_value subject_value
-	workspace=$(pwd -P 2>/dev/null || printf '%s' "${PWD:-unknown}")
-	host_value=$(hostname 2>/dev/null || printf '%s' unknown)
-	time_value=$(date '+%Y-%m-%d %H:%M:%S %Z' 2>/dev/null || printf '%s' unknown)
+# @description Invoke Fastfetch with only Mantle's explicit config.
+run_fastfetch() {
+	local fastfetch_command=""
+	local fastfetch_status=0
 
-	printf 'workspace: %s\n' "$workspace"
-	printf 'host:      %s\n' "$host_value"
-	printf 'time:      %s\n' "$time_value"
+	if ! command -v fastfetch >/dev/null 2>&1; then
+		log_verbose "Fastfetch is unavailable"
+		return 0
+	fi
+	if [[ ! -r "${FASTFETCH_CONFIG}" ]]; then
+		log_verbose "Fastfetch config is unavailable: ${FASTFETCH_CONFIG}"
+		return 0
+	fi
 
-	[[ "$SHOW_GIT" == true ]] || return 0
-	command -v git >/dev/null 2>&1 || return 0
-	git rev-parse --is-inside-work-tree >/dev/null 2>&1 || return 0
+	fastfetch_command="$(command -v fastfetch)"
+	if [[ "${VERBOSE}" == "1" ]]; then
+		printf "%s: Fastfetch command: %s\n" "${PROGRAM_NAME}" "${fastfetch_command}" >&2
+		printf "%s: Fastfetch config: %s\n" "${PROGRAM_NAME}" "${FASTFETCH_CONFIG}" >&2
+		"${fastfetch_command}" --version >&2 || true
+		"${fastfetch_command}" --config "${FASTFETCH_CONFIG}" || fastfetch_status=$?
+	else
+		"${fastfetch_command}" --config "${FASTFETCH_CONFIG}" 2>/dev/null || fastfetch_status=$?
+	fi
 
-	repository_root=$(git rev-parse --show-toplevel 2>/dev/null) || return 0
-	branch_value=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null || printf '%s' unknown)
-	commit_value=$(git rev-parse --short HEAD 2>/dev/null || printf '%s' unknown)
-	subject_value=$(git log -1 --pretty=%s 2>/dev/null || printf '%s' '(no commits)')
-	printf 'repo:      %s\n' "${repository_root##*/}"
-	printf 'branch:    %s\n' "$branch_value"
-	printf 'commit:    %s %s\n' "$commit_value" "$subject_value"
+	if ((fastfetch_status != 0)); then
+		log_verbose "Fastfetch failed with status ${fastfetch_status}; continuing"
+	fi
+	return 0
 }
 
 # @description Run shell-banner.
 # @arg $@ string CLI arguments.
 main() {
 	parse_arguments "$@"
-	discover_root || {
+	apply_mode_policy
+	resolve_paths || {
 		log_error "Mantle root is not an accessible directory: ${ROOT_DIRECTORY:-unknown}"
 		exit 66
 	}
-	select_banner_file
-	render_banner
-	[[ "$LOGO_ONLY" == true ]] || render_context
+	validate_explicit_paths
+
+	if [[ "${DRY_RUN}" == "1" ]]; then
+		print_plan
+		return 0
+	fi
+
+	if ! presentation_is_eligible; then
+		log_verbose "skipped: ${SKIP_REASON}"
+		return 0
+	fi
+
+	if [[ "${FASTFETCH_ONLY}" != "1" ]]; then
+		render_banner
+	fi
+	if [[ "${BANNER_ONLY}" != "1" ]]; then
+		run_fastfetch
+	fi
+	return 0
 }
 
 main "$@"

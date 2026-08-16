@@ -1,0 +1,55 @@
+apiVersion: egohygiene.dev/v1alpha1
+kind: RepositoryPack
+metadata:
+  name: readme
+  status: incubating
+  owner: holon
+spec:
+  purpose: Evidence-first project and profile README authoring
+  placeholderSyntax: "{{UPPER_SNAKE_CASE}}"
+  generatedRegions:
+    startSuffix: ":START -->"
+    endSuffix: ":END -->"
+  templates:
+    - id: project
+      path: ./templates/project/README.md
+      audience: adopters, operators, maintainers, and contributors
+      requiredSections:
+        - why
+        - highlights
+        - quick-start
+        - usage
+        - compatibility
+        - development
+        - security
+        - support
+        - contributing
+        - license
+    - id: profile
+      path: ./templates/profile/README.md
+      audience: hiring managers, collaborators, and open-source users
+      requiredSections:
+        - thirty-second-brief
+        - proof-at-a-glance
+        - selected-impact
+        - featured-systems
+        - engineering-capabilities
+        - experience
+        - contact
+  repositoryTypes:
+    - cli
+    - library
+    - service
+    - application
+    - template
+    - automation
+    - data
+    - documentation
+    - monorepo
+  validation:
+    command: python3 holon/packs/readme/tools/validate.py
+    placeholderPolicy: allowed-in-source-forbidden-in-materialized-output
+    externalWidgetPolicy: optional-and-noncritical
+  references:
+    - ./references/research-and-design.md
+    - ./PROVENANCE.md

@@ -14,6 +14,7 @@ setup() {
 		"README.md" \
 		"ARCHITECTURE.md" \
 		"CONTRIBUTING.md" \
+		"PRESENTATION.md" \
 		"PROVENANCE.md" \
 		"tests/README.md"; do
 		assert_file_exists "${MANTLE_ROOT}/${document_path}"
@@ -27,6 +28,7 @@ setup() {
 
 	for expected_link in \
 		"ARCHITECTURE.md" \
+		"PRESENTATION.md" \
 		"PROVENANCE.md" \
 		"CONTRIBUTING.md" \
 		"tests/README.md"; do

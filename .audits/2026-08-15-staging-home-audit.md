@@ -5,10 +5,11 @@
 
 > **Living-ledger note (2026-08-16):** The narrative and owner table below
 > preserve the original `41d1da3` snapshot. The deterministic CSV is refreshed
-> as approved promotion PRs land and currently covers 2,226 tracked files and
-> 161,813,173 bytes. See
-> [`2026-08-16-taskfile-promotion.md`](2026-08-16-taskfile-promotion.md) for the
-> latest task-corpus disposition.
+> as approved promotion PRs land and currently covers 2,222 tracked files and
+> 161,784,921 bytes. See
+> [`2026-08-16-taskfile-promotion.md`](2026-08-16-taskfile-promotion.md) and
+> [`2026-08-16-misc-promotion.md`](2026-08-16-misc-promotion.md) for the latest
+> approved dispositions.
 
 ## Decision
 

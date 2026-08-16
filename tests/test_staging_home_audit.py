@@ -56,7 +56,6 @@ class StagingHomeAuditTests(unittest.TestCase):
             ".staging/.github/workflows/flutter-ci-reusable.yml": "relay",
             ".staging/.github/specs/agent-system.spec.md": "aether",
             ".staging/mkdocs.yml": "mindgarden",
-            ".staging/misc/fastfetch.jsonc": "mantle",
             ".staging/templates/paper/README.md": "beacon",
         }
 
