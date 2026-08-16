@@ -197,3 +197,58 @@ _source_shellrc() {
 	run /bin/bash --noprofile --norc "${MANTLE_ROOT}/lib/modules.sh"
 	assert_status 64
 }
+
+# ---------------------------------------------------------------------------
+# Once-per-session presentation integration
+# ---------------------------------------------------------------------------
+
+@test "interactive Bash evaluates presentation once and exports the guard" {
+	run env -i \
+		HOME="${TEST_HOME}" \
+		MANTLE_PRESENTATION_MODE="off" \
+		PATH="${PATH}" \
+		TERM=xterm-256color \
+		/bin/bash --noprofile --norc -i -c \
+		"source '${MANTLE_ROOT}/.shellrc'; printf 'guard=%s\\n' \"\${MANTLE_PRESENTATION_SHOWN:-missing}\""
+	assert_success
+	assert_output_contains "guard=1"
+}
+
+@test "nested Bash inherits the once-per-session presentation guard" {
+	run env -i \
+		HOME="${TEST_HOME}" \
+		MANTLE_PRESENTATION_MODE="off" \
+		PATH="${PATH}" \
+		TERM=xterm-256color \
+		/bin/bash --noprofile --norc -i -c \
+		"source '${MANTLE_ROOT}/.shellrc'; /bin/bash --noprofile --norc -c 'printf \"nested=%s\\n\" \"\${MANTLE_PRESENTATION_SHOWN:-missing}\"'"
+	assert_success
+	assert_output_contains "nested=1"
+}
+
+@test "interactive Zsh uses the shared presentation command and guard" {
+	require_zsh
+	run env -i \
+		HOME="${TEST_HOME}" \
+		MANTLE_PRESENTATION_MODE="off" \
+		PATH="${PATH}" \
+		TERM=xterm-256color \
+		zsh --no-rcs -i -c \
+		"source '${MANTLE_ROOT}/.shellrc'; printf 'guard=%s\\n' \"\${MANTLE_PRESENTATION_SHOWN:-missing}\""
+	assert_success
+	assert_output_contains "guard=1"
+}
+
+@test "interactive Fish uses the shared presentation command and guard" {
+	require_fish
+	run env -i \
+		HOME="${TEST_HOME}" \
+		MANTLE_PRESENTATION_MODE="off" \
+		MANTLE_ROOT="${MANTLE_ROOT}" \
+		PATH="${PATH}" \
+		TERM=xterm-256color \
+		fish --no-config --interactive --command \
+		'source "$MANTLE_ROOT/runtime/shells/fish/runtime.fish"; printf "guard=%s\n" "$MANTLE_PRESENTATION_SHOWN"'
+	assert_success
+	assert_output_contains "guard=1"
+}

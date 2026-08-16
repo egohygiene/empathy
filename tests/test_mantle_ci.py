@@ -62,6 +62,11 @@ class MantleIntegrationTests(unittest.TestCase):
             "macos-15",
             "./tests/run.sh --strict",
             "/bin/bash ./tests/smoke/install.sh",
+            'FASTFETCH_VERSION: "2.67.0"',
+            "tests/validate_fastfetch.py",
+            "fastfetch-linux-amd64.tar.gz",
+            "f14538f30286f83affe129c8fb874d2b13c669365fa2e71533986d188c6c5af1",
+            "--config config/fastfetch/fastfetch.jsonc",
             "permissions:\n  contents: read",
             "persist-credentials: false",
         ):

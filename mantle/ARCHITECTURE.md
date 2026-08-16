@@ -22,6 +22,7 @@ declarations.
 | `.shellrc`                                    | Public entrypoint       | Source to initialize Bash or Zsh.                                                             |
 | `runtime/shells/fish/runtime.fish`            | Public entrypoint       | Source from Fish with `MANTLE_ROOT` set.                                                      |
 | `bin/mantle`                                  | Public entrypoint       | Execute to access supported CLI commands.                                                     |
+| `bin/shell-banner`                            | Public entrypoint       | Replay or inspect the optional startup presentation.                                          |
 | `install.sh`                                  | Public entrypoint       | Execute to install, inspect, or remove Mantle.                                                |
 | `lib/core/`, `lib/bash/`                      | Public library layer    | Functions covered by the public-API contract are stable.                                      |
 | `lib/modules.sh`                              | Public loader API       | `mantle_load_module`, `mantle_list_loaded_modules`, and `mantle_is_module_loaded` are stable. |
@@ -49,6 +50,9 @@ define which files are direct entrypoints.
 - Shell runtimes adapt shared behavior to Bash, Zsh, Fish, or POSIX syntax.
 - CLI commands parse user intent and report results. Installer implementations
   consume the install-library layer in a process-isolated execution path.
+- Presentation owns TTY eligibility, banner rendering, Fastfetch invocation,
+  and nonfatal degradation. Shell adapters only invoke it and export the
+  inherited once-per-session guard.
 - Extensions remain opt-in and must not become implicit startup dependencies.
 
 ## Dependency direction
@@ -83,7 +87,9 @@ test when the edge is dynamic.
 4. Bootstrap loads portable modules in dependency order.
 5. The active platform adapter applies OS-specific behavior.
 6. Profile-enabled capability modules load only where applicable.
-7. Successful initialization records an idempotent initialized state; failures
+7. An eligible interactive shell evaluates the shared presentation command and
+   exports `MANTLE_PRESENTATION_SHOWN=1` for nested shells.
+8. Successful initialization records an idempotent initialized state; failures
    remain visible and retryable.
 
 Fish uses its native runtime entrypoint and configuration fragments rather than
@@ -102,6 +108,10 @@ Realm may activate Mantle inside an environment, but Mantle must not acquire
 container lifecycle, image-composition, or project-service responsibilities.
 This keeps Mantle usable on a laptop, in a dev container, and in CI without
 requiring Realm.
+
+Realm may provision Fastfetch, Chafa, fonts, or terminal packages. The banner,
+Fastfetch config, collectors, eligibility policy, and shell integration remain
+Mantle behavior.
 
 ## Changing a boundary
 
