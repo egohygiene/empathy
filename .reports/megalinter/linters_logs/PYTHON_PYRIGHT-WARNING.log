@@ -3130,11 +3130,15 @@ Linter raw log:
   .staging/.github/skills/eyeball/tools/eyeball.py:770:13 - error: Type of "close" is unknown (reportUnknownMemberType)
 .staging/.github/skills/mini-context-graph/scripts/contextgraph.py
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:20:8 - warning: Import "config" could not be resolved (reportMissingImports)
-  .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:6 - warning: Import "tools" could not be resolved (reportMissingImports)
+  .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:19 - error: "graph_store" is unknown import symbol (reportAttributeAccessIssue)
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:19 - error: Type of "graph_store" is unknown (reportUnknownVariableType)
+  .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:32 - error: "index_store" is unknown import symbol (reportAttributeAccessIssue)
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:32 - error: Type of "index_store" is unknown (reportUnknownVariableType)
+  .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:45 - error: "ontology_store" is unknown import symbol (reportAttributeAccessIssue)
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:45 - error: Type of "ontology_store" is unknown (reportUnknownVariableType)
+  .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:61 - error: "retrieval_engine" is unknown import symbol (reportAttributeAccessIssue)
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:61 - error: Type of "retrieval_engine" is unknown (reportUnknownVariableType)
+  .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:79 - error: "documents_store" is unknown import symbol (reportAttributeAccessIssue)
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:21:79 - error: Type of "documents_store" is unknown (reportUnknownVariableType)
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:51:9 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
   .staging/.github/skills/mini-context-graph/scripts/contextgraph.py:51:36 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
@@ -3550,7 +3554,7 @@ Linter raw log:
   .staging/.github/skills/mini-context-graph/scripts/tools/ontology_store.py:170:12 - error: Return type is unknown (reportUnknownVariableType)
   .staging/.github/skills/mini-context-graph/scripts/tools/ontology_store.py:175:12 - error: Return type is unknown (reportUnknownVariableType)
 .staging/.github/skills/mini-context-graph/scripts/tools/retrieval_engine.py
-  .staging/.github/skills/mini-context-graph/scripts/tools/retrieval_engine.py:16:6 - warning: Import "tools" could not be resolved (reportMissingImports)
+  .staging/.github/skills/mini-context-graph/scripts/tools/retrieval_engine.py:16:19 - error: "graph_store" is unknown import symbol (reportAttributeAccessIssue)
   .staging/.github/skills/mini-context-graph/scripts/tools/retrieval_engine.py:16:19 - error: Type of "graph_store" is unknown (reportUnknownVariableType)
   .staging/.github/skills/mini-context-graph/scripts/tools/retrieval_engine.py:17:8 - warning: Import "config" could not be resolved (reportMissingImports)
   .staging/.github/skills/mini-context-graph/scripts/tools/retrieval_engine.py:22:18 - error: Type of "MAX_GRAPH_DEPTH" is unknown (reportUnknownMemberType)
@@ -10589,5 +10593,5 @@ tests/test_repository_intelligence_dashboard.py
   tests/test_repository_intelligence_dashboard.py:414:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
   tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
   tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-7390 errors, 411 warnings, 0 informations
+7396 errors, 409 warnings, 0 informations
 

@@ -11,22 +11,22 @@ Linter raw log:
 
 ┌─stripe-access-token──○
 │
-│ 142 │ const API_KEY = "REDACTED";
+│ 412 │ const API_KEY = 'REDACTED';
 │     │                  ^^^^^^^^
 │
 │ attributes:
-│   path .......... .staging/.github/instructions/awesome-copilot/code-review-generic.instructions.md
+│   path .......... .staging/.github/instructions/awesome-copilot/security-and-owasp.instructions.md
 │   resource ...... fs.content
 └○
 
 
 ┌─stripe-access-token──○
 │
-│ 412 │ const API_KEY = 'REDACTED';
+│ 142 │ const API_KEY = "REDACTED";
 │     │                  ^^^^^^^^
 │
 │ attributes:
-│   path .......... .staging/.github/instructions/awesome-copilot/security-and-owasp.instructions.md
+│   path .......... .staging/.github/instructions/awesome-copilot/code-review-generic.instructions.md
 │   resource ...... fs.content
 └○
 
@@ -64,6 +64,6 @@ Linter raw log:
 └○
 
 
-1:08AM INF scanned ~25303828 bytes (25.30 MB) in 2.17s
-1:08AM WRN leaks found: 5
+1:53AM INF scanned ~25392327 bytes (25.39 MB) in 2.03s
+1:53AM WRN leaks found: 5
 

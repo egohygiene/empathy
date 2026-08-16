@@ -119,6 +119,10 @@ Linter raw log:
 	155: Trailing whitespace
 .github/workflow-profiles/security-optional/ossf-scorecard-older.yml:
 	Wrong line endings or no final newline
+mantle/bin/list-vscode-language-ids:
+	Wrong line endings or no final newline
+notebooks/jupyter/.gitignore:
+	Wrong line endings or no final newline
 
-109 errors found
+111 errors found
 
