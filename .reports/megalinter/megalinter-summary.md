@@ -5,61 +5,64 @@
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
 |✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.49s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       9.58s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   47|     |     0|          |       0|       0.33s|
-|❌ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  119|     |     7|          |       0|       9.15s|
-|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    4|     |     0|          |       0|       0.03s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  1740|          |      no|       19.9s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    4|     |   113|          |       0|       2.14s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 1040|     |     1|          |       0|       1.35s|
-|✅ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |    2|     |     0|          |       0|       0.28s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|       2.44s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.48s|
-|✅ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  105|     |     0|          |       0|       0.23s|
-|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  105|     |     1|          |       0|       2.52s|
-|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  105|     |     0|          |       0|      26.16s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |    2|     |    10|          |       0|       0.06s|
-|✅ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  247|     |     0|          |       0|       3.87s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  247|     |     1|          |       0|       0.46s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.43s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       1.17s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   45|     |    11|          |       0|       2.88s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    22|          |      no|      16.85s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   45|     |    36|          |       0|      14.96s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  7396|          |      no|      38.75s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   45|     |    55|          |       0|       0.58s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   45|     |     1|          |       0|       0.07s|
-|❌ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |     5|          |      no|       2.11s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      38.51s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       4.66s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    62|          |      no|     113.68s|
-|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|        1.3s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     219.13s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       4.92s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      14.29s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      40.29s|
-|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       8.33s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.82s|
-|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|        0.3s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  525|     |    55|          |       0|      16.69s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  251|     |   437|          |       0|       6.84s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  251|     |     4|          |    2145|       5.32s|
-|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|        0.3s|
-|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  166|     |     1|          |      16|        4.6s|
-|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  166|     |     0|          |       0|      47.63s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  166|     |   172|          |       0|      11.75s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       8.31s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   49|     |     0|          |       0|       0.25s|
+|❌ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  121|     |     7|          |       0|       8.99s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |    6|     |     0|          |       0|       0.03s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3088|          |      no|       26.5s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |    6|     |   192|          |       0|       1.87s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2032|     |     1|          |       0|        2.4s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   11|     |   354|          |       0|       1.27s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|        2.1s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.45s|
+|✅ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  107|     |     0|          |       0|       0.21s|
+|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  107|     |     1|          |       0|       1.98s|
+|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  107|     |     0|          |       0|      29.12s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  298|     | 67759|          |       0|     164.41s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  266|     |   400|          |       0|       3.18s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  266|     |     1|          |       0|       0.34s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       0.87s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.28s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|        0.9s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   53|     |    14|          |       0|        3.0s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    34|          |      no|      18.79s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   53|     |   257|          |       0|      16.84s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8726|          |      no|      49.09s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   53|     |   778|          |       0|       6.47s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   53|     |     1|          |       0|       0.07s|
+|❌ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |     5|          |      no|       2.58s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    57|          |      no|      38.57s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       3.13s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    62|          |      no|     105.97s|
+|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.75s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.14s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       7.69s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      15.65s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      50.75s|
+|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       9.34s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       4.08s|
+|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.34s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  577|     |    99|          |       0|      60.61s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  282|     |   661|          |       0|       8.66s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  282|     |     1|          |       0|       0.91s|
+|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|        0.4s|
+|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  176|     |     1|          |      16|       5.15s|
+|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  176|     |     0|          |       0|      54.16s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  176|     |   200|          |       0|      17.35s|
 
 ## Detailed Issues
 
 <details>
-<summary>❌ PYTHON / bandit - 11 errors</summary>
+<summary>❌ PYTHON / bandit - 14 errors</summary>
 
 ```
+[_py_warnings]	WARNING	"\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:269
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-16 01:52:42.925236+00:00
+Run started:2026-08-16 02:42:10.048545+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -244,24 +247,60 @@ Test results:
 44	    return result.stdout.strip()
 
 --------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tools/staging_home_audit.py:15:0
+14	import re
+15	import subprocess
+16	import sys
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tools/staging_home_audit.py:189:11
+188	def run_git(repository_root: Path, *arguments: str) -> bytes:
+189	    return subprocess.check_output(
+190	        ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
+191	    )
+192	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tools/staging_home_audit.py:189:11
+188	def run_git(repository_root: Path, *arguments: str) -> bytes:
+189	    return subprocess.check_output(
+190	        ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
+191	    )
+192	
+
+--------------------------------------------------
 
 Code scanned:
-	Total lines of code: 6740
+	Total lines of code: 9083
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 11
+		Low: 14
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 11
-Files skipped (0):
+		High: 14
+Files skipped (2):
+	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
+	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)
 ```
 
 </details>
@@ -276,22 +315,22 @@ Files skipped (0):
 
 ┌─stripe-access-token──○
 │
-│ 412 │ const API_KEY = 'REDACTED';
+│ 142 │ const API_KEY = "REDACTED";
 │     │                  ^^^^^^^^
 │
 │ attributes:
-│   path .......... .staging/.github/instructions/awesome-copilot/security-and-owasp.instructions.md
+│   path .......... .staging/.github/instructions/awesome-copilot/code-review-generic.instructions.md
 │   resource ...... fs.content
 └○
 
 
 ┌─stripe-access-token──○
 │
-│ 142 │ const API_KEY = "REDACTED";
+│ 412 │ const API_KEY = 'REDACTED';
 │     │                  ^^^^^^^^
 │
 │ attributes:
-│   path .......... .staging/.github/instructions/awesome-copilot/code-review-generic.instructions.md
+│   path .......... .staging/.github/instructions/awesome-copilot/security-and-owasp.instructions.md
 │   resource ...... fs.content
 └○
 
@@ -329,19 +368,110 @@ Files skipped (0):
 └○
 
 
-1:53AM INF scanned ~25392327 bytes (25.39 MB) in 2.03s
-1:53AM WRN leaks found: 5
+2:43AM INF scanned ~32262809 bytes (32.26 MB) in 2.46s
+2:43AM WRN leaks found: 5
 ```
 
 </details>
 
 <details>
-<summary>❌ LATEX / chktex - 10 errors</summary>
+<summary>❌ LATEX / chktex - 67759 errors</summary>
 
 ```
-Results of chktex linter (version 1.7.8)
-See documentation on https://megalinter.io/10.0.0/descriptors/latex_chktex/
------------------------------------------------
+impossible; so $p$ is not in the set. Hence a finite set $\{p_1,p_2,...,p_n\}$ cannot be the collection of all primes.  
+                                                                                                                                                                                                                                                                                                                  ^^^
+    Warning 11 in beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/chapter1.tex line 139: You should use \cdots or \ldots to achieve an ellipsis.
+    For any finite set $\{p_1,p_2,...,p_n\}$ of primes, consider $m = p_1p_2...p_n+1$. If $m$ is prime it is not in the set since $m > p_i$ for all $i$. If $m$ is not prime it has a prime divisor $p$. If $p$ is one of the $p_i$ then $p$ is a divisor of $p_1p_2...p_n$ and hence is a divisor of $(m - p_1p_2...p_n) = 1$, which is impossible; so $p$ is not in the set. Hence a finite set $\{p_1,p_2,...,p_n\}$ cannot be the collection of all primes.  
+                                                                                                                                                                                                                                                                                                                                                                                                             ^^^
+    Warning 17 in beacon/.staging/latex/Theses/maggi-memoir-thesis/thesis.tex line 233: Number of `(' doesn't match the number of `)'!
+
+✅ [SUCCESS] beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixA.tex
+✅ [SUCCESS] beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixTemplate.tex
+❌ [ERROR] beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                            ^
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                                                      ^
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 180: Interword spacing (`\ ') should perhaps be used.
+    This thesis template is designed for double sided printing (i.e. content on the front and back of pages) as most theses are printed and bound this way. Switching to one sided printing is as simple as uncommenting the \option{oneside} option of the \code{documentclass} command at the top of the \file{main.tex} file. You may then wish to adjust the margins to suit specifications from your institution.  
+                                                                    ^
+    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
+    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
+                                                                                                                                                                                                                                                                                                                                                             ^
+    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
+    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    Warning 11 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 196: You should use \ldots to achieve an ellipsis.
+    Scientific references should come \emph{before} the punctuation mark if there is one (such as a comma or period). The same goes for footnotes\footnote{Such as this footnote, here down at the bottom of the page.}. You can change this but the most important thing is to keep the convention consistent throughout the thesis. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). The APA6 states: \enquote{Footnote numbers should be superscripted, [...], following any punctuation mark except a dash.} The Chicago manual of style states: \enquote{A note number should be placed at the end of a sentence or clause. The number follows any punctuation mark except the dash, which it precedes. It follows a closing parenthesis.}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^^^
+    Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
+    The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
+                                                                                                                  ^
+    Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
+    The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
+                                                                                                                                ^
+
+✅ [SUCCESS] beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/ChapterTemplate.tex
+❌ [ERROR] beacon/.staging/latex/Theses/masters-doctoral-thesis/main.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                            ^
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                                                      ^
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 180: Interword spacing (`\ ') should perhaps be used.
+    This thesis template is designed for double sided printing (i.e. content on the front and back of pages) as most theses are printed and bound this way. Switching to one sided printing is as simple as uncommenting the \option{oneside} option of the \code{documentclass} command at the top of the \file{main.tex} file. You may then wish to adjust the margins to suit specifications from your institution.  
+                                                                    ^
+    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
+    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
+                                                                                                                                                                                                                                                                                                                                                             ^
+    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
+    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    Warning 11 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 196: You should use \ldots to achieve an ellipsis.
+    Scientific references should come \emph{before} the punctuation mark if there is one (such as a comma or period). The same goes for footnotes\footnote{Such as this footnote, here down at the bottom of the page.}. You can change this but the most important thing is to keep the convention consistent throughout the thesis. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). The APA6 states: \enquote{Footnote numbers should be superscripted, [...], following any punctuation mark except a dash.} The Chicago manual of style states: \enquote{A note number should be placed at the end of a sentence or clause. The number follows any punctuation mark except the dash, which it precedes. It follows a closing parenthesis.}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^^^
+    Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
+    The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
+                                                                                                                  ^
+    Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
+    The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
+                                                                                                                                ^
+
+❌ [ERROR] beacon/.staging/latex/Title Pages/academic-title-page/main.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 39 in beacon/.staging/latex/Title Pages/academic-title-page/main.tex line 84: Double space found.
+        ~  
+       ^
+
+❌ [ERROR] beacon/.staging/latex/Title Pages/formal-book-title-page/main.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 39 in beacon/.staging/latex/Title Pages/formal-book-title-page/main.tex line 65: Double space found.
+        {\LARGE THE BIG BOOK\\ OF\\ \LaTeX ~TEMPLATES\\} % Title  
+                                          ^
+
+❌ [ERROR] beacon/.staging/latex/Title Pages/minimalist-book-title-page/main.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 39 in beacon/.staging/latex/Title Pages/minimalist-book-title-page/main.tex line 70: Double space found.
+        {\textcolor{Red}{\Huge \LaTeX ~Templates}}\\[\baselineskip] % Main title line which draws the focus of the reader  
+                                     ^
+
+✅ [SUCCESS] beacon/.staging/latex/Title Pages/multi-purpose-large-font-title-page/main.tex
+❌ [ERROR] beacon/.staging/latex/Title Pages/stylish-title-page/main.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 39 in beacon/.staging/latex/Title Pages/stylish-title-page/main.tex line 64: Double space found.
+        \textcolor{Sienna}{\textit{\Huge The Book of \LaTeX ~Templates}}\\[\baselineskip] % Title  
+                                                           ^
 
 ❌ [ERROR] beacon/templates/research-paper/template.tex
     chktex: WARNING -- Could not find global resource file.
@@ -378,6 +508,10 @@ See documentation on https://megalinter.io/10.0.0/descriptors/latex_chktex/
     Warning 45 in research/antidote/templates/template.tex line 50: Use \[ ... \] instead of $$ ... $$.
     \fancyhead[R]{\small\itshape $if(author)$$author$$endif$}  
                                                     ^^^^^^^^^
+
+
+
+(Truncated to last 27586 characters out of 22918695)
 ```
 
 </details>
@@ -399,127 +533,852 @@ For more information, try '--help'.
 <summary>❌ EDITORCONFIG / editorconfig-checker - 1 error</summary>
 
 ```
-.github/workflow-profiles/agent-environment/validate-copilot-setup.yml:
-	106: Trailing whitespace
-	111: Trailing whitespace
-	259: Trailing whitespace
-	262: Trailing whitespace
-	265: Trailing whitespace
-	268: Trailing whitespace
-	271: Trailing whitespace
-	274: Trailing whitespace
-	277: Trailing whitespace
-	280: Trailing whitespace
-	283: Trailing whitespace
-	286: Trailing whitespace
-	295: Trailing whitespace
-	298: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/article-notes/article_notes.tex:
+	Wrong line endings or no final newline
+	101: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/article-notes/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/canadian-forces-memo/CF_memo.tex:
+	20: Trailing whitespace
+	130: Trailing whitespace
+	196: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/cheatsheet/LICENSE:
+	1: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/cheatsheet/cheatsheet.tex:
+	Wrong line endings or no final newline
+	37-40: Trailing whitespace
+	60: Trailing whitespace
+	81: Trailing whitespace
+	91-92: Trailing whitespace
+	94: Trailing whitespace
+	108: Trailing whitespace
+	126: Trailing whitespace
+	150: Trailing whitespace
+	153-154: Trailing whitespace
+	175: Trailing whitespace
+	212: Trailing whitespace
+	214: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/chemical-equations/chemical_equations.tex:
+	Wrong line endings or no final newline
+	16: Trailing whitespace
+	29: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/code-snippet/Scripts/example.pl:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/code-snippet/main.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/conference-booklet/conferencebooklet.cls:
+	10: Trailing whitespace
+	175: Trailing whitespace
+	177: Trailing whitespace
+	179: Trailing whitespace
+	181: Trailing whitespace
+	191: Trailing whitespace
+	194: Trailing whitespace
+	216: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/conference-booklet/main.tex:
+	10: Trailing whitespace
+	48: Trailing whitespace
+	50: Trailing whitespace
+	102: Trailing whitespace
+	125: Trailing whitespace
+	145: Trailing whitespace
+	178: Trailing whitespace
+	205: Trailing whitespace
+	224: Trailing whitespace
+	235: Trailing whitespace
+	238: Trailing whitespace
+	294: Trailing whitespace
 	302: Trailing whitespace
 	306: Trailing whitespace
-.github/workflow-profiles/container-platform/benchmark.yml:
+beacon/.staging/latex/Miscellaneous/contract/contract.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/contract/structure.tex:
+	Wrong line endings or no final newline
+	8: Trailing whitespace
+	37: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/custom-class/example.cls:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/custom-class/template.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/dictionary/dictionary.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/drake-certificate/CSDrakeCertificate.cls:
+	82: Trailing whitespace
+	86: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/drake-certificate/template.tex:
+	54: Trailing whitespace
+	87: Trailing whitespace
+	89: Trailing whitespace
+	99: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/engineering-calculation-paper/EngCalcPaper.tex:
+	Wrong line endings or no final newline
+	47: Trailing whitespace
+	71: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/frequently-asked-questions/faq.tex:
+	Wrong line endings or no final newline
+	141: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/memo/memo.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/memo/texMemo.cls:
+	Wrong line endings or no final newline
+	4: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/minimal-memo/CSMinimalMemo.cls:
+	112: Trailing whitespace
+	114: Trailing whitespace
+	116: Trailing whitespace
+	118: Trailing whitespace
+	120: Trailing whitespace
+	127: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.bib:
+	23: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.tex:
+	Wrong line endings or no final newline
+	64: Trailing whitespace
+	118: Trailing whitespace
+	248: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/nih-grant-proposal/nihunsrt.bst:
+	12: Trailing whitespace
+	594: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/poems/poems.tex:
+	Wrong line endings or no final newline
+	Not all lines have the correct end of line character
+	20: Trailing whitespace
+	282: Trailing whitespace
+	289: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/press-release/fancyhdr.sty:
+	3: Trailing whitespace
+	30: Trailing whitespace
+	51: Trailing whitespace
+	105: Trailing whitespace
+	228: Trailing whitespace
+	341: Trailing whitespace
+	400: Trailing whitespace
+	474: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/press-release/press_release.tex:
+	Wrong line endings or no final newline
+	Not all lines have the correct end of line character
+beacon/.staging/latex/Miscellaneous/press-release/prsrls.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/professional-table/table.tex:
+	Wrong line endings or no final newline
+	10: Trailing whitespace
+	16: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/ryo-menu/CSRyoMenu.cls:
+	103: Trailing whitespace
+	119: Trailing whitespace
+	121: Trailing whitespace
+	123: Trailing whitespace
+	125: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Newsletters/professional-newsletter/newsletter_2.tex:
+	Wrong line endings or no final newline
+	9: Trailing whitespace
+	60: Trailing whitespace
+	92: Trailing whitespace
+	108: Trailing whitespace
+	129: Trailing whitespace
+	136: Trailing whitespace
+	153: Trailing whitespace
+	157: Trailing whitespace
+	163: Trailing whitespace
+	165: Trailing whitespace
+	183: Trailing whitespace
+	187-188: Trailing whitespace
+	255: Trailing whitespace
+	264: Trailing whitespace
+beacon/.staging/latex/Newsletters/professional-newsletter/structure.tex:
+	Wrong line endings or no final newline
+	8: Trailing whitespace
+beacon/.staging/latex/Newsletters/short-three-column-newsletter/newsletter_1.tex:
+	Wrong line endings or no final newline
+	7: Trailing whitespace
+	10: Trailing whitespace
+	83: Trailing whitespace
+	97: Trailing whitespace
+	126: Trailing whitespace
+	152: Trailing whitespace
+	239: Trailing whitespace
+beacon/.staging/latex/Presentations/beamer-presentation/template.tex:
+	Wrong line endings or no final newline
+	175: Trailing whitespace
+	192: Trailing whitespace
+	194: Trailing whitespace
+	196: Trailing whitespace
+	202: Trailing whitespace
+	204: Trailing whitespace
+	213: Trailing whitespace
+	223: Trailing whitespace
+	225: Trailing whitespace
+	228: Trailing whitespace
+	238: Trailing whitespace
+	242: Trailing whitespace
+	246: Trailing whitespace
+	250: Trailing whitespace
+	263: Trailing whitespace
+	288: Trailing whitespace
+	309: Trailing whitespace
+	322: Trailing whitespace
+	326: Trailing whitespace
+	328: Trailing whitespace
+	336: Trailing whitespace
+	338: Trailing whitespace
+	346: Trailing whitespace
+	350: Trailing whitespace
+	354: Trailing whitespace
+	374: Trailing whitespace
+	398: Trailing whitespace
+	400: Trailing whitespace
+	402: Trailing whitespace
+	410: Trailing whitespace
+	413: Trailing whitespace
+	418: Trailing whitespace
+	432: Trailing whitespace
+	446: Trailing whitespace
+	464: Trailing whitespace
+	466: Trailing whitespace
+	473: Trailing whitespace
+beacon/.staging/latex/Presentations/fancyslides-presentation/fancyslides.cls:
+	Wrong line endings or no final newline
+	122: Trailing whitespace
+	124: Trailing whitespace
+	162: Trailing whitespace
+beacon/.staging/latex/Presentations/fancyslides-presentation/presentation_3.tex:
+	Wrong line endings or no final newline
+	29: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamercolorthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerfontthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerinnerthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+	41: Trailing whitespace
+	49: Trailing whitespace
+	55: Trailing whitespace
+	62: Trailing whitespace
+	67: Trailing whitespace
+	73: Trailing whitespace
+	78: Trailing whitespace
+	80: Trailing whitespace
+	92: Trailing whitespace
+	99: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerouterthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+	71: Trailing whitespace
+	74: Trailing whitespace
+	77: Trailing whitespace
+	85: Trailing whitespace
+	111: Trailing whitespace
+	150: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+	40: Trailing whitespace
+	43: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/template.tex:
+	10: Trailing whitespace
+	137: Trailing whitespace
+	158: Trailing whitespace
+	170: Trailing whitespace
+beacon/.staging/latex/Recipes/jacopo-recipe/CSJacopoRecipe.cls:
+	104: Trailing whitespace
+	108: Trailing whitespace
+	111: Trailing whitespace
+	113: Trailing whitespace
+	115: Trailing whitespace
+	117: Trailing whitespace
+	122: Trailing whitespace
+	124: Trailing whitespace
+	131: Trailing whitespace
+	133: Trailing whitespace
+	135: Trailing whitespace
+	139: Trailing whitespace
+	162: Trailing whitespace
+	176: Trailing whitespace
+	179: Trailing whitespace
+beacon/.staging/latex/Recipes/morgana-recipe/CSMorganaRecipe.cls:
+	97: Trailing whitespace
+	100: Trailing whitespace
+	103: Trailing whitespace
 	106: Trailing whitespace
 	108: Trailing whitespace
 	112: Trailing whitespace
+	123: Trailing whitespace
+	125: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+	142: Trailing whitespace
+	144: Trailing whitespace
+	146: Trailing whitespace
+beacon/.staging/latex/Recipes/morgana-recipe/template.tex:
+	60: Trailing whitespace
+	86: Trailing whitespace
+	88: Trailing whitespace
+beacon/.staging/latex/Signs/arrow-sign/template.tex:
+	33-35: Trailing whitespace
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:
+	22: Trailing whitespace
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter01.tex:
+	Wrong line endings or no final newline
+	5: Trailing whitespace
+	24: Trailing whitespace
+	68: Trailing whitespace
+	86: Trailing whitespace
+	91: Trailing whitespace
+	104: Trailing whitespace
+	107: Trailing whitespace
+	121-123: Trailing whitespace
+	126: Trailing whitespace
+	140: Trailing whitespace
+	177: Trailing whitespace
+	184: Trailing whitespace
+	187: Trailing whitespace
+	205: Trailing whitespace
+	208: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter02.tex:
+	Wrong line endings or no final newline
+	5: Trailing whitespace
+	79: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter03.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter04.tex:
+	Wrong line endings or no final newline
+	5: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter0A.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter0B.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-article.tex:
+	Wrong line endings or no final newline
+	12: Trailing whitespace
+	14: Trailing whitespace
+	18: Trailing whitespace
+	20: Trailing whitespace
+	26: Trailing whitespace
+	29: Trailing whitespace
+	33: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-book-xelatex.tex:
+	Wrong line endings or no final newline
+	3: Trailing whitespace
+	14-15: Trailing whitespace
+	25: Trailing whitespace
+	28: Trailing whitespace
+	31: Trailing whitespace
+	41: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-book.tex:
+	Wrong line endings or no final newline
+	3: Trailing whitespace
+	12-13: Trailing whitespace
+	23: Trailing whitespace
+	29: Trailing whitespace
+	32: Trailing whitespace
+	42: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-cv.tex:
+	Wrong line endings or no final newline
+	18-21: Trailing whitespace
+	23: Trailing whitespace
+	27: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Abstract.tex:
+	Wrong line endings or no final newline
+	13-14: Trailing whitespace
+	19: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Acknowledgments.tex:
+	Wrong line endings or no final newline
+	5-7: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Bibliography.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Colophon.tex:
+	Wrong line endings or no final newline
+	13: Trailing whitespace
+	19: Trailing whitespace
+	24: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Contents.tex:
+	Wrong line endings or no final newline
+	13: Trailing whitespace
+	20: Trailing whitespace
+	47: Trailing whitespace
+	50: Trailing whitespace
+	53: Trailing whitespace
+	59: Trailing whitespace
+	63: Trailing whitespace
+	80-81: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Declaration.tex:
+	12: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Dedication.tex:
+	Wrong line endings or no final newline
+	13: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Publications.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Titleback.tex:
+	9: Trailing whitespace
+	18: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Titlepage.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/classicthesis-config.tex:
+	Wrong line endings or no final newline
+	59: Trailing whitespace
+	78: Trailing whitespace
+	94: Trailing whitespace
+	97: Trailing whitespace
+	99: Trailing whitespace
+	111: Trailing whitespace
+	123: Trailing whitespace
+	136: Trailing whitespace
+	148: Trailing whitespace
+	154: Trailing whitespace
+	185: Trailing whitespace
+	188: Trailing whitespace
+	207: Trailing whitespace
+	239: Trailing whitespace
+	242: Trailing whitespace
+	259: Trailing whitespace
+	261: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/classicthesis.sty:
+	6-8: Trailing whitespace
+	27: Trailing whitespace
+	33: Trailing whitespace
+	36: Trailing whitespace
+	40: Trailing whitespace
+	51-52: Trailing whitespace
+	64: Trailing whitespace
+	67: Trailing whitespace
+	79-81: Trailing whitespace
+	83-86: Trailing whitespace
+	117: Trailing whitespace
+	147: Trailing whitespace
+	160: Trailing whitespace
+	180: Trailing whitespace
+	184: Trailing whitespace
+	194: Trailing whitespace
+	221: Trailing whitespace
+	229: Trailing whitespace
+	247: Trailing whitespace
+	260: Trailing whitespace
+	267-268: Trailing whitespace
+	293: Trailing whitespace
+	312: Trailing whitespace
+	321: Trailing whitespace
+	339: Trailing whitespace
+	341-342: Trailing whitespace
+	347: Trailing whitespace
+	349: Trailing whitespace
+	359: Trailing whitespace
+	362: Trailing whitespace
+	370-371: Trailing whitespace
+	375: Trailing whitespace
+	382: Trailing whitespace
+	391: Trailing whitespace
+	394: Trailing whitespace
+	397: Trailing whitespace
+	407: Trailing whitespace
+	410: Trailing whitespace
+	412: Trailing whitespace
+	417: Trailing whitespace
+	421: Trailing whitespace
+	426: Trailing whitespace
+	430: Trailing whitespace
+	432: Trailing whitespace
+	434: Trailing whitespace
+	439: Trailing whitespace
+	447: Trailing whitespace
+	461: Trailing whitespace
+	463: Trailing whitespace
+	477-478: Trailing whitespace
+	480: Trailing whitespace
+	483: Trailing whitespace
+	493-494: Trailing whitespace
+	502-505: Trailing whitespace
+	511-514: Trailing whitespace
+	516-518: Trailing whitespace
+	521: Trailing whitespace
+	534-536: Trailing whitespace
+	544: Trailing whitespace
+	552: Trailing whitespace
+	565-566: Trailing whitespace
+	574: Trailing whitespace
+	598: Trailing whitespace
+	601: Trailing whitespace
+	633: Trailing whitespace
+	643: Trailing whitespace
+	652: Trailing whitespace
+	658-660: Trailing whitespace
+	662: Trailing whitespace
+	665: Trailing whitespace
+	667-668: Trailing whitespace
+	670-671: Trailing whitespace
+	681-683: Trailing whitespace
+	690: Trailing whitespace
+	699: Trailing whitespace
+	723: Trailing whitespace
+	730-731: Trailing whitespace
+	736: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/main.tex:
+	36-37: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/kaobook/README.md:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/kaobook/chapters/figsntabs.tex:
+	11-16: Trailing whitespace
+	19-23: Trailing whitespace
+	32-34: Trailing whitespace
+	37: Trailing whitespace
+	76: Trailing whitespace
+	81-83: Trailing whitespace
+	94-100: Trailing whitespace
+	111: Trailing whitespace
 	116: Trailing whitespace
-	119: Trailing whitespace
-	128: Trailing whitespace
+	125-127: Trailing whitespace
+	132-133: Trailing whitespace
+	155-156: Trailing whitespace
+	174-177: Trailing whitespace
+	184-190: Trailing whitespace
+	212-217: Trailing whitespace
+	228: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/introduction.tex:
+	7-11: Trailing whitespace
+	14-17: Trailing whitespace
+	20-25: Trailing whitespace
+	28-38: Trailing whitespace
+	41-42: Trailing whitespace
+	48-53: Trailing whitespace
+	59-60: Trailing whitespace
+	62-63: Trailing whitespace
+	65-67: Trailing whitespace
+	69-73: Trailing whitespace
+	75-77: Trailing whitespace
+	79-81: Trailing whitespace
+	83-84: Trailing whitespace
+	86-89: Trailing whitespace
+	91-94: Trailing whitespace
+	100: Trailing whitespace
+	105-107: Trailing whitespace
+	113-118: Trailing whitespace
+	122-123: Trailing whitespace
+	125: Trailing whitespace
+	127-131: Trailing whitespace
+	133-134: Trailing whitespace
+	136-139: Trailing whitespace
+	141: Trailing whitespace
+	143-144: Trailing whitespace
+	148-149: Trailing whitespace
+	152-156: Trailing whitespace
+	161-171: Trailing whitespace
+	174: Trailing whitespace
+	187-189: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/layout.tex:
+	8-15: Trailing whitespace
+	18-21: Trailing whitespace
+	24-32: Trailing whitespace
+	35: Trailing whitespace
+	44-47: Trailing whitespace
+	49-53: Trailing whitespace
+	63: Trailing whitespace
+	68-74: Trailing whitespace
+	78: Trailing whitespace
+	83: Trailing whitespace
+	89-99: Trailing whitespace
+	102-106: Trailing whitespace
+	125-129: Trailing whitespace
+	132-136: Trailing whitespace
+	149: Trailing whitespace
+	174: Trailing whitespace
+	188-191: Trailing whitespace
+	194-197: Trailing whitespace
+	200-202: Trailing whitespace
+	205: Trailing whitespace
+	214-217: Trailing whitespace
+	233-234: Trailing whitespace
+	250: Trailing whitespace
+	255: Trailing whitespace
+	264: Trailing whitespace
+	273: Trailing whitespace
+	282-285: Trailing whitespace
+	290: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/mathematics.tex:
+	8-14: Trailing whitespace
+	19-21: Trailing whitespace
+	25-26: Trailing whitespace
+	30-31: Trailing whitespace
+	36-37: Trailing whitespace
+	41: Trailing whitespace
+	45-47: Trailing whitespace
+	51-53: Trailing whitespace
+	57-58: Trailing whitespace
+	67-69: Trailing whitespace
+	83-85: Trailing whitespace
+	90-92: Trailing whitespace
+	96-97: Trailing whitespace
+	101: Trailing whitespace
+	112-126: Trailing whitespace
+	130-132: Trailing whitespace
+	135-138: Trailing whitespace
+	145: Trailing whitespace
+	154-155: Trailing whitespace
+	165-169: Trailing whitespace
+	180-181: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/options.tex:
+	5-7: Trailing whitespace
+	12-16: Trailing whitespace
+	19-23: Trailing whitespace
+	28-31: Trailing whitespace
+	34-36: Trailing whitespace
+	40-44: Trailing whitespace
+	48-49: Trailing whitespace
+	54: Trailing whitespace
+	66-68: Trailing whitespace
+	81-83: Trailing whitespace
+	86-87: Trailing whitespace
+	92-102: Trailing whitespace
+	105-113: Trailing whitespace
+	115-123: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/preface.tex:
+	4-9: Trailing whitespace
+	13-15: Trailing whitespace
+	17-18: Trailing whitespace
+	23-27: Trailing whitespace
+	30: Trailing whitespace
+	32-33: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/references.tex:
+	9-15: Trailing whitespace
+	18-25: Trailing whitespace
+	41-42: Trailing whitespace
+	45-50: Trailing whitespace
+	59-63: Trailing whitespace
+	76-79: Trailing whitespace
+	100-101: Trailing whitespace
+	113-119: Trailing whitespace
+	122-126: Trailing whitespace
+	135: Trailing whitespace
+	139-142: Trailing whitespace
+	145-146: Trailing whitespace
+	155: Trailing whitespace
+	164-167: Trailing whitespace
+	170-173: Trailing whitespace
+	176-177: Trailing whitespace
+	184-188: Trailing whitespace
+	190-191: Trailing whitespace
+	214-218: Trailing whitespace
+	221-222: Trailing whitespace
+	225-229: Trailing whitespace
+	232-233: Trailing whitespace
+	236-240: Trailing whitespace
+	243-253: Trailing whitespace
+	255-256: Trailing whitespace
+	262-264: Trailing whitespace
+	272-273: Trailing whitespace
+	299-302: Trailing whitespace
+	306-309: Trailing whitespace
+	311-314: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/textnotes.tex:
+	4-7: Trailing whitespace
+	12-16: Trailing whitespace
+	23-25: Trailing whitespace
+	28-30: Trailing whitespace
+	37: Trailing whitespace
+	42-51: Trailing whitespace
+	59-61: Trailing whitespace
+	65-77: Trailing whitespace
+	82-89: Trailing whitespace
+	94-97: Trailing whitespace
+	100-102: Trailing whitespace
+	105-106: Trailing whitespace
+	114-119: Trailing whitespace
+	134-138: Trailing whitespace
+	159: Trailing whitespace
+	162: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/kao.sty:
+	63-66: Trailing whitespace
+	333: Trailing whitespace
+	863: Trailing whitespace
+	1045: Trailing whitespace
+	1302: Trailing whitespace
+	1348-1349: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/kaobiblio.sty:
+	19: Trailing whitespace
+	403: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/kaobook.cls:
+	45: Trailing whitespace
+	262: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/main.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/kaobook/main.tex:
+	122: Trailing whitespace
+	124: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+	131: Trailing whitespace
+	134: Trailing whitespace
+	136: Trailing whitespace
 	138: Trailing whitespace
 	140: Trailing whitespace
-	143: Trailing whitespace
-	146: Trailing whitespace
-	150: Trailing whitespace
-	153: Trailing whitespace
-	156: Trailing whitespace
-	161: Trailing whitespace
-	164: Trailing whitespace
-	166: Trailing whitespace
-	170: Trailing whitespace
-	173: Trailing whitespace
-	184: Trailing whitespace
-	186: Trailing whitespace
-	189: Trailing whitespace
-	193: Trailing whitespace
-	196: Trailing whitespace
-	200: Trailing whitespace
-	203: Trailing whitespace
-	205: Trailing whitespace
-	209: Trailing whitespace
-	212: Trailing whitespace
-	223: Trailing whitespace
-	225: Trailing whitespace
-	229: Trailing whitespace
-	232: Trailing whitespace
-	236: Trailing whitespace
-	239: Trailing whitespace
-	241: Trailing whitespace
-	244: Trailing whitespace
-	247: Trailing whitespace
-	258: Trailing whitespace
-	260: Trailing whitespace
-	263: Trailing whitespace
-	265: Trailing whitespace
-	268: Trailing whitespace
-	271: Trailing whitespace
-	274: Trailing whitespace
-	279: Trailing whitespace
-	285: Trailing whitespace
-	304: Trailing whitespace
-	307: Trailing whitespace
-	311: Trailing whitespace
-	317: Trailing whitespace
-	322: Trailing whitespace
-	327: Trailing whitespace
-	333: Trailing whitespace
-	343: Trailing whitespace
-	374: Trailing whitespace
-	385-390: Trailing whitespace
-	392: Trailing whitespace
-	394: Trailing whitespace
-	400: Trailing whitespace
-	402: Trailing whitespace
-	408: Trailing whitespace
-	410: Trailing whitespace
-	416: Trailing whitespace
-	418: Trailing whitespace
-	422: Trailing whitespace
-	426: Trailing whitespace
-	429: Trailing whitespace
-	431: Trailing whitespace
-	435: Trailing whitespace
-	437: Trailing whitespace
-	440: Trailing whitespace
-	450: Trailing whitespace
-	453: Trailing whitespace
-	469: Trailing whitespace
-	554: Trailing whitespace
-	556: Trailing whitespace
-	568: Trailing whitespace
-	575: Trailing whitespace
-	580: Trailing whitespace
-	584: Trailing whitespace
-	592: Trailing whitespace
-	597: Trailing whitespace
-	599: Trailing whitespace
-	601: Trailing whitespace
-	603: Trailing whitespace
-	631: Trailing whitespace
-	634: Trailing whitespace
-	645: Trailing whitespace
-.github/workflow-profiles/container-platform/release-notes.yml:
-	228: Trailing whitespace
-.github/workflow-profiles/content-and-docs/docs.yml:
-	81: Trailing whitespace
-.github/workflow-profiles/content-and-docs/image-optimization.yml:
-	137: Trailing whitespace
-	155: Trailing whitespace
-.github/workflow-profiles/security-optional/ossf-scorecard-older.yml:
+	270: Trailing whitespace
+	273: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/chapter1.tex:
+	11: Trailing whitespace
+	35: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/introduction.tex:
 	Wrong line endings or no final newline
+	17: Trailing whitespace
+	66: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/acronyms.tex:
+	Wrong line endings or no final newline
+	84: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/bibliography.bib:
+	5: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/structure.tex:
+	Wrong line endings or no final newline
+	40: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/thesis.tex:
+	Wrong line endings or no final newline
+	22-23: Trailing whitespace
+	26: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixA.tex:
+	19: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixTemplate.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex:
+	5: Trailing whitespace
+	9: Trailing whitespace
+	38-39: Trailing whitespace
+	55: Trailing whitespace
+	57: Trailing whitespace
+	110: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/ChapterTemplate.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/masters-doctoral-thesis/MastersDoctoralThesis.cls:
+	2: Trailing whitespace
+	58: Trailing whitespace
+	134: Trailing whitespace
+	227: Trailing whitespace
+	298-299: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/main.tex:
+	2: Trailing whitespace
+	110: Trailing whitespace
+	120: Trailing whitespace
+	123: Trailing whitespace
+	129: Trailing whitespace
+	134: Trailing whitespace
+	147: Trailing whitespace
+	155: Trailing whitespace
+	158: Trailing whitespace
+	247: Trailing whitespace
+	261: Trailing whitespace
+	263-264: Trailing whitespace
+	287: Trailing whitespace
+beacon/.staging/latex/Title Pages/academic-title-page/main.tex:
+	15: Trailing whitespace
+	17-18: Trailing whitespace
+	20-21: Trailing whitespace
+	25: Trailing whitespace
+	50: Trailing whitespace
+	52: Trailing whitespace
+	56: Trailing whitespace
+	58: Trailing whitespace
+	60: Trailing whitespace
+	62: Trailing whitespace
+	66: Trailing whitespace
+	68: Trailing whitespace
+	70: Trailing whitespace
+	72: Trailing whitespace
+	76: Trailing whitespace
+	92: Trailing whitespace
+	96: Trailing whitespace
+	100: Trailing whitespace
+	102: Trailing whitespace
+	104: Trailing whitespace
+	108: Trailing whitespace
+	111: Trailing whitespace
+	113: Trailing whitespace
+	115: Trailing whitespace
+beacon/.staging/latex/Title Pages/formal-book-title-page/main.tex:
+	15: Trailing whitespace
+	24: Trailing whitespace
+	46: Trailing whitespace
+	51: Trailing whitespace
+	53: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	62: Trailing whitespace
+	64: Trailing whitespace
+	66: Trailing whitespace
+	68: Trailing whitespace
+	71: Trailing whitespace
+	73: Trailing whitespace
+	77: Trailing whitespace
+	79: Trailing whitespace
+	81: Trailing whitespace
+	85: Trailing whitespace
+	87: Trailing whitespace
+	89: Trailing whitespace
+	91: Trailing whitespace
+	93: Trailing whitespace
+	95: Trailing whitespace
+	97: Trailing whitespace
+	101: Trailing whitespace
+	103: Trailing whitespace
+	105: Trailing whitespace
+	107: Trailing whitespace
+beacon/.staging/latex/Title Pages/minimalist-book-title-page/main.tex:
+	15: Trailing whitespace
+	24: Trailing whitespace
+	44: Trailing whitespace
+	53: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	61: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	69: Trailing whitespace
+	71: Trailing whitespace
+	73: Trailing whitespace
+	75: Trailing whitespace
+	79: Trailing whitespace
+	81: Trailing whitespace
+beacon/.staging/latex/Title Pages/multi-purpose-large-font-title-page/main.tex:
+	23: Trailing whitespace
+	52: Trailing whitespace
+	56: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	72: Trailing whitespace
+	74: Trailing whitespace
+	78: Trailing whitespace
+	86: Trailing whitespace
+	89: Trailing whitespace
+beacon/.staging/latex/Title Pages/stylish-title-page/main.tex:
+	15: Trailing whitespace
+	24: Trailing whitespace
+	46: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	61: Trailing whitespace
+	63: Trailing whitespace
+	65: Trailing whitespace
+	67: Trailing whitespace
+	69: Trailing whitespace
+	71: Trailing whitespace
+	75: Trailing whitespace
+	77: Trailing whitespace
+	79: Trailing whitespace
+	83: Trailing whitespace
+	85: Trailing whitespace
 mantle/bin/list-vscode-language-ids:
 	Wrong line endings or no final newline
 notebooks/jupyter/.gitignore:
 	Wrong line endings or no final newline
 
-111 errors found
+2778 errors found
+
+(Truncated to last 27586 characters out of 102318)
 ```
 
 </details>
@@ -543,7 +1402,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786845032892:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786847980702:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -566,6 +1425,351 @@ Resolutions:
 </details>
 
 <details>
+<summary>❌ HTML / htmlhint - 354 errors</summary>
+
+```
+he id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L352 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L371 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L100 |<div id="body_frame">
+            ^ Tag must be paired, missing: [ </div> ], start tag match failed [ <div id="body_frame"> ] on line 100. (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/index.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</span><span class="code_opti...
+                   ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L121 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{The no...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L122 |  <br /><span class="tex_command">\annote</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L122 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L123 |  <br /><span class="tex_command">&nbsp;&nbsp;&nbsp;\add</span><span class="code">[</span><span class...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L123 |...d</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L124 |  <br /><span class="tex_command">\remove</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L124 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L125 |  <br /><span class="tex_command">\change</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L125 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L127 |...l cases <span class="code">[</span><span class="code_option">editor</span><span class="code">]</span>...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L134 |        <span class="tex_command">\addeditor</span><span class="code">{</span><span class="code_optio...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L134 |...r</span><span class="code">{</span><span class="code_option">editor one</span><span class="code">}</s...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L135 |  <br /><span class="tex_command">\addeditor</span><span class="code">{</span><span class="code_optio...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L135 |...r</span><span class="code">{</span><span class="code_option">editor two</span><span class="code">}</s...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L167 |...to LaTeX! This is the basic idea of the <SPAN class="code">TrackChanges</span> LaTeX package. But thi...
+                                                       ^ The html element name of [ SPAN ] must be in lowercase. (tagname-lowercase)
+      L180 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L205 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_contact.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Contact</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Contact</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Questions, comments and bug reports.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Questions, comments and bug reports.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L93 |  <div id="body_footer">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L118 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_credits.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Credits</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Credits</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>The people who made it happen.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>The people who made it happen.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L107 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L132 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_download.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Downloads</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Downloads</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Where to get it.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Where to get it.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L103 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L128 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_preview.html
+      L1 |<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L65 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L72 |<div id="body_frame">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L73 |  <div id="body_header">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L75 |  <div id="body_main">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Preview</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges Preview</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Screeshots, examples and other goodness.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Screeshots, examples and other goodness.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L105 |  <div id="body_footer">
+                  ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L130 |</body>
+            ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+   Config loaded: egolint/.config/lint/html/htmlhint.json
+
+Scanned 11 files, found 354 errors in 9 files (155 ms)
+
+(Truncated to last 27586 characters out of 66238)
+```
+
+</details>
+
+<details>
 <summary>❌ REPOSITORY / ls-lint - 1 error</summary>
 
 ```
@@ -575,185 +1779,72 @@ Cargo.toml failed for `.toml` rules: kebabcase | snakecase
 </details>
 
 <details>
-<summary>❌ SPELL / lychee - 55 errors</summary>
+<summary>❌ SPELL / lychee - 99 errors</summary>
 
 ```
-t 2:15) | OK (cached)
-[200] https://github.com/egohygiene/empathy/security/advisories/new (at 39:10) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy/security/advisories/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fegohygiene%2Fempathy%2Fsecurity%2Fadvisories%2Fnew
-[200] file://egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md (at 29:11)
-[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 29:108)
-[200] file://PURPOSE.md (at 54:3)
-[200] file://VISION.md (at 55:3)
-[200] file://PRINCIPLES.md (at 56:3)
-[200] file://PILLARS.md (at 57:3)
-[200] file://MANIFESTO.md (at 58:3)
-[200] file://EPISTEMOLOGY.md (at 59:3)
-[200] file://AI_CONSTITUTION.md (at 60:3)
-[200] file://ONTOLOGY.md (at 61:3)
-[200] file://PERSONAL_MODEL.md (at 62:3)
-[200] file://FOUNDATIONS.md (at 63:3)
-[200] file://SYSTEM.md (at 64:3)
-[200] file://ARCHITECTURE.md (at 65:3)
-[200] file://DESIGN.md (at 66:3)
-[200] file://DESIGN_SYSTEM.md (at 67:3)
-[200] file://METHODOLOGY.md (at 68:3)
-[200] file://DECISIONS.md (at 69:3)
-[200] file://ROADMAP.md (at 70:3)
-[200] file://META.md (at 71:3)
-[404] https://egohygiene.github.io/identity/contracts/project.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://github.com/egohygiene/empathy/discussions/categories/documentation (at 35:10)
-[200] https://www.schemastore.org/markdown-link-check.json (at 2:15)
-[200] https://humanstxt.org/ (at 39:13)
-[200] https://api.github.com/ (at 32:10)
-[200] https://raw.githubusercontent.com/ (at 33:10) | 200 OK | Followed 1 redirect. Redirects: https://raw.githubusercontent.com/ --[301]--> https://github.com/
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://docs.github.com/en/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent (at 6:8) | 200 OK | Followed 1 redirect. Redirects: https://docs.github.com/en/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent --[301]--> https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment
-[200] https://github.com/egohygiene/empathy/issues (at 19:13)
-[200] https://securityscorecards.dev/ (at 22:7)
-[200] https://github.com/egohygiene/empathy/issues (at 12:9)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://mindgarden/profiles/obsidian/README.md (at 31:1)
-[200] file://mantle/LICENSE (at 18:43)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] file://egolint/.agents/skills/authoring/implementation-planning/SKILL.md (at 30:11)
-[ERROR] file://.staging/github/README.md (at 41:35) | File not found. Check if file exists and path is correct
-[200] file://egolint/README.md (at 80:25)
-[200] file://.github/actions/README.md (at 81:1)
-[200] file://mindgarden/README.md (at 82:5)
-[200] file://identity/README.md (at 83:1)
-[200] file://beacon/README.md (at 84:1)
-[200] file://META.md (at 90:1)
-[200] file://PURPOSE.md (at 95:4)
-[200] file://VISION.md (at 95:32)
-[200] file://PRINCIPLES.md (at 96:4)
-[200] file://ONTOLOGY.md (at 97:4)
-[200] file://SYSTEM.md (at 98:4)
-[200] file://ARCHITECTURE.md (at 98:33)
-[200] file://DECISIONS.md (at 100:4)
-[200] file://ROADMAP.md (at 100:39)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://github.com/aboutcode-org/scancode-toolkit (at 23:7)
-[ERROR] https://egohygiene.dev/schemas/repository-report-summary/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/egohygiene/empathy.git (at 24:13) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-[200] https://www.schemastore.org/htmlhint.json (at 2:15)
-[200] https://docs.rubocop.org/rubocop/latest/configuration.html (at 13:5)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://autofix.ci/ (at 9:20)
-[200] https://github.com/yoheimuta/protolint (at 11:5) | OK (cached)
-[200] https://rubystyle.guide/ (at 14:5)
-[200] https://www.rubyschema.org/rubocop.json (at 2:33)
-[200] https://github.com/egohygiene/empathy (at 191:17) | OK (cached)
-[200] https://protobuf.dev/programming-guides/style/ (at 12:5)
-[200] https://raw.githubusercontent.com/jackyzha0/quartz/v5/quartz/plugins/quartz-plugins.schema.json (at 1:33)
-[404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
-[200] https://github.com/btford/write-good (at 1:12)
-[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 3130:14)
-[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 7:19)
-[200] https://github.com/sponsors/szmyty (at 34:13)
-[200] https://docs.stoplight.io/docs/spectral/e5b9616d6d50c-rulesets (at 16:3)
-[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
-[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip (at 6:11) | 200 OK | Followed 3 redirects. Redirects: https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip --[301]--> https://github.com/vale-cli/proselint/releases/latest/download/proselint.zip --[302]--> https://github.com/vale-cli/proselint/releases/download/v0.3.4/proselint.zip --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/189305362/4395a0e6-cc11-4ea3-84a4-25cf080bb429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T02%3A31%3A13Z&rscd=attachment%3B+filename%3Dproselint.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T01%3A31%3A12Z&ske=2026-08-16T02%3A31%3A13Z&sks=b&skv=2018-11-09&sig=D7ardoPYiK5duGkUp5nPYNTpPOWq1SLCnngT6nfpQbw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0NTQ1OSwibmJmIjoxNzg2ODQ1MTU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bj1jVLQyAmsQKXHUgPnzrFn_UrnD70DJ8nHpfAvs1rY&response-content-disposition=attachment%3B%20filename%3Dproselint.zip&response-content-type=application%2Foctet-stream
-[200] https://github.com/cmhughes/latexindent.pl (at 11:5)
-[200] https://github.com/egohygiene/mindgarden (at 5:31)
-[200] https://github.com/errata-ai/proselint/releases.atom (at 7:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/proselint/releases.atom --[301]--> https://github.com/vale-cli/proselint/releases.atom
-[200] https://github.com/errata-ai/proselint/issues/new (at 8:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/errata-ai/proselint/issues/new --[301]--> https://github.com/vale-cli/proselint/issues/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fvale-cli%2Fproselint%2Fissues%2Fnew
-[200] https://github.com/ (at 31:10)
-[200] https://github.com/ (at 35:20)
-[200] https://github.com/szmyty (at 5:9)
-[200] https://github.com/bats-core/bats-core (at 12:3)
-[200] https://github.com/egohygiene/empathy/blob/main/mindgarden/profiles/agent/README.md (at 192:22)
-[200] https://github.com/ossf/scorecard (at 21:7)
-📝 Summary
----------------------
-🔍 Total..........660
-🔗 Unique.........445
-✅ Successful.....598
-⏳ Timeouts.........0
-🔀 Redirected......44
-👻 Excluded.........7
-❓ Unknown..........0
-🚫 Errors..........55
-⛔ Unsupported.....55
+| Rejected status code: 403 Forbidden | Followed 2 redirects. Redirects: http://tex.stackexchange.com/q/55437 --[301]--> https://tex.stackexchange.com/q/55437 --[302]--> https://tex.stackexchange.com/questions/55437/how-do-i-update-my-tex-distribution
+[403] https://tex.stackexchange.com/q/1092 (at 78:9) | Rejected status code: 403 Forbidden | Followed 1 redirect. Redirects: https://tex.stackexchange.com/q/1092 --[302]--> https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
 
-Errors in .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json
-[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v3.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-
-Errors in .github/actions/generate-repository-intelligence/repository-analytics.schema.json
-[404] https://egohygiene.github.io/contracts/repository-analytics/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
-
-Errors in .github/actions/generate-repository-intelligence/repository-tree.schema.json
-[404] https://egohygiene.github.io/contracts/repository-tree/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
-
-Errors in .github/actions/normalize-repository-report/repository-report-summary.schema.json
-[ERROR] https://egohygiene.dev/schemas/repository-report-summary/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-
-Errors in .github/actions/setup-osv-scanner/action.yml
-[404] https://github.com/google/osv-scanner/releases/download/v$%7BOSV_SCANNER_VERSION%7D/osv-scanner_linux_amd64 (at 57:12) | Rejected status code: 404 Not Found
-
-Errors in .github/actions/validate-automation/action.yml
-[404] https://github.com/rhysd/actionlint/releases/download/v$%7BACTIONLINT_VERSION%7D/$%7Barchive_name%7D (at 52:12) | Rejected status code: 404 Not Found
-
-Errors in .github/FUNDING.yml
-[404] https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-funding-files (at 10:3) | Rejected status code: 404 Not Found
-
-Errors in .github/workflow-profiles/agent-environment/copilot-setup-steps.yml
-[404] https://github.com/sigstore/cosign/releases/download/$%7BCOSIGN_VERSION%7D/cosign-linux-amd64 (at 137:14) | Rejected status code: 404 Not Found
-
-Redirects in .github/workflow-profiles/agent-environment/copilot-setup-steps.yml
-https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 --[302]--> https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-Linux-x86_64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/46234189/452c2925-e304-4ed1-9a07-671658ac125d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T02%3A36%3A00Z&rscd=attachment%3B+filename%3Dhadolint-linux-x86_64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T01%3A35%3A38Z&ske=2026-08-16T02%3A36%3A00Z&sks=b&skv=2018-11-09&sig=8wUhraW7UK4mJUyn3G%2FtXr0LgUZCeMC5XZc5yEpekVw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0Njk1MiwibmJmIjoxNzg2ODQ1MTUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ydNPUZ0i9TOavmi_7UXw3lSmHmm6AnK076sF20QqWWQ&response-content-disposition=attachment%3B%20filename%3Dhadolint-linux-x86_64&response-content-type=application%2Foctet-stream
-https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 --[302]--> https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_linux_amd64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/43225113/89e648aa-ac93-4896-8540-c75c6e5e3880?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T02%3A26%3A44Z&rscd=attachment%3B+filename%3Dyq_linux_amd64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T01%3A26%3A03Z&ske=2026-08-16T02%3A26%3A44Z&sks=b&skv=2018-11-09&sig=ZUzbjKZzWxq1znNzxKeksb3OV1mPe7teUsB%2B4uQnsFs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0NjgxOCwibmJmIjoxNzg2ODQ1MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.hRjYAHIwdBxa1JE5A36UVg5rR5wYdzXu6nxbZKys47g&response-content-disposition=attachment%3B%20filename%3Dyq_linux_amd64&response-content-type=application%2Foctet-stream
+Redirects in beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md
+http://tex.stackexchange.com/q/55437 --[301]--> https://tex.stackexchange.com/q/55437 --[302]--> https://tex.stackexchange.com/questions/55437/how-do-i-update-my-tex-distribution
+https://docker.com/ --[301]--> https://www.docker.com/
+https://github.com/adobe-fonts/source-sans-pro --[301]--> https://github.com/adobe-fonts/source-sans
+https://github.com/google/roboto --[301]--> https://github.com/googlefonts/roboto-2
+https://github.com/posquit0/Awesome-CV/raw/master/icon.png --[302]--> https://raw.githubusercontent.com/posquit0/Awesome-CV/master/icon.png
+https://tex.stackexchange.com/q/1092 --[302]--> https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
+https://www.paypal.me/posquit0 --[301]--> https://www.paypal.com/paypalme/posquit0
+https://www.sharelatex.com/templates/cv-or-resume/fancy-cv --[308]--> https://www.overleaf.com/latex/templates/friggeri-cv-template/hmnchbfmjgqh
 
 
-Errors in .github/workflow-profiles/agent-environment/validate-copilot-setup.yml
-[404] https://api.github.com/repos/egohygiene/ubi (at 300:22) | Rejected status code: 404 Not Found
-[404] https://aquasecurity.github.io/trivy-repo/deb (at 123:21) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://aquasecurity.github.io/trivy-repo/deb --[301]--> https://aquasecurity.github.io/trivy-repo/deb/
-[404] https://github.com/hadolint/hadolint/releases/download/$%7BHADOLINT_VERSION%7D/hadolint-Linux-x86_64 (at 138:14) | Rejected status code: 404 Not Found
-[404] https://raw.githubusercontent.com/goss-org/goss/$%7BGOSS_VERSION%7D/extras/dgoss/dgoss (at 109:14) | Rejected status code: 404 Not Found
+Errors in beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md
+[403] https://www.indeed.com/career-advice/resumes-cover-letters/resume-objective-examples (at 22:22) | Rejected status code: 403 Forbidden
+[999] https://www.linkedin.com/in/timmy-l-chan/ (at 31:1) | Rejected status code: 999 Unknown status code | Followed 1 redirect. Redirects: https://www.linkedin.com/in/timmy-l-chan/ --[301]--> https://www.linkedin.com/in/timmy-l-chan
 
-Redirects in .github/workflow-profiles/agent-environment/validate-copilot-setup.yml
-https://aquasecurity.github.io/trivy-repo/deb --[301]--> https://aquasecurity.github.io/trivy-repo/deb/
-https://goss.rocks/install --[302]--> https://raw.githubusercontent.com/goss-org/goss/master/install.sh
+Redirects in beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md
+https://www.linkedin.com/in/timmy-l-chan/ --[301]--> https://www.linkedin.com/in/timmy-l-chan
 
 
-Errors in .github/workflow-profiles/container-platform/benchmark.yml
-[404] https://github.com/$ (at 391:56) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 433:28) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 596:56) | Rejected status code: 404 Not Found
+Errors in beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md
+[404] http://www.latextemplates.com/template/moderncv-cv-and-cover-letter (at 14:38) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: http://www.latextemplates.com/template/moderncv-cv-and-cover-letter --[302]--> https://www.latextemplates.com/template/moderncv-cv-and-cover-letter
+[404] https://github.com/afriggeri/cv (at 14:131) | Rejected status code: 404 Not Found
+[ERROR] https://www.writelatex.com/templates/deedy-resume/sqdbztjjghvz#.U2H9Kq1dV18 (at 35:79) | Cannot find fragment
 
-Errors in .github/workflow-profiles/container-platform/devcontainer.yml
-[404] https://github.com/reproducible-containers/diffoci/releases/download/$%7BDIFFOCI_VERSION%7D (at 235:21) | Rejected status code: 404 Not Found
-
-Errors in .github/workflow-profiles/container-platform/release-notes.yml
-[404] https://github.com/$ (at 249:32) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 250:31) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 251:35) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 281:41) | Error (cached)
-[404] https://github.com/$ (at 77:80) | Rejected status code: 404 Not Found
-
-Errors in .github/workflow-profiles/content-and-docs/image-optimization.yml
-[404] https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz (at 80:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz --[301]--> https://github.com/oxipng/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz
-
-Redirects in .github/workflow-profiles/content-and-docs/image-optimization.yml
-https://api.github.com/repos/shssoichiro/oxipng/releases/latest --[301]--> https://api.github.com/repositories/49436331/releases/latest
-https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz --[301]--> https://github.com/oxipng/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz
+Redirects in beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md
+http://debarghyadas.com/resume/debarghya-das-resume.pdf --[301]--> https://debarghyadas.com/resume/debarghya-das-resume.pdf
+http://www.businessinsider.com/most-big-companies-have-a-tracking-system-that-scans-your-resume-for-keywords-2012-1 --[301]--> https://www.businessinsider.com/most-big-companies-have-a-tracking-system-that-scans-your-resume-for-keywords-2012-1
+http://www.latextemplates.com/template/moderncv-cv-and-cover-letter --[302]--> https://www.latextemplates.com/template/moderncv-cv-and-cover-letter
+https://github.com/deedydas/Deedy-Resume/raw/master/MacFonts/deedy_resume.pdf --[301]--> https://github.com/deedy/Deedy-Resume/raw/master/MacFonts/deedy_resume.pdf --[302]--> https://raw.githubusercontent.com/deedy/Deedy-Resume/master/MacFonts/deedy_resume.pdf
+https://github.com/deedydas/Deedy-Resume/raw/master/OpenFonts/deedy_resume-openfont.pdf --[301]--> https://github.com/deedy/Deedy-Resume/raw/master/OpenFonts/deedy_resume-openfont.pdf --[302]--> https://raw.githubusercontent.com/deedy/Deedy-Resume/master/OpenFonts/deedy_resume-openfont.pdf
+https://www.sharelatex.com/templates/cv-or-resume/deedy-resume --[308]--> https://www.overleaf.com/latex/templates/deedy-resume/sqdbztjjghvz
 
 
-Errors in .github/workflow-profiles/release-strategies/semantic-release.yml
-[404] https://github.com/$ (at 88:45) | Rejected status code: 404 Not Found
+Errors in beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Freebooterscript-license.txt
+[ERROR] http://apostrophiclab.pedroreina.net/info.html (at 5:11) | Error (cached)
 
-Errors in .github/workflow-profiles/security-optional/clearlydefined.yml
-[404] https://api.clearlydefined.io/definitions/npm/npmjs/-/%7Bdependency_name%7D (at 117:25) | Rejected status code: 404 Not Found
+Errors in beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md
+[ERROR] https://2by22.blog/overhaul-resume-highly-effective-tips/ (at 49:75) | Connection failed. Check network connectivity and firewall settings
+[403] https://www.reddit.com/r/jobs/comments/cmezx2/ats_myths_and_facts_why_you_were_really_rejected/ (at 69:56) | Rejected status code: 403 Forbidden
 
-Redirects in .github/workflow-profiles/security-optional/clearlydefined.yml
-https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
+Redirects in beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md
+http://www.apache.org/licenses/ --[301]--> https://www.apache.org/licenses/
+https://i.imgur.com/92v0sxg.png --[302]--> https://i.imgur.com/removed.png
 
 
-Errors in .github/workflows/ossf-scorecard.yml
-[404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
+Errors in beacon/.staging/latex/Theses/kaobook/README.md
+[ERROR] file://beacon/.staging/latex/Theses/kaobook/example_and_documentation.pdf (at 104:1) | File not found. Check if file exists and path is correct
+[ERROR] file://beacon/.staging/latex/Theses/kaobook/example_and_documentation.pdf (at 38:54) | File not found. Check if file exists and path is correct
+[ERROR] file://beacon/.staging/latex/Theses/kaobook/examples (at 42:8) | File not found. Check if file exists and path is correct
+[ERROR] file://beacon/.staging/latex/Theses/kaobook/instructions (at 174:21) | File not found. Check if file exists and path is correct
+[ERROR] file://beacon/.staging/latex/Theses/kaobook/instructions (at 87:25) | File not found. Check if file exists and path is correct
+[ERROR] file://beacon/.staging/latex/Theses/kaobook/instructions (at 97:15) | File not found. Check if file exists and path is correct
+[404] http://www.latextemplates.com/template/kaobook (at 36:38) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: http://www.latextemplates.com/template/kaobook --[302]--> https://www.latextemplates.com/template/kaobook
+[404] https://www.latextemplates.com/template/kaobook (at 70:15) | Rejected status code: 404 Not Found
+
+Redirects in beacon/.staging/latex/Theses/kaobook/README.md
+http://www.latextemplates.com/ --[302]--> https://www.latextemplates.com/
+http://www.latextemplates.com/template/kaobook --[302]--> https://www.latextemplates.com/template/kaobook
+https://paypal.me/marofede --[301]--> https://www.paypal.me/marofede --[301]--> https://www.paypal.com/paypalme/marofede
+
 
 Errors in beacon/contracts/template-manifest.schema.json
 [ERROR] https://egohygiene.dev/beacon/contracts/template-manifest.schema.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
@@ -778,7 +1869,7 @@ https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
 
 Errors in egolint/package.json
 [404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 30:13) | Error (cached)
 
 Redirects in egolint/package.json
 https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
@@ -804,7 +1895,6 @@ Errors in mantle/.github/workflows/test.yml
 
 Redirects in mantle/.github/workflows/test.yml
 https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
-https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
 
 
 Errors in mindgarden/contracts/publish-profile.schema.json
@@ -818,8 +1908,8 @@ Errors in README.md
 
 Errors in tests/fixtures/repository-intelligence-dashboard/megalinter/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Error (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Error (cached)
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
 
 Errors in tests/fixtures/repository-intelligence-dashboard/osv/summary.json
@@ -830,138 +1920,228 @@ Errors in tests/fixtures/repository-intelligence-dashboard/osv/summary.json
 
 Errors in tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Error (cached)
 
 📊 Per-host Statistics
 ---------------------
 
 Host: github.com
-  Total requests: 166
-  Successful: 150 (90.4%)
-  Client errors (4xx): 16
-  Median response time: 429ms
-  Cache hit rate: 26.5%
-  Cache hits: 44, misses: 122
+  Total requests: 217
+  Successful: 199 (91.7%)
+  Client errors (4xx): 18
+  Median response time: 484ms
+  Cache hit rate: 22.1%
+  Cache hits: 48, misses: 169
 
 Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 29ms
+  Median response time: 93ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
 Host: json.schemastore.org
   Total requests: 69
   Successful: 69 (100.0%)
-  Median response time: 73ms
+  Median response time: 85ms
   Cache hit rate: 85.5%
   Cache hits: 59, misses: 10
 
 Host: raw.githubusercontent.com
-  Total requests: 20
-  Successful: 19 (95.0%)
+  Total requests: 37
+  Successful: 36 (97.3%)
   Client errors (4xx): 1
-  Median response time: 50ms
-  Cache hit rate: 25.0%
-  Cache hits: 5, misses: 15
+  Median response time: 109ms
+  Cache hit rate: 29.7%
+  Cache hits: 11, misses: 26
+
+Host: img.shields.io
+  Total requests: 22
+  Successful: 22 (100.0%)
+  Median response time: 85ms
+  Cache hit rate: 4.5%
+  Cache hits: 1, misses: 21
 
 Host: json-schema.org
   Total requests: 16
   Successful: 16 (100.0%)
-  Median response time: 86ms
+  Median response time: 218ms
   Cache hit rate: 93.8%
   Cache hits: 15, misses: 1
 
-Host: www.schemastore.org
-  Total requests: 12
-  Successful: 12 (100.0%)
-  Median response time: 15ms
-  Cache hit rate: 33.3%
-  Cache hits: 4, misses: 8
+Host: creativecommons.org
+  Total requests: 15
+  Successful: 14 (93.3%)
+  Client errors (4xx): 1
+  Median response time: 203ms
+  Cache hit rate: 66.7%
+  Cache hits: 10, misses: 5
 
 Host: egohygiene.github.io
   Total requests: 12
   Successful: 6 (50.0%)
   Client errors (4xx): 6
-  Median response time: 23ms
+  Median response time: 83ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
+
+Host: www.schemastore.org
+  Total requests: 12
+  Successful: 12 (100.0%)
+  Median response time: 40ms
+  Cache hit rate: 33.3%
+  Cache hits: 4, misses: 8
+
+Host: www.overleaf.com
+  Total requests: 11
+  Successful: 11 (100.0%)
+  Median response time: 89ms
+  Cache hit rate: 9.1%
+  Cache hits: 1, misses: 10
+
+Host: sourceforge.net
+  Total requests: 9
+  Successful: 9 (100.0%)
+  Median response time: 330ms
+  Cache hit rate: 55.6%
+  Cache hits: 5, misses: 4
+
+Host: scripts.sil.org
+  Total requests: 9
+  Successful: 9 (100.0%)
+  Median response time: 1002ms
+  Cache hit rate: 88.9%
+  Cache hits: 8, misses: 1
+
+Host: i.creativecommons.org
+  Total requests: 8
+  Successful: 8 (100.0%)
+  Median response time: 170ms
+  Cache hit rate: 87.5%
+  Cache hits: 7, misses: 1
 
 Host: taskfile.dev
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 105ms
-  Cache hit rate: 71.4%
-  Cache hits: 5, misses: 2
+  Median response time: 199ms
+  Cache hit rate: 55.6%
+  Cache hits: 5, misses: 4
 
-Host: img.shields.io
-  Total requests: 5
-  Successful: 5 (100.0%)
-  Median response time: 12ms
+Host: www.latextemplates.com
+  Total requests: 7
+  Successful: 4 (57.1%)
+  Client errors (4xx): 3
+  Median response time: 147ms
+  Cache hit rate: 42.9%
+  Cache hits: 3, misses: 4
+
+Host: jdujava.github.io
+  Total requests: 6
+  Successful: 6 (100.0%)
+  Median response time: 214ms
+  Cache hit rate: 50.0%
+  Cache hits: 3, misses: 3
+
+Host: www.latex-project.org
+  Total requests: 6
+  Successful: 6 (100.0%)
+  Median response time: 627ms
+  Cache hit rate: 50.0%
+  Cache hits: 3, misses: 3
+
+Host: sflogo.sourceforge.net
+  Total requests: 6
+  Successful: 6 (100.0%)
+  Median response time: 244ms
+  Cache hit rate: 66.7%
+  Cache hits: 4, misses: 2
 
 Host: docs.github.com
   Total requests: 5
   Successful: 3 (60.0%)
   Client errors (4xx): 2
-  Median response time: 83ms
+  Median response time: 136ms
+
+Host: 3d.bk.tudelft.nl
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 584ms
+  Cache hit rate: 50.0%
+  Cache hits: 2, misses: 2
 
 Host: api.github.com
   Total requests: 4
   Successful: 3 (75.0%)
   Client errors (4xx): 1
-  Median response time: 47ms
+  Median response time: 127ms
 
-Host: developer.mozilla.org
+Host: www.fontawesome.io
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 119ms
+  Cache hit rate: 75.0%
+  Cache hits: 3, misses: 1
+
+Host: www.apostrophiclab.com
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 473ms
+  Cache hit rate: 75.0%
+  Cache hits: 3, misses: 1
+
+Host: www.ctan.org
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 238ms
+  Median response time: 750ms
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 25ms
+  Median response time: 21ms
+
+Host: i.imgur.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 83ms
 
 Host: www.checkov.io
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 35ms
+  Median response time: 111ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
-Host: yamllint.readthedocs.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 92ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: api.star-history.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 272ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
 
-Host: ogp.me
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 37ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: developer.mozilla.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 160ms
 
-Host: eslint.org
+Host: paypal.me
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 50ms
+  Median response time: 560ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: oss.anchore.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 115ms
+  Median response time: 92ms
 
-Host: developer.salesforce.com
+Host: yamllint.readthedocs.io
   Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 99ms
+  Successful: 2 (100.0%)
+  Median response time: 44ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -969,22 +2149,91 @@ Host: aquasecurity.github.io
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 42ms
+  Median response time: 108ms
 
-Host: reuse.software
+Host: tex.stackexchange.com
+  Total requests: 2
+  Successful: 0 (0.0%)
+  Client errors (4xx): 2
+  Median response time: 97ms
+
+Host: www.mff.cuni.cz
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 666ms
+  Median response time: 510ms
+
+Host: arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 119ms
+
+Host: web.archive.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 1143ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
 Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 23ms
+  Median response time: 135ms
+
+Host: docs.ansible.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 97ms
+
+Host: www.sharelatex.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 334ms
+
+Host: en.wikipedia.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 105ms
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 85ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: developer.salesforce.com
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 44ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
 Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 288ms
+  Median response time: 25ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: ogp.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 268ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.cyrius.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 435ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.vel.nz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 429ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -992,243 +2241,440 @@ Host: egohygiene.io
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 76ms
+  Median response time: 173ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: prettier.io
+Host: commons.wikimedia.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 230ms
+  Median response time: 60ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: docs.ansible.com
+Host: reuse.software
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 89ms
+  Median response time: 802ms
 
-Host: osv.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 143ms
+Host: eslint.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 87ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 68ms
+Host: femto-physique.fr
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 690ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: securityscorecards.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 54ms
+Host: www.amazon.ca
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 112ms
 
 Host: ls-lint.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 216ms
+  Median response time: 73ms
 
-Host: www.designtokens.org
+Host: www.nongnu.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 326ms
+  Median response time: 236ms
 
-Host: docs.rubocop.org
+Host: texdoc.net
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 57ms
+  Median response time: 2457ms
 
-Host: scancode-toolkit.readthedocs.io
+Host: pnpm.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 168ms
+  Median response time: 55ms
 
-Host: trivy.dev
+Host: sahiljhawar.in
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 91ms
+  Median response time: 986ms
+
+Host: quartz.jzhao.xyz
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 127ms
+
+Host: humanstxt.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 742ms
 
 Host: psalm.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 212ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 711ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 54ms
+  Median response time: 151ms
 
 Host: api.scorecard.dev
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 150ms
+  Median response time: 1172ms
 
-Host: google.github.io
+Host: ansible.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 43ms
+  Median response time: 256ms
 
-Host: www.rubyschema.org
+Host: www.apache.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 122ms
+  Median response time: 18ms
 
-Host: goss.rocks
+Host: www.linkedin.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Median response time: 215ms
+
+Host: www.designtokens.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 71ms
+  Median response time: 206ms
 
-Host: golangci-lint.run
+Host: cyclonedx.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 75ms
+  Median response time: 82ms
 
 Host: api.clearlydefined.io
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 143ms
+  Median response time: 348ms
 
-Host: humanstxt.org
+Host: www.tylerfinck.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 456ms
-
-Host: web.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 412ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 247ms
-
-Host: developer.apple.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 107ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 141ms
-
-Host: quartz.jzhao.xyz
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 105ms
-
-Host: phpstan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 44ms
-
-Host: trufflesecurity.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 218ms
-
-Host: developercertificate.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 250ms
-
-Host: realm.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 55ms
-
-Host: ansible.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 207ms
-
-Host: unpkg.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 86ms
-
-Host: zizmor.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 69ms
-
-Host: www.nongnu.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 91ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 94ms
+  Median response time: 371ms
 
 Host: stylelint.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 76ms
+  Median response time: 117ms
 
-Host: registry.npmjs.org
+Host: securityscorecards.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 46ms
+  Median response time: 734ms
 
-Host: install.python-poetry.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 57ms
-
-Host: pnpm.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 63ms
-
-Host: agentskills.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 100ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 95ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 61ms
-
-Host: chris48s.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 66ms
-
-Host: rubocop.org
+Host: osv.dev
   Total requests: 1
   Successful: 1 (100.0%)
   Median response time: 71ms
 
+Host: git-lfs.github.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 122ms
+
+Host: resumake.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 263ms
+
+Host: docs.rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 120ms
+
+Host: protobuf.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 107ms
+
+Host: install.python-poetry.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 42ms
+
+Host: www.paypal.me
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 682ms
+
+Host: kiwiirc.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 642ms
+
+Host: docker.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 127ms
+
+Host: www.latofonts.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 805ms
+
+Host: micahrich.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 550ms
+
+Host: www.businessinsider.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 589ms
+
+Host: hemingwayapp.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 311ms
+
+Host: autofix.ci
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 405ms
+
+Host: www.reddit.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 36ms
+
+Host: developercertificate.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 220ms
+
+Host: prowritingaid.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 53ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 116ms
+
+Host: chris48s.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 130ms
+
+Host: developer.apple.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 43ms
+
+Host: phpstan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 72ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 108ms
+
+Host: mirrors.ctan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 924ms
+
+Host: tug.ctan.org
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 145ms
+
+Host: checkstyle.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 114ms
+
+Host: www.chrisbehr.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 310ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 79ms
+
+Host: zizmor.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 109ms
+
+Host: www.indeed.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 36ms
+
+Host: thetechresume.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 6791ms
+
 Host: clearlydefined.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 224ms
+  Median response time: 334ms
+
+Host: raku.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 998ms
+
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 7ms
+
+Host: fonts.google.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 393ms
+
+Host: realm.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 107ms
+
+Host: www.smashingmagazine.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 251ms
+
+Host: www.hadilaksono.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 276ms
+
+Host: www.wnd.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 124ms
+
+Host: apostrophiclab.pedroreina.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 107ms
+
+Host: registry.npmjs.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 31ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 138ms
+
+Host: scancode-toolkit.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 231ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 507ms
+
+Host: web.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 306ms
+
+Host: fontawesome.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 118ms
+
+Host: debarghyadas.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 657ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 218ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 106ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 211ms
+
+Host: www.writelatex.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 542ms
+
+Host: goss.rocks
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 141ms
+
+Host: unpkg.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 64ms
 
 Host: rubystyle.guide
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 81ms
+  Median response time: 143ms
 
-Host: cyclonedx.org
+Host: www.grammarly.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 83ms
+  Median response time: 241ms
+
+Host: img.youtube.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 108ms
+
+Host: enhancv.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 27ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 228ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 101ms
+
+Host: 2by22.blog
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: x-access-token
+  Total requests: 0
+  Successful: 0 (100.0%)
 
 Host: egohygiene.dev
   Total requests: 0
@@ -1238,13 +2684,231 @@ Host: github
   Total requests: 0
   Successful: 0 (100.0%)
 
-(Truncated to last 29629 characters out of 78438)
+Host: www.businessinsider.my
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: www.youtube.com
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+(Truncated to last 27586 characters out of 165295)
 ```
 
 </details>
 
 <details>
-<summary>❌ PYTHON / mypy - 22 errors</summary>
+<summary>❌ MARKDOWN / markdownlint - 400 errors</summary>
+
+```
+Resumes/Awesome-CV/README.md:62:416 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:64 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:70:3 error MD049/emphasis-style Emphasis style [Expected: asterisk; Actual: underscore]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:70:9 error MD049/emphasis-style Emphasis style [Expected: asterisk; Actual: underscore]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:72 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:75 error MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h3; Actual: h4]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:86 error MD046/code-block-style Code block style [Expected: indented; Actual: fenced]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:92 error MD046/code-block-style Code block style [Expected: indented; Actual: fenced]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:98 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:109 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:114:132 error MD059/descriptive-link-text Link text should be descriptive [Context: "[here]"]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:118 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:119 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Maintainers"]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:120:1 error MD004/ul-style Unordered list style [Expected: asterisk; Actual: dash]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:120 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- [posquit0](https://github.co..."]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:121:1 error MD004/ul-style Unordered list style [Expected: asterisk; Actual: dash]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:123 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:5:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.overleaf.com/latex..."]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:7:249 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:12:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.overleaf.com/latex..."]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:17:10 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:22:22 error MD034/no-bare-urls Bare URL used [Context: "https://www.indeed.com/career-..."]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:28:11 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:30:1 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/TimmyChan"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:31:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.linkedin.com/in/ti..."]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:33:17 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:35:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/xiazeyu"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:36:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/iamgmujtaba"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:37:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/alejlatorre"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:41 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:12 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:584 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:18 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:20 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:20 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### OpenFonts"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:23 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:23 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### MacFonts"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:26 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:31 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:38 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:38 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Changelog"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:39 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:39 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "### v1.2"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:39 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### v1.2"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:40 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "1. Added publications in place..."]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:42:88 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:44 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:44 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### v1.1"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:45 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "1. Fixed several compilation b..."]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:51 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:51 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## TODO"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:52 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "1. Merge OpenFont and MacFonts..."]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:59 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:59 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Known Issues:"]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:59:16 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:60 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "1. Overflows onto second page ..."]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:64 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:64 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## License"]
+beacon/.staging/latex/CVs and Resumes/developer-cv/LICENSE.md:22:31 error MD047/single-trailing-newline Files should end with a single newline character
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/FontAwesome.md:1:1 error MD020/no-missing-space-closed-atx No space inside hashes on closed atx style heading [Context: "#fontawesome: h...lity web icons#"]
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/FontAwesome.md:5:46 error MD034/no-bare-urls Bare URL used [Context: "http://scripts.sil.org/OFL"]
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/FontAwesome.md:6:5 error MD034/no-bare-urls Bare URL used [Context: "http://www.fontawesome.io"]
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/FontAwesome.md:17 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/FontAwesome.md:21:6 error MD034/no-bare-urls Bare URL used [Context: "http://www.fontawesome.io"]
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/FontAwesome.md:26:6 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/xdanaux/fon..."]
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:73:1 error MD007/ul-indent Unordered list indentation [Expected: 2; Actual: 4]
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:74:1 error MD007/ul-indent Unordered list indentation [Expected: 2; Actual: 4]
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:19 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:31:65 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:26 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:30:12 error MD010/no-hard-tabs Hard tabs [Column: 12]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:30:17 error MD010/no-hard-tabs Hard tabs [Column: 17]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:31:18 error MD010/no-hard-tabs Hard tabs [Column: 18]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:31:23 error MD010/no-hard-tabs Hard tabs [Column: 23]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:40:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:41:64 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:44:3 error MD034/no-bare-urls Bare URL used [Context: "http://creativecommons.org/pub..."]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:46:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:51 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:55:6 error MD010/no-hard-tabs Hard tabs [Column: 6]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:57:6 error MD010/no-hard-tabs Hard tabs [Column: 6]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:58:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:59:6 error MD010/no-hard-tabs Hard tabs [Column: 6]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:60:6 error MD010/no-hard-tabs Hard tabs [Column: 6]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:61:6 error MD010/no-hard-tabs Hard tabs [Column: 6]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:62:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:62:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:63:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:63:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:64:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:64:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:65:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:65:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:66:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:66:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:67:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:67:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:68:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:68:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:69:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:69:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:70:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:70:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:71:1 error MD010/no-hard-tabs Hard tabs [Column: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:71:3 error MD010/no-hard-tabs Hard tabs [Column: 3]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:74:10 error MD010/no-hard-tabs Hard tabs [Column: 10]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:75:10 error MD010/no-hard-tabs Hard tabs [Column: 10]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:76:10 error MD010/no-hard-tabs Hard tabs [Column: 10]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:77:10 error MD010/no-hard-tabs Hard tabs [Column: 10]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:82:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:83:48 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:84:63 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:85:55 error MD047/single-trailing-newline Files should end with a single newline character
+beacon/.staging/latex/Theses/kaobook/README.md:12:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:13:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:14:31 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:15:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:22:70 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:29:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:36:44 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:37:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:42:63 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:43:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:44:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:53:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:54:75 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:55:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:56:69 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:57:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:58:70 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:60 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/README.md:60 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/README.md:64:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:65:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:71:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:76:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:77:65 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:78:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:81:70 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:82:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:83:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:84:66 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:85:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:86:70 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:87:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:90:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:91:64 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:92:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:97:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:98:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:103:47 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:104:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:105:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:119 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/README.md:119 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/README.md:127:64 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:129 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/README.md:129 error MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/README.md:132 error MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
+beacon/.staging/latex/Theses/kaobook/README.md:153:1 error MD029/ol-prefix Ordered list item prefix [Expected: 4; Actual: 3; Style: 1/2/3]
+beacon/.staging/latex/Theses/kaobook/README.md:154:1 error MD029/ol-prefix Ordered list item prefix [Expected: 5; Actual: 4; Style: 1/2/3]
+beacon/.staging/latex/Theses/kaobook/README.md:155:1 error MD029/ol-prefix Ordered list item prefix [Expected: 6; Actual: 5; Style: 1/2/3]
+beacon/.staging/latex/Theses/kaobook/README.md:161:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:162:63 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:163:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:164:70 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:165:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:166:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:167:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:168:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:169:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:170:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:173:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:178:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:179:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:180:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:183:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:184:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:185:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:188:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:189:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:192:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:197:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:198:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:199:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:202:60 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:203:73 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:204:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:205:66 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:212:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:213:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:217:71 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:218:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:219:1 error MD034/no-bare-urls Bare URL used [Context: "https://paypal.me/marofede"]
+beacon/.staging/latex/Theses/kaobook/README.md:223:69 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:224:64 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:225:72 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:226:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:236:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailing-newline Files should end with a single newline character
+
+(Truncated to last 27586 characters out of 54345)
+```
+
+</details>
+
+<details>
+<summary>❌ PYTHON / mypy - 34 errors</summary>
 
 ```
 WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
@@ -1253,6 +2917,60 @@ Collecting types-PyYAML
 Downloading types_pyyaml-6.0.12.20260815-py3-none-any.whl (21 kB)
 Installing collected packages: types-PyYAML
 Successfully installed types-PyYAML-6.0.12.20260815
+tests/test_staging_home_audit.py: note: In member "setUpClass" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:25:9: error: "type[StagingHomeAuditTests]" has
+no attribute "rows"  [attr-defined]
+            cls.rows = staging_home_audit.build_rows(REPOSITORY_ROOT)
+            ^~~~~~~~
+tests/test_staging_home_audit.py:26:9: error: "type[StagingHomeAuditTests]" has
+no attribute "by_path"  [attr-defined]
+            cls.by_path = {row.source_path: row for row in cls.rows}
+            ^~~~~~~~~~~
+tests/test_staging_home_audit.py:26:56: error: "type[StagingHomeAuditTests]"
+has no attribute "rows"  [attr-defined]
+            cls.by_path = {row.source_path: row for row in cls.rows}
+                                                           ^~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_every_staged_file_has_a_concrete_home" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:35:30: error: "StagingHomeAuditTests" has no
+attribute "by_path"  [attr-defined]
+            self.assertEqual(set(self.by_path), tracked_staging_paths)
+                                 ^~~~~~~~~~~~
+tests/test_staging_home_audit.py:36:75: error: "StagingHomeAuditTests" has no
+attribute "rows"  [attr-defined]
+    ...sertNotIn("manual-review", {row.canonical_owner for row in self.rows})
+                                                                  ^~~~~~~~~
+tests/test_staging_home_audit.py:37:64: error: "StagingHomeAuditTests" has no
+attribute "rows"  [attr-defined]
+    ...    self.assertNotIn("TBD", {row.canonical_home for row in self.rows})
+                                                                  ^~~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_realm_devcontainer_variants_share_one_destination" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:40:17: error: "StagingHomeAuditTests" has no
+attribute "by_path"  [attr-defined]
+            first = self.by_path[".staging/devenvironment/.devcontainer/de...
+                    ^~~~~~~~~~~~
+tests/test_staging_home_audit.py:41:18: error: "StagingHomeAuditTests" has no
+attribute "by_path"  [attr-defined]
+            second = self.by_path[".staging/devenvironment/.devcontainer/d...
+                     ^~~~~~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_product_fixtures_are_kept_out_of_realm" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:49:15: error: "StagingHomeAuditTests" has no
+attribute "by_path"  [attr-defined]
+            api = self.by_path[
+                  ^~~~~~~~~~~~
+tests/test_staging_home_audit.py:52:14: error: "StagingHomeAuditTests" has no
+attribute "by_path"  [attr-defined]
+            ui = self.by_path[".staging/react-template/universal/apps/ui/p...
+                 ^~~~~~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_cross_cutting_sources_follow_capability_ownership" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:71:34: error: "StagingHomeAuditTests" has no
+attribute "by_path"  [attr-defined]
+                    self.assertEqual(self.by_path[path].canonical_owner, e...
+                                     ^~~~~~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_community_instructions_remain_quarantined" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:76:24: error: "StagingHomeAuditTests" has no
+attribute "rows"  [attr-defined]
+                for row in self.rows
+                           ^~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "build" of class "RepositoryIntelligenceDashboardTests":
 tests/test_repository_intelligence_dashboard.py:94:9: error: Returning Any from
 function declared to return "dict[str, object]"  [no-any-return]
@@ -1357,7 +3075,7 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 22 errors in 1 file (checked 37 source files)
+Found 34 errors in 2 files (checked 39 source files)
 ```
 
 </details>
@@ -1400,415 +3118,359 @@ Checking formatting...
 </details>
 
 <details>
-<summary>❌ PYTHON / ruff - 55 errors</summary>
+<summary>❌ PYTHON / ruff - 778 errors</summary>
 
 ```
-PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:111:55
-    |
-109 |     if isinstance(value, bool) or not isinstance(value, (int, float)):
-110 |         return None
-111 |     return value if isfinite(value) and 0 <= value <= 10 else None
-    |                                                       ^^
+|
+help: Remove trailing whitespace
 
-PLR0912 Too many branches (17 > 12)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:5
+W293 Blank line contains whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:968:1
     |
-252 | def validate_report(
-    |     ^^^^^^^^^^^^^^^
-253 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
-254 | ) -> dict[str, Any]:
+966 |                     else:
+967 |                         raise Error
+968 |                     
+    | ^^^^^^^^^^^^^^^^^^^^
+969 |
+970 |                     print '%03d-%03d:%s: %s'%(
     |
+help: Remove whitespace from blank line
 
-PLR0915 Too many statements (64 > 50)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:5
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:970:27
     |
-252 | def validate_report(
-    |     ^^^^^^^^^^^^^^^
-253 |     document: dict[str, Any], producer: str, repository: str, as_of: datetime
-254 | ) -> dict[str, Any]:
+970 |                     print '%03d-%03d:%s: %s'%(
+    |                           ^^^^^^^^^^^^^^^^^^
+971 |                         span_full[0]
+972 |                         ,span_full[1]
     |
 
-SIM102 Use a single `if` statement instead of nested `if` statements
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:284:5
-    |
-282 |       blocking = safe_integer(report_findings.get("blocking"), allow_none=allow_none)
-283 |       advisory = safe_integer(report_findings.get("advisory"), allow_none=allow_none)
-284 | /     if total is not None and blocking is not None and advisory is not None:
-285 | |         if blocking + advisory != total:
-    | |________________________________________^
-286 |               raise DashboardInputError("blocking and advisory counts must sum to total.")
-287 |       by_severity = report_findings.get("by_severity")
-    |
-help: Combine `if` statements using `and`
-
-PLR0912 Too many branches (13 > 12)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:439:5
-    |
-439 | def validate_analytics(document: dict[str, Any], source_commit: str) -> dict[str, Any]:
-    |     ^^^^^^^^^^^^^^^^^^
-440 |     """Project the versioned public analytics contract used by the charts."""
-    |
-
-PLR0912 Too many branches (19 > 12)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:5
-    |
-640 | def validate_tree_node(
-    |     ^^^^^^^^^^^^^^^^^^
-641 |     candidate: Any,
-642 |     *,
-    |
-
-PLR0915 Too many statements (55 > 50)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:5
-    |
-640 | def validate_tree_node(
-    |     ^^^^^^^^^^^^^^^^^^
-641 |     candidate: Any,
-642 |     *,
-    |
-
-S603 `subprocess` call: check for execution of untrusted input
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:805:14
-    |
-803 |     """Run a read-only Git query and return normalized stdout."""
-804 |
-805 |     result = subprocess.run(
-    |              ^^^^^^^^^^^^^^
-806 |         ["git", "-C", str(repository_root), *arguments],
-807 |         check=True,
-    |
-
-S607 Starting a process with a partial executable path
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:806:9
-    |
-805 |     result = subprocess.run(
-806 |         ["git", "-C", str(repository_root), *arguments],
-    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-807 |         check=True,
-808 |         capture_output=True,
-    |
-
-TRY301 Abstract `raise` to an inner function
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:826:13
-    |
-824 |         resolved_commit = run_git(repository_root, "rev-parse", source_commit)
-825 |         if not FULL_SHA_PATTERN.fullmatch(resolved_commit):
-826 |             raise DashboardInputError("Git did not resolve a full source commit.")
-    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-827 |         committed_at = run_git(
-828 |             repository_root, "show", "--no-patch", "--format=%cI", resolved_commit
-    |
-
-PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:875:36
-    |
-873 |             path.startswith(".github/actions/")
-874 |             and path.endswith("/action.yml")
-875 |             and path.count("/") == 3
-    |                                    ^
-876 |             for path in tracked_paths
-877 |         )
-    |
-
-C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:924:25
-    |
-923 |     counts = {
-924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-    |
-help: Replace with `dict.fromkeys(iterable)`)
-    |
-923 |     counts = {
-    -         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-924 +         "availability": dict.fromkeys(sorted(AVAILABILITY_STATES), 0),
-925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-    |
-
-C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:925:22
-    |
-923 |     counts = {
-924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-    |
-help: Replace with `dict.fromkeys(iterable)`)
-    |
-924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-    -         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-925 +         "execution": dict.fromkeys(sorted(EXECUTION_STATES), 0),
-926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-    |
-
-C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:926:21
-    |
-924 |         "availability": {state: 0 for state in sorted(AVAILABILITY_STATES)},
-925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-928 |     }
-    |
-help: Replace with `dict.fromkeys(iterable)`)
-    |
-925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-    -         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-926 +         "findings": dict.fromkeys(sorted(FINDING_STATES), 0),
-927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-    |
-
-C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:927:22
-    |
-925 |         "execution": {state: 0 for state in sorted(EXECUTION_STATES)},
-926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-927 |         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-928 |     }
-929 |     for projection in producers.values():
-    |
-help: Replace with `dict.fromkeys(iterable)`)
-    |
-926 |         "findings": {state: 0 for state in sorted(FINDING_STATES)},
-    -         "freshness": {state: 0 for state in sorted(FRESHNESS_STATES)},
-927 +         "freshness": dict.fromkeys(sorted(FRESHNESS_STATES), 0),
-928 |     }
-    |
-
-PLR0913 Too many arguments in function definition (8 > 5)
-   --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:937:5
-    |
-937 | def build_dashboard(
-    |     ^^^^^^^^^^^^^^^
-938 |     *,
-939 |     repository_root: Path,
-    |
-
-PLR2004 Magic value used in comparison, consider replacing `1_000` with a constant variable
-    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1095:21
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1005:31
      |
-1093 |     """Render a compact, deterministic integer label."""
-1094 |
-1095 |     if abs(value) < 1_000:
-     |                     ^^^^^
-1096 |         return str(value)
-1097 |     for divisor, suffix in ((1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")):
+1003 |                     elif trackchanges_main.current_action == 'cancel':
+1004 |                         self.emit(QtCore.SIGNAL('cancel'))
+1005 |                         return              
+     |                               ^^^^^^^^^^^^^^
+1006 |                     elif self.command in trackchanges_main.command_names:
+1007 |                         trackchanges_main.search_position = span_full[1]
      |
+help: Remove trailing whitespace
 
-PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
-    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1100:45
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1128:58
      |
-1098 |         if abs(value) >= divisor:
-1099 |             scaled = value / divisor
-1100 |             precision = 0 if abs(scaled) >= 10 else 1
-     |                                             ^^
-1101 |             return f"{scaled:.{precision}f}{suffix}".replace(".0", "")
-1102 |     return str(value)
+1126 |         self.connect(self.text_main
+1127 |                      ,QtCore.SIGNAL('textChangedByUser')
+1128 |                      ,trackchanges_main.textChangeByUser)   
+     |                                                          ^^^
+1129 |
+1130 |         self.connect(self.button_old
      |
+help: Remove trailing whitespace
 
-PLR0913 Too many arguments in function definition (7 > 5)
-    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1134:5
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1149:1
      |
-1134 | def chart_card(
-     |     ^^^^^^^^^^
-1135 |     *,
-1136 |     identifier: str,
+1147 |     """Here QtGui.QTextEdit is reimplemented so I can figure out what the last
+1148 |     selection was before an edit wase done.
+1149 |     
+     | ^^^^
+1150 |     This only works for edits that are done with a keyboard or mouse command, 
+1151 |     not any commands given from the program.
      |
+help: Remove whitespace from blank line
 
-PLR2004 Magic value used in comparison, consider replacing `20` with a constant variable
-    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1342:59
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1150:78
      |
-1340 |         y = 28 + index * row_height
-1341 |         rendered_width = bar_width * row["commit_touches"] / maximum
-1342 |         display_name = row["name"] if len(row["name"]) <= 20 else row["name"][:18] + "…"
-     |                                                           ^^
-1343 |         bars.append(
-1344 |             f'<text class="bar-label" x="0" y="{y + 17}">{escaped(display_name)}</text>'
+1148 |     selection was before an edit wase done.
+1149 |     
+1150 |     This only works for edits that are done with a keyboard or mouse command, 
+     |                                                                              ^
+1151 |     not any commands given from the program.
+1152 |     """
      |
+help: Remove trailing whitespace
 
-PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
-    --> .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1558:22
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1156:37
      |
-1557 |     parts = repository.split("/")
-1558 |     if len(parts) != 2 or not all(re.fullmatch(r"[A-Za-z0-9_.-]+", part) for part in parts):
-     |                      ^
-1559 |         return ""
-1560 |     owner, name = (quote(part, safe="") for part in parts)
+1154 |         QtGui.QTextEdit.__init__(self, *args)
+1155 |
+1156 |         # For now disable Undo/Redo.  
+     |                                     ^^
+1157 |         # To enable this is a lot of work.
+1158 |         # There are two ways to go about it:
      |
+help: Remove trailing whitespace
 
-S603 `subprocess` call: check for execution of untrusted input
-  --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:68:17
-   |
-67 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
-68 |     completed = subprocess.run(
-   |                 ^^^^^^^^^^^^^^
-69 |         ["git", "-C", str(repo_root), *arguments],
-70 |         check=True,
-   |
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1172:39
+     |
+1170 |         self.connect(self
+1171 |                      ,QtCore.SIGNAL('textChanged()')
+1172 |                      ,self.textChange)        
+     |                                       ^^^^^^^^
+1173 |
+1174 |     def textChange(self):
+     |
+help: Remove trailing whitespace
 
-S607 Starting a process with a partial executable path
-  --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:69:9
-   |
-67 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
-68 |     completed = subprocess.run(
-69 |         ["git", "-C", str(repo_root), *arguments],
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-70 |         check=True,
-71 |         capture_output=True,
-   |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1255:1
+     |
+1254 |         ui_central_widget = UiCentralWindow(self)
+1255 |         
+     | ^^^^^^^^
+1256 |         # Set the central Widget
+1257 |         self.setCentralWidget(ui_central_widget)
+     |
+help: Remove whitespace from blank line
 
-FURB110 [*] Replace ternary `if` expression with `or` operator
-   --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:161:12
-    |
-159 | def extension_name(relative_path: str) -> str:
-160 |     suffix = Path(relative_path).suffix.casefold()
-161 |     return suffix if suffix else "[no extension]"
-    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-help: Replace with `or` operator
-    |
-160 |     suffix = Path(relative_path).suffix.casefold()
-    -     return suffix if suffix else "[no extension]"
-161 +     return suffix or "[no extension]"
-162 |
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1287:1
+     |
+1285 |         # Setup some actions.
+1286 |         self.createActions()
+1287 |         
+     | ^^^^^^^^
+1288 |         # Add the actions to the menus
+1289 |         # --------------------------------------------------------------
+     |
+help: Remove whitespace from blank line
 
-PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
-   --> .github/actions/generate-repository-intelligence/generate_repository_analytics.py:267:27
-    |
-265 |             continue
-266 |         fields = record.split(b"\t", maxsplit=2)
-267 |         if len(fields) != 3:
-    |                           ^
-268 |             continue
-269 |         raw_insertions, raw_deletions, raw_path = fields
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1290:1
+     |
+1288 |         # Add the actions to the menus
+1289 |         # --------------------------------------------------------------
+1290 |         
+     | ^^^^^^^^
+1291 |         # First the file menu.
+1292 |         ui_menubar_file.addAction(self.ui_menu_items['load'])
+     |
+help: Remove whitespace from blank line
 
-S603 `subprocess` call: check for execution of untrusted input
-  --> .github/actions/generate-repository-intelligence/generate_repository_intelligence.py:89:17
-   |
-88 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
-89 |     completed = subprocess.run(
-   |                 ^^^^^^^^^^^^^^
-90 |         ["git", "-C", str(repo_root), *arguments],
-91 |         check=True,
-   |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1300:1
+     |
+1298 |         ui_menubar_commands.addAction(self.ui_menu_items['skip all'])
+1299 |         ui_menubar_commands.addAction(self.ui_menu_items['cancel'])
+1300 |         
+     | ^^^^^^^^
+1301 |
+1302 |         # Now the help menu
+     |
+help: Remove whitespace from blank line
 
-S607 Starting a process with a partial executable path
-  --> .github/actions/generate-repository-intelligence/generate_repository_intelligence.py:90:9
-   |
-88 | def run_git(repo_root: Path, arguments: Sequence[str]) -> bytes:
-89 |     completed = subprocess.run(
-90 |         ["git", "-C", str(repo_root), *arguments],
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-91 |         check=True,
-92 |         capture_output=True,
-   |
+ERA001 Found commented-out code
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1389:9
+     |
+1387 |     def showHelpDialog(self):
+1388 |
+1389 |         #help = HelpWindow(self)
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+1390 |         self.help_window = HelpWindow(None)
+1391 |         self.help_window.show()
+     |
+help: Remove commented-out code
 
-PLR0913 Too many arguments in function definition (6 > 5)
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:112:5
-    |
-112 | def default_links(
-    |     ^^^^^^^^^^^^^
-113 |     *,
-114 |     producer: str,
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1411:1
+     |
+1409 |         # We load this on the fly to reduce memory footprint.
+1410 |         from PyQt4 import QtWebKit
+1411 |         
+     | ^^^^^^^^
+1412 |         self.browser_main = QtWebKit.QWebView(self)
+     |
+help: Remove whitespace from blank line
 
-PLR0913 Too many arguments in function definition (11 > 5)
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:139:5
-    |
-139 | def common_summary(
-    |     ^^^^^^^^^^^^^^
-140 |     *,
-141 |     producer: str,
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1414:1
+     |
+1412 |         self.browser_main = QtWebKit.QWebView(self)
+1413 |
+1414 |       
+     | ^^^^^^
+1415 |         # Connect things
+1416 |         self.connectThings()
+     |
+help: Remove whitespace from blank line
 
-PLR0911 Too many return statements (7 > 6)
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:310:5
-    |
-310 | def risk_from_rule(rule: dict[str, Any]) -> str:
-    |     ^^^^^^^^^^^^^^
-311 |     """Translate SARIF's numeric security severity into a compact risk label."""
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1420:1
+     |
+1418 |         url_main = QtCore.QUrl(r'../documentation/web/html_css/help.html')
+1419 |         self.browser_main.setUrl(url_main)
+1420 |   
+     | ^^
+1421 |
+1422 |         # Set the layout
+     |
+help: Remove whitespace from blank line
 
-PLR2004 Magic value used in comparison, consider replacing `9` with a constant variable
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:320:20
-    |
-318 |     except (TypeError, ValueError):
-319 |         return "unknown"
-320 |     if severity >= 9:
-    |                    ^
-321 |         return "critical"
-322 |     if severity >= 7:
-    |
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1436:65
+     |
+1434 | # This is meant to be a lightweight help browser for TrackChanges.
+1435 | #
+1436 | # Unfortunatly Qt's rich text handling is all messed up and this 
+     |                                                                 ^
+1437 | # does not work.  Qt puts the ends of tags in the wrong place.
+1438 | class HelpBrowser(QtGui.QWidget):
+     |
+help: Remove trailing whitespace
 
-PLR2004 Magic value used in comparison, consider replacing `7` with a constant variable
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:322:20
-    |
-320 |     if severity >= 9:
-321 |         return "critical"
-322 |     if severity >= 7:
-    |                    ^
-323 |         return "high"
-324 |     if severity >= 4:
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1441:1
+     |
+1439 |     def __init__(self, parent=None):
+1440 |         QtGui.QWidget.__init__(self, parent)
+1441 |         
+     | ^^^^^^^^
+1442 |         self.browser_main = QtGui.QTextBrowser(self)
+1443 |         self.browser_main.setSearchPaths(['../documentation/web/'])
+     |
+help: Remove whitespace from blank line
 
-PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:324:20
-    |
-322 |     if severity >= 7:
-323 |         return "high"
-324 |     if severity >= 4:
-    |                    ^
-325 |         return "medium"
-326 |     if severity > 0:
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1453:1
+     |
+1451 |         self.browser_index.setMinimumWidth(150)
+1452 |         self.browser_index.setOpenLinks(False)
+1453 |         
+     | ^^^^^^^^
+1454 |         # Connect things
+1455 |         self.connectThings()
+     |
+help: Remove whitespace from blank line
 
-PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:421:38
-    |
-419 |                 continue
-420 |             score = int(check["score"])
-421 |             if score < 0 or score >= 10:
-    |                                      ^^
-422 |                 continue
-423 |             documentation = check.get("documentation", {})
-    |
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1483:66
+     |
+1481 | def findallInnerSpan(string, marker, start=None, end=None):
+1482 |     """
+1483 |     Returns a list of the spans of the first substring surrounded 
+     |                                                                  ^
+1484 |     by the markers as well as any nested matches.
+     |
+help: Remove trailing whitespace
 
-C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:447:19
-    |
-445 |         source = "api"
-446 |
-447 |     by_severity = {name: 0 for name in SEVERITY_ORDER}
-    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-448 |     for check in checks:
-449 |         risk = str(check.get("risk", "unknown"))
-    |
-help: Replace with `dict.fromkeys(iterable)`)
-    |
-446 |
-    -     by_severity = {name: 0 for name in SEVERITY_ORDER}
-447 +     by_severity = dict.fromkeys(SEVERITY_ORDER, 0)
-448 |     for check in checks:
-    |
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1486:53
+     |
+1484 |     by the markers as well as any nested matches.
+1485 |
+1486 |     This is to be used in extracting the contents of 
+     |                                                     ^
+1487 |     brackets.  This will deal with nested brackets properly.
+     |
+help: Remove trailing whitespace
 
-TRY301 Abstract `raise` to an inner function
-   --> .github/actions/normalize-repository-report/normalize_repository_report.py:490:17
-    |
-488 |         elif args.producer == "megalinter":
-489 |             if not args.policy_input:
-490 |                 raise ReportInputError("MegaLinter normalization requires --policy-input")
-    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-491 |             policy = load_object(Path(args.policy_input), "MegaLinter policy input")
-492 |             normalize_megalinter(document, policy, summary)
-    |
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1494:1
+     |
+1492 |     been closed endOfStringError will be raised.
+1493 |     """
+1494 |     
+     | ^^^^
+1495 |     if not start:
+1496 |         start = 0
+     |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1515:1
+     |
+1513 |         open_stack = []
+1514 |         close_stack = []
+1515 |         
+     | ^^^^^^^^
+1516 |         # Here we store the final {starting,ending) pairs.
+1517 |         final_stack = []
+     |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1543:1
+     |
+1541 |         for i in range(len(open_stack)):
+1542 |             final_stack.append((open_stack[i],close_stack[i]))
+1543 |         
+     | ^^^^^^^^
+1544 |         if final_stack:
+1545 |             return final_stack
+     |
+help: Remove whitespace from blank line
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1552:57
+     |
+1550 | def findInnerSpan(string, marker, start=None, end=None):
+1551 |     """
+1552 |     Returns a the span of the first substring surrounded 
+     |                                                         ^
+1553 |     by the markers. Properly handles nested brackets.
+     |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1560:50
+     |
+1558 |     been closed endOfStringError will be raised.
+1559 |     """
+1560 |     # First get a list that includes the spans of 
+     |                                                  ^
+1561 |     # all the nested brackets.
+1562 |     final_stack = findallInnerSpan(string, marker, start, end)
+     |
+help: Remove trailing whitespace
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1563:1
+     |
+1561 |     # all the nested brackets.
+1562 |     final_stack = findallInnerSpan(string, marker, start, end)
+1563 |     
+     | ^^^^
+1564 |     # Now just return the outermost span
+1565 |     try: 
+     |
+help: Remove whitespace from blank line
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1565:9
+     |
+1564 |     # Now just return the outermost span
+1565 |     try: 
+     |         ^
+1566 |         return final_stack[0]
+1567 |     except:
+     |
+help: Remove trailing whitespace
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1569:1
+     |
+1567 |     except:
+1568 |         return None
+1569 |     
+     | ^^^^
+1570 | def isWhiteSpace(string):
+1571 |     match = re.search(r"[^\s]", string)
+     |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1605:1
+     |
+1603 |     """Execption raised when a Tex syntax error is encountered."""
+1604 |     pass
+1605 |     
+     | ^^^^
+help: Remove whitespace from blank line
 
 I001 [*] Import block is un-sorted or un-formatted
   --> beacon/scripts/validate_templates.py:7:1
@@ -2050,8 +3712,205 @@ S607 Starting a process with a partial executable path
 40 |         capture_output=True,
    |
 
-Found 55 errors.
-[*] 8 fixable with the `--fix` option (3 hidden fixes can be enabled with the `--unsafe-fixes` option).
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests/test_staging_home_audit.py:4:1
+  |
+2 |   # SPDX-License-Identifier: MIT
+3 |
+4 | / from __future__ import annotations
+5 | |
+6 | | import importlib.util
+7 | | from pathlib import Path
+8 | | import sys
+9 | | import unittest
+  | |_______________^
+help: Organize imports
+   |
+10 |
+   -
+11 | REPOSITORY_ROOT = Path(__file__).parents[1]
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tools/staging_home_audit.py:7:1
+   |
+ 5 |   """Generate the deterministic file-level disposition ledger for ``.staging``."""
+ 6 |
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | import argparse
+10 | | import csv
+11 | | from dataclasses import asdict, dataclass
+12 | | import io
+13 | | from pathlib import Path
+14 | | import re
+15 | | import subprocess
+16 | | import sys
+   | |__________^
+help: Organize imports
+   |
+17 |
+   -
+18 | EMPTY_BLOB = "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+   |
+
+S603 `subprocess` call: check for execution of untrusted input
+   --> tools/staging_home_audit.py:189:12
+    |
+188 | def run_git(repository_root: Path, *arguments: str) -> bytes:
+189 |     return subprocess.check_output(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^
+190 |         ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
+191 |     )
+    |
+
+S607 Starting a process with a partial executable path
+   --> tools/staging_home_audit.py:190:9
+    |
+188 | def run_git(repository_root: Path, *arguments: str) -> bytes:
+189 |     return subprocess.check_output(
+190 |         ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
+    |         ^^^^^^^^^^^^^^^^^^^
+191 |     )
+    |
+
+PLR0911 Too many return statements (15 > 6)
+   --> tools/staging_home_audit.py:206:5
+    |
+206 | def file_kind(path: str, size: int) -> str:
+    |     ^^^^^^^^^
+207 |     if size == 0:
+208 |         return "empty-placeholder"
+    |
+
+PLR0912 Too many branches (14 > 12)
+   --> tools/staging_home_audit.py:206:5
+    |
+206 | def file_kind(path: str, size: int) -> str:
+    |     ^^^^^^^^^
+207 |     if size == 0:
+208 |         return "empty-placeholder"
+    |
+
+PLR0911 Too many return statements (7 > 6)
+   --> tools/staging_home_audit.py:258:5
+    |
+258 | def classify_workflow(path: str, relative: str) -> Classification:
+    |     ^^^^^^^^^^^^^^^^^
+259 |     name = Path(relative).name
+260 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
+    |
+
+ARG001 Unused function argument: `path`
+   --> tools/staging_home_audit.py:258:23
+    |
+258 | def classify_workflow(path: str, relative: str) -> Classification:
+    |                       ^^^^
+259 |     name = Path(relative).name
+260 |     stem = name.removesuffix(".lock.yml").removesuffix(".yml").removesuffix(".md")
+    |
+
+PLR0912 Too many branches (16 > 12)
+   --> tools/staging_home_audit.py:380:5
+    |
+380 | def classify_devenvironment(relative: str) -> Classification:
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+381 |     inner = relative.removeprefix("devenvironment/")
+382 |     if inner.startswith("containers/services/api/"):
+    |
+
+PLR0915 Too many statements (68 > 50)
+   --> tools/staging_home_audit.py:380:5
+    |
+380 | def classify_devenvironment(relative: str) -> Classification:
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+381 |     inner = relative.removeprefix("devenvironment/")
+382 |     if inner.startswith("containers/services/api/"):
+    |
+
+PLR0911 Too many return statements (36 > 6)
+   --> tools/staging_home_audit.py:599:5
+    |
+599 | def classify(path: str) -> Classification:
+    |     ^^^^^^^^
+600 |     relative = path.removeprefix(".staging/")
+    |
+
+PLR0912 Too many branches (36 > 12)
+   --> tools/staging_home_audit.py:599:5
+    |
+599 | def classify(path: str) -> Classification:
+    |     ^^^^^^^^
+600 |     relative = path.removeprefix(".staging/")
+    |
+
+PLR0915 Too many statements (55 > 50)
+   --> tools/staging_home_audit.py:599:5
+    |
+599 | def classify(path: str) -> Classification:
+    |     ^^^^^^^^
+600 |     relative = path.removeprefix(".staging/")
+    |
+
+PLR0911 Too many return statements (8 > 6)
+    --> tools/staging_home_audit.py:1004:5
+     |
+1004 | def duplicate_policy(path: str, blob: str, duplicate_of: str) -> tuple[str, str]:
+     |     ^^^^^^^^^^^^^^^^
+1005 |     if not duplicate_of or blob == EMPTY_BLOB:
+1006 |         return "", ""
+     |
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1108:13
+     |
+1106 |     if arguments.check:
+1107 |         if not output.exists():
+1108 |             print(f"Missing generated ledger: {output}", file=sys.stderr)
+     |             ^^^^^
+1109 |             return 1
+1110 |         if output.read_text(encoding="utf-8") != rendered:
+     |
+help: Remove `print`
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1111:13
+     |
+1109 |             return 1
+1110 |         if output.read_text(encoding="utf-8") != rendered:
+1111 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
+     |             ^^^^^
+1112 |             return 1
+1113 |         print(f"Staging ledger is current: {output}")
+     |
+help: Remove `print`
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1113:9
+     |
+1111 |             print(f"Generated ledger is stale: {output}", file=sys.stderr)
+1112 |             return 1
+1113 |         print(f"Staging ledger is current: {output}")
+     |         ^^^^^
+1114 |         return 0
+     |
+help: Remove `print`
+
+T201 `print` found
+    --> tools/staging_home_audit.py:1118:5
+     |
+1116 |     output.parent.mkdir(parents=True, exist_ok=True)
+1117 |     output.write_text(rendered, encoding="utf-8")
+1118 |     print(f"Wrote {len(rendered.splitlines()) - 1} staging dispositions to {output}")
+     |     ^^^^^
+1119 |     return 0
+     |
+help: Remove `print`
+
+Found 778 errors.
+[*] 46 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
+
+(Truncated to last 27586 characters out of 372438)
 ```
 
 </details>
@@ -2060,6 +3919,416 @@ Found 55 errors.
 <summary>❌ PYTHON / ruff-format - 1 error</summary>
 
 ```
+"\n")
+    - 	
+    - 	def addInteraction(self, addSegments):
+    - 		"""provides three options to the user:
+    - 		  - Accept: erase the \\add command and keep the added text 
+    - 		  - Reject: erase the \\add command together with the added text
+    - 		  - Ignore: ignore and leave the \\change command in the text"""
+    - 		self.printBuffer(addSegments)
+    - 		sys.stderr.write("Accept added text, Reject added text or Ignore? [A|r|i] ")
+    - 		inputStr = raw_input("")
+    - 		inputStr = inputStr.lower()
+    - 		if inputStr == "i":
+    - 			pass
+    - 		elif inputStr == "r": 
+    - 			self.removeAddedText(addSegments)
+    - 		else:
+    - 			self.keepAddedText(addSegments)
+    - 		sys.stderr.write("\n")
+    - 	
+    - 	def removeInteraction(self, removeSegments):
+    - 		"""provides three options to the user:
+    - 		  - Accept: erase the \\remove command together with the removed text
+    - 		  - Reject: erase the \\remove command but leave the removed text
+    - 		  - Ignore: ignore and leave the \\remove command in the text"""
+    - 		self.printBuffer(removeSegments)
+    - 		sys.stderr.write("Accept to remove text, Reject deletion or Ignore? [A|r|i] ")
+    - 		inputStr = raw_input("")
+    - 		inputStr = inputStr.lower()
+    - 		if inputStr == "i":
+    - 			pass
+    - 		elif inputStr == "r": 
+    - 			self.keepRemovedText(removeSegments)
+    - 		else:
+    - 			self.removeRemovedText(removeSegments)
+    - 		sys.stderr.write("\n")
+    - 	
+    - 	def changeInteraction(self, changeSegments):
+    - 		"""provides three options to the user:
+    - 		  - erase the \\change command and keep the new text (the replaced text)
+    - 		  - erase the \\change command and keep the original text
+    - 		  - ignore and leave the \\change command in the text"""
+    - 		self.printBuffer(changeSegments)
+    - 		sys.stderr.write("Accept change, Reject change or Ignore? [A|r|i] ")
+    - 		inputStr = raw_input("")
+    - 		inputStr = inputStr.lower()
+    - 		if inputStr == "i":
+    - 			pass
+    - 		elif inputStr == "r": 
+    - 			self.keepOriginalText(changeSegments)
+    - 		else:
+    - 			self.keepNewText(changeSegments)
+    - 		sys.stderr.write("\n")
+    - 	
+    - 		
+    - 	def processSegments(self):
+    - 		"""loops through the entire document and processes all segments.
+    - 		the goal is to hide segments that should not appear in the output.
+    - 		If interactive mode is enabled, after each \\annote or \\change command a user
+    - 		interaction is requested to decide how the correpsonding command should be handled."""
+    - 		
+    - 		env = ""          # stores the state the process is in 
+    - 		envBuffer = []    # stores all segments that belong to one command
+    - 		for segment in self.document:
+    - 			if segment.type in ("annoteCommand", "noteCommand", "addCommand", "removeCommand", "changeCommand"):
+    - 				# this is the first segment of an \add, \remove, \change, \note or \annote command ...
+    - 				env = segment.type
+    - 				envBuffer.append(segment)
+    - 				continue
+    - 			if (env == "changeCommand") and (segment.type == "endBrace"):
+    - 				# since \change commands have 2 arguments, we have to wait for a second endBrace ...
+    - 				env = "changeSecondArg"
+    - 				envBuffer.append(segment)
+    - 				continue
+    - 			if (env == "annoteCommand") and (segment.type == "endBrace"):
+    - 				# since \annote commands have 2 arguments, we have to wait for a second endBrace ...
+    - 				env = "annoteSecondArg"
+    - 				envBuffer.append(segment)
+    - 				continue
+    - 			if env in ( "annoteCommand", "noteCommand", "addCommand", "removeCommand", "changeCommand", "changeSecondArg", "annoteSecondArg"):
+    - 				# if we are currently processing segments belonging to a command
+    - 				# we have to add all segments to envBuffer
+    - 				envBuffer.append(segment)
+    - 				if segment.type == "endBrace":
+    - 					# we came to the end of an environment ...
+    - 					if self.processNotes and (env in ("noteCommand", "annoteSecondArg")):
+    - 						if self.interactive:
+    - 							self.noteInteraction(envBuffer)
+    - 						else:
+    - 							self.eraseNote(envBuffer)
+    - 					elif self.processChanges and (env == "addCommand"):
+    - 						if self.interactive:
+    - 							self.addInteraction(envBuffer)
+    - 						else:
+    - 							self.keepAddedText(envBuffer)
+    - 					elif self.processChanges and (env == "removeCommand"):
+    - 						if self.interactive:
+    - 							self.removeInteraction(envBuffer)
+    - 						else:
+    - 							self.removeRemovedText(envBuffer)
+    - 					elif self.processChanges and (env == "changeSecondArg"):
+    - 						if self.interactive:
+    - 							self.changeInteraction(envBuffer)
+    - 						else:
+    - 							self.keepNewText(envBuffer)
+33  +     def __init__(self, outfile, options):
+34  +         """parameters:
+35  +         - outfile: an output Stream object such as a file object or sys.stdout ...
+36  +              - options: an object containing the following flags:
+37  +                  - options.interactive: are user interactions required
+38  +                       - options.notes: should \\annote commands be processed
+39  +                       - options.changes: should \\change commands be processed"""
+40  +         self.outfile = outfile
+41  +         self.interactive = options.interactive
+42  +         self.processNotes = options.notes
+43  +         self.processChanges = options.changes
+44  +         self.document = []
+45  +
+46  +     def addSegment(self, line, fromIndex, toIndex, type):
+47  +         """adds a LineSegment to self.document"""
+48  +         self.document.append(LineSegment(line, fromIndex, toIndex, type))
+49  +
+50  +     def printBuffer(self, segments):
+51  +         """prints the given list of line segments to stderr ..."""
+52  +         for s in segments:
+53  +             s.output(sys.stderr)
+54  +         sys.stderr.write("\n")
+55  +
+56  +     def eraseNote(self, noteSegments):
+57  +         """erase segments that belong to the note:
+58  +         - if it is a \note command -> erase all
+59  +              - if it is an \annote command -> erase all but the annoted text"""
+60  +         if noteSegments[0].type == "noteCommand":
+61  +             for s in noteSegments:
+62  +                 s.hide()
+63  +         elif noteSegments[0].type == "annoteCommand":
+64  +             for s in noteSegments:
+65  +                 if s.type != "annotedText":
+66  +                     s.hide()
+67  +
+68  +     def keepAddedText(self, addSegments):
+69  +         """keeps the added text of an \add command:
+70  +         hide all elements except for newText"""
+71  +         for s in addSegments:
+72  +             if s.type in ("addCommand", "initials", "startBrace", "endBrace"):
+73  +                 s.hide()
+74  +
+75  +     def removeAddedText(self, addSegments):
+76  +         """removes the added text of an \add command: hide all elements"""
+77  +         for s in addSegments:
+78  +             s.hide()
+79  +
+80  +     def removeRemovedText(self, removeSegments):
+81  +         """removes the text -> remove all segments ..."""
+82  +         for s in removeSegments:
+83  +             s.hide()
+84  +
+85  +     def keepRemovedText(self, removeSegments):
+86  +         """removes the command but leaves the element removedText ..."""
+87  +         for s in removeSegments:
+88  +             if s.type in ("removeCommand", "initials", "startBrace", "endBrace"):
+89  +                 s.hide()
+90  +
+91  +     def keepNewText(self, changeSegments):
+92  +         """keeps only the new text of a change command: removes all but the newText segment"""
+93  +         for s in changeSegments:
+94  +             if s.type in ("changeCommand", "initials", "originalText", "startBrace", "endBrace"):
+95  +                 s.hide()
+96  +
+97  +     def keepOriginalText(self, changeSegments):
+98  +         """keeps only the original text of a change command: removes all but the originalText segment"""
+99  +         for s in changeSegments:
+100 +             if s.type in ("changeCommand", "initials", "newText", "startBrace", "endBrace"):
+101 +                 s.hide()
+102 +
+103 +     def noteInteraction(self, noteSegments):
+104 +         """asks the user, if the note should be erased or not and hides the corresponding
+105 +         LineSegments if requested ..."""
+106 +         self.printBuffer(noteSegments)
+107 +         sys.stderr.write("\nErase? [Y|n] ")
+108 +         inputStr = raw_input("")
+109 +         if inputStr.lower() != "n":
+110 +             self.eraseNote(noteSegments)
+111 +         sys.stderr.write("\n")
+112 +
+113 +     def addInteraction(self, addSegments):
+114 +         """provides three options to the user:
+115 +         - Accept: erase the \\add command and keep the added text
+116 +         - Reject: erase the \\add command together with the added text
+117 +         - Ignore: ignore and leave the \\change command in the text"""
+118 +         self.printBuffer(addSegments)
+119 +         sys.stderr.write("Accept added text, Reject added text or Ignore? [A|r|i] ")
+120 +         inputStr = raw_input("")
+121 +         inputStr = inputStr.lower()
+122 +         if inputStr == "i":
+123 +             pass
+124 +         elif inputStr == "r":
+125 +             self.removeAddedText(addSegments)
+126 +         else:
+127 +             self.keepAddedText(addSegments)
+128 +         sys.stderr.write("\n")
+129 |
+    - 					envBuffer = []
+    - 					env = ""
+130 +     def removeInteraction(self, removeSegments):
+131 +         """provides three options to the user:
+132 +         - Accept: erase the \\remove command together with the removed text
+133 +         - Reject: erase the \\remove command but leave the removed text
+134 +         - Ignore: ignore and leave the \\remove command in the text"""
+135 +         self.printBuffer(removeSegments)
+136 +         sys.stderr.write("Accept to remove text, Reject deletion or Ignore? [A|r|i] ")
+137 +         inputStr = raw_input("")
+138 +         inputStr = inputStr.lower()
+139 +         if inputStr == "i":
+140 +             pass
+141 +         elif inputStr == "r":
+142 +             self.keepRemovedText(removeSegments)
+143 +         else:
+144 +             self.removeRemovedText(removeSegments)
+145 +         sys.stderr.write("\n")
+146 |
+    - 	def write(self):
+    - 		"""writes the entire self.document to self.outfile"""
+    - 		for segment in self.document:
+    - 			segment.output(self.outfile)
+147 +     def changeInteraction(self, changeSegments):
+148 +         """provides three options to the user:
+149 +         - erase the \\change command and keep the new text (the replaced text)
+150 +         - erase the \\change command and keep the original text
+151 +         - ignore and leave the \\change command in the text"""
+152 +         self.printBuffer(changeSegments)
+153 +         sys.stderr.write("Accept change, Reject change or Ignore? [A|r|i] ")
+154 +         inputStr = raw_input("")
+155 +         inputStr = inputStr.lower()
+156 +         if inputStr == "i":
+157 +             pass
+158 +         elif inputStr == "r":
+159 +             self.keepOriginalText(changeSegments)
+160 +         else:
+161 +             self.keepNewText(changeSegments)
+162 +         sys.stderr.write("\n")
+163 |
+164 +     def processSegments(self):
+165 +         """loops through the entire document and processes all segments.
+166 +         the goal is to hide segments that should not appear in the output.
+167 +         If interactive mode is enabled, after each \\annote or \\change command a user
+168 +         interaction is requested to decide how the correpsonding command should be handled."""
+169 |
+170 +         env = ""  # stores the state the process is in
+171 +         envBuffer = []  # stores all segments that belong to one command
+172 +         for segment in self.document:
+173 +             if segment.type in (
+174 +                 "annoteCommand",
+175 +                 "noteCommand",
+176 +                 "addCommand",
+177 +                 "removeCommand",
+178 +                 "changeCommand",
+179 +             ):
+180 +                 # this is the first segment of an \add, \remove, \change, \note or \annote command ...
+181 +                 env = segment.type
+182 +                 envBuffer.append(segment)
+183 +                 continue
+184 +             if (env == "changeCommand") and (segment.type == "endBrace"):
+185 +                 # since \change commands have 2 arguments, we have to wait for a second endBrace ...
+186 +                 env = "changeSecondArg"
+187 +                 envBuffer.append(segment)
+188 +                 continue
+189 +             if (env == "annoteCommand") and (segment.type == "endBrace"):
+190 +                 # since \annote commands have 2 arguments, we have to wait for a second endBrace ...
+191 +                 env = "annoteSecondArg"
+192 +                 envBuffer.append(segment)
+193 +                 continue
+194 +             if env in (
+195 +                 "annoteCommand",
+196 +                 "noteCommand",
+197 +                 "addCommand",
+198 +                 "removeCommand",
+199 +                 "changeCommand",
+200 +                 "changeSecondArg",
+201 +                 "annoteSecondArg",
+202 +             ):
+203 +                 # if we are currently processing segments belonging to a command
+204 +                 # we have to add all segments to envBuffer
+205 +                 envBuffer.append(segment)
+206 +                 if segment.type == "endBrace":
+207 +                     # we came to the end of an environment ...
+208 +                     if self.processNotes and (env in ("noteCommand", "annoteSecondArg")):
+209 +                         if self.interactive:
+210 +                             self.noteInteraction(envBuffer)
+211 +                         else:
+212 +                             self.eraseNote(envBuffer)
+213 +                     elif self.processChanges and (env == "addCommand"):
+214 +                         if self.interactive:
+215 +                             self.addInteraction(envBuffer)
+216 +                         else:
+217 +                             self.keepAddedText(envBuffer)
+218 +                     elif self.processChanges and (env == "removeCommand"):
+219 +                         if self.interactive:
+220 +                             self.removeInteraction(envBuffer)
+221 +                         else:
+222 +                             self.removeRemovedText(envBuffer)
+223 +                     elif self.processChanges and (env == "changeSecondArg"):
+224 +                         if self.interactive:
+225 +                             self.changeInteraction(envBuffer)
+226 +                         else:
+227 +                             self.keepNewText(envBuffer)
+228 |
+229 +                     envBuffer = []
+230 +                     env = ""
+231 |
+232 +     def write(self):
+233 +         """writes the entire self.document to self.outfile"""
+234 +         for segment in self.document:
+235 +             segment.output(self.outfile)
+    |
+
+unformatted: File would be reformatted
+  --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:11:90
+   |
+10 | #
+   - # This program is free software; you can redistribute it and/or modify it under the terms 
+   - # of the GNU General Public License as published by the Free Software Foundation; either 
+11 + # This program is free software; you can redistribute it and/or modify it under the terms
+12 + # of the GNU General Public License as published by the Free Software Foundation; either
+13 | # version 2 of the License, or (at your option) any later version.
+14 | #
+   - # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+   - # without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+15 + # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+16 + # without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+17 | # See the GNU General Public License for more details.
+18 | #
+   - # You should have received a copy of the GNU General Public License along with this program; 
+   - # if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+19 + # You should have received a copy of the GNU General Public License along with this program;
+20 + # if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+21 | # MA 02111-1307 USA
+--------------------------------------------------------------------------------
+27 |
+28 +
+29 | class LineSegment:
+   - 	def __init__(self,line, fromPos, toPos, type):
+   - 		"""parameters:
+   - 		     - line: a reference to the (entire) line string
+   - 			  - fromPos: start index of the segment
+   - 			  - toPos: end index of the segment (not included in output)
+   - 			  - type: a string specifying the type of the segment"""
+   - 		self.line = line
+   - 		self.fromPos = fromPos
+   - 		self.toPos = toPos
+   - 		self.type = type
+   - 		self.hideFlag = False
+   - 	
+   - 	def hide(self):
+   - 		"""hides the segment such that it will not be included in the output"""
+   - 		self.hideFlag = True
+30 +     def __init__(self, line, fromPos, toPos, type):
+31 +         """parameters:
+32 +         - line: a reference to the (entire) line string
+33 +              - fromPos: start index of the segment
+34 +              - toPos: end index of the segment (not included in output)
+35 +              - type: a string specifying the type of the segment"""
+36 +         self.line = line
+37 +         self.fromPos = fromPos
+38 +         self.toPos = toPos
+39 +         self.type = type
+40 +         self.hideFlag = False
+41 |
+   - 	def output(self,outputStream):
+   - 		"""writes the segment to 'outputStream'"""
+   - 		if not self.hideFlag:
+   - 			outputStream.write(self.line[self.fromPos:self.toPos])
+   - 	
+   - 	def toString(self):
+   - 		"""returns a string that contains only the specified slice of line"""
+   - 		return self.line[self.fromPos:self.toPos]
+42 +     def hide(self):
+43 +         """hides the segment such that it will not be included in the output"""
+44 +         self.hideFlag = True
+45 |
+46 +     def output(self, outputStream):
+47 +         """writes the segment to 'outputStream'"""
+48 +         if not self.hideFlag:
+49 +             outputStream.write(self.line[self.fromPos : self.toPos])
+50 |
+51 +     def toString(self):
+52 +         """returns a string that contains only the specified slice of line"""
+53 +         return self.line[self.fromPos : self.toPos]
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py:84:9
+   |
+83 |     if DEBUG:
+84 |         print "looking for start of command at:", startpos, "in line:", line
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+85 |     match = re.search('(\\\\annote.*?[\[{])|(\\\\note.*?[\[{])|(\\\\add.*?[\[{])|(\\\\remove.*?[\[{])|(\\\\change.*?[\[{])', line[star…
+86 |     if match:
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:642:15
+    |
+640 |         self.setStatusText('Error.')
+641 |
+642 |         print 'Encountered error.'
+    |               ^^^^^^^^^^^^^^^^^^^^
+643 |
+644 |         result = self.messageBoxError()
+    |
+
 unformatted: File would be reformatted
    --> beacon/scripts/validate_templates.py:55:72
     |
@@ -2089,7 +4358,125 @@ unformatted: File would be reformatted
 128 |     if not package_directories:
     |
 
-1 file would be reformatted, 44 files already formatted
+unformatted: File would be reformatted
+  --> tests/test_staging_home_audit.py:49:28
+   |
+48 |     def test_product_fixtures_are_kept_out_of_realm(self) -> None:
+   -         api = self.by_path[
+   -             ".staging/devenvironment/containers/services/api/Dockerfile.old"
+   -         ]
+49 +         api = self.by_path[".staging/devenvironment/containers/services/api/Dockerfile.old"]
+50 |         ui = self.by_path[".staging/react-template/universal/apps/ui/package.json"]
+--------------------------------------------------------------------------------
+71 |     def test_community_instructions_remain_quarantined(self) -> None:
+   -         community_rows = [
+   -             row
+   -             for row in self.rows
+   -             if row.collection.startswith("community ")
+   -         ]
+72 +         community_rows = [row for row in self.rows if row.collection.startswith("community ")]
+73 |
+74 |         self.assertGreater(len(community_rows), 1_000)
+75 |         self.assertEqual({row.canonical_owner for row in community_rows}, {"aether"})
+   -         self.assertEqual(
+   -             {row.disposition for row in community_rows}, {"quarantine-and-curate"}
+   -         )
+76 +         self.assertEqual({row.disposition for row in community_rows}, {"quarantine-and-curate"})
+77 |         self.assertTrue(
+   |
+
+unformatted: File would be reformatted
+    --> tools/staging_home_audit.py:189:36
+     |
+188  | def run_git(repository_root: Path, *arguments: str) -> bytes:
+     -     return subprocess.check_output(
+     -         ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
+     -     )
+189  +     return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
+190  |
+--------------------------------------------------------------------------------
+348  |     elif name == "fix-line-endings.sh":
+     -         owner, destination, action = "egolint", "egolint/scripts/fix-line-endings.sh", "merge-with-format-policy"
+349  +         owner, destination, action = (
+350  +             "egolint",
+351  +             "egolint/scripts/fix-line-endings.sh",
+352  +             "merge-with-format-policy",
+353  +         )
+354  |     elif name == "pr-risk-scan.mjs":
+     -         owner, destination, action = "relay", "relay/actions/pr-risk-scan/pr-risk-scan.mjs", "extract-composite-action"
+355  +         owner, destination, action = (
+356  +             "relay",
+357  +             "relay/actions/pr-risk-scan/pr-risk-scan.mjs",
+358  +             "extract-composite-action",
+359  +         )
+360  |     elif name in {"create-skill.mjs", "validate-skills.mjs"}:
+361  |         owner, destination, action = "aether", f"aether/tools/{name}", "repair-and-promote"
+362  |     else:
+     -         owner, destination, action = "awesome", f"awesome/tools/catalog/{relative.removeprefix('scripts/')}", "preserve-for-product-review"
+363  +         owner, destination, action = (
+364  +             "awesome",
+365  +             f"awesome/tools/catalog/{relative.removeprefix('scripts/')}",
+366  +             "preserve-for-product-review",
+367  +         )
+368  |     missing_dependency = name in {
+--------------------------------------------------------------------------------
+462  |         group = "realm-workstation-grub-theme"
+     -         notes += " Preserve the theme tree intact until upstream license and attribution are recorded."
+463  +         notes += (
+464  +             " Preserve the theme tree intact until upstream license and attribution are recorded."
+465  +         )
+466  |     elif inner.startswith("workstation/"):
+--------------------------------------------------------------------------------
+981  |     lowered = str(path).lower()
+     -     if any(token in lowered for token in (" copy", "devcontainer2", "compose2", "redis2", ".old", "/todo")):
+982  +     if any(
+983  +         token in lowered
+984  +         for token in (" copy", "devcontainer2", "compose2", "redis2", ".old", "/todo")
+985  +     ):
+986  |         flags.append("variant")
+--------------------------------------------------------------------------------
+999  |         (r"NOPASSWD", "passwordless-sudo"),
+     -         (r"(?i)(?:adminpassword|miniosecret|mysecret|changeme|Root123!)", "development-credentials"),
+     -         (r"(?i)(?:override directive|show your thinking|absolute transparency|ignore (?:all |any )?(?:previous|prior))", "prompt-override-content"),
+1000 +         (
+1001 +             r"(?i)(?:adminpassword|miniosecret|mysecret|changeme|Root123!)",
+1002 +             "development-credentials",
+1003 +         ),
+1004 +         (
+1005 +             r"(?i)(?:override directive|show your thinking|absolute transparency|ignore (?:all |any )?(?:previous|prior))",
+1006 +             "prompt-override-content",
+1007 +         ),
+1008 |     )
+--------------------------------------------------------------------------------
+1028 |     if path.startswith(".staging/.github/skills/"):
+     -         return "preserve-package-local-copy", "Package-local references and licenses remain self-contained."
+1029 +         return (
+1030 +             "preserve-package-local-copy",
+1031 +             "Package-local references and licenses remain self-contained.",
+1032 +         )
+1033 |     if "/workstation/linux/grub/themes/" in path:
+--------------------------------------------------------------------------------
+1037 |     if path.startswith(".staging/hygiene/"):
+     -         return "deduplicate-after-visual-classification", "Retain one named/provenanced visual after owner review."
+1038 +         return (
+1039 +             "deduplicate-after-visual-classification",
+1040 +             "Retain one named/provenanced visual after owner review.",
+1041 +         )
+1042 |     if path in {".staging/misc/ROADMAP.md", ".staging/misc/universal.png"}:
+1043 |         return "delete-exact-duplicate-after-approval", "A retained canonical copy already exists."
+1044 |     if " copy" in path:
+1045 |         return "merge-or-delete-variant", "Compare references, then retain the canonical filename."
+     -     return "review-exact-duplicate", "Exact content match detected; structural context decides whether removal is safe."
+1046 +     return (
+1047 +         "review-exact-duplicate",
+1048 +         "Exact content match detected; structural context decides whether removal is safe.",
+1049 +     )
+1050 |
+     |
+
+5 files would be reformatted, 46 files already formatted
+
+(Truncated to last 27586 characters out of 33052)
 ```
 
 </details>
@@ -2098,10 +4485,7 @@ unformatted: File would be reformatted
 <summary>❌ REPOSITORY / secretlint - 1 error</summary>
 
 ```
-.staging/.github/skills/mcp-security-audit/SKILL.md
-  102:19  error  [PostgreSQLConnection] found PostgreSQL connection string: *************************************************  @secretlint/secretlint-rule-preset-recommend > @secretlint/secretlint-rule-database-connection-string
-
-✖ 1 problem (1 error, 0 warnings, 0 infos)
+[secretlint] Timed out after 300 seconds and was killed (LINTER_TIMEOUT_SECONDS (default)=300). Partial output above if any. If this repository legitimately needs more time, increase the value with REPOSITORY_SECRETLINT_TIMEOUT_SECONDS or LINTER_TIMEOUT_SECONDS (0 disables the timeout); a timeout with very low CPU usage usually means an I/O stall (e.g. workspace bind-mounted from Windows into a WSL2-backed container engine).
 ```
 
 </details>
@@ -2152,11 +4536,10 @@ For more information:
 </details>
 
 <details>
-<summary>❌ CSS / stylelint - 113 errors</summary>
+<summary>❌ CSS / stylelint - 192 errors</summary>
 
 ```
-.github/actions/generate-repository-intelligence-dashboard/dashboard.css
-     2:1   ✖  Expected empty line before comment                                                                                                              comment-empty-line-before
+Expected empty line before comment                                                                                                              comment-empty-line-before
      6:3   ✖  Expected empty line before custom property                                                                                                      custom-property-empty-line-before
      7:14  ✖  Expected "rgba" to be "rgb"                                                                                                                     color-function-alias-notation
      7:14  ✖  Expected modern color-function notation                                                                                                         color-function-notation
@@ -2265,6 +4648,89 @@ For more information:
   1067:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
   1092:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
 
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/doc.css
+    5:12  ✖  Expected "#555555" to be "#555"                           color-hex-length
+    7:25  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
+   15:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   19:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   23:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   27:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   38:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   47:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   51:1   ✖  Expected class selector ".tex_command" to be kebab-case   selector-class-pattern
+   52:12  ✖  Expected "#4444aa" to be "#44a"                           color-hex-length
+   53:18  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
+   57:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
+   61:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   62:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
+   66:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   67:12  ✖  Expected "#662222" to be "#622"                           color-hex-length
+   69:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   70:12  ✖  Expected "#aa2222" to be "#a22"                           color-hex-length
+   75:18  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
+   78:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   78:1   ✖  Expected class selector ".code_option" to be kebab-case   selector-class-pattern
+   85:1   ✖  Expected empty line before comment                        comment-empty-line-before
+   86:1   ✖  Expected class selector ".index_main" to be kebab-case    selector-class-pattern
+   90:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   90:1   ✖  Expected class selector ".index_sub" to be kebab-case     selector-class-pattern
+   95:4   ✖  Expected class selector ".index_indent" to be kebab-case  selector-class-pattern
+  102:1   ✖  Expected empty line before comment                        comment-empty-line-before
+  103:1   ✖  Expected id selector "#simple_title" to be kebab-case     selector-id-pattern
+  103:1   ✖  Too many ID selectors in "#simple_title", maximum 0       selector-max-id
+  110:1   ✖  Expected id selector "#simple_subtitle" to be kebab-case  selector-id-pattern
+  110:1   ✖  Too many ID selectors in "#simple_subtitle", maximum 0    selector-max-id
+  118:1   ✖  Expected empty line before comment                        comment-empty-line-before
+  119:1   ✖  Expected id selector "#body_frame" to be kebab-case       selector-id-pattern
+  119:1   ✖  Too many ID selectors in "#body_frame", maximum 0         selector-max-id
+  126:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  126:1   ✖  Expected id selector "#body_main" to be kebab-case        selector-id-pattern
+  126:1   ✖  Too many ID selectors in "#body_main", maximum 0          selector-max-id
+  130:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
+  132:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  132:1   ✖  Expected id selector "#body_footer" to be kebab-case      selector-id-pattern
+  132:1   ✖  Too many ID selectors in "#body_footer", maximum 0        selector-max-id
+  136:12  ✖  Expected "#888888" to be "#888"                           color-hex-length
+  141:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  141:1   ✖  Expected id selector "#nav_bar" to be kebab-case          selector-id-pattern
+  141:1   ✖  Too many ID selectors in "#nav_bar", maximum 0            selector-max-id
+  143:23  ✖  Expected "#ffffff" to be "#fff"                           color-hex-length
+  144:12  ✖  Disallowed unit                                           length-zero-no-unit
+  145:11  ✖  Disallowed unit                                           length-zero-no-unit
+  149:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  149:1   ✖  Expected id selector "#nav_bar_decor_1" to be kebab-case  selector-id-pattern
+  149:1   ✖  Too many ID selectors in "#nav_bar_decor_1", maximum 0    selector-max-id
+  152:23  ✖  Expected "#eeeeee" to be "#eee"                           color-hex-length
+  158:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  158:1   ✖  Expected id selector "#nav_bar_decor_2" to be kebab-case  selector-id-pattern
+  158:1   ✖  Too many ID selectors in "#nav_bar_decor_2", maximum 0    selector-max-id
+  161:23  ✖  Expected "#aaaaaa" to be "#aaa"                           color-hex-length
+  167:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  167:1   ✖  Expected id selector "#nav_bar_body" to be kebab-case     selector-id-pattern
+  167:1   ✖  Too many ID selectors in "#nav_bar_body", maximum 0       selector-max-id
+
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/examples/highlight.css
+   5:28  ✖  Expected "#ffffff" to be "#fff"   color-hex-length
+   6:8   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+   6:16  ✖  Expected "#000000" to be "#000"   color-hex-length
+   6:42  ✖  Expected "#ffffff" to be "#fff"   color-hex-length
+   6:79  ✖  Missing generic font family       font-family-no-missing-generic-family-keyword
+   7:9   ✖  Empty block                       block-no-empty
+   9:17  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
+  10:18  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
+  11:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  11:17  ✖  Expected "#cc5500" to be "#c50"   color-hex-length
+  12:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  12:17  ✖  Expected "#666666" to be "#666"   color-hex-length
+  14:17  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
+  15:18  ✖  Expected "#666666" to be "#666"   color-hex-length
+  16:29  ✖  Expected "#ffffbb" to be "#ffb"   color-hex-length
+  17:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  17:17  ✖  Expected "#0000aa" to be "#00a"   color-hex-length
+  18:17  ✖  Expected "#cc00ff" to be "#c0f"   color-hex-length
+  20:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  20:17  ✖  Expected "#000000" to be "#000"   color-hex-length
+
 notebooks/jupyter/themes/@jupyterlab/theme-dark-extension/index.css
   110:23  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
   149:28  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
@@ -2274,8 +4740,10 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
   108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
   147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
 
-✖ 113 problems (113 errors, 0 warnings)
-  98 errors potentially fixable with the "--fix" option.
+✖ 192 problems (192 errors, 0 warnings)
+  144 errors potentially fixable with the "--fix" option.
+
+(Truncated to last 27586 characters out of 27672)
 ```
 
 </details>
@@ -2286,7 +4754,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 ```
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-16T01:52:13Z	info-0	trufflehog	running source	{"source_manager_worker_id": "Kc0oD", "with_units": true}
+2026-08-16T02:41:33Z	info-0	trufflehog	running source	{"source_manager_worker_id": "p8wWQ", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -2305,13 +4773,13 @@ File: tests/test_repository_analytics.py
 Line: 84
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-16T01:52:17Z	info-0	trufflehog	finished scanning	{"chunks": 4827, "bytes": 31700824, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "4.554701092s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":14,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1073}}
+2026-08-16T02:41:38Z	info-0	trufflehog	finished scanning	{"chunks": 5807, "bytes": 39167163, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "5.355049874s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1618}}
 ```
 
 </details>
 
 <details>
-<summary>❌ YAML / yamllint - 172 errors</summary>
+<summary>❌ YAML / yamllint - 200 errors</summary>
 
 ```
 .garden/context-packs/agent-default.yaml
@@ -2465,6 +4933,52 @@ Analyze: Run `trufflehog analyze` to analyze this key's permissions
 .github/workflow-profiles/security-optional/ossf-scorecard-older.yml
   111:40    error    no new line character at the end of file  (new-line-at-end-of-file)
 
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/dependabot.yml
+  1:1       warning  missing document start "---"  (document-start)
+  3:1       error    wrong indentation: expected at least 1  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/labels.yaml
+  2:1       warning  missing document start "---"  (document-start)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/integration.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  6:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  22:5      error    wrong indentation: expected 6 but found 4  (indentation)
+  46:5      error    wrong indentation: expected 6 but found 4  (indentation)
+  51:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/main.yml
+  1:1       warning  missing document start "---"  (document-start)
+  13:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/pull-request-labeler.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  4:1       error    wrong indentation: expected at least 1  (indentation)
+  11:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/sync-labels.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  6:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  8:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  15:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.github/workflows/welcome.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  6:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  9:5       error    wrong indentation: expected 6 but found 4  (indentation)
+  16:5      error    wrong indentation: expected 6 but found 4  (indentation)
+
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/.yamllint.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  2:1       error    wrong indentation: expected at least 1  (indentation)
+
+beacon/.staging/latex/Community/TeXtured/.github/workflows/main.yml
+  1:1       warning  missing document start "---"  (document-start)
+  5:16      error    too many spaces inside brackets  (brackets)
+  5:23      error    too many spaces inside brackets  (brackets)
+  7:16      error    too many spaces inside brackets  (brackets)
+  7:23      error    too many spaces inside brackets  (brackets)
+
 egolint/.config/lint/prose/styles/proselint/Airlinese.yml
   1:1       warning  missing document start "---"  (document-start)
 
@@ -2617,122 +5131,102 @@ pnpm-workspace.yaml
 <summary>⚠️ REPOSITORY / checkov - 57 errors</summary>
 
 ```
-excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 01:51:41,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
+at position 263
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
+2026-08-16 02:40:59,018 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
+2026-08-16 02:40:59,018 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
+2026-08-16 02:40:59,018 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
+2026-08-16 02:40:59,018 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,975 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
+2026-08-16 02:40:59,021 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,976 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
+2026-08-16 02:40:59,022 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,979 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
+2026-08-16 02:40:59,023 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,980 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
+2026-08-16 02:40:59,023 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,980 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+2026-08-16 02:40:59,023 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,980 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+2026-08-16 02:40:59,023 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,980 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-08-16 02:40:59,023 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,980 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-08-16 02:40:59,023 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-16 01:51:41,980 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 01:51:41,980 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 01:51:41,984 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 01:51:41,984 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 01:51:41,984 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 01:51:41,984 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-16 01:51:42,089 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-16 01:51:42,091 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-16 01:51:42,097 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-16 01:51:42,235 [MainThread  ] [INFO ]  Creating vertices
-2026-08-16 01:51:42,248 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-16 01:51:42,248 [MainThread  ] [INFO ]  Creating edges
-2026-08-16 01:51:42,248 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-16 01:51:42,248 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-16 01:51:42,249 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-16 01:51:42,257 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-16 01:51:42,273 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-16 01:51:42,275 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-16 01:51:42,276 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-16 01:51:42,276 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-16 01:51:42,286 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-16 01:51:42,291 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-16 01:51:42,328 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-16 01:51:42,338 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-16 01:51:42,696 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-16 01:51:42,696 [MainThread  ] [INFO ]  Creating vertices
-2026-08-16 01:51:42,712 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-16 01:51:42,712 [MainThread  ] [INFO ]  Creating edges
-2026-08-16 01:51:42,713 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-16 01:51:42,714 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-16 01:51:42,794 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-16 01:51:42,807 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-16 01:51:42,807 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-16 01:51:42,807 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-16 01:51:52,531 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-16 01:51:52,533 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-16 01:51:52,628 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-16 01:51:52,629 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-16 01:51:52,629 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-16 01:51:52,629 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-16 01:51:52,629 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-16 01:51:52,630 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-16 02:40:59,147 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-16 02:40:59,147 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-16 02:40:59,248 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-16 02:40:59,254 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-16 02:40:59,255 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-16 02:40:59,265 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-16 02:40:59,269 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-16 02:40:59,276 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-16 02:40:59,297 [MainThread  ] [INFO ]  Creating vertices
+2026-08-16 02:40:59,298 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-16 02:40:59,298 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-16 02:40:59,299 [MainThread  ] [INFO ]  Creating edges
+2026-08-16 02:40:59,299 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-16 02:40:59,310 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-16 02:40:59,311 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-16 02:40:59,333 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-16 02:40:59,379 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-16 02:40:59,394 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-16 02:41:00,035 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-16 02:41:00,046 [MainThread  ] [INFO ]  Creating vertices
+2026-08-16 02:41:00,046 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-16 02:41:00,046 [MainThread  ] [INFO ]  Creating edges
+2026-08-16 02:41:00,047 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-16 02:41:00,047 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-16 02:41:00,109 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-16 02:41:00,112 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-16 02:41:00,112 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-16 02:41:00,113 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-16 02:41:08,874 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-16 02:41:08,877 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-16 02:41:08,878 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-16 02:41:08,878 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-16 02:41:08,880 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-16 02:41:08,884 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-16 02:41:08,972 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-16 02:41:08,975 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -2980,7 +5474,7 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 29629 characters out of 36188)
+(Truncated to last 27586 characters out of 36188)
 ```
 
 </details>
@@ -3053,68 +5547,16 @@ pygments                     2.19.2                                    2.20.0   
 virtualenv                   20.31.2                                   20.36.1   python         GHSA-597g-3phw-6986  Medium    < 0.1% (0th)  < 0.1  
 actions/download-artifact    v4                                        4.1.3     github-action  GHSA-cxww-7g56-2vh6  High      N/A           N/A    
 cryptography                 45.0.4                                    48.0.1    python         GHSA-537c-gmf6-5ccf  High      N/A           N/A
-[0113] ERROR discovered vulnerabilities at or above the severity threshold
+[0105] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 1740 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 3088 errors</summary>
 
 ```
-ound (bash)
- - mantle/bin/list-fonts [131:1 - 151:5] (21 lines, 117 tokens)
-   mantle/bin/list-packages [150:1 - 170:5]
-Clone found (bash)
- - mantle/bin/list-fonts [145:23 - 152:5] (8 lines, 51 tokens)
-   mantle/bin/list-package-versions [165:4 - 172:5]
-Clone found (bash)
- - mantle/bin/list-fonts [184:1 - 201:14] (18 lines, 135 tokens)
-   mantle/bin/list-packages [279:1 - 296:14]
-Clone found (bash)
- - mantle/bin/list-fonts [229:1 - 239:11] (11 lines, 58 tokens)
-   mantle/bin/list-package-versions [242:1 - 252:11]
-Clone found (bash)
- - mantle/bin/list-fonts [302:1 - 313:2] (12 lines, 100 tokens)
-   mantle/bin/samba-ports [637:1 - 648:2]
-Clone found (bash)
- - mantle/bin/list-fonts [302:1 - 313:2] (12 lines, 100 tokens)
-   mantle/bin/whats-in-port [199:1 - 210:2]
-Clone found (bash)
- - mantle/bin/list-fonts [431:1 - 438:17] (8 lines, 60 tokens)
-   mantle/bin/list-packages [595:1 - 602:17]
-Clone found (bash)
- - mantle/bin/list-fonts [514:1 - 530:2] (17 lines, 99 tokens)
-   mantle/bin/list-package-versions [405:1 - 422:2]
-Clone found (bash)
- - mantle/bin/list-fonts [520:2 - 530:2] (11 lines, 60 tokens)
-   mantle/bin/list-packages [653:25 - 663:2]
-Clone found (bash)
- - mantle/bin/list-fonts [552:1 - 559:9] (8 lines, 50 tokens)
-   mantle/bin/list-package-versions [458:1 - 465:9]
-Clone found (bash)
- - mantle/bin/list-package-versions [90:1 - 95:90] (6 lines, 75 tokens)
-   mantle/bin/list-packages [109:1 - 114:90]
-Clone found (bash)
- - mantle/bin/list-package-versions [314:1 - 326:10] (13 lines, 82 tokens)
-   mantle/bin/list-packages [550:1 - 561:10]
-Clone found (bash)
- - mantle/bin/list-package-versions [453:1 - 462:14] (10 lines, 72 tokens)
-   mantle/bin/list-packages [675:1 - 684:14]
-Clone found (bash)
- - mantle/bin/list-packages [99:74 - 129:2] (31 lines, 192 tokens)
-   mantle/bin/whats-in-port [91:59 - 121:2]
-Clone found (bash)
- - mantle/bin/list-packages [106:64 - 136:4] (31 lines, 177 tokens)
-   mantle/bin/samba-ports [109:78 - 136:2]
-Clone found (bash)
- - mantle/bin/makepng [171:38 - 197:2] (27 lines, 167 tokens)
-   mantle/bin/remove-pdf-password [144:30 - 170:2]
-Clone found (bash)
- - mantle/bin/makepng [193:17 - 213:2] (21 lines, 89 tokens)
-   mantle/bin/remove-pdf-password [166:26 - 186:2]
-Clone found (bash)
- - mantle/bin/makepng [287:1 - 292:2] (6 lines, 53 tokens)
+- 292:2] (6 lines, 53 tokens)
    mantle/bin/remove-pdf-password [211:1 - 216:2]
 Clone found (bash)
  - mantle/bin/nuke-docker [191:1 - 203:2] (13 lines, 51 tokens)
@@ -3374,9 +5816,9 @@ Clone found (python)
 ┌──────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format       │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ apex         │ 4              │ 1594        │ 8033         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 398            │ 107873      │ 420880       │ 229          │ 3557 (3.30%)     │ 19271 (4.58%)     │
+│ bash         │ 403            │ 108067      │ 421428       │ 230          │ 3578 (3.31%)     │ 19321 (4.58%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3390,9 +5832,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csharp       │ 56             │ 14917       │ 43793        │ 22           │ 479 (3.21%)      │ 1936 (4.42%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css          │ 18             │ 5774        │ 17933        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css          │ 20             │ 5969        │ 19497        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ csv          │ 1              │ 5           │ 60           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ csv          │ 2              │ 2346        │ 204424       │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ dart         │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3424,7 +5866,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 64             │ 22736       │ 62404        │ 58           │ 1321 (5.81%)     │ 5555 (8.90%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 213            │ 68419       │ 202576       │ 56           │ 1043 (1.52%)     │ 4655 (2.30%)      │
+│ json         │ 214            │ 68434       │ 202640       │ 56           │ 1043 (1.52%)     │ 4655 (2.30%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3432,19 +5874,21 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ kusto        │ 1              │ 542         │ 306          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ latex        │ 7              │ 433         │ 4007         │ 1            │ 105 (24.25%)     │ 700 (17.47%)      │
+│ latex        │ 303            │ 44149       │ 837394       │ 895          │ 12887 (29.19%)   │ 231937 (27.70%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ liquid       │ 2              │ 597         │ 835          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1672           │ 325319      │ 4171888      │ 682          │ 11314 (3.48%)    │ 174978 (4.19%)    │
+│ markdown     │ 1690           │ 327085      │ 4200894      │ 685          │ 11782 (3.60%)    │ 173935 (4.14%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markup       │ 87             │ 28027       │ 96254        │ 25           │ 277 (0.99%)      │ 2408 (2.50%)      │
+│ markup       │ 96             │ 29811       │ 116915       │ 45           │ 946 (3.17%)      │ 7819 (6.69%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ mermaid      │ 11             │ 2820        │ 5846         │ 12           │ 135 (4.79%)      │ 1061 (18.15%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ pascal       │ 1              │ 410         │ 419          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ perl         │ 4              │ 80          │ 330          │ 2            │ 42 (52.50%)      │ 168 (50.91%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ php          │ 9              │ 3948        │ 17117        │ 8            │ 77 (1.95%)       │ 486 (2.84%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3458,7 +5902,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 280            │ 70687       │ 441608       │ 125          │ 1266 (1.79%)     │ 12106 (2.74%)     │
+│ python       │ 286            │ 74132       │ 463045       │ 133          │ 1344 (1.81%)     │ 12605 (2.72%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3476,7 +5920,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 371            │ 85304       │ 198143       │ 30           │ 659 (0.77%)      │ 2661 (1.34%)      │
+│ text         │ 376            │ 85814       │ 199095       │ 32           │ 781 (0.91%)      │ 3098 (1.56%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 38             │ 6466        │ 13087        │ 8            │ 175 (2.71%)      │ 625 (4.78%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -3484,22 +5928,22 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ twig         │ 1              │ 573         │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ txt          │ 18             │ 4435        │ 47964        │ 72           │ 1690 (38.11%)    │ 18397 (38.36%)    │
+│ txt          │ 30             │ 5502        │ 70405        │ 78           │ 1955 (35.53%)    │ 23695 (33.66%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript   │ 80             │ 13750       │ 35187        │ 11           │ 216 (1.57%)      │ 825 (2.34%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 538            │ 56837       │ 311150       │ 342          │ 9283 (16.33%)    │ 104427 (33.56%)   │
+│ yaml         │ 548            │ 57219       │ 313718       │ 343          │ 9302 (16.26%)    │ 104618 (33.35%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4157           │ 887539      │ 6284069      │ 1740         │ 32316 (3.64%)    │ 354415 (5.64%)    │
+│ Total:       │ 4587           │ 972671      │ 7816054      │ 3088         │ 56746 (5.83%)    │ 743897 (9.52%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 1740 clones.
+Found 3088 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (3.6%) over threshold (3.0%)
-time: 13.91s
+ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
+time: 15.88s
 
-(Truncated to last 29629 characters out of 376010)
+(Truncated to last 27586 characters out of 686737)
 ```
 
 </details>
@@ -3508,8 +5952,9 @@ time: 13.91s
 <summary>⚠️ MARKDOWN / markdown-table-formatter - 1 error</summary>
 
 ```
-40 files contain markdown tables to format:
+42 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
+- .audits/2026-08-15-staging-home-audit.md
 - .audits/egolint/2026-08-11-complementary-toolchain-audit.md
 - .audits/egolint/2026-08-11-integration-audit.md
 - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md
@@ -3529,6 +5974,7 @@ time: 13.91s
 - ONTOLOGY.md
 - ROADMAP.md
 - SYSTEM.md
+- beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md
 - egolint/.agents/agents/AGENT-CONTRACT.md
 - egolint/.agents/skills/SKILL-CONTRACT.md
 - egolint/.agents/specs/SCHEMA.md
@@ -3554,24 +6000,10 @@ time: 13.91s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 437 errors</summary>
+<summary>⚠️ SPELL / proselint - 661 errors</summary>
 
 ```
-s “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-pillars-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-principles-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-principles-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-principles-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-principles-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-purpose-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+t/.agents/skills/architecture/create-roadmap-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-roadmap-document/SKILL.md:25:27: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
@@ -3816,33 +6248,127 @@ research/antidote/research/bootstrap/01-research-concept-snapshot.md:17:61: need
 research/antidote/research/bootstrap/03-scientific-boundaries.md:38:154: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 
-(Truncated to last 29629 characters out of 60501)
+(Truncated to last 27586 characters out of 94359)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pylint - 36 errors</summary>
+<summary>⚠️ PYTHON / pylint - 257 errors</summary>
 
 ```
-************* Module generate_lint_infographic
-.github/actions/generate-lint-infographic/generate_lint_infographic.py:150:0: R0913: Too many arguments (8/7) (too-many-arguments)
-.github/actions/generate-lint-infographic/generate_lint_infographic.py:171:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
-************* Module generate_repository_intelligence_dashboard
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1:0: C0302: Too many lines in module (1929/1000) (too-many-lines)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:0: R0914: Too many local variables (34/20) (too-many-locals)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:0: R0912: Too many branches (17/12) (too-many-branches)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:252:0: R0915: Too many statements (64/60) (too-many-statements)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:439:0: R0914: Too many local variables (25/20) (too-many-locals)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:439:0: R0912: Too many branches (13/12) (too-many-branches)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:0: R0914: Too many local variables (25/20) (too-many-locals)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:640:0: R0912: Too many branches (19/12) (too-many-branches)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:937:0: R0913: Too many arguments (8/7) (too-many-arguments)
-.github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py:1160:0: R0914: Too many local variables (26/20) (too-many-locals)
-************* Module normalize_repository_report
-.github/actions/normalize-repository-report/normalize_repository_report.py:139:0: R0913: Too many arguments (11/7) (too-many-arguments)
-.github/actions/normalize-repository-report/normalize_repository_report.py:232:0: R0914: Too many local variables (22/20) (too-many-locals)
-.github/actions/normalize-repository-report/normalize_repository_report.py:310:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+ation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:140:23: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:140:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:141:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:142:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:143:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:144:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:145:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:146:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:147:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:151:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:152:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:153:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:154:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:155:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:156:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:157:23: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:157:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:158:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:159:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:160:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:161:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:162:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:163:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:164:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:165:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:169:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:170:56: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:170:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:171:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:172:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:173:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:175:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:176:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:177:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:178:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:180:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:181:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:182:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:183:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:185:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:186:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:187:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:188:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:191:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:192:0: W0311: Bad indentation. Found 4 spaces, expected 16 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:194:0: W0311: Bad indentation. Found 5 spaces, expected 20 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:195:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:196:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:197:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:198:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:199:0: W0311: Bad indentation. Found 5 spaces, expected 20 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:200:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:201:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:202:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:203:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:204:0: W0311: Bad indentation. Found 5 spaces, expected 20 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:205:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:206:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:207:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:208:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:209:0: W0311: Bad indentation. Found 5 spaces, expected 20 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:210:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:211:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:212:0: W0311: Bad indentation. Found 6 spaces, expected 24 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:213:0: W0311: Bad indentation. Found 7 spaces, expected 28 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:215:0: W0311: Bad indentation. Found 5 spaces, expected 20 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:216:0: W0311: Bad indentation. Found 5 spaces, expected 20 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:218:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:219:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:220:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:221:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:225:0: C0305: Trailing newlines (trailing-newlines)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:29:0: E0401: Unable to import 'linesegment' (import-error)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:45:48: W0622: Redefining built-in 'type' (redefined-builtin)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:107:13: E0602: Undefined variable 'raw_input' (undefined-variable)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:119:13: E0602: Undefined variable 'raw_input' (undefined-variable)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:136:13: E0602: Undefined variable 'raw_input' (undefined-variable)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:153:13: E0602: Undefined variable 'raw_input' (undefined-variable)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:164:1: R0912: Too many branches (18/12) (too-many-branches)
+************* Module AcceptChanges.linesegment
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:11:89: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:12:88: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:15:91: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:16:91: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:19:92: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:20:90: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:29:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:30:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:35:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:36:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:37:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:38:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:39:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:40:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:41:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:42:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:43:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:45:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:46:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:47:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:48:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:49:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:50:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:51:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:52:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:54:0: C0305: Trailing newlines (trailing-newlines)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:29:41: W0622: Redefining built-in 'type' (redefined-builtin)
+************* Module acceptchanges
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py:84:3: E0001: Parsing failed: 'Missing parentheses in call to 'print'. Did you mean print(...)? (acceptchanges, line 84)' (syntax-error)
+************* Module trackchanges
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:642:9: E0001: Parsing failed: 'Missing parentheses in call to 'print'. Did you mean print(...)? (trackchanges, line 642)' (syntax-error)
 ************* Module validate_templates
 beacon/scripts/validate_templates.py:30:0: R0914: Too many local variables (24/20) (too-many-locals)
 beacon/scripts/validate_templates.py:30:0: R0912: Too many branches (26/12) (too-many-branches)
@@ -3875,50 +6401,32 @@ mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "retur
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 ************* Module test_repository_intelligence_dashboard
 tests/test_repository_intelligence_dashboard.py:80:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module staging_home_audit
+tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1123/1000) (too-many-lines)
+tools/staging_home_audit.py:48:0: R0902: Too many instance attributes (17/12) (too-many-instance-attributes)
+tools/staging_home_audit.py:206:0: R0911: Too many return statements (15/6) (too-many-return-statements)
+tools/staging_home_audit.py:206:0: R0912: Too many branches (14/12) (too-many-branches)
+tools/staging_home_audit.py:258:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+tools/staging_home_audit.py:258:22: W0613: Unused argument 'path' (unused-argument)
+tools/staging_home_audit.py:380:0: R0912: Too many branches (16/12) (too-many-branches)
+tools/staging_home_audit.py:380:0: R0915: Too many statements (69/60) (too-many-statements)
+tools/staging_home_audit.py:599:0: R0911: Too many return statements (36/6) (too-many-return-statements)
+tools/staging_home_audit.py:599:0: R0912: Too many branches (36/12) (too-many-branches)
+tools/staging_home_audit.py:1004:0: R0911: Too many return statements (8/6) (too-many-return-statements)
 
 -----------------------------------
-Your code has been rated at 9.92/10
+Your code has been rated at 9.55/10
+
+(Truncated to last 27586 characters out of 52249)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pyright - 7396 errors</summary>
+<summary>⚠️ PYTHON / pyright - 8726 errors</summary>
 
 ```
-71:5 - error: Type of "quartz_commit" is partially unknown
-    Type of "quartz_commit" is "str | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:171:36 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:172:33 - error: Argument type is partially unknown
-    Argument corresponds to parameter "string" in function "fullmatch"
-    Argument type is "str | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:175:5 - error: Type of "node_major" is partially unknown
-    Type of "node_major" is "Any | Unknown | None" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:175:18 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: str, default: None = None, /) -> (Any | None), (key: str, default: Any, /) -> Any, (key: str, default: _T@get, /) -> (Any | _T@get)] | Unknown" (reportUnknownMemberType)
-  mindgarden/scripts/publish_garden.py:182:31 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:183:31 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_exact_string_list"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:186:5 - error: Type of "manifest" is partially unknown
-    Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/publish_garden.py:187:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:188:9 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:191:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:192:9 - error: Argument type is partially unknown
-    Argument corresponds to parameter "metadata" in function "require_string"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/publish_garden.py:196:12 - error: Return type, "tuple[Path, dict[str, Any] | Unknown]", is partially unknown (reportUnknownVariableType)
+rtially unknown (reportUnknownVariableType)
   mindgarden/scripts/publish_garden.py:449:5 - error: Type of "manifest" is partially unknown
     Type of "manifest" is "dict[str, str | bool | int | list[str]] | Unknown" (reportUnknownVariableType)
   mindgarden/scripts/publish_garden.py:450:5 - error: Type of "content_roots" is partially unknown
@@ -4191,9 +6699,13 @@ tests/test_repository_intelligence_dashboard.py
   tests/test_repository_intelligence_dashboard.py:414:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
   tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
   tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-7396 errors, 409 warnings, 0 informations
+tools/staging_home_audit.py
+  tools/staging_home_audit.py:1082:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]" in function "writerow"
+    "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]"
+      Type parameter "_KT@Mapping" is invariant, but "str" is not the same as "Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags']" (reportArgumentType)
+8726 errors, 420 warnings, 0 informations
 
-(Truncated to last 29629 characters out of 1353275)
+(Truncated to last 27586 characters out of 1653950)
 ```
 
 </details>
@@ -4202,19 +6714,16 @@ tests/test_repository_intelligence_dashboard.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-16T01:51:55Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-16T01:51:55Z	INFO	[vulndb] Need to update DB
-2026-08-16T01:51:55Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-16T01:51:55Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-30.17 MiB / 107.64 MiB [---------------->___________________________________________] 28.03% ? p/s ?63.86 MiB / 107.64 MiB [----------------------------------->________________________] 59.33% ? p/s ?104.57 MiB / 107.64 MiB [--------------------------------------------------------->_] 97.15% ? p/s ?107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 129.94 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 129.94 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 129.94 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 121.56 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 121.56 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 121.56 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 113.72 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 113.72 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 113.72 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 106.38 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 106.38 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 106.38 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 99.52 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 99.52 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 99.52 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 93.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 93.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 93.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 87.09 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 87.09 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 87.09 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 81.47 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 81.47 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 81.47 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 76.21 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-----------------------------------------------] 100.00% 19.38 MiB p/s 5.8s2026-08-16T01:52:02Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-16T01:52:02Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-16T01:52:02Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-16T01:52:02Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-16T01:52:02Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [----------------------------------------------] 100.00% 298.14 KiB p/s 1.0s2026-08-16T01:52:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-08-16T01:52:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-08-16T01:52:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-08-16T01:52:09Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+2026-08-16T02:41:13Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-16T02:41:13Z	INFO	[vulndb] Need to update DB
+2026-08-16T02:41:13Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-16T02:41:13Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+1.32 MiB / 107.64 MiB [>_____________________________________________________________] 1.23% ? p/s ?14.80 MiB / 107.64 MiB [-------->___________________________________________________] 13.75% ? p/s ?42.42 MiB / 107.64 MiB [----------------------->____________________________________] 39.41% ? p/s ?69.02 MiB / 107.64 MiB [----------------------------->________________] 64.12% 112.95 MiB p/s ETA 0s94.77 MiB / 107.64 MiB [---------------------------------------->_____] 88.04% 112.95 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 112.95 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 109.81 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 109.81 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 109.81 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 102.73 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 102.73 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 102.73 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 96.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 96.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 96.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 89.90 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 89.90 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 89.90 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 84.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 84.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 84.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 78.67 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 78.67 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 78.67 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 73.60 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 73.60 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 73.60 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 68.85 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 68.85 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 68.85 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 64.41 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 64.41 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 64.41 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 60.25 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 60.25 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 60.25 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 56.37 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 56.37 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-----------------------------------------------] 100.00% 14.43 MiB p/s 7.7s2026-08-16T02:41:23Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-16T02:41:23Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-16T02:41:23Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-16T02:41:23Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-16T02:41:23Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [---------------------------------------------] 100.00% 991.54 KiB p/s 400ms2026-08-16T02:41:28Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 
 📣 Notices:
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
@@ -4225,73 +6734,73 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2616cf2]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x26691fdf2500)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x2195a56a6e0)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x26691e090f00?, 0x6, 0x4252f4?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x219554c6800?, 0x6, 0x4252f4?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x2669227adc20, 0x7f32e06bca00?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x2195a571400, 0x7fa92ce5abf0?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x2669219bdd2c, 0x2669227adc20)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x2195a619489, 0x2195a571400)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x2669219bdd2c, {0x5aa9040?, 0x266922261b23?}, {0x67caaa0?, 0x266920982978?}, {0x26691e17dcc0, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x2195a619489, {0x5aa9040?, 0x2195a557703?}, {0x67caaa0?, 0x2195757b238?}, {0x2195a43f4a0, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x26691fdf2230}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x2195a56a4b0}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x26691e17dcc0, 0x43}, {0x6831f78, 0x26691fdf2230}, 0x26691c696ba8)
+io/fs.walkDir({0x67cb5e0, 0x219570aac78}, {0x2195a43f4a0, 0x43}, {0x6831f78, 0x2195a56a4b0}, 0x21955412ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x266922261b00, 0x2d}, {0x6831f78, 0x266920d63e28}, 0x26691c696ba8)
+io/fs.walkDir({0x67cb5e0, 0x219570aac78}, {0x2195a5576e0, 0x2d}, {0x6831f78, 0x2195a5ac848}, 0x21955412ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x2669222d17a0, 0x22}, {0x6831f78, 0x266920d62f28}, 0x26691c696ba8)
+io/fs.walkDir({0x67cb5e0, 0x219570aac78}, {0x2195a5b4ae0, 0x22}, {0x6831f78, 0x219570257e8}, 0x21955412ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x266920d3cf18, 0x17}, {0x6831f78, 0x266920d628e8}, 0x26691c696ba8)
+io/fs.walkDir({0x67cb5e0, 0x219570aac78}, {0x2195b198c00, 0x17}, {0x6831f78, 0x21957025108}, 0x21955412ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x266920d44f90, 0x8}, {0x6831f78, 0x266920d62708}, 0x26691c696ba8)
+io/fs.walkDir({0x67cb5e0, 0x219570aac78}, {0x2195a5947e0, 0x8}, {0x6831f78, 0x21957024f28}, 0x21955412ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1}, {0x6831370, 0x266920d611f0}, 0x26691c696ba8)
+io/fs.walkDir({0x67cb5e0, 0x219570aac78}, {0x67a84f8, 0x1}, {0x6831370, 0x2195617acc0}, 0x21955412ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1}, 0x26691c696ba8)
+io/fs.WalkDir({0x67cb5e0, 0x219570aac78}, {0x67a84f8, 0x1}, 0x21955412ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x266921eee960}, {0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x2195a7ef7d0}, {0x67cb5e0, 0x219570aac78}, {0x67a84f8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x266921eee960}, {0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x2195a7ef7d0}, {0x67cb5e0, 0x219570aac78}, {0x67a84f8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x266921fb0040, {0x68311b0, 0x26691be380e0}, {0x67cb5e0, 0x26691f76b068})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x21956b6b4c0, {0x68311b0, 0x219544b0230}, {0x67cb5e0, 0x21956e23ab8})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x266921fae120, {0x68311b0?, 0x26691be380e0?}, {{0x67cb5e0, 0x26691f76b068}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x21956ac3700, {0x68311b0?, 0x219544b0230?}, {{0x67cb5e0, 0x21956e23ab8}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x266921e40cd0, {0x2669219c7a00, 0x1f, 0x20}, {0x2669219c7c00, 0x19, 0x20}, 0x266921e7fc80, {0x26691c8f1457, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x21957382e60, {0x21958e02e00, 0x1f, 0x20}, {0x21958e03000, 0x19, 0x20}, 0x21955990c90, {0x21953ea13b7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x266921e40cd0, {0x2669219c7a00, 0x1f, 0x20}, {0x2669219c7c00, 0x19, 0x20}, 0x266921e7fc80, {0x26691c8f1457, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x21957382e60, {0x21958e02e00, 0x1f, 0x20}, {0x21958e03000, 0x19, 0x20}, 0x21955990c90, {0x21953ea13b7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7fff180eb12f, 0x1}, 0x266921e41580, {0x7f3219494628, 0x26691e454000}, {0x67cb520, 0xa3125e0}, {0x266921e40cd0, {0x2669219c7a00, 0x1f, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffd021ec12f, 0x1}, 0x219573a2a40, {0x7fa8a5b92210, 0x21958a81c20}, {0x67cb520, 0xa3125e0}, {0x21957382e60, {0x21958e02e00, 0x1f, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x26691ca62e60, 0x2, 0x2}, {0x26691c3699c0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x219550b9220, 0x2, 0x2}, {0x2195485b980, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffd021ebf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffd021ebf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffd021ebf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffd021ebf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffd021ebf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffd021ebf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x26691c7e4f08, {0x26691c533188, 0x1, 0x33})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x21954b86f08, {0x21954f1d508, 0x1, 0x33})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0x26691c7e4f08, {0x26691c532e08, 0x33, 0x33})
+github.com/spf13/cobra.(*Command).execute(0x21954b86f08, {0x21954f1d188, 0x33, 0x33})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0x26691c7e4908)
+github.com/spf13/cobra.(*Command).ExecuteC(0x21954b86908)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x26691c585d00})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x21954b91400})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c
@@ -4302,368 +6811,19 @@ main.main()
 </details>
 
 <details>
-<summary>⚠️ SPELL / vale - 4 errors</summary>
+<summary>⚠️ SPELL / vale - 1 error</summary>
 
 ```
-oo wordy.                                        write-good.TooWordy 
- 48:20   warning  'is preserved' may be passive voice. Use active voice if you can.  write-good.Passive  
- 103:21  warning  'are skipped' may be passive voice. Use active voice if you can.   write-good.Passive  
- 104:10  warning  'are reported' may be passive voice. Use active voice if you can.  write-good.Passive  
+E201 Invalid value [beacon/.staging/latex/Books/kaobook/MANIFEST.md:1:1]:
 
+   1* ---
+   2  
+   3  # First Work: The kaobook Class
 
- identity/ARCHITECTURE.md
- 22:20  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
+yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `MANIFES...` into map[string]interface {}
 
-
- identity/EXTRACTION.md
- 12:21  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
-
-
- identity/PROVENANCE.md
- 5:17   warning  'was designed' may be passive voice. Use active voice if you can.     write-good.Passive 
- 10:20  warning  'was informed' may be passive voice. Use active voice if you can.     write-good.Passive 
- 19:44  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive 
-
-
- llms.txt
- 7:52  warning  'retain' is too wordy.  write-good.TooWordy 
-
-
- mantle/ARCHITECTURE.md
- 101:70  warning  'acquire' is too wordy.  write-good.TooWordy 
-
-
- mantle/CONTRIBUTING.md
- 39:14  warning  'are checked' may be passive voice. Use active voice if you can.   write-good.Passive  
- 42:34  warning  'are consumed' may be passive voice. Use active voice if you can.  write-good.Passive  
- 62:67  warning  'equivalent' is too wordy.                                         write-good.TooWordy 
-
-
- mantle/INSTALLER_ASSURANCE.md
- 32:32  warning  'are rejected' may be passive voice. Use active voice if you can.  write-good.Passive 
- 36:27  warning  'is pinned' may be passive voice. Use active voice if you can.     write-good.Passive 
- 38:27  warning  'are labeled' may be passive voice. Use active voice if you can.   write-good.Passive 
-
-
- mantle/PROVENANCE.md
- 12:66  warning  'was consolidated' may be passive voice. Use active voice if you can.  write-good.Passive  
- 13:63  warning  'subsequent' is too wordy.                                             write-good.TooWordy 
- 30:33  warning  'it is' is too wordy.                                                  write-good.TooWordy 
- 40:1   warning  'substantially' is a weasel word!                                      write-good.Weasel   
- 45:22  warning  'were modified' may be passive voice. Use active voice if you can.     write-good.Passive  
- 50:22  warning  'sufficient' is too wordy.                                             write-good.TooWordy 
- 54:14  warning  'be verified' may be passive voice. Use active voice if you can.       write-good.Passive  
-
-
- mantle/README.md
- 37:15    warning  'is composed' may be passive voice. Use active voice if you can.     write-good.Passive  
- 47:53    warning  'is designed' may be passive voice. Use active voice if you can.     write-good.Passive  
- 51:124   warning  'It is' is too wordy.                                                write-good.TooWordy 
- 72:3     warning  'Additional' is too wordy.                                           write-good.TooWordy 
- 78:42    warning  'be sourced' may be passive voice. Use active voice if you can.      write-good.Passive  
- 146:59   warning  'are managed' may be passive voice. Use active voice if you can.     write-good.Passive  
- 191:49   warning  'usually' is a weasel word!                                          write-good.Weasel   
- 266:51   warning  'is parsed' may be passive voice. Use active voice if you can.       write-good.Passive  
- 277:1    warning  'is required' may be passive voice. Use active voice if you can.     write-good.Passive  
- 334:92   warning  'additional' is too wordy.                                           write-good.TooWordy 
- 348:168  warning  'be treated' may be passive voice. Use active voice if you can.      write-good.Passive  
- 353:36   warning  'are documented' may be passive voice. Use active voice if you can.  write-good.Passive  
- 355:10   warning  'are recorded' may be passive voice. Use active voice if you can.    write-good.Passive  
- 433:37   warning  'is sourced' may be passive voice. Use active voice if you can.      write-good.Passive  
- 440:25   warning  'is loaded' may be passive voice. Use active voice if you can.       write-good.Passive  
- 447:28   warning  'is rejected' may be passive voice. Use active voice if you can.     write-good.Passive  
- 449:29   warning  'are sourced' may be passive voice. Use active voice if you can.     write-good.Passive  
- 474:27   warning  'is implemented' may be passive voice. Use active voice if you can.  write-good.Passive  
- 480:14   warning  'are tested' may be passive voice. Use active voice if you can.      write-good.Passive  
- 483:27   warning  'is discovered' may be passive voice. Use active voice if you can.   write-good.Passive  
- 518:39   warning  'several' is a weasel word!                                          write-good.Weasel   
- 521:30   warning  'are enabled' may be passive voice. Use active voice if you can.     write-good.Passive  
- 521:100  warning  'is changed' may be passive voice. Use active voice if you can.      write-good.Passive  
- 526:27   warning  'are created' may be passive voice. Use active voice if you can.     write-good.Passive  
- 527:47   warning  'are validated' may be passive voice. Use active voice if you can.   write-good.Passive  
- 545:39   warning  'equivalent' is too wordy.                                           write-good.TooWordy 
- 574:7    warning  'are intended' may be passive voice. Use active voice if you can.    write-good.Passive  
- 609:25   warning  'be inferred' may be passive voice. Use active voice if you can.     write-good.Passive  
-
-
- mantle/audits/mantle-holistic-polish-20260806T124442Z.md
- 21:164    warning  'be executed' may be passive voice. Use active voice if you can.       write-good.Passive  
- 29:87     warning  'prior to' is too wordy.                                               write-good.TooWordy 
- 29:124    warning  'been implemented' may be passive voice. Use active voice if you can.  write-good.Passive  
- 31:80     warning  'are recommended' may be passive voice. Use active voice if you can.   write-good.Passive  
- 32:53     warning  'several' is a weasel word!                                            write-good.Weasel   
- 36:19     warning  'are recorded' may be passive voice. Use active voice if you can.      write-good.Passive  
- 133:7     warning  'Methodology' is too wordy.                                            write-good.TooWordy 
- 146:66    warning  'several' is a weasel word!                                            write-good.Weasel   
- 165:7     warning  'Overall' is too wordy.                                                write-good.TooWordy 
- 189:103   warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 190:139   warning  'be resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 193:58    warning  'is resolved' may be passive voice. Use active voice if you can.       write-good.Passive  
- 244:71    warning  'is computed' may be passive voice. Use active voice if you can.       write-good.Passive  
- 293:32    warning  'be done' may be passive voice. Use active voice if you can.           write-good.Passive  
- 309:194   warning  'However' is too wordy.                                                write-good.TooWordy 
- 309:265   warning  'be captured' may be passive voice. Use active voice if you can.       write-good.Passive  
- 320:128   warning  'be detected' may be passive voice. Use active voice if you can.       write-good.Passive  
- 322:114   warning  'minimum' is too wordy.                                                write-good.TooWordy 
- 346:77    warning  'is produced' may be passive voice. Use active voice if you can.       write-good.Passive  
- 383:63    warning  'equivalent' is too wordy.                                             write-good.TooWordy 
- 383:152   warning  'multiple' is too wordy.                                               write-good.TooWordy 
- 415:1     error    Don't start a sentence with 'There are'.                               write-good.ThereIs  
- 415:153   error    Don't start a sentence with 'There is'.                                write-good.ThereIs  
- 483:241   warning  'it is' is too wordy.                                                  write-good.TooWordy 
- 483:244   warning  'is sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 485:68    warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 501:94    warning  'equivalent' is too wordy.                                             write-good.TooWordy 
- 503:41    warning  'clearly' is a weasel word!                                            write-good.Weasel   
- 539:160   warning  'is restored' may be passive voice. Use active voice if you can.       write-good.Passive  
- 561:120   warning  'are exported' may be passive voice. Use active voice if you can.      write-good.Passive  
- 609:90    warning  'Several' is a weasel word!                                            write-good.Weasel   
- 609:242   warning  'it is' is too wordy.                                                  write-good.TooWordy 
- 625:126   warning  'was added' may be passive voice. Use active voice if you can.         write-good.Passive  
- 643:43    warning  'is noted' may be passive voice. Use active voice if you can.          write-good.Passive  
- 656:120   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 656:155   warning  'been validated' may be passive voice. Use active voice if you can.    write-good.Passive  
- 672:121   warning  'However' is too wordy.                                                write-good.TooWordy 
- 733:37    warning  'are registered' may be passive voice. Use active voice if you can.    write-good.Passive  
- 739:50    warning  'be sourced' may be passive voice. Use active voice if you can.        write-good.Passive  
- 775:165   warning  'is backed' may be passive voice. Use active voice if you can.         write-good.Passive  
- 785:72    warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 790:71    warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 791:50    warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 796:18    warning  'Validate' is too wordy.                                               write-good.TooWordy 
- 803:3     warning  'Evaluate' is too wordy.                                               write-good.TooWordy 
- 824:8     warning  'are ordered' may be passive voice. Use active voice if you can.       write-good.Passive  
- 896:75    warning  'be produced' may be passive voice. Use active voice if you can.       write-good.Passive  
- 915:74    warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 924:35    warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 936:48    warning  'requirement' is too wordy.                                            write-good.TooWordy 
- 937:190   warning  'is required' may be passive voice. Use active voice if you can.       write-good.Passive  
- 948:107   warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 960:110   warning  'evaluate' is too wordy.                                               write-good.TooWordy 
- 963:90    warning  'is expected' may be passive voice. Use active voice if you can.       write-good.Passive  
- 963:105   warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
- 971:58    warning  'be run' may be passive voice. Use active voice if you can.            write-good.Passive  
- 973:196   warning  'be required' may be passive voice. Use active voice if you can.       write-good.Passive  
- 975:125   warning  'is enabled' may be passive voice. Use active voice if you can.        write-good.Passive  
- 977:110   warning  'be added' may be passive voice. Use active voice if you can.          write-good.Passive  
- 1013:163  warning  'were read' may be passive voice. Use active voice if you can.         write-good.Passive  
- 1096:13   warning  'is marked' may be passive voice. Use active voice if you can.         write-good.Passive  
- 1105:69   warning  'be installed' may be passive voice. Use active voice if you can.      write-good.Passive  
-
-
- mantle/lib/install/README.md
- 57:66   warning  'is found' may be passive voice. Use active voice if you can.       write-good.Passive 
- 61:12   warning  'are rejected' may be passive voice. Use active voice if you can.   write-good.Passive 
- 62:15   warning  'are staged' may be passive voice. Use active voice if you can.     write-good.Passive 
- 65:21   warning  'is restricted' may be passive voice. Use active voice if you can.  write-good.Passive 
- 108:35  warning  'be set' may be passive voice. Use active voice if you can.         write-good.Passive 
- 109:16  warning  'is used' may be passive voice. Use active voice if you can.        write-good.Passive 
-
-
- mantle/libexec/mantle/README.md
- 3:60   warning  'are dispatched' may be passive voice. Use active voice if you can.  write-good.Passive 
- 30:17  warning  'are named' may be passive voice. Use active voice if you can.       write-good.Passive 
- 30:60  warning  'be executed' may be passive voice. Use active voice if you can.     write-good.Passive 
-
-
- mantle/runtime/shells/fish/README.md
- 16:71  warning  'are preserved' may be passive voice. Use active voice if you can.  write-good.Passive 
-
-
- mantle/runtime/shells/fish/completions/README.md
- 4:54  warning  'are required' may be passive voice. Use active voice if you can.  write-good.Passive 
-
-
- mantle/tests/README.md
- 10:57   warning  'Minimum' is too wordy.                                             write-good.TooWordy 
- 20:31   warning  'be skipped' may be passive voice. Use active voice if you can.     write-good.Passive  
- 21:10   warning  'all of' is too wordy.                                              write-good.TooWordy 
- 58:19   warning  'equivalent' is too wordy.                                          write-good.TooWordy 
- 72:33   warning  'equivalent' is too wordy.                                          write-good.TooWordy 
- 154:15  warning  'are replaced' may be passive voice. Use active voice if you can.   write-good.Passive  
- 188:16  warning  'is added' may be passive voice. Use active voice if you can.       write-good.Passive  
- 235:22  warning  'are isolated' may be passive voice. Use active voice if you can.   write-good.Passive  
- 250:20  warning  'are launched' may be passive voice. Use active voice if you can.   write-good.Passive  
- 287:7   warning  'are isolated' may be passive voice. Use active voice if you can.   write-good.Passive  
- 338:49  warning  'is validated' may be passive voice. Use active voice if you can.   write-good.Passive  
- 359:41  warning  'are installed' may be passive voice. Use active voice if you can.  write-good.Passive  
- 379:13  warning  'are designed' may be passive voice. Use active voice if you can.   write-good.Passive  
- 397:60  warning  'is involved' may be passive voice. Use active voice if you can.    write-good.Passive  
-
-
- mindgarden/ARCHITECTURE.md
- 30:34  warning  'are bounded' may be passive voice. Use active voice if you can.   write-good.Passive 
- 35:10  warning  'is committed' may be passive voice. Use active voice if you can.  write-good.Passive 
-
-
- mindgarden/EXTRACTION.md
- 12:21  warning  'are versioned' may be passive voice. Use active voice if you can.  write-good.Passive 
- 19:76  warning  'be projected' may be passive voice. Use active voice if you can.   write-good.Passive 
-
-
- mindgarden/PROVENANCE.md
- 5:12   warning  'was incubated' may be passive voice. Use active voice if you can.  write-good.Passive 
- 14:17  warning  'is retained' may be passive voice. Use active voice if you can.    write-good.Passive 
- 14:50  warning  'was expanded' may be passive voice. Use active voice if you can.   write-good.Passive 
- 35:31  warning  'be evaluated' may be passive voice. Use active voice if you can.   write-good.Passive 
- 40:65  warning  'are vendored' may be passive voice. Use active voice if you can.   write-good.Passive 
-
-
- mindgarden/README.md
- 30:35  warning  'multiple' is too wordy.                                              write-good.TooWordy 
- 59:1   warning  'Validate' is too wordy.                                              write-good.TooWordy 
- 73:50  warning  'are recorded' may be passive voice. Use active voice if you can.     write-good.Passive  
- 75:47  warning  'are defined' may be passive voice. Use active voice if you can.      write-good.Passive  
- 78:36  warning  'is incorporated' may be passive voice. Use active voice if you can.  write-good.Passive  
-
-
- mindgarden/profiles/agent/README.md
- 4:37   warning  'It is' is too wordy.                                             write-good.TooWordy 
- 8:20   warning  'acquire' is too wordy.                                           write-good.TooWordy 
- 40:31  warning  'is returned' may be passive voice. Use active voice if you can.  write-good.Passive  
- 41:29  warning  'is required' may be passive voice. Use active voice if you can.  write-good.Passive  
-
-
- mindgarden/profiles/obsidian/README.md
- 23:69  warning  'is scoped' may be passive voice. Use active voice if you can.    write-good.Passive 
- 28:17  warning  'is declared' may be passive voice. Use active voice if you can.  write-good.Passive 
- 44:49  warning  'are copied' may be passive voice. Use active voice if you can.   write-good.Passive 
-
-
- mindgarden/profiles/quartz/README.md
- 12:30  warning  'are rejected' may be passive voice. Use active voice if you can.   write-good.Passive  
- 13:51  warning  'are omitted' may be passive voice. Use active voice if you can.    write-good.Passive  
- 16:45  warning  'are rejected' may be passive voice. Use active voice if you can.   write-good.Passive  
- 26:36  warning  'are required' may be passive voice. Use active voice if you can.   write-good.Passive  
- 52:5   warning  'equivalent' is too wordy.                                          write-good.TooWordy 
- 62:69  warning  'is generated' may be passive voice. Use active voice if you can.   write-good.Passive  
- 66:49  warning  'are committed' may be passive voice. Use active voice if you can.  write-good.Passive  
- 70:57  warning  'it is' is too wordy.                                               write-good.TooWordy 
- 74:32  warning  'are pinned' may be passive voice. Use active voice if you can.     write-good.Passive  
-
-
- research/antidote/README.md
- 18:18  warning  'is treated' may be passive voice. Use active voice if you can.  write-good.Passive 
- 73:14  warning  'is frozen' may be passive voice. Use active voice if you can.   write-good.Passive 
-
-
- research/antidote/paper.md
- 16:72   warning  'be mapped' may be passive voice. Use active voice if you can.           write-good.Passive 
- 28:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
- 32:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
- 36:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
- 40:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
- 44:5    warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
- 49:77   warning  'be verified' may be passive voice. Use active voice if you can.         write-good.Passive 
- 50:65   warning  'is frozen' may be passive voice. Use active voice if you can.           write-good.Passive 
- 65:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
- 69:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
- 73:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
- 77:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
- 81:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
- 85:5    warning  'be operationalized' may be passive voice. Use active voice if you can.  write-good.Passive 
- 89:17   warning  'is expected' may be passive voice. Use active voice if you can.         write-good.Passive 
- 91:54   warning  'be frozen' may be passive voice. Use active voice if you can.           write-good.Passive 
- 96:18   warning  'been collected' may be passive voice. Use active voice if you can.      write-good.Passive 
- 100:5   warning  'be written' may be passive voice. Use active voice if you can.          write-good.Passive 
- 100:30  warning  'are frozen' may be passive voice. Use active voice if you can.          write-good.Passive 
- 100:54  warning  'is collected' may be passive voice. Use active voice if you can.        write-good.Passive 
- 106:24  warning  'be reduced' may be passive voice. Use active voice if you can.          write-good.Passive 
- 107:50  warning  'be represented' may be passive voice. Use active voice if you can.      write-good.Passive 
-
-
- research/antidote/research/bootstrap/01-research-concept-snapshot.md
- 5:236   warning  'is treated' may be passive voice. Use active voice if you can.    write-good.Passive  
- 20:36   warning  'are analyzed' may be passive voice. Use active voice if you can.  write-good.Passive  
- 21:54   warning  'are measured' may be passive voice. Use active voice if you can.  write-good.Passive  
- 22:18   warning  'are learned' may be passive voice. Use active voice if you can.   write-good.Passive  
- 47:286  warning  'all of' is too wordy.                                             write-good.TooWordy 
-
-
- research/antidote/research/bootstrap/02-conceptual-system-model.md
- 24:101  warning  'therefore' is too wordy.                                          write-good.TooWordy 
- 24:111  warning  'be treated' may be passive voice. Use active voice if you can.    write-good.Passive  
- 24:194  warning  'be measured' may be passive voice. Use active voice if you can.   write-good.Passive  
- 28:66   warning  'is generated' may be passive voice. Use active voice if you can.  write-good.Passive  
- 28:112  warning  'is desired' may be passive voice. Use active voice if you can.    write-good.Passive  
- 67:320  warning  'additional' is too wordy.                                         write-good.TooWordy 
-
-
- research/antidote/research/bootstrap/03-scientific-boundaries.md
- 30:94   warning  'It is' is too wordy.                                                 write-good.TooWordy 
- 38:104  warning  'be tested' may be passive voice. Use active voice if you can.        write-good.Passive  
- 42:48   warning  'be presented' may be passive voice. Use active voice if you can.     write-good.Passive  
- 42:121  warning  'be modeled' may be passive voice. Use active voice if you can.       write-good.Passive  
- 42:237  warning  'be investigated' may be passive voice. Use active voice if you can.  write-good.Passive  
-
-
- research/antidote/research/bootstrap/04-literature-scan-map.md
- 3:49    warning  'It is' is too wordy.                                             write-good.TooWordy 
- 3:113   warning  'be verified' may be passive voice. Use active voice if you can.  write-good.Passive  
- 51:191  warning  'be examined' may be passive voice. Use active voice if you can.  write-good.Passive  
-
-
- research/antidote/research/bootstrap/05-paper-shape.md
- 11:24  warning  'be chosen' may be passive voice. Use active voice if you can.  write-good.Passive 
-
-
- research/antidote/research/bootstrap/07-beacon-and-renderflow-context.md
- 17:63   warning  'is selected' may be passive voice. Use active voice if you can.    write-good.Passive 
- 19:38   warning  'are rendered' may be passive voice. Use active voice if you can.   write-good.Passive 
- 19:71   warning  'are invoked' may be passive voice. Use active voice if you can.    write-good.Passive 
- 19:98   warning  'are validated' may be passive voice. Use active voice if you can.  write-good.Passive 
- 19:158  warning  'are produced' may be passive voice. Use active voice if you can.   write-good.Passive 
- 21:18   warning  'be treated' may be passive voice. Use active voice if you can.     write-good.Passive 
- 21:139  warning  'be harmonized' may be passive voice. Use active voice if you can.  write-good.Passive 
- 21:185  warning  'are proven' may be passive voice. Use active voice if you can.     write-good.Passive 
-
-
- tools/ROADMAP.md
- 6:7     warning  'It is' is too wordy.                                                  write-good.TooWordy 
- 11:42   warning  'additional' is too wordy.                                             write-good.TooWordy 
- 17:58   warning  'assistance' is too wordy.                                             write-good.TooWordy 
- 26:6    warning  'Acquire' is too wordy.                                                write-good.TooWordy 
- 41:8    warning  'be replaced' may be passive voice. Use active voice if you can.       write-good.Passive  
- 45:70   warning  'is known' may be passive voice. Use active voice if you can.          write-good.Passive  
- 77:45   warning  'is scaffolded' may be passive voice. Use active voice if you can.     write-good.Passive  
- 88:12   warning  'be attached' may be passive voice. Use active voice if you can.       write-good.Passive  
- 95:5    warning  'implement' is too wordy.                                              write-good.TooWordy 
- 111:43  warning  'is agreed' may be passive voice. Use active voice if you can.         write-good.Passive  
- 111:79  warning  'is duplicated' may be passive voice. Use active voice if you can.     write-good.Passive  
- 118:3   warning  'Finalize' is too wordy.                                               write-good.TooWordy 
- 119:3   warning  'Validate' is too wordy.                                               write-good.TooWordy 
- 128:20  warning  'Several' is a weasel word!                                            write-good.Weasel   
- 129:46  warning  'equivalent' is too wordy.                                             write-good.TooWordy 
- 143:3   warning  'Validate' is too wordy.                                               write-good.TooWordy 
- 151:11  warning  'Implement' is too wordy.                                              write-good.TooWordy 
- 165:33  warning  'be validated' may be passive voice. Use active voice if you can.      write-good.Passive  
- 200:50  warning  'be retrieved' may be passive voice. Use active voice if you can.      write-good.Passive  
- 214:3   warning  'Evaluate' is too wordy.                                               write-good.TooWordy 
- 214:57  warning  'sufficient' is too wordy.                                             write-good.TooWordy 
- 248:1   warning  'be processed' may be passive voice. Use active voice if you can.      write-good.Passive  
- 262:48  warning  'is proven' may be passive voice. Use active voice if you can.         write-good.Passive  
- 286:12  warning  'validate' is too wordy.                                               write-good.TooWordy 
- 292:57  warning  'is archived' may be passive voice. Use active voice if you can.       write-good.Passive  
- 294:43  warning  'be reconstructed' may be passive voice. Use active voice if you can.  write-good.Passive  
- 302:15  warning  'finalize' is too wordy.                                               write-good.TooWordy 
- 310:41  warning  'be routed' may be passive voice. Use active voice if you can.         write-good.Passive  
- 319:3   warning  'Validate' is too wordy.                                               write-good.TooWordy 
- 345:1   warning  'be prototyped' may be passive voice. Use active voice if you can.     write-good.Passive  
- 346:42  warning  'substantial' is too wordy.                                            write-good.TooWordy 
- 346:77  warning  'is built' may be passive voice. Use active voice if you can.          write-good.Passive  
- 356:17  warning  'validate' is too wordy.                                               write-good.TooWordy 
- 359:4   warning  'Implement' is too wordy.                                              write-good.TooWordy 
- 381:59  warning  'are satisfied' may be passive voice. Use active voice if you can.     write-good.Passive  
- 384:15  warning  'are preserved' may be passive voice. Use active voice if you can.     write-good.Passive  
- 389:24  warning  'is disabled' may be passive voice. Use active voice if you can.       write-good.Passive  
- 391:26  warning  'is isolated' may be passive voice. Use active voice if you can.       write-good.Passive  
- 393:29  warning  'is implemented' may be passive voice. Use active voice if you can.    write-good.Passive  
- 393:66  warning  'is intended' may be passive voice. Use active voice if you can.       write-good.Passive  
- 399:56  warning  'Validate' is too wordy.                                               write-good.TooWordy 
-
-✖ 4 errors, 2145 warnings and 0 suggestions in 251 files.
-
-(Truncated to last 29629 characters out of 242917)
+Execution stopped with code 1.
 ```
 
 </details>

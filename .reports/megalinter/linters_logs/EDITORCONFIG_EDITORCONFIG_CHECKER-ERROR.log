@@ -119,10 +119,3032 @@ Linter raw log:
 	155: Trailing whitespace
 .github/workflow-profiles/security-optional/ossf-scorecard-older.yml:
 	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Articles/arsclassica-article/article_4.tex:
+	Wrong line endings or no final newline
+	106: Trailing whitespace
+	144: Trailing whitespace
+	147-148: Trailing whitespace
+	154: Trailing whitespace
+	169-170: Trailing whitespace
+	172: Trailing whitespace
+beacon/.staging/latex/Academic Articles/arsclassica-article/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Articles/arsclassica-article/structure.tex:
+	Wrong line endings or no final newline
+	22: Trailing whitespace
+beacon/.staging/latex/Academic Articles/journal-article/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Articles/journal-article/template.tex:
+	217: Trailing whitespace
+beacon/.staging/latex/Academic Articles/stylish-article/SelfArx.cls:
+	140: Trailing whitespace
+	151: Trailing whitespace
+beacon/.staging/latex/Academic Articles/stylish-article/article_3.tex:
+	Wrong line endings or no final newline
+	10: Trailing whitespace
+beacon/.staging/latex/Academic Articles/stylish-article/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Articles/wenneker-article/main.tex:
+	72: Trailing whitespace
+	90-91: Trailing whitespace
+beacon/.staging/latex/Academic Journals/acmart-primary/.gitignore:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Journals/acmart-primary/ACM-Reference-Format.bst:
+	439: Trailing whitespace
+	443: Trailing whitespace
+	447: Trailing whitespace
+	451: Trailing whitespace
+	459: Trailing whitespace
+	464: Trailing whitespace
+beacon/.staging/latex/Academic Journals/acmart-primary/ACM-Reference-Format.dbx:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Journals/acmart-primary/README:
+	Wrong line endings or no final newline
+	246: Trailing whitespace
+beacon/.staging/latex/Academic Journals/acmart-primary/acmart.dtx:
+	302: Trailing whitespace
+	328: Trailing whitespace
+	343: Trailing whitespace
+	417: Trailing whitespace
+	495: Trailing whitespace
+	752: Trailing whitespace
+	785: Trailing whitespace
+	979: Trailing whitespace
+	990: Trailing whitespace
+	1105: Trailing whitespace
+	1272: Trailing whitespace
+	1481: Trailing whitespace
+	1502: Trailing whitespace
+	1506: Trailing whitespace
+	1599-1600: Trailing whitespace
+	1710: Trailing whitespace
+	1781: Trailing whitespace
+	1873: Trailing whitespace
+	1889: Trailing whitespace
+	1906: Trailing whitespace
+	1914-1915: Trailing whitespace
+	2027: Trailing whitespace
+	2031: Trailing whitespace
+	2101-2102: Trailing whitespace
+	2144: Trailing whitespace
+	2238: Trailing whitespace
+	2251: Trailing whitespace
+	2253: Trailing whitespace
+	2383: Trailing whitespace
+	2505: Trailing whitespace
+	2880: Trailing whitespace
+	2884: Trailing whitespace
+	2886: Trailing whitespace
+	3020: Trailing whitespace
+	3412: Trailing whitespace
+	3697: Trailing whitespace
+	4067: Trailing whitespace
+	4089: Trailing whitespace
+	4185: Trailing whitespace
+	4325: Trailing whitespace
+	4648: Trailing whitespace
+	5306: Trailing whitespace
+	5308: Trailing whitespace
+	5488: Trailing whitespace
+	5516: Trailing whitespace
+	5953: Trailing whitespace
+	5964: Trailing whitespace
+	5973: Trailing whitespace
+	5975: Trailing whitespace
+	5987: Trailing whitespace
+	6008: Trailing whitespace
+	6341: Trailing whitespace
+	6725: Trailing whitespace
+	7342: Trailing whitespace
+	7362: Trailing whitespace
+	7383: Trailing whitespace
+	7393: Trailing whitespace
+	7464: Trailing whitespace
+	7473: Trailing whitespace
+	7511: Trailing whitespace
+	7528: Trailing whitespace
+	7535: Trailing whitespace
+	7550: Trailing whitespace
+beacon/.staging/latex/Academic Journals/acmart-primary/acmart.ins:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Journals/acmart-primary/samples/samples.dtx:
+	3: Trailing whitespace
+	16-17: Trailing whitespace
+	51: Trailing whitespace
+	53: Trailing whitespace
+	73: Trailing whitespace
+	88: Trailing whitespace
+	106: Trailing whitespace
+	146: Trailing whitespace
+	182: Trailing whitespace
+	184: Trailing whitespace
+	190: Trailing whitespace
+	248: Trailing whitespace
+	769: Trailing whitespace
+beacon/.staging/latex/Academic Journals/acmart-primary/samples/samples.ins:
+	18: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/agujournaltemplate.tex:
+	154: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/agutexSI2019.cls:
+	4: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/si_template_2019.tex:
+	91: Trailing whitespace
+	253: Trailing whitespace
+	265: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/AUTHORS:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/trackchanges.sty:
+	3: Trailing whitespace
+	30: Trailing whitespace
+	34: Trailing whitespace
+	44: Trailing whitespace
+	52: Trailing whitespace
+	54: Trailing whitespace
+	60: Trailing whitespace
+	67: Trailing whitespace
+	70-71: Trailing whitespace
+	77: Trailing whitespace
+	83: Trailing whitespace
+	92-93: Trailing whitespace
+	115: Trailing whitespace
+	129: Trailing whitespace
+	145: Trailing whitespace
+	152-153: Trailing whitespace
+	160: Trailing whitespace
+	162: Trailing whitespace
+	170: Trailing whitespace
+	187: Trailing whitespace
+	200: Trailing whitespace
+	222: Trailing whitespace
+	271: Trailing whitespace
+	469: Trailing whitespace
+	560: Trailing whitespace
+	589: Trailing whitespace
+	740: Trailing whitespace
+	808: Trailing whitespace
+	811: Trailing whitespace
+	814: Trailing whitespace
+	831: Trailing whitespace
+	833: Trailing whitespace
+	835: Trailing whitespace
+	858: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:
+	8-9: Trailing whitespace
+	12-13: Trailing whitespace
+	16-17: Trailing whitespace
+	44: Trailing whitespace
+	48: Trailing whitespace
+	53-54: Trailing whitespace
+	66: Trailing whitespace
+	73: Trailing whitespace
+	78: Trailing whitespace
+	83: Trailing whitespace
+	89: Trailing whitespace
+	95: Trailing whitespace
+	101: Trailing whitespace
+	111: Trailing whitespace
+	114: Trailing whitespace
+	123: Trailing whitespace
+	128: Trailing whitespace
+	140: Trailing whitespace
+	145: Trailing whitespace
+	157: Trailing whitespace
+	162-163: Trailing whitespace
+	169-170: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/linesegment.py:
+	11-12: Trailing whitespace
+	15-16: Trailing whitespace
+	19-20: Trailing whitespace
+	40: Trailing whitespace
+	49: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py:
+	7: Trailing whitespace
+	10-11: Trailing whitespace
+	14-15: Trailing whitespace
+	18-19: Trailing whitespace
+	28: Trailing whitespace
+	47: Trailing whitespace
+	60: Trailing whitespace
+	65: Trailing whitespace
+	70-71: Trailing whitespace
+	77: Trailing whitespace
+	82: Trailing whitespace
+	90-91: Trailing whitespace
+	96-97: Trailing whitespace
+	102-103: Trailing whitespace
+	108-109: Trailing whitespace
+	114-115: Trailing whitespace
+	129: Trailing whitespace
+	149: Trailing whitespace
+	151: Trailing whitespace
+	157: Trailing whitespace
+	159: Trailing whitespace
+	164: Trailing whitespace
+	188: Trailing whitespace
+	223: Trailing whitespace
+	232: Trailing whitespace
+	242: Trailing whitespace
+	250: Trailing whitespace
+	252-253: Trailing whitespace
+	262: Trailing whitespace
+	266: Trailing whitespace
+	270: Trailing whitespace
+	274: Trailing whitespace
+	279: Trailing whitespace
+	286: Trailing whitespace
+	290: Trailing whitespace
+	294: Trailing whitespace
+	296: Trailing whitespace
+	300: Trailing whitespace
+	303: Trailing whitespace
+	306: Trailing whitespace
+	320: Trailing whitespace
+	333: Trailing whitespace
+	340-342: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:
+	23: Trailing whitespace
+	46: Trailing whitespace
+	55: Trailing whitespace
+	117: Trailing whitespace
+	143: Trailing whitespace
+	147: Trailing whitespace
+	181-182: Trailing whitespace
+	345: Trailing whitespace
+	355: Trailing whitespace
+	384: Trailing whitespace
+	412: Trailing whitespace
+	471: Trailing whitespace
+	490: Trailing whitespace
+	492: Trailing whitespace
+	499: Trailing whitespace
+	502: Trailing whitespace
+	505: Trailing whitespace
+	524: Trailing whitespace
+	560: Trailing whitespace
+	605: Trailing whitespace
+	636: Trailing whitespace
+	653: Trailing whitespace
+	659: Trailing whitespace
+	670: Trailing whitespace
+	694: Trailing whitespace
+	736: Trailing whitespace
+	858: Trailing whitespace
+	864: Trailing whitespace
+	868: Trailing whitespace
+	968: Trailing whitespace
+	1005: Trailing whitespace
+	1128: Trailing whitespace
+	1149-1150: Trailing whitespace
+	1156: Trailing whitespace
+	1172: Trailing whitespace
+	1255: Trailing whitespace
+	1287: Trailing whitespace
+	1290: Trailing whitespace
+	1300: Trailing whitespace
+	1411: Trailing whitespace
+	1414: Trailing whitespace
+	1420: Trailing whitespace
+	1436: Trailing whitespace
+	1441: Trailing whitespace
+	1453: Trailing whitespace
+	1483: Trailing whitespace
+	1486: Trailing whitespace
+	1494: Trailing whitespace
+	1515: Trailing whitespace
+	1543: Trailing whitespace
+	1552: Trailing whitespace
+	1560: Trailing whitespace
+	1563: Trailing whitespace
+	1565: Trailing whitespace
+	1569: Trailing whitespace
+	1605: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/README:
+	Wrong line endings or no final newline
+	9: Trailing whitespace
+	57: Trailing whitespace
+	60: Trailing whitespace
+	66-67: Trailing whitespace
+	70: Trailing whitespace
+	74: Trailing whitespace
+	78-80: Trailing whitespace
+	83: Trailing whitespace
+	85: Trailing whitespace
+	88-89: Trailing whitespace
+	93: Trailing whitespace
+	96: Trailing whitespace
+	101-102: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/doc.css:
+	Wrong line endings or no final newline
+	55: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/help.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	104: Trailing whitespace
+	133: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/help_gui.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	104: Trailing whitespace
+	131: Trailing whitespace
+	135-136: Trailing whitespace
+	155: Trailing whitespace
+	158: Trailing whitespace
+	197: Trailing whitespace
+	227: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/help_stylefile.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	104: Trailing whitespace
+	156: Trailing whitespace
+	164: Trailing whitespace
+	167: Trailing whitespace
+	170: Trailing whitespace
+	173: Trailing whitespace
+	179: Trailing whitespace
+	185: Trailing whitespace
+	194: Trailing whitespace
+	222-223: Trailing whitespace
+	238-239: Trailing whitespace
+	242: Trailing whitespace
+	252: Trailing whitespace
+	259-260: Trailing whitespace
+	270-271: Trailing whitespace
+	288-290: Trailing whitespace
+	304: Trailing whitespace
+	313: Trailing whitespace
+	316: Trailing whitespace
+	329-330: Trailing whitespace
+	340-341: Trailing whitespace
+	344-345: Trailing whitespace
+	353: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/index.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	76: Trailing whitespace
+	152: Trailing whitespace
+	161: Trailing whitespace
+	163: Trailing whitespace
+	181: Trailing whitespace
+	197: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/screenshots/demo.tex:
+	26: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_contact.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	76: Trailing whitespace
+	94: Trailing whitespace
+	110: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_credits.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	76: Trailing whitespace
+	108: Trailing whitespace
+	124: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_download.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	76: Trailing whitespace
+	86: Trailing whitespace
+	88: Trailing whitespace
+	104: Trailing whitespace
+	120: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/web_preview.html:
+	6: Trailing whitespace
+	35: Trailing whitespace
+	76: Trailing whitespace
+	106: Trailing whitespace
+	122: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/testing/testing_edit.tex:
+	41: Trailing whitespace
+	45: Trailing whitespace
+	49: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	71: Trailing whitespace
+	79: Trailing whitespace
+	83-84: Trailing whitespace
+	87: Trailing whitespace
+	91: Trailing whitespace
+	95: Trailing whitespace
+	99: Trailing whitespace
+	103: Trailing whitespace
+	107: Trailing whitespace
+	111: Trailing whitespace
+	115: Trailing whitespace
+	119: Trailing whitespace
+	123: Trailing whitespace
+	127: Trailing whitespace
+	131: Trailing whitespace
+	135: Trailing whitespace
+	139: Trailing whitespace
+	143: Trailing whitespace
+	147: Trailing whitespace
+	151: Trailing whitespace
+	155: Trailing whitespace
+	159: Trailing whitespace
+	163: Trailing whitespace
+	167: Trailing whitespace
+	171: Trailing whitespace
+	175: Trailing whitespace
+	179: Trailing whitespace
+	183: Trailing whitespace
+	187: Trailing whitespace
+	191: Trailing whitespace
+	195: Trailing whitespace
+	199: Trailing whitespace
+	203: Trailing whitespace
+	207: Trailing whitespace
+	211: Trailing whitespace
+	215: Trailing whitespace
+	219: Trailing whitespace
+	223: Trailing whitespace
+	227: Trailing whitespace
+	231: Trailing whitespace
+	235: Trailing whitespace
+	239: Trailing whitespace
+	245: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/testing/testing_new.tex:
+	41: Trailing whitespace
+	45: Trailing whitespace
+	49: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	71: Trailing whitespace
+	81: Trailing whitespace
+	85: Trailing whitespace
+	89: Trailing whitespace
+	93: Trailing whitespace
+	97: Trailing whitespace
+	101: Trailing whitespace
+	105: Trailing whitespace
+	109: Trailing whitespace
+	113: Trailing whitespace
+	117: Trailing whitespace
+	121: Trailing whitespace
+	125: Trailing whitespace
+	129: Trailing whitespace
+	133: Trailing whitespace
+	137: Trailing whitespace
+	141: Trailing whitespace
+	145: Trailing whitespace
+	149: Trailing whitespace
+	153: Trailing whitespace
+	157: Trailing whitespace
+	161: Trailing whitespace
+	165: Trailing whitespace
+	169: Trailing whitespace
+	173: Trailing whitespace
+	177: Trailing whitespace
+	181: Trailing whitespace
+	185: Trailing whitespace
+	189: Trailing whitespace
+	193: Trailing whitespace
+	197: Trailing whitespace
+	201: Trailing whitespace
+	205: Trailing whitespace
+	209: Trailing whitespace
+	213: Trailing whitespace
+	219: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/testing/testing_old.tex:
+	41: Trailing whitespace
+	45: Trailing whitespace
+	49: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	71: Trailing whitespace
+	79: Trailing whitespace
+	83-84: Trailing whitespace
+	87: Trailing whitespace
+	91: Trailing whitespace
+	95: Trailing whitespace
+	99: Trailing whitespace
+	103: Trailing whitespace
+	107: Trailing whitespace
+	111: Trailing whitespace
+	115: Trailing whitespace
+	119: Trailing whitespace
+	123: Trailing whitespace
+	127: Trailing whitespace
+	131: Trailing whitespace
+	135: Trailing whitespace
+	139: Trailing whitespace
+	143: Trailing whitespace
+	147: Trailing whitespace
+	151: Trailing whitespace
+	155: Trailing whitespace
+	159: Trailing whitespace
+	163: Trailing whitespace
+	167: Trailing whitespace
+	171: Trailing whitespace
+	175: Trailing whitespace
+	179: Trailing whitespace
+	183: Trailing whitespace
+	187: Trailing whitespace
+	191: Trailing whitespace
+	195: Trailing whitespace
+	199: Trailing whitespace
+	203: Trailing whitespace
+	207: Trailing whitespace
+	211: Trailing whitespace
+	215: Trailing whitespace
+	219: Trailing whitespace
+	223: Trailing whitespace
+	227: Trailing whitespace
+	231: Trailing whitespace
+	235: Trailing whitespace
+	239: Trailing whitespace
+	245: Trailing whitespace
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges.sty:
+	3: Trailing whitespace
+	30: Trailing whitespace
+	34: Trailing whitespace
+	44: Trailing whitespace
+	52: Trailing whitespace
+	54: Trailing whitespace
+	60: Trailing whitespace
+	67: Trailing whitespace
+	70-71: Trailing whitespace
+	77: Trailing whitespace
+	83: Trailing whitespace
+	92-93: Trailing whitespace
+	115: Trailing whitespace
+	129: Trailing whitespace
+	145: Trailing whitespace
+	152-153: Trailing whitespace
+	160: Trailing whitespace
+	162: Trailing whitespace
+	170: Trailing whitespace
+	187: Trailing whitespace
+	200: Trailing whitespace
+	222: Trailing whitespace
+	271: Trailing whitespace
+	469: Trailing whitespace
+	560: Trailing whitespace
+	589: Trailing whitespace
+	740: Trailing whitespace
+	808: Trailing whitespace
+	811: Trailing whitespace
+	814: Trailing whitespace
+	831: Trailing whitespace
+	833: Trailing whitespace
+	835: Trailing whitespace
+	858: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/conf-1.8/FAQ:
+	3-7: Trailing whitespace
+	14: Trailing whitespace
+	22: Trailing whitespace
+	29-30: Trailing whitespace
+	38-39: Trailing whitespace
+	42: Trailing whitespace
+	50: Trailing whitespace
+	88: Trailing whitespace
+	97: Trailing whitespace
+	117: Trailing whitespace
+	122-125: Trailing whitespace
+	139: Trailing whitespace
+	151: Trailing whitespace
+	154: Trailing whitespace
+	158: Trailing whitespace
+	175: Trailing whitespace
+	183: Trailing whitespace
+	200: Trailing whitespace
+	206: Trailing whitespace
+	216: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/conf-1.8/README:
+	6: Trailing whitespace
+	14-15: Trailing whitespace
+	19: Trailing whitespace
+	23-24: Trailing whitespace
+	27: Trailing whitespace
+	30: Trailing whitespace
+	34-35: Trailing whitespace
+	39: Trailing whitespace
+	44-53: Trailing whitespace
+	55: Trailing whitespace
+	57: Trailing whitespace
+	60: Trailing whitespace
+	63: Trailing whitespace
+	65: Trailing whitespace
+	78: Trailing whitespace
+	82: Trailing whitespace
+	85-87: Trailing whitespace
+	102-103: Trailing whitespace
+	105: Trailing whitespace
+	112: Trailing whitespace
+	114: Trailing whitespace
+	117-119: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/conf-1.8/abstract.tex:
+	4: Trailing whitespace
+	59: Trailing whitespace
+	72: Trailing whitespace
+	93: Trailing whitespace
+	98-99: Trailing whitespace
+	103: Trailing whitespace
+	105: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/conf-1.8/asme2e.bib:
+	3: Trailing whitespace
+	14: Trailing whitespace
+	17: Trailing whitespace
+	20: Trailing whitespace
+	32: Trailing whitespace
+	38: Trailing whitespace
+	53: Trailing whitespace
+	64: Trailing whitespace
+	70: Trailing whitespace
+	74: Trailing whitespace
+	84: Trailing whitespace
+	89: Trailing whitespace
+	96: Trailing whitespace
+	111: Trailing whitespace
+	133: Trailing whitespace
+	142: Trailing whitespace
+	154: Trailing whitespace
+	161: Trailing whitespace
+	172: Trailing whitespace
+	189: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/conf-1.8/asme2e.cls:
+	5: Trailing whitespace
+	10: Trailing whitespace
+	13-14: Trailing whitespace
+	17-18: Trailing whitespace
+	38: Trailing whitespace
+	42: Trailing whitespace
+	91: Trailing whitespace
+	106-107: Trailing whitespace
+	124: Trailing whitespace
+	349: Trailing whitespace
+	666: Trailing whitespace
+	675: Trailing whitespace
+	812: Trailing whitespace
+	875: Trailing whitespace
+	934: Trailing whitespace
+	1230: Trailing whitespace
+	1309: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/conf-1.8/asme2e.tex:
+	31: Trailing whitespace
+	48: Trailing whitespace
+	66: Trailing whitespace
+	73: Trailing whitespace
+	84: Trailing whitespace
+	128: Trailing whitespace
+	157: Trailing whitespace
+	159: Trailing whitespace
+	180: Trailing whitespace
+	209: Trailing whitespace
+	216: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/conf-1.8/asmems4.bst:
+	16-17: Trailing whitespace
+	376: Trailing whitespace
+	563: Trailing whitespace
+	585: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journal-1.1/FAQ:
+	3-7: Trailing whitespace
+	14: Trailing whitespace
+	22: Trailing whitespace
+	29-30: Trailing whitespace
+	38-39: Trailing whitespace
+	42: Trailing whitespace
+	50: Trailing whitespace
+	88: Trailing whitespace
+	97: Trailing whitespace
+	117: Trailing whitespace
+	122-125: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journal-1.1/README:
+	37: Trailing whitespace
+	41-42: Trailing whitespace
+	46: Trailing whitespace
+	51-60: Trailing whitespace
+	62: Trailing whitespace
+	64: Trailing whitespace
+	67: Trailing whitespace
+	70: Trailing whitespace
+	72: Trailing whitespace
+	85: Trailing whitespace
+	89: Trailing whitespace
+	92-94: Trailing whitespace
+	107-108: Trailing whitespace
+	110: Trailing whitespace
+	117: Trailing whitespace
+	119: Trailing whitespace
+	121-124: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journal-1.1/asme2e.bib:
+	3: Trailing whitespace
+	14: Trailing whitespace
+	17: Trailing whitespace
+	20: Trailing whitespace
+	32: Trailing whitespace
+	38: Trailing whitespace
+	53: Trailing whitespace
+	64: Trailing whitespace
+	70: Trailing whitespace
+	74: Trailing whitespace
+	84: Trailing whitespace
+	89: Trailing whitespace
+	96: Trailing whitespace
+	111: Trailing whitespace
+	133: Trailing whitespace
+	142: Trailing whitespace
+	154: Trailing whitespace
+	161: Trailing whitespace
+	172: Trailing whitespace
+	189: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journal-1.1/asme2ej.cls:
+	5: Trailing whitespace
+	10-11: Trailing whitespace
+	31: Trailing whitespace
+	35: Trailing whitespace
+	84: Trailing whitespace
+	99-100: Trailing whitespace
+	117: Trailing whitespace
+	349: Trailing whitespace
+	674: Trailing whitespace
+	683: Trailing whitespace
+	822: Trailing whitespace
+	890: Trailing whitespace
+	949: Trailing whitespace
+	1246: Trailing whitespace
+	1325: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journal-1.1/asme2ej.tex:
+	32: Trailing whitespace
+	36: Trailing whitespace
+	49: Trailing whitespace
+	67: Trailing whitespace
+	80: Trailing whitespace
+	85: Trailing whitespace
+	88-89: Trailing whitespace
+	104: Trailing whitespace
+	106: Trailing whitespace
+	108: Trailing whitespace
+	110: Trailing whitespace
+	122: Trailing whitespace
+	128: Trailing whitespace
+	140: Trailing whitespace
+	178: Trailing whitespace
+	180: Trailing whitespace
+	183: Trailing whitespace
+	190: Trailing whitespace
+	198: Trailing whitespace
+	201: Trailing whitespace
+	212: Trailing whitespace
+	228: Trailing whitespace
+	237: Trailing whitespace
+	243: Trailing whitespace
+	245: Trailing whitespace
+	248: Trailing whitespace
+	273: Trailing whitespace
+	320: Trailing whitespace
+	326: Trailing whitespace
+	328: Trailing whitespace
+	348: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journal-1.1/asmems4.bst:
+	16-17: Trailing whitespace
+	376: Trailing whitespace
+	563: Trailing whitespace
+	585: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journals-1.2/FAQ:
+	3-7: Trailing whitespace
+	14: Trailing whitespace
+	22: Trailing whitespace
+	29-30: Trailing whitespace
+	38-39: Trailing whitespace
+	42: Trailing whitespace
+	50: Trailing whitespace
+	88: Trailing whitespace
+	97: Trailing whitespace
+	117: Trailing whitespace
+	122-125: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journals-1.2/README:
+	11-24: Trailing whitespace
+	28-34: Trailing whitespace
+	104: Trailing whitespace
+	108-109: Trailing whitespace
+	113: Trailing whitespace
+	118-127: Trailing whitespace
+	129: Trailing whitespace
+	131: Trailing whitespace
+	134: Trailing whitespace
+	137: Trailing whitespace
+	139: Trailing whitespace
+	152: Trailing whitespace
+	156: Trailing whitespace
+	159-161: Trailing whitespace
+	174-175: Trailing whitespace
+	177: Trailing whitespace
+	184: Trailing whitespace
+	186: Trailing whitespace
+	188-191: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journals-1.2/asme2e.bib:
+	3: Trailing whitespace
+	14: Trailing whitespace
+	17: Trailing whitespace
+	20: Trailing whitespace
+	32: Trailing whitespace
+	38: Trailing whitespace
+	53: Trailing whitespace
+	64: Trailing whitespace
+	70: Trailing whitespace
+	74: Trailing whitespace
+	84: Trailing whitespace
+	89: Trailing whitespace
+	96: Trailing whitespace
+	111: Trailing whitespace
+	133: Trailing whitespace
+	142: Trailing whitespace
+	154: Trailing whitespace
+	161: Trailing whitespace
+	172: Trailing whitespace
+	189: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journals-1.2/asme2ej.cls:
+	5: Trailing whitespace
+	10-11: Trailing whitespace
+	31: Trailing whitespace
+	35: Trailing whitespace
+	84: Trailing whitespace
+	99-100: Trailing whitespace
+	117: Trailing whitespace
+	351: Trailing whitespace
+	677: Trailing whitespace
+	686: Trailing whitespace
+	825: Trailing whitespace
+	893: Trailing whitespace
+	952: Trailing whitespace
+	1249: Trailing whitespace
+	1328: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journals-1.2/asme2ejs.tex:
+	50: Trailing whitespace
+	55: Trailing whitespace
+	69: Trailing whitespace
+	87: Trailing whitespace
+	100: Trailing whitespace
+	104: Trailing whitespace
+	106: Trailing whitespace
+	108: Trailing whitespace
+	110-112: Trailing whitespace
+	114-116: Trailing whitespace
+	131: Trailing whitespace
+	133: Trailing whitespace
+	135: Trailing whitespace
+	137: Trailing whitespace
+	149: Trailing whitespace
+	155: Trailing whitespace
+	167: Trailing whitespace
+	205: Trailing whitespace
+	207: Trailing whitespace
+	210: Trailing whitespace
+	217: Trailing whitespace
+	225: Trailing whitespace
+	228: Trailing whitespace
+	239: Trailing whitespace
+	255: Trailing whitespace
+	265: Trailing whitespace
+	271: Trailing whitespace
+	273: Trailing whitespace
+	276: Trailing whitespace
+	301: Trailing whitespace
+	348: Trailing whitespace
+	354: Trailing whitespace
+	356: Trailing whitespace
+	376: Trailing whitespace
+beacon/.staging/latex/Academic Journals/asme/journals-1.2/asmems4.bst:
+	16-17: Trailing whitespace
+	376: Trailing whitespace
+	563: Trailing whitespace
+	585: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/elsarticle-num.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	15: Trailing whitespace
+	18: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/elsarticle-template.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/model1-num-names.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	1508: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/model1a-num-names.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	1500: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/model2-names.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	19: Trailing whitespace
+	75: Trailing whitespace
+	336: Trailing whitespace
+	1635: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/model3-num-names.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	1684: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/model4-names.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	1675: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/model5-names.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	1701: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/model6-num-names.bst:
+	3: Trailing whitespace
+	5: Trailing whitespace
+	8: Trailing whitespace
+	147: Trailing whitespace
+	1665: Trailing whitespace
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/mybibfile.bib:
+	Wrong character encoding ("UTF-8-SIG" instead of "utf-8")
+beacon/.staging/latex/Academic Journals/elsarticle-academic-journal/numcompress.sty:
+	4: Trailing whitespace
+	6-7: Trailing whitespace
+	16: Trailing whitespace
+	34: Trailing whitespace
+beacon/.staging/latex/Academic Journals/pnas/PNAS-template-main.tex:
+	Wrong line endings or no final newline
+	4: Trailing whitespace
+	13: Trailing whitespace
+	21: Trailing whitespace
+	33: Trailing whitespace
+	49: Trailing whitespace
+	51: Trailing whitespace
+	65: Trailing whitespace
+	77: Trailing whitespace
+	84: Trailing whitespace
+	102: Trailing whitespace
+	117: Trailing whitespace
+	123: Trailing whitespace
+	149: Trailing whitespace
+	164: Trailing whitespace
+beacon/.staging/latex/Academic Journals/pnas/pnas-new.bst:
+	Wrong line endings or no final newline
+	6-7: Trailing whitespace
+beacon/.staging/latex/Academic Journals/pnas/pnas-new.cls:
+	Wrong line endings or no final newline
+	4: Trailing whitespace
+	6-8: Trailing whitespace
+	21-22: Trailing whitespace
+	24: Trailing whitespace
+	60: Trailing whitespace
+	95: Trailing whitespace
+	173: Trailing whitespace
+	244: Trailing whitespace
+	256: Trailing whitespace
+	261: Trailing whitespace
+	287: Trailing whitespace
+	322: Trailing whitespace
+	330: Trailing whitespace
+	340: Trailing whitespace
+	367: Trailing whitespace
+beacon/.staging/latex/Academic Journals/pnas/pnasresearcharticle.sty:
+	Wrong line endings or no final newline
+	7: Trailing whitespace
+	23: Trailing whitespace
+beacon/.staging/latex/Academic Journals/pnas/widetext.sty:
+	Wrong line endings or no final newline
+	9: Trailing whitespace
+	11: Trailing whitespace
+	18: Trailing whitespace
+	27: Trailing whitespace
+	29: Trailing whitespace
+	32: Trailing whitespace
+beacon/.staging/latex/Academic Journals/public-library-of-science-plos/plos2015.bst:
+	2: Trailing whitespace
+	5-6: Trailing whitespace
+	8: Trailing whitespace
+	10: Trailing whitespace
+	34: Trailing whitespace
+	114: Trailing whitespace
+	185-186: Trailing whitespace
+	192: Trailing whitespace
+	229: Trailing whitespace
+	443: Trailing whitespace
+	465: Trailing whitespace
+	826: Trailing whitespace
+	1001: Trailing whitespace
+	1365: Trailing whitespace
+	1372: Trailing whitespace
+	1422-1423: Trailing whitespace
+	1425: Trailing whitespace
+	1598: Trailing whitespace
+beacon/.staging/latex/Academic Journals/public-library-of-science-plos/plos_latex_template.tex:
+	8-9: Trailing whitespace
+	13: Trailing whitespace
+	15-17: Trailing whitespace
+	22: Trailing whitespace
+	36-37: Trailing whitespace
+	61: Trailing whitespace
+	65: Trailing whitespace
+	69: Trailing whitespace
+	128: Trailing whitespace
+	134: Trailing whitespace
+	205: Trailing whitespace
+	217: Trailing whitespace
+	236-237: Trailing whitespace
+	291-292: Trailing whitespace
+	316: Trailing whitespace
+	362: Trailing whitespace
+	364: Trailing whitespace
+beacon/.staging/latex/Academic Journals/science-journal/Science.bst:
+	12: Trailing whitespace
+beacon/.staging/latex/Academic Journals/science-journal/scicite.sty:
+	147: Trailing whitespace
+	252: Trailing whitespace
+	308: Trailing whitespace
+	341-342: Trailing whitespace
+	347: Trailing whitespace
+	388: Trailing whitespace
+	421: Trailing whitespace
+	463-464: Trailing whitespace
+beacon/.staging/latex/Academic Journals/science-journal/scifile.tex:
+	7: Trailing whitespace
+	26: Trailing whitespace
+	41: Trailing whitespace
+	70: Trailing whitespace
+	78: Trailing whitespace
+	162: Trailing whitespace
+	187: Trailing whitespace
+	191: Trailing whitespace
+	204-207: Trailing whitespace
+	236: Trailing whitespace
+	278: Trailing whitespace
+	285: Trailing whitespace
+	306: Trailing whitespace
+	319-320: Trailing whitespace
+	322: Trailing whitespace
+beacon/.staging/latex/Assignments/cleese-assignment/luftballons.pl:
+	Wrong line endings or no final newline
+	1: Trailing whitespace
+	3: Trailing whitespace
+beacon/.staging/latex/Assignments/cleese-assignment/structure.tex:
+	14: Trailing whitespace
+	168: Trailing whitespace
+	170: Trailing whitespace
+	173: Trailing whitespace
+	175: Trailing whitespace
+beacon/.staging/latex/Assignments/cleese-assignment/student_template.tex:
+	14: Trailing whitespace
+beacon/.staging/latex/Assignments/cleese-assignment/teacher_template.tex:
+	14: Trailing whitespace
+beacon/.staging/latex/Assignments/fphw-assignment/fphw.cls:
+	4-5: Trailing whitespace
+	14: Trailing whitespace
+	70: Trailing whitespace
+	76-77: Trailing whitespace
+	93: Trailing whitespace
+	112: Trailing whitespace
+beacon/.staging/latex/Assignments/fphw-assignment/luftballons.pl:
+	Wrong line endings or no final newline
+	1: Trailing whitespace
+	3: Trailing whitespace
+beacon/.staging/latex/Assignments/fphw-assignment/main.tex:
+	10: Trailing whitespace
+	88: Trailing whitespace
+	90: Trailing whitespace
+	103: Trailing whitespace
+	113: Trailing whitespace
+	115: Trailing whitespace
+	119: Trailing whitespace
+	125: Trailing whitespace
+	135: Trailing whitespace
+	137: Trailing whitespace
+	152: Trailing whitespace
+	176: Trailing whitespace
+beacon/.staging/latex/Assignments/lachaise-assignment/main.tex:
+	15: Trailing whitespace
+	88: Trailing whitespace
+beacon/.staging/latex/Assignments/lachaise-assignment/structure.tex:
+	15: Trailing whitespace
+	70: Trailing whitespace
+beacon/.staging/latex/Assignments/wenneker-assignment/luftballons.pl:
+	Wrong line endings or no final newline
+	1: Trailing whitespace
+	3: Trailing whitespace
+beacon/.staging/latex/Assignments/wenneker-assignment/main.tex:
+	15: Trailing whitespace
+	30: Trailing whitespace
+	102: Trailing whitespace
+	106: Trailing whitespace
+	115: Trailing whitespace
+	121: Trailing whitespace
+	124: Trailing whitespace
+	126: Trailing whitespace
+	143: Trailing whitespace
+	145: Trailing whitespace
+	147-148: Trailing whitespace
+	150: Trailing whitespace
+	152: Trailing whitespace
+	160-161: Trailing whitespace
+beacon/.staging/latex/Assignments/wenneker-assignment/structure.tex:
+	15: Trailing whitespace
+beacon/.staging/latex/Books/ebook-book/ebook.tex:
+	Wrong line endings or no final newline
+	2: Trailing whitespace
+beacon/.staging/latex/Books/ebook-book/structure.tex:
+	Wrong line endings or no final newline
+	8: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/MANIFEST.md:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Books/kaobook/README.md:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Books/kaobook/chapters/figsntabs.tex:
+	11-16: Trailing whitespace
+	19-23: Trailing whitespace
+	32-34: Trailing whitespace
+	37: Trailing whitespace
+	76: Trailing whitespace
+	81-83: Trailing whitespace
+	94-100: Trailing whitespace
+	111: Trailing whitespace
+	116: Trailing whitespace
+	125-127: Trailing whitespace
+	132-133: Trailing whitespace
+	155-156: Trailing whitespace
+	174-177: Trailing whitespace
+	184-190: Trailing whitespace
+	212-217: Trailing whitespace
+	228: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/chapters/introduction.tex:
+	7-11: Trailing whitespace
+	14-17: Trailing whitespace
+	20-25: Trailing whitespace
+	28-38: Trailing whitespace
+	41-42: Trailing whitespace
+	48-53: Trailing whitespace
+	59-60: Trailing whitespace
+	62-63: Trailing whitespace
+	65-67: Trailing whitespace
+	69-73: Trailing whitespace
+	75-77: Trailing whitespace
+	79-81: Trailing whitespace
+	83-84: Trailing whitespace
+	86-89: Trailing whitespace
+	91-94: Trailing whitespace
+	100: Trailing whitespace
+	105-107: Trailing whitespace
+	113-118: Trailing whitespace
+	122-123: Trailing whitespace
+	125: Trailing whitespace
+	127-131: Trailing whitespace
+	133-134: Trailing whitespace
+	136-139: Trailing whitespace
+	141: Trailing whitespace
+	143-144: Trailing whitespace
+	148-149: Trailing whitespace
+	152-156: Trailing whitespace
+	161-171: Trailing whitespace
+	174: Trailing whitespace
+	187-189: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/chapters/layout.tex:
+	8-15: Trailing whitespace
+	18-21: Trailing whitespace
+	24-32: Trailing whitespace
+	35: Trailing whitespace
+	44-47: Trailing whitespace
+	49-53: Trailing whitespace
+	63: Trailing whitespace
+	68-74: Trailing whitespace
+	78: Trailing whitespace
+	83: Trailing whitespace
+	89-99: Trailing whitespace
+	102-106: Trailing whitespace
+	125-129: Trailing whitespace
+	132-136: Trailing whitespace
+	149: Trailing whitespace
+	174: Trailing whitespace
+	188-191: Trailing whitespace
+	194-197: Trailing whitespace
+	200-202: Trailing whitespace
+	205: Trailing whitespace
+	214-217: Trailing whitespace
+	233-234: Trailing whitespace
+	250: Trailing whitespace
+	255: Trailing whitespace
+	264: Trailing whitespace
+	273: Trailing whitespace
+	282-285: Trailing whitespace
+	290: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/chapters/mathematics.tex:
+	8-14: Trailing whitespace
+	19-21: Trailing whitespace
+	25-26: Trailing whitespace
+	30-31: Trailing whitespace
+	36-37: Trailing whitespace
+	41: Trailing whitespace
+	45-47: Trailing whitespace
+	51-53: Trailing whitespace
+	57-58: Trailing whitespace
+	67-69: Trailing whitespace
+	83-85: Trailing whitespace
+	90-92: Trailing whitespace
+	96-97: Trailing whitespace
+	101: Trailing whitespace
+	112-126: Trailing whitespace
+	130-132: Trailing whitespace
+	135-138: Trailing whitespace
+	145: Trailing whitespace
+	154-155: Trailing whitespace
+	165-169: Trailing whitespace
+	180-181: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/chapters/options.tex:
+	5-7: Trailing whitespace
+	12-16: Trailing whitespace
+	19-23: Trailing whitespace
+	28-31: Trailing whitespace
+	34-36: Trailing whitespace
+	40-44: Trailing whitespace
+	48-49: Trailing whitespace
+	54: Trailing whitespace
+	66-68: Trailing whitespace
+	81-83: Trailing whitespace
+	86-87: Trailing whitespace
+	92-102: Trailing whitespace
+	105-113: Trailing whitespace
+	115-123: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/chapters/preface.tex:
+	4-9: Trailing whitespace
+	13-15: Trailing whitespace
+	17-18: Trailing whitespace
+	23-27: Trailing whitespace
+	30: Trailing whitespace
+	32-33: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/chapters/references.tex:
+	9-15: Trailing whitespace
+	18-25: Trailing whitespace
+	41-42: Trailing whitespace
+	45-50: Trailing whitespace
+	59-63: Trailing whitespace
+	76-79: Trailing whitespace
+	100-101: Trailing whitespace
+	113-119: Trailing whitespace
+	122-126: Trailing whitespace
+	135: Trailing whitespace
+	139-142: Trailing whitespace
+	145-146: Trailing whitespace
+	155: Trailing whitespace
+	164-167: Trailing whitespace
+	170-173: Trailing whitespace
+	176-177: Trailing whitespace
+	184-188: Trailing whitespace
+	190-191: Trailing whitespace
+	214-218: Trailing whitespace
+	221-222: Trailing whitespace
+	225-229: Trailing whitespace
+	232-233: Trailing whitespace
+	236-240: Trailing whitespace
+	243-253: Trailing whitespace
+	255-256: Trailing whitespace
+	262-264: Trailing whitespace
+	272-273: Trailing whitespace
+	299-302: Trailing whitespace
+	306-309: Trailing whitespace
+	311-314: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/chapters/textnotes.tex:
+	4-7: Trailing whitespace
+	12-16: Trailing whitespace
+	23-25: Trailing whitespace
+	28-30: Trailing whitespace
+	37: Trailing whitespace
+	42-51: Trailing whitespace
+	59-61: Trailing whitespace
+	65-77: Trailing whitespace
+	82-89: Trailing whitespace
+	94-97: Trailing whitespace
+	100-102: Trailing whitespace
+	105-106: Trailing whitespace
+	114-119: Trailing whitespace
+	134-138: Trailing whitespace
+	159: Trailing whitespace
+	162: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/kao.sty:
+	63-66: Trailing whitespace
+	333: Trailing whitespace
+	863: Trailing whitespace
+	1045: Trailing whitespace
+	1302: Trailing whitespace
+	1348-1349: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/kaobiblio.sty:
+	19: Trailing whitespace
+	403: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/kaobook.cls:
+	45: Trailing whitespace
+	262: Trailing whitespace
+beacon/.staging/latex/Books/kaobook/main.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Books/kaobook/main.tex:
+	122: Trailing whitespace
+	124: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+	131: Trailing whitespace
+	134: Trailing whitespace
+	136: Trailing whitespace
+	138: Trailing whitespace
+	140: Trailing whitespace
+	270: Trailing whitespace
+	273: Trailing whitespace
+beacon/.staging/latex/Books/legrand-orange-book/LegrandOrangeBook.cls:
+	9: Trailing whitespace
+	220: Trailing whitespace
+	242: Trailing whitespace
+	264: Trailing whitespace
+	371: Trailing whitespace
+	539: Trailing whitespace
+	712: Trailing whitespace
+beacon/.staging/latex/Books/legrand-orange-book/indexstyle.ist:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Books/legrand-orange-book/main.tex:
+	18: Trailing whitespace
+	27: Trailing whitespace
+	43: Trailing whitespace
+	266: Trailing whitespace
+	294: Trailing whitespace
+	332: Trailing whitespace
+beacon/.staging/latex/Books/legrand-orange-book/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Books/tufte-book/book_1_template.tex:
+	Wrong line endings or no final newline
+	155: Trailing whitespace
+beacon/.staging/latex/Books/tufte-book/main.tex:
+	Wrong line endings or no final newline
+	65: Trailing whitespace
+	234: Trailing whitespace
+	470: Trailing whitespace
+	472: Trailing whitespace
+	662: Trailing whitespace
+	672: Trailing whitespace
+	674: Trailing whitespace
+	704: Trailing whitespace
+	706: Trailing whitespace
+	771: Trailing whitespace
+beacon/.staging/latex/Books/tufte-book/tufte-common.def:
+	621: Trailing whitespace
+	633: Trailing whitespace
+	800: Trailing whitespace
+	1075: Trailing whitespace
+	1561: Trailing whitespace
+	1566: Trailing whitespace
+	1569-1570: Trailing whitespace
+	1576: Trailing whitespace
+	1579-1580: Trailing whitespace
+beacon/.staging/latex/Business Cards/bezos-business-card/template.tex:
+	59: Trailing whitespace
+	61: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	71: Trailing whitespace
+	73: Trailing whitespace
+beacon/.staging/latex/Business Cards/goodman-business-card/CSGoodmanBusinessCard.cls:
+	81: Trailing whitespace
+	102: Trailing whitespace
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:
+	Wrong line endings or no final newline
+	20: Trailing whitespace
+beacon/.staging/latex/Business Reports/makoto-technical-report/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Business Reports/makoto-technical-report/template.tex:
+	172: Trailing whitespace
+	272: Trailing whitespace
+	440: Trailing whitespace
+	444: Trailing whitespace
+	446-448: Trailing whitespace
+	450: Trailing whitespace
+	452: Trailing whitespace
+	456: Trailing whitespace
+	458: Trailing whitespace
+beacon/.staging/latex/Business Reports/sullivan-business-report/CSSullivanBusinessReport.cls:
+	79: Trailing whitespace
+	240: Trailing whitespace
+beacon/.staging/latex/Business Reports/sullivan-business-report/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Business Reports/sullivan-business-report/template.tex:
+	55: Trailing whitespace
+	61: Trailing whitespace
+	63: Trailing whitespace
+	65: Trailing whitespace
+	67: Trailing whitespace
+	69: Trailing whitespace
+	71: Trailing whitespace
+	85: Trailing whitespace
+	89: Trailing whitespace
+	91-93: Trailing whitespace
+	95: Trailing whitespace
+	97: Trailing whitespace
+	101: Trailing whitespace
+	103: Trailing whitespace
+	105: Trailing whitespace
+	107: Trailing whitespace
+	109: Trailing whitespace
+	111: Trailing whitespace
+	215: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/AI & ML Engineer LaTeX Resume Template/resume.tex:
+	Wrong line endings or no final newline
+	59: Trailing whitespace
+	85: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/ATS friendly - LaTeX Resume Template/ATS-friendly-Resume.tex:
+	Wrong line endings or no final newline
+	90-91: Trailing whitespace
+	93-94: Trailing whitespace
+	96: Trailing whitespace
+	98: Trailing whitespace
+	102: Trailing whitespace
+	146: Trailing whitespace
+	157: Trailing whitespace
+	169: Trailing whitespace
+	181: Trailing whitespace
+	189: Trailing whitespace
+	215: Trailing whitespace
+	221: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Academic CV LaTeX Resume Template/main.tex:
+	Wrong line endings or no final newline
+	40: Trailing whitespace
+	97: Trailing whitespace
+	171: Trailing whitespace
+	179-180: Trailing whitespace
+	212: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/AltaCV/altacv.cls:
+	76: Trailing whitespace
+	162: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/AltaCV/legacy/p1sidebar.tex:
+	21: Trailing whitespace
+	41-42: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/AltaCV/nicethings_icons_readme.txt:
+	10: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/LICENCE:
+	19-20: Trailing whitespace
+	47: Trailing whitespace
+	51: Trailing whitespace
+	61: Trailing whitespace
+	82: Trailing whitespace
+	84: Trailing whitespace
+	91: Trailing whitespace
+	132-133: Trailing whitespace
+	143: Trailing whitespace
+	149: Trailing whitespace
+	159: Trailing whitespace
+	186: Trailing whitespace
+	191: Trailing whitespace
+	194: Trailing whitespace
+	263: Trailing whitespace
+	273: Trailing whitespace
+	276-277: Trailing whitespace
+	283: Trailing whitespace
+	366: Trailing whitespace
+	380: Trailing whitespace
+	410: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/CS : IT & SWE Latex Template/main.tex:
+	112: Trailing whitespace
+	129: Trailing whitespace
+	146: Trailing whitespace
+	155-156: Trailing whitespace
+	171: Trailing whitespace
+	200: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/CV Template for Phd application/main.tex:
+	108: Trailing whitespace
+	110: Trailing whitespace
+	137: Trailing whitespace
+	139: Trailing whitespace
+	141: Trailing whitespace
+	143: Trailing whitespace
+	160: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/MacFonts/deedy-resume.cls:
+	26-27: Trailing whitespace
+	41: Trailing whitespace
+	47: Trailing whitespace
+	56: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/MacFonts/deedy_resume.xtx:
+	Not all lines have the correct end of line character
+	18: Trailing whitespace
+	20: Trailing whitespace
+	27: Trailing whitespace
+	50: Trailing whitespace
+	53: Trailing whitespace
+	79: Trailing whitespace
+	85: Trailing whitespace
+	109: Trailing whitespace
+	150: Trailing whitespace
+	163: Trailing whitespace
+	165: Trailing whitespace
+	182: Trailing whitespace
+	209: Trailing whitespace
+	215: Trailing whitespace
+	222: Trailing whitespace
+	237: Trailing whitespace
+	243: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/OpenFonts/deedy-resume-openfont.cls:
+	20-22: Trailing whitespace
+	37: Trailing whitespace
+	45: Trailing whitespace
+	55: Trailing whitespace
+	57: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/OpenFonts/deedy_resume-openfont.xtx:
+	Not all lines have the correct end of line character
+	18: Trailing whitespace
+	20: Trailing whitespace
+	27: Trailing whitespace
+	50: Trailing whitespace
+	53: Trailing whitespace
+	78: Trailing whitespace
+	84: Trailing whitespace
+	108: Trailing whitespace
+	149: Trailing whitespace
+	162: Trailing whitespace
+	164: Trailing whitespace
+	181: Trailing whitespace
+	208: Trailing whitespace
+	214: Trailing whitespace
+	221: Trailing whitespace
+	236: Trailing whitespace
+	242: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Faang Resume Template/resume.cls:
+	7: Trailing whitespace
+	33: Trailing whitespace
+	48: Trailing whitespace
+	137: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Faang Resume Template/resume_faangpath.tex:
+	4: Trailing whitespace
+	8: Trailing whitespace
+	41: Trailing whitespace
+	58: Trailing whitespace
+	61: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	70: Trailing whitespace
+	73: Trailing whitespace
+	84: Trailing whitespace
+	87: Trailing whitespace
+	89: Trailing whitespace
+	97: Trailing whitespace
+	99: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Harvard Resume Template/main.tex:
+	6: Trailing whitespace
+	19: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Jakes Resume Template/main.tex:
+	116: Trailing whitespace
+	146: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Modern CV - Latex Template/template.tex:
+	33: Trailing whitespace
+	140: Trailing whitespace
+	142: Trailing whitespace
+	181: Trailing whitespace
+	186: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/RenderCV Latex Resume Template/main.tex:
+	Wrong line endings or no final newline
+	11: Trailing whitespace
+	198: Trailing whitespace
+	210: Trailing whitespace
+	233: Trailing whitespace
+	249: Trailing whitespace
+	254: Trailing whitespace
+	290: Trailing whitespace
+	295: Trailing whitespace
+	304: Trailing whitespace
+	309: Trailing whitespace
+	315: Trailing whitespace
+	320: Trailing whitespace
+	368: Trailing whitespace
+	373: Trailing whitespace
+	385: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Resume Templates for Freshers/main.tex:
+	Wrong line endings or no final newline
+	71-74: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Rover Resume Latex Template/office-rover.tex:
+	Wrong line endings or no final newline
+	70: Trailing whitespace
+	111: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/SWE Resume Template/custom-commands.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/SWE Resume Template/resume.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/Software engineer - Developer/main.tex:
+	126: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/Technical Resume Template/main.tex:
+	Wrong line endings or no final newline
+	30: Trailing whitespace
+	65-67: Trailing whitespace
+	73: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/awesome-cv.cls:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cover_letter.tex:
+	Wrong line endings or no final newline
+	32: Trailing whitespace
+	85: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/committees.tex:
+	Wrong line endings or no final newline
+	20: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/education.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/experience.tex:
+	Wrong line endings or no final newline
+	28: Trailing whitespace
+	53: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/extracurricular.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/honors.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/presentation.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/skills.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/cv-sections/writing.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/fontawesome.sty:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/awesome-resume-cv/resume_cv.tex:
+	Wrong line endings or no final newline
+	10: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/cies-cv/cv_11.tex:
+	Wrong line endings or no final newline
+	29: Trailing whitespace
+	56: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/cies-cv/structure.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/classicthesis-styled-cv/cv_8.tex:
+	Wrong line endings or no final newline
+	23: Trailing whitespace
+	104: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/LICENSE.txt:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/TLCresume.sty:
+	31: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/_header.tex:
+	10: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/resume.tex:
+	7: Trailing whitespace
+	22: Trailing whitespace
+	24: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/sections/activities.tex:
+	2: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/sections/experience.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/sections/skills.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/deedy-resume-cv/cv_12.tex:
+	Wrong line endings or no final newline
+	22: Trailing whitespace
+	47: Trailing whitespace
+	78: Trailing whitespace
+	128: Trailing whitespace
+	220: Trailing whitespace
+	239: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/deedy-resume-cv/deedy-resume.cls:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/developer-cv/LICENSE.md:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/developer-cv/developercv.cls:
+	85: Trailing whitespace
+	100: Trailing whitespace
+	108: Trailing whitespace
+	113: Trailing whitespace
+	116: Trailing whitespace
+	119: Trailing whitespace
+	122: Trailing whitespace
+	124: Trailing whitespace
+	146: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/developer-cv/main.tex:
+	35: Trailing whitespace
+	39: Trailing whitespace
+	41: Trailing whitespace
+	43: Trailing whitespace
+	49: Trailing whitespace
+	54: Trailing whitespace
+	59: Trailing whitespace
+	77: Trailing whitespace
+	83: Trailing whitespace
+	155: Trailing whitespace
+	163: Trailing whitespace
+	165: Trailing whitespace
+	171: Trailing whitespace
+	173: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/EBGaramond-License:
+	21: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Freebooterscript-license.txt:
+	Wrong line endings or no final newline
+	20: Trailing whitespace
+	27-30: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/freeman-cv/FreemanCV.cls:
+	15: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/freeman-cv/template.tex:
+	21: Trailing whitespace
+	32: Trailing whitespace
+	50: Trailing whitespace
+	52: Trailing whitespace
+	54: Trailing whitespace
+	56: Trailing whitespace
+	137: Trailing whitespace
+	139: Trailing whitespace
+	146: Trailing whitespace
+	148: Trailing whitespace
+	150: Trailing whitespace
+	152: Trailing whitespace
+	159: Trailing whitespace
+	161: Trailing whitespace
+	193: Trailing whitespace
+	211: Trailing whitespace
+	218: Trailing whitespace
+	220: Trailing whitespace
+	227: Trailing whitespace
+	229: Trailing whitespace
+	236: Trailing whitespace
+	256: Trailing whitespace
+	258: Trailing whitespace
+	261: Trailing whitespace
+	263: Trailing whitespace
+	266: Trailing whitespace
+	268: Trailing whitespace
+	275: Trailing whitespace
+	286: Trailing whitespace
+	288: Trailing whitespace
+	290: Trailing whitespace
+	292: Trailing whitespace
+	296: Trailing whitespace
+	298: Trailing whitespace
+	300: Trailing whitespace
+	302: Trailing whitespace
+	320: Trailing whitespace
+	322: Trailing whitespace
+	325: Trailing whitespace
+	327: Trailing whitespace
+	330: Trailing whitespace
+	332: Trailing whitespace
+	386: Trailing whitespace
+	388: Trailing whitespace
+	390: Trailing whitespace
+	392: Trailing whitespace
+	394: Trailing whitespace
+	396: Trailing whitespace
+	399: Trailing whitespace
+	401: Trailing whitespace
+	403: Trailing whitespace
+	405: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/long-professional-cv/cv_1.tex:
+	Wrong line endings or no final newline
+	56: Trailing whitespace
+	62: Trailing whitespace
+	66-68: Trailing whitespace
+	70-72: Trailing whitespace
+	75: Trailing whitespace
+	79: Trailing whitespace
+	86: Trailing whitespace
+	93-96: Trailing whitespace
+	100: Trailing whitespace
+	102-104: Trailing whitespace
+	106-108: Trailing whitespace
+	110: Trailing whitespace
+	112: Trailing whitespace
+	117: Trailing whitespace
+	119-121: Trailing whitespace
+	136: Trailing whitespace
+	146: Trailing whitespace
+	150: Trailing whitespace
+	162: Trailing whitespace
+	168-169: Trailing whitespace
+	171: Trailing whitespace
+	182: Trailing whitespace
+	189: Trailing whitespace
+	200: Trailing whitespace
+	206: Trailing whitespace
+	210: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/long-professional-cv/res.cls:
+	38: Trailing whitespace
+	44: Trailing whitespace
+	79: Trailing whitespace
+	85: Trailing whitespace
+	117: Trailing whitespace
+	261: Trailing whitespace
+	317: Trailing whitespace
+	362: Trailing whitespace
+	475-476: Trailing whitespace
+	508: Trailing whitespace
+	567: Trailing whitespace
+	593: Trailing whitespace
+	788: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/medium-length-graduate-cv/cv_2.tex:
+	Wrong line endings or no final newline
+	37: Trailing whitespace
+	39: Trailing whitespace
+	51-52: Trailing whitespace
+	54: Trailing whitespace
+	65-66: Trailing whitespace
+	71: Trailing whitespace
+	73: Trailing whitespace
+	75-76: Trailing whitespace
+	80: Trailing whitespace
+	84: Trailing whitespace
+	87-88: Trailing whitespace
+	90: Trailing whitespace
+	92-95: Trailing whitespace
+	100-101: Trailing whitespace
+	105: Trailing whitespace
+	110: Trailing whitespace
+	116: Trailing whitespace
+	123: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/medium-length-graduate-cv/res.cls:
+	38: Trailing whitespace
+	44: Trailing whitespace
+	79: Trailing whitespace
+	85: Trailing whitespace
+	117: Trailing whitespace
+	261: Trailing whitespace
+	317: Trailing whitespace
+	362: Trailing whitespace
+	475-476: Trailing whitespace
+	508: Trailing whitespace
+	567: Trailing whitespace
+	593: Trailing whitespace
+	788: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/medium-length-professional-cv/template.tex:
+	53-54: Trailing whitespace
+	60: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/modern-deedy/resume-openfont.cls:
+	14: Trailing whitespace
+	28: Trailing whitespace
+	59: Trailing whitespace
+	135: Trailing whitespace
+	148-149: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/modern-deedy/resume.tex:
+	Wrong line endings or no final newline
+	28: Trailing whitespace
+	45: Trailing whitespace
+	48: Trailing whitespace
+	51: Trailing whitespace
+	60: Trailing whitespace
+	62: Trailing whitespace
+	113: Trailing whitespace
+	130: Trailing whitespace
+	136: Trailing whitespace
+	150: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/moderncv-cv-and-cover-letter/cv_7.tex:
+	Wrong line endings or no final newline
+	17-18: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/moderncv-cv-and-cover-letter/moderncv.cls:
+	261: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/moderncv-cv-and-cover-letter/moderncvstylecasual.sty:
+	120: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/moderncv-cv-and-cover-letter/moderncvstyleclassic.sty:
+	120: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/moderncv-cv-and-cover-letter/moderncvstyleoldstyle.sty:
+	162: Trailing whitespace
+	305: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/plasmati-cv/template.tex:
+	67: Trailing whitespace
+	74: Trailing whitespace
+	96: Trailing whitespace
+	148: Trailing whitespace
+	191: Trailing whitespace
+	197-199: Trailing whitespace
+	216: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/stylish-cv/template.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/CVs and Resumes/twenty-seconds-resumecv/template.tex:
+	10: Trailing whitespace
+	161: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/twenty-seconds-resumecv/twentysecondcv.cls:
+	83: Trailing whitespace
+	96: Trailing whitespace
+	99: Trailing whitespace
+	118: Trailing whitespace
+	120: Trailing whitespace
+	150: Trailing whitespace
+	166: Trailing whitespace
+	168: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/wenneker-resume-cv/cv_15.tex:
+	10: Trailing whitespace
+	27: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/wenneker-resume-cv/structure.tex:
+	10: Trailing whitespace
+	48: Trailing whitespace
+	51: Trailing whitespace
+	58: Trailing whitespace
+	83: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/wilson-resume-cv/cv_13.tex:
+	Wrong line endings or no final newline
+	43: Trailing whitespace
+	177: Trailing whitespace
+	186: Trailing whitespace
+beacon/.staging/latex/CVs and Resumes/wilson-resume-cv/structure.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Calendars/conference-event-timetable/template.tex:
+	67: Trailing whitespace
+	73: Trailing whitespace
+	97: Trailing whitespace
+	147: Trailing whitespace
+	172: Trailing whitespace
+beacon/.staging/latex/Calendars/weekly-timetable/template.tex:
+	72: Trailing whitespace
+	87: Trailing whitespace
+	102: Trailing whitespace
+	117: Trailing whitespace
+	132: Trailing whitespace
+beacon/.staging/latex/Community/TeXtured/figures/Inkscape/parallel-plate-capacitor.pdf_tex:
+	23: Trailing whitespace
+beacon/.staging/latex/Community/TeXtured/preamble/layout/titles.tex:
+	12: Trailing whitespace
+beacon/.staging/latex/Community/TeXtured/preamble/references/biblatex.tex:
+	47: Trailing whitespace
+beacon/.staging/latex/Conference Posters/a0poster-landscape-poster/a0poster.cls:
+	2: Trailing whitespace
+	4: Trailing whitespace
+	7: Trailing whitespace
+	9: Trailing whitespace
+	15: Trailing whitespace
+	153: Trailing whitespace
+	203: Trailing whitespace
+beacon/.staging/latex/Conference Posters/a0poster-landscape-poster/a0size.sty:
+	1: Trailing whitespace
+	3: Trailing whitespace
+	6: Trailing whitespace
+	36: Trailing whitespace
+	44: Trailing whitespace
+	57: Trailing whitespace
+	105: Trailing whitespace
+	110-111: Trailing whitespace
+	117: Trailing whitespace
+	122: Trailing whitespace
+	150: Trailing whitespace
+	211: Trailing whitespace
+	241: Trailing whitespace
+beacon/.staging/latex/Conference Posters/a0poster-landscape-poster/conference_poster_5.tex:
+	Wrong line endings or no final newline
+	8: Trailing whitespace
+	42: Trailing whitespace
+	134: Trailing whitespace
+	142-144: Trailing whitespace
+	149: Trailing whitespace
+	156: Trailing whitespace
+	161: Trailing whitespace
+beacon/.staging/latex/Conference Posters/a0poster-landscape-poster/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Conference Posters/a0poster-portrait-poster/a0poster.cls:
+	2: Trailing whitespace
+	4: Trailing whitespace
+	7: Trailing whitespace
+	9: Trailing whitespace
+	15: Trailing whitespace
+	153: Trailing whitespace
+	203: Trailing whitespace
+beacon/.staging/latex/Conference Posters/a0poster-portrait-poster/a0size.sty:
+	1: Trailing whitespace
+	3: Trailing whitespace
+	6: Trailing whitespace
+	36: Trailing whitespace
+	44: Trailing whitespace
+	57: Trailing whitespace
+	105: Trailing whitespace
+	110-111: Trailing whitespace
+	117: Trailing whitespace
+	122: Trailing whitespace
+	150: Trailing whitespace
+	211: Trailing whitespace
+	241: Trailing whitespace
+beacon/.staging/latex/Conference Posters/a0poster-portrait-poster/conference_poster_6.tex:
+	Wrong line endings or no final newline
+	8: Trailing whitespace
+	42: Trailing whitespace
+	123: Trailing whitespace
+	131-133: Trailing whitespace
+	138: Trailing whitespace
+	145: Trailing whitespace
+	150: Trailing whitespace
+beacon/.staging/latex/Conference Posters/a0poster-portrait-poster/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Conference Posters/baposter-landscape-poster/baposter.cls:
+	14-15: Trailing whitespace
+	18: Trailing whitespace
+	283: Trailing whitespace
+beacon/.staging/latex/Conference Posters/baposter-landscape-poster/conference_poster_4.tex:
+	Wrong line endings or no final newline
+	71: Trailing whitespace
+	85: Trailing whitespace
+	92: Trailing whitespace
+beacon/.staging/latex/Conference Posters/baposter-landscape-poster/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Conference Posters/baposter-portrait-poster/baposter.cls:
+	14-15: Trailing whitespace
+	18: Trailing whitespace
+	283: Trailing whitespace
+beacon/.staging/latex/Conference Posters/baposter-portrait-poster/conference_poster_3.tex:
+	Wrong line endings or no final newline
+	97: Trailing whitespace
+	106: Trailing whitespace
+	136: Trailing whitespace
+	144: Trailing whitespace
+	168: Trailing whitespace
+beacon/.staging/latex/Conference Posters/baposter-portrait-poster/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Conference Posters/dreuw-deselaers-poster/beamerthemeI6pd2.sty:
+	75: Trailing whitespace
+	111: Trailing whitespace
+beacon/.staging/latex/Conference Posters/dreuw-deselaers-poster/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Conference Posters/dreuw-deselaers-poster/template.tex:
+	91: Trailing whitespace
+	94: Trailing whitespace
+	96: Trailing whitespace
+	115: Trailing whitespace
+	117: Trailing whitespace
+	129: Trailing whitespace
+	139: Trailing whitespace
+	142: Trailing whitespace
+	145: Trailing whitespace
+	159: Trailing whitespace
+	172: Trailing whitespace
+	183: Trailing whitespace
+	196: Trailing whitespace
+	198: Trailing whitespace
+	200: Trailing whitespace
+	215: Trailing whitespace
+	217: Trailing whitespace
+	239: Trailing whitespace
+beacon/.staging/latex/Conference Posters/jacobs-landscape-poster/beamerposter.sty:
+	1-2: Trailing whitespace
+	26: Trailing whitespace
+	79: Trailing whitespace
+	93: Trailing whitespace
+	152: Trailing whitespace
+	154: Trailing whitespace
+	158: Trailing whitespace
+beacon/.staging/latex/Conference Posters/jacobs-landscape-poster/beamerthemeconfposter.sty:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Conference Posters/jacobs-landscape-poster/main.tex:
+	9: Trailing whitespace
+	63: Trailing whitespace
+	100: Trailing whitespace
+	193: Trailing whitespace
+	208: Trailing whitespace
+	292: Trailing whitespace
+beacon/.staging/latex/Conference Posters/jacobs-landscape-poster/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/EBGaramond-License:
+	21: Trailing whitespace
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Freebooterscript-license.txt:
+	Wrong line endings or no final newline
+	20: Trailing whitespace
+	27-30: Trailing whitespace
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/FreemanCV.cls:
+	15: Trailing whitespace
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/template.tex:
+	20: Trailing whitespace
+	31: Trailing whitespace
+	52: Trailing whitespace
+	54: Trailing whitespace
+	56: Trailing whitespace
+	58: Trailing whitespace
+beacon/.staging/latex/Cover Letters/plain-cover-letter/template.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Essays/diaz-essay/diazessay.cls:
+	90: Trailing whitespace
+	92: Trailing whitespace
+	95: Trailing whitespace
+beacon/.staging/latex/Essays/diaz-essay/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Essays/tufte-essay/tufte-common.def:
+	653: Trailing whitespace
+	665: Trailing whitespace
+	849: Trailing whitespace
+	1153: Trailing whitespace
+	1653: Trailing whitespace
+	1656-1657: Trailing whitespace
+	1663: Trailing whitespace
+	1666-1667: Trailing whitespace
+beacon/.staging/latex/Essays/tufte-essay/tufte.bst:
+	10: Trailing whitespace
+beacon/.staging/latex/Formal Letters/elmueller-formal-letter/formal_letter_2.tex:
+	Wrong line endings or no final newline
+	10: Trailing whitespace
+	50: Trailing whitespace
+	56: Trailing whitespace
+	79: Trailing whitespace
+beacon/.staging/latex/Formal Letters/letter-of-notice/formal_letter_3.tex:
+	Wrong line endings or no final newline
+	10: Trailing whitespace
+beacon/.staging/latex/Formal Letters/thin-formal-letter/formal_letter_1.tex:
+	12: Trailing whitespace
+	89: Trailing whitespace
+beacon/.staging/latex/Invoices/minimal-invoice/CSMinimalInvoice.cls:
+	109: Trailing whitespace
+	111: Trailing whitespace
+	113: Trailing whitespace
+	115: Trailing whitespace
+	190: Trailing whitespace
+	199: Trailing whitespace
+	209: Trailing whitespace
+	211: Trailing whitespace
+	213: Trailing whitespace
+beacon/.staging/latex/Invoices/minimal-invoice/template.tex:
+	87: Trailing whitespace
+	89: Trailing whitespace
+	99: Trailing whitespace
+	148: Trailing whitespace
+	150: Trailing whitespace
+	162: Trailing whitespace
+	164: Trailing whitespace
+	175: Trailing whitespace
+	177: Trailing whitespace
+beacon/.staging/latex/Invoices/wile-e-invoice/main.tex:
+	64: Trailing whitespace
+beacon/.staging/latex/Invoices/wile-e-invoice/structure.tex:
+	26-28: Trailing whitespace
+	126: Trailing whitespace
+	155: Trailing whitespace
+	187: Trailing whitespace
+	203: Trailing whitespace
+	205: Trailing whitespace
+	209: Trailing whitespace
+	212: Trailing whitespace
+	215: Trailing whitespace
+	217: Trailing whitespace
+	236: Trailing whitespace
+	238: Trailing whitespace
+	243: Trailing whitespace
+beacon/.staging/latex/Laboratory Books/compact-laboratory-book/lab_book_2.tex:
+	Wrong line endings or no final newline
+	22: Trailing whitespace
+	25: Trailing whitespace
+	28: Trailing whitespace
+	32-39: Trailing whitespace
+	42: Trailing whitespace
+	49: Trailing whitespace
+	57: Trailing whitespace
+	165: Trailing whitespace
+	264: Trailing whitespace
+	299: Trailing whitespace
+	301: Trailing whitespace
+beacon/.staging/latex/Laboratory Books/compact-laboratory-book/labbook.cls:
+	8: Trailing whitespace
+	10: Trailing whitespace
+beacon/.staging/latex/Laboratory Books/daily-laboratory-book/lab_book_1.tex:
+	Wrong line endings or no final newline
+	18: Trailing whitespace
+	21: Trailing whitespace
+	24-25: Trailing whitespace
+	28-34: Trailing whitespace
+	37: Trailing whitespace
+	48: Trailing whitespace
+	55: Trailing whitespace
+beacon/.staging/latex/Laboratory Books/daily-laboratory-book/labbook.cls:
+	8: Trailing whitespace
+	10: Trailing whitespace
+beacon/.staging/latex/Laboratory Reports/university-school-laboratory-report/CSUniSchoolLabReport.cls:
+	11: Trailing whitespace
+	48: Trailing whitespace
+beacon/.staging/latex/Laboratory Reports/university-school-laboratory-report/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Laboratory Reports/university-school-laboratory-report/template.tex:
+	Wrong line endings or no final newline
+	83-85: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/article-notes/article_notes.tex:
+	Wrong line endings or no final newline
+	101: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/article-notes/sample.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/canadian-forces-memo/CF_memo.tex:
+	20: Trailing whitespace
+	130: Trailing whitespace
+	196: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/cheatsheet/LICENSE:
+	1: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/cheatsheet/cheatsheet.tex:
+	Wrong line endings or no final newline
+	37-40: Trailing whitespace
+	60: Trailing whitespace
+	81: Trailing whitespace
+	91-92: Trailing whitespace
+	94: Trailing whitespace
+	108: Trailing whitespace
+	126: Trailing whitespace
+	150: Trailing whitespace
+	153-154: Trailing whitespace
+	175: Trailing whitespace
+	212: Trailing whitespace
+	214: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/chemical-equations/chemical_equations.tex:
+	Wrong line endings or no final newline
+	16: Trailing whitespace
+	29: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/code-snippet/Scripts/example.pl:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/code-snippet/main.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/conference-booklet/conferencebooklet.cls:
+	10: Trailing whitespace
+	175: Trailing whitespace
+	177: Trailing whitespace
+	179: Trailing whitespace
+	181: Trailing whitespace
+	191: Trailing whitespace
+	194: Trailing whitespace
+	216: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/conference-booklet/main.tex:
+	10: Trailing whitespace
+	48: Trailing whitespace
+	50: Trailing whitespace
+	102: Trailing whitespace
+	125: Trailing whitespace
+	145: Trailing whitespace
+	178: Trailing whitespace
+	205: Trailing whitespace
+	224: Trailing whitespace
+	235: Trailing whitespace
+	238: Trailing whitespace
+	294: Trailing whitespace
+	302: Trailing whitespace
+	306: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/contract/contract.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/contract/structure.tex:
+	Wrong line endings or no final newline
+	8: Trailing whitespace
+	37: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/custom-class/example.cls:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/custom-class/template.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/dictionary/dictionary.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/drake-certificate/CSDrakeCertificate.cls:
+	82: Trailing whitespace
+	86: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/drake-certificate/template.tex:
+	54: Trailing whitespace
+	87: Trailing whitespace
+	89: Trailing whitespace
+	99: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/engineering-calculation-paper/EngCalcPaper.tex:
+	Wrong line endings or no final newline
+	47: Trailing whitespace
+	71: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/frequently-asked-questions/faq.tex:
+	Wrong line endings or no final newline
+	141: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/memo/memo.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/memo/texMemo.cls:
+	Wrong line endings or no final newline
+	4: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/minimal-memo/CSMinimalMemo.cls:
+	112: Trailing whitespace
+	114: Trailing whitespace
+	116: Trailing whitespace
+	118: Trailing whitespace
+	120: Trailing whitespace
+	127: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.bib:
+	23: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.tex:
+	Wrong line endings or no final newline
+	64: Trailing whitespace
+	118: Trailing whitespace
+	248: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/nih-grant-proposal/nihunsrt.bst:
+	12: Trailing whitespace
+	594: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/poems/poems.tex:
+	Wrong line endings or no final newline
+	Not all lines have the correct end of line character
+	20: Trailing whitespace
+	282: Trailing whitespace
+	289: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/press-release/fancyhdr.sty:
+	3: Trailing whitespace
+	30: Trailing whitespace
+	51: Trailing whitespace
+	105: Trailing whitespace
+	228: Trailing whitespace
+	341: Trailing whitespace
+	400: Trailing whitespace
+	474: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/press-release/press_release.tex:
+	Wrong line endings or no final newline
+	Not all lines have the correct end of line character
+beacon/.staging/latex/Miscellaneous/press-release/prsrls.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/professional-table/table.tex:
+	Wrong line endings or no final newline
+	10: Trailing whitespace
+	16: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/ryo-menu/CSRyoMenu.cls:
+	103: Trailing whitespace
+	119: Trailing whitespace
+	121: Trailing whitespace
+	123: Trailing whitespace
+	125: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Newsletters/professional-newsletter/newsletter_2.tex:
+	Wrong line endings or no final newline
+	9: Trailing whitespace
+	60: Trailing whitespace
+	92: Trailing whitespace
+	108: Trailing whitespace
+	129: Trailing whitespace
+	136: Trailing whitespace
+	153: Trailing whitespace
+	157: Trailing whitespace
+	163: Trailing whitespace
+	165: Trailing whitespace
+	183: Trailing whitespace
+	187-188: Trailing whitespace
+	255: Trailing whitespace
+	264: Trailing whitespace
+beacon/.staging/latex/Newsletters/professional-newsletter/structure.tex:
+	Wrong line endings or no final newline
+	8: Trailing whitespace
+beacon/.staging/latex/Newsletters/short-three-column-newsletter/newsletter_1.tex:
+	Wrong line endings or no final newline
+	7: Trailing whitespace
+	10: Trailing whitespace
+	83: Trailing whitespace
+	97: Trailing whitespace
+	126: Trailing whitespace
+	152: Trailing whitespace
+	239: Trailing whitespace
+beacon/.staging/latex/Presentations/beamer-presentation/template.tex:
+	Wrong line endings or no final newline
+	175: Trailing whitespace
+	192: Trailing whitespace
+	194: Trailing whitespace
+	196: Trailing whitespace
+	202: Trailing whitespace
+	204: Trailing whitespace
+	213: Trailing whitespace
+	223: Trailing whitespace
+	225: Trailing whitespace
+	228: Trailing whitespace
+	238: Trailing whitespace
+	242: Trailing whitespace
+	246: Trailing whitespace
+	250: Trailing whitespace
+	263: Trailing whitespace
+	288: Trailing whitespace
+	309: Trailing whitespace
+	322: Trailing whitespace
+	326: Trailing whitespace
+	328: Trailing whitespace
+	336: Trailing whitespace
+	338: Trailing whitespace
+	346: Trailing whitespace
+	350: Trailing whitespace
+	354: Trailing whitespace
+	374: Trailing whitespace
+	398: Trailing whitespace
+	400: Trailing whitespace
+	402: Trailing whitespace
+	410: Trailing whitespace
+	413: Trailing whitespace
+	418: Trailing whitespace
+	432: Trailing whitespace
+	446: Trailing whitespace
+	464: Trailing whitespace
+	466: Trailing whitespace
+	473: Trailing whitespace
+beacon/.staging/latex/Presentations/fancyslides-presentation/fancyslides.cls:
+	Wrong line endings or no final newline
+	122: Trailing whitespace
+	124: Trailing whitespace
+	162: Trailing whitespace
+beacon/.staging/latex/Presentations/fancyslides-presentation/presentation_3.tex:
+	Wrong line endings or no final newline
+	29: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamercolorthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerfontthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerinnerthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+	41: Trailing whitespace
+	49: Trailing whitespace
+	55: Trailing whitespace
+	62: Trailing whitespace
+	67: Trailing whitespace
+	73: Trailing whitespace
+	78: Trailing whitespace
+	80: Trailing whitespace
+	92: Trailing whitespace
+	99: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerouterthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+	71: Trailing whitespace
+	74: Trailing whitespace
+	77: Trailing whitespace
+	85: Trailing whitespace
+	111: Trailing whitespace
+	150: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/beamerthemefocus.sty:
+	10: Trailing whitespace
+	15: Trailing whitespace
+	40: Trailing whitespace
+	43: Trailing whitespace
+beacon/.staging/latex/Presentations/focus-presentation/template.tex:
+	10: Trailing whitespace
+	137: Trailing whitespace
+	158: Trailing whitespace
+	170: Trailing whitespace
+beacon/.staging/latex/Recipes/jacopo-recipe/CSJacopoRecipe.cls:
+	104: Trailing whitespace
+	108: Trailing whitespace
+	111: Trailing whitespace
+	113: Trailing whitespace
+	115: Trailing whitespace
+	117: Trailing whitespace
+	122: Trailing whitespace
+	124: Trailing whitespace
+	131: Trailing whitespace
+	133: Trailing whitespace
+	135: Trailing whitespace
+	139: Trailing whitespace
+	162: Trailing whitespace
+	176: Trailing whitespace
+	179: Trailing whitespace
+beacon/.staging/latex/Recipes/morgana-recipe/CSMorganaRecipe.cls:
+	97: Trailing whitespace
+	100: Trailing whitespace
+	103: Trailing whitespace
+	106: Trailing whitespace
+	108: Trailing whitespace
+	112: Trailing whitespace
+	123: Trailing whitespace
+	125: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+	142: Trailing whitespace
+	144: Trailing whitespace
+	146: Trailing whitespace
+beacon/.staging/latex/Recipes/morgana-recipe/template.tex:
+	60: Trailing whitespace
+	86: Trailing whitespace
+	88: Trailing whitespace
+beacon/.staging/latex/Signs/arrow-sign/template.tex:
+	33-35: Trailing whitespace
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:
+	22: Trailing whitespace
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter01.tex:
+	Wrong line endings or no final newline
+	5: Trailing whitespace
+	24: Trailing whitespace
+	68: Trailing whitespace
+	86: Trailing whitespace
+	91: Trailing whitespace
+	104: Trailing whitespace
+	107: Trailing whitespace
+	121-123: Trailing whitespace
+	126: Trailing whitespace
+	140: Trailing whitespace
+	177: Trailing whitespace
+	184: Trailing whitespace
+	187: Trailing whitespace
+	205: Trailing whitespace
+	208: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter02.tex:
+	Wrong line endings or no final newline
+	5: Trailing whitespace
+	79: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter03.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter04.tex:
+	Wrong line endings or no final newline
+	5: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter0A.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter0B.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-article.tex:
+	Wrong line endings or no final newline
+	12: Trailing whitespace
+	14: Trailing whitespace
+	18: Trailing whitespace
+	20: Trailing whitespace
+	26: Trailing whitespace
+	29: Trailing whitespace
+	33: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-book-xelatex.tex:
+	Wrong line endings or no final newline
+	3: Trailing whitespace
+	14-15: Trailing whitespace
+	25: Trailing whitespace
+	28: Trailing whitespace
+	31: Trailing whitespace
+	41: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-book.tex:
+	Wrong line endings or no final newline
+	3: Trailing whitespace
+	12-13: Trailing whitespace
+	23: Trailing whitespace
+	29: Trailing whitespace
+	32: Trailing whitespace
+	42: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-cv.tex:
+	Wrong line endings or no final newline
+	18-21: Trailing whitespace
+	23: Trailing whitespace
+	27: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Abstract.tex:
+	Wrong line endings or no final newline
+	13-14: Trailing whitespace
+	19: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Acknowledgments.tex:
+	Wrong line endings or no final newline
+	5-7: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Bibliography.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Colophon.tex:
+	Wrong line endings or no final newline
+	13: Trailing whitespace
+	19: Trailing whitespace
+	24: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Contents.tex:
+	Wrong line endings or no final newline
+	13: Trailing whitespace
+	20: Trailing whitespace
+	47: Trailing whitespace
+	50: Trailing whitespace
+	53: Trailing whitespace
+	59: Trailing whitespace
+	63: Trailing whitespace
+	80-81: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Declaration.tex:
+	12: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Dedication.tex:
+	Wrong line endings or no final newline
+	13: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Publications.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Titleback.tex:
+	9: Trailing whitespace
+	18: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Titlepage.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/classicthesis-thesis/classicthesis-config.tex:
+	Wrong line endings or no final newline
+	59: Trailing whitespace
+	78: Trailing whitespace
+	94: Trailing whitespace
+	97: Trailing whitespace
+	99: Trailing whitespace
+	111: Trailing whitespace
+	123: Trailing whitespace
+	136: Trailing whitespace
+	148: Trailing whitespace
+	154: Trailing whitespace
+	185: Trailing whitespace
+	188: Trailing whitespace
+	207: Trailing whitespace
+	239: Trailing whitespace
+	242: Trailing whitespace
+	259: Trailing whitespace
+	261: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/classicthesis.sty:
+	6-8: Trailing whitespace
+	27: Trailing whitespace
+	33: Trailing whitespace
+	36: Trailing whitespace
+	40: Trailing whitespace
+	51-52: Trailing whitespace
+	64: Trailing whitespace
+	67: Trailing whitespace
+	79-81: Trailing whitespace
+	83-86: Trailing whitespace
+	117: Trailing whitespace
+	147: Trailing whitespace
+	160: Trailing whitespace
+	180: Trailing whitespace
+	184: Trailing whitespace
+	194: Trailing whitespace
+	221: Trailing whitespace
+	229: Trailing whitespace
+	247: Trailing whitespace
+	260: Trailing whitespace
+	267-268: Trailing whitespace
+	293: Trailing whitespace
+	312: Trailing whitespace
+	321: Trailing whitespace
+	339: Trailing whitespace
+	341-342: Trailing whitespace
+	347: Trailing whitespace
+	349: Trailing whitespace
+	359: Trailing whitespace
+	362: Trailing whitespace
+	370-371: Trailing whitespace
+	375: Trailing whitespace
+	382: Trailing whitespace
+	391: Trailing whitespace
+	394: Trailing whitespace
+	397: Trailing whitespace
+	407: Trailing whitespace
+	410: Trailing whitespace
+	412: Trailing whitespace
+	417: Trailing whitespace
+	421: Trailing whitespace
+	426: Trailing whitespace
+	430: Trailing whitespace
+	432: Trailing whitespace
+	434: Trailing whitespace
+	439: Trailing whitespace
+	447: Trailing whitespace
+	461: Trailing whitespace
+	463: Trailing whitespace
+	477-478: Trailing whitespace
+	480: Trailing whitespace
+	483: Trailing whitespace
+	493-494: Trailing whitespace
+	502-505: Trailing whitespace
+	511-514: Trailing whitespace
+	516-518: Trailing whitespace
+	521: Trailing whitespace
+	534-536: Trailing whitespace
+	544: Trailing whitespace
+	552: Trailing whitespace
+	565-566: Trailing whitespace
+	574: Trailing whitespace
+	598: Trailing whitespace
+	601: Trailing whitespace
+	633: Trailing whitespace
+	643: Trailing whitespace
+	652: Trailing whitespace
+	658-660: Trailing whitespace
+	662: Trailing whitespace
+	665: Trailing whitespace
+	667-668: Trailing whitespace
+	670-671: Trailing whitespace
+	681-683: Trailing whitespace
+	690: Trailing whitespace
+	699: Trailing whitespace
+	723: Trailing whitespace
+	730-731: Trailing whitespace
+	736: Trailing whitespace
+beacon/.staging/latex/Theses/classicthesis-thesis/main.tex:
+	36-37: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/MANIFEST.md:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/kaobook/README.md:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/kaobook/chapters/figsntabs.tex:
+	11-16: Trailing whitespace
+	19-23: Trailing whitespace
+	32-34: Trailing whitespace
+	37: Trailing whitespace
+	76: Trailing whitespace
+	81-83: Trailing whitespace
+	94-100: Trailing whitespace
+	111: Trailing whitespace
+	116: Trailing whitespace
+	125-127: Trailing whitespace
+	132-133: Trailing whitespace
+	155-156: Trailing whitespace
+	174-177: Trailing whitespace
+	184-190: Trailing whitespace
+	212-217: Trailing whitespace
+	228: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/introduction.tex:
+	7-11: Trailing whitespace
+	14-17: Trailing whitespace
+	20-25: Trailing whitespace
+	28-38: Trailing whitespace
+	41-42: Trailing whitespace
+	48-53: Trailing whitespace
+	59-60: Trailing whitespace
+	62-63: Trailing whitespace
+	65-67: Trailing whitespace
+	69-73: Trailing whitespace
+	75-77: Trailing whitespace
+	79-81: Trailing whitespace
+	83-84: Trailing whitespace
+	86-89: Trailing whitespace
+	91-94: Trailing whitespace
+	100: Trailing whitespace
+	105-107: Trailing whitespace
+	113-118: Trailing whitespace
+	122-123: Trailing whitespace
+	125: Trailing whitespace
+	127-131: Trailing whitespace
+	133-134: Trailing whitespace
+	136-139: Trailing whitespace
+	141: Trailing whitespace
+	143-144: Trailing whitespace
+	148-149: Trailing whitespace
+	152-156: Trailing whitespace
+	161-171: Trailing whitespace
+	174: Trailing whitespace
+	187-189: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/layout.tex:
+	8-15: Trailing whitespace
+	18-21: Trailing whitespace
+	24-32: Trailing whitespace
+	35: Trailing whitespace
+	44-47: Trailing whitespace
+	49-53: Trailing whitespace
+	63: Trailing whitespace
+	68-74: Trailing whitespace
+	78: Trailing whitespace
+	83: Trailing whitespace
+	89-99: Trailing whitespace
+	102-106: Trailing whitespace
+	125-129: Trailing whitespace
+	132-136: Trailing whitespace
+	149: Trailing whitespace
+	174: Trailing whitespace
+	188-191: Trailing whitespace
+	194-197: Trailing whitespace
+	200-202: Trailing whitespace
+	205: Trailing whitespace
+	214-217: Trailing whitespace
+	233-234: Trailing whitespace
+	250: Trailing whitespace
+	255: Trailing whitespace
+	264: Trailing whitespace
+	273: Trailing whitespace
+	282-285: Trailing whitespace
+	290: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/mathematics.tex:
+	8-14: Trailing whitespace
+	19-21: Trailing whitespace
+	25-26: Trailing whitespace
+	30-31: Trailing whitespace
+	36-37: Trailing whitespace
+	41: Trailing whitespace
+	45-47: Trailing whitespace
+	51-53: Trailing whitespace
+	57-58: Trailing whitespace
+	67-69: Trailing whitespace
+	83-85: Trailing whitespace
+	90-92: Trailing whitespace
+	96-97: Trailing whitespace
+	101: Trailing whitespace
+	112-126: Trailing whitespace
+	130-132: Trailing whitespace
+	135-138: Trailing whitespace
+	145: Trailing whitespace
+	154-155: Trailing whitespace
+	165-169: Trailing whitespace
+	180-181: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/options.tex:
+	5-7: Trailing whitespace
+	12-16: Trailing whitespace
+	19-23: Trailing whitespace
+	28-31: Trailing whitespace
+	34-36: Trailing whitespace
+	40-44: Trailing whitespace
+	48-49: Trailing whitespace
+	54: Trailing whitespace
+	66-68: Trailing whitespace
+	81-83: Trailing whitespace
+	86-87: Trailing whitespace
+	92-102: Trailing whitespace
+	105-113: Trailing whitespace
+	115-123: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/preface.tex:
+	4-9: Trailing whitespace
+	13-15: Trailing whitespace
+	17-18: Trailing whitespace
+	23-27: Trailing whitespace
+	30: Trailing whitespace
+	32-33: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/references.tex:
+	9-15: Trailing whitespace
+	18-25: Trailing whitespace
+	41-42: Trailing whitespace
+	45-50: Trailing whitespace
+	59-63: Trailing whitespace
+	76-79: Trailing whitespace
+	100-101: Trailing whitespace
+	113-119: Trailing whitespace
+	122-126: Trailing whitespace
+	135: Trailing whitespace
+	139-142: Trailing whitespace
+	145-146: Trailing whitespace
+	155: Trailing whitespace
+	164-167: Trailing whitespace
+	170-173: Trailing whitespace
+	176-177: Trailing whitespace
+	184-188: Trailing whitespace
+	190-191: Trailing whitespace
+	214-218: Trailing whitespace
+	221-222: Trailing whitespace
+	225-229: Trailing whitespace
+	232-233: Trailing whitespace
+	236-240: Trailing whitespace
+	243-253: Trailing whitespace
+	255-256: Trailing whitespace
+	262-264: Trailing whitespace
+	272-273: Trailing whitespace
+	299-302: Trailing whitespace
+	306-309: Trailing whitespace
+	311-314: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/chapters/textnotes.tex:
+	4-7: Trailing whitespace
+	12-16: Trailing whitespace
+	23-25: Trailing whitespace
+	28-30: Trailing whitespace
+	37: Trailing whitespace
+	42-51: Trailing whitespace
+	59-61: Trailing whitespace
+	65-77: Trailing whitespace
+	82-89: Trailing whitespace
+	94-97: Trailing whitespace
+	100-102: Trailing whitespace
+	105-106: Trailing whitespace
+	114-119: Trailing whitespace
+	134-138: Trailing whitespace
+	159: Trailing whitespace
+	162: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/kao.sty:
+	63-66: Trailing whitespace
+	333: Trailing whitespace
+	863: Trailing whitespace
+	1045: Trailing whitespace
+	1302: Trailing whitespace
+	1348-1349: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/kaobiblio.sty:
+	19: Trailing whitespace
+	403: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/kaobook.cls:
+	45: Trailing whitespace
+	262: Trailing whitespace
+beacon/.staging/latex/Theses/kaobook/main.bib:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/kaobook/main.tex:
+	122: Trailing whitespace
+	124: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+	131: Trailing whitespace
+	134: Trailing whitespace
+	136: Trailing whitespace
+	138: Trailing whitespace
+	140: Trailing whitespace
+	270: Trailing whitespace
+	273: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/chapter1.tex:
+	11: Trailing whitespace
+	35: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/introduction.tex:
+	Wrong line endings or no final newline
+	17: Trailing whitespace
+	66: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/acronyms.tex:
+	Wrong line endings or no final newline
+	84: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/bibliography.bib:
+	5: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/structure.tex:
+	Wrong line endings or no final newline
+	40: Trailing whitespace
+beacon/.staging/latex/Theses/maggi-memoir-thesis/thesis.tex:
+	Wrong line endings or no final newline
+	22-23: Trailing whitespace
+	26: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixA.tex:
+	19: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixTemplate.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex:
+	5: Trailing whitespace
+	9: Trailing whitespace
+	38-39: Trailing whitespace
+	55: Trailing whitespace
+	57: Trailing whitespace
+	110: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/ChapterTemplate.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Theses/masters-doctoral-thesis/MastersDoctoralThesis.cls:
+	2: Trailing whitespace
+	58: Trailing whitespace
+	134: Trailing whitespace
+	227: Trailing whitespace
+	298-299: Trailing whitespace
+beacon/.staging/latex/Theses/masters-doctoral-thesis/main.tex:
+	2: Trailing whitespace
+	110: Trailing whitespace
+	120: Trailing whitespace
+	123: Trailing whitespace
+	129: Trailing whitespace
+	134: Trailing whitespace
+	147: Trailing whitespace
+	155: Trailing whitespace
+	158: Trailing whitespace
+	247: Trailing whitespace
+	261: Trailing whitespace
+	263-264: Trailing whitespace
+	287: Trailing whitespace
+beacon/.staging/latex/Title Pages/academic-title-page/main.tex:
+	15: Trailing whitespace
+	17-18: Trailing whitespace
+	20-21: Trailing whitespace
+	25: Trailing whitespace
+	50: Trailing whitespace
+	52: Trailing whitespace
+	56: Trailing whitespace
+	58: Trailing whitespace
+	60: Trailing whitespace
+	62: Trailing whitespace
+	66: Trailing whitespace
+	68: Trailing whitespace
+	70: Trailing whitespace
+	72: Trailing whitespace
+	76: Trailing whitespace
+	92: Trailing whitespace
+	96: Trailing whitespace
+	100: Trailing whitespace
+	102: Trailing whitespace
+	104: Trailing whitespace
+	108: Trailing whitespace
+	111: Trailing whitespace
+	113: Trailing whitespace
+	115: Trailing whitespace
+beacon/.staging/latex/Title Pages/formal-book-title-page/main.tex:
+	15: Trailing whitespace
+	24: Trailing whitespace
+	46: Trailing whitespace
+	51: Trailing whitespace
+	53: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	62: Trailing whitespace
+	64: Trailing whitespace
+	66: Trailing whitespace
+	68: Trailing whitespace
+	71: Trailing whitespace
+	73: Trailing whitespace
+	77: Trailing whitespace
+	79: Trailing whitespace
+	81: Trailing whitespace
+	85: Trailing whitespace
+	87: Trailing whitespace
+	89: Trailing whitespace
+	91: Trailing whitespace
+	93: Trailing whitespace
+	95: Trailing whitespace
+	97: Trailing whitespace
+	101: Trailing whitespace
+	103: Trailing whitespace
+	105: Trailing whitespace
+	107: Trailing whitespace
+beacon/.staging/latex/Title Pages/minimalist-book-title-page/main.tex:
+	15: Trailing whitespace
+	24: Trailing whitespace
+	44: Trailing whitespace
+	53: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	61: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	69: Trailing whitespace
+	71: Trailing whitespace
+	73: Trailing whitespace
+	75: Trailing whitespace
+	79: Trailing whitespace
+	81: Trailing whitespace
+beacon/.staging/latex/Title Pages/multi-purpose-large-font-title-page/main.tex:
+	23: Trailing whitespace
+	52: Trailing whitespace
+	56: Trailing whitespace
+	63: Trailing whitespace
+	67: Trailing whitespace
+	72: Trailing whitespace
+	74: Trailing whitespace
+	78: Trailing whitespace
+	86: Trailing whitespace
+	89: Trailing whitespace
+beacon/.staging/latex/Title Pages/stylish-title-page/main.tex:
+	15: Trailing whitespace
+	24: Trailing whitespace
+	46: Trailing whitespace
+	55: Trailing whitespace
+	59: Trailing whitespace
+	61: Trailing whitespace
+	63: Trailing whitespace
+	65: Trailing whitespace
+	67: Trailing whitespace
+	69: Trailing whitespace
+	71: Trailing whitespace
+	75: Trailing whitespace
+	77: Trailing whitespace
+	79: Trailing whitespace
+	83: Trailing whitespace
+	85: Trailing whitespace
 mantle/bin/list-vscode-language-ids:
 	Wrong line endings or no final newline
 notebooks/jupyter/.gitignore:
 	Wrong line endings or no final newline
 
-111 errors found
+2778 errors found
 

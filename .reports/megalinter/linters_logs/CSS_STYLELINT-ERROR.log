@@ -115,6 +115,89 @@ Linter raw log:
   1067:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
   1092:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
 
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/doc.css
+    5:12  ✖  Expected "#555555" to be "#555"                           color-hex-length
+    7:25  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
+   15:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   19:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   23:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   27:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   38:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   47:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   51:1   ✖  Expected class selector ".tex_command" to be kebab-case   selector-class-pattern
+   52:12  ✖  Expected "#4444aa" to be "#44a"                           color-hex-length
+   53:18  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
+   57:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
+   61:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   62:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
+   66:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   67:12  ✖  Expected "#662222" to be "#622"                           color-hex-length
+   69:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   70:12  ✖  Expected "#aa2222" to be "#a22"                           color-hex-length
+   75:18  ✖  Missing generic font family                               font-family-no-missing-generic-family-keyword
+   78:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   78:1   ✖  Expected class selector ".code_option" to be kebab-case   selector-class-pattern
+   85:1   ✖  Expected empty line before comment                        comment-empty-line-before
+   86:1   ✖  Expected class selector ".index_main" to be kebab-case    selector-class-pattern
+   90:1   ✖  Expected empty line before rule                           rule-empty-line-before
+   90:1   ✖  Expected class selector ".index_sub" to be kebab-case     selector-class-pattern
+   95:4   ✖  Expected class selector ".index_indent" to be kebab-case  selector-class-pattern
+  102:1   ✖  Expected empty line before comment                        comment-empty-line-before
+  103:1   ✖  Expected id selector "#simple_title" to be kebab-case     selector-id-pattern
+  103:1   ✖  Too many ID selectors in "#simple_title", maximum 0       selector-max-id
+  110:1   ✖  Expected id selector "#simple_subtitle" to be kebab-case  selector-id-pattern
+  110:1   ✖  Too many ID selectors in "#simple_subtitle", maximum 0    selector-max-id
+  118:1   ✖  Expected empty line before comment                        comment-empty-line-before
+  119:1   ✖  Expected id selector "#body_frame" to be kebab-case       selector-id-pattern
+  119:1   ✖  Too many ID selectors in "#body_frame", maximum 0         selector-max-id
+  126:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  126:1   ✖  Expected id selector "#body_main" to be kebab-case        selector-id-pattern
+  126:1   ✖  Too many ID selectors in "#body_main", maximum 0          selector-max-id
+  130:12  ✖  Expected "#444444" to be "#444"                           color-hex-length
+  132:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  132:1   ✖  Expected id selector "#body_footer" to be kebab-case      selector-id-pattern
+  132:1   ✖  Too many ID selectors in "#body_footer", maximum 0        selector-max-id
+  136:12  ✖  Expected "#888888" to be "#888"                           color-hex-length
+  141:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  141:1   ✖  Expected id selector "#nav_bar" to be kebab-case          selector-id-pattern
+  141:1   ✖  Too many ID selectors in "#nav_bar", maximum 0            selector-max-id
+  143:23  ✖  Expected "#ffffff" to be "#fff"                           color-hex-length
+  144:12  ✖  Disallowed unit                                           length-zero-no-unit
+  145:11  ✖  Disallowed unit                                           length-zero-no-unit
+  149:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  149:1   ✖  Expected id selector "#nav_bar_decor_1" to be kebab-case  selector-id-pattern
+  149:1   ✖  Too many ID selectors in "#nav_bar_decor_1", maximum 0    selector-max-id
+  152:23  ✖  Expected "#eeeeee" to be "#eee"                           color-hex-length
+  158:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  158:1   ✖  Expected id selector "#nav_bar_decor_2" to be kebab-case  selector-id-pattern
+  158:1   ✖  Too many ID selectors in "#nav_bar_decor_2", maximum 0    selector-max-id
+  161:23  ✖  Expected "#aaaaaa" to be "#aaa"                           color-hex-length
+  167:1   ✖  Expected empty line before rule                           rule-empty-line-before
+  167:1   ✖  Expected id selector "#nav_bar_body" to be kebab-case     selector-id-pattern
+  167:1   ✖  Too many ID selectors in "#nav_bar_body", maximum 0       selector-max-id
+
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/documentation/web/examples/highlight.css
+   5:28  ✖  Expected "#ffffff" to be "#fff"   color-hex-length
+   6:8   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+   6:16  ✖  Expected "#000000" to be "#000"   color-hex-length
+   6:42  ✖  Expected "#ffffff" to be "#fff"   color-hex-length
+   6:79  ✖  Missing generic font family       font-family-no-missing-generic-family-keyword
+   7:9   ✖  Empty block                       block-no-empty
+   9:17  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
+  10:18  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
+  11:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  11:17  ✖  Expected "#cc5500" to be "#c50"   color-hex-length
+  12:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  12:17  ✖  Expected "#666666" to be "#666"   color-hex-length
+  14:17  ✖  Expected "#ff0000" to be "#f00"   color-hex-length
+  15:18  ✖  Expected "#666666" to be "#666"   color-hex-length
+  16:29  ✖  Expected "#ffffbb" to be "#ffb"   color-hex-length
+  17:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  17:17  ✖  Expected "#0000aa" to be "#00a"   color-hex-length
+  18:17  ✖  Expected "#cc00ff" to be "#c0f"   color-hex-length
+  20:9   ✖  Too many declarations, maximum 1  declaration-block-single-line-max-declarations
+  20:17  ✖  Expected "#000000" to be "#000"   color-hex-length
+
 notebooks/jupyter/themes/@jupyterlab/theme-dark-extension/index.css
   110:23  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
   149:28  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
@@ -124,7 +207,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
   108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
   147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
 
-✖ 113 problems (113 errors, 0 warnings)
-  98 errors potentially fixable with the "--fix" option.
+✖ 192 problems (192 errors, 0 warnings)
+  144 errors potentially fixable with the "--fix" option.
 
 

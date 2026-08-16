@@ -4,6 +4,8 @@ See documentation on https://megalinter.io/10.0.0/descriptors/spell_proselint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+.audits/2026-08-15-staging-home-audit.md:99:23: annotations.misc: Annotation left in text.
+.audits/2026-08-15-staging-home-audit.md:99:42: annotations.misc: Annotation left in text.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:6:18: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:28:66: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:29:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -117,6 +119,233 @@ Automation' - a phrase is repeated.
 README.md:19:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:58:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:174:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:1:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:250: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:561: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:608: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:43:564: redundancy.misc.after_the_deadline: Redundancy. Use 'every' instead of 'each and every'.
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:75:225: needless_variants: Needless variant. 'geographic' is the preferred form.
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:79:138: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:85:237: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:95:210: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:98:15: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:110:39: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:114:99: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Books/kaobook/README.md:27:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+beacon/.staging/latex/Books/kaobook/README.md:198:56: typography.punctuation.exclamation: More than 30 ppm of exclamations. Keep them under control. Surpassed 30 ppm.
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:1:52: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:28:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:32:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:35:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:38:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:43:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Business Reports/makoto-technical-report/Fonts/license.txt:84:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/CHANGELOG.md:5:145: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+beacon/.staging/latex/CVs and Resumes/AltaCV/CHANGELOG.md:9:157: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/CHANGELOG.md:24:19: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/CHANGELOG.md:25:95: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/CHANGELOG.md:25:165: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:9:47: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:11:130: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:18:82: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:22:27: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:22:68: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:33:66: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:50:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:51:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:51:33: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:56:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:57:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:57:33: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:60:38: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:86:25: typography.punctuation.exclamation: More than 30 ppm of exclamations. Keep them under control. Surpassed 30 ppm.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:167:376: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:171:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:172:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:172:34: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/README.md:174:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/AltaCV/nicethings_icons_readme.txt:12:138: redundancy.misc.after_the_deadline: Redundancy. Use 'free' instead of 'for free'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:1:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:2:58: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:3:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:3:97: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:3:112: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:9:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:13:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:15:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:18:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:20:82: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:21:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:21:23: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:21:65: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:24:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:27:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:35:163: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:44:27: typography.punctuation.exclamation: More than 30 ppm of exclamations. Keep them under control. Surpassed 30 ppm.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:50:89: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:54:84: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:54:169: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:54:265: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:54:350: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:112:70: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:112:98: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:1:7: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:4:43: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:14: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:228: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:354: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:471: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:546: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:21:61: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:24:61: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:33:70: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:33:91: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:33:164: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:33:197: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:34:81: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:34:115: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:35:142: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:36:107: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:36:120: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:44:8: lexical_illusions: There's a lexical illusion in '1
+ 1' - a phrase is repeated.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:51:4: annotations.misc: Annotation left in text.
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:67:57: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:74:56: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/LICENSE.txt:5:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/LICENSE.txt:15:7: lexical_illusions: There's a lexical illusion in 'Creative Commons Public Licenses
+
+Creative Commons public licenses' - a phrase is repeated.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/LICENSE.txt:61:47: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/LICENSE.txt:387:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:1:21: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:5:60: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:7:219: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:9:24: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:11:1: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:14:51: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:15:51: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:19:3: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:21:6: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:22:59: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:22:81: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:26:54: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/developer-cv/LICENSE.md:1:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/CVs and Resumes/developer-cv/LICENSE.md:5:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/developer-cv/LICENSE.md:15:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Freebooterscript-license.txt:1:13: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:2:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:2:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:2:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:30:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:34:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:37:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:40:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:45:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/freeman-cv/Fonts/Libertinus-OFL-license.txt:86:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:5:74: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:5:83: redundancy.misc.after_the_deadline: Redundancy. Use 'created' instead of 'originally created'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:9:24: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:9:79: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:9:144: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:9:356: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:9:475: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:37:4: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:39:4: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:39:36: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:39:72: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:39:158: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:39:191: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:41:47: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:49:111: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:51:19: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:51:40: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:51:197: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:51:204: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:51:275: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:58:181: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:59:58: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:60:18: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:61:57: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:63:81: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:64:64: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:64:90: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:64:104: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:65:207: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:67:21: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:67:114: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:73:17: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:73:40: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/modern-deedy/README.md:74:19: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+beacon/.staging/latex/CVs and Resumes/wilson-resume-cv/fonts/Erewhon README.txt:1:72: lexical_illusions: There's a lexical illusion in 'erewhon
+
+Erewhon' - a phrase is repeated.
+beacon/.staging/latex/Community/TeXtured/README.md:1:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:2:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:2:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:3:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:3:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:5:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:6:68: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:8:67: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:10:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:12:68: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:14:69: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:29:13: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:29:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:44:14: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:76:103: typography.punctuation.exclamation: More than 30 ppm of exclamations. Keep them under control. Surpassed 30 ppm.
+beacon/.staging/latex/Community/TeXtured/README.md:88:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:88:28: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:104:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:104:28: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:127:13: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Community/TeXtured/README.md:127:88: typography.symbols.multiplication: Use the multiplication symbol ×, not the letter x.
+beacon/.staging/latex/Community/TeXtured/README.md:129:13: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Freebooterscript-license.txt:1:13: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:2:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:2:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:2:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:30:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:34:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:37:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:40:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:45:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Cover Letters/freeman-cover-letter/Fonts/Libertinus-OFL-license.txt:86:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:1:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:21:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:23:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:25:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:27:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:29:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:48:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:1:15: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:3:15: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:4:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:6:15: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:41:2: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:45:2: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:48:2: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:51:2: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:56:2: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/arrow-sign/Fonts/OFL.md:103:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:1:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:30:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:34:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:37:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:40:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:45:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:86:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:1:119: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:17:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:19:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:21:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:23:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:25:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:44:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+beacon/.staging/latex/Theses/kaobook/README.md:27:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+beacon/.staging/latex/Theses/kaobook/README.md:198:56: typography.punctuation.exclamation: More than 30 ppm of exclamations. Keep them under control. Surpassed 30 ppm.
 beacon/ARCHITECTURE.md:55:8: lexical_illusions: There's a lexical illusion in 'v             v' - a phrase is repeated.
 beacon/CLI.md:12:36: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/CLI.md:13:36: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
