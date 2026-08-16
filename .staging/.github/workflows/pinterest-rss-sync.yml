@@ -1,0 +1,53 @@
+name: Pinterest RSS Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'publishing/tools/pinterest-rss/**'
+      - 'publishing/channels/pinterest/config.yaml'
+      - '.github/workflows/pinterest-rss-sync.yml'
+      - '.github/actions/python-poetry-setup/action.yml'
+      - '.github/actions/commit-if-changed/action.yml'
+
+concurrency:
+  group: pinterest-rss-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    name: Sync Pinterest Feed
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python toolchain
+        uses: ./.github/actions/python-poetry-setup
+        with:
+          working-directory: publishing/tools/pinterest-rss
+          cache-path: publishing/tools/pinterest-rss/.venv
+          cache-dependency-path: publishing/tools/pinterest-rss/poetry.lock
+          cache-key-prefix: poetry-pinterest-rss
+
+      - name: Run Pinterest RSS sync
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        run: poetry run --directory publishing/tools/pinterest-rss pinterest-rss sync --config publishing/channels/pinterest/config.yaml
+
+      - name: Commit synchronized content
+        uses: ./.github/actions/commit-if-changed
+        with:
+          pathspec: publishing/channels/pinterest/
+          commit-message: 'assets(pinterest): 🍱 sync Pinterest feed [skip ci]'

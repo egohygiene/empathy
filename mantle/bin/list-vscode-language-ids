@@ -1,0 +1,353 @@
+#!/usr/bin/env python3
+"""VS Code Language ID Extractor.
+
+Discovers and extracts language identifiers, aliases, and file associations
+contributed by built-in and user-installed Visual Studio Code (and compatible
+editor) extensions across macOS, Linux, and Windows.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from dataclasses import asdict, dataclass, field
+from pathlib import Path
+from typing import Any, Iterable, Sequence
+
+
+@dataclass
+class LanguageDefinition:
+    """Represents a language contributed by a VS Code extension."""
+
+    id: str
+    aliases: list[str] = field(default_factory=list)
+    extensions: list[str] = field(default_factory=list)
+    filenames: list[str] = field(default_factory=list)
+    source_packages: set[str] = field(default_factory=set)
+
+    def merge(self, other: LanguageDefinition) -> None:
+        """Merge metadata from another definition of the same language."""
+        self.aliases = sorted(set(self.aliases + other.aliases))
+        self.extensions = sorted(set(self.extensions + other.extensions))
+        self.filenames = sorted(set(self.filenames + other.filenames))
+        self.source_packages.update(other.source_packages)
+
+    def to_dict(self) -> dict[str, Any]:
+        """Convert the instance to a JSON-serializable dictionary."""
+        data = asdict(self)
+        data["source_packages"] = sorted(self.source_packages)
+        return data
+
+
+def get_default_extension_roots(
+    include_builtin: bool = True,
+    include_user: bool = True,
+    flavors: Sequence[str] = ("code", "code-insiders", "vscodium", "cursor"),
+) -> list[Path]:
+    """Resolve default extension directories based on the host operating system.
+
+    Args:
+        include_builtin: Whether to include application-bundled extensions.
+        include_user: Whether to include user-installed extension folders.
+        flavors: Editor variants to search for ('code', 'code-insiders', 'vscodium', 'cursor').
+
+    Returns:
+        List of existing directory paths containing extension subdirectories.
+    """
+    home = Path.home()
+    roots: list[Path] = []
+
+    # 1. User Extension Folders (~/.vscode/extensions, etc.)
+    if include_user:
+        flavor_user_dirs = {
+            "code": home / ".vscode/extensions",
+            "code-insiders": home / ".vscode-insiders/extensions",
+            "vscodium": home / ".vscode-oss/extensions",
+            "cursor": home / ".cursor/extensions",
+        }
+        for flavor in flavors:
+            path = flavor_user_dirs.get(flavor)
+            if path and path.is_dir():
+                roots.append(path)
+
+    # 2. Built-in Extension Folders
+    if include_builtin:
+        platform = sys.platform
+
+        if platform == "darwin":
+            flavor_app_names = {
+                "code": ["Visual Studio Code.app"],
+                "code-insiders": ["Visual Studio Code - Insiders.app"],
+                "vscodium": ["VSCodium.app"],
+                "cursor": ["Cursor.app"],
+            }
+            app_bases = [Path("/Applications"), home / "Applications"]
+            for flavor in flavors:
+                for app_name in flavor_app_names.get(flavor, []):
+                    for base in app_bases:
+                        builtin_path = base / app_name / "Contents/Resources/app/extensions"
+                        if builtin_path.is_dir():
+                            roots.append(builtin_path)
+
+        elif platform.startswith("linux"):
+            flavor_linux_paths = {
+                "code": [
+                    Path("/usr/share/code/resources/app/extensions"),
+                    Path("/usr/lib/code/resources/app/extensions"),
+                    Path("/opt/visual-studio-code/resources/app/extensions"),
+                    Path("/var/lib/flatpak/app/com.visualstudio.code/current/active/files/extra/vscode/resources/app/extensions"),
+                    home / ".local/share/flatpak/app/com.visualstudio.code/current/active/files/extra/vscode/resources/app/extensions",
+                    Path("/snap/code/current/usr/share/code/resources/app/extensions"),
+                ],
+                "code-insiders": [
+                    Path("/usr/share/code-insiders/resources/app/extensions"),
+                    Path("/snap/code-insiders/current/usr/share/code-insiders/resources/app/extensions"),
+                ],
+                "vscodium": [
+                    Path("/usr/share/vscodium/resources/app/extensions"),
+                    Path("/usr/share/codium/resources/app/extensions"),
+                ],
+                "cursor": [
+                    Path("/opt/Cursor/resources/app/extensions"),
+                ],
+            }
+            for flavor in flavors:
+                for candidate in flavor_linux_paths.get(flavor, []):
+                    if candidate.is_dir():
+                        roots.append(candidate)
+
+        elif platform == "win32":
+            local_app_data = Path(os.environ.get("LOCALAPPDATA", home / "AppData/Local"))
+            program_files = Path(os.environ.get("ProgramFiles", "C:/Program Files"))
+            program_files_x86 = Path(os.environ.get("ProgramFiles(x86)", "C:/Program Files (x86)"))
+
+            flavor_win_paths = {
+                "code": [
+                    local_app_data / "Programs/Microsoft VS Code/resources/app/extensions",
+                    program_files / "Microsoft VS Code/resources/app/extensions",
+                    program_files_x86 / "Microsoft VS Code/resources/app/extensions",
+                ],
+                "code-insiders": [
+                    local_app_data / "Programs/Microsoft VS Code Insiders/resources/app/extensions",
+                    program_files / "Microsoft VS Code Insiders/resources/app/extensions",
+                ],
+                "vscodium": [
+                    local_app_data / "Programs/VSCodium/resources/app/extensions",
+                    program_files / "VSCodium/resources/app/extensions",
+                ],
+                "cursor": [
+                    local_app_data / "Programs/cursor/resources/app/extensions",
+                ],
+            }
+            for flavor in flavors:
+                for candidate in flavor_win_paths.get(flavor, []):
+                    if candidate.is_dir():
+                        roots.append(candidate)
+
+    # De-duplicate while preserving discovery order
+    seen: set[Path] = set()
+    unique_roots: list[Path] = []
+    for r in roots:
+        resolved = r.resolve()
+        if resolved not in seen:
+            seen.add(resolved)
+            unique_roots.append(resolved)
+
+    return unique_roots
+
+
+def parse_manifest(manifest_path: Path) -> list[LanguageDefinition]:
+    """Parse a package.json manifest and extract contributed language definitions.
+
+    Args:
+        manifest_path: Path to the extension's package.json file.
+
+    Returns:
+        A list of LanguageDefinition objects extracted from the manifest.
+    """
+    try:
+        content = manifest_path.read_text(encoding="utf-8")
+        manifest = json.loads(content)
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+        return []
+
+    if not isinstance(manifest, dict):
+        return []
+
+    pkg_name = manifest.get("name", manifest_path.parent.name)
+    contributes = manifest.get("contributes")
+    if not isinstance(contributes, dict):
+        return []
+
+    raw_languages = contributes.get("languages", [])
+    if not isinstance(raw_languages, list):
+        return []
+
+    definitions: list[LanguageDefinition] = []
+    for entry in raw_languages:
+        if not isinstance(entry, dict):
+            continue
+
+        lang_id = entry.get("id")
+        if not isinstance(lang_id, str) or not lang_id.strip():
+            continue
+
+        aliases = [a for a in entry.get("aliases", []) if isinstance(a, str)]
+        extensions = [e for e in entry.get("extensions", []) if isinstance(e, str)]
+        filenames = [f for f in entry.get("filenames", []) if isinstance(f, str)]
+
+        definitions.append(
+            LanguageDefinition(
+                id=lang_id.strip(),
+                aliases=aliases,
+                extensions=extensions,
+                filenames=filenames,
+                source_packages={pkg_name},
+            )
+        )
+
+    return definitions
+
+
+def collect_languages(search_paths: Iterable[Path]) -> dict[str, LanguageDefinition]:
+    """Scan extension roots and aggregate language definitions by language ID.
+
+    Args:
+        search_paths: Iterable of root directories containing extension packages.
+
+    Returns:
+        Mapping of language ID string to its combined LanguageDefinition.
+    """
+    languages: dict[str, LanguageDefinition] = {}
+
+    for root in search_paths:
+        if not root.is_dir():
+            continue
+
+        for manifest_path in root.glob("*/package.json"):
+            for lang in parse_manifest(manifest_path):
+                if lang.id in languages:
+                    languages[lang.id].merge(lang)
+                else:
+                    languages[lang.id] = lang
+
+    return languages
+
+
+def build_argument_parser() -> argparse.ArgumentParser:
+    """Configure command-line options and flags."""
+    parser = argparse.ArgumentParser(
+        description="Extract contributed language IDs from VS Code extensions.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "Examples:\n"
+            "  %(prog)s\n"
+            "  %(prog)s --json --details\n"
+            "  %(prog)s --custom-path /path/to/custom/extensions\n"
+            "  %(prog)s --user-only --flavors code cursor\n"
+        ),
+    )
+
+    scope_group = parser.add_mutually_exclusive_group()
+    scope_group.add_argument(
+        "--builtin-only",
+        action="store_true",
+        help="Scan only built-in/bundled editor extensions.",
+    )
+    scope_group.add_argument(
+        "--user-only",
+        action="store_true",
+        help="Scan only user-installed extensions.",
+    )
+
+    parser.add_argument(
+        "-p",
+        "--custom-path",
+        action="append",
+        type=Path,
+        dest="custom_paths",
+        metavar="DIR",
+        help="Add an explicit directory containing extensions (can be repeated).",
+    )
+    parser.add_argument(
+        "--flavors",
+        nargs="+",
+        choices=["code", "code-insiders", "vscodium", "cursor"],
+        default=["code", "code-insiders", "vscodium", "cursor"],
+        help="Editor variants to include in auto-discovery (default: all).",
+    )
+    parser.add_argument(
+        "--details",
+        action="store_true",
+        help="Show associated file extensions and aliases alongside IDs.",
+    )
+    parser.add_argument(
+        "-j",
+        "--json",
+        action="store_true",
+        dest="output_json",
+        help="Output results as formatted JSON.",
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Print diagnostic information to stderr regarding scanned paths.",
+    )
+
+    return parser
+
+
+def main() -> int:
+    """CLI entrypoint."""
+    parser = build_argument_parser()
+    args = parser.parse_args()
+
+    include_builtin = not args.user_only
+    include_user = not args.builtin_only
+
+    search_paths: list[Path] = []
+    if args.custom_paths:
+        search_paths.extend(args.custom_paths)
+
+    search_paths.extend(
+        get_default_extension_roots(
+            include_builtin=include_builtin,
+            include_user=include_user,
+            flavors=args.flavors,
+        )
+    )
+
+    if args.verbose:
+        sys.stderr.write("Resolved Search Paths:\n")
+        for path in search_paths:
+            sys.stderr.write(f"  - [{path.exists() and 'EXISTS' or 'MISSING'}] {path}\n")
+        sys.stderr.write("\n")
+
+    language_map = collect_languages(search_paths)
+    sorted_languages = sorted(language_map.values(), key=lambda lang: lang.id.casefold())
+
+    if args.output_json:
+        if args.details:
+            payload = [lang.to_dict() for lang in sorted_languages]
+        else:
+            payload = [lang.id for lang in sorted_languages]
+        print(json.dumps(payload, indent=2))
+        return 0
+
+    for lang in sorted_languages:
+        if not args.details:
+            print(lang.id)
+            continue
+
+        exts = f" [exts: {', '.join(lang.extensions)}]" if lang.extensions else ""
+        aliases = f" (aliases: {', '.join(lang.aliases)})" if lang.aliases else ""
+        print(f"{lang.id}{exts}{aliases}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

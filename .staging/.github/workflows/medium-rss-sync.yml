@@ -1,0 +1,53 @@
+name: Medium RSS Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 8 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'publishing/tools/medium-rss/**'
+      - 'publishing/channels/medium/config.yaml'
+      - '.github/workflows/medium-rss-sync.yml'
+      - '.github/actions/python-poetry-setup/action.yml'
+      - '.github/actions/commit-if-changed/action.yml'
+
+concurrency:
+  group: medium-rss-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    name: Sync Medium Feed
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python toolchain
+        uses: ./.github/actions/python-poetry-setup
+        with:
+          working-directory: publishing/tools/medium-rss
+          cache-path: publishing/tools/medium-rss/.venv
+          cache-dependency-path: publishing/tools/medium-rss/poetry.lock
+          cache-key-prefix: poetry-medium-rss
+
+      - name: Run Medium RSS sync
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        run: poetry run --directory publishing/tools/medium-rss medium-rss sync --config publishing/channels/medium/config.yaml
+
+      - name: Commit synchronized content
+        uses: ./.github/actions/commit-if-changed
+        with:
+          pathspec: publishing/channels/medium/
+          commit-message: 'docs(medium): 📝 sync Medium article archive [skip ci]'
