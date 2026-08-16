@@ -26,7 +26,6 @@ sources:
   - ../../.github/workflows/osv-scan.yml
   - ../../.github/workflows/megalinter.yml
   - ../../.github/workflows/mindgarden-pages.yml
-  - ../../.staging/github/README.md
 related:
   - empathy-garden-dashboard
   - empathy-garden-projects

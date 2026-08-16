@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Behavioral tests for bin/apt-freeze, bin/apt-install, and bin/apt-base.
 
 setup() {
@@ -33,14 +34,14 @@ teardown() {
 	assert_failure
 }
 
-@test "apt-freeze requires root and fails without sudo or root" {
-	# apt-freeze should exit non-zero when not running as root and sudo is absent.
-	if [[ "${EUID}" -eq 0 ]]; then
-		skip "root can run apt-freeze without sudo"
-	fi
-	make_stub "sudo" 1 ""
-	run_bin apt-freeze
-	assert_failure
+@test "apt-freeze dry-run never writes an export bundle" {
+	local output_dir="${BIN_TEST_HOME}/apt-export"
+	run_bin apt-freeze --dry-run --output-dir "${output_dir}"
+
+	# Ubuntu runners validate the plan. Other supported test hosts may reject
+	# the platform or lack the APT inventory tools before validation begins.
+	[[ "${status}" -eq 0 || "${status}" -eq 4 || "${status}" -eq 127 ]]
+	[[ ! -e "${output_dir}" ]]
 }
 
 # ===========================================================================
@@ -65,9 +66,13 @@ teardown() {
 }
 
 @test "apt-install requires root and fails without sudo or root" {
+	local package_file="${BIN_TEST_HOME}/packages.txt"
+	printf "curl\n" >"${package_file}"
+	make_stub "id" 0 "1000"
 	make_stub "sudo" 1 ""
-	run_bin apt-install curl
+	run_bin apt-install --lock --packages-file "${package_file}" --yes
 	assert_failure
+	[[ "${status}" -eq 77 ]]
 }
 
 # ===========================================================================
@@ -87,7 +92,9 @@ teardown() {
 }
 
 @test "apt-base requires root and fails without sudo or root" {
+	make_stub "id" 0 "1000"
 	make_stub "sudo" 1 ""
-	run_bin apt-base
+	run_bin apt-base --yes
 	assert_failure
+	[[ "${status}" -eq 77 ]]
 }

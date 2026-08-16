@@ -257,7 +257,7 @@ mantle install talisman --dry-run
 - `mantle help <command>` delegates to the command's own `--help` output.
 - `mantle version` prints `mantle <version>`.
 - `mantle version --short` prints only the resolved version identifier.
-- Version resolution prefers `MANTLE_VERSION`, then `VERSION`, then Git metadata, then `development`.
+- Version resolution prefers `MANTLE_VERSION`, then `VERSION`, then Git metadata, then `0.0.0-development`.
 
 ### Install behavior
 
@@ -352,10 +352,10 @@ shape runtime behavior.
 | `MANTLE_ENABLE_SAFETY_ALIASES`           | Profile value                       | Overrides prompting replacements for `cp`, `mv`, and `rm`           | `export MANTLE_ENABLE_SAFETY_ALIASES="true"`         |
 | `MANTLE_ENABLE_HISTORY`                  | Profile value                       | Overrides Mantle-owned interactive history policy                   | `export MANTLE_ENABLE_HISTORY="false"`               |
 | `MANTLE_PRESENTATION_MODE`               | Profile value                       | Publishes `private`, `share-safe`, `ci`, or `off` presentation mode | `export MANTLE_PRESENTATION_MODE="share-safe"`       |
-| `MANTLE_PRESENTATION_SHOWN`              | Unset at session start              | Inherited once-per-session startup guard                             | `export MANTLE_PRESENTATION_SHOWN="1"`               |
-| `MANTLE_BANNER_IMAGE`                    | Repository presentation PNG         | Overrides the banner image without changing installed assets         | `export MANTLE_BANNER_IMAGE="$HOME/banner.png"`      |
-| `MANTLE_BANNER_TEXT`                     | Repository text fallback            | Overrides the ANSI-free fallback                                     | `export MANTLE_BANNER_TEXT="$HOME/banner.txt"`       |
-| `MANTLE_FASTFETCH_CONFIG`                | Repository Fastfetch config         | Overrides the explicit config passed to Fastfetch                     | `export MANTLE_FASTFETCH_CONFIG="$HOME/view.jsonc"`  |
+| `MANTLE_PRESENTATION_SHOWN`              | Unset at session start              | Inherited once-per-session startup guard                            | `export MANTLE_PRESENTATION_SHOWN="1"`               |
+| `MANTLE_BANNER_IMAGE`                    | Repository presentation PNG         | Overrides the banner image without changing installed assets        | `export MANTLE_BANNER_IMAGE="$HOME/banner.png"`      |
+| `MANTLE_BANNER_TEXT`                     | Repository text fallback            | Overrides the ANSI-free fallback                                    | `export MANTLE_BANNER_TEXT="$HOME/banner.txt"`       |
+| `MANTLE_FASTFETCH_CONFIG`                | Repository Fastfetch config         | Overrides the explicit config passed to Fastfetch                   | `export MANTLE_FASTFETCH_CONFIG="$HOME/view.jsonc"`  |
 | `MANTLE_DISABLE_TELEMETRY`               | `1`                                 | Enables Mantle's telemetry opt-out defaults when set to `1`         | `export MANTLE_DISABLE_TELEMETRY="1"`                |
 | `MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS` | `0`                                 | Opts into the update-check suppression module                       | `export MANTLE_DISABLE_AUTOMATIC_UPDATE_CHECKS="1"`  |
 | `MANTLE_ENABLE_PROJECT_PATH`             | `0`                                 | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled   | `export MANTLE_ENABLE_PROJECT_PATH="1"`              |

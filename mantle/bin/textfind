@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 #
 # textfind - Find files containing text with portable backend fallback.
@@ -298,11 +300,17 @@ _run_rg() {
 		arguments+=(--glob '!.git/**' --glob '!.hg/**' --glob '!.svn/**')
 		arguments+=(--glob '!**/.git/**' --glob '!**/.hg/**' --glob '!**/.svn/**')
 	fi
-	for glob in "${INCLUDE_GLOBS[@]}"; do arguments+=(--glob "${glob}"); done
-	for glob in "${EXCLUDE_GLOBS[@]}"; do arguments+=(--glob "!${glob}"); done
-	for glob in "${EXCLUDE_DIR_GLOBS[@]}"; do
-		arguments+=(--glob "!${glob}/**" --glob "!**/${glob}/**")
-	done
+	if ((${#INCLUDE_GLOBS[@]} > 0)); then
+		for glob in "${INCLUDE_GLOBS[@]}"; do arguments+=(--glob "${glob}"); done
+	fi
+	if ((${#EXCLUDE_GLOBS[@]} > 0)); then
+		for glob in "${EXCLUDE_GLOBS[@]}"; do arguments+=(--glob "!${glob}"); done
+	fi
+	if ((${#EXCLUDE_DIR_GLOBS[@]} > 0)); then
+		for glob in "${EXCLUDE_DIR_GLOBS[@]}"; do
+			arguments+=(--glob "!${glob}/**" --glob "!**/${glob}/**")
+		done
+	fi
 
 	rg "${arguments[@]}" -- "${PATTERN}" "${PATHS[@]}"
 }
@@ -333,9 +341,15 @@ _run_grep() {
 	if [[ ${INCLUDE_VCS} == false ]]; then
 		arguments+=(--exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn)
 	fi
-	for glob in "${INCLUDE_GLOBS[@]}"; do arguments+=("--include=${glob}"); done
-	for glob in "${EXCLUDE_GLOBS[@]}"; do arguments+=("--exclude=${glob}"); done
-	for glob in "${EXCLUDE_DIR_GLOBS[@]}"; do arguments+=("--exclude-dir=${glob}"); done
+	if ((${#INCLUDE_GLOBS[@]} > 0)); then
+		for glob in "${INCLUDE_GLOBS[@]}"; do arguments+=("--include=${glob}"); done
+	fi
+	if ((${#EXCLUDE_GLOBS[@]} > 0)); then
+		for glob in "${EXCLUDE_GLOBS[@]}"; do arguments+=("--exclude=${glob}"); done
+	fi
+	if ((${#EXCLUDE_DIR_GLOBS[@]} > 0)); then
+		for glob in "${EXCLUDE_DIR_GLOBS[@]}"; do arguments+=("--exclude-dir=${glob}"); done
+	fi
 
 	GREP_OPTIONS="" grep "${arguments[@]}" -- "${PATTERN}" "${PATHS[@]}"
 }

@@ -13,6 +13,11 @@ setup() {
 
 	INSTALL_SH="${MANTLE_ROOT}/install.sh"
 	DEFAULT_PREFIX="${XDG_DATA_HOME}/mantle"
+	if [[ "$(uname -s)" == "Darwin" ]]; then
+		BASH_STARTUP_FILE="${TEST_HOME}/.bash_profile"
+	else
+		BASH_STARTUP_FILE="${TEST_HOME}/.bashrc"
+	fi
 	REAL_MV="$(command -v mv)"
 	mkdir -p "${TEST_HOME}/tmp"
 	export TMPDIR="${TEST_HOME}/tmp"
@@ -152,6 +157,7 @@ EOF
 	assert_output_contains "prefix: ${DEFAULT_PREFIX}"
 	[[ ! -e "${DEFAULT_PREFIX}" ]]
 	[[ ! -e "${TEST_HOME}/.bashrc" ]]
+	[[ ! -e "${TEST_HOME}/.bash_profile" ]]
 }
 
 @test "install.sh performs a copy installation and bash activation by default" {
@@ -164,8 +170,8 @@ EOF
 	_run_installed_mantle "${DEFAULT_PREFIX}" doctor
 	assert_success
 	assert_output_contains 'status: ok'
-	assert_file_exists "${TEST_HOME}/.bashrc"
-	run grep -F "${DEFAULT_PREFIX}/.shellrc" "${TEST_HOME}/.bashrc"
+	assert_file_exists "${BASH_STARTUP_FILE}"
+	run grep -F "${DEFAULT_PREFIX}/.shellrc" "${BASH_STARTUP_FILE}"
 	assert_success
 }
 
@@ -175,7 +181,7 @@ EOF
 	_run_installer --shell bash
 	assert_success
 
-	[[ "$(_count_fixed_string '# >>> mantle >>>' "${TEST_HOME}/.bashrc")" == '1' ]]
+	[[ "$(_count_fixed_string '# >>> mantle >>>' "${BASH_STARTUP_FILE}")" == '1' ]]
 
 	run env -i \
 		HOME="${TEST_HOME}" \
@@ -184,11 +190,12 @@ EOF
 		XDG_DATA_HOME="${XDG_DATA_HOME}" \
 		XDG_STATE_HOME="${XDG_STATE_HOME}" \
 		XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}" \
+		BASH_STARTUP_FILE="${BASH_STARTUP_FILE}" \
 		PATH="/usr/bin:/bin" \
 		TERM=dumb \
 		/bin/bash --noprofile --norc -c '
-			source "$HOME/.bashrc"
-			source "$HOME/.bashrc"
+			source "$BASH_STARTUP_FILE"
+			source "$BASH_STARTUP_FILE"
 			count=0
 			OLDIFS=$IFS
 			IFS=:
@@ -216,10 +223,11 @@ EOF
 		XDG_DATA_HOME="${XDG_DATA_HOME}" \
 		XDG_STATE_HOME="${XDG_STATE_HOME}" \
 		XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}" \
+		BASH_STARTUP_FILE="${BASH_STARTUP_FILE}" \
 		PATH="/usr/bin:/bin" \
 		TERM=dumb \
 		/bin/bash --noprofile --norc -c '
-			source "$HOME/.bashrc"
+			source "$BASH_STARTUP_FILE"
 			printf "%s\n" "${MANTLE_ROOT}"
 		'
 	assert_success
@@ -241,19 +249,19 @@ EOF
 }
 
 @test "install.sh backs up existing shell files and uninstall removes only the managed block" {
-	printf '%s\n%s\n' '# before' '# after' >"${TEST_HOME}/.bashrc"
+	printf '%s\n%s\n' '# before' '# after' >"${BASH_STARTUP_FILE}"
 
 	_run_installer --shell bash
 	assert_success
-	assert_file_exists "${TEST_HOME}/.bashrc.mantle.bak"
-	run cat "${TEST_HOME}/.bashrc.mantle.bak"
+	assert_file_exists "${BASH_STARTUP_FILE}.mantle.bak"
+	run cat "${BASH_STARTUP_FILE}.mantle.bak"
 	assert_output_contains '# before'
 	assert_output_contains '# after'
 
-	printf '%s\n' '# user change after install' >>"${TEST_HOME}/.bashrc"
+	printf '%s\n' '# user change after install' >>"${BASH_STARTUP_FILE}"
 	_run_installer --uninstall --shell bash
 	assert_success
-	run cat "${TEST_HOME}/.bashrc"
+	run cat "${BASH_STARTUP_FILE}"
 	assert_output_contains '# before'
 	assert_output_contains '# after'
 	assert_output_contains '# user change after install'
@@ -265,6 +273,7 @@ EOF
 	assert_success
 	_assert_installed_payload "${DEFAULT_PREFIX}"
 	[[ ! -e "${TEST_HOME}/.bashrc" ]]
+	[[ ! -e "${TEST_HOME}/.bash_profile" ]]
 	[[ ! -e "${TEST_HOME}/.zshrc" ]]
 	[[ ! -e "${XDG_CONFIG_HOME}/fish/conf.d/mantle.fish" ]]
 }
@@ -345,6 +354,8 @@ EOF
 	assert_success
 
 	if command -v fish >/dev/null 2>&1; then
+		local fish_command
+		fish_command="$(command -v fish)"
 		run env -i \
 			HOME="${TEST_HOME}" \
 			XDG_CONFIG_HOME="${XDG_CONFIG_HOME}" \
@@ -354,7 +365,7 @@ EOF
 			XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}" \
 			PATH="/usr/bin:/bin" \
 			TERM=dumb \
-			fish --no-config -c 'source "$XDG_CONFIG_HOME/fish/conf.d/mantle.fish"; printf "%s\n" "$MANTLE_ROOT"'
+			"${fish_command}" --no-config -c 'source "$XDG_CONFIG_HOME/fish/conf.d/mantle.fish"; printf "%s\n" "$MANTLE_ROOT"'
 		assert_success
 		[[ "${output}" == "${DEFAULT_PREFIX}" ]]
 	fi

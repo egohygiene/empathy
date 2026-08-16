@@ -601,6 +601,7 @@ _array_contains() {
 _run_bin_suite() {
 	local coverage_map="${MANTLE_TEST_DIR}/bin/coverage-map.tsv"
 	local command_name=""
+	local support_test=""
 	local test_file=""
 	local resolved_test_file=""
 	local bin_test_files=()
@@ -609,6 +610,13 @@ _run_bin_suite() {
 		_record_failure "The bin coverage map is missing or empty"
 		return 0
 	fi
+
+	for support_test in bin/coverage-guard.bats bin/shared-contract.bats; do
+		resolved_test_file="${MANTLE_TEST_DIR}/${support_test}"
+		if [[ -f "${resolved_test_file}" ]]; then
+			bin_test_files+=("${resolved_test_file}")
+		fi
+	done
 
 	while IFS=$'\t' read -r command_name test_file _; do
 		if [[ -z "${command_name}" || "${command_name}" == \#* ]]; then
@@ -625,7 +633,9 @@ _run_bin_suite() {
 			continue
 		fi
 
-		if ! _array_contains "${resolved_test_file}" "${bin_test_files[@]}"; then
+		if ((${#bin_test_files[@]} == 0)); then
+			bin_test_files+=("${resolved_test_file}")
+		elif ! _array_contains "${resolved_test_file}" "${bin_test_files[@]}"; then
 			bin_test_files+=("${resolved_test_file}")
 		fi
 	done <"${coverage_map}"

@@ -34,6 +34,12 @@ SOURCE_SUFFIXES = {
     ".tsx",
     ".zsh",
 }
+INLINE_HEADER_EXEMPT_PREFIXES = (
+    "beacon/templates/",
+    "holon/packs/react-vite/template/",
+    "notebooks/jupyter/themes/",
+    "research/antidote/templates/",
+)
 
 
 class QualityPolicyTests(unittest.TestCase):
@@ -140,8 +146,11 @@ class QualityPolicyTests(unittest.TestCase):
             for path in tracked_files
             if Path(path).suffix in SOURCE_SUFFIXES
             and not path.startswith(".reports/")
-            and not path.startswith(".staging/")
+            and ".staging" not in Path(path).parts
             and not path.startswith("egolint/tests/fixtures/")
+            # Reusable template and vendored payloads inherit the repository's
+            # global REUSE.toml annotation instead of modifying emitted source.
+            and not path.startswith(INLINE_HEADER_EXEMPT_PREFIXES)
         ]
         self.assertTrue(source_paths)
 

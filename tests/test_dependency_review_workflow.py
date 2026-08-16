@@ -29,12 +29,5 @@ class DependencyReviewWorkflowTests(unittest.TestCase):
         self.assertIn("fail-on-severity: high", workflow)
         self.assertIn("comment-summary-in-pr: never", workflow)
 
-    def test_staging_ledger_records_the_promotion_boundary(self) -> None:
-        ledger = (REPOSITORY_ROOT / ".staging/github/README.md").read_text(encoding="utf-8")
-        self.assertIn("Dependency review | Promoted as an opt-in profile", ledger)
-        self.assertIn("Gitleaks | Not promoted", ledger)
-        self.assertIn("Vitality audit | Redesign as dashboard collector", ledger)
-
-
 if __name__ == "__main__":
     unittest.main()

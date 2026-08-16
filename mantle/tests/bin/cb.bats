@@ -1,4 +1,5 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Behavioral tests for bin/cb — clipboard copy utility.
 
 setup() {
@@ -68,6 +69,8 @@ teardown() {
 }
 
 @test "cb exits 69 when no clipboard backend is available" {
+	# Force the Linux selection path so a host pbcopy cannot be auto-selected.
+	make_stub "uname" 0 "Linux"
 	# Shadow all backends with failing stubs.
 	make_stub "pbcopy" 127 ""
 	make_stub "wl-copy" 127 ""

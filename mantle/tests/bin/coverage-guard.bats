@@ -1,11 +1,14 @@
-#!/usr/bin/env bats
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # Coverage guard for bin/ commands.
 #
 # This test suite enforces that:
 #   1. Every regular executable in bin/ has a coverage-map entry.
 #   2. Every test file listed in the coverage map exists.
 #   3. Every command listed in the map still exists in bin/.
-#   4. Every exemption entry has a non-empty justification.
+#   4. Every row has the documented five-column schema.
+#   5. Every exemption entry has a non-empty justification.
+#   6. Commands are unique and the map count matches bin/.
 #
 # Fail any of these checks to force developers to register new commands.
 
@@ -59,7 +62,7 @@ _map_test_files() {
 	while IFS=$'\t' read -r cmd test_file _rest; do
 		[[ "${cmd}" =~ ^[[:space:]]*# ]] && continue
 		[[ -z "${cmd}" ]] && continue
-		local full_path="${MANTLE_ROOT}/tests/bin/${test_file}"
+		local full_path="${MANTLE_ROOT}/tests/${test_file}"
 		if [[ ! -f "${full_path}" ]]; then
 			printf "Missing test file for %s: %s\n" "${cmd}" "${full_path}" >&2
 			missing=1
@@ -87,7 +90,25 @@ _map_test_files() {
 }
 
 # ---------------------------------------------------------------------------
-# 4. Every exemption must have a non-empty justification.
+# 4. Every row uses the documented schema.
+# ---------------------------------------------------------------------------
+
+@test "every coverage-map row has five populated columns" {
+	local bad=0
+	local cmd test_file categories exemptions reason extra
+	while IFS=$'\t' read -r cmd test_file categories exemptions reason extra; do
+		[[ "${cmd}" =~ ^[[:space:]]*# ]] && continue
+		[[ -z "${cmd}" ]] && continue
+		if [[ -z "${test_file}" || -z "${categories}" || -z "${exemptions}" || -z "${reason}" || -n "${extra}" ]]; then
+			printf "Invalid coverage-map schema for %s\n" "${cmd}" >&2
+			bad=1
+		fi
+	done <"${COVERAGE_MAP}"
+	[[ "${bad}" -eq 0 ]]
+}
+
+# ---------------------------------------------------------------------------
+# 5. Every exemption must have a non-empty justification.
 # ---------------------------------------------------------------------------
 
 @test "every coverage-map exemption has a justification" {
@@ -108,8 +129,17 @@ _map_test_files() {
 }
 
 # ---------------------------------------------------------------------------
-# 5. Coverage-map has exactly the right number of entries (sanity check).
+# 6. Commands are unique and the map has exactly the right entry count.
 # ---------------------------------------------------------------------------
+
+@test "coverage-map commands are unique" {
+	local duplicates=""
+	duplicates="$(_map_commands | sort | uniq -d)"
+	if [[ -n "${duplicates}" ]]; then
+		printf "Duplicate coverage-map commands:\n%s\n" "${duplicates}" >&2
+		return 1
+	fi
+}
 
 @test "coverage-map entry count matches bin/ executable count" {
 	local bin_count=0

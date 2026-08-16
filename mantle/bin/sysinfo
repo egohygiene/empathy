@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 # shellcheck shell=bash
 #
 # sysinfo - Print a concise, privacy-conscious interactive system summary.
@@ -167,7 +169,9 @@ show_disk() {
 show_network() {
 	section "Network addresses"
 	if command -v ip >/dev/null 2>&1; then
-		ip -brief address 2>/dev/null || ip address
+		if ! ip -brief address 2>/dev/null && ! ip address 2>/dev/null; then
+			printf 'Address information unavailable.\n'
+		fi
 	elif [[ ${OS} == Darwin ]] && command -v ifconfig >/dev/null 2>&1; then
 		ifconfig | awk '/^[a-zA-Z0-9]/ {interface=$1; sub(/:$/, "", interface)} /^[[:space:]]*inet / {print interface, $2} /^[[:space:]]*inet6 / {print interface, $2}'
 	elif hostname -I >/dev/null 2>&1; then
@@ -178,7 +182,9 @@ show_network() {
 
 	section "Listening sockets"
 	if command -v ss >/dev/null 2>&1; then
-		ss --listening --numeric --tcp --udp 2>/dev/null || ss -lntu
+		if ! ss --listening --numeric --tcp --udp 2>/dev/null && ! ss -lntu 2>/dev/null; then
+			printf 'Socket information unavailable.\n'
+		fi
 	elif command -v netstat >/dev/null 2>&1; then
 		netstat -an | awk '/LISTEN|udp/'
 	else

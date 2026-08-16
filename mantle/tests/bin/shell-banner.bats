@@ -1,4 +1,3 @@
-#!/usr/bin/env bats
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # Behavioral tests for bin/shell-banner.
@@ -41,7 +40,7 @@ install_fastfetch_stub() {
 	local stub_path="${BIN_STUB_DIR}/fastfetch"
 	{
 		printf "#!/bin/sh\n"
-		printf 'printf "fastfetch:%s\\n" "$*" >> "$ORDER_FILE"\n'
+		printf 'printf "fastfetch:%%s\\n" "$*" >> "$ORDER_FILE"\n'
 		printf 'case "$1" in --version) printf "fastfetch 2.67.0\\n" ;; *) printf "FASTFETCH RENDERED\\n" ;; esac\n'
 		printf "exit %d\n" "${exit_code}"
 	} >"${stub_path}"

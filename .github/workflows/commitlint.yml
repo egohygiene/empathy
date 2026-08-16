@@ -60,6 +60,7 @@ jobs:
         shell: bash
         env:
           BASE_SHA: "${{ github.event.pull_request.base.sha }}"
+          COREPACK_HOME: "${{ runner.temp }}/empathy-corepack"
           HEAD_SHA: "${{ github.event.pull_request.head.sha }}"
         run: |
           set -euo pipefail

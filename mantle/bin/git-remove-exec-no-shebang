@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 set -o errexit
 set -o nounset
 set -o pipefail
@@ -160,7 +162,7 @@ main() {
 					warn "removed executable bit: ${file}"
 				fi
 			fi
-			[[ ${DRY_RUN} == true ]] || chmod -x -- "${file}" || die 1 "could not change mode: ${file}"
+			[[ ${DRY_RUN} == true ]] || chmod a-x "./${file#./}" || die 1 "could not change mode: ${file}"
 		fi
 	done < <(git ls-files "${list_arguments[@]}")
 

@@ -33,7 +33,10 @@ export MANTLE_TEST_DIR MANTLE_ROOT
 # Call from Bats setup() functions.
 setup_isolated_home() {
 	local original_home="${HOME:-}"
-	TEST_HOME="$(mktemp -d "${TMPDIR:-/tmp}/mantle-test-home-XXXXXX")"
+	local temp_root="${TMPDIR:-/tmp}"
+	temp_root=${temp_root%/}
+	TEST_HOME="$(mktemp -d "${temp_root}/mantle-test-home-XXXXXX")"
+	TEST_HOME="$(cd "${TEST_HOME}" && pwd -P)"
 	export TEST_HOME HOME="${TEST_HOME}"
 
 	export XDG_CONFIG_HOME="${TEST_HOME}/.config"
@@ -138,7 +141,10 @@ run_bash_env() {
 
 # setup_stub_dir — create a per-test stub directory and prepend it to PATH.
 setup_stub_dir() {
-	STUB_DIR="$(mktemp -d "${TMPDIR:-/tmp}/mantle-test-stubs-XXXXXX")"
+	local temp_root="${TMPDIR:-/tmp}"
+	temp_root=${temp_root%/}
+	STUB_DIR="$(mktemp -d "${temp_root}/mantle-test-stubs-XXXXXX")"
+	STUB_DIR="$(cd "${STUB_DIR}" && pwd -P)"
 	export STUB_DIR
 	export PATH="${STUB_DIR}:${PATH}"
 }

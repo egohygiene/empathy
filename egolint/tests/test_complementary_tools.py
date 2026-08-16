@@ -55,7 +55,6 @@ class ComplementaryToolContractTests(unittest.TestCase):
             "govulncheck",
             "interrogate",
             "knip",
-            "latexindent",
             "regal",
             "vacuum",
             "vulture",
@@ -77,6 +76,12 @@ class ComplementaryToolContractTests(unittest.TestCase):
             with self.subTest(tool=identifier):
                 state = COMPLEMENTARY_TOOLS.resolve_tool_state(self.tools[identifier])
                 self.assertEqual(state.applicability, "applicable")
+
+    def test_maintained_latex_templates_activate_latexindent(self) -> None:
+        state = COMPLEMENTARY_TOOLS.resolve_tool_state(self.tools["latexindent"])
+        self.assertEqual(state.applicability, "applicable")
+        self.assertIn("beacon/templates/research-paper/template.tex", state.matched_files)
+        self.assertIn("research/antidote/templates/template.tex", state.matched_files)
 
     def test_all_of_marker_groups_require_every_project_marker(self) -> None:
         tool = self.tools["deptry"]
