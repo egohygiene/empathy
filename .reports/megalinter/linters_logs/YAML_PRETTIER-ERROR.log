@@ -19,5 +19,6 @@ Checking formatting...
 [warn] .github/workflow-profiles/release-strategies/release-please.yml
 [warn] .github/workflow-profiles/release-strategies/semantic-release.yml
 [warn] .github/workflow-profiles/security-optional/ossf-scorecard-older.yml
-[warn] Code style issues found in 14 files. Run Prettier with --write to fix.
+[warn] pnpm-workspace.yaml
+[warn] Code style issues found in 15 files. Run Prettier with --write to fix.
 

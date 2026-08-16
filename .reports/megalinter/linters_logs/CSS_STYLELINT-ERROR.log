@@ -115,7 +115,16 @@ Linter raw log:
   1067:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
   1092:8   ✖  Expected "context" media feature range notation                                                                                                 media-feature-range-notation
 
-✖ 108 problems (108 errors, 0 warnings)
+notebooks/jupyter/themes/@jupyterlab/theme-dark-extension/index.css
+  110:23  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
+  149:28  ✖  Expected "0.83333" to be "0.8333"                            number-max-precision
+  445:8   ✖  Expected class selector ".jp-RenderedText" to be kebab-case  selector-class-pattern
+
+notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
+  108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
+  147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
+
+✖ 113 problems (113 errors, 0 warnings)
   98 errors potentially fixable with the "--fix" option.
 
 

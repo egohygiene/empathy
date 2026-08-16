@@ -2,4 +2,7 @@ Results of ls-lint linter (version 2.3.1)
 See documentation on https://megalinter.io/10.0.0/descriptors/repository_ls_lint/
 -----------------------------------------------
 
-✅ [SUCCESS] for workspace /github/workspace
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Cargo.toml failed for `.toml` rules: kebabcase | snakecase
+

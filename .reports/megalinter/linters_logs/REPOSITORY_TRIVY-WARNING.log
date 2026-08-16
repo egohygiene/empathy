@@ -4,16 +4,19 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_trivy/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026-08-16T01:06:49Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-16T01:06:49Z	INFO	[vulndb] Need to update DB
-2026-08-16T01:06:49Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-16T01:06:49Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-23.75 MiB / 107.72 MiB [------------->______________________________________________] 22.05% ? p/s ?60.13 MiB / 107.72 MiB [--------------------------------->__________________________] 55.82% ? p/s ?95.82 MiB / 107.72 MiB [----------------------------------------------------->______] 88.95% ? p/s ?107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 139.84 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 139.84 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 139.84 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 130.82 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 130.82 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 130.82 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 122.38 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 122.38 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 122.38 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 114.49 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 114.49 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 114.49 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 107.10 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 107.10 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 107.10 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 100.19 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 100.19 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [------------------------------------------->] 100.00% 100.19 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 93.73 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 93.73 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 93.73 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 87.68 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 87.68 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 87.68 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 82.02 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-------------------------------------------->] 100.00% 82.02 MiB p/s ETA 0s107.72 MiB / 107.72 MiB [-----------------------------------------------] 100.00% 19.02 MiB p/s 5.9s2026-08-16T01:06:56Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-16T01:06:56Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-16T01:06:56Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-16T01:06:56Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-16T01:06:56Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-08-16T01:07:00Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+2026-08-16T01:51:55Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-16T01:51:55Z	INFO	[vulndb] Need to update DB
+2026-08-16T01:51:55Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-16T01:51:55Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+30.17 MiB / 107.64 MiB [---------------->___________________________________________] 28.03% ? p/s ?63.86 MiB / 107.64 MiB [----------------------------------->________________________] 59.33% ? p/s ?104.57 MiB / 107.64 MiB [--------------------------------------------------------->_] 97.15% ? p/s ?107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 129.94 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 129.94 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 129.94 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 121.56 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 121.56 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 121.56 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 113.72 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 113.72 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 113.72 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 106.38 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 106.38 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [------------------------------------------->] 100.00% 106.38 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 99.52 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 99.52 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 99.52 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 93.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 93.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 93.10 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 87.09 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 87.09 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 87.09 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 81.47 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 81.47 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 81.47 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-------------------------------------------->] 100.00% 76.21 MiB p/s ETA 0s107.64 MiB / 107.64 MiB [-----------------------------------------------] 100.00% 19.38 MiB p/s 5.8s2026-08-16T01:52:02Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-16T01:52:02Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-16T01:52:02Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-16T01:52:02Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-16T01:52:02Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [----------------------------------------------] 100.00% 298.14 KiB p/s 1.0s2026-08-16T01:52:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-16T01:52:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-16T01:52:08Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-16T01:52:09Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".staging/devenvironment/.devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 
 📣 Notices:
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
@@ -24,73 +27,73 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2616cf2]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0xf0d131af6d0)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x26691fdf2500)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0xf0d11704400?, 0x6, 0x4252f4?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x26691e090f00?, 0x6, 0x4252f4?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0xf0d13d1b040, 0x7fe3cb1cfa00?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x2669227adc20, 0x7f32e06bca00?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0xf0d14db33b0, 0xf0d13d1b040)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x2669219bdd2c, 0x2669227adc20)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0xf0d14db33b0, {0xf0d12dc0f00?, 0xf0d139ac1d3?}, {0x67caaa0?, 0xf0d10c8b508?}, {0xf0d12dc0f00, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x2669219bdd2c, {0x5aa9040?, 0x266922261b23?}, {0x67caaa0?, 0x266920982978?}, {0x26691e17dcc0, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0xf0d131af4a0}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x26691fdf2230}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x67cb5e0, 0xf0d14ccbe48}, {0xf0d12dc0f00, 0x43}, {0x6831f78, 0xf0d131af4a0}, 0xf0d11192ba8)
+io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x26691e17dcc0, 0x43}, {0x6831f78, 0x26691fdf2230}, 0x26691c696ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x67cb5e0, 0xf0d14ccbe48}, {0xf0d139ac1b0, 0x2d}, {0x6831f78, 0xf0d11ecc0c8}, 0xf0d11192ba8)
+io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x266922261b00, 0x2d}, {0x6831f78, 0x266920d63e28}, 0x26691c696ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0xf0d14ccbe48}, {0xf0d163aff20, 0x22}, {0x6831f78, 0xf0d11eaae88}, 0xf0d11192ba8)
+io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x2669222d17a0, 0x22}, {0x6831f78, 0x266920d62f28}, 0x26691c696ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0xf0d14ccbe48}, {0xf0d1595a078, 0x17}, {0x6831f78, 0xf0d11eaa848}, 0xf0d11192ba8)
+io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x266920d3cf18, 0x17}, {0x6831f78, 0x266920d628e8}, 0x26691c696ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0xf0d14ccbe48}, {0xf0d139106a0, 0x8}, {0x6831f78, 0xf0d11eaa668}, 0xf0d11192ba8)
+io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x266920d44f90, 0x8}, {0x6831f78, 0x266920d62708}, 0x26691c696ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0xf0d14ccbe48}, {0x67a84f8, 0x1}, {0x6831370, 0xf0d0fcb4990}, 0xf0d11192ba8)
+io/fs.walkDir({0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1}, {0x6831370, 0x266920d611f0}, 0x26691c696ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x67cb5e0, 0xf0d14ccbe48}, {0x67a84f8, 0x1}, 0xf0d11192ba8)
+io/fs.WalkDir({0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1}, 0x26691c696ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0xf0d135370b0}, {0x67cb5e0, 0xf0d14ccbe48}, {0x67a84f8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x266921eee960}, {0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0xf0d135370b0}, {0x67cb5e0, 0xf0d14ccbe48}, {0x67a84f8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x266921eee960}, {0x67cb5e0, 0x26691f76b2c0}, {0x67a84f8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0xf0d15460ec0, {0x68311b0, 0xf0d0f9a02a0}, {0x67cb5e0, 0xf0d14ccbbd8})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x266921fb0040, {0x68311b0, 0x26691be380e0}, {0x67cb5e0, 0x26691f76b068})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0xf0d15471760, {0x68311b0?, 0xf0d0f9a02a0?}, {{0x67cb5e0, 0xf0d14ccbbd8}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x266921fae120, {0x68311b0?, 0x26691be380e0?}, {{0x67cb5e0, 0x26691f76b068}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0xf0d15513190, {0xf0d1498b000, 0x1f, 0x20}, {0xf0d1498b200, 0x19, 0x20}, 0xf0d15578000, {0xf0d1050b2d7, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x266921e40cd0, {0x2669219c7a00, 0x1f, 0x20}, {0x2669219c7c00, 0x19, 0x20}, 0x266921e7fc80, {0x26691c8f1457, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0xf0d15513190, {0xf0d1498b000, 0x1f, 0x20}, {0xf0d1498b200, 0x19, 0x20}, 0xf0d15578000, {0xf0d1050b2d7, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x266921e40cd0, {0x2669219c7a00, 0x1f, 0x20}, {0x2669219c7c00, 0x19, 0x20}, 0x266921e7fc80, {0x26691c8f1457, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffe7df7212f, 0x1}, 0xf0d1546f8c0, {0x7fe363fa2f30, 0xf0d13db5e00}, {0x67cb520, 0xa3125e0}, {0xf0d15513190, {0xf0d1498b000, 0x1f, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7fff180eb12f, 0x1}, 0x266921e41580, {0x7f3219494628, 0x26691e454000}, {0x67cb520, 0xa3125e0}, {0x266921e40cd0, {0x2669219c7a00, 0x1f, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0xf0d108cc2c0, 0x2, 0x2}, {0xf0d1069dd00, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x26691ca62e60, 0x2, 0x2}, {0x26691c3699c0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffe7df71f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffe7df71f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffe7df71f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffe7df71f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffe7df71f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffe7df71f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7fff180eaf46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0xf0d0fd03508, {0xf0d1072a388, 0x1, 0x33})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x26691c7e4f08, {0x26691c533188, 0x1, 0x33})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0xf0d0fd03508, {0xf0d1072a008, 0x33, 0x33})
+github.com/spf13/cobra.(*Command).execute(0x26691c7e4f08, {0x26691c532e08, 0x33, 0x33})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0xf0d0fafb508)
+github.com/spf13/cobra.(*Command).ExecuteC(0x26691c7e4908)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0xf0d0fc83680})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x26691c585d00})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c

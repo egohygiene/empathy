@@ -2724,5 +2724,49 @@ Linter raw log:
  21:139  warning  'be harmonized' may be passive voice. Use active voice if you can.  write-good.Passive 
  21:185  warning  'are proven' may be passive voice. Use active voice if you can.     write-good.Passive 
 
-✖ 4 errors, 2104 warnings and 0 suggestions in 249 files.
+
+ tools/ROADMAP.md
+ 6:7     warning  'It is' is too wordy.                                                  write-good.TooWordy 
+ 11:42   warning  'additional' is too wordy.                                             write-good.TooWordy 
+ 17:58   warning  'assistance' is too wordy.                                             write-good.TooWordy 
+ 26:6    warning  'Acquire' is too wordy.                                                write-good.TooWordy 
+ 41:8    warning  'be replaced' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 45:70   warning  'is known' may be passive voice. Use active voice if you can.          write-good.Passive  
+ 77:45   warning  'is scaffolded' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 88:12   warning  'be attached' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 95:5    warning  'implement' is too wordy.                                              write-good.TooWordy 
+ 111:43  warning  'is agreed' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 111:79  warning  'is duplicated' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 118:3   warning  'Finalize' is too wordy.                                               write-good.TooWordy 
+ 119:3   warning  'Validate' is too wordy.                                               write-good.TooWordy 
+ 128:20  warning  'Several' is a weasel word!                                            write-good.Weasel   
+ 129:46  warning  'equivalent' is too wordy.                                             write-good.TooWordy 
+ 143:3   warning  'Validate' is too wordy.                                               write-good.TooWordy 
+ 151:11  warning  'Implement' is too wordy.                                              write-good.TooWordy 
+ 165:33  warning  'be validated' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 200:50  warning  'be retrieved' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 214:3   warning  'Evaluate' is too wordy.                                               write-good.TooWordy 
+ 214:57  warning  'sufficient' is too wordy.                                             write-good.TooWordy 
+ 248:1   warning  'be processed' may be passive voice. Use active voice if you can.      write-good.Passive  
+ 262:48  warning  'is proven' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 286:12  warning  'validate' is too wordy.                                               write-good.TooWordy 
+ 292:57  warning  'is archived' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 294:43  warning  'be reconstructed' may be passive voice. Use active voice if you can.  write-good.Passive  
+ 302:15  warning  'finalize' is too wordy.                                               write-good.TooWordy 
+ 310:41  warning  'be routed' may be passive voice. Use active voice if you can.         write-good.Passive  
+ 319:3   warning  'Validate' is too wordy.                                               write-good.TooWordy 
+ 345:1   warning  'be prototyped' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 346:42  warning  'substantial' is too wordy.                                            write-good.TooWordy 
+ 346:77  warning  'is built' may be passive voice. Use active voice if you can.          write-good.Passive  
+ 356:17  warning  'validate' is too wordy.                                               write-good.TooWordy 
+ 359:4   warning  'Implement' is too wordy.                                              write-good.TooWordy 
+ 381:59  warning  'are satisfied' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 384:15  warning  'are preserved' may be passive voice. Use active voice if you can.     write-good.Passive  
+ 389:24  warning  'is disabled' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 391:26  warning  'is isolated' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 393:29  warning  'is implemented' may be passive voice. Use active voice if you can.    write-good.Passive  
+ 393:66  warning  'is intended' may be passive voice. Use active voice if you can.       write-good.Passive  
+ 399:56  warning  'Validate' is too wordy.                                               write-good.TooWordy 
+
+✖ 4 errors, 2145 warnings and 0 suggestions in 251 files.
 

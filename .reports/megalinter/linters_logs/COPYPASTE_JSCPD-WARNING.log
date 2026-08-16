@@ -109,6 +109,9 @@ Clone found (yaml)
  - .github/workflow-profiles/application-flutter/copilot-setup-steps2.yml [10:7 - 15:60] (6 lines, 68 tokens)
    .github/workflow-profiles/application-flutter/copilot-setup-steps2.yml [16:15 - 21:60]
 Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/copilot-setup-steps2.yml [32:1 - 41:15] (10 lines, 58 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [77:1 - 86:15]
+Clone found (yaml)
  - .github/workflow-profiles/application-flutter/copilot-setup-steps2.yml [36:1 - 45:49] (10 lines, 84 tokens)
    .github/workflow-profiles/application-flutter/release-artifacts.yml [245:1 - 254:49]
 Clone found (yaml)
@@ -121,8 +124,35 @@ Clone found (yaml)
  - .github/workflow-profiles/application-flutter/release-artifacts.yml [26:20 - 46:15] (21 lines, 124 tokens)
    .github/workflow-profiles/application-flutter/release-artifacts.yml [190:19 - 209:15]
 Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [26:1 - 36:11] (11 lines, 55 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [71:1 - 81:11]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [26:1 - 40:13] (15 lines, 90 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [103:1 - 118:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [26:1 - 46:15] (21 lines, 131 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [133:1 - 154:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [26:1 - 40:13] (15 lines, 90 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [248:1 - 263:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [26:1 - 46:15] (21 lines, 131 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [416:1 - 437:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [37:1 - 52:15] (16 lines, 128 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [258:1 - 273:15]
+Clone found (yaml)
  - .github/workflow-profiles/application-flutter/release-artifacts.yml [56:1 - 64:11] (9 lines, 77 tokens)
    .github/workflow-profiles/application-flutter/release-artifacts.yml [86:1 - 94:11]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [163:1 - 171:15] (9 lines, 59 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [81:1 - 89:15]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [190:1 - 200:11] (11 lines, 55 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [363:1 - 373:11]
+Clone found (yaml)
+ - .github/workflow-profiles/application-flutter/release-artifacts.yml [209:1 - 218:15] (10 lines, 77 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [384:1 - 393:15]
 Clone found (yaml)
  - .github/workflow-profiles/container-platform/benchmark.yml [26:1 - 43:28] (18 lines, 94 tokens)
    .github/workflow-profiles/container-platform/publish.yml [28:1 - 45:28]
@@ -165,6 +195,9 @@ Clone found (yaml)
 Clone found (yaml)
  - .github/workflow-profiles/content-and-docs/bookmarks-extract.yml [44:1 - 52:15] (9 lines, 91 tokens)
    .github/workflow-profiles/content-and-docs/bookmarks-extract.yml [70:1 - 78:15]
+Clone found (yaml)
+ - .github/workflow-profiles/content-and-docs/bookmarks-extract.yml [62:1 - 73:47] (12 lines, 81 tokens)
+   .staging/.github/workflows/medium-rss-sync.yml [28:1 - 39:47]
 Clone found (yaml)
  - .github/workflow-profiles/content-and-docs/docs.yml [43:1 - 61:7] (19 lines, 85 tokens)
    .github/workflow-profiles/content-and-docs/docs.yml [94:1 - 112:7]
@@ -414,6 +447,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
+   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 510:27] (14 lines, 479 tokens)
    .staging/.github/agents/awesome/gem-mobile-tester.agent.md:markdown [84:36 - 98:4]
@@ -889,17 +925,17 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [24:124 - 128:4] (105 lines, 250 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [22:119 - 127:4]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [28:53 - 116:8] (89 lines, 103 tokens)
-   .staging/.github/skills/create-specification/SKILL.md:markdown [26:53 - 114:12]
-Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 114:28] (84 lines, 1122 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [29:1 - 112:28]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [37:1 - 124:40] (88 lines, 101 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [35:1 - 122:40]
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [33:25 - 58:4] (26 lines, 281 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [31:25 - 56:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [59:1 - 116:2] (58 lines, 795 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [57:1 - 114:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1699,11 +1735,14 @@ Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [41:3 - 48:21] (8 lines, 98 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [41:3 - 48:21]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [124:22 - 131:3] (8 lines, 64 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [96:22 - 103:3]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [130:35 - 141:3] (12 lines, 179 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [102:35 - 113:3]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [140:35 - 148:124] (9 lines, 156 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [112:35 - 120:124]
 Clone found (markdown)
  - .staging/.github/skills/create-llms/SKILL.md:markdown [53:32 - 108:13] (56 lines, 562 tokens)
    .staging/.github/skills/update-llms/SKILL.md:markdown [47:42 - 96:13]
@@ -1716,9 +1755,6 @@ Clone found (txt)
 Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
-Clone found (markdown)
- - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
 Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
@@ -2563,6 +2599,9 @@ Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
 Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [300:45 - 305:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [318:23 - 322:2]
+Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [1223:63 - 1244:14] (22 lines, 530 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2150:63 - 2166:62]
 Clone found (markdown)
@@ -2766,9 +2805,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
-Clone found (markdown)
- - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
-   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -2802,6 +2838,9 @@ Clone found (markdown)
 Clone found (yaml)
  - .staging/.github/workflows/build-website.yml [20:1 - 41:15] (22 lines, 137 tokens)
    .staging/.github/workflows/deploy-website.yml [24:1 - 45:15]
+Clone found (yaml)
+ - .staging/.github/workflows/build.yml [8:12 - 18:5] (11 lines, 58 tokens)
+   .staging/.github/workflows/development-build.yml [10:27 - 20:5]
 Clone found (yaml)
  - .staging/.github/workflows/cli-for-beginners-sync.lock.yml [73:1 - 104:38] (32 lines, 443 tokens)
    .staging/.github/workflows/duplicate-resource-detector.lock.yml [72:1 - 103:38]
@@ -3427,6 +3466,15 @@ Clone found (yaml)
  - .staging/.github/workflows/duplicate-resource-detector.lock.yml [1151:42 - 1168:37] (18 lines, 172 tokens)
    .staging/.github/workflows/duplicate-resource-detector.lock.yml [1166:47 - 1182:32]
 Clone found (yaml)
+ - .staging/.github/workflows/flutter-ci-reusable.yml [71:20 - 91:13] (21 lines, 124 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [363:19 - 384:15]
+Clone found (yaml)
+ - .staging/.github/workflows/flutter-ci-reusable.yml [246:1 - 269:19] (24 lines, 159 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [290:1 - 313:15]
+Clone found (yaml)
+ - .staging/.github/workflows/flutter-ci-reusable.yml [246:1 - 268:16] (23 lines, 149 tokens)
+   .staging/.github/workflows/flutter-ci-reusable.yml [324:1 - 344:15]
+Clone found (yaml)
  - .staging/.github/workflows/learning-hub-updater.lock.yml [102:80 - 109:15] (8 lines, 72 tokens)
    .staging/.github/workflows/learning-hub-updater.lock.yml [413:118 - 420:15]
 Clone found (yaml)
@@ -3438,6 +3486,9 @@ Clone found (yaml)
 Clone found (yaml)
  - .staging/.github/workflows/learning-hub-updater.lock.yml [1187:42 - 1204:37] (18 lines, 172 tokens)
    .staging/.github/workflows/learning-hub-updater.lock.yml [1202:47 - 1218:32]
+Clone found (yaml)
+ - .staging/.github/workflows/medium-rss-sync.yml [26:22 - 39:47] (14 lines, 92 tokens)
+   .staging/.github/workflows/pinterest-rss-sync.yml [26:25 - 39:47]
 Clone found (yaml)
  - .staging/.github/workflows/pr-duplicate-check.lock.yml [104:80 - 111:15] (8 lines, 72 tokens)
    .staging/.github/workflows/pr-duplicate-check.lock.yml [427:118 - 434:15]
@@ -3672,6 +3723,12 @@ Clone found (toml)
 Clone found (toml)
  - .staging/devenvironment/realm/pyproject.toml [51:1 - 67:33] (17 lines, 53 tokens)
    .staging/devenvironment/realm/pyproject.toml [302:1 - 318:33]
+Clone found (markdown)
+ - .staging/misc/ROADMAP.md:markdown [1:1 - 419:73] (419 lines, 5045 tokens)
+   tools/ROADMAP.md:markdown [1:1 - 419:73]
+Clone found (text)
+ - .staging/misc/ROADMAP.md:text [50:1 - 341:16] (292 lines, 184 tokens)
+   tools/ROADMAP.md:text [50:1 - 341:16]
 Clone found (typescript)
  - .staging/react-template/universal/apps/ui/src/api/user.ts [14:37 - 22:92] (9 lines, 51 tokens)
    .staging/react-template/universal/apps/ui/src/utils/request.ts [32:32 - 40:92]
@@ -5222,7 +5279,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 64             │ 22736       │ 62404        │ 58           │ 1321 (5.81%)     │ 5555 (8.90%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 212            │ 68407       │ 202525       │ 56           │ 1043 (1.52%)     │ 4655 (2.30%)      │
+│ json         │ 213            │ 68419       │ 202576       │ 56           │ 1043 (1.52%)     │ 4655 (2.30%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5236,7 +5293,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1671           │ 324900      │ 4166659      │ 680          │ 11090 (3.41%)    │ 169134 (4.06%)    │
+│ markdown     │ 1672           │ 325319      │ 4171888      │ 682          │ 11314 (3.48%)    │ 174978 (4.19%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 87             │ 28027       │ 96254        │ 25           │ 277 (0.99%)      │ 2408 (2.50%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5256,7 +5313,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 279            │ 70334       │ 439159       │ 125          │ 1266 (1.80%)     │ 12106 (2.76%)     │
+│ python       │ 280            │ 70687       │ 441608       │ 125          │ 1266 (1.79%)     │ 12106 (2.74%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5274,7 +5331,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 370            │ 84963       │ 197959       │ 29           │ 368 (0.43%)      │ 2477 (1.25%)      │
+│ text         │ 371            │ 85304       │ 198143       │ 30           │ 659 (0.77%)      │ 2661 (1.34%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 38             │ 6466        │ 13087        │ 8            │ 175 (2.71%)      │ 625 (4.78%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5288,12 +5345,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 529            │ 56013       │ 305330       │ 326          │ 9055 (16.17%)    │ 102890 (33.70%)   │
+│ yaml         │ 538            │ 56837       │ 311150       │ 342          │ 9283 (16.33%)    │ 104427 (33.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4144           │ 885590      │ 6270336      │ 1721         │ 31573 (3.57%)    │ 346850 (5.53%)    │
+│ Total:       │ 4157           │ 887539      │ 6284069      │ 1740         │ 32316 (3.64%)    │ 354415 (5.64%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 1721 clones.
+Found 1740 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (3.6%) over threshold (3.0%)
-time: 14.28s
+time: 13.91s
 
