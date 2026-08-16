@@ -42,6 +42,12 @@ paths = [
   '''(?:^|/)\.cache(?:/.*)?$''',
   '''(?:^|/)\.reports(?:/.*)?$''',
   '''(?:^|/)\.secrets\.baseline$''',
+  # Quarantined third-party intake containing literal REDACTED examples. Keep
+  # this narrow list until each source receives its provenance/security review;
+  # never exempt .staging as a whole.
+  '''^\.staging/\.github/instructions/awesome-copilot/(?:code-review-generic|security-and-owasp)\.instructions\.md$''',
+  '''^\.staging/\.github/skills/geofeed-tuner/SKILL\.md$''',
+  '''^\.staging/devenvironment/containers/services/keycloak/realms/development-realm\.json$''',
   '''^egolint/tests/fixtures/negative(?:/.*)?$''',
   '''(?:^|/)megalinter-reports(?:/.*)?$''',
 ]
