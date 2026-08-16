@@ -633,7 +633,9 @@ _run_bin_suite() {
 			continue
 		fi
 
-		if ! _array_contains "${resolved_test_file}" "${bin_test_files[@]}"; then
+		if ((${#bin_test_files[@]} == 0)); then
+			bin_test_files+=("${resolved_test_file}")
+		elif ! _array_contains "${resolved_test_file}" "${bin_test_files[@]}"; then
 			bin_test_files+=("${resolved_test_file}")
 		fi
 	done <"${coverage_map}"

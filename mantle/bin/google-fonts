@@ -307,9 +307,11 @@ validate_options() {
 	validate_enum "download method" "$DOWNLOAD_METHOD" auto archive git
 
 	local license
-	for license in "${LICENSES[@]}"; do
-		validate_enum "license" "$license" ofl apache ufl
-	done
+	if ((${#LICENSES[@]} > 0)); then
+		for license in "${LICENSES[@]}"; do
+			validate_enum "license" "$license" ofl apache ufl
+		done
+	fi
 
 	((${#FAMILIES[@]} == 0 || SELECT_ALL == 0)) ||
 		die "Use either --all or one or more --family options, not both."
@@ -456,12 +458,14 @@ prepare_git_source() {
 
 	if ((SELECT_ALL == 0)); then
 		git -C "$checkout" sparse-checkout init --cone || return 1
-		for family in "${FAMILIES[@]}"; do
-			slug="$(normalize_family "$family")"
-			while IFS= read -r license; do
-				sparse_paths[${#sparse_paths[@]}]="${license}/${slug}"
-			done < <(selected_licenses)
-		done
+		if ((${#FAMILIES[@]} > 0)); then
+			for family in "${FAMILIES[@]}"; do
+				slug="$(normalize_family "$family")"
+				while IFS= read -r license; do
+					sparse_paths[${#sparse_paths[@]}]="${license}/${slug}"
+				done < <(selected_licenses)
+			done
+		fi
 		git -C "$checkout" sparse-checkout set "${sparse_paths[@]}" || return 1
 	fi
 
@@ -496,20 +500,22 @@ collect_family_directories() {
 			find "$SOURCE_DIRECTORY/$license" -mindepth 1 -maxdepth 1 -type d -print >>"$output"
 		done < <(selected_licenses)
 	else
-		for family in "${FAMILIES[@]}"; do
-			slug="$(normalize_family "$family")"
-			[[ -n $slug ]] || die "Family name has no searchable characters: ${family}"
-			found=0
+		if ((${#FAMILIES[@]} > 0)); then
+			for family in "${FAMILIES[@]}"; do
+				slug="$(normalize_family "$family")"
+				[[ -n $slug ]] || die "Family name has no searchable characters: ${family}"
+				found=0
 
-			while IFS= read -r license; do
-				if [[ -d "$SOURCE_DIRECTORY/$license/$slug" ]]; then
-					printf '%s\n' "$SOURCE_DIRECTORY/$license/$slug" >>"$output"
-					found=1
-				fi
-			done < <(selected_licenses)
+				while IFS= read -r license; do
+					if [[ -d "$SOURCE_DIRECTORY/$license/$slug" ]]; then
+						printf '%s\n' "$SOURCE_DIRECTORY/$license/$slug" >>"$output"
+						found=1
+					fi
+				done < <(selected_licenses)
 
-			((found)) || die "Font family not found in the selected license roots: ${family} (${slug})"
-		done
+				((found)) || die "Font family not found in the selected license roots: ${family} (${slug})"
+			done
+		fi
 	fi
 
 	LC_ALL=C sort -u -o "$output" "$output"

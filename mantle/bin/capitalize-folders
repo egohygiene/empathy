@@ -233,6 +233,10 @@ build_plan() {
 
 	children=("$directory"/*)
 
+	if ((${#children[@]} == 0)); then
+		return 0
+	fi
+
 	for entry in "${children[@]}"; do
 		[[ -d "$entry" && ! -L "$entry" ]] || continue
 

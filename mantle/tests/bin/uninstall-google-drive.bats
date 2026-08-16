@@ -32,8 +32,12 @@ teardown() {
 	assert_failure
 }
 
-@test "uninstall-google-drive requires root and fails without sudo" {
-	make_stub "sudo" 1 ""
-	run_bin uninstall-google-drive
-	assert_failure
+@test "uninstall-google-drive rejects unsupported hosts or no-ops without artifacts" {
+	run_bin uninstall-google-drive uninstall --yes
+	if [[ "$(uname -s)" == "Darwin" ]]; then
+		assert_success
+		assert_output_contains "nothing to remove"
+	else
+		assert_status 69
+	fi
 }

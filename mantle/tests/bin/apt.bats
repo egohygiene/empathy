@@ -34,14 +34,14 @@ teardown() {
 	assert_failure
 }
 
-@test "apt-freeze requires root and fails without sudo or root" {
-	# apt-freeze should exit non-zero when not running as root and sudo is absent.
-	if [[ "${EUID}" -eq 0 ]]; then
-		skip "root can run apt-freeze without sudo"
-	fi
-	make_stub "sudo" 1 ""
-	run_bin apt-freeze
-	assert_failure
+@test "apt-freeze dry-run never writes an export bundle" {
+	local output_dir="${BIN_TEST_HOME}/apt-export"
+	run_bin apt-freeze --dry-run --output-dir "${output_dir}"
+
+	# Ubuntu runners validate the plan. Other supported test hosts may reject
+	# the platform or lack the APT inventory tools before validation begins.
+	[[ "${status}" -eq 0 || "${status}" -eq 4 || "${status}" -eq 127 ]]
+	[[ ! -e "${output_dir}" ]]
 }
 
 # ===========================================================================

@@ -345,6 +345,8 @@ EOF
 	assert_success
 
 	if command -v fish >/dev/null 2>&1; then
+		local fish_command
+		fish_command="$(command -v fish)"
 		run env -i \
 			HOME="${TEST_HOME}" \
 			XDG_CONFIG_HOME="${XDG_CONFIG_HOME}" \
@@ -354,7 +356,7 @@ EOF
 			XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}" \
 			PATH="/usr/bin:/bin" \
 			TERM=dumb \
-			fish --no-config -c 'source "$XDG_CONFIG_HOME/fish/conf.d/mantle.fish"; printf "%s\n" "$MANTLE_ROOT"'
+			"${fish_command}" --no-config -c 'source "$XDG_CONFIG_HOME/fish/conf.d/mantle.fish"; printf "%s\n" "$MANTLE_ROOT"'
 		assert_success
 		[[ "${output}" == "${DEFAULT_PREFIX}" ]]
 	fi

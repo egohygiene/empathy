@@ -67,6 +67,7 @@ jobs:
             bats \
             fish \
             gawk \
+            ripgrep \
             shellcheck \
             zsh
 
@@ -79,6 +80,7 @@ jobs:
             bats-core \
             fish \
             gawk \
+            ripgrep \
             shellcheck
 
       - name: Install pinned shdoc
@@ -95,7 +97,13 @@ jobs:
             "https://github.com/reconquest/shdoc.git"
           git -C "${shdoc_root}" fetch --depth 1 origin "${SHDOC_COMMIT}"
           git -C "${shdoc_root}" checkout --detach FETCH_HEAD
-          install -m 0755 "${shdoc_root}/shdoc" "${shdoc_bin}/shdoc"
+          install -m 0644 "${shdoc_root}/shdoc" "${shdoc_bin}/shdoc.awk"
+          {
+            printf '%s\n' '#!/usr/bin/env bash'
+            printf '%s\n' 'set -euo pipefail'
+            printf 'exec gawk -E %q "$@"\n' "${shdoc_bin}/shdoc.awk"
+          } > "${shdoc_bin}/shdoc"
+          chmod 0755 "${shdoc_bin}/shdoc"
           printf '%s\n' "${shdoc_bin}" >> "${GITHUB_PATH}"
 
       - name: Install locked shfmt through Mantle

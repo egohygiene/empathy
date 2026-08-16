@@ -38,10 +38,9 @@ teardown() {
 	mkdir -p "${WORK_DIR}/hello world"
 	run_bin capitalize-folders --dry-run "${WORK_DIR}"
 	assert_success
-	# Original name must still exist
-	[[ -d "${WORK_DIR}/hello world" ]]
-	# Proposed new name must not exist
-	[[ ! -d "${WORK_DIR}/Hello World" ]]
+	run find "${WORK_DIR}" -mindepth 1 -maxdepth 1 -type d -exec basename {} \;
+	assert_success
+	[[ "${output}" == "hello world" ]]
 }
 
 @test "capitalize-folders --dry-run prints proposed renames" {
@@ -59,8 +58,9 @@ teardown() {
 	mkdir -p "${WORK_DIR}/hello"
 	run_bin capitalize-folders "${WORK_DIR}"
 	assert_success
-	[[ -d "${WORK_DIR}/Hello" ]]
-	[[ ! -d "${WORK_DIR}/hello" ]]
+	run find "${WORK_DIR}" -mindepth 1 -maxdepth 1 -type d -exec basename {} \;
+	assert_success
+	[[ "${output}" == "Hello" ]]
 }
 
 @test "capitalize-folders renames directory with multiple words" {

@@ -179,11 +179,13 @@ validate_arguments() {
 	case "$BACKEND" in auto | lsof | ss | sockstat | powershell | netstat | fuser) ;; *) usage_error "unknown backend: $BACKEND" ;; esac
 	case "$FORMAT" in table | tsv | json | pids) ;; *) usage_error "unknown format: $FORMAT" ;; esac
 	if [[ "$LIST_BACKENDS" != true ]]; then ((${#PORTS[@]} > 0)) || usage_error "at least one port is required"; fi
-	for port in "${PORTS[@]}"; do
-		case "$port" in *[!0-9]* | "") usage_error "port must be an integer: $port" ;; esac
-		((${#port} <= 5)) || usage_error "port must be between 1 and 65535: $port"
-		((10#$port >= 1 && 10#$port <= 65535)) || usage_error "port must be between 1 and 65535: $port"
-	done
+	if ((${#PORTS[@]} > 0)); then
+		for port in "${PORTS[@]}"; do
+			case "$port" in *[!0-9]* | "") usage_error "port must be an integer: $port" ;; esac
+			((${#port} <= 5)) || usage_error "port must be between 1 and 65535: $port"
+			((10#$port >= 1 && 10#$port <= 65535)) || usage_error "port must be between 1 and 65535: $port"
+		done
+	fi
 }
 
 # @description Require commands used by the core normalization pipeline.
