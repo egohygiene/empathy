@@ -14,6 +14,8 @@ set -o pipefail
 
 readonly MANTLE_INSTALLER_BLOCK_BEGIN="# >>> mantle >>>"
 readonly MANTLE_INSTALLER_BLOCK_END="# <<< mantle <<<"
+readonly MANTLE_INSTALLER_ZSHENV_BLOCK_BEGIN="# >>> mantle zdotdir >>>"
+readonly MANTLE_INSTALLER_ZSHENV_BLOCK_END="# <<< mantle zdotdir <<<"
 readonly MANTLE_INSTALLER_VERSION_FALLBACK="development"
 readonly MANTLE_STARTUP_BACKUP_SUFFIX=".mantle.bak"
 
@@ -486,7 +488,20 @@ shell_startup_path() {
 		esac
 		;;
 	zsh)
-		printf "%s/.zshrc\n" "${HOME}"
+		if [[ -n "${ZDOTDIR:-}" ]]; then
+			if [[ "${ZDOTDIR}" != /* ]]; then
+				log_error "ZDOTDIR must be an absolute path"
+				exit 64
+			fi
+			printf "%s/.zshrc\n" "${ZDOTDIR%/}"
+		elif [[ -e "${HOME}/.zshrc" &&
+			! -e "${XDG_CONFIG_HOME:-${HOME}/.config}/zsh/.zshrc" ]]; then
+			# Preserve an existing legacy startup file until the user explicitly
+			# migrates it; silently switching ZDOTDIR would hide their shell setup.
+			printf "%s/.zshrc\n" "${HOME}"
+		else
+			printf "%s/zsh/.zshrc\n" "${XDG_CONFIG_HOME:-${HOME}/.config}"
+		fi
 		;;
 	fish)
 		printf "%s/fish/conf.d/mantle.fish\n" "${XDG_CONFIG_HOME:-${HOME}/.config}"
@@ -496,6 +511,18 @@ shell_startup_path() {
 		exit 64
 		;;
 	esac
+}
+
+# @description Return whether Mantle must bootstrap ZDOTDIR from ~/.zshenv.
+zsh_bootstrap_required() {
+	local startup_file=""
+
+	if [[ -n "${ZDOTDIR:-}" ]]; then
+		return 1
+	fi
+
+	startup_file="$(shell_startup_path "zsh")"
+	[[ "${startup_file}" != "${HOME}/.zshrc" ]]
 }
 
 # @description Report whether a shell is available on the current system.
@@ -568,6 +595,21 @@ print_managed_block() {
 		"${MANTLE_INSTALLER_BLOCK_END}"
 }
 
+# @description Print the minimal home-level bootstrap needed for XDG Zsh files.
+print_zshenv_block() {
+	# shellcheck disable=SC2016 # Generated startup code expands these variables when Zsh reads it.
+	printf "%s\n" \
+		"${MANTLE_INSTALLER_ZSHENV_BLOCK_BEGIN}" \
+		"# Managed by Mantle's installer; Zsh must discover ZDOTDIR from HOME." \
+		'if [ -z "${XDG_CONFIG_HOME:-}" ]; then' \
+		'  export XDG_CONFIG_HOME="$HOME/.config"' \
+		'fi' \
+		'if [ -z "${ZDOTDIR:-}" ]; then' \
+		'  export ZDOTDIR="$XDG_CONFIG_HOME/zsh"' \
+		'fi' \
+		"${MANTLE_INSTALLER_ZSHENV_BLOCK_END}"
+}
+
 # @description Print the managed Fish activation file contents.
 # @arg $1 Installation prefix.
 print_fish_hook() {
@@ -612,6 +654,8 @@ make_temp_path() {
 # @arg $1 Startup file path.
 remove_managed_block() {
 	local startup_file="${1:-}"
+	local block_begin="${2:-${MANTLE_INSTALLER_BLOCK_BEGIN}}"
+	local block_end="${3:-${MANTLE_INSTALLER_BLOCK_END}}"
 	local temp_file=""
 	local temp_root=""
 
@@ -626,11 +670,11 @@ remove_managed_block() {
 	BEGIN {
 		skip = 0
 	}
-	$0 == "'"${MANTLE_INSTALLER_BLOCK_BEGIN}"'" {
+	$0 == "'"${block_begin}"'" {
 		skip = 1
 		next
 	}
-	$0 == "'"${MANTLE_INSTALLER_BLOCK_END}"'" {
+	$0 == "'"${block_end}"'" {
 		skip = 0
 		next
 	}
@@ -735,6 +779,49 @@ install_block_hook() {
 	printf "\n" >>"${startup_file}"
 }
 
+# @description Install or update Mantle's minimal ~/.zshenv ZDOTDIR bootstrap.
+install_zshenv_hook() {
+	local zshenv_file="${HOME}/.zshenv"
+
+	if [[ ! -e "${zshenv_file}" ]]; then
+		: >"${zshenv_file}"
+	else
+		ensure_startup_backup "${zshenv_file}"
+	fi
+
+	remove_managed_block \
+		"${zshenv_file}" \
+		"${MANTLE_INSTALLER_ZSHENV_BLOCK_BEGIN}" \
+		"${MANTLE_INSTALLER_ZSHENV_BLOCK_END}"
+	trim_trailing_blank_lines "${zshenv_file}"
+	ensure_trailing_newline "${zshenv_file}"
+
+	if [[ -s "${zshenv_file}" ]]; then
+		printf "\n" >>"${zshenv_file}"
+	fi
+
+	print_zshenv_block >>"${zshenv_file}"
+	printf "\n" >>"${zshenv_file}"
+}
+
+# @description Remove only Mantle's ZDOTDIR bootstrap from ~/.zshenv.
+remove_zshenv_hook() {
+	local zshenv_file="${HOME}/.zshenv"
+
+	if [[ ! -e "${zshenv_file}" ]]; then
+		return 0
+	fi
+
+	remove_managed_block \
+		"${zshenv_file}" \
+		"${MANTLE_INSTALLER_ZSHENV_BLOCK_BEGIN}" \
+		"${MANTLE_INSTALLER_ZSHENV_BLOCK_END}"
+	trim_trailing_blank_lines "${zshenv_file}"
+	if [[ ! -s "${zshenv_file}" && ! -e "$(startup_backup_path "${zshenv_file}")" ]]; then
+		rm -f "${zshenv_file}"
+	fi
+}
+
 # @description Install or update the managed Fish activation file.
 # @arg $1 Installation prefix.
 install_fish_hook() {
@@ -755,11 +842,22 @@ remove_shell_hook() {
 
 	startup_file="$(shell_startup_path "${shell_name}")"
 	case "${shell_name}" in
-	bash | zsh)
+	bash)
 		if [[ -e "${startup_file}" ]]; then
 			remove_managed_block "${startup_file}"
 			trim_trailing_blank_lines "${startup_file}"
 		fi
+		;;
+	zsh)
+		if [[ -e "${startup_file}" ]]; then
+			remove_managed_block "${startup_file}"
+			trim_trailing_blank_lines "${startup_file}"
+			if [[ ! -s "${startup_file}" &&
+				! -e "$(startup_backup_path "${startup_file}")" ]]; then
+				rm -f "${startup_file}"
+			fi
+		fi
+		remove_zshenv_hook
 		;;
 	fish)
 		if [[ -e "${startup_file}" ]]; then
@@ -790,13 +888,27 @@ shell_hook_state() {
 	fi
 
 	case "${shell_name}" in
-	bash | zsh)
+	bash)
 		expected_path="${prefix_path}/.shellrc"
 		if grep -Fq "${MANTLE_INSTALLER_BLOCK_BEGIN}" "${startup_file}" &&
 			grep -Fq "${expected_path}" "${startup_file}"; then
 			printf "yes\n"
 		else
 			printf "no\n"
+		fi
+		;;
+	zsh)
+		expected_path="${prefix_path}/.shellrc"
+		if ! grep -Fq "${MANTLE_INSTALLER_BLOCK_BEGIN}" "${startup_file}" ||
+			! grep -Fq "${expected_path}" "${startup_file}"; then
+			printf "no\n"
+			return 0
+		fi
+		if zsh_bootstrap_required &&
+			! grep -Fq "${MANTLE_INSTALLER_ZSHENV_BLOCK_BEGIN}" "${HOME}/.zshenv" 2>/dev/null; then
+			printf "no\n"
+		else
+			printf "yes\n"
 		fi
 		;;
 	fish)
@@ -939,9 +1051,19 @@ install_shell_hooks() {
 
 	for shell_name in "${MANTLE_RESOLVED_SHELLS[@]}"; do
 		case "${shell_name}" in
-		bash | zsh)
+		bash)
 			log_info "updating ${shell_name} startup hook"
 			install_block_hook "${shell_name}" "${prefix_path}"
+			;;
+		zsh)
+			log_info "updating zsh startup hook"
+			install_block_hook "zsh" "${prefix_path}"
+			if zsh_bootstrap_required; then
+				log_info "updating zsh XDG bootstrap"
+				install_zshenv_hook
+			else
+				remove_zshenv_hook
+			fi
 			;;
 		fish)
 			log_info "updating fish startup hook"
@@ -992,6 +1114,9 @@ run_dry_run() {
 		else
 			for shell_name in "${MANTLE_RESOLVED_SHELLS[@]}"; do
 				printf "%s\n" "  - ${shell_name}: $(shell_startup_path "${shell_name}")"
+				if [[ "${shell_name}" == "zsh" ]] && zsh_bootstrap_required; then
+					printf "%s\n" "    bootstrap: ${HOME}/.zshenv"
+				fi
 			done
 		fi
 	else

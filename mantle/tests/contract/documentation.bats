@@ -28,6 +28,7 @@ setup() {
 
 	for expected_link in \
 		"ARCHITECTURE.md" \
+		"config/xdg-exceptions.tsv" \
 		"PRESENTATION.md" \
 		"PROVENANCE.md" \
 		"CONTRIBUTING.md" \

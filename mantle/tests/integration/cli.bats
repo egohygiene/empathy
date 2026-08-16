@@ -194,6 +194,20 @@ _mantle() {
 	assert_output_contains "status: ok"
 }
 
+@test "mantle doctor reports preserved XDG migrations without failing" {
+	run env -i \
+		HOME="${TEST_HOME}" \
+		MANTLE_ROOT="${MANTLE_ROOT}" \
+		MANTLE_XDG_MIGRATION_WARNINGS="CARGO_HOME:DOCKER_CONFIG" \
+		PATH="${STUB_DIR}:${PATH}" \
+		TERM=dumb \
+		"${MANTLE_BIN}" doctor
+	assert_success
+	assert_output_contains "XDG migration pending for CARGO_HOME"
+	assert_output_contains "XDG migration pending for DOCKER_CONFIG"
+	assert_output_contains "status: ok (3 warning(s))"
+}
+
 @test "mantle env reports the resolved installation root" {
 	_mantle env
 	assert_success

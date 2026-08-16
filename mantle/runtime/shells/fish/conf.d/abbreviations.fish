@@ -16,6 +16,17 @@ function __mantle_fish_abbreviations
     abbr --add -- gr 'git rebase FETCH_HEAD'
     abbr --add -- gs 'git status'
     abbr --add -- ll 'ls -lhA'
+
+    if command -q adb; and set -q ANDROID_USER_HOME; and not functions -q adb
+        function adb --wraps adb --description 'Run adb with the migrated Android user home'
+            command env HOME="$ANDROID_USER_HOME" adb $argv
+        end
+    end
+    if command -q feh; and not functions -q feh
+        function feh --wraps feh --description 'Run feh without creating ~/.fehbg'
+            command feh --no-fehbg $argv
+        end
+    end
     return 0
 end
 __mantle_fish_abbreviations; set -l __mantle_s $status

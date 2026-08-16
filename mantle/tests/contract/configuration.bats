@@ -28,6 +28,19 @@ setup() {
 	[[ "$(tail -n +2 "${MANTLE_ROOT}/config/settings.tsv" | cut -f 3 | sort | uniq -d | wc -l | tr -d ' ')" -eq 0 ]]
 }
 
+@test "XDG exception registry has unique paths and known policies" {
+	local failed=0
+	local legacy_path status policy _reason
+	while IFS=$'\t' read -r legacy_path status policy _reason; do
+		[[ "${legacy_path}" == "legacy_path" ]] && continue
+		[[ "${legacy_path}" =~ ^[^[:space:]]+$ ]] || failed=1
+		[[ "${status}" =~ ^[a-z][a-z-]*$ ]] || failed=1
+		case "${policy}" in keep | preserve) ;; *) failed=1 ;; esac
+	done <"${MANTLE_ROOT}/config/xdg-exceptions.tsv"
+	[[ "$(tail -n +2 "${MANTLE_ROOT}/config/xdg-exceptions.tsv" | cut -f 1 | sort | uniq -d | wc -l | tr -d ' ')" -eq 0 ]]
+	[[ "${failed}" -eq 0 ]]
+}
+
 @test "shipped example config validates through the public CLI" {
 	run env -i HOME="${BATS_TEST_TMPDIR}" PATH="${PATH}" MANTLE_ROOT="${MANTLE_ROOT}" \
 		"${MANTLE_ROOT}/bin/mantle" config validate "${MANTLE_ROOT}/config/example.conf"

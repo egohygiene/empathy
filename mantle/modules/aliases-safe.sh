@@ -129,4 +129,14 @@ else
 	alias l="command ls -CF"
 fi
 
+# Prevent adb from consulting ~/.android after ANDROID_USER_HOME has migrated.
+if command -v adb >/dev/null 2>&1 && [[ -n "${ANDROID_USER_HOME:-}" ]]; then
+	alias adb='HOME="$ANDROID_USER_HOME" command adb'
+fi
+
+# feh otherwise recreates ~/.fehbg each time a background is selected.
+if command -v feh >/dev/null 2>&1; then
+	alias feh="command feh --no-fehbg"
+fi
+
 return 0

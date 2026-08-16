@@ -85,6 +85,7 @@ mantle_doctor_require_file "bin/mantle"
 mantle_doctor_require_file "init/init.sh"
 mantle_doctor_require_file "config/profiles.tsv"
 mantle_doctor_require_file "config/settings.tsv"
+mantle_doctor_require_file "config/xdg-exceptions.tsv"
 mantle_doctor_require_file "lib/config/profile.sh"
 mantle_doctor_require_directory "lib"
 mantle_doctor_require_directory "libexec/mantle/commands"
@@ -104,6 +105,27 @@ case ":${PATH:-}:" in
 	mantle_doctor_report "warn" "Mantle bin directory is not on PATH"
 	;;
 esac
+
+if [[ -n "${MANTLE_XDG_MIGRATION_WARNINGS:-}" ]]; then
+	mantle_doctor_migration_list="${MANTLE_XDG_MIGRATION_WARNINGS}"
+	while [[ -n "${mantle_doctor_migration_list}" ]]; do
+		case "${mantle_doctor_migration_list}" in
+		*:*)
+			mantle_doctor_migration_variable="${mantle_doctor_migration_list%%:*}"
+			mantle_doctor_migration_list="${mantle_doctor_migration_list#*:}"
+			;;
+		*)
+			mantle_doctor_migration_variable="${mantle_doctor_migration_list}"
+			mantle_doctor_migration_list=""
+			;;
+		esac
+		[[ -n "${mantle_doctor_migration_variable}" ]] || continue
+		mantle_doctor_report "warn" \
+			"XDG migration pending for ${mantle_doctor_migration_variable}; legacy data remains active"
+	done
+	unset mantle_doctor_migration_list
+	unset mantle_doctor_migration_variable
+fi
 
 if ((mantle_doctor_failures > 0)); then
 	printf "status: failed (%d failure(s), %d warning(s))\n" \

@@ -165,6 +165,14 @@ Useful installer options:
 - `--no-shell-hook` is the non-mutating activation opt-out for CI and containers.
 - `--environment-diff` prints the environment delta without mutating the parent shell.
 
+On a fresh Zsh setup, the installer writes the activation block to
+`"${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.zshrc"` and adds a minimal managed
+block to `~/.zshenv` so Zsh can discover `ZDOTDIR`. If `~/.zshrc` already exists
+and the XDG file does not, Mantle preserves and updates the legacy file instead
+of silently hiding the user's current configuration. Existing files are backed
+up once with the `.mantle.bak` suffix, and uninstall removes only managed
+blocks.
+
 ### Clone and initialize
 
 ```sh
@@ -197,6 +205,38 @@ For Fish, set `MANTLE_ROOT` to the absolute path of your clone and source the na
 set -gx MANTLE_ROOT (pwd)
 source "./runtime/shells/fish/runtime.fish"
 ```
+
+### XDG migration policy
+
+Mantle treats home-directory cleanup as a state migration, not a cache purge.
+Bash, Zsh, and Fish use the same rule for supported stateful tools:
+
+1. An explicit environment value always wins.
+2. When the XDG destination exists, Mantle selects it.
+3. When only the legacy path exists, Mantle leaves the variable unset so the
+   application keeps seeing its existing state and appends the variable name to
+   `MANTLE_XDG_MIGRATION_WARNINGS`.
+4. When neither path exists, a fresh installation uses the XDG destination.
+
+Run `mantle doctor` after shell initialization to see pending migrations. Close
+the affected application, move or copy its state deliberately, verify ownership
+and permissions, then start a new shell. Mantle never automatically moves
+credentials, SDKs, histories, browser profiles, or package installations.
+
+The policy covers the audited Android, Ansible, Cargo/Rustup, Docker, Go,
+Gradle, IPython/Jupyter, RubyGems, Kubernetes/Minikube, Python, Dart, FVM, NLTK,
+and supported AI-agent roots. Android SDK installation variables such as
+`ANDROID_HOME` are intentionally untouched; `ANDROID_USER_HOME`, emulator
+state, and AVD data are independent. `DART_DATA_HOME` is enabled for supported
+Dart state, but current Dart/Flutter releases can still retain `.dart-tool`,
+`.dartServer`, and `.pub-cache` data.
+
+Some paths are standards, system-owned, upstream-blocked, or unsafe to redirect
+globally. Mantle records those decisions in
+[`config/xdg-exceptions.tsv`](config/xdg-exceptions.tsv). Personal documents,
+backup archives, and application project folders are outside Mantle's runtime
+policy and should be organized as user data rather than hidden through `HOME`
+overrides.
 
 ### Disable or remove the integration
 
@@ -270,8 +310,9 @@ Installer destinations are configurable per installer where supported. For examp
 
 ### Diagnostics and environment behavior
 
-- `mantle doctor` performs read-only installation checks and reports whether
-  the CLI is available on the current `PATH`.
+- `mantle doctor` performs read-only installation checks, reports whether the
+  CLI is available on the current `PATH`, and lists any preserved legacy paths
+  that still require an explicit XDG migration.
 - `mantle env` prints only Mantle's public environment contract rather than the
   complete process environment; `--shell` renders safely quoted exports.
 - `mantle path` reports the resolved installation paths, while `--entries`
@@ -361,6 +402,7 @@ shape runtime behavior.
 | `MANTLE_ENABLE_PROJECT_PATH`             | `0`                                 | Prepends `"$PWD/bin"` and `"$PWD/node_modules/.bin"` when enabled   | `export MANTLE_ENABLE_PROJECT_PATH="1"`              |
 | `MANTLE_CREATE_XDG_DIRECTORIES`          | `1`                                 | Creates missing XDG directories and `XDG_BIN_HOME`                  | `export MANTLE_CREATE_XDG_DIRECTORIES="0"`           |
 | `MANTLE_HISTORY_SIZE`                    | `50000`                             | Controls interactive shell and REPL history sizing                  | `export MANTLE_HISTORY_SIZE="100000"`                |
+| `MANTLE_XDG_MIGRATION_WARNINGS`          | Unset                               | Colon-delimited variables whose existing legacy state was preserved | `mantle doctor`                                      |
 | `MANTLE_DEBUG`                           | `0`                                 | Enables additional debug logging and loader diagnostics             | `export MANTLE_DEBUG="1"`                            |
 | `XDG_CONFIG_HOME`                        | `"$HOME/.config"`                   | XDG config root                                                     | `export XDG_CONFIG_HOME="$HOME/.config"`             |
 | `XDG_CACHE_HOME`                         | `"$HOME/.cache"`                    | XDG cache root                                                      | `export XDG_CACHE_HOME="$HOME/.cache"`               |

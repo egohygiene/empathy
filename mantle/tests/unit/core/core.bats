@@ -153,6 +153,22 @@ _bash_core() {
 	assert_output_contains "64"
 }
 
+@test "mantle_core_set_owner preserves Zsh command lookup" {
+	require_zsh
+	local target_file="${TEST_HOME}/owned-file"
+	touch "${target_file}"
+
+	run env -i HOME="${TEST_HOME}" PATH="${PATH}" TERM=dumb \
+		zsh --no-rcs -c "
+			source '${MANTLE_ROOT}/lib/core/core.sh'
+			original_path=\"\${PATH}\"
+			mantle_core_set_owner '${target_file}' \"\$(id -un)\"
+			command -v id >/dev/null
+			[[ \"\${PATH}\" == \"\${original_path}\" ]]
+		"
+	assert_success
+}
+
 # ---------------------------------------------------------------------------
 # mantle_core_directory_is_empty
 # ---------------------------------------------------------------------------
