@@ -1,10 +1,10 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-16T01-56-26Z`
+- Generated: `2026-08-16T10-09-40Z`
 - Repository: `egohygiene/empathy`
-- Commit: `83516a8e82e7cf17438ed7ed6e4aeb1749976a2f`
+- Commit: `d9ac09d21729acd80f4df1c8c02bfaaaa94b489e`
 - Severity gate: `high`
-- Duration: `11s`
+- Duration: `13s`
 
 ## Findings
 
@@ -19,7 +19,7 @@
 
 ## Discovery
 
-Discovered 25 artifact(s) across 7 ecosystem label(s).
+Discovered 40 artifact(s) across 7 ecosystem label(s).
 
 - `.reports/megalinter/syft/sbom.spdx.json`
 - `.staging/.github/skills/drawio/scripts/package.json`
@@ -30,6 +30,21 @@ Discovered 25 artifact(s) across 7 ecosystem label(s).
 - `.staging/devenvironment/realm/pyproject.toml`
 - `.staging/react-template/universal/apps/ui/package.json`
 - `.staging/react-template/universal/apps/ui/pyproject.toml`
+- `.staging/react-template/website/apps/docs/package.json`
+- `.staging/react-template/website/apps/egohygiene.io/package.json`
+- `.staging/react-template/website/apps/playground/package.json`
+- `.staging/react-template/website/package.json`
+- `.staging/react-template/website/packages/api-client/package.json`
+- `.staging/react-template/website/packages/config/package.json`
+- `.staging/react-template/website/packages/content/package.json`
+- `.staging/react-template/website/packages/design-tokens/package.json`
+- `.staging/react-template/website/packages/i18n/package.json`
+- `.staging/react-template/website/packages/icons/package.json`
+- `.staging/react-template/website/packages/schemas/package.json`
+- `.staging/react-template/website/packages/themes/package.json`
+- `.staging/react-template/website/packages/ui/package.json`
+- `.staging/react-template/website/packages/utilities/package.json`
+- `.staging/react-template/website/packages/visualizations/package.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/Cargo.lock`
 - `egolint/package.json`
@@ -64,6 +79,21 @@ Discovered 25 artifact(s) across 7 ecosystem label(s).
 - `.staging/devenvironment/realm/pyproject.toml`
 - `.staging/react-template/universal/apps/ui/package.json`
 - `.staging/react-template/universal/apps/ui/pyproject.toml`
+- `.staging/react-template/website/apps/docs/package.json`
+- `.staging/react-template/website/apps/egohygiene.io/package.json`
+- `.staging/react-template/website/apps/playground/package.json`
+- `.staging/react-template/website/package.json`
+- `.staging/react-template/website/packages/api-client/package.json`
+- `.staging/react-template/website/packages/config/package.json`
+- `.staging/react-template/website/packages/content/package.json`
+- `.staging/react-template/website/packages/design-tokens/package.json`
+- `.staging/react-template/website/packages/i18n/package.json`
+- `.staging/react-template/website/packages/icons/package.json`
+- `.staging/react-template/website/packages/schemas/package.json`
+- `.staging/react-template/website/packages/themes/package.json`
+- `.staging/react-template/website/packages/ui/package.json`
+- `.staging/react-template/website/packages/utilities/package.json`
+- `.staging/react-template/website/packages/visualizations/package.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/package.json`
 - `egolint/pyproject.toml`
