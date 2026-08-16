@@ -13,9 +13,10 @@ REPOSITORY_ROOT = Path(__file__).parents[1]
 class MantleIntegrationTests(unittest.TestCase):
     def test_root_taskfile_delegates_to_mantle(self) -> None:
         taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf-8")
+        project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(encoding="utf-8")
         self.assertIn("mantle:", taskfile)
         self.assertIn("taskfile: ./mantle/Taskfile.yml", taskfile)
-        self.assertIn("- mantle:check", taskfile)
+        self.assertIn("- mantle:check", project_tasks)
 
         mantle_taskfile = (REPOSITORY_ROOT / "mantle/Taskfile.yml").read_text(encoding="utf-8")
         for task_name in (

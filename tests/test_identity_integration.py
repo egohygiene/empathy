@@ -88,10 +88,16 @@ class IdentityIntegrationTests(unittest.TestCase):
             self.assertTrue((REPOSITORY_ROOT / context_path).is_file(), context_path)
 
     def test_task_contract_exposes_identity_workflow(self) -> None:
-        taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
+        root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
+        taskfile = (REPOSITORY_ROOT / ".tasks/identity.yml").read_text(encoding="utf8")
+        project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(encoding="utf8")
+
+        self.assertIn("taskfile: ./.tasks/identity.yml", root_taskfile)
+        self.assertIn("flatten: true", root_taskfile)
         for task_name in ("identity:check:", "identity:plan:", "identity:handoff:"):
             self.assertIn(task_name, taskfile)
         self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
+        self.assertIn("- identity:check", project_tasks)
 
 
 if __name__ == "__main__":

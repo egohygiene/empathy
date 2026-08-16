@@ -24,7 +24,22 @@ tasks:
     desc: Print the current Git branch
     deps: [_require]
     cmds:
-      - git rev-parse --abbrev-ref HEAD
+      - git branch --show-current
+    silent: true
+
+  changes:
+    desc: Summarize unstaged and staged changes separately
+    deps: [_require]
+    cmds:
+      - git diff --stat
+      - git diff --cached --stat
+    silent: true
+
+  contributors:
+    desc: List contributors ordered by commit count
+    deps: [_require]
+    cmds:
+      - git shortlog --summary --numbered --all --no-merges
     silent: true
 
   heatmap:
@@ -39,9 +54,9 @@ tasks:
         | head -n 20
     silent: true
 
-  contributors:
-    desc: List contributors ordered by commit count
+  remotes:
+    desc: List configured Git remotes and their fetch and push URLs
     deps: [_require]
     cmds:
-      - git shortlog --summary --numbered --all --no-merges
+      - git remote --verbose
     silent: true

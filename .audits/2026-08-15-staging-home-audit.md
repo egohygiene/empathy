@@ -3,6 +3,13 @@
 
 # Staging ownership and destination audit
 
+> **Living-ledger note (2026-08-16):** The narrative and owner table below
+> preserve the original `41d1da3` snapshot. The deterministic CSV is refreshed
+> as approved promotion PRs land and currently covers 2,226 tracked files and
+> 161,813,173 bytes. See
+> [`2026-08-16-taskfile-promotion.md`](2026-08-16-taskfile-promotion.md) for the
+> latest task-corpus disposition.
+
 ## Decision
 
 `.staging/` is an intake reservoir, not a future source tree. Its 2,340 tracked

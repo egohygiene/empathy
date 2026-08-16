@@ -1,15 +1,45 @@
 ---
 # yaml-language-server: $schema=https://taskfile.dev/schema.json
 
+# REVIEW QUEUE ONLY — intentionally not imported by the root Taskfile.
+#
+# These tasks retain product-, host-, or tool-specific assumptions from the
+# staged corpus. Their referenced implementations are absent from Empathy, so
+# they are preserved here for an explicit keep/adapt/delete decision instead of
+# being presented as universal baseline capabilities.
+#
+# Original corpus: .staging/tasks at commit be89125.
+
 version: "3"
 
 vars:
-  APP_DIR: '{{.APP_DIR | default (joinPath .ROOT_DIR "apps/egohygiene")}}'
+  REPOSITORY_ROOT: '{{.REPOSITORY_ROOT | default (clean (joinPath .ROOT_DIR ".."))}}'
+  APP_DIR: '{{.APP_DIR | default (joinPath .REPOSITORY_ROOT "apps/egohygiene")}}'
   INTEGRATION_TEST_SCRIPT: >-
     {{.INTEGRATION_TEST_SCRIPT |
-    default (joinPath .ROOT_DIR
+    default (joinPath .REPOSITORY_ROOT
     ".engineering/scripts/run-flutter-integration-tests.sh")}}
   RIVE_OS: '{{if eq OS "darwin"}}macos{{else}}{{OS}}{{end}}'
+  AGENT_DOCTOR_SCRIPT: >-
+    {{.AGENT_DOCTOR_SCRIPT |
+    default (joinPath .REPOSITORY_ROOT ".agents/scripts/doctor.sh")}}
+  MINDCAP_DIR: >-
+    {{.MINDCAP_DIR |
+    default (joinPath .REPOSITORY_ROOT "tools/mindcap")}}
+  COPILOT_HOOK_CONFIG: >-
+    {{.COPILOT_HOOK_CONFIG |
+    default (joinPath .REPOSITORY_ROOT ".github/hooks/ego-hygiene.json")}}
+  COPILOT_HOOK_TEST: >-
+    {{.COPILOT_HOOK_TEST |
+    default (joinPath .REPOSITORY_ROOT
+    "scripts/copilot-hooks/tests/test-pre-tool-use.sh")}}
+  LYNIS_PROFILE: >-
+    {{.LYNIS_PROFILE |
+    default (joinPath .REPOSITORY_ROOT
+    "egolint/.config/lint/security/lynis/custom.prf")}}
+  LYNIS_REPORT_DIRECTORY: >-
+    {{.LYNIS_REPORT_DIRECTORY |
+    default (joinPath .REPOSITORY_ROOT ".reports/security/lynis")}}
 
 tasks:
   _require-app:
@@ -21,6 +51,18 @@ tasks:
         msg: 'Flutter application directory not found: {{.APP_DIR}}'
       - sh: test -f "{{.APP_DIR}}/pubspec.yaml"
         msg: 'Flutter pubspec not found: {{.APP_DIR}}/pubspec.yaml'
+
+  app:doctor:
+    desc: Verify the deferred Flutter and Java application toolchain
+    deps: [_require-app]
+    preconditions:
+      - sh: command -v java >/dev/null 2>&1
+        msg: Java is not installed or is not available on PATH.
+    cmds:
+      - fvm --version
+      - fvm flutter --version
+      - fvm dart --version
+      - java --version
 
   setup:
     desc: Install the configured Flutter SDK, dependencies, and Rive binaries
@@ -266,3 +308,124 @@ tasks:
       - task: dart:format:check
       - task: analyze
       - task: test:coverage
+
+  agents:doctor:
+    desc: Check OpenCode, Ollama, configured models, and repository layout
+    preconditions:
+      - sh: command -v bash >/dev/null 2>&1
+        msg: Bash is required to run the agent doctor.
+      - sh: test -f "{{.AGENT_DOCTOR_SCRIPT}}"
+        msg: 'Agent doctor script not found: {{.AGENT_DOCTOR_SCRIPT}}'
+    cmds:
+      - bash "{{.AGENT_DOCTOR_SCRIPT}}"
+
+  agents:models:list:
+    desc: List locally installed Ollama models
+    aliases: [agents:models]
+    preconditions:
+      - sh: command -v ollama >/dev/null 2>&1
+        msg: Ollama is not installed or is not available on PATH.
+    cmds:
+      - ollama list
+
+  agents:models:running:
+    desc: Show models currently loaded by Ollama
+    aliases: [agents:running-models]
+    preconditions:
+      - sh: command -v ollama >/dev/null 2>&1
+        msg: Ollama is not installed or is not available on PATH.
+    cmds:
+      - ollama ps
+
+  agents:open:
+    desc: Start OpenCode with the project-local configuration
+    interactive: true
+    preconditions:
+      - sh: command -v opencode >/dev/null 2>&1
+        msg: OpenCode is not installed or is not available on PATH.
+      - sh: command -v ollama >/dev/null 2>&1
+        msg: Ollama is not installed or is not available on PATH.
+      - sh: ollama list >/dev/null 2>&1
+        msg: Ollama is not responding. Start Ollama before opening OpenCode.
+    cmds:
+      - opencode
+
+  agents:config:
+    desc: Print OpenCode's resolved project configuration
+    preconditions:
+      - sh: command -v opencode >/dev/null 2>&1
+        msg: OpenCode is not installed or is not available on PATH.
+    cmds:
+      - opencode debug config
+
+  agents:mindcap:doctor:
+    desc: Run Mindcap's ChatGPT capture diagnostics
+    aliases: [agents:mindcap-doctor]
+    dir: "{{.MINDCAP_DIR}}"
+    preconditions:
+      - sh: test -f "{{.MINDCAP_DIR}}/Taskfile.yml"
+        msg: 'Mindcap Taskfile not found: {{.MINDCAP_DIR}}/Taskfile.yml'
+    cmds:
+      - task doctor
+
+  agents:mindcap:paths:
+    desc: Show Mindcap artifact and browser-profile locations
+    aliases: [agents:mindcap-paths]
+    dir: "{{.MINDCAP_DIR}}"
+    preconditions:
+      - sh: test -f "{{.MINDCAP_DIR}}/Taskfile.yml"
+        msg: 'Mindcap Taskfile not found: {{.MINDCAP_DIR}}/Taskfile.yml'
+    cmds:
+      - task paths
+
+  copilot:hooks:validate:
+    desc: Validate every Copilot hook configuration as JSON
+    preconditions:
+      - sh: command -v jq >/dev/null 2>&1
+        msg: jq is required to validate Copilot hook configuration.
+      - sh: test -f "{{.COPILOT_HOOK_CONFIG}}"
+        msg: 'Copilot hook configuration not found: {{.COPILOT_HOOK_CONFIG}}'
+    cmds:
+      - jq empty "{{.COPILOT_HOOK_CONFIG}}"
+
+  copilot:hooks:test:
+    desc: Run the Copilot hook test fixtures
+    preconditions:
+      - sh: command -v bash >/dev/null 2>&1
+        msg: Bash is required to run the Copilot hook tests.
+      - sh: test -f "{{.COPILOT_HOOK_TEST}}"
+        msg: 'Copilot hook test not found: {{.COPILOT_HOOK_TEST}}'
+    cmds:
+      - bash "{{.COPILOT_HOOK_TEST}}"
+
+  security:lynis:
+    desc: Run a host security audit and save its log and report
+    aliases: [security:audit]
+    platforms: [darwin, linux, freebsd, openbsd, netbsd]
+    summary: |
+      Runs Lynis without privilege escalation. Run Task itself through your
+      preferred elevation mechanism if a complete privileged host audit is
+      required.
+    preconditions:
+      - sh: command -v lynis >/dev/null 2>&1
+        msg: Lynis is not installed or is not available on PATH.
+      - sh: test -f "{{.LYNIS_PROFILE}}"
+        msg: 'Lynis profile not found: {{.LYNIS_PROFILE}}'
+    cmds:
+      - mkdir -p "{{.LYNIS_REPORT_DIRECTORY}}"
+      - >-
+        lynis audit system
+        --profile "{{.LYNIS_PROFILE}}"
+        --quick
+        --no-colors
+        --log-file "{{.LYNIS_REPORT_DIRECTORY}}/lynis.log"
+        --report-file "{{.LYNIS_REPORT_DIRECTORY}}/lynis-report.dat"
+
+  security:lynis:version:
+    desc: Print the installed Lynis version
+    preconditions:
+      - sh: command -v lynis >/dev/null 2>&1
+        msg: Lynis is not installed or is not available on PATH.
+    cmds:
+      - lynis --version
+    silent: true

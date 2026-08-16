@@ -15,7 +15,6 @@ import re
 import subprocess
 import sys
 
-
 EMPTY_BLOB = "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
 CSV_FIELDS = (
     "source_path",
@@ -186,9 +185,7 @@ RELAY_WORKFLOWS = {
 
 
 def run_git(repository_root: Path, *arguments: str) -> bytes:
-    return subprocess.check_output(
-        ["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE
-    )
+    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
 
 
 def tracked_entries(repository_root: Path) -> list[tuple[str, str, str]]:
@@ -348,13 +345,25 @@ def classify_script(relative: str) -> Classification:
     if name == "delete-gone-branches.sh":
         owner, destination, action = "mantle", "mantle/bin/git-delete-gone-branches", "refactor-cli"
     elif name == "fix-line-endings.sh":
-        owner, destination, action = "egolint", "egolint/scripts/fix-line-endings.sh", "merge-with-format-policy"
+        owner, destination, action = (
+            "egolint",
+            "egolint/scripts/fix-line-endings.sh",
+            "merge-with-format-policy",
+        )
     elif name == "pr-risk-scan.mjs":
-        owner, destination, action = "relay", "relay/actions/pr-risk-scan/pr-risk-scan.mjs", "extract-composite-action"
+        owner, destination, action = (
+            "relay",
+            "relay/actions/pr-risk-scan/pr-risk-scan.mjs",
+            "extract-composite-action",
+        )
     elif name in {"create-skill.mjs", "validate-skills.mjs"}:
         owner, destination, action = "aether", f"aether/tools/{name}", "repair-and-promote"
     else:
-        owner, destination, action = "awesome", f"awesome/tools/catalog/{relative.removeprefix('scripts/')}", "preserve-for-product-review"
+        owner, destination, action = (
+            "awesome",
+            f"awesome/tools/catalog/{relative.removeprefix('scripts/')}",
+            "preserve-for-product-review",
+        )
     missing_dependency = name in {
         "create-skill.mjs",
         "generate-open-pr-report.mjs",
@@ -450,7 +459,9 @@ def classify_devenvironment(relative: str) -> Classification:
     elif inner.startswith("workstation/linux/grub/themes/"):
         action = "quarantine-third-party-assets"
         group = "realm-workstation-grub-theme"
-        notes += " Preserve the theme tree intact until upstream license and attribution are recorded."
+        notes += (
+            " Preserve the theme tree intact until upstream license and attribution are recorded."
+        )
     elif inner.startswith("workstation/"):
         action = "normalize-workstation-profile"
         group = "realm-workstation-profile"
@@ -599,6 +610,19 @@ def classify_task(relative: str) -> Classification:
 def classify(path: str) -> Classification:
     relative = path.removeprefix(".staging/")
 
+    if relative == "tasks-todo.yml":
+        return Classification(
+            "deferred repository task review queue",
+            "empathy",
+            ".staging/tasks-todo.yml",
+            ".tasks/ or an owning capability profile",
+            "review-adapt-or-delete",
+            "empathy-deferred-task-review",
+            "inert-executable-task-configuration",
+            "high",
+            "The file is intentionally not imported; each task awaits an explicit owner and capability decision.",
+        )
+
     if relative.startswith(".github/skills/"):
         suffix = relative.removeprefix(".github/skills/")
         return aether_community(path, f"skills/{suffix}", "community agent skills")
@@ -610,6 +634,18 @@ def classify(path: str) -> Classification:
         return aether_community(path, f"instructions/{suffix}", "community Copilot instructions")
     if relative == ".github/copilot-instructions.awesome-copilot.md":
         return aether_community(path, "copilot-instructions.md", "community Copilot review policy")
+    if relative == ".github/copilot-instructions.aether.md":
+        return Classification(
+            "Aether Copilot instruction source",
+            "aether",
+            "aether/.staging/distributions/copilot/copilot-instructions.md",
+            "aether/distributions/copilot/copilot-instructions.md",
+            "merge-with-canonical-agent-distribution",
+            "aether-copilot-distribution",
+            "staged-instruction",
+            "high",
+            "Treat as a generated adapter candidate and preserve its mapping to canonical Aether source contracts.",
+        )
     if relative.startswith(".github/agents/"):
         suffix = relative.removeprefix(".github/agents/")
         return Classification(
@@ -967,7 +1003,10 @@ def text_flags(path: Path, mode: str) -> list[str]:
     if mode == "100755":
         flags.append("executable")
     lowered = str(path).lower()
-    if any(token in lowered for token in (" copy", "devcontainer2", "compose2", "redis2", ".old", "/todo")):
+    if any(
+        token in lowered
+        for token in (" copy", "devcontainer2", "compose2", "redis2", ".old", "/todo")
+    ):
         flags.append("variant")
     if path.suffix.lower() in {".env", ".pem", ".crt", ".key"} or "/certs/" in lowered:
         flags.append("sensitive-configuration")
@@ -982,8 +1021,14 @@ def text_flags(path: Path, mode: str) -> list[str]:
         (r"StrictHostKeyChecking=no", "ssh-host-verification-disabled"),
         (r"(?:privileged:\s*true|\"privileged\"\s*:\s*true)", "privileged-runtime"),
         (r"NOPASSWD", "passwordless-sudo"),
-        (r"(?i)(?:adminpassword|miniosecret|mysecret|changeme|Root123!)", "development-credentials"),
-        (r"(?i)(?:override directive|show your thinking|absolute transparency|ignore (?:all |any )?(?:previous|prior))", "prompt-override-content"),
+        (
+            r"(?i)(?:adminpassword|miniosecret|mysecret|changeme|Root123!)",
+            "development-credentials",
+        ),
+        (
+            r"(?i)(?:override directive|show your thinking|absolute transparency|ignore (?:all |any )?(?:previous|prior))",
+            "prompt-override-content",
+        ),
     )
     for pattern, flag in patterns:
         if re.search(pattern, content):
@@ -1005,18 +1050,27 @@ def duplicate_policy(path: str, blob: str, duplicate_of: str) -> tuple[str, str]
     if not duplicate_of or blob == EMPTY_BLOB:
         return "", ""
     if path.startswith(".staging/.github/skills/"):
-        return "preserve-package-local-copy", "Package-local references and licenses remain self-contained."
+        return (
+            "preserve-package-local-copy",
+            "Package-local references and licenses remain self-contained.",
+        )
     if "/workstation/linux/grub/themes/" in path:
         return "preserve-layout-copy", "Theme filenames encode layout roles even when pixels match."
     if "/__init__.py" in path or "/__init__.pyi" in path:
         return "preserve-package-initializer", "Package initializers are structurally significant."
     if path.startswith(".staging/hygiene/"):
-        return "deduplicate-after-visual-classification", "Retain one named/provenanced visual after owner review."
+        return (
+            "deduplicate-after-visual-classification",
+            "Retain one named/provenanced visual after owner review.",
+        )
     if path in {".staging/misc/ROADMAP.md", ".staging/misc/universal.png"}:
         return "delete-exact-duplicate-after-approval", "A retained canonical copy already exists."
     if " copy" in path:
         return "merge-or-delete-variant", "Compare references, then retain the canonical filename."
-    return "review-exact-duplicate", "Exact content match detected; structural context decides whether removal is safe."
+    return (
+        "review-exact-duplicate",
+        "Exact content match detected; structural context decides whether removal is safe.",
+    )
 
 
 def build_rows(repository_root: Path) -> list[LedgerRow]:

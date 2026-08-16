@@ -1,0 +1,49 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+tasks:
+  identity:check:
+    desc: Validate the incubated identity holon and Empathy identity contract
+    cmds:
+      - cargo fmt --manifest-path "identity/Cargo.toml" --all --check
+      - >-
+        cargo clippy
+        --manifest-path "identity/Cargo.toml"
+        --all-targets
+        --all-features
+        --
+        -D warnings
+      - cargo test --manifest-path "identity/Cargo.toml" --all-features
+      - >-
+        cargo run
+        --quiet
+        --manifest-path "identity/Cargo.toml"
+        --
+        validate
+        --repository-root "."
+
+  identity:plan:
+    desc: Render Empathy's resolved identity target plan
+    cmds:
+      - >-
+        cargo run
+        --quiet
+        --manifest-path "identity/Cargo.toml"
+        --
+        plan
+        --repository-root "."
+        --format "markdown"
+
+  identity:handoff:
+    desc: Build the contextual creative handoff for Empathy
+    cmds:
+      - >-
+        cargo run
+        --quiet
+        --manifest-path "identity/Cargo.toml"
+        --
+        handoff
+        --repository-root "."
+        --output-directory ".cache/identity/handoff"
