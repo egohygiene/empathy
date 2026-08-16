@@ -1,0 +1,22 @@
+{
+  "name": "@egohygiene/commerce",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json --noEmit",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test": "vitest run",
+    "clean": "node -e \"require('node:fs').rmSync('coverage',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "@egohygiene/store-config": "workspace:*",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10"
+  }
+}

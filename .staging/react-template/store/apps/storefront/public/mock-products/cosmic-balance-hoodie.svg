@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 1200"
+  role="img"
+  aria-labelledby="cosmic-balance-hoodie-title"
+>
+  <title id="cosmic-balance-hoodie-title">
+    Cosmic Balance hoodie product mockup
+  </title>
+  <defs>
+    <radialGradient id="bg"><stop stop-color="#5f2d91"/><stop offset="1" stop-color="#110d1e"/></radialGradient>
+    <linearGradient id="hood" x2="1" y2="1"><stop stop-color="#28213b"/><stop offset="1" stop-color="#080711"/></linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <circle cx="180" cy="170" r="3" fill="#fff"/><circle cx="950" cy="260" r="4" fill="#fff"/><circle cx="1060" cy="900" r="3" fill="#fff"/>
+  <path d="M400 325 520 230h160l120 95 160 130-95 130-85-65v410H420V520l-85 65-95-130Z" fill="url(#hood)" stroke="#c687ff" stroke-width="9"/>
+  <path d="M520 230q80 120 160 0" fill="none" stroke="#5b4f76" stroke-width="24"/>
+  <circle cx="600" cy="580" r="104" fill="#b864ff"/>
+  <path d="M600 476a104 104 0 1 0 0 208c-42-24-42-76 0-104s42-80 0-104Z" fill="#0a0712"/>
+  <circle cx="600" cy="528" r="14" fill="#ffd7f8"/><circle cx="600" cy="632" r="14" fill="#0a0712" stroke="#ffd7f8" stroke-width="4"/>
+  <text x="600" y="1025" text-anchor="middle" fill="#ead9ff" font-family="sans-serif" font-size="42" letter-spacing="8">BALANCE</text>
+</svg>

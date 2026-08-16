@@ -1,0 +1,21 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 1200"
+  role="img"
+  aria-labelledby="reflection-field-journal-title"
+>
+  <title id="reflection-field-journal-title">
+    Reflection Field journal product mockup
+  </title>
+  <defs><linearGradient id="cover" x2="1" y2="1"><stop stop-color="#2c153f"/><stop offset="1" stop-color="#0b0811"/></linearGradient></defs>
+  <rect width="1200" height="1200" fill="#e6a5d2"/>
+  <g transform="rotate(-7 600 600)">
+    <rect x="330" y="180" width="540" height="800" rx="28" fill="#f2d9e9" opacity=".4"/>
+    <rect x="300" y="150" width="540" height="800" rx="28" fill="url(#cover)" stroke="#fff" stroke-opacity=".5" stroke-width="8"/>
+    <path d="M350 150v800" stroke="#bd71e0" stroke-width="18"/>
+    <circle cx="570" cy="500" r="116" fill="#e073c7"/>
+    <path d="M570 384a116 116 0 1 0 0 232c-48-26-48-85 0-116s48-90 0-116Z" fill="#100b19"/>
+    <text x="570" y="730" text-anchor="middle" fill="#f9e9ff" font-family="sans-serif" font-size="46">reflection field</text>
+    <text x="570" y="785" text-anchor="middle" fill="#c9a3d8" font-family="sans-serif" font-size="24" letter-spacing="7">OBSERVE • CONNECT • RETURN</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+{
+  "name": "@egohygiene/store",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The modular Ego Hygiene storefront platform.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:store": "pnpm --filter @egohygiene/storefront dev",
+    "build": "turbo run build",
+    "preview:store": "pnpm --filter @egohygiene/storefront preview",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:e2e": "playwright test",
+    "check:workspace": "node scripts/check-workspace.mjs",
+    "check": "pnpm check:workspace && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "clean": "turbo run clean && node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@playwright/test": "^1.54.2",
+    "turbo": "^2.5.6",
+    "typescript": "^7.0.2"
+  }
+}

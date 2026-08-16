@@ -1,0 +1,19 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-labelledby="favicon-title"
+>
+  <title id="favicon-title">Ego Hygiene cosmic balance symbol</title>
+  <defs>
+    <radialGradient id="g" cx="30%" cy="20%">
+      <stop offset="0" stop-color="#ffb8ef"/>
+      <stop offset="0.55" stop-color="#a75cff"/>
+      <stop offset="1" stop-color="#161026"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#g)"/>
+  <path d="M32 12a20 20 0 1 0 0 40c-7-4-7-14 0-20s7-16 0-20Z" fill="#090711"/>
+  <circle cx="32" cy="22" r="3.5" fill="#f8eaff"/>
+  <circle cx="32" cy="42" r="3.5" fill="#090711" stroke="#f8eaff"/>
+</svg>
