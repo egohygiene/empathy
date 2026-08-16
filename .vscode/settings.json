@@ -6,6 +6,8 @@
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.rulers": [100],
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.ignoreTrimWhitespace": true,
   "files.associations": {
     ".allcontributorsrc": "jsonc",
     ".codespellrc": "ini",
@@ -26,8 +28,24 @@
     "tombi.toml": "toml"
   },
   "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.cache/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.reports/**": true,
+    "**/node_modules/**": true,
+    "**/target/**": true
+  },
+  "search.exclude": {
+    "**/.cache": true,
+    "**/.git": true,
+    "**/.reports": true,
+    "**/node_modules": true,
+    "**/target": true
+  },
   "prettier.configPath": "${workspaceFolder}/egolint/.config/lint/javascript/prettier.config.mjs",
   "prettier.ignorePath": "${workspaceFolder}/.prettierignore",
   "eslint.options": {
@@ -63,6 +81,8 @@
   "sqlfluff.dialect": "postgres",
   "sqlfluff.ignoreLocalConfig": false,
   "cSpell.configFile": "${workspaceFolder}/egolint/.config/lint/prose/spell/cspell.json",
+  "cSpell.mergeCSpellSettings": true,
+  "cSpell.useGitignore": true,
   "spectral.rulesetFile": "${workspaceFolder}/egolint/.config/lint/api/spectral.yaml",
   "latex-workshop.latexindent.args": [
     "--local=${workspaceFolder}/egolint/.config/lint/latex/latexindent.yml"
@@ -74,6 +94,9 @@
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[bats]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
   },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
