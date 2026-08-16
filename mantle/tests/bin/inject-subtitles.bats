@@ -34,6 +34,7 @@ teardown() {
 
 @test "inject-subtitles treats an empty discovery directory as a successful no-op" {
 	stub_ffmpeg
+	make_stub "ffprobe" 0 ""
 	run_bin inject-subtitles
 	assert_success
 	assert_output_contains "No matching video/subtitle pairs found"
