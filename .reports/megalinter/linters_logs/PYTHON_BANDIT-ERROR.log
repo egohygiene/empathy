@@ -10,7 +10,7 @@ Linter raw log:
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-16 19:00:04.069946+00:00
+Run started:2026-08-16 21:08:13.517287+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.

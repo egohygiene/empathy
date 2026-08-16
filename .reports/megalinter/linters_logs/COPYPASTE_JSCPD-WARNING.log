@@ -442,6 +442,9 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
+   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
+Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 510:27] (14 lines, 479 tokens)
    .staging/.github/agents/awesome/gem-mobile-tester.agent.md:markdown [84:36 - 98:4]
 Clone found (markdown)
@@ -1484,7 +1487,7 @@ Clone found (markdown)
    .staging/.github/skills/eval-driven-dev/references/2c-capture-and-verify-trace.md:markdown [22:133 - 27:134]
 Clone found (markdown)
  - .staging/.github/skills/aspire/references/troubleshooting.md:markdown [145:115 - 150:33] (6 lines, 211 tokens)
-   mantle/README.md:markdown [341:207 - 343:4]
+   mantle/README.md:markdown [382:207 - 384:4]
 Clone found (markdown)
  - .staging/.github/skills/autoresearch/SKILL.md:markdown [124:53 - 131:16] (8 lines, 135 tokens)
    DESIGN_SYSTEM.md:markdown [51:132 - 53:3]
@@ -1732,14 +1735,11 @@ Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [124:22 - 131:3] (8 lines, 64 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [96:22 - 103:3]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [41:3 - 48:21] (8 lines, 98 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [41:3 - 48:21]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [130:35 - 141:3] (12 lines, 179 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [102:35 - 113:3]
-Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [140:35 - 148:124] (9 lines, 156 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [112:35 - 120:124]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
 Clone found (markdown)
  - .staging/.github/skills/create-llms/SKILL.md:markdown [53:32 - 108:13] (56 lines, 562 tokens)
    .staging/.github/skills/update-llms/SKILL.md:markdown [47:42 - 96:13]
@@ -1752,9 +1752,6 @@ Clone found (txt)
 Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
-Clone found (markdown)
- - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
 Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
@@ -3606,6 +3603,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.analyze.md:markdown [31:20 - 44:17] (14 lines, 84 tokens)
    .staging/.opencode/commands/speckit.analyze.md:markdown [221:16 - 234:17]
+Clone found (markdown)
+ - .staging/.opencode/commands/speckit.analyze.md:markdown [226:8 - 241:2] (16 lines, 111 tokens)
+   .staging/.opencode/commands/speckit.checklist.md:markdown [359:8 - 372:88]
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.clarify.md:markdown [44:25 - 55:5] (12 lines, 92 tokens)
    .staging/.opencode/commands/speckit.constitution.md:markdown [44:25 - 55:4]
@@ -9112,7 +9112,7 @@ Clone found (bash)
  - mantle/init/init.sh [30:1 - 48:2] (19 lines, 112 tokens)
    mantle/init/load-core.sh [51:1 - 69:2]
 Clone found (bash)
- - mantle/install.sh [108:1 - 121:45] (14 lines, 122 tokens)
+ - mantle/install.sh [110:1 - 123:45] (14 lines, 122 tokens)
    mantle/libexec/mantle/commands/version.sh [25:1 - 38:45]
 Clone found (bash)
  - mantle/lib/bash/collection.sh [28:23 - 46:2] (19 lines, 103 tokens)
@@ -9280,8 +9280,20 @@ Clone found (bash)
  - mantle/modules/aliases-system.sh [13:1 - 37:2] (25 lines, 289 tokens)
    mantle/modules/aliases.sh [351:1 - 380:2]
 Clone found (bash)
- - mantle/modules/cache.sh [32:1 - 39:2] (8 lines, 51 tokens)
-   mantle/modules/tooling.sh [28:1 - 35:2]
+ - mantle/modules/cache.sh [34:1 - 44:29] (11 lines, 64 tokens)
+   mantle/modules/cache.sh [56:1 - 66:29]
+Clone found (bash)
+ - mantle/modules/cache.sh [37:1 - 44:2] (8 lines, 51 tokens)
+   mantle/modules/tooling.sh [33:1 - 40:2]
+Clone found (bash)
+ - mantle/modules/cache.sh [66:40 - 76:2] (11 lines, 58 tokens)
+   mantle/modules/tooling.sh [84:56 - 94:2]
+Clone found (bash)
+ - mantle/modules/tooling.sh [75:25 - 88:9] (14 lines, 57 tokens)
+   mantle/modules/tooling.sh [96:33 - 109:9]
+Clone found (bash)
+ - mantle/modules/tooling.sh [75:25 - 93:2] (19 lines, 95 tokens)
+   mantle/modules/tooling.sh [116:43 - 134:2]
 Clone found (bash)
  - mantle/tests/bin/helpers/environment.bash [86:2 - 99:3] (14 lines, 77 tokens)
    mantle/tests/bin/helpers/environment.bash [112:24 - 125:3]
@@ -9326,7 +9338,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 408            │ 109329      │ 424073       │ 228          │ 3563 (3.26%)     │ 19173 (4.52%)     │
+│ bash         │ 408            │ 109726      │ 426089       │ 232          │ 3614 (3.29%)     │ 19447 (4.56%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9388,7 +9400,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1726           │ 329646      │ 4245767      │ 686          │ 11525 (3.50%)    │ 171643 (4.04%)    │
+│ markdown     │ 1726           │ 329688      │ 4246513      │ 686          │ 11612 (3.52%)    │ 171481 (4.04%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 99             │ 29819       │ 117043       │ 48           │ 964 (3.23%)      │ 7969 (6.81%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9428,7 +9440,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 382            │ 86312       │ 199754       │ 32           │ 781 (0.90%)      │ 3098 (1.55%)      │
+│ text         │ 382            │ 86354       │ 199754       │ 32           │ 781 (0.90%)      │ 3098 (1.55%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 37             │ 6466        │ 13039        │ 8            │ 175 (2.71%)      │ 625 (4.79%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9444,10 +9456,10 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ yaml         │ 560            │ 58005       │ 320022       │ 351          │ 9396 (16.20%)    │ 105399 (32.93%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4777           │ 983864      │ 7895373      │ 3105         │ 56677 (5.76%)    │ 742775 (9.41%)    │
+│ Total:       │ 4777           │ 984345      │ 7898135      │ 3109         │ 56815 (5.77%)    │ 742887 (9.41%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3105 clones.
+Found 3109 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
-time: 10.06s
+time: 12.43s
 
