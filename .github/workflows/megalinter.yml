@@ -63,6 +63,16 @@ jobs:
           VALIDATE_ALL_CODEBASE: >-
             ${{ github.event_name != 'pull_request' }}
 
+      - name: Reclaim MegaLinter report ownership
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          report_root=".reports/megalinter"
+          if [[ -d "${report_root}" ]]; then
+            sudo chown --recursive "$(id --user):$(id --group)" "${report_root}"
+          fi
+
       - name: Normalize repository-intelligence summary
         if: always()
         uses: ./.github/actions/normalize-repository-report
