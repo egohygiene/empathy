@@ -4,182 +4,18 @@ See documentation on https://megalinter.io/10.0.0/descriptors/spell_lychee/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-[200] file://egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md (at 29:11)
-[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 29:108)
-[404] https://egohygiene.github.io/identity/contracts/profile.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://zizmor.sh/ (at 329:3)
-[200] https://megalinter.io/latest/configuration/ (at 7:3)
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Rejected status code: 403 Forbidden
-[200] https://megalinter.io/latest/descriptors/action_actionlint/ (at 324:3)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
-[200] https://megalinter.io/10.0.0/descriptors/action_zizmor/ (at 330:3)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33)
-[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/ (at 340:3)
-[200] https://clang.llvm.org/docs/ClangFormat.html (at 453:3)
-[200] https://clang.llvm.org/docs/ClangFormat.html (at 471:3)
-[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/ (at 395:3)
-[200] https://ansible.readthedocs.io/projects/lint/ (at 339:3) | 200 OK | Followed 1 redirect. Redirects: https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
-[200] https://github.com/rhysd/actionlint/blob/main/docs/config.md (at 17:3)
-[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/ (at 409:3)
-[200] https://dart.dev/tools/dart-analyze (at 497:3)
-[200] https://github.com/Azure/arm-ttk (at 363:3)
-[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/ (at 424:3)
-[200] https://github.com/greglook/cljstyle (at 394:3)
-[200] https://github.com/rhysd/actionlint (at 323:3)
-[200] https://megalinter.io/latest/config-variables/ (at 10:3)
-[200] https://stylelint.io/ (at 487:3)
-[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/ (at 444:3)
-[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ (at 434:3) | Rejected status code: 404 Not Found
-[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/ (at 364:3)
-[200] https://github.com/clj-kondo/clj-kondo (at 408:3)
-[200] https://megalinter.io/latest/descriptors/cpp_clang_format/ (at 454:3)
-[200] https://megalinter.io/latest/descriptors/c_clang_format/ (at 472:3)
-[200] https://htmlhint.com/ (at 588:3)
-[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/ (at 511:3)
-[200] https://eslint.org/ (at 606:3)
-[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/ (at 498:3)
-[200] https://github.com/aws-cloudformation/cfn-lint (at 423:3)
-[200] https://github.com/kucherenko/jscpd (at 443:3)
-[200] https://prettier.io/ (at 626:3)
-[200] https://megalinter.io/latest/descriptors/css_stylelint/ (at 488:3)
-[200] https://github.com/coffeelint/coffeelint (at 433:3)
-[200] https://pmd.github.io/ (at 646:3)
-[200] https://prettier.io/ (at 666:3) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/go_revive/ (at 550:3)
-[200] https://eslint.org/ (at 681:3) | OK (cached)
-[200] https://checkstyle.org/ (at 636:3)
-[200] https://github.com/mgechev/revive (at 549:3)
-[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/ (at 540:3)
-[200] https://github.com/hadolint/hadolint (at 510:3)
-[200] https://github.com/editorconfig-checker/editorconfig-checker (at 520:3)
-[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/ (at 579:3)
-[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/ (at 565:3)
-[200] https://megalinter.io/latest/descriptors/javascript_eslint/ (at 607:3)
-[200] https://megalinter.io/latest/descriptors/html_htmlhint/ (at 589:3)
-[200] https://megalinter.io/latest/descriptors/java_checkstyle/ (at 637:3)
-[200] https://github.com/cjoudrey/graphql-schema-linter (at 564:3)
-[200] https://megalinter.io/latest/descriptors/javascript_prettier/ (at 627:3)
-[200] https://github.com/gherkin-lint/gherkin-lint (at 539:3)
-[200] https://megalinter.io/latest/descriptors/json_jsonlint/ (at 657:3)
-[200] https://phpstan.org/ (at 752:3)
-[200] https://megalinter.io/latest/descriptors/java_pmd/ (at 647:3)
-[200] https://github.com/prantlf/jsonlint (at 656:3)
-[200] https://github.com/nvuillam/npm-groovy-lint (at 578:3)
-[200] https://psalm.dev/ (at 759:3)
-[200] https://megalinter.io/latest/descriptors/jsx_eslint/ (at 682:3)
-[200] https://megalinter.io/latest/descriptors/latex_chktex/ (at 702:3)
-[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/ (at 521:3)
-[200] https://github.com/DavidAnson/markdownlint (at 721:3)
-[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/ (at 722:3)
-[200] https://megalinter.io/latest/descriptors/php_phpcs/ (at 739:3)
-[200] https://megalinter.io/latest/descriptors/php_phplint/ (at 746:3)
-[200] https://github.com/overtrue/phplint (at 745:3)
-[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/ (at 738:3)
-[200] https://github.com/lunarmodules/luacheck (at 711:3)
-[200] https://megalinter.io/latest/descriptors/php_phpstan/ (at 753:3)
-[200] https://www.checkov.io/ (at 874:3)
-[200] https://megalinter.io/latest/descriptors/php_psalm/ (at 760:3)
-[200] https://megalinter.io/latest/descriptors/lua_luacheck/ (at 712:3)
-[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/ (at 778:3)
-[200] https://megalinter.io/latest/descriptors/protobuf_protolint/ (at 789:3)
-[200] https://github.com/yoheimuta/protolint (at 788:3)
-[200] https://github.com/PowerShell/PSScriptAnalyzer (at 770:3)
-[200] https://github.com/PowerShell/PSScriptAnalyzer (at 777:3)
-[200] https://raku.org/ (at 799:3)
-[200] https://megalinter.io/latest/descriptors/raku_raku/ (at 800:3)
-[200] https://megalinter.io/latest/descriptors/powershell_powershell/ (at 771:3)
-[200] https://github.com/loeffel-io/ls-lint (at 808:3)
-[200] https://github.com/streetsidesoftware/cspell (at 823:3)
-[200] https://megalinter.io/latest/descriptors/spell_cspell/ (at 824:3)
-[200] https://megalinter.io/latest/descriptors/repository_ls_lint/ (at 809:3)
-[200] https://rubocop.org/ (at 988:3)
-[200] https://megalinter.io/latest/descriptors/repository_devskim/ (at 885:3)
-[200] https://github.com/microsoft/DevSkim (at 884:3)
-[200] https://megalinter.io/latest/descriptors/repository_checkov/ (at 875:3)
-[200] https://github.com/anchore/grype (at 894:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 925:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy/ (at 912:3)
-[200] https://github.com/trufflesecurity/trufflehog (at 941:3)
-[200] https://megalinter.io/latest/descriptors/json_prettier/ (at 667:3)
-[200] https://yamllint.readthedocs.io/en/stable/ (at 1089:3)
-[200] https://megalinter.io/latest/descriptors/repository_grype/ (at 895:3)
-[200] https://github.com/aquasecurity/trivy (at 911:3)
-[200] https://github.com/aquasecurity/trivy (at 924:3)
-[200] https://github.com/rstcheck/rstcheck (at 977:3)
-[200] https://megalinter.io/latest/descriptors/rst_rstcheck/ (at 978:3)
-[200] https://megalinter.io/latest/descriptors/ruby_rubocop/ (at 989:3)
-[200] https://github.com/rust-lang/rust-clippy (at 1005:3)
-[200] https://megalinter.io/latest/descriptors/repository_syft/ (at 961:3)
-[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Error (cached)
-[200] https://github.com/anchore/syft (at 960:3)
-[200] https://megalinter.io/latest/descriptors/repository_trufflehog/ (at 942:3)
-[200] https://megalinter.io/latest/descriptors/rust_clippy/ (at 1006:3)
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 1090:3)
-[200] https://github.com/chris48s/v8r (at 1078:3)
-[200] https://megalinter.io/latest/descriptors/yaml_v8r/ (at 1079:3)
-[200] https://github.com/r-lib/lintr (at 1029:3)
-[200] https://github.com/terraform-linters/tflint (at 1118:3)
-[200] https://megalinter.io/latest/descriptors/r_lintr/ (at 1030:3)
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 1141:3)
-[200] https://github.com/gruntwork-io/terragrunt (at 1124:3)
-[200] https://megalinter.io/latest/descriptors/swift_swiftlint/ (at 1158:3)
-[200] https://megalinter.io/latest/descriptors/terraform_tflint/ (at 1119:3)
-[200] https://github.com/IBM/tekton-lint (at 1140:3)
-[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/ (at 1125:3)
-[200] https://json.schemastore.org/github-action.json (at 71:6) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-action.json --[301]--> https://www.schemastore.org/github-action.json
-[200] https://json.schemastore.org/github-workflow.json (at 72:6) | OK (cached)
-[200] https://github.com/realm/SwiftLint (at 1157:3)
-[200] https://json.schemastore.org/github-workflow.json (at 59:33) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/scala_scalafix/ (at 1168:3)
-[200] https://megalinter.io/latest/descriptors/repository_betterleaks/ (at 1205:3)
-[200] https://github.com/snakemake/snakefmt (at 1194:3)
-[200] https://www.schemastore.org/github-workflow.json (at 2:33)
-[200] https://pnpm.io/using-changesets (at 73:7)
-[200] https://taskfile.dev/schema.json (at 73:6)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-issue-forms.json --[301]--> https://www.schemastore.org/github-issue-forms.json
-[200] https://github.com/scalacenter/scalafix (at 1167:3)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/ (at 1221:3)
-[200] https://megalinter.io/latest/descriptors/spell_proselint/ (at 1233:3)
-[200] https://megalinter.io/latest/descriptors/salesforce_code_analyzer_apex/ (at 1178:3)
-[200] https://agentskills.io/specification (at 12:25)
-[200] https://github.com/amperser/proselint (at 1232:3)
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 15:5) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/spell_lychee/ (at 1286:3)
-[200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json (at 2:33)
-[200] https://www.schemastore.org/coffeelint.json (at 2:15)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/sqlfluff/sqlfluff (at 1220:3)
-[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/ (at 1195:3)
-[200] https://megalinter.io/latest/descriptors/spell_vale/ (at 1253:3)
-[EXCLUDED] http://localhost:8080/ (at 40:30) | This is due to your 'exclude' values
-[200] https://trivy.dev/docs/latest/supply-chain/sbom/ (at 14:5)
-[200] https://github.com/betterleaks/betterleaks (at 1204:3)
-[200] file://mindgarden/profiles/quartz/profile.yaml (at 75:42)
-[200] https://egohygiene.github.io/empathy/intelligence/ (at 62:2)
-[200] https://www.checkov.io/ (at 11:5) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/repository_secretlint/ (at 1403:3)
-[200] file://DESIGN.md (at 36:1)
-[200] file://ONTOLOGY.md (at 147:31)
-[200] file://DESIGN.md (at 186:1)
-[200] file://DESIGN.md (at 224:56)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://github.com/errata-ai/vale (at 1252:3) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
-[200] https://github.com/anchore/grype (at 12:5) | OK (cached)
-[200] https://www.schemastore.org/stylelintrc.json (at 2:15)
 [200] file://.obsidian/README.md (at 10:35)
 [200] file://.garden/dashboard.md (at 35:12)
 [200] file://.garden/home.md (at 36:1)
 [200] file://llms.txt (at 38:21)
 [200] file://mindgarden/profiles/agent/README.md (at 39:1)
-[200] https://egohygiene.github.io/empathy/ (at 72:2)
-[200] https://egohygiene.github.io/empathy/ (at 42:24)
 [200] file://mindgarden/profiles/quartz/README.md (at 44:1)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[EXCLUDED] http://localhost:8080/ (at 40:30) | This is due to your 'exclude' values
+[200] file://mindgarden/profiles/quartz/profile.yaml (at 75:42)
+[200] file://DESIGN.md (at 36:1)
+[200] file://ONTOLOGY.md (at 147:31)
+[200] file://DESIGN.md (at 186:1)
+[200] file://DESIGN.md (at 224:56)
 [200] file://PURPOSE.md (at 54:3)
 [200] file://VISION.md (at 55:3)
 [200] file://PRINCIPLES.md (at 56:3)
@@ -198,124 +34,314 @@ Linter raw log:
 [200] file://DECISIONS.md (at 69:3)
 [200] file://ROADMAP.md (at 70:3)
 [200] file://META.md (at 71:3)
-[200] https://www.checkov.io/2.Basics/CLI%20Command%20Reference.html (at 12:5)
-[200] https://www.schemastore.org/npmpackagejsonlintrc.json (at 2:15)
+[200] file://egolint/.agents/skills/authoring/implementation-planning/SKILL.md (at 30:11)
+[200] file://egolint/.agents/skills/authoring/github-issue-authoring/SKILL.md (at 29:11)
+[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 29:108)
+[ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
+[EXCLUDED] mailto:szmyty@gmail.com (at 29:15) | This is due to your 'exclude' values
+[EXCLUDED] mailto:szmyty@gmail.com (at 20:15) | This is due to your 'exclude' values
+  [WARN] egolint/pnpm-lock.yaml: No files found for this input source
+[200] https://registry.npmjs.org/ (at 45:18)
 [EXCLUDED] mailto:support@errata.ai (at 4:13) | This is due to your 'exclude' values
-[200] https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html (at 8:6)
-[200] https://clearlydefined.io/ (at 22:7)
-[200] https://oss.anchore.com/docs/reference/grype/configuration/ (at 11:5)
-[200] https://github.com/amperser/proselint (at 11:16) | OK (cached)
+[200] https://www.schemastore.org/npmpackagejsonlintrc.json (at 2:15)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15)
+[200] file://egolint/.agents/skills/architecture/create-system-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-system-document/references/authoring-guide.md (at 98:1)
+[200] https://egohygiene.github.io/empathy/ (at 42:24)
+[200] https://egohygiene.github.io/empathy/ (at 72:2)
+[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 62:2)
+[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json (at 2:15)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 11:5) | Rejected status code: 403 Forbidden
+[404] https://egohygiene.github.io/identity/contracts/profile.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://json.schemastore.org/package.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
+[200] https://protobuf.dev/programming-guides/style/ (at 12:5)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-action.json --[301]--> https://www.schemastore.org/github-action.json
+[200] file://ARCHITECTURE.md (at 29:53)
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://mantle/config/installers.lock.tsv (at 4:1)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
-[200] https://developer.mozilla.org/en-US/docs/Glossary/Favicon (at 7:6)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/quality/test-engineering/SKILL.md (at 30:11)
+[200] file://.github/actions/normalize-repository-report/repository-report-summary.schema.json (at 8:1)
+[200] file://egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md (at 31:11)
+[200] file://egolint/.agents/specs/publishing/arxiv.spec.md (at 31:110)
+[200] https://github.com/sponsors/szmyty (at 34:13)
+[200] https://www.schemastore.org/markdown-link-check.json (at 2:15)
+[404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
+[404] https://egohygiene.github.io/contracts/repository-tree/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://api.github.com/ (at 32:10)
+[200] https://raw.githubusercontent.com/ (at 33:10) | 200 OK | Followed 1 redirect. Redirects: https://raw.githubusercontent.com/ --[301]--> https://github.com/
+[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33)
+[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33)
+[200] https://latexindentpl.readthedocs.io/ (at 10:5) | 200 OK | Followed 1 redirect. Redirects: https://latexindentpl.readthedocs.io/ --[302]--> https://latexindentpl.readthedocs.io/en/latest/
+[200] https://megalinter.io/latest/configuration/ (at 7:3)
+[200] https://zizmor.sh/ (at 329:3)
+[200] https://megalinter.io/latest/descriptors/action_actionlint/ (at 324:3)
+[200] https://github.com/jackyzha0/quartz.git (at 53:17) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
+[200] https://megalinter.io/latest/config-variables/ (at 10:3)
+[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/ (at 340:3)
+[200] https://github.com/egohygiene/empathy.git (at 24:13) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
+[200] https://github.com/egohygiene/empathy/issues (at 19:13)
+[200] https://ansible.readthedocs.io/projects/lint/ (at 339:3) | 200 OK | Followed 1 redirect. Redirects: https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
+[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/ (at 395:3)
+[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip (at 6:11) | 200 OK | Followed 3 redirects. Redirects: https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip --[301]--> https://github.com/vale-cli/proselint/releases/latest/download/proselint.zip --[302]--> https://github.com/vale-cli/proselint/releases/download/v0.3.4/proselint.zip --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/189305362/4395a0e6-cc11-4ea3-84a4-25cf080bb429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T01%3A48%3A35Z&rscd=attachment%3B+filename%3Dproselint.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T00%3A47%3A50Z&ske=2026-08-16T01%3A48%3A35Z&sks=b&skv=2018-11-09&sig=v4OyvFZ40KD3hY2aoYzc0EhiXzoG7b6%2Fku%2Fxs26BRK0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0MjczOCwibmJmIjoxNzg2ODQyNDM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v-QfVjDgWLeTzUD8PIK6LowzlG1ELQf7uIyzOHe6kFA&response-content-disposition=attachment%3B%20filename%3Dproselint.zip&response-content-type=application%2Foctet-stream
+[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/ (at 424:3)
+[200] https://github.com/errata-ai/proselint/releases.atom (at 7:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/proselint/releases.atom --[301]--> https://github.com/vale-cli/proselint/releases.atom
+[200] https://github.com/errata-ai/proselint/issues/new (at 8:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/errata-ai/proselint/issues/new --[301]--> https://github.com/vale-cli/proselint/issues/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fvale-cli%2Fproselint%2Fissues%2Fnew
+[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/ (at 364:3)
+[200] https://megalinter.io/10.0.0/descriptors/action_zizmor/ (at 330:3)
+[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/ (at 409:3)
+[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ (at 434:3) | Rejected status code: 404 Not Found
+[200] https://github.com/amperser/proselint (at 11:16)
+[200] https://clang.llvm.org/docs/ClangFormat.html (at 453:3)
+[200] https://clang.llvm.org/docs/ClangFormat.html (at 471:3)
+[200] https://megalinter.io/latest/descriptors/c_clang_format/ (at 472:3)
+[200] https://github.com/cmhughes/latexindent.pl (at 11:5)
+[200] https://megalinter.io/latest/descriptors/css_stylelint/ (at 488:3)
+[200] https://dart.dev/tools/dart-analyze (at 497:3)
+[200] https://github.com/yoheimuta/protolint (at 11:5)
+[200] https://stylelint.io/ (at 487:3)
+[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/ (at 511:3)
+[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 7:19)
+[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/ (at 521:3)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
+[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/ (at 540:3)
+[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
+[200] https://megalinter.io/latest/descriptors/go_revive/ (at 550:3)
+[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
+[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/ (at 565:3)
+[200] https://github.com/Azure/arm-ttk (at 363:3)
+[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/ (at 579:3)
+[200] https://htmlhint.com/ (at 588:3)
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
+[200] https://eslint.org/ (at 606:3)
+[200] https://github.com/ (at 31:10)
+[200] https://megalinter.io/latest/descriptors/html_htmlhint/ (at 589:3)
+[200] https://checkstyle.org/ (at 636:3)
+[200] https://megalinter.io/latest/descriptors/javascript_eslint/ (at 607:3)
+[200] https://pmd.github.io/ (at 646:3)
+[200] https://prettier.io/ (at 626:3)
+[200] https://megalinter.io/latest/descriptors/javascript_prettier/ (at 627:3)
+[200] https://prettier.io/ (at 666:3) | OK (cached)
+[200] https://github.com/rhysd/actionlint (at 323:3)
+[200] https://eslint.org/ (at 681:3) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/ (at 444:3)
+[200] https://github.com/greglook/cljstyle (at 394:3)
+[200] https://megalinter.io/latest/descriptors/java_checkstyle/ (at 637:3)
+[200] https://megalinter.io/latest/descriptors/cpp_clang_format/ (at 454:3)
+[200] https://github.com/clj-kondo/clj-kondo (at 408:3)
+[200] https://github.com/coffeelint/coffeelint (at 433:3)
+[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/ (at 498:3)
+[200] https://github.com/aws-cloudformation/cfn-lint (at 423:3)
+[200] https://megalinter.io/latest/descriptors/json_prettier/ (at 667:3)
+[200] https://github.com/kucherenko/jscpd (at 443:3)
+[200] https://megalinter.io/latest/descriptors/json_jsonlint/ (at 657:3)
+[200] https://github.com/hadolint/hadolint (at 510:3)
+[200] https://phpstan.org/ (at 752:3)
+[200] https://megalinter.io/latest/descriptors/jsx_eslint/ (at 682:3)
+[200] https://megalinter.io/latest/descriptors/lua_luacheck/ (at 712:3)
+[200] https://github.com/gherkin-lint/gherkin-lint (at 539:3)
+[200] https://github.com/editorconfig-checker/editorconfig-checker (at 520:3)
+[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/ (at 722:3)
+[200] https://psalm.dev/ (at 759:3)
+[200] https://github.com/yoheimuta/protolint (at 788:3) | OK (cached)
+[200] https://github.com/mgechev/revive (at 549:3)
+[200] https://megalinter.io/latest/descriptors/php_phpcs/ (at 739:3)
+[200] https://megalinter.io/latest/descriptors/php_phplint/ (at 746:3)
+[200] https://megalinter.io/latest/descriptors/latex_chktex/ (at 702:3)
+[200] https://megalinter.io/latest/descriptors/php_psalm/ (at 760:3)
+[200] https://github.com/cjoudrey/graphql-schema-linter (at 564:3)
+[200] https://megalinter.io/latest/descriptors/powershell_powershell/ (at 771:3)
+[200] https://www.checkov.io/ (at 874:3)
+[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/ (at 778:3)
+[200] https://github.com/lunarmodules/luacheck (at 711:3)
+[200] https://megalinter.io/latest/descriptors/protobuf_protolint/ (at 789:3)
+[200] https://github.com/nvuillam/npm-groovy-lint (at 578:3)
+[200] https://github.com/prantlf/jsonlint (at 656:3)
+[200] https://megalinter.io/latest/descriptors/raku_raku/ (at 800:3)
+[200] https://raku.org/ (at 799:3)
+[200] https://megalinter.io/latest/descriptors/php_phpstan/ (at 753:3)
+[200] https://megalinter.io/latest/descriptors/spell_cspell/ (at 824:3)
+[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/ (at 738:3)
+[200] https://megalinter.io/latest/descriptors/repository_checkov/ (at 875:3)
+[200] https://github.com/DavidAnson/markdownlint (at 721:3)
+[200] https://megalinter.io/latest/descriptors/repository_devskim/ (at 885:3)
+[200] https://github.com/PowerShell/PSScriptAnalyzer (at 770:3)
+[200] https://github.com/PowerShell/PSScriptAnalyzer (at 777:3)
+[200] https://github.com/overtrue/phplint (at 745:3)
+[200] https://rubocop.org/ (at 988:3)
+[200] https://megalinter.io/latest/descriptors/repository_ls_lint/ (at 809:3)
+[200] https://megalinter.io/latest/descriptors/java_pmd/ (at 647:3)
+[200] https://megalinter.io/latest/descriptors/repository_grype/ (at 895:3)
+[200] https://github.com/loeffel-io/ls-lint (at 808:3)
+[200] https://github.com/anchore/grype (at 894:3)
+[200] https://megalinter.io/latest/descriptors/repository_trufflehog/ (at 942:3)
+[200] https://github.com/streetsidesoftware/cspell (at 823:3)
+[200] https://yamllint.readthedocs.io/en/stable/ (at 1089:3)
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 925:3)
+[200] https://megalinter.io/latest/descriptors/repository_trivy/ (at 912:3)
+[200] https://megalinter.io/latest/descriptors/repository_syft/ (at 961:3)
+[200] https://github.com/microsoft/DevSkim (at 884:3)
+[200] https://megalinter.io/latest/descriptors/rst_rstcheck/ (at 978:3)
+[200] https://github.com/aquasecurity/trivy (at 911:3)
+[200] https://github.com/aquasecurity/trivy (at 924:3)
+[200] https://github.com/anchore/syft (at 960:3)
+[200] https://megalinter.io/latest/descriptors/r_lintr/ (at 1030:3)
+[200] https://github.com/trufflesecurity/trufflehog (at 941:3)
+[403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Error (cached)
+[200] https://megalinter.io/latest/descriptors/rust_clippy/ (at 1006:3)
+[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 1090:3)
+[200] https://megalinter.io/latest/descriptors/terraform_tflint/ (at 1119:3)
+[200] https://github.com/rstcheck/rstcheck (at 977:3)
+[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/ (at 1125:3)
+[200] https://github.com/rust-lang/rust-clippy (at 1005:3)
+[200] https://github.com/r-lib/lintr (at 1029:3)
+[200] https://github.com/amperser/proselint (at 1232:3) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 1141:3)
+[200] https://megalinter.io/latest/descriptors/ruby_rubocop/ (at 989:3)
+[200] https://megalinter.io/latest/descriptors/yaml_v8r/ (at 1079:3)
+[200] https://github.com/chris48s/v8r (at 1078:3)
+[200] https://megalinter.io/latest/descriptors/swift_swiftlint/ (at 1158:3)
+[200] https://megalinter.io/latest/descriptors/scala_scalafix/ (at 1168:3)
+[200] https://github.com/terraform-linters/tflint (at 1118:3)
+[200] https://megalinter.io/latest/descriptors/salesforce_code_analyzer_apex/ (at 1178:3)
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/lycheeverse/lychee (at 1285:3)
-[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/validation-checklist.md (at 95:5)
-[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/authoring-guide.md (at 97:1)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Error (cached)
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Error (cached)
+[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/ (at 1221:3)
+[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/authoring-guide.md (at 98:1)
+[404] https://docs.github.com/en/copilot/customizing-copilot/using-github-copilot-extensions/about-github-copilot-agents (at 13:2) | Rejected status code: 404 Not Found
+[200] https://github.com/IBM/tekton-lint (at 1140:3)
+[200] https://megalinter.io/latest/descriptors/repository_betterleaks/ (at 1205:3)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://docs.stoplight.io/docs/spectral/e5b9616d6d50c-rulesets (at 16:3)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/ (at 1195:3)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://github.com/gruntwork-io/terragrunt (at 1124:3)
+[200] file://README.md (at 96:32)
+[200] file://pyproject.toml (at 96:58)
+[ERROR] file://.staging/github/README.md (at 97:48) | File not found. Check if file exists and path is correct
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-issue-forms.json --[301]--> https://www.schemastore.org/github-issue-forms.json
+[200] https://megalinter.io/latest/descriptors/spell_lychee/ (at 1286:3)
+[200] https://github.com/realm/SwiftLint (at 1157:3)
+[200] https://github.com/scalacenter/scalafix (at 1167:3)
+[200] https://megalinter.io/latest/descriptors/spell_vale/ (at 1253:3)
+[200] file://PURPOSE.md (at 103:33)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://api.github.com/repos/sigstore/cosign/releases/latest (at 129:16)
+[200] https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash (at 103:16)
+[200] https://json.schemastore.org/github-issue-config.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-issue-config.json --[301]--> https://www.schemastore.org/github-issue-config.json
+[200] https://megalinter.io/latest/descriptors/spell_proselint/ (at 1233:3)
+[200] https://docs.github.com/issues/tracking-your-work-with-issues (at 18:5) | 200 OK | Followed 1 redirect. Redirects: https://docs.github.com/issues/tracking-your-work-with-issues --[302]--> https://docs.github.com/en/issues/tracking-your-work-with-issues
+[200] https://megalinter.io/latest/descriptors/repository_secretlint/ (at 1403:3)
+[404] https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-funding-files (at 10:3) | Rejected status code: 404 Not Found
+[200] https://github.com/snakemake/snakefmt (at 1194:3)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Error (cached)
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Error (cached)
+[200] https://github.com/betterleaks/betterleaks (at 1204:3)
+[200] https://github.com/errata-ai/vale (at 1252:3) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/vale --[301]--> https://github.com/vale-cli/vale
+[200] https://www.rubyschema.org/rubocop.json (at 2:33)
+[200] https://docs.rubocop.org/rubocop/latest/configuration.html (at 13:5)
+[200] https://rubystyle.guide/ (at 14:5)
+[200] https://www.schemastore.org/coffeelint.json (at 2:15)
+[200] file://PURPOSE.md (at 89:46)
+[200] file://VISION.md (at 89:74)
+[200] file://PRINCIPLES.md (at 90:1)
+[200] file://PILLARS.md (at 90:39)
+[200] https://github.com/sqlfluff/sqlfluff (at 1220:3)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
+[200] https://json.schemastore.org/remarkrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/remarkrc.json --[301]--> https://www.schemastore.org/remarkrc.json
 [200] https://github.com/secretlint/secretlint (at 1402:3)
+[200] https://github.com/lycheeverse/lychee (at 1285:3)
+[200] https://megalinter.io/10.0.0/configuration/ (at 283:3)
+[404] https://github.com/$ (at 88:45) | Rejected status code: 404 Not Found
+[200] https://megalinter.io/10.0.0/descriptors/repository_betterleaks/ (at 285:3)
+[200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json (at 2:33)
+[200] https://taskfile.dev/docs/guide#including-other-taskfiles (at 286:3)
+[200] https://github.com/StepanKropachev/obsidian-pm (at 17:18)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[404] https://egohygiene.github.io/contracts/repository-analytics/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://github.com/overtrue/phplint (at 9:3) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://www.schemastore.org/github-action.json (at 2:33)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[ERROR] https://egohygiene.dev/schemas/repository-report-summary/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/architecture/create-architecture-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-architecture-document/references/authoring-guide.md (at 98:1)
+[200] file://egolint/.agents/skills/quality/repository-cleanup/SKILL.md (at 30:11)
+[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/validation-checklist.md (at 95:5)
+[200] https://github.com/blacksmithgu/obsidian-dataview (at 24:18)
+[200] file://egolint/.agents/skills/architecture/create-foundations-document/references/authoring-guide.md (at 97:1)
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/markdownlint.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/markdownlint.json --[301]--> https://www.schemastore.org/markdownlint.json
+[200] https://github.com/trufflesecurity/trufflehog (at 12:5) | OK (cached)
+[200] https://megalinter.io/10.0.0/removed-linters/ (at 284:3)
+[200] https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 (at 88:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 --[302]--> https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_linux_amd64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/43225113/89e648aa-ac93-4896-8540-c75c6e5e3880?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T01%3A45%3A05Z&rscd=attachment%3B+filename%3Dyq_linux_amd64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T00%3A45%3A01Z&ske=2026-08-16T01%3A45%3A05Z&sks=b&skv=2018-11-09&sig=jVgtlORJUoZ%2FNnovt7yOPRZIkjDvdEJhgEjBvp0MWxw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0NDEzNCwibmJmIjoxNzg2ODQyMzM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YRsPTd0ZT6tQH5uH35J6imU2XbWKhjTKaGHJ0j5QOjE&response-content-disposition=attachment%3B%20filename%3Dyq_linux_amd64&response-content-type=application%2Foctet-stream
+[404] https://github.com/google/osv-scanner/releases/download/v$%7BOSV_SCANNER_VERSION%7D/osv-scanner_linux_amd64 (at 57:12) | Rejected status code: 404 Not Found
+[200] https://github.com/loeffel-io/ls-lint (at 12:5) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://trufflesecurity.com/docs/configuration-file-reference (at 13:5)
+[200] https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html (at 8:6)
+[200] https://developer.mozilla.org/en-US/docs/Glossary/Favicon (at 7:6)
+[404] https://github.com/sigstore/cosign/releases/download/$%7BCOSIGN_VERSION%7D/cosign-linux-amd64 (at 137:14) | Rejected status code: 404 Not Found
+[200] https://github.com/egohygiene/empathy/discussions (at 27:10)
+[200] https://ls-lint.org/ (at 11:5)
+[200] https://www.schemastore.org/jscpd.json (at 2:15)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
 [200] https://docs.github.com/en/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent (at 6:8) | 200 OK | Followed 1 redirect. Redirects: https://docs.github.com/en/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent --[301]--> https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment
-[200] https://autofix.ci/ (at 9:20)
-[200] https://github.com/errata-ai/write-good/releases.atom (at 2:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/write-good/releases.atom --[301]--> https://github.com/vale-cli/write-good/releases.atom
-[200] https://github.com/changesets/action (at 74:7)
-[404] https://github.com/$ (at 391:56) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 433:28) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 596:56) | Rejected status code: 404 Not Found
-[200] https://github.com/hadolint/hadolint#configure (at 21:3)
-[200] https://github.com/hadolint/hadolint#rules (at 24:3)
-[200] file://egolint/.agents/skills/quality/bug-fixing/SKILL.md (at 30:11)
+[200] https://github.com/egohygiene/empathy/discussions/categories/documentation (at 35:10)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://ogp.me/ (at 6:19)
+[200] file://EPISTEMOLOGY.md (at 54:35)
+[200] file://PRINCIPLES.md (at 159:18)
+[200] file://EPISTEMOLOGY.md (at 160:3)
+[200] https://oss.anchore.com/docs/reference/syft/configuration/ (at 11:5)
+[200] https://megalinter.io/latest/descriptors/repository_syft/ (at 12:5) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://developercertificate.org/ (at 25:7)
+[200] https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 (at 116:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 --[302]--> https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-Linux-x86_64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/46234189/452c2925-e304-4ed1-9a07-671658ac125d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T01%3A51%3A17Z&rscd=attachment%3B+filename%3Dhadolint-linux-x86_64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T00%3A50%3A58Z&ske=2026-08-16T01%3A51%3A17Z&sks=b&skv=2018-11-09&sig=vLOmNJCUAxrZDnR6e%2BJQCfxCqSScJHkBQmcgovufVUo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0NDI0NSwibmJmIjoxNzg2ODQyNDQ1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PocHFebxlWcvg_v4PPh7aPJ4yxj2yEZuy3EVCT89GEI&response-content-disposition=attachment%3B%20filename%3Dhadolint-linux-x86_64&response-content-type=application%2Foctet-stream
+[200] https://github.com/realm/SwiftLint (at 11:5) | OK (cached)
+[200] https://realm.github.io/SwiftLint/rule-directory.html (at 12:5)
+[200] file://egolint/.agents/skills/architecture/architecture-authoring/SKILL.md (at 30:11)
+[200] file://egolint/.agents/specs/architecture (at 30:153)
+[200] https://scancode-toolkit.readthedocs.io/ (at 22:7) | 200 OK | Followed 1 redirect. Redirects: https://scancode-toolkit.readthedocs.io/ --[302]--> https://scancode-toolkit.readthedocs.io/en/stable/
+[200] https://github.com/egohygiene/empathy/discussions/categories/ideas (at 31:10)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
 [200] file://mantle/ARCHITECTURE.md (at 69:6)
 [200] file://mantle/config/architecture/layers.tsv (at 71:1)
 [200] file://mantle/PROVENANCE.md (at 80:8)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] file://PURPOSE.md (at 128:30)
-[200] file://VISION.md (at 128:61)
+[200] https://www.checkov.io/ (at 11:5) | OK (cached)
+[200] https://github.com/egohygiene/empathy/security/advisories/new (at 39:10) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy/security/advisories/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fegohygiene%2Fempathy%2Fsecurity%2Fadvisories%2Fnew
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://raw.githubusercontent.com/nvuillam/npm-groovy-lint/refs/heads/main/docs/groovy-lint.jsonschema.json (at 2:15)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md (at 98:1)
-[200] https://github.com/IBM/tekton-lint (at 11:5) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 12:5) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[404] https://egohygiene.github.io/identity/contracts/handoff-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://github.com/jackyzha0/quartz.git (at 76:35) | 200 OK | Followed 1 redirect. Redirects: https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[404] https://egohygiene.github.io/contracts/repository-analytics/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
-[404] https://egohygiene.github.io/identity/contracts/project.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://github.com/loeffel-io/ls-lint (at 12:5) | OK (cached)
+[200] https://www.designtokens.org/tr/2025.10/format/ (at 6:19)
+[200] https://www.checkov.io/2.Basics/CLI%20Command%20Reference.html (at 12:5)
 [200] https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview (at 7:6)
-[200] https://yamllint.readthedocs.io/en/stable/ (at 11:5) | OK (cached)
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 12:5) | OK (cached)
-[200] https://ogp.me/ (at 6:19)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15)
-[200] https://github.com/clearlydefined (at 23:7)
-[200] https://www.nongnu.org/chktex/ (at 701:3)
-[200] https://ls-lint.org/ (at 11:5)
-[200] https://github.com/egohygiene/mindgarden (at 5:31)
-[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip (at 6:11) | 200 OK | Followed 3 redirects. Redirects: https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip --[301]--> https://github.com/vale-cli/proselint/releases/latest/download/proselint.zip --[302]--> https://github.com/vale-cli/proselint/releases/download/v0.3.4/proselint.zip --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/189305362/4395a0e6-cc11-4ea3-84a4-25cf080bb429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-15T23%3A20%3A53Z&rscd=attachment%3B+filename%3Dproselint.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-15T22%3A20%3A11Z&ske=2026-08-15T23%3A20%3A53Z&sks=b&skv=2018-11-09&sig=oYmJo%2FJZ%2BPTVPbIJ7ryVIA084QzhpELCcbL9tBK6NOE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NjgzMzA0MiwibmJmIjoxNzg2ODMyNzQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DCkRFP41eG5HF_lf238esG9EwbmTNgjZUMEeyZrRZ_8&response-content-disposition=attachment%3B%20filename%3Dproselint.zip&response-content-type=application%2Foctet-stream
+[200] https://github.com/jackyzha0/quartz.git (at 10:20) | OK (cached)
 [200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] file://egolint/.agents/skills/authoring/implementation-planning/SKILL.md (at 30:11)
-[200] file://egolint/.agents/skills/authoring/create-specification-file/SKILL.md (at 30:11)
-[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 30:117)
-[200] file://egolint/.agents/skills/publishing/prepare-arxiv-release/SKILL.md (at 31:11)
-[200] file://egolint/.agents/specs/publishing/arxiv.spec.md (at 31:110)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/errata-ai/proselint/releases.atom (at 7:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/proselint/releases.atom --[301]--> https://github.com/vale-cli/proselint/releases.atom
 [200] https://securityscorecards.dev/ (at 22:7)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] file://egolint/.agents/skills/architecture/create-architecture-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-architecture-document/references/authoring-guide.md (at 98:1)
-[200] https://github.com/errata-ai/proselint/issues/new (at 8:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/errata-ai/proselint/issues/new --[301]--> https://github.com/vale-cli/proselint/issues/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fvale-cli%2Fproselint%2Fissues%2Fnew
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://scancode-toolkit.readthedocs.io/ (at 22:7) | 200 OK | Followed 1 redirect. Redirects: https://scancode-toolkit.readthedocs.io/ --[302]--> https://scancode-toolkit.readthedocs.io/en/stable/
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Rejected status code: 404 Not Found
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[404] https://egohygiene.github.io/contracts/repository-tree/v1/schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://developercertificate.org/ (at 25:7)
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/actions/runs/101 (at 27:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash (at 103:16)
-[200] https://www.schemastore.org/markdown-link-check.json (at 2:15)
-[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
-[200] https://api.github.com/ (at 32:10)
-[200] file://mantle/config/architecture/layers.tsv (at 14:1)
-[200] file://EPISTEMOLOGY.md (at 42:43)
-[200] file://AI_CONSTITUTION.md (at 145:1)
-[200] https://raw.githubusercontent.com/ (at 33:10) | 200 OK | Followed 1 redirect. Redirects: https://raw.githubusercontent.com/ --[301]--> https://github.com/
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/osv (at 24:16) | Rejected status code: 404 Not Found
-[200] https://api.github.com/repos/sigstore/cosign/releases/latest (at 129:16)
-[200] https://github.com/reproducible-containers/repro-sources-list.sh (at 17:31)
-[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 3130:14)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/reproducible-containers/buildkit-cache-dance (at 19:29)
-[200] https://github.com/reproducible-containers/buildkit-cache-dance (at 108:9)
-[200] https://github.com/reconquest/shdoc.git (at 95:14) | 200 OK | Followed 1 redirect. Redirects: https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
-[200] https://github.com/realm/SwiftLint (at 11:5) | OK (cached)
-[200] https://rubystyle.guide/ (at 14:5)
-[200] file://mantle/LICENSE (at 18:43)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json (at 2:15)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://realm.github.io/SwiftLint/rule-directory.html (at 12:5)
+[200] https://raw.githubusercontent.com/jackyzha0/quartz/v5/quartz/plugins/quartz-plugins.schema.json (at 1:33)
+[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json (at 2:33)
+[EXCLUDED] https://example.test/branch-protection (at 4:34) | This is due to your 'exclude' values
+[EXCLUDED] https://example.test/security-policy (at 10:34) | This is due to your 'exclude' values
+[EXCLUDED] https://example.test/signed-releases (at 16:34) | This is due to your 'exclude' values
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
 [404] https://github.com/$ (at 77:80) | Error (cached)
 [200] https://github.com/anchore/syft (at 245:46) | OK (cached)
@@ -323,6 +349,216 @@ Linter raw log:
 [404] https://github.com/$ (at 250:31) | Error (cached)
 [404] https://github.com/$ (at 251:35) | Error (cached)
 [404] https://github.com/$ (at 281:41) | Error (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[404] https://egohygiene.github.io/identity/contracts/project.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://www.schemastore.org/github-workflow.json (at 2:33)
+[200] https://github.com/jackyzha0/quartz.git (at 76:35) | OK (cached)
+[404] https://github.com/egohygiene/empathy/actions/runs/101 (at 27:18) | Rejected status code: 404 Not Found
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[404] https://github.com/$ (at 391:56) | Error (cached)
+[404] https://github.com/$ (at 433:28) | Error (cached)
+[404] https://github.com/$ (at 596:56) | Error (cached)
+[200] file://mindgarden/profiles/obsidian/README.md (at 31:1)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://google.github.io/osv-scanner/ (at 27:5)
+[200] https://www.schemastore.org/stylelintrc.json (at 2:15)
+[200] https://json.schemastore.org/sarif-2.1.0.json (at 419:35) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/sarif-2.1.0.json --[301]--> https://www.schemastore.org/sarif-2.1.0.json
+[200] https://github.com/errata-ai/write-good/releases.atom (at 2:12) | 200 OK | Followed 1 redirect. Redirects: https://github.com/errata-ai/write-good/releases.atom --[301]--> https://github.com/vale-cli/write-good/releases.atom
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] file://.mega-linter.yml (at 15:10)
+[200] file://egolint/.mega-linter.fast.yml (at 16:22)
+[200] file://.czrc (at 52:33)
+[200] file://.secrets.baseline (at 56:34)
+[200] file://REUSE.toml (at 58:12)
+[200] file://.audits (at 71:7)
+[200] file://EPISTEMOLOGY.md (at 42:43)
+[200] file://AI_CONSTITUTION.md (at 145:1)
+[200] https://github.com/hadolint/hadolint#configure (at 21:3)
+[200] https://github.com/hadolint/hadolint#rules (at 24:3)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://github.com/reconquest/shdoc.git (at 95:14) | 200 OK | Followed 1 redirect. Redirects: https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/ (at 15:5) | OK (cached)
+[200] file://egolint/.agents/skills/quality/audit-repository/SKILL.md (at 28:11)
+[200] file://egolint/.agents/specs/quality/auditor.spec.md (at 28:97)
+[200] file://egolint/.agents/skills/authoring/create-specification-file/SKILL.md (at 30:11)
+[200] file://egolint/.agents/specs/authoring/specfile.spec.md (at 30:117)
+[200] file://PURPOSE.md (at 128:30)
+[200] file://VISION.md (at 128:61)
+[200] file://VISION.md (at 195:26)
+[200] file://PILLARS.md (at 195:52)
+[200] https://osv.dev/ (at 426:58)
+[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://quartz.jzhao.xyz/configuration (at 6:19)
+[200] https://trivy.dev/docs/latest/supply-chain/sbom/ (at 14:5)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://clearlydefined.io/ (at 22:7)
+[200] https://github.com/wagoid/commitlint-github-action (at 287:3)
+[200] https://api.github.com/repos/shssoichiro/oxipng/releases/latest (at 77:40) | 200 OK | Followed 1 redirect. Redirects: https://api.github.com/repos/shssoichiro/oxipng/releases/latest --[301]--> https://api.github.com/repositories/49436331/releases/latest
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[404] https://egohygiene.github.io/identity/contracts/handoff-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://www.schemastore.org/htmlhint.json (at 2:15)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://github.com/chris48s/v8r (at 11:5) | OK (cached)
+[200] https://github.com/bats-core/bats-core (at 12:3)
+[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json (at 15:11)
+[200] https://taskfile.dev/schema.json (at 2:33)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://chris48s.github.io/v8r/ (at 12:5)
+[200] https://info.arxiv.org/help/submit_tex.html (at 7:3)
+[200] file://mindgarden/profiles/obsidian/profile.json (at 33:1)
+[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://ogp.me/ (at 6:19) | OK (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://yamllint.readthedocs.io/en/stable/ (at 11:5) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/yaml_yamllint/ (at 12:5) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://info.arxiv.org/help/ancillary_files.html (at 8:3)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://github.com/reproducible-containers/buildkit-cache-dance (at 19:29)
+[200] https://github.com/reproducible-containers/buildkit-cache-dance (at 108:9)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/dependabot-2.0.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/dependabot-2.0.json --[301]--> https://www.schemastore.org/dependabot-2.0.json
+[200] https://dart.dev/tools/analysis (at 17:3)
+[404] https://github.com/reproducible-containers/diffoci/releases/download/$%7BDIFFOCI_VERSION%7D (at 235:21) | Rejected status code: 404 Not Found
+[200] https://github.com/reproducible-containers/repro-sources-list.sh (at 17:31)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15)
+[200] https://json.schemastore.org/prettierrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/prettierrc.json --[301]--> https://www.schemastore.org/prettierrc.json
+[200] https://github.com/aquasecurity/trivy (at 29:7) | OK (cached)
+[200] https://github.com/egohygiene/empathy (at 7:13)
+[200] https://github.com/egohygiene/empathy (at 191:17)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://github.com/egohygiene/empathy (at 9:13)
+[200] file://README.md (at 38:40)
+[200] file://PRINCIPLES.md (at 38:77)
+[200] file://.garden/README.md (at 39:3)
+[200] file://ARCHITECTURE.md (at 39:40)
+[200] file://METHODOLOGY.md (at 39:77)
+[200] file://.garden/templates/note.md (at 40:3)
+[200] file://SYSTEM.md (at 40:40)
+[200] file://DECISIONS.md (at 40:77)
+[200] file://ROADMAP.md (at 41:40)
+[200] file://EPISTEMOLOGY.md (at 41:77)
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 45:1) | OK (cached)
+[200] https://dart.dev/tools/linter-rules (at 20:3)
+[200] file://.garden/views/knowledge.base#Projects (at 70:1)
+[200] file://.garden/views/knowledge.base#Knowledge (at 55:1)
+[200] file://.garden/views/knowledge.base#Needs%20review (at 62:1)
+[200] file://SYSTEM.md (at 34:1)
+[200] https://github.com/ (at 35:20) | OK (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://github.com/reproducible-containers/diffoci (at 20:42)
+[200] https://github.com/reproducible-containers/diffoci (at 230:9)
+[200] https://github.com/anchore/grype (at 12:5) | OK (cached)
+[200] https://github.com/IBM/tekton-lint (at 11:5) | OK (cached)
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/ (at 12:5) | OK (cached)
+[200] file://mantle/assets/branding/mantle-banner-placeholder.svg (at 2:13)
+[404] https://egohygiene.github.io/identity/contracts/candidate-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
+[200] https://oss.anchore.com/docs/reference/grype/configuration/ (at 11:5)
+[200] https://cyclonedx.org/ (at 27:7)
+[200] https://raw.githubusercontent.com/editorconfig-checker/editorconfig-checker/main/.editorconfig-checker.schema.json (at 2:15)
+[200] https://img.shields.io/badge/workflow-mantle.yml-181717?style=flat-square&logo=githubactions&logoColor=white (at 11:100)
+[200] https://img.shields.io/badge/tests-Bats%20%2B%20ShellCheck-2E8B57?style=flat-square (at 12:94)
+[200] https://agentskills.io/specification (at 12:25)
+[200] https://raw.githubusercontent.com/nvuillam/npm-groovy-lint/refs/heads/main/docs/groovy-lint.jsonschema.json (at 2:15)
+[200] https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json (at 2:15)
+[200] https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20MSYS2%2FGit%20Bash-0A66C2?style=flat-square (at 14:98)
+[200] file://mantle/LICENSE (at 15:12)
+[200] https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json (at 4:15) | 200 OK | Followed 1 redirect. Redirects: https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json --[302]--> https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.67.0/doc/json_schema.json
+[200] file://mantle/README.md#overview (at 21:12)
+[200] file://mantle/README.md#project-status (at 22:12)
+[200] file://mantle/README.md#features (at 23:12)
+[200] file://mantle/README.md#supported-environments (at 24:12)
+[200] file://mantle/README.md#quick-start (at 25:12)
+[200] file://mantle/README.md#cli-usage (at 26:12)
+[200] file://mantle/README.md#configuration (at 27:12)
+[200] file://mantle/README.md#architecture (at 28:12)
+[200] file://mantle/README.md#testing-and-validation (at 29:12)
+[200] file://mantle/README.md#contributing (at 30:12)
+[200] file://mantle/config/example.conf (at 277:19)
+[200] file://mantle/ARCHITECTURE.md (at 354:1)
+[200] file://mantle/PROVENANCE.md (at 355:26)
+[200] file://mantle/config/architecture/layers.tsv (at 357:1)
+[200] file://mantle/INSTALLER_ASSURANCE.md (at 477:101)
+[200] file://mantle/tests/README.md (at 572:91)
+[200] file://mantle/CONTRIBUTING.md (at 578:6)
+[200] file://mantle/CONTRIBUTING.md (at 605:1)
+[200] file://mantle/LICENSE (at 621:31)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://github.com/aboutcode-org/scancode-toolkit (at 23:7)
+[200] https://img.shields.io/badge/license-MIT-blue?style=flat-square (at 15:31)
+[200] file://mantle/config/architecture/layers.tsv (at 14:1)
+[200] https://img.shields.io/badge/shells-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25?style=flat-square (at 13:87)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[ERROR] https://egohygiene.dev/beacon/contracts/template-manifest.schema.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/validation-checklist.md (at 96:5)
+[200] file://egolint/.agents/skills/architecture/create-roadmap-document/references/authoring-guide.md (at 98:1)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://github.com/ossf/scorecard (at 21:7)
+[200] https://install.python-poetry.org/ (at 71:21)
+[200] https://github.com/egohygiene/empathy/blob/main/mindgarden/profiles/agent/README.md (at 192:22)
+[200] https://goss.rocks/install (at 105:22) | 200 OK | Followed 1 redirect. Redirects: https://goss.rocks/install --[302]--> https://raw.githubusercontent.com/goss-org/goss/master/install.sh
+[200] https://aquasecurity.github.io/trivy-repo/deb/public.key (at 122:22)
+[404] https://aquasecurity.github.io/trivy-repo/deb (at 123:21) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://aquasecurity.github.io/trivy-repo/deb --[301]--> https://aquasecurity.github.io/trivy-repo/deb/
+[200] https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash (at 149:23) | OK (cached)
+[200] https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 (at 182:13) | OK (cached)
+[200] https://github.com/btford/write-good (at 1:12)
+[404] https://raw.githubusercontent.com/goss-org/goss/$%7BGOSS_VERSION%7D/extras/dgoss/dgoss (at 109:14) | Rejected status code: 404 Not Found
+[200] https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash (at 347:23) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[404] https://api.github.com/repos/egohygiene/ubi (at 300:22) | Rejected status code: 404 Not Found
+[200] https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore (at 304:22)
+[200] https://autofix.ci/ (at 9:20)
+[200] https://github.com/rhysd/actionlint/blob/main/docs/config.md (at 17:3)
+[404] https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz (at 80:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz --[301]--> https://github.com/oxipng/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz
+[404] https://github.com/rhysd/actionlint/releases/download/v$%7BACTIONLINT_VERSION%7D/$%7Barchive_name%7D (at 52:12) | Rejected status code: 404 Not Found
+[200] https://github.com/clearlydefined (at 23:7)
+[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml/badge.svg?branch=main (at 10:90)
+[200] https://github.com/CycloneDX/cdxgen (at 28:7) | 200 OK | Followed 1 redirect. Redirects: https://github.com/CycloneDX/cdxgen --[301]--> https://github.com/cdxgen/cdxgen
+[200] https://github.com/egohygiene/empathy/blob/main/.github/workflows/mantle.yml (at 11:12)
+[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml (at 10:12)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/tests/README.md (at 12:12)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/.shellrc (at 13:12)
+[200] https://github.com/hadolint/hadolint (at 255:11) | OK (cached)
+[200] https://github.com/egohygiene/empathy/blob/main/mantle/platforms/README.md (at 14:12)
+[200] https://github.com/gitleaks/gitleaks-action (at 28:7)
+[200] https://github.com/gitleaks/gitleaks (at 27:7)
+[200] https://github.com/gitleaks/gitleaks (at 29:11)
+[404] https://github.com/hadolint/hadolint/releases/download/$%7BHADOLINT_VERSION%7D/hadolint-Linux-x86_64 (at 138:14) | Rejected status code: 404 Not Found
+[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 59:33) | OK (cached)
+[200] https://pnpm.io/using-changesets (at 73:7)
+[200] https://github.com/egohygiene/mindgarden (at 5:31)
+[200] https://json.schemastore.org/github-action.json (at 91:6) | OK (cached)
+[200] https://json.schemastore.org/github-workflow.json (at 92:6) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 93:6) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
+[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v3.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
+[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 3130:14) | OK (cached)
+[200] file://README.md (at 33:3)
+[200] file://ARCHITECTURE.md (at 34:3)
+[200] file://SYSTEM.md (at 35:3)
+[200] file://DECISIONS.md (at 36:3)
+[200] file://ROADMAP.md (at 37:3)
+[200] https://egohygiene.github.io/empathy/ (at 41:3) | OK (cached)
+[200] https://egohygiene.github.io/empathy/intelligence/ (at 42:3) | OK (cached)
+[200] file://llms.txt (at 43:3)
+[200] https://github.com/egohygiene/empathy (at 44:3) | OK (cached)
 [200] file://README.md (at 98:23)
 [200] file://PURPOSE.md (at 116:10)
 [200] file://SYSTEM.md (at 116:38)
@@ -343,6 +579,9 @@ Linter raw log:
 [200] file://.github/actions/publish-report-snapshot/action.yml (at 282:1)
 [200] file://AI_CONSTITUTION.md (at 322:10)
 [200] file://tests/test_report_publication.py (at 323:1)
+[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://github.com/Yelp/detect-secrets (at 39:11)
 [200] file://mindgarden/contracts/garden.schema.json (at 37:3)
 [200] file://mindgarden/contracts/note.schema.json (at 39:3)
 [200] file://mindgarden/contracts/obsidian-profile.schema.json (at 41:3)
@@ -360,32 +599,31 @@ Linter raw log:
 [200] file://mindgarden/profiles/obsidian (at 80:37)
 [200] file://mindgarden/profiles/agent (at 84:37)
 [200] file://mindgarden/profiles/quartz (at 88:34)
-[200] https://www.rubyschema.org/rubocop.json (at 2:33)
-[200] https://docs.rubocop.org/rubocop/latest/configuration.html (at 13:5)
-[200] https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json (at 4:15) | 200 OK | Followed 1 redirect. Redirects: https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json --[302]--> https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.67.0/doc/json_schema.json
-[200] https://github.com/ossf/scorecard (at 21:7)
-[200] https://humanstxt.org/ (at 39:13)
-[404] https://github.com/reproducible-containers/diffoci/releases/download/$%7BDIFFOCI_VERSION%7D (at 235:21) | Rejected status code: 404 Not Found
-[200] https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 (at 88:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 --[302]--> https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_linux_amd64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/43225113/89e648aa-ac93-4896-8540-c75c6e5e3880?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-15T23%3A09%3A05Z&rscd=attachment%3B+filename%3Dyq_linux_amd64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-15T22%3A08%3A35Z&ske=2026-08-15T23%3A09%3A05Z&sks=b&skv=2018-11-09&sig=u%2FtgLwD%2FKccFwBLI2opy5AKkPxKNorcrSSvUaHIf52g%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NjgzNDQ2NiwibmJmIjoxNzg2ODMyNjY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.JkoOVxSohp8iI5gA29_y23Qkhv1YFnEkTxLa-lPzZNk&response-content-disposition=attachment%3B%20filename%3Dyq_linux_amd64&response-content-type=application%2Foctet-stream
-[200] https://github.com/reproducible-containers/diffoci (at 20:42)
-[200] https://github.com/reproducible-containers/diffoci (at 230:9)
-[200] https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 (at 116:14) | 200 OK | Followed 2 redirects. Redirects: https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 --[302]--> https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-Linux-x86_64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/46234189/452c2925-e304-4ed1-9a07-671658ac125d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-15T23%3A05%3A08Z&rscd=attachment%3B+filename%3Dhadolint-linux-x86_64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-15T22%3A05%3A08Z&ske=2026-08-15T23%3A05%3A08Z&sks=b&skv=2018-11-09&sig=%2FkVyVjGAZcDi3k%2FD5lIboh%2F84OWIArwxgBQROHWd1pU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NjgzNDU0NCwibmJmIjoxNzg2ODMyNzQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7ZCW-jYUZSZvsrH5_6PNBBq12Tc_Nzoz34zn7pKGqjU&response-content-disposition=attachment%3B%20filename%3Dhadolint-linux-x86_64&response-content-type=application%2Foctet-stream
-[200] https://github.com/ (at 31:10)
-[404] https://github.com/sigstore/cosign/releases/download/$%7BCOSIGN_VERSION%7D/cosign-linux-amd64 (at 137:14) | Rejected status code: 404 Not Found
-[200] https://github.com/hadolint/hadolint (at 255:11) | OK (cached)
-[200] https://github.com/aboutcode-org/scancode-toolkit (at 23:7)
-[200] https://github.com/egohygiene/empathy/issues (at 12:9)
-[200] https://github.com/egohygiene/empathy/discussions (at 13:14)
-[200] https://github.com/egohygiene/empathy (at 11:13)
-[404] https://github.com/google/osv-scanner/releases/download/v$%7BOSV_SCANNER_VERSION%7D/osv-scanner_linux_amd64 (at 57:12) | Rejected status code: 404 Not Found
-[200] file://ARCHITECTURE.md (at 29:53)
-[200] https://github.com/oxsecurity/megalinter/tree/v10.0.0 (at 7:19) | OK (cached)
-[200] https://dart.dev/tools/analysis (at 17:3)
-[200] https://github.com/szmyty (at 5:9)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[ERROR] https://egohygiene.dev/schemas/repository-report-summary/v1.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-[200] https://github.com/egohygiene/empathy (at 7:13) | OK (cached)
-[200] https://github.com/jackyzha0/quartz.git (at 10:20) | OK (cached)
+[200] file://mantle/config/installers.lock.tsv (at 4:1)
+[200] file://mantle/LICENSE (at 18:43)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://github.com/google/addlicense (at 51:11)
+[200] https://github.com/astral-sh/ruff-pre-commit (at 162:11)
+[200] file://egolint/.agents/skills/quality/bug-fixing/SKILL.md (at 30:11)
+[200] file://DESIGN_SYSTEM.md (at 145:46)
+[200] https://github.com/pre-commit/pre-commit-hooks (at 71:11)
+[200] https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible-lint-config.json (at 2:33)
+[200] https://docs.ansible.com/projects/lint/configuring/ (at 19:3)
+[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] file://egolint/.config/toolchain/complementary-tools.json (at 15:1)
+[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15) | OK (cached)
+[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
+[200] https://github.com/nbQA-dev/nbQA (at 179:11)
+[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
+[200] https://docs.ansible.com/projects/lint/rules/ (at 22:3)
+[200] https://github.com/reconquest/shdoc.git (at 43:50) | OK (cached)
+[200] https://unpkg.com/knip@6/schema.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://unpkg.com/knip@6/schema.json --[302]--> https://unpkg.com/knip@6.32.2/schema.json
+[200] https://reuse.software/ (at 14:7)
+[200] https://reuse.software/spec/ (at 15:7)
+[200] https://github.com/egohygiene/empathy (at 11:13) | OK (cached)
+[200] https://github.com/egohygiene/empathy/issues (at 12:9) | OK (cached)
+[200] https://github.com/egohygiene/empathy/discussions (at 13:14) | OK (cached)
+[200] https://github.com/abravalheri/validate-pyproject (at 196:11)
 [ERROR] file://.staging/github/README.md (at 41:35) | File not found. Check if file exists and path is correct
 [200] file://egolint/README.md (at 80:25)
 [200] file://.github/actions/README.md (at 81:1)
@@ -401,276 +639,38 @@ Linter raw log:
 [200] file://ARCHITECTURE.md (at 98:33)
 [200] file://DECISIONS.md (at 100:4)
 [200] file://ROADMAP.md (at 100:39)
-[200] https://dart.dev/tools/linter-rules (at 20:3)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://raw.githubusercontent.com/editorconfig-checker/editorconfig-checker/main/.editorconfig-checker.schema.json (at 2:15)
-[200] https://github.com/gitleaks/gitleaks (at 29:11)
-[200] https://github.com/aquasecurity/trivy (at 29:7) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
-[200] https://github.com/jackyzha0/quartz.git (at 53:17) | OK (cached)
-[200] https://github.com/Yelp/detect-secrets (at 39:11)
-[200] https://json.schemastore.org/package.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
-[200] https://github.com/egohygiene/empathy/issues (at 19:13) | OK (cached)
-[EXCLUDED] mailto:szmyty@gmail.com (at 20:15) | This is due to your 'exclude' values
-[200] https://github.com/google/addlicense (at 51:11)
-[EXCLUDED] mailto:szmyty@gmail.com (at 29:15) | This is due to your 'exclude' values
-[200] https://cyclonedx.org/ (at 27:7)
-[200] https://github.com/pre-commit/pre-commit-hooks (at 71:11)
-[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[ERROR] https://egohygiene.dev/beacon/contracts/template-manifest.schema.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-[200] https://github.com/astral-sh/ruff-pre-commit (at 162:11)
-[200] file://egolint/.agents/skills/quality/audit-repository/SKILL.md (at 28:11)
-[200] file://egolint/.agents/specs/quality/auditor.spec.md (at 28:97)
-[200] https://github.com/trufflesecurity/trufflehog (at 12:5) | OK (cached)
-[404] https://egohygiene.github.io/identity/contracts/candidate-manifest.schema.json (at 3:11) | Rejected status code: 404 Not Found
-[200] https://json.schemastore.org/prettierrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/prettierrc.json --[301]--> https://www.schemastore.org/prettierrc.json
-[200] file://PURPOSE.md (at 103:33)
-[200] https://github.com/overtrue/phplint (at 9:3) | OK (cached)
-[200] https://github.com/egohygiene/empathy (at 9:13) | OK (cached)
-[200] https://ogp.me/ (at 6:19) | OK (cached)
-[404] https://docs.github.com/en/copilot/customizing-copilot/using-github-copilot-extensions/about-github-copilot-agents (at 13:2) | Rejected status code: 404 Not Found
-[200] https://registry.npmjs.org/ (at 45:18)
-[200] file://README.md (at 38:40)
-[200] file://PRINCIPLES.md (at 38:77)
-[200] file://.garden/README.md (at 39:3)
-[200] file://ARCHITECTURE.md (at 39:40)
-[200] file://METHODOLOGY.md (at 39:77)
-[200] file://.garden/templates/note.md (at 40:3)
-[200] file://SYSTEM.md (at 40:40)
-[200] file://DECISIONS.md (at 40:77)
-[200] file://ROADMAP.md (at 41:40)
-[200] file://EPISTEMOLOGY.md (at 41:77)
-[200] https://egohygiene.github.io/empathy/intelligence/ (at 45:1) | OK (cached)
-[200] file://.garden/views/knowledge.base#Knowledge (at 55:1)
-[200] file://.garden/views/knowledge.base#Needs%20review (at 62:1)
-[200] file://.garden/views/knowledge.base#Projects (at 70:1)
-[200] file://PURPOSE.md (at 89:46)
-[200] file://VISION.md (at 89:74)
-[200] file://PRINCIPLES.md (at 90:1)
-[200] file://PILLARS.md (at 90:39)
-[200] https://oss.anchore.com/docs/reference/syft/configuration/ (at 11:5)
-[200] https://megalinter.io/latest/descriptors/repository_syft/ (at 12:5) | OK (cached)
-[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://egolint/.agents/skills/quality/repository-cleanup/SKILL.md (at 30:11)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://trufflesecurity.com/docs/configuration-file-reference (at 13:5)
-[200] https://latexindentpl.readthedocs.io/ (at 10:5) | 200 OK | Followed 1 redirect. Redirects: https://latexindentpl.readthedocs.io/ --[302]--> https://latexindentpl.readthedocs.io/en/latest/
 [200] https://github.com/pre-commit/mirrors-prettier (at 206:11)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[404] https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/about-funding-files (at 10:3) | Rejected status code: 404 Not Found
-[200] https://info.arxiv.org/help/submit_tex.html (at 7:3)
-[200] https://github.com/biomejs/pre-commit (at 217:11)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/ (at 35:20) | OK (cached)
-  [WARN] egolint/pnpm-lock.yaml: No files found for this input source
-[200] https://json.schemastore.org/sarif-2.1.0.json (at 419:35) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/sarif-2.1.0.json --[301]--> https://www.schemastore.org/sarif-2.1.0.json
-[200] https://google.github.io/osv-scanner/ (at 27:5)
-[200] https://megalinter.io/10.0.0/configuration/ (at 283:3)
-[200] https://info.arxiv.org/help/ancillary_files.html (at 8:3)
-[200] https://github.com/nbQA-dev/nbQA (at 179:11)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://github.com/abravalheri/validate-pyproject (at 196:11)
-[200] https://osv.dev/ (at 426:58)
-[200] https://megalinter.io/10.0.0/descriptors/repository_betterleaks/ (at 285:3)
-[200] https://github.com/igorshubovych/markdownlint-cli (at 227:11)
-[200] https://taskfile.dev/docs/guide#including-other-taskfiles (at 286:3)
-[200] https://megalinter.io/10.0.0/removed-linters/ (at 284:3)
-[200] https://json.schemastore.org/remarkrc.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/remarkrc.json --[301]--> https://www.schemastore.org/remarkrc.json
-[200] file://mindgarden/profiles/obsidian/profile.json (at 33:1)
-[200] file://egolint/.agents/skills/architecture/create-system-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-system-document/references/authoring-guide.md (at 98:1)
-[200] file://egolint/.config/toolchain/complementary-tools.json (at 15:1)
-[200] https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json (at 2:15)
-[200] file://VISION.md (at 195:26)
-[200] file://PILLARS.md (at 195:52)
-[200] https://unpkg.com/knip@6/schema.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://unpkg.com/knip@6/schema.json --[302]--> https://unpkg.com/knip@6.32.2/schema.json
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[ERROR] https://egohygiene.dev/schemas/repository-intelligence-dashboard/v3.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Error (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Error (cached)
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Error (cached)
-[200] https://docs.ansible.com/projects/lint/configuring/ (at 19:3)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://www.schemastore.org/htmlhint.json (at 2:15)
-[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://docs.ansible.com/projects/lint/rules/ (at 22:3)
-[200] https://quartz.jzhao.xyz/configuration (at 6:19)
-[200] https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible-lint-config.json (at 2:33)
-[200] https://github.com/executablebooks/mdformat (at 237:11) | 200 OK | Followed 1 redirect. Redirects: https://github.com/executablebooks/mdformat --[301]--> https://github.com/hukkin/mdformat
-[200] https://install.python-poetry.org/ (at 71:21)
-[200] https://aquasecurity.github.io/trivy-repo/deb/public.key (at 122:22)
-[200] https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash (at 149:23) | OK (cached)
-[200] https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 (at 182:13) | OK (cached)
-[200] https://github.com/openstack/bashate (at 265:11)
-[200] https://goss.rocks/install (at 105:22) | 200 OK | Followed 1 redirect. Redirects: https://goss.rocks/install --[302]--> https://raw.githubusercontent.com/goss-org/goss/master/install.sh
-[200] https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash (at 347:23) | OK (cached)
-[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[404] https://aquasecurity.github.io/trivy-repo/deb (at 123:21) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://aquasecurity.github.io/trivy-repo/deb --[301]--> https://aquasecurity.github.io/trivy-repo/deb/
-[404] https://api.github.com/repos/egohygiene/ubi (at 300:22) | Rejected status code: 404 Not Found
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore (at 304:22)
-[200] https://raw.githubusercontent.com/oxsecurity/megalinter/v10.0.0/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://www.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/python-jsonschema/check-jsonschema (at 275:11)
-[200] https://github.com/reconquest/shdoc.git (at 43:50) | OK (cached)
-[404] https://raw.githubusercontent.com/goss-org/goss/$%7BGOSS_VERSION%7D/extras/dgoss/dgoss (at 109:14) | Rejected status code: 404 Not Found
-[200] https://github.com/shellcheck-py/shellcheck-py (at 245:11)
-[200] https://api.github.com/repos/shssoichiro/oxipng/releases/latest (at 77:40) | 200 OK | Followed 1 redirect. Redirects: https://api.github.com/repos/shssoichiro/oxipng/releases/latest --[301]--> https://api.github.com/repositories/49436331/releases/latest
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://www.schemastore.org/github-action.json (at 2:33)
-[200] https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json (at 2:15) | OK (cached)
-[EXCLUDED] https://example.test/branch-protection (at 4:34) | This is due to your 'exclude' values
-[EXCLUDED] https://example.test/security-policy (at 10:34) | This is due to your 'exclude' values
-[EXCLUDED] https://example.test/signed-releases (at 16:34) | This is due to your 'exclude' values
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/crate-ci/typos (at 303:11)
-[404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
-[200] https://github.com/codespell-project/codespell (at 291:11)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] file://EPISTEMOLOGY.md (at 54:35)
-[200] file://PRINCIPLES.md (at 159:18)
-[200] file://EPISTEMOLOGY.md (at 160:3)
-[200] file://README.md (at 33:3)
-[200] file://ARCHITECTURE.md (at 34:3)
-[200] file://SYSTEM.md (at 35:3)
-[200] file://DECISIONS.md (at 36:3)
-[200] file://ROADMAP.md (at 37:3)
-[200] https://egohygiene.github.io/empathy/ (at 41:3) | OK (cached)
-[200] https://egohygiene.github.io/empathy/intelligence/ (at 42:3) | OK (cached)
-[200] file://llms.txt (at 43:3)
-[200] https://github.com/egohygiene/empathy (at 44:3) | OK (cached)
-[200] file://.mega-linter.yml (at 15:10)
-[200] file://egolint/.mega-linter.fast.yml (at 16:22)
-[200] file://.czrc (at 52:33)
-[200] file://.secrets.baseline (at 56:34)
-[200] file://REUSE.toml (at 58:12)
-[200] file://.audits (at 71:7)
-[200] file://.github/actions/normalize-repository-report/repository-report-summary.schema.json (at 8:1)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons (at 7:6)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
 [200] https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable (at 8:6)
-[200] https://github.com/egohygiene/empathy.git (at 24:13) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/validation-checklist.md (at 96:5)
-[200] file://egolint/.agents/skills/architecture/create-methodology-document/references/authoring-guide.md (at 98:1)
-[200] https://www.schemastore.org/jscpd.json (at 2:15)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://github.com/sponsors/szmyty (at 34:13)
-[200] https://github.com/fsfe/reuse-tool (at 324:11)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] file://DESIGN_SYSTEM.md (at 145:46)
-[200] https://www.designtokens.org/tr/2025.10/format/ (at 6:19)
-[200] file://SYSTEM.md (at 34:1)
+[200] https://github.com/biomejs/pre-commit (at 217:11)
+[200] https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons (at 7:6)
 [200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[404] https://github.com/$ (at 88:45) | Error (cached)
-[200] file://mindgarden/profiles/obsidian/README.md (at 31:1)
-[200] https://json.schemastore.org/dependabot-2.0.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/dependabot-2.0.json --[301]--> https://www.schemastore.org/dependabot-2.0.json
-[200] https://github.com/egohygiene/empathy (at 191:17) | OK (cached)
+[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
+[200] https://github.com/igorshubovych/markdownlint-cli (at 227:11)
+[200] https://json.schemastore.org/markdownlint.json (at 2:15) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/markdownlint.json --[301]--> https://www.schemastore.org/markdownlint.json
+[200] https://humanstxt.org/ (at 39:13)
+[200] https://github.com/shellcheck-py/shellcheck-py (at 245:11)
 [200] https://web.dev/articles/maskable-icon (at 9:6)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://raw.githubusercontent.com/jackyzha0/quartz/v5/quartz/plugins/quartz-plugins.schema.json (at 1:33)
-[200] https://github.com/CycloneDX/cdxgen (at 28:7) | 200 OK | Followed 1 redirect. Redirects: https://github.com/CycloneDX/cdxgen --[301]--> https://github.com/cdxgen/cdxgen
-[200] https://github.com/egohygiene/empathy/discussions (at 27:10) | OK (cached)
-[200] https://json.schemastore.org/github-issue-config.json (at 2:33) | 200 OK | Followed 1 redirect. Redirects: https://json.schemastore.org/github-issue-config.json --[301]--> https://www.schemastore.org/github-issue-config.json
-[200] https://docs.github.com/issues/tracking-your-work-with-issues (at 18:5) | 200 OK | Followed 1 redirect. Redirects: https://docs.github.com/issues/tracking-your-work-with-issues --[302]--> https://docs.github.com/en/issues/tracking-your-work-with-issues
-[200] https://github.com/cmhughes/latexindent.pl (at 11:5)
-[200] file://egolint/.agents/skills/architecture/architecture-authoring/SKILL.md (at 30:11)
-[200] file://egolint/.agents/specs/architecture (at 30:153)
-[200] https://github.com/yoheimuta/protolint (at 11:5) | OK (cached)
-[200] https://github.com/wagoid/commitlint-github-action (at 287:3)
-[200] https://protobuf.dev/programming-guides/style/ (at 12:5)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] https://github.com/gitleaks/gitleaks (at 27:7) | OK (cached)
-[200] https://github.com/StepanKropachev/obsidian-pm (at 17:18)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://reuse.software/ (at 14:7)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://taskfile.dev/schema.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-issue-forms.json (at 2:33) | OK (cached)
-[200] https://json.schemastore.org/github-action.json (at 2:33) | OK (cached)
-[200] https://json-schema.org/draft/2020-12/schema (at 2:15) | OK (cached)
-[200] https://github.com/blacksmithgu/obsidian-dataview (at 24:18)
-[200] https://github.com/chris48s/v8r (at 11:5) | OK (cached)
-[404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
-[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json (at 2:33)
-[200] file://README.md (at 96:32)
-[200] file://pyproject.toml (at 96:58)
-[ERROR] file://.staging/github/README.md (at 97:48) | File not found. Check if file exists and path is correct
-[200] https://json.schemastore.org/github-workflow.json (at 2:33) | OK (cached)
-[200] file://mantle/assets/branding/mantle-banner-placeholder.svg (at 2:13)
-[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json (at 15:11)
-[200] https://reuse.software/spec/ (at 15:7)
-[200] https://chris48s.github.io/v8r/ (at 12:5)
-[404] https://github.com/hadolint/hadolint/releases/download/$%7BHADOLINT_VERSION%7D/hadolint-Linux-x86_64 (at 138:14) | Rejected status code: 404 Not Found
+[200] https://github.com/openstack/bashate (at 265:11)
+[200] https://github.com/python-jsonschema/check-jsonschema (at 275:11)
+[200] https://github.com/executablebooks/mdformat (at 237:11) | 200 OK | Followed 1 redirect. Redirects: https://github.com/executablebooks/mdformat --[301]--> https://github.com/hukkin/mdformat
+[200] https://github.com/codespell-project/codespell (at 291:11)
 [200] https://github.com/aws-cloudformation/cfn-lint#configuration (at 18:3)
-[200] https://docs.stoplight.io/docs/spectral/e5b9616d6d50c-rulesets (at 16:3)
+[200] https://github.com/fsfe/reuse-tool (at 324:11)
 [404] https://github.com/mvdan/sh/releases/download/v$%7BSHFMT_VERSION%7D/shfmt_v$%7BSHFMT_VERSION%7D_linux_amd64 (at 37:14) | Rejected status code: 404 Not Found
-[200] https://img.shields.io/badge/workflow-mantle.yml-181717?style=flat-square&logo=githubactions&logoColor=white (at 11:100)
-[200] https://img.shields.io/badge/tests-Bats%20%2B%20ShellCheck-2E8B57?style=flat-square (at 12:94)
-[200] https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20MSYS2%2FGit%20Bash-0A66C2?style=flat-square (at 14:98)
-[200] file://mantle/LICENSE (at 15:12)
-[200] https://img.shields.io/badge/shells-Bash%20%7C%20Zsh%20%7C%20Fish-4EAA25?style=flat-square (at 13:87)
-[200] file://mantle/README.md#overview (at 21:12)
-[200] file://mantle/README.md#project-status (at 22:12)
-[200] file://mantle/README.md#features (at 23:12)
-[200] file://mantle/README.md#supported-environments (at 24:12)
-[200] file://mantle/README.md#quick-start (at 25:12)
-[200] file://mantle/README.md#cli-usage (at 26:12)
-[200] file://mantle/README.md#configuration (at 27:12)
-[200] file://mantle/README.md#architecture (at 28:12)
-[200] file://mantle/README.md#testing-and-validation (at 29:12)
-[200] file://mantle/README.md#contributing (at 30:12)
-[200] file://mantle/config/example.conf (at 277:19)
-[200] file://mantle/ARCHITECTURE.md (at 354:1)
-[200] file://mantle/PROVENANCE.md (at 355:26)
-[200] file://mantle/config/architecture/layers.tsv (at 357:1)
-[200] file://mantle/INSTALLER_ASSURANCE.md (at 477:101)
-[200] file://mantle/tests/README.md (at 572:91)
-[200] file://mantle/CONTRIBUTING.md (at 578:6)
-[200] file://mantle/CONTRIBUTING.md (at 605:1)
-[200] file://mantle/LICENSE (at 621:31)
-[200] file://egolint/.agents/skills/quality/test-engineering/SKILL.md (at 30:11)
-[200] https://img.shields.io/badge/license-MIT-blue?style=flat-square (at 15:31)
-[404] https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz (at 80:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz --[301]--> https://github.com/oxipng/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/oxipng-$%7BOXIPNG_VERSION%7D-x86_64-unknown-linux-musl.tar.gz
-[200] https://github.com/bats-core/bats-core (at 12:3)
-[200] https://github.com/egohygiene/empathy/blob/main/mindgarden/profiles/agent/README.md (at 192:22)
-[200] https://github.com/egohygiene/empathy/discussions/categories/ideas (at 31:10)
+[200] https://github.com/changesets/action (at 74:7)
+[200] https://github.com/crate-ci/typos (at 303:11)
 [404] https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz (at 119:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
 [404] https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz (at 70:14) | Rejected status code: 404 Not Found | Followed 1 redirect. Redirects: https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
-[200] https://github.com/egohygiene/empathy/security/advisories/new (at 39:10) | 200 OK | Followed 1 redirect. Redirects: https://github.com/egohygiene/empathy/security/advisories/new --[302]--> https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fegohygiene%2Fempathy%2Fsecurity%2Fadvisories%2Fnew
-[200] https://github.com/egohygiene/empathy/discussions/categories/documentation (at 35:10)
-[200] https://github.com/btford/write-good (at 1:12)
-[404] https://github.com/rhysd/actionlint/releases/download/v$%7BACTIONLINT_VERSION%7D/$%7Barchive_name%7D (at 52:12) | Rejected status code: 404 Not Found
-[200] https://github.com/gitleaks/gitleaks-action (at 28:7)
-[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml/badge.svg?branch=main (at 10:90)
-[200] https://github.com/egohygiene/empathy/actions/workflows/mantle.yml (at 10:12)
-[200] https://github.com/egohygiene/empathy/blob/main/.github/workflows/mantle.yml (at 11:12)
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/tests/README.md (at 12:12)
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/.shellrc (at 13:12)
-[200] https://github.com/egohygiene/empathy/blob/main/mantle/platforms/README.md (at 14:12)
+[200] https://github.com/szmyty (at 5:9)
 [404] https://api.clearlydefined.io/definitions/npm/npmjs/-/%7Bdependency_name%7D (at 117:25) | Rejected status code: 404 Not Found
+[TIMEOUT] https://www.nongnu.org/chktex/ (at 701:3) | Request timed out
 📝 Summary
 ---------------------
 🔍 Total..........659
 🔗 Unique.........444
-✅ Successful.....597
-⏳ Timeouts.........0
-🔀 Redirected......37
+✅ Successful.....596
+⏳ Timeouts.........1
+🔀 Redirected......41
 👻 Excluded.........7
 ❓ Unknown..........0
 🚫 Errors..........55
@@ -701,8 +701,8 @@ Errors in .github/workflow-profiles/agent-environment/copilot-setup-steps.yml
 [404] https://github.com/sigstore/cosign/releases/download/$%7BCOSIGN_VERSION%7D/cosign-linux-amd64 (at 137:14) | Rejected status code: 404 Not Found
 
 Redirects in .github/workflow-profiles/agent-environment/copilot-setup-steps.yml
-https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 --[302]--> https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-Linux-x86_64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/46234189/452c2925-e304-4ed1-9a07-671658ac125d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-15T23%3A05%3A08Z&rscd=attachment%3B+filename%3Dhadolint-linux-x86_64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-15T22%3A05%3A08Z&ske=2026-08-15T23%3A05%3A08Z&sks=b&skv=2018-11-09&sig=%2FkVyVjGAZcDi3k%2FD5lIboh%2F84OWIArwxgBQROHWd1pU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NjgzNDU0NCwibmJmIjoxNzg2ODMyNzQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7ZCW-jYUZSZvsrH5_6PNBBq12Tc_Nzoz34zn7pKGqjU&response-content-disposition=attachment%3B%20filename%3Dhadolint-linux-x86_64&response-content-type=application%2Foctet-stream
-https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 --[302]--> https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_linux_amd64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/43225113/89e648aa-ac93-4896-8540-c75c6e5e3880?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-15T23%3A09%3A05Z&rscd=attachment%3B+filename%3Dyq_linux_amd64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-15T22%3A08%3A35Z&ske=2026-08-15T23%3A09%3A05Z&sks=b&skv=2018-11-09&sig=u%2FtgLwD%2FKccFwBLI2opy5AKkPxKNorcrSSvUaHIf52g%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NjgzNDQ2NiwibmJmIjoxNzg2ODMyNjY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.JkoOVxSohp8iI5gA29_y23Qkhv1YFnEkTxLa-lPzZNk&response-content-disposition=attachment%3B%20filename%3Dyq_linux_amd64&response-content-type=application%2Foctet-stream
+https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 --[302]--> https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-Linux-x86_64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/46234189/452c2925-e304-4ed1-9a07-671658ac125d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T01%3A51%3A17Z&rscd=attachment%3B+filename%3Dhadolint-linux-x86_64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T00%3A50%3A58Z&ske=2026-08-16T01%3A51%3A17Z&sks=b&skv=2018-11-09&sig=vLOmNJCUAxrZDnR6e%2BJQCfxCqSScJHkBQmcgovufVUo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0NDI0NSwibmJmIjoxNzg2ODQyNDQ1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PocHFebxlWcvg_v4PPh7aPJ4yxj2yEZuy3EVCT89GEI&response-content-disposition=attachment%3B%20filename%3Dhadolint-linux-x86_64&response-content-type=application%2Foctet-stream
+https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 --[302]--> https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_linux_amd64 --[302]--> https://release-assets.githubusercontent.com/github-production-release-asset/43225113/89e648aa-ac93-4896-8540-c75c6e5e3880?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-16T01%3A45%3A05Z&rscd=attachment%3B+filename%3Dyq_linux_amd64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-16T00%3A45%3A01Z&ske=2026-08-16T01%3A45%3A05Z&sks=b&skv=2018-11-09&sig=jVgtlORJUoZ%2FNnovt7yOPRZIkjDvdEJhgEjBvp0MWxw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4Njg0NDEzNCwibmJmIjoxNzg2ODQyMzM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YRsPTd0ZT6tQH5uH35J6imU2XbWKhjTKaGHJ0j5QOjE&response-content-disposition=attachment%3B%20filename%3Dyq_linux_amd64&response-content-type=application%2Foctet-stream
 
 
 Errors in .github/workflow-profiles/agent-environment/validate-copilot-setup.yml
@@ -717,9 +717,9 @@ https://goss.rocks/install --[302]--> https://raw.githubusercontent.com/goss-org
 
 
 Errors in .github/workflow-profiles/container-platform/benchmark.yml
-[404] https://github.com/$ (at 391:56) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 433:28) | Rejected status code: 404 Not Found
-[404] https://github.com/$ (at 596:56) | Rejected status code: 404 Not Found
+[404] https://github.com/$ (at 391:56) | Error (cached)
+[404] https://github.com/$ (at 433:28) | Error (cached)
+[404] https://github.com/$ (at 596:56) | Error (cached)
 
 Errors in .github/workflow-profiles/container-platform/devcontainer.yml
 [404] https://github.com/reproducible-containers/diffoci/releases/download/$%7BDIFFOCI_VERSION%7D (at 235:21) | Rejected status code: 404 Not Found
@@ -740,13 +740,17 @@ https://github.com/shssoichiro/oxipng/releases/download/v$%7BOXIPNG_VERSION%7D/o
 
 
 Errors in .github/workflow-profiles/release-strategies/semantic-release.yml
-[404] https://github.com/$ (at 88:45) | Error (cached)
+[404] https://github.com/$ (at 88:45) | Rejected status code: 404 Not Found
 
 Errors in .github/workflow-profiles/security-optional/clearlydefined.yml
 [404] https://api.clearlydefined.io/definitions/npm/npmjs/-/%7Bdependency_name%7D (at 117:25) | Rejected status code: 404 Not Found
 
 Errors in .github/workflows/ossf-scorecard.yml
 [404] https://api.scorecard.dev/projects/github.com/$ (at 122:13) | Rejected status code: 404 Not Found
+
+Redirects in .github/workflows/ossf-scorecard.yml
+https://json.schemastore.org/github-workflow.json --[301]--> https://www.schemastore.org/github-workflow.json
+
 
 Errors in beacon/contracts/template-manifest.schema.json
 [ERROR] https://egohygiene.dev/beacon/contracts/template-manifest.schema.json (at 3:11) | Connection failed. Check network connectivity and firewall settings
@@ -763,6 +767,7 @@ Errors in egolint/.config/lint/salesforce/code-analyzer.yml
 Errors in egolint/.mega-linter.yml
 [403] https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/ (at 1177:3) | Error (cached)
 [404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ (at 434:3) | Rejected status code: 404 Not Found
+[TIMEOUT] https://www.nongnu.org/chktex/ (at 701:3) | Request timed out
 
 Redirects in egolint/.mega-linter.yml
 https://ansible.readthedocs.io/projects/lint/ --[302]--> https://docs.ansible.com/projects/lint/
@@ -802,6 +807,10 @@ https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.ta
 Errors in mindgarden/contracts/publish-profile.schema.json
 [ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
 
+Redirects in mindgarden/contracts/publish-profile.schema.json
+https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
+
+
 Errors in PURPOSE.md
 [ERROR] file://.staging/github/README.md (at 97:48) | File not found. Check if file exists and path is correct
 
@@ -816,8 +825,8 @@ Errors in tests/fixtures/repository-intelligence-dashboard/megalinter/summary.js
 
 Errors in tests/fixtures/repository-intelligence-dashboard/osv/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/101 (at 27:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/osv (at 24:16) | Rejected status code: 404 Not Found
 
 Errors in tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json
@@ -833,7 +842,7 @@ Host: github.com
   Total requests: 166
   Successful: 150 (90.4%)
   Client errors (4xx): 16
-  Median response time: 502ms
+  Median response time: 424ms
   Cache hit rate: 26.5%
   Cache hits: 44, misses: 122
 
@@ -841,14 +850,14 @@ Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 74ms
+  Median response time: 35ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
 Host: json.schemastore.org
   Total requests: 69
   Successful: 69 (100.0%)
-  Median response time: 84ms
+  Median response time: 75ms
   Cache hit rate: 85.5%
   Cache hits: 59, misses: 10
 
@@ -856,122 +865,115 @@ Host: raw.githubusercontent.com
   Total requests: 19
   Successful: 18 (94.7%)
   Client errors (4xx): 1
-  Median response time: 94ms
+  Median response time: 44ms
   Cache hit rate: 26.3%
   Cache hits: 5, misses: 14
 
 Host: json-schema.org
   Total requests: 16
   Successful: 16 (100.0%)
-  Median response time: 311ms
+  Median response time: 346ms
   Cache hit rate: 93.8%
   Cache hits: 15, misses: 1
-
-Host: www.schemastore.org
-  Total requests: 12
-  Successful: 12 (100.0%)
-  Median response time: 41ms
-  Cache hit rate: 33.3%
-  Cache hits: 4, misses: 8
 
 Host: egohygiene.github.io
   Total requests: 12
   Successful: 6 (50.0%)
   Client errors (4xx): 6
-  Median response time: 65ms
+  Median response time: 17ms
+  Cache hit rate: 33.3%
+  Cache hits: 4, misses: 8
+
+Host: www.schemastore.org
+  Total requests: 12
+  Successful: 12 (100.0%)
+  Median response time: 13ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
 
 Host: taskfile.dev
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 138ms
+  Median response time: 38ms
   Cache hit rate: 71.4%
   Cache hits: 5, misses: 2
+
+Host: img.shields.io
+  Total requests: 5
+  Successful: 5 (100.0%)
+  Median response time: 12ms
 
 Host: docs.github.com
   Total requests: 5
   Successful: 3 (60.0%)
   Client errors (4xx): 2
-  Median response time: 119ms
-
-Host: img.shields.io
-  Total requests: 5
-  Successful: 5 (100.0%)
-  Median response time: 77ms
+  Median response time: 41ms
 
 Host: api.github.com
   Total requests: 4
   Successful: 3 (75.0%)
   Client errors (4xx): 1
-  Median response time: 152ms
+  Median response time: 71ms
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 19ms
-
-Host: www.checkov.io
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 104ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
+  Median response time: 16ms
 
 Host: developer.mozilla.org
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 146ms
+  Median response time: 232ms
 
-Host: developer.salesforce.com
+Host: www.checkov.io
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 51ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
+
+Host: egohygiene.io
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 224ms
+  Median response time: 338ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: docs.ansible.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 84ms
-
-Host: oss.anchore.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 189ms
-
-Host: clang.llvm.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 169ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: egohygiene.io
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 239ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: prettier.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 166ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: info.arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 291ms
+  Median response time: 56ms
 
 Host: eslint.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 124ms
+  Median response time: 76ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: reuse.software
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 438ms
+
+Host: developer.salesforce.com
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 47ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: oss.anchore.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 72ms
+
+Host: ogp.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 46ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -979,249 +981,254 @@ Host: aquasecurity.github.io
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 135ms
+  Median response time: 39ms
 
-Host: ogp.me
+Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 102ms
+  Median response time: 258ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: yamllint.readthedocs.io
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 181ms
+  Median response time: 55ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: www.nongnu.org
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Rate limited: 1 (429 Too Many Requests)
-  Median response time: 226ms
-
-Host: reuse.software
+Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 937ms
+  Median response time: 87ms
 
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 214ms
-
-Host: rubystyle.guide
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 180ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 340ms
-
-Host: trivy.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 255ms
-
-Host: rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 206ms
-
-Host: phpstan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 148ms
-
-Host: unpkg.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 158ms
-
-Host: goss.rocks
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 252ms
-
-Host: ls-lint.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 508ms
-
-Host: agentskills.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 273ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 197ms
-
-Host: cyclonedx.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 257ms
-
-Host: zizmor.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 196ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 369ms
-
-Host: www.designtokens.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 233ms
-
-Host: www.rubyschema.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 279ms
-
-Host: developer.apple.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 134ms
-
-Host: golangci-lint.run
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 102ms
-
-Host: humanstxt.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 668ms
-
-Host: web.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 400ms
-
-Host: securityscorecards.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 112ms
-
-Host: registry.npmjs.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 131ms
-
-Host: docs.rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 301ms
-
-Host: ansible.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 532ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 284ms
-
-Host: chris48s.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 153ms
-
-Host: google.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 138ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 233ms
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 223ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
 Host: pmd.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 135ms
+  Median response time: 52ms
 
-Host: trufflesecurity.com
+Host: registry.npmjs.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 378ms
+  Median response time: 300ms
 
-Host: quartz.jzhao.xyz
+Host: latexindentpl.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 202ms
+  Median response time: 247ms
 
-Host: install.python-poetry.org
+Host: checkstyle.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 155ms
+  Median response time: 65ms
+
+Host: phpstan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 54ms
+
+Host: ls-lint.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 257ms
+
+Host: clearlydefined.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 103ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 196ms
 
 Host: api.clearlydefined.io
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 240ms
+  Median response time: 65ms
 
-Host: stylelint.io
+Host: scancode-toolkit.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 363ms
+  Median response time: 254ms
 
-Host: pnpm.io
+Host: trufflesecurity.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 167ms
+  Median response time: 211ms
 
-Host: realm.github.io
+Host: docs.stoplight.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 151ms
+  Median response time: 306ms
 
-Host: osv.dev
+Host: chris48s.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 202ms
+  Median response time: 86ms
 
-Host: developercertificate.org
+Host: protobuf.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 153ms
+  Median response time: 73ms
 
 Host: raku.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 950ms
+  Median response time: 731ms
+
+Host: psalm.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 224ms
+
+Host: securityscorecards.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 85ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 168ms
+
+Host: stylelint.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 182ms
+
+Host: goss.rocks
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 106ms
+
+Host: cyclonedx.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 91ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 96ms
+
+Host: autofix.ci
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 99ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 114ms
+
+Host: unpkg.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 101ms
+
+Host: install.python-poetry.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 63ms
+
+Host: realm.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 45ms
+
+Host: docs.rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 63ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 46ms
+
+Host: humanstxt.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 444ms
+
+Host: developercertificate.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 165ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 47ms
+
+Host: developer.apple.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 213ms
+
+Host: pnpm.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 71ms
+
+Host: www.designtokens.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 88ms
+
+Host: web.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 297ms
+
+Host: ansible.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 271ms
+
+Host: rubystyle.guide
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 49ms
+
+Host: osv.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 429ms
 
 Host: api.scorecard.dev
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 301ms
+  Median response time: 520ms
 
-Host: protobuf.dev
+Host: rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 163ms
+  Median response time: 53ms
 
-Host: scancode-toolkit.readthedocs.io
+Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 295ms
+  Median response time: 65ms
 
-Host: clearlydefined.io
+Host: quartz.jzhao.xyz
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 491ms
+  Median response time: 157ms
+
+Host: www.nongnu.org
+  Total requests: 0
+  Successful: 0 (100.0%)
 
 Host: github
   Total requests: 0

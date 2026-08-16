@@ -6,7 +6,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_truffle
 Linter raw log:
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-15T22:25:22Z	info-0	trufflehog	running source	{"source_manager_worker_id": "t4J6P", "with_units": true}
+2026-08-16T01:07:05Z	info-0	trufflehog	running source	{"source_manager_worker_id": "Txcv3", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -25,5 +25,5 @@ File: tests/test_repository_analytics.py
 Line: 84
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-15T22:25:27Z	info-0	trufflehog	finished scanning	{"chunks": 4890, "bytes": 32242978, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "4.267950739s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":14,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1784}}
+2026-08-16T01:07:10Z	info-0	trufflehog	finished scanning	{"chunks": 4803, "bytes": 31597904, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "4.603635798s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":14,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1371}}
 
