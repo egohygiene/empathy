@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --color-canvas: 248 250 252;
+    --color-surface: 255 255 255;
+    --color-elevated: 255 255 255;
+    --color-ink: 15 23 42;
+    --color-muted: 71 85 105;
+    --color-border: 203 213 225;
+    --color-primary-50: 245 243 255;
+    --color-primary-100: 237 233 254;
+    --color-primary-200: 221 214 254;
+    --color-primary-300: 196 181 253;
+    --color-primary-400: 167 139 250;
+    --color-primary-500: 139 92 246;
+    --color-primary-600: 124 58 237;
+    --color-primary-700: 109 40 217;
+    --color-primary-800: 91 33 182;
+    --color-primary-900: 76 29 149;
+    --color-primary-950: 46 16 101;
+    --color-success: 5 150 105;
+    --color-warning: 217 119 6;
+    --color-danger: 220 38 38;
+    --color-info: 2 132 199;
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+
+    /* Compatibility aliases for the promoted website and storefront profiles. */
+    --color-background: rgb(var(--color-canvas));
+    --color-foreground: rgb(var(--color-ink));
+    --color-accent: rgb(var(--color-primary-600));
+    --color-accent-soft: rgb(var(--color-primary-100));
+  }
+
+  :root.dark,
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-canvas: 2 6 23;
+    --color-surface: 15 23 42;
+    --color-elevated: 30 41 59;
+    --color-ink: 241 245 249;
+    --color-muted: 148 163 184;
+    --color-border: 51 65 85;
+    --color-primary-200: 196 181 253;
+    --color-primary-500: 167 139 250;
+    --color-primary-600: 196 181 253;
+    --color-primary-950: 245 243 255;
+    --color-accent-soft: rgb(var(--color-primary-950) / 0.24);
+  }
+
+  html {
+    min-width: 20rem;
+    background: rgb(var(--color-canvas));
+    color: rgb(var(--color-ink));
+    font-family: theme("fontFamily.sans");
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+}

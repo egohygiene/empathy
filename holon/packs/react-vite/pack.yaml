@@ -1,0 +1,20 @@
+apiVersion: egohygiene.dev/v1alpha1
+kind: RepositoryPack
+metadata:
+  name: react-vite
+  status: incubating
+  owner: holon
+spec:
+  template: ./template
+  packageManager: pnpm
+  runtime: node
+  profiles:
+    - core-web
+    - documentation
+    - design-system
+    - commerce
+  sources:
+    - ../../../.staging/react-template/website
+    - ../../../.staging/react-template/store
+    - ../../../.staging/react-template/universal
+    - ../../../.staging/vite.corpus.txt

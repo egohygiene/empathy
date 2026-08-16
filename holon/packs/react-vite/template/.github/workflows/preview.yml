@@ -1,0 +1,14 @@
+name: Preview
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  disabled-until-configured:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: printf '%s\n' "Preview deployment is intentionally disabled until hosting configuration is explicit."

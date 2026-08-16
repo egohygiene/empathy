@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">React Vite template documentation</title>
+  <defs>
+    <linearGradient id="page" x1="27" y1="20" x2="99" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67e8f9" />
+      <stop offset="1" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#020617" />
+  <path d="M31 20h49l19 19v69H31V20Z" fill="url(#page)" />
+  <path d="M80 20v20h19" fill="none" stroke="#e0f2fe" stroke-width="7" stroke-linejoin="round" />
+  <path d="M47 58h36M47 74h36M47 90h24" stroke="#020617" stroke-width="7" stroke-linecap="round" opacity=".75" />
+</svg>

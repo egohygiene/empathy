@@ -1,0 +1,36 @@
+name: Capability proposal
+description: Propose a reusable core capability or opt-in profile.
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What repeated product or repository need should the template solve?
+    validations:
+      required: true
+  - type: dropdown
+    id: ownership
+    attributes:
+      label: Proposed ownership
+      options:
+        - Core package
+        - Optional profile
+        - Example application
+        - Product-owned customization
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Proposed contract
+      description: Describe inputs, outputs, opt-in behavior, and likely consumers.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and tradeoffs
+      description: What else was considered, including leaving this product-owned?

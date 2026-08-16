@@ -13,6 +13,9 @@ includes:
   mantle:
     taskfile: ./mantle/Taskfile.yml
     dir: ./mantle
+  react-vite:
+    taskfile: ./holon/packs/react-vite/template/Taskfile.yml
+    dir: ./holon/packs/react-vite/template
   tool:
     taskfile: ./egolint/tasks/complementary.yml
     dir: .

@@ -36,6 +36,9 @@ quality layers:
 - an incubated Rust `beacon` holon with versioned document-template packages,
   deterministic project initialization, binary-level smoke coverage, and root
   validation integration.
+- an incubated Holon-owned React + Vite pack that combines website, docs,
+  playground, provider-neutral auth, optional commerce, shared Vite policy, and
+  Tailwind CSS v3 into one comprehensive pnpm workspace.
 
 Imported workflows that still depend on a product, toolchain, secret set, or
 release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
@@ -53,6 +56,8 @@ task garden:site:serve
 task identity:check
 task identity:plan
 task identity:handoff
+task react-vite:check
+task react-vite:dev:web
 task hooks:install
 task commit:test
 task precommit:staged
@@ -82,6 +87,8 @@ scope deliberately. See [the Egolint subsystem](egolint/README.md) and
 See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle,
 [`identity`](identity/README.md) for the visual identity lifecycle, and
 [`beacon`](beacon/README.md) for reproducible document-project bootstrapping.
+See [`holon/packs/react-vite`](holon/packs/react-vite/README.md) for the
+incubating frontend repository pack and its staging-promotion ledger.
 
 ## Architecture
 
