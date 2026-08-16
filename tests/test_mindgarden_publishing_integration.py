@@ -104,7 +104,9 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
         )
 
     def test_task_and_documentation_surface_the_publish_contract(self) -> None:
-        taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
+        root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
+        taskfile = (REPOSITORY_ROOT / ".tasks/mindgarden.yml").read_text(encoding="utf8")
+        self.assertIn("taskfile: ./.tasks/mindgarden.yml", root_taskfile)
         for task_name in (
             "garden:publish:check:",
             "garden:publish:",

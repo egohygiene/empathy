@@ -47,7 +47,9 @@ class MindgardenAgentIntegrationTests(unittest.TestCase):
         self.assertIn("<mindgarden-note", rendered)
 
     def test_task_contract_exposes_agent_verification(self) -> None:
-        taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
+        root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
+        taskfile = (REPOSITORY_ROOT / ".tasks/mindgarden.yml").read_text(encoding="utf8")
+        self.assertIn("taskfile: ./.tasks/mindgarden.yml", root_taskfile)
         self.assertIn("mindgarden/scripts/garden_agent.py", taskfile)
         self.assertIn("garden:index:", taskfile)
         self.assertIn("garden:context:", taskfile)

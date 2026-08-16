@@ -1,0 +1,99 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+vars:
+  TASK_SYSTEM_VERSION: "2.0.0"
+
+tasks:
+  default:
+    desc: List the repository task contract
+    cmds:
+      - task --list
+    silent: true
+
+  setup:
+    desc: Install managed workspace dependencies and repository Git hooks
+    summary: |
+      Installs the locked Egolint dependencies, the React + Vite pack's pnpm
+      workspace, and the repository-owned Husky hooks. This task is explicit
+      because it may access package registries and modifies local Git config.
+    cmds:
+      - task: egolint:dependencies:ensure
+      - task: react-vite:setup
+      - task: hooks:install
+
+  doctor:
+    desc: Diagnose the core repository toolchain without changing the host
+    preconditions:
+      - sh: command -v git >/dev/null 2>&1
+        msg: Git is not installed or is not available on PATH.
+      - sh: command -v python3 >/dev/null 2>&1
+        msg: Python 3 is not installed or is not available on PATH.
+    cmds:
+      - task --version
+      - git --version
+      - python3 --version
+      - |
+        report_tool() {
+          tool_name="$1"
+          required_by="$2"
+          if command -v "$tool_name" >/dev/null 2>&1; then
+            printf '%-8s %s\n' "$tool_name" "available ($required_by)"
+          else
+            printf '%-8s %s\n' "$tool_name" "missing ($required_by)"
+          fi
+        }
+
+        report_tool cargo "Beacon and identity"
+        report_tool docker "Egolint and security scans"
+        report_tool node "JavaScript tooling"
+        report_tool npm "root formatting"
+        report_tool pnpm "Egolint and React + Vite"
+    silent: true
+
+  platform:
+    desc: Print the host platform detected by Task
+    cmds:
+      - 'printf "Operating system: %s\n" "{{OS}}"'
+      - 'printf "Architecture:     %s\n" "{{ARCH}}"'
+      - 'printf "CPU cores:        %s\n" "{{numCPU}}"'
+    silent: true
+
+  version:
+    desc: Print the repository task-system contract version
+    cmds:
+      - 'printf "%s\n" "{{.TASK_SYSTEM_VERSION}}"'
+    silent: true
+
+  build:
+    desc: Build the incubated Rust holons and React + Vite pack
+    preconditions:
+      - sh: command -v cargo >/dev/null 2>&1
+        msg: Cargo is required to build the Rust holons.
+    cmds:
+      - cargo build --manifest-path "beacon/Cargo.toml" --all-features
+      - cargo build --manifest-path "identity/Cargo.toml" --all-features
+      - task: react-vite:build
+
+  check:
+    desc: Run the complete deterministic repository validation contract
+    deps:
+      - architecture:check
+      - beacon:check
+      - format:check
+      - garden:check
+      - identity:check
+      - lint
+      - mantle:check
+      - react-vite:check
+      - taskfile:check
+      - test
+    cmds:
+      - git diff --check
+
+  ci:
+    desc: Reproduce the complete deterministic repository CI contract locally
+    cmds:
+      - task: check

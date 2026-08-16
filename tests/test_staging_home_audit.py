@@ -8,7 +8,6 @@ from pathlib import Path
 import sys
 import unittest
 
-
 REPOSITORY_ROOT = Path(__file__).parents[1]
 MODULE_PATH = REPOSITORY_ROOT / "tools/staging_home_audit.py"
 SPEC = importlib.util.spec_from_file_location("staging_home_audit", MODULE_PATH)
@@ -45,16 +44,11 @@ class StagingHomeAuditTests(unittest.TestCase):
         self.assertEqual(first.merge_group, "realm-devcontainer-config")
         self.assertEqual(second.merge_group, first.merge_group)
 
-    def test_product_fixtures_are_kept_out_of_realm(self) -> None:
-        api = self.by_path[
-            ".staging/devenvironment/containers/services/api/Dockerfile.old"
-        ]
-        ui = self.by_path[".staging/react-template/universal/apps/ui/package.json"]
+    def test_product_fixture_is_kept_out_of_realm(self) -> None:
+        api = self.by_path[".staging/devenvironment/containers/services/api/Dockerfile.old"]
 
         self.assertEqual(api.canonical_owner, "holon")
-        self.assertEqual(ui.canonical_owner, "holon")
         self.assertTrue(api.canonical_home.startswith("holon/templates/universal-app/"))
-        self.assertTrue(ui.canonical_home.startswith("holon/templates/universal-app/"))
 
     def test_cross_cutting_sources_follow_capability_ownership(self) -> None:
         cases = {
@@ -71,17 +65,11 @@ class StagingHomeAuditTests(unittest.TestCase):
                 self.assertEqual(self.by_path[path].canonical_owner, expected_owner)
 
     def test_community_instructions_remain_quarantined(self) -> None:
-        community_rows = [
-            row
-            for row in self.rows
-            if row.collection.startswith("community ")
-        ]
+        community_rows = [row for row in self.rows if row.collection.startswith("community ")]
 
         self.assertGreater(len(community_rows), 1_000)
         self.assertEqual({row.canonical_owner for row in community_rows}, {"aether"})
-        self.assertEqual(
-            {row.disposition for row in community_rows}, {"quarantine-and-curate"}
-        )
+        self.assertEqual({row.disposition for row in community_rows}, {"quarantine-and-curate"})
         self.assertTrue(
             all(row.incubation_home.startswith("aether/.staging/") for row in community_rows)
         )

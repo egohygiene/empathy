@@ -46,31 +46,10 @@ and are intentionally inert.
 
 ## Repository contract
 
-```bash
-task check
-task beacon:check
-task beacon:smoke
-task garden:check
-task garden:publish:check
-task garden:site:serve
-task identity:check
-task identity:plan
-task identity:handoff
-task react-vite:check
-task react-vite:dev:web
-task hooks:install
-task commit:test
-task precommit:staged
-task precommit:all
-task license:check
-task secrets:check
-task lint:fast
-task lint:holistic
-task lint:complementary
-task lint:contracts
-task tools:status
-task tools:versions
-```
+The root [`Taskfile.yml`](Taskfile.yml) composes focused modules from
+[`.tasks/`](.tasks/) with subsystem-owned Taskfiles. See [`TASKS.md`](TASKS.md)
+for the stable lifecycle contract, operational boundaries, namespaces, and the
+generated catalog of every public command.
 
 Husky is the sole Git hook manager. Its pre-commit hook combines lint-staged's
 fast file-aware fixes with the intentionally small structural/security
@@ -80,9 +59,9 @@ because Husky owns the repository hook path.
 Commit messages use `type(scope): emoji subject` and can be authored through
 `task commit:create`.
 
-The standard check validates formatting, tests, the incubated holons, and the
-changed-file Egolint profile. The complete and holistic commands expand that
-scope deliberately. See [the Egolint subsystem](egolint/README.md) and
+The standard check validates task composition, formatting, tests, the incubated
+holons and frontend pack, and the holistic Egolint profile. Focused commands
+reduce that scope deliberately. See [the Egolint subsystem](egolint/README.md) and
 [the composite action catalog](.github/actions/README.md) for their contracts.
 See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle,
 [`identity`](identity/README.md) for the visual identity lifecycle, and

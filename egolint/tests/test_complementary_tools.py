@@ -126,7 +126,10 @@ class ComplementaryToolContractTests(unittest.TestCase):
         self.assertTrue(forbidden.isdisjoint(self.tools))
 
     def test_taskfile_exposes_stable_aggregate_interface(self) -> None:
-        taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf-8")
+        root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf-8")
+        taskfile = (REPOSITORY_ROOT / ".tasks/quality.yml").read_text(encoding="utf-8")
+        self.assertIn("taskfile: ./.tasks/quality.yml", root_taskfile)
+        self.assertIn("flatten: true", root_taskfile)
         for task_name in (
             "lint:complementary:",
             "security:source:",
