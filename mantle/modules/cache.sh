@@ -14,9 +14,14 @@ elif [[ -n "${ZSH_VERSION:-}" && "${ZSH_EVAL_CONTEXT:-}" != *:file ]]; then
 	exit 64
 fi
 
-if [[ -z "${XDG_CACHE_HOME:-}" || -z "${XDG_STATE_HOME:-}" ||
+if [[ -z "${HOME:-}" || -z "${XDG_CACHE_HOME:-}" || -z "${XDG_STATE_HOME:-}" ||
 	-z "${XDG_RUNTIME_DIR:-}" ]]; then
-	printf "[mantle:error] cache: XDG cache, state, and runtime directories are required\n" >&2
+	printf "[mantle:error] cache: HOME and the XDG cache/state/runtime directories are required\n" >&2
+	return 1
+fi
+
+if ! command -v __mantle_xdg_record_migration_warning >/dev/null 2>&1; then
+	printf "[mantle:error] cache: XDG migration policy is unavailable\n" >&2
 	return 1
 fi
 
@@ -41,23 +46,55 @@ __mantle_cache_set_default() {
 	fi
 }
 
+__mantle_cache_set_xdg() {
+	local variable_name="${1:-}"
+	local xdg_path="${2:-}"
+	local legacy_path="${3:-}"
+	local variable_is_set=""
+
+	if (($# != 3)); then
+		return 64
+	fi
+
+	case "${variable_name}" in
+	"" | [!A-Za-z_]* | *[!A-Za-z0-9_]*)
+		return 64
+		;;
+	esac
+
+	eval "variable_is_set=\${${variable_name}+set}"
+	if [[ "${variable_is_set}" == "set" ]]; then
+		return 0
+	fi
+
+	if [[ -n "${legacy_path}" && -e "${legacy_path}" && ! -e "${xdg_path}" ]]; then
+		__mantle_xdg_record_migration_warning "${variable_name}"
+		return 0
+	fi
+
+	export "${variable_name}=${xdg_path}"
+}
+
 # Development languages and build systems.
 __mantle_cache_set_default "SONARLINT_USER_HOME" "${XDG_CACHE_HOME}/sonarlint"
 __mantle_cache_set_default "NODE_COMPILER_CACHE" "${XDG_CACHE_HOME}/node/compiler"
 __mantle_cache_set_default "YARN_CACHE_FOLDER" "${XDG_CACHE_HOME}/yarn"
-__mantle_cache_set_default "PUB_CACHE" "${XDG_CACHE_HOME}/dart-pub"
+__mantle_cache_set_xdg "PUB_CACHE" "${XDG_CACHE_HOME}/dart-pub" "${HOME}/.pub-cache"
 __mantle_cache_set_default "KSCRIPT_CACHE_DIR" "${XDG_CACHE_HOME}/kscript"
 __mantle_cache_set_default "EM_CACHE" "${XDG_CACHE_HOME}/emscripten"
 __mantle_cache_set_default "BUNDLE_USER_CACHE" "${XDG_CACHE_HOME}/bundle"
-__mantle_cache_set_default "GEM_SPEC_CACHE" "${XDG_CACHE_HOME}/gem/specs"
+__mantle_cache_set_xdg "GEM_SPEC_CACHE" "${XDG_CACHE_HOME}/gem/specs" "${HOME}/.gem/specs"
 __mantle_cache_set_default "NUGET_PACKAGES" "${XDG_CACHE_HOME}/nuget/packages"
+__mantle_cache_set_default "DOTNET_BUNDLE_EXTRACT_BASE_DIR" "${XDG_CACHE_HOME}/dotnet/bundle-extract"
 __mantle_cache_set_default "DENO_DIR" "${XDG_CACHE_HOME}/deno"
 __mantle_cache_set_default "UV_CACHE_DIR" "${XDG_CACHE_HOME}/uv"
 __mantle_cache_set_default "PIP_CACHE_DIR" "${XDG_CACHE_HOME}/pip"
 __mantle_cache_set_default "GOMODCACHE" "${XDG_CACHE_HOME}/go/mod"
 __mantle_cache_set_default "TERRAGRUNT_DOWNLOAD" "${XDG_CACHE_HOME}/terragrunt"
-__mantle_cache_set_default "TF_PLUGIN_CACHE_DIR" "${XDG_CACHE_HOME}/terraform/plugin-cache"
-__mantle_cache_set_default "KUBECACHEDIR" "${XDG_CACHE_HOME}/kubernetes"
+__mantle_cache_set_xdg "TF_PLUGIN_CACHE_DIR" "${XDG_CACHE_HOME}/terraform/plugin-cache" "${HOME}/.terraform.d/plugin-cache"
+__mantle_cache_set_xdg "KUBECACHEDIR" "${XDG_CACHE_HOME}/kubernetes" "${HOME}/.kube/cache"
+__mantle_cache_set_xdg "NPM_CONFIG_CACHE" "${XDG_CACHE_HOME}/npm" "${HOME}/.npm"
+__mantle_cache_set_default "TASK_TEMP_DIR" "${XDG_CACHE_HOME}/task"
 
 # Python and language-analysis tools.
 __mantle_cache_set_default "PYTHON_EGG_CACHE" "${XDG_CACHE_HOME}/python-eggs"
@@ -86,5 +123,6 @@ __mantle_cache_set_default "DVDCSS_CACHE" "${XDG_CACHE_HOME}/dvdcss"
 __mantle_cache_set_default "SINGULARITY_CACHEDIR" "${XDG_CACHE_HOME}/singularity"
 
 unset -f __mantle_cache_set_default
+unset -f __mantle_cache_set_xdg
 
 return 0

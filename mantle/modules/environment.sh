@@ -65,14 +65,41 @@ fi
 # Candidates are ordered from lowest to highest priority because each existing
 # directory is prepended. Mantle commands remain the highest-priority managed
 # command surface; a caller's pre-existing PATH entries retain their order.
+__mantle_environment_asdf_root="${ASDF_DATA_DIR:-${XDG_DATA_HOME}/asdf}"
+__mantle_environment_pyenv_root="${PYENV_ROOT:-${XDG_DATA_HOME}/pyenv}"
+__mantle_environment_volta_root="${VOLTA_HOME:-${XDG_DATA_HOME}/volta}"
+__mantle_environment_go_root="${GOPATH:-${XDG_DATA_HOME}/go}"
+__mantle_environment_cargo_root="${CARGO_HOME:-${XDG_DATA_HOME}/cargo}"
+
+if [[ -z "${ASDF_DATA_DIR:-}" && -d "${HOME}/.asdf" &&
+	! -e "${XDG_DATA_HOME}/asdf" ]]; then
+	__mantle_environment_asdf_root="${HOME}/.asdf"
+fi
+if [[ -z "${PYENV_ROOT:-}" && -d "${HOME}/.pyenv" &&
+	! -e "${XDG_DATA_HOME}/pyenv" ]]; then
+	__mantle_environment_pyenv_root="${HOME}/.pyenv"
+fi
+if [[ -z "${VOLTA_HOME:-}" && -d "${HOME}/.volta" &&
+	! -e "${XDG_DATA_HOME}/volta" ]]; then
+	__mantle_environment_volta_root="${HOME}/.volta"
+fi
+if [[ -z "${GOPATH:-}" && -d "${HOME}/go" &&
+	! -e "${XDG_DATA_HOME}/go" ]]; then
+	__mantle_environment_go_root="${HOME}/go"
+fi
+if [[ -z "${CARGO_HOME:-}" && -d "${HOME}/.cargo" &&
+	! -e "${XDG_DATA_HOME}/cargo" ]]; then
+	__mantle_environment_cargo_root="${HOME}/.cargo"
+fi
+
 __mantle_environment_path_candidates=(
-	"${ASDF_DATA_DIR:-${XDG_DATA_HOME}/asdf}/bin"
-	"${ASDF_DATA_DIR:-${XDG_DATA_HOME}/asdf}/shims"
-	"${PYENV_ROOT:-${XDG_DATA_HOME}/pyenv}/bin"
-	"${VOLTA_HOME:-${XDG_DATA_HOME}/volta}/bin"
+	"${__mantle_environment_asdf_root}/bin"
+	"${__mantle_environment_asdf_root}/shims"
+	"${__mantle_environment_pyenv_root}/bin"
+	"${__mantle_environment_volta_root}/bin"
 	"${PIPX_BIN_DIR:-${XDG_DATA_HOME}/pipx/bin}"
-	"${GOPATH:-${XDG_DATA_HOME}/go}/bin"
-	"${CARGO_HOME:-${XDG_DATA_HOME}/cargo}/bin"
+	"${__mantle_environment_go_root}/bin"
+	"${__mantle_environment_cargo_root}/bin"
 	"${PNPM_HOME:-${XDG_DATA_HOME}/pnpm}"
 	"${XDG_BIN_HOME}"
 	"${MANTLE_ROOT}/bin"
@@ -121,5 +148,10 @@ export GHCUP_USE_XDG_DIRS="${GHCUP_USE_XDG_DIRS:-true}"
 
 unset __mantle_environment_path_candidate
 unset __mantle_environment_path_candidates
+unset __mantle_environment_asdf_root
+unset __mantle_environment_cargo_root
+unset __mantle_environment_go_root
+unset __mantle_environment_pyenv_root
+unset __mantle_environment_volta_root
 
 return 0

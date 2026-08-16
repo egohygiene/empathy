@@ -75,6 +75,119 @@ teardown() {
 }
 
 # ---------------------------------------------------------------------------
+# Migration-safe XDG tooling, caches, and history
+# ---------------------------------------------------------------------------
+
+@test "tooling preserves legacy state and reports every pending migration" {
+	mkdir -p "${TEST_HOME}/.cargo/bin" "${TEST_HOME}/go" "${TEST_HOME}/.android"
+
+	run env -i HOME="${TEST_HOME}" PATH="${PATH}" TERM=dumb \
+		/bin/bash --noprofile --norc -c "
+			source '${MANTLE_ROOT}/.shellrc'
+			printf 'cargo=%s\n' \"\${CARGO_HOME:-legacy}\"
+			printf 'go=%s\n' \"\${GOPATH:-legacy}\"
+			printf 'android=%s\n' \"\${ANDROID_USER_HOME:-legacy}\"
+			printf 'path=%s\n' \"\${PATH}\"
+			printf 'warnings=%s\n' \"\${MANTLE_XDG_MIGRATION_WARNINGS:-}\"
+		"
+	assert_success
+	assert_output_contains "cargo=legacy"
+	assert_output_contains "go=legacy"
+	assert_output_contains "android=legacy"
+	assert_output_contains "${TEST_HOME}/.cargo/bin"
+	assert_output_contains "CARGO_HOME"
+	assert_output_contains "GOPATH"
+	assert_output_contains "ANDROID_USER_HOME"
+}
+
+@test "tooling selects audited XDG roots for a fresh home" {
+	run env -i HOME="${TEST_HOME}" PATH="${PATH}" TERM=dumb \
+		/bin/bash --noprofile --norc -c "
+			source '${MANTLE_ROOT}/.shellrc'
+			printf 'ansible=%s\n' \"\${ANSIBLE_HOME}\"
+			printf 'docker=%s\n' \"\${DOCKER_CONFIG}\"
+			printf 'dart=%s\n' \"\${DART_DATA_HOME}\"
+			printf 'sdk=%s\n' \"\${ANDROID_HOME:-unset}\"
+			printf 'sdk_root=%s\n' \"\${ANDROID_SDK_ROOT:-unset}\"
+			printf 'flutter=%s\n' \"\${FLUTTER_HOME:-unset}\"
+		"
+	assert_success
+	assert_output_contains "ansible=${TEST_HOME}/.local/share/ansible"
+	assert_output_contains "docker=${TEST_HOME}/.config/docker"
+	assert_output_contains "dart=${TEST_HOME}/.local/share/dart"
+	assert_output_contains "sdk=unset"
+	assert_output_contains "sdk_root=unset"
+	assert_output_contains "flutter=unset"
+}
+
+@test "cache preserves an existing npm cache until migration" {
+	mkdir -p "${TEST_HOME}/.npm"
+
+	run env -i HOME="${TEST_HOME}" PATH="${PATH}" TERM=dumb \
+		/bin/bash --noprofile --norc -c "
+			source '${MANTLE_ROOT}/.shellrc'
+			printf 'cache=%s\n' \"\${NPM_CONFIG_CACHE:-legacy}\"
+			printf 'warnings=%s\n' \"\${MANTLE_XDG_MIGRATION_WARNINGS:-}\"
+		"
+	assert_success
+	assert_output_contains "cache=legacy"
+	assert_output_contains "NPM_CONFIG_CACHE"
+}
+
+@test "tooling preserves a legacy npmrc until its XDG file exists" {
+	printf '%s\n' 'fund=false' >"${TEST_HOME}/.npmrc"
+
+	run env -i HOME="${TEST_HOME}" PATH="${PATH}" TERM=dumb \
+		/bin/bash --noprofile --norc -c "
+			source '${MANTLE_ROOT}/.shellrc'
+			printf 'config=%s\n' \"\${NPM_CONFIG_USERCONFIG:-legacy}\"
+			printf 'warnings=%s\n' \"\${MANTLE_XDG_MIGRATION_WARNINGS:-}\"
+		"
+	assert_success
+	assert_output_contains "config=legacy"
+	assert_output_contains "NPM_CONFIG_USERCONFIG"
+}
+
+@test "history preserves legacy Bash history instead of silently splitting it" {
+	printf '%s\n' 'existing command' >"${TEST_HOME}/.bash_history"
+
+	run env -i HOME="${TEST_HOME}" PATH="${PATH}" TERM=dumb \
+		/bin/bash --noprofile --norc -c "
+			MANTLE_ROOT='${MANTLE_ROOT}'
+			MANTLE_INTERACTIVE=1
+			MANTLE_SHELL_NAME=bash
+			export MANTLE_ROOT MANTLE_INTERACTIVE MANTLE_SHELL_NAME
+			source '${MANTLE_ROOT}/lib/modules.sh'
+			mantle_load_module xdg
+			mantle_load_module history
+			printf 'history=%s\n' \"\${HISTFILE}\"
+			printf 'warnings=%s\n' \"\${MANTLE_XDG_MIGRATION_WARNINGS:-}\"
+		"
+	assert_success
+	assert_output_contains "history=${TEST_HOME}/.bash_history"
+	assert_output_contains "HISTFILE"
+}
+
+@test "Fish preserves the same legacy Cargo root when available" {
+	require_fish
+	mkdir -p "${TEST_HOME}/.cargo"
+
+	run env -i HOME="${TEST_HOME}" MANTLE_ROOT="${MANTLE_ROOT}" \
+		PATH="${PATH}" TERM=dumb fish --no-config --command '
+			source "$MANTLE_ROOT/runtime/shells/fish/runtime.fish"
+			if set -q CARGO_HOME
+				printf "cargo=%s\n" "$CARGO_HOME"
+			else
+				printf "cargo=legacy\n"
+			end
+			printf "warnings=%s\n" "$MANTLE_XDG_MIGRATION_WARNINGS"
+		'
+	assert_success
+	assert_output_contains "cargo=legacy"
+	assert_output_contains "CARGO_HOME"
+}
+
+# ---------------------------------------------------------------------------
 # Privacy module
 # ---------------------------------------------------------------------------
 

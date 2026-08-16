@@ -682,10 +682,6 @@ fi
 
 # ─── OS and platform-specific tools ──────────────────────────────────────────
 
-if command -v adb >/dev/null 2>&1 && [[ -n "${ANDROID_USER_HOME:-}" ]]; then
-	alias adb='HOME="$ANDROID_USER_HOME" command adb'
-fi
-
 if [[ "$(command uname -s)" == "Darwin" ]]; then
 	if [[ -x "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" ]]; then
 		alias afk='command "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" -suspend'

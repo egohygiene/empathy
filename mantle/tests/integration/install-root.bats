@@ -275,6 +275,8 @@ EOF
 	[[ ! -e "${TEST_HOME}/.bashrc" ]]
 	[[ ! -e "${TEST_HOME}/.bash_profile" ]]
 	[[ ! -e "${TEST_HOME}/.zshrc" ]]
+	[[ ! -e "${TEST_HOME}/.zshenv" ]]
+	[[ ! -e "${XDG_CONFIG_HOME}/zsh/.zshrc" ]]
 	[[ ! -e "${XDG_CONFIG_HOME}/fish/conf.d/mantle.fish" ]]
 }
 
@@ -329,6 +331,8 @@ EOF
 	[[ ! -e "${DEFAULT_PREFIX}" ]]
 	[[ ! -e "${TEST_HOME}/.bashrc" ]]
 	[[ ! -e "${TEST_HOME}/.zshrc" ]]
+	[[ ! -e "${TEST_HOME}/.zshenv" ]]
+	[[ ! -e "${XDG_CONFIG_HOME}/zsh/.zshrc" ]]
 }
 
 @test "install.sh rolls back an installer-owned update when publication fails" {
@@ -376,19 +380,43 @@ EOF
 
 	_run_installer --shell zsh
 	assert_success
-	assert_file_exists "${TEST_HOME}/.zshrc"
+	assert_file_exists "${TEST_HOME}/.zshenv"
+	assert_file_exists "${XDG_CONFIG_HOME}/zsh/.zshrc"
+	run grep -F '# >>> mantle zdotdir >>>' "${TEST_HOME}/.zshenv"
+	assert_success
 
 	run env -i \
 		HOME="${TEST_HOME}" \
-		ZDOTDIR="${TEST_HOME}" \
 		XDG_CONFIG_HOME="${XDG_CONFIG_HOME}" \
 		XDG_CACHE_HOME="${XDG_CACHE_HOME}" \
 		XDG_DATA_HOME="${XDG_DATA_HOME}" \
 		XDG_STATE_HOME="${XDG_STATE_HOME}" \
 		XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}" \
+		MANTLE_PRESENTATION_MODE=off \
 		PATH="/usr/bin:/bin" \
 		TERM=dumb \
-		zsh --no-rcs -c 'source "$HOME/.zshrc"; printf "%s\n" "${MANTLE_ROOT}"'
+		zsh --no-global-rcs --interactive -c 'printf "%s\n" "${MANTLE_ROOT}"'
 	assert_success
 	[[ "${output}" == "${DEFAULT_PREFIX}" ]]
+
+	_run_installer --uninstall --shell zsh
+	assert_success
+	[[ ! -e "${TEST_HOME}/.zshenv" ]]
+	[[ ! -e "${XDG_CONFIG_HOME}/zsh/.zshrc" ]]
+}
+
+@test "install.sh preserves an existing legacy zshrc until explicit migration" {
+	require_zsh
+	printf '%s\n' '# existing zsh setup' >"${TEST_HOME}/.zshrc"
+
+	_run_installer --shell zsh
+	assert_success
+	assert_file_exists "${TEST_HOME}/.zshrc"
+	assert_file_exists "${TEST_HOME}/.zshrc.mantle.bak"
+	[[ ! -e "${TEST_HOME}/.zshenv" ]]
+	[[ ! -e "${XDG_CONFIG_HOME}/zsh/.zshrc" ]]
+	run grep -F '# existing zsh setup' "${TEST_HOME}/.zshrc"
+	assert_success
+	run grep -F '# >>> mantle >>>' "${TEST_HOME}/.zshrc"
+	assert_success
 }
