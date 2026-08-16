@@ -1,8 +1,8 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-16T10-12-56Z`
+- Generated: `2026-08-16T13-19-24Z`
 - Repository: `egohygiene/empathy`
-- Commit: `b8f17def3cbdac67b0b9064280096e8e79b0d7e0`
+- Commit: `be127f75e5fc9918f5d4cecaf26b44bd4e3a6e49`
 - Severity gate: `high`
 - Duration: `11s`
 
@@ -11,15 +11,15 @@
 | Severity | Count |
 | --- | ---: |
 | Critical | 2 |
-| High | 26 |
+| High | 25 |
 | Medium | 21 |
 | Low | 5 |
 | Unknown | 0 |
-| **Total** | **54** |
+| **Total** | **53** |
 
 ## Discovery
 
-Discovered 46 artifact(s) across 7 ecosystem label(s).
+Discovered 47 artifact(s) across 7 ecosystem label(s).
 
 - `.reports/megalinter/syft/sbom.spdx.json`
 - `.staging/.github/skills/drawio/scripts/package.json`
@@ -28,29 +28,8 @@ Discovered 46 artifact(s) across 7 ecosystem label(s).
 - `.staging/devenvironment/containers/services/api/poetry.lock`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
-- `.staging/react-template/store/apps/storefront/package.json`
-- `.staging/react-template/store/package.json`
-- `.staging/react-template/store/packages/commerce/package.json`
-- `.staging/react-template/store/packages/store-config/package.json`
-- `.staging/react-template/store/packages/store-ui/package.json`
-- `.staging/react-template/store/pnpm-lock.yaml`
 - `.staging/react-template/universal/apps/ui/package.json`
 - `.staging/react-template/universal/apps/ui/pyproject.toml`
-- `.staging/react-template/website/apps/docs/package.json`
-- `.staging/react-template/website/apps/egohygiene.io/package.json`
-- `.staging/react-template/website/apps/playground/package.json`
-- `.staging/react-template/website/package.json`
-- `.staging/react-template/website/packages/api-client/package.json`
-- `.staging/react-template/website/packages/config/package.json`
-- `.staging/react-template/website/packages/content/package.json`
-- `.staging/react-template/website/packages/design-tokens/package.json`
-- `.staging/react-template/website/packages/i18n/package.json`
-- `.staging/react-template/website/packages/icons/package.json`
-- `.staging/react-template/website/packages/schemas/package.json`
-- `.staging/react-template/website/packages/themes/package.json`
-- `.staging/react-template/website/packages/ui/package.json`
-- `.staging/react-template/website/packages/utilities/package.json`
-- `.staging/react-template/website/packages/visualizations/package.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/Cargo.lock`
 - `egolint/package.json`
@@ -66,13 +45,34 @@ Discovered 46 artifact(s) across 7 ecosystem label(s).
 - `egolint/tests/fixtures/npm-package-json-lint/package.json`
 - `egolint/tests/fixtures/v8r/package.json`
 - `egolint/uv.lock`
+- `holon/packs/react-vite/template/apps/docs/package.json`
+- `holon/packs/react-vite/template/apps/playground/package.json`
+- `holon/packs/react-vite/template/apps/storefront/package.json`
+- `holon/packs/react-vite/template/apps/web/package.json`
+- `holon/packs/react-vite/template/package.json`
+- `holon/packs/react-vite/template/packages/api-client/package.json`
+- `holon/packs/react-vite/template/packages/auth/package.json`
+- `holon/packs/react-vite/template/packages/commerce/package.json`
+- `holon/packs/react-vite/template/packages/config/package.json`
+- `holon/packs/react-vite/template/packages/content/package.json`
+- `holon/packs/react-vite/template/packages/design-tokens/package.json`
+- `holon/packs/react-vite/template/packages/i18n/package.json`
+- `holon/packs/react-vite/template/packages/icons/package.json`
+- `holon/packs/react-vite/template/packages/schemas/package.json`
+- `holon/packs/react-vite/template/packages/store-config/package.json`
+- `holon/packs/react-vite/template/packages/store-ui/package.json`
+- `holon/packs/react-vite/template/packages/tailwind-config/package.json`
+- `holon/packs/react-vite/template/packages/themes/package.json`
+- `holon/packs/react-vite/template/packages/ui/package.json`
+- `holon/packs/react-vite/template/packages/utilities/package.json`
+- `holon/packs/react-vite/template/packages/visualizations/package.json`
+- `holon/packs/react-vite/template/packages/vite-config/package.json`
 - `pyproject.toml`
 
 ## Scanned Files
 
 - `.staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj`
 - `.staging/devenvironment/containers/services/api/poetry.lock`
-- `.staging/react-template/store/pnpm-lock.yaml`
 - `egolint/Cargo.lock`
 - `egolint/pnpm-lock.yaml`
 - `egolint/uv.lock`
@@ -84,28 +84,8 @@ Discovered 46 artifact(s) across 7 ecosystem label(s).
 - `.staging/.github/skills/md-to-docx/scripts/package.json`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
-- `.staging/react-template/store/apps/storefront/package.json`
-- `.staging/react-template/store/package.json`
-- `.staging/react-template/store/packages/commerce/package.json`
-- `.staging/react-template/store/packages/store-config/package.json`
-- `.staging/react-template/store/packages/store-ui/package.json`
 - `.staging/react-template/universal/apps/ui/package.json`
 - `.staging/react-template/universal/apps/ui/pyproject.toml`
-- `.staging/react-template/website/apps/docs/package.json`
-- `.staging/react-template/website/apps/egohygiene.io/package.json`
-- `.staging/react-template/website/apps/playground/package.json`
-- `.staging/react-template/website/package.json`
-- `.staging/react-template/website/packages/api-client/package.json`
-- `.staging/react-template/website/packages/config/package.json`
-- `.staging/react-template/website/packages/content/package.json`
-- `.staging/react-template/website/packages/design-tokens/package.json`
-- `.staging/react-template/website/packages/i18n/package.json`
-- `.staging/react-template/website/packages/icons/package.json`
-- `.staging/react-template/website/packages/schemas/package.json`
-- `.staging/react-template/website/packages/themes/package.json`
-- `.staging/react-template/website/packages/ui/package.json`
-- `.staging/react-template/website/packages/utilities/package.json`
-- `.staging/react-template/website/packages/visualizations/package.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/package.json`
 - `egolint/pyproject.toml`
@@ -118,13 +98,35 @@ Discovered 46 artifact(s) across 7 ecosystem label(s).
 - `egolint/tests/fixtures/negative/v8r/package.json`
 - `egolint/tests/fixtures/npm-package-json-lint/package.json`
 - `egolint/tests/fixtures/v8r/package.json`
+- `holon/packs/react-vite/template/apps/docs/package.json`
+- `holon/packs/react-vite/template/apps/playground/package.json`
+- `holon/packs/react-vite/template/apps/storefront/package.json`
+- `holon/packs/react-vite/template/apps/web/package.json`
+- `holon/packs/react-vite/template/package.json`
+- `holon/packs/react-vite/template/packages/api-client/package.json`
+- `holon/packs/react-vite/template/packages/auth/package.json`
+- `holon/packs/react-vite/template/packages/commerce/package.json`
+- `holon/packs/react-vite/template/packages/config/package.json`
+- `holon/packs/react-vite/template/packages/content/package.json`
+- `holon/packs/react-vite/template/packages/design-tokens/package.json`
+- `holon/packs/react-vite/template/packages/i18n/package.json`
+- `holon/packs/react-vite/template/packages/icons/package.json`
+- `holon/packs/react-vite/template/packages/schemas/package.json`
+- `holon/packs/react-vite/template/packages/store-config/package.json`
+- `holon/packs/react-vite/template/packages/store-ui/package.json`
+- `holon/packs/react-vite/template/packages/tailwind-config/package.json`
+- `holon/packs/react-vite/template/packages/themes/package.json`
+- `holon/packs/react-vite/template/packages/ui/package.json`
+- `holon/packs/react-vite/template/packages/utilities/package.json`
+- `holon/packs/react-vite/template/packages/visualizations/package.json`
+- `holon/packs/react-vite/template/packages/vite-config/package.json`
 - `pyproject.toml`
 
 ## OSV Scanner Report
 
 
-Total 21 packages affected by 54 known vulnerabilities (2 Critical, 26 High, 21 Medium, 5 Low, 0 Unknown) from 2 ecosystems.
-51 vulnerabilities can be fixed.
+Total 20 packages affected by 53 known vulnerabilities (2 Critical, 25 High, 21 Medium, 5 Low, 0 Unknown) from 2 ecosystems.
+50 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -179,6 +181,5 @@ Total 21 packages affected by 54 known vulnerabilities (2 Critical, 26 High, 21 
 | https://osv.dev/PYSEC-2026-1996<br/>https://osv.dev/GHSA-38jv-5279-wg99 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.3 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-1998<br/>https://osv.dev/GHSA-gm62-xv2j-4w53 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.0 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2009<br/>https://osv.dev/GHSA-597g-3phw-6986 | 4.5 | PyPI | virtualenv (dev) | 20.31.2 | 20.36.1 | .staging/devenvironment/containers/services/api/poetry.lock |
-| https://osv.dev/GHSA-2v37-7h3g-55p8 | 8.2 | npm | nanoid | 3.3.16 | 3.3.18 | .staging/react-template/store/pnpm-lock.yaml |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-g3ch-rx76-35fx | 4.2 | npm | vue-template-compiler | 2.7.16 | -- | egolint/pnpm-lock.yaml |
