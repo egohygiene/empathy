@@ -57,37 +57,49 @@
   "initializeCommand": {
     "initialize": [
         "/bin/bash",
-        ".devcontainer/scripts/initialize.sh"
+        ".devcontainer/scripts/initialize.sh",
+        "--devcontainer-id",
+        "${devcontainerId}"
     ]
   },
   "onCreateCommand": {
     "onCreate": [
         "/bin/bash",
-        ".devcontainer/scripts/on-create.sh"
+        ".devcontainer/scripts/on-create.sh",
+        "--devcontainer-id",
+        "${devcontainerId}"
     ]
   },
   "updateContentCommand": {
     "updateContent": [
       "/bin/bash",
-      ".devcontainer/scripts/update-content.sh"
+      ".devcontainer/scripts/update-content.sh",
+      "--devcontainer-id",
+      "${devcontainerId}"
     ]
   },
   "postCreateCommand": {
     "postCreate": [
       "/bin/bash",
-      ".devcontainer/scripts/post-create.sh"
+      ".devcontainer/scripts/post-create.sh",
+      "--devcontainer-id",
+      "${devcontainerId}"
     ]
   },
   "postStartCommand": {
     "postStart": [
       "/bin/bash",
-      ".devcontainer/scripts/post-start.sh"
+      ".devcontainer/scripts/post-start.sh",
+      "--devcontainer-id",
+      "${devcontainerId}"
     ]
   },
   "postAttachCommand": {
     "postAttach": [
       "/bin/bash",
-      ".devcontainer/scripts/post-attach.sh"
+      ".devcontainer/scripts/post-attach.sh",
+      "--devcontainer-id",
+      "${devcontainerId}"
     ]
   },
   "waitFor": "postCreateCommand",

@@ -1,13 +1,3 @@
----
-# yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
-
-######################################################################
-# docker-compose configuration for the devcontainer
-#
-# The dev service builds the image defined in Dockerfile and mounts the
-# repository into /workspace. The container is kept running with a
-# "sleep infinity" command so that VS Code can attach to it.
-######################################################################
 
 # Define common labels for Docker objects
 x-labels: &labels

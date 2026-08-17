@@ -2,15 +2,18 @@ allowBuilds:
   '@danmarshall/deckgl-typings': true
   '@heroui/shared-utils': true
   '@parcel/watcher': true
-  '@pulumi/kubernetes': set this to true or false
+  '@pulumi/kubernetes': true
   '@scarf/scarf': true
   '@swc/core': true
+  '@vscode/deviceid': true
+  better-sqlite3: true
   browser-tabs-lock: true
   core-js: true
   cpu-features: true
   cypress: true
   esbuild: true
-  fsevents: set this to true or false
+  fsevents: true
+  koffi: true
   maplibre-gl: true
   msw: true
   nx: true
