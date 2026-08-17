@@ -1,0 +1,86 @@
+Results of shfmt linter (version 3.13.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/bash_shfmt/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+diff .devcontainer/scripts/initialize.sh.orig .devcontainer/scripts/initialize.sh
+--- .devcontainer/scripts/initialize.sh.orig
++++ .devcontainer/scripts/initialize.sh
+@@ -80,8 +80,8 @@
+   local script_directory
+ 
+   script_directory="$(
+-    cd -- "$(dirname -- "${BASH_SOURCE[0]}")" \
+-      && pwd -P
++    cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &&
++      pwd -P
+   )"
+ 
+   cd -- "$script_directory/../.." && pwd -P
+@@ -104,7 +104,7 @@
+   local directory="${1:?Directory path is required}"
+   local path_entry
+ 
+-  IFS=":" read -r -a path_entries <<< "${PATH:-}"
++  IFS=":" read -r -a path_entries <<<"${PATH:-}"
+   for path_entry in "${path_entries[@]}"; do
+     [ "$path_entry" = "$directory" ] && return 0
+   done
+@@ -188,8 +188,8 @@
+       -maxdepth 1 \
+       -type f \
+       -name "*.sh" \
+-      -print0 \
+-      | LC_ALL=C sort -z
++      -print0 |
++      LC_ALL=C sort -z
+   )
+ }
+ 
+@@ -198,18 +198,21 @@
+   local detected=()
+ 
+   [ -f "$REPO_ROOT/package.json" ] && detected+=("Node.js")
+-  [ -f "$REPO_ROOT/pyproject.toml" ] \
+-    || [ -f "$REPO_ROOT/requirements.txt" ] \
+-    || [ -f "$REPO_ROOT/setup.py" ] \
+-    && detected+=("Python")
++  [ -f "$REPO_ROOT/pyproject.toml" ] ||
++    [ -f "$REPO_ROOT/requirements.txt" ] ||
++    [ -f "$REPO_ROOT/setup.py" ] &&
++    detected+=("Python")
+   [ -f "$REPO_ROOT/Cargo.toml" ] && detected+=("Rust")
+   [ -f "$REPO_ROOT/go.mod" ] && detected+=("Go")
+-  [ -f "$REPO_ROOT/compose.yaml" ] \
+-    || [ -f "$REPO_ROOT/docker-compose.yml" ] \
+-    && detected+=("Docker Compose")
++  [ -f "$REPO_ROOT/compose.yaml" ] ||
++    [ -f "$REPO_ROOT/docker-compose.yml" ] &&
++    detected+=("Docker Compose")
+ 
+   if [ "${#detected[@]}" -gt 0 ]; then
+-    log "Detected project tooling: $(IFS=", "; printf "%s" "${detected[*]}")"
++    log "Detected project tooling: $(
++      IFS=", "
++      printf "%s" "${detected[*]}"
++    )"
+   else
+     log "No common project manifest detected."
+   fi
+diff .devcontainer/scripts/on-create.sh.orig .devcontainer/scripts/on-create.sh
+--- .devcontainer/scripts/on-create.sh.orig
++++ .devcontainer/scripts/on-create.sh
+@@ -0,0 +1,1 @@
++
+diff .devcontainer/scripts/update-content.sh.orig .devcontainer/scripts/update-content.sh
+--- .devcontainer/scripts/update-content.sh.orig
++++ .devcontainer/scripts/update-content.sh
+@@ -1,6 +1,3 @@
+-
+-
+-
+ // Example: Reinstall Python dependencies
+ // "install-deps": ["pip", "install", "-r", "requirements.txt"],
+ 
+
