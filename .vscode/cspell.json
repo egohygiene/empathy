@@ -1,0 +1,6 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "import": [
+    "../.config/lint/prose/spell/cspell.json"
+  ]
+}

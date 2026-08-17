@@ -1,4 +1,161 @@
 {
   "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
-  "name": "${localWorkspaceFolderBasename}"
+  "name": "${localWorkspaceFolderBasename}",
+  "dockerComposeFile": ["devcontainer.yml"],
+  "workspaceFolder": "/workspace",
+  "service": "development",
+  "shutdownAction": "stopCompose",
+  "overrideCommand": false,
+  "init": true,
+  "privileged": true,
+  "capAdd": [
+    "SYS_PTRACE"
+  ],
+  "securityOpt": [
+    "seccomp=unconfined", "apparmor=unconfined",
+    "label=disable"
+  ],
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
+  "updateRemoteUserUID": true,
+  "features": {},
+  "overrideFeatureInstallOrder": [],
+  "forwardPorts": [3000, 9222],
+  "portsAttributes": {
+    "3000":
+    {
+      "label": "Application port",
+      "onAutoForward": "silent"
+    },
+    "9222": {
+      "label": "Chrome CDP",
+      "onAutoForward": "silent"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  },
+  "userEnvProbe": "loginInteractiveShell",
+  "containerEnv": {
+    "IN_DEVCONTAINER": "1",
+    "CHROME_REMOTE_DEBUGGING_PORT": "9222",
+    "GIT_TERMINAL_PROMPT": "0",
+    "GIT_SSH_COMMAND": "ssh -o StrictHostKeyChecking=no"
+  },
+  "remoteEnv": {
+    "IN_DEVCONTAINER": "1",
+    "CHROME_REMOTE_DEBUGGING_PORT": "9222",
+    "GIT_TERMINAL_PROMPT": "0",
+    "GIT_SSH_COMMAND": "ssh -o StrictHostKeyChecking=no"
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb",
+    "gpu": "optional"
+  },
+  "initializeCommand": {
+    "initialize": [
+        "/bin/bash",
+        ".devcontainer/scripts/initialize.sh"
+    ]
+  },
+  "onCreateCommand": {
+    "onCreate": [
+        "/bin/bash",
+        ".devcontainer/scripts/on-create.sh"
+    ]
+  },
+  "updateContentCommand": {
+    "updateContent": [
+      "/bin/bash",
+      ".devcontainer/scripts/update-content.sh"
+    ]
+  },
+  "postCreateCommand": {
+    "postCreate": [
+      "/bin/bash",
+      ".devcontainer/scripts/post-create.sh"
+    ]
+  },
+  "postStartCommand": {
+    "postStart": [
+      "/bin/bash",
+      ".devcontainer/scripts/post-start.sh"
+    ]
+  },
+  "postAttachCommand": {
+    "postAttach": [
+      "/bin/bash",
+      ".devcontainer/scripts/post-attach.sh"
+    ]
+  },
+  "waitFor": "postCreateCommand",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached,readonly",
+    "source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached,readonly",
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached,readonly",
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.kube,target=/home/vscode/.kube,type=bind,consistency=cached,readonly"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "ms-azuretools.vscode-containers",
+        "redhat.vscode-yaml",
+        "timonwong.shellcheck",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "args": [
+              "--login"
+            ],
+            "icon": "terminal-bash"
+          },
+          "fish": {
+            "path": "/usr/bin/fish",
+            "icon": "terminal"
+          },
+          "zsh": {
+            "path": "/usr/bin/zsh",
+            "args": [
+              "--login"
+            ],
+            "icon": "terminal"
+          }
+        },
+        "terminal.integrated.enablePersistentSessions": true,
+        "terminal.integrated.gpuAcceleration": "off",
+        "terminal.integrated.scrollback": 10000,
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+          80,
+          120
+        ],
+        "files.eol": "\n",
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true,
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "search.exclude": {
+          "**/.cache": true,
+          "**/.git": true,
+          "**/.venv": true,
+          "**/__pycache__": true,
+          "**/build": true,
+          "**/dist": true,
+          "**/node_modules": true
+        },
+        "telemetry.telemetryLevel": "off"
+      }
+    }
+  }
 }
