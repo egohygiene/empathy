@@ -5,9 +5,11 @@ See documentation on https://megalinter.io/10.0.0/descriptors/json_prettier/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 Checking formatting...
+[warn] .devcontainer/devcontainer.json
 [warn] .github/actions/generate-repository-intelligence/repository-analytics.schema.json
+[warn] .vscode/cspell.json
 [warn] beacon/contracts/template-manifest.schema.json
 [warn] holon/packs/react-vite/template/apps/storefront/tsconfig.json
 [warn] holon/packs/react-vite/template/test-results/.last-run.json
-[warn] Code style issues found in 4 files. Run Prettier with --write to fix.
+[warn] Code style issues found in 6 files. Run Prettier with --write to fix.
 
