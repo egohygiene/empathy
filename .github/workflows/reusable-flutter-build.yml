@@ -53,7 +53,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
         with:
           egress-policy: audit
       - name: Checkout repository
@@ -74,7 +74,7 @@ jobs:
         working-directory: "${{ inputs.working-directory }}"
         run: flutter build web --release
       - name: Upload web artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "${{ inputs.artifact-prefix }}-web"
           path: "${{ inputs.working-directory }}/build/web"
@@ -86,7 +86,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
         with:
           egress-policy: audit
       - name: Checkout repository
@@ -109,7 +109,7 @@ jobs:
         working-directory: "${{ inputs.working-directory }}"
         run: flutter build linux --release
       - name: Upload Linux artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "${{ inputs.artifact-prefix }}-linux"
           path: "${{ inputs.working-directory }}/build/linux"
@@ -121,7 +121,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920
+        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
         with:
           egress-policy: audit
       - name: Checkout repository
@@ -142,7 +142,7 @@ jobs:
         working-directory: "${{ inputs.working-directory }}"
         run: flutter build apk --release
       - name: Upload Android artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "${{ inputs.artifact-prefix }}-android"
           path: "${{ inputs.working-directory }}/build/app/outputs/flutter-apk/app-release.apk"
@@ -171,7 +171,7 @@ jobs:
         working-directory: "${{ inputs.working-directory }}"
         run: flutter build ios --release --no-codesign
       - name: Upload iOS artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: "${{ inputs.artifact-prefix }}-ios"
           path: "${{ inputs.working-directory }}/build/ios/iphoneos"
