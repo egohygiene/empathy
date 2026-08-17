@@ -4,55 +4,56 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.44s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       7.32s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   55|     |     0|          |       0|       0.35s|
-|❌ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  127|     |    16|          |       0|       6.78s|
-|❌ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |   12|     |     3|          |       0|       0.02s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3106|          |      no|      25.86s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |   23|     |   438|          |       0|       2.66s|
-|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    1|     |     1|          |       0|       0.16s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2506|     |     1|          |       0|        2.7s|
-|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   17|     |   356|          |       0|       1.17s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|       2.01s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.44s|
-|❌ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  186|     |     1|          |       0|       0.32s|
-|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  186|     |     1|          |       0|       3.23s|
-|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  186|     |     0|          |       0|     100.77s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  298|     | 67759|          |       0|     164.48s|
-|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  322|     |   400|          |       0|       3.37s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  322|     |     1|          |       0|       0.49s|
-|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.26s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.06s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.76s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   58|     |    16|          |       0|       2.41s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    34|          |      no|      16.66s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   58|     |   258|          |       0|      17.54s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8742|          |      no|      42.55s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   58|     |   767|          |       0|       6.14s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.53s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|      20.81s|
+|❌ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   55|     |     6|          |       0|       0.22s|
+|✅ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  127|     |     0|          |       0|       6.63s|
+|❌ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |   12|     |     6|          |       0|       0.15s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3158|          |      no|      20.28s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |   23|     |   438|          |       0|        1.7s|
+|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.38s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2517|     |     1|          |       0|       1.87s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   17|     |   356|          |       0|       0.95s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|       1.83s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.59s|
+|❌ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  187|     |     1|          |       0|       0.28s|
+|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.0.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|        0.6s|
+|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  187|     |     1|          |       0|       3.12s|
+|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  187|     |     0|          |       0|      65.66s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  299|     | 67779|          |       0|     145.14s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  322|     |   400|          |       0|        3.1s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  322|     |     1|          |       0|       0.46s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       2.14s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|        0.9s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|        0.7s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   58|     |    16|          |       0|       3.51s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    34|          |      no|      15.51s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   58|     |   258|          |       0|      13.81s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8742|          |      no|      33.09s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   58|     |   767|          |       0|       5.17s|
 |❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   58|     |     1|          |       0|       0.06s|
-|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       2.34s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      47.71s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       6.14s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |    62|          |      no|      119.6s|
-|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.92s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.13s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       5.36s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      16.09s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      48.59s|
-|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       9.32s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.86s|
-|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|        0.3s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  749|     |   193|          |       0|      88.18s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  344|     |   715|          |       0|        9.0s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  344|     |     1|          |       0|       0.89s|
-|❌ TSX         |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.15s|
-|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       1.16s|
-|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       3.51s|
-|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.38s|
-|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  196|     |     1|          |      17|       4.42s|
-|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  196|     |     0|          |       0|      44.46s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  196|     |   214|          |       0|      14.11s|
+|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       2.48s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      51.32s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|      14.79s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |   115|          |      no|      95.57s|
+|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       0.96s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     282.85s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       7.61s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      22.53s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      60.23s|
+|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|       8.44s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       7.94s|
+|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       1.62s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  751|     |   193|          |       0|      49.22s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  344|     |   715|          |       0|        8.4s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  344|     |     1|          |       0|       0.84s|
+|❌ TSX         |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.32s|
+|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       1.26s|
+|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       4.06s|
+|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.41s|
+|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  197|     |     1|          |      17|       3.76s|
+|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  197|     |     0|          |       0|       35.5s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  197|     |   215|          |       0|       15.4s|
 
 ## Detailed Issues
 
@@ -66,7 +67,7 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-17 03:22:41.718114+00:00
+Run started:2026-08-17 21:13:05.876319+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -331,54 +332,89 @@ Files skipped (2):
 </details>
 
 <details>
-<summary>❌ LATEX / chktex - 67759 errors</summary>
+<summary>❌ BASH / bash-exec - 6 errors</summary>
 
 ```
-ing space (`~') should have been used.
-    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
-    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 180: Interword spacing (`\ ') should perhaps be used.
-    This thesis template is designed for double sided printing (i.e. content on the front and back of pages) as most theses are printed and bound this way. Switching to one sided printing is as simple as uncommenting the \option{oneside} option of the \code{documentclass} command at the top of the \file{main.tex} file. You may then wish to adjust the margins to suit specifications from your institution.  
-                                                                    ^
-    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
-    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
-                                                                                                                                                                                                                                                                                                                                                             ^
-    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
-    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
-    Warning 11 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 196: You should use \ldots to achieve an ellipsis.
-    Scientific references should come \emph{before} the punctuation mark if there is one (such as a comma or period). The same goes for footnotes\footnote{Such as this footnote, here down at the bottom of the page.}. You can change this but the most important thing is to keep the convention consistent throughout the thesis. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). The APA6 states: \enquote{Footnote numbers should be superscripted, [...], following any punctuation mark except a dash.} The Chicago manual of style states: \enquote{A note number should be placed at the end of a sentence or clause. The number follows any punctuation mark except the dash, which it precedes. It follows a closing parenthesis.}  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^^^
-    Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
-    The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
-                                                                                                                  ^
-    Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
-    The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
-                                                                                                                                ^
+Results of bash-exec linter (version 5.3.9)
+See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
+-----------------------------------------------
 
-✅ [SUCCESS] beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/ChapterTemplate.tex
-❌ [ERROR] beacon/.staging/latex/Theses/masters-doctoral-thesis/main.tex
-    chktex: WARNING -- Could not find global resource file.
-    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
-    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
-                                                                                                                                                                                                                                                                                                                                            ^
-    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
-    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
-                                                                                                                                                                                                                                                                                                                                                                      ^
-    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
-    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
-    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 180: Interword spacing (`\ ') should perhaps be used.
-    This thesis template is designed for double sided printing (i.e. content on the front and back of pages) as most theses are printed and bound this way. Switching to one sided printing is as simple as uncommenting the \option{oneside} option of the \code{documentclass} command at the top of the \file{main.tex} file. You may then wish to adjust the margins to suit specifications from your institution.  
-                                                                    ^
-    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
-    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
-                                                                                                                                                                                                                                                                                                                                                             ^
-    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
-    The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
-    Warning 11 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 196: You should use \ldots to achieve an ellipsis.
-    Scientific references should come \emph{before} the punctuation mark if there is one (such as a comma or period). The same goes for footnotes\footnote{Such as this footnote, here down at the bottom of the page.}. You can change this but the most important thing is to keep the convention consistent throughout the thesis. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). The APA6 states: \enquote{Footnote numbers should be superscripted, [...], following any punctuation mark except a dash.} The Chicago manual of style states: \enquote{A note number should be placed at the end of a sentence or clause. The number follows any punctuation mark except the dash, which it precedes. It follows a closing parenthesis.}  
+❌ [ERROR] .devcontainer/scripts/initialize.sh
+    Error: File:[.devcontainer/scripts/initialize.sh] is not executable
+
+❌ [ERROR] .devcontainer/scripts/on-create.sh
+    Error: File:[.devcontainer/scripts/on-create.sh] is not executable
+
+❌ [ERROR] .devcontainer/scripts/post-attach.sh
+    Error: File:[.devcontainer/scripts/post-attach.sh] is not executable
+
+❌ [ERROR] .devcontainer/scripts/post-create.sh
+    Error: File:[.devcontainer/scripts/post-create.sh] is not executable
+
+❌ [ERROR] .devcontainer/scripts/post-start.sh
+    Error: File:[.devcontainer/scripts/post-start.sh] is not executable
+
+❌ [ERROR] .devcontainer/scripts/update-content.sh
+    Error: File:[.devcontainer/scripts/update-content.sh] is not executable
+
+✅ [SUCCESS] beacon/.staging/latex/Books/kaobook/compileall.sh
+✅ [SUCCESS] beacon/.staging/latex/Theses/kaobook/compileall.sh
+✅ [SUCCESS] egolint/scripts/latexindent.sh
+✅ [SUCCESS] egolint/scripts/megalinter.sh
+✅ [SUCCESS] egolint/scripts/pnpm.sh
+✅ [SUCCESS] egolint/scripts/precommit.sh
+✅ [SUCCESS] mantle/install.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/completion.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/config.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/doctor.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/env.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/fastfetch.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/help.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/install.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/path.sh
+✅ [SUCCESS] mantle/libexec/mantle/commands/version.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/addlicense.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/asdf.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/calibre.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/ceres-solver.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/crush.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/docker-desktop.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/dockerfmt.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/dust.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/e57format.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/eza.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/git-sim.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/gitinspector.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/google-fonts.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/httpie.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/image-optim.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/imagemagick.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/java.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/linuxbrew.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/lynis.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/mitmproxy.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/nerd-fonts.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/nfpm.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/pdal.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/pyenv.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/scc.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/shdoc.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/shfmt.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/sqlfluff.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/talisman.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/taskfile.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/terminus.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/typos.sh
+✅ [SUCCESS] mantle/libexec/mantle/installers/vale.sh
+```
+
+</details>
+
+<details>
+<summary>❌ LATEX / chktex - 67779 errors</summary>
+
+```
+keep the convention consistent throughout the thesis. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). The APA6 states: \enquote{Footnote numbers should be superscripted, [...], following any punctuation mark except a dash.} The Chicago manual of style states: \enquote{A note number should be placed at the end of a sentence or clause. The number follows any punctuation mark except the dash, which it precedes. It follows a closing parenthesis.}  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^^^
     Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
     The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
@@ -411,6 +447,69 @@ ing space (`~') should have been used.
     Warning 39 in beacon/.staging/latex/Title Pages/stylish-title-page/main.tex line 64: Double space found.
         \textcolor{Sienna}{\textit{\Huge The Book of \LaTeX ~Templates}}\\[\baselineskip] % Title  
                                                            ^
+
+❌ [ERROR] beacon/.staging/nih-grant-proposal/NIHGrant.tex
+    chktex: WARNING -- Could not find global resource file.
+    Warning 2 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 55: Non-breaking space (`~') should have been used.
+    This is an example citation \cite{Tatro2013}. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.  
+                               ^
+    Warning 44 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 118: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                \hline   
+                ^^^^^^
+    Warning 2 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 125: Non-breaking space (`~') should have been used.
+    Referencing a table using it's label: Table \ref{tab:example}. Maecenas consectetur metus at tellus finibus condimentum. Proin arcu lectus, ultrices non tincidunt et, tincidunt ut quam. Integer luctus posuere est, non maximus ante dignissim quis. Nunc a cursus erat. Curabitur suscipit nibh in tincidunt sagittis. Nam malesuada vestibulum quam id gravida. Proin ut dapibus velit. Vestibulum eget quam quis ipsum semper convallis. Duis consectetur nibh ac diam dignissim, id condimentum enim dictum. Nam aliquet ligula eu magna pellentesque, nec sagittis leo lobortis. Aenean tincidunt dignissim egestas. Morbi efficitur risus ante, id tincidunt odio pulvinar vitae. Proin ut dapibus velit. Vestibulum eget quam quis ipsum semper convallis. Duis consectetur nibh ac diam dignissim, id condimentum enim dictum.  
+                                               ^
+    Warning 2 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 137: Non-breaking space (`~') should have been used.
+    Referencing a figure using it's label: Figure \ref{fig:example}. Proin lobortis efficitur dictum. Pellentesque vitae pharetra eros, quis dignissim magna. Sed tellus leo, semper non vestibulum vel, tincidunt eu mi. Aenean pretium ut velit sed facilisis. Ut placerat urna facilisis dolor suscipit vehicula. Ut ut auctor nunc. Nulla non massa eros. Proin rhoncus arcu odio, eu lobortis metus sollicitudin eu. Duis maximus ex dui, id bibendum diam dignissim id. Aliquam quis lorem lorem. Phasellus sagittis aliquet dolor, vulputate cursus dolor convallis vel. Suspendisse eu tellus feugiat, bibendum lectus quis, fermentum nunc. Nunc euismod condimentum magna nec bibendum. Curabitur elementum nibh eu sem cursus, eu aliquam leo rutrum. Sed bibendum augue sit amet pharetra ullamcorper. Aenean congue sit amet tortor vitae feugiat. Vestibulum vestibulum luctus metus venenatis facilisis. Suspendisse iaculis augue at vehicula ornare. Sed vel eros ut velit fermentum porttitor sed sed massa. Fusce venenatis, metus a rutrum sagittis, enim ex maximus velit, id semper nisi velit eu purus.  
+                                                 ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 214: Use either `` or '' as an alternative to `"'.
+    List the titles and complete references to all appropriate publications, manuscripts accepted for publication, patents, and other printed materials that have resulted from the project since it was last reviewed competitively. When citing articles that fall under the Public Access Policy, were authored or co-authored by the applicant and arose from NIH support, provide the NIH Manuscript Submission reference number (e.g., NIHMS97531) or the Pubmed Central (PMC) reference number (e.g., PMCID234567) for each article. If the PMCID is not yet available because the Journal submits articles directly to PMC on behalf of their authors, indicate "PMC Journal -- In Process." A list of these journals is posted at: http://publicaccess.nih.gov/submit\_process\_journals.htm.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 214: Use either `` or '' as an alternative to `"'.
+    List the titles and complete references to all appropriate publications, manuscripts accepted for publication, patents, and other printed materials that have resulted from the project since it was last reviewed competitively. When citing articles that fall under the Public Access Policy, were authored or co-authored by the applicant and arose from NIH support, provide the NIH Manuscript Submission reference number (e.g., NIHMS97531) or the Pubmed Central (PMC) reference number (e.g., PMCID234567) for each article. If the PMCID is not yet available because the Journal submits articles directly to PMC on behalf of their authors, indicate "PMC Journal -- In Process." A list of these journals is posted at: http://publicaccess.nih.gov/submit\_process\_journals.htm.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 228: Use either `` or '' as an alternative to `"'.
+    This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form. If the answer is "No" to the question but the proposed research involves human specimens and/or data from subjects applicants must provide a justification in this section for the claim that no human subjects are involved.  
+                                                      ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 228: Use either `` or '' as an alternative to `"'.
+    This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form. If the answer is "No" to the question but the proposed research involves human specimens and/or data from subjects applicants must provide a justification in this section for the claim that no human subjects are involved.  
+                                                          ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 228: Use either `` or '' as an alternative to `"'.
+    This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form. If the answer is "No" to the question but the proposed research involves human specimens and/or data from subjects applicants must provide a justification in this section for the claim that no human subjects are involved.  
+                                                                            ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 228: Use either `` or '' as an alternative to `"'.
+    This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form. If the answer is "No" to the question but the proposed research involves human specimens and/or data from subjects applicants must provide a justification in this section for the claim that no human subjects are involved.  
+                                                                                                         ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 228: Use either `` or '' as an alternative to `"'.
+    This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form. If the answer is "No" to the question but the proposed research involves human specimens and/or data from subjects applicants must provide a justification in this section for the claim that no human subjects are involved.  
+                                                                                                                                                                        ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 228: Use either `` or '' as an alternative to `"'.
+    This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form. If the answer is "No" to the question but the proposed research involves human specimens and/or data from subjects applicants must provide a justification in this section for the claim that no human subjects are involved.  
+                                                                                                                                                                           ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 240: Use either `` or '' as an alternative to `"'.
+    Refer to Part II, Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan. This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form and the research does not fall under Exemption 4.  
+                                                                                                                                                                 ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 240: Use either `` or '' as an alternative to `"'.
+    Refer to Part II, Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan. This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form and the research does not fall under Exemption 4.  
+                                                                                                                                                                     ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 240: Use either `` or '' as an alternative to `"'.
+    Refer to Part II, Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan. This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form and the research does not fall under Exemption 4.  
+                                                                                                                                                                                       ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 240: Use either `` or '' as an alternative to `"'.
+    Refer to Part II, Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan. This section is required for applicants answering "yes" to the question "Are human subjects involved?" on the R\&R Other Project Information form and the research does not fall under Exemption 4.  
+                                                                                                                                                                                                                    ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 251: Use either `` or '' as an alternative to `"'.
+    Refer to Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan, Sections 4.4 and 5.7. For applicants answering "Yes" to the question "Are human subjects involved" on the R\&R Other Project Information Form and the research does not fall under Section 4, this section is required.  
+                                                                                                                                                     ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 251: Use either `` or '' as an alternative to `"'.
+    Refer to Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan, Sections 4.4 and 5.7. For applicants answering "Yes" to the question "Are human subjects involved" on the R\&R Other Project Information Form and the research does not fall under Section 4, this section is required.  
+                                                                                                                                                         ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 251: Use either `` or '' as an alternative to `"'.
+    Refer to Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan, Sections 4.4 and 5.7. For applicants answering "Yes" to the question "Are human subjects involved" on the R\&R Other Project Information Form and the research does not fall under Section 4, this section is required.  
+                                                                                                                                                                           ^
+    Warning 18 in beacon/.staging/nih-grant-proposal/NIHGrant.tex line 251: Use either `` or '' as an alternative to `"'.
+    Refer to Supplemental Instructions for Preparing the Human Subjects Section of the Research Plan, Sections 4.4 and 5.7. For applicants answering "Yes" to the question "Are human subjects involved" on the R\&R Other Project Information Form and the research does not fall under Section 4, this section is required.  
+                                                                                                                                                                                                       ^
 
 ❌ [ERROR] beacon/templates/research-paper/template.tex
     chktex: WARNING -- Could not find global resource file.
@@ -450,7 +549,7 @@ ing space (`~') should have been used.
 
 
 
-(Truncated to last 23529 characters out of 22918695)
+(Truncated to last 22857 characters out of 22933588)
 ```
 
 </details>
@@ -472,35 +571,7 @@ For more information, try '--help'.
 <summary>❌ EDITORCONFIG / editorconfig-checker - 1 error</summary>
 
 ```
-hitespace
-	289: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/press-release/fancyhdr.sty:
-	3: Trailing whitespace
-	30: Trailing whitespace
-	51: Trailing whitespace
-	105: Trailing whitespace
-	228: Trailing whitespace
-	341: Trailing whitespace
-	400: Trailing whitespace
-	474: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/press-release/press_release.tex:
-	Wrong line endings or no final newline
-	Not all lines have the correct end of line character
-beacon/.staging/latex/Miscellaneous/press-release/prsrls.tex:
-	Wrong line endings or no final newline
-beacon/.staging/latex/Miscellaneous/professional-table/table.tex:
-	Wrong line endings or no final newline
-	10: Trailing whitespace
-	16: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/ryo-menu/CSRyoMenu.cls:
-	103: Trailing whitespace
-	119: Trailing whitespace
-	121: Trailing whitespace
-	123: Trailing whitespace
-	125: Trailing whitespace
-	127: Trailing whitespace
-	129: Trailing whitespace
-beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:
+Fonts/SIL Open Font License.txt:
 	Wrong line endings or no final newline
 beacon/.staging/latex/Newsletters/professional-newsletter/newsletter_2.tex:
 	Wrong line endings or no final newline
@@ -1200,6 +1271,16 @@ beacon/.staging/latex/Title Pages/stylish-title-page/main.tex:
 	79: Trailing whitespace
 	83: Trailing whitespace
 	85: Trailing whitespace
+beacon/.staging/nih-grant-proposal/NIHGrant.bib:
+	23: Trailing whitespace
+beacon/.staging/nih-grant-proposal/NIHGrant.tex:
+	Wrong line endings or no final newline
+	64: Trailing whitespace
+	118: Trailing whitespace
+	248: Trailing whitespace
+beacon/.staging/nih-grant-proposal/nihunsrt.bst:
+	12: Trailing whitespace
+	594: Trailing whitespace
 holon/packs/react-vite/template/test-results/.last-run.json:
 	Wrong line endings or no final newline
 mantle/bin/list-vscode-language-ids:
@@ -1207,9 +1288,9 @@ mantle/bin/list-vscode-language-ids:
 notebooks/jupyter/.gitignore:
 	Wrong line endings or no final newline
 
-2779 errors found
+2786 errors found
 
-(Truncated to last 23529 characters out of 102419)
+(Truncated to last 22857 characters out of 102759)
 ```
 
 </details>
@@ -1233,7 +1314,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786936792029:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787001018066:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1274,7 +1355,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786936792029:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787001018066:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1314,7 +1395,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1786936792029:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787001018066:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1348,12 +1429,7 @@ holon/packs/react-vite/template/infra/docker/Dockerfile:9 DL3025 warning: Use ar
 <summary>❌ HTML / htmlhint - 356 errors</summary>
 
 ```
-L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</span><span class="code_opti...
-                   ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L121 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{The no...
-                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
-      L122 |  <br /><span class="tex_command">\annote</span><span class="code">[</span><span class="code_option">...
-                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+values must be in lowercase and split by a dash. (id-class-value)
       L122 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
                                                        ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
       L123 |  <br /><span class="tex_command">&nbsp;&nbsp;&nbsp;\add</span><span class="code">[</span><span class...
@@ -1641,9 +1717,9 @@ L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 17 files, found 356 errors in 11 files (111 ms)
+Scanned 17 files, found 356 errors in 11 files (105 ms)
 
-(Truncated to last 23529 characters out of 67003)
+(Truncated to last 22857 characters out of 67003)
 ```
 
 </details>
@@ -1776,16 +1852,7 @@ Cargo.toml failed for `.toml` rules: kebabcase | snakecase
 <summary>❌ SPELL / lychee - 193 errors</summary>
 
 ```
-ct/CONTRIBUTING.md (at 341:33) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/CONTRIBUTING.md (at 47:77) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/docs/architecture/README.md (at 201:5) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/docs/assets/banner-dark.svg (at 27:58) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/docs/assets/banner-light.svg (at 28:59) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/docs/assets/banner-light.svg (at 29:15) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/docs/assets/preview.png (at 51:2) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/docs/decisions (at 202:1) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/LICENSE (at 355:43) | File not found. Check if file exists and path is correct
-[ERROR] file://holon/packs/readme/templates/project/LICENSE (at 88:13) | File not found. Check if file exists and path is correct
+cks/readme/templates/project/LICENSE (at 88:13) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/project/SECURITY.md (at 314:1) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/project/SECURITY.md (at 337:29) | File not found. Check if file exists and path is correct
 [404] https://github.com/%7B%7BOWNER%7D%7D/%7B%7BREPOSITORY%7D%7D/actions/workflows/%7B%7BWORKFLOW_FILE%7D%7D (at 41:1) | Rejected status code: 404 Not Found
@@ -1822,6 +1889,18 @@ https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest
 Errors in mindgarden/contracts/publish-profile.schema.json
 [ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
 
+Redirects in mindgarden/contracts/publish-profile.schema.json
+https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
+
+
+Errors in package.json
+[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
+
+Redirects in package.json
+https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
+
+
 Errors in PURPOSE.md
 [ERROR] file://.staging/github/README.md (at 97:48) | File not found. Check if file exists and path is correct
 
@@ -1830,67 +1909,67 @@ Errors in README.md
 
 Errors in tests/fixtures/repository-intelligence-dashboard/megalinter/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
 
 Errors in tests/fixtures/repository-intelligence-dashboard/osv/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/101 (at 27:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Error (cached)
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Error (cached)
 [404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/osv (at 24:16) | Rejected status code: 404 Not Found
 
 Errors in tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json
 [404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Error (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Error (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Error (cached)
+[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Rejected status code: 404 Not Found
+[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Rejected status code: 404 Not Found
 
 📊 Per-host Statistics
 ---------------------
 
 Host: github.com
-  Total requests: 234
-  Successful: 208 (88.9%)
+  Total requests: 237
+  Successful: 211 (89.0%)
   Client errors (4xx): 26
-  Median response time: 377ms
-  Cache hit rate: 23.1%
-  Cache hits: 54, misses: 180
+  Median response time: 531ms
+  Cache hit rate: 23.6%
+  Cache hits: 56, misses: 181
 
 Host: json.schemastore.org
-  Total requests: 98
-  Successful: 98 (100.0%)
-  Median response time: 63ms
-  Cache hit rate: 88.8%
-  Cache hits: 87, misses: 11
+  Total requests: 99
+  Successful: 99 (100.0%)
+  Median response time: 130ms
+  Cache hit rate: 88.9%
+  Cache hits: 88, misses: 11
 
 Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 27ms
+  Median response time: 91ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
 Host: raw.githubusercontent.com
-  Total requests: 38
-  Successful: 37 (97.4%)
+  Total requests: 39
+  Successful: 38 (97.4%)
   Client errors (4xx): 1
-  Median response time: 44ms
-  Cache hit rate: 31.6%
-  Cache hits: 12, misses: 26
+  Median response time: 124ms
+  Cache hit rate: 30.8%
+  Cache hits: 12, misses: 27
 
 Host: img.shields.io
   Total requests: 26
   Successful: 26 (100.0%)
-  Median response time: 12ms
+  Median response time: 107ms
   Cache hit rate: 3.8%
   Cache hits: 1, misses: 25
 
 Host: json-schema.org
   Total requests: 23
   Successful: 23 (100.0%)
-  Median response time: 38ms
+  Median response time: 98ms
   Cache hit rate: 95.7%
   Cache hits: 22, misses: 1
 
@@ -1898,549 +1977,699 @@ Host: creativecommons.org
   Total requests: 15
   Successful: 14 (93.3%)
   Client errors (4xx): 1
-  Median response time: 139ms
+  Median response time: 256ms
   Cache hit rate: 66.7%
   Cache hits: 10, misses: 5
 
 Host: taskfile.dev
   Total requests: 13
   Successful: 13 (100.0%)
-  Median response time: 59ms
-  Cache hit rate: 66.7%
-  Cache hits: 10, misses: 5
+  Median response time: 188ms
+  Cache hit rate: 58.8%
+  Cache hits: 10, misses: 7
 
 Host: egohygiene.github.io
   Total requests: 12
   Successful: 6 (50.0%)
   Client errors (4xx): 6
-  Median response time: 12ms
+  Median response time: 73ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
 
 Host: www.schemastore.org
   Total requests: 12
   Successful: 12 (100.0%)
-  Median response time: 12ms
+  Median response time: 119ms
   Cache hit rate: 33.3%
   Cache hits: 4, misses: 8
 
 Host: www.overleaf.com
   Total requests: 11
   Successful: 11 (100.0%)
-  Median response time: 43ms
+  Median response time: 83ms
   Cache hit rate: 9.1%
   Cache hits: 1, misses: 10
-
-Host: sourceforge.net
-  Total requests: 9
-  Successful: 9 (100.0%)
-  Median response time: 410ms
-  Cache hit rate: 55.6%
-  Cache hits: 5, misses: 4
 
 Host: scripts.sil.org
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 199ms
+  Median response time: 669ms
   Cache hit rate: 88.9%
   Cache hits: 8, misses: 1
+
+Host: egohygiene.io
+  Total requests: 9
+  Successful: 7 (77.8%)
+  Client errors (4xx): 2
+  Median response time: 276ms
+  Cache hit rate: 77.8%
+  Cache hits: 7, misses: 2
+
+Host: sourceforge.net
+  Total requests: 9
+  Successful: 9 (100.0%)
+  Median response time: 346ms
+  Cache hit rate: 55.6%
+  Cache hits: 5, misses: 4
 
 Host: i.creativecommons.org
   Total requests: 8
   Successful: 8 (100.0%)
-  Median response time: 75ms
+  Median response time: 4062ms
   Cache hit rate: 87.5%
   Cache hits: 7, misses: 1
-
-Host: egohygiene.io
-  Total requests: 7
-  Successful: 5 (71.4%)
-  Client errors (4xx): 2
-  Median response time: 50ms
-  Cache hit rate: 71.4%
-  Cache hits: 5, misses: 2
-
-Host: docs.github.com
-  Total requests: 7
-  Successful: 5 (71.4%)
-  Client errors (4xx): 2
-  Median response time: 12ms
 
 Host: www.latextemplates.com
   Total requests: 7
   Successful: 4 (57.1%)
   Client errors (4xx): 3
-  Median response time: 26ms
+  Median response time: 151ms
   Cache hit rate: 42.9%
   Cache hits: 3, misses: 4
 
-Host: www.latex-project.org
-  Total requests: 6
-  Successful: 6 (100.0%)
-  Median response time: 101ms
-  Cache hit rate: 50.0%
-  Cache hits: 3, misses: 3
+Host: docs.github.com
+  Total requests: 7
+  Successful: 5 (71.4%)
+  Client errors (4xx): 2
+  Median response time: 178ms
 
 Host: jdujava.github.io
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 93ms
+  Median response time: 197ms
+  Cache hit rate: 50.0%
+  Cache hits: 3, misses: 3
+
+Host: www.latex-project.org
+  Total requests: 6
+  Successful: 6 (100.0%)
+  Median response time: 495ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
 
 Host: sflogo.sourceforge.net
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 180ms
+  Median response time: 85ms
   Cache hit rate: 66.7%
   Cache hits: 4, misses: 2
-
-Host: www.fontawesome.io
-  Total requests: 4
-  Successful: 4 (100.0%)
-  Median response time: 81ms
-  Cache hit rate: 75.0%
-  Cache hits: 3, misses: 1
 
 Host: api.github.com
   Total requests: 4
   Successful: 3 (75.0%)
   Client errors (4xx): 1
-  Median response time: 69ms
+  Median response time: 180ms
 
 Host: 3d.bk.tudelft.nl
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 311ms
+  Median response time: 614ms
   Cache hit rate: 50.0%
   Cache hits: 2, misses: 2
+
+Host: www.fontawesome.io
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 149ms
+  Cache hit rate: 75.0%
+  Cache hits: 3, misses: 1
 
 Host: www.apostrophiclab.com
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 300ms
+  Median response time: 460ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
 
-Host: developer.mozilla.org
+Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 169ms
-
-Host: vite.dev
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 33ms
+  Median response time: 159ms
 
 Host: www.checkov.io
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 25ms
+  Median response time: 140ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
 Host: api.star-history.com
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 104ms
+  Median response time: 362ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
-Host: www.ctan.org
+Host: vite.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 586ms
+  Median response time: 23ms
+
+Host: developer.mozilla.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 157ms
 
 Host: i.imgur.com
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 49ms
+  Median response time: 94ms
 
-Host: dart.dev
+Host: www.ctan.org
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 3ms
+  Median response time: 710ms
+
+Host: clang.llvm.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 107ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
 Host: developer.salesforce.com
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 30ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: reuse.software
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 482ms
-
-Host: typedoc.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 341ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: en.wikipedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 399ms
-
-Host: oss.anchore.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 58ms
-
-Host: femto-physique.fr
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 134ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.sharelatex.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 92ms
-
-Host: docs.ansible.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 49ms
-
-Host: tex.stackexchange.com
-  Total requests: 2
-  Successful: 0 (0.0%)
-  Client errors (4xx): 2
-  Median response time: 71ms
-
-Host: aquasecurity.github.io
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 31ms
-
-Host: www.cyrius.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 261ms
+  Median response time: 55ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: www.amazon.ca
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 32ms
+  Median response time: 116ms
 
-Host: commons.wikimedia.org
+Host: aquasecurity.github.io
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 178ms
+
+Host: web.archive.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 17ms
+  Median response time: 388ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: yamllint.readthedocs.io
+Host: typedoc.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 37ms
+  Median response time: 135ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: clang.llvm.org
+Host: tex.stackexchange.com
   Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 266ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: info.arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 38ms
+  Successful: 0 (0.0%)
+  Client errors (4xx): 2
+  Median response time: 228ms
 
 Host: arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 11ms
+  Median response time: 26ms
+
+Host: oss.anchore.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 128ms
 
 Host: eslint.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 27ms
+  Median response time: 80ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
+
+Host: reuse.software
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 610ms
+
+Host: femto-physique.fr
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 411ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: commons.wikimedia.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 191ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.sharelatex.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 211ms
+
+Host: info.arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 170ms
+
+Host: registry.npmjs.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 90ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: en.wikipedia.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 125ms
 
 Host: www.mff.cuni.cz
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 435ms
-
-Host: paypal.me
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 573ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+  Median response time: 504ms
 
 Host: prettier.io
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 229ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.vel.nz
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 654ms
+  Median response time: 139ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: unpkg.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 51ms
+  Median response time: 185ms
+
+Host: www.vel.nz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 546ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
 Host: ogp.me
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 46ms
+  Median response time: 48ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: web.archive.org
+Host: www.cyrius.com
   Total requests: 2
-  Successful: 0 (0.0%)
-  Server errors (5xx): 2
-  Median response time: 5101ms
+  Successful: 2 (100.0%)
+  Median response time: 410ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: github.blog
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 13ms
+Host: paypal.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 448ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: www.smashingmagazine.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 220ms
+Host: docs.ansible.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 75ms
 
-Host: turborepo.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 209ms
-
-Host: www.reddit.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 63ms
-
-Host: www.writelatex.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 91ms
-
-Host: biomejs.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 146ms
-
-Host: openapi.vercel.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 69ms
-
-Host: kiwiirc.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 381ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 756ms
-
-Host: web.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 185ms
-
-Host: realm.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 49ms
-
-Host: www.designtokens.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 204ms
-
-Host: www.grammarly.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 213ms
-
-Host: www.apache.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 67ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 33ms
+Host: yamllint.readthedocs.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 81ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
 Host: osv.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 306ms
+  Median response time: 59ms
 
-Host: rubystyle.guide
+Host: raku.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 91ms
+  Median response time: 1069ms
 
-Host: fonts.google.com
+Host: www.grammarly.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 293ms
+  Median response time: 244ms
 
-Host: www.ssw.com.au
+Host: www.writelatex.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 656ms
+  Median response time: 198ms
 
-Host: humanstxt.org
+Host: ls-lint.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 448ms
+  Median response time: 206ms
 
-Host: prowritingaid.com
+Host: recodehive.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 309ms
-
-Host: texdoc.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 2367ms
-
-Host: goss.rocks
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 71ms
-
-Host: cyclonedx.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 63ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 35ms
+  Median response time: 154ms
 
 Host: sahiljhawar.in
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 293ms
+  Median response time: 747ms
 
-Host: developercertificate.org
+Host: developer.apple.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 144ms
+  Median response time: 120ms
 
-Host: registry.npmjs.org
+Host: biomejs.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 29ms
+  Median response time: 295ms
+
+Host: kiwiirc.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 648ms
+
+Host: debarghyadas.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 80ms
+
+Host: api.scorecard.dev
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 200ms
+
+Host: install.python-poetry.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 118ms
 
 Host: www.indeed.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 28ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 211ms
+  Median response time: 103ms
 
 Host: stylelint.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 52ms
+  Median response time: 260ms
 
-Host: phpstan.org
+Host: img.youtube.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 32ms
+  Median response time: 140ms
 
-Host: licensebuttons.net
+Host: scancode-toolkit.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 10ms
+  Median response time: 345ms
 
-Host: clearlydefined.io
+Host: docs.rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 87ms
+  Median response time: 278ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 291ms
 
 Host: www.latofonts.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 503ms
+  Median response time: 894ms
 
-Host: rubocop.org
+Host: trivy.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 40ms
+  Median response time: 485ms
 
-Host: ls-lint.org
+Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 224ms
+  Median response time: 180ms
 
-Host: securityscorecards.dev
+Host: docker.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 75ms
+  Median response time: 117ms
 
-Host: install.python-poetry.org
+Host: www.designtokens.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 51ms
+  Median response time: 153ms
 
-Host: agentskills.io
+Host: protobuf.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 85ms
+  Median response time: 303ms
+
+Host: github.blog
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 598ms
+
+Host: psalm.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 208ms
+
+Host: openapi.vercel.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 104ms
 
 Host: checkstyle.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 29ms
+  Median response time: 151ms
 
-Host: trufflesecurity.com
+Host: rubystyle.guide
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 193ms
+  Median response time: 162ms
 
-Host: www.wnd.com
+Host: cyclonedx.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 190ms
+  Median response time: 154ms
 
-Host: dev.to
+Host: google.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 26ms
+  Median response time: 268ms
+
+Host: web.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 756ms
 
 Host: htmlhint.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 112ms
+  Median response time: 176ms
+
+Host: chris48s.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 146ms
+
+Host: www.wnd.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 116ms
+
+Host: www.hadilaksono.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 181ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 333ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 197ms
+
+Host: micahrich.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 326ms
+
+Host: mirrors.ctan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 632ms
+
+Host: www.paypal.me
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 834ms
+
+Host: realm.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 98ms
+
+Host: texdoc.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 2887ms
+
+Host: www.linkedin.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Median response time: 244ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 183ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 157ms
+
+Host: www.businessinsider.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 87ms
+
+Host: securityscorecards.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 189ms
+
+Host: developercertificate.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 300ms
+
+Host: turborepo.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 314ms
+
+Host: rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 147ms
+
+Host: www.apache.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 63ms
+
+Host: api.clearlydefined.io
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 387ms
+
+Host: fontawesome.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 140ms
+
+Host: git-lfs.github.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 150ms
+
+Host: v3.tailwindcss.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 150ms
+
+Host: www.ssw.com.au
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 584ms
+
+Host: quartz.jzhao.xyz
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 179ms
+
+Host: enhancv.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 75ms
+
+Host: resumake.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 291ms
+
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1173ms
+
+Host: clearlydefined.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 390ms
+
+Host: dev.to
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 32ms
+
+Host: www.smashingmagazine.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 377ms
+
+Host: humanstxt.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 755ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 275ms
+
+Host: semver.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 44ms
+
+Host: www.reddit.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 40ms
+
+Host: thetechresume.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 468ms
+
+Host: www.nongnu.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 329ms
+
+Host: www.tylerfinck.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 2162ms
+
+Host: pnpm.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 120ms
 
 Host: apostrophiclab.pedroreina.net
   Total requests: 1
@@ -2448,209 +2677,71 @@ Host: apostrophiclab.pedroreina.net
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: scancode-toolkit.readthedocs.io
+Host: fonts.google.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 128ms
-
-Host: zizmor.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 52ms
-
-Host: api.scorecard.dev
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 130ms
-
-Host: www.rubyschema.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 78ms
-
-Host: www.linkedin.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Median response time: 197ms
-
-Host: v3.tailwindcss.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 81ms
-
-Host: resumake.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 101ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 192ms
-
-Host: img.youtube.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 35ms
-
-Host: fontawesome.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 59ms
-
-Host: micahrich.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 447ms
+  Median response time: 490ms
 
 Host: autofix.ci
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 77ms
+  Median response time: 373ms
 
-Host: recodehive.github.io
+Host: www.rubyschema.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 121ms
+  Median response time: 167ms
 
-Host: hemingwayapp.com
+Host: goss.rocks
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 123ms
-
-Host: api.clearlydefined.io
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 53ms
-
-Host: www.tylerfinck.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1306ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 180ms
-
-Host: ansible.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 197ms
-
-Host: golangci-lint.run
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 73ms
-
-Host: thetechresume.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 186ms
-
-Host: trivy.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 63ms
-
-Host: developer.apple.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 135ms
-
-Host: debarghyadas.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 433ms
-
-Host: www.paypal.me
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 547ms
-
-Host: docs.rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 54ms
-
-Host: mirrors.ctan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 509ms
-
-Host: chris48s.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 31ms
-
-Host: www.businessinsider.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 27ms
-
-Host: www.hadilaksono.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 358ms
-
-Host: www.chrisbehr.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 119ms
-
-Host: enhancv.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 23ms
-
-Host: google.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 36ms
-
-Host: semver.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 15ms
-
-Host: quartz.jzhao.xyz
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 77ms
+  Median response time: 166ms
 
 Host: tug.ctan.org
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 377ms
+  Median response time: 145ms
 
-Host: pnpm.io
+Host: prowritingaid.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 72ms
+  Median response time: 143ms
 
-Host: git-lfs.github.com
+Host: hemingwayapp.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 50ms
+  Median response time: 159ms
+
+Host: ansible.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 423ms
 
 Host: www.tilburgsciencehub.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 741ms
+  Median response time: 1354ms
 
-Host: docker.com
+Host: www.chrisbehr.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 56ms
+  Median response time: 220ms
 
-Host: 2by22.blog
+Host: phpstan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 38ms
+
+Host: egohygiene.dev
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: egohygiene.dev
+Host: www.youtube.com
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: 2by22.blog
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2662,19 +2753,11 @@ Host: github
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: www.youtube.com
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: www.nongnu.org
-  Total requests: 0
-  Successful: 0 (100.0%)
-
 Host: x-access-token
   Total requests: 0
   Successful: 0 (100.0%)
 
-(Truncated to last 23529 characters out of 203949)
+(Truncated to last 22857 characters out of 204329)
 ```
 
 </details>
@@ -2683,11 +2766,7 @@ Host: x-access-token
 <summary>❌ MARKDOWN / markdownlint - 400 errors</summary>
 
 ```
-ata-science-tech-resume-template/README.md:33:17 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:35:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/xiazeyu"]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:36:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/iamgmujtaba"]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:37:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/alejlatorre"]
-beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:41 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+Resumes/data-science-tech-resume-template/README.md:41 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
 beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:12 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
 beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:584 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:18 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
@@ -2859,7 +2938,7 @@ beacon/.staging/latex/Theses/kaobook/README.md:226:68 error MD009/no-trailing-sp
 beacon/.staging/latex/Theses/kaobook/README.md:236:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailing-newline Files should end with a single newline character
 
-(Truncated to last 23529 characters out of 54345)
+(Truncated to last 22857 characters out of 54345)
 ```
 
 </details>
@@ -3039,6 +3118,37 @@ Found 34 errors in 3 files (checked 44 source files)
 </details>
 
 <details>
+<summary>❌ JSON / npm-package-json-lint - 1 error</summary>
+
+```
+./package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/tests/fixtures/knip/package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/tests/fixtures/negative/knip/package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/tests/fixtures/negative/v8r/package.json
+ERROR version-format - node: version - Format must be a valid semantic version
+ERROR version-type - node: version - Type should be a string
+2 errors
+
+Totals
+6 errors
+```
+
+</details>
+
+<details>
 <summary>❌ JSON / prettier - 1 error</summary>
 
 ```
@@ -3175,19 +3285,7 @@ Checking formatting...
 <summary>❌ PYTHON / ruff - 767 errors</summary>
 
 ```
-/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1005:31
-     |
-1003 |                     elif trackchanges_main.current_action == 'cancel':
-1004 |                         self.emit(QtCore.SIGNAL('cancel'))
-1005 |                         return              
-     |                               ^^^^^^^^^^^^^^
-1006 |                     elif self.command in trackchanges_main.command_names:
-1007 |                         trackchanges_main.search_position = span_full[1]
-     |
-help: Remove trailing whitespace
-
-W291 Trailing whitespace
-    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1128:58
+n/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1128:58
      |
 1126 |         self.connect(self.text_main
 1127 |                      ,QtCore.SIGNAL('textChangedByUser')
@@ -3819,7 +3917,7 @@ help: Remove `print`
 Found 767 errors.
 [*] 44 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
 
-(Truncated to last 23529 characters out of 369317)
+(Truncated to last 22857 characters out of 369317)
 ```
 
 </details>
@@ -3828,23 +3926,7 @@ Found 767 errors.
 <summary>❌ PYTHON / ruff-format - 1 error</summary>
 
 ```
-- 		for s in removeSegments:
-    - 			s.hide()
-    - 	
-    - 	def keepRemovedText(self, removeSegments):
-    - 		"""removes the command but leaves the element removedText ..."""
-    - 		for s in removeSegments:
-    - 			if s.type in ("removeCommand", "initials", "startBrace", "endBrace"):
-    - 				s.hide()
-    - 	
-    - 	def keepNewText(self, changeSegments):
-    - 		"""keeps only the new text of a change command: removes all but the newText segment"""
-    - 		for s in changeSegments:
-    - 			if s.type in ("changeCommand", "initials", "originalText", "startBrace", "endBrace"):
-    - 				s.hide()
-    - 	
-    - 	def keepOriginalText(self, changeSegments):
-    - 		"""keeps only the original text of a change command: removes all but the originalText segment"""
+"""keeps only the original text of a change command: removes all but the originalText segment"""
     - 		for s in changeSegments:
     - 			if s.type in ("changeCommand", "initials", "newText", "startBrace", "endBrace"):
     - 				s.hide()
@@ -4324,7 +4406,7 @@ unformatted: File would be reformatted
 
 5 files would be reformatted, 51 files already formatted
 
-(Truncated to last 23529 characters out of 27680)
+(Truncated to last 22857 characters out of 27680)
 ```
 
 </details>
@@ -4333,193 +4415,803 @@ unformatted: File would be reformatted
 <summary>❌ REPOSITORY / secretlint - 1 error</summary>
 
 ```
-[secretlint] Timed out after 300 seconds and was killed (LINTER_TIMEOUT_SECONDS (default)=300). Partial output above if any. If this repository legitimately needs more time, increase the value with REPOSITORY_SECRETLINT_TIMEOUT_SECONDS or LINTER_TIMEOUT_SECONDS (0 disables the timeout); a timeout with very low CPU usage usually means an I/O stall (e.g. workspace bind-mounted from Windows into a WSL2-backed container engine).
+.staging/.github/skills/mcp-security-audit/SKILL.md
+  102:19  error  [PostgreSQLConnection] found PostgreSQL connection string: *************************************************  @secretlint/secretlint-rule-preset-recommend > @secretlint/secretlint-rule-database-connection-string
+
+✖ 1 problem (1 error, 0 warnings, 0 infos)
 ```
 
 </details>
 
 <details>
-<summary>❌ BASH / shellcheck - 16 errors</summary>
+<summary>❌ BASH / shfmt - 6 errors</summary>
 
 ```
-In .devcontainer/scripts/initialize.sh line 17:
-readonly SCRIPT_NAME="${BASH_SOURCE[0]##*/}"
-         ^---------^ SC2034 (warning): SCRIPT_NAME appears unused. Verify use (or export if used externally).
-
-
-In .devcontainer/scripts/initialize.sh line 155:
-  log "Running hook: ${hook#$REPO_ROOT/}"
-                            ^--------^ SC2295 (info): Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.
-
-Did you mean:
-  log "Running hook: ${hook#"$REPO_ROOT"/}"
-
-
-In .devcontainer/scripts/initialize.sh line 165:
-    die "Hook failed: ${hook#$REPO_ROOT/}"
-                             ^--------^ SC2295 (info): Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.
-
-Did you mean:
-    die "Hook failed: ${hook#"$REPO_ROOT"/}"
-
-
-In .devcontainer/scripts/initialize.sh line 168:
-  warn "Hook failed; continuing: ${hook#$REPO_ROOT/}"
-                                        ^--------^ SC2295 (info): Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.
-
-Did you mean:
-  warn "Hook failed; continuing: ${hook#"$REPO_ROOT"/}"
-
-
-In .devcontainer/scripts/initialize.sh line 169:
-  CURRENT_HOOK=""
-  ^----------^ SC2034 (warning): CURRENT_HOOK appears unused. Verify use (or export if used externally).
-
-
-In .devcontainer/scripts/post-create.sh line 11:
-// Example: Install Python dependencies with Poetry
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/post-create.sh line 12:
-// "install-python-deps": ["poetry", "install", "--no-root"],
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/post-create.sh line 14:
-// Example: Install Node.js dependencies
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/post-create.sh line 15:
-// "install-node-deps": ["npm", "install"],
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/post-create.sh line 17:
-// Example: Run database migrations
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/post-create.sh line 18:
-// "migrate-db": ["python", "manage.py", "migrate"]
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/post-start.sh line 1:
-"welcome": ["echo", "🚀 Development ${devcontainerId} container started successfully!"]
-                                   ^---------------^ SC2154 (warning): devcontainerId is referenced but not assigned.
-
-
-In .devcontainer/scripts/update-content.sh line 4:
-// Example: Reinstall Python dependencies
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/update-content.sh line 5:
-// "install-deps": ["pip", "install", "-r", "requirements.txt"],
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/update-content.sh line 7:
-// Example: Rebuild project after content changes
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-
-In .devcontainer/scripts/update-content.sh line 8:
-// "rebuild": ["npm", "run", "build"]
-^-- SC1127 (error): Was this intended as a comment? Use # in sh.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1127 -- Was this intended as a comment? U...
-  https://www.shellcheck.net/wiki/SC2034 -- CURRENT_HOOK appears unused. Veri...
-  https://www.shellcheck.net/wiki/SC2154 -- devcontainerId is referenced but ...
-```
-
-</details>
-
-<details>
-<summary>❌ BASH / shfmt - 3 errors</summary>
-
-```
-diff .devcontainer/scripts/initialize.sh.orig .devcontainer/scripts/initialize.sh
---- .devcontainer/scripts/initialize.sh.orig
-+++ .devcontainer/scripts/initialize.sh
-@@ -80,8 +80,8 @@
-   local script_directory
- 
-   script_directory="$(
--    cd -- "$(dirname -- "${BASH_SOURCE[0]}")" \
--      && pwd -P
-+    cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &&
-+      pwd -P
-   )"
- 
-   cd -- "$script_directory/../.." && pwd -P
-@@ -104,7 +104,7 @@
-   local directory="${1:?Directory path is required}"
-   local path_entry
- 
--  IFS=":" read -r -a path_entries <<< "${PATH:-}"
-+  IFS=":" read -r -a path_entries <<<"${PATH:-}"
-   for path_entry in "${path_entries[@]}"; do
-     [ "$path_entry" = "$directory" ] && return 0
-   done
-@@ -188,8 +188,8 @@
-       -maxdepth 1 \
-       -type f \
-       -name "*.sh" \
--      -print0 \
--      | LC_ALL=C sort -z
-+      -print0 |
-+      LC_ALL=C sort -z
-   )
+RUNTIME_CONTAINER_ID="${1#*=}"
++      ;;
++    --dry-run)
++      DRY_RUN=1
++      ;;
++    --verbose)
++      VERBOSE=1
++      ;;
++    --help)
++      print_usage
++      exit 0
++      ;;
++    --)
++      shift
++      break
++      ;;
++    -*)
++      usage_error "Unknown option: $1"
++      ;;
++    *)
++      usage_error "Unexpected positional argument: $1"
++      ;;
++    esac
++
++    shift
++  done
++
++  if (($# > 0)); then
++    usage_error "Unexpected positional argument: $1"
++  fi
  }
  
-@@ -198,18 +198,21 @@
-   local detected=()
- 
-   [ -f "$REPO_ROOT/package.json" ] && detected+=("Node.js")
--  [ -f "$REPO_ROOT/pyproject.toml" ] \
--    || [ -f "$REPO_ROOT/requirements.txt" ] \
--    || [ -f "$REPO_ROOT/setup.py" ] \
--    && detected+=("Python")
-+  [ -f "$REPO_ROOT/pyproject.toml" ] ||
-+    [ -f "$REPO_ROOT/requirements.txt" ] ||
-+    [ -f "$REPO_ROOT/setup.py" ] &&
-+    detected+=("Python")
-   [ -f "$REPO_ROOT/Cargo.toml" ] && detected+=("Rust")
-   [ -f "$REPO_ROOT/go.mod" ] && detected+=("Go")
--  [ -f "$REPO_ROOT/compose.yaml" ] \
--    || [ -f "$REPO_ROOT/docker-compose.yml" ] \
--    && detected+=("Docker Compose")
-+  [ -f "$REPO_ROOT/compose.yaml" ] ||
-+    [ -f "$REPO_ROOT/docker-compose.yml" ] &&
-+    detected+=("Docker Compose")
- 
-   if [ "${#detected[@]}" -gt 0 ]; then
--    log "Detected project tooling: $(IFS=", "; printf "%s" "${detected[*]}")"
-+    log "Detected project tooling: $(
-+      IFS=", "
-+      printf "%s" "${detected[*]}"
-+    )"
-   else
-     log "No common project manifest detected."
-   fi
-diff .devcontainer/scripts/on-create.sh.orig .devcontainer/scripts/on-create.sh
---- .devcontainer/scripts/on-create.sh.orig
-+++ .devcontainer/scripts/on-create.sh
-@@ -0,0 +1,1 @@
+ ##
+@@ -362,14 +362,14 @@
+ #   $2 - Identifier value.
+ ##
+ validate_identifier() {
+-    local label="${1:?Identifier label is required}"
+-    local value="${2:-}"
+-
+-    case "$value" in
+-        *$'\n'* | *$'\r'*)
+-            usage_error "$label must not contain line breaks."
+-            ;;
+-    esac
++  local label="${1:?Identifier label is required}"
++  local value="${2:-}"
 +
-diff .devcontainer/scripts/update-content.sh.orig .devcontainer/scripts/update-content.sh
---- .devcontainer/scripts/update-content.sh.orig
-+++ .devcontainer/scripts/update-content.sh
-@@ -1,6 +1,3 @@
++  case "$value" in
++  *$'\n'* | *$'\r'*)
++    usage_error "$label must not contain line breaks."
++    ;;
++  esac
+ }
+ 
+ ##
+@@ -376,12 +376,12 @@
+ # Validates and normalizes the optional Dev Container identifier.
+ ##
+ normalize_devcontainer_id() {
+-    if [[ $DEVCONTAINER_ID == "\${devcontainerId}" ]]; then
+-        print_warning "The devcontainerId substitution was not resolved by this implementation."
+-        DEVCONTAINER_ID=""
+-    fi
 -
+-    validate_identifier "The Dev Container ID" "$DEVCONTAINER_ID"
++  if [[ $DEVCONTAINER_ID == "\${devcontainerId}" ]]; then
++    print_warning "The devcontainerId substitution was not resolved by this implementation."
++    DEVCONTAINER_ID=""
++  fi
++
++  validate_identifier "The Dev Container ID" "$DEVCONTAINER_ID"
+ }
+ 
+ # -----------------------------------------------------------------------------
+@@ -398,12 +398,12 @@
+ #   Writes the resolved path to stdout.
+ ##
+ resolve_directory() {
+-    local directory="${1:?Directory path is required}"
 -
+-    (
+-        cd -- "$directory"
+-        pwd -P
+-    )
++  local directory="${1:?Directory path is required}"
++
++  (
++    cd -- "$directory"
++    pwd -P
++  )
+ }
+ 
+ ##
+@@ -410,16 +410,16 @@
+ # Resolves the script directory and repository root.
+ ##
+ resolve_paths() {
+-    SCRIPT_DIRECTORY="$(resolve_directory "$(dirname "${BASH_SOURCE[0]}")")"
 -
- // Example: Reinstall Python dependencies
- // "install-deps": ["pip", "install", "-r", "requirements.txt"],
+-    if [[ -n ${DEVCONTAINER_REPO_ROOT:-} ]]; then
+-        REPO_ROOT="$(resolve_directory "$DEVCONTAINER_REPO_ROOT")"
+-    else
+-        REPO_ROOT="$(resolve_directory "$SCRIPT_DIRECTORY/../..")"
+-    fi
+-
+-    [[ -d $REPO_ROOT/$DEVCONTAINER_DIRECTORY ]] ||
+-        print_warning "Expected Dev Container directory not found: $REPO_ROOT/$DEVCONTAINER_DIRECTORY"
++  SCRIPT_DIRECTORY="$(resolve_directory "$(dirname "${BASH_SOURCE[0]}")")"
++
++  if [[ -n ${DEVCONTAINER_REPO_ROOT:-} ]]; then
++    REPO_ROOT="$(resolve_directory "$DEVCONTAINER_REPO_ROOT")"
++  else
++    REPO_ROOT="$(resolve_directory "$SCRIPT_DIRECTORY/../..")"
++  fi
++
++  [[ -d $REPO_ROOT/$DEVCONTAINER_DIRECTORY ]] ||
++    print_warning "Expected Dev Container directory not found: $REPO_ROOT/$DEVCONTAINER_DIRECTORY"
+ }
+ 
+ ##
+@@ -426,24 +426,24 @@
+ # Resolves the runtime container identifier when one was not supplied.
+ ##
+ resolve_runtime_container_id() {
+-    if [[ -n $RUNTIME_CONTAINER_ID ]]; then
+-        validate_identifier "The runtime container ID" "$RUNTIME_CONTAINER_ID"
+-        return 0
+-    fi
+-
+-    if [[ -r /etc/hostname ]]; then
+-        IFS= read -r RUNTIME_CONTAINER_ID < /etc/hostname || true
+-    fi
+-
+-    if [[ -z $RUNTIME_CONTAINER_ID ]] && command -v hostname > /dev/null 2>&1; then
+-        RUNTIME_CONTAINER_ID="$(hostname 2> /dev/null || true)"
+-    fi
+-
+-    if [[ -z $RUNTIME_CONTAINER_ID && -n ${HOSTNAME:-} ]]; then
+-        RUNTIME_CONTAINER_ID="$HOSTNAME"
+-    fi
+-
++  if [[ -n $RUNTIME_CONTAINER_ID ]]; then
+     validate_identifier "The runtime container ID" "$RUNTIME_CONTAINER_ID"
++    return 0
++  fi
++
++  if [[ -r /etc/hostname ]]; then
++    IFS= read -r RUNTIME_CONTAINER_ID </etc/hostname || true
++  fi
++
++  if [[ -z $RUNTIME_CONTAINER_ID ]] && command -v hostname >/dev/null 2>&1; then
++    RUNTIME_CONTAINER_ID="$(hostname 2>/dev/null || true)"
++  fi
++
++  if [[ -z $RUNTIME_CONTAINER_ID && -n ${HOSTNAME:-} ]]; then
++    RUNTIME_CONTAINER_ID="$HOSTNAME"
++  fi
++
++  validate_identifier "The runtime container ID" "$RUNTIME_CONTAINER_ID"
+ }
+ 
+ ##
+@@ -453,14 +453,14 @@
+ #   $1 - Directory to add.
+ ##
+ prepend_path_once() {
+-    local directory="${1:?Directory path is required}"
+-
+-    case ":${PATH:-}:" in
+-        *":$directory:"*) ;;
+-        *) PATH="$directory${PATH:+:$PATH}" ;;
+-    esac
+-
+-    export PATH
++  local directory="${1:?Directory path is required}"
++
++  case ":${PATH:-}:" in
++  *":$directory:"*) ;;
++  *) PATH="$directory${PATH:+:$PATH}" ;;
++  esac
++
++  export PATH
+ }
+ 
+ ##
+@@ -467,27 +467,27 @@
+ # Configures the environment inherited by repository-specific hooks.
+ ##
+ configure_environment() {
+-    : "${HOME:?HOME must be set for the Dev Container update-content lifecycle}"
+-
+-    export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+-    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+-    export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+-    export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+-
+-    UPDATE_STATE_DIRECTORY="$XDG_STATE_HOME/$UPDATE_STATE_DIRECTORY_NAME"
+-    UPDATE_MARKER_FILE="$UPDATE_STATE_DIRECTORY/$UPDATE_MARKER_NAME"
+-
+-    export DEVCONTAINER_ID
+-    export DEVCONTAINER_RUNTIME_ID="$RUNTIME_CONTAINER_ID"
+-    export DEVCONTAINER_LIFECYCLE="update-content"
+-    export DEVCONTAINER_REPO_ROOT="$REPO_ROOT"
+-    export DEVCONTAINER_SCRIPT_DIRECTORY="$SCRIPT_DIRECTORY"
+-
+-    prepend_path_once "$HOME/.local/bin"
+-    prepend_path_once "$HOME/bin"
+-
+-    print_debug "Platform: $(uname -s 2> /dev/null || printf "unknown")/$(uname -m 2> /dev/null || printf "unknown")"
+-    print_debug "PATH: $PATH"
++  : "${HOME:?HOME must be set for the Dev Container update-content lifecycle}"
++
++  export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
++  export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
++  export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
++  export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
++
++  UPDATE_STATE_DIRECTORY="$XDG_STATE_HOME/$UPDATE_STATE_DIRECTORY_NAME"
++  UPDATE_MARKER_FILE="$UPDATE_STATE_DIRECTORY/$UPDATE_MARKER_NAME"
++
++  export DEVCONTAINER_ID
++  export DEVCONTAINER_RUNTIME_ID="$RUNTIME_CONTAINER_ID"
++  export DEVCONTAINER_LIFECYCLE="update-content"
++  export DEVCONTAINER_REPO_ROOT="$REPO_ROOT"
++  export DEVCONTAINER_SCRIPT_DIRECTORY="$SCRIPT_DIRECTORY"
++
++  prepend_path_once "$HOME/.local/bin"
++  prepend_path_once "$HOME/bin"
++
++  print_debug "Platform: $(uname -s 2>/dev/null || printf "unknown")/$(uname -m 2>/dev/null || printf "unknown")"
++  print_debug "PATH: $PATH"
+ }
+ 
+ # -----------------------------------------------------------------------------
+@@ -498,17 +498,17 @@
+ # Validates basic workspace and home-directory expectations.
+ ##
+ validate_environment() {
+-    [[ -d $REPO_ROOT ]] || die "Repository root does not exist: $REPO_ROOT"
+-    [[ -r $REPO_ROOT ]] || die "Repository root is not readable: $REPO_ROOT"
+-    [[ -d $HOME ]] || die "Home directory does not exist: $HOME"
+-
+-    if [[ ! -w $REPO_ROOT ]]; then
+-        print_warning "Repository root is not writable: $REPO_ROOT"
+-    fi
+-
+-    if [[ ! -w $HOME ]]; then
+-        print_warning "Home directory is not writable: $HOME"
+-    fi
++  [[ -d $REPO_ROOT ]] || die "Repository root does not exist: $REPO_ROOT"
++  [[ -r $REPO_ROOT ]] || die "Repository root is not readable: $REPO_ROOT"
++  [[ -d $HOME ]] || die "Home directory does not exist: $HOME"
++
++  if [[ ! -w $REPO_ROOT ]]; then
++    print_warning "Repository root is not writable: $REPO_ROOT"
++  fi
++
++  if [[ ! -w $HOME ]]; then
++    print_warning "Home directory is not writable: $HOME"
++  fi
+ }
+ 
+ ##
+@@ -519,25 +519,25 @@
+ #   $2 - Optional directory mode. Defaults to 0755.
+ ##
+ ensure_directory() {
+-    local directory="${1:?Directory path is required}"
+-    local mode="${2:-0755}"
+-
+-    if [[ -d $directory ]]; then
+-        print_debug "Directory already exists: $directory"
+-        return 0
+-    fi
+-
+-    if ((DRY_RUN == 1)); then
+-        print_status "Would create directory: $directory"
+-        return 0
+-    fi
+-
+-    print_status "Creating directory: $directory"
+-    mkdir -p "$directory"
+-
+-    if ! chmod "$mode" "$directory" 2> /dev/null; then
+-        print_warning "Could not set mode $mode on directory: $directory"
+-    fi
++  local directory="${1:?Directory path is required}"
++  local mode="${2:-0755}"
++
++  if [[ -d $directory ]]; then
++    print_debug "Directory already exists: $directory"
++    return 0
++  fi
++
++  if ((DRY_RUN == 1)); then
++    print_status "Would create directory: $directory"
++    return 0
++  fi
++
++  print_status "Creating directory: $directory"
++  mkdir -p "$directory"
++
++  if ! chmod "$mode" "$directory" 2>/dev/null; then
++    print_warning "Could not set mode $mode on directory: $directory"
++  fi
+ }
+ 
+ ##
+@@ -544,14 +544,14 @@
+ # Creates baseline user-local and repository-local directories.
+ ##
+ create_required_directories() {
+-    ensure_directory "$HOME/.local/bin"
+-    ensure_directory "$XDG_CACHE_HOME"
+-    ensure_directory "$XDG_CONFIG_HOME"
+-    ensure_directory "$XDG_DATA_HOME"
+-    ensure_directory "$XDG_STATE_HOME"
+-    ensure_directory "$UPDATE_STATE_DIRECTORY" 0700
+-    ensure_directory "$REPO_ROOT/.cache" 0775
+-    ensure_directory "$REPO_ROOT/.tmp" 0775
++  ensure_directory "$HOME/.local/bin"
++  ensure_directory "$XDG_CACHE_HOME"
++  ensure_directory "$XDG_CONFIG_HOME"
++  ensure_directory "$XDG_DATA_HOME"
++  ensure_directory "$XDG_STATE_HOME"
++  ensure_directory "$UPDATE_STATE_DIRECTORY" 0700
++  ensure_directory "$REPO_ROOT/.cache" 0775
++  ensure_directory "$REPO_ROOT/.tmp" 0775
+ }
+ 
+ ##
+@@ -558,19 +558,19 @@
+ # Captures lightweight Git metadata for the completion marker.
+ ##
+ capture_repository_state() {
+-    local status_output
+-
+-    command -v git > /dev/null 2>&1 || return 0
+-    git -C "$REPO_ROOT" rev-parse --is-inside-work-tree > /dev/null 2>&1 || return 0
+-
+-    GIT_COMMIT="$(git -C "$REPO_ROOT" rev-parse HEAD 2> /dev/null || true)"
+-    status_output="$(git -C "$REPO_ROOT" status --porcelain 2> /dev/null || true)"
+-
+-    if [[ -n $status_output ]]; then
+-        GIT_DIRTY="true"
+-    else
+-        GIT_DIRTY="false"
+-    fi
++  local status_output
++
++  command -v git >/dev/null 2>&1 || return 0
++  git -C "$REPO_ROOT" rev-parse --is-inside-work-tree >/dev/null 2>&1 || return 0
++
++  GIT_COMMIT="$(git -C "$REPO_ROOT" rev-parse HEAD 2>/dev/null || true)"
++  status_output="$(git -C "$REPO_ROOT" status --porcelain 2>/dev/null || true)"
++
++  if [[ -n $status_output ]]; then
++    GIT_DIRTY="true"
++  else
++    GIT_DIRTY="false"
++  fi
+ }
+ 
+ ##
+@@ -577,18 +577,18 @@
+ # Calculates the next successful update-content run number.
+ ##
+ calculate_run_count() {
+-    local previous_count=""
+-
+-    [[ -f $UPDATE_MARKER_FILE ]] || return 0
+-
+-    previous_count="$(
+-        awk -F= '$1 == "run_count" { print $2; exit }' \
+-            "$UPDATE_MARKER_FILE" 2> /dev/null || true
+-    )"
+-
+-    if [[ $previous_count =~ ^[0-9]+$ ]]; then
+-        UPDATE_RUN_COUNT=$((previous_count + 1))
+-    fi
++  local previous_count=""
++
++  [[ -f $UPDATE_MARKER_FILE ]] || return 0
++
++  previous_count="$(
++    awk -F= '$1 == "run_count" { print $2; exit }' \
++      "$UPDATE_MARKER_FILE" 2>/dev/null || true
++  )"
++
++  if [[ $previous_count =~ ^[0-9]+$ ]]; then
++    UPDATE_RUN_COUNT=$((previous_count + 1))
++  fi
+ }
+ 
+ ##
+@@ -595,35 +595,35 @@
+ # Reports the effective user, container, and repository identifiers.
+ ##
+ report_runtime_context() {
+-    local user_name
+-    local user_id
+-    local group_name
+-    local group_id
+-
+-    user_name="$(id -un 2> /dev/null || printf "unknown")"
+-    user_id="$(id -u 2> /dev/null || printf "unknown")"
+-    group_name="$(id -gn 2> /dev/null || printf "unknown")"
+-    group_id="$(id -g 2> /dev/null || printf "unknown")"
+-
+-    print_status "Container user: $user_name (uid=$user_id, gid=$group_id, group=$group_name)"
+-
+-    if [[ -n $DEVCONTAINER_ID ]]; then
+-        print_status "Dev Container ID: $DEVCONTAINER_ID"
+-    else
+-        print_status "Dev Container ID: unavailable"
+-    fi
+-
+-    if [[ -n $RUNTIME_CONTAINER_ID ]]; then
+-        print_status "Runtime container ID: $RUNTIME_CONTAINER_ID"
+-    else
+-        print_status "Runtime container ID: unavailable"
+-    fi
+-
+-    if [[ -n $GIT_COMMIT ]]; then
+-        print_status "Git content state: commit=$GIT_COMMIT, dirty=$GIT_DIRTY"
+-    fi
+-
+-    print_status "Update-content run: $UPDATE_RUN_COUNT"
++  local user_name
++  local user_id
++  local group_name
++  local group_id
++
++  user_name="$(id -un 2>/dev/null || printf "unknown")"
++  user_id="$(id -u 2>/dev/null || printf "unknown")"
++  group_name="$(id -gn 2>/dev/null || printf "unknown")"
++  group_id="$(id -g 2>/dev/null || printf "unknown")"
++
++  print_status "Container user: $user_name (uid=$user_id, gid=$group_id, group=$group_name)"
++
++  if [[ -n $DEVCONTAINER_ID ]]; then
++    print_status "Dev Container ID: $DEVCONTAINER_ID"
++  else
++    print_status "Dev Container ID: unavailable"
++  fi
++
++  if [[ -n $RUNTIME_CONTAINER_ID ]]; then
++    print_status "Runtime container ID: $RUNTIME_CONTAINER_ID"
++  else
++    print_status "Runtime container ID: unavailable"
++  fi
++
++  if [[ -n $GIT_COMMIT ]]; then
++    print_status "Git content state: commit=$GIT_COMMIT, dirty=$GIT_DIRTY"
++  fi
++
++  print_status "Update-content run: $UPDATE_RUN_COUNT"
+ }
+ 
+ ##
+@@ -630,32 +630,32 @@
+ # Atomically writes the latest update-content completion marker.
+ ##
+ write_update_marker() {
+-    local completed_at
+-
+-    if ((DRY_RUN == 1)); then
+-        print_status "Would write update-content marker: $UPDATE_MARKER_FILE"
+-        return 0
+-    fi
+-
+-    completed_at="$(date -u "+%Y-%m-%dT%H:%M:%SZ")"
+-    TEMPORARY_FILE="$(mktemp "${UPDATE_MARKER_FILE}.tmp.XXXXXX")"
+-
+-    {
+-        printf "schema_version=%s\n" "$UPDATE_SCHEMA_VERSION"
+-        printf "completed_at=%s\n" "$completed_at"
+-        printf "run_count=%s\n" "$UPDATE_RUN_COUNT"
+-        printf "devcontainer_id=%s\n" "$DEVCONTAINER_ID"
+-        printf "runtime_container_id=%s\n" "$RUNTIME_CONTAINER_ID"
+-        printf "git_commit=%s\n" "$GIT_COMMIT"
+-        printf "git_dirty=%s\n" "$GIT_DIRTY"
+-        printf "repository_root=%s\n" "$REPO_ROOT"
+-    } > "$TEMPORARY_FILE"
+-
+-    chmod 0600 "$TEMPORARY_FILE"
+-    mv "$TEMPORARY_FILE" "$UPDATE_MARKER_FILE"
+-    TEMPORARY_FILE=""
+-
+-    print_status "Wrote update-content marker: $UPDATE_MARKER_FILE"
++  local completed_at
++
++  if ((DRY_RUN == 1)); then
++    print_status "Would write update-content marker: $UPDATE_MARKER_FILE"
++    return 0
++  fi
++
++  completed_at="$(date -u "+%Y-%m-%dT%H:%M:%SZ")"
++  TEMPORARY_FILE="$(mktemp "${UPDATE_MARKER_FILE}.tmp.XXXXXX")"
++
++  {
++    printf "schema_version=%s\n" "$UPDATE_SCHEMA_VERSION"
++    printf "completed_at=%s\n" "$completed_at"
++    printf "run_count=%s\n" "$UPDATE_RUN_COUNT"
++    printf "devcontainer_id=%s\n" "$DEVCONTAINER_ID"
++    printf "runtime_container_id=%s\n" "$RUNTIME_CONTAINER_ID"
++    printf "git_commit=%s\n" "$GIT_COMMIT"
++    printf "git_dirty=%s\n" "$GIT_DIRTY"
++    printf "repository_root=%s\n" "$REPO_ROOT"
++  } >"$TEMPORARY_FILE"
++
++  chmod 0600 "$TEMPORARY_FILE"
++  mv "$TEMPORARY_FILE" "$UPDATE_MARKER_FILE"
++  TEMPORARY_FILE=""
++
++  print_status "Wrote update-content marker: $UPDATE_MARKER_FILE"
+ }
+ 
+ # -----------------------------------------------------------------------------
+@@ -669,26 +669,26 @@
+ #   $1 - Hook path.
+ ##
+ run_hook() {
+-    local hook="${1:?Hook path is required}"
+-    local relative_hook="${hook#"$REPO_ROOT"/}"
+-
+-    if ((DRY_RUN == 1)); then
+-        print_status "Would run hook: $relative_hook"
+-        return 0
+-    fi
+-
+-    print_status "Running hook: $relative_hook"
+-
+-    if bash "$hook"; then
+-        return 0
+-    fi
+-
+-    if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_CONTINUE_ON_HOOK_FAILURE:-0}"; then
+-        print_warning "Hook failed; continuing: $relative_hook"
+-        return 0
+-    fi
+-
+-    die "Hook failed: $relative_hook"
++  local hook="${1:?Hook path is required}"
++  local relative_hook="${hook#"$REPO_ROOT"/}"
++
++  if ((DRY_RUN == 1)); then
++    print_status "Would run hook: $relative_hook"
++    return 0
++  fi
++
++  print_status "Running hook: $relative_hook"
++
++  if bash "$hook"; then
++    return 0
++  fi
++
++  if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_CONTINUE_ON_HOOK_FAILURE:-0}"; then
++    print_warning "Hook failed; continuing: $relative_hook"
++    return 0
++  fi
++
++  die "Hook failed: $relative_hook"
+ }
+ 
+ ##
+@@ -695,41 +695,41 @@
+ # Discovers and executes update-content hooks in deterministic filename order.
+ ##
+ run_extension_hooks() {
+-    local hooks_directory="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.d"
+-    local local_hook="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.local.sh"
+-    local hook
+-    local nullglob_was_enabled=0
+-    local previous_lc_all="${LC_ALL-}"
+-    local -a hooks=()
+-
+-    if [[ -f $local_hook ]]; then
+-        run_hook "$local_hook"
+-    fi
+-
+-    [[ -d $hooks_directory ]] || return 0
+-
+-    if shopt -q nullglob; then
+-        nullglob_was_enabled=1
+-    fi
+-
+-    LC_ALL=C
+-    shopt -s nullglob
+-    hooks=("$hooks_directory"/*.sh)
+-
+-    if ((nullglob_was_enabled == 0)); then
+-        shopt -u nullglob
+-    fi
+-
+-    if [[ -n $previous_lc_all ]]; then
+-        LC_ALL="$previous_lc_all"
+-    else
+-        unset LC_ALL
+-    fi
+-
+-    for hook in "${hooks[@]}"; do
+-        [[ -f $hook ]] || continue
+-        run_hook "$hook"
+-    done
++  local hooks_directory="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.d"
++  local local_hook="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.local.sh"
++  local hook
++  local nullglob_was_enabled=0
++  local previous_lc_all="${LC_ALL-}"
++  local -a hooks=()
++
++  if [[ -f $local_hook ]]; then
++    run_hook "$local_hook"
++  fi
++
++  [[ -d $hooks_directory ]] || return 0
++
++  if shopt -q nullglob; then
++    nullglob_was_enabled=1
++  fi
++
++  LC_ALL=C
++  shopt -s nullglob
++  hooks=("$hooks_directory"/*.sh)
++
++  if ((nullglob_was_enabled == 0)); then
++    shopt -u nullglob
++  fi
++
++  if [[ -n $previous_lc_all ]]; then
++    LC_ALL="$previous_lc_all"
++  else
++    unset LC_ALL
++  fi
++
++  for hook in "${hooks[@]}"; do
++    [[ -f $hook ]] || continue
++    run_hook "$hook"
++  done
+ }
+ 
+ ##
+@@ -742,13 +742,13 @@
+ #   Writes the joined labels to stdout.
+ ##
+ join_labels() {
+-    local label
+-    local separator=""
+-
+-    for label in "$@"; do
+-        printf "%s%s" "$separator" "$label"
+-        separator=", "
+-    done
++  local label
++  local separator=""
++
++  for label in "$@"; do
++    printf "%s%s" "$separator" "$label"
++    separator=", "
++  done
+ }
+ 
+ ##
+@@ -755,28 +755,28 @@
+ # Reports recognized project manifests without installing dependencies.
+ ##
+ report_detected_tooling() {
+-    local -a detected=()
+-
+-    [[ -f $REPO_ROOT/package.json ]] && detected+=("Node.js")
+-    [[ -f $REPO_ROOT/pyproject.toml || -f $REPO_ROOT/requirements.txt || -f $REPO_ROOT/setup.py ]] &&
+-        detected+=("Python")
+-    [[ -f $REPO_ROOT/Cargo.toml ]] && detected+=("Rust")
+-    [[ -f $REPO_ROOT/go.mod ]] && detected+=("Go")
+-    [[ -f $REPO_ROOT/pom.xml || -f $REPO_ROOT/build.gradle || -f $REPO_ROOT/build.gradle.kts ]] &&
+-        detected+=("Java/JVM")
+-    [[ -f $REPO_ROOT/Gemfile ]] && detected+=("Ruby")
+-    [[ -f $REPO_ROOT/composer.json ]] && detected+=("PHP")
+-    [[ -f $REPO_ROOT/compose.yaml || -f $REPO_ROOT/compose.yml || -f $REPO_ROOT/docker-compose.yaml || -f $REPO_ROOT/docker-compose.yml ]] &&
+-        detected+=("Docker Compose")
+-    [[ -f $REPO_ROOT/Taskfile.yml || -f $REPO_ROOT/Taskfile.yaml ]] && detected+=("Task")
+-    [[ -f $REPO_ROOT/Makefile ]] && detected+=("Make")
+-
+-    if ((${#detected[@]} == 0)); then
+-        print_debug "No common project manifests detected."
+-        return 0
+-    fi
+-
+-    print_status "Detected project tooling: $(join_labels "${detected[@]}")"
++  local -a detected=()
++
++  [[ -f $REPO_ROOT/package.json ]] && detected+=("Node.js")
++  [[ -f $REPO_ROOT/pyproject.toml || -f $REPO_ROOT/requirements.txt || -f $REPO_ROOT/setup.py ]] &&
++    detected+=("Python")
++  [[ -f $REPO_ROOT/Cargo.toml ]] && detected+=("Rust")
++  [[ -f $REPO_ROOT/go.mod ]] && detected+=("Go")
++  [[ -f $REPO_ROOT/pom.xml || -f $REPO_ROOT/build.gradle || -f $REPO_ROOT/build.gradle.kts ]] &&
++    detected+=("Java/JVM")
++  [[ -f $REPO_ROOT/Gemfile ]] && detected+=("Ruby")
++  [[ -f $REPO_ROOT/composer.json ]] && detected+=("PHP")
++  [[ -f $REPO_ROOT/compose.yaml || -f $REPO_ROOT/compose.yml || -f $REPO_ROOT/docker-compose.yaml || -f $REPO_ROOT/docker-compose.yml ]] &&
++    detected+=("Docker Compose")
++  [[ -f $REPO_ROOT/Taskfile.yml || -f $REPO_ROOT/Taskfile.yaml ]] && detected+=("Task")
++  [[ -f $REPO_ROOT/Makefile ]] && detected+=("Make")
++
++  if ((${#detected[@]} == 0)); then
++    print_debug "No common project manifests detected."
++    return 0
++  fi
++
++  print_status "Detected project tooling: $(join_labels "${detected[@]}")"
+ }
+ 
+ # -----------------------------------------------------------------------------
+@@ -790,36 +790,36 @@
+ #   $@ - Script arguments.
+ ##
+ main() {
+-    parse_arguments "$@"
+-    normalize_devcontainer_id
+-    install_traps
+-
+-    if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_VERBOSE:-0}"; then
+-        VERBOSE=1
+-    fi
+-
+-    if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_TRACE:-0}"; then
+-        set -o xtrace
+-    fi
+-
+-    resolve_paths
+-    resolve_runtime_container_id
+-    cd -- "$REPO_ROOT"
+-    configure_environment
+-
+-    print_status "Reconciling updated development container content."
+-    print_status "Repository root: $REPO_ROOT"
+-
+-    validate_environment
+-    create_required_directories
+-    capture_repository_state
+-    calculate_run_count
+-    report_runtime_context
+-    report_detected_tooling
+-    run_extension_hooks
+-    write_update_marker
+-
+-    print_status "Development container content reconciliation complete."
++  parse_arguments "$@"
++  normalize_devcontainer_id
++  install_traps
++
++  if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_VERBOSE:-0}"; then
++    VERBOSE=1
++  fi
++
++  if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_TRACE:-0}"; then
++    set -o xtrace
++  fi
++
++  resolve_paths
++  resolve_runtime_container_id
++  cd -- "$REPO_ROOT"
++  configure_environment
++
++  print_status "Reconciling updated development container content."
++  print_status "Repository root: $REPO_ROOT"
++
++  validate_environment
++  create_required_directories
++  capture_repository_state
++  calculate_run_count
++  report_runtime_context
++  report_detected_tooling
++  run_extension_hooks
++  write_update_marker
++
++  print_status "Development container content reconciliation complete."
+ }
+ 
+ main "$@"
+
+(Truncated to last 22857 characters out of 166865)
 ```
 
 </details>
@@ -4528,11 +5220,7 @@ diff .devcontainer/scripts/update-content.sh.orig .devcontainer/scripts/update-c
 <summary>❌ CSS / stylelint - 438 errors</summary>
 
 ```
-no-descending-specificity
-  407:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
-  407:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
-  407:35  ✖  Expected "0.025" to be "2.5%"                                                                                                 alpha-value-notation
-  423:1   ✖  Expected selector ".prose-page p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422           no-descending-specificity
+pecificity
   441:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
   448:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
   459:1   ✖  Expected class selector ".product-detail__description" to be kebab-case                                                       selector-class-pattern
@@ -4736,7 +5424,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 ✖ 438 problems (438 errors, 0 warnings)
   249 errors potentially fixable with the "--fix" option.
 
-(Truncated to last 23529 characters out of 62006)
+(Truncated to last 22857 characters out of 62006)
 ```
 
 </details>
@@ -4747,7 +5435,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 ```
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-17T03:22:03Z	info-0	trufflehog	running source	{"source_manager_worker_id": "2CH5x", "with_units": true}
+2026-08-17T21:12:15Z	info-0	trufflehog	running source	{"source_manager_worker_id": "JNLGj", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -4766,13 +5454,13 @@ File: tests/test_repository_analytics.py
 Line: 84
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-17T03:22:09Z	info-0	trufflehog	finished scanning	{"chunks": 6122, "bytes": 39584399, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "5.570640762s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1468}}
+2026-08-17T21:12:20Z	info-0	trufflehog	finished scanning	{"chunks": 6279, "bytes": 41586920, "verified_secrets": 2, "unverified_secrets": 0, "scan_duration": "4.893588145s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1402}}
 ```
 
 </details>
 
 <details>
-<summary>❌ YAML / yamllint - 214 errors</summary>
+<summary>❌ YAML / yamllint - 215 errors</summary>
 
 ```
 .garden/context-packs/agent-default.yaml
@@ -5156,6 +5844,9 @@ mindgarden/profiles/quartz/profile.yaml
 mindgarden/profiles/quartz/quartz.config.yaml
   2:1       warning  missing document start "---"  (document-start)
 
+pnpm-lock.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
 pnpm-workspace.yaml
   1:1       warning  missing document start "---"  (document-start)
 ```
@@ -5166,54 +5857,48 @@ pnpm-workspace.yaml
 <summary>⚠️ REPOSITORY / checkov - 58 errors</summary>
 
 ```
-nThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+dule_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-17 03:21:21,350 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-08-17 21:11:45,838 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-17 03:21:21,350 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-17 03:21:21,350 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
-  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
-
-2026-08-17 03:21:21,579 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-17 03:21:21,582 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-17 03:21:21,632 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-17 03:21:21,750 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-17 03:21:21,757 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-17 03:21:21,960 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-17 03:21:21,971 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-17 03:21:21,972 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-17 03:21:21,976 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-17 03:21:21,988 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-17 03:21:22,044 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-17 03:21:22,099 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-17 03:21:22,100 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-17 03:21:22,114 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-17 03:21:22,130 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-17 03:21:22,132 [MainThread  ] [INFO ]  Creating vertices
-2026-08-17 03:21:22,132 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-17 03:21:22,133 [MainThread  ] [INFO ]  Creating edges
-2026-08-17 03:21:22,134 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-17 03:21:22,135 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-17 03:21:22,157 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-17 03:21:22,158 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-17 03:21:22,158 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-17 03:21:22,158 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-17 03:21:22,694 [MainThread  ] [INFO ]  Creating vertices
-2026-08-17 03:21:22,695 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-17 03:21:22,695 [MainThread  ] [INFO ]  Creating edges
-2026-08-17 03:21:22,695 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-17 03:21:40,995 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-17 03:21:41,002 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-17 03:21:41,681 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-17 03:21:41,682 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-17 03:21:41,682 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-17 03:21:41,682 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-17 03:21:41,682 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-17 03:21:41,683 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-17 21:11:45,937 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-17 21:11:46,170 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-17 21:11:46,177 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-17 21:11:46,195 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-17 21:11:46,196 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-17 21:11:46,199 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-17 21:11:46,206 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-17 21:11:46,207 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-17 21:11:46,285 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-17 21:11:46,293 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-17 21:11:46,303 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-17 21:11:46,315 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-17 21:11:46,318 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-17 21:11:46,332 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-17 21:11:46,333 [MainThread  ] [INFO ]  Creating vertices
+2026-08-17 21:11:46,333 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-17 21:11:46,333 [MainThread  ] [INFO ]  Creating edges
+2026-08-17 21:11:46,333 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-17 21:11:46,779 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-17 21:11:46,780 [MainThread  ] [INFO ]  Creating vertices
+2026-08-17 21:11:46,783 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-17 21:11:46,783 [MainThread  ] [INFO ]  Creating edges
+2026-08-17 21:11:46,791 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-17 21:11:46,792 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-17 21:11:46,849 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-17 21:11:46,849 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-17 21:11:46,849 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-17 21:11:46,849 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-17 21:12:00,594 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-17 21:12:00,595 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-17 21:12:00,722 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-17 21:12:00,723 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-17 21:12:00,723 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-17 21:12:00,723 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-17 21:12:00,723 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-17 21:12:00,724 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -5440,14 +6125,14 @@ dockerfile scan results:
 
 Passed checks: 53, Failed checks: 2, Skipped checks: 0
 
-Check: CKV_DOCKER_3: "Ensure that a user for the container has been created"
-	FAILED for resource: /holon/packs/react-vite/template/infra/docker/Dockerfile.
-	File: /holon/packs/react-vite/template/infra/docker/Dockerfile:1-9
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-a-user-for-the-container-has-been-created
 Check: CKV_DOCKER_2: "Ensure that HEALTHCHECK instructions have been added to container images"
 	FAILED for resource: /egolint/tests/fixtures/hadolint/Dockerfile.
 	File: /egolint/tests/fixtures/hadolint/Dockerfile:1-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images
+Check: CKV_DOCKER_3: "Ensure that a user for the container has been created"
+	FAILED for resource: /holon/packs/react-vite/template/infra/docker/Dockerfile.
+	File: /holon/packs/react-vite/template/infra/docker/Dockerfile:1-9
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-a-user-for-the-container-has-been-created
 openapi scan results:
 
 Passed checks: 6, Failed checks: 4, Skipped checks: 0
@@ -5469,58 +6154,99 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 23529 characters out of 36683)
+(Truncated to last 22857 characters out of 36683)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ REPOSITORY / grype - 62 errors</summary>
+<summary>⚠️ REPOSITORY / grype - 115 errors</summary>
 
 ```
 [0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal) from=syft
 NAME                         INSTALLED                                 FIXED IN  TYPE           VULNERABILITY        SEVERITY  EPSS          RISK   
+trim                         0.0.1                                     0.0.3     npm            GHSA-w5p7-h5w8-2hfq  High      3.8% (89th)   2.8    
 urllib3                      2.5.0                                     2.6.3     python         GHSA-38jv-5279-wg99  High      2.7% (84th)   2.1    
+lodash                       4.17.21                                   4.18.0    npm            GHSA-r5fr-rjxr-66jc  High      2.6% (83rd)   2.0    
 python-multipart             0.0.20                                    0.0.22    python         GHSA-wp53-j4wj-2cfg  High      2.2% (81st)   1.8    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.10.2    github-action  GHSA-g85v-wf27-67xc  Low       2.7% (84th)   1.2    
+braces                       2.3.2                                     3.0.3     npm            GHSA-grv7-fg5c-xmjg  High      1.5% (71st)   1.1    
 starlette                    0.46.2                                    1.0.1     python         GHSA-86qp-5c8j-p5mr  Medium    1.8% (77th)   1.1    
+lodash                       4.17.21                                   4.17.23   npm            GHSA-xxjr-mmjv-4gpg  Medium    1.5% (72nd)   0.9    
+undici                       5.28.4                                    6.24.0    npm            GHSA-vrm6-8vpv-qv8q  High      1.1% (64th)   0.9    
+micromatch                   3.1.10                                    4.0.8     npm            GHSA-952p-6rrq-rcjv  Medium    1.4% (70th)   0.7    
 ecdsa                        0.19.2                                              python         GHSA-wj6h-64fc-37mp  High      1.0% (59th)   0.7    
+path-to-regexp               6.1.0                                     6.3.0     npm            GHSA-9wv6-86v2-598j  High      0.9% (57th)   0.7    
+protobufjs                   6.11.6                                    7.5.5     npm            GHSA-xq3m-2v4x-88gg  Critical  0.7% (51st)   0.7    
+undici                       5.28.4                                    6.24.0    npm            GHSA-v9p9-hfj2-hcw8  High      0.9% (55th)   0.7    
+undici                       5.28.4                                    6.27.0    npm            GHSA-vxpw-j846-p89q  High      0.8% (53rd)   0.6    
 decompress                   4.2.1                                               npm            GHSA-mp2f-45pm-3cg9  Critical  0.6% (47th)   0.6    
-urllib3                      2.5.0                                     2.6.0     python         GHSA-gm62-xv2j-4w53  High      0.7% (49th)   0.6    
 urllib3                      2.5.0                                     2.6.0     python         GHSA-2xpw-w6gg-jr37  High      0.7% (49th)   0.6    
+urllib3                      2.5.0                                     2.6.0     python         GHSA-gm62-xv2j-4w53  High      0.7% (49th)   0.6    
 python-multipart             0.0.20                                    0.0.27    python         GHSA-pp6c-gr5w-3c5g  High      0.7% (51st)   0.6    
 mako                         1.3.10                                    1.3.12    python         GHSA-2h4p-vjrc-8xpq  High      0.6% (46th)   0.5    
 black                        25.1.0                                    26.3.1    python         GHSA-3936-cmfr-pm3m  High      0.6% (46th)   0.5    
 starlette                    0.46.2                                    0.49.1    python         GHSA-7f5h-v6xp-fcq8  High      0.6% (47th)   0.5    
+undici                       5.28.4                                    5.28.5    npm            GHSA-c76h-2ccp-4975  Medium    0.8% (52nd)   0.5    
+protobufjs                   6.11.6                                    7.5.6     npm            GHSA-685m-2w69-288q  High      0.6% (44th)   0.4    
+minimatch                    10.1.1                                    10.2.1    npm            GHSA-3ppc-4f35-3m26  High      0.5% (41st)   0.4    
 orjson                       3.10.18                                   3.11.6    python         GHSA-hx9q-6w63-j58v  High      0.5% (43rd)   0.4    
+protobufjs                   6.11.6                                    7.5.6     npm            GHSA-75px-5xx7-5xc7  High      0.5% (40th)   0.4    
 cryptography                 45.0.4                                    46.0.7    python         GHSA-p423-j2cm-9vmq  Medium    0.7% (48th)   0.4    
+minimatch                    10.1.1                                    10.2.3    npm            GHSA-7r86-cg39-jmmj  High      0.5% (41st)   0.4    
 ujson                        5.10.0                                    5.12.0    python         GHSA-wgvc-ghv9-3pmm  High      0.5% (39th)   0.4    
+minimatch                    10.1.1                                    10.2.3    npm            GHSA-23c5-xmqv-rm74  High      0.5% (38th)   0.4    
 ujson                        5.10.0                                    5.12.0    python         GHSA-c8rr-9gxc-jprv  High      0.5% (38th)   0.4    
+protobufjs                   6.11.6                                    7.6.1     npm            GHSA-wcpc-wj8m-hjx6  High      0.5% (38th)   0.3    
 image-size                   2.0.2                                               npm            GHSA-5p2g-fcmc-qvqq  High      0.4% (35th)   0.3    
 image-size                   2.0.2                                               npm            GHSA-w3rx-r6r6-pgpr  High      0.4% (35th)   0.3    
 ujson                        5.10.0                                    5.12.1    python         GHSA-c38f-wx89-p2xg  High      0.4% (35th)   0.3    
+js-yaml                      4.1.1                                     4.3.0     npm            GHSA-52cp-r559-cp3m  High      0.4% (35th)   0.3    
+brace-expansion              5.0.8                                     5.0.9     npm            GHSA-rgw5-rvv9-x895  High      0.4% (34th)   0.3    
+protobufjs                   6.11.6                                    7.5.6     npm            GHSA-66ff-xgx4-vchm  High      0.4% (32nd)   0.3    
 starlette                    0.46.2                                    1.3.1     python         GHSA-82w8-qh3p-5jfq  High      0.4% (32nd)   0.3    
 pyjwt                        2.10.1                                    2.13.0    python         GHSA-xgmm-8j9v-c9wx  High      0.4% (32nd)   0.3    
 decompress                   4.2.1                                               npm            GHSA-h39j-r5qq-r9mm  Medium    0.5% (41st)   0.3    
 python-multipart             0.0.20                                    0.0.30    python         GHSA-5rvq-cxj2-64vf  High      0.4% (31st)   0.3    
+undici                       5.28.4                                    6.24.0    npm            GHSA-2mjp-6q6p-2qxm  Medium    0.5% (40th)   0.3    
+protobufjs                   6.11.6                                    7.5.6     npm            GHSA-jvwf-75h9-cwgg  High      0.4% (30th)   0.3    
 starlette                    0.46.2                                    1.1.0     python         GHSA-wqp7-x3pw-xc5r  High      0.4% (29th)   0.3    
 starlette                    0.46.2                                    0.47.2    python         GHSA-2c2j-9gv5-cj73  Medium    0.5% (42nd)   0.3    
 mako                         1.3.10                                    1.3.11    python         GHSA-v92g-xgxw-vvmm  High      0.4% (29th)   0.3    
+tmp                          0.0.33                                    0.2.6     npm            GHSA-ph9p-34f9-6g65  High      0.4% (28th)   0.3    
 cryptography                 45.0.4                                    46.0.5    python         GHSA-r6ph-v2qm-q3c2  High      0.3% (27th)   0.3    
+ajv                          8.17.1                                    8.18.0    npm            GHSA-2g4f-4pwh-qvx6  Medium    0.5% (40th)   0.3    
+ajv                          8.6.3                                     8.18.0    npm            GHSA-2g4f-4pwh-qvx6  Medium    0.5% (40th)   0.3    
+serialize-javascript         6.0.2                                     7.0.5     npm            GHSA-qj8w-gfj5-8c6v  Medium    0.5% (38th)   0.3    
+undici                       5.28.4                                    6.23.0    npm            GHSA-g9mf-h72j-4rw9  Medium    0.4% (36th)   0.2    
 urllib3                      2.5.0                                     2.7.0     python         GHSA-qccp-gfcp-xxvc  High      0.3% (26th)   0.2    
 vue-template-compiler        2.7.16                                              npm            GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)   0.2    
 idna                         3.10                                      3.15      python         GHSA-65pc-fj4g-8rjx  Medium    0.4% (34th)   0.2    
+protobufjs                   6.11.6                                    7.5.6     npm            GHSA-2pr8-phx7-x9h3  Medium    0.4% (35th)   0.2    
+protobufjs                   6.11.6                                    7.6.3     npm            GHSA-f38q-mgvj-vph7  Medium    0.4% (33rd)   0.2    
 pyjwt                        2.10.1                                    2.12.0    python         GHSA-752w-5fwx-jx9f  High      0.3% (19th)   0.2    
+uuid                         3.4.0                                     11.1.1    npm            GHSA-w5hq-g745-h8pq  Medium    0.3% (26th)   0.2    
+uuid                         8.3.2                                     11.1.1    npm            GHSA-w5hq-g745-h8pq  Medium    0.3% (26th)   0.2    
+js-yaml                      4.1.1                                     4.2.0     npm            GHSA-h67p-54hq-rp68  Medium    0.4% (30th)   0.2    
 pyjwt                        2.10.1                                    2.13.0    python         GHSA-w7vc-732c-9m39  Medium    0.4% (30th)   0.2    
+lodash                       4.17.21                                   4.18.0    npm            GHSA-f23m-r3pf-42rh  Medium    0.3% (24th)   0.2    
 python-multipart             0.0.20                                    0.0.26    python         GHSA-mj87-hwqh-73pj  Medium    0.4% (28th)   0.2    
+@opentelemetry/core          2.0.0                                     2.8.0     npm            GHSA-8988-4f7v-96qf  Medium    0.3% (27th)   0.2    
 decompress                   4.2.1                                               npm            GHSA-jwp9-9v96-94mx  Medium    0.3% (25th)   0.2    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.14.2    github-action  GHSA-cpmj-h4f6-r6pq  Medium    0.3% (24th)   0.2    
+file-type                    20.5.0                                    21.3.1    npm            GHSA-5v7r-6r5c-r473  Medium    0.3% (25th)   0.2    
 ujson                        5.10.0                                    5.13.0    python         GHSA-3j69-69wj-xqx2  Medium    0.3% (19th)   0.2    
 cryptography                 45.0.4                                    49.0.0    python         GHSA-jwv3-5hgf-82ww  High      0.2% (9th)    0.2    
+protobufjs                   6.11.6                                    7.5.6     npm            GHSA-q6x5-8v7m-xcrf  Medium    0.3% (22nd)   0.2    
+file-type                    20.5.0                                    21.3.2    npm            GHSA-j47w-4g3g-c36v  Medium    0.3% (22nd)   0.2    
 jwcrypto                     1.5.6                                     1.5.7     python         GHSA-fjrm-76x2-c4q4  Medium    0.3% (22nd)   0.2    
 python-dotenv                1.1.1                                     1.2.2     python         GHSA-mf9w-mj56-hr94  Medium    0.3% (17th)   0.1    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.16.0    github-action  GHSA-46g3-37rh-v698  Medium    0.3% (23rd)   0.1    
+undici                       5.28.4                                    6.27.0    npm            GHSA-p88m-4jfj-68fv  Medium    0.3% (17th)   0.1    
 cryptography                 45.0.4                                    50.0.0    python         GHSA-g6cj-pr64-35w5  High      0.2% (7th)    0.1    
+protobufjs                   6.11.6                                    7.5.6     npm            GHSA-fx83-v9x8-x52w  Medium    0.3% (18th)   0.1    
+protobufjs                   6.11.6                                    7.5.8     npm            GHSA-jggg-4jg4-v7c6  Medium    0.3% (18th)   0.1    
+undici                       5.28.4                                    6.24.0    npm            GHSA-4992-7rv2-5pvq  Medium    0.3% (17th)   0.1    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.16.0    github-action  GHSA-g699-3x6g-wm3g  Medium    0.3% (17th)   0.1    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.12.0    github-action  GHSA-mxr3-8whj-j74r  Medium    0.2% (12th)   0.1    
 filelock                     3.18.0                                    3.20.1    python         GHSA-w853-jp5j-5j7f  Medium    0.2% (10th)   0.1    
@@ -5528,9 +6254,16 @@ pyjwt                        2.10.1                                    2.13.0   
 cryptography                 45.0.4                                    49.0.0    python         GHSA-m2h6-j472-rp4c  Medium    0.2% (8th)    0.1    
 starlette                    0.46.2                                    1.1.0     python         GHSA-x746-7m8f-x49c  Medium    0.2% (11th)   0.1    
 pyjwt                        2.10.1                                    2.13.0    python         GHSA-993g-76c3-p5m4  Medium    0.2% (13th)   0.1    
+undici                       5.28.4                                    5.29.0    npm            GHSA-cxrh-j4jr-qwg3  Low       0.3% (22nd)   < 0.1  
+tmp                          0.0.33                                    0.2.4     npm            GHSA-52f5-9888-hmc6  Low       0.3% (26th)   < 0.1  
+undici                       5.28.4                                    6.28.0    npm            GHSA-8xcm-r25x-g524  Medium    0.2% (7th)    < 0.1  
 requests                     2.32.4                                    2.33.0    python         GHSA-gc5v-m9x4-r6x2  Medium    0.2% (8th)    < 0.1  
 pytest                       8.4.1                                     9.0.3     python         GHSA-6w46-j5rx-g56g  Medium    0.1% (3rd)    < 0.1  
+undici                       5.28.4                                    6.28.0    npm            GHSA-v3r7-h72x-cjcm  Medium    0.2% (6th)    < 0.1  
+undici                       5.28.4                                    6.27.0    npm            GHSA-g8m3-5g58-fq7m  Low       0.2% (15th)   < 0.1  
+undici                       5.28.4                                    6.27.0    npm            GHSA-35p6-xmwp-9g52  Low       0.2% (12th)   < 0.1  
 python-multipart             0.0.20                                    0.0.31    python         GHSA-v9pg-7xvm-68hf  Low       0.2% (12th)   < 0.1  
+undici                       5.28.4                                    6.28.0    npm            GHSA-m8rv-5g2x-5cg5  Medium    0.2% (5th)    < 0.1  
 pyjwt                        2.10.1                                    2.13.0    python         GHSA-jq35-7prp-9v3f  Medium    0.1% (2nd)    < 0.1  
 starlette                    0.46.2                                    1.3.0     python         GHSA-jp82-jpqv-5vv3  Low       0.2% (8th)    < 0.1  
 filelock                     3.18.0                                    3.20.3    python         GHSA-qmgc-5h2g-mvrw  Medium    0.1% (2nd)    < 0.1  
@@ -5541,29 +6274,22 @@ cryptography                 45.0.4                                    46.0.6   
 pygments                     2.19.2                                    2.20.0    python         GHSA-5239-wwwm-4pmq  Low       0.2% (5th)    < 0.1  
 virtualenv                   20.31.2                                   20.36.1   python         GHSA-597g-3phw-6986  Medium    < 0.1% (0th)  < 0.1  
 actions/download-artifact    v4                                        4.1.3     github-action  GHSA-cxww-7g56-2vh6  High      N/A           N/A    
-cryptography                 45.0.4                                    48.0.1    python         GHSA-537c-gmf6-5ccf  High      N/A           N/A
-[0119] ERROR discovered vulnerabilities at or above the severity threshold
+cryptography                 45.0.4                                    48.0.1    python         GHSA-537c-gmf6-5ccf  High      N/A           N/A    
+js-yaml                      4.1.1                                     4.3.1     npm            GHSA-5p4m-2wfm-xmqj  High      N/A           N/A    
+serialize-javascript         4.0.0                                     7.0.3     npm            GHSA-5c6j-r48x-rmvq  High      N/A           N/A    
+serialize-javascript         6.0.2                                     7.0.3     npm            GHSA-5c6j-r48x-rmvq  High      N/A           N/A    
+smol-toml                    1.5.2                                     1.6.1     npm            GHSA-v3rj-xjv7-4jmq  Medium    N/A           N/A    
+esbuild                      0.27.7                                    0.28.1    npm            GHSA-g7r4-m6w7-qqqr  Low       N/A           N/A
+[0095] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 3106 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 3158 errors</summary>
 
 ```
-, 63 tokens)
-   mantle/libexec/mantle/installers/crush.sh [8:1 - 20:26]
-Clone found (bash)
- - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
-   mantle/libexec/mantle/installers/docker-desktop.sh [8:1 - 18:47]
-Clone found (bash)
- - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
-   mantle/libexec/mantle/installers/dockerfmt.sh [8:1 - 20:26]
-Clone found (bash)
- - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
-   mantle/libexec/mantle/installers/dust.sh [8:1 - 20:26]
-Clone found (bash)
- - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+tokens)
    mantle/libexec/mantle/installers/e57format.sh [8:1 - 20:26]
 Clone found (bash)
  - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
@@ -5723,7 +6449,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 410            │ 109837      │ 427090       │ 232          │ 3614 (3.29%)     │ 19447 (4.55%)     │
+│ bash         │ 413            │ 114221      │ 442514       │ 275          │ 6032 (5.28%)     │ 28895 (6.53%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5771,7 +6497,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 68             │ 22806       │ 62739        │ 58           │ 1321 (5.79%)     │ 5555 (8.85%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 240            │ 69221       │ 206737       │ 64           │ 1139 (1.65%)     │ 5120 (2.48%)      │
+│ json         │ 241            │ 69470       │ 208087       │ 71           │ 1257 (1.81%)     │ 5779 (2.78%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5779,13 +6505,13 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ kusto        │ 1              │ 542         │ 306          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ latex        │ 303            │ 44149       │ 837394       │ 895          │ 12887 (29.19%)   │ 231937 (27.70%)   │
+│ latex        │ 304            │ 44487       │ 848196       │ 896          │ 13224 (29.73%)   │ 242739 (28.62%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ liquid       │ 2              │ 597         │ 835          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1725           │ 329668      │ 4246455      │ 683          │ 11428 (3.47%)    │ 171385 (4.04%)    │
+│ markdown     │ 1725           │ 329668      │ 4246455      │ 684          │ 11518 (3.49%)    │ 171282 (4.03%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 99             │ 29819       │ 117043       │ 48           │ 964 (3.23%)      │ 7969 (6.81%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5839,16 +6565,16 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 560            │ 58005       │ 320022       │ 351          │ 9396 (16.20%)    │ 105399 (32.93%)   │
+│ yaml         │ 560            │ 57988       │ 319997       │ 351          │ 9396 (16.20%)    │ 105399 (32.94%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4777           │ 984261      │ 7898225      │ 3106         │ 56631 (5.75%)    │ 742791 (9.40%)    │
+│ Total:       │ 4782           │ 989215      │ 7925776      │ 3158         │ 59594 (6.02%)    │ 763597 (9.63%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3106 clones.
+Found 3158 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
-time: 15.34s
+ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
+time: 11.28s
 
-(Truncated to last 23529 characters out of 689937)
+(Truncated to last 22857 characters out of 697744)
 ```
 
 </details>
@@ -5923,12 +6649,7 @@ time: 15.34s
 <summary>⚠️ SPELL / proselint - 715 errors</summary>
 
 ```
-t quotes "".
-egolint/.agents/skills/quality/repository-cleanup/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/repository-cleanup/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/repository-cleanup/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/repository-cleanup/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-egolint/.agents/skills/quality/test-engineering/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+y_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -6152,7 +6873,7 @@ research/antidote/research/bootstrap/01-research-concept-snapshot.md:17:61: need
 research/antidote/research/bootstrap/03-scientific-boundaries.md:38:154: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 
-(Truncated to last 23529 characters out of 101400)
+(Truncated to last 22857 characters out of 101400)
 ```
 
 </details>
@@ -6161,11 +6882,7 @@ research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritic
 <summary>⚠️ PYTHON / pylint - 258 errors</summary>
 
 ```
-tion)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:160:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:161:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:162:0: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:163:0: C0303: Trailing whitespace (trailing-whitespace)
+Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:163:0: C0303: Trailing whitespace (trailing-whitespace)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:164:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:165:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:169:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -6304,7 +7021,7 @@ tools/staging_home_audit.py:1051:0: R0911: Too many return statements (8/6) (too
 -----------------------------------
 Your code has been rated at 9.57/10
 
-(Truncated to last 23529 characters out of 52384)
+(Truncated to last 22857 characters out of 52384)
 ```
 
 </details>
@@ -6313,15 +7030,7 @@ Your code has been rated at 9.57/10
 <summary>⚠️ PYTHON / pyright - 8742 errors</summary>
 
 ```
-xpected_node_major" is "Any | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/quartz_site.py:175:33 - error: Argument type is partially unknown
-    Argument corresponds to parameter "profile" in function "prepare_engine"
-    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
-  mindgarden/scripts/quartz_site.py:176:5 - error: Type of "configuration_path" is partially unknown
-    Type of "configuration_path" is "Path | Unknown" (reportUnknownVariableType)
-  mindgarden/scripts/quartz_site.py:176:26 - error: Type of "parent" is partially unknown
-    Type of "parent" is "Path | Unknown" (reportUnknownMemberType)
-  mindgarden/scripts/quartz_site.py:177:12 - error: Type of "is_file" is partially unknown
+z_site.py:177:12 - error: Type of "is_file" is partially unknown
     Type of "is_file" is "(() -> bool) | Unknown" (reportUnknownMemberType)
   mindgarden/scripts/quartz_site.py:177:44 - error: Type of "is_symlink" is partially unknown
     Type of "is_symlink" is "(() -> bool) | Unknown" (reportUnknownMemberType)
@@ -6548,7 +7257,7 @@ tools/task_catalog.py
     "__iter__" method not defined (reportGeneralTypeIssues)
 8742 errors, 420 warnings, 0 informations
 
-(Truncated to last 23529 characters out of 1657419)
+(Truncated to last 22857 characters out of 1657419)
 ```
 
 </details>
@@ -6557,16 +7266,17 @@ tools/task_catalog.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-17T03:21:43Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-17T03:21:43Z	INFO	[vulndb] Need to update DB
-2026-08-17T03:21:43Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-17T03:21:43Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-33.71 MiB / 107.70 MiB [------------------>_________________________________________] 31.30% ? p/s ?67.34 MiB / 107.70 MiB [------------------------------------->______________________] 62.52% ? p/s ?98.87 MiB / 107.70 MiB [------------------------------------------------------->____] 91.80% ? p/s ?107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 120.94 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 120.94 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 120.94 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 113.13 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 113.13 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 113.13 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 105.83 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 105.83 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [------------------------------------------->] 100.00% 105.83 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 99.01 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 99.01 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 99.01 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 92.62 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 92.62 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 92.62 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 86.64 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 86.64 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 86.64 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 81.05 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 81.05 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 81.05 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 75.82 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 75.82 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 75.82 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 70.93 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 70.93 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 70.93 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 66.36 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-------------------------------------------->] 100.00% 66.36 MiB p/s ETA 0s107.70 MiB / 107.70 MiB [-----------------------------------------------] 100.00% 17.19 MiB p/s 6.5s2026-08-17T03:21:51Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-17T03:21:51Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-17T03:21:51Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-17T03:21:51Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-17T03:21:51Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [----------------------------------------------] 100.00% 11.26 MiB p/s 200ms
+2026-08-17T21:11:39Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-17T21:11:39Z	INFO	[vulndb] Need to update DB
+2026-08-17T21:11:39Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-17T21:11:39Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+9.99 MiB / 108.00 MiB [----->________________________________________________________] 9.25% ? p/s ?33.26 MiB / 108.00 MiB [------------------>_________________________________________] 30.80% ? p/s ?47.38 MiB / 108.00 MiB [-------------------------->_________________________________] 43.87% ? p/s ?72.73 MiB / 108.00 MiB [------------------------------>_______________] 67.35% 104.50 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [------------------------------------------->] 100.00% 104.50 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [------------------------------------------->] 100.00% 104.50 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [------------------------------------------->] 100.00% 101.56 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [------------------------------------------->] 100.00% 101.56 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [------------------------------------------->] 100.00% 101.56 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 95.00 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 95.00 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 95.00 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 88.87 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 88.87 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 88.87 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 83.14 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 83.14 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 83.14 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 77.78 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 77.78 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 77.78 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 72.76 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 72.76 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 72.76 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 68.06 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 68.06 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 68.06 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 63.67 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 63.67 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 63.67 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 59.57 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 59.57 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 59.57 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 55.72 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 55.72 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-------------------------------------------->] 100.00% 55.72 MiB p/s ETA 0s108.00 MiB / 108.00 MiB [-----------------------------------------------] 100.00% 15.13 MiB p/s 7.3s2026-08-17T21:11:48Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-17T21:11:48Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-17T21:11:48Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-17T21:11:48Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-17T21:11:48Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 1.41 MiB p/s 400ms2026-08-17T21:12:01Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+
 📣 Notices:
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
 
@@ -6576,73 +7286,73 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2616cf2]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x146fcaf71360)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0xb0a1d1a4690)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x146fc9163300?, 0x6, 0x425325?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0xb0a1ae6fe00?, 0x6, 0x4252f4?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x146fc7b2d540, 0x7f61014a32f8?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0xb0a202b2e60, 0x7fb3004f6108?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x146fc857da3d, 0x146fc7b2d540)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0xb0a1f6172fc, 0xb0a202b2e60)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x146fc857da3d, {0x5aa9040?, 0x146fca86b373?}, {0x67caaa0?, 0x146fc95f21b0?}, {0x146fcaf72af0, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0xb0a1f6172fc, {0x5aa9040?, 0xb0a1f7676d3?}, {0x67caaa0?, 0xb0a1ea5baf0?}, {0xb0a1fe3aa00, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x146fcaf71130}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0xb0a1d1a4460}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x67cb5e0, 0x146fcae56948}, {0x146fcaf72af0, 0x43}, {0x6831f78, 0x146fcaf71130}, 0x146fcaed6ba8)
+io/fs.walkDir({0x67cb5e0, 0xb0a1d53b560}, {0xb0a1fe3aa00, 0x43}, {0x6831f78, 0xb0a1d1a4460}, 0xb0a1ac92ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x67cb5e0, 0x146fcae56948}, {0x146fca86b350, 0x2d}, {0x6831f78, 0x146fc7e357e8}, 0x146fcaed6ba8)
+io/fs.walkDir({0x67cb5e0, 0xb0a1d53b560}, {0xb0a1f7676b0, 0x2d}, {0x6831f78, 0xb0a2024be28}, 0xb0a1ac92ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x146fcae56948}, {0x146fca3d5140, 0x22}, {0x6831f78, 0x146fc7e345c8}, 0x146fcaed6ba8)
+io/fs.walkDir({0x67cb5e0, 0xb0a1d53b560}, {0xb0a1f8cd350, 0x22}, {0x6831f78, 0xb0a2024ae88}, 0xb0a1ac92ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x146fcae56948}, {0x146fc9e4e018, 0x17}, {0x6831f78, 0x146fc7e342a8}, 0x146fcaed6ba8)
+io/fs.walkDir({0x67cb5e0, 0xb0a1d53b560}, {0xb0a20ffdf50, 0x17}, {0x6831f78, 0xb0a2024ac08}, 0xb0a1ac92ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x146fcae56948}, {0x146fcc22e1f0, 0x8}, {0x6831f78, 0x146fc7e340c8}, 0x146fcaed6ba8)
+io/fs.walkDir({0x67cb5e0, 0xb0a1d53b560}, {0xb0a2021d510, 0x8}, {0x6831f78, 0xb0a2024aac8}, 0xb0a1ac92ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x146fcae56948}, {0x67a84f8, 0x1}, {0x6831370, 0x146fcae5fd90}, 0x146fcaed6ba8)
+io/fs.walkDir({0x67cb5e0, 0xb0a1d53b560}, {0x67a84f8, 0x1}, {0x6831370, 0xb0a20250620}, 0xb0a1ac92ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x67cb5e0, 0x146fcae56948}, {0x67a84f8, 0x1}, 0x146fcaed6ba8)
+io/fs.WalkDir({0x67cb5e0, 0xb0a1d53b560}, {0x67a84f8, 0x1}, 0xb0a1ac92ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x146fcae66780}, {0x67cb5e0, 0x146fcae56948}, {0x67a84f8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0xb0a1f65c930}, {0x67cb5e0, 0xb0a1d53b560}, {0x67a84f8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x146fcae66780}, {0x67cb5e0, 0x146fcae56948}, {0x67a84f8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0xb0a1f65c930}, {0x67cb5e0, 0xb0a1d53b560}, {0x67a84f8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x146fca020040, {0x68311b0, 0x146fc4b34230}, {0x67cb5e0, 0x146fcae56678})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0xb0a1f838580, {0x68311b0, 0xb0a195ea310}, {0x67cb5e0, 0xb0a1d53a750})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x146fc9fe5dc0, {0x68311b0?, 0x146fc4b34230?}, {{0x67cb5e0, 0x146fcae56678}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0xb0a1f815c60, {0x68311b0?, 0xb0a195ea310?}, {{0x67cb5e0, 0xb0a1d53a750}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x146fc9fb0400, {0x146fc7d6dc00, 0x1f, 0x20}, {0x146fca022000, 0x19, 0x20}, 0x146fc9ffcd20, {0x146fc501e327, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0xb0a1f804f10, {0xb0a1f83a600, 0x1f, 0x20}, {0xb0a1f83a800, 0x19, 0x20}, 0xb0a1f82f530, {0xb0a19fa90a7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x146fc9fb0400, {0x146fc7d6dc00, 0x1f, 0x20}, {0x146fca022000, 0x19, 0x20}, 0x146fc9ffcd20, {0x146fc501e327, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0xb0a1f804f10, {0xb0a1f83a600, 0x1f, 0x20}, {0xb0a1f83a800, 0x19, 0x20}, 0xb0a1f82f530, {0xb0a19fa90a7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffdb5c7512f, 0x1}, 0x146fc9fb0cb0, {0x7f603a322ab0, 0x146fc5165a40}, {0x67cb520, 0xa3125e0}, {0x146fc9fb0400, {0x146fc7d6dc00, 0x1f, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffc3496812f, 0x1}, 0xb0a1f8057c0, {0x7fb2b9598258, 0xb0a1b5ff800}, {0x67cb520, 0xa3125e0}, {0xb0a1f804f10, {0xb0a1f83a600, 0x1f, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x146fc4c3d3c0, 0x2, 0x2}, {0x146fc4bd6240, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0xb0a1a0eb360, 0x2, 0x2}, {0xb0a1a560340, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffdb5c74f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffc34967f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffdb5c74f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffc34967f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffdb5c74f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffc34967f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffdb5c74f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffc34967f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffdb5c74f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffc34967f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffdb5c74f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffc34967f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x146fc44b8f08, {0x146fc4d25888, 0x1, 0x33})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0xb0a19d5f508, {0xb0a1a75c388, 0x1, 0x33})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0x146fc44b8f08, {0x146fc4d25508, 0x33, 0x33})
+github.com/spf13/cobra.(*Command).execute(0xb0a19d5f508, {0xb0a1a75c008, 0x33, 0x33})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0x146fc44df808)
+github.com/spf13/cobra.(*Command).ExecuteC(0xb0a19d5ef08)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x146fc4483140})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0xb0a19f90140})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c

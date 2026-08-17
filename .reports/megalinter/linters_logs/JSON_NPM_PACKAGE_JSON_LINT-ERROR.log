@@ -1,0 +1,31 @@
+Results of npm-package-json-lint linter (version 10.4.1)
+See documentation on https://megalinter.io/10.0.0/descriptors/json_npm_package_json_lint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+
+./package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/tests/fixtures/knip/package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/tests/fixtures/negative/knip/package.json
+ERROR require-version - node: version - version is required
+1 error
+
+./egolint/tests/fixtures/negative/v8r/package.json
+ERROR version-format - node: version - Format must be a valid semantic version
+ERROR version-type - node: version - Type should be a string
+2 errors
+
+Totals
+6 errors
+

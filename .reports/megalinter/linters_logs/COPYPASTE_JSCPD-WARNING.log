@@ -90,6 +90,135 @@ Clone found (markdown)
 Clone found (markdown)
  - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [47:89 - 54:59] (8 lines, 209 tokens)
    AI_CONSTITUTION.md:markdown [84:206 - 86:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [81:21 - 239:23] (159 lines, 434 tokens)
+   .devcontainer/scripts/on-create.sh [85:16 - 243:23]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [81:21 - 181:3] (101 lines, 254 tokens)
+   .devcontainer/scripts/post-attach.sh [83:22 - 183:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [81:21 - 239:23] (159 lines, 434 tokens)
+   .devcontainer/scripts/post-create.sh [91:18 - 249:23]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [81:21 - 239:23] (159 lines, 434 tokens)
+   .devcontainer/scripts/post-start.sh [88:8 - 246:23]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [193:1 - 223:3] (31 lines, 75 tokens)
+   .devcontainer/scripts/post-attach.sh [181:1 - 211:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
+   .devcontainer/scripts/on-create.sh [265:1 - 288:12]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
+   .devcontainer/scripts/post-attach.sh [248:1 - 271:12]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
+   .devcontainer/scripts/post-create.sh [271:1 - 294:12]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
+   .devcontainer/scripts/post-start.sh [268:1 - 291:12]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
+   .devcontainer/scripts/update-content.sh [269:1 - 292:12]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [290:1 - 311:15] (22 lines, 73 tokens)
+   .devcontainer/scripts/on-create.sh [295:1 - 316:15]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [290:1 - 320:14] (31 lines, 110 tokens)
+   .devcontainer/scripts/post-attach.sh [279:1 - 308:15]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [290:1 - 325:17] (36 lines, 127 tokens)
+   .devcontainer/scripts/post-create.sh [301:1 - 334:17]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [290:1 - 324:14] (35 lines, 124 tokens)
+   .devcontainer/scripts/post-start.sh [297:1 - 329:15]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [315:37 - 344:3] (30 lines, 84 tokens)
+   .devcontainer/scripts/on-create.sh [328:32 - 357:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [315:37 - 344:3] (30 lines, 84 tokens)
+   .devcontainer/scripts/post-attach.sh [317:24 - 346:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [315:37 - 477:3] (163 lines, 534 tokens)
+   .devcontainer/scripts/post-create.sh [334:34 - 476:7]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [388:1 - 398:5] (11 lines, 63 tokens)
+   .devcontainer/scripts/on-create.sh [411:1 - 421:5]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [402:1 - 425:7] (24 lines, 60 tokens)
+   .devcontainer/scripts/on-create.sh [447:1 - 470:7]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [459:1 - 477:3] (19 lines, 93 tokens)
+   .devcontainer/scripts/on-create.sh [525:1 - 543:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
+   .devcontainer/scripts/on-create.sh [646:1 - 665:19]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
+   .devcontainer/scripts/post-attach.sh [580:1 - 599:19]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
+   .devcontainer/scripts/post-create.sh [652:1 - 671:19]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
+   .devcontainer/scripts/post-start.sh [591:1 - 610:19]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
+   .devcontainer/scripts/update-content.sh [667:1 - 686:19]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [605:1 - 691:3] (87 lines, 665 tokens)
+   .devcontainer/scripts/on-create.sh [679:1 - 765:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [605:1 - 638:2] (34 lines, 196 tokens)
+   .devcontainer/scripts/post-attach.sh [613:1 - 646:2]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [605:1 - 691:3] (87 lines, 665 tokens)
+   .devcontainer/scripts/post-create.sh [685:1 - 771:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [605:1 - 640:3] (36 lines, 197 tokens)
+   .devcontainer/scripts/post-start.sh [624:1 - 659:3]
+Clone found (bash)
+ - .devcontainer/scripts/initialize.sh [605:1 - 691:3] (87 lines, 665 tokens)
+   .devcontainer/scripts/update-content.sh [700:1 - 786:3]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [359:1 - 470:7] (112 lines, 449 tokens)
+   .devcontainer/scripts/post-attach.sh [362:1 - 473:7]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [359:1 - 470:7] (112 lines, 449 tokens)
+   .devcontainer/scripts/post-start.sh [358:1 - 469:7]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [359:1 - 470:7] (112 lines, 449 tokens)
+   .devcontainer/scripts/update-content.sh [359:1 - 470:7]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [483:1 - 552:22] (70 lines, 299 tokens)
+   .devcontainer/scripts/post-create.sh [489:1 - 558:22]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [483:1 - 543:3] (61 lines, 269 tokens)
+   .devcontainer/scripts/post-start.sh [482:1 - 542:3]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [483:1 - 552:22] (70 lines, 299 tokens)
+   .devcontainer/scripts/update-content.sh [483:1 - 552:22]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [495:1 - 503:65] (9 lines, 66 tokens)
+   .devcontainer/scripts/post-attach.sh [495:1 - 503:65]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [552:50 - 591:3] (40 lines, 132 tokens)
+   .devcontainer/scripts/post-create.sh [558:52 - 597:3]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [552:50 - 584:2] (33 lines, 126 tokens)
+   .devcontainer/scripts/post-start.sh [551:51 - 583:2]
+Clone found (bash)
+ - .devcontainer/scripts/on-create.sh [560:24 - 583:7] (24 lines, 106 tokens)
+   .devcontainer/scripts/update-content.sh [597:23 - 620:7]
+Clone found (bash)
+ - .devcontainer/scripts/post-attach.sh [315:1 - 346:3] (32 lines, 96 tokens)
+   .devcontainer/scripts/post-start.sh [325:1 - 356:3]
+Clone found (bash)
+ - .devcontainer/scripts/post-start.sh [87:21 - 246:23] (160 lines, 437 tokens)
+   .devcontainer/scripts/update-content.sh [88:17 - 247:23]
+Clone found (bash)
+ - .devcontainer/scripts/post-start.sh [292:1 - 356:3] (65 lines, 220 tokens)
+   .devcontainer/scripts/update-content.sh [293:1 - 357:3]
 Clone found (yaml)
  - .github/ISSUE_TEMPLATE/architecture.yml [107:1 - 113:18] (7 lines, 51 tokens)
    .github/ISSUE_TEMPLATE/ci.yml [101:1 - 107:18]
@@ -1732,14 +1861,8 @@ Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [124:22 - 131:3] (8 lines, 64 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [96:22 - 103:3]
-Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [130:35 - 141:3] (12 lines, 179 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [102:35 - 113:3]
-Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [140:35 - 148:124] (9 lines, 156 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [112:35 - 120:124]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
 Clone found (markdown)
  - .staging/.github/skills/create-llms/SKILL.md:markdown [53:32 - 108:13] (56 lines, 562 tokens)
    .staging/.github/skills/update-llms/SKILL.md:markdown [47:42 - 96:13]
@@ -2469,6 +2592,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [110:16 - 124:125] (15 lines, 576 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2526:50 - 2551:7]
+Clone found (markdown)
+ - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [163:28 - 168:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [1282:112 - 1286:2]
 Clone found (yaml)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:yaml [59:1 - 178:48] (120 lines, 71 tokens)
    .staging/.github/skills/phoenix-evals/references/axial-coding.md:yaml [29:1 - 73:48]
@@ -2598,6 +2724,9 @@ Clone found (yaml)
 Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
+Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [300:45 - 305:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [318:23 - 322:2]
 Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [1223:63 - 1244:14] (22 lines, 530 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2150:63 - 2166:62]
@@ -3598,6 +3727,9 @@ Clone found (markdown)
  - .staging/.opencode/commands/speckit.analyze.md:markdown [31:20 - 44:17] (14 lines, 84 tokens)
    .staging/.opencode/commands/speckit.analyze.md:markdown [221:16 - 234:17]
 Clone found (markdown)
+ - .staging/.opencode/commands/speckit.analyze.md:markdown [226:8 - 241:2] (16 lines, 111 tokens)
+   .staging/.opencode/commands/speckit.checklist.md:markdown [359:8 - 372:88]
+Clone found (markdown)
  - .staging/.opencode/commands/speckit.clarify.md:markdown [44:25 - 55:5] (12 lines, 92 tokens)
    .staging/.opencode/commands/speckit.constitution.md:markdown [44:25 - 55:4]
 Clone found (markdown)
@@ -3628,13 +3760,13 @@ Clone found (markdown)
  - .staging/devenvironment/.devcontainer/features/devtools/README.md:markdown [11:1 - 18:4] (8 lines, 72 tokens)
    .staging/devenvironment/.devcontainer/features/docker-proxy/README.md:markdown [15:1 - 22:4]
 Clone found (yaml)
- - .staging/devenvironment/compose/docker-compose.yml [18:1 - 38:11] (21 lines, 77 tokens)
-   .staging/devenvironment/compose/docker-compose2.yml [23:1 - 43:11]
+ - .staging/devenvironment/compose/docker-compose.yml [8:1 - 28:11] (21 lines, 77 tokens)
+   .staging/devenvironment/compose/docker-compose2.yml [13:1 - 33:11]
 Clone found (yaml)
- - .staging/devenvironment/compose/docker-compose.yml [48:36 - 59:51] (12 lines, 56 tokens)
-   .staging/devenvironment/compose/docker-compose2.yml [53:11 - 64:51]
+ - .staging/devenvironment/compose/docker-compose.yml [38:36 - 49:51] (12 lines, 56 tokens)
+   .staging/devenvironment/compose/docker-compose2.yml [43:11 - 54:51]
 Clone found (yaml)
- - .staging/devenvironment/compose/docker-compose.yml [48:47 - 57:16] (10 lines, 54 tokens)
+ - .staging/devenvironment/compose/docker-compose.yml [38:47 - 47:16] (10 lines, 54 tokens)
    .staging/devenvironment/realm/ui/universal.base.yml [38:22 - 47:16]
 Clone found (yaml)
  - .staging/devenvironment/containers/caddy/caddy copy.yml [1:1 - 54:33] (54 lines, 288 tokens)
@@ -7717,6 +7849,9 @@ Clone found (latex)
  - beacon/.staging/latex/Miscellaneous/frequently-asked-questions/faq.tex [129:54 - 136:57] (8 lines, 101 tokens)
    beacon/.staging/latex/Miscellaneous/frequently-asked-questions/faq.tex [157:41 - 162:15]
 Clone found (latex)
+ - beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.tex [1:1 - 338:15] (338 lines, 10802 tokens)
+   beacon/.staging/nih-grant-proposal/NIHGrant.tex [1:1 - 338:15]
+Clone found (latex)
  - beacon/.staging/latex/Miscellaneous/poems/poems.tex [60:40 - 66:26] (7 lines, 93 tokens)
    beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex [144:192 - 148:10]
 Clone found (latex)
@@ -8496,6 +8631,24 @@ Clone found (yaml)
 Clone found (json)
  - egolint/package.json [26:26 - 37:3] (12 lines, 52 tokens)
    holon/packs/react-vite/template/package.json [29:19 - 40:3]
+Clone found (json)
+ - egolint/package.json [41:35 - 66:5] (26 lines, 117 tokens)
+   package.json [41:35 - 66:5]
+Clone found (json)
+ - egolint/package.json [87:24 - 106:25] (20 lines, 116 tokens)
+   package.json [82:32 - 101:25]
+Clone found (json)
+ - egolint/package.json [113:43 - 127:20] (15 lines, 83 tokens)
+   package.json [110:38 - 124:20]
+Clone found (json)
+ - egolint/package.json [130:33 - 154:32] (25 lines, 143 tokens)
+   package.json [127:33 - 151:32]
+Clone found (json)
+ - egolint/package.json [174:24 - 184:16] (11 lines, 59 tokens)
+   package.json [169:54 - 179:16]
+Clone found (json)
+ - egolint/package.json [234:34 - 244:17] (11 lines, 59 tokens)
+   package.json [209:34 - 219:17]
 Clone found (toml)
  - egolint/poetry.toml [1:1 - 107:15] (107 lines, 185 tokens)
    poetry.toml [1:1 - 107:15]
@@ -8535,6 +8688,9 @@ Clone found (tsx)
 Clone found (typescript)
  - holon/packs/react-vite/template/apps/web/vite.config.ts [1:1 - 10:13] (10 lines, 60 tokens)
    holon/packs/react-vite/template/docs/tooling/vite.md:typescript [48:1 - 57:13]
+Clone found (json)
+ - holon/packs/react-vite/template/package.json [28:1 - 44:3] (17 lines, 82 tokens)
+   package.json [25:1 - 41:21]
 Clone found (json)
  - holon/packs/react-vite/template/packages/api-client/package.json [2:35 - 13:2] (12 lines, 51 tokens)
    holon/packs/react-vite/template/packages/utilities/package.json [2:34 - 13:2]
@@ -9329,7 +9485,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 410            │ 109837      │ 427090       │ 232          │ 3614 (3.29%)     │ 19447 (4.55%)     │
+│ bash         │ 413            │ 114221      │ 442514       │ 275          │ 6032 (5.28%)     │ 28895 (6.53%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9377,7 +9533,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 68             │ 22806       │ 62739        │ 58           │ 1321 (5.79%)     │ 5555 (8.85%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 240            │ 69221       │ 206737       │ 64           │ 1139 (1.65%)     │ 5120 (2.48%)      │
+│ json         │ 241            │ 69470       │ 208087       │ 71           │ 1257 (1.81%)     │ 5779 (2.78%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9385,13 +9541,13 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ kusto        │ 1              │ 542         │ 306          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ latex        │ 303            │ 44149       │ 837394       │ 895          │ 12887 (29.19%)   │ 231937 (27.70%)   │
+│ latex        │ 304            │ 44487       │ 848196       │ 896          │ 13224 (29.73%)   │ 242739 (28.62%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ liquid       │ 2              │ 597         │ 835          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1725           │ 329668      │ 4246455      │ 683          │ 11428 (3.47%)    │ 171385 (4.04%)    │
+│ markdown     │ 1725           │ 329668      │ 4246455      │ 684          │ 11518 (3.49%)    │ 171282 (4.03%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 99             │ 29819       │ 117043       │ 48           │ 964 (3.23%)      │ 7969 (6.81%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9445,12 +9601,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 560            │ 58005       │ 320022       │ 351          │ 9396 (16.20%)    │ 105399 (32.93%)   │
+│ yaml         │ 560            │ 57988       │ 319997       │ 351          │ 9396 (16.20%)    │ 105399 (32.94%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4777           │ 984261      │ 7898225      │ 3106         │ 56631 (5.75%)    │ 742791 (9.40%)    │
+│ Total:       │ 4782           │ 989215      │ 7925776      │ 3158         │ 59594 (6.02%)    │ 763597 (9.63%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3106 clones.
+Found 3158 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (5.8%) over threshold (3.0%)
-time: 15.34s
+ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
+time: 11.28s
 

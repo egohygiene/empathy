@@ -3141,6 +3141,16 @@ beacon/.staging/latex/Title Pages/stylish-title-page/main.tex:
 	79: Trailing whitespace
 	83: Trailing whitespace
 	85: Trailing whitespace
+beacon/.staging/nih-grant-proposal/NIHGrant.bib:
+	23: Trailing whitespace
+beacon/.staging/nih-grant-proposal/NIHGrant.tex:
+	Wrong line endings or no final newline
+	64: Trailing whitespace
+	118: Trailing whitespace
+	248: Trailing whitespace
+beacon/.staging/nih-grant-proposal/nihunsrt.bst:
+	12: Trailing whitespace
+	594: Trailing whitespace
 holon/packs/react-vite/template/test-results/.last-run.json:
 	Wrong line endings or no final newline
 mantle/bin/list-vscode-language-ids:
@@ -3148,5 +3158,5 @@ mantle/bin/list-vscode-language-ids:
 notebooks/jupyter/.gitignore:
 	Wrong line endings or no final newline
 
-2779 errors found
+2786 errors found
 
