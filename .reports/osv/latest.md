@@ -1,25 +1,25 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-17T03-17-05Z`
+- Generated: `2026-08-17T21-06-31Z`
 - Repository: `egohygiene/empathy`
-- Commit: `7ac20af4fd73ee9869aa2310cef48b230512fd54`
+- Commit: `0e3b89c195a83734696404e1a281bfc3861a9a08`
 - Severity gate: `high`
-- Duration: `14s`
+- Duration: `16s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
-| Critical | 2 |
-| High | 25 |
-| Medium | 21 |
-| Low | 5 |
+| Critical | 3 |
+| High | 48 |
+| Medium | 46 |
+| Low | 10 |
 | Unknown | 0 |
-| **Total** | **53** |
+| **Total** | **107** |
 
 ## Discovery
 
-Discovered 45 artifact(s) across 7 ecosystem label(s).
+Discovered 47 artifact(s) across 7 ecosystem label(s).
 
 - `.reports/megalinter/syft/sbom.spdx.json`
 - `.staging/.github/skills/drawio/scripts/package.json`
@@ -65,6 +65,8 @@ Discovered 45 artifact(s) across 7 ecosystem label(s).
 - `holon/packs/react-vite/template/packages/utilities/package.json`
 - `holon/packs/react-vite/template/packages/visualizations/package.json`
 - `holon/packs/react-vite/template/packages/vite-config/package.json`
+- `package.json`
+- `pnpm-lock.yaml`
 - `pyproject.toml`
 
 ## Scanned Files
@@ -74,6 +76,7 @@ Discovered 45 artifact(s) across 7 ecosystem label(s).
 - `egolint/Cargo.lock`
 - `egolint/pnpm-lock.yaml`
 - `egolint/uv.lock`
+- `pnpm-lock.yaml`
 
 ## Skipped Discovered Files
 
@@ -116,13 +119,14 @@ Discovered 45 artifact(s) across 7 ecosystem label(s).
 - `holon/packs/react-vite/template/packages/utilities/package.json`
 - `holon/packs/react-vite/template/packages/visualizations/package.json`
 - `holon/packs/react-vite/template/packages/vite-config/package.json`
+- `package.json`
 - `pyproject.toml`
 
 ## OSV Scanner Report
 
 
-Total 20 packages affected by 53 known vulnerabilities (2 Critical, 25 High, 21 Medium, 5 Low, 0 Unknown) from 2 ecosystems.
-50 vulnerabilities can be fixed.
+Total 43 packages affected by 107 known vulnerabilities (3 Critical, 48 High, 46 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
+102 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -179,3 +183,57 @@ Total 20 packages affected by 53 known vulnerabilities (2 Critical, 25 High, 21 
 | https://osv.dev/PYSEC-2026-2009<br/>https://osv.dev/GHSA-597g-3phw-6986 | 4.5 | PyPI | virtualenv (dev) | 20.31.2 | 20.36.1 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-g3ch-rx76-35fx | 4.2 | npm | vue-template-compiler | 2.7.16 | -- | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-8988-4f7v-96qf | 5.3 | npm | @opentelemetry/core | 2.0.0 | 2.8.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-2g4f-4pwh-qvx6 | 5.5 | npm | ajv | 8.17.1 | 8.18.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-2g4f-4pwh-qvx6 | 5.5 | npm | ajv | 8.6.3 | 8.18.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-rgw5-rvv9-x895 | 7.5 | npm | brace-expansion | 5.0.8 | 5.0.9 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-grv7-fg5c-xmjg | 7.5 | npm | braces | 2.3.2 | 3.0.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | pnpm-lock.yaml |
+| https://osv.dev/GHSA-g7r4-m6w7-qqqr | 2.5 | npm | esbuild | 0.27.7 | 0.28.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-5v7r-6r5c-r473 | 5.3 | npm | file-type | 20.5.0 | 21.3.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-j47w-4g3g-c36v | 5.3 | npm | file-type | 20.5.0 | 21.3.2 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-52cp-r559-cp3m | 7.5 | npm | js-yaml | 4.1.1 | 4.3.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-5p4m-2wfm-xmqj | 7.5 | npm | js-yaml | 4.1.1 | 4.3.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-h67p-54hq-rp68 | 5.3 | npm | js-yaml | 4.1.1 | 4.2.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-f23m-r3pf-42rh<br/>https://osv.dev/GHSA-xxjr-mmjv-4gpg | 6.9 | npm | lodash | 4.17.21 | 4.18.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-r5fr-rjxr-66jc | 8.1 | npm | lodash | 4.17.21 | 4.18.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-952p-6rrq-rcjv | 5.3 | npm | micromatch | 3.1.10 | 4.0.8 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-23c5-xmqv-rm74 | 7.5 | npm | minimatch | 10.1.1 | 10.2.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-3ppc-4f35-3m26 | 8.7 | npm | minimatch | 10.1.1 | 10.2.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-7r86-cg39-jmmj | 7.5 | npm | minimatch | 10.1.1 | 10.2.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-9wv6-86v2-598j | 7.7 | npm | path-to-regexp | 6.1.0 | 6.3.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-2pr8-phx7-x9h3 | 5.3 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-66ff-xgx4-vchm | 7.7 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-685m-2w69-288q | 7.5 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-75px-5xx7-5xc7 | 8.1 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-f38q-mgvj-vph7 | 5.3 | npm | protobufjs | 6.11.6 | 7.6.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-fx83-v9x8-x52w | 5.3 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-jggg-4jg4-v7c6 | 5.3 | npm | protobufjs | 6.11.6 | 7.5.8 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-jvwf-75h9-cwgg | 7.5 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-q6x5-8v7m-xcrf | 5.3 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-wcpc-wj8m-hjx6 | 7.5 | npm | protobufjs | 6.11.6 | 7.6.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-xq3m-2v4x-88gg | 9.8 | npm | protobufjs | 6.11.6 | 7.5.5 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-5c6j-r48x-rmvq | 8.1 | npm | serialize-javascript | 4.0.0 | 7.0.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-5c6j-r48x-rmvq | 8.1 | npm | serialize-javascript | 6.0.2 | 7.0.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-qj8w-gfj5-8c6v | 5.9 | npm | serialize-javascript | 6.0.2 | 7.0.5 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-v3rj-xjv7-4jmq | 5.3 | npm | smol-toml | 1.5.2 | 1.6.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-52f5-9888-hmc6 | 2.5 | npm | tmp | 0.0.33 | 0.2.4 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-ph9p-34f9-6g65 | 7.7 | npm | tmp | 0.0.33 | 0.2.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-w5p7-h5w8-2hfq | 7.5 | npm | trim | 0.0.1 | 0.0.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-2mjp-6q6p-2qxm | 6.5 | npm | undici | 5.28.4 | 6.24.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-35p6-xmwp-9g52 | 3.7 | npm | undici | 5.28.4 | 6.27.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-4992-7rv2-5pvq | 4.6 | npm | undici | 5.28.4 | 6.24.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-8xcm-r25x-g524 | 4.8 | npm | undici | 5.28.4 | 6.28.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-c76h-2ccp-4975 | 6.8 | npm | undici | 5.28.4 | 5.28.5 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-cxrh-j4jr-qwg3 | 3.1 | npm | undici | 5.28.4 | 5.29.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-g8m3-5g58-fq7m | 3.7 | npm | undici | 5.28.4 | 6.27.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-g9mf-h72j-4rw9 | 5.9 | npm | undici | 5.28.4 | 6.23.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-m8rv-5g2x-5cg5 | 4.2 | npm | undici | 5.28.4 | 6.28.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-p88m-4jfj-68fv | 5.9 | npm | undici | 5.28.4 | 6.27.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-v3r7-h72x-cjcm | 4.8 | npm | undici | 5.28.4 | 6.28.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-v9p9-hfj2-hcw8 | 7.5 | npm | undici | 5.28.4 | 6.24.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-vrm6-8vpv-qv8q | 7.5 | npm | undici | 5.28.4 | 6.24.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-vxpw-j846-p89q | 7.5 | npm | undici | 5.28.4 | 6.27.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-w5hq-g745-h8pq | 7.5 | npm | uuid | 3.4.0 | 11.1.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-w5hq-g745-h8pq | 7.5 | npm | uuid | 8.3.2 | 11.1.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-g3ch-rx76-35fx | 4.2 | npm | vue-template-compiler | 2.7.16 | -- | pnpm-lock.yaml |
