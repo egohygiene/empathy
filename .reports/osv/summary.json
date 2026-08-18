@@ -1,36 +1,36 @@
 {
-  "commit": "7ac20af4fd73ee9869aa2310cef48b230512fd54",
+  "commit": "0e3b89c195a83734696404e1a281bfc3861a9a08",
   "execution": {
     "message": "Canonical OSV JSON and SARIF outputs were validated.",
     "state": "success"
   },
   "findings": {
-    "advisory": 26,
-    "blocking": 27,
+    "advisory": 56,
+    "blocking": 51,
     "by_severity": {
-      "critical": 2,
-      "high": 25,
-      "low": 5,
-      "medium": 21,
+      "critical": 3,
+      "high": 48,
+      "low": 10,
+      "medium": 46,
       "unknown": 0
     },
     "state": "blocked",
-    "total": 53
+    "total": 107
   },
   "freshness": {
-    "expires_at": "2026-08-25T03:17:19Z",
+    "expires_at": "2026-08-25T21:06:47Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-08-17T03:17:19Z",
+  "generated_at": "2026-08-17T21:06:47Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/7ac20af4fd73ee9869aa2310cef48b230512fd54/.reports/osv",
+    "detail": "https://github.com/egohygiene/empathy/tree/0e3b89c195a83734696404e1a281bfc3861a9a08/.reports/osv",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/7ac20af4fd73ee9869aa2310cef48b230512fd54",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/31990647843"
+    "source": "https://github.com/egohygiene/empathy/commit/0e3b89c195a83734696404e1a281bfc3861a9a08",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/32069327113"
   },
   "osv": {
     "discovery": {
-      "artifact_count": 45,
+      "artifact_count": 47,
       "artifacts": [
         ".reports/megalinter/syft/sbom.spdx.json",
         ".staging/.github/skills/drawio/scripts/package.json",
@@ -76,6 +76,8 @@
         "holon/packs/react-vite/template/packages/utilities/package.json",
         "holon/packs/react-vite/template/packages/visualizations/package.json",
         "holon/packs/react-vite/template/packages/vite-config/package.json",
+        "package.json",
+        "pnpm-lock.yaml",
         "pyproject.toml"
       ],
       "ecosystem_count": 7,
@@ -96,13 +98,14 @@
       "sarif": ".reports/osv/latest.sarif"
     },
     "scan": {
-      "affected_packages": 20,
+      "affected_packages": 43,
       "files_scanned": [
         ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
         ".staging/devenvironment/containers/services/api/poetry.lock",
         "egolint/Cargo.lock",
         "egolint/pnpm-lock.yaml",
-        "egolint/uv.lock"
+        "egolint/uv.lock",
+        "pnpm-lock.yaml"
       ],
       "files_skipped": [
         ".reports/megalinter/syft/sbom.spdx.json",
@@ -144,19 +147,20 @@
         "holon/packs/react-vite/template/packages/utilities/package.json",
         "holon/packs/react-vite/template/packages/visualizations/package.json",
         "holon/packs/react-vite/template/packages/vite-config/package.json",
+        "package.json",
         "pyproject.toml"
       ],
       "severity": {
-        "critical": 2,
-        "high": 25,
-        "low": 5,
-        "medium": 21,
-        "total": 53,
+        "critical": 3,
+        "high": 48,
+        "low": 10,
+        "medium": 46,
+        "total": 107,
         "unknown": 0
       },
-      "vulnerabilities": 53
+      "vulnerabilities": 107
     },
-    "scan_duration_seconds": 14,
+    "scan_duration_seconds": 16,
     "scanner": {
       "name": "osv-scanner",
       "version": "2.5.0"
@@ -172,7 +176,7 @@
   "provenance": {
     "event": "push",
     "run_attempt": 1,
-    "run_id": "31990647843",
+    "run_id": "32069327113",
     "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
   },
   "repository": "egohygiene/empathy",

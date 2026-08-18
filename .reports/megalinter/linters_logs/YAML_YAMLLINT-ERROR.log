@@ -385,6 +385,9 @@ mindgarden/profiles/quartz/profile.yaml
 mindgarden/profiles/quartz/quartz.config.yaml
   2:1       warning  missing document start "---"  (document-start)
 
+pnpm-lock.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
 pnpm-workspace.yaml
   1:1       warning  missing document start "---"  (document-start)
 
