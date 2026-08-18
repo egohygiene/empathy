@@ -1,36 +1,36 @@
 {
-  "commit": "0e3b89c195a83734696404e1a281bfc3861a9a08",
+  "commit": "df92966ecc4750d2c1f26fc8323ecec3cbe2c004",
   "execution": {
     "message": "Canonical OSV JSON and SARIF outputs were validated.",
     "state": "success"
   },
   "findings": {
-    "advisory": 56,
-    "blocking": 51,
+    "advisory": 57,
+    "blocking": 57,
     "by_severity": {
       "critical": 3,
-      "high": 48,
+      "high": 54,
       "low": 10,
-      "medium": 46,
+      "medium": 47,
       "unknown": 0
     },
     "state": "blocked",
-    "total": 107
+    "total": 114
   },
   "freshness": {
-    "expires_at": "2026-08-25T21:06:47Z",
+    "expires_at": "2026-08-26T14:39:52Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-08-17T21:06:47Z",
+  "generated_at": "2026-08-18T14:39:52Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/0e3b89c195a83734696404e1a281bfc3861a9a08/.reports/osv",
+    "detail": "https://github.com/egohygiene/empathy/tree/df92966ecc4750d2c1f26fc8323ecec3cbe2c004/.reports/osv",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/0e3b89c195a83734696404e1a281bfc3861a9a08",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/32069327113"
+    "source": "https://github.com/egohygiene/empathy/commit/df92966ecc4750d2c1f26fc8323ecec3cbe2c004",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/32149629892"
   },
   "osv": {
     "discovery": {
-      "artifact_count": 47,
+      "artifact_count": 49,
       "artifacts": [
         ".reports/megalinter/syft/sbom.spdx.json",
         ".staging/.github/skills/drawio/scripts/package.json",
@@ -39,6 +39,8 @@
         ".staging/devenvironment/containers/services/api/poetry.lock",
         ".staging/devenvironment/containers/services/api/pyproject.toml",
         ".staging/devenvironment/realm/pyproject.toml",
+        ".staging/tools/emoji-precache/package-lock.json",
+        ".staging/tools/emoji-precache/package.json",
         "egolint/.config/lint/python/pyproject.toml",
         "egolint/Cargo.lock",
         "egolint/package.json",
@@ -98,10 +100,11 @@
       "sarif": ".reports/osv/latest.sarif"
     },
     "scan": {
-      "affected_packages": 43,
+      "affected_packages": 45,
       "files_scanned": [
         ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
         ".staging/devenvironment/containers/services/api/poetry.lock",
+        ".staging/tools/emoji-precache/package-lock.json",
         "egolint/Cargo.lock",
         "egolint/pnpm-lock.yaml",
         "egolint/uv.lock",
@@ -113,6 +116,7 @@
         ".staging/.github/skills/md-to-docx/scripts/package.json",
         ".staging/devenvironment/containers/services/api/pyproject.toml",
         ".staging/devenvironment/realm/pyproject.toml",
+        ".staging/tools/emoji-precache/package.json",
         "egolint/.config/lint/python/pyproject.toml",
         "egolint/package.json",
         "egolint/pyproject.toml",
@@ -152,15 +156,15 @@
       ],
       "severity": {
         "critical": 3,
-        "high": 48,
+        "high": 54,
         "low": 10,
-        "medium": 46,
-        "total": 107,
+        "medium": 47,
+        "total": 114,
         "unknown": 0
       },
-      "vulnerabilities": 107
+      "vulnerabilities": 114
     },
-    "scan_duration_seconds": 16,
+    "scan_duration_seconds": 17,
     "scanner": {
       "name": "osv-scanner",
       "version": "2.5.0"
@@ -176,7 +180,7 @@
   "provenance": {
     "event": "push",
     "run_attempt": 1,
-    "run_id": "32069327113",
+    "run_id": "32149629892",
     "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
   },
   "repository": "egohygiene/empathy",

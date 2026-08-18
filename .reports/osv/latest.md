@@ -1,25 +1,25 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-17T21-06-31Z`
+- Generated: `2026-08-18T14-39-35Z`
 - Repository: `egohygiene/empathy`
-- Commit: `0e3b89c195a83734696404e1a281bfc3861a9a08`
+- Commit: `df92966ecc4750d2c1f26fc8323ecec3cbe2c004`
 - Severity gate: `high`
-- Duration: `16s`
+- Duration: `17s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
 | Critical | 3 |
-| High | 48 |
-| Medium | 46 |
+| High | 54 |
+| Medium | 47 |
 | Low | 10 |
 | Unknown | 0 |
-| **Total** | **107** |
+| **Total** | **114** |
 
 ## Discovery
 
-Discovered 47 artifact(s) across 7 ecosystem label(s).
+Discovered 49 artifact(s) across 7 ecosystem label(s).
 
 - `.reports/megalinter/syft/sbom.spdx.json`
 - `.staging/.github/skills/drawio/scripts/package.json`
@@ -28,6 +28,8 @@ Discovered 47 artifact(s) across 7 ecosystem label(s).
 - `.staging/devenvironment/containers/services/api/poetry.lock`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
+- `.staging/tools/emoji-precache/package-lock.json`
+- `.staging/tools/emoji-precache/package.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/Cargo.lock`
 - `egolint/package.json`
@@ -73,6 +75,7 @@ Discovered 47 artifact(s) across 7 ecosystem label(s).
 
 - `.staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj`
 - `.staging/devenvironment/containers/services/api/poetry.lock`
+- `.staging/tools/emoji-precache/package-lock.json`
 - `egolint/Cargo.lock`
 - `egolint/pnpm-lock.yaml`
 - `egolint/uv.lock`
@@ -85,6 +88,7 @@ Discovered 47 artifact(s) across 7 ecosystem label(s).
 - `.staging/.github/skills/md-to-docx/scripts/package.json`
 - `.staging/devenvironment/containers/services/api/pyproject.toml`
 - `.staging/devenvironment/realm/pyproject.toml`
+- `.staging/tools/emoji-precache/package.json`
 - `egolint/.config/lint/python/pyproject.toml`
 - `egolint/package.json`
 - `egolint/pyproject.toml`
@@ -125,8 +129,8 @@ Discovered 47 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 43 packages affected by 107 known vulnerabilities (3 Critical, 48 High, 46 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
-102 vulnerabilities can be fixed.
+Total 45 packages affected by 114 known vulnerabilities (3 Critical, 54 High, 47 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
+109 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -181,6 +185,13 @@ Total 43 packages affected by 107 known vulnerabilities (3 Critical, 48 High, 46
 | https://osv.dev/PYSEC-2026-1996<br/>https://osv.dev/GHSA-38jv-5279-wg99 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.3 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-1998<br/>https://osv.dev/GHSA-gm62-xv2j-4w53 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.0 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2009<br/>https://osv.dev/GHSA-597g-3phw-6986 | 4.5 | PyPI | virtualenv (dev) | 20.31.2 | 20.36.1 | .staging/devenvironment/containers/services/api/poetry.lock |
+| https://osv.dev/GHSA-3jxr-9vmj-r5cp | 7.7 | npm | brace-expansion | 1.1.12 | 1.1.16 | .staging/tools/emoji-precache/package-lock.json |
+| https://osv.dev/GHSA-f886-m6hf-6m8v | 6.5 | npm | brace-expansion | 1.1.12 | 1.1.13 | .staging/tools/emoji-precache/package-lock.json |
+| https://osv.dev/GHSA-mh99-v99m-4gvg | 7.5 | npm | brace-expansion | 1.1.12 | 1.1.17 | .staging/tools/emoji-precache/package-lock.json |
+| https://osv.dev/GHSA-rgw5-rvv9-x895 | 7.5 | npm | brace-expansion | 1.1.12 | 1.1.18 | .staging/tools/emoji-precache/package-lock.json |
+| https://osv.dev/GHSA-23c5-xmqv-rm74 | 7.5 | npm | minimatch | 3.1.2 | 3.1.4 | .staging/tools/emoji-precache/package-lock.json |
+| https://osv.dev/GHSA-3ppc-4f35-3m26 | 8.7 | npm | minimatch | 3.1.2 | 3.1.3 | .staging/tools/emoji-precache/package-lock.json |
+| https://osv.dev/GHSA-7r86-cg39-jmmj | 7.5 | npm | minimatch | 3.1.2 | 3.1.3 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-g3ch-rx76-35fx | 4.2 | npm | vue-template-compiler | 2.7.16 | -- | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-8988-4f7v-96qf | 5.3 | npm | @opentelemetry/core | 2.0.0 | 2.8.0 | pnpm-lock.yaml |
