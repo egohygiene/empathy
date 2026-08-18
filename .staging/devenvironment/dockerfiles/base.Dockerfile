@@ -39,17 +39,8 @@ FROM debian:${DEBIAN_IMAGE_VERSION} AS setup
 #   - https://github.com/opencontainers/image-spec/blob/latest/annotations.md
 #   - https://specs.opencontainers.org/image-spec/annotations/
 ######################################################################
-LABEL \
-    org.opencontainers.image.authors="Alan Szmyt" \
-    org.opencontainers.image.url="https://example.com/myimage" \
-    org.opencontainers.image.documentation="https://example.com/myimage/docs" \
-    org.opencontainers.image.source="https://github.com/example/myimage" \
-    org.opencontainers.image.version=${BASE_IMAGE_VERSION} \
-    org.opencontainers.image.vendor="Example, Inc." \
-    org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.title="${COMPOSE_PROJECT_NAME}" \
-    org.opencontainers.image.description="This image is used for..." \
-    org.opencontainers.image.base.name="debian:bookworm"
+
+
 
 ######################################################################
 # Arguments (with default values)
