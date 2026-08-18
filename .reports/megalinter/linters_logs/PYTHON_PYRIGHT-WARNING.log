@@ -9387,6 +9387,59 @@ Linter raw log:
       Type "str" is not assignable to type "int | None"
         "str" is not assignable to "int"
         "str" is not assignable to "None" (reportArgumentType)
+.staging/tools/emoji-precache/pandoc_emoji_filter.py
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:24:8 - warning: Import "emoji" could not be resolved (reportMissingImports)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:25:6 - warning: Import "emoji.core" could not be resolved (reportMissingImports)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:25:24 - error: Type of "EmojiMatch" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:26:6 - warning: Import "pandocfilters" could not be resolved (reportMissingImports)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:26:27 - error: Type of "Image" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:26:34 - error: Type of "Str" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:26:39 - error: Type of "attributes" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:26:51 - error: Type of "toJSONFilter" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:29:10 - warning: Import "pandocfilters" could not be resolved (reportMissingImports)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:29:31 - error: Type of "PandocFormat" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:29:45 - error: Type of "PandocMeta" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:58:5 - error: Type of "data" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:58:12 - error: Type of "EMOJI_DATA" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:58:12 - error: Type of "get" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:62:27 - error: Type of "strip" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:62:27 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:63:23 - error: Type of "strip" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:63:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "extend"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:63:44 - error: Type of "alias" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:63:53 - error: Type of "get" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:84:5 - error: Type of "tokens" is partially unknown
+    Type of "tokens" is "list[Unknown]" (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:84:19 - error: Type of "analyze" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:84:19 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "__init__" (reportUnknownArgumentType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:88:9 - error: Type of "tok" is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:89:23 - error: Type of "value" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:93:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "object" in function "append"
+    Argument type is "tuple[Unknown, Literal[True]]" (reportUnknownArgumentType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:93:30 - error: Type of "chars" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:95:24 - error: Type of "chars" is unknown (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:95:24 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:118:12 - error: Return type is unknown (reportUnknownVariableType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:130:5 - error: Return type, "list[dict[Unknown, Unknown]] | None", is partially unknown (reportUnknownParameterType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:133:5 - error: Type of parameter "fmt" is unknown (reportUnknownParameterType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:134:5 - error: Type of parameter "meta" is unknown (reportUnknownParameterType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:171:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: dict[Unknown, Unknown], /) -> None" (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:175:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: dict[Unknown, Unknown], /) -> None" (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:175:30 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:177:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: dict[Unknown, Unknown], /) -> None" (reportUnknownMemberType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:177:26 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  .staging/tools/emoji-precache/pandoc_emoji_filter.py:179:12 - error: Return type, "list[dict[Unknown, Unknown]] | None", is partially unknown (reportUnknownVariableType)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py
   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:29:6 - warning: Import "linesegment" could not be resolved (reportMissingImports)
   beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:29:25 - error: Type of "LineSegment" is unknown (reportUnknownVariableType)
@@ -12253,5 +12306,5 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8742 errors, 420 warnings, 0 informations
+8777 errors, 424 warnings, 0 informations
 

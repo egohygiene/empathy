@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:bfb0dd8a-79e2-4616-9ffe-60dcb253e1c4",
+  "serialNumber": "urn:uuid:baab5a9b-bbe9-48a1-8c1e-8f8e1953540e",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-17T21:13:36Z",
+    "timestamp": "2026-08-18T14:46:09Z",
     "tools": {
       "components": [
         {
@@ -179876,6 +179876,66 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/balanced-match@1.0.2?package-id=63938d61170e2194",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:balanced-match:balanced-match:1.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/balanced-match@1.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:balanced-match:balanced_match:1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:balanced_match:balanced-match:1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:balanced_match:balanced_match:1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:balanced:balanced-match:1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:balanced:balanced_match:1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/balanced-match@1.0.2?package-id=a24c7ce2c36a358f",
       "type": "library",
       "supplier": {
@@ -184826,6 +184886,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/brace-expansion@1.1.12?package-id=e8127b6643214d5e",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "brace-expansion",
+      "version": "1.1.12",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:juliangruber:brace-expansion:1.1.12:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/brace-expansion@1.1.12",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -201973,6 +202073,66 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/concat-map@0.0.1?package-id=8eec59e1b0010f42",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "concat-map",
+      "version": "0.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:concat-map:concat-map:0.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/concat-map@0.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:concat-map:concat_map:0.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:concat_map:concat-map:0.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:concat_map:concat_map:0.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:concat:concat-map:0.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:concat:concat_map:0.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -226232,6 +226392,59 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/emoji-precache@1.0.0?package-id=d4dcf47380ca34f5",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "emoji-precache",
+      "version": "1.0.0",
+      "cpe": "cpe:2.3:a:emoji-precache:emoji-precache:1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/emoji-precache@1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:emoji-precache:emoji_precache:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:emoji_precache:emoji-precache:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:emoji_precache:emoji_precache:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:emoji:emoji-precache:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:emoji:emoji_precache:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/emoji-regex@10.6.0?package-id=441e6ef0eff4345b",
       "type": "library",
       "supplier": {
@@ -248898,6 +249111,66 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/fs-extra@8.1.0?package-id=0fd7f0ead4cdf4d3",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "fs-extra",
+      "version": "8.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:fs-extra:fs-extra:8.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/fs-extra@8.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fs-extra:fs_extra:8.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fs_extra:fs-extra:8.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fs_extra:fs_extra:8.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fs:fs-extra:8.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fs:fs_extra:8.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/fs-extra@8.1.0?package-id=f4870edef6db6be6",
       "type": "library",
       "supplier": {
@@ -249386,6 +249659,46 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/fs.realpath@1.0.0?package-id=f0c89653b0df8f35",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "fs.realpath",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:fs.realpath:fs.realpath:1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/fs.realpath@1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/fs.realpath@1.0.0?package-id=764857c8fe47f5e4",
       "type": "library",
       "supplier": {
@@ -249646,6 +249959,66 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/function-bind@1.1.2?package-id=d6a7ff69b356f9ce",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "function-bind",
+      "version": "1.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:function-bind:function-bind:1.1.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/function-bind@1.1.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:function-bind:function_bind:1.1.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:function_bind:function-bind:1.1.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:function_bind:function_bind:1.1.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:function:function-bind:1.1.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:function:function_bind:1.1.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -255790,6 +256163,46 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/glob@7.2.3?package-id=5ffc50dddb667a84",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "glob",
+      "version": "7.2.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:isaacs:glob:7.2.3:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/glob@7.2.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/glob@7.2.3?package-id=7646e5ebf7a6091f",
       "type": "library",
       "supplier": {
@@ -258682,6 +259095,66 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/graceful-fs@4.2.11?package-id=018d09bab1618f31",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "graceful-fs",
+      "version": "4.2.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:graceful-fs:graceful-fs:4.2.11:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/graceful-fs@4.2.11",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:graceful-fs:graceful_fs:4.2.11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:graceful_fs:graceful-fs:4.2.11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:graceful_fs:graceful_fs:4.2.11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:graceful:graceful-fs:4.2.11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:graceful:graceful_fs:4.2.11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -261748,6 +262221,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/hasown@2.0.2?package-id=c7acfb6ad6ae2777",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "hasown",
+      "version": "2.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:hasown:hasown:2.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/hasown@2.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -273238,6 +273751,46 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/inflight@1.0.6?package-id=c4e15b7214f1b42d",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "inflight",
+      "version": "1.0.6",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:inflight:inflight:1.0.6:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/inflight@1.0.6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/inflight@1.0.6?package-id=41543ecb880bc051",
       "type": "library",
       "supplier": {
@@ -273366,6 +273919,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/inherits@2.0.4?package-id=77aeda06225f98ff",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "inherits",
+      "version": "2.0.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:inherits:inherits:2.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/inherits@2.0.4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -275200,6 +275793,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/interpret@1.4.0?package-id=1370ed6906ec93de",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "interpret",
+      "version": "1.4.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:interpret:interpret:1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/interpret@1.4.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -277860,6 +278493,82 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/is-core-module@2.16.1?package-id=ffb132c6c41bd7de",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "is-core-module",
+      "version": "2.16.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:is-core-module:is-core-module:2.16.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/is-core-module@2.16.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is-core-module:is_core_module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is_core_module:is-core-module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is_core_module:is_core_module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is-core:is-core-module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is-core:is_core_module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is_core:is-core-module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is_core:is_core_module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is:is-core-module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:is:is_core_module:2.16.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -299007,6 +299716,46 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/jsonfile@4.0.0?package-id=01e22677e7c21f97",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "jsonfile",
+      "version": "4.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:jsonfile:jsonfile:4.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/jsonfile@4.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/jsonfile@4.0.0?package-id=24c3d5ead18cc6b3",
       "type": "library",
       "supplier": {
@@ -299069,6 +299818,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/jsonfile@5.0.0?package-id=8a4cabf723b2b959",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "jsonfile",
+      "version": "5.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:jsonfile:jsonfile:5.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/jsonfile@5.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -336753,6 +337542,46 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/minimatch@3.1.2?package-id=d4b2d3829609696a",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "minimatch",
+      "version": "3.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:minimatch_project:minimatch:3.1.2:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/minimatch@3.1.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/minimatch@3.1.5?package-id=1590acf9e1f7067e",
       "type": "library",
       "supplier": {
@@ -352467,6 +353296,46 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/once@1.4.0?package-id=11f715b8476bec69",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "once",
+      "version": "1.4.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:once:once:1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/once@1.4.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/once@1.4.0?package-id=048c16fd4d3d10e1",
       "type": "library",
       "supplier": {
@@ -363022,6 +363891,82 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/path-is-absolute@1.0.1?package-id=e800d7c6fc983657",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "path-is-absolute",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:path-is-absolute:path-is-absolute:1.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/path-is-absolute@1.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path-is-absolute:path_is_absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path_is_absolute:path-is-absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path_is_absolute:path_is_absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path-is:path-is-absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path-is:path_is_absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path_is:path-is-absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path_is:path_is_absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path:path-is-absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:path:path_is_absolute:1.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/path-is-absolute@1.0.1?package-id=6f50586d2578a289",
       "type": "library",
       "supplier": {
@@ -363506,6 +364451,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/path-parse@1.0.7?package-id=b5eb338060aa20c5",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "path-parse",
+      "version": "1.0.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:path-parse_project:path-parse:1.0.7:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/path-parse@1.0.7",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -405736,6 +406721,39 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/rechoir@0.6.2?package-id=e25361b87fe9dd3b",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "rechoir",
+      "version": "0.6.2",
+      "cpe": "cpe:2.3:a:rechoir:rechoir:0.6.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/rechoir@0.6.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/recma-build-jsx@1.0.0?package-id=cb34304a2f5ac580",
       "type": "library",
       "supplier": {
@@ -414938,6 +415956,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/resolve@1.22.10?package-id=3d1ccda76ae31777",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "resolve",
+      "version": "1.22.10",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:resolve:resolve:1.22.10:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/resolve@1.22.10",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -429033,6 +430091,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/shelljs@0.8.5?package-id=0e357ceed2e35d4a",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "shelljs",
+      "version": "0.8.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:shelljs:shelljs:0.8.5:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/shelljs@0.8.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -448402,6 +449500,98 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/supports-preserve-symlinks-flag@1.0.0?package-id=b544d741139ca7bf",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "supports-preserve-symlinks-flag",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:supports-preserve-symlinks-flag:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports-preserve-symlinks-flag:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports_preserve_symlinks_flag:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports_preserve_symlinks_flag:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports-preserve-symlinks:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports-preserve-symlinks:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports_preserve_symlinks:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports_preserve_symlinks:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports-preserve:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports-preserve:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports_preserve:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports_preserve:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:supports:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/supports-preserve-symlinks-flag@1.0.0?package-id=7d285f2e5732cc67",
       "type": "library",
       "supplier": {
@@ -460253,6 +461443,106 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/twemoji@14.0.2?package-id=45e6af9c2040d91b",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "twemoji",
+      "version": "14.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:twemoji:twemoji:14.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/twemoji@14.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/twemoji-parser@14.0.0?package-id=288025d2ca5e790a",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "twemoji-parser",
+      "version": "14.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:twemoji-parser:twemoji-parser:14.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/twemoji-parser@14.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:twemoji-parser:twemoji_parser:14.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:twemoji_parser:twemoji-parser:14.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:twemoji_parser:twemoji_parser:14.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:twemoji:twemoji-parser:14.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:twemoji:twemoji_parser:14.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/type-check@0.4.0?package-id=9019f2d3c7f556b4",
       "type": "library",
       "supplier": {
@@ -469736,6 +471026,46 @@
         {
           "name": "syft:location:0:path",
           "value": "/pnpm-lock.yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/universalify@0.1.2?package-id=84001b460d19a3b0",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "universalify",
+      "version": "0.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:universalify:universalify:0.1.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/universalify@0.1.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
         }
       ]
     },
@@ -481826,6 +483156,46 @@
       ]
     },
     {
+      "bom-ref": "pkg:npm/wrappy@1.0.2?package-id=bb87e77615743585",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "wrappy",
+      "version": "1.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:wrappy:wrappy:1.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/wrappy@1.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.staging/tools/emoji-precache/package-lock.json"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:npm/wrappy@1.0.2?package-id=4068cf65fee25929",
       "type": "library",
       "supplier": {
@@ -486612,6 +487982,17 @@
         {
           "alg": "SHA-256",
           "content": "372a823da960f45f70db23e30a2804ca1c3d3caa40279df7629ba8876c3d87f6"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f3345687688ada68",
+      "type": "file",
+      "name": "/github/workspace/.staging/tools/emoji-precache/package-lock.json",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "82d7674f75a332f557bad2cfa99fe7d1e9fa64e71e3c35243d73faefaa849277"
         }
       ]
     },
@@ -507175,6 +508556,13 @@
       ]
     },
     {
+      "ref": "pkg:npm/brace-expansion@1.1.12?package-id=e8127b6643214d5e",
+      "dependsOn": [
+        "pkg:npm/balanced-match@1.0.2?package-id=63938d61170e2194",
+        "pkg:npm/concat-map@0.0.1?package-id=8eec59e1b0010f42"
+      ]
+    },
+    {
       "ref": "pkg:npm/brace-expansion@1.1.18?package-id=cc3b593234365115",
       "dependsOn": [
         "pkg:npm/balanced-match@1.0.2?package-id=a24c7ce2c36a358f",
@@ -512323,6 +513711,13 @@
       ]
     },
     {
+      "ref": "pkg:npm/emoji-precache@1.0.0?package-id=d4dcf47380ca34f5",
+      "dependsOn": [
+        "pkg:npm/shelljs@0.8.5?package-id=0e357ceed2e35d4a",
+        "pkg:npm/twemoji@14.0.2?package-id=45e6af9c2040d91b"
+      ]
+    },
+    {
       "ref": "pkg:npm/encoding-sniffer@0.2.1?package-id=e8777dae07fb1e43",
       "dependsOn": [
         "pkg:npm/iconv-lite@0.4.24?package-id=37642577d6875019",
@@ -515040,6 +516435,15 @@
       ]
     },
     {
+      "ref": "pkg:npm/fs-extra@8.1.0?package-id=0fd7f0ead4cdf4d3",
+      "dependsOn": [
+        "pkg:npm/graceful-fs@4.2.11?package-id=018d09bab1618f31",
+        "pkg:npm/jsonfile@4.0.0?package-id=01e22677e7c21f97",
+        "pkg:npm/jsonfile@5.0.0?package-id=8a4cabf723b2b959",
+        "pkg:npm/universalify@0.1.2?package-id=84001b460d19a3b0"
+      ]
+    },
+    {
       "ref": "pkg:npm/fs-extra@8.1.0?package-id=8f9c87d954b2f5b9",
       "dependsOn": [
         "pkg:npm/graceful-fs@4.2.10?package-id=644534999679d7f7",
@@ -515801,6 +517205,17 @@
         "pkg:npm/minimatch@9.0.9?package-id=49a3871a1b44c30f",
         "pkg:npm/once@1.4.0?package-id=d998e23cbae11300",
         "pkg:npm/path-is-absolute@1.0.1?package-id=25df60f7db29f132"
+      ]
+    },
+    {
+      "ref": "pkg:npm/glob@7.2.3?package-id=5ffc50dddb667a84",
+      "dependsOn": [
+        "pkg:npm/fs.realpath@1.0.0?package-id=f0c89653b0df8f35",
+        "pkg:npm/inflight@1.0.6?package-id=c4e15b7214f1b42d",
+        "pkg:npm/inherits@2.0.4?package-id=77aeda06225f98ff",
+        "pkg:npm/minimatch@3.1.2?package-id=d4b2d3829609696a",
+        "pkg:npm/once@1.4.0?package-id=11f715b8476bec69",
+        "pkg:npm/path-is-absolute@1.0.1?package-id=e800d7c6fc983657"
       ]
     },
     {
@@ -516655,6 +518070,12 @@
       "dependsOn": [
         "pkg:npm/hookified@1.15.1?package-id=a7fb61333d0f42a3",
         "pkg:npm/hookified@2.2.0?package-id=81d267adca3e7bba"
+      ]
+    },
+    {
+      "ref": "pkg:npm/hasown@2.0.2?package-id=c7acfb6ad6ae2777",
+      "dependsOn": [
+        "pkg:npm/function-bind@1.1.2?package-id=d6a7ff69b356f9ce"
       ]
     },
     {
@@ -518114,6 +519535,13 @@
       ]
     },
     {
+      "ref": "pkg:npm/inflight@1.0.6?package-id=c4e15b7214f1b42d",
+      "dependsOn": [
+        "pkg:npm/once@1.4.0?package-id=11f715b8476bec69",
+        "pkg:npm/wrappy@1.0.2?package-id=bb87e77615743585"
+      ]
+    },
+    {
       "ref": "pkg:npm/inflight@1.0.6?package-id=dc886874231bf747",
       "dependsOn": [
         "pkg:npm/once@1.4.0?package-id=d998e23cbae11300",
@@ -519017,6 +520445,12 @@
       "dependsOn": [
         "pkg:npm/ci-info@3.9.0?package-id=c9a2d854aa26970d",
         "pkg:npm/ci-info@4.4.0?package-id=4a22b68160d19296"
+      ]
+    },
+    {
+      "ref": "pkg:npm/is-core-module@2.16.1?package-id=ffb132c6c41bd7de",
+      "dependsOn": [
+        "pkg:npm/hasown@2.0.2?package-id=c7acfb6ad6ae2777"
       ]
     },
     {
@@ -521039,6 +522473,12 @@
       "ref": "pkg:npm/jsonc-simple-parser@3.0.0?package-id=ac25f1b3d8ea4f02",
       "dependsOn": [
         "pkg:npm/reghex@3.0.2?package-id=7a42e12ace25eade"
+      ]
+    },
+    {
+      "ref": "pkg:npm/jsonfile@5.0.0?package-id=8a4cabf723b2b959",
+      "dependsOn": [
+        "pkg:npm/universalify@0.1.2?package-id=84001b460d19a3b0"
       ]
     },
     {
@@ -525515,6 +526955,12 @@
       ]
     },
     {
+      "ref": "pkg:npm/minimatch@3.1.2?package-id=d4b2d3829609696a",
+      "dependsOn": [
+        "pkg:npm/brace-expansion@1.1.12?package-id=e8127b6643214d5e"
+      ]
+    },
+    {
       "ref": "pkg:npm/minimatch@3.1.5?package-id=1590acf9e1f7067e",
       "dependsOn": [
         "pkg:npm/brace-expansion@1.1.18?package-id=cc3b593234365115",
@@ -527883,6 +529329,12 @@
       "ref": "pkg:npm/once@1.4.0?package-id=048c16fd4d3d10e1",
       "dependsOn": [
         "pkg:npm/wrappy@1.0.2?package-id=4068cf65fee25929"
+      ]
+    },
+    {
+      "ref": "pkg:npm/once@1.4.0?package-id=11f715b8476bec69",
+      "dependsOn": [
+        "pkg:npm/wrappy@1.0.2?package-id=bb87e77615743585"
       ]
     },
     {
@@ -533193,6 +534645,12 @@
       ]
     },
     {
+      "ref": "pkg:npm/rechoir@0.6.2?package-id=e25361b87fe9dd3b",
+      "dependsOn": [
+        "pkg:npm/resolve@1.22.10?package-id=3d1ccda76ae31777"
+      ]
+    },
+    {
       "ref": "pkg:npm/recma-build-jsx@1.0.0?package-id=0c34711d4960fe3c",
       "dependsOn": [
         "pkg:npm/%40types/estree@0.0.39?package-id=2f81a16cc78db126",
@@ -534476,6 +535934,14 @@
         "pkg:npm/glob@8.1.0?package-id=3885253eec17e8f9",
         "pkg:npm/walk-up-path@3.0.1?package-id=c4ade8ab734cee5f",
         "pkg:npm/walk-up-path@4.0.0?package-id=bfc40a42210dd0b5"
+      ]
+    },
+    {
+      "ref": "pkg:npm/resolve@1.22.10?package-id=3d1ccda76ae31777",
+      "dependsOn": [
+        "pkg:npm/is-core-module@2.16.1?package-id=ffb132c6c41bd7de",
+        "pkg:npm/path-parse@1.0.7?package-id=b5eb338060aa20c5",
+        "pkg:npm/supports-preserve-symlinks-flag@1.0.0?package-id=b544d741139ca7bf"
       ]
     },
     {
@@ -536059,6 +537525,14 @@
         "pkg:npm/execa@9.6.1?package-id=decd6831f7578974",
         "pkg:npm/fast-glob@3.2.12?package-id=4bf25a830549f56c",
         "pkg:npm/fast-glob@3.3.3?package-id=66e9a6d1cd566c94"
+      ]
+    },
+    {
+      "ref": "pkg:npm/shelljs@0.8.5?package-id=0e357ceed2e35d4a",
+      "dependsOn": [
+        "pkg:npm/glob@7.2.3?package-id=5ffc50dddb667a84",
+        "pkg:npm/interpret@1.4.0?package-id=1370ed6906ec93de",
+        "pkg:npm/rechoir@0.6.2?package-id=e25361b87fe9dd3b"
       ]
     },
     {
@@ -539708,6 +541182,16 @@
         "pkg:npm/debug@4.4.0?package-id=795fdc73fb9e4dcb",
         "pkg:npm/debug@4.4.3?package-id=9dd81391e298e5db",
         "pkg:npm/make-fetch-happen@15.0.6?package-id=b59331de69fdcede"
+      ]
+    },
+    {
+      "ref": "pkg:npm/twemoji@14.0.2?package-id=45e6af9c2040d91b",
+      "dependsOn": [
+        "pkg:npm/fs-extra@8.1.0?package-id=0fd7f0ead4cdf4d3",
+        "pkg:npm/jsonfile@4.0.0?package-id=01e22677e7c21f97",
+        "pkg:npm/jsonfile@5.0.0?package-id=8a4cabf723b2b959",
+        "pkg:npm/twemoji-parser@14.0.0?package-id=288025d2ca5e790a",
+        "pkg:npm/universalify@0.1.2?package-id=84001b460d19a3b0"
       ]
     },
     {
