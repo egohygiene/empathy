@@ -4,8 +4,8 @@ See documentation on https://megalinter.io/10.0.0/descriptors/spell_proselint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-.audits/2026-08-15-staging-home-audit.md:107:23: annotations.misc: Annotation left in text.
-.audits/2026-08-15-staging-home-audit.md:107:42: annotations.misc: Annotation left in text.
+.audits/2026-08-15-staging-home-audit.md:109:23: annotations.misc: Annotation left in text.
+.audits/2026-08-15-staging-home-audit.md:109:42: annotations.misc: Annotation left in text.
 .audits/2026-08-16-taskfile-promotion.md:42:147: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .audits/2026-08-16-taskfile-promotion.md:43:228: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .audits/2026-08-16-taskfile-promotion.md:44:134: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -132,7 +132,7 @@ Consent' - a phrase is repeated.
 PILLARS.md:68:38: lexical_illusions: There's a lexical illusion in 'Automation
 
 Automation' - a phrase is repeated.
-README.md:19:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+README.md:23:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:58:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:174:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 TASKS.md:14:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.

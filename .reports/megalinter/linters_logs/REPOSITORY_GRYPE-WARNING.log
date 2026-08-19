@@ -128,5 +128,5 @@ serialize-javascript         4.0.0                                     7.0.3    
 serialize-javascript         6.0.2                                     7.0.3     npm            GHSA-5c6j-r48x-rmvq  High      N/A           N/A    
 smol-toml                    1.5.2                                     1.6.1     npm            GHSA-v3rj-xjv7-4jmq  Medium    N/A           N/A    
 esbuild                      0.27.7                                    0.28.1    npm            GHSA-g7r4-m6w7-qqqr  Low       N/A           N/A
-[0122] ERROR discovered vulnerabilities at or above the severity threshold
+[0121] ERROR discovered vulnerabilities at or above the severity threshold
 

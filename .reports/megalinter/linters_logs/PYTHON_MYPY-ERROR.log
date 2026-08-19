@@ -10,11 +10,103 @@ Collecting types-PyYAML
 Downloading types_pyyaml-6.0.12.20260815-py3-none-any.whl (21 kB)
 Installing collected packages: types-PyYAML
 Successfully installed types-PyYAML-6.0.12.20260815
+tools/staging_removal_gate.py: note: In function "load_audit_module":
+tools/staging_removal_gate.py:17:1: error: Function is missing a return type
+annotation  [no-untyped-def]
+    def load_audit_module(repository_root: Path):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tools/staging_removal_gate.py: note: In function "validate_removals":
+tools/staging_removal_gate.py:43:1: error: Function is missing a type
+annotation for one or more arguments  [no-untyped-def]
+    def validate_removals(rows, approvals, source_paths: list[str]) -> lis...
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
+tools/staging_removal_gate.py: note: In function "main":
+tools/staging_removal_gate.py:102:9: error: Assignment to variable "error"
+outside except: block  [misc]
+            for error in errors:
+            ^
+tools/staging_removal_gate.py:103:42: error: Trying to read deleted variable
+"error"  [misc]
+                print(f"removal gate failed: {error}", file=sys.stderr)
+                                             ^~~~~~
 tools/task_catalog.py: note: In function "render_catalog":
 tools/task_catalog.py:75:71: error: "object" has no attribute "__iter__"; maybe
 "__dir__" or "__str__"? (not iterable)  [attr-defined]
     ...alias_text = ", ".join(f"`{escape_cell(alias)}`" for alias in aliases)
                                                                      ^~~~~~~
+tests/test_staging_removal_gate.py: note: In function "load_module":
+tests/test_staging_removal_gate.py:15:1: error: Function is missing a return
+type annotation  [no-untyped-def]
+    def load_module(name: str, path: Path):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_staging_removal_gate.py: note: In member "setUpClass" of class "StagingRemovalGateTests":
+tests/test_staging_removal_gate.py:32:9: error: "type[StagingRemovalGateTests]"
+has no attribute "rows"  [attr-defined]
+            cls.rows = audit.build_rows(ROOT)
+            ^~~~~~~~
+tests/test_staging_removal_gate.py:33:9: error: "type[StagingRemovalGateTests]"
+has no attribute "row"  [attr-defined]
+            cls.row = next(row for row in cls.rows if row.source_path == "...
+            ^~~~~~~
+tests/test_staging_removal_gate.py:33:39: error:
+"type[StagingRemovalGateTests]" has no attribute "rows"  [attr-defined]
+            cls.row = next(row for row in cls.rows if row.source_path == "...
+                                          ^~~~~~~~
+tests/test_staging_removal_gate.py: note: In member "test_missing_approval_blocks_removal" of class "StagingRemovalGateTests":
+tests/test_staging_removal_gate.py:36:41: error: "StagingRemovalGateTests" has
+no attribute "rows"  [attr-defined]
+            errors = gate.validate_removals(self.rows, {}, [self.row.sourc...
+                                            ^~~~~~~~~
+tests/test_staging_removal_gate.py:36:57: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+    ... errors = gate.validate_removals(self.rows, {}, [self.row.source_path]...
+                                                        ^~~~~~~~
+tests/test_staging_removal_gate.py:37:56: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+    ...  self.assertEqual([f"missing removal approval: {self.row.source_path}...
+                                                        ^~~~~~~~
+tests/test_staging_removal_gate.py: note: In member "test_exact_complete_approval_allows_removal" of class "StagingRemovalGateTests":
+tests/test_staging_removal_gate.py:41:28: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                "source_path": self.row.source_path,
+                               ^~~~~~~~
+tests/test_staging_removal_gate.py:42:25: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                "git_blob": self.row.git_blob,
+                            ^~~~~~~~
+tests/test_staging_removal_gate.py:43:28: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                "destination": self.row.canonical_home,
+                               ^~~~~~~~
+tests/test_staging_removal_gate.py:52:13: error: "StagingRemovalGateTests" has
+no attribute "rows"  [attr-defined]
+                self.rows, {self.row.source_path: approval}, [self.row.sou...
+                ^~~~~~~~~
+tests/test_staging_removal_gate.py:52:25: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                self.rows, {self.row.source_path: approval}, [self.row.sou...
+                            ^~~~~~~~
+tests/test_staging_removal_gate.py: note: In member "test_blob_change_invalidates_approval" of class "StagingRemovalGateTests":
+tests/test_staging_removal_gate.py:58:28: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                "source_path": self.row.source_path,
+                               ^~~~~~~~
+tests/test_staging_removal_gate.py:60:28: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                "destination": self.row.canonical_home,
+                               ^~~~~~~~
+tests/test_staging_removal_gate.py:69:13: error: "StagingRemovalGateTests" has
+no attribute "rows"  [attr-defined]
+                self.rows, {self.row.source_path: approval}, [self.row.sou...
+                ^~~~~~~~~
+tests/test_staging_removal_gate.py:69:25: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                self.rows, {self.row.source_path: approval}, [self.row.sou...
+                            ^~~~~~~~
+tests/test_staging_removal_gate.py:72:16: error: "StagingRemovalGateTests" has
+no attribute "row"  [attr-defined]
+                f"{self.row.source_path} approval blob does not match curr...
+                   ^~~~~~~~
 tests/test_staging_home_audit.py: note: In member "setUpClass" of class "StagingHomeAuditTests":
 tests/test_staging_home_audit.py:24:9: error: "type[StagingHomeAuditTests]" has
 no attribute "rows"  [attr-defined]
@@ -41,30 +133,45 @@ tests/test_staging_home_audit.py:36:64: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
     ...    self.assertNotIn("TBD", {row.canonical_home for row in self.rows})
                                                                   ^~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_realm_devcontainer_variants_share_one_destination" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:39:17: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py: note: In member "test_remaining_devcontainer_features_have_realm_destinations" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:46:23: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
-            first = self.by_path[".staging/devenvironment/.devcontainer/de...
-                    ^~~~~~~~~~~~
-tests/test_staging_home_audit.py:40:18: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            second = self.by_path[".staging/devenvironment/.devcontainer/d...
-                     ^~~~~~~~~~~~
+                    row = self.by_path[path]
+                          ^~~~~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_product_fixture_is_kept_out_of_realm" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:48:15: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:51:15: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
             api = self.by_path[".staging/devenvironment/containers/service...
                   ^~~~~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_cross_cutting_sources_follow_capability_ownership" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:64:34: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:67:34: error: "StagingHomeAuditTests" has no
 attribute "by_path"  [attr-defined]
                     self.assertEqual(self.by_path[path].canonical_owner, e...
                                      ^~~~~~~~~~~~
 tests/test_staging_home_audit.py: note: In member "test_community_instructions_remain_quarantined" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:67:42: error: "StagingHomeAuditTests" has no
+tests/test_staging_home_audit.py:70:42: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
             community_rows = [row for row in self.rows if row.collection.s...
                                              ^~~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_emoji_cache_is_classified_as_generated_renderflow_intake" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:82:24: error: "StagingHomeAuditTests" has no
+attribute "rows"  [attr-defined]
+                for row in self.rows
+                           ^~~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_ledger_records_deletion_gate_fields" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:94:15: error: "StagingHomeAuditTests" has no
+attribute "by_path"  [attr-defined]
+            row = self.by_path[".staging/misc/ROADMAP.md"]
+                  ^~~~~~~~~~~~
+tests/test_staging_home_audit.py: note: In member "test_summary_json_covers_the_file_ledger" of class "StagingHomeAuditTests":
+tests/test_staging_home_audit.py:102:59: error: "StagingHomeAuditTests" has no
+attribute "rows"  [attr-defined]
+            rendered = staging_home_audit.render_summary_json(self.rows)
+                                                              ^~~~~~~~~
+tests/test_staging_home_audit.py:104:47: error: "StagingHomeAuditTests" has no
+attribute "rows"  [attr-defined]
+            self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
+                                                  ^~~~~~~~~
 tests/test_repository_intelligence_dashboard.py: note: In member "build" of class "RepositoryIntelligenceDashboardTests":
 tests/test_repository_intelligence_dashboard.py:94:9: error: Returning Any from
 function declared to return "dict[str, object]"  [no-any-return]
@@ -169,5 +276,5 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 34 errors in 3 files (checked 44 source files)
+Found 58 errors in 5 files (checked 46 source files)
 

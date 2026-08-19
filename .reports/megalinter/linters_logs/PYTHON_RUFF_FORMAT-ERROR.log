@@ -578,5 +578,38 @@ unformatted: File would be reformatted
 33 | if __name__ == "__main__":
    |
 
-5 files would be reformatted, 51 files already formatted
+unformatted: File would be reformatted
+  --> tests/test_staging_home_audit.py:89:26
+   |
+88 |         self.assertEqual({row.migration_state for row in rows}, {"quarantined"})
+   -         self.assertEqual(
+   -             {row.provenance_state for row in rows}, {"needs-source-license-review"}
+   -         )
+89 +         self.assertEqual({row.provenance_state for row in rows}, {"needs-source-license-review"})
+90 |
+   |
+
+unformatted: File would be reformatted
+  --> tests/test_staging_removal_gate.py:71:23
+   |
+70 |         )
+   -         self.assertIn(
+   -             f"{self.row.source_path} approval blob does not match current source", errors
+   -         )
+71 +         self.assertIn(f"{self.row.source_path} approval blob does not match current source", errors)
+72 |
+   |
+
+unformatted: File would be reformatted
+    --> tools/staging_home_audit.py:1334:43
+     |
+1333 |                 "by_sensitivity": counts("sensitivity"),
+     -                 "unclassified_files": sum(
+     -                     row.canonical_owner == "manual-review" for row in rows
+     -                 ),
+1334 +                 "unclassified_files": sum(row.canonical_owner == "manual-review" for row in rows),
+1335 |             },
+     |
+
+8 files would be reformatted, 50 files already formatted
 

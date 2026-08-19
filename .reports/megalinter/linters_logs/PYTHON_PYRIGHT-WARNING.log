@@ -12297,14 +12297,38 @@ tests/test_repository_intelligence_dashboard.py
   tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
   tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
 tools/staging_home_audit.py
-  tools/staging_home_audit.py:1138:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]" in function "writerow"
-    "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags'], Any]"
-      Type parameter "_KT@Mapping" is invariant, but "str" is not the same as "Literal['source_path', 'bytes', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'duplicate_of', 'flags']" (reportArgumentType)
+  tools/staging_home_audit.py:1299:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]" in function "writerow"
+    "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]"
+      Type parameter "_KT@Mapping" is invariant, but "str" is not the same as "Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes']" (reportArgumentType)
+tools/staging_removal_gate.py
+  tools/staging_removal_gate.py:34:9 - error: Type of "source_path" is partially unknown
+    Type of "source_path" is "Unknown | None" (reportUnknownVariableType)
+  tools/staging_removal_gate.py:34:23 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/staging_removal_gate.py:43:23 - error: Type of parameter "rows" is unknown (reportUnknownParameterType)
+  tools/staging_removal_gate.py:43:23 - error: Type annotation is missing for parameter "rows" (reportMissingParameterType)
+  tools/staging_removal_gate.py:43:29 - error: Type of parameter "approvals" is unknown (reportUnknownParameterType)
+  tools/staging_removal_gate.py:43:29 - error: Type annotation is missing for parameter "approvals" (reportMissingParameterType)
+  tools/staging_removal_gate.py:44:5 - error: Type of "by_path" is partially unknown
+    Type of "by_path" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tools/staging_removal_gate.py:44:16 - error: Type of "source_path" is unknown (reportUnknownMemberType)
+  tools/staging_removal_gate.py:44:41 - error: Type of "row" is unknown (reportUnknownVariableType)
+  tools/staging_removal_gate.py:57:9 - error: Type of "row" is partially unknown
+    Type of "row" is "Unknown | None" (reportUnknownVariableType)
+  tools/staging_removal_gate.py:57:15 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/staging_removal_gate.py:61:9 - error: Type of "approval" is unknown (reportUnknownVariableType)
+  tools/staging_removal_gate.py:61:20 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tools/staging_removal_gate.py:65:55 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tools/staging_removal_gate.py:68:12 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tools/staging_removal_gate.py:68:40 - error: Type of "git_blob" is unknown (reportUnknownMemberType)
+  tools/staging_removal_gate.py:70:12 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tools/staging_removal_gate.py:70:43 - error: Type of "canonical_home" is unknown (reportUnknownMemberType)
 tools/task_catalog.py
   tools/task_catalog.py:75:48 - error: Argument type is unknown
     Argument corresponds to parameter "value" in function "escape_cell" (reportUnknownArgumentType)
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8777 errors, 424 warnings, 0 informations
+8795 errors, 424 warnings, 0 informations
 

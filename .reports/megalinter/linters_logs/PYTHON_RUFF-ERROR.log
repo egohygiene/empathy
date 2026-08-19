@@ -8564,6 +8564,25 @@ S607 Starting a process with a partial executable path
 40 |         capture_output=True,
    |
 
+I001 [*] Import block is un-sorted or un-formatted
+ --> tests/test_staging_removal_gate.py:4:1
+  |
+2 |   # SPDX-License-Identifier: MIT
+3 |
+4 | / from __future__ import annotations
+5 | |
+6 | | import importlib.util
+7 | | from pathlib import Path
+8 | | import sys
+9 | | import unittest
+  | |_______________^
+help: Organize imports
+   |
+10 |
+   -
+11 | ROOT = Path(__file__).parents[1]
+   |
+
 PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
   --> tests/test_task_catalog.py:51:14
    |
@@ -8573,6 +8592,85 @@ PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
 52 |             task_catalog.update_catalog("no generated region", "replacement")
    |
 help: Replace `assertRaisesRegex` with `pytest.raises`
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> tools/staging_removal_gate.py:21:15
+   |
+19 |     specification = importlib.util.spec_from_file_location("staging_home_audit", path)
+20 |     if specification is None or specification.loader is None:
+21 |         raise RuntimeError(f"cannot load staging audit module: {path}")
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+22 |     module = importlib.util.module_from_spec(specification)
+23 |     sys.modules[specification.name] = module
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> tools/staging_removal_gate.py:31:15
+   |
+29 |     data = json.loads(path.read_text(encoding="utf-8"))
+30 |     if data.get("schema_version") != "1.0.0" or not isinstance(data.get("approvals"), list):
+31 |         raise ValueError("removal approvals must use schema version 1.0.0")
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+32 |     approvals: dict[str, dict[str, Any]] = {}
+33 |     for approval in data["approvals"]:
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> tools/staging_removal_gate.py:36:19
+   |
+34 |         source_path = approval.get("source_path") if isinstance(approval, dict) else None
+35 |         if not isinstance(source_path, str) or not source_path.startswith(".staging/"):
+36 |             raise ValueError("every approval needs a .staging source_path")
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+37 |         if source_path in approvals:
+38 |             raise ValueError(f"duplicate removal approval: {source_path}")
+   |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> tools/staging_removal_gate.py:38:19
+   |
+36 |             raise ValueError("every approval needs a .staging source_path")
+37 |         if source_path in approvals:
+38 |             raise ValueError(f"duplicate removal approval: {source_path}")
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+39 |         approvals[source_path] = approval
+40 |     return approvals
+   |
+
+T201 `print` found
+   --> tools/staging_removal_gate.py:98:9
+    |
+ 96 |         approvals = load_approvals(approvals_path)
+ 97 |     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as error:
+ 98 |         print(f"removal gate failed: {error}", file=sys.stderr)
+    |         ^^^^^
+ 99 |         return 2
+100 |     errors = validate_removals(rows, approvals, arguments.source_path)
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> tools/staging_removal_gate.py:103:13
+    |
+101 |     if errors:
+102 |         for error in errors:
+103 |             print(f"removal gate failed: {error}", file=sys.stderr)
+    |             ^^^^^
+104 |         return 1
+105 |     print(f"removal gate passed for {len(arguments.source_path)} staged file(s)")
+    |
+help: Remove `print`
+
+T201 `print` found
+   --> tools/staging_removal_gate.py:105:5
+    |
+103 |             print(f"removal gate failed: {error}", file=sys.stderr)
+104 |         return 1
+105 |     print(f"removal gate passed for {len(arguments.source_path)} staged file(s)")
+    |     ^^^^^
+106 |     return 0
+    |
+help: Remove `print`
 
 TRY003 Avoid specifying long messages outside the exception class
   --> tools/task_catalog.py:41:15
@@ -8639,6 +8737,6 @@ T201 `print` found
     |
 help: Remove `print`
 
-Found 767 errors.
-[*] 44 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).
+Found 775 errors.
+[*] 45 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
 

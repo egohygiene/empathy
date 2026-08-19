@@ -10,7 +10,7 @@ Linter raw log:
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-18 14:45:34.652543+00:00
+Run started:2026-08-19 02:52:12.730406+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -199,30 +199,30 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tools/staging_home_audit.py:17:0
-16	import re
-17	import subprocess
-18	import sys
+   Location: ./tools/staging_home_audit.py:18:0
+17	import re
+18	import subprocess
+19	import sys
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tools/staging_home_audit.py:190:11
-189	def run_git(repository_root: Path, *arguments: str) -> bytes:
-190	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
-191	
+   Location: ./tools/staging_home_audit.py:212:11
+211	def run_git(repository_root: Path, *arguments: str) -> bytes:
+212	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
+213	
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tools/staging_home_audit.py:190:11
-189	def run_git(repository_root: Path, *arguments: str) -> bytes:
-190	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
-191	
+   Location: ./tools/staging_home_audit.py:212:11
+211	def run_git(repository_root: Path, *arguments: str) -> bytes:
+212	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
+213	
 
 --------------------------------------------------
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -252,7 +252,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 9598
+	Total lines of code: 9977
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
