@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-19
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -23,6 +23,22 @@ supersedes: []
 ---
 
 # Empathy Roadmap
+
+## Accepted Direction: Baseline Convergence
+
+Empathy is converging from a fast-moving integration and incubation workspace into the strict
+universal baseline template.
+
+The convergence sequence is:
+
+1. freeze and inventory baseline candidates;
+2. move experiments and unfinished capabilities to Sanctuary;
+3. graduate reusable capabilities to their canonical repositories;
+4. express specialized templates as explicit inheritance deltas;
+5. publish an independently versioned Empathy baseline;
+6. let Holon instantiate and Pace later reconcile consumer repositories.
+
+This direction is accepted; exact migration mechanics and release gates remain roadmap work.
 
 ## Strategic Context
 

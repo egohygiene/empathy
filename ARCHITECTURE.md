@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-14
+updated: 2026-08-19
 governed_by:
   - architecture-architecture
 depends_on:
@@ -32,6 +32,28 @@ review and architectural revision.
 This document owns structural layers, allowed dependency direction, integration boundaries, and the
 current repository mapping. Logical system responsibilities remain canonical in
 [`SYSTEM.md`](SYSTEM.md).
+
+## Baseline and Incubation Boundary
+
+The target structure separates stable template composition from experimentation:
+
+```mermaid
+flowchart LR
+  H[Hygiene rules] --> E[Empathy baseline]
+  S[Sanctuary incubation] --> G{Graduation review}
+  G --> C[Capability owner]
+  G --> T[Specialized template]
+  C --> E
+  T --> HN[Holon resolution]
+  E --> HN
+  HN --> R[Repository instance]
+  P[Pace reconciliation] --> R
+```
+
+Empathy may consume a released capability and prove its integration, but it does not become that
+capability's canonical source. Incubated source must leave Empathy for Sanctuary or its durable owner;
+consumer-specific extensions must not flow back into the universal baseline without Hygiene
+applicability evidence.
 
 ## Structural Units or Layers
 

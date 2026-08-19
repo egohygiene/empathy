@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-19
 governed_by:
   - architecture-decisions
 depends_on:
@@ -68,6 +68,7 @@ migration decision.
 | ADR-0004 | Use Taskfile as the stable local repository interface                 | Accepted | 2026-08-11 | —          | —             |
 | ADR-0005 | Separate disposable reports from durable audits                       | Accepted | 2026-08-11 | —          | —             |
 | ADR-0006 | Keep pull-request automation read-only and trusted publication narrow | Accepted | 2026-08-11 | —          | —             |
+| ADR-0007 | Make Empathy the strict baseline and move incubation to Sanctuary | Accepted |
 
 ## Active Decisions
 
@@ -321,6 +322,55 @@ covered by policy tests.
 
 Related: [`AI_CONSTITUTION.md`](AI_CONSTITUTION.md),
 [`tests/test_report_publication.py`](tests/test_report_publication.py).
+
+## ADR-0007 — Make Empathy the Strict Baseline and Move Incubation to Sanctuary
+
+### Metadata
+
+- **Status:** Accepted
+- **Accepted:** 2026-08-19
+- **Owners:** `egohygiene`
+- **Scope:** repository role, template inheritance, incubation, and capability graduation
+- **Review triggers:** the organization adopts a different canonical template model or evidence shows
+  the separation prevents reliable integration testing
+
+### Context
+
+Empathy accumulated baseline files, reusable capabilities, product-specific experiments, and staged
+migration material while the organization architecture was still emerging. That accelerated
+learning, but it left one repository responsible for incompatible lifecycle states and made its
+future boundary ambiguous.
+
+### Decision
+
+Empathy is the canonical strict baseline repository template. Sanctuary owns experimentation and
+incubation. Reusable capabilities graduate to their canonical repositories; specialized repository
+templates inherit from Empathy through explicit deltas. Holon resolves and instantiates templates,
+while Pace later reconciles desired state in consumer repositories.
+
+Temporary physical presence in Empathy does not establish durable ownership.
+
+### Rationale and Evidence
+
+A strict baseline makes Hygiene conformance testable, keeps Holon generation deterministic, lets
+capability repositories version independently, and gives experimental work a safe home without
+polluting every generated repository.
+
+### Alternatives, Trade-Offs, and Consequences
+
+Keeping Empathy as both baseline and incubator maximizes short-term convenience but makes universal
+applicability impossible to prove. Moving all integration responsibility into Holon would mix
+template content with generation mechanics. The accepted split adds migration work and a Sanctuary
+lifecycle, but creates clearer ownership and release boundaries.
+
+### Observed Outcomes and Related Artifacts
+
+This record changes target ownership immediately. Source migration, template manifests, Sanctuary
+creation, and release automation remain follow-up work.
+
+Related: [`PURPOSE.md`](PURPOSE.md), [`SYSTEM.md`](SYSTEM.md),
+[`ARCHITECTURE.md`](ARCHITECTURE.md), and [`ROADMAP.md`](ROADMAP.md).
+
 
 ## Deprecated and Superseded Decisions
 

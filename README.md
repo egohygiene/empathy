@@ -3,9 +3,11 @@
 🤝 A humane, reusable repository foundation for maintainers, contributors,
 users, automation, and AI agents.
 
-Empathy is the integration monorepo for Ego Hygiene's opinionated repository
-baseline. It assembles universal contracts and selectable capability profiles in
-one place before independently versioned components are extracted.
+Empathy is Ego Hygiene's canonical strict baseline repository template. It
+assembles universal contracts and stable capability integrations while keeping
+specialized templates, generation, synchronization, and incubation independently
+owned. Historical incubations remain temporarily visible while they graduate to
+Sanctuary or their canonical repositories.
 
 ## Current foundation
 
@@ -95,5 +97,7 @@ relationships, graph acyclicity, document structure, and inventory coverage.
 
 ## Status
 
-Empathy is under active foundation development. Staged material is preserved for
-classification and must not be treated as production-ready template content.
+Empathy is converging from an integration workspace into the versioned universal
+baseline. Staged and incubated material is preserved for migration, must not be
+treated as baseline content, and will graduate through Sanctuary or its canonical
+owner before the baseline is declared stable.
