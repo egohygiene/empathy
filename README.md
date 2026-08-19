@@ -12,6 +12,10 @@ one place before independently versioned components are extracted.
 The current consolidation passes establish the GitHub automation and Egolint
 quality layers:
 
+- a frozen, deterministic [staging migration contract](docs/migration/STAGING.md)
+  with file-level ownership, JSON projections, and evidence-backed deletion
+  gates;
+
 - immutable external action references;
 - least-privilege workflow permissions and bounded job runtimes;
 - reusable composite actions for common toolchain and generation steps;

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.io/schemas/empathy/staging-removal-approvals.v1.schema.json",
+  "title": "Empathy staging removal approvals v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "approvals"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "approvals": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/approval" }
+    }
+  },
+  "$defs": {
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_path",
+        "git_blob",
+        "destination",
+        "destination_revision",
+        "validation_evidence",
+        "provenance_resolution",
+        "sensitivity_resolution",
+        "approved_by",
+        "approved_at"
+      ],
+      "properties": {
+        "source_path": { "type": "string", "pattern": "^\\.staging/" },
+        "git_blob": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "destination": { "type": "string", "minLength": 1 },
+        "destination_revision": { "type": "string", "minLength": 7 },
+        "validation_evidence": { "type": "string", "minLength": 1 },
+        "provenance_resolution": { "type": "string", "minLength": 1 },
+        "sensitivity_resolution": { "type": "string", "minLength": 1 },
+        "approved_by": { "type": "string", "minLength": 1 },
+        "approved_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

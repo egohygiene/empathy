@@ -12,6 +12,7 @@ import argparse
 import csv
 from dataclasses import asdict, dataclass
 import io
+import json
 from pathlib import Path
 import re
 import subprocess
@@ -21,14 +22,28 @@ EMPTY_BLOB = "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
 CSV_FIELDS = (
     "source_path",
     "bytes",
+    "git_mode",
+    "git_blob",
+    "kind",
+    "collection",
     "canonical_owner",
     "incubation_home",
     "canonical_home",
     "disposition",
     "merge_group",
     "trust_class",
+    "sensitivity",
+    "confidence",
     "duplicate_of",
+    "duplicate_action",
     "flags",
+    "migration_state",
+    "provenance_state",
+    "exit_criteria",
+    "destination_evidence",
+    "deletion_approved_by",
+    "deletion_approved_at",
+    "notes",
 )
 
 
@@ -63,6 +78,13 @@ class LedgerRow:
     duplicate_of: str
     duplicate_action: str
     flags: str
+    sensitivity: str
+    migration_state: str
+    provenance_state: str
+    exit_criteria: str
+    destination_evidence: str
+    deletion_approved_by: str
+    deletion_approved_at: str
     notes: str
 
 
@@ -609,8 +631,51 @@ def classify_task(relative: str) -> Classification:
     )
 
 
+def classify_emoji_precache(relative: str) -> Classification:
+    inner = relative.removeprefix("tools/emoji-precache/")
+    if inner.startswith("assets/emojis/"):
+        asset = inner.removeprefix("assets/emojis/")
+        return Classification(
+            "generated third-party emoji cache",
+            "renderflow",
+            f"renderflow/.staging/vendor/emoji-cache/{asset}",
+            f"renderflow/.cache/emoji-precache/{asset}",
+            "regenerate-do-not-promote-cache",
+            "renderflow-emoji-precache-assets",
+            "third-party-generated-binary",
+            "high",
+            "Generated Twemoji/Noto SVG and PDF cache. Preserve only as intake evidence; record licenses and regenerate from pinned upstream sources instead of promoting thousands of binaries as canonical source.",
+        )
+    return Classification(
+        "emoji rendering tool intake",
+        "renderflow",
+        f"renderflow/.staging/tools/emoji-precache/{inner}",
+        f"renderflow/tools/emoji-precache/{inner}",
+        "refactor-pin-and-test",
+        "renderflow-emoji-precache-tool",
+        "quarantined-executable"
+        if file_kind(relative, 1) in {"script", "source-code"}
+        else "staged-tool-source",
+        "high",
+        "Renderflow owns document transform helpers. Reconcile the competing filters, pin upstream emoji sources, preserve licenses, bound downloads, and keep generated assets out of canonical source.",
+    )
+
+
 def classify(path: str) -> Classification:
     relative = path.removeprefix(".staging/")
+
+    if relative == "README.md":
+        return Classification(
+            "staging freeze marker",
+            "empathy",
+            ".staging/README.md",
+            "docs/migration/STAGING.md",
+            "retain-until-staging-is-empty",
+            "empathy-staging-governance",
+            "active-governance-marker",
+            "high",
+            "The marker keeps the freeze visible at the intake root and is removed only when the staging directory is retired.",
+        )
 
     if relative == "tasks-todo.yml":
         return Classification(
@@ -723,6 +788,8 @@ def classify(path: str) -> Classification:
         )
     if relative.startswith("devenvironment/"):
         return classify_devenvironment(relative)
+    if relative.startswith("tools/emoji-precache/"):
+        return classify_emoji_precache(relative)
     if relative.startswith("react-template/universal/"):
         suffix = relative.removeprefix("react-template/universal/")
         return Classification(
@@ -735,6 +802,19 @@ def classify(path: str) -> Classification:
             "executable-application-fixture",
             "high",
             "Keep product code out of Realm; Realm should supply only the development profile and service adapter.",
+        )
+    if relative.startswith("react-template/website/"):
+        suffix = relative.removeprefix("react-template/website/")
+        return Classification(
+            "web application template fragment",
+            "holon",
+            f"holon/.staging/templates/web/{suffix}",
+            f"holon/templates/web/{suffix}",
+            "merge-into-web-template",
+            "holon-web-template",
+            "executable-application-fixture",
+            "high",
+            "The remaining website test utility belongs with Holon's parameterized web template, not the Empathy active tree.",
         )
     if relative.startswith("hygiene/"):
         return classify_hygiene(relative)
@@ -853,6 +933,45 @@ def classify(path: str) -> Classification:
             "passive-reference",
             "high",
             "Byte-identical to the active tools/ROADMAP.md.",
+        )
+    if relative.startswith("misc/ego-hygiene-") or relative == (
+        "misc/file_00000000ed3871f5ac46b30574466122.png"
+    ):
+        name = Path(relative).name
+        return Classification(
+            "Ego Hygiene identity references",
+            "identity",
+            f"identity/.staging/references/ego-hygiene/{name}",
+            f"identity/references/ego-hygiene/{name}",
+            "visual-review-rename-and-curate",
+            "identity-ego-hygiene-reference-intake",
+            "passive-binary",
+            "high",
+            "Rename opaque or sequence-only assets and attach generation/source provenance before any publication or product use.",
+        )
+    if relative == "misc/flow-orchestration-suite-github-issue.md":
+        return Classification(
+            "Flow orchestration architecture reference",
+            "flow",
+            "flow/.staging/references/flow-orchestration-suite-github-issue.md",
+            "flow/docs/architecture/source-review/flow-orchestration-suite-github-issue.md",
+            "reconcile-with-accepted-roadmap",
+            "flow-orchestration-reference",
+            "passive-reference",
+            "high",
+            "Preserve as design provenance and reconcile it with Flow's accepted boundaries before implementation.",
+        )
+    if relative == "misc/macos.txt":
+        return Classification(
+            "macOS workstation mutation reference",
+            "realm",
+            "realm/.staging/workstation/macos/legacy-defaults.sh",
+            "realm/workstation/macos/profile.sh",
+            "mine-safe-idempotent-settings",
+            "realm-macos-workstation-profile",
+            "destructive-host-configuration",
+            "high",
+            "Legacy dotfiles script uses sudo and destructive host mutations. Treat only as research input for an opt-in, idempotent, reversible workstation profile.",
         )
     if relative == "misc/fastfetch.jsonc":
         return Classification(
@@ -1075,6 +1194,38 @@ def duplicate_policy(path: str, blob: str, duplicate_of: str) -> tuple[str, str]
     )
 
 
+def ledger_state(classification: Classification, flags: list[str]) -> tuple[str, str, str, str]:
+    if "sensitive-configuration" in flags:
+        sensitivity = "sensitive-review"
+    elif any(
+        token in classification.trust_class
+        for token in ("privileged", "quarantined", "executable", "host", "destructive")
+    ):
+        sensitivity = "restricted-review"
+    else:
+        sensitivity = "normal"
+
+    if "quarantine" in classification.disposition or "do-not-promote" in classification.disposition:
+        migration_state = "quarantined"
+    elif "delete" in classification.disposition:
+        migration_state = "candidate-removal"
+    else:
+        migration_state = "inventoried"
+
+    if classification.collection.startswith("community ") or "third-party" in (
+        classification.trust_class
+    ):
+        provenance_state = "needs-source-license-review"
+    else:
+        provenance_state = "preserved-in-git"
+
+    exit_criteria = (
+        "destination revision recorded; owner validation passes; provenance and license resolved; "
+        "source removal approved separately"
+    )
+    return sensitivity, migration_state, provenance_state, exit_criteria
+
+
 def build_rows(repository_root: Path) -> list[LedgerRow]:
     entries = tracked_entries(repository_root)
     paths_by_blob: dict[str, list[str]] = {}
@@ -1098,6 +1249,9 @@ def build_rows(repository_root: Path) -> list[LedgerRow]:
         duplicate_of = canonical if canonical and canonical != path else ""
         duplicate_action, duplicate_note = duplicate_policy(path, blob, duplicate_of)
         flags = text_flags(absolute, mode)
+        sensitivity, migration_state, provenance_state, exit_criteria = ledger_state(
+            classification, flags
+        )
         notes = classification.notes
         if duplicate_note:
             notes = f"{notes} {duplicate_note}"
@@ -1119,6 +1273,13 @@ def build_rows(repository_root: Path) -> list[LedgerRow]:
                 duplicate_of=duplicate_of,
                 duplicate_action=duplicate_action,
                 flags=";".join(sorted(set(flags))),
+                sensitivity=sensitivity,
+                migration_state=migration_state,
+                provenance_state=provenance_state,
+                exit_criteria=exit_criteria,
+                destination_evidence="",
+                deletion_approved_by="",
+                deletion_approved_at="",
                 notes=notes,
             )
         )
@@ -1139,6 +1300,48 @@ def render_csv(rows: list[LedgerRow]) -> str:
     return stream.getvalue()
 
 
+def render_json(rows: list[LedgerRow]) -> str:
+    return (
+        json.dumps(
+            {
+                "schema_version": "1.0.0",
+                "files": [asdict(row) for row in rows],
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n"
+    )
+
+
+def render_summary_json(rows: list[LedgerRow]) -> str:
+    def counts(field: str) -> dict[str, int]:
+        result: dict[str, int] = {}
+        for row in rows:
+            value = str(getattr(row, field))
+            result[value] = result.get(value, 0) + 1
+        return dict(sorted(result.items()))
+
+    return (
+        json.dumps(
+            {
+                "schema_version": "1.0.0",
+                "tracked_files": len(rows),
+                "tracked_bytes": sum(row.bytes for row in rows),
+                "by_owner": counts("canonical_owner"),
+                "by_migration_state": counts("migration_state"),
+                "by_sensitivity": counts("sensitivity"),
+                "unclassified_files": sum(
+                    row.canonical_owner == "manual-review" for row in rows
+                ),
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n"
+    )
+
+
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repository-root", type=Path, default=Path.cwd())
@@ -1148,6 +1351,12 @@ def parse_arguments() -> argparse.Namespace:
         default=Path(".audits/data/2026-08-15-staging-file-disposition.csv"),
     )
     parser.add_argument("--check", action="store_true")
+    parser.add_argument(
+        "--format",
+        choices=("csv", "json", "summary-json"),
+        default="csv",
+        help="ledger output format",
+    )
     return parser.parse_args()
 
 
@@ -1157,7 +1366,13 @@ def main() -> int:
     output = arguments.output
     if not output.is_absolute():
         output = repository_root / output
-    rendered = render_csv(build_rows(repository_root))
+    rows = build_rows(repository_root)
+    if arguments.format == "json":
+        rendered = render_json(rows)
+    elif arguments.format == "summary-json":
+        rendered = render_summary_json(rows)
+    else:
+        rendered = render_csv(rows)
 
     if arguments.check:
         if not output.exists():
@@ -1171,7 +1386,7 @@ def main() -> int:
 
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(rendered, encoding="utf-8")
-    print(f"Wrote {len(rendered.splitlines()) - 1} staging dispositions to {output}")
+    print(f"Wrote {len(rows)} staging dispositions to {output}")
     return 0
 
 
