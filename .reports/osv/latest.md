@@ -1,8 +1,8 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-19T02-46-01Z`
+- Generated: `2026-08-19T03-14-59Z`
 - Repository: `egohygiene/empathy`
-- Commit: `db0cc9cee669f47794d5eb20f08edb4214862b66`
+- Commit: `7d4b7460e04033a20659bd2623694d999ec3e5f4`
 - Severity gate: `high`
 - Duration: `18s`
 
