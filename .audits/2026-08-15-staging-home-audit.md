@@ -3,10 +3,12 @@
 
 # Staging ownership and destination audit
 
-> **Living-ledger note (2026-08-16):** The narrative and owner table below
+> **Living-ledger note (2026-08-18):** The narrative and owner table below
 > preserve the original `41d1da3` snapshot. The deterministic CSV is refreshed
-> as approved promotion PRs land and currently covers 2,222 tracked files and
-> 161,784,921 bytes. See
+> as approved promotion PRs land and currently covers 9,588 tracked files and
+> 230,520,227 bytes. The expanded intake includes the generated emoji cache,
+> which is quarantined under the Renderflow owner pending upstream provenance,
+> license review, and deterministic regeneration. See
 > [`2026-08-16-taskfile-promotion.md`](2026-08-16-taskfile-promotion.md) and
 > [`2026-08-16-misc-promotion.md`](2026-08-16-misc-promotion.md) for the latest
 > approved dispositions.
@@ -236,6 +238,8 @@ tracked intake with:
 python3 tools/staging_home_audit.py --repository-root "." --check
 ```
 
-The CSV is the file-level disposition authority for this snapshot. If new files
-arrive in `.staging/`, extend the classifier deliberately; its contract test
-fails whenever a tracked staging file lacks a concrete owner or destination.
+The CSV is the file-level disposition authority for the current tracked intake.
+If new files arrive in `.staging/`, extend the classifier deliberately; its
+contract test fails whenever a tracked staging file lacks a concrete owner or
+destination. The freeze and evidence-backed removal procedure is defined in
+[`docs/migration/STAGING.md`](../docs/migration/STAGING.md).

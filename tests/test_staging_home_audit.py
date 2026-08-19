@@ -35,14 +35,17 @@ class StagingHomeAuditTests(unittest.TestCase):
         self.assertNotIn("manual-review", {row.canonical_owner for row in self.rows})
         self.assertNotIn("TBD", {row.canonical_home for row in self.rows})
 
-    def test_realm_devcontainer_variants_share_one_destination(self) -> None:
-        first = self.by_path[".staging/devenvironment/.devcontainer/devcontainer.json"]
-        second = self.by_path[".staging/devenvironment/.devcontainer/devcontainer2.json"]
+    def test_remaining_devcontainer_features_have_realm_destinations(self) -> None:
+        paths = [
+            ".staging/devenvironment/.devcontainer/features/devtools/devcontainer-feature.json",
+            ".staging/devenvironment/.devcontainer/features/docker-proxy/devcontainer-feature.json",
+        ]
 
-        self.assertEqual(first.canonical_owner, "realm")
-        self.assertEqual(first.canonical_home, second.canonical_home)
-        self.assertEqual(first.merge_group, "realm-devcontainer-config")
-        self.assertEqual(second.merge_group, first.merge_group)
+        for path in paths:
+            with self.subTest(path=path):
+                row = self.by_path[path]
+                self.assertEqual(row.canonical_owner, "realm")
+                self.assertTrue(row.canonical_home.startswith("realm/devcontainer-features/"))
 
     def test_product_fixture_is_kept_out_of_realm(self) -> None:
         api = self.by_path[".staging/devenvironment/containers/services/api/Dockerfile.old"]
@@ -72,6 +75,34 @@ class StagingHomeAuditTests(unittest.TestCase):
         self.assertTrue(
             all(row.incubation_home.startswith("aether/.staging/") for row in community_rows)
         )
+
+    def test_emoji_cache_is_classified_as_generated_renderflow_intake(self) -> None:
+        rows = [
+            row
+            for row in self.rows
+            if row.source_path.startswith(".staging/tools/emoji-precache/assets/emojis/")
+        ]
+
+        self.assertGreater(len(rows), 7_000)
+        self.assertEqual({row.canonical_owner for row in rows}, {"renderflow"})
+        self.assertEqual({row.migration_state for row in rows}, {"quarantined"})
+        self.assertEqual(
+            {row.provenance_state for row in rows}, {"needs-source-license-review"}
+        )
+
+    def test_ledger_records_deletion_gate_fields(self) -> None:
+        row = self.by_path[".staging/misc/ROADMAP.md"]
+
+        self.assertEqual(row.migration_state, "candidate-removal")
+        self.assertEqual(row.destination_evidence, "")
+        self.assertEqual(row.deletion_approved_by, "")
+        self.assertIn("source removal approved separately", row.exit_criteria)
+
+    def test_summary_json_covers_the_file_ledger(self) -> None:
+        rendered = staging_home_audit.render_summary_json(self.rows)
+
+        self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
+        self.assertIn('"unclassified_files": 0', rendered)
 
 
 if __name__ == "__main__":
