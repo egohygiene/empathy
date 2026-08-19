@@ -1045,17 +1045,17 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [24:124 - 128:4] (105 lines, 250 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [22:119 - 127:4]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [28:53 - 116:8] (89 lines, 103 tokens)
-   .staging/.github/skills/create-specification/SKILL.md:markdown [26:53 - 114:12]
-Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 114:28] (84 lines, 1122 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [29:1 - 112:28]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [37:1 - 124:40] (88 lines, 101 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [35:1 - 122:40]
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [59:1 - 116:2] (58 lines, 795 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [57:1 - 114:5]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [112:31 - 117:110] (6 lines, 54 tokens)
+   .staging/.github/skills/update-specification/SKILL.md:markdown [110:31 - 115:110]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -3732,6 +3732,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.analyze.md:markdown [31:20 - 44:17] (14 lines, 84 tokens)
    .staging/.opencode/commands/speckit.analyze.md:markdown [221:16 - 234:17]
+Clone found (markdown)
+ - .staging/.opencode/commands/speckit.analyze.md:markdown [226:8 - 241:2] (16 lines, 111 tokens)
+   .staging/.opencode/commands/speckit.checklist.md:markdown [359:8 - 372:88]
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.clarify.md:markdown [44:25 - 55:5] (12 lines, 92 tokens)
    .staging/.opencode/commands/speckit.constitution.md:markdown [44:25 - 55:4]
@@ -9556,7 +9559,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1728           │ 330420      │ 4254978      │ 687          │ 11539 (3.49%)    │ 172062 (4.04%)    │
+│ markdown     │ 1728           │ 330420      │ 4254978      │ 688          │ 11441 (3.46%)    │ 172818 (4.06%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 99             │ 29819       │ 117043       │ 48           │ 964 (3.23%)      │ 7969 (6.81%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9612,10 +9615,10 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ yaml         │ 560            │ 57988       │ 320020       │ 349          │ 9379 (16.17%)    │ 105320 (32.91%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4794           │ 989752      │ 7761635      │ 3161         │ 59612 (6.02%)    │ 764406 (9.85%)    │
+│ Total:       │ 4794           │ 989752      │ 7761635      │ 3162         │ 59514 (6.01%)    │ 765162 (9.86%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3161 clones.
+Found 3162 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
-time: 17.41s
+time: 17.63s
 

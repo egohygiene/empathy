@@ -773,5 +773,5 @@ Linter raw log:
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 17 files, found 356 errors in 11 files (197 ms)
+Scanned 17 files, found 356 errors in 11 files (155 ms)
 
