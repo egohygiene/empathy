@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 #
 # @file update-content.sh
 # @brief Container-side reconciliation after workspace content is updated.

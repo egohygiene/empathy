@@ -69,17 +69,19 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
             encoding="utf8"
         )
 
-        self.assertIn("./.github/actions/generate-repository-intelligence", workflow)
-        self.assertIn("./.github/actions/generate-repository-intelligence-dashboard", workflow)
         self.assertIn(
-            'analytics-summary: ".cache/mindgarden/repository-intelligence/analytics/summary.json"',
+            "egohygiene/relay/actions/repository-intelligence@",
             workflow,
         )
         self.assertIn(
-            'repository-tree: ".cache/mindgarden/repository-intelligence/tree/repo.json"',
+            'work-directory: ".cache/mindgarden/repository-intelligence"',
             workflow,
         )
-        self.assertIn('output-root: ".cache/mindgarden/site/intelligence"', workflow)
+        self.assertIn(
+            'reports-directory: ".reports"',
+            workflow,
+        )
+        self.assertIn('output-directory: ".cache/mindgarden/site/intelligence"', workflow)
         self.assertIn('path: ".cache/mindgarden/site"', workflow)
         self.assertIn('".reports/*/summary.json"', workflow)
         self.assertIn("event != 'pull_request'", workflow)
@@ -93,10 +95,6 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
             self.assertIn(producer_workflow, workflow)
         self.assertLess(
             workflow.index("Build the pinned Quartz site"),
-            workflow.index("Generate public repository analytics"),
-        )
-        self.assertLess(
-            workflow.index("Generate public repository analytics"),
             workflow.index("Generate repository intelligence dashboard"),
         )
         self.assertLess(

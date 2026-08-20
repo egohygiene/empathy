@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 #
 # @file post-create.sh
 # @brief Final one-time project setup after a development container is created.

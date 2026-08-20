@@ -75,7 +75,7 @@ jobs:
 
       - name: Normalize repository-intelligence summary
         if: always()
-        uses: ./.github/actions/normalize-repository-report
+        uses: egohygiene/relay/actions/normalize-repository-report@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
         with:
           producer: megalinter
           input: .reports/megalinter/mega-linter-report.json
@@ -175,7 +175,7 @@ jobs:
           path: .reports/megalinter
 
       - name: Publish stable MegaLinter snapshot
-        uses: ./.github/actions/publish-report-snapshot
+        uses: egohygiene/relay/actions/publish-report-snapshot@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
         with:
           paths: .reports/megalinter
           default-branch: "${{ github.event.repository.default_branch }}"

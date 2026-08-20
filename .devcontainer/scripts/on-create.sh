@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
 #
 # @file on-create.sh
 # @brief Container-side initialization after a development container is created.

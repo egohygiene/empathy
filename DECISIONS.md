@@ -280,7 +280,7 @@ Quality and OSV output use stable report namespaces; audits record remediation c
 publication remains limited to trusted runs.
 
 Related: [`EPISTEMOLOGY.md`](EPISTEMOLOGY.md),
-[`.github/actions/publish-report-snapshot/action.yml`](.github/actions/publish-report-snapshot/action.yml).
+[`Relay publish-report-snapshot`](https://github.com/egohygiene/relay/tree/ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210/actions/publish-report-snapshot).
 
 ### ADR-0006 — Keep Pull-Request Automation Read-Only and Trusted Publication Narrow
 
@@ -385,7 +385,7 @@ No earlier decision records with sufficient provenance were found in the current
 The following choices are not accepted decisions in this log:
 
 - whether Aether source is relocated, pinned, or projected into Empathy;
-- whether Relay and Realm extraction uses releases, source references, or generated distributions;
+- whether Realm extraction uses releases, source references, or generated distributions;
 - whether Holon owns Empathy profile composition or only organization desired state;
 - which contracts form the universal core and which profiles are first-party;
 - the compatibility and migration policy for the first stable consumer distribution.

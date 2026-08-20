@@ -1,9 +1,0 @@
-{
-  "schema_version": 1,
-  "tools": [
-    { "enforcement": "blocking", "id": "ACTION_ACTIONLINT" },
-    { "enforcement": "advisory", "id": "PYTHON_PYLINT" },
-    { "enforcement": "blocking", "id": "PYTHON_RUFF" },
-    { "enforcement": "blocking", "id": "RUST_CLIPPY" }
-  ]
-}

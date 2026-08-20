@@ -84,9 +84,10 @@ inventories, complementary tools, hooks, editor parity, reports, and the stable 
 Executes active GitHub event, validation, reporting, security, contributor, and repository
 intelligence workflows with bounded permissions and reusable composite actions.
 
-- **Current evidence:** `.github/workflows/` and `.github/actions/`.
-- **Target owner:** independently reusable workflow behavior should migrate to Relay while Empathy
-  retains profile selection and integration tests.
+- **Current evidence:** repository-owned `.github/workflows/`, local adapters under
+  `.github/actions/`, and immutable actions released by Relay.
+- **Canonical owner:** Relay owns independently reusable behavior while Empathy retains profile
+  selection, permissions, final artifact composition, and integration tests.
 
 ### Intelligence Artifact System
 
@@ -158,7 +159,7 @@ consumer conformance results.
 | Repository foundation identity and profile composition | Empathy               | Define, integrate, validate, and document                            |
 | Reusable intelligence artifacts                        | Aether                | Consume a pinned source or projection and test compatibility         |
 | Cross-language quality policy                          | Egolint               | Integrate the stable task/configuration boundary                     |
-| Reusable GitHub automation                             | Relay target          | Prove behavior in the integration profile and avoid permanent forks  |
+| Reusable GitHub automation                             | Relay                 | Pin releases and prove behavior in the integration profile           |
 | Reproducible development environment                   | Realm target          | Define the Empathy profile and validate repository use               |
 | Reusable visual-identity compiler                      | Identity holon        | Own the Empathy specification, approve sources, and test projections |
 | Organization desired state and materialization         | Holon target          | Supply reusable profile content; do not own consumer identity        |
@@ -232,8 +233,8 @@ External availability or platform behavior must not be mistaken for Empathy-owne
 
 - What versioned manifest lets Holon resolve Empathy and specialized template deltas without
   duplicating baseline ownership?
-- What are the public interfaces between Empathy and Aether, Egolint, Relay, and Realm?
-- Which active root workflows remain Empathy-specific after Relay extraction?
+- What are the public interfaces between Empathy and Aether, Egolint, and Realm?
+- Which producer and deployment workflows should remain repository-specific as Relay expands?
 
 ## Validation
 

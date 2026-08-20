@@ -7,7 +7,6 @@ on:
   pull_request:
     paths:
       - ".github/actions/generate-lint-infographic/**"
-      - ".github/actions/publish-report-snapshot/**"
       - ".github/workflows/**"
       - ".mega-linter.yml"
       - ".reports/README.md"
@@ -22,7 +21,6 @@ on:
       - main
     paths:
       - ".github/actions/generate-lint-infographic/**"
-      - ".github/actions/publish-report-snapshot/**"
       - ".github/workflows/**"
       - ".mega-linter.yml"
       - ".reports/README.md"
@@ -116,7 +114,7 @@ jobs:
           path: .reports/egolint/architecture
 
       - name: Publish stable architecture snapshot
-        uses: ./.github/actions/publish-report-snapshot
+        uses: egohygiene/relay/actions/publish-report-snapshot@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
         with:
           paths: .reports/egolint/architecture
           default-branch: "${{ github.event.repository.default_branch }}"
