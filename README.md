@@ -20,10 +20,12 @@ quality layers:
 
 - immutable external action references;
 - least-privilege workflow permissions and bounded job runtimes;
-- reusable composite actions for common toolchain and generation steps;
+- repository-local adapters plus immutable Relay actions for reusable
+  automation;
 - automation policy tests and MegaLinter validation;
 - dependency, CodeQL, OSV, and OpenSSF supply-chain checks;
-- safe manual workflows for contributor and repository-intelligence generation.
+- safe manual workflows for contributor generation and pinned Relay repository
+  intelligence.
 - an encapsulated, cross-language Egolint subsystem with root Taskfile imports;
 - universal and holistic MegaLinter profiles with generated output under
   `.reports/`;

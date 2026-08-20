@@ -68,7 +68,7 @@ migration decision.
 | ADR-0004 | Use Taskfile as the stable local repository interface                 | Accepted | 2026-08-11 | —          | —             |
 | ADR-0005 | Separate disposable reports from durable audits                       | Accepted | 2026-08-11 | —          | —             |
 | ADR-0006 | Keep pull-request automation read-only and trusted publication narrow | Accepted | 2026-08-11 | —          | —             |
-| ADR-0007 | Make Empathy the strict baseline and move incubation to Sanctuary | Accepted |
+| ADR-0007 | Make Empathy the strict baseline and move incubation to Sanctuary     | Accepted | 2026-08-19 | —          | —             |
 
 ## Active Decisions
 
@@ -280,7 +280,7 @@ Quality and OSV output use stable report namespaces; audits record remediation c
 publication remains limited to trusted runs.
 
 Related: [`EPISTEMOLOGY.md`](EPISTEMOLOGY.md),
-[`.github/actions/publish-report-snapshot/action.yml`](.github/actions/publish-report-snapshot/action.yml).
+[`Relay publish-report-snapshot`](https://github.com/egohygiene/relay/tree/ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210/actions/publish-report-snapshot).
 
 ### ADR-0006 — Keep Pull-Request Automation Read-Only and Trusted Publication Narrow
 
@@ -371,7 +371,6 @@ creation, and release automation remain follow-up work.
 Related: [`PURPOSE.md`](PURPOSE.md), [`SYSTEM.md`](SYSTEM.md),
 [`ARCHITECTURE.md`](ARCHITECTURE.md), and [`ROADMAP.md`](ROADMAP.md).
 
-
 ## Deprecated and Superseded Decisions
 
 None recorded.
@@ -385,7 +384,7 @@ No earlier decision records with sufficient provenance were found in the current
 The following choices are not accepted decisions in this log:
 
 - whether Aether source is relocated, pinned, or projected into Empathy;
-- whether Relay and Realm extraction uses releases, source references, or generated distributions;
+- whether Realm extraction uses releases, source references, or generated distributions;
 - whether Holon owns Empathy profile composition or only organization desired state;
 - which contracts form the universal core and which profiles are first-party;
 - the compatibility and migration policy for the first stable consumer distribution.

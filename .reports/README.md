@@ -6,7 +6,7 @@ compliance, and architecture reports.
 Generated contents are ignored by default. Pull-request runs remain read-only and
 upload their complete output as workflow artifacts. Trusted default-branch pushes,
 schedules, and manual runs may commit curated stable snapshots through
-`.github/actions/publish-report-snapshot`.
+`egohygiene/relay/actions/publish-report-snapshot@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210`.
 
 Artifacts and Git history preserve historical results. Report generators must not
 accumulate timestamped history trees in this directory.
@@ -49,10 +49,11 @@ from both canonical tool matrices rather than maintained manually.
 
 OSV, MegaLinter, and OpenSSF Scorecard each publish a compact `summary.json`
 using `egohygiene.repository-report-summary/v1`. The JSON Schema and producer
-normalizer live in `.github/actions/normalize-repository-report/`. These
-summaries keep execution, findings, freshness, provenance, and links separate;
-producer-native JSON and SARIF remain authoritative and continue through their
-existing artifact and Security-tab paths.
+normalizer are released by Relay and consumed through
+`egohygiene/relay/actions/normalize-repository-report@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210`.
+These summaries keep execution, findings, freshness, provenance, and links
+separate; producer-native JSON and SARIF remain authoritative and continue
+through their existing artifact and Security-tab paths.
 
 Scorecard's aggregate is copied from the official API only when the API result
 names the exact commit evaluated by the workflow. A late, stale, or unavailable

@@ -52,9 +52,12 @@ jobs:
           set -euo pipefail
           corepack enable
           corepack prepare pnpm@11.21.0 --activate
-          sh egolint/scripts/pnpm.sh --dir egolint install \
-            --frozen-lockfile \
-            --ignore-scripts
+          (
+            cd egolint
+            sh scripts/pnpm.sh install \
+              --frozen-lockfile \
+              --ignore-scripts
+          )
 
       - name: Lint commit messages
         shell: bash
@@ -64,8 +67,11 @@ jobs:
           HEAD_SHA: "${{ github.event.pull_request.head.sha }}"
         run: |
           set -euo pipefail
-          sh egolint/scripts/pnpm.sh --dir egolint exec commitlint \
-            --config .config/lint/commits/commitlint.emoji.config.cjs \
-            --from "${BASE_SHA}" \
-            --to "${HEAD_SHA}" \
-            --verbose
+          (
+            cd egolint
+            sh scripts/pnpm.sh exec commitlint \
+              --config .config/lint/commits/commitlint.emoji.config.cjs \
+              --from "${BASE_SHA}" \
+              --to "${HEAD_SHA}" \
+              --verbose
+          )

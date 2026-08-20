@@ -69,7 +69,8 @@ organization synchronization, or the implementation of every capability it consu
 - Aether owns reusable, provider-neutral specifications, skills, agents, and other AI-governance
   source artifacts.
 - Egolint owns the cross-language quality-policy capability.
-- Relay is the intended owner of independently reusable GitHub automation.
+- Relay owns independently reusable GitHub automation; Empathy selects immutable
+  releases and proves repository-specific composition.
 - Realm is the intended owner of reproducible development-environment capabilities.
 - A consumer repository owns its identity, product behavior, private context, and selected profile.
 

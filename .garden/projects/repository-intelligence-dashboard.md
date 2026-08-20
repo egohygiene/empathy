@@ -10,18 +10,11 @@ visibility: public
 owners:
   - egohygiene
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-19
 sources:
-  - ../../.github/actions/generate-repository-intelligence/README.md
-  - ../../.github/actions/generate-repository-intelligence/action.yml
-  - ../../.github/actions/generate-repository-intelligence/repository-analytics.schema.json
-  - ../../.github/actions/generate-repository-intelligence/repository-tree.schema.json
-  - ../../.github/actions/generate-repository-intelligence-dashboard/README.md
-  - ../../.github/actions/generate-repository-intelligence-dashboard/action.yml
-  - ../../.github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json
-  - ../../.github/actions/normalize-repository-report/README.md
-  - ../../.github/actions/normalize-repository-report/action.yml
-  - ../../.github/actions/normalize-repository-report/repository-report-summary.schema.json
+  - https://github.com/egohygiene/relay/tree/ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210/actions/repository-intelligence
+  - https://github.com/egohygiene/relay/tree/ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210/actions/normalize-repository-report
+  - https://github.com/egohygiene/relay/tree/ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210/actions/publish-report-snapshot
   - ../../.github/workflows/ossf-scorecard.yml
   - ../../.github/workflows/osv-scan.yml
   - ../../.github/workflows/megalinter.yml
@@ -41,10 +34,12 @@ tags:
 
 ## Decision
 
-Publish one static, repository-scoped dashboard beneath the existing GitHub
-Pages site at `/empathy/intelligence/`. It will summarize the authoritative
-scanner outputs rather than replace their native reports, SARIF uploads, or
-GitHub Security-tab integration.
+Publish one static, repository-scoped dashboard at the site's
+`/intelligence/` surface. Empathy currently serves that surface at
+<https://egohygiene.github.io/empathy/intelligence/> until its custom domain is
+configured. The dashboard summarizes authoritative scanner outputs rather than
+replacing their native reports, SARIF uploads, or GitHub Security-tab
+integration.
 
 The dashboard is a public, compact projection. Raw logs, SARIF payloads,
 workflow artifacts, and any private workflow context remain outside the site.
@@ -120,16 +115,16 @@ never become a misleading green result.
 ```text
 canonical scanners and collectors
   -> stable .reports/<producer>/summary.json snapshots
-  -> composite dashboard builder
+  -> pinned Relay repository-intelligence action
   -> .cache/mindgarden/site/intelligence/
-  -> existing GitHub Pages deployment
+  -> repository-owned GitHub Pages composition and deployment
 ```
 
-The dashboard builder is a composite action when it only validates inputs and
-generates deterministic static assets. A reusable workflow belongs in Relay
-once it needs repository checkout policy, Pages permissions, or cross-repo
-orchestration. Repositories should keep thin caller workflows and local theme
-configuration.
+Relay owns the reusable collectors, schemas, normalizers, renderer, assets, and
+guarded report publisher. Empathy owns its scanner configuration, normalized
+report snapshots, Mindgarden build, final site composition, Pages permissions,
+and immutable Relay version selection. The shared action writes only the
+`intelligence/` subtree and cannot deploy or replace the rest of the site.
 
 ## Delivery slices
 
@@ -145,8 +140,9 @@ configuration.
 4. Extend the Mindgarden Pages build job to place the generated dashboard at
    `intelligence/` beside the Quartz site and add a garden link to it.
    **Complete.**
-5. Extract the stable builder and caller contract to Relay, then instantiate
-   it in each repository through its declared capability profile.
+5. Extract the stable builder and caller contract to Relay, replace Empathy's
+   incubated implementation with an immutable thin consumer, and prove the
+   released contract in Akashic and Optiflow. **In progress.**
 
 ## Dashboard expansion roadmap
 

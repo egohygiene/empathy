@@ -54,25 +54,15 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Generate intelligence artifacts
-        uses: ./.github/actions/generate-repository-intelligence
+      - name: Generate intelligence artifacts and dashboard
+        uses: egohygiene/relay/actions/repository-intelligence@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
         with:
-          output-root: "${{ inputs.output-root }}"
-          max-depth: "${{ inputs.max-depth }}"
+          output-directory: "${{ inputs.dashboard-output-root }}"
+          work-directory: "${{ inputs.output-root }}"
+          reports-directory: ".reports"
           activity-since: "${{ inputs.activity-since }}"
-          activity-ref: "HEAD"
+          max-depth: "${{ inputs.max-depth }}"
           require-full-history: "true"
-
-      - name: Generate static intelligence dashboard
-        uses: ./.github/actions/generate-repository-intelligence-dashboard
-        with:
-          reports-root: ".reports"
-          analytics-summary: "${{ inputs.output-root }}/analytics/summary.json"
-          repository-tree: "${{ inputs.output-root }}/tree/repo.json"
-          output-root: "${{ inputs.dashboard-output-root }}"
-          repository: "${{ github.repository }}"
-          default-branch: "${{ github.event.repository.default_branch }}"
-          source-commit: "${{ github.sha }}"
 
       - name: Upload intelligence artifacts
         # actions/upload-artifact v7.0.1

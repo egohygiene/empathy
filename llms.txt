@@ -15,9 +15,8 @@ confidence metadata, and do not silently promote agent-authored drafts.
   stable id `empathy-garden-dashboard`.
 - [Empathy Garden Projects](.garden/projects/README.md): map knowledge; high confidence;
   stable id `empathy-garden-projects`.
-- [Ego Hygiene web namespace and holon
-  surfaces](.garden/projects/egohygiene-web-namespace.md): project knowledge; medium
-  confidence; stable id `empathy-egohygiene-web-namespace`.
+- [Ego Hygiene repository web namespaces](.garden/projects/egohygiene-web-namespace.md):
+  project knowledge; high confidence; stable id `empathy-egohygiene-web-namespace`.
 - [Repository Intelligence
   Dashboard](.garden/projects/repository-intelligence-dashboard.md): project knowledge;
   high confidence; stable id `repository-intelligence-dashboard`.

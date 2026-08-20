@@ -131,8 +131,8 @@ permanent embedded subsystem.
 
 ### Extract Reusable Automation and Environment Capabilities
 
-- Move reusable GitHub actions/workflows to Relay with immutable consumption and integration
-  fixtures.
+- Maintain reusable GitHub actions in Relay with immutable consumption, Relay-owned fixtures, and
+  Empathy-owned integration proof. Repository intelligence is the first extracted consumer path.
 - Move portable development-environment capabilities to Realm while retaining the Empathy profile.
 - Keep Empathy-specific selection and tests in Empathy.
 

@@ -160,7 +160,7 @@ jobs:
           fi
 
       - name: Normalize repository-intelligence summary
-        uses: ./.github/actions/normalize-repository-report
+        uses: egohygiene/relay/actions/normalize-repository-report@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
         with:
           producer: scorecard
           input: .cache/scorecard/results.sarif
@@ -168,7 +168,7 @@ jobs:
           scorecard-api-input: "${{ steps.scorecard-api.outputs.path }}"
 
       - name: Publish stable Scorecard summary
-        uses: ./.github/actions/publish-report-snapshot
+        uses: egohygiene/relay/actions/publish-report-snapshot@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
         with:
           paths: .reports/scorecard
           default-branch: "${{ github.event.repository.default_branch }}"
