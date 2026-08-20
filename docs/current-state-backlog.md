@@ -15,7 +15,9 @@ This page is the compact execution view for Empathy after the 2026 foundation ow
 ### Next — define the actual golden baseline
 
 - [#62 — Define universal repository files and selectable capability profiles](https://github.com/egohygiene/empathy/issues/62)
-  - **Blocked by:** Hygiene catalog/context contracts and Holon manifest/materialization contracts identified by the issue.
+  - **Implemented:** versioned artifact inventory, selectable profile catalog,
+    golden Empathy manifest, safe preserve overrides, deterministic resolution,
+    generated Hygiene context, and canonical EgoLint projection.
   - **Empathy owns:** baseline/profile composition and golden fixtures.
   - **Empathy does not own:** specialist implementation copied from sibling repositories.
 

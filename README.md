@@ -14,6 +14,9 @@ Sanctuary or their canonical repositories.
 The current consolidation passes establish the GitHub automation and Egolint
 quality layers:
 
+- a versioned [repository foundation catalog](docs/foundation/README.md) with
+  universal, language, product, publication, risk, release, documentation, and
+  agent-context profiles, plus a canonical offline EgoLint projection;
 - a frozen, deterministic [staging migration contract](docs/migration/STAGING.md)
   with file-level ownership, JSON projections, and evidence-backed deletion
   gates;
@@ -76,6 +79,9 @@ See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle,
 [`beacon`](beacon/README.md) for reproducible document-project bootstrapping.
 See [`holon/packs/react-vite`](holon/packs/react-vite/README.md) for the
 incubating frontend repository pack and its staging-promotion ledger.
+See [the repository foundation contract](docs/foundation/README.md) for the
+canonical baseline inventory, selectable profiles, ownership overrides, and
+golden-consumer validation.
 
 ## Architecture
 

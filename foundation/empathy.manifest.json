@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "egohygiene/empathy",
+  "foundation": "empathy/repository-foundation@1.0.0",
+  "selected_profiles": [
+    "agent-context",
+    "community-health",
+    "language-node",
+    "language-rust",
+    "product",
+    "release-automated",
+    "risk-hardened"
+  ],
+  "overrides": [
+    {
+      "artifact": "issue-template-config",
+      "mode": "preserve"
+    },
+    {
+      "artifact": "megalinter-config",
+      "mode": "preserve"
+    }
+  ],
+  "repository_owned": {
+    "display_name": "Empathy",
+    "description": "Golden repository baseline and integration consumer for Ego Hygiene",
+    "maintainers": ["szmyty"],
+    "topics": ["developer-experience", "golden-repository", "integration"],
+    "domains": [],
+    "license_expression": "MIT"
+  }
+}
