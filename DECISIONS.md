@@ -68,7 +68,7 @@ migration decision.
 | ADR-0004 | Use Taskfile as the stable local repository interface                 | Accepted | 2026-08-11 | —          | —             |
 | ADR-0005 | Separate disposable reports from durable audits                       | Accepted | 2026-08-11 | —          | —             |
 | ADR-0006 | Keep pull-request automation read-only and trusted publication narrow | Accepted | 2026-08-11 | —          | —             |
-| ADR-0007 | Make Empathy the strict baseline and move incubation to Sanctuary      | Accepted | 2026-08-19 | —          | —             |
+| ADR-0007 | Make Empathy the strict baseline and move incubation to Sanctuary     | Accepted | 2026-08-19 | —          | —             |
 
 ## Active Decisions
 
