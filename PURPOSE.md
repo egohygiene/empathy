@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-19
 governed_by:
   - architecture-purpose
 depends_on: []
@@ -33,8 +33,10 @@ Repositories often assemble governance, contribution guidance, quality policy, s
 developer tooling, and automation independently. The result is duplicated effort, inconsistent
 behavior, unclear ownership, and a high cognitive cost for people entering or maintaining a project.
 
-Empathy addresses that systems problem at the repository-foundation layer. It provides a place to
-compose and validate reusable contracts before they are distributed to consumer repositories.
+Empathy addresses that systems problem at the repository-foundation layer. It is the canonical
+baseline template that satisfies universal Hygiene rules and exposes intentional extension points.
+Experimental capabilities are incubated in Sanctuary, then graduate to their owning repositories or
+to specialized templates before they become baseline dependencies.
 
 ## Beneficiaries
 
@@ -60,8 +62,9 @@ Empathy seeks to preserve four forms of value across changes in implementation:
 
 ## Scope Boundaries
 
-Empathy owns the integration and validation of a repository foundation. It does not own every
-capability it composes.
+Empathy owns the content, integration contract, reference implementation, and validation of the
+universal baseline repository template. It does not own incubation, repository generation,
+organization synchronization, or the implementation of every capability it consumes.
 
 - Aether owns reusable, provider-neutral specifications, skills, agents, and other AI-governance
   source artifacts.
@@ -75,19 +78,18 @@ manager, or a promise that one baseline fits every project unchanged.
 
 ## Assumptions
 
-- **Observed:** The repository currently operates as an integration monorepo with active GitHub
-  automation, an encapsulated Egolint subsystem, local task contracts, generated reports, durable
-  audits, and quarantined staged material.
+- **Observed:** The repository currently contains the baseline plus historical incubation and
+  integration material that has not yet completed graduation or migration.
 - **Assumed:** A reusable baseline reduces maintenance cost only when capabilities remain
   independently selectable and traceable to a canonical owner.
-- **Unresolved:** The long-term boundary between Empathy as an integration repository and Holon as
-  an organization-state compiler has not been accepted in this repository.
+- **Decided:** Empathy is the strict baseline template; Sanctuary owns incubation; Holon resolves and
+  instantiates baseline and specialized templates; Pace later reconciles consumer drift.
 
 ## Open Questions
 
 - Which contracts are mandatory in the universal core, and which belong only to named profiles?
-- Does Empathy remain the long-lived integration authority, or become a profile/content source
-  consumed by Holon?
+- What manifest and release boundary lets Holon consume Empathy without copying its implementation
+  history or making Empathy responsible for generation?
 - What compatibility promise will apply to consumer repositories before a stable release?
 
 ## Validation

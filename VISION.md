@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-19
 governed_by:
   - architecture-vision
 depends_on:
@@ -37,6 +37,9 @@ In the desired future:
 
 - a new or existing repository can adopt a small universal foundation without inheriting unrelated
   product assumptions;
+- specialized templates inherit from the baseline through explicit deltas rather than permanent
+  forks;
+- Sanctuary can incubate experimental capabilities without making them baseline contracts;
 - maintainers can select capability profiles and inspect exactly what each one owns, changes, and
   requires;
 - local tools, editor feedback, hooks, and CI enforce the same contracts;
@@ -76,6 +79,7 @@ satisfies them.
 Empathy is not intended to become:
 
 - a monolithic repository that permanently owns every reusable capability;
+- an incubation area or general-purpose staging ground;
 - a background system that mutates repositories without an inspectable plan and authorization;
 - a marketplace of unreviewed templates or AI artifacts;
 - a compliance badge that hides unresolved findings;

@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-14
+updated: 2026-08-19
 governed_by:
   - architecture-system
 depends_on:
@@ -31,6 +31,21 @@ defines how those systems are structurally organized and allowed to depend on on
 
 The inventory includes implemented systems and explicitly identified target boundaries. It does not
 claim that every target capability is independently released today.
+
+## Accepted Repository Role
+
+Empathy is the strict baseline template and reference consumer for universal repository behavior.
+It owns baseline content and integration evidence, not the machinery that creates organizations.
+
+- **Sanctuary** owns experimental incubation and graduation evidence.
+- **Hygiene** defines the organization rules the baseline satisfies.
+- **Holon** resolves and instantiates baseline and specialized templates.
+- **Pace** later detects and reconciles drift in instantiated repositories.
+- **Aether, Relay, Realm, Egolint, Identity, and other capability repositories** own the reusable
+  packages that keep the baseline thin.
+
+Historical incubations may remain physically present during migration, but physical presence does
+not grant long-term architectural ownership.
 
 ## System Inventory
 
@@ -215,8 +230,8 @@ External availability or platform behavior must not be mistaken for Empathy-owne
 
 ## Open Questions
 
-- Does Holon subsume Composition and Distribution while Empathy remains the foundation content
-  authority?
+- What versioned manifest lets Holon resolve Empathy and specialized template deltas without
+  duplicating baseline ownership?
 - What are the public interfaces between Empathy and Aether, Egolint, Relay, and Realm?
 - Which active root workflows remain Empathy-specific after Relay extraction?
 

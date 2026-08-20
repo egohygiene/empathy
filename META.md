@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-19
 governed_by:
   - architecture-meta
 depends_on:
@@ -33,8 +33,9 @@ Aether architecture specifications. Each document owns one bounded concern. Depe
 reading and authoring prerequisites; related links are informative and may be cyclic.
 
 The documents are draft until human review. They describe Empathy's current architecture and honest
-target boundaries; they do not make the imported Aether corpus canonical merely by consuming its
-contracts.
+target boundaries. Empathy is the strict baseline template; Sanctuary owns incubation, and Holon
+owns deterministic instantiation. Consuming Aether, Relay, Realm, Egolint, or another capability
+does not make Empathy the canonical owner of that capability.
 
 ## Document Categories
 
@@ -202,7 +203,8 @@ Semantic, evidence, accessibility, and authority review still require human judg
 ## Open Questions
 
 - What review promotes this complete document set from draft to active?
-- Should architecture-document validation move to Aether and be consumed as a released capability?
+- How should Empathy pin and consume Aether's released architecture validator after the
+  materialization contract becomes stable?
 - How will organization-level architecture reference Empathy without duplicating these concerns?
 - Which future documents belong to profile specifications rather than this root architecture set?
 
