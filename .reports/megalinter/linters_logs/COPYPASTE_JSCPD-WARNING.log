@@ -94,134 +94,134 @@ Clone found (markdown)
  - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [47:89 - 54:59] (8 lines, 209 tokens)
    AI_CONSTITUTION.md:markdown [84:206 - 86:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [81:21 - 239:23] (159 lines, 434 tokens)
-   .devcontainer/scripts/on-create.sh [85:16 - 243:23]
+ - .devcontainer/scripts/initialize.sh [83:21 - 241:19] (159 lines, 434 tokens)
+   .devcontainer/scripts/on-create.sh [87:16 - 245:19]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [81:21 - 181:3] (101 lines, 254 tokens)
-   .devcontainer/scripts/post-attach.sh [83:22 - 183:3]
+ - .devcontainer/scripts/initialize.sh [83:21 - 183:3] (101 lines, 254 tokens)
+   .devcontainer/scripts/post-attach.sh [85:22 - 185:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [81:21 - 239:23] (159 lines, 434 tokens)
-   .devcontainer/scripts/post-create.sh [91:18 - 249:23]
+ - .devcontainer/scripts/initialize.sh [83:21 - 241:19] (159 lines, 434 tokens)
+   .devcontainer/scripts/post-create.sh [93:18 - 251:19]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [81:21 - 239:23] (159 lines, 434 tokens)
-   .devcontainer/scripts/post-start.sh [88:8 - 246:23]
+ - .devcontainer/scripts/initialize.sh [83:21 - 241:19] (159 lines, 434 tokens)
+   .devcontainer/scripts/post-start.sh [90:8 - 248:19]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [193:1 - 223:3] (31 lines, 75 tokens)
-   .devcontainer/scripts/post-attach.sh [181:1 - 211:3]
+ - .devcontainer/scripts/initialize.sh [195:1 - 225:3] (31 lines, 75 tokens)
+   .devcontainer/scripts/post-attach.sh [183:1 - 213:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
-   .devcontainer/scripts/on-create.sh [265:1 - 288:12]
+ - .devcontainer/scripts/initialize.sh [263:1 - 286:10] (24 lines, 62 tokens)
+   .devcontainer/scripts/on-create.sh [267:1 - 290:10]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
-   .devcontainer/scripts/post-attach.sh [248:1 - 271:12]
+ - .devcontainer/scripts/initialize.sh [263:1 - 286:10] (24 lines, 62 tokens)
+   .devcontainer/scripts/post-attach.sh [250:1 - 273:10]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
-   .devcontainer/scripts/post-create.sh [271:1 - 294:12]
+ - .devcontainer/scripts/initialize.sh [263:1 - 286:10] (24 lines, 62 tokens)
+   .devcontainer/scripts/post-create.sh [273:1 - 296:10]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
-   .devcontainer/scripts/post-start.sh [268:1 - 291:12]
+ - .devcontainer/scripts/initialize.sh [263:1 - 286:10] (24 lines, 62 tokens)
+   .devcontainer/scripts/post-start.sh [270:1 - 293:10]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [261:1 - 284:12] (24 lines, 62 tokens)
-   .devcontainer/scripts/update-content.sh [269:1 - 292:12]
+ - .devcontainer/scripts/initialize.sh [263:1 - 286:10] (24 lines, 62 tokens)
+   .devcontainer/scripts/update-content.sh [271:1 - 294:10]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [290:1 - 311:15] (22 lines, 73 tokens)
-   .devcontainer/scripts/on-create.sh [295:1 - 316:15]
+ - .devcontainer/scripts/initialize.sh [292:1 - 313:7] (22 lines, 73 tokens)
+   .devcontainer/scripts/on-create.sh [297:1 - 318:7]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [290:1 - 320:14] (31 lines, 110 tokens)
-   .devcontainer/scripts/post-attach.sh [279:1 - 308:15]
+ - .devcontainer/scripts/initialize.sh [292:1 - 322:6] (31 lines, 110 tokens)
+   .devcontainer/scripts/post-attach.sh [281:1 - 310:7]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [290:1 - 325:17] (36 lines, 127 tokens)
-   .devcontainer/scripts/post-create.sh [301:1 - 334:17]
+ - .devcontainer/scripts/initialize.sh [292:1 - 327:7] (36 lines, 127 tokens)
+   .devcontainer/scripts/post-create.sh [303:1 - 336:7]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [290:1 - 324:14] (35 lines, 124 tokens)
-   .devcontainer/scripts/post-start.sh [297:1 - 329:15]
+ - .devcontainer/scripts/initialize.sh [292:1 - 326:6] (35 lines, 124 tokens)
+   .devcontainer/scripts/post-start.sh [299:1 - 331:7]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [315:37 - 344:3] (30 lines, 84 tokens)
-   .devcontainer/scripts/on-create.sh [328:32 - 357:3]
+ - .devcontainer/scripts/initialize.sh [317:27 - 346:3] (30 lines, 84 tokens)
+   .devcontainer/scripts/on-create.sh [330:22 - 359:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [315:37 - 344:3] (30 lines, 84 tokens)
-   .devcontainer/scripts/post-attach.sh [317:24 - 346:3]
+ - .devcontainer/scripts/initialize.sh [317:27 - 346:3] (30 lines, 84 tokens)
+   .devcontainer/scripts/post-attach.sh [319:14 - 348:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [315:37 - 477:3] (163 lines, 534 tokens)
-   .devcontainer/scripts/post-create.sh [334:34 - 476:7]
+ - .devcontainer/scripts/initialize.sh [317:27 - 477:2] (161 lines, 532 tokens)
+   .devcontainer/scripts/post-create.sh [336:24 - 478:5]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [388:1 - 398:5] (11 lines, 63 tokens)
-   .devcontainer/scripts/on-create.sh [411:1 - 421:5]
+ - .devcontainer/scripts/initialize.sh [390:1 - 400:3] (11 lines, 63 tokens)
+   .devcontainer/scripts/on-create.sh [413:1 - 423:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [402:1 - 425:7] (24 lines, 60 tokens)
-   .devcontainer/scripts/on-create.sh [447:1 - 470:7]
+ - .devcontainer/scripts/initialize.sh [404:1 - 427:5] (24 lines, 60 tokens)
+   .devcontainer/scripts/on-create.sh [449:1 - 472:5]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [459:1 - 477:3] (19 lines, 93 tokens)
-   .devcontainer/scripts/on-create.sh [525:1 - 543:3]
+ - .devcontainer/scripts/initialize.sh [461:1 - 479:3] (19 lines, 92 tokens)
+   .devcontainer/scripts/on-create.sh [527:1 - 545:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
-   .devcontainer/scripts/on-create.sh [646:1 - 665:19]
+ - .devcontainer/scripts/initialize.sh [574:1 - 593:17] (20 lines, 74 tokens)
+   .devcontainer/scripts/on-create.sh [648:1 - 667:17]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
-   .devcontainer/scripts/post-attach.sh [580:1 - 599:19]
+ - .devcontainer/scripts/initialize.sh [574:1 - 593:17] (20 lines, 74 tokens)
+   .devcontainer/scripts/post-attach.sh [582:1 - 601:17]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
-   .devcontainer/scripts/post-create.sh [652:1 - 671:19]
+ - .devcontainer/scripts/initialize.sh [574:1 - 593:17] (20 lines, 74 tokens)
+   .devcontainer/scripts/post-create.sh [654:1 - 673:17]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
-   .devcontainer/scripts/post-start.sh [591:1 - 610:19]
+ - .devcontainer/scripts/initialize.sh [574:1 - 593:17] (20 lines, 74 tokens)
+   .devcontainer/scripts/post-start.sh [593:1 - 612:17]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [572:1 - 591:19] (20 lines, 74 tokens)
-   .devcontainer/scripts/update-content.sh [667:1 - 686:19]
+ - .devcontainer/scripts/initialize.sh [574:1 - 593:17] (20 lines, 74 tokens)
+   .devcontainer/scripts/update-content.sh [669:1 - 688:17]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [605:1 - 691:3] (87 lines, 665 tokens)
-   .devcontainer/scripts/on-create.sh [679:1 - 765:3]
+ - .devcontainer/scripts/initialize.sh [607:1 - 693:3] (87 lines, 665 tokens)
+   .devcontainer/scripts/on-create.sh [681:1 - 767:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [605:1 - 638:2] (34 lines, 196 tokens)
-   .devcontainer/scripts/post-attach.sh [613:1 - 646:2]
+ - .devcontainer/scripts/initialize.sh [607:1 - 640:2] (34 lines, 196 tokens)
+   .devcontainer/scripts/post-attach.sh [615:1 - 648:2]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [605:1 - 691:3] (87 lines, 665 tokens)
-   .devcontainer/scripts/post-create.sh [685:1 - 771:3]
+ - .devcontainer/scripts/initialize.sh [607:1 - 693:3] (87 lines, 665 tokens)
+   .devcontainer/scripts/post-create.sh [687:1 - 773:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [605:1 - 640:3] (36 lines, 197 tokens)
-   .devcontainer/scripts/post-start.sh [624:1 - 659:3]
+ - .devcontainer/scripts/initialize.sh [607:1 - 642:3] (36 lines, 197 tokens)
+   .devcontainer/scripts/post-start.sh [626:1 - 661:3]
 Clone found (bash)
- - .devcontainer/scripts/initialize.sh [605:1 - 691:3] (87 lines, 665 tokens)
-   .devcontainer/scripts/update-content.sh [700:1 - 786:3]
+ - .devcontainer/scripts/initialize.sh [607:1 - 693:3] (87 lines, 665 tokens)
+   .devcontainer/scripts/update-content.sh [702:1 - 788:3]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [359:1 - 470:7] (112 lines, 449 tokens)
-   .devcontainer/scripts/post-attach.sh [362:1 - 473:7]
+ - .devcontainer/scripts/on-create.sh [361:1 - 472:5] (112 lines, 447 tokens)
+   .devcontainer/scripts/post-attach.sh [364:1 - 475:5]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [359:1 - 470:7] (112 lines, 449 tokens)
-   .devcontainer/scripts/post-start.sh [358:1 - 469:7]
+ - .devcontainer/scripts/on-create.sh [361:1 - 472:5] (112 lines, 447 tokens)
+   .devcontainer/scripts/post-start.sh [360:1 - 471:5]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [359:1 - 470:7] (112 lines, 449 tokens)
-   .devcontainer/scripts/update-content.sh [359:1 - 470:7]
+ - .devcontainer/scripts/on-create.sh [361:1 - 472:5] (112 lines, 447 tokens)
+   .devcontainer/scripts/update-content.sh [361:1 - 472:5]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [483:1 - 552:22] (70 lines, 299 tokens)
-   .devcontainer/scripts/post-create.sh [489:1 - 558:22]
+ - .devcontainer/scripts/on-create.sh [485:1 - 554:20] (70 lines, 298 tokens)
+   .devcontainer/scripts/post-create.sh [491:1 - 560:20]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [483:1 - 543:3] (61 lines, 269 tokens)
-   .devcontainer/scripts/post-start.sh [482:1 - 542:3]
+ - .devcontainer/scripts/on-create.sh [485:1 - 545:3] (61 lines, 268 tokens)
+   .devcontainer/scripts/post-start.sh [484:1 - 544:3]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [483:1 - 552:22] (70 lines, 299 tokens)
-   .devcontainer/scripts/update-content.sh [483:1 - 552:22]
+ - .devcontainer/scripts/on-create.sh [485:1 - 554:20] (70 lines, 298 tokens)
+   .devcontainer/scripts/update-content.sh [485:1 - 554:20]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [495:1 - 503:65] (9 lines, 66 tokens)
-   .devcontainer/scripts/post-attach.sh [495:1 - 503:65]
+ - .devcontainer/scripts/on-create.sh [497:1 - 505:63] (9 lines, 66 tokens)
+   .devcontainer/scripts/post-attach.sh [497:1 - 505:63]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [552:50 - 591:3] (40 lines, 132 tokens)
-   .devcontainer/scripts/post-create.sh [558:52 - 597:3]
+ - .devcontainer/scripts/on-create.sh [554:48 - 593:3] (40 lines, 132 tokens)
+   .devcontainer/scripts/post-create.sh [560:50 - 599:3]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [552:50 - 584:2] (33 lines, 126 tokens)
-   .devcontainer/scripts/post-start.sh [551:51 - 583:2]
+ - .devcontainer/scripts/on-create.sh [554:48 - 586:2] (33 lines, 126 tokens)
+   .devcontainer/scripts/post-start.sh [553:49 - 585:2]
 Clone found (bash)
- - .devcontainer/scripts/on-create.sh [560:24 - 583:7] (24 lines, 106 tokens)
-   .devcontainer/scripts/update-content.sh [597:23 - 620:7]
+ - .devcontainer/scripts/on-create.sh [562:24 - 585:5] (24 lines, 106 tokens)
+   .devcontainer/scripts/update-content.sh [599:23 - 622:5]
 Clone found (bash)
- - .devcontainer/scripts/post-attach.sh [315:1 - 346:3] (32 lines, 96 tokens)
-   .devcontainer/scripts/post-start.sh [325:1 - 356:3]
+ - .devcontainer/scripts/post-attach.sh [317:1 - 348:3] (32 lines, 96 tokens)
+   .devcontainer/scripts/post-start.sh [327:1 - 358:3]
 Clone found (bash)
- - .devcontainer/scripts/post-start.sh [87:21 - 246:23] (160 lines, 437 tokens)
-   .devcontainer/scripts/update-content.sh [88:17 - 247:23]
+ - .devcontainer/scripts/post-start.sh [89:21 - 248:19] (160 lines, 437 tokens)
+   .devcontainer/scripts/update-content.sh [90:17 - 249:19]
 Clone found (bash)
- - .devcontainer/scripts/post-start.sh [292:1 - 356:3] (65 lines, 220 tokens)
-   .devcontainer/scripts/update-content.sh [293:1 - 357:3]
+ - .devcontainer/scripts/post-start.sh [294:1 - 358:3] (65 lines, 220 tokens)
+   .devcontainer/scripts/update-content.sh [295:1 - 359:3]
 Clone found (yaml)
  - .github/ISSUE_TEMPLATE/architecture.yml [107:1 - 113:18] (7 lines, 51 tokens)
    .github/ISSUE_TEMPLATE/ci.yml [101:1 - 107:18]
@@ -234,45 +234,6 @@ Clone found (yaml)
 Clone found (yaml)
  - .github/ISSUE_TEMPLATE/architecture.yml [107:1 - 114:26] (8 lines, 69 tokens)
    .github/ISSUE_TEMPLATE/tech-debt.yml [100:1 - 107:18]
-Clone found (yaml)
- - .github/actions/commit-if-changed/action.yml [14:63 - 23:69] (10 lines, 64 tokens)
-   .github/actions/publish-report-snapshot/action.yml [17:79 - 26:69]
-Clone found (python)
- - .github/actions/generate-repository-intelligence-dashboard/generate_repository_intelligence_dashboard.py [1845:96 - 1858:5] (14 lines, 89 tokens)
-   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py [335:5 - 349:5]
-Clone found (json)
- - .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [167:26 - 174:21] (8 lines, 73 tokens)
-   .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [187:24 - 194:21]
-Clone found (json)
- - .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [174:49 - 182:20] (9 lines, 51 tokens)
-   .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [196:9 - 204:20]
-Clone found (json)
- - .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [233:17 - 243:5] (11 lines, 96 tokens)
-   .github/actions/generate-repository-intelligence/repository-analytics.schema.json [129:13 - 139:5]
-Clone found (json)
- - .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [243:17 - 254:5] (12 lines, 118 tokens)
-   .github/actions/generate-repository-intelligence/repository-tree.schema.json [24:13 - 35:5]
-Clone found (json)
- - .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [254:15 - 266:30] (13 lines, 116 tokens)
-   .github/actions/generate-repository-intelligence/repository-tree.schema.json [35:11 - 47:30]
-Clone found (json)
- - .github/actions/generate-repository-intelligence-dashboard/repository-intelligence-dashboard.schema.json [268:54 - 291:2] (24 lines, 143 tokens)
-   .github/actions/generate-repository-intelligence/repository-tree.schema.json [49:50 - 72:2]
-Clone found (python)
- - .github/actions/generate-repository-intelligence/generate_repository_analytics.py [67:1 - 76:5] (10 lines, 71 tokens)
-   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py [88:1 - 97:5]
-Clone found (python)
- - .github/actions/generate-repository-intelligence/generate_repository_analytics.py [80:51 - 97:5] (18 lines, 109 tokens)
-   .github/actions/generate-repository-intelligence/generate_repository_intelligence.py [70:21 - 88:5]
-Clone found (python)
- - .github/actions/generate-repository-intelligence/generate_repository_analytics.py [287:36 - 294:5] (8 lines, 73 tokens)
-   .github/actions/generate-repository-intelligence/generate_repository_analytics.py [295:36 - 302:5]
-Clone found (json)
- - .github/actions/generate-repository-intelligence/repository-analytics.schema.json [128:5 - 139:5] (12 lines, 100 tokens)
-   .github/actions/generate-repository-intelligence/repository-tree.schema.json [10:36 - 21:5]
-Clone found (json)
- - .github/actions/generate-repository-intelligence/repository-analytics.schema.json [153:15 - 159:6] (7 lines, 72 tokens)
-   .github/actions/generate-repository-intelligence/repository-analytics.schema.json [165:15 - 171:6]
 Clone found (yaml)
  - .github/actions/python-poetry-setup/action.yml [10:1 - 15:49] (6 lines, 50 tokens)
    .github/actions/setup-environment/action.yml [39:1 - 44:49]
@@ -401,7 +362,7 @@ Clone found (yaml)
    .github/workflows/codeql.yml [40:1 - 53:15]
 Clone found (yaml)
  - .github/workflows/automation.yml [54:1 - 67:15] (14 lines, 75 tokens)
-   .github/workflows/lint-architecture.yml [52:1 - 65:15]
+   .github/workflows/lint-architecture.yml [50:1 - 63:15]
 Clone found (yaml)
  - .github/workflows/automation.yml [54:1 - 65:32] (12 lines, 68 tokens)
    .github/workflows/megalinter.yml [35:1 - 46:24]
@@ -413,7 +374,7 @@ Clone found (yaml)
    .github/workflows/contributors.yml [19:1 - 29:24]
 Clone found (yaml)
  - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 62 tokens)
-   .github/workflows/lint-architecture.yml [49:1 - 59:24]
+   .github/workflows/lint-architecture.yml [47:1 - 57:24]
 Clone found (yaml)
  - .github/workflows/contributors.yml [22:1 - 34:11] (13 lines, 72 tokens)
    .github/workflows/megalinter-fix.yml [29:1 - 41:11]
@@ -421,10 +382,10 @@ Clone found (yaml)
  - .github/workflows/copilot-setup-steps.yml [32:1 - 47:32] (16 lines, 91 tokens)
    .github/workflows/reusable-autofix.yml [46:1 - 62:15]
 Clone found (yaml)
- - .github/workflows/lint-architecture.yml [82:1 - 104:34] (23 lines, 139 tokens)
+ - .github/workflows/lint-architecture.yml [80:1 - 102:34] (23 lines, 139 tokens)
    .github/workflows/megalinter.yml [142:1 - 164:34]
 Clone found (yaml)
- - .github/workflows/lint-architecture.yml [85:1 - 97:15] (13 lines, 59 tokens)
+ - .github/workflows/lint-architecture.yml [83:1 - 95:15] (13 lines, 59 tokens)
    .github/workflows/osv-scan.yml [744:1 - 756:15]
 Clone found (yaml)
  - .github/workflows/megalinter.yml [33:1 - 47:32] (15 lines, 82 tokens)
@@ -433,11 +394,11 @@ Clone found (yaml)
  - .github/workflows/megalinter.yml [141:17 - 164:34] (24 lines, 149 tokens)
    .github/workflows/ossf-scorecard.yml [79:22 - 102:34]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [61:1 - 75:15] (15 lines, 86 tokens)
+ - .github/workflows/mindgarden-pages.yml [51:1 - 65:15] (15 lines, 86 tokens)
    .github/workflows/repository-intelligence.yml [43:1 - 57:15]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [114:1 - 119:9] (6 lines, 82 tokens)
-   .github/workflows/mindgarden-pages.yml [123:1 - 128:9]
+ - .github/workflows/mindgarden-pages.yml [94:1 - 99:9] (6 lines, 82 tokens)
+   .github/workflows/mindgarden-pages.yml [103:1 - 108:9]
 Clone found (yaml)
  - .github/workflows/osv-scan.yml [330:1 - 339:22] (10 lines, 85 tokens)
    .github/workflows/osv-scan.yml [354:1 - 363:22]
@@ -567,6 +528,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
+   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 510:27] (14 lines, 479 tokens)
    .staging/.github/agents/awesome/gem-mobile-tester.agent.md:markdown [84:36 - 98:4]
@@ -847,8 +811,14 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [73:1 - 157:3] (85 lines, 1124 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [69:1 - 156:42]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [75:25 - 95:4] (21 lines, 260 tokens)
+   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [99:25 - 119:4]
+Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [91:105 - 100:4] (10 lines, 116 tokens)
    .staging/.github/agents/awesome/specification.agent.md:markdown [54:70 - 63:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [96:1 - 106:12] (11 lines, 102 tokens)
+   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [120:1 - 130:8]
 Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [120:55 - 160:42] (41 lines, 421 tokens)
    .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [144:41 - 184:42]
@@ -1042,17 +1012,17 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [24:124 - 128:4] (105 lines, 250 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [22:119 - 127:4]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [28:53 - 116:8] (89 lines, 103 tokens)
-   .staging/.github/skills/create-specification/SKILL.md:markdown [26:53 - 114:12]
-Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 114:28] (84 lines, 1122 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [29:1 - 112:28]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [37:1 - 124:40] (88 lines, 101 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [35:1 - 122:40]
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [33:25 - 58:4] (26 lines, 281 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [31:25 - 56:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [59:1 - 116:2] (58 lines, 795 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [57:1 - 114:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1873,9 +1843,6 @@ Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
 Clone found (markdown)
- - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
-Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
 Clone found (markdown)
@@ -2592,6 +2559,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [110:16 - 124:125] (15 lines, 576 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2526:50 - 2551:7]
+Clone found (markdown)
+ - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [163:28 - 168:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [1282:112 - 1286:2]
 Clone found (yaml)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:yaml [59:1 - 178:48] (120 lines, 71 tokens)
    .staging/.github/skills/phoenix-evals/references/axial-coding.md:yaml [29:1 - 73:48]
@@ -2640,6 +2610,12 @@ Clone found (typescript)
 Clone found (markdown)
  - .staging/.github/skills/phoenix-tracing/references/projects-python.md:markdown [1:36 - 17:4] (17 lines, 86 tokens)
    .staging/.github/skills/phoenix-tracing/references/projects-typescript.md:markdown [1:40 - 17:4]
+Clone found (markdown)
+ - .staging/.github/skills/phoenix-tracing/references/setup-python.md:markdown [7:52 - 29:3] (23 lines, 133 tokens)
+   EPISTEMOLOGY.md:markdown [37:130 - 39:3]
+Clone found (markdown)
+ - .staging/.github/skills/phoenix-tracing/references/setup-python.md:markdown [7:52 - 27:22] (21 lines, 127 tokens)
+   META.md:markdown [42:124 - 44:3]
 Clone found (markdown)
  - .staging/.github/skills/phoenix-tracing/references/span-embedding.md:markdown [5:102 - 11:48] (7 lines, 90 tokens)
    .staging/.github/skills/phoenix-tracing/references/span-evaluator.md:markdown [5:113 - 11:48]
@@ -2721,6 +2697,9 @@ Clone found (yaml)
 Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
+Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [300:45 - 305:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [318:23 - 322:2]
 Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [1223:63 - 1244:14] (22 lines, 530 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2150:63 - 2166:62]
@@ -2925,6 +2904,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
+Clone found (markdown)
+ - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
+   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -9462,12 +9444,6 @@ Clone found (python)
 Clone found (python)
  - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
    mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
-Clone found (json)
- - tests/fixtures/repository-intelligence-dashboard/osv/summary.json [13:15 - 24:15] (12 lines, 54 tokens)
-   tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json [11:16 - 22:15]
-Clone found (python)
- - tests/test_repository_intelligence_dashboard.py [308:1 - 313:64] (6 lines, 62 tokens)
-   tests/test_repository_intelligence_dashboard.py [323:1 - 328:64]
 Clone found (python)
  - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
    tests/test_staging_removal_gate.py [64:49 - 71:14]
@@ -9485,7 +9461,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 414            │ 114333      │ 442638       │ 275          │ 6032 (5.28%)     │ 28895 (6.53%)     │
+│ bash         │ 413            │ 113679      │ 438066       │ 275          │ 6030 (5.30%)     │ 28883 (6.59%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9499,7 +9475,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csharp       │ 56             │ 14917       │ 43793        │ 22           │ 479 (3.21%)      │ 1936 (4.42%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css          │ 30             │ 7037        │ 26989        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css          │ 29             │ 5884        │ 19407        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csv          │ 1              │ 5           │ 60           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9531,9 +9507,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java         │ 34             │ 10376       │ 32325        │ 12           │ 152 (1.46%)      │ 843 (2.61%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript   │ 71             │ 23073       │ 64297        │ 58           │ 1321 (5.73%)     │ 5555 (8.64%)      │
+│ javascript   │ 70             │ 22962       │ 63622        │ 58           │ 1321 (5.75%)     │ 5555 (8.73%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 243            │ 69526       │ 208470       │ 71           │ 1257 (1.81%)     │ 5779 (2.77%)      │
+│ json         │ 232            │ 68579       │ 202110       │ 62           │ 1158 (1.69%)     │ 4956 (2.45%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9547,7 +9523,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1728           │ 330535      │ 4256495      │ 684          │ 11609 (3.51%)    │ 171816 (4.04%)    │
+│ markdown     │ 1725           │ 330232      │ 4253089      │ 691          │ 11632 (3.52%)    │ 173635 (4.08%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 99             │ 29819       │ 117043       │ 48           │ 964 (3.23%)      │ 7969 (6.81%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9569,7 +9545,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 294            │ 75379       │ 471765       │ 135          │ 1358 (1.80%)     │ 12713 (2.69%)     │
+│ python       │ 286            │ 71127       │ 435963       │ 130          │ 1307 (1.84%)     │ 12309 (2.82%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9587,7 +9563,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 382            │ 86356       │ 199754       │ 32           │ 781 (0.90%)      │ 3098 (1.55%)      │
+│ text         │ 381            │ 86200       │ 199391       │ 32           │ 781 (0.91%)      │ 3098 (1.55%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 37             │ 6466        │ 13039        │ 8            │ 175 (2.71%)      │ 625 (4.79%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9595,18 +9571,18 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ twig         │ 1              │ 573         │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ txt          │ 33             │ 6474        │ 85150        │ 78           │ 1955 (30.20%)    │ 23695 (27.83%)    │
+│ txt          │ 33             │ 6473        │ 85146        │ 78           │ 1955 (30.20%)    │ 23695 (27.83%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript   │ 113            │ 15342       │ 44030        │ 9            │ 196 (1.28%)      │ 687 (1.56%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 560            │ 57988       │ 320020       │ 349          │ 9379 (16.17%)    │ 105320 (32.91%)   │
+│ yaml         │ 553            │ 57132       │ 315960       │ 348          │ 9370 (16.40%)    │ 105256 (33.31%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4794           │ 989890      │ 7763272      │ 3158         │ 59682 (6.03%)    │ 764160 (9.84%)    │
+│ Total:       │ 4761           │ 981457      │ 7700448      │ 3150         │ 59544 (6.07%)    │ 764676 (9.93%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3158 clones.
+Found 3150 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
-time: 15.94s
+ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
+time: 12.71s
 

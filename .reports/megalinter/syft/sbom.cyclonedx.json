@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:95836ed7-ad9f-4b10-afc2-170e02b6a581",
+  "serialNumber": "urn:uuid:497deef9-ab56-4131-a017-71ddae4792b8",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-20T01:37:08Z",
+    "timestamp": "2026-08-20T03:28:27Z",
     "tools": {
       "components": [
         {
@@ -554,294 +554,6 @@
       ]
     },
     {
-      "bom-ref": "8240392e72f414a9",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/generate-repository-intelligence",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/mindgarden-pages.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "3b0731b310809a45",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/generate-repository-intelligence",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate-repository-intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/repository-intelligence.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "f91acad11e004238",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/generate-repository-intelligence-dashboard",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/mindgarden-pages.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "4c7979ab13b82d2d",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/generate-repository-intelligence-dashboard",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository-intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository_intelligence:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate-repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate_repository:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate-repository-intelligence-dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/generate:.\\/.github\\/actions\\/generate_repository_intelligence_dashboard:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/repository-intelligence.yml"
-        }
-      ]
-    },
-    {
       "bom-ref": "7c3aa98e5e389763",
       "type": "library",
       "supplier": {
@@ -1078,454 +790,6 @@
         {
           "name": "syft:location:0:path",
           "value": "/.staging/.github/workflows/flutter-ci-reusable.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "9a33cdeb60265eaa",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/normalize-repository-report",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/megalinter.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "1a0c4ae9deac44db",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/normalize-repository-report",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/ossf-scorecard.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "f302c1084f6a5995",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/normalize-repository-report",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository-report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository_report:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize-repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize_repository:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize-repository-report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/normalize:.\\/.github\\/actions\\/normalize_repository_report:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/osv-scan.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "243857b282062c6d",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/publish-report-snapshot",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/lint-architecture.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "736859c8763cfbc7",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/publish-report-snapshot",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/megalinter.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "e452725c5fee6a9c",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/publish-report-snapshot",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/ossf-scorecard.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "6221ecbe60cfb768",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "./.github/actions/publish-report-snapshot",
-      "version": "UNKNOWN",
-      "cpe": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report-snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report_snapshot:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish-report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish_report:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish-report-snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:.\\/.github\\/actions\\/publish:.\\/.github\\/actions\\/publish_report_snapshot:*:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/osv-scan.yml"
         }
       ]
     },
@@ -225646,6 +224910,559 @@
         {
           "name": "syft:location:0:path",
           "value": "/egolint/Cargo.lock"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=92d13ae8b9f7efad#actions/normalize-repository-report",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/normalize-repository-report",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/normalize-repository-report",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/megalinter.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=a13d2b1d07c382cd#actions/normalize-repository-report",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/normalize-repository-report",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/normalize-repository-report",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/ossf-scorecard.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=240728cb19ed7e1b#actions/normalize-repository-report",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/normalize-repository-report",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/normalize-repository-report",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/osv-scan.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=3d85b93c8c14eaa8#actions/publish-report-snapshot",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/publish-report-snapshot",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/publish-report-snapshot",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/lint-architecture.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=c74d166827919740#actions/publish-report-snapshot",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/publish-report-snapshot",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/publish-report-snapshot",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/megalinter.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=1b01cedbecfcb01e#actions/publish-report-snapshot",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/publish-report-snapshot",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/publish-report-snapshot",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/ossf-scorecard.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=68186b59c90966e2#actions/publish-report-snapshot",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/publish-report-snapshot",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/publish-report-snapshot",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/osv-scan.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=b7481b49aee737ad#actions/repository-intelligence",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/repository-intelligence",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/repository-intelligence",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/egohygiene/relay@v1.0.0?package-id=c8a24931b974f535#actions/repository-intelligence",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "egohygiene/relay/actions/repository-intelligence",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.0.0#actions/repository-intelligence",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/repository-intelligence.yml"
         }
       ]
     },
@@ -487475,7 +487292,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "0a87db6a4f82d80fb567bd6af4a5bab7c5753cd5d964905b74f052ba9c31d7c2"
+          "content": "622a42b2d1ebcff6e686db625474c5ef57c87b0dcc240472233f271da034a9dd"
         }
       ]
     },
@@ -487530,7 +487347,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "6cbd182d476a342bc7ed9f738106a24930480023c2ecdcd9e5aa7b61a80d4991"
+          "content": "377945cd373ea448c33de9ed484a44e320661d4c7ee04df9a9628e78ca13acef"
         }
       ]
     },
@@ -487563,7 +487380,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "e36ffa864b7fe08ef3dc3ebc2a69823a6f187a05873d5b1f26cad6d922f50d4e"
+          "content": "792c8fecb6d68244966ab94ec861804d415ce78a53ad1395eaa8f24b56f727fe"
         }
       ]
     },
@@ -487574,7 +487391,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "75e467ad443407cbede3b9d49cfb9942c1d31aa24f2a945f86715b4c34b366c2"
+          "content": "bfd29d5a3a235290c6b52eca8d0b75b79b56e134f230643d00033791f2611e72"
         }
       ]
     },
@@ -487585,7 +487402,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "20a6562f855d527fc74a97437f3c243e9725bfdc70b2dd94207de7be8b24ce0e"
+          "content": "eace08a847758d335bc79412c4b82905cd88302370e131168485c4a6b79423f1"
         }
       ]
     },
@@ -487596,7 +487413,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "0f57dd44f09424d649fdc3e149a8ebbe85b75f686bbd5ec5be28f274e63c3ea7"
+          "content": "7f2d4a9680a2e4fd268a6f94fdf5d794e436a236a02de8d425d0da75bc823f94"
         }
       ]
     },
@@ -487607,7 +487424,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "cbd02eeb84cb2b0751bcb4d158cd499bfac96c5e40772d8410a0808045fb4c6c"
+          "content": "2bb776f3d5316ef98300ff7a323c2d6320f973f408efac0fd2bfaf69d70c32b1"
         }
       ]
     },

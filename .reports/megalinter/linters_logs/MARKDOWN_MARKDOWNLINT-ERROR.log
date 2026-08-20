@@ -404,8 +404,4 @@ beacon/.staging/latex/Theses/kaobook/README.md:225:72 error MD009/no-trailing-sp
 beacon/.staging/latex/Theses/kaobook/README.md:226:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:236:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailing-newline Files should end with a single newline character
-DECISIONS.md:71:91 error MD056/table-column-count Table column count [Expected: 6; Actual: 3; Too few cells, row will be missing data]
-DECISIONS.md:71:80 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-DECISIONS.md:71:91 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-DECISIONS.md:374 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
 

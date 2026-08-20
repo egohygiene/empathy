@@ -4,7 +4,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/markdown_markdown_
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-57 files contain markdown tables to format:
+56 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
 - .audits/2026-08-15-staging-home-audit.md
 - .audits/2026-08-16-misc-promotion.md
@@ -14,10 +14,9 @@ Linter raw log:
 - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md
 - .audits/egolint/2026-08-11-reporting-and-dependency-audit.md
 - .garden/dashboard.md
+- .garden/projects/egohygiene-web-namespace.md
 - .garden/projects/repository-intelligence-dashboard.md
 - .github/actions/README.md
-- .github/actions/generate-repository-intelligence/README.md
-- .github/actions/normalize-repository-report/README.md
 - .github/security/dependabot-dismissals.md
 - .tasks/README.md
 - AI_CONSTITUTION.md

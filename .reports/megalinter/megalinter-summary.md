@@ -4,61 +4,61 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.44s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|        9.7s|
-|❌ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   55|     |     6|          |       0|       0.42s|
-|✅ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  127|     |     0|          |       0|      11.64s|
-|❌ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |   12|     |     6|          |       0|       0.05s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3158|          |      no|       26.8s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |   23|     |   438|          |       0|       3.01s|
-|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.17s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2522|     |     1|          |       0|       2.79s|
-|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   17|     |   356|          |       0|       0.85s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    3|     |     1|          |       0|        1.7s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    3|     |     0|          |       0|       0.43s|
-|❌ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  189|     |     1|          |       0|       0.31s|
-|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.0.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.81s|
-|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  189|     |     1|          |       0|       3.62s|
-|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  189|     |     0|          |       0|     102.89s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  299|     | 67779|          |       0|     167.86s|
-|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  323|     |   404|          |       0|       3.86s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  323|     |     1|          |       0|       0.66s|
-|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.22s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.34s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|        1.1s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   60|     |    16|          |       0|        2.7s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    58|          |      no|      19.74s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   60|     |   260|          |       0|      19.07s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8795|          |      no|      44.94s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   60|     |   775|          |       0|       6.62s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   60|     |     1|          |       0|       0.07s|
-|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       3.07s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      56.34s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       7.87s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |   122|          |      no|     130.18s|
-|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       2.39s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.03s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|      11.37s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      16.67s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      71.53s|
-|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|      11.94s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       3.98s|
-|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.39s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  754|     |   197|          |       0|      82.48s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  345|     |   716|          |       0|       9.14s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  345|     |     1|          |       0|       0.94s|
-|❌ TSX         |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.85s|
-|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       1.78s|
-|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       5.56s|
-|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.37s|
-|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  197|     |     1|          |      17|       5.25s|
-|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  197|     |     0|          |       0|      46.77s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  197|     |   215|          |       0|      23.27s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.0.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|        0.4s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.0.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       9.34s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.0.0/descriptors/bash_bash_exec)                                  |   55|     |     0|          |       0|       0.28s|
+|✅ BASH        |[shellcheck](https://megalinter.io/10.0.0/descriptors/bash_shellcheck)                                |  127|     |     0|          |       0|        9.0s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.0.0/descriptors/bash_shfmt)                                          |   12|     |     0|          |       0|       0.04s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.0.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3150|          |      no|      23.15s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.0.0/descriptors/css_stylelint)                                   |   22|     |   330|          |       0|       2.49s|
+|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.0.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|        0.2s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.0.0/descriptors/editorconfig_editorconfig_checker)    | 2491|     |     1|          |       0|       3.53s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.0.0/descriptors/html_htmlhint)                                    |   17|     |   356|          |       0|       1.56s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       2.42s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.36s|
+|❌ JSON        |[jsonlint](https://megalinter.io/10.0.0/descriptors/json_jsonlint)                                    |  177|     |     1|          |       0|       0.38s|
+|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.0.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.79s|
+|❌ JSON        |[prettier](https://megalinter.io/10.0.0/descriptors/json_prettier)                                    |  177|     |     1|          |       0|       4.26s|
+|✅ JSON        |[v8r](https://megalinter.io/10.0.0/descriptors/json_v8r)                                              |  177|     |     0|          |       0|      92.34s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.0.0/descriptors/latex_chktex)                                       |  299|     | 67779|          |       0|     155.08s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.0.0/descriptors/markdown_markdownlint)                        |  320|     |   400|          |       0|       4.36s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.0.0/descriptors/markdown_markdown_table_formatter)|  320|     |     1|          |       0|        0.6s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.0.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.19s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.0.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.07s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.0.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.81s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.0.0/descriptors/python_bandit)                                      |   52|     |     5|          |       0|       2.46s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.0.0/descriptors/python_mypy)                                          |  yes|     |    36|          |      no|      16.49s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.0.0/descriptors/python_pylint)                                      |   52|     |   246|          |       0|      14.24s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.0.0/descriptors/python_pyright)                                    |  yes|     |  8612|          |      no|      39.86s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.0.0/descriptors/python_ruff)                                          |   52|     |   731|          |       0|        6.6s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.0.0/descriptors/python_ruff_format)                            |   52|     |     1|          |       0|       0.08s|
+|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.0.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       3.04s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.0.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      52.94s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.0.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       14.7s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.0.0/descriptors/repository_grype)                                    |  yes|     |   122|          |      no|     129.49s|
+|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.0.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.15s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.0.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|     300.13s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.0.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       10.0s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.0.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      15.83s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.0.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      82.01s|
+|❌ REPOSITORY  |[trufflehog](https://megalinter.io/10.0.0/descriptors/repository_trufflehog)                          |  yes|     |     1|          |      no|      12.51s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.0.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|        2.0s|
+|❌ RUST        |[clippy](https://megalinter.io/10.0.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|        0.3s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.0.0/descriptors/spell_lychee)                                       |  735|     |   180|          |       0|      73.35s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.0.0/descriptors/spell_proselint)                                 |  342|     |   709|          |       0|        9.7s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.0.0/descriptors/spell_vale)                                           |  342|     |     1|          |       0|       0.88s|
+|❌ TSX         |[eslint](https://megalinter.io/10.0.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.34s|
+|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.0.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|        1.7s|
+|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.0.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       4.82s|
+|✅ XML         |[xmllint](https://megalinter.io/10.0.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.36s|
+|❌ YAML        |[prettier](https://megalinter.io/10.0.0/descriptors/yaml_prettier)                                    |  193|     |     1|          |      17|       4.66s|
+|✅ YAML        |[v8r](https://megalinter.io/10.0.0/descriptors/yaml_v8r)                                              |  193|     |     0|          |       0|      41.04s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.0.0/descriptors/yaml_yamllint)                                    |  193|     |   215|          |       0|      19.14s|
 
 ## Detailed Issues
 
 <details>
-<summary>❌ PYTHON / bandit - 16 errors</summary>
+<summary>❌ PYTHON / bandit - 5 errors</summary>
 
 ```
 [_py_warnings]	WARNING	"\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
@@ -67,191 +67,9 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-20 01:36:24.272654+00:00
+Run started:2026-08-20 03:27:55.123547+00:00
 
 Test results:
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_repository_analytics.py:11:0
-10	from pathlib import Path
-11	import subprocess
-12	import tempfile
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_analytics.py:30:11
-29	        environment["GIT_COMMITTER_DATE"] = date
-30	    return subprocess.run(
-31	        ["git", "-C", str(repository_root), *arguments],
-32	        check=True,
-33	        capture_output=True,
-34	        text=True,
-35	        env=environment,
-36	    ).stdout.strip()
-37	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_analytics.py:30:11
-29	        environment["GIT_COMMITTER_DATE"] = date
-30	    return subprocess.run(
-31	        ["git", "-C", str(repository_root), *arguments],
-32	        check=True,
-33	        capture_output=True,
-34	        text=True,
-35	        env=environment,
-36	    ).stdout.strip()
-37	
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_analytics.py:141:12
-140	
-141	            subprocess.run(
-142	                [
-143	                    "bash",
-144	                    str(ACTION_ROOT / "repo-activity"),
-145	                    "--repo",
-146	                    str(repository_root),
-147	                    "--output",
-148	                    ".cache/activity",
-149	                    "--since",
-150	                    "2 years ago",
-151	                    "--ref",
-152	                    "HEAD",
-153	                    "--color",
-154	                    "never",
-155	                    "--quiet",
-156	                ],
-157	                check=True,
-158	                capture_output=True,
-159	                text=True,
-160	            )
-161	            summary = (repository_root / ".cache/activity/summary.md").read_text(encoding="utf-8")
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_analytics.py:141:12
-140	
-141	            subprocess.run(
-142	                [
-143	                    "bash",
-144	                    str(ACTION_ROOT / "repo-activity"),
-145	                    "--repo",
-146	                    str(repository_root),
-147	                    "--output",
-148	                    ".cache/activity",
-149	                    "--since",
-150	                    "2 years ago",
-151	                    "--ref",
-152	                    "HEAD",
-153	                    "--color",
-154	                    "never",
-155	                    "--quiet",
-156	                ],
-157	                check=True,
-158	                capture_output=True,
-159	                text=True,
-160	            )
-161	            summary = (repository_root / ".cache/activity/summary.md").read_text(encoding="utf-8")
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_repository_intelligence.py:9:0
-8	from pathlib import Path
-9	import subprocess
-10	import tempfile
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_intelligence.py:28:11
-27	def git(repository_root: Path, *arguments: str) -> str:
-28	    return subprocess.run(
-29	        ["git", "-C", str(repository_root), *arguments],
-30	        check=True,
-31	        capture_output=True,
-32	        text=True,
-33	    ).stdout.strip()
-34	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_intelligence.py:28:11
-27	def git(repository_root: Path, *arguments: str) -> str:
-28	    return subprocess.run(
-29	        ["git", "-C", str(repository_root), *arguments],
-30	        check=True,
-31	        capture_output=True,
-32	        text=True,
-33	    ).stdout.strip()
-34	
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_repository_intelligence_dashboard.py:14:0
-13	import shutil
-14	import subprocess
-15	import tempfile
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_intelligence_dashboard.py:37:13
-36	
-37	    result = subprocess.run(
-38	        ["git", "-C", str(repository), *arguments],
-39	        check=True,
-40	        capture_output=True,
-41	        text=True,
-42	        env=environment,
-43	    )
-44	    return result.stdout.strip()
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_intelligence_dashboard.py:37:13
-36	
-37	    result = subprocess.run(
-38	        ["git", "-C", str(repository), *arguments],
-39	        check=True,
-40	        capture_output=True,
-41	        text=True,
-42	        env=environment,
-43	    )
-44	    return result.stdout.strip()
-
---------------------------------------------------
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
@@ -309,21 +127,21 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 9977
+	Total lines of code: 9200
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 16
+		Low: 5
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 16
+		High: 5
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)
@@ -332,89 +150,13 @@ Files skipped (2):
 </details>
 
 <details>
-<summary>❌ BASH / bash-exec - 6 errors</summary>
-
-```
-Results of bash-exec linter (version 5.3.9)
-See documentation on https://megalinter.io/10.0.0/descriptors/bash_bash_exec/
------------------------------------------------
-
-❌ [ERROR] .devcontainer/scripts/initialize.sh
-    Error: File:[.devcontainer/scripts/initialize.sh] is not executable
-
-❌ [ERROR] .devcontainer/scripts/on-create.sh
-    Error: File:[.devcontainer/scripts/on-create.sh] is not executable
-
-❌ [ERROR] .devcontainer/scripts/post-attach.sh
-    Error: File:[.devcontainer/scripts/post-attach.sh] is not executable
-
-❌ [ERROR] .devcontainer/scripts/post-create.sh
-    Error: File:[.devcontainer/scripts/post-create.sh] is not executable
-
-❌ [ERROR] .devcontainer/scripts/post-start.sh
-    Error: File:[.devcontainer/scripts/post-start.sh] is not executable
-
-❌ [ERROR] .devcontainer/scripts/update-content.sh
-    Error: File:[.devcontainer/scripts/update-content.sh] is not executable
-
-✅ [SUCCESS] beacon/.staging/latex/Books/kaobook/compileall.sh
-✅ [SUCCESS] beacon/.staging/latex/Theses/kaobook/compileall.sh
-✅ [SUCCESS] egolint/scripts/latexindent.sh
-✅ [SUCCESS] egolint/scripts/megalinter.sh
-✅ [SUCCESS] egolint/scripts/pnpm.sh
-✅ [SUCCESS] egolint/scripts/precommit.sh
-✅ [SUCCESS] mantle/install.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/completion.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/config.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/doctor.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/env.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/fastfetch.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/help.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/install.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/path.sh
-✅ [SUCCESS] mantle/libexec/mantle/commands/version.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/addlicense.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/asdf.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/calibre.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/ceres-solver.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/crush.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/docker-desktop.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/dockerfmt.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/dust.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/e57format.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/eza.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/git-sim.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/gitinspector.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/google-fonts.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/httpie.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/image-optim.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/imagemagick.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/java.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/linuxbrew.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/lynis.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/mitmproxy.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/nerd-fonts.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/nfpm.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/pdal.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/pyenv.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/scc.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/shdoc.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/shfmt.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/sqlfluff.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/talisman.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/taskfile.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/terminus.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/typos.sh
-✅ [SUCCESS] mantle/libexec/mantle/installers/vale.sh
-```
-
-</details>
-
-<details>
 <summary>❌ LATEX / chktex - 67779 errors</summary>
 
 ```
-keep the convention consistent throughout the thesis. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). The APA6 states: \enquote{Footnote numbers should be superscripted, [...], following any punctuation mark except a dash.} The Chicago manual of style states: \enquote{A note number should be placed at the end of a sentence or clause. The number follows any punctuation mark except the dash, which it precedes. It follows a closing parenthesis.}  
+rences are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    Warning 11 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 196: You should use \ldots to achieve an ellipsis.
+    Scientific references should come \emph{before} the punctuation mark if there is one (such as a comma or period). The same goes for footnotes\footnote{Such as this footnote, here down at the bottom of the page.}. You can change this but the most important thing is to keep the convention consistent throughout the thesis. Footnotes themselves should be full, descriptive sentences (beginning with a capital letter and ending with a full stop). The APA6 states: \enquote{Footnote numbers should be superscripted, [...], following any punctuation mark except a dash.} The Chicago manual of style states: \enquote{A note number should be placed at the end of a sentence or clause. The number follows any punctuation mark except the dash, which it precedes. It follows a closing parenthesis.}  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^^^
     Warning 18 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 202: Use either `` or '' as an alternative to `"'.
     The bibtex backend used in the template by default does not correctly handle unicode character encoding (i.e. "international" characters). You may see a warning about this in the compilation log and, if your references contain unicode characters, they may not show up correctly or at all. The solution to this is to use the biber backend instead of the outdated bibtex backend. This is done by finding this in \file{main.tex}: \option{backend=bibtex} and changing it to \option{backend=biber}. You will then need to delete all auxiliary BibTeX files and navigate to the template directory in your terminal (command prompt). Once there, simply type \code{biber main} and biber will compile your bibliography. You can then compile \file{main.tex} as normal and your bibliography will be updated. An alternative is to set up your LaTeX editor to compile with biber instead of bibtex, see \href{http://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/}{here} for how to do this for various editors.  
@@ -549,7 +291,7 @@ keep the convention consistent throughout the thesis. Footnotes themselves shoul
 
 
 
-(Truncated to last 22857 characters out of 22933588)
+(Truncated to last 24242 characters out of 22933588)
 ```
 
 </details>
@@ -571,7 +313,45 @@ For more information, try '--help'.
 <summary>❌ EDITORCONFIG / editorconfig-checker - 1 error</summary>
 
 ```
-Fonts/SIL Open Font License.txt:
+g whitespace
+	118: Trailing whitespace
+	248: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/nih-grant-proposal/nihunsrt.bst:
+	12: Trailing whitespace
+	594: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/poems/poems.tex:
+	Wrong line endings or no final newline
+	Not all lines have the correct end of line character
+	20: Trailing whitespace
+	282: Trailing whitespace
+	289: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/press-release/fancyhdr.sty:
+	3: Trailing whitespace
+	30: Trailing whitespace
+	51: Trailing whitespace
+	105: Trailing whitespace
+	228: Trailing whitespace
+	341: Trailing whitespace
+	400: Trailing whitespace
+	474: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/press-release/press_release.tex:
+	Wrong line endings or no final newline
+	Not all lines have the correct end of line character
+beacon/.staging/latex/Miscellaneous/press-release/prsrls.tex:
+	Wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/professional-table/table.tex:
+	Wrong line endings or no final newline
+	10: Trailing whitespace
+	16: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/ryo-menu/CSRyoMenu.cls:
+	103: Trailing whitespace
+	119: Trailing whitespace
+	121: Trailing whitespace
+	123: Trailing whitespace
+	125: Trailing whitespace
+	127: Trailing whitespace
+	129: Trailing whitespace
+beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:
 	Wrong line endings or no final newline
 beacon/.staging/latex/Newsletters/professional-newsletter/newsletter_2.tex:
 	Wrong line endings or no final newline
@@ -1290,7 +1070,7 @@ notebooks/jupyter/.gitignore:
 
 2786 errors found
 
-(Truncated to last 22857 characters out of 102759)
+(Truncated to last 24242 characters out of 102759)
 ```
 
 </details>
@@ -1314,7 +1094,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787189578600:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787196272393:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1355,7 +1135,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787189578600:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787196272393:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1395,7 +1175,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
     at Module.require (node:internal/modules/cjs/loader:1619:12)
     at require (node:internal/modules/helpers:191:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787189578600:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1787196272393:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
 
 
@@ -1429,7 +1209,19 @@ holon/packs/react-vite/template/infra/docker/Dockerfile:9 DL3025 warning: Use ar
 <summary>❌ HTML / htmlhint - 356 errors</summary>
 
 ```
-values must be in lowercase and split by a dash. (id-class-value)
+^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L80 |<div id="simple_title" align=center>TrackChanges</div>
+                                 ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L81 |<div id="simple_subtitle" align=center>Collaborative editing of LaTeX documents.</div>
+                                    ^ The value of attribute [ align ] must be in double quotes. (attr-value-double-quotes)
+      L121 |  <span class="tex_command">&nbsp;&nbsp;\note</span><span class="code">[</span><span class="code_opti...
+                   ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L121 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{The no...
+                                                       ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L122 |  <br /><span class="tex_command">\annote</span><span class="code">[</span><span class="code_option">...
+                         ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
       L122 |...e</span><span class="code">[</span><span class="code_option">editor</span><span class="code">]{Text t...
                                                        ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
       L123 |  <br /><span class="tex_command">&nbsp;&nbsp;&nbsp;\add</span><span class="code">[</span><span class...
@@ -1717,9 +1509,9 @@ values must be in lowercase and split by a dash. (id-class-value)
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 17 files, found 356 errors in 11 files (122 ms)
+Scanned 17 files, found 356 errors in 11 files (141 ms)
 
-(Truncated to last 22857 characters out of 67003)
+(Truncated to last 24242 characters out of 67003)
 ```
 
 </details>
@@ -1849,10 +1641,34 @@ Cargo.toml failed for `.toml` rules: kebabcase | snakecase
 </details>
 
 <details>
-<summary>❌ SPELL / lychee - 197 errors</summary>
+<summary>❌ SPELL / lychee - 180 errors</summary>
 
 ```
-FLOW_FILE%7D%7D (at 41:1) | Rejected status code: 404 Not Found
+ect
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BDOCUMENTATION_URL_OR_RELATIVE_PATH%7D%7D (at 47:31) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BGUIDES_PATH%7D%7D (at 232:25) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BREFERENCE_DOCUMENTATION_PATH%7D%7D (at 161:37) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BREFERENCE_PATH%7D%7D (at 233:30) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BROADMAP_URL_OR_RELATIVE_PATH%7D%7D (at 321:39) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BRUNBOOK_PATH%7D%7D (at 287:9) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BSECURITY_BADGE_URL%7D%7D (at 43:2) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BSECURITY_REPORT_URL%7D%7D (at 43:1) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/%7B%7BSUPPORT_POLICY_PATH%7D%7D (at 225:9) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/CHANGELOG.md (at 350:9) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/CODE_OF_CONDUCT.md (at 345:43) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/CONTRIBUTING.md (at 341:33) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/CONTRIBUTING.md (at 47:77) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/docs/architecture/README.md (at 201:5) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/docs/assets/banner-dark.svg (at 27:58) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/docs/assets/banner-light.svg (at 28:59) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/docs/assets/banner-light.svg (at 29:15) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/docs/assets/preview.png (at 51:2) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/docs/decisions (at 202:1) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/LICENSE (at 355:43) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/LICENSE (at 88:13) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/SECURITY.md (at 314:1) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/project/SECURITY.md (at 337:29) | File not found. Check if file exists and path is correct
+[404] https://github.com/%7B%7BOWNER%7D%7D/%7B%7BREPOSITORY%7D%7D/actions/workflows/%7B%7BWORKFLOW_FILE%7D%7D (at 41:1) | Rejected status code: 404 Not Found
 [404] https://github.com/%7B%7BOWNER%7D%7D/%7B%7BREPOSITORY%7D%7D/blob/%7B%7BDEFAULT_BRANCH%7D%7D/LICENSE (at 45:1) | Rejected status code: 404 Not Found
 [404] https://github.com/%7B%7BOWNER%7D%7D/%7B%7BREPOSITORY%7D%7D/discussions (at 334:20) | Rejected status code: 404 Not Found
 [404] https://github.com/%7B%7BOWNER%7D%7D/%7B%7BREPOSITORY%7D%7D/issues (at 322:1) | Rejected status code: 404 Not Found
@@ -1886,69 +1702,42 @@ https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest
 Errors in mindgarden/contracts/publish-profile.schema.json
 [ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
 
-Redirects in mindgarden/contracts/publish-profile.schema.json
-https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
-
-
 Errors in package.json
 [404] https://egohygiene.io/ (at 17:16) | Error (cached)
 [404] https://egohygiene.io/ (at 30:13) | Error (cached)
 
-Redirects in package.json
-https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
-
-
 Errors in PURPOSE.md
-[ERROR] file://.staging/github/README.md (at 99:48) | File not found. Check if file exists and path is correct
+[ERROR] file://.staging/github/README.md (at 100:48) | File not found. Check if file exists and path is correct
 
 Errors in README.md
-[ERROR] file://.staging/github/README.md (at 50:35) | File not found. Check if file exists and path is correct
+[ERROR] file://.staging/github/README.md (at 52:35) | File not found. Check if file exists and path is correct
 
 Errors in schemas/staging-removal-approvals.v1.schema.json
 [404] https://egohygiene.io/schemas/empathy/staging-removal-approvals.v1.schema.json (at 3:11) | Rejected status code: 404 Not Found
-
-Errors in tests/fixtures/repository-intelligence-dashboard/megalinter/summary.json
-[404] https://github.com/egohygiene/empathy/actions/runs/102 (at 23:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 22:16) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 21:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/megalinter (at 20:16) | Rejected status code: 404 Not Found
-
-Errors in tests/fixtures/repository-intelligence-dashboard/osv/summary.json
-[404] https://github.com/egohygiene/empathy/actions/runs/101 (at 27:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 26:16) | Error (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 25:18) | Error (cached)
-[404] https://github.com/egohygiene/empathy/tree/1111111111111111111111111111111111111111/.reports/osv (at 24:16) | Rejected status code: 404 Not Found
-
-Errors in tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json
-[404] https://github.com/egohygiene/empathy/actions/runs/103 (at 25:18) | Rejected status code: 404 Not Found
-[404] https://github.com/egohygiene/empathy/commit/1111111111111111111111111111111111111111 (at 24:16) | Error (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 22:16) | Error (cached)
-[404] https://github.com/egohygiene/empathy/security/code-scanning (at 23:18) | Error (cached)
 
 📊 Per-host Statistics
 ---------------------
 
 Host: github.com
-  Total requests: 238
-  Successful: 212 (89.1%)
-  Client errors (4xx): 26
-  Median response time: 485ms
-  Cache hit rate: 23.5%
-  Cache hits: 56, misses: 182
+  Total requests: 231
+  Successful: 212 (91.8%)
+  Client errors (4xx): 19
+  Median response time: 437ms
+  Cache hit rate: 22.5%
+  Cache hits: 52, misses: 179
 
 Host: json.schemastore.org
-  Total requests: 99
-  Successful: 99 (100.0%)
-  Median response time: 104ms
-  Cache hit rate: 88.9%
-  Cache hits: 88, misses: 11
+  Total requests: 96
+  Successful: 96 (100.0%)
+  Median response time: 90ms
+  Cache hit rate: 88.5%
+  Cache hits: 85, misses: 11
 
 Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 98ms
+  Median response time: 77ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
@@ -1956,101 +1745,101 @@ Host: raw.githubusercontent.com
   Total requests: 39
   Successful: 38 (97.4%)
   Client errors (4xx): 1
-  Median response time: 148ms
+  Median response time: 92ms
   Cache hit rate: 30.8%
   Cache hits: 12, misses: 27
 
 Host: img.shields.io
   Total requests: 26
   Successful: 26 (100.0%)
-  Median response time: 104ms
+  Median response time: 53ms
   Cache hit rate: 3.8%
   Cache hits: 1, misses: 25
 
 Host: json-schema.org
-  Total requests: 24
-  Successful: 24 (100.0%)
-  Median response time: 288ms
-  Cache hit rate: 95.8%
-  Cache hits: 23, misses: 1
+  Total requests: 20
+  Successful: 20 (100.0%)
+  Median response time: 171ms
+  Cache hit rate: 95.0%
+  Cache hits: 19, misses: 1
 
 Host: creativecommons.org
   Total requests: 15
   Successful: 14 (93.3%)
   Client errors (4xx): 1
-  Median response time: 159ms
+  Median response time: 233ms
   Cache hit rate: 66.7%
   Cache hits: 10, misses: 5
 
 Host: taskfile.dev
   Total requests: 13
   Successful: 13 (100.0%)
-  Median response time: 277ms
+  Median response time: 143ms
   Cache hit rate: 76.9%
   Cache hits: 10, misses: 3
 
 Host: www.schemastore.org
-  Total requests: 12
-  Successful: 12 (100.0%)
-  Median response time: 26ms
-  Cache hit rate: 33.3%
-  Cache hits: 4, misses: 8
-
-Host: egohygiene.github.io
-  Total requests: 12
-  Successful: 6 (50.0%)
-  Client errors (4xx): 6
-  Median response time: 80ms
-  Cache hit rate: 33.3%
-  Cache hits: 4, misses: 8
+  Total requests: 11
+  Successful: 11 (100.0%)
+  Median response time: 38ms
+  Cache hit rate: 36.4%
+  Cache hits: 4, misses: 7
 
 Host: www.overleaf.com
   Total requests: 11
   Successful: 11 (100.0%)
-  Median response time: 102ms
+  Median response time: 86ms
   Cache hit rate: 9.1%
   Cache hits: 1, misses: 10
+
+Host: egohygiene.github.io
+  Total requests: 11
+  Successful: 7 (63.6%)
+  Client errors (4xx): 4
+  Median response time: 44ms
+  Cache hit rate: 45.5%
+  Cache hits: 5, misses: 6
 
 Host: egohygiene.io
   Total requests: 10
   Successful: 7 (70.0%)
   Client errors (4xx): 3
-  Median response time: 82ms
+  Median response time: 88ms
   Cache hit rate: 70.0%
   Cache hits: 7, misses: 3
-
-Host: scripts.sil.org
-  Total requests: 9
-  Successful: 9 (100.0%)
-  Median response time: 979ms
-  Cache hit rate: 88.9%
-  Cache hits: 8, misses: 1
 
 Host: sourceforge.net
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 256ms
+  Median response time: 798ms
   Cache hit rate: 55.6%
   Cache hits: 5, misses: 4
 
-Host: i.creativecommons.org
-  Total requests: 8
-  Successful: 8 (100.0%)
-  Median response time: 79ms
-  Cache hit rate: 87.5%
-  Cache hits: 7, misses: 1
+Host: scripts.sil.org
+  Total requests: 9
+  Successful: 9 (100.0%)
+  Median response time: 621ms
+  Cache hit rate: 88.9%
+  Cache hits: 8, misses: 1
 
 Host: docs.ansible.com
   Total requests: 8
   Successful: 0 (0.0%)
   Rate limited: 8 (429 Too Many Requests)
-  Median response time: 7ms
+  Median response time: 20ms
+
+Host: i.creativecommons.org
+  Total requests: 8
+  Successful: 8 (100.0%)
+  Median response time: 614ms
+  Cache hit rate: 87.5%
+  Cache hits: 7, misses: 1
 
 Host: www.latextemplates.com
   Total requests: 7
   Successful: 4 (57.1%)
   Client errors (4xx): 3
-  Median response time: 148ms
+  Median response time: 72ms
   Cache hit rate: 42.9%
   Cache hits: 3, misses: 4
 
@@ -2058,123 +1847,127 @@ Host: docs.github.com
   Total requests: 7
   Successful: 5 (71.4%)
   Client errors (4xx): 2
-  Median response time: 141ms
+  Median response time: 162ms
 
 Host: www.latex-project.org
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 492ms
+  Median response time: 614ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
 
 Host: sflogo.sourceforge.net
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 81ms
+  Median response time: 356ms
   Cache hit rate: 66.7%
   Cache hits: 4, misses: 2
 
 Host: jdujava.github.io
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 160ms
+  Median response time: 246ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
 
 Host: www.fontawesome.io
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 106ms
+  Median response time: 304ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
-
-Host: ansible.readthedocs.io
-  Total requests: 4
-  Successful: 0 (0.0%)
-  Rate limited: 4 (429 Too Many Requests)
-  Median response time: 24ms
 
 Host: api.github.com
   Total requests: 4
   Successful: 3 (75.0%)
   Client errors (4xx): 1
-  Median response time: 198ms
+  Median response time: 110ms
+
+Host: ansible.readthedocs.io
+  Total requests: 4
+  Successful: 0 (0.0%)
+  Rate limited: 4 (429 Too Many Requests)
+  Median response time: 49ms
 
 Host: www.apostrophiclab.com
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 481ms
+  Median response time: 388ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
-
-Host: www.nongnu.org
-  Total requests: 4
-  Successful: 0 (0.0%)
-  Rate limited: 4 (429 Too Many Requests)
-  Median response time: 238ms
 
 Host: 3d.bk.tudelft.nl
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 783ms
+  Median response time: 453ms
   Cache hit rate: 50.0%
   Cache hits: 2, misses: 2
-
-Host: vite.dev
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 116ms
-
-Host: dart.dev
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 5ms
-
-Host: api.star-history.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 267ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
-
-Host: developer.mozilla.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 198ms
-
-Host: www.ctan.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 747ms
 
 Host: i.imgur.com
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 92ms
+  Median response time: 16ms
 
 Host: www.checkov.io
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 95ms
+  Median response time: 55ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
-Host: ogp.me
+Host: api.star-history.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 271ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
+
+Host: vite.dev
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 85ms
+
+Host: www.ctan.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 769ms
+
+Host: dart.dev
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 82ms
+
+Host: developer.mozilla.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 240ms
+
+Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 26ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+  Median response time: 126ms
 
 Host: en.wikipedia.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 110ms
+  Median response time: 702ms
 
-Host: femto-physique.fr
+Host: eslint.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 370ms
+  Median response time: 182ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: unpkg.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 130ms
+
+Host: ogp.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 64ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -2182,291 +1975,143 @@ Host: tex.stackexchange.com
   Total requests: 2
   Successful: 0 (0.0%)
   Client errors (4xx): 2
-  Median response time: 137ms
-
-Host: developer.salesforce.com
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 53ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: reuse.software
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 1010ms
-
-Host: www.vel.nz
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 502ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: typedoc.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 38ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: paypal.me
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 536ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+  Median response time: 164ms
 
 Host: commons.wikimedia.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 59ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: eslint.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 27ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.sharelatex.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 208ms
-
-Host: unpkg.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 109ms
-
-Host: aquasecurity.github.io
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 154ms
-
-Host: registry.npmjs.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 34ms
+  Median response time: 213ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 39ms
+  Median response time: 175ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: www.mff.cuni.cz
+Host: aquasecurity.github.io
   Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 462ms
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 176ms
 
-Host: prettier.io
+Host: reuse.software
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 91ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+  Median response time: 911ms
 
-Host: web.archive.org
+Host: femto-physique.fr
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 603ms
+  Median response time: 601ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: www.cyrius.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 447ms
+  Median response time: 462ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: web.archive.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 352ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.vel.nz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 673ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 204ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.amazon.ca
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 264ms
+
+Host: www.sharelatex.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 206ms
+
+Host: www.mff.cuni.cz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 592ms
+
+Host: yamllint.readthedocs.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 119ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: oss.anchore.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 121ms
+
+Host: paypal.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 1066ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 43ms
+  Median response time: 65ms
 
-Host: yamllint.readthedocs.io
+Host: typedoc.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 185ms
+  Median response time: 144ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: info.arxiv.org
+Host: developer.salesforce.com
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 123ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: registry.npmjs.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 84ms
+  Median response time: 82ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: oss.anchore.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 87ms
-
-Host: www.amazon.ca
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 83ms
-
-Host: sahiljhawar.in
+Host: protobuf.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 524ms
+  Median response time: 134ms
 
-Host: licensebuttons.net
+Host: www.businessinsider.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 11ms
+  Median response time: 211ms
 
-Host: prowritingaid.com
+Host: www.grammarly.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 62ms
-
-Host: fonts.google.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 495ms
-
-Host: phpstan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 37ms
-
-Host: enhancv.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 34ms
-
-Host: chris48s.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 126ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 318ms
-
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 103ms
-
-Host: trufflesecurity.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 543ms
-
-Host: www.indeed.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 36ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 179ms
-
-Host: dev.to
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 59ms
-
-Host: hemingwayapp.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 244ms
-
-Host: github.blog
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 640ms
-
-Host: fontawesome.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 329ms
-
-Host: semver.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 159ms
-
-Host: www.smashingmagazine.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 325ms
-
-Host: git-lfs.github.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 247ms
-
-Host: humanstxt.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 594ms
-
-Host: mirrors.ctan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 979ms
-
-Host: goss.rocks
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 182ms
-
-Host: www.latofonts.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 687ms
-
-Host: www.linkedin.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Median response time: 248ms
-
-Host: micahrich.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 339ms
-
-Host: docker.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 179ms
-
-Host: install.python-poetry.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 55ms
-
-Host: agentskills.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 101ms
-
-Host: scancode-toolkit.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 315ms
-
-Host: api.clearlydefined.io
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 353ms
+  Median response time: 259ms
 
 Host: apostrophiclab.pedroreina.net
   Total requests: 1
@@ -2474,284 +2119,402 @@ Host: apostrophiclab.pedroreina.net
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: www.designtokens.org
+Host: golangci-lint.run
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 165ms
+  Median response time: 115ms
 
-Host: www.grammarly.com
+Host: api.clearlydefined.io
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 1865ms
+
+Host: goss.rocks
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 211ms
+  Median response time: 279ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 370ms
+
+Host: resumake.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 416ms
+
+Host: www.latofonts.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 565ms
 
 Host: www.hadilaksono.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 219ms
+  Median response time: 139ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 175ms
+
+Host: realm.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 123ms
+
+Host: prowritingaid.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 249ms
+
+Host: openapi.vercel.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 129ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 317ms
+
+Host: pnpm.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 148ms
+
+Host: img.youtube.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 141ms
+
+Host: sahiljhawar.in
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 483ms
 
 Host: api.scorecard.dev
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 597ms
-
-Host: recodehive.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 106ms
-
-Host: google.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 105ms
-
-Host: www.paypal.me
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 626ms
-
-Host: resumake.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 255ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 95ms
-
-Host: securityscorecards.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 91ms
-
-Host: thetechresume.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 272ms
-
-Host: www.tilburgsciencehub.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1116ms
-
-Host: developer.apple.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 41ms
-
-Host: openapi.vercel.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 48ms
-
-Host: texdoc.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 3491ms
-
-Host: stylelint.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 121ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 234ms
-
-Host: www.businessinsider.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 197ms
-
-Host: rubystyle.guide
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 114ms
-
-Host: www.apache.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 67ms
-
-Host: www.ssw.com.au
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1297ms
-
-Host: trivy.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 98ms
-
-Host: web.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 616ms
-
-Host: biomejs.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 91ms
-
-Host: www.wnd.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 69ms
-
-Host: www.rubyschema.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 109ms
-
-Host: ls-lint.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 72ms
-
-Host: docs.rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 113ms
-
-Host: debarghyadas.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1705ms
-
-Host: osv.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 73ms
-
-Host: turborepo.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 58ms
-
-Host: clearlydefined.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 360ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 24ms
-
-Host: cyclonedx.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 93ms
+  Median response time: 217ms
 
 Host: developercertificate.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 193ms
+  Median response time: 284ms
 
-Host: kiwiirc.com
+Host: chris48s.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 636ms
+  Median response time: 130ms
 
-Host: quartz.jzhao.xyz
+Host: www.apache.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 105ms
+  Median response time: 219ms
 
-Host: www.writelatex.com
+Host: www.indeed.com
   Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 267ms
-
-Host: www.chrisbehr.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 227ms
-
-Host: img.youtube.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 95ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 162ms
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 66ms
 
 Host: v3.tailwindcss.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 290ms
+  Median response time: 171ms
+
+Host: autofix.ci
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 277ms
+
+Host: quartz.jzhao.xyz
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 192ms
+
+Host: developer.apple.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 480ms
+
+Host: rubystyle.guide
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 180ms
+
+Host: docs.rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 154ms
+
+Host: stylelint.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 338ms
+
+Host: www.chrisbehr.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 473ms
+
+Host: fonts.google.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 397ms
+
+Host: www.writelatex.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 218ms
+
+Host: recodehive.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 117ms
+
+Host: cyclonedx.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 162ms
+
+Host: checkstyle.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 90ms
+
+Host: rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 143ms
+
+Host: osv.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 502ms
+
+Host: semver.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 210ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 501ms
+
+Host: github.blog
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 830ms
+
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 23ms
+
+Host: debarghyadas.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 373ms
+
+Host: scancode-toolkit.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 254ms
+
+Host: www.smashingmagazine.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 262ms
+
+Host: securityscorecards.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 2214ms
+
+Host: www.tilburgsciencehub.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1092ms
 
 Host: psalm.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 267ms
+  Median response time: 147ms
+
+Host: texdoc.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 2775ms
+
+Host: hemingwayapp.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 287ms
+
+Host: docker.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 129ms
+
+Host: www.paypal.me
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 475ms
+
+Host: www.wnd.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 217ms
 
 Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 120ms
+  Median response time: 104ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 102ms
+
+Host: www.tylerfinck.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1225ms
+
+Host: enhancv.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 172ms
+
+Host: turborepo.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 228ms
+
+Host: mirrors.ctan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 673ms
+
+Host: ls-lint.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 409ms
+
+Host: web.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 405ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 117ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 218ms
+
+Host: install.python-poetry.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 221ms
+
+Host: git-lfs.github.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 129ms
+
+Host: clearlydefined.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 382ms
+
+Host: raku.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 576ms
+
+Host: kiwiirc.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 490ms
+
+Host: micahrich.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 392ms
+
+Host: humanstxt.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 665ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 246ms
+
+Host: www.ssw.com.au
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 822ms
+
+Host: www.designtokens.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 559ms
+
+Host: thetechresume.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 382ms
+
+Host: biomejs.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 321ms
+
+Host: phpstan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 183ms
+
+Host: fontawesome.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 40ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 272ms
+
+Host: www.linkedin.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Median response time: 186ms
 
 Host: www.reddit.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 33ms
+  Median response time: 119ms
 
-Host: golangci-lint.run
+Host: dev.to
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 103ms
+  Median response time: 63ms
 
-Host: www.tylerfinck.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1636ms
-
-Host: realm.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 121ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 505ms
-
-Host: rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 104ms
-
-Host: pnpm.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 52ms
-
-Host: www.youtube.com
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: github
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: tug.ctan.org
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: x-access-token
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: www.businessinsider.my
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: egohygiene.dev
+Host: www.nongnu.org
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2759,18 +2522,53 @@ Host: 2by22.blog
   Total requests: 0
   Successful: 0 (100.0%)
 
-Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."ansible.readthedocs.io"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
+Host: tug.ctan.org
+  Total requests: 0
+  Successful: 0 (100.0%)
 
-(Truncated to last 22857 characters out of 206844)
+Host: github
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: www.youtube.com
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: www.businessinsider.my
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: x-access-token
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: egohygiene.dev
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."docs.ansible.com"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
+
+(Truncated to last 24242 characters out of 201396)
 ```
 
 </details>
 
 <details>
-<summary>❌ MARKDOWN / markdownlint - 404 errors</summary>
+<summary>❌ MARKDOWN / markdownlint - 400 errors</summary>
 
 ```
-3/heading-style Heading style [Expected: setext; Actual: atx]
+latex/CVs and Resumes/data-science-tech-resume-template/README.md:22:22 error MD034/no-bare-urls Bare URL used [Context: "https://www.indeed.com/career-..."]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:28:11 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:30:1 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/TimmyChan"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:31:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.linkedin.com/in/ti..."]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:33:17 error MD026/no-trailing-punctuation Trailing punctuation in heading [Punctuation: ':']
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:35:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/xiazeyu"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:36:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/iamgmujtaba"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:37:3 error MD034/no-bare-urls Bare URL used [Context: "https://github.com/alejlatorre"]
+beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:41 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:12 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:14:584 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:18 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
 beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:20 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
 beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:20 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### OpenFonts"]
 beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md:23 error MD003/heading-style Heading style [Expected: setext; Actual: atx]
@@ -2938,18 +2736,14 @@ beacon/.staging/latex/Theses/kaobook/README.md:225:72 error MD009/no-trailing-sp
 beacon/.staging/latex/Theses/kaobook/README.md:226:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:236:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailing-newline Files should end with a single newline character
-DECISIONS.md:71:91 error MD056/table-column-count Table column count [Expected: 6; Actual: 3; Too few cells, row will be missing data]
-DECISIONS.md:71:80 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-DECISIONS.md:71:91 error MD060/table-column-style Table column style [Table pipe does not align with header for style "aligned"]
-DECISIONS.md:374 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
 
-(Truncated to last 22857 characters out of 54844)
+(Truncated to last 24242 characters out of 54345)
 ```
 
 </details>
 
 <details>
-<summary>❌ PYTHON / mypy - 58 errors</summary>
+<summary>❌ PYTHON / mypy - 36 errors</summary>
 
 ```
 WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
@@ -3120,111 +2914,11 @@ tests/test_staging_home_audit.py:104:47: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
             self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
                                                   ^~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "build" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:94:9: error: Returning Any from
-function declared to return "dict[str, object]"  [no-any-return]
-            return dashboard_builder.build_dashboard(
-            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_complete_reports_preserve_independent_states" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:252:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["execution"]["success"], ...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:253:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["execution"]["failure"], ...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:254:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["findings"]["attention"],...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:255:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["findings"]["clear"], 1)
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:256:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["freshness"]["fresh"], 2)
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:257:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["freshness"]["stale"], 1)
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:258:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["producers"]["scorecard"]["metrics"...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_missing_reports_are_unavailable_and_unknown" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:263:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["availability"]["unavaila...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:264:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["execution"]["unknown"], ...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:265:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["findings"]["unknown"], 3...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:266:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["states"]["freshness"]["unknown"], ...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_public_analytics_renders_accessible_statistical_snapshots" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:275:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["analytics"]["availability"], "avai...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_repository_tree_renders_searchable_source_pinned_anatomy" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:292:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["anatomy"]["availability"], "availa...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py:293:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["anatomy"]["summary"]["node_count"]...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_repository_tree_for_another_commit_is_invalid_not_rendered" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:313:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["anatomy"]["availability"], "invali...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_repository_tree_names_are_escaped_and_source_paths_are_encoded" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:328:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["anatomy"]["availability"], "availa...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_analytics_for_another_commit_is_invalid_not_rendered" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:342:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["analytics"]["availability"], "inva...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_malformed_report_is_invalid_instead_of_green" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:354:21: error: Value of type
-"object" is not indexable  [index]
-            scorecard = dashboard["producers"]["scorecard"]
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_stale_boundary_is_inclusive" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:369:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(dashboard["producers"]["osv"]["freshness"]["s...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_bundle_is_deterministic_and_contains_no_contributor_identities" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:414:26: error: Value of type
-"object" is not indexable  [index]
-            self.assertEqual(first["vitality"]["metrics"]["contributors_90...
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_repository_intelligence_dashboard.py: note: In member "test_vitality_uses_the_represented_commit_not_untracked_files" of class "RepositoryIntelligenceDashboardTests":
-tests/test_repository_intelligence_dashboard.py:427:19: error: Value of type
-"object" is not indexable  [index]
-            metrics = dashboard["vitality"]["metrics"]
-                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 58 errors in 5 files (checked 46 source files)
+Found 36 errors in 4 files (checked 42 source files)
 ```
 
 </details>
@@ -3266,12 +2960,11 @@ Totals
 ```
 Checking formatting...
 [warn] .devcontainer/devcontainer.json
-[warn] .github/actions/generate-repository-intelligence/repository-analytics.schema.json
 [warn] .vscode/cspell.json
 [warn] beacon/contracts/template-manifest.schema.json
 [warn] holon/packs/react-vite/template/apps/storefront/tsconfig.json
 [warn] holon/packs/react-vite/template/test-results/.last-run.json
-[warn] Code style issues found in 6 files. Run Prettier with --write to fix.
+[warn] Code style issues found in 5 files. Run Prettier with --write to fix.
 ```
 
 </details>
@@ -3394,10 +3087,121 @@ Checking formatting...
 </details>
 
 <details>
-<summary>❌ PYTHON / ruff - 775 errors</summary>
+<summary>❌ PYTHON / ruff - 731 errors</summary>
 
 ```
-|         # First the file menu.
+micolons
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:970:27
+    |
+970 |                     print '%03d-%03d:%s: %s'%(
+    |                           ^^^^^^^^^^^^^^^^^^
+971 |                         span_full[0]
+972 |                         ,span_full[1]
+    |
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1005:31
+     |
+1003 |                     elif trackchanges_main.current_action == 'cancel':
+1004 |                         self.emit(QtCore.SIGNAL('cancel'))
+1005 |                         return              
+     |                               ^^^^^^^^^^^^^^
+1006 |                     elif self.command in trackchanges_main.command_names:
+1007 |                         trackchanges_main.search_position = span_full[1]
+     |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1128:58
+     |
+1126 |         self.connect(self.text_main
+1127 |                      ,QtCore.SIGNAL('textChangedByUser')
+1128 |                      ,trackchanges_main.textChangeByUser)   
+     |                                                          ^^^
+1129 |
+1130 |         self.connect(self.button_old
+     |
+help: Remove trailing whitespace
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1149:1
+     |
+1147 |     """Here QtGui.QTextEdit is reimplemented so I can figure out what the last
+1148 |     selection was before an edit wase done.
+1149 |     
+     | ^^^^
+1150 |     This only works for edits that are done with a keyboard or mouse command, 
+1151 |     not any commands given from the program.
+     |
+help: Remove whitespace from blank line
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1150:78
+     |
+1148 |     selection was before an edit wase done.
+1149 |     
+1150 |     This only works for edits that are done with a keyboard or mouse command, 
+     |                                                                              ^
+1151 |     not any commands given from the program.
+1152 |     """
+     |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1156:37
+     |
+1154 |         QtGui.QTextEdit.__init__(self, *args)
+1155 |
+1156 |         # For now disable Undo/Redo.  
+     |                                     ^^
+1157 |         # To enable this is a lot of work.
+1158 |         # There are two ways to go about it:
+     |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1172:39
+     |
+1170 |         self.connect(self
+1171 |                      ,QtCore.SIGNAL('textChanged()')
+1172 |                      ,self.textChange)        
+     |                                       ^^^^^^^^
+1173 |
+1174 |     def textChange(self):
+     |
+help: Remove trailing whitespace
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1255:1
+     |
+1254 |         ui_central_widget = UiCentralWindow(self)
+1255 |         
+     | ^^^^^^^^
+1256 |         # Set the central Widget
+1257 |         self.setCentralWidget(ui_central_widget)
+     |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1287:1
+     |
+1285 |         # Setup some actions.
+1286 |         self.createActions()
+1287 |         
+     | ^^^^^^^^
+1288 |         # Add the actions to the menus
+1289 |         # --------------------------------------------------------------
+     |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:1290:1
+     |
+1288 |         # Add the actions to the menus
+1289 |         # --------------------------------------------------------------
+1290 |         
+     | ^^^^^^^^
+1291 |         # First the file menu.
 1292 |         ui_menubar_file.addAction(self.ui_menu_items['load'])
      |
 help: Remove whitespace from blank line
@@ -3763,105 +3567,6 @@ PT018 Assertion should be broken down into multiple parts
    |
 help: Break down assertion into multiple parts
 
-S603 `subprocess` call: check for execution of untrusted input
-  --> tests/test_repository_analytics.py:30:12
-   |
-28 |         environment["GIT_AUTHOR_DATE"] = date
-29 |         environment["GIT_COMMITTER_DATE"] = date
-30 |     return subprocess.run(
-   |            ^^^^^^^^^^^^^^
-31 |         ["git", "-C", str(repository_root), *arguments],
-32 |         check=True,
-   |
-
-S607 Starting a process with a partial executable path
-  --> tests/test_repository_analytics.py:31:9
-   |
-29 |         environment["GIT_COMMITTER_DATE"] = date
-30 |     return subprocess.run(
-31 |         ["git", "-C", str(repository_root), *arguments],
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-32 |         check=True,
-33 |         capture_output=True,
-   |
-
-S603 `subprocess` call: check for execution of untrusted input
-   --> tests/test_repository_analytics.py:141:13
-    |
-139 |             create_repository(repository_root)
-140 |
-141 |             subprocess.run(
-    |             ^^^^^^^^^^^^^^
-142 |                 [
-143 |                     "bash",
-    |
-
-S607 Starting a process with a partial executable path
-   --> tests/test_repository_analytics.py:142:17
-    |
-141 |               subprocess.run(
-142 | /                 [
-143 | |                     "bash",
-144 | |                     str(ACTION_ROOT / "repo-activity"),
-145 | |                     "--repo",
-146 | |                     str(repository_root),
-147 | |                     "--output",
-148 | |                     ".cache/activity",
-149 | |                     "--since",
-150 | |                     "2 years ago",
-151 | |                     "--ref",
-152 | |                     "HEAD",
-153 | |                     "--color",
-154 | |                     "never",
-155 | |                     "--quiet",
-156 | |                 ],
-    | |_________________^
-157 |                   check=True,
-158 |                   capture_output=True,
-    |
-
-S603 `subprocess` call: check for execution of untrusted input
-  --> tests/test_repository_intelligence.py:28:12
-   |
-27 | def git(repository_root: Path, *arguments: str) -> str:
-28 |     return subprocess.run(
-   |            ^^^^^^^^^^^^^^
-29 |         ["git", "-C", str(repository_root), *arguments],
-30 |         check=True,
-   |
-
-S607 Starting a process with a partial executable path
-  --> tests/test_repository_intelligence.py:29:9
-   |
-27 | def git(repository_root: Path, *arguments: str) -> str:
-28 |     return subprocess.run(
-29 |         ["git", "-C", str(repository_root), *arguments],
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-30 |         check=True,
-31 |         capture_output=True,
-   |
-
-S603 `subprocess` call: check for execution of untrusted input
-  --> tests/test_repository_intelligence_dashboard.py:37:14
-   |
-35 |     """Run one deterministic Git command in a fixture repository."""
-36 |
-37 |     result = subprocess.run(
-   |              ^^^^^^^^^^^^^^
-38 |         ["git", "-C", str(repository), *arguments],
-39 |         check=True,
-   |
-
-S607 Starting a process with a partial executable path
-  --> tests/test_repository_intelligence_dashboard.py:38:9
-   |
-37 |     result = subprocess.run(
-38 |         ["git", "-C", str(repository), *arguments],
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-39 |         check=True,
-40 |         capture_output=True,
-   |
-
 I001 [*] Import block is un-sorted or un-formatted
  --> tests/test_staging_removal_gate.py:4:1
   |
@@ -4035,10 +3740,10 @@ T201 `print` found
     |
 help: Remove `print`
 
-Found 775 errors.
-[*] 45 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
+Found 731 errors.
+[*] 39 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
 
-(Truncated to last 22857 characters out of 372960)
+(Truncated to last 24242 characters out of 352206)
 ```
 
 </details>
@@ -4047,7 +3752,38 @@ Found 775 errors.
 <summary>❌ PYTHON / ruff-format - 1 error</summary>
 
 ```
-- 			self.removeAddedText(addSegments)
+ngeCommand", "initials", "originalText", "startBrace", "endBrace"):
+    - 				s.hide()
+    - 	
+    - 	def keepOriginalText(self, changeSegments):
+    - 		"""keeps only the original text of a change command: removes all but the originalText segment"""
+    - 		for s in changeSegments:
+    - 			if s.type in ("changeCommand", "initials", "newText", "startBrace", "endBrace"):
+    - 				s.hide()
+    - 	
+    - 	def noteInteraction(self, noteSegments):
+    - 		"""asks the user, if the note should be erased or not and hides the corresponding
+    - 		LineSegments if requested ..."""
+    - 		self.printBuffer(noteSegments)
+    - 		sys.stderr.write("\nErase? [Y|n] ")
+    - 		inputStr = raw_input("")
+    - 		if inputStr.lower() != "n":
+    - 			self.eraseNote(noteSegments)
+    - 		sys.stderr.write("\n")
+    - 	
+    - 	def addInteraction(self, addSegments):
+    - 		"""provides three options to the user:
+    - 		  - Accept: erase the \\add command and keep the added text 
+    - 		  - Reject: erase the \\add command together with the added text
+    - 		  - Ignore: ignore and leave the \\change command in the text"""
+    - 		self.printBuffer(addSegments)
+    - 		sys.stderr.write("Accept added text, Reject added text or Ignore? [A|r|i] ")
+    - 		inputStr = raw_input("")
+    - 		inputStr = inputStr.lower()
+    - 		if inputStr == "i":
+    - 			pass
+    - 		elif inputStr == "r": 
+    - 			self.removeAddedText(addSegments)
     - 		else:
     - 			self.keepAddedText(addSegments)
     - 		sys.stderr.write("\n")
@@ -4531,9 +4267,9 @@ unformatted: File would be reformatted
 1335 |             },
      |
 
-8 files would be reformatted, 50 files already formatted
+8 files would be reformatted, 42 files already formatted
 
-(Truncated to last 22857 characters out of 28913)
+(Truncated to last 24242 characters out of 28913)
 ```
 
 </details>
@@ -4548,803 +4284,18 @@ unformatted: File would be reformatted
 </details>
 
 <details>
-<summary>❌ BASH / shfmt - 6 errors</summary>
+<summary>❌ CSS / stylelint - 330 errors</summary>
 
 ```
-RUNTIME_CONTAINER_ID="${1#*=}"
-+      ;;
-+    --dry-run)
-+      DRY_RUN=1
-+      ;;
-+    --verbose)
-+      VERBOSE=1
-+      ;;
-+    --help)
-+      print_usage
-+      exit 0
-+      ;;
-+    --)
-+      shift
-+      break
-+      ;;
-+    -*)
-+      usage_error "Unknown option: $1"
-+      ;;
-+    *)
-+      usage_error "Unexpected positional argument: $1"
-+      ;;
-+    esac
-+
-+    shift
-+  done
-+
-+  if (($# > 0)); then
-+    usage_error "Unexpected positional argument: $1"
-+  fi
- }
- 
- ##
-@@ -362,14 +362,14 @@
- #   $2 - Identifier value.
- ##
- validate_identifier() {
--    local label="${1:?Identifier label is required}"
--    local value="${2:-}"
--
--    case "$value" in
--        *$'\n'* | *$'\r'*)
--            usage_error "$label must not contain line breaks."
--            ;;
--    esac
-+  local label="${1:?Identifier label is required}"
-+  local value="${2:-}"
-+
-+  case "$value" in
-+  *$'\n'* | *$'\r'*)
-+    usage_error "$label must not contain line breaks."
-+    ;;
-+  esac
- }
- 
- ##
-@@ -376,12 +376,12 @@
- # Validates and normalizes the optional Dev Container identifier.
- ##
- normalize_devcontainer_id() {
--    if [[ $DEVCONTAINER_ID == "\${devcontainerId}" ]]; then
--        print_warning "The devcontainerId substitution was not resolved by this implementation."
--        DEVCONTAINER_ID=""
--    fi
--
--    validate_identifier "The Dev Container ID" "$DEVCONTAINER_ID"
-+  if [[ $DEVCONTAINER_ID == "\${devcontainerId}" ]]; then
-+    print_warning "The devcontainerId substitution was not resolved by this implementation."
-+    DEVCONTAINER_ID=""
-+  fi
-+
-+  validate_identifier "The Dev Container ID" "$DEVCONTAINER_ID"
- }
- 
- # -----------------------------------------------------------------------------
-@@ -398,12 +398,12 @@
- #   Writes the resolved path to stdout.
- ##
- resolve_directory() {
--    local directory="${1:?Directory path is required}"
--
--    (
--        cd -- "$directory"
--        pwd -P
--    )
-+  local directory="${1:?Directory path is required}"
-+
-+  (
-+    cd -- "$directory"
-+    pwd -P
-+  )
- }
- 
- ##
-@@ -410,16 +410,16 @@
- # Resolves the script directory and repository root.
- ##
- resolve_paths() {
--    SCRIPT_DIRECTORY="$(resolve_directory "$(dirname "${BASH_SOURCE[0]}")")"
--
--    if [[ -n ${DEVCONTAINER_REPO_ROOT:-} ]]; then
--        REPO_ROOT="$(resolve_directory "$DEVCONTAINER_REPO_ROOT")"
--    else
--        REPO_ROOT="$(resolve_directory "$SCRIPT_DIRECTORY/../..")"
--    fi
--
--    [[ -d $REPO_ROOT/$DEVCONTAINER_DIRECTORY ]] ||
--        print_warning "Expected Dev Container directory not found: $REPO_ROOT/$DEVCONTAINER_DIRECTORY"
-+  SCRIPT_DIRECTORY="$(resolve_directory "$(dirname "${BASH_SOURCE[0]}")")"
-+
-+  if [[ -n ${DEVCONTAINER_REPO_ROOT:-} ]]; then
-+    REPO_ROOT="$(resolve_directory "$DEVCONTAINER_REPO_ROOT")"
-+  else
-+    REPO_ROOT="$(resolve_directory "$SCRIPT_DIRECTORY/../..")"
-+  fi
-+
-+  [[ -d $REPO_ROOT/$DEVCONTAINER_DIRECTORY ]] ||
-+    print_warning "Expected Dev Container directory not found: $REPO_ROOT/$DEVCONTAINER_DIRECTORY"
- }
- 
- ##
-@@ -426,24 +426,24 @@
- # Resolves the runtime container identifier when one was not supplied.
- ##
- resolve_runtime_container_id() {
--    if [[ -n $RUNTIME_CONTAINER_ID ]]; then
--        validate_identifier "The runtime container ID" "$RUNTIME_CONTAINER_ID"
--        return 0
--    fi
--
--    if [[ -r /etc/hostname ]]; then
--        IFS= read -r RUNTIME_CONTAINER_ID < /etc/hostname || true
--    fi
--
--    if [[ -z $RUNTIME_CONTAINER_ID ]] && command -v hostname > /dev/null 2>&1; then
--        RUNTIME_CONTAINER_ID="$(hostname 2> /dev/null || true)"
--    fi
--
--    if [[ -z $RUNTIME_CONTAINER_ID && -n ${HOSTNAME:-} ]]; then
--        RUNTIME_CONTAINER_ID="$HOSTNAME"
--    fi
--
-+  if [[ -n $RUNTIME_CONTAINER_ID ]]; then
-     validate_identifier "The runtime container ID" "$RUNTIME_CONTAINER_ID"
-+    return 0
-+  fi
-+
-+  if [[ -r /etc/hostname ]]; then
-+    IFS= read -r RUNTIME_CONTAINER_ID </etc/hostname || true
-+  fi
-+
-+  if [[ -z $RUNTIME_CONTAINER_ID ]] && command -v hostname >/dev/null 2>&1; then
-+    RUNTIME_CONTAINER_ID="$(hostname 2>/dev/null || true)"
-+  fi
-+
-+  if [[ -z $RUNTIME_CONTAINER_ID && -n ${HOSTNAME:-} ]]; then
-+    RUNTIME_CONTAINER_ID="$HOSTNAME"
-+  fi
-+
-+  validate_identifier "The runtime container ID" "$RUNTIME_CONTAINER_ID"
- }
- 
- ##
-@@ -453,14 +453,14 @@
- #   $1 - Directory to add.
- ##
- prepend_path_once() {
--    local directory="${1:?Directory path is required}"
--
--    case ":${PATH:-}:" in
--        *":$directory:"*) ;;
--        *) PATH="$directory${PATH:+:$PATH}" ;;
--    esac
--
--    export PATH
-+  local directory="${1:?Directory path is required}"
-+
-+  case ":${PATH:-}:" in
-+  *":$directory:"*) ;;
-+  *) PATH="$directory${PATH:+:$PATH}" ;;
-+  esac
-+
-+  export PATH
- }
- 
- ##
-@@ -467,27 +467,27 @@
- # Configures the environment inherited by repository-specific hooks.
- ##
- configure_environment() {
--    : "${HOME:?HOME must be set for the Dev Container update-content lifecycle}"
--
--    export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
--    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
--    export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
--    export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
--
--    UPDATE_STATE_DIRECTORY="$XDG_STATE_HOME/$UPDATE_STATE_DIRECTORY_NAME"
--    UPDATE_MARKER_FILE="$UPDATE_STATE_DIRECTORY/$UPDATE_MARKER_NAME"
--
--    export DEVCONTAINER_ID
--    export DEVCONTAINER_RUNTIME_ID="$RUNTIME_CONTAINER_ID"
--    export DEVCONTAINER_LIFECYCLE="update-content"
--    export DEVCONTAINER_REPO_ROOT="$REPO_ROOT"
--    export DEVCONTAINER_SCRIPT_DIRECTORY="$SCRIPT_DIRECTORY"
--
--    prepend_path_once "$HOME/.local/bin"
--    prepend_path_once "$HOME/bin"
--
--    print_debug "Platform: $(uname -s 2> /dev/null || printf "unknown")/$(uname -m 2> /dev/null || printf "unknown")"
--    print_debug "PATH: $PATH"
-+  : "${HOME:?HOME must be set for the Dev Container update-content lifecycle}"
-+
-+  export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
-+  export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-+  export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
-+  export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
-+
-+  UPDATE_STATE_DIRECTORY="$XDG_STATE_HOME/$UPDATE_STATE_DIRECTORY_NAME"
-+  UPDATE_MARKER_FILE="$UPDATE_STATE_DIRECTORY/$UPDATE_MARKER_NAME"
-+
-+  export DEVCONTAINER_ID
-+  export DEVCONTAINER_RUNTIME_ID="$RUNTIME_CONTAINER_ID"
-+  export DEVCONTAINER_LIFECYCLE="update-content"
-+  export DEVCONTAINER_REPO_ROOT="$REPO_ROOT"
-+  export DEVCONTAINER_SCRIPT_DIRECTORY="$SCRIPT_DIRECTORY"
-+
-+  prepend_path_once "$HOME/.local/bin"
-+  prepend_path_once "$HOME/bin"
-+
-+  print_debug "Platform: $(uname -s 2>/dev/null || printf "unknown")/$(uname -m 2>/dev/null || printf "unknown")"
-+  print_debug "PATH: $PATH"
- }
- 
- # -----------------------------------------------------------------------------
-@@ -498,17 +498,17 @@
- # Validates basic workspace and home-directory expectations.
- ##
- validate_environment() {
--    [[ -d $REPO_ROOT ]] || die "Repository root does not exist: $REPO_ROOT"
--    [[ -r $REPO_ROOT ]] || die "Repository root is not readable: $REPO_ROOT"
--    [[ -d $HOME ]] || die "Home directory does not exist: $HOME"
--
--    if [[ ! -w $REPO_ROOT ]]; then
--        print_warning "Repository root is not writable: $REPO_ROOT"
--    fi
--
--    if [[ ! -w $HOME ]]; then
--        print_warning "Home directory is not writable: $HOME"
--    fi
-+  [[ -d $REPO_ROOT ]] || die "Repository root does not exist: $REPO_ROOT"
-+  [[ -r $REPO_ROOT ]] || die "Repository root is not readable: $REPO_ROOT"
-+  [[ -d $HOME ]] || die "Home directory does not exist: $HOME"
-+
-+  if [[ ! -w $REPO_ROOT ]]; then
-+    print_warning "Repository root is not writable: $REPO_ROOT"
-+  fi
-+
-+  if [[ ! -w $HOME ]]; then
-+    print_warning "Home directory is not writable: $HOME"
-+  fi
- }
- 
- ##
-@@ -519,25 +519,25 @@
- #   $2 - Optional directory mode. Defaults to 0755.
- ##
- ensure_directory() {
--    local directory="${1:?Directory path is required}"
--    local mode="${2:-0755}"
--
--    if [[ -d $directory ]]; then
--        print_debug "Directory already exists: $directory"
--        return 0
--    fi
--
--    if ((DRY_RUN == 1)); then
--        print_status "Would create directory: $directory"
--        return 0
--    fi
--
--    print_status "Creating directory: $directory"
--    mkdir -p "$directory"
--
--    if ! chmod "$mode" "$directory" 2> /dev/null; then
--        print_warning "Could not set mode $mode on directory: $directory"
--    fi
-+  local directory="${1:?Directory path is required}"
-+  local mode="${2:-0755}"
-+
-+  if [[ -d $directory ]]; then
-+    print_debug "Directory already exists: $directory"
-+    return 0
-+  fi
-+
-+  if ((DRY_RUN == 1)); then
-+    print_status "Would create directory: $directory"
-+    return 0
-+  fi
-+
-+  print_status "Creating directory: $directory"
-+  mkdir -p "$directory"
-+
-+  if ! chmod "$mode" "$directory" 2>/dev/null; then
-+    print_warning "Could not set mode $mode on directory: $directory"
-+  fi
- }
- 
- ##
-@@ -544,14 +544,14 @@
- # Creates baseline user-local and repository-local directories.
- ##
- create_required_directories() {
--    ensure_directory "$HOME/.local/bin"
--    ensure_directory "$XDG_CACHE_HOME"
--    ensure_directory "$XDG_CONFIG_HOME"
--    ensure_directory "$XDG_DATA_HOME"
--    ensure_directory "$XDG_STATE_HOME"
--    ensure_directory "$UPDATE_STATE_DIRECTORY" 0700
--    ensure_directory "$REPO_ROOT/.cache" 0775
--    ensure_directory "$REPO_ROOT/.tmp" 0775
-+  ensure_directory "$HOME/.local/bin"
-+  ensure_directory "$XDG_CACHE_HOME"
-+  ensure_directory "$XDG_CONFIG_HOME"
-+  ensure_directory "$XDG_DATA_HOME"
-+  ensure_directory "$XDG_STATE_HOME"
-+  ensure_directory "$UPDATE_STATE_DIRECTORY" 0700
-+  ensure_directory "$REPO_ROOT/.cache" 0775
-+  ensure_directory "$REPO_ROOT/.tmp" 0775
- }
- 
- ##
-@@ -558,19 +558,19 @@
- # Captures lightweight Git metadata for the completion marker.
- ##
- capture_repository_state() {
--    local status_output
--
--    command -v git > /dev/null 2>&1 || return 0
--    git -C "$REPO_ROOT" rev-parse --is-inside-work-tree > /dev/null 2>&1 || return 0
--
--    GIT_COMMIT="$(git -C "$REPO_ROOT" rev-parse HEAD 2> /dev/null || true)"
--    status_output="$(git -C "$REPO_ROOT" status --porcelain 2> /dev/null || true)"
--
--    if [[ -n $status_output ]]; then
--        GIT_DIRTY="true"
--    else
--        GIT_DIRTY="false"
--    fi
-+  local status_output
-+
-+  command -v git >/dev/null 2>&1 || return 0
-+  git -C "$REPO_ROOT" rev-parse --is-inside-work-tree >/dev/null 2>&1 || return 0
-+
-+  GIT_COMMIT="$(git -C "$REPO_ROOT" rev-parse HEAD 2>/dev/null || true)"
-+  status_output="$(git -C "$REPO_ROOT" status --porcelain 2>/dev/null || true)"
-+
-+  if [[ -n $status_output ]]; then
-+    GIT_DIRTY="true"
-+  else
-+    GIT_DIRTY="false"
-+  fi
- }
- 
- ##
-@@ -577,18 +577,18 @@
- # Calculates the next successful update-content run number.
- ##
- calculate_run_count() {
--    local previous_count=""
--
--    [[ -f $UPDATE_MARKER_FILE ]] || return 0
--
--    previous_count="$(
--        awk -F= '$1 == "run_count" { print $2; exit }' \
--            "$UPDATE_MARKER_FILE" 2> /dev/null || true
--    )"
--
--    if [[ $previous_count =~ ^[0-9]+$ ]]; then
--        UPDATE_RUN_COUNT=$((previous_count + 1))
--    fi
-+  local previous_count=""
-+
-+  [[ -f $UPDATE_MARKER_FILE ]] || return 0
-+
-+  previous_count="$(
-+    awk -F= '$1 == "run_count" { print $2; exit }' \
-+      "$UPDATE_MARKER_FILE" 2>/dev/null || true
-+  )"
-+
-+  if [[ $previous_count =~ ^[0-9]+$ ]]; then
-+    UPDATE_RUN_COUNT=$((previous_count + 1))
-+  fi
- }
- 
- ##
-@@ -595,35 +595,35 @@
- # Reports the effective user, container, and repository identifiers.
- ##
- report_runtime_context() {
--    local user_name
--    local user_id
--    local group_name
--    local group_id
--
--    user_name="$(id -un 2> /dev/null || printf "unknown")"
--    user_id="$(id -u 2> /dev/null || printf "unknown")"
--    group_name="$(id -gn 2> /dev/null || printf "unknown")"
--    group_id="$(id -g 2> /dev/null || printf "unknown")"
--
--    print_status "Container user: $user_name (uid=$user_id, gid=$group_id, group=$group_name)"
--
--    if [[ -n $DEVCONTAINER_ID ]]; then
--        print_status "Dev Container ID: $DEVCONTAINER_ID"
--    else
--        print_status "Dev Container ID: unavailable"
--    fi
--
--    if [[ -n $RUNTIME_CONTAINER_ID ]]; then
--        print_status "Runtime container ID: $RUNTIME_CONTAINER_ID"
--    else
--        print_status "Runtime container ID: unavailable"
--    fi
--
--    if [[ -n $GIT_COMMIT ]]; then
--        print_status "Git content state: commit=$GIT_COMMIT, dirty=$GIT_DIRTY"
--    fi
--
--    print_status "Update-content run: $UPDATE_RUN_COUNT"
-+  local user_name
-+  local user_id
-+  local group_name
-+  local group_id
-+
-+  user_name="$(id -un 2>/dev/null || printf "unknown")"
-+  user_id="$(id -u 2>/dev/null || printf "unknown")"
-+  group_name="$(id -gn 2>/dev/null || printf "unknown")"
-+  group_id="$(id -g 2>/dev/null || printf "unknown")"
-+
-+  print_status "Container user: $user_name (uid=$user_id, gid=$group_id, group=$group_name)"
-+
-+  if [[ -n $DEVCONTAINER_ID ]]; then
-+    print_status "Dev Container ID: $DEVCONTAINER_ID"
-+  else
-+    print_status "Dev Container ID: unavailable"
-+  fi
-+
-+  if [[ -n $RUNTIME_CONTAINER_ID ]]; then
-+    print_status "Runtime container ID: $RUNTIME_CONTAINER_ID"
-+  else
-+    print_status "Runtime container ID: unavailable"
-+  fi
-+
-+  if [[ -n $GIT_COMMIT ]]; then
-+    print_status "Git content state: commit=$GIT_COMMIT, dirty=$GIT_DIRTY"
-+  fi
-+
-+  print_status "Update-content run: $UPDATE_RUN_COUNT"
- }
- 
- ##
-@@ -630,32 +630,32 @@
- # Atomically writes the latest update-content completion marker.
- ##
- write_update_marker() {
--    local completed_at
--
--    if ((DRY_RUN == 1)); then
--        print_status "Would write update-content marker: $UPDATE_MARKER_FILE"
--        return 0
--    fi
--
--    completed_at="$(date -u "+%Y-%m-%dT%H:%M:%SZ")"
--    TEMPORARY_FILE="$(mktemp "${UPDATE_MARKER_FILE}.tmp.XXXXXX")"
--
--    {
--        printf "schema_version=%s\n" "$UPDATE_SCHEMA_VERSION"
--        printf "completed_at=%s\n" "$completed_at"
--        printf "run_count=%s\n" "$UPDATE_RUN_COUNT"
--        printf "devcontainer_id=%s\n" "$DEVCONTAINER_ID"
--        printf "runtime_container_id=%s\n" "$RUNTIME_CONTAINER_ID"
--        printf "git_commit=%s\n" "$GIT_COMMIT"
--        printf "git_dirty=%s\n" "$GIT_DIRTY"
--        printf "repository_root=%s\n" "$REPO_ROOT"
--    } > "$TEMPORARY_FILE"
--
--    chmod 0600 "$TEMPORARY_FILE"
--    mv "$TEMPORARY_FILE" "$UPDATE_MARKER_FILE"
--    TEMPORARY_FILE=""
--
--    print_status "Wrote update-content marker: $UPDATE_MARKER_FILE"
-+  local completed_at
-+
-+  if ((DRY_RUN == 1)); then
-+    print_status "Would write update-content marker: $UPDATE_MARKER_FILE"
-+    return 0
-+  fi
-+
-+  completed_at="$(date -u "+%Y-%m-%dT%H:%M:%SZ")"
-+  TEMPORARY_FILE="$(mktemp "${UPDATE_MARKER_FILE}.tmp.XXXXXX")"
-+
-+  {
-+    printf "schema_version=%s\n" "$UPDATE_SCHEMA_VERSION"
-+    printf "completed_at=%s\n" "$completed_at"
-+    printf "run_count=%s\n" "$UPDATE_RUN_COUNT"
-+    printf "devcontainer_id=%s\n" "$DEVCONTAINER_ID"
-+    printf "runtime_container_id=%s\n" "$RUNTIME_CONTAINER_ID"
-+    printf "git_commit=%s\n" "$GIT_COMMIT"
-+    printf "git_dirty=%s\n" "$GIT_DIRTY"
-+    printf "repository_root=%s\n" "$REPO_ROOT"
-+  } >"$TEMPORARY_FILE"
-+
-+  chmod 0600 "$TEMPORARY_FILE"
-+  mv "$TEMPORARY_FILE" "$UPDATE_MARKER_FILE"
-+  TEMPORARY_FILE=""
-+
-+  print_status "Wrote update-content marker: $UPDATE_MARKER_FILE"
- }
- 
- # -----------------------------------------------------------------------------
-@@ -669,26 +669,26 @@
- #   $1 - Hook path.
- ##
- run_hook() {
--    local hook="${1:?Hook path is required}"
--    local relative_hook="${hook#"$REPO_ROOT"/}"
--
--    if ((DRY_RUN == 1)); then
--        print_status "Would run hook: $relative_hook"
--        return 0
--    fi
--
--    print_status "Running hook: $relative_hook"
--
--    if bash "$hook"; then
--        return 0
--    fi
--
--    if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_CONTINUE_ON_HOOK_FAILURE:-0}"; then
--        print_warning "Hook failed; continuing: $relative_hook"
--        return 0
--    fi
--
--    die "Hook failed: $relative_hook"
-+  local hook="${1:?Hook path is required}"
-+  local relative_hook="${hook#"$REPO_ROOT"/}"
-+
-+  if ((DRY_RUN == 1)); then
-+    print_status "Would run hook: $relative_hook"
-+    return 0
-+  fi
-+
-+  print_status "Running hook: $relative_hook"
-+
-+  if bash "$hook"; then
-+    return 0
-+  fi
-+
-+  if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_CONTINUE_ON_HOOK_FAILURE:-0}"; then
-+    print_warning "Hook failed; continuing: $relative_hook"
-+    return 0
-+  fi
-+
-+  die "Hook failed: $relative_hook"
- }
- 
- ##
-@@ -695,41 +695,41 @@
- # Discovers and executes update-content hooks in deterministic filename order.
- ##
- run_extension_hooks() {
--    local hooks_directory="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.d"
--    local local_hook="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.local.sh"
--    local hook
--    local nullglob_was_enabled=0
--    local previous_lc_all="${LC_ALL-}"
--    local -a hooks=()
--
--    if [[ -f $local_hook ]]; then
--        run_hook "$local_hook"
--    fi
--
--    [[ -d $hooks_directory ]] || return 0
--
--    if shopt -q nullglob; then
--        nullglob_was_enabled=1
--    fi
--
--    LC_ALL=C
--    shopt -s nullglob
--    hooks=("$hooks_directory"/*.sh)
--
--    if ((nullglob_was_enabled == 0)); then
--        shopt -u nullglob
--    fi
--
--    if [[ -n $previous_lc_all ]]; then
--        LC_ALL="$previous_lc_all"
--    else
--        unset LC_ALL
--    fi
--
--    for hook in "${hooks[@]}"; do
--        [[ -f $hook ]] || continue
--        run_hook "$hook"
--    done
-+  local hooks_directory="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.d"
-+  local local_hook="$REPO_ROOT/$DEVCONTAINER_DIRECTORY/scripts/update-content.local.sh"
-+  local hook
-+  local nullglob_was_enabled=0
-+  local previous_lc_all="${LC_ALL-}"
-+  local -a hooks=()
-+
-+  if [[ -f $local_hook ]]; then
-+    run_hook "$local_hook"
-+  fi
-+
-+  [[ -d $hooks_directory ]] || return 0
-+
-+  if shopt -q nullglob; then
-+    nullglob_was_enabled=1
-+  fi
-+
-+  LC_ALL=C
-+  shopt -s nullglob
-+  hooks=("$hooks_directory"/*.sh)
-+
-+  if ((nullglob_was_enabled == 0)); then
-+    shopt -u nullglob
-+  fi
-+
-+  if [[ -n $previous_lc_all ]]; then
-+    LC_ALL="$previous_lc_all"
-+  else
-+    unset LC_ALL
-+  fi
-+
-+  for hook in "${hooks[@]}"; do
-+    [[ -f $hook ]] || continue
-+    run_hook "$hook"
-+  done
- }
- 
- ##
-@@ -742,13 +742,13 @@
- #   Writes the joined labels to stdout.
- ##
- join_labels() {
--    local label
--    local separator=""
--
--    for label in "$@"; do
--        printf "%s%s" "$separator" "$label"
--        separator=", "
--    done
-+  local label
-+  local separator=""
-+
-+  for label in "$@"; do
-+    printf "%s%s" "$separator" "$label"
-+    separator=", "
-+  done
- }
- 
- ##
-@@ -755,28 +755,28 @@
- # Reports recognized project manifests without installing dependencies.
- ##
- report_detected_tooling() {
--    local -a detected=()
--
--    [[ -f $REPO_ROOT/package.json ]] && detected+=("Node.js")
--    [[ -f $REPO_ROOT/pyproject.toml || -f $REPO_ROOT/requirements.txt || -f $REPO_ROOT/setup.py ]] &&
--        detected+=("Python")
--    [[ -f $REPO_ROOT/Cargo.toml ]] && detected+=("Rust")
--    [[ -f $REPO_ROOT/go.mod ]] && detected+=("Go")
--    [[ -f $REPO_ROOT/pom.xml || -f $REPO_ROOT/build.gradle || -f $REPO_ROOT/build.gradle.kts ]] &&
--        detected+=("Java/JVM")
--    [[ -f $REPO_ROOT/Gemfile ]] && detected+=("Ruby")
--    [[ -f $REPO_ROOT/composer.json ]] && detected+=("PHP")
--    [[ -f $REPO_ROOT/compose.yaml || -f $REPO_ROOT/compose.yml || -f $REPO_ROOT/docker-compose.yaml || -f $REPO_ROOT/docker-compose.yml ]] &&
--        detected+=("Docker Compose")
--    [[ -f $REPO_ROOT/Taskfile.yml || -f $REPO_ROOT/Taskfile.yaml ]] && detected+=("Task")
--    [[ -f $REPO_ROOT/Makefile ]] && detected+=("Make")
--
--    if ((${#detected[@]} == 0)); then
--        print_debug "No common project manifests detected."
--        return 0
--    fi
--
--    print_status "Detected project tooling: $(join_labels "${detected[@]}")"
-+  local -a detected=()
-+
-+  [[ -f $REPO_ROOT/package.json ]] && detected+=("Node.js")
-+  [[ -f $REPO_ROOT/pyproject.toml || -f $REPO_ROOT/requirements.txt || -f $REPO_ROOT/setup.py ]] &&
-+    detected+=("Python")
-+  [[ -f $REPO_ROOT/Cargo.toml ]] && detected+=("Rust")
-+  [[ -f $REPO_ROOT/go.mod ]] && detected+=("Go")
-+  [[ -f $REPO_ROOT/pom.xml || -f $REPO_ROOT/build.gradle || -f $REPO_ROOT/build.gradle.kts ]] &&
-+    detected+=("Java/JVM")
-+  [[ -f $REPO_ROOT/Gemfile ]] && detected+=("Ruby")
-+  [[ -f $REPO_ROOT/composer.json ]] && detected+=("PHP")
-+  [[ -f $REPO_ROOT/compose.yaml || -f $REPO_ROOT/compose.yml || -f $REPO_ROOT/docker-compose.yaml || -f $REPO_ROOT/docker-compose.yml ]] &&
-+    detected+=("Docker Compose")
-+  [[ -f $REPO_ROOT/Taskfile.yml || -f $REPO_ROOT/Taskfile.yaml ]] && detected+=("Task")
-+  [[ -f $REPO_ROOT/Makefile ]] && detected+=("Make")
-+
-+  if ((${#detected[@]} == 0)); then
-+    print_debug "No common project manifests detected."
-+    return 0
-+  fi
-+
-+  print_status "Detected project tooling: $(join_labels "${detected[@]}")"
- }
- 
- # -----------------------------------------------------------------------------
-@@ -790,36 +790,36 @@
- #   $@ - Script arguments.
- ##
- main() {
--    parse_arguments "$@"
--    normalize_devcontainer_id
--    install_traps
--
--    if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_VERBOSE:-0}"; then
--        VERBOSE=1
--    fi
--
--    if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_TRACE:-0}"; then
--        set -o xtrace
--    fi
--
--    resolve_paths
--    resolve_runtime_container_id
--    cd -- "$REPO_ROOT"
--    configure_environment
--
--    print_status "Reconciling updated development container content."
--    print_status "Repository root: $REPO_ROOT"
--
--    validate_environment
--    create_required_directories
--    capture_repository_state
--    calculate_run_count
--    report_runtime_context
--    report_detected_tooling
--    run_extension_hooks
--    write_update_marker
--
--    print_status "Development container content reconciliation complete."
-+  parse_arguments "$@"
-+  normalize_devcontainer_id
-+  install_traps
-+
-+  if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_VERBOSE:-0}"; then
-+    VERBOSE=1
-+  fi
-+
-+  if is_enabled "${DEVCONTAINER_UPDATE_CONTENT_TRACE:-0}"; then
-+    set -o xtrace
-+  fi
-+
-+  resolve_paths
-+  resolve_runtime_container_id
-+  cd -- "$REPO_ROOT"
-+  configure_environment
-+
-+  print_status "Reconciling updated development container content."
-+  print_status "Repository root: $REPO_ROOT"
-+
-+  validate_environment
-+  create_required_directories
-+  capture_repository_state
-+  calculate_run_count
-+  report_runtime_context
-+  report_detected_tooling
-+  run_extension_hooks
-+  write_update_marker
-+
-+  print_status "Development container content reconciliation complete."
- }
- 
- main "$@"
-
-(Truncated to last 22857 characters out of 166865)
-```
-
-</details>
-
-<details>
-<summary>❌ CSS / stylelint - 438 errors</summary>
-
-```
-pecificity
+color-function-alias-notation
+  382:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  382:35  ✖  Expected "0.1" to be "10%"                                                                                                    alpha-value-notation
+  385:1   ✖  Expected class selector ".status-badge--success" to be kebab-case                                                             selector-class-pattern
+  394:1   ✖  Expected selector ".product-card h3 a" to come before selector ".primary-navigation a:hover", at line 108                     no-descending-specificity
+  407:15  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  407:15  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  407:35  ✖  Expected "0.025" to be "2.5%"                                                                                                 alpha-value-notation
+  423:1   ✖  Expected selector ".prose-page p" to come before selector ".page-intro > .container > p:not(.eyebrow)", at line 422           no-descending-specificity
   441:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
   448:1   ✖  Expected class selector ".product-detail__media" to be kebab-case                                                             selector-class-pattern
   459:1   ✖  Expected class selector ".product-detail__description" to be kebab-case                                                       selector-class-pattern
@@ -5545,10 +4496,10 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
   108:23  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
   147:28  ✖  Expected "0.83333" to be "0.8333"  number-max-precision
 
-✖ 438 problems (438 errors, 0 warnings)
-  249 errors potentially fixable with the "--fix" option.
+✖ 330 problems (330 errors, 0 warnings)
+  151 errors potentially fixable with the "--fix" option.
 
-(Truncated to last 22857 characters out of 62006)
+(Truncated to last 24242 characters out of 42163)
 ```
 
 </details>
@@ -5559,7 +4510,7 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 ```
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-20T01:35:14Z	info-0	trufflehog	running source	{"source_manager_worker_id": "WmmAF", "with_units": true}
+2026-08-20T03:26:35Z	info-0	trufflehog	running source	{"source_manager_worker_id": "TwuWR", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -5567,15 +4518,6 @@ Raw result: test_commit_tools_share_the_emoji_policy
 Environment: test
 File: egolint/.config/security/trufflehog/.trufflehogignore
 Line: 36
-Analyze: Run `trufflehog analyze` to analyze this key's permissions
-
-✅ Found verified result 🐷🔑
-Detector Type: Lob
-Decoder Type: PLAIN
-Raw result: test_normalizes_git_rename_display_paths
-Environment: test
-File: tests/test_repository_analytics.py
-Line: 84
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
 ✅ Found verified result 🐷🔑
@@ -5596,7 +4538,7 @@ File: tests/test_staging_home_audit.py
 Line: 101
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-20T01:35:22Z	info-0	trufflehog	finished scanning	{"chunks": 6959, "bytes": 50461749, "verified_secrets": 4, "unverified_secrets": 0, "scan_duration": "7.930822666s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":1,"Misses":16,"HitsWasted":0,"AttemptsSaved":1,"VerificationTimeSpentMS":1302}}
+2026-08-20T03:26:44Z	info-0	trufflehog	finished scanning	{"chunks": 6915, "bytes": 50146621, "verified_secrets": 3, "unverified_secrets": 0, "scan_duration": "8.361164389s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":16,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1969}}
 ```
 
 </details>
@@ -5999,48 +4941,62 @@ pnpm-workspace.yaml
 <summary>⚠️ REPOSITORY / checkov - 58 errors</summary>
 
 ```
-dule_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-20 03:25:54,626 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-20 01:34:34,622 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-08-20 03:25:54,628 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-08-20 01:34:34,974 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-08-20 01:34:34,979 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-08-20 01:34:34,986 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-08-20 01:34:35,091 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-08-20 01:34:35,091 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-08-20 01:34:35,172 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-08-20 01:34:35,193 [MainThread  ] [INFO ]  Creating ARM graph
-2026-08-20 01:34:35,194 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-08-20 01:34:35,229 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-08-20 01:34:35,247 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-08-20 01:34:35,248 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-08-20 01:34:35,266 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-08-20 01:34:35,267 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-08-20 01:34:35,272 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-08-20 01:34:35,433 [MainThread  ] [INFO ]  Creating vertices
-2026-08-20 01:34:35,433 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-08-20 01:34:35,434 [MainThread  ] [INFO ]  Creating edges
-2026-08-20 01:34:35,434 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-08-20 01:34:36,398 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-08-20 01:34:36,400 [MainThread  ] [INFO ]  Creating vertices
-2026-08-20 01:34:36,408 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-08-20 01:34:36,408 [MainThread  ] [INFO ]  Creating edges
-2026-08-20 01:34:36,409 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-08-20 01:34:36,410 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-08-20 01:34:36,481 [MainThread  ] [INFO ]  Building cross variable edges
-2026-08-20 01:34:36,484 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-08-20 01:34:36,488 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-08-20 01:34:36,488 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-08-20 01:34:54,083 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-08-20 01:34:54,087 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-08-20 01:34:54,388 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-08-20 01:34:54,389 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-08-20 01:34:54,389 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-08-20 01:34:54,391 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-08-20 01:34:54,392 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-08-20 01:34:54,392 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-08-20 03:25:54,628 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-20 03:25:54,628 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-20 03:25:54,628 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-20 03:25:54,629 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-08-20 03:25:54,842 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-08-20 03:25:54,963 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-08-20 03:25:54,967 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-08-20 03:25:55,004 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-08-20 03:25:55,006 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-08-20 03:25:55,063 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-08-20 03:25:55,064 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-08-20 03:25:55,072 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-08-20 03:25:55,085 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-08-20 03:25:55,087 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-08-20 03:25:55,075 [MainThread  ] [INFO ]  Creating ARM graph
+2026-08-20 03:25:55,102 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-08-20 03:25:55,127 [MainThread  ] [INFO ]  Creating vertices
+2026-08-20 03:25:55,128 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-08-20 03:25:55,128 [MainThread  ] [INFO ]  Creating edges
+2026-08-20 03:25:55,128 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-08-20 03:25:55,294 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-08-20 03:25:55,333 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-08-20 03:25:55,803 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-08-20 03:25:55,805 [MainThread  ] [INFO ]  Creating vertices
+2026-08-20 03:25:55,808 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-08-20 03:25:55,809 [MainThread  ] [INFO ]  Creating edges
+2026-08-20 03:25:55,817 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-08-20 03:25:55,820 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-08-20 03:25:55,881 [MainThread  ] [INFO ]  Building cross variable edges
+2026-08-20 03:25:55,892 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-08-20 03:25:55,892 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-08-20 03:25:55,892 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-08-20 03:26:12,911 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-08-20 03:26:12,912 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-08-20 03:26:12,927 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-08-20 03:26:12,930 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-08-20 03:26:12,933 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-08-20 03:26:12,933 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-08-20 03:26:12,933 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-08-20 03:26:12,934 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -6296,7 +5252,7 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
-(Truncated to last 22857 characters out of 36683)
+(Truncated to last 24242 characters out of 36683)
 ```
 
 </details>
@@ -6435,10 +5391,43 @@ esbuild                      0.27.7                                    0.28.1   
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 3158 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 3150 errors</summary>
 
 ```
-addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+tall/github.sh [411:1 - 423:5] (13 lines, 51 tokens)
+   mantle/lib/install/python-tool.sh [76:1 - 88:5]
+Clone found (bash)
+ - mantle/lib/modules.sh [40:80 - 55:2] (16 lines, 84 tokens)
+   mantle/lib/modules.sh [143:85 - 158:2]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/asdf.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/calibre.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/ceres-solver.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/crush.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 18:47] (11 lines, 61 tokens)
+   mantle/libexec/mantle/installers/docker-desktop.sh [8:1 - 18:47]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/dockerfmt.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/dust.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/e57format.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
+   mantle/libexec/mantle/installers/eza.sh [8:1 - 20:26]
+Clone found (bash)
+ - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
    mantle/libexec/mantle/installers/git-sim.sh [8:1 - 20:26]
 Clone found (bash)
  - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
@@ -6575,12 +5564,6 @@ Clone found (python)
 Clone found (python)
  - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
    mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
-Clone found (json)
- - tests/fixtures/repository-intelligence-dashboard/osv/summary.json [13:15 - 24:15] (12 lines, 54 tokens)
-   tests/fixtures/repository-intelligence-dashboard/scorecard/summary.json [11:16 - 22:15]
-Clone found (python)
- - tests/test_repository_intelligence_dashboard.py [308:1 - 313:64] (6 lines, 62 tokens)
-   tests/test_repository_intelligence_dashboard.py [323:1 - 328:64]
 Clone found (python)
  - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
    tests/test_staging_removal_gate.py [64:49 - 71:14]
@@ -6598,7 +5581,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 414            │ 114333      │ 442638       │ 275          │ 6032 (5.28%)     │ 28895 (6.53%)     │
+│ bash         │ 413            │ 113679      │ 438066       │ 275          │ 6030 (5.30%)     │ 28883 (6.59%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6612,7 +5595,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csharp       │ 56             │ 14917       │ 43793        │ 22           │ 479 (3.21%)      │ 1936 (4.42%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css          │ 30             │ 7037        │ 26989        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css          │ 29             │ 5884        │ 19407        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ csv          │ 1              │ 5           │ 60           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6644,9 +5627,9 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ java         │ 34             │ 10376       │ 32325        │ 12           │ 152 (1.46%)      │ 843 (2.61%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript   │ 71             │ 23073       │ 64297        │ 58           │ 1321 (5.73%)     │ 5555 (8.64%)      │
+│ javascript   │ 70             │ 22962       │ 63622        │ 58           │ 1321 (5.75%)     │ 5555 (8.73%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 243            │ 69526       │ 208470       │ 71           │ 1257 (1.81%)     │ 5779 (2.77%)      │
+│ json         │ 232            │ 68579       │ 202110       │ 62           │ 1158 (1.69%)     │ 4956 (2.45%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6660,7 +5643,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1728           │ 330535      │ 4256495      │ 684          │ 11609 (3.51%)    │ 171816 (4.04%)    │
+│ markdown     │ 1725           │ 330232      │ 4253089      │ 691          │ 11632 (3.52%)    │ 173635 (4.08%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 99             │ 29819       │ 117043       │ 48           │ 964 (3.23%)      │ 7969 (6.81%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6682,7 +5665,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 294            │ 75379       │ 471765       │ 135          │ 1358 (1.80%)     │ 12713 (2.69%)     │
+│ python       │ 286            │ 71127       │ 435963       │ 130          │ 1307 (1.84%)     │ 12309 (2.82%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6700,7 +5683,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 382            │ 86356       │ 199754       │ 32           │ 781 (0.90%)      │ 3098 (1.55%)      │
+│ text         │ 381            │ 86200       │ 199391       │ 32           │ 781 (0.91%)      │ 3098 (1.55%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ toml         │ 37             │ 6466        │ 13039        │ 8            │ 175 (2.71%)      │ 625 (4.79%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6708,22 +5691,22 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ twig         │ 1              │ 573         │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ txt          │ 33             │ 6474        │ 85150        │ 78           │ 1955 (30.20%)    │ 23695 (27.83%)    │
+│ txt          │ 33             │ 6473        │ 85146        │ 78           │ 1955 (30.20%)    │ 23695 (27.83%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ typescript   │ 113            │ 15342       │ 44030        │ 9            │ 196 (1.28%)      │ 687 (1.56%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 560            │ 57988       │ 320020       │ 349          │ 9379 (16.17%)    │ 105320 (32.91%)   │
+│ yaml         │ 553            │ 57132       │ 315960       │ 348          │ 9370 (16.40%)    │ 105256 (33.31%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4794           │ 989890      │ 7763272      │ 3158         │ 59682 (6.03%)    │ 764160 (9.84%)    │
+│ Total:       │ 4761           │ 981457      │ 7700448      │ 3150         │ 59544 (6.07%)    │ 764676 (9.93%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3158 clones.
+Found 3150 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
-time: 15.94s
+ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
+time: 12.71s
 
-(Truncated to last 22857 characters out of 697700)
+(Truncated to last 24242 characters out of 695514)
 ```
 
 </details>
@@ -6732,7 +5715,7 @@ time: 15.94s
 <summary>⚠️ MARKDOWN / markdown-table-formatter - 1 error</summary>
 
 ```
-57 files contain markdown tables to format:
+56 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
 - .audits/2026-08-15-staging-home-audit.md
 - .audits/2026-08-16-misc-promotion.md
@@ -6742,10 +5725,9 @@ time: 15.94s
 - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md
 - .audits/egolint/2026-08-11-reporting-and-dependency-audit.md
 - .garden/dashboard.md
+- .garden/projects/egohygiene-web-namespace.md
 - .garden/projects/repository-intelligence-dashboard.md
 - .github/actions/README.md
-- .github/actions/generate-repository-intelligence/README.md
-- .github/actions/normalize-repository-report/README.md
 - .github/security/dependabot-dismissals.md
 - .tasks/README.md
 - AI_CONSTITUTION.md
@@ -6795,10 +5777,20 @@ time: 15.94s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 716 errors</summary>
+<summary>⚠️ SPELL / proselint - 709 errors</summary>
 
 ```
-y_quotes: Use curly quotes “”, not straight quotes "".
+e curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/audit-repository/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/bug-fixing/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/repository-cleanup/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/quality/test-engineering/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:8:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:9:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/quality/test-engineering/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -7022,16 +6014,24 @@ research/antidote/research/bootstrap/01-research-concept-snapshot.md:17:61: need
 research/antidote/research/bootstrap/03-scientific-boundaries.md:38:154: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 research/antidote/research/bootstrap/08-resume-here.md:1:3: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 
-(Truncated to last 22857 characters out of 101505)
+(Truncated to last 24242 characters out of 100499)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pylint - 260 errors</summary>
+<summary>⚠️ PYTHON / pylint - 246 errors</summary>
 
 ```
-.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:164:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
+oleoutput.py:157:23: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:157:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:158:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:159:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:160:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:161:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:162:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:163:0: C0303: Trailing whitespace (trailing-whitespace)
+beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:164:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:165:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:169:0: C0303: Trailing whitespace (trailing-whitespace)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:170:56: C0303: Trailing whitespace (trailing-whitespace)
@@ -7151,8 +6151,6 @@ mantle/tests/validate_fastfetch.py:114:0: R0912: Too many branches (16/12) (too-
 mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
-************* Module test_repository_intelligence_dashboard
-tests/test_repository_intelligence_dashboard.py:80:35: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module staging_home_audit
 tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1394/1000) (too-many-lines)
 tools/staging_home_audit.py:64:0: R0902: Too many instance attributes (24/12) (too-many-instance-attributes)
@@ -7169,18 +6167,72 @@ tools/staging_home_audit.py:1170:0: R0911: Too many return statements (8/6) (too
 tools/staging_home_audit.py:1229:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.58/10
+Your code has been rated at 9.46/10
 
-(Truncated to last 22857 characters out of 52570)
+(Truncated to last 24242 characters out of 50148)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pyright - 8795 errors</summary>
+<summary>⚠️ PYTHON / pyright - 8612 errors</summary>
 
 ```
-reportUnknownArgumentType)
+blish_profile" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:34:9 - error: Type of "project_garden" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:158:5 - error: Type of "resolved_profile" is partially unknown
+    Type of "resolved_profile" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:158:23 - error: Type of "profile" is partially unknown
+    Type of "profile" is "dict[str, Any] | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:161:5 - error: Type of "expected_node_major" is partially unknown
+    Type of "expected_node_major" is "Any | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:175:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "profile" in function "prepare_engine"
+    Argument type is "dict[str, Any] | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/quartz_site.py:176:5 - error: Type of "configuration_path" is partially unknown
+    Type of "configuration_path" is "Path | Unknown" (reportUnknownVariableType)
+  mindgarden/scripts/quartz_site.py:176:26 - error: Type of "parent" is partially unknown
+    Type of "parent" is "Path | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:177:12 - error: Type of "is_file" is partially unknown
+    Type of "is_file" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:177:44 - error: Type of "is_symlink" is partially unknown
+    Type of "is_symlink" is "(() -> bool) | Unknown" (reportUnknownMemberType)
+  mindgarden/scripts/quartz_site.py:179:21 - error: Argument type is partially unknown
+    Argument corresponds to parameter "src" in function "copyfile"
+    Argument type is "Path | Unknown" (reportUnknownArgumentType)
+  mindgarden/scripts/quartz_site.py:252:10 - error: Type of "error" is partially unknown
+    Type of "error" is "Unknown | OSError | UnicodeError | JSONDecodeError | CalledProcessError" (reportUnknownVariableType)
+mindgarden/scripts/validate_garden.py
+  mindgarden/scripts/validate_garden.py:198:85 - error: Type of "item" is unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:202:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:202:26 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:202:30 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:204:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:390:9 - error: Type of "observed_fields" is partially unknown
+    Type of "observed_fields" is "set[Unknown]" (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:390:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:393:13 - error: Type of "unknown" is partially unknown
+    Type of "unknown" is "list[Unknown]" (reportUnknownVariableType)
+  mindgarden/scripts/validate_garden.py:393:30 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:398:32 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:400:41 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  mindgarden/scripts/validate_garden.py:403:39 - error: Argument type is partially unknown
+    Argument corresponds to parameter "record" in function "require_json_string"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
   mindgarden/scripts/validate_garden.py:410:46 - error: Argument type is partially unknown
     Argument corresponds to parameter "record" in function "require_json_string"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
@@ -7332,30 +6384,6 @@ tests/test_mindgarden_publishing_integration.py
   tests/test_mindgarden_publishing_integration.py:30:13 - error: Type of "paths" is unknown (reportUnknownVariableType)
   tests/test_mindgarden_publishing_integration.py:32:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
   tests/test_mindgarden_publishing_integration.py:32:38 - error: Type of "path" is unknown (reportUnknownVariableType)
-tests/test_repository_intelligence_dashboard.py
-  tests/test_repository_intelligence_dashboard.py:252:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:253:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:254:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:255:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:256:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:257:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:258:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:263:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:264:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:265:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:266:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:275:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:292:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:293:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:313:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:328:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:342:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:354:9 - error: Type of "scorecard" is unknown (reportUnknownVariableType)
-  tests/test_repository_intelligence_dashboard.py:354:21 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:369:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:414:26 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
-  tests/test_repository_intelligence_dashboard.py:427:9 - error: Type of "metrics" is unknown (reportUnknownVariableType)
-  tests/test_repository_intelligence_dashboard.py:427:19 - error: "__getitem__" method not defined on type "object" (reportIndexIssue)
 tools/staging_home_audit.py
   tools/staging_home_audit.py:1299:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]" in function "writerow"
     "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]"
@@ -7390,9 +6418,9 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8795 errors, 424 warnings, 0 informations
+8612 errors, 424 warnings, 0 informations
 
-(Truncated to last 22857 characters out of 1666606)
+(Truncated to last 24242 characters out of 1619923)
 ```
 
 </details>
@@ -7401,16 +6429,20 @@ tools/task_catalog.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-08-20T01:34:53Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-08-20T01:34:53Z	INFO	[vulndb] Need to update DB
-2026-08-20T01:34:53Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-08-20T01:34:53Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-1.56 MiB / 108.34 MiB [>_____________________________________________________________] 1.44% ? p/s ?17.87 MiB / 108.34 MiB [--------->__________________________________________________] 16.50% ? p/s ?41.33 MiB / 108.34 MiB [---------------------->_____________________________________] 38.15% ? p/s ?66.67 MiB / 108.34 MiB [---------------------------->_________________] 61.54% 108.52 MiB p/s ETA 0s91.02 MiB / 108.34 MiB [-------------------------------------->_______] 84.01% 108.52 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 108.52 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 106.00 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 106.00 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 106.00 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 99.16 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 99.16 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 99.16 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 92.76 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 92.76 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 92.76 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 86.78 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 86.78 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 86.78 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 81.18 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 81.18 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 81.18 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 75.94 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 75.94 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 75.94 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 71.04 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 71.04 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 71.04 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 66.46 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 66.46 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 66.46 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 62.17 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 62.17 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 62.17 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 58.16 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 58.16 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-----------------------------------------------] 100.00% 15.67 MiB p/s 7.1s2026-08-20T01:35:02Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-08-20T01:35:02Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-08-20T01:35:02Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-08-20T01:35:02Z	INFO	[checks-client] Need to update the checks bundle
-2026-08-20T01:35:02Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 1.63 MiB p/s 300ms2026-08-20T01:35:09Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+2026-08-20T03:26:15Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-08-20T03:26:15Z	INFO	[vulndb] Need to update DB
+2026-08-20T03:26:15Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-08-20T03:26:15Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+3.27 MiB / 108.34 MiB [->____________________________________________________________] 3.02% ? p/s ?30.35 MiB / 108.34 MiB [---------------->___________________________________________] 28.01% ? p/s ?64.00 MiB / 108.34 MiB [----------------------------------->________________________] 59.07% ? p/s ?97.16 MiB / 108.34 MiB [----------------------------------------->____] 89.68% 156.49 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 156.49 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 156.49 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 147.60 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 147.60 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 147.60 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 138.08 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 138.08 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 138.08 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 129.17 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 129.17 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 129.17 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 120.83 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 120.83 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 120.83 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 113.04 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 113.04 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 113.04 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 105.75 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 105.75 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [------------------------------------------->] 100.00% 105.75 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 98.92 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 98.92 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 98.92 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 92.54 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 92.54 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 92.54 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-------------------------------------------->] 100.00% 86.57 MiB p/s ETA 0s108.34 MiB / 108.34 MiB [-----------------------------------------------] 100.00% 17.94 MiB p/s 6.2s2026-08-20T03:26:22Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-08-20T03:26:22Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-20T03:26:22Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-08-20T03:26:22Z	INFO	[checks-client] Need to update the checks bundle
+2026-08-20T03:26:22Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.09 MiB p/s 300ms2026-08-20T03:26:31Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-08-20T03:26:31Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-08-20T03:26:31Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-08-20T03:26:31Z	INFO	[npm] Run "npm install" to collect the license information of packages	dir=".staging/tools/emoji-precache/node_modules"
+2026-08-20T03:26:31Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 
 📣 Notices:
   - Version 0.74.0 of Trivy is now available, current version is 0.73.0
@@ -7421,73 +6453,73 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2616cf2]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x2d84057ea460)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x128dd57f2730)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x2d8403e51880?, 0x6, 0x4252f4?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x128dd5811e00?, 0x6, 0x4252f4?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x2d84057e7b80, 0x7fa7b1315a00?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x128dd8122640, 0x7fef49222a00?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.31.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x2d8405daf949, 0x2d84057e7b80)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x128dd5f5f16c, 0x128dd8122640)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x2d8405daf949, {0x5aa9040?, 0x2d8405002bc3?}, {0x67caaa0?, 0x2d8402a06830?}, {0x2d84057db040, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x128dd5f5f16c, {0x5aa9040?, 0x128ddad8c6e3?}, {0x67caaa0?, 0x128ddb0aa290?}, {0x128dd5e4dc70, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x2d84057ea230}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x6831f78, 0x128dd57f2500}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x67cb5e0, 0x2d84025ce4e0}, {0x2d84057db040, 0x43}, {0x6831f78, 0x2d84057ea230}, 0x2d8400d7aba8)
+io/fs.walkDir({0x67cb5e0, 0x128dd95a22d0}, {0x128dd5e4dc70, 0x43}, {0x6831f78, 0x128dd57f2500}, 0x128ddb186ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x67cb5e0, 0x2d84025ce4e0}, {0x2d8405002ba0, 0x2d}, {0x6831f78, 0x2d84057a0c08}, 0x2d8400d7aba8)
+io/fs.walkDir({0x67cb5e0, 0x128dd95a22d0}, {0x128ddad8c6c0, 0x2d}, {0x6831f78, 0x128dd6f76fc8}, 0x128ddb186ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x2d84025ce4e0}, {0x2d8407ccd440, 0x22}, {0x6831f78, 0x2d840579db08}, 0x2d8400d7aba8)
+io/fs.walkDir({0x67cb5e0, 0x128dd95a22d0}, {0x128ddb596390, 0x22}, {0x6831f78, 0x128dd8ba9888}, 0x128ddb186ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x2d84025ce4e0}, {0x2d84054d0fa8, 0x17}, {0x6831f78, 0x2d840579d888}, 0x2d8400d7aba8)
+io/fs.walkDir({0x67cb5e0, 0x128dd95a22d0}, {0x128dd5c93e48, 0x17}, {0x6831f78, 0x128dd8ba91a8}, 0x128ddb186ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x2d84025ce4e0}, {0x2d8407ce5dd0, 0x8}, {0x6831f78, 0x2d840579d748}, 0x2d8400d7aba8)
+io/fs.walkDir({0x67cb5e0, 0x128dd95a22d0}, {0x128ddb514030, 0x8}, {0x6831f78, 0x128dd8ba9068}, 0x128ddb186ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x67cb5e0, 0x2d84025ce4e0}, {0x67a84f8, 0x1}, {0x6831370, 0x2d8401a15000}, 0x2d8400d7aba8)
+io/fs.walkDir({0x67cb5e0, 0x128dd95a22d0}, {0x67a84f8, 0x1}, {0x6831370, 0x128dd78e59e0}, 0x128ddb186ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x67cb5e0, 0x2d84025ce4e0}, {0x67a84f8, 0x1}, 0x2d8400d7aba8)
+io/fs.WalkDir({0x67cb5e0, 0x128dd95a22d0}, {0x67a84f8, 0x1}, 0x128ddb186ba8)
 	/opt/hostedtoolcache/go/1.26.5/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x2d8403a3af30}, {0x67cb5e0, 0x2d84025ce4e0}, {0x67a84f8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6861540, {0x6831108, 0x128dd96da0f0}, {0x67cb5e0, 0x128dd95a22d0}, {0x67a84f8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x2d8403a3af30}, {0x67cb5e0, 0x2d84025ce4e0}, {0x67a84f8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6861540, {0x6831108, 0x128dd96da0f0}, {0x67cb5e0, 0x128dd95a22d0}, {0x67a84f8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x2d8406296500, {0x68311b0, 0x2d83ffbd81c0}, {0x67cb5e0, 0x2d8403796b40})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x128dd9830d00, {0x68311b0, 0x128dd5680930}, {0x67cb5e0, 0x128dd7499ea8})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x2d84060739c0, {0x68311b0?, 0x2d83ffbd81c0?}, {{0x67cb5e0, 0x2d8403796b40}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x128dd77839c0, {0x68311b0?, 0x128dd5680930?}, {{0x67cb5e0, 0x128dd7499ea8}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x2d840601bbb0, {0x2d8405b26a00, 0x1f, 0x20}, {0x2d8405b26c00, 0x19, 0x20}, 0x2d84062ba2a0, {0x2d8400d28737, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x128dd7cb1a40, {0x128ddb5b3200, 0x1f, 0x20}, {0x128ddb5b3400, 0x19, 0x20}, 0x128dda4c9bc0, {0x128dd52f35b7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x2d840601bbb0, {0x2d8405b26a00, 0x1f, 0x20}, {0x2d8405b26c00, 0x19, 0x20}, 0x2d84062ba2a0, {0x2d8400d28737, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x128dd7cb1a40, {0x128ddb5b3200, 0x1f, 0x20}, {0x128ddb5b3400, 0x19, 0x20}, 0x128dda4c9bc0, {0x128dd52f35b7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffc7bc0912f, 0x1}, 0x2d84062bc560, {0x7fa6ea0e6978, 0x2d8401759980}, {0x67cb520, 0xa3125e0}, {0x2d840601bbb0, {0x2d8405b26a00, 0x1f, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffd87f3512f, 0x1}, 0x128dd532b470, {0x7fee820109e8, 0x128dd8ac4a80}, {0x67cb520, 0xa3125e0}, {0x128dd7cb1a40, {0x128ddb5b3200, 0x1f, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x2d84005539c0, 0x2, 0x2}, {0x2d8400b5dd00, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x128dd5dfcaa0, 0x2, 0x2}, {0x128dd5c33980, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffc7bc08f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffd87f34f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffc7bc08f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffd87f34f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffc7bc08f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffd87f34f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffc7bc08f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffd87f34f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffc7bc08f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffd87f34f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffc7bc08f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffd87f34f46, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x2d8400243508, {0x2d8400ca1508, 0x1, 0x33})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x128dd58f7b08, {0x128dd5c61188, 0x1, 0x33})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0x2d8400243508, {0x2d8400ca1188, 0x33, 0x33})
+github.com/spf13/cobra.(*Command).execute(0x128dd58f7b08, {0x128dd5c60e08, 0x33, 0x33})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0x2d8400242f08)
+github.com/spf13/cobra.(*Command).ExecuteC(0x128dd58f7508)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x2d8400543a00})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x68314f8, 0x128dd5ba52c0})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c

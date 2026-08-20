@@ -10,191 +10,9 @@ Linter raw log:
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-20 01:36:24.272654+00:00
+Run started:2026-08-20 03:27:55.123547+00:00
 
 Test results:
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_repository_analytics.py:11:0
-10	from pathlib import Path
-11	import subprocess
-12	import tempfile
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_analytics.py:30:11
-29	        environment["GIT_COMMITTER_DATE"] = date
-30	    return subprocess.run(
-31	        ["git", "-C", str(repository_root), *arguments],
-32	        check=True,
-33	        capture_output=True,
-34	        text=True,
-35	        env=environment,
-36	    ).stdout.strip()
-37	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_analytics.py:30:11
-29	        environment["GIT_COMMITTER_DATE"] = date
-30	    return subprocess.run(
-31	        ["git", "-C", str(repository_root), *arguments],
-32	        check=True,
-33	        capture_output=True,
-34	        text=True,
-35	        env=environment,
-36	    ).stdout.strip()
-37	
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_analytics.py:141:12
-140	
-141	            subprocess.run(
-142	                [
-143	                    "bash",
-144	                    str(ACTION_ROOT / "repo-activity"),
-145	                    "--repo",
-146	                    str(repository_root),
-147	                    "--output",
-148	                    ".cache/activity",
-149	                    "--since",
-150	                    "2 years ago",
-151	                    "--ref",
-152	                    "HEAD",
-153	                    "--color",
-154	                    "never",
-155	                    "--quiet",
-156	                ],
-157	                check=True,
-158	                capture_output=True,
-159	                text=True,
-160	            )
-161	            summary = (repository_root / ".cache/activity/summary.md").read_text(encoding="utf-8")
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_analytics.py:141:12
-140	
-141	            subprocess.run(
-142	                [
-143	                    "bash",
-144	                    str(ACTION_ROOT / "repo-activity"),
-145	                    "--repo",
-146	                    str(repository_root),
-147	                    "--output",
-148	                    ".cache/activity",
-149	                    "--since",
-150	                    "2 years ago",
-151	                    "--ref",
-152	                    "HEAD",
-153	                    "--color",
-154	                    "never",
-155	                    "--quiet",
-156	                ],
-157	                check=True,
-158	                capture_output=True,
-159	                text=True,
-160	            )
-161	            summary = (repository_root / ".cache/activity/summary.md").read_text(encoding="utf-8")
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_repository_intelligence.py:9:0
-8	from pathlib import Path
-9	import subprocess
-10	import tempfile
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_intelligence.py:28:11
-27	def git(repository_root: Path, *arguments: str) -> str:
-28	    return subprocess.run(
-29	        ["git", "-C", str(repository_root), *arguments],
-30	        check=True,
-31	        capture_output=True,
-32	        text=True,
-33	    ).stdout.strip()
-34	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_intelligence.py:28:11
-27	def git(repository_root: Path, *arguments: str) -> str:
-28	    return subprocess.run(
-29	        ["git", "-C", str(repository_root), *arguments],
-30	        check=True,
-31	        capture_output=True,
-32	        text=True,
-33	    ).stdout.strip()
-34	
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_repository_intelligence_dashboard.py:14:0
-13	import shutil
-14	import subprocess
-15	import tempfile
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_repository_intelligence_dashboard.py:37:13
-36	
-37	    result = subprocess.run(
-38	        ["git", "-C", str(repository), *arguments],
-39	        check=True,
-40	        capture_output=True,
-41	        text=True,
-42	        env=environment,
-43	    )
-44	    return result.stdout.strip()
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_repository_intelligence_dashboard.py:37:13
-36	
-37	    result = subprocess.run(
-38	        ["git", "-C", str(repository), *arguments],
-39	        check=True,
-40	        capture_output=True,
-41	        text=True,
-42	        env=environment,
-43	    )
-44	    return result.stdout.strip()
-
---------------------------------------------------
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
@@ -252,21 +70,21 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 9977
+	Total lines of code: 9200
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 16
+		Low: 5
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 16
+		High: 5
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)
