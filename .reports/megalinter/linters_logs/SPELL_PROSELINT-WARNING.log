@@ -94,14 +94,16 @@ reviewed' - a phrase is repeated.
 .github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.lowercase_periods: It's standard to use periods for lowercase 'a.m.' or 'p.m.'.
 .github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.spacing: It's standard to put a space before 'a.m.' or 'p.m.'.
 .github/workflow-profiles/README.md:66:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-ARCHITECTURE.md:105:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:105:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:106:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:107:29: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:108:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:109:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:121:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-DECISIONS.md:313:87: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+ARCHITECTURE.md:48:9: lexical_illusions: There's a lexical illusion in 'HN
+  HN' - a phrase is repeated.
+ARCHITECTURE.md:127:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:127:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:128:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:129:29: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:130:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:131:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:143:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+DECISIONS.md:314:87: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 DESIGN.md:128:1: misc.preferred_forms: 'sans serif' is the preferred form.
 DESIGN_SYSTEM.md:68:38: misc.preferred_forms: 'sans serif' is the preferred form.
 EPISTEMOLOGY.md:109:22: lexical_illusions: There's a lexical illusion in 'Knowledge
@@ -121,7 +123,7 @@ We commit to' - a phrase is repeated.
 MANIFESTO.md:64:9: lexical_illusions: There's a lexical illusion in 'We Refuse to Normalize
 
 We refuse to normalize' - a phrase is repeated.
-META.md:114:19: lexical_illusions: There's a lexical illusion in 'system
+META.md:115:19: lexical_illusions: There's a lexical illusion in 'system
   system' - a phrase is repeated.
 METHODOLOGY.md:76:5: lexical_illusions: There's a lexical illusion in 'Review
 
@@ -132,9 +134,9 @@ Consent' - a phrase is repeated.
 PILLARS.md:68:38: lexical_illusions: There's a lexical illusion in 'Automation
 
 Automation' - a phrase is repeated.
-README.md:23:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-SYSTEM.md:58:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-SYSTEM.md:174:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+README.md:25:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+SYSTEM.md:73:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+SYSTEM.md:189:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 TASKS.md:14:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:15:56: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:16:60: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
