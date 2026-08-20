@@ -43,6 +43,10 @@ planning and materializing repositories; Pace may propose reviewed upgrades.
 
 ## Validation
 
+Hygiene-owned generated context is validated by its pinned generator and
+marker contract; consumer formatting tools do not rewrite that canonical
+projection.
+
 ```bash
 python3 tools/foundation.py validate-catalog
 python3 tools/foundation.py validate-manifest \
