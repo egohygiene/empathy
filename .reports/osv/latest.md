@@ -1,10 +1,10 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-20T14-01-59Z`
+- Generated: `2026-08-21T02-26-07Z`
 - Repository: `egohygiene/empathy`
-- Commit: `5bd5f5329d6982697241a96c568bc1169ad4b569`
+- Commit: `6d9b211b16aa17b5b5453788a49be770272439d8`
 - Severity gate: `high`
-- Duration: `16s`
+- Duration: `17s`
 
 ## Findings
 
@@ -12,10 +12,10 @@
 | --- | ---: |
 | Critical | 3 |
 | High | 54 |
-| Medium | 47 |
+| Medium | 49 |
 | Low | 10 |
 | Unknown | 0 |
-| **Total** | **114** |
+| **Total** | **116** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 45 packages affected by 114 known vulnerabilities (3 Critical, 54 High, 47 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
-109 vulnerabilities can be fixed.
+Total 46 packages affected by 116 known vulnerabilities (3 Critical, 54 High, 49 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
+111 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -185,6 +185,8 @@ Total 45 packages affected by 114 known vulnerabilities (3 Critical, 54 High, 47
 | https://osv.dev/PYSEC-2026-1996<br/>https://osv.dev/GHSA-38jv-5279-wg99 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.3 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-1998<br/>https://osv.dev/GHSA-gm62-xv2j-4w53 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.0 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2009<br/>https://osv.dev/GHSA-597g-3phw-6986 | 4.5 | PyPI | virtualenv (dev) | 20.31.2 | 20.36.1 | .staging/devenvironment/containers/services/api/poetry.lock |
+| https://osv.dev/GHSA-89v8-rhwq-hf77 | 5.0 | PyPI | asteval | 1.0.6 | 1.0.9 | egolint/uv.lock |
+| https://osv.dev/GHSA-9w56-46f6-3qhx | 5.5 | PyPI | asteval | 1.0.6 | 1.0.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-3jxr-9vmj-r5cp | 7.7 | npm | brace-expansion | 1.1.12 | 1.1.16 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-f886-m6hf-6m8v | 6.5 | npm | brace-expansion | 1.1.12 | 1.1.13 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-mh99-v99m-4gvg | 7.5 | npm | brace-expansion | 1.1.12 | 1.1.17 | .staging/tools/emoji-precache/package-lock.json |
