@@ -79,8 +79,8 @@ Selects the universal core and optional capabilities, resolves versions and depe
 Empathy configuration, and defines the public repository task/profile interface.
 
 Current examples are root Taskfile imports, root integration configurations, active workflow
-selection, and the explicit active-versus-staged boundary. A machine-readable profile manifest is a
-missing component.
+selection, the explicit active-versus-staged boundary, and the versioned
+`foundation/catalog.json` plus `foundation/empathy.manifest.json` golden-consumer contract.
 
 ### Layer 4 — Execution Adapters
 
@@ -164,18 +164,18 @@ may inform intent, but generated output does not directly mutate governance.
 
 ## Relationship to System Inventory
 
-| Logical system               | Primary structural layers             | Current repository evidence                           |
-| ---------------------------- | ------------------------------------- | ----------------------------------------------------- |
-| Foundation Contract          | Intent and Governance; Composition    | Root docs, `.github/`, policy files                   |
-| Capability Composition       | Source Contracts; Composition         | `Taskfile.yml`, root configs, active/staged selection |
-| Quality and Supply Chain     | Source Contracts through Verification | `egolint/`, root profiles, tests, reports             |
-| Automation                   | Execution; Verification               | `.github/actions/`, `.github/workflows/`              |
-| Intelligence Artifacts       | Source Contracts; Distribution target | `egolint/.agents/` provisional import                 |
-| Development Environment      | Composition; Execution                | `.devcontainer/`, `.vscode/`, workspace/manifests     |
-| Visual Identity              | Source Contracts through Distribution | `identity/`, `.identity/`, future generated assets    |
-| Evidence and Observability   | Verification                          | `.reports/`, `.audits/`, workflow artifacts           |
-| Staging and Classification   | Isolated from active layers           | `.staging/`                                           |
-| Distribution and Conformance | Distribution target                   | Builders and projection concepts; no stable release   |
+| Logical system               | Primary structural layers             | Current repository evidence                                         |
+| ---------------------------- | ------------------------------------- | ------------------------------------------------------------------- |
+| Foundation Contract          | Intent and Governance; Composition    | Root docs, `.github/`, policy files                                 |
+| Capability Composition       | Source Contracts; Composition         | `Taskfile.yml`, root configs, active/staged selection               |
+| Quality and Supply Chain     | Source Contracts through Verification | `egolint/`, root profiles, tests, reports                           |
+| Automation                   | Execution; Verification               | `.github/actions/`, `.github/workflows/`                            |
+| Intelligence Artifacts       | Source Contracts; Distribution target | `egolint/.agents/` provisional import                               |
+| Development Environment      | Composition; Execution                | `.devcontainer/`, `.vscode/`, workspace/manifests                   |
+| Visual Identity              | Source Contracts through Distribution | `identity/`, `.identity/`, future generated assets                  |
+| Evidence and Observability   | Verification                          | `.reports/`, `.audits/`, workflow artifacts                         |
+| Staging and Classification   | Isolated from active layers           | `.staging/`                                                         |
+| Distribution and Conformance | Distribution target                   | Foundation catalog, golden manifest, and offline EgoLint projection |
 
 ## Assumptions and Evidence Gaps
 
@@ -183,13 +183,17 @@ may inform intent, but generated output does not directly mutate governance.
   automation.
 - **Inferred:** The imported Aether builders are candidates for Layer 6, but their original paths and
   source assumptions have not been adapted into an accepted Empathy distribution boundary.
-- **Missing:** A canonical profile schema, version-resolution contract, consumer exception model,
-  and end-to-end conformance fixture.
+- **Implemented:** The repository foundation catalog, selectable profile
+  resolution, safe preserve overrides, and Empathy golden-consumer fixture are
+  machine-readable and deterministic.
+- **Missing:** A released Holon materialization engine and the organization-wide
+  Pace convergence path.
 - **Unresolved:** Holon may own part of Layers 3 and 6 at organization scale.
 
 ## Open Questions
 
-- Where should the profile manifest and compatibility lock live?
+- Which future Pace lock should pin the released Empathy foundation and Hygiene
+  context artifacts?
 - Which layer owns migration planning when a capability changes incompatibly?
 - Should Empathy test extracted capabilities from released artifacts, source checkouts, or both?
 

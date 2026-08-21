@@ -17,25 +17,25 @@ Empathy is converging on a **strict golden baseline and integration consumer**. 
 
 ## Current ownership map
 
-| Capability / historical audit concern | Current state | Durable owner | Empathy responsibility now |
-| --- | --- | --- | --- |
-| Universal repository baseline | still-owned | Empathy | Define and prove the smallest coherent golden baseline and selectable profiles. |
-| Organization rules, ontology, repository catalog, dependency policy | extracted | Hygiene | Consume accepted organization contracts; do not redefine them locally. |
-| Repository/template materialization | extracted | Holon | Act as the golden source/consumer used to validate materialization and upgrades. |
-| AI specifications, skills, prompts, instructions, agents, provider projections | extracted | Aether | Consume pinned projections and prove integration; remove duplicated canonical AI source from Empathy as migration completes. |
-| Lint semantics, rule packs, SARIF/quality policy | extracted | Egolint | Consume released Egolint behavior; keep only Empathy-specific configuration/fixtures. |
-| Reusable GitHub Actions and CI/CD mechanics | extracted | Relay | Consume versioned workflows/actions; retain only repository-specific callers/configuration. |
-| Devcontainers, development images, reusable environment profiles | extracted | Realm | Consume released Realm environments; retain only repository-specific environment intent. |
-| Portable shell/workstation behavior | extracted | Mantle | Consume pinned Mantle releases; do not carry the canonical shell implementation. |
-| Product identity generation and design-token contract | extracted | Identity | Keep `.identity` as consumer-owned input/configuration; reusable generation belongs in Identity. |
-| Knowledge garden implementation | extracted | Mindgarden | Use Empathy as a golden consumer/integration fixture; Mindgarden owns the reusable knowledge system. |
-| Research-paper/template tooling | extracted | Beacon | Empathy may host migration evidence/examples until drained; Beacon owns reusable paper tooling. |
-| Fleet synchronization/convergence | extracted | Pace | Expose baseline/version evidence that Pace can reconcile; Empathy does not push fleet changes itself. |
-| Organization visibility/health | extracted | Observatory | Emit evidence; Observatory aggregates and presents organization state. |
-| Experiment/incubation workspace | superseded | Sanctuary (proposed organization repository) | Empathy is no longer the general-purpose incubator. Experimental work should graduate out of `.staging` or route to Sanctuary once available. |
-| `.staging` contents | draining | Mixed, according to ledger | Preserve provenance and safety while issue #59 drains each migration unit; no new unrecorded intake. |
-| Assurance/security/privacy baseline | still-owned as integration baseline; specialist ownership split | Empathy + Hygiene/Aether/Relay/Realm/Observatory/Identity | Prove safe baseline composition and reference behavior without claiming all policy/automation/deployment/visibility ownership. |
-| Website/docs baseline | blocked | Empathy baseline, Holon generation, Identity branding, Relay publication | Define the reusable baseline only after required upstream contracts are ready. |
+| Capability / historical audit concern                                          | Current state                                                   | Durable owner                                                            | Empathy responsibility now                                                                                                                    |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Universal repository baseline                                                  | still-owned                                                     | Empathy                                                                  | Define and prove the smallest coherent golden baseline and selectable profiles.                                                               |
+| Organization rules, ontology, repository catalog, dependency policy            | extracted                                                       | Hygiene                                                                  | Consume accepted organization contracts; do not redefine them locally.                                                                        |
+| Repository/template materialization                                            | extracted                                                       | Holon                                                                    | Act as the golden source/consumer used to validate materialization and upgrades.                                                              |
+| AI specifications, skills, prompts, instructions, agents, provider projections | extracted                                                       | Aether                                                                   | Consume pinned projections and prove integration; remove duplicated canonical AI source from Empathy as migration completes.                  |
+| Lint semantics, rule packs, SARIF/quality policy                               | extracted                                                       | Egolint                                                                  | Consume released Egolint behavior; keep only Empathy-specific configuration/fixtures.                                                         |
+| Reusable GitHub Actions and CI/CD mechanics                                    | extracted                                                       | Relay                                                                    | Consume versioned workflows/actions; retain only repository-specific callers/configuration.                                                   |
+| Devcontainers, development images, reusable environment profiles               | extracted                                                       | Realm                                                                    | Consume released Realm environments; retain only repository-specific environment intent.                                                      |
+| Portable shell/workstation behavior                                            | extracted                                                       | Mantle                                                                   | Consume pinned Mantle releases; do not carry the canonical shell implementation.                                                              |
+| Product identity generation and design-token contract                          | extracted                                                       | Identity                                                                 | Keep `.identity` as consumer-owned input/configuration; reusable generation belongs in Identity.                                              |
+| Knowledge garden implementation                                                | extracted                                                       | Mindgarden                                                               | Use Empathy as a golden consumer/integration fixture; Mindgarden owns the reusable knowledge system.                                          |
+| Research-paper/template tooling                                                | extracted                                                       | Beacon                                                                   | Empathy may host migration evidence/examples until drained; Beacon owns reusable paper tooling.                                               |
+| Fleet synchronization/convergence                                              | extracted                                                       | Pace                                                                     | Expose baseline/version evidence that Pace can reconcile; Empathy does not push fleet changes itself.                                         |
+| Organization visibility/health                                                 | extracted                                                       | Observatory                                                              | Emit evidence; Observatory aggregates and presents organization state.                                                                        |
+| Experiment/incubation workspace                                                | superseded                                                      | Sanctuary (proposed organization repository)                             | Empathy is no longer the general-purpose incubator. Experimental work should graduate out of `.staging` or route to Sanctuary once available. |
+| `.staging` contents                                                            | draining                                                        | Mixed, according to ledger                                               | Preserve provenance and safety while issue #59 drains each migration unit; no new unrecorded intake.                                          |
+| Assurance/security/privacy baseline                                            | still-owned as integration baseline; specialist ownership split | Empathy + Hygiene/Aether/Relay/Realm/Observatory/Identity                | Prove safe baseline composition and reference behavior without claiming all policy/automation/deployment/visibility ownership.                |
+| Website/docs baseline                                                          | blocked                                                         | Empathy baseline, Holon generation, Identity branding, Relay publication | Define the reusable baseline only after required upstream contracts are ready.                                                                |
 
 ## Current issue reconciliation
 
@@ -57,7 +57,10 @@ This is the controlled exit path for historical incubation content. It must rema
 
 ### #62 — universal repository files and profiles
 
-**State:** blocked by the accepted Hygiene/Holon contracts identified in the issue, then still-owned by Empathy as the golden baseline definition and fixture.
+**State:** implemented by the versioned foundation catalog, golden Empathy
+manifest, deterministic inventory and resolution checks, generated Hygiene
+context, and canonical EgoLint repository-contract projection. Holon retains
+materialization ownership; Empathy owns the baseline meaning and fixture.
 
 ### #63 — editor/AI/MCP profiles
 
@@ -100,7 +103,6 @@ Empathy is considered reconciled when:
 ## Follow-up ordering
 
 1. Complete #59 staging coverage/drain controls.
-2. Complete upstream Hygiene/Holon/Aether contracts needed by #62.
-3. Implement #62 universal baseline/profile contract.
-4. Layer #63, #64, and #65 only when their declared dependencies are satisfied.
-5. Split #51 into bounded specialist implementation issues as its architecture is exercised; keep Empathy focused on integration/conformance.
+2. Merge and release the #62 universal baseline/profile contract.
+3. Layer #63, #64, and #65 only when their declared dependencies are satisfied.
+4. Split #51 into bounded specialist implementation issues as its architecture is exercised; keep Empathy focused on integration/conformance.

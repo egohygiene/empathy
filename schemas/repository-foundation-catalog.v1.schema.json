@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.io/schemas/empathy/repository-foundation-catalog.v1.schema.json",
+  "title": "Empathy repository foundation catalog v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "owner",
+    "holon_contract",
+    "categories",
+    "profiles",
+    "artifacts",
+    "repository_owned_fields",
+    "generated_outputs"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "const": "empathy/repository-foundation" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "owner": { "const": "egohygiene/empathy" },
+    "holon_contract": { "type": "object" },
+    "categories": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/profile" }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/artifact" }
+    },
+    "repository_owned_fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/repositoryOwnedField" }
+    },
+    "generated_outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/generatedOutput" }
+    }
+  },
+  "$defs": {
+    "uniqueStrings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "nonEmptyUniqueStrings": {
+      "allOf": [{ "$ref": "#/$defs/uniqueStrings" }, { "minItems": 1 }]
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "dimension", "description", "requires", "conflicts"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]+$" },
+        "dimension": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "requires": { "$ref": "#/$defs/uniqueStrings" },
+        "conflicts": { "$ref": "#/$defs/uniqueStrings" }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "path",
+        "kind",
+        "category",
+        "presence",
+        "ownership",
+        "profiles",
+        "executable",
+        "markers",
+        "description"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]+$" },
+        "path": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["file", "directory"] },
+        "category": { "type": "string", "minLength": 1 },
+        "presence": { "enum": ["required", "optional", "profile"] },
+        "ownership": { "enum": ["generated", "required", "repository-owned"] },
+        "profiles": { "$ref": "#/$defs/uniqueStrings" },
+        "executable": { "type": "boolean" },
+        "markers": { "$ref": "#/$defs/uniqueStrings" },
+        "description": { "type": "string", "minLength": 1 }
+      }
+    },
+    "repositoryOwnedField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "required"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]+$" },
+        "type": { "enum": ["string", "string-array"] },
+        "required": { "type": "boolean" }
+      }
+    },
+    "generatedOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "owner", "source", "checked_in"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "owner": { "type": "string", "pattern": "^egohygiene/" },
+        "source": { "type": "string", "minLength": 1 },
+        "checked_in": { "type": "boolean" }
+      }
+    }
+  }
+}
