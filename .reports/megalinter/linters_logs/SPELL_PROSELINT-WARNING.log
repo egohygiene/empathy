@@ -20,6 +20,22 @@ Linter raw log:
 .audits/2026-08-16-taskfile-promotion.md:50:90: uncomparables: Comparison of an uncomparable: 'less complete' is not comparable.
 .audits/2026-08-16-taskfile-promotion.md:50:133: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .audits/2026-08-16-taskfile-promotion.md:51:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:22:303: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:23:294: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:24:304: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:25:348: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:26:309: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:27:315: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:28:312: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:29:304: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:30:320: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:31:324: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:32:319: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:33:325: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:34:294: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:36:324: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:37:350: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+.audits/2026-08-20-foundation-ownership.md:38:302: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:6:18: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:28:66: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 .audits/egolint/2026-08-11-complementary-toolchain-audit.md:29:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -127,7 +143,7 @@ Consent' - a phrase is repeated.
 PILLARS.md:68:38: lexical_illusions: There's a lexical illusion in 'Automation
 
 Automation' - a phrase is repeated.
-README.md:26:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+README.md:29:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:73:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:190:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 TASKS.md:14:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -383,6 +399,7 @@ beacon/README.md:48:11: typography.symbols.curly_quotes: Use curly quotes “”
 beacon/README.md:49:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/templates/research-paper/example/paper.md:2:8: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/templates/research-paper/example/paper.md:3:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/ecosystem/CONTEXT.md:8:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".

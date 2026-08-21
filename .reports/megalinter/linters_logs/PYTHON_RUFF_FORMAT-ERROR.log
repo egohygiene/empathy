@@ -579,6 +579,74 @@ unformatted: File would be reformatted
    |
 
 unformatted: File would be reformatted
+   --> tests/test_foundation_contract.py:25:45
+    |
+24  |         cls.catalog = foundation.load_json(ROOT / "foundation" / "catalog.json")
+    -         cls.manifest = foundation.load_json(
+    -             ROOT / "foundation" / "empathy.manifest.json"
+    -         )
+25  +         cls.manifest = foundation.load_json(ROOT / "foundation" / "empathy.manifest.json")
+26  |
+--------------------------------------------------------------------------------
+37  |     def test_all_required_categories_and_presence_states_are_inventory_visible(self) -> None:
+38  +         self.assertEqual(foundation.REQUIRED_CATEGORIES, set(self.catalog["categories"]))
+39  |         self.assertEqual(
+    -             foundation.REQUIRED_CATEGORIES, set(self.catalog["categories"])
+    -         )
+    -         self.assertEqual(
+40  |             {"optional", "profile", "required"},
+--------------------------------------------------------------------------------
+57  |         self.assertEqual(first, second)
+    -         self.assertEqual(
+    -             foundation.render_resolved(first), foundation.render_resolved(second)
+    -         )
+58  +         self.assertEqual(foundation.render_resolved(first), foundation.render_resolved(second))
+59  |
+--------------------------------------------------------------------------------
+68  |         self.assertEqual("preserve", artifacts["issue-template-config"]["override"])
+    -         self.assertEqual(
+    -             "required", artifacts["issue-template-config"]["ownership"]
+    -         )
+69  +         self.assertEqual("required", artifacts["issue-template-config"]["ownership"])
+70  |
+71  |     def test_generated_artifact_override_fails_closed(self) -> None:
+72  |         manifest = copy.deepcopy(self.manifest)
+    -         manifest["overrides"] = [
+    -             {"artifact": "ecosystem-context", "mode": "preserve"}
+    -         ]
+73  +         manifest["overrides"] = [{"artifact": "ecosystem-context", "mode": "preserve"}]
+74  |         resolved, errors = foundation.resolve_manifest(self.catalog, manifest)
+--------------------------------------------------------------------------------
+128 |         self.assertTrue(
+    -             any("path must be normalized" in error for error in foundation.validate_catalog(invalid_path))
+129 +             any(
+130 +                 "path must be normalized" in error
+131 +                 for error in foundation.validate_catalog(invalid_path)
+132 +             )
+133 |         )
+--------------------------------------------------------------------------------
+154 |             schema = json.loads((ROOT / "schemas" / name).read_text(encoding="utf-8"))
+    -             self.assertEqual(
+    -                 "https://json-schema.org/draft/2020-12/schema", schema["$schema"]
+    -             )
+155 +             self.assertEqual("https://json-schema.org/draft/2020-12/schema", schema["$schema"])
+156 |
+157 |     def test_checked_in_inventory_and_contract_are_current(self) -> None:
+    -         contract_path = (
+    -             ROOT / "foundation" / "contracts" / "empathy.repository-contract.toml"
+    -         )
+158 +         contract_path = ROOT / "foundation" / "contracts" / "empathy.repository-contract.toml"
+159 |         contract = tomllib.loads(contract_path.read_text(encoding="utf-8"))
+--------------------------------------------------------------------------------
+165 |             foundation.render_inventory(self.catalog),
+    -             (ROOT / "docs" / "foundation" / "INVENTORY.md").read_text(
+    -                 encoding="utf-8"
+    -             ),
+166 +             (ROOT / "docs" / "foundation" / "INVENTORY.md").read_text(encoding="utf-8"),
+167 |         )
+    |
+
+unformatted: File would be reformatted
   --> tests/test_staging_home_audit.py:89:26
    |
 88 |         self.assertEqual({row.migration_state for row in rows}, {"quarantined"})
@@ -601,6 +669,23 @@ unformatted: File would be reformatted
    |
 
 unformatted: File would be reformatted
+   --> tools/foundation.py:110:31
+    |
+109 |             if unknown:
+    -                 errors.append(f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}")
+110 +                 errors.append(
+111 +                     f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}"
+112 +                 )
+113 |             if name in requires or name in conflicts:
+--------------------------------------------------------------------------------
+263 |         or (
+    -             artifact["presence"] == "profile"
+    -             and set(artifact["profiles"]) & set(resolved_profiles)
+264 +             artifact["presence"] == "profile" and set(artifact["profiles"]) & set(resolved_profiles)
+265 |         )
+    |
+
+unformatted: File would be reformatted
     --> tools/staging_home_audit.py:1334:43
      |
 1333 |                 "by_sensitivity": counts("sensitivity"),
@@ -611,5 +696,5 @@ unformatted: File would be reformatted
 1335 |             },
      |
 
-8 files would be reformatted, 42 files already formatted
+10 files would be reformatted, 42 files already formatted
 

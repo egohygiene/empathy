@@ -29,6 +29,45 @@ tools/staging_removal_gate.py:103:42: error: Trying to read deleted variable
 "error"  [misc]
                 print(f"removal gate failed: {error}", file=sys.stderr)
                                              ^~~~~~
+tools/foundation.py: note: In function "validate_catalog":
+tools/foundation.py:88:29: error: Argument 1 to "set" has incompatible type
+"list[Any | None]"; expected "Iterable[str]"  [arg-type]
+            profile_names = set(profile_ids)
+                                ^~~~~~~~~~~
+tools/foundation.py:153:26: error: Argument 1 to "append" of "list" has
+incompatible type "Any | None"; expected "str"  [arg-type]
+                paths.append(path)
+                             ^~~~
+tools/foundation.py: note: In function "resolve_manifest":
+tools/foundation.py:276:29: error: Argument 1 to "append" of "list" has
+incompatible type "Any | None"; expected "str"  [arg-type]
+            override_ids.append(identifier)
+                                ^~~~~~~~~~
+tools/foundation.py: note: In function "main":
+tools/foundation.py:487:9: error: Assignment to variable "error" outside
+except: block  [misc]
+            for error in errors:
+            ^
+tools/foundation.py:488:59: error: Trying to read deleted variable "error" 
+[misc]
+    ...   print(f"foundation catalog validation failed: {error}", file=sys.st...
+                                                        ^~~~~~
+tools/foundation.py:514:9: error: Assignment to variable "error" outside
+except: block  [misc]
+            for error in errors:
+            ^
+tools/foundation.py:515:60: error: Trying to read deleted variable "error" 
+[misc]
+    ...  print(f"foundation manifest validation failed: {error}", file=sys.st...
+                                                        ^~~~~~
+tools/foundation.py:531:13: error: Assignment to variable "error" outside
+except: block  [misc]
+                for error in errors:
+                ^
+tools/foundation.py:532:61: error: Trying to read deleted variable "error" 
+[misc]
+    ...     print(f"golden workspace validation failed: {error}", file=sys.st...
+                                                        ^~~~~~
 tools/task_catalog.py: note: In function "render_catalog":
 tools/task_catalog.py:75:71: error: "object" has no attribute "__iter__"; maybe
 "__dir__" or "__str__"? (not iterable)  [attr-defined]
@@ -172,9 +211,249 @@ tests/test_staging_home_audit.py:104:47: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
             self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
                                                   ^~~~~~~~~
+tests/test_foundation_contract.py: note: In member "setUpClass" of class "FoundationContractTests":
+tests/test_foundation_contract.py:24:9: error: "type[FoundationContractTests]"
+has no attribute "catalog"  [attr-defined]
+            cls.catalog = foundation.load_json(ROOT / "foundation" / "cata...
+            ^~~~~~~~~~~
+tests/test_foundation_contract.py:24:23: error: Module has no attribute
+"load_json"  [attr-defined]
+            cls.catalog = foundation.load_json(ROOT / "foundation" / "cata...
+                          ^~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:25:9: error: "type[FoundationContractTests]"
+has no attribute "manifest"  [attr-defined]
+            cls.manifest = foundation.load_json(
+            ^~~~~~~~~~~~
+tests/test_foundation_contract.py:25:24: error: Module has no attribute
+"load_json"  [attr-defined]
+            cls.manifest = foundation.load_json(
+                           ^~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_catalog_and_golden_manifest_are_valid" of class "FoundationContractTests":
+tests/test_foundation_contract.py:30:30: error: Module has no attribute
+"validate_catalog"  [attr-defined]
+            self.assertEqual([], foundation.validate_catalog(self.catalog)...
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:30:58: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...       self.assertEqual([], foundation.validate_catalog(self.catalog))
+                                                               ^~~~~~~~~~~~
+tests/test_foundation_contract.py:31:28: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            resolved, errors = foundation.resolve_manifest(self.catalog, s...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:31:56: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...  resolved, errors = foundation.resolve_manifest(self.catalog, self.ma...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:31:70: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+    ...ved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
+                                                               ^~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_all_required_categories_and_presence_states_are_inventory_visible" of class "FoundationContractTests":
+tests/test_foundation_contract.py:41:13: error: Module has no attribute
+"REQUIRED_CATEGORIES"  [attr-defined]
+                foundation.REQUIRED_CATEGORIES, set(self.catalog["categori...
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:41:49: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+                foundation.REQUIRED_CATEGORIES, set(self.catalog["categori...
+                                                    ^~~~~~~~~~~~
+tests/test_foundation_contract.py:45:51: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...           {artifact["presence"] for artifact in self.catalog["artifac...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:49:52: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...          {artifact["ownership"] for artifact in self.catalog["artifac...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_resolution_is_byte_idempotent" of class "FoundationContractTests":
+tests/test_foundation_contract.py:53:31: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            first, first_errors = foundation.resolve_manifest(self.catalog...
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:53:59: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...irst, first_errors = foundation.resolve_manifest(self.catalog, self.ma...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:53:73: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+    ...irst_errors = foundation.resolve_manifest(self.catalog, self.manifest)
+                                                               ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:54:33: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            second, second_errors = foundation.resolve_manifest(
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:55:27: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+                copy.deepcopy(self.catalog), copy.deepcopy(self.manifest)
+                              ^~~~~~~~~~~~
+tests/test_foundation_contract.py:55:56: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+                copy.deepcopy(self.catalog), copy.deepcopy(self.manifest)
+                                                           ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:63:13: error: Module has no attribute
+"render_resolved"  [attr-defined]
+                foundation.render_resolved(first), foundation.render_resol...
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_safe_override_preserves_repository_ownership" of class "FoundationContractTests":
+tests/test_foundation_contract.py:67:28: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            resolved, errors = foundation.resolve_manifest(self.catalog, s...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:67:56: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...  resolved, errors = foundation.resolve_manifest(self.catalog, self.ma...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:67:70: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+    ...ved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
+                                                               ^~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_generated_artifact_override_fails_closed" of class "FoundationContractTests":
+tests/test_foundation_contract.py:80:34: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+            manifest = copy.deepcopy(self.manifest)
+                                     ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:84:28: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            resolved, errors = foundation.resolve_manifest(self.catalog, m...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:84:56: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...  resolved, errors = foundation.resolve_manifest(self.catalog, manifes...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_unknown_and_conflicting_profiles_fail_closed" of class "FoundationContractTests":
+tests/test_foundation_contract.py:92:33: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+            unknown = copy.deepcopy(self.manifest)
+                                    ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:94:29: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            _, unknown_errors = foundation.resolve_manifest(self.catalog, ...
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:94:57: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ... _, unknown_errors = foundation.resolve_manifest(self.catalog, unknown...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:97:34: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+            conflict = copy.deepcopy(self.manifest)
+                                     ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:99:30: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            _, conflict_errors = foundation.resolve_manifest(self.catalog,...
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:99:58: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ..._, conflict_errors = foundation.resolve_manifest(self.catalog, conflic...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_optional_artifacts_are_inventoried_but_not_enforced" of class "FoundationContractTests":
+tests/test_foundation_contract.py:106:28: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            resolved, errors = foundation.resolve_manifest(self.catalog, s...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:106:56: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...  resolved, errors = foundation.resolve_manifest(self.catalog, self.ma...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:106:70: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+    ...ved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
+                                                               ^~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_golden_workspace_satisfies_selected_foundation" of class "FoundationContractTests":
+tests/test_foundation_contract.py:115:28: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            resolved, errors = foundation.resolve_manifest(self.catalog, s...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:115:56: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...  resolved, errors = foundation.resolve_manifest(self.catalog, self.ma...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:115:70: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+    ...ved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
+                                                               ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:118:30: error: Module has no attribute
+"validate_workspace"  [attr-defined]
+            self.assertEqual([], foundation.validate_workspace(ROOT, resol...
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_inventory_and_egolint_contract_are_deterministic" of class "FoundationContractTests":
+tests/test_foundation_contract.py:121:21: error: Module has no attribute
+"render_inventory"  [attr-defined]
+            inventory = foundation.render_inventory(self.catalog)
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:121:49: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+            inventory = foundation.render_inventory(self.catalog)
+                                                    ^~~~~~~~~~~~
+tests/test_foundation_contract.py:122:37: error: Module has no attribute
+"render_inventory"  [attr-defined]
+            self.assertEqual(inventory, foundation.render_inventory(copy.d...
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:122:79: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...l(inventory, foundation.render_inventory(copy.deepcopy(self.catalog)))
+                                                              ^~~~~~~~~~~~
+tests/test_foundation_contract.py:126:28: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            resolved, errors = foundation.resolve_manifest(self.catalog, s...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:126:56: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...  resolved, errors = foundation.resolve_manifest(self.catalog, self.ma...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:126:70: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+    ...ved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
+                                                               ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:129:20: error: Module has no attribute
+"render_egolint_contract"  [attr-defined]
+            contract = foundation.render_egolint_contract(resolved, SOURCE...
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_invalid_catalog_paths_and_generated_markers_are_rejected" of class "FoundationContractTests":
+tests/test_foundation_contract.py:136:38: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+            invalid_path = copy.deepcopy(self.catalog)
+                                         ^~~~~~~~~~~~
+tests/test_foundation_contract.py:139:65: error: Module has no attribute
+"validate_catalog"  [attr-defined]
+    ...("path must be normalized" in error for error in foundation.validate_c...
+                                                        ^~~~~~~~~~~~~~~~~~~~~...
+tests/test_foundation_contract.py:142:40: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+            missing_marker = copy.deepcopy(self.catalog)
+                                           ^~~~~~~~~~~~
+tests/test_foundation_contract.py:152:30: error: Module has no attribute
+"validate_catalog"  [attr-defined]
+                    for error in foundation.validate_catalog(missing_marke...
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py: note: In member "test_checked_in_inventory_and_contract_are_current" of class "FoundationContractTests":
+tests/test_foundation_contract.py:172:28: error: Module has no attribute
+"resolve_manifest"  [attr-defined]
+            resolved, errors = foundation.resolve_manifest(self.catalog, s...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:172:56: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+    ...  resolved, errors = foundation.resolve_manifest(self.catalog, self.ma...
+                                                        ^~~~~~~~~~~~
+tests/test_foundation_contract.py:172:70: error: "FoundationContractTests" has
+no attribute "manifest"  [attr-defined]
+    ...ved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
+                                                               ^~~~~~~~~~~~~
+tests/test_foundation_contract.py:176:13: error: Module has no attribute
+"render_inventory"  [attr-defined]
+                foundation.render_inventory(self.catalog),
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_contract.py:176:41: error: "FoundationContractTests" has
+no attribute "catalog"  [attr-defined]
+                foundation.render_inventory(self.catalog),
+                                            ^~~~~~~~~~~~
+tests/test_foundation_contract.py:182:13: error: Module has no attribute
+"render_egolint_contract"  [attr-defined]
+                foundation.render_egolint_contract(resolved, source_revisi...
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 36 errors in 4 files (checked 42 source files)
+Found 102 errors in 6 files (checked 44 source files)
 
