@@ -56,7 +56,7 @@ jobs:
       - name: Upload SARIF to code scanning
         if: always()
         # github/codeql-action v4.37.6
-        uses: github/codeql-action/upload-sarif@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd
+        uses: github/codeql-action/upload-sarif@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28
         with:
           sarif_file: results.sarif
           category: ossf-scorecard
@@ -160,7 +160,7 @@ jobs:
           fi
 
       - name: Normalize repository-intelligence summary
-        uses: egohygiene/relay/actions/normalize-repository-report@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
+        uses: egohygiene/relay/actions/normalize-repository-report@aaadf940c3470bd6beb2266619c3b95295635145 # v1.2.0
         with:
           producer: scorecard
           input: .cache/scorecard/results.sarif
@@ -168,7 +168,7 @@ jobs:
           scorecard-api-input: "${{ steps.scorecard-api.outputs.path }}"
 
       - name: Publish stable Scorecard summary
-        uses: egohygiene/relay/actions/publish-report-snapshot@ca6e9319d5133615c1b9e0b5ea5a4f5d3a113210 # v1.0.0
+        uses: egohygiene/relay/actions/publish-report-snapshot@aaadf940c3470bd6beb2266619c3b95295635145 # v1.2.0
         with:
           paths: .reports/scorecard
           default-branch: "${{ github.event.repository.default_branch }}"
