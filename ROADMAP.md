@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-19
+updated: 2026-08-24
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -23,6 +23,155 @@ supersedes: []
 ---
 
 # Empathy Roadmap
+
+<!-- BEGIN ROADMAP EXECUTION SNAPSHOT -->
+<!-- roadmap-manifest
+schema: hygiene.roadmap/v1alpha1
+repository: egohygiene/empathy
+visibility: public
+publication: composed
+route: /roadmap/
+updated: 2026-08-24
+-->
+## 2026-08-24 execution snapshot
+
+> This evidence-reconciled snapshot is the issue-generation and visual-roadmap handoff. The longer-horizon strategy below remains canonical context; generated HTML, JSON, progress, issue plans, and commit lists are projections.
+
+**Lifecycle:** converging integration monorepo  
+**Current gate:** Restore the security baseline: PR #72 is red and the audit observed 57 high-or-greater OSV findings plus OpenSSF failures.  
+**North-star outcome:** A versioned golden foundation that integrates the ecosystem cleanly and can be reproduced from declared sources.
+
+### Visual roadmap publication
+
+**Mode:** `composed`  
+**Route:** `/roadmap/`  
+**Current publication evidence:** GitHub Pages is live and composes generated Mindgarden, site, and intelligence outputs.
+
+Compose dist/roadmap/ into the repository's existing final site artifact at /roadmap/. The current Pages workflow remains the only deployer.
+
+### Quest line
+
+<!-- roadmap-step
+id: EMP-Q01
+status: complete
+depends_on: []
+issues: []
+-->
+#### EMP-Q01 — Establish the strict integration baseline
+
+**State:** `complete`  
+**Depends on:** None
+
+**Outcome:** The monorepo has a strict integration structure and a live composite Pages surface.
+
+**Exit criteria:**
+
+- [x] The strict baseline is checked in.
+- [x] The published site composes the declared generated surfaces.
+
+**Current evidence:**
+
+- Pages was observed live.
+- The build composes .cache/mindgarden, site, and intelligence outputs.
+
+<!-- roadmap-step
+id: EMP-Q02
+status: blocked
+depends_on: [EMP-Q01]
+issues: []
+-->
+#### EMP-Q02 — Recover the security and quality baseline
+
+**State:** `blocked`  
+**Depends on:** `EMP-Q01`
+
+**Outcome:** Default-branch integration is green without unowned critical supply-chain risk.
+
+**Exit criteria:**
+
+- [ ] OSV and OpenSSF checks meet an explicitly approved threshold.
+- [ ] PR #72 or its successor is green with remediation evidence.
+
+**Current evidence:**
+
+- PR #72 was red.
+- The audit found 57 high-or-greater OSV findings and red OpenSSF checks.
+
+<!-- roadmap-step
+id: EMP-Q03
+status: ready
+depends_on: [EMP-Q02]
+issues: []
+-->
+#### EMP-Q03 — Drain staging and incubation ownership
+
+**State:** `ready`  
+**Depends on:** `EMP-Q02`
+
+**Outcome:** Incubated components move to their durable repositories or have explicit retained ownership.
+
+**Exit criteria:**
+
+- [ ] Every staged component has a disposition and owner.
+- [ ] Cross-repository copies have a single authoritative source.
+
+**Current evidence:**
+
+- The current gate includes ownership drain from the integration monorepo.
+
+<!-- roadmap-step
+id: EMP-Q04
+status: planned
+depends_on: [EMP-Q03]
+issues: [63, 64, 65]
+-->
+#### EMP-Q04 — Complete the foundation profiles
+
+**State:** `planned`  
+**Depends on:** `EMP-Q03`
+
+**Outcome:** The planned golden-foundation profiles are complete and acceptance-tested.
+
+**Exit criteria:**
+
+- [ ] Issues #63, #64, and #65 meet their acceptance criteria.
+- [ ] Each profile is covered by deterministic integration tests.
+
+**Current evidence:**
+
+- Issues #63-#65 are the identified profile backlog.
+
+<!-- roadmap-step
+id: EMP-Q05
+status: planned
+depends_on: [EMP-Q02, EMP-Q04]
+issues: []
+-->
+#### EMP-Q05 — Prove and release the golden foundation
+
+**State:** `planned`  
+**Depends on:** `EMP-Q02`, `EMP-Q04`
+
+**Outcome:** A clean-room Holon materialization reproduces a tagged Empathy baseline.
+
+**Exit criteria:**
+
+- [ ] A fresh environment is materialized and verified from pinned inputs.
+- [ ] A versioned baseline release includes provenance and recovery instructions.
+
+**Current evidence:**
+
+- No clean-room Holon proof or durable baseline release was observed.
+
+### Roadmap-to-issue handoff
+
+- A step is complete only when its exit criteria and required evidence are satisfied; commit count never determines progress.
+- Ready or planned steps without an issue are candidates for the private, duplicate-aware roadmap.issue-plan.json dry run.
+- Issue creation or reconciliation requires human approval or an explicitly authorized Pace operation and returns issue references through a reviewable roadmap pull request.
+- Pull requests and commits should include Roadmap-Step: <ID>; historical evidence may be linked through existing issue and pull-request relationships.
+- Public rendering uses only allowlisted build-time evidence and never places a GitHub token or private issue plan in the browser artifact.
+
+<!-- END ROADMAP EXECUTION SNAPSHOT -->
 
 ## Accepted Direction: Baseline Convergence
 
