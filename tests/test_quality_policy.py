@@ -38,7 +38,6 @@ INLINE_HEADER_EXEMPT_PREFIXES = (
     "beacon/templates/",
     "holon/packs/react-vite/template/",
     "notebooks/jupyter/themes/",
-    "research/antidote/templates/",
 )
 
 

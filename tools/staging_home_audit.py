@@ -538,8 +538,9 @@ def classify_hygiene(relative: str) -> Classification:
         incubation = f"identity/.staging/references/ego-hygiene/{name}"
         final = f".identity/references/ego-hygiene/{name}"
     elif owner == "research":
-        incubation = f"research/.staging/assets/therapy/{name}"
-        final = f"research/antidote/assets/references/{name}"
+        owner = "antidote"
+        incubation = f"antidote/.staging/assets/references/{name}"
+        final = f"antidote/assets/references/{name}"
     else:
         incubation = f"{owner}/.staging/assets/references/{name}"
         final = f"{owner}/assets/references/{name}"
