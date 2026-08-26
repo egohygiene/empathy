@@ -265,7 +265,7 @@ tools/foundation.py:236:0: R0912: Too many branches (20/12) (too-many-branches)
 tools/foundation.py:478:0: R0911: Too many return statements (16/6) (too-many-return-statements)
 tools/foundation.py:478:0: R0912: Too many branches (18/12) (too-many-branches)
 ************* Module staging_home_audit
-tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1394/1000) (too-many-lines)
+tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1395/1000) (too-many-lines)
 tools/staging_home_audit.py:64:0: R0902: Too many instance attributes (24/12) (too-many-instance-attributes)
 tools/staging_home_audit.py:227:0: R0911: Too many return statements (15/6) (too-many-return-statements)
 tools/staging_home_audit.py:227:0: R0912: Too many branches (14/12) (too-many-branches)
@@ -273,13 +273,13 @@ tools/staging_home_audit.py:279:0: R0911: Too many return statements (7/6) (too-
 tools/staging_home_audit.py:279:22: W0613: Unused argument 'path' (unused-argument)
 tools/staging_home_audit.py:413:0: R0912: Too many branches (16/12) (too-many-branches)
 tools/staging_home_audit.py:413:0: R0915: Too many statements (69/60) (too-many-statements)
-tools/staging_home_audit.py:664:0: R0911: Too many return statements (44/6) (too-many-return-statements)
-tools/staging_home_audit.py:664:0: R0912: Too many branches (44/12) (too-many-branches)
-tools/staging_home_audit.py:664:0: R0915: Too many statements (66/60) (too-many-statements)
-tools/staging_home_audit.py:1170:0: R0911: Too many return statements (8/6) (too-many-return-statements)
-tools/staging_home_audit.py:1229:0: R0914: Too many local variables (22/20) (too-many-locals)
+tools/staging_home_audit.py:665:0: R0911: Too many return statements (44/6) (too-many-return-statements)
+tools/staging_home_audit.py:665:0: R0912: Too many branches (44/12) (too-many-branches)
+tools/staging_home_audit.py:665:0: R0915: Too many statements (66/60) (too-many-statements)
+tools/staging_home_audit.py:1171:0: R0911: Too many return statements (8/6) (too-many-return-statements)
+tools/staging_home_audit.py:1230:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.49/10
+Your code has been rated at 9.50/10
 
 

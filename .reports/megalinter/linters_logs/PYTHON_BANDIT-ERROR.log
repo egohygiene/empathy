@@ -10,9 +10,83 @@ Linter raw log:
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-08-26 06:09:24.305882+00:00
+Run started:2026-08-26 22:17:33.145775+00:00
 
 Test results:
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tests/test_identity_integration.py:9:0
+8	from pathlib import Path, PurePosixPath
+9	import subprocess
+10	import tomllib
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_identity_integration.py:44:21
+43	
+44	        tree_entry = subprocess.run(
+45	            ["git", "ls-tree", "HEAD", "identity"],
+46	            cwd=REPOSITORY_ROOT,
+47	            check=True,
+48	            capture_output=True,
+49	            text=True,
+50	        ).stdout.strip()
+51	        mode, object_type, revision_and_path = tree_entry.split(maxsplit=2)
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_identity_integration.py:44:21
+43	
+44	        tree_entry = subprocess.run(
+45	            ["git", "ls-tree", "HEAD", "identity"],
+46	            cwd=REPOSITORY_ROOT,
+47	            check=True,
+48	            capture_output=True,
+49	            text=True,
+50	        ).stdout.strip()
+51	        mode, object_type, revision_and_path = tree_entry.split(maxsplit=2)
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_identity_integration.py:58:28
+57	
+58	        worktree_revision = subprocess.run(
+59	            ["git", "-C", "identity", "rev-parse", "HEAD"],
+60	            cwd=REPOSITORY_ROOT,
+61	            check=True,
+62	            capture_output=True,
+63	            text=True,
+64	        ).stdout.strip()
+65	        self.assertEqual(worktree_revision, self.consumer_lock["revision"])
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_identity_integration.py:58:28
+57	
+58	        worktree_revision = subprocess.run(
+59	            ["git", "-C", "identity", "rev-parse", "HEAD"],
+60	            cwd=REPOSITORY_ROOT,
+61	            check=True,
+62	            capture_output=True,
+63	            text=True,
+64	        ).stdout.strip()
+65	        self.assertEqual(worktree_revision, self.consumer_lock["revision"])
+
+--------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
@@ -80,21 +154,21 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 9861
+	Total lines of code: 9919
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 22
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 6
+		Low: 11
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 6
+		High: 11
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)

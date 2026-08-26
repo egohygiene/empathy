@@ -647,6 +647,27 @@ unformatted: File would be reformatted
     |
 
 unformatted: File would be reformatted
+   --> tests/test_identity_integration.py:144:83
+    |
+143 |         project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(encoding="utf8")
+    -         workflow = (REPOSITORY_ROOT / ".github/workflows/identity.yml").read_text(
+    -             encoding="utf8"
+    -         )
+144 +         workflow = (REPOSITORY_ROOT / ".github/workflows/identity.yml").read_text(encoding="utf8")
+145 |
+--------------------------------------------------------------------------------
+155 |         self.assertIn("internal: true", taskfile)
+    -         self.assertIn('.config/identity/consumer-lock.json', taskfile)
+156 +         self.assertIn(".config/identity/consumer-lock.json", taskfile)
+157 |         self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
+--------------------------------------------------------------------------------
+161 |         self.assertIn("Verify immutable consumer pin", workflow)
+    -         self.assertIn('.config/identity/consumer-lock.json', workflow)
+162 +         self.assertIn(".config/identity/consumer-lock.json", workflow)
+163 |
+    |
+
+unformatted: File would be reformatted
   --> tests/test_staging_home_audit.py:89:26
    |
 88 |         self.assertEqual({row.migration_state for row in rows}, {"quarantined"})
@@ -686,15 +707,15 @@ unformatted: File would be reformatted
     |
 
 unformatted: File would be reformatted
-    --> tools/staging_home_audit.py:1334:43
+    --> tools/staging_home_audit.py:1335:43
      |
-1333 |                 "by_sensitivity": counts("sensitivity"),
+1334 |                 "by_sensitivity": counts("sensitivity"),
      -                 "unclassified_files": sum(
      -                     row.canonical_owner == "manual-review" for row in rows
      -                 ),
-1334 +                 "unclassified_files": sum(row.canonical_owner == "manual-review" for row in rows),
-1335 |             },
+1335 +                 "unclassified_files": sum(row.canonical_owner == "manual-review" for row in rows),
+1336 |             },
      |
 
-10 files would be reformatted, 42 files already formatted
+11 files would be reformatted, 41 files already formatted
 
