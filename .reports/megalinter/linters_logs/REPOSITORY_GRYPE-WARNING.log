@@ -130,5 +130,5 @@ asteval                      1.0.6                                     1.0.9    
 asteval                      1.0.6                                     1.0.9     python         GHSA-9w56-46f6-3qhx  Medium    N/A           N/A    
 smol-toml                    1.5.2                                     1.6.1     npm            GHSA-v3rj-xjv7-4jmq  Medium    N/A           N/A    
 esbuild                      0.27.7                                    0.28.1    npm            GHSA-g7r4-m6w7-qqqr  Low       N/A           N/A
-[0128] ERROR discovered vulnerabilities at or above the severity threshold
+[0124] ERROR discovered vulnerabilities at or above the severity threshold
 
