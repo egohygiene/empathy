@@ -41,9 +41,9 @@ quality layers:
 - an incubated Mindgarden holon with versioned `.garden` contracts,
   dependency-free validation, deterministic agent access, a reviewed-public
   Quartz projection, and Empathy as its first consumer.
-- an incubated Rust `identity` holon with a consumer-owned `.identity/`
-  contract, versioned asset profiles, deterministic planning, and a contextual
-  creative handoff that keeps human approval canonical.
+- an immutable [Identity consumer integration](docs/integrations/IDENTITY.md)
+  pinned to the canonical `egohygiene/identity` repository, while Empathy keeps
+  its `.identity/` intent, generated assets, and human approval repository-owned.
 - an incubated Rust `beacon` holon with versioned document-template packages,
   deterministic project initialization, binary-level smoke coverage, and root
   validation integration.
@@ -70,12 +70,14 @@ because Husky owns the repository hook path.
 Commit messages use `type(scope): emoji subject` and can be authored through
 `task commit:create`.
 
-The standard check validates task composition, formatting, tests, the incubated
-holons and frontend pack, and the holistic Egolint profile. Focused commands
-reduce that scope deliberately. See [the Egolint subsystem](egolint/README.md) and
+The standard check validates task composition, formatting, tests, external
+consumer integrations, the remaining incubated holons and frontend pack, and
+the holistic Egolint profile. Focused commands reduce that scope deliberately.
+See [the Egolint subsystem](egolint/README.md) and
 [the composite action catalog](.github/actions/README.md) for their contracts.
 See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle,
-[`identity`](identity/README.md) for the visual identity lifecycle, and
+[the Identity consumer integration](docs/integrations/IDENTITY.md) for the
+immutable visual-identity dependency and Empathy authority boundary, and
 [`beacon`](beacon/README.md) for reproducible document-project bootstrapping.
 See [`holon/packs/react-vite`](holon/packs/react-vite/README.md) for the
 incubating frontend repository pack and its staging-promotion ledger.

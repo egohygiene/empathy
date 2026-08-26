@@ -3,19 +3,67 @@
 
 from __future__ import annotations
 
+import configparser
 import json
 from pathlib import Path, PurePosixPath
+import subprocess
 import tomllib
 import unittest
 
 REPOSITORY_ROOT = Path(__file__).parents[1]
 IDENTITY_ROOT = REPOSITORY_ROOT / "identity"
 PROJECT_SPEC_PATH = REPOSITORY_ROOT / ".identity" / "identity.toml"
+CONSUMER_LOCK_PATH = REPOSITORY_ROOT / ".config" / "identity" / "consumer-lock.json"
+GITMODULES_PATH = REPOSITORY_ROOT / ".gitmodules"
 
 
 class IdentityIntegrationTests(unittest.TestCase):
     def setUp(self) -> None:
         self.specification = tomllib.loads(PROJECT_SPEC_PATH.read_text(encoding="utf8"))
+        self.consumer_lock = json.loads(CONSUMER_LOCK_PATH.read_text(encoding="utf8"))
+
+    def test_identity_source_is_an_immutable_submodule(self) -> None:
+        self.assertEqual(self.consumer_lock["schema"], "identity.consumer-lock/v1")
+        self.assertEqual(self.consumer_lock["consumer"], "egohygiene/empathy")
+        self.assertEqual(self.consumer_lock["repository"], "egohygiene/identity")
+        self.assertEqual(self.consumer_lock["revision_kind"], "git-commit")
+        self.assertEqual(self.consumer_lock["path"], "identity")
+        self.assertRegex(self.consumer_lock["revision"], r"^[0-9a-f]{40}$")
+        self.assertRegex(self.consumer_lock["source_extraction_revision"], r"^[0-9a-f]{40}$")
+
+        gitmodules = configparser.ConfigParser()
+        gitmodules.read(GITMODULES_PATH, encoding="utf8")
+        section = 'submodule "identity"'
+        self.assertTrue(gitmodules.has_section(section))
+        self.assertEqual(gitmodules[section]["path"], "identity")
+        self.assertEqual(
+            gitmodules[section]["url"],
+            "https://github.com/egohygiene/identity.git",
+        )
+
+        tree_entry = subprocess.run(
+            ["git", "ls-tree", "HEAD", "identity"],
+            cwd=REPOSITORY_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        mode, object_type, revision_and_path = tree_entry.split(maxsplit=2)
+        tree_revision, tree_path = revision_and_path.split("\t", maxsplit=1)
+        self.assertEqual(mode, "160000")
+        self.assertEqual(object_type, "commit")
+        self.assertEqual(tree_path, "identity")
+        self.assertEqual(tree_revision, self.consumer_lock["revision"])
+
+        worktree_revision = subprocess.run(
+            ["git", "-C", "identity", "rev-parse", "HEAD"],
+            cwd=REPOSITORY_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        self.assertEqual(worktree_revision, self.consumer_lock["revision"])
+        self.assertTrue((IDENTITY_ROOT / "Cargo.toml").is_file())
 
     def test_empathy_selects_versioned_profiles_and_human_approval(self) -> None:
         self.assertEqual(self.specification["schema"], "identity.project/v0")
@@ -87,17 +135,33 @@ class IdentityIntegrationTests(unittest.TestCase):
         for context_path in self.specification["context"]["files"]:
             self.assertTrue((REPOSITORY_ROOT / context_path).is_file(), context_path)
 
-    def test_task_contract_exposes_identity_workflow(self) -> None:
+        self.assertTrue((REPOSITORY_ROOT / "docs" / "integrations" / "IDENTITY.md").is_file())
+
+    def test_task_and_ci_contracts_use_the_pinned_consumer(self) -> None:
         root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
         taskfile = (REPOSITORY_ROOT / ".tasks/identity.yml").read_text(encoding="utf8")
         project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(encoding="utf8")
+        workflow = (REPOSITORY_ROOT / ".github/workflows/identity.yml").read_text(
+            encoding="utf8"
+        )
 
         self.assertIn("taskfile: ./.tasks/identity.yml", root_taskfile)
         self.assertIn("flatten: true", root_taskfile)
-        for task_name in ("identity:check:", "identity:plan:", "identity:handoff:"):
+        for task_name in (
+            "identity:pin:check:",
+            "identity:check:",
+            "identity:plan:",
+            "identity:handoff:",
+        ):
             self.assertIn(task_name, taskfile)
+        self.assertIn("internal: true", taskfile)
+        self.assertIn('.config/identity/consumer-lock.json', taskfile)
         self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
         self.assertIn("- identity:check", project_tasks)
+
+        self.assertIn("submodules: recursive", workflow)
+        self.assertIn("Verify immutable consumer pin", workflow)
+        self.assertIn('.config/identity/consumer-lock.json', workflow)
 
 
 if __name__ == "__main__":

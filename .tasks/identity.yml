@@ -4,8 +4,35 @@
 version: "3"
 
 tasks:
+  identity:pin:check:
+    desc: Verify Empathy consumes the reviewed immutable Identity revision
+    internal: true
+    preconditions:
+      - sh: test -f "identity/Cargo.toml"
+        msg: >-
+          Identity is not initialized. Run:
+          git submodule update --init --recursive "identity"
+    cmds:
+      - |
+        set -euo pipefail
+        expected_revision="$(python3 - <<'PY'
+        import json
+        from pathlib import Path
+
+        lock = json.loads(Path(".config/identity/consumer-lock.json").read_text(encoding="utf-8"))
+        print(lock["revision"])
+        PY
+        )"
+        tree_revision="$(git ls-tree "HEAD" "identity" | awk '{print $3}')"
+        worktree_revision="$(git -C "identity" rev-parse "HEAD")"
+        test "${tree_revision}" = "${expected_revision}"
+        test "${worktree_revision}" = "${expected_revision}"
+        test -z "$(git -C "identity" status --short)"
+
   identity:check:
-    desc: Validate the incubated identity holon and Empathy identity contract
+    desc: Validate the pinned Identity CLI and Empathy identity contract
+    deps:
+      - identity:pin:check
     cmds:
       - cargo fmt --manifest-path "identity/Cargo.toml" --all --check
       - >-
@@ -25,7 +52,9 @@ tasks:
         --repository-root "."
 
   identity:plan:
-    desc: Render Empathy's resolved identity target plan
+    desc: Render Empathy's resolved identity target plan with the pinned CLI
+    deps:
+      - identity:pin:check
     cmds:
       - >-
         cargo run
@@ -37,7 +66,9 @@ tasks:
         --format "markdown"
 
   identity:handoff:
-    desc: Build the contextual creative handoff for Empathy
+    desc: Build Empathy's contextual creative handoff with the pinned CLI
+    deps:
+      - identity:pin:check
     cmds:
       - >-
         cargo run

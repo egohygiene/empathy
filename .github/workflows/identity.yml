@@ -1,13 +1,18 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 
-name: Validate identity
+name: Validate Identity consumer
 
 on:
   pull_request:
     paths:
+      - ".gitmodules"
+      - ".config/identity/**"
       - ".identity/**"
       - ".github/workflows/identity.yml"
+      - ".tasks/identity.yml"
+      - "docs/integrations/IDENTITY.md"
+      - "identity"
       - "identity/**"
       - "tests/test_identity_integration.py"
       - "Taskfile.yml"
@@ -15,8 +20,13 @@ on:
     branches:
       - main
     paths:
+      - ".gitmodules"
+      - ".config/identity/**"
       - ".identity/**"
       - ".github/workflows/identity.yml"
+      - ".tasks/identity.yml"
+      - "docs/integrations/IDENTITY.md"
+      - "identity"
       - "identity/**"
       - "tests/test_identity_integration.py"
       - "Taskfile.yml"
@@ -31,9 +41,9 @@ concurrency:
 
 jobs:
   validate:
-    name: Validate Rust holon and Empathy contract
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
+    name: Validate immutable Identity consumer and Empathy contract
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
 
     steps:
       - name: Harden Runner
@@ -42,11 +52,35 @@ jobs:
         with:
           egress-policy: audit
 
-      - name: Checkout repository
+      - name: Checkout repository and pinned Identity source
         # actions/checkout v7.0.1
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Verify immutable consumer pin
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_revision="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          lock = json.loads(Path(".config/identity/consumer-lock.json").read_text(encoding="utf-8"))
+          assert lock["schema"] == "identity.consumer-lock/v1"
+          assert lock["repository"] == "egohygiene/identity"
+          assert lock["revision_kind"] == "git-commit"
+          print(lock["revision"])
+          PY
+          )"
+          tree_revision="$(git ls-tree "HEAD" "identity" | awk '{print $3}')"
+          worktree_revision="$(git -C "identity" rev-parse "HEAD")"
+          test "${tree_revision}" = "${expected_revision}"
+          test "${worktree_revision}" = "${expected_revision}"
+          test -z "$(git -C "identity" status --short)"
+          git submodule status --recursive
 
       - name: Install pinned Rust toolchain
         shell: bash
@@ -55,6 +89,14 @@ jobs:
           rustup toolchain install "1.97.1" \
             --profile "minimal" \
             --component "clippy,rustfmt"
+
+      - name: Verify locked dependency resolution
+        run: >-
+          cargo metadata
+          --manifest-path "identity/Cargo.toml"
+          --locked
+          --format-version "1"
+          --no-deps
 
       - name: Verify formatting
         run: cargo fmt --manifest-path "identity/Cargo.toml" --all --check
