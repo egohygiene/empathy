@@ -1,0 +1,12 @@
+{
+  "schema": "identity.consumer-lock/v1",
+  "consumer": "egohygiene/empathy",
+  "repository": "egohygiene/identity",
+  "url": "https://github.com/egohygiene/identity.git",
+  "path": "identity",
+  "revision": "73e7add02dbd11c38cf8a76d03d7ef2219e252ac",
+  "revision_kind": "git-commit",
+  "source_extraction_revision": "cbd6e0dfb08befa1d8bf795f5328bac9fddb27fc",
+  "governing_issue": "https://github.com/egohygiene/identity/issues/8",
+  "updated": "2026-08-26"
+}
