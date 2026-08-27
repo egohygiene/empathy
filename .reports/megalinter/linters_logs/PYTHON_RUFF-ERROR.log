@@ -8058,59 +8058,6 @@ PT018 Assertion should be broken down into multiple parts
    |
 help: Break down assertion into multiple parts
 
-S607 Starting a process with a partial executable path
-  --> tests/test_identity_integration.py:45:13
-   |
-44 |         tree_entry = subprocess.run(
-45 |             ["git", "ls-tree", "HEAD", "identity"],
-   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-46 |             cwd=REPOSITORY_ROOT,
-47 |             check=True,
-   |
-
-S607 Starting a process with a partial executable path
-  --> tests/test_identity_integration.py:59:13
-   |
-58 |         worktree_revision = subprocess.run(
-59 |             ["git", "-C", "identity", "rev-parse", "HEAD"],
-   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-60 |             cwd=REPOSITORY_ROOT,
-61 |             check=True,
-   |
-
-Q000 [*] Single quotes found but double quotes preferred
-   --> tests/test_identity_integration.py:158:23
-    |
-156 |             self.assertIn(task_name, taskfile)
-157 |         self.assertIn("internal: true", taskfile)
-158 |         self.assertIn('.config/identity/consumer-lock.json', taskfile)
-    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-159 |         self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
-160 |         self.assertIn("- identity:check", project_tasks)
-    |
-help: Replace single quotes with double quotes
-    |
-157 |         self.assertIn("internal: true", taskfile)
-    -         self.assertIn('.config/identity/consumer-lock.json', taskfile)
-158 +         self.assertIn(".config/identity/consumer-lock.json", taskfile)
-159 |         self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
-    |
-
-Q000 [*] Single quotes found but double quotes preferred
-   --> tests/test_identity_integration.py:164:23
-    |
-162 |         self.assertIn("submodules: recursive", workflow)
-163 |         self.assertIn("Verify immutable consumer pin", workflow)
-164 |         self.assertIn('.config/identity/consumer-lock.json', workflow)
-    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-help: Replace single quotes with double quotes
-    |
-163 |         self.assertIn("Verify immutable consumer pin", workflow)
-    -         self.assertIn('.config/identity/consumer-lock.json', workflow)
-164 +         self.assertIn(".config/identity/consumer-lock.json", workflow)
-165 |
-    |
-
 I001 [*] Import block is un-sorted or un-formatted
  --> tests/test_staging_removal_gate.py:4:1
   |
@@ -8284,6 +8231,6 @@ T201 `print` found
     |
 help: Remove `print`
 
-Found 735 errors.
-[*] 41 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
+Found 731 errors.
+[*] 39 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
 

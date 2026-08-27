@@ -349,22 +349,22 @@ Clone found (yaml)
  - .github/workflow-profiles/security-optional/dependency-review.yml [29:1 - 42:11] (14 lines, 96 tokens)
    .github/workflows/dependency-review.yml [36:1 - 49:11]
 Clone found (yaml)
- - .github/workflows/automation.yml [8:1 - 22:3] (15 lines, 56 tokens)
-   .github/workflows/automation.yml [25:1 - 39:3]
+ - .github/workflows/automation.yml [8:1 - 23:3] (16 lines, 60 tokens)
+   .github/workflows/automation.yml [26:1 - 41:3]
 Clone found (yaml)
- - .github/workflows/automation.yml [51:1 - 61:24] (11 lines, 62 tokens)
+ - .github/workflows/automation.yml [53:1 - 63:24] (11 lines, 62 tokens)
    .github/workflows/repository-intelligence.yml [40:1 - 50:24]
 Clone found (yaml)
- - .github/workflows/automation.yml [54:1 - 67:15] (14 lines, 75 tokens)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 75 tokens)
    .github/workflows/codeql.yml [40:1 - 53:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [54:1 - 67:15] (14 lines, 75 tokens)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 75 tokens)
    .github/workflows/lint-architecture.yml [50:1 - 63:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [54:1 - 65:32] (12 lines, 68 tokens)
+ - .github/workflows/automation.yml [56:1 - 67:32] (12 lines, 68 tokens)
    .github/workflows/megalinter.yml [35:1 - 46:24]
 Clone found (yaml)
- - .github/workflows/automation.yml [57:1 - 67:15] (11 lines, 61 tokens)
+ - .github/workflows/automation.yml [59:1 - 69:15] (11 lines, 61 tokens)
    .github/workflows/mantle.yml [50:1 - 60:15]
 Clone found (yaml)
  - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 62 tokens)
@@ -528,9 +528,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
-Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
-   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 510:27] (14 lines, 479 tokens)
    .staging/.github/agents/awesome/gem-mobile-tester.agent.md:markdown [84:36 - 98:4]
@@ -1012,14 +1009,20 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [24:124 - 128:4] (105 lines, 250 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [22:119 - 127:4]
 Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [28:53 - 116:8] (89 lines, 103 tokens)
-   .staging/.github/skills/create-specification/SKILL.md:markdown [26:53 - 114:12]
-Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 114:28] (84 lines, 1122 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [29:1 - 112:28]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [33:25 - 58:4] (26 lines, 281 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [31:25 - 56:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [59:1 - 116:2] (58 lines, 795 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [57:1 - 114:5]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [112:31 - 117:110] (6 lines, 54 tokens)
+   .staging/.github/skills/update-specification/SKILL.md:markdown [110:31 - 115:110]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1825,8 +1828,14 @@ Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [124:22 - 131:3] (8 lines, 64 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [96:22 - 103:3]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [130:35 - 141:3] (12 lines, 179 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [102:35 - 113:3]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [140:35 - 148:124] (9 lines, 156 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [112:35 - 120:124]
 Clone found (markdown)
  - .staging/.github/skills/create-llms/SKILL.md:markdown [53:32 - 108:13] (56 lines, 562 tokens)
    .staging/.github/skills/update-llms/SKILL.md:markdown [47:42 - 96:13]
@@ -2556,9 +2565,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [110:16 - 124:125] (15 lines, 576 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2526:50 - 2551:7]
-Clone found (markdown)
- - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [163:28 - 168:2] (6 lines, 50 tokens)
-   .staging/.github/skills/quality-playbook/SKILL.md:markdown [1282:112 - 1286:2]
 Clone found (yaml)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:yaml [59:1 - 178:48] (120 lines, 71 tokens)
    .staging/.github/skills/phoenix-evals/references/axial-coding.md:yaml [29:1 - 73:48]
@@ -2694,9 +2700,6 @@ Clone found (yaml)
 Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
-Clone found (markdown)
- - .staging/.github/skills/quality-playbook/SKILL.md:markdown [300:45 - 305:2] (6 lines, 50 tokens)
-   .staging/.github/skills/quality-playbook/SKILL.md:markdown [318:23 - 322:2]
 Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [1223:63 - 1244:14] (22 lines, 530 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2150:63 - 2166:62]
@@ -9511,7 +9514,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1720           │ 330337      │ 4257282      │ 690          │ 11638 (3.52%)    │ 172662 (4.06%)    │
+│ markdown     │ 1720           │ 330337      │ 4257282      │ 691          │ 11556 (3.50%)    │ 173848 (4.08%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9533,7 +9536,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 288            │ 71934       │ 443512       │ 130          │ 1307 (1.82%)     │ 12309 (2.78%)     │
+│ python       │ 288            │ 71976       │ 443628       │ 130          │ 1307 (1.82%)     │ 12309 (2.77%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9565,12 +9568,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 553            │ 57205       │ 316449       │ 348          │ 9363 (16.37%)    │ 105216 (33.25%)   │
+│ yaml         │ 553            │ 57207       │ 316457       │ 348          │ 9364 (16.37%)    │ 105220 (33.25%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4735           │ 980948      │ 7701219      │ 3146         │ 59404 (6.06%)    │ 762114 (9.90%)    │
+│ Total:       │ 4735           │ 980992      │ 7701343      │ 3147         │ 59323 (6.05%)    │ 763304 (9.91%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3146 clones.
+Found 3147 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 17.40s
+ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
+time: 17.39s
 

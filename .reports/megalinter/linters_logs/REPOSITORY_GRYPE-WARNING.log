@@ -7,15 +7,15 @@ Linter raw log:
 [0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal) from=syft
 NAME                         INSTALLED                                 FIXED IN  TYPE           VULNERABILITY        SEVERITY  EPSS          RISK   
 trim                         0.0.1                                     0.0.3     npm            GHSA-w5p7-h5w8-2hfq  High      3.8% (89th)   2.8    
+urllib3                      2.5.0                                     2.6.3     python         GHSA-38jv-5279-wg99  High      2.8% (85th)   2.2    
 lodash                       4.17.21                                   4.18.0    npm            GHSA-r5fr-rjxr-66jc  High      2.8% (85th)   2.2    
-urllib3                      2.5.0                                     2.6.3     python         GHSA-38jv-5279-wg99  High      2.7% (84th)   2.1    
-python-multipart             0.0.20                                    0.0.22    python         GHSA-wp53-j4wj-2cfg  High      2.1% (80th)   1.7    
+python-multipart             0.0.20                                    0.0.22    python         GHSA-wp53-j4wj-2cfg  High      2.2% (80th)   1.7    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.10.2    github-action  GHSA-g85v-wf27-67xc  Low       2.8% (85th)   1.2    
 braces                       2.3.2                                     3.0.3     npm            GHSA-grv7-fg5c-xmjg  High      1.5% (71st)   1.1    
 starlette                    0.46.2                                    1.0.1     python         GHSA-86qp-5c8j-p5mr  Medium    1.9% (78th)   1.1    
 lodash                       4.17.21                                   4.17.23   npm            GHSA-xxjr-mmjv-4gpg  Medium    1.6% (73rd)   0.9    
 undici                       5.28.4                                    6.24.0    npm            GHSA-vrm6-8vpv-qv8q  High      1.1% (64th)   0.9    
-micromatch                   3.1.10                                    4.0.8     npm            GHSA-952p-6rrq-rcjv  Medium    1.4% (70th)   0.7    
+micromatch                   3.1.10                                    4.0.8     npm            GHSA-952p-6rrq-rcjv  Medium    1.4% (71st)   0.7    
 ecdsa                        0.19.2                                              python         GHSA-wj6h-64fc-37mp  High      1.0% (59th)   0.7    
 path-to-regexp               6.1.0                                     6.3.0     npm            GHSA-9wv6-86v2-598j  High      0.9% (58th)   0.7    
 protobufjs                   6.11.6                                    7.5.5     npm            GHSA-xq3m-2v4x-88gg  Critical  0.7% (52nd)   0.7    
@@ -46,11 +46,11 @@ minimatch                    10.1.1                                    10.2.3   
 minimatch                    3.1.2                                     3.1.4     npm            GHSA-23c5-xmqv-rm74  High      0.5% (38th)   0.4    
 ujson                        5.10.0                                    5.12.0    python         GHSA-c8rr-9gxc-jprv  High      0.5% (38th)   0.4    
 brace-expansion              1.1.12                                    1.1.17    npm            GHSA-mh99-v99m-4gvg  High      0.5% (38th)   0.3    
-protobufjs                   6.11.6                                    7.6.1     npm            GHSA-wcpc-wj8m-hjx6  High      0.5% (37th)   0.3    
-python-multipart             0.0.20                                    0.0.30    python         GHSA-5rvq-cxj2-64vf  High      0.5% (37th)   0.3    
-image-size                   2.0.2                                               npm            GHSA-5p2g-fcmc-qvqq  High      0.4% (35th)   0.3    
+python-multipart             0.0.20                                    0.0.30    python         GHSA-5rvq-cxj2-64vf  High      0.5% (38th)   0.3    
+protobufjs                   6.11.6                                    7.6.1     npm            GHSA-wcpc-wj8m-hjx6  High      0.5% (38th)   0.3    
 image-size                   2.0.2                                               npm            GHSA-w3rx-r6r6-pgpr  High      0.4% (35th)   0.3    
-tmp                          0.0.33                                    0.2.6     npm            GHSA-ph9p-34f9-6g65  High      0.4% (35th)   0.3    
+image-size                   2.0.2                                               npm            GHSA-5p2g-fcmc-qvqq  High      0.4% (35th)   0.3    
+tmp                          0.0.33                                    0.2.6     npm            GHSA-ph9p-34f9-6g65  High      0.4% (36th)   0.3    
 ujson                        5.10.0                                    5.12.1    python         GHSA-c38f-wx89-p2xg  High      0.4% (34th)   0.3    
 protobufjs                   6.11.6                                    7.5.6     npm            GHSA-66ff-xgx4-vchm  High      0.4% (33rd)   0.3    
 pyjwt                        2.10.1                                    2.13.0    python         GHSA-xgmm-8j9v-c9wx  High      0.4% (32nd)   0.3    
@@ -68,7 +68,7 @@ brace-expansion              1.1.12                                    1.1.16   
 brace-expansion              1.1.12                                    1.1.13    npm            GHSA-f886-m6hf-6m8v  Medium    0.4% (35th)   0.2    
 undici                       5.28.4                                    6.23.0    npm            GHSA-g9mf-h72j-4rw9  Medium    0.4% (36th)   0.2    
 urllib3                      2.5.0                                     2.7.0     python         GHSA-qccp-gfcp-xxvc  High      0.3% (25th)   0.2    
-vue-template-compiler        2.7.16                                              npm            GHSA-g3ch-rx76-35fx  Medium    0.5% (40th)   0.2    
+vue-template-compiler        2.7.16                                              npm            GHSA-g3ch-rx76-35fx  Medium    0.5% (41st)   0.2    
 idna                         3.10                                      3.15      python         GHSA-65pc-fj4g-8rjx  Medium    0.4% (33rd)   0.2    
 protobufjs                   6.11.6                                    7.5.6     npm            GHSA-2pr8-phx7-x9h3  Medium    0.4% (35th)   0.2    
 ujson                        5.10.0                                    5.13.0    python         GHSA-3j69-69wj-xqx2  Medium    0.4% (29th)   0.2    
@@ -78,9 +78,9 @@ protobufjs                   6.11.6                                    7.6.3    
 pyjwt                        2.10.1                                    2.12.0    python         GHSA-752w-5fwx-jx9f  High      0.3% (18th)   0.2    
 js-yaml                      4.1.1                                     4.2.0     npm            GHSA-h67p-54hq-rp68  Medium    0.4% (31st)   0.2    
 pyjwt                        2.10.1                                    2.13.0    python         GHSA-w7vc-732c-9m39  Medium    0.4% (29th)   0.2    
-lodash                       4.17.21                                   4.18.0    npm            GHSA-f23m-r3pf-42rh  Medium    0.3% (23rd)   0.2    
+lodash                       4.17.21                                   4.18.0    npm            GHSA-f23m-r3pf-42rh  Medium    0.3% (24th)   0.2    
 python-multipart             0.0.20                                    0.0.26    python         GHSA-mj87-hwqh-73pj  Medium    0.4% (27th)   0.2    
-@opentelemetry/core          2.0.0                                     2.8.0     npm            GHSA-8988-4f7v-96qf  Medium    0.3% (26th)   0.2    
+@opentelemetry/core          2.0.0                                     2.8.0     npm            GHSA-8988-4f7v-96qf  Medium    0.3% (27th)   0.2    
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.14.2    github-action  GHSA-cpmj-h4f6-r6pq  Medium    0.3% (23rd)   0.2    
 file-type                    20.5.0                                    21.3.1    npm            GHSA-5v7r-6r5c-r473  Medium    0.3% (24th)   0.2    
 decompress                   4.2.1                                               npm            GHSA-jwp9-9v96-94mx  Medium    0.3% (22nd)   0.2    
@@ -130,5 +130,5 @@ asteval                      1.0.6                                     1.0.9    
 asteval                      1.0.6                                     1.0.9     python         GHSA-9w56-46f6-3qhx  Medium    N/A           N/A    
 smol-toml                    1.5.2                                     1.6.1     npm            GHSA-v3rj-xjv7-4jmq  Medium    N/A           N/A    
 esbuild                      0.27.7                                    0.28.1    npm            GHSA-g7r4-m6w7-qqqr  Low       N/A           N/A
-[0119] ERROR discovered vulnerabilities at or above the severity threshold
+[0111] ERROR discovered vulnerabilities at or above the severity threshold
 
