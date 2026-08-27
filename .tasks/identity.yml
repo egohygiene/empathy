@@ -5,7 +5,7 @@ version: "3"
 
 tasks:
   identity:pin:check:
-    desc: Verify Empathy consumes the reviewed immutable Identity revision
+    desc: Verify Empathy consumes the reviewed immutable Identity revision.
     internal: true
     preconditions:
       - sh: test -f "identity/Cargo.toml"
@@ -29,52 +29,24 @@ tasks:
         test "${worktree_revision}" = "${expected_revision}"
         test -z "$(git -C "identity" status --short)"
 
+  identity:v1:check:
+    desc: Validate Empathy's pinned Identity v1 source contract.
+    deps: [identity:pin:check]
+    cmds:
+      - python3 identity/scripts/validate_identity.py --repository-root . --format json
+
+  identity:v1:generate:
+    desc: Generate Empathy's complete Identity v1 package from reviewed source.
+    deps: [identity:v1:check]
+    cmds:
+      - cargo run --quiet --manifest-path identity/Cargo.toml -- v1-generate --repository-root .
+
+  identity:v1:verify:
+    desc: Verify Empathy's complete Identity v1 package has no missing or drifted files.
+    deps: [identity:v1:check]
+    cmds:
+      - cargo run --quiet --manifest-path identity/Cargo.toml -- v1-verify --repository-root .
+
   identity:check:
-    desc: Validate the pinned Identity CLI and Empathy identity contract
-    deps:
-      - identity:pin:check
-    cmds:
-      - cargo fmt --manifest-path "identity/Cargo.toml" --all --check
-      - >-
-        cargo clippy
-        --manifest-path "identity/Cargo.toml"
-        --all-targets
-        --all-features
-        --
-        -D warnings
-      - cargo test --manifest-path "identity/Cargo.toml" --all-features
-      - >-
-        cargo run
-        --quiet
-        --manifest-path "identity/Cargo.toml"
-        --
-        validate
-        --repository-root "."
-
-  identity:plan:
-    desc: Render Empathy's resolved identity target plan with the pinned CLI
-    deps:
-      - identity:pin:check
-    cmds:
-      - >-
-        cargo run
-        --quiet
-        --manifest-path "identity/Cargo.toml"
-        --
-        plan
-        --repository-root "."
-        --format "markdown"
-
-  identity:handoff:
-    desc: Build Empathy's contextual creative handoff with the pinned CLI
-    deps:
-      - identity:pin:check
-    cmds:
-      - >-
-        cargo run
-        --quiet
-        --manifest-path "identity/Cargo.toml"
-        --
-        handoff
-        --repository-root "."
-        --output-directory ".cache/identity/handoff"
+    desc: Validate Empathy's immutable Identity v1 consumer contract.
+    deps: [identity:v1:check]

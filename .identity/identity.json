@@ -1,0 +1,24 @@
+{
+  "$schema": "https://egohygiene.github.io/identity/contracts/v1/project.schema.json",
+  "schema": "identity.project/v1",
+  "project": {
+    "id": "empathy",
+    "displayName": "Empathy",
+    "repository": "https://github.com/egohygiene/empathy",
+    "tagline": "A humane foundation for people, automation, and AI agents.",
+    "kind": "product"
+  },
+  "layers": [
+    { "id": "egohygiene-organization", "kind": "organization-defaults", "priority": 0, "tokens": ".identity/defaults/organization.tokens.json", "sha256": "6098e60eaab67887c597327e55da646685443eeddc1e27188beab4a1311e36aa" },
+    { "id": "empathy-product", "kind": "product-override", "priority": 10, "tokens": ".identity/overrides/product.tokens.json", "sha256": "36425014c5c3122cde12dc01483b99d0eb77691570180aefc9a6d3ca5cdba0f3" }
+  ],
+  "documents": {
+    "brief": ".identity/brief.md",
+    "targets": ".identity/targets/profiles.json",
+    "provenance": ".identity/governance/provenance.json",
+    "approvals": ".identity/governance/approvals.json",
+    "guidance": { "voice": ".identity/guidance/voice.json", "usage": ".identity/guidance/usage.json" }
+  },
+  "directories": { "sources": ".identity/sources", "candidates": ".identity/candidates", "references": ".identity/references" },
+  "compatibility": { "acceptedSchemaMajor": 1, "migrationFrom": ["identity.project/v0"] }
+}

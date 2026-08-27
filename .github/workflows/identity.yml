@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 
-name: Validate Identity consumer
+name: Validate Identity v1 consumer
 
 on:
   pull_request:
@@ -11,21 +11,20 @@ on:
       - ".identity/**"
       - ".github/workflows/identity.yml"
       - ".tasks/identity.yml"
-      - "docs/integrations/IDENTITY.md"
+      - "docs/integrations/IDENTITY*.md"
       - "identity"
       - "identity/**"
       - "tests/test_identity_integration.py"
       - "Taskfile.yml"
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - ".gitmodules"
       - ".config/identity/**"
       - ".identity/**"
       - ".github/workflows/identity.yml"
       - ".tasks/identity.yml"
-      - "docs/integrations/IDENTITY.md"
+      - "docs/integrations/IDENTITY*.md"
       - "identity"
       - "identity/**"
       - "tests/test_identity_integration.py"
@@ -41,101 +40,40 @@ concurrency:
 
 jobs:
   validate:
-    name: Validate immutable Identity consumer and Empathy contract
+    name: Validate immutable source and complete package
     runs-on: ubuntu-24.04
     timeout-minutes: 20
-
     steps:
       - name: Harden Runner
-        # step-security/harden-runner v2.20.0; observe egress before enforcing.
         uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
         with:
           egress-policy: audit
-
       - name: Checkout repository and pinned Identity source
-        # actions/checkout v7.0.1
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          persist-credentials: false
           fetch-depth: 0
+          persist-credentials: false
           submodules: recursive
-
-      - name: Verify immutable consumer pin
+      - name: Verify immutable gitlink and lock
         shell: bash
         run: |
           set -euo pipefail
-          expected_revision="$(python3 - <<'PY'
-          import json
-          from pathlib import Path
-
-          lock = json.loads(Path(".config/identity/consumer-lock.json").read_text(encoding="utf-8"))
-          assert lock["schema"] == "identity.consumer-lock/v1"
-          assert lock["repository"] == "egohygiene/identity"
-          assert lock["revision_kind"] == "git-commit"
-          print(lock["revision"])
-          PY
-          )"
-          tree_revision="$(git ls-tree "HEAD" "identity" | awk '{print $3}')"
-          worktree_revision="$(git -C "identity" rev-parse "HEAD")"
-          test "${tree_revision}" = "${expected_revision}"
-          test "${worktree_revision}" = "${expected_revision}"
-          test -z "$(git -C "identity" status --short)"
-          git submodule status --recursive
-
-      - name: Install pinned Rust toolchain
-        shell: bash
+          expected="$(python3 -c 'import json; print(json.load(open(".config/identity/consumer-lock.json", encoding="utf-8"))["revision"])')"
+          test "$(git ls-tree HEAD identity | awk '{print $3}')" = "${expected}"
+          test "$(git -C identity rev-parse HEAD)" = "${expected}"
+          test -z "$(git -C identity status --short)"
+      - name: Validate v1 source contract
+        run: python3 identity/scripts/validate_identity.py --repository-root . --format json
+      - name: Generate and verify complete immutable package
         run: |
           set -euo pipefail
-          rustup toolchain install "1.97.1" \
-            --profile "minimal" \
-            --component "clippy,rustfmt"
-
-      - name: Verify locked dependency resolution
-        run: >-
-          cargo metadata
-          --manifest-path "identity/Cargo.toml"
-          --locked
-          --format-version "1"
-          --no-deps
-
-      - name: Verify formatting
-        run: cargo fmt --manifest-path "identity/Cargo.toml" --all --check
-
-      - name: Run Clippy
-        run: >-
-          cargo clippy
-          --manifest-path "identity/Cargo.toml"
-          --all-targets
-          --all-features
-          --
-          -D warnings
-
-      - name: Run Rust tests
-        run: cargo test --manifest-path "identity/Cargo.toml" --all-features
-
-      - name: Validate Empathy integration contract
-        shell: bash
-        run: |
-          set -euo pipefail
+          cargo run --quiet --manifest-path identity/Cargo.toml -- v1-generate --repository-root .
+          cargo run --quiet --manifest-path identity/Cargo.toml -- v1-verify --repository-root .
           python3 -m unittest tests.test_identity_integration --verbose
-          cargo run \
-            --quiet \
-            --manifest-path "identity/Cargo.toml" \
-            -- \
-            validate \
-            --repository-root "."
-
-      - name: Exercise deterministic handoff
-        shell: bash
-        run: |
-          set -euo pipefail
-          cargo run \
-            --quiet \
-            --manifest-path "identity/Cargo.toml" \
-            -- \
-            handoff \
-            --repository-root "." \
-            --output-directory ".cache/identity/ci-handoff"
-          test -s ".cache/identity/ci-handoff/identity-handoff.md"
-          test -s ".cache/identity/ci-handoff/candidate-manifest.template.json"
-          test -s ".cache/identity/ci-handoff/handoff-manifest.json"
+      - name: Upload generated Identity package evidence
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: empathy-identity-v1-${{ github.sha }}
+          path: assets/identity/
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://egohygiene.github.io/identity/contracts/v1/tokens.schema.json",
+  "$description": "Empathy's intentional calm, resonant expression.",
+  "$extensions": {
+    "org.egohygiene.identity": {
+      "schema": "identity.tokens/v1",
+      "layer": { "id": "empathy-product", "kind": "product-override", "priority": 10 }
+    }
+  },
+  "color": {
+    "$type": "color",
+    "brand": {
+      "primary": {
+        "$value": { "colorSpace": "srgb", "components": [0.431, 0.369, 0.745], "alpha": 1 },
+        "$description": "Quiet violet for connection without sentimentality.",
+        "$extensions": {
+          "org.egohygiene.identity": {
+            "override": { "reason": "Empathy needs a calmer, more spacious accent while retaining the organization palette structure.", "approval": "approve-empathy-primary" },
+            "contrast": { "intent": "decorative", "pairedWith": [], "minimumRatio": 1 }
+          }
+        }
+      }
+    },
+    "action": { "primary": { "$value": "{color.brand.primary}" } }
+  }
+}
