@@ -7,10 +7,27 @@
       "path": ".identity/sources/mark.svg",
       "kind": "mark",
       "sha256": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
-      "license": { "spdx": "MIT", "status": "approved", "attribution": "Copyright 2026 Ego Hygiene" },
-      "origin": { "creator": "Ego Hygiene", "method": "first-party", "source": "https://github.com/egohygiene/empathy/tree/main/.identity/sources/mark.svg", "capturedAt": "2026-08-27T12:00:00Z" },
-      "accessibility": { "altText": "Two distinct circular forms overlap to create a calm field of shared resonance." },
-      "usage": { "safeZone": "Keep one quarter of the mark width clear on every side.", "minimumSize": "16 CSS pixels.", "restrictions": ["Do not stretch, rotate, or recolor outside approved tokens."] },
+      "license": {
+        "spdx": "MIT",
+        "status": "approved",
+        "attribution": "Copyright 2026 Ego Hygiene"
+      },
+      "origin": {
+        "creator": "Ego Hygiene",
+        "method": "first-party",
+        "source": "https://github.com/egohygiene/empathy/tree/main/.identity/sources/mark.svg",
+        "capturedAt": "2026-08-27T12:00:00Z"
+      },
+      "accessibility": {
+        "altText": "Two distinct circular forms overlap to create a calm field of shared resonance."
+      },
+      "usage": {
+        "safeZone": "Keep one quarter of the mark width clear on every side.",
+        "minimumSize": "16 CSS pixels.",
+        "restrictions": [
+          "Do not stretch, rotate, or recolor outside approved tokens."
+        ]
+      },
       "approval": "approve-empathy-mark"
     }
   ]

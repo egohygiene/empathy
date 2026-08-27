@@ -1,5 +1,6 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# ruff: noqa: S603, S607
 
 """Evidence for Empathy's immutable, calm Identity v1 consumer."""
 
@@ -15,7 +16,7 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 IDENTITY_ROOT = REPOSITORY_ROOT / "identity"
 LOCK_PATH = REPOSITORY_ROOT / ".config/identity/consumer-lock.json"
 PROJECT_PATH = REPOSITORY_ROOT / ".identity/identity.json"
-ORGANIZATION_DEFAULT_SHA256 = "6098e60eaab67887c597327e55da646685443eeddc1e27188beab4a1311e36aa"
+ORGANIZATION_DEFAULT_SHA256 = "6da0fb26cfe3a6d43be6e579acff2bbabe968c1e07f1e23e656e1f83104f6d23"
 
 
 class IdentityIntegrationTests(unittest.TestCase):
@@ -30,7 +31,7 @@ class IdentityIntegrationTests(unittest.TestCase):
         self.assertEqual(self.lock["revision_kind"], "git-commit")
         self.assertRegex(self.lock["revision"], r"^[0-9a-f]{40}$")
         self.assertRegex(self.lock["source_extraction_revision"], r"^[0-9a-f]{40}$")
-        self.assertIn('path = identity', (REPOSITORY_ROOT / ".gitmodules").read_text())
+        self.assertIn("path = identity", (REPOSITORY_ROOT / ".gitmodules").read_text())
 
     def test_v0_fixture_is_explicitly_promoted_to_v1_with_a_rollback_anchor(self) -> None:
         self.assertTrue((REPOSITORY_ROOT / ".identity/identity.toml").is_file())

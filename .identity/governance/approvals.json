@@ -2,9 +2,49 @@
   "$schema": "https://egohygiene.github.io/identity/contracts/v1/approvals.schema.json",
   "schema": "identity.approvals/v1",
   "decisions": [
-    { "id": "approve-empathy-mark", "subject": "mark", "candidate": ".identity/sources/mark.svg", "status": "approved", "reviewedBy": "Ego Hygiene maintainers", "reviewedAt": "2026-08-27T12:00:00Z", "evidence": "https://github.com/egohygiene/identity/issues/17", "supersedes": null, "notes": "Approved canonical Empathy resonance mark." },
-    { "id": "approve-empathy-primary", "subject": "token:color.brand.primary", "candidate": "token:color.brand.primary@empathy-product", "status": "approved", "reviewedBy": "Ego Hygiene maintainers", "reviewedAt": "2026-08-27T12:01:00Z", "evidence": "https://github.com/egohygiene/identity/issues/17", "supersedes": null, "notes": "Approved product-level calm violet distinction." },
-    { "id": "approve-empathy-voice", "subject": "voice:empathy", "candidate": "guidance:empathy-voice/v1", "status": "approved", "reviewedBy": "Ego Hygiene maintainers", "reviewedAt": "2026-08-27T12:02:00Z", "evidence": "https://github.com/egohygiene/identity/issues/17", "supersedes": null, "notes": "Approved structured Empathy voice." },
-    { "id": "approve-empathy-usage", "subject": "usage:empathy", "candidate": "guidance:empathy-usage/v1", "status": "approved", "reviewedBy": "Ego Hygiene maintainers", "reviewedAt": "2026-08-27T12:03:00Z", "evidence": "https://github.com/egohygiene/identity/issues/17", "supersedes": null, "notes": "Approved accessible Empathy usage guidance." }
+    {
+      "id": "approve-empathy-mark",
+      "subject": "mark",
+      "candidate": ".identity/sources/mark.svg",
+      "status": "approved",
+      "reviewedBy": "Ego Hygiene maintainers",
+      "reviewedAt": "2026-08-27T12:00:00Z",
+      "evidence": "https://github.com/egohygiene/identity/issues/17",
+      "supersedes": null,
+      "notes": "Approved canonical Empathy resonance mark."
+    },
+    {
+      "id": "approve-empathy-primary",
+      "subject": "token:color.brand.primary",
+      "candidate": "token:color.brand.primary@empathy-product",
+      "status": "approved",
+      "reviewedBy": "Ego Hygiene maintainers",
+      "reviewedAt": "2026-08-27T12:01:00Z",
+      "evidence": "https://github.com/egohygiene/identity/issues/17",
+      "supersedes": null,
+      "notes": "Approved product-level calm violet distinction."
+    },
+    {
+      "id": "approve-empathy-voice",
+      "subject": "voice:empathy",
+      "candidate": "guidance:empathy-voice/v1",
+      "status": "approved",
+      "reviewedBy": "Ego Hygiene maintainers",
+      "reviewedAt": "2026-08-27T12:02:00Z",
+      "evidence": "https://github.com/egohygiene/identity/issues/17",
+      "supersedes": null,
+      "notes": "Approved structured Empathy voice."
+    },
+    {
+      "id": "approve-empathy-usage",
+      "subject": "usage:empathy",
+      "candidate": "guidance:empathy-usage/v1",
+      "status": "approved",
+      "reviewedBy": "Ego Hygiene maintainers",
+      "reviewedAt": "2026-08-27T12:03:00Z",
+      "evidence": "https://github.com/egohygiene/identity/issues/17",
+      "supersedes": null,
+      "notes": "Approved accessible Empathy usage guidance."
+    }
   ]
 }

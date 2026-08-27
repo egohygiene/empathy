@@ -2,9 +2,94 @@
   "$schema": "https://egohygiene.github.io/identity/contracts/v1/usage.schema.json",
   "schema": "identity.usage/v1",
   "sections": [
-    { "id": "resonance-mark", "title": "Resonance mark", "description": "Keep the mark spacious and readable.", "rules": [ { "id": "mark-clear-space", "kind": "do", "category": "mark", "instruction": "Keep one quarter of the mark width clear on every side.", "rationale": "Space preserves the distinct presences represented by the mark.", "details": ["Minimum standalone size: 16 CSS pixels"], "contexts": ["documentation", "product-ui"], "governance": { "subject": "usage:empathy", "state": "approved", "visibility": "public", "provenance": { "method": "human-authored", "source": ".identity/brief.md", "capturedAt": "2026-08-27T12:03:00Z" }, "approval": "approve-empathy-usage" } } ] }
+    {
+      "id": "resonance-mark",
+      "title": "Resonance mark",
+      "description": "Keep the mark spacious and readable.",
+      "rules": [
+        {
+          "id": "mark-clear-space",
+          "kind": "do",
+          "category": "mark",
+          "instruction": "Keep one quarter of the mark width clear on every side.",
+          "rationale": "Space preserves the distinct presences represented by the mark.",
+          "details": ["Minimum standalone size: 16 CSS pixels"],
+          "contexts": ["documentation", "product-ui"],
+          "governance": {
+            "subject": "usage:empathy",
+            "state": "approved",
+            "visibility": "public",
+            "provenance": {
+              "method": "human-authored",
+              "source": ".identity/brief.md",
+              "capturedAt": "2026-08-27T12:03:00Z"
+            },
+            "approval": "approve-empathy-usage"
+          }
+        }
+      ]
+    }
   ],
-  "assets": [ { "id": "mark", "label": "Empathy resonance mark", "kind": "mark", "path": ".identity/sources/mark.svg", "status": "active", "availability": "public", "replacement": null, "downloadName": "empathy-mark.svg", "notes": "Use only the approved source or generated projections.", "governance": { "subject": "usage:empathy", "state": "approved", "visibility": "public", "provenance": { "method": "human-authored", "source": ".identity/governance/provenance.json#mark", "capturedAt": "2026-08-27T12:03:00Z" }, "approval": "approve-empathy-usage" } } ],
-  "accessibility": { "summary": "Identity must preserve readable text, sufficient contrast, and meaning without color alone.", "rules": ["Honor reduced motion", "Provide contextual alternative text"], "governance": { "subject": "usage:empathy", "state": "approved", "visibility": "public", "provenance": { "method": "human-authored", "source": ".identity/brief.md", "capturedAt": "2026-08-27T12:03:00Z" }, "approval": "approve-empathy-usage" } },
-  "legal": { "trademark": "Empathy names and marks identify this project without implying endorsement.", "copyright": "Copyright 2026 Ego Hygiene.", "attribution": "Preserve the governed attribution when distributing the mark.", "thirdPartyLicenses": [ { "name": "Empathy mark", "spdx": "MIT", "attribution": "Copyright 2026 Ego Hygiene" } ], "governance": { "subject": "usage:empathy", "state": "approved", "visibility": "public", "provenance": { "method": "human-authored", "source": ".identity/governance/provenance.json#mark", "capturedAt": "2026-08-27T12:03:00Z" }, "approval": "approve-empathy-usage" } }
+  "assets": [
+    {
+      "id": "mark",
+      "label": "Empathy resonance mark",
+      "kind": "mark",
+      "path": ".identity/sources/mark.svg",
+      "status": "active",
+      "availability": "public",
+      "replacement": null,
+      "downloadName": "empathy-mark.svg",
+      "notes": "Use only the approved source or generated projections.",
+      "governance": {
+        "subject": "usage:empathy",
+        "state": "approved",
+        "visibility": "public",
+        "provenance": {
+          "method": "human-authored",
+          "source": ".identity/governance/provenance.json#mark",
+          "capturedAt": "2026-08-27T12:03:00Z"
+        },
+        "approval": "approve-empathy-usage"
+      }
+    }
+  ],
+  "accessibility": {
+    "summary": "Identity must preserve readable text, sufficient contrast, and meaning without color alone.",
+    "rules": ["Honor reduced motion", "Provide contextual alternative text"],
+    "governance": {
+      "subject": "usage:empathy",
+      "state": "approved",
+      "visibility": "public",
+      "provenance": {
+        "method": "human-authored",
+        "source": ".identity/brief.md",
+        "capturedAt": "2026-08-27T12:03:00Z"
+      },
+      "approval": "approve-empathy-usage"
+    }
+  },
+  "legal": {
+    "trademark": "Empathy names and marks identify this project without implying endorsement.",
+    "copyright": "Copyright 2026 Ego Hygiene.",
+    "attribution": "Preserve the governed attribution when distributing the mark.",
+    "thirdPartyLicenses": [
+      {
+        "name": "Empathy mark",
+        "spdx": "MIT",
+        "attribution": "Copyright 2026 Ego Hygiene"
+      }
+    ],
+    "governance": {
+      "subject": "usage:empathy",
+      "state": "approved",
+      "visibility": "public",
+      "provenance": {
+        "method": "human-authored",
+        "source": ".identity/governance/provenance.json#mark",
+        "capturedAt": "2026-08-27T12:03:00Z"
+      },
+      "approval": "approve-empathy-usage"
+    }
+  }
 }
