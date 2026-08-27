@@ -647,47 +647,65 @@ unformatted: File would be reformatted
     |
 
 unformatted: File would be reformatted
-   --> tests/test_identity_integration.py:104:29
+   --> tests/test_identity_integration.py:45:26
     |
-103 |     def test_profiles_resolve_unique_safe_targets_and_declared_sources(self) -> None:
-    -         declared_sources = {
-    -             source["role"] for source in self.specification["sources"]["required"]
-    -         }
-104 +         declared_sources = {source["role"] for source in self.specification["sources"]["required"]}
-105 |         declared_sources.update({"identity-brief", "project-spec"})
+44  |         layers = self.project["layers"]
+    -         self.assertEqual([layer["kind"] for layer in layers], ["organization-defaults", "product-override"])
+45  +         self.assertEqual(
+46  +             [layer["kind"] for layer in layers], ["organization-defaults", "product-override"]
+47  +         )
+48  |         self.assertEqual(layers[0]["sha256"], ORGANIZATION_DEFAULT_SHA256)
+49  |         self.assertEqual(
+    -             hashlib.sha256(
+    -                 (REPOSITORY_ROOT / layers[0]["tokens"]).read_bytes()
+    -             ).hexdigest(),
+50  +             hashlib.sha256((REPOSITORY_ROOT / layers[0]["tokens"]).read_bytes()).hexdigest(),
+51  |             ORGANIZATION_DEFAULT_SHA256,
+    -         )
+    -         overrides = json.loads(
+    -             (REPOSITORY_ROOT / layers[1]["tokens"]).read_text(encoding="utf-8")
+52  |         )
+53  +         overrides = json.loads((REPOSITORY_ROOT / layers[1]["tokens"]).read_text(encoding="utf-8"))
+54  |         primary = overrides["color"]["brand"]["primary"]
 --------------------------------------------------------------------------------
-130 |         social_preview = next(
-    -             target
-    -             for target in github["targets"]
-    -             if target["id"] == "repository-social-preview"
-131 +             target for target in github["targets"] if target["id"] == "repository-social-preview"
-132 |         )
-133 |         self.assertEqual((social_preview["width"], social_preview["height"]), (1280, 640))
-134 |         self.assertEqual(social_preview["maximum_bytes"], 1_000_000)
-135 |
-    -         pwa = json.loads(
-    -             (IDENTITY_ROOT / "profiles" / "pwa.json").read_text(encoding="utf-8")
-    -         )
-136 +         pwa = json.loads((IDENTITY_ROOT / "profiles" / "pwa.json").read_text(encoding="utf-8"))
-137 |         purposes = {target.get("purpose") for target in pwa["targets"]}
---------------------------------------------------------------------------------
-168 |
-    -         integration_document = (
-    -             REPOSITORY_ROOT / "docs" / "integrations" / "IDENTITY.md"
-    -         )
-169 +         integration_document = REPOSITORY_ROOT / "docs" / "integrations" / "IDENTITY.md"
-170 |         self.assertTrue(integration_document.is_file())
---------------------------------------------------------------------------------
-174 |         taskfile = (REPOSITORY_ROOT / ".tasks/identity.yml").read_text(encoding="utf-8")
-    -         project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(
-    -             encoding="utf-8"
-    -         )
-    -         workflow = (REPOSITORY_ROOT / ".github/workflows/identity.yml").read_text(
-    -             encoding="utf-8"
-    -         )
-175 +         project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(encoding="utf-8")
-176 +         workflow = (REPOSITORY_ROOT / ".github/workflows/identity.yml").read_text(encoding="utf-8")
-177 |
+78  |     def test_generated_package_snapshot_preserves_the_reviewed_calm_violet(self) -> None:
+    -         css = (
+    -             REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css"
+    -         ).read_text(encoding="utf-8")
+79  +         css = (REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css").read_text(
+80  +             encoding="utf-8"
+81  +         )
+82  |         self.assertIn("--identity-color-brand-primary: #6e5ebe;", css)
+83  |
+    -     @unittest.skipUnless((IDENTITY_ROOT / "Cargo.toml").is_file(), "Identity submodule is not initialized")
+84  +     @unittest.skipUnless(
+85  +         (IDENTITY_ROOT / "Cargo.toml").is_file(), "Identity submodule is not initialized"
+86  +     )
+87  |     def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
+88  |         subprocess.run(
+    -             ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
+89  +             [
+90  +                 "python3",
+91  +                 str(IDENTITY_ROOT / "scripts/validate_identity.py"),
+92  +                 "--repository-root",
+93  +                 str(REPOSITORY_ROOT),
+94  +             ],
+95  |             check=True,
+96  |         )
+97  |         subprocess.run(
+    -             ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
+98  +             [
+99  +                 "cargo",
+100 +                 "run",
+101 +                 "--quiet",
+102 +                 "--manifest-path",
+103 +                 str(IDENTITY_ROOT / "Cargo.toml"),
+104 +                 "--",
+105 +                 "v1-verify",
+106 +                 "--repository-root",
+107 +                 str(REPOSITORY_ROOT),
+108 +             ],
+109 |             check=True,
     |
 
 unformatted: File would be reformatted
