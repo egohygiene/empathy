@@ -56,7 +56,7 @@ class IdentityIntegrationTests(unittest.TestCase):
 
         gitmodules = configparser.ConfigParser()
         gitmodules.read(GITMODULES_PATH, encoding="utf-8")
-        section = 'submodule "identity"'
+        section = "submodule \"identity\""
         self.assertTrue(gitmodules.has_section(section))
         self.assertEqual(gitmodules[section]["path"], "identity")
         self.assertEqual(
@@ -125,7 +125,9 @@ class IdentityIntegrationTests(unittest.TestCase):
             (IDENTITY_ROOT / "profiles" / "github.json").read_text(encoding="utf-8")
         )
         social_preview = next(
-            target for target in github["targets"] if target["id"] == "repository-social-preview"
+            target
+            for target in github["targets"]
+            if target["id"] == "repository-social-preview"
         )
         self.assertEqual((social_preview["width"], social_preview["height"]), (1280, 640))
         self.assertEqual(social_preview["maximum_bytes"], 1_000_000)
@@ -165,13 +167,17 @@ class IdentityIntegrationTests(unittest.TestCase):
         for context_path in self.specification["context"]["files"]:
             self.assertTrue((REPOSITORY_ROOT / context_path).is_file(), context_path)
 
-        integration_document = REPOSITORY_ROOT / "docs" / "integrations" / "IDENTITY.md"
+        integration_document = (
+            REPOSITORY_ROOT / "docs" / "integrations" / "IDENTITY.md"
+        )
         self.assertTrue(integration_document.is_file())
 
     def test_task_and_ci_contracts_use_the_pinned_consumer(self) -> None:
         root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf-8")
         taskfile = (REPOSITORY_ROOT / ".tasks/identity.yml").read_text(encoding="utf-8")
-        project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(encoding="utf-8")
+        project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(
+            encoding="utf-8"
+        )
         workflow = (REPOSITORY_ROOT / ".github/workflows/identity.yml").read_text(
             encoding="utf-8"
         )
@@ -187,7 +193,7 @@ class IdentityIntegrationTests(unittest.TestCase):
             self.assertIn(task_name, taskfile)
         self.assertIn("internal: true", taskfile)
         self.assertIn(".config/identity/consumer-lock.json", taskfile)
-        self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
+        self.assertIn("--manifest-path \"identity/Cargo.toml\"", taskfile)
         self.assertIn("- identity:check", project_tasks)
 
         self.assertIn("submodules: recursive", workflow)
