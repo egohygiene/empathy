@@ -23,14 +23,19 @@ REQUIRES_IDENTITY_WORKTREE = unittest.skipUnless(
 )
 
 
+class GitExecutableUnavailableError(RuntimeError):
+    """Raised when the integration test cannot resolve the Git executable."""
+
+
 def run_git(*arguments: str) -> str:
     """Run Git using its resolved executable and return stripped standard output."""
 
     git_executable = shutil.which("git")
     if git_executable is None:
-        raise RuntimeError("Git is required to validate the Identity consumer contract.")
+        raise GitExecutableUnavailableError
 
-    completed_process = subprocess.run(
+    # Only fixed Git operations and repository-owned paths reach this test helper.
+    completed_process = subprocess.run(  # noqa: S603
         [git_executable, *arguments],
         cwd=REPOSITORY_ROOT,
         check=True,
@@ -56,7 +61,7 @@ class IdentityIntegrationTests(unittest.TestCase):
 
         gitmodules = configparser.ConfigParser()
         gitmodules.read(GITMODULES_PATH, encoding="utf-8")
-        section = "submodule \"identity\""
+        section = 'submodule "identity"'
         self.assertTrue(gitmodules.has_section(section))
         self.assertEqual(gitmodules[section]["path"], "identity")
         self.assertEqual(
@@ -193,7 +198,7 @@ class IdentityIntegrationTests(unittest.TestCase):
             self.assertIn(task_name, taskfile)
         self.assertIn("internal: true", taskfile)
         self.assertIn(".config/identity/consumer-lock.json", taskfile)
-        self.assertIn("--manifest-path \"identity/Cargo.toml\"", taskfile)
+        self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
         self.assertIn("- identity:check", project_tasks)
 
         self.assertIn("submodules: recursive", workflow)
