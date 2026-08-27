@@ -1,209 +1,98 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# ruff: noqa: S603, S607
+
+"""Evidence for Empathy's immutable, calm Identity v1 consumer."""
 
 from __future__ import annotations
 
-import configparser
+import hashlib
 import json
-from pathlib import Path, PurePosixPath
-import shutil
+from pathlib import Path
 import subprocess
-import tomllib
 import unittest
 
-REPOSITORY_ROOT = Path(__file__).parents[1]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 IDENTITY_ROOT = REPOSITORY_ROOT / "identity"
-PROJECT_SPEC_PATH = REPOSITORY_ROOT / ".identity" / "identity.toml"
-CONSUMER_LOCK_PATH = REPOSITORY_ROOT / ".config" / "identity" / "consumer-lock.json"
-GITMODULES_PATH = REPOSITORY_ROOT / ".gitmodules"
-IDENTITY_WORKTREE_INITIALIZED = (IDENTITY_ROOT / "Cargo.toml").is_file()
-REQUIRES_IDENTITY_WORKTREE = unittest.skipUnless(
-    IDENTITY_WORKTREE_INITIALIZED,
-    "Identity submodule is not initialized in this checkout.",
-)
-
-
-class GitExecutableUnavailableError(RuntimeError):
-    """Raised when the integration test cannot resolve the Git executable."""
-
-
-def run_git(*arguments: str) -> str:
-    """Run Git using its resolved executable and return stripped standard output."""
-
-    git_executable = shutil.which("git")
-    if git_executable is None:
-        raise GitExecutableUnavailableError
-
-    # Only fixed Git operations and repository-owned paths reach this test helper.
-    completed_process = subprocess.run(  # noqa: S603
-        [git_executable, *arguments],
-        cwd=REPOSITORY_ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    return completed_process.stdout.strip()
+LOCK_PATH = REPOSITORY_ROOT / ".config/identity/consumer-lock.json"
+PROJECT_PATH = REPOSITORY_ROOT / ".identity/identity.json"
+ORGANIZATION_DEFAULT_SHA256 = "6da0fb26cfe3a6d43be6e579acff2bbabe968c1e07f1e23e656e1f83104f6d23"
 
 
 class IdentityIntegrationTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.specification = tomllib.loads(PROJECT_SPEC_PATH.read_text(encoding="utf-8"))
-        self.consumer_lock = json.loads(CONSUMER_LOCK_PATH.read_text(encoding="utf-8"))
+        self.lock = json.loads(LOCK_PATH.read_text(encoding="utf-8"))
+        self.project = json.loads(PROJECT_PATH.read_text(encoding="utf-8"))
 
-    def test_identity_source_is_pinned_as_an_immutable_gitlink(self) -> None:
-        self.assertEqual(self.consumer_lock["schema"], "identity.consumer-lock/v1")
-        self.assertEqual(self.consumer_lock["consumer"], "egohygiene/empathy")
-        self.assertEqual(self.consumer_lock["repository"], "egohygiene/identity")
-        self.assertEqual(self.consumer_lock["revision_kind"], "git-commit")
-        self.assertEqual(self.consumer_lock["path"], "identity")
-        self.assertRegex(self.consumer_lock["revision"], r"^[0-9a-f]{40}$")
-        self.assertRegex(self.consumer_lock["source_extraction_revision"], r"^[0-9a-f]{40}$")
+    def test_immutable_identity_contract_preserves_extraction_lineage(self) -> None:
+        self.assertEqual(self.lock["schema"], "identity.consumer-lock/v1")
+        self.assertEqual(self.lock["consumer"], "egohygiene/empathy")
+        self.assertEqual(self.lock["repository"], "egohygiene/identity")
+        self.assertEqual(self.lock["revision_kind"], "git-commit")
+        self.assertRegex(self.lock["revision"], r"^[0-9a-f]{40}$")
+        self.assertRegex(self.lock["source_extraction_revision"], r"^[0-9a-f]{40}$")
+        self.assertIn("path = identity", (REPOSITORY_ROOT / ".gitmodules").read_text())
 
-        gitmodules = configparser.ConfigParser()
-        gitmodules.read(GITMODULES_PATH, encoding="utf-8")
-        section = 'submodule "identity"'
-        self.assertTrue(gitmodules.has_section(section))
-        self.assertEqual(gitmodules[section]["path"], "identity")
+    def test_v0_fixture_is_explicitly_promoted_to_v1_with_a_rollback_anchor(self) -> None:
+        self.assertTrue((REPOSITORY_ROOT / ".identity/identity.toml").is_file())
+        self.assertEqual(self.project["schema"], "identity.project/v1")
+        self.assertEqual(self.project["project"]["id"], "empathy")
+        self.assertEqual(self.project["compatibility"]["migrationFrom"], ["identity.project/v0"])
+        self.assertTrue((REPOSITORY_ROOT / "docs/integrations/IDENTITY_V1.md").is_file())
+
+    def test_only_reviewed_product_differences_override_shared_defaults(self) -> None:
+        layers = self.project["layers"]
+        self.assertEqual([layer["kind"] for layer in layers], ["organization-defaults", "product-override"])
+        self.assertEqual(layers[0]["sha256"], ORGANIZATION_DEFAULT_SHA256)
         self.assertEqual(
-            gitmodules[section]["url"],
-            "https://github.com/egohygiene/identity.git",
+            hashlib.sha256(
+                (REPOSITORY_ROOT / layers[0]["tokens"]).read_bytes()
+            ).hexdigest(),
+            ORGANIZATION_DEFAULT_SHA256,
         )
-
-        tree_entry = run_git("ls-tree", "HEAD", "identity")
-        mode, object_type, revision_and_path = tree_entry.split(maxsplit=2)
-        tree_revision, tree_path = revision_and_path.split("\t", maxsplit=1)
-        self.assertEqual(mode, "160000")
-        self.assertEqual(object_type, "commit")
-        self.assertEqual(tree_path, "identity")
-        self.assertEqual(tree_revision, self.consumer_lock["revision"])
-
-    @REQUIRES_IDENTITY_WORKTREE
-    def test_initialized_identity_worktree_matches_the_consumer_lock(self) -> None:
-        worktree_revision = run_git(
-            "-C",
-            str(IDENTITY_ROOT),
-            "rev-parse",
-            "HEAD",
+        overrides = json.loads(
+            (REPOSITORY_ROOT / layers[1]["tokens"]).read_text(encoding="utf-8")
         )
-        self.assertEqual(worktree_revision, self.consumer_lock["revision"])
-
-    def test_empathy_selects_versioned_profiles_and_human_approval(self) -> None:
-        self.assertEqual(self.specification["schema"], "identity.project/v0")
-        self.assertEqual(self.specification["project"]["id"], "empathy")
-        self.assertEqual(self.specification["sources"]["approval"], "human")
-
-        enabled = self.specification["profiles"]["enabled"]
-        self.assertEqual(len(enabled), len(set(enabled)))
+        primary = overrides["color"]["brand"]["primary"]
+        self.assertEqual(primary["$value"]["components"], [0.431, 0.369, 0.745])
         self.assertEqual(
-            set(enabled),
-            {"core", "docs", "github", "metadata", "pwa", "social", "tokens", "web"},
+            primary["$extensions"]["org.egohygiene.identity"]["override"]["approval"],
+            "approve-empathy-primary",
         )
+        self.assertEqual(overrides["color"]["action"]["primary"]["$value"], "{color.brand.primary}")
 
-    @REQUIRES_IDENTITY_WORKTREE
-    def test_profiles_resolve_unique_safe_targets_and_declared_sources(self) -> None:
-        declared_sources = {
-            source["role"] for source in self.specification["sources"]["required"]
-        }
-        declared_sources.update({"identity-brief", "project-spec"})
-        paths: set[str] = set()
-
-        for profile_id in self.specification["profiles"]["enabled"]:
-            profile_path = IDENTITY_ROOT / "profiles" / f"{profile_id}.json"
-            profile = json.loads(profile_path.read_text(encoding="utf-8"))
-            self.assertEqual(profile["schema"], "identity.profile/v0")
-            self.assertEqual(profile["id"], profile_id)
-            self.assertRegex(profile["version"], r"^\d+\.\d+\.\d+$")
-            self.assertRegex(profile["verified_at"], r"^\d{4}-\d{2}-\d{2}$")
-
-            for target in profile["targets"]:
-                path = PurePosixPath(target["path"])
-                self.assertFalse(path.is_absolute())
-                self.assertNotIn("..", path.parts)
-                self.assertNotIn(target["path"], paths)
-                paths.add(target["path"])
-                self.assertIn(target["source_role"], declared_sources)
-                self.assertEqual("width" in target, "height" in target)
-
-    @REQUIRES_IDENTITY_WORKTREE
-    def test_platform_profiles_capture_foundational_constraints(self) -> None:
-        github = json.loads(
-            (IDENTITY_ROOT / "profiles" / "github.json").read_text(encoding="utf-8")
+    def test_full_profile_selection_is_versioned(self) -> None:
+        profiles = json.loads(
+            (REPOSITORY_ROOT / ".identity/targets/profiles.json").read_text(encoding="utf-8")
         )
-        social_preview = next(
-            target
-            for target in github["targets"]
-            if target["id"] == "repository-social-preview"
+        self.assertEqual(profiles["schema"], "identity.targets/v1")
+        self.assertEqual(
+            [profile["id"] for profile in profiles["enabled"]],
+            ["core", "web", "pwa", "github", "docs", "social", "tokens", "metadata", "archive"],
         )
-        self.assertEqual((social_preview["width"], social_preview["height"]), (1280, 640))
-        self.assertEqual(social_preview["maximum_bytes"], 1_000_000)
+        self.assertEqual(profiles["inapplicable"], [])
+        self.assertTrue(all(profile["version"] == "1.0.0" for profile in profiles["enabled"]))
 
-        pwa = json.loads(
-            (IDENTITY_ROOT / "profiles" / "pwa.json").read_text(encoding="utf-8")
+    @unittest.skipUnless(
+        (REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css").is_file(),
+        "Identity package has not been generated",
+    )
+    def test_generated_package_snapshot_preserves_the_reviewed_calm_violet(self) -> None:
+        css = (
+            REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css"
+        ).read_text(encoding="utf-8")
+        self.assertIn("--identity-color-brand-primary: #6e5ebe;", css)
+
+    @unittest.skipUnless((IDENTITY_ROOT / "Cargo.toml").is_file(), "Identity submodule is not initialized")
+    def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
+        subprocess.run(
+            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
+            check=True,
         )
-        purposes = {target.get("purpose") for target in pwa["targets"]}
-        self.assertTrue({"any", "maskable", "monochrome"}.issubset(purposes))
-        raster_sizes = {
-            (target.get("width"), target.get("height"))
-            for target in pwa["targets"]
-            if target["format"] == "png"
-        }
-        self.assertTrue({(192, 192), (512, 512)}.issubset(raster_sizes))
-
-    @REQUIRES_IDENTITY_WORKTREE
-    def test_identity_v0_contracts_are_present(self) -> None:
-        for contract_name in (
-            "candidate-manifest.schema.json",
-            "handoff-manifest.schema.json",
-            "profile.schema.json",
-            "project.schema.json",
-        ):
-            contract = json.loads(
-                (IDENTITY_ROOT / "contracts" / contract_name).read_text(encoding="utf-8")
-            )
-            self.assertEqual(
-                contract["$schema"],
-                "https://json-schema.org/draft/2020-12/schema",
-            )
-
-    def test_consumer_paths_are_present(self) -> None:
-        for path_key in ("brief", "source_root"):
-            path = REPOSITORY_ROOT / self.specification["paths"][path_key]
-            self.assertTrue(path.exists(), path_key)
-        for context_path in self.specification["context"]["files"]:
-            self.assertTrue((REPOSITORY_ROOT / context_path).is_file(), context_path)
-
-        integration_document = (
-            REPOSITORY_ROOT / "docs" / "integrations" / "IDENTITY.md"
+        subprocess.run(
+            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
+            check=True,
         )
-        self.assertTrue(integration_document.is_file())
-
-    def test_task_and_ci_contracts_use_the_pinned_consumer(self) -> None:
-        root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf-8")
-        taskfile = (REPOSITORY_ROOT / ".tasks/identity.yml").read_text(encoding="utf-8")
-        project_tasks = (REPOSITORY_ROOT / ".tasks/project.yml").read_text(
-            encoding="utf-8"
-        )
-        workflow = (REPOSITORY_ROOT / ".github/workflows/identity.yml").read_text(
-            encoding="utf-8"
-        )
-
-        self.assertIn("taskfile: ./.tasks/identity.yml", root_taskfile)
-        self.assertIn("flatten: true", root_taskfile)
-        for task_name in (
-            "identity:pin:check:",
-            "identity:check:",
-            "identity:plan:",
-            "identity:handoff:",
-        ):
-            self.assertIn(task_name, taskfile)
-        self.assertIn("internal: true", taskfile)
-        self.assertIn(".config/identity/consumer-lock.json", taskfile)
-        self.assertIn('--manifest-path "identity/Cargo.toml"', taskfile)
-        self.assertIn("- identity:check", project_tasks)
-
-        self.assertIn("submodules: recursive", workflow)
-        self.assertIn("Verify immutable consumer pin", workflow)
-        self.assertIn(".config/identity/consumer-lock.json", workflow)
 
 
 if __name__ == "__main__":

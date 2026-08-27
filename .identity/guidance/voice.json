@@ -1,0 +1,123 @@
+{
+  "$schema": "https://egohygiene.github.io/identity/contracts/v1/voice.schema.json",
+  "schema": "identity.voice/v1",
+  "foundation": {
+    "purpose": "Make humane technical work easier to understand and carry forward.",
+    "positioning": "A calm shared substrate for people and agents collaborating on explicit systems.",
+    "audience": ["maintainers", "contributors", "agents"],
+    "personality": ["humane", "calm", "precise"],
+    "governance": {
+      "subject": "voice:empathy",
+      "state": "approved",
+      "visibility": "public",
+      "provenance": {
+        "method": "human-authored",
+        "source": ".identity/brief.md",
+        "capturedAt": "2026-08-27T12:02:00Z"
+      },
+      "approval": "approve-empathy-voice"
+    }
+  },
+  "characteristics": [
+    {
+      "id": "calm",
+      "label": "Calm",
+      "description": "Make room for difficult work without becoming vague.",
+      "governance": {
+        "subject": "voice:empathy",
+        "state": "approved",
+        "visibility": "public",
+        "provenance": {
+          "method": "human-authored",
+          "source": ".identity/brief.md",
+          "capturedAt": "2026-08-27T12:02:00Z"
+        },
+        "approval": "approve-empathy-voice"
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "id": "documentation",
+      "label": "Documentation",
+      "audience": "A contributor seeking a safe next step.",
+      "intent": "Orient with care and concrete evidence.",
+      "tone": "Warm, clear, and exact.",
+      "characteristics": ["calm"],
+      "preferredVocabulary": ["reviewed", "context", "next step"],
+      "avoidedLanguage": ["magic", "effortless", "guaranteed"],
+      "naming": "Use Empathy on first mention.",
+      "capitalization": "Use sentence case.",
+      "punctuation": "Use short declarative sentences.",
+      "examples": [
+        {
+          "id": "documentation-welcome",
+          "text": "Start with the context that explains the decision.",
+          "rationale": "It offers an actionable, nonjudgmental entry point.",
+          "governance": {
+            "subject": "voice:empathy",
+            "state": "approved",
+            "visibility": "public",
+            "provenance": {
+              "method": "human-authored",
+              "source": ".identity/brief.md",
+              "capturedAt": "2026-08-27T12:02:00Z"
+            },
+            "approval": "approve-empathy-voice"
+          }
+        }
+      ],
+      "antiExamples": [
+        {
+          "id": "documentation-hype",
+          "text": "Empathy solves collaboration forever.",
+          "rationale": "It makes an unprovable promise.",
+          "governance": {
+            "subject": "voice:empathy",
+            "state": "approved",
+            "visibility": "public",
+            "provenance": {
+              "method": "human-authored",
+              "source": ".identity/brief.md",
+              "capturedAt": "2026-08-27T12:02:00Z"
+            },
+            "approval": "approve-empathy-voice"
+          }
+        }
+      ],
+      "governance": {
+        "subject": "voice:empathy",
+        "state": "approved",
+        "visibility": "public",
+        "provenance": {
+          "method": "human-authored",
+          "source": ".identity/brief.md",
+          "capturedAt": "2026-08-27T12:02:00Z"
+        },
+        "approval": "approve-empathy-voice"
+      }
+    }
+  ],
+  "localization": {
+    "sourceLanguage": "en-US",
+    "supportedLanguages": [
+      {
+        "tag": "en-US",
+        "coverage": "reviewed",
+        "notes": "Canonical Empathy guidance."
+      }
+    ],
+    "fallback": "Keep the Empathy name unchanged and request human review for uncovered locales.",
+    "governance": {
+      "subject": "voice:empathy",
+      "state": "approved",
+      "visibility": "public",
+      "provenance": {
+        "method": "human-authored",
+        "source": ".identity/brief.md",
+        "capturedAt": "2026-08-27T12:02:00Z"
+      },
+      "approval": "approve-empathy-voice"
+    }
+  }
+}
