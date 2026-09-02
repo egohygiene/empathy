@@ -6,7 +6,7 @@ See documentation on https://megalinter.io/10.0.0/descriptors/repository_truffle
 Linter raw log:
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-08-27T23:30:51Z	info-0	trufflehog	running source	{"source_manager_worker_id": "1wibg", "with_units": true}
+2026-09-02T09:57:30Z	info-0	trufflehog	running source	{"source_manager_worker_id": "5Sj0D", "with_units": true}
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
@@ -19,10 +19,10 @@ Analyze: Run `trufflehog analyze` to analyze this key's permissions
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
-Raw result: test_ledger_records_deletion_gate_fields
+Raw result: test_full_profile_selection_is_versioned
 Environment: test
-File: tests/test_staging_home_audit.py
-Line: 93
+File: tests/test_identity_integration.py
+Line: 64
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
 ✅ Found verified result 🐷🔑
@@ -37,11 +37,11 @@ Analyze: Run `trufflehog analyze` to analyze this key's permissions
 ✅ Found verified result 🐷🔑
 Detector Type: Lob
 Decoder Type: PLAIN
-Raw result: test_full_profile_selection_is_versioned
+Raw result: test_ledger_records_deletion_gate_fields
 Environment: test
-File: tests/test_identity_integration.py
-Line: 64
+File: tests/test_staging_home_audit.py
+Line: 93
 Analyze: Run `trufflehog analyze` to analyze this key's permissions
 
-2026-08-27T23:30:59Z	info-0	trufflehog	finished scanning	{"chunks": 6906, "bytes": 50174758, "verified_secrets": 4, "unverified_secrets": 0, "scan_duration": "7.995480157s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":1547}}
+2026-09-02T09:57:41Z	info-0	trufflehog	finished scanning	{"chunks": 6906, "bytes": 50174758, "verified_secrets": 4, "unverified_secrets": 0, "scan_duration": "10.259537414s", "trufflehog_version": "3.96.0", "verification_caching": {"Hits":0,"Misses":17,"HitsWasted":0,"AttemptsSaved":0,"VerificationTimeSpentMS":778}}
 
