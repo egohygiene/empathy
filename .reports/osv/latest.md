@@ -1,10 +1,10 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-08-27T23-25-27Z`
+- Generated: `2026-09-02T08-14-01Z`
 - Repository: `egohygiene/empathy`
-- Commit: `2b180084a936394e35cfca77c598a54d40568932`
+- Commit: `f8313641fa05cb1d062057a426b094c0e3770522`
 - Severity gate: `high`
-- Duration: `14s`
+- Duration: `13s`
 
 ## Findings
 
@@ -12,10 +12,10 @@
 | --- | ---: |
 | Critical | 3 |
 | High | 54 |
-| Medium | 49 |
+| Medium | 50 |
 | Low | 10 |
 | Unknown | 0 |
-| **Total** | **116** |
+| **Total** | **117** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 46 packages affected by 116 known vulnerabilities (3 Critical, 54 High, 49 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
-111 vulnerabilities can be fixed.
+Total 47 packages affected by 117 known vulnerabilities (3 Critical, 54 High, 50 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
+112 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -201,6 +201,7 @@ Total 46 packages affected by 116 known vulnerabilities (3 Critical, 54 High, 49
 | https://osv.dev/GHSA-2g4f-4pwh-qvx6 | 5.5 | npm | ajv | 8.6.3 | 8.18.0 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-rgw5-rvv9-x895 | 7.5 | npm | brace-expansion | 5.0.8 | 5.0.9 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-grv7-fg5c-xmjg | 7.5 | npm | braces | 2.3.2 | 3.0.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-vcc3-ghjq-m6fr | 6.6 | npm | decode-uri-component | 0.2.2 | 0.5.0 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | pnpm-lock.yaml |
 | https://osv.dev/GHSA-g7r4-m6w7-qqqr | 2.5 | npm | esbuild | 0.27.7 | 0.28.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-5v7r-6r5c-r473 | 5.3 | npm | file-type | 20.5.0 | 21.3.1 | pnpm-lock.yaml |

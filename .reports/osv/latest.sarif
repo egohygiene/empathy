@@ -3592,6 +3592,42 @@
         },
         {
           "partialFingerprints": {
+            "primaryLocationLineHash": "297f71a0dd860e804a78dd119701d0cb2a162fe9f9d3e205e7deb3ad8417768c"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'decode-uri-component@0.2.2' is vulnerable to 'CVE-2026-45822' (also known as 'GHSA-vcc3-ghjq-m6fr')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-45822",
+          "ruleIndex": 90,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
             "primaryLocationLineHash": "4d80297ecd630386e2f087f630b62b5fdddf068aac2e676e520e9982bb8bf90e"
           },
           "attachments": [],
@@ -3622,7 +3658,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 90,
+          "ruleIndex": 91,
           "stacks": [],
           "taxa": []
         },
@@ -3658,7 +3694,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-1526",
-          "ruleIndex": 91,
+          "ruleIndex": 92,
           "stacks": [],
           "taxa": []
         },
@@ -3694,7 +3730,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-12151",
-          "ruleIndex": 92,
+          "ruleIndex": 93,
           "stacks": [],
           "taxa": []
         },
@@ -3730,7 +3766,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 93,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -3766,7 +3802,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 93,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -3802,7 +3838,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2020-7753",
-          "ruleIndex": 94,
+          "ruleIndex": 95,
           "stacks": [],
           "taxa": []
         },
@@ -3838,7 +3874,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 95,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -3874,7 +3910,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 96,
+          "ruleIndex": 97,
           "stacks": [],
           "taxa": []
         },
@@ -3910,7 +3946,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48712",
-          "ruleIndex": 97,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -3946,7 +3982,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 98,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -3982,7 +4018,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 99,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -4018,7 +4054,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 100,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -4054,7 +4090,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 101,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -4090,7 +4126,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 102,
+          "ruleIndex": 103,
           "stacks": [],
           "taxa": []
         },
@@ -4126,7 +4162,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41242",
-          "ruleIndex": 103,
+          "ruleIndex": 104,
           "stacks": [],
           "taxa": []
         },
@@ -4198,7 +4234,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-45768",
-          "ruleIndex": 104,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         },
@@ -4342,7 +4378,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 96,
+          "ruleIndex": 97,
           "stacks": [],
           "taxa": []
         },
@@ -4558,7 +4594,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 95,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -4594,7 +4630,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 102,
+          "ruleIndex": 103,
           "stacks": [],
           "taxa": []
         },
@@ -4666,7 +4702,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 99,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -4918,7 +4954,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31900",
-          "ruleIndex": 105,
+          "ruleIndex": 106,
           "stacks": [],
           "taxa": []
         },
@@ -4990,7 +5026,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-7246",
-          "ruleIndex": 106,
+          "ruleIndex": 107,
           "stacks": [],
           "taxa": []
         },
@@ -5170,7 +5206,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 101,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -5206,7 +5242,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 100,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -5242,7 +5278,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 98,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -5710,7 +5746,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 90,
+          "ruleIndex": 91,
           "stacks": [],
           "taxa": []
         },
@@ -7118,8 +7154,8 @@
                 "text": "### Impact\n\nLodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\nThe issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\n### Patches\n\nThis issue is patched in 4.18.0.\n\n### Workarounds\n\nNone. Upgrade to the patched version."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2025-13465",
               "name": "CVE-2025-13465",
@@ -7900,8 +7936,8 @@
                 "text": "## Summary\n\nprotobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\nThe issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\n## Impact\n\nAn attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\nThe practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\n## Preconditions\n\n- The application must decode protobuf binary data influenced by an attacker.\n- The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n- The application must rely on byte-level filtering or validation before protobuf string decoding.\n- The decoded string must then be used in a security-sensitive context.\n\n## Workarounds\n\nAvoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2026-44288",
               "name": "CVE-2026-44288",
@@ -8000,8 +8036,8 @@
                 "text": "### Impact\n\nThe fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\nWhen an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\nAdditionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\n### Patches\n\nUsers should upgrade to version 4.18.0.\n\nThe fix applies two changes:\n1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\n### Workarounds\n\nDo not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2021-23337",
               "name": "CVE-2021-23337",
@@ -8182,6 +8218,30 @@
               "shortDescription": {
                 "markdown": "CVE-2026-53540: python-multipart: Negative Content-Length in parse_form buffers the entire body in memory",
                 "text": "CVE-2026-53540: python-multipart: Negative Content-Length in parse_form buffers the entire body in memory"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-45822",
+                "GHSA-vcc3-ghjq-m6fr"
+              ],
+              "fullDescription": {
+                "markdown": "### Impact\nAn attacker who can supply input to `decodeUriComponent()` (directly or via a dependency that uses this package on URL/query/path data) can cause excessive CPU usage and application unresponsiveness. This is an availability issue; there is no known memory corruption, data disclosure, or remote code execution impact.\n\n### Patches\nUpgrade to `decode-uri-component@0.5.0`.\n\n### Workarounds\nLimit the size of the input.",
+                "text": "### Impact\nAn attacker who can supply input to `decodeUriComponent()` (directly or via a dependency that uses this package on URL/query/path data) can cause excessive CPU usage and application unresponsiveness. This is an availability issue; there is no known memory corruption, data disclosure, or remote code execution impact.\n\n### Patches\nUpgrade to `decode-uri-component@0.5.0`.\n\n### Workarounds\nLimit the size of the input."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-45822](https://osv.dev/CVE-2026-45822)**.\n\n## [GHSA-vcc3-ghjq-m6fr](https://osv.dev/GHSA-vcc3-ghjq-m6fr)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e An attacker who can supply input to `decodeUriComponent()` (directly or via a dependency that uses this package on URL/query/path data) can cause excessive CPU usage and application unresponsiveness. This is an availability issue; there is no known memory corruption, data disclosure, or remote code execution impact.\n\u003e \n\u003e ### Patches\n\u003e Upgrade to `decode-uri-component@0.5.0`.\n\u003e \n\u003e ### Workarounds\n\u003e Limit the size of the input.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | decode-uri-component | 0.2.2 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-vcc3-ghjq-m6fr | decode-uri-component | 0.5.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-45822\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-45822](https://osv.dev/CVE-2026-45822)**.\n\n## [GHSA-vcc3-ghjq-m6fr](https://osv.dev/GHSA-vcc3-ghjq-m6fr)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e An attacker who can supply input to `decodeUriComponent()` (directly or via a dependency that uses this package on URL/query/path data) can cause excessive CPU usage and application unresponsiveness. This is an availability issue; there is no known memory corruption, data disclosure, or remote code execution impact.\n\u003e \n\u003e ### Patches\n\u003e Upgrade to `decode-uri-component@0.5.0`.\n\u003e \n\u003e ### Workarounds\n\u003e Limit the size of the input.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | decode-uri-component | 0.2.2 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-vcc3-ghjq-m6fr | decode-uri-component | 0.5.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-45822\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-45822",
+              "name": "CVE-2026-45822",
+              "properties": {
+                "security-severity": "6.6"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-45822: decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+                "text": "CVE-2026-45822: decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input"
               }
             },
             {
