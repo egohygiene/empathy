@@ -817,14 +817,8 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [73:1 - 157:3] (85 lines, 1124 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [69:1 - 156:42]
 Clone found (markdown)
- - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [75:25 - 95:4] (21 lines, 260 tokens)
-   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [99:25 - 119:4]
-Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [91:105 - 100:4] (10 lines, 116 tokens)
    .staging/.github/agents/awesome/specification.agent.md:markdown [54:70 - 63:4]
-Clone found (markdown)
- - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [96:1 - 106:12] (11 lines, 102 tokens)
-   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [120:1 - 130:8]
 Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [120:55 - 160:42] (41 lines, 421 tokens)
    .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [144:41 - 184:42]
@@ -1018,17 +1012,14 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [24:124 - 128:4] (105 lines, 250 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [22:119 - 127:4]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/specification.agent.md:markdown [28:53 - 116:8] (89 lines, 103 tokens)
+   .staging/.github/skills/create-specification/SKILL.md:markdown [26:53 - 114:12]
+Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 114:28] (84 lines, 1122 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [29:1 - 112:28]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
-Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [59:1 - 116:2] (58 lines, 795 tokens)
-   .staging/.github/skills/create-specification/SKILL.md:markdown [57:1 - 114:5]
-Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [112:31 - 117:110] (6 lines, 54 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [110:31 - 115:110]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1833,6 +1824,9 @@ Clone found (typescript)
 Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [41:3 - 48:21] (8 lines, 98 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [41:3 - 48:21]
 Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
@@ -2910,6 +2904,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
+Clone found (markdown)
+ - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
+   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -9517,7 +9514,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1721           │ 330310      │ 4257223      │ 690          │ 11578 (3.51%)    │ 173126 (4.07%)    │
+│ markdown     │ 1721           │ 330310      │ 4257223      │ 689          │ 11615 (3.52%)    │ 172398 (4.05%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9571,12 +9568,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 553            │ 57117       │ 316119       │ 347          │ 9355 (16.38%)    │ 105167 (33.27%)   │
+│ yaml         │ 553            │ 57117       │ 316128       │ 347          │ 9355 (16.38%)    │ 105167 (33.27%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4743           │ 981179      │ 7702638      │ 3148         │ 59376 (6.05%)    │ 762711 (9.90%)    │
+│ Total:       │ 4743           │ 981179      │ 7702647      │ 3147         │ 59413 (6.06%)    │ 761983 (9.89%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3148 clones.
+Found 3147 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 13.77s
+time: 16.03s
 

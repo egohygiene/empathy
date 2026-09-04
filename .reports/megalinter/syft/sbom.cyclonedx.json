@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:cecb5985-703b-496c-b082-bc1014c17f5f",
+  "serialNumber": "urn:uuid:3314ace4-6121-48b1-9d63-72ec2f667393",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-09-02T09:58:58Z",
+    "timestamp": "2026-09-04T22:38:38Z",
     "tools": {
       "components": [
         {
@@ -224963,15 +224963,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=901f59f17eead4e4#actions/normalize-repository-report",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=96fd289287ba869a#actions/normalize-repository-report",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/normalize-repository-report",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/normalize-repository-report",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/normalize-repository-report",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -224987,39 +224987,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225028,15 +225028,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=3c2744d34699c73d#actions/normalize-repository-report",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=6d8dc74584cfffe3#actions/normalize-repository-report",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/normalize-repository-report",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/normalize-repository-report",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/normalize-repository-report",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225052,39 +225052,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225093,15 +225093,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=0da620847f7edda6#actions/normalize-repository-report",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=6d5fa28d86347f5b#actions/normalize-repository-report",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/normalize-repository-report",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/normalize-repository-report",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/normalize-repository-report",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225117,39 +225117,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225158,15 +225158,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=6432c0b6b712af4c#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=07fb604194ebf768#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/publish-report-snapshot",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225182,39 +225182,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225223,15 +225223,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=b0b26fe3c9b4d839#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=365cd54a34068cd7#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/publish-report-snapshot",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225247,39 +225247,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225288,15 +225288,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=30834906d7af9817#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=e1359083adf5e0b5#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/publish-report-snapshot",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225312,39 +225312,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225353,15 +225353,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=913203ac806c70cf#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=7c4bf4f83d3f45ca#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/publish-report-snapshot",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225377,39 +225377,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225418,15 +225418,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=ce6f7f5b0ed0ed07#actions/repository-intelligence",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=084fe2a34e41036a#actions/repository-intelligence",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/repository-intelligence",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/repository-intelligence",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/repository-intelligence",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225442,23 +225442,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225467,15 +225467,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.2.0?package-id=d7ba9b30ad111a8e#actions/repository-intelligence",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=6946764b7f5e9de4#actions/repository-intelligence",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/repository-intelligence",
-      "version": "v1.2.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.2.0#actions/repository-intelligence",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/repository-intelligence",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225491,23 +225491,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254716,15 +254716,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28?package-id=5e65284c068cda26#analyze",
+      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=9ef39a936c877096#analyze",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/analyze",
-      "version": "db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28#analyze",
+      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#analyze",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254740,23 +254740,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254765,15 +254765,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28?package-id=d70f2c50c87ead69#init",
+      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=f6ebeabfc080a085#init",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/init",
-      "version": "db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28#init",
+      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#init",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254789,23 +254789,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254814,15 +254814,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28?package-id=e3da66cde8ad48df#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=484af9d9ba7492ba#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28#upload-sarif",
+      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254838,39 +254838,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254879,15 +254879,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28?package-id=e467113c73b61649#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=df46d0df6d6201c9#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28#upload-sarif",
+      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254903,39 +254903,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254944,15 +254944,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28?package-id=c5e1787705b552db#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=9ea0321ac926e9ea#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28#upload-sarif",
+      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254968,39 +254968,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -487330,7 +487330,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "e7b9da0378590f2924b56a795f9439b6d704dceb9b021b121bdab8c973032b97"
+          "content": "79215d6ade5369c402aad8e85f6a5b375fe49694f8ffe1ce155069d5d95e1db5"
         }
       ]
     },
@@ -487396,7 +487396,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "50acd438c1394e3751681f2d321cd06f3094845cc2e633c2f51135188c7597e1"
+          "content": "dc0f6e6683ab0c182328a05790995196da3c3791ac6e8ce40d71da89d29dc322"
         }
       ]
     },
@@ -487429,7 +487429,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "eebc2b2775dc2c70027a31cb49e56a492f8a50ffc0b17d844f5c3375289f71da"
+          "content": "5ba82472f8a4cf9d013c0e19f733116dc185cfde6ded395c7b0a005b5767d3af"
         }
       ]
     },
@@ -487440,7 +487440,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "4ba5dad6c2b3e705cda812b9a46b66e042920aaeaeabc0e67b09c32bce382937"
+          "content": "b4ebe5a84b5b2abda297ffa6942df856d370272df69adf5ee77b1be5981c0e8e"
         }
       ]
     },
@@ -487451,7 +487451,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "4e89dd966d9c45be5676aff4a9c6b0863dc153deabe500ddb63436f552d470ba"
+          "content": "99674184c6526947b7093b937c137209b89c8b81b9ce1e4265cabd39fc4b9268"
         }
       ]
     },
@@ -487462,7 +487462,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "eb479dcd4a0c7ce8aef121ef51832f0dbea0733601d89672c74647e859f47d6b"
+          "content": "28254ae4de6e2bbc3604bf4e93a6c3f7b6d2bdd5a553a0eb33b96c48ffd27364"
         }
       ]
     },
@@ -487473,7 +487473,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "2f83b3ffb7086816dcc3ee991e326feb17c358b362c3681b8bcfe713b2a4a8c4"
+          "content": "29adfb11a5efc6828d7c13f1b948ff6022f43fdafa6cd1d3cd0a78b7ab7a014c"
         }
       ]
     },
