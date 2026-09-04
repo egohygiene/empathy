@@ -1,21 +1,21 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-09-02T08-14-01Z`
+- Generated: `2026-09-04T22-31-29Z`
 - Repository: `egohygiene/empathy`
-- Commit: `f8313641fa05cb1d062057a426b094c0e3770522`
+- Commit: `c409e5efe7dfb5c4dc6037d720c138e6e403fce0`
 - Severity gate: `high`
-- Duration: `13s`
+- Duration: `19s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
 | Critical | 3 |
-| High | 54 |
-| Medium | 50 |
+| High | 62 |
+| Medium | 54 |
 | Low | 10 |
 | Unknown | 0 |
-| **Total** | **117** |
+| **Total** | **129** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 47 packages affected by 117 known vulnerabilities (3 Critical, 54 High, 50 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
-112 vulnerabilities can be fixed.
+Total 51 packages affected by 129 known vulnerabilities (3 Critical, 62 High, 54 Medium, 10 Low, 0 Unknown) from 2 ecosystems.
+124 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -195,6 +195,12 @@ Total 47 packages affected by 117 known vulnerabilities (3 Critical, 54 High, 50
 | https://osv.dev/GHSA-3ppc-4f35-3m26 | 8.7 | npm | minimatch | 3.1.2 | 3.1.3 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-7r86-cg39-jmmj | 7.5 | npm | minimatch | 3.1.2 | 3.1.3 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-5jgf-p345-68v8 | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-f65p-4m7j-42xc | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-fph4-wmhf-6fwf | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-jqff-g426-hqxp | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-4mjr-xmp4-gh2g | 6.3 | npm | qs | 6.15.3 | 6.16.0 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-x5fp-wj9c-mxmx | 6.3 | npm | qs | 6.15.3 | 6.16.0 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-g3ch-rx76-35fx | 4.2 | npm | vue-template-compiler | 2.7.16 | -- | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-8988-4f7v-96qf | 5.3 | npm | @opentelemetry/core | 2.0.0 | 2.8.0 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-2g4f-4pwh-qvx6 | 5.5 | npm | ajv | 8.17.1 | 8.18.0 | pnpm-lock.yaml |
@@ -204,6 +210,10 @@ Total 47 packages affected by 117 known vulnerabilities (3 Critical, 54 High, 50
 | https://osv.dev/GHSA-vcc3-ghjq-m6fr | 6.6 | npm | decode-uri-component | 0.2.2 | 0.5.0 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-848j-6mx2-7j84 | 5.6 | npm | elliptic | 6.6.1 | -- | pnpm-lock.yaml |
 | https://osv.dev/GHSA-g7r4-m6w7-qqqr | 2.5 | npm | esbuild | 0.27.7 | 0.28.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-5jgf-p345-68v8 | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-f65p-4m7j-42xc | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-fph4-wmhf-6fwf | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-jqff-g426-hqxp | 7.5 | npm | fast-uri | 3.1.5 | 3.1.6 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-5v7r-6r5c-r473 | 5.3 | npm | file-type | 20.5.0 | 21.3.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-j47w-4g3g-c36v | 5.3 | npm | file-type | 20.5.0 | 21.3.2 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-52cp-r559-cp3m | 7.5 | npm | js-yaml | 4.1.1 | 4.3.0 | pnpm-lock.yaml |
@@ -227,6 +237,8 @@ Total 47 packages affected by 117 known vulnerabilities (3 Critical, 54 High, 50
 | https://osv.dev/GHSA-q6x5-8v7m-xcrf | 5.3 | npm | protobufjs | 6.11.6 | 7.5.6 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-wcpc-wj8m-hjx6 | 7.5 | npm | protobufjs | 6.11.6 | 7.6.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-xq3m-2v4x-88gg | 9.8 | npm | protobufjs | 6.11.6 | 7.5.5 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-4mjr-xmp4-gh2g | 6.3 | npm | qs | 6.15.3 | 6.16.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-x5fp-wj9c-mxmx | 6.3 | npm | qs | 6.15.3 | 6.16.0 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-5c6j-r48x-rmvq | 8.1 | npm | serialize-javascript | 4.0.0 | 7.0.3 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-5c6j-r48x-rmvq | 8.1 | npm | serialize-javascript | 6.0.2 | 7.0.3 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-qj8w-gfj5-8c6v | 5.9 | npm | serialize-javascript | 6.0.2 | 7.0.5 | pnpm-lock.yaml |

