@@ -51,7 +51,7 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
         with:
           egress-policy: audit
 
@@ -81,7 +81,7 @@ jobs:
           build
 
       - name: Generate repository intelligence dashboard
-        uses: egohygiene/relay/actions/repository-intelligence@55587de4ff322931d401e964f5af0716633dd675 # v1.3.0
+        uses: egohygiene/relay/actions/repository-intelligence@b71b090406a3a9e4cd9f107e9d14a623bbecb127 # v1.4.0
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -131,11 +131,11 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
         with:
           egress-policy: audit
 
       - name: Deploy to GitHub Pages
         id: deployment
         # actions/deploy-pages v5.0.0
-        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346

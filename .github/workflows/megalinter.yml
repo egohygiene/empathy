@@ -35,7 +35,7 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
         with:
           egress-policy: audit
 
@@ -75,7 +75,7 @@ jobs:
 
       - name: Normalize repository-intelligence summary
         if: always()
-        uses: egohygiene/relay/actions/normalize-repository-report@55587de4ff322931d401e964f5af0716633dd675 # v1.3.0
+        uses: egohygiene/relay/actions/normalize-repository-report@b71b090406a3a9e4cd9f107e9d14a623bbecb127 # v1.4.0
         with:
           producer: megalinter
           input: .reports/megalinter/mega-linter-report.json
@@ -150,7 +150,7 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
         with:
           egress-policy: audit
 
@@ -175,7 +175,7 @@ jobs:
           path: .reports/megalinter
 
       - name: Publish stable MegaLinter snapshot
-        uses: egohygiene/relay/actions/publish-report-snapshot@55587de4ff322931d401e964f5af0716633dd675 # v1.3.0
+        uses: egohygiene/relay/actions/publish-report-snapshot@b71b090406a3a9e4cd9f107e9d14a623bbecb127 # v1.4.0
         with:
           paths: .reports/megalinter
           default-branch: "${{ github.event.repository.default_branch }}"
