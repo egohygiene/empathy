@@ -29442,7 +29442,94 @@
             "name": "colord",
             "version": "2.9.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2wm5-q62r-hmrv"
+              ],
+              "aliases": [
+                "CVE-2026-85062",
+                "GHSA-2wm5-q62r-hmrv"
+              ],
+              "max_severity": "6.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2wm5-q62r-hmrv/GHSA-2wm5-q62r-hmrv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "colord",
+                    "purl": "pkg:npm/colord"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.9.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-85062"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:51:57Z",
+                "nvd_published_at": "2026-09-03T21:17:23Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\n`colord`'s CSS color string matchers described a number as `([+-]?\\d*\\.?\\d+)`. In that form `\\d*` and `\\d+` can match the same digits, so a run of *n* digits can be divided between them in O(n²) ways, and rejecting an input retries every division. Parsing is synchronous and uninterruptible, so a long malformed color string blocks the thread:\n\n| input | time to reject |\n| --- | --- |\n| 16 KB | 224 ms |\n| 64 KB | 4.4 s |\n| 128 KB | 18.5 s |\n\nReachable through `colord()` and `getFormat()`, and through any method that accepts a color string — including `isEqual()`, `mix()` and `contrast()`. The affected matchers are `parseRgbaString` and `parseHslaString` (built in) and `parseHwbaString`, `parseLchaString`, `parseCmykaString` (plugins).\n\nGrowth is polynomial, not exponential — multi-kilobyte payloads are required for a noticeable stall.\n\n### Who is affected\n\nApplications that pass attacker-controlled strings of unbounded length to `colord()` — for example a server validating a color taken from a request body, JSON field, or uploaded stylesheet. `colord` applies no length limit before matching.\n\nTypical client-side use with short input is not meaningfully affected.\n\n### Patches\n\nFixed in **2.9.4**. The number is now written as `([+-]?(?:\\d*\\.\\d+|\\d+))`, which accepts exactly the same syntax but leaves only one way to match it, making rejection linear — 1 MB of input is rejected in ~5 ms.\n\n### Workarounds\n\nReject or truncate color strings longer than a sane limit (e.g. 100 characters) before passing them to `colord`.",
+              "id": "GHSA-2wm5-q62r-hmrv",
+              "modified": "2026-09-08T21:00:06.239800217Z",
+              "published": "2026-09-08T20:51:57Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/omgovich/colord/security/advisories/GHSA-2wm5-q62r-hmrv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85062"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/omgovich/colord/pull/141"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/omgovich/colord/commit/87018089515ed66a85b1a95c3c7c3fd69a25bac2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/omgovich/colord"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Colord: Slow rejection of oversized malformed color strings"
+            }
+          ]
         },
         {
           "package": {
@@ -35928,14 +36015,540 @@
             "name": "joi",
             "version": "17.13.4",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "aliases": [
+                "CVE-2026-84368",
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "max_severity": "3.7"
+            },
+            {
+              "ids": [
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "aliases": [
+                "CVE-2026-84367",
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "max_severity": "3.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "17.2.0"
+                        },
+                        {
+                          "fixed": "17.13.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@hapi/joi",
+                    "purl": "pkg:npm/%40hapi/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "last_affected": "17.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84368"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:55:58Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\nAn application that passes attacker-controlled data into joi's custom message configuration (`messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`) lets the attacker write properties onto `Object.prototype`, where every object in the process then inherits them. A key named `__proto__` was treated as a language name, and the code reused the object it found at that key, which resolves to the prototype rather than to a new own property; a key named `constructor` did the same to the `Object` function's statics. A consuming application that gates on the mere presence of a property (`if (user.isAdmin)`) can be made to take the wrong branch for every object it inspects.\n\nThis is not reachable from data that joi validates. Custom messages are schema-construction configuration, normally written by the application developer. Exploitation therefore requires an application that feeds untrusted input straight into schema construction.\n\n### Patches\nUpgrade to version 18.2.5 or 17.13.6.\n\n### Workarounds\nDo not pass untrusted input into `messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`. Or validate that they don't contain any `__proto__` or `constructor` property.",
+              "id": "GHSA-6w3j-5fw6-r9vr",
+              "modified": "2026-09-08T21:15:03.964614980Z",
+              "published": "2026-09-08T20:55:58Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-6w3j-5fw6-r9vr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84368"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3139"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/8d0b808f3e874d28f9078f61b7742290989afb36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/90d07571923c90e3432a328fc041d1cda03d30fa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: Prototype pollution via a `__proto__` language key in custom messages"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "fixed": "17.13.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84367"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:51:21Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\n\nApplications are affected only if a schema renames keys with a regular-expression source and a `Joi.expression()` / `Joi.x()` target that interpolates the pattern's own match data, combined with `{ multiple: true }`, for example `.rename(/^x-(.+)$/, Joi.x('{#1}'), { multiple: true })`. Because the target is rendered from the matched input key, an attacker who controls input keys can send `x-__proto__` with an object value and make the rename target render as `__proto__`, which sets the prototype of the object joi returns instead of creating a key on it. The global `Object.prototype` is not modified, so the effect is confined to the object returned by that one `validate()` call.\n\nSchemas using a static string rename target are not affected, and neither are schemas left on the default `{ multiple: false }`.\n\n### Patches\n\nVersions 17.13.5 and 18.2.4 have been released to address the issue.\n\n### Workarounds\n\n1. Replace the template rename target with a static string target.\n2. Keep the template but make the capture unable to produce `__proto__`, using a negative lookahead: `.rename(/^x-(?!__proto__$)(.+)$/, Joi.x('{#1}'), { multiple: true })`\n3. Drop { multiple: true } from the rename, which stops the rename before the assignment.",
+              "id": "GHSA-gg4h-3hg2-grpc",
+              "modified": "2026-09-08T21:00:05.097709715Z",
+              "published": "2026-09-08T20:51:21Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-gg4h-3hg2-grpc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84367"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3134"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3135"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/162f367aa178d2e1ebec8dc1164e5fe16536ddf6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/172ececa192feda532b743d77bc9d3e523d19b01"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v17.13.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v18.2.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: object().rename() with a template target can set the validated object's prototype"
+            }
+          ]
         },
         {
           "package": {
             "name": "joi",
             "version": "18.2.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "aliases": [
+                "CVE-2026-84368",
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "max_severity": "3.7"
+            },
+            {
+              "ids": [
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "aliases": [
+                "CVE-2026-84367",
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "max_severity": "3.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "17.2.0"
+                        },
+                        {
+                          "fixed": "17.13.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@hapi/joi",
+                    "purl": "pkg:npm/%40hapi/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "last_affected": "17.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84368"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:55:58Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\nAn application that passes attacker-controlled data into joi's custom message configuration (`messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`) lets the attacker write properties onto `Object.prototype`, where every object in the process then inherits them. A key named `__proto__` was treated as a language name, and the code reused the object it found at that key, which resolves to the prototype rather than to a new own property; a key named `constructor` did the same to the `Object` function's statics. A consuming application that gates on the mere presence of a property (`if (user.isAdmin)`) can be made to take the wrong branch for every object it inspects.\n\nThis is not reachable from data that joi validates. Custom messages are schema-construction configuration, normally written by the application developer. Exploitation therefore requires an application that feeds untrusted input straight into schema construction.\n\n### Patches\nUpgrade to version 18.2.5 or 17.13.6.\n\n### Workarounds\nDo not pass untrusted input into `messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`. Or validate that they don't contain any `__proto__` or `constructor` property.",
+              "id": "GHSA-6w3j-5fw6-r9vr",
+              "modified": "2026-09-08T21:15:03.964614980Z",
+              "published": "2026-09-08T20:55:58Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-6w3j-5fw6-r9vr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84368"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3139"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/8d0b808f3e874d28f9078f61b7742290989afb36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/90d07571923c90e3432a328fc041d1cda03d30fa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: Prototype pollution via a `__proto__` language key in custom messages"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "fixed": "17.13.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84367"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:51:21Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\n\nApplications are affected only if a schema renames keys with a regular-expression source and a `Joi.expression()` / `Joi.x()` target that interpolates the pattern's own match data, combined with `{ multiple: true }`, for example `.rename(/^x-(.+)$/, Joi.x('{#1}'), { multiple: true })`. Because the target is rendered from the matched input key, an attacker who controls input keys can send `x-__proto__` with an object value and make the rename target render as `__proto__`, which sets the prototype of the object joi returns instead of creating a key on it. The global `Object.prototype` is not modified, so the effect is confined to the object returned by that one `validate()` call.\n\nSchemas using a static string rename target are not affected, and neither are schemas left on the default `{ multiple: false }`.\n\n### Patches\n\nVersions 17.13.5 and 18.2.4 have been released to address the issue.\n\n### Workarounds\n\n1. Replace the template rename target with a static string target.\n2. Keep the template but make the capture unable to produce `__proto__`, using a negative lookahead: `.rename(/^x-(?!__proto__$)(.+)$/, Joi.x('{#1}'), { multiple: true })`\n3. Drop { multiple: true } from the rename, which stops the rename before the assignment.",
+              "id": "GHSA-gg4h-3hg2-grpc",
+              "modified": "2026-09-08T21:00:05.097709715Z",
+              "published": "2026-09-08T20:51:21Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-gg4h-3hg2-grpc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84367"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3134"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3135"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/162f367aa178d2e1ebec8dc1164e5fe16536ddf6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/172ececa192feda532b743d77bc9d3e523d19b01"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v17.13.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v18.2.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: object().rename() with a template target can set the validated object's prototype"
+            }
+          ]
         },
         {
           "package": {
@@ -35963,14 +36576,268 @@
             "name": "js-yaml",
             "version": "3.15.1",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "aliases": [
+                "CVE-2026-84375",
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.15.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84375"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:24:51Z",
+                "nvd_published_at": "2026-09-01T22:17:19Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\n`maxTotalMergeKeys` does not count empty mappings. An attacker can repeatedly merge a large sequence of them and consume significant CPU without reaching the configured limit.\n\n## Example\n\n```yaml\narr: \u0026arr [{}, {}, {}, ...] # N empty mappings\ntargets:\n  - \u003c\u003c: *arr                # repeated K times\n```\n\nFor every target, the loader iterates all `N` elements of `arr`. This results in `O(N * K)` work while `totalMergeKeys` remains unchanged.\n\n## PoC\n\n```js\nimport { performance } from 'node:perf_hooks'\nimport { load, YAML11_SCHEMA } from 'js-yaml'\n\nconst n = 20000\n\nconst src =\n  'arr: \u0026arr [' + '{},'.repeat(n).slice(0, -1) + ']\\n' +\n  'targets:\\n' +\n  '  - \u003c\u003c: *arr\\n'.repeat(n)\n\nconst started = performance.now()\n\nload(src, { schema: YAML11_SCHEMA })\n\nconsole.log(`${(performance.now() - started).toFixed(1)} ms`)\n```\n\nObserved results:\n\n| N | YAML size | Time |\n|---:|---:|---:|\n| 800 | ~13 KB | ~20 ms |\n| 3200 | ~50 KB | ~180 ms |\n| 20000 | ~500 KB | ~13 s |\n\n## Impact\n\nAn attacker can submit a relatively small YAML document that causes prolonged CPU consumption despite the default `maxTotalMergeKeys` limit.\n\n## Fix\n\nCount each merge-source mapping as one budget unit, in addition to counting its keys.\n\n## Difference with v5\n\nIn v3 \u0026 v4, merge is enabled by default. So, the severity score is higher.",
+              "id": "GHSA-2883-xcg3-v3hh",
+              "modified": "2026-09-08T21:30:05.575808098Z",
+              "published": "2026-09-08T21:24:51Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-2883-xcg3-v3hh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84375"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/pull/797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/3485bc06ff8a0251505f44a00414d90df2466639"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/6a8e05f9a485188ed730ac81e81ae221352ef480"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/d90b6612a5a84385bdcb556c44578eac76dc0f6b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/3.15.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/4.3.2"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources"
+            }
+          ]
         },
         {
           "package": {
             "name": "js-yaml",
             "version": "4.3.1",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "aliases": [
+                "CVE-2026-84375",
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.15.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84375"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:24:51Z",
+                "nvd_published_at": "2026-09-01T22:17:19Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\n`maxTotalMergeKeys` does not count empty mappings. An attacker can repeatedly merge a large sequence of them and consume significant CPU without reaching the configured limit.\n\n## Example\n\n```yaml\narr: \u0026arr [{}, {}, {}, ...] # N empty mappings\ntargets:\n  - \u003c\u003c: *arr                # repeated K times\n```\n\nFor every target, the loader iterates all `N` elements of `arr`. This results in `O(N * K)` work while `totalMergeKeys` remains unchanged.\n\n## PoC\n\n```js\nimport { performance } from 'node:perf_hooks'\nimport { load, YAML11_SCHEMA } from 'js-yaml'\n\nconst n = 20000\n\nconst src =\n  'arr: \u0026arr [' + '{},'.repeat(n).slice(0, -1) + ']\\n' +\n  'targets:\\n' +\n  '  - \u003c\u003c: *arr\\n'.repeat(n)\n\nconst started = performance.now()\n\nload(src, { schema: YAML11_SCHEMA })\n\nconsole.log(`${(performance.now() - started).toFixed(1)} ms`)\n```\n\nObserved results:\n\n| N | YAML size | Time |\n|---:|---:|---:|\n| 800 | ~13 KB | ~20 ms |\n| 3200 | ~50 KB | ~180 ms |\n| 20000 | ~500 KB | ~13 s |\n\n## Impact\n\nAn attacker can submit a relatively small YAML document that causes prolonged CPU consumption despite the default `maxTotalMergeKeys` limit.\n\n## Fix\n\nCount each merge-source mapping as one budget unit, in addition to counting its keys.\n\n## Difference with v5\n\nIn v3 \u0026 v4, merge is enabled by default. So, the severity score is higher.",
+              "id": "GHSA-2883-xcg3-v3hh",
+              "modified": "2026-09-08T21:30:05.575808098Z",
+              "published": "2026-09-08T21:24:51Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-2883-xcg3-v3hh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84375"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/pull/797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/3485bc06ff8a0251505f44a00414d90df2466639"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/6a8e05f9a485188ed730ac81e81ae221352ef480"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/d90b6612a5a84385bdcb556c44578eac76dc0f6b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/3.15.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/4.3.2"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources"
+            }
+          ]
         },
         {
           "package": {
@@ -43118,7 +43985,90 @@
             "name": "sharp",
             "version": "0.35.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-rgj7-g3m4-5g8c"
+              ],
+              "aliases": [
+                "GHSA-rgj7-g3m4-5g8c"
+              ],
+              "max_severity": "8.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-rgj7-g3m4-5g8c/GHSA-rgj7-g3m4-5g8c.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "sharp",
+                    "purl": "pkg:npm/sharp"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.35.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-122"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:25:11Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              },
+              "details": "### Impact\nA number of vulnerabilities, two rated as \"Critical\" severity using CVSSv3, have been discovered and fixed in the upstream libheif dependency. These can lead to possible remote code execution (RCE) on glibc-based Linux when run under certain conditions.\n\nThe attack vector for these claims to be \"network\" however sharp does not provide any networking features so this vulnerability is down-rated to a \"High\" severity using CVSSv4 but please note its Subsequent System Impact.\n\nThose processing untrusted input with versions of sharp prior to 0.35.4 are affected.\n\n### Patches\n\n#### Using prebuilt binaries provided by sharp?\n\nMost people rely on the prebuilt binaries provided by sharp.\n\nPlease upgrade sharp to the latest version, currently 0.35.4, which provides libheif 1.23.2.\n\n#### Using a globally-installed libheif?\n\nPlease ensure you are using the latest libheif 1.23.2.\n\n### Workarounds\nAdd the following to your code to prevent sharp from decoding AVIF images.\n```js\nsharp.block({ operation: [\"VipsForeignLoadHeif\"] });\n```\n\nEnsure you are using a `node` executable binary compiled as a Position Independent Executable (PIE). Most Linux package managers already do this for protection against RCE however be warned that the \"official\" Node.js binaries do not.\n\n### References\n- [CVE-2026-84383](https://github.com/strukturag/libheif/security/advisories/GHSA-g89c-p67h-r497)\n- https://github.com/strukturag/libheif/security/advisories/GHSA-2jg2-4ch7-h545",
+              "id": "GHSA-rgj7-g3m4-5g8c",
+              "modified": "2026-09-08T21:30:05.560836870Z",
+              "published": "2026-09-08T21:25:11Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lovell/sharp/security/advisories/GHSA-rgj7-g3m4-5g8c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-2jg2-4ch7-h545"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-g89c-p67h-r497"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/lovell/sharp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lovell/sharp/releases/tag/v0.35.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545"
+            }
+          ]
         },
         {
           "package": {
@@ -44231,14 +45181,652 @@
             "name": "svgo",
             "version": "2.8.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "aliases": [
+                "CVE-2026-84369",
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "aliases": [
+                "CVE-2026-84370",
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "max_severity": "8.2"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84369"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:05Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin did not inspect executable HTML content inside SVG `\u003cforeignObject\u003e` elements. Applications that used this plugin as their only protection for untrusted SVG input could produce SVGs containing active HTML and expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nAlthough the plugin removed SVG and XHTML `\u003cscript\u003e` elements, it left other HTML execution paths inside `\u003cforeignObject\u003e` unchanged. These included:\n\n- event-handler attributes such as `onload` and `onbeforetoggle`;\n- `srcdoc` documents, including on `\u003ciframe\u003e` elements;\n- executable URLs in HTML attributes such as `action`, `data`, `formaction`, `href`, and `src`.\n\nAn attacker could place one of these payloads in an SVG. If an application optimized the untrusted SVG with `removeScripts` and then served the result in an active browser context, the payload could execute in the viewer's origin.\n\n## Impact\n\nSuccessful exploitation could allow script execution in the context where the optimized SVG is rendered. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable `removeScripts` are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix preserves visual HTML inside SVG `\u003cforeignObject\u003e` elements while removing event attributes, `srcdoc`, and executable URL values from active HTML URL attributes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. As defense in depth, applications can reject or remove `\u003cforeignObject\u003e` content and avoid serving user-controlled SVGs in an active same-origin context.",
+              "id": "GHSA-4vpr-x523-8j87",
+              "modified": "2026-09-08T21:30:05.558835894Z",
+              "published": "2026-09-08T21:20:05Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-4vpr-x523-8j87"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84369"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2264"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/fd51e474a300417d9361d9302d596b1763146327"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts incompletely sanitizes executable HTML in SVG foreignObject elements"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84370"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-184",
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:28Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin failed to remove some executable links. Namespace-prefixed SVG anchors and URL schemes containing ASCII tabs or newlines could bypass its checks. Applications that used this plugin as their only protection for untrusted SVG input could expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nTwo related bypasses were present:\n\n1. The plugin inspected unprefixed SVG `\u003ca\u003e` elements but did not recognize namespace-prefixed SVG anchors such as `\u003csvg:a\u003e` when the prefix was bound to the SVG namespace. Their executable `href` or namespaced `*:href` values remained intact.\n2. The URL check did not account for ASCII tab, line-feed, or carriage-return characters embedded in a scheme. Browsers remove these characters before parsing the scheme, so values such as `java\u0026#9;script:` could remain executable after bypassing the plugin's `javascript:` check.\n\nAnchors in unrelated custom namespaces are not executable SVG anchors and remain untouched.\n\n## Impact\n\nIf an application optimized attacker-controlled SVGs with `removeScripts` and then served the result in an active browser context, a victim could follow a link that executes script in the SVG's origin. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable it are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix makes SVG anchor handling namespace-aware and strips ASCII tabs, line feeds, and carriage returns before checking executable URL schemes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. Applications can also reject links from untrusted SVG input and avoid serving user-controlled SVGs in an active same-origin context.\n\n## References\n\n- v4 fix: https://github.com/svg/svgo/pull/2268\n- related executable URL hardening: https://github.com/svg/svgo/pull/2263\n- v3 backport: https://github.com/svg/svgo/pull/2269\n- v2 backport: https://github.com/svg/svgo/pull/2272\n- v4.1.0 release: https://github.com/svg/svgo/releases/tag/v4.1.0\n- v3.3.5 release: https://github.com/svg/svgo/releases/tag/v3.3.5\n- v2.8.4 release: https://github.com/svg/svgo/releases/tag/v2.8.4",
+              "id": "GHSA-w27v-7q3p-w38r",
+              "modified": "2026-09-08T21:30:04.769354630Z",
+              "published": "2026-09-08T21:20:28Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-w27v-7q3p-w38r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84370"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2268"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/3db3ef33e409a0bc0fdaf255e46c908b00e93bc2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts allows executable links through namespace and control-character bypasses"
+            }
+          ]
         },
         {
           "package": {
             "name": "svgo",
             "version": "3.3.4",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "aliases": [
+                "CVE-2026-84369",
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "aliases": [
+                "CVE-2026-84370",
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "max_severity": "8.2"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84369"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:05Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin did not inspect executable HTML content inside SVG `\u003cforeignObject\u003e` elements. Applications that used this plugin as their only protection for untrusted SVG input could produce SVGs containing active HTML and expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nAlthough the plugin removed SVG and XHTML `\u003cscript\u003e` elements, it left other HTML execution paths inside `\u003cforeignObject\u003e` unchanged. These included:\n\n- event-handler attributes such as `onload` and `onbeforetoggle`;\n- `srcdoc` documents, including on `\u003ciframe\u003e` elements;\n- executable URLs in HTML attributes such as `action`, `data`, `formaction`, `href`, and `src`.\n\nAn attacker could place one of these payloads in an SVG. If an application optimized the untrusted SVG with `removeScripts` and then served the result in an active browser context, the payload could execute in the viewer's origin.\n\n## Impact\n\nSuccessful exploitation could allow script execution in the context where the optimized SVG is rendered. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable `removeScripts` are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix preserves visual HTML inside SVG `\u003cforeignObject\u003e` elements while removing event attributes, `srcdoc`, and executable URL values from active HTML URL attributes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. As defense in depth, applications can reject or remove `\u003cforeignObject\u003e` content and avoid serving user-controlled SVGs in an active same-origin context.",
+              "id": "GHSA-4vpr-x523-8j87",
+              "modified": "2026-09-08T21:30:05.558835894Z",
+              "published": "2026-09-08T21:20:05Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-4vpr-x523-8j87"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84369"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2264"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/fd51e474a300417d9361d9302d596b1763146327"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts incompletely sanitizes executable HTML in SVG foreignObject elements"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84370"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-184",
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:28Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin failed to remove some executable links. Namespace-prefixed SVG anchors and URL schemes containing ASCII tabs or newlines could bypass its checks. Applications that used this plugin as their only protection for untrusted SVG input could expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nTwo related bypasses were present:\n\n1. The plugin inspected unprefixed SVG `\u003ca\u003e` elements but did not recognize namespace-prefixed SVG anchors such as `\u003csvg:a\u003e` when the prefix was bound to the SVG namespace. Their executable `href` or namespaced `*:href` values remained intact.\n2. The URL check did not account for ASCII tab, line-feed, or carriage-return characters embedded in a scheme. Browsers remove these characters before parsing the scheme, so values such as `java\u0026#9;script:` could remain executable after bypassing the plugin's `javascript:` check.\n\nAnchors in unrelated custom namespaces are not executable SVG anchors and remain untouched.\n\n## Impact\n\nIf an application optimized attacker-controlled SVGs with `removeScripts` and then served the result in an active browser context, a victim could follow a link that executes script in the SVG's origin. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable it are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix makes SVG anchor handling namespace-aware and strips ASCII tabs, line feeds, and carriage returns before checking executable URL schemes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. Applications can also reject links from untrusted SVG input and avoid serving user-controlled SVGs in an active same-origin context.\n\n## References\n\n- v4 fix: https://github.com/svg/svgo/pull/2268\n- related executable URL hardening: https://github.com/svg/svgo/pull/2263\n- v3 backport: https://github.com/svg/svgo/pull/2269\n- v2 backport: https://github.com/svg/svgo/pull/2272\n- v4.1.0 release: https://github.com/svg/svgo/releases/tag/v4.1.0\n- v3.3.5 release: https://github.com/svg/svgo/releases/tag/v3.3.5\n- v2.8.4 release: https://github.com/svg/svgo/releases/tag/v2.8.4",
+              "id": "GHSA-w27v-7q3p-w38r",
+              "modified": "2026-09-08T21:30:04.769354630Z",
+              "published": "2026-09-08T21:20:28Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-w27v-7q3p-w38r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84370"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2268"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/3db3ef33e409a0bc0fdaf255e46c908b00e93bc2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts allows executable links through namespace and control-character bypasses"
+            }
+          ]
         },
         {
           "package": {
@@ -61198,7 +62786,94 @@
             "name": "colord",
             "version": "2.9.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2wm5-q62r-hmrv"
+              ],
+              "aliases": [
+                "CVE-2026-85062",
+                "GHSA-2wm5-q62r-hmrv"
+              ],
+              "max_severity": "6.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2wm5-q62r-hmrv/GHSA-2wm5-q62r-hmrv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "colord",
+                    "purl": "pkg:npm/colord"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.9.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-85062"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:51:57Z",
+                "nvd_published_at": "2026-09-03T21:17:23Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\n`colord`'s CSS color string matchers described a number as `([+-]?\\d*\\.?\\d+)`. In that form `\\d*` and `\\d+` can match the same digits, so a run of *n* digits can be divided between them in O(n²) ways, and rejecting an input retries every division. Parsing is synchronous and uninterruptible, so a long malformed color string blocks the thread:\n\n| input | time to reject |\n| --- | --- |\n| 16 KB | 224 ms |\n| 64 KB | 4.4 s |\n| 128 KB | 18.5 s |\n\nReachable through `colord()` and `getFormat()`, and through any method that accepts a color string — including `isEqual()`, `mix()` and `contrast()`. The affected matchers are `parseRgbaString` and `parseHslaString` (built in) and `parseHwbaString`, `parseLchaString`, `parseCmykaString` (plugins).\n\nGrowth is polynomial, not exponential — multi-kilobyte payloads are required for a noticeable stall.\n\n### Who is affected\n\nApplications that pass attacker-controlled strings of unbounded length to `colord()` — for example a server validating a color taken from a request body, JSON field, or uploaded stylesheet. `colord` applies no length limit before matching.\n\nTypical client-side use with short input is not meaningfully affected.\n\n### Patches\n\nFixed in **2.9.4**. The number is now written as `([+-]?(?:\\d*\\.\\d+|\\d+))`, which accepts exactly the same syntax but leaves only one way to match it, making rejection linear — 1 MB of input is rejected in ~5 ms.\n\n### Workarounds\n\nReject or truncate color strings longer than a sane limit (e.g. 100 characters) before passing them to `colord`.",
+              "id": "GHSA-2wm5-q62r-hmrv",
+              "modified": "2026-09-08T21:00:06.239800217Z",
+              "published": "2026-09-08T20:51:57Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/omgovich/colord/security/advisories/GHSA-2wm5-q62r-hmrv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85062"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/omgovich/colord/pull/141"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/omgovich/colord/commit/87018089515ed66a85b1a95c3c7c3fd69a25bac2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/omgovich/colord"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Colord: Slow rejection of oversized malformed color strings"
+            }
+          ]
         },
         {
           "package": {
@@ -66285,7 +67960,260 @@
             "name": "hono",
             "version": "4.13.2",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-crvj-82cr-hjcx"
+              ],
+              "aliases": [
+                "CVE-2026-84363",
+                "GHSA-crvj-82cr-hjcx"
+              ],
+              "max_severity": "5.9"
+            },
+            {
+              "ids": [
+                "GHSA-g6gw-c38x-mqfc"
+              ],
+              "aliases": [
+                "CVE-2026-84364",
+                "GHSA-g6gw-c38x-mqfc"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-gqvv-2mrq-wpjv"
+              ],
+              "aliases": [
+                "CVE-2026-84365",
+                "GHSA-gqvv-2mrq-wpjv"
+              ],
+              "max_severity": "6.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-crvj-82cr-hjcx/GHSA-crvj-82cr-hjcx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.13.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84363"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-444"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:22:50Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nHono's query parsing does not stop at the URL fragment: a `?` appearing after a `#` is treated as the start of a query string. As a result, the application can read request parameters that no other component involved in handling the request can see.\n\n### Details\n\nA fragment is never part of the query, and every standard URL consumer — browsers, `new URL()`, reverse proxies — ignores everything from the first `#` onward. Hono's routing followed that rule; its query helpers did not.\n\nFor one and the same request, this produces an interpretation differential:\n\n- A component in front of the application that inspects the query string — filtering rules, parameter allow/deny lists, access logging — observes no parameters, while the application reads and acts on them.\n- The cache middleware removed the fragment when building its cache key, so a response influenced by parameters carried inside the fragment could be stored under a key that did not reflect them and later returned to other users.\n\nThe same divergence reaches request validation and any middleware that reads query parameters.\n\nThis requires a request target containing a literal `#` to reach the application. Deployments on runtimes that normalise such a target — including Cloudflare Workers — are not affected, and neither are those behind an intermediary that strips the fragment.\n\n### Impact\n\nAn attacker can cause the application to act on parameters that components in front of it never observe.\n\nThis may lead to:\n\n- filtering rules, allow/deny lists, and audit logging being blind to parameters the application still processes\n- a cached response being stored under a key that does not reflect the parameters used to produce it, and served to other users\n- stored cross-site scripting, where such a parameter is reflected into a cached HTML response without escaping\n\nThis issue affects applications that read query parameters and run on a runtime that passes a literal `#` through to the request URL.",
+              "id": "GHSA-crvj-82cr-hjcx",
+              "modified": "2026-09-08T21:30:04.756349206Z",
+              "published": "2026-09-08T21:22:50Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-crvj-82cr-hjcx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84363"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/9c28d724c5a7fb086ebaa812fdc1ad6e957c63bc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.5"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: Query parser reads parameters after the URL fragment, causing cache-key and proxy interpretation differentials"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-g6gw-c38x-mqfc/GHSA-g6gw-c38x-mqfc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.13.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84364"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:23:02Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nWhen `parseBody()` expands dot-separated form field names into nested objects, it does not limit the nesting depth or the total number of objects created. A request body well within a normal size limit can therefore allocate an object graph far larger than the request itself, and concurrent requests can exhaust the heap and terminate the process.\n\n### Details\n\nEach dot-separated segment of a field name creates an intermediate object. Neither the segments within a single field name nor the total across a request was bounded, and empty segments were preserved, so a field name could encode one nesting level per byte.\n\nBoth shapes produce the effect: a single deeply dotted field name, and a large number of shallowly dotted ones within one body. A request body size limit does not prevent it, because the amplification happens after the body has been accepted.\n\nDot-notation parsing is not enabled by default.\n\n### Impact\n\nAn attacker who can reach an endpoint that parses request bodies with dot-notation enabled can send concurrent requests whose memory cost is disproportionate to their size.\n\nThis may lead to:\n\n- exhaustion of the JavaScript heap and termination of the server process\n- the service remaining unavailable until it is restarted\n\nThis issue affects applications that explicitly enable dot-notation parsing. Applications using the default behaviour are not affected.",
+              "id": "GHSA-g6gw-c38x-mqfc",
+              "modified": "2026-09-08T21:30:05.512225825Z",
+              "published": "2026-09-08T21:23:02Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-g6gw-c38x-mqfc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84364"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/531e9c5a3ae058d10de33f643055bd4009a87178"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.5"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: Unbounded dot-notation nesting in `parseBody()` can cause memory exhaustion"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gqvv-2mrq-wpjv/GHSA-gqvv-2mrq-wpjv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.13.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84365"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:23:51Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nThe fix released for CVE-2026-39408 does not cover every traversal sequence. `toSSG()` can still write files outside the configured output directory when a route parameter contains consecutive parent-directory segments.\n\n### Details\n\nStatic site generation builds each output path from the route path and the values supplied through `ssgParams`, then verifies that the result stays inside the output directory. That check normalizes the path with the same routine that built it, and the routine did not fully collapse runs of consecutive parent-directory segments. A value carrying enough of them produces a path the check accepts, but the filesystem resolves outside the output directory.\n\nThe earlier fix handled a single parent-directory segment, so it blocks the sequence reported at the time while leaving longer runs unhandled. The check also treated output directories that differ only in how they are rooted as equivalent.\n\nThis arises when an application generates a static site from route parameter values it does not fully control — slugs coming from a CMS, an API, or user submissions.\n\n### Impact\n\nA value reaching `ssgParams` from an untrusted source can cause build output to be written outside the intended output directory, carrying whatever content the route handler produced.\n\nThis may lead to:\n\n- files being created or overwritten elsewhere in the build environment\n- generated artifacts or deployment output being altered\n\nThis affects build-time static site generation only; request-time routing is not affected. Applications whose `ssgParams` values are entirely developer-controlled are not affected.",
+              "id": "GHSA-gqvv-2mrq-wpjv",
+              "modified": "2026-09-08T21:30:04.760578762Z",
+              "published": "2026-09-08T21:23:51Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-gqvv-2mrq-wpjv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84365"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/3a67f7f3997e1437d108f7bcba2dbcee2df69221"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.5"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: Incomplete fix for CVE-2026-39408: `toSSG()` still writes files outside the output directory"
+            }
+          ]
         },
         {
           "package": {
@@ -68021,14 +69949,540 @@
             "name": "joi",
             "version": "17.13.4",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "aliases": [
+                "CVE-2026-84368",
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "max_severity": "3.7"
+            },
+            {
+              "ids": [
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "aliases": [
+                "CVE-2026-84367",
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "max_severity": "3.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "17.2.0"
+                        },
+                        {
+                          "fixed": "17.13.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@hapi/joi",
+                    "purl": "pkg:npm/%40hapi/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "last_affected": "17.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84368"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:55:58Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\nAn application that passes attacker-controlled data into joi's custom message configuration (`messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`) lets the attacker write properties onto `Object.prototype`, where every object in the process then inherits them. A key named `__proto__` was treated as a language name, and the code reused the object it found at that key, which resolves to the prototype rather than to a new own property; a key named `constructor` did the same to the `Object` function's statics. A consuming application that gates on the mere presence of a property (`if (user.isAdmin)`) can be made to take the wrong branch for every object it inspects.\n\nThis is not reachable from data that joi validates. Custom messages are schema-construction configuration, normally written by the application developer. Exploitation therefore requires an application that feeds untrusted input straight into schema construction.\n\n### Patches\nUpgrade to version 18.2.5 or 17.13.6.\n\n### Workarounds\nDo not pass untrusted input into `messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`. Or validate that they don't contain any `__proto__` or `constructor` property.",
+              "id": "GHSA-6w3j-5fw6-r9vr",
+              "modified": "2026-09-08T21:15:03.964614980Z",
+              "published": "2026-09-08T20:55:58Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-6w3j-5fw6-r9vr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84368"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3139"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/8d0b808f3e874d28f9078f61b7742290989afb36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/90d07571923c90e3432a328fc041d1cda03d30fa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: Prototype pollution via a `__proto__` language key in custom messages"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "fixed": "17.13.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84367"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:51:21Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\n\nApplications are affected only if a schema renames keys with a regular-expression source and a `Joi.expression()` / `Joi.x()` target that interpolates the pattern's own match data, combined with `{ multiple: true }`, for example `.rename(/^x-(.+)$/, Joi.x('{#1}'), { multiple: true })`. Because the target is rendered from the matched input key, an attacker who controls input keys can send `x-__proto__` with an object value and make the rename target render as `__proto__`, which sets the prototype of the object joi returns instead of creating a key on it. The global `Object.prototype` is not modified, so the effect is confined to the object returned by that one `validate()` call.\n\nSchemas using a static string rename target are not affected, and neither are schemas left on the default `{ multiple: false }`.\n\n### Patches\n\nVersions 17.13.5 and 18.2.4 have been released to address the issue.\n\n### Workarounds\n\n1. Replace the template rename target with a static string target.\n2. Keep the template but make the capture unable to produce `__proto__`, using a negative lookahead: `.rename(/^x-(?!__proto__$)(.+)$/, Joi.x('{#1}'), { multiple: true })`\n3. Drop { multiple: true } from the rename, which stops the rename before the assignment.",
+              "id": "GHSA-gg4h-3hg2-grpc",
+              "modified": "2026-09-08T21:00:05.097709715Z",
+              "published": "2026-09-08T20:51:21Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-gg4h-3hg2-grpc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84367"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3134"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3135"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/162f367aa178d2e1ebec8dc1164e5fe16536ddf6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/172ececa192feda532b743d77bc9d3e523d19b01"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v17.13.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v18.2.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: object().rename() with a template target can set the validated object's prototype"
+            }
+          ]
         },
         {
           "package": {
             "name": "joi",
             "version": "18.2.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "aliases": [
+                "CVE-2026-84368",
+                "GHSA-6w3j-5fw6-r9vr"
+              ],
+              "max_severity": "3.7"
+            },
+            {
+              "ids": [
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "aliases": [
+                "CVE-2026-84367",
+                "GHSA-gg4h-3hg2-grpc"
+              ],
+              "max_severity": "3.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "17.2.0"
+                        },
+                        {
+                          "fixed": "17.13.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@hapi/joi",
+                    "purl": "pkg:npm/%40hapi/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "last_affected": "17.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-6w3j-5fw6-r9vr/GHSA-6w3j-5fw6-r9vr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84368"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:55:58Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\nAn application that passes attacker-controlled data into joi's custom message configuration (`messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`) lets the attacker write properties onto `Object.prototype`, where every object in the process then inherits them. A key named `__proto__` was treated as a language name, and the code reused the object it found at that key, which resolves to the prototype rather than to a new own property; a key named `constructor` did the same to the `Object` function's statics. A consuming application that gates on the mere presence of a property (`if (user.isAdmin)`) can be made to take the wrong branch for every object it inspects.\n\nThis is not reachable from data that joi validates. Custom messages are schema-construction configuration, normally written by the application developer. Exploitation therefore requires an application that feeds untrusted input straight into schema construction.\n\n### Patches\nUpgrade to version 18.2.5 or 17.13.6.\n\n### Workarounds\nDo not pass untrusted input into `messages()`, `message()`, `prefs({ messages })`, `Joi.extend({ messages })` or `rule({ message })`. Or validate that they don't contain any `__proto__` or `constructor` property.",
+              "id": "GHSA-6w3j-5fw6-r9vr",
+              "modified": "2026-09-08T21:15:03.964614980Z",
+              "published": "2026-09-08T20:55:58Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-6w3j-5fw6-r9vr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84368"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3139"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/8d0b808f3e874d28f9078f61b7742290989afb36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/90d07571923c90e3432a328fc041d1cda03d30fa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: Prototype pollution via a `__proto__` language key in custom messages"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "16.0.0"
+                        },
+                        {
+                          "fixed": "17.13.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-gg4h-3hg2-grpc/GHSA-gg4h-3hg2-grpc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "joi",
+                    "purl": "pkg:npm/joi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "18.0.0"
+                        },
+                        {
+                          "fixed": "18.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84367"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T20:51:21Z",
+                "nvd_published_at": "2026-09-01T21:18:47Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\n\nApplications are affected only if a schema renames keys with a regular-expression source and a `Joi.expression()` / `Joi.x()` target that interpolates the pattern's own match data, combined with `{ multiple: true }`, for example `.rename(/^x-(.+)$/, Joi.x('{#1}'), { multiple: true })`. Because the target is rendered from the matched input key, an attacker who controls input keys can send `x-__proto__` with an object value and make the rename target render as `__proto__`, which sets the prototype of the object joi returns instead of creating a key on it. The global `Object.prototype` is not modified, so the effect is confined to the object returned by that one `validate()` call.\n\nSchemas using a static string rename target are not affected, and neither are schemas left on the default `{ multiple: false }`.\n\n### Patches\n\nVersions 17.13.5 and 18.2.4 have been released to address the issue.\n\n### Workarounds\n\n1. Replace the template rename target with a static string target.\n2. Keep the template but make the capture unable to produce `__proto__`, using a negative lookahead: `.rename(/^x-(?!__proto__$)(.+)$/, Joi.x('{#1}'), { multiple: true })`\n3. Drop { multiple: true } from the rename, which stops the rename before the assignment.",
+              "id": "GHSA-gg4h-3hg2-grpc",
+              "modified": "2026-09-08T21:00:05.097709715Z",
+              "published": "2026-09-08T20:51:21Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/security/advisories/GHSA-gg4h-3hg2-grpc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84367"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3134"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/pull/3135"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/162f367aa178d2e1ebec8dc1164e5fe16536ddf6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/commit/172ececa192feda532b743d77bc9d3e523d19b01"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hapijs/joi"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v17.13.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/joi/releases/tag/v18.2.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "joi: object().rename() with a template target can set the validated object's prototype"
+            }
+          ]
         },
         {
           "package": {
@@ -68063,7 +70517,134 @@
             "name": "js-yaml",
             "version": "3.15.1",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "aliases": [
+                "CVE-2026-84375",
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.15.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84375"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:24:51Z",
+                "nvd_published_at": "2026-09-01T22:17:19Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\n`maxTotalMergeKeys` does not count empty mappings. An attacker can repeatedly merge a large sequence of them and consume significant CPU without reaching the configured limit.\n\n## Example\n\n```yaml\narr: \u0026arr [{}, {}, {}, ...] # N empty mappings\ntargets:\n  - \u003c\u003c: *arr                # repeated K times\n```\n\nFor every target, the loader iterates all `N` elements of `arr`. This results in `O(N * K)` work while `totalMergeKeys` remains unchanged.\n\n## PoC\n\n```js\nimport { performance } from 'node:perf_hooks'\nimport { load, YAML11_SCHEMA } from 'js-yaml'\n\nconst n = 20000\n\nconst src =\n  'arr: \u0026arr [' + '{},'.repeat(n).slice(0, -1) + ']\\n' +\n  'targets:\\n' +\n  '  - \u003c\u003c: *arr\\n'.repeat(n)\n\nconst started = performance.now()\n\nload(src, { schema: YAML11_SCHEMA })\n\nconsole.log(`${(performance.now() - started).toFixed(1)} ms`)\n```\n\nObserved results:\n\n| N | YAML size | Time |\n|---:|---:|---:|\n| 800 | ~13 KB | ~20 ms |\n| 3200 | ~50 KB | ~180 ms |\n| 20000 | ~500 KB | ~13 s |\n\n## Impact\n\nAn attacker can submit a relatively small YAML document that causes prolonged CPU consumption despite the default `maxTotalMergeKeys` limit.\n\n## Fix\n\nCount each merge-source mapping as one budget unit, in addition to counting its keys.\n\n## Difference with v5\n\nIn v3 \u0026 v4, merge is enabled by default. So, the severity score is higher.",
+              "id": "GHSA-2883-xcg3-v3hh",
+              "modified": "2026-09-08T21:30:05.575808098Z",
+              "published": "2026-09-08T21:24:51Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-2883-xcg3-v3hh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84375"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/pull/797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/3485bc06ff8a0251505f44a00414d90df2466639"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/6a8e05f9a485188ed730ac81e81ae221352ef480"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/d90b6612a5a84385bdcb556c44578eac76dc0f6b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/3.15.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/4.3.2"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources"
+            }
+          ]
         },
         {
           "package": {
@@ -68072,6 +70653,16 @@
             "ecosystem": "npm"
           },
           "groups": [
+            {
+              "ids": [
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "aliases": [
+                "CVE-2026-84375",
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "max_severity": "7.5"
+            },
             {
               "ids": [
                 "GHSA-52cp-r559-cp3m"
@@ -68103,6 +70694,119 @@
             }
           ],
           "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.15.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84375"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:24:51Z",
+                "nvd_published_at": "2026-09-01T22:17:19Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\n`maxTotalMergeKeys` does not count empty mappings. An attacker can repeatedly merge a large sequence of them and consume significant CPU without reaching the configured limit.\n\n## Example\n\n```yaml\narr: \u0026arr [{}, {}, {}, ...] # N empty mappings\ntargets:\n  - \u003c\u003c: *arr                # repeated K times\n```\n\nFor every target, the loader iterates all `N` elements of `arr`. This results in `O(N * K)` work while `totalMergeKeys` remains unchanged.\n\n## PoC\n\n```js\nimport { performance } from 'node:perf_hooks'\nimport { load, YAML11_SCHEMA } from 'js-yaml'\n\nconst n = 20000\n\nconst src =\n  'arr: \u0026arr [' + '{},'.repeat(n).slice(0, -1) + ']\\n' +\n  'targets:\\n' +\n  '  - \u003c\u003c: *arr\\n'.repeat(n)\n\nconst started = performance.now()\n\nload(src, { schema: YAML11_SCHEMA })\n\nconsole.log(`${(performance.now() - started).toFixed(1)} ms`)\n```\n\nObserved results:\n\n| N | YAML size | Time |\n|---:|---:|---:|\n| 800 | ~13 KB | ~20 ms |\n| 3200 | ~50 KB | ~180 ms |\n| 20000 | ~500 KB | ~13 s |\n\n## Impact\n\nAn attacker can submit a relatively small YAML document that causes prolonged CPU consumption despite the default `maxTotalMergeKeys` limit.\n\n## Fix\n\nCount each merge-source mapping as one budget unit, in addition to counting its keys.\n\n## Difference with v5\n\nIn v3 \u0026 v4, merge is enabled by default. So, the severity score is higher.",
+              "id": "GHSA-2883-xcg3-v3hh",
+              "modified": "2026-09-08T21:30:05.575808098Z",
+              "published": "2026-09-08T21:24:51Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-2883-xcg3-v3hh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84375"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/pull/797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/3485bc06ff8a0251505f44a00414d90df2466639"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/6a8e05f9a485188ed730ac81e81ae221352ef480"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/d90b6612a5a84385bdcb556c44578eac76dc0f6b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/3.15.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/4.3.2"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources"
+            },
             {
               "affected": [
                 {
@@ -68394,7 +71098,134 @@
             "name": "js-yaml",
             "version": "4.3.1",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "aliases": [
+                "CVE-2026-84375",
+                "GHSA-2883-xcg3-v3hh"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-2883-xcg3-v3hh/GHSA-2883-xcg3-v3hh.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.15.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84375"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:24:51Z",
+                "nvd_published_at": "2026-09-01T22:17:19Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\n`maxTotalMergeKeys` does not count empty mappings. An attacker can repeatedly merge a large sequence of them and consume significant CPU without reaching the configured limit.\n\n## Example\n\n```yaml\narr: \u0026arr [{}, {}, {}, ...] # N empty mappings\ntargets:\n  - \u003c\u003c: *arr                # repeated K times\n```\n\nFor every target, the loader iterates all `N` elements of `arr`. This results in `O(N * K)` work while `totalMergeKeys` remains unchanged.\n\n## PoC\n\n```js\nimport { performance } from 'node:perf_hooks'\nimport { load, YAML11_SCHEMA } from 'js-yaml'\n\nconst n = 20000\n\nconst src =\n  'arr: \u0026arr [' + '{},'.repeat(n).slice(0, -1) + ']\\n' +\n  'targets:\\n' +\n  '  - \u003c\u003c: *arr\\n'.repeat(n)\n\nconst started = performance.now()\n\nload(src, { schema: YAML11_SCHEMA })\n\nconsole.log(`${(performance.now() - started).toFixed(1)} ms`)\n```\n\nObserved results:\n\n| N | YAML size | Time |\n|---:|---:|---:|\n| 800 | ~13 KB | ~20 ms |\n| 3200 | ~50 KB | ~180 ms |\n| 20000 | ~500 KB | ~13 s |\n\n## Impact\n\nAn attacker can submit a relatively small YAML document that causes prolonged CPU consumption despite the default `maxTotalMergeKeys` limit.\n\n## Fix\n\nCount each merge-source mapping as one budget unit, in addition to counting its keys.\n\n## Difference with v5\n\nIn v3 \u0026 v4, merge is enabled by default. So, the severity score is higher.",
+              "id": "GHSA-2883-xcg3-v3hh",
+              "modified": "2026-09-08T21:30:05.575808098Z",
+              "published": "2026-09-08T21:24:51Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-2883-xcg3-v3hh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84375"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/pull/797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/3485bc06ff8a0251505f44a00414d90df2466639"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/6a8e05f9a485188ed730ac81e81ae221352ef480"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/d90b6612a5a84385bdcb556c44578eac76dc0f6b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/3.15.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/releases/tag/4.3.2"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources"
+            }
+          ]
         },
         {
           "package": {
@@ -78285,7 +81116,90 @@
             "name": "sharp",
             "version": "0.35.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-rgj7-g3m4-5g8c"
+              ],
+              "aliases": [
+                "GHSA-rgj7-g3m4-5g8c"
+              ],
+              "max_severity": "8.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-rgj7-g3m4-5g8c/GHSA-rgj7-g3m4-5g8c.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "sharp",
+                    "purl": "pkg:npm/sharp"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.35.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-122"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:25:11Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              },
+              "details": "### Impact\nA number of vulnerabilities, two rated as \"Critical\" severity using CVSSv3, have been discovered and fixed in the upstream libheif dependency. These can lead to possible remote code execution (RCE) on glibc-based Linux when run under certain conditions.\n\nThe attack vector for these claims to be \"network\" however sharp does not provide any networking features so this vulnerability is down-rated to a \"High\" severity using CVSSv4 but please note its Subsequent System Impact.\n\nThose processing untrusted input with versions of sharp prior to 0.35.4 are affected.\n\n### Patches\n\n#### Using prebuilt binaries provided by sharp?\n\nMost people rely on the prebuilt binaries provided by sharp.\n\nPlease upgrade sharp to the latest version, currently 0.35.4, which provides libheif 1.23.2.\n\n#### Using a globally-installed libheif?\n\nPlease ensure you are using the latest libheif 1.23.2.\n\n### Workarounds\nAdd the following to your code to prevent sharp from decoding AVIF images.\n```js\nsharp.block({ operation: [\"VipsForeignLoadHeif\"] });\n```\n\nEnsure you are using a `node` executable binary compiled as a Position Independent Executable (PIE). Most Linux package managers already do this for protection against RCE however be warned that the \"official\" Node.js binaries do not.\n\n### References\n- [CVE-2026-84383](https://github.com/strukturag/libheif/security/advisories/GHSA-g89c-p67h-r497)\n- https://github.com/strukturag/libheif/security/advisories/GHSA-2jg2-4ch7-h545",
+              "id": "GHSA-rgj7-g3m4-5g8c",
+              "modified": "2026-09-08T21:30:05.560836870Z",
+              "published": "2026-09-08T21:25:11Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lovell/sharp/security/advisories/GHSA-rgj7-g3m4-5g8c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-2jg2-4ch7-h545"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-g89c-p67h-r497"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/lovell/sharp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lovell/sharp/releases/tag/v0.35.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545"
+            }
+          ]
         },
         {
           "package": {
@@ -79525,14 +82439,652 @@
             "name": "svgo",
             "version": "2.8.3",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "aliases": [
+                "CVE-2026-84369",
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "aliases": [
+                "CVE-2026-84370",
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "max_severity": "8.2"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84369"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:05Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin did not inspect executable HTML content inside SVG `\u003cforeignObject\u003e` elements. Applications that used this plugin as their only protection for untrusted SVG input could produce SVGs containing active HTML and expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nAlthough the plugin removed SVG and XHTML `\u003cscript\u003e` elements, it left other HTML execution paths inside `\u003cforeignObject\u003e` unchanged. These included:\n\n- event-handler attributes such as `onload` and `onbeforetoggle`;\n- `srcdoc` documents, including on `\u003ciframe\u003e` elements;\n- executable URLs in HTML attributes such as `action`, `data`, `formaction`, `href`, and `src`.\n\nAn attacker could place one of these payloads in an SVG. If an application optimized the untrusted SVG with `removeScripts` and then served the result in an active browser context, the payload could execute in the viewer's origin.\n\n## Impact\n\nSuccessful exploitation could allow script execution in the context where the optimized SVG is rendered. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable `removeScripts` are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix preserves visual HTML inside SVG `\u003cforeignObject\u003e` elements while removing event attributes, `srcdoc`, and executable URL values from active HTML URL attributes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. As defense in depth, applications can reject or remove `\u003cforeignObject\u003e` content and avoid serving user-controlled SVGs in an active same-origin context.",
+              "id": "GHSA-4vpr-x523-8j87",
+              "modified": "2026-09-08T21:30:05.558835894Z",
+              "published": "2026-09-08T21:20:05Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-4vpr-x523-8j87"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84369"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2264"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/fd51e474a300417d9361d9302d596b1763146327"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts incompletely sanitizes executable HTML in SVG foreignObject elements"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84370"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-184",
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:28Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin failed to remove some executable links. Namespace-prefixed SVG anchors and URL schemes containing ASCII tabs or newlines could bypass its checks. Applications that used this plugin as their only protection for untrusted SVG input could expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nTwo related bypasses were present:\n\n1. The plugin inspected unprefixed SVG `\u003ca\u003e` elements but did not recognize namespace-prefixed SVG anchors such as `\u003csvg:a\u003e` when the prefix was bound to the SVG namespace. Their executable `href` or namespaced `*:href` values remained intact.\n2. The URL check did not account for ASCII tab, line-feed, or carriage-return characters embedded in a scheme. Browsers remove these characters before parsing the scheme, so values such as `java\u0026#9;script:` could remain executable after bypassing the plugin's `javascript:` check.\n\nAnchors in unrelated custom namespaces are not executable SVG anchors and remain untouched.\n\n## Impact\n\nIf an application optimized attacker-controlled SVGs with `removeScripts` and then served the result in an active browser context, a victim could follow a link that executes script in the SVG's origin. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable it are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix makes SVG anchor handling namespace-aware and strips ASCII tabs, line feeds, and carriage returns before checking executable URL schemes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. Applications can also reject links from untrusted SVG input and avoid serving user-controlled SVGs in an active same-origin context.\n\n## References\n\n- v4 fix: https://github.com/svg/svgo/pull/2268\n- related executable URL hardening: https://github.com/svg/svgo/pull/2263\n- v3 backport: https://github.com/svg/svgo/pull/2269\n- v2 backport: https://github.com/svg/svgo/pull/2272\n- v4.1.0 release: https://github.com/svg/svgo/releases/tag/v4.1.0\n- v3.3.5 release: https://github.com/svg/svgo/releases/tag/v3.3.5\n- v2.8.4 release: https://github.com/svg/svgo/releases/tag/v2.8.4",
+              "id": "GHSA-w27v-7q3p-w38r",
+              "modified": "2026-09-08T21:30:04.769354630Z",
+              "published": "2026-09-08T21:20:28Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-w27v-7q3p-w38r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84370"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2268"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/3db3ef33e409a0bc0fdaf255e46c908b00e93bc2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts allows executable links through namespace and control-character bypasses"
+            }
+          ]
         },
         {
           "package": {
             "name": "svgo",
             "version": "3.3.4",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "aliases": [
+                "CVE-2026-84369",
+                "GHSA-4vpr-x523-8j87"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "aliases": [
+                "CVE-2026-84370",
+                "GHSA-w27v-7q3p-w38r"
+              ],
+              "max_severity": "8.2"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-4vpr-x523-8j87/GHSA-4vpr-x523-8j87.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84369"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:05Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin did not inspect executable HTML content inside SVG `\u003cforeignObject\u003e` elements. Applications that used this plugin as their only protection for untrusted SVG input could produce SVGs containing active HTML and expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nAlthough the plugin removed SVG and XHTML `\u003cscript\u003e` elements, it left other HTML execution paths inside `\u003cforeignObject\u003e` unchanged. These included:\n\n- event-handler attributes such as `onload` and `onbeforetoggle`;\n- `srcdoc` documents, including on `\u003ciframe\u003e` elements;\n- executable URLs in HTML attributes such as `action`, `data`, `formaction`, `href`, and `src`.\n\nAn attacker could place one of these payloads in an SVG. If an application optimized the untrusted SVG with `removeScripts` and then served the result in an active browser context, the payload could execute in the viewer's origin.\n\n## Impact\n\nSuccessful exploitation could allow script execution in the context where the optimized SVG is rendered. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable `removeScripts` are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix preserves visual HTML inside SVG `\u003cforeignObject\u003e` elements while removing event attributes, `srcdoc`, and executable URL values from active HTML URL attributes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. As defense in depth, applications can reject or remove `\u003cforeignObject\u003e` content and avoid serving user-controlled SVGs in an active same-origin context.",
+              "id": "GHSA-4vpr-x523-8j87",
+              "modified": "2026-09-08T21:30:05.558835894Z",
+              "published": "2026-09-08T21:20:05Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-4vpr-x523-8j87"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84369"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2264"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/fd51e474a300417d9361d9302d596b1763146327"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts incompletely sanitizes executable HTML in SVG foreignObject elements"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "2.8.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.3.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-w27v-7q3p-w38r/GHSA-w27v-7q3p-w38r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "svgo",
+                    "purl": "pkg:npm/svgo"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-84370"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-184",
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-09-08T21:20:28Z",
+                "nvd_published_at": "2026-09-01T21:18:48Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\nSVGO's opt-in `removeScripts` plugin failed to remove some executable links. Namespace-prefixed SVG anchors and URL schemes containing ASCII tabs or newlines could bypass its checks. Applications that used this plugin as their only protection for untrusted SVG input could expose users to cross-site scripting (XSS).\n\nSVGO is an optimizer rather than a comprehensive sanitization library, but `removeScripts` is maintained for consumers that already rely on it to remove common script execution paths.\n\n## Details\n\nTwo related bypasses were present:\n\n1. The plugin inspected unprefixed SVG `\u003ca\u003e` elements but did not recognize namespace-prefixed SVG anchors such as `\u003csvg:a\u003e` when the prefix was bound to the SVG namespace. Their executable `href` or namespaced `*:href` values remained intact.\n2. The URL check did not account for ASCII tab, line-feed, or carriage-return characters embedded in a scheme. Browsers remove these characters before parsing the scheme, so values such as `java\u0026#9;script:` could remain executable after bypassing the plugin's `javascript:` check.\n\nAnchors in unrelated custom namespaces are not executable SVG anchors and remain untouched.\n\n## Impact\n\nIf an application optimized attacker-controlled SVGs with `removeScripts` and then served the result in an active browser context, a victim could follow a link that executes script in the SVG's origin. Depending on the embedding and origin configuration, this could expose cookies or local storage, modify content, or perform actions as the victim.\n\nThe plugin is opt-in, so consumers that do not enable it are not relying on the affected behavior. Typical local optimization of trusted SVG files is not affected.\n\n## Patches\n\nUpgrade to one of the following releases for the maintained release line in use:\n\n| Release line | Patched version | Plugin |\n| --- | --- | --- |\n| v2 | 2.8.4 | `removeScriptElement` |\n| v3 | 3.3.5 | `removeScriptElement` |\n| v4 | 4.1.0 | `removeScripts` |\n\nThe fix makes SVG anchor handling namespace-aware and strips ASCII tabs, line feeds, and carriage returns before checking executable URL schemes.\n\nSVGO v1 is no longer maintained. Users of v1 should upgrade to a supported release line.\n\n## Workarounds\n\nFor hostile input, use a dedicated SVG sanitization tool before passing the SVG to SVGO. Applications can also reject links from untrusted SVG input and avoid serving user-controlled SVGs in an active same-origin context.\n\n## References\n\n- v4 fix: https://github.com/svg/svgo/pull/2268\n- related executable URL hardening: https://github.com/svg/svgo/pull/2263\n- v3 backport: https://github.com/svg/svgo/pull/2269\n- v2 backport: https://github.com/svg/svgo/pull/2272\n- v4.1.0 release: https://github.com/svg/svgo/releases/tag/v4.1.0\n- v3.3.5 release: https://github.com/svg/svgo/releases/tag/v3.3.5\n- v2.8.4 release: https://github.com/svg/svgo/releases/tag/v2.8.4",
+              "id": "GHSA-w27v-7q3p-w38r",
+              "modified": "2026-09-08T21:30:04.769354630Z",
+              "published": "2026-09-08T21:20:28Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/security/advisories/GHSA-w27v-7q3p-w38r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84370"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2268"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2269"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/pull/2272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/0557385564a5c6c11d76cd934a6cff94451e532c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/3db3ef33e409a0bc0fdaf255e46c908b00e93bc2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/commit/994a9f00d79ddec68ce19a1ce9eb8ca08d747e4f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/svg/svgo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v2.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v3.3.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/svg/svgo/releases/tag/v4.1.0"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SVGO: removeScripts allows executable links through namespace and control-character bypasses"
+            }
+          ]
         },
         {
           "package": {
