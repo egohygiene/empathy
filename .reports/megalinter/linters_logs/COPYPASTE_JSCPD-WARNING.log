@@ -9575,5 +9575,5 @@ Clone found (python)
 Found 3147 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 15.97s
+time: 17.05s
 
