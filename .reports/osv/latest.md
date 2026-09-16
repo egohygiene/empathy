@@ -1,21 +1,21 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-09-09T08-28-10Z`
+- Generated: `2026-09-16T08-55-55Z`
 - Repository: `egohygiene/empathy`
-- Commit: `b369e54d4b01e91488320055d89e41bccf2f3d70`
+- Commit: `ad9094dd75a296c07bc41f8b53d6116733778aae`
 - Severity gate: `high`
-- Duration: `16s`
+- Duration: `14s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
 | Critical | 3 |
-| High | 73 |
+| High | 77 |
 | Medium | 63 |
 | Low | 18 |
 | Unknown | 0 |
-| **Total** | **157** |
+| **Total** | **161** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 68 packages affected by 157 known vulnerabilities (3 Critical, 73 High, 63 Medium, 18 Low, 0 Unknown) from 2 ecosystems.
-152 vulnerabilities can be fixed.
+Total 71 packages affected by 161 known vulnerabilities (3 Critical, 77 High, 63 Medium, 18 Low, 0 Unknown) from 2 ecosystems.
+156 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -185,7 +185,7 @@ Total 68 packages affected by 157 known vulnerabilities (3 Critical, 73 High, 63
 | https://osv.dev/PYSEC-2026-1996<br/>https://osv.dev/GHSA-38jv-5279-wg99 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.3 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-1998<br/>https://osv.dev/GHSA-gm62-xv2j-4w53 | 8.9 | PyPI | urllib3 | 2.5.0 | 2.6.0 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2009<br/>https://osv.dev/GHSA-597g-3phw-6986 | 4.5 | PyPI | virtualenv (dev) | 20.31.2 | 20.36.1 | .staging/devenvironment/containers/services/api/poetry.lock |
-| https://osv.dev/GHSA-89v8-rhwq-hf77 | 5.0 | PyPI | asteval | 1.0.6 | 1.0.9 | egolint/uv.lock |
+| https://osv.dev/PYSEC-2026-3807<br/>https://osv.dev/GHSA-89v8-rhwq-hf77 | 5.0 | PyPI | asteval | 1.0.6 | 1.0.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-9w56-46f6-3qhx | 5.5 | PyPI | asteval | 1.0.6 | 1.0.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-3jxr-9vmj-r5cp | 7.7 | npm | brace-expansion | 1.1.12 | 1.1.16 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-f886-m6hf-6m8v | 6.5 | npm | brace-expansion | 1.1.12 | 1.1.13 | .staging/tools/emoji-precache/package-lock.json |
@@ -209,6 +209,8 @@ Total 68 packages affected by 157 known vulnerabilities (3 Critical, 73 High, 63
 | https://osv.dev/GHSA-4mjr-xmp4-gh2g | 6.3 | npm | qs | 6.15.3 | 6.16.0 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-x5fp-wj9c-mxmx | 6.3 | npm | qs | 6.15.3 | 6.16.0 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-rgj7-g3m4-5g8c | 8.9 | npm | sharp | 0.35.3 | 0.35.4 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-7w5x-hrqm-74c2 | 8.2 | npm | smol-toml | 1.6.1 | 1.7.1 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-7w5x-hrqm-74c2 | 8.2 | npm | smol-toml | 1.7.0 | 1.7.1 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-4vpr-x523-8j87 | 6.1 | npm | svgo | 2.8.3 | 2.8.4 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-w27v-7q3p-w38r | 8.2 | npm | svgo | 2.8.3 | 2.8.4 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-4vpr-x523-8j87 | 6.1 | npm | svgo | 3.3.4 | 3.3.5 | egolint/pnpm-lock.yaml |
@@ -266,7 +268,9 @@ Total 68 packages affected by 157 known vulnerabilities (3 Critical, 73 High, 63
 | https://osv.dev/GHSA-5c6j-r48x-rmvq | 8.1 | npm | serialize-javascript | 6.0.2 | 7.0.3 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-qj8w-gfj5-8c6v | 5.9 | npm | serialize-javascript | 6.0.2 | 7.0.5 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-rgj7-g3m4-5g8c | 8.9 | npm | sharp | 0.35.3 | 0.35.4 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-7w5x-hrqm-74c2 | 8.2 | npm | smol-toml | 1.5.2 | 1.7.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-v3rj-xjv7-4jmq | 5.3 | npm | smol-toml | 1.5.2 | 1.6.1 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-7w5x-hrqm-74c2 | 8.2 | npm | smol-toml | 1.6.1 | 1.7.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-4vpr-x523-8j87 | 6.1 | npm | svgo | 2.8.3 | 2.8.4 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-w27v-7q3p-w38r | 8.2 | npm | svgo | 2.8.3 | 2.8.4 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-4vpr-x523-8j87 | 6.1 | npm | svgo | 3.3.4 | 3.3.5 | pnpm-lock.yaml |
