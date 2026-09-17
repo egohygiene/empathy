@@ -20,6 +20,14 @@ profiles.
 - `foundation/contracts/empathy.repository-contract.toml` is the canonical,
   offline EgoLint projection.
 
+## Gitignore contract under review
+
+The [layered gitignore proposal](gitignore/README.md) records the candidate
+universal rules, the existing-rule audit, Git behavior checks, and the first
+file-contract review checkpoint. It is the first bounded part of
+[issue #82](https://github.com/egohygiene/empathy/issues/82); catalog integration
+and adoption remain subsequent work.
+
 ## Composition boundary
 
 Profiles vary independently across core, governance, quality, risk, release,
