@@ -212,7 +212,7 @@ attribute "rows"  [attr-defined]
             self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
                                                   ^~~~~~~~~
 tests/test_gitignore_baseline.py: note: In member "git" of class "GitignoreBaselineTests":
-tests/test_gitignore_baseline.py:46:14: error: List item 0 has incompatible
+tests/test_gitignore_baseline.py:47:14: error: List item 0 has incompatible
 type "str | None"; expected "str | bytes | PathLike[str] | PathLike[bytes]" 
 [list-item]
                 [self.git_executable, *arguments],

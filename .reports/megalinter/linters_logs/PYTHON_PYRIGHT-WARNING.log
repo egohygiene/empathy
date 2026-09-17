@@ -12093,9 +12093,9 @@ tests/test_foundation_contract.py
   tests/test_foundation_contract.py:182:13 - error: Type of "render_egolint_contract" is unknown (reportUnknownMemberType)
   tests/test_foundation_contract.py:182:24 - error: "render_egolint_contract" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
 tests/test_gitignore_baseline.py
-  tests/test_gitignore_baseline.py:45:16 - error: No overloads for "run" match the provided arguments (reportCallIssue)
-  tests/test_gitignore_baseline.py:45:16 - error: Return type is unknown (reportUnknownVariableType)
-  tests/test_gitignore_baseline.py:46:14 - error: Argument of type "list[str | None]" cannot be assigned to parameter "args" of type "_CMD" in function "run"
+  tests/test_gitignore_baseline.py:46:16 - error: No overloads for "run" match the provided arguments (reportCallIssue)
+  tests/test_gitignore_baseline.py:46:16 - error: Return type is unknown (reportUnknownVariableType)
+  tests/test_gitignore_baseline.py:47:14 - error: Argument of type "list[str | None]" cannot be assigned to parameter "args" of type "_CMD" in function "run"
     Type "str | None" is not assignable to type "StrOrBytesPath"
       Type "None" is not assignable to type "StrOrBytesPath"
         "None" is not assignable to "str"
