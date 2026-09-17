@@ -34,7 +34,7 @@ This is a working example of the epic's process, not a new organization policy
 or a separate universal continuity-file requirement. Extract portable guidance
 into its established owner after more file iterations prove it useful.
 
-## Part 1 checkpoint
+## Part 1 checkpoint at original handoff
 
 | Item            | Recorded state                                                                                                             |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -48,6 +48,28 @@ into its established owner after more file iterations prove it useful.
 | Roadmap         | Contributes to `EMP-Q04`; does not complete its profile acceptance criteria or advance strategic status.                   |
 | Continuity      | No root `CONTINUITY.md` was present at inspection; this scoped checkpoint and the epic provide the handoff.                |
 | Evidence        | Commands and exact results belong in the linked PR; no claim of all-green CI or complete #82 acceptance.                   |
+
+## Merge verification and validation correction
+
+[PR #85](https://github.com/egohygiene/empathy/pull/85) merged on 2026-09-17 as
+`52d7231413b5920a6de410460710dbea73a58daf`. The baseline source proposal and
+audit are accepted; profile composition and consumer adoption remain pending.
+
+Post-merge inspection found two new Ruff findings in the test harness in the
+[completed MegaLinter run](https://github.com/egohygiene/empathy/actions/runs/35226310235).
+The original local check used the root configuration, while CI uses
+`egolint/.config/lint/python/ruff.toml`. The follow-up uses tuple unpacking for
+the fixture cases and documents a call-specific `S603` exception for the
+test-controlled Git subprocess. The Git behavior and fixture coverage stay the same.
+
+This changes the process: validate with the actual CI configuration and inspect
+completed CI results. A passing local command or a merged PR does not establish
+that those checks passed. The known catalog/workflow pin mismatch remains a
+separate failure; this correction does not claim all-green repository CI.
+
+After the correction is reviewed, take profile composition and contract
+integration as the next bounded PR. Keep golden-root adoption in a later PR so
+the composition model can be reviewed before its migration effects.
 
 ## Edges learned in this part
 
@@ -68,23 +90,23 @@ into its established owner after more file iterations prove it useful.
 
 ## Next bounded part after review
 
-Reverify the merged part 1 PR and any requested rule changes. Then prepare one
-Empathy PR for explicit profile/local rule ownership and deterministic contract
-integration, including the golden-root migration where it can be reviewed safely:
+Reverify the merged part 1 PR and its validation correction. Then prepare one
+Empathy PR for scoped profile composition and deterministic contract integration:
 
-- Resolve every relocation in the audit against actual project roots, including
-  reports, shared editor settings, language outputs, and private material.
 - Define the artifact identity, composition order, preservation, provenance,
   and rollback behavior using the existing foundation catalog/manifest model.
-- Keep mandatory secret protection explicit and tested before removing current
-  broad rules; check for newly visible untracked files without exposing contents.
+- Give applicable overlays explicit owners, selection conditions, and project
+  roots. A selected Rust project can ignore its own `/target/` without hiding
+  source under an unrelated `target/` directory.
 - Regenerate affected inventory/EgoLint projections and prove repeatability,
-  profile scope, local exceptions, and the active root's Git behavior.
+  profile scope, and local exceptions in composition fixtures.
 
-If this is too much for one coherent PR, split profile/composition support from
-root adoption and record the revised checkpoint before implementation. Keep #82
-open until its full acceptance criteria are met. Holon and Pace follow-ups and
-the Filament PR come after contract acceptance, as #82 requires.
+A subsequent PR migrates Empathy's active root. Before that change, resolve every
+remaining audit relocation against actual project roots and keep private-material
+protection explicit and tested. Check for newly visible untracked files without
+exposing contents. Keep #82 open until its full acceptance criteria are met.
+Holon and Pace follow-ups and the Filament PR come after contract acceptance,
+as #82 requires.
 
 Fresh-chat entry: open the master epic, follow iteration 01 to the latest PR,
 verify whether it merged, read its review decisions and this checkpoint, then

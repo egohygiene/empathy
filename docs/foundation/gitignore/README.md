@@ -104,7 +104,15 @@ python3 -m unittest discover \
   --start-directory tests \
   --pattern "test_gitignore_baseline.py" \
   --verbose
+ruff check \
+  --config "egolint/.config/lint/python/ruff.toml" \
+  "tests/test_gitignore_baseline.py"
 ```
+
+Use the explicit Ruff configuration above to match MegaLinter. A bare
+`ruff check` resolves the root `pyproject.toml`, whose narrower rule selection
+does not cover the CI policy. Run the behavior and lint checks before handoff,
+then inspect the PR's final CI results before declaring validation complete.
 
 The harness installs the candidate into temporary Git repositories, creates
 real untracked fixtures, and uses `git check-ignore --no-index`. Failures include
