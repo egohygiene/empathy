@@ -256,6 +256,8 @@ mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "retur
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 ************* Module test_foundation_contract
 tests/test_foundation_contract.py:16:0: C0413: Import "import foundation" should be placed at the top of the module (wrong-import-position)
+************* Module test_gitignore_baseline
+tests/test_gitignore_baseline.py:25:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module foundation
 tools/foundation.py:62:0: R0914: Too many local variables (34/20) (too-many-locals)
 tools/foundation.py:62:0: R0912: Too many branches (50/12) (too-many-branches)
@@ -280,6 +282,6 @@ tools/staging_home_audit.py:1171:0: R0911: Too many return statements (8/6) (too
 tools/staging_home_audit.py:1230:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.49/10
+Your code has been rated at 9.50/10
 
 

@@ -12092,6 +12092,18 @@ tests/test_foundation_contract.py
   tests/test_foundation_contract.py:176:41 - error: Type of "catalog" is unknown (reportUnknownMemberType)
   tests/test_foundation_contract.py:182:13 - error: Type of "render_egolint_contract" is unknown (reportUnknownMemberType)
   tests/test_foundation_contract.py:182:24 - error: "render_egolint_contract" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
+tests/test_gitignore_baseline.py
+  tests/test_gitignore_baseline.py:45:16 - error: No overloads for "run" match the provided arguments (reportCallIssue)
+  tests/test_gitignore_baseline.py:45:16 - error: Return type is unknown (reportUnknownVariableType)
+  tests/test_gitignore_baseline.py:46:14 - error: Argument of type "list[str | None]" cannot be assigned to parameter "args" of type "_CMD" in function "run"
+    Type "str | None" is not assignable to type "StrOrBytesPath"
+      Type "None" is not assignable to type "StrOrBytesPath"
+        "None" is not assignable to "str"
+        "None" is not assignable to "bytes"
+        "None" is incompatible with protocol "PathLike[str]"
+          "__fspath__" is not present
+        "None" is incompatible with protocol "PathLike[bytes]"
+          "__fspath__" is not present (reportArgumentType)
 tests/test_mindgarden_agent_integration.py
   tests/test_mindgarden_agent_integration.py:16:6 - warning: Import "scripts.garden_agent" could not be resolved (reportMissingImports)
   tests/test_mindgarden_agent_integration.py:17:5 - error: Type of "build_index" is unknown (reportUnknownVariableType)
@@ -12340,5 +12352,5 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8845 errors, 424 warnings, 0 informations
+8848 errors, 424 warnings, 0 informations
 

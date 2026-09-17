@@ -8058,6 +8058,81 @@ PT018 Assertion should be broken down into multiple parts
    |
 help: Break down assertion into multiple parts
 
+S603 `subprocess` call: check for execution of untrusted input
+  --> tests/test_gitignore_baseline.py:45:16
+   |
+43 |     def git(self, *arguments: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+44 |         """Run Git without a shell or inherited Git configuration overrides."""
+45 |         return subprocess.run(  # nosec B603
+   |                ^^^^^^^^^^^^^^
+46 |             [self.git_executable, *arguments],
+47 |             cwd=self.root,
+   |
+
+RUF005 Consider iterable unpacking instead of concatenation
+   --> tests/test_gitignore_baseline.py:181:13
+    |
+179 |       def test_ambiguous_paths_and_reviewed_artifacts_stay_visible(self) -> None:
+180 |           self.assert_paths(
+181 | /             tuple(
+182 | |                 f"{directory}/source.txt"
+183 | |                 for directory in (
+184 | |                     "bin",
+185 | |                     "build",
+186 | |                     "dist",
+187 | |                     "lib",
+188 | |                     "out",
+189 | |                     "pkg",
+190 | |                     "public",
+191 | |                     "reports",
+192 | |                     "target",
+193 | |                     "vendor",
+194 | |                     "coverage",
+195 | |                     "temp",
+196 | |                     "tmp",
+197 | |                     "venv",
+198 | |                     "obj",
+199 | |                     "Pods",
+200 | |                     "project/bin",
+201 | |                     "project/build",
+202 | |                     "project/dist",
+203 | |                     "project/target",
+204 | |                 )
+205 | |             )
+206 | |             + (
+207 | |                 "fixtures/reference.zip",
+208 | |                 "fixtures/reference.tar.gz",
+209 | |                 "fixtures/reference.patch",
+210 | |                 "fixtures/reference.orig",
+211 | |                 "fixtures/reference.rej",
+212 | |                 "fixtures/reference.bak",
+213 | |                 "fixtures/reference.log",
+214 | |                 "fixtures/reference.seed",
+215 | |                 "fixtures/public.key",
+216 | |                 "fixtures/public.pem",
+217 | |                 "fixtures/public.crt",
+218 | |                 "fixtures/binary sample.p12",
+219 | |                 "fixtures/reference.pfx",
+220 | |                 "fixtures/reference.jks",
+221 | |                 "fixtures/reference.keystore",
+222 | |                 "fixtures/reference.pyd",
+223 | |                 "fixtures/reference.whl",
+224 | |                 "fixtures/reference.apk",
+225 | |                 "fixtures/reference.test",
+226 | |                 "screenshots/reference.png",
+227 | |                 "snapshots/reference.snap",
+228 | |                 "docs/generated/reference.md",
+229 | |                 ".reports/accepted-evidence.json",
+230 | |                 "temp.md",
+231 | |                 "temp.txt",
+232 | |                 "infra/reviewed.tfvars",
+233 | |             ),
+    | |_____________^
+234 |               ignored=False,
+235 |           )
+    |
+help: Replace with iterable unpacking
+
 I001 [*] Import block is un-sorted or un-formatted
  --> tests/test_staging_removal_gate.py:4:1
   |
@@ -8231,6 +8306,6 @@ T201 `print` found
     |
 help: Remove `print`
 
-Found 731 errors.
-[*] 39 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
+Found 733 errors.
+[*] 39 fixable with the `--fix` option (12 hidden fixes can be enabled with the `--unsafe-fixes` option).
 

@@ -211,6 +211,12 @@ tests/test_staging_home_audit.py:104:47: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
             self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
                                                   ^~~~~~~~~
+tests/test_gitignore_baseline.py: note: In member "git" of class "GitignoreBaselineTests":
+tests/test_gitignore_baseline.py:46:14: error: List item 0 has incompatible
+type "str | None"; expected "str | bytes | PathLike[str] | PathLike[bytes]" 
+[list-item]
+                [self.git_executable, *arguments],
+                 ^~~~~~~~~~~~~~~~~~~
 tests/test_foundation_contract.py: note: In member "setUpClass" of class "FoundationContractTests":
 tests/test_foundation_contract.py:24:9: error: "type[FoundationContractTests]"
 has no attribute "catalog"  [attr-defined]
@@ -455,5 +461,5 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 102 errors in 6 files (checked 44 source files)
+Found 103 errors in 7 files (checked 45 source files)
 
