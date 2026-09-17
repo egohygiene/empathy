@@ -1,5 +1,5 @@
-Results of powershell linter (version 7.6.4)
-See documentation on https://megalinter.io/10.0.0/descriptors/powershell_powershell/
+Results of powershell linter (version 7.6.5)
+See documentation on https://megalinter.io/10.1.0/descriptors/powershell_powershell/
 -----------------------------------------------
 
 ✅ [SUCCESS] egolint/.config/lint/arm/arm-ttk.psd1

@@ -2,17 +2,17 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:08267471-bebb-4893-aac4-cedb3d97a170",
+  "serialNumber": "urn:uuid:7dbc81b8-0ea6-4a7e-8583-4afdf94e9a12",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-09-16T10:22:41Z",
+    "timestamp": "2026-09-17T09:10:45Z",
     "tools": {
       "components": [
         {
           "type": "application",
           "author": "anchore",
           "name": "syft",
-          "version": "1.50.0"
+          "version": "1.51.1"
         }
       ]
     },
@@ -160137,15 +160137,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128?package-id=14e99c60b7c7b566",
+      "bom-ref": "pkg:github/actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346?package-id=9d9346bd7cae66f3",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/deploy-pages",
-      "version": "cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
-      "cpe": "cpe:2.3:a:actions\\/deploy-pages:actions\\/deploy-pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+      "version": "368f82528645a54fb793d4d04e342629a3f51346",
+      "cpe": "cpe:2.3:a:actions\\/deploy-pages:actions\\/deploy-pages:368f82528645a54fb793d4d04e342629a3f51346:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -160161,23 +160161,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/deploy-pages:actions\\/deploy_pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/deploy-pages:actions\\/deploy_pages:368f82528645a54fb793d4d04e342629a3f51346:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/deploy_pages:actions\\/deploy-pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/deploy_pages:actions\\/deploy-pages:368f82528645a54fb793d4d04e342629a3f51346:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/deploy_pages:actions\\/deploy_pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/deploy_pages:actions\\/deploy_pages:368f82528645a54fb793d4d04e342629a3f51346:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/deploy:actions\\/deploy-pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/deploy:actions\\/deploy-pages:368f82528645a54fb793d4d04e342629a3f51346:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/deploy:actions\\/deploy_pages:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/deploy:actions\\/deploy_pages:368f82528645a54fb793d4d04e342629a3f51346:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -183133,7 +183133,7 @@
       },
       "name": "bluebird",
       "version": "3.7.2",
-      "cpe": "cpe:2.3:a:bluebird:bluebird:3.7.2:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:bluebirdjs:bluebird:3.7.2:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/bluebird@3.7.2",
       "properties": [
         {
@@ -183166,7 +183166,7 @@
       },
       "name": "bluebird",
       "version": "3.7.2",
-      "cpe": "cpe:2.3:a:bluebird:bluebird:3.7.2:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:bluebirdjs:bluebird:3.7.2:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/bluebird@3.7.2",
       "properties": [
         {
@@ -224902,7 +224902,7 @@
       },
       "name": "egohygiene-clippy-fixture",
       "version": "0.1.0",
-      "cpe": "cpe:2.3:a:egohygiene-clippy-fixture:egohygiene-clippy-fixture:0.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:egohygiene-clippy-fixture_project:egohygiene-clippy-fixture:0.1.0:*:*:*:*:rust:*:*",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -224922,39 +224922,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene-clippy-fixture:egohygiene_clippy_fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene-clippy-fixture_project:egohygiene_clippy_fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene_clippy_fixture:egohygiene-clippy-fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene-clippy-fixture:egohygiene-clippy-fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene_clippy_fixture:egohygiene_clippy_fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene-clippy-fixture:egohygiene_clippy_fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene-clippy:egohygiene-clippy-fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene_clippy_fixture:egohygiene-clippy-fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene-clippy:egohygiene_clippy_fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene_clippy_fixture:egohygiene_clippy_fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene_clippy:egohygiene-clippy-fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene-clippy:egohygiene-clippy-fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene_clippy:egohygiene_clippy_fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene-clippy:egohygiene_clippy_fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene:egohygiene-clippy-fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene_clippy:egohygiene-clippy-fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene:egohygiene_clippy_fixture:0.1.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene_clippy:egohygiene_clippy_fixture:0.1.0:*:*:*:*:rust:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene:egohygiene-clippy-fixture:0.1.0:*:*:*:*:rust:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:egohygiene:egohygiene_clippy_fixture:0.1.0:*:*:*:*:rust:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -224963,15 +224971,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=96fd289287ba869a#actions/normalize-repository-report",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=8031a5667247c735#actions/normalize-repository-report",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/normalize-repository-report",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/normalize-repository-report",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/normalize-repository-report",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -224987,39 +224995,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225028,15 +225036,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=6d8dc74584cfffe3#actions/normalize-repository-report",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=f5b3b4582782c621#actions/normalize-repository-report",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/normalize-repository-report",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/normalize-repository-report",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/normalize-repository-report",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225052,39 +225060,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225093,15 +225101,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=6d5fa28d86347f5b#actions/normalize-repository-report",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=956d957180b25631#actions/normalize-repository-report",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/normalize-repository-report",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/normalize-repository-report",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/normalize-repository-report",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225117,39 +225125,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository-report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository_report:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize-repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize_repository:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize-repository-report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/normalize:egohygiene\\/relay\\/actions\\/normalize_repository_report:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225158,15 +225166,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=07fb604194ebf768#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=f3f863d88722c5c4#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225182,39 +225190,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225223,15 +225231,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=365cd54a34068cd7#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=9c62b609f587cba2#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225247,39 +225255,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225288,15 +225296,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=e1359083adf5e0b5#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=abde5fa897e21134#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225312,39 +225320,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225353,15 +225361,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=7c4bf4f83d3f45ca#actions/publish-report-snapshot",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=ef9c96fcf57b82eb#actions/publish-report-snapshot",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/publish-report-snapshot",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/publish-report-snapshot",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/publish-report-snapshot",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225377,39 +225385,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report-snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report_snapshot:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish-report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish_report:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish-report-snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/publish:egohygiene\\/relay\\/actions\\/publish_report_snapshot:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225418,15 +225426,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=084fe2a34e41036a#actions/repository-intelligence",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=8b6f7cc6f86c79f1#actions/repository-intelligence",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/repository-intelligence",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/repository-intelligence",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/repository-intelligence",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225442,23 +225450,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225467,15 +225475,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@v1.3.0?package-id=6946764b7f5e9de4#actions/repository-intelligence",
+      "bom-ref": "pkg:github/egohygiene/relay@v1.4.0?package-id=8de2108875078f81#actions/repository-intelligence",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/repository-intelligence",
-      "version": "v1.3.0",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@v1.3.0#actions/repository-intelligence",
+      "version": "v1.4.0",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@v1.4.0#actions/repository-intelligence",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225491,23 +225499,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:v1.4.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -241305,7 +241313,7 @@
       },
       "name": "fflate",
       "version": "0.8.3",
-      "cpe": "cpe:2.3:a:fflate:fflate:0.8.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:101arrowz:fflate:0.8.3:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/fflate@0.8.3",
       "properties": [
         {
@@ -241338,7 +241346,7 @@
       },
       "name": "fflate",
       "version": "0.8.3",
-      "cpe": "cpe:2.3:a:fflate:fflate:0.8.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:101arrowz:fflate:0.8.3:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/fflate@0.8.3",
       "properties": [
         {
@@ -254716,15 +254724,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=9ef39a936c877096#analyze",
+      "bom-ref": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63?package-id=4eda94395276878a#analyze",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/analyze",
-      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#analyze",
+      "version": "b96794f015dfd88f77b49b1c93e0fa7110f94c63",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63#analyze",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254740,23 +254748,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254765,15 +254773,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=f6ebeabfc080a085#init",
+      "bom-ref": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63?package-id=f1342b2b9d59ffd9#init",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/init",
-      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#init",
+      "version": "b96794f015dfd88f77b49b1c93e0fa7110f94c63",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63#init",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254789,23 +254797,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254814,15 +254822,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=484af9d9ba7492ba#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63?package-id=81118be1fa591181#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#upload-sarif",
+      "version": "b96794f015dfd88f77b49b1c93e0fa7110f94c63",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254838,39 +254846,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254879,15 +254887,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=df46d0df6d6201c9#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63?package-id=179c09f5a616cc5e#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#upload-sarif",
+      "version": "b96794f015dfd88f77b49b1c93e0fa7110f94c63",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254903,39 +254911,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -254944,15 +254952,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938?package-id=9ea0321ac926e9ea#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63?package-id=e5831bb8722fb9fe#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@cdf488f595d80d6e07e03d4674febd5ab45fa938#upload-sarif",
+      "version": "b96794f015dfd88f77b49b1c93e0fa7110f94c63",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@b96794f015dfd88f77b49b1c93e0fa7110f94c63#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -254968,39 +254976,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:cdf488f595d80d6e07e03d4674febd5ab45fa938:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:b96794f015dfd88f77b49b1c93e0fa7110f94c63:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -342839,7 +342847,7 @@
       },
       "name": "msgpack",
       "version": "1.2.1",
-      "cpe": "cpe:2.3:a:python-msgpack:python-msgpack:1.2.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:msgpack:messagepack:1.2.1:*:*:*:*:python:*:*",
       "purl": "pkg:pypi/msgpack@1.2.1",
       "properties": [
         {
@@ -342857,50 +342865,6 @@
         {
           "name": "syft:package:metadataType",
           "value": "python-uv-lock-entry"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-msgpack:python_msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_msgpack:python-msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_msgpack:python_msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:msgpack:python-msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:msgpack:python_msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-msgpack:msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_msgpack:msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:msgpack:msgpack:1.2.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:msgpack:1.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -355159,15 +355123,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/oxsecurity/megalinter@15e5b45552097e318c93de385779ce3b1084052c?package-id=8b8aac745cd3c514",
+      "bom-ref": "pkg:github/oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2?package-id=e189f016cf2d825d",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "oxsecurity/megalinter",
-      "version": "15e5b45552097e318c93de385779ce3b1084052c",
-      "cpe": "cpe:2.3:a:oxsecurity\\/megalinter:oxsecurity\\/megalinter:15e5b45552097e318c93de385779ce3b1084052c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/oxsecurity/megalinter@15e5b45552097e318c93de385779ce3b1084052c",
+      "version": "9949bad031045f366be2467e00e8371a7328a2e2",
+      "cpe": "cpe:2.3:a:oxsecurity\\/megalinter:oxsecurity\\/megalinter:9949bad031045f366be2467e00e8371a7328a2e2:*:*:*:*:*:*:*",
+      "purl": "pkg:github/oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -355188,15 +355152,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/oxsecurity/megalinter@15e5b45552097e318c93de385779ce3b1084052c?package-id=a81e459479013789",
+      "bom-ref": "pkg:github/oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2?package-id=37c4ddf6ef1f806c",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "oxsecurity/megalinter",
-      "version": "15e5b45552097e318c93de385779ce3b1084052c",
-      "cpe": "cpe:2.3:a:oxsecurity\\/megalinter:oxsecurity\\/megalinter:15e5b45552097e318c93de385779ce3b1084052c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/oxsecurity/megalinter@15e5b45552097e318c93de385779ce3b1084052c",
+      "version": "9949bad031045f366be2467e00e8371a7328a2e2",
+      "cpe": "cpe:2.3:a:oxsecurity\\/megalinter:oxsecurity\\/megalinter:9949bad031045f366be2467e00e8371a7328a2e2:*:*:*:*:*:*:*",
+      "purl": "pkg:github/oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -394752,7 +394716,7 @@
       },
       "name": "pydantic-settings",
       "version": "2.10.1",
-      "cpe": "cpe:2.3:a:python-pydantic-settings:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:pydantic:pydantic-settings:2.10.1:*:*:*:*:*:*:*",
       "purl": "pkg:pypi/pydantic-settings@2.10.1",
       "properties": [
         {
@@ -394772,130 +394736,6 @@
           "value": "python-poetry-lock-entry"
         },
         {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic-settings:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic-settings:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic-settings:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pydantic-settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pydantic_settings:2.10.1:*:*:*:*:*:*:*"
-        },
-        {
           "name": "syft:location:0:path",
           "value": "/.staging/devenvironment/containers/services/api/poetry.lock"
         }
@@ -394909,7 +394749,7 @@
       },
       "name": "pydantic-settings",
       "version": "2.15.0",
-      "cpe": "cpe:2.3:a:python-pydantic-settings:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:pydantic:pydantic-settings:2.15.0:*:*:*:*:*:*:*",
       "purl": "pkg:pypi/pydantic-settings@2.15.0",
       "properties": [
         {
@@ -394927,130 +394767,6 @@
         {
           "name": "syft:package:metadataType",
           "value": "python-uv-lock-entry"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic-settings:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic-settings:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic-settings:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic_settings:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic-settings:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic_settings:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pydantic:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pydantic:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pydantic:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pydantic-settings:2.15.0:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pydantic_settings:2.15.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -431069,7 +430785,7 @@
       },
       "name": "sigstore",
       "version": "4.1.1",
-      "cpe": "cpe:2.3:a:sigstore:sigstore:4.1.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:sigstore:sigstore:4.1.1:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/sigstore@4.1.1",
       "properties": [
         {
@@ -431102,7 +430818,7 @@
       },
       "name": "sigstore",
       "version": "4.1.1",
-      "cpe": "cpe:2.3:a:sigstore:sigstore:4.1.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:sigstore:sigstore:4.1.1:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/sigstore@4.1.1",
       "properties": [
         {
@@ -439970,1111 +439686,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=30e5ca94458c3d28",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/automation.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=ac471922e178d9d3",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/codeql.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=f46165bdbe73a8c6",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/commitlint.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=48cf7ddb86504bb3",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/contributors.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=f2a6c10c56bc2716",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/copilot-setup-steps.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=60625e72132d95e2",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/dependency-review.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=c33cbe8ad9cb168f",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/identity.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=fb3c7389f597bfa6",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/lint-architecture.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=76db8382f3eb757f",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/mantle.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=aca7068862f865c9",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/megalinter-fix.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=92e2278621bbe8b5",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/megalinter.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=23be612848b65175",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/mindgarden-pages.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=c2297da434124321",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/ossf-scorecard.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=1c411ab8e78f2e01",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/osv-scan.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=a4c6cc1de4245875",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/repository-intelligence.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=57e5d913c1228157",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/reusable-autofix.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c?package-id=cf7f036d66aa8b8a",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:05e31511f85b41b11d1cf0ef85d0992719546e2c:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/reusable-flutter-build.yml"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:github/step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920?package-id=e756f84284694f2a",
       "type": "library",
       "supplier": {
@@ -441266,6 +439877,1111 @@
         {
           "name": "syft:location:0:path",
           "value": "/holon/packs/react-vite/template/.github/workflows/release.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=0aa4726e46653781",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/automation.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=362456beed58aef3",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/codeql.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=4c5819391ce1657d",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/commitlint.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=8f29a93c8cd5865e",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/contributors.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=aa2a6ffed5ef2e0e",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/copilot-setup-steps.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=30f885ef875444fa",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/dependency-review.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=fa86637593a0a63d",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/identity.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=0b18e4390df339d8",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/lint-architecture.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=3294043d2e438d10",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mantle.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=e66f994acc6a0136",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/megalinter-fix.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=da4cfb49cd61ee30",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/megalinter.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=54bf09f4f25b5975",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/mindgarden-pages.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=a7aa89b21aae9250",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/ossf-scorecard.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=ff29aafe5885c9a6",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/osv-scan.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=2fbde6dde6ea3ef7",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/repository-intelligence.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=434aa0cd798a2d61",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-autofix.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=585058d025fdd48d",
+      "type": "library",
+      "supplier": {
+        "name": "Organization: Ego Hygiene"
+      },
+      "name": "step-security/harden-runner",
+      "version": "e14015d583714f6e62063499dc959a02595150a1",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/reusable-flutter-build.yml"
         }
       ]
     },
@@ -487319,7 +487035,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "79a32a5c4310b5440411844454175dfb3ef24c3d70b18bff721866b7f0ff9d83"
+          "content": "721f06f07430d5b11298364a16ac9c7771b930f9465b84feea2307e0cf2d6bb5"
         }
       ]
     },
@@ -487330,7 +487046,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "79215d6ade5369c402aad8e85f6a5b375fe49694f8ffe1ce155069d5d95e1db5"
+          "content": "17de9517b68151fbf8dee5019f06e8d0c393dda517d62059aa89695eb4daf923"
         }
       ]
     },
@@ -487341,7 +487057,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "622a42b2d1ebcff6e686db625474c5ef57c87b0dcc240472233f271da034a9dd"
+          "content": "d62371699bfe7dcac5aa5686fb04ae51f5bd7d60238013a40f6d75c348b8a31f"
         }
       ]
     },
@@ -487352,7 +487068,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "e9654d574cd4cabd5b5ddc4a7e64bd8d70b35dfdfaa171b467688cd32a59ff27"
+          "content": "c384503a7ff32b366d9ce924bd05f101aebd06b498f61014a7e7322f1dd48a1d"
         }
       ]
     },
@@ -487363,7 +487079,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "bfd8f95f60c3e82a2c042976099b05892566eefafe918237ec7146e3dd5246eb"
+          "content": "1e9b668b685847975ce27340975bf348a898b216885450c6c6a83c9106b8ff24"
         }
       ]
     },
@@ -487374,7 +487090,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "03c89b429766d1a056059f1e7a4e3a2761cacef687a81d8a089d995a9cad65b3"
+          "content": "93f12c92e10bf49dcd1a0af142330d70139ac27e807e57662acdf2390a7ede5d"
         }
       ]
     },
@@ -487385,7 +487101,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ab718a1c7cdc981e1600fbfa07087a861830ccb338d81e0cc140b85fb5320846"
+          "content": "ff2c3cb3eb892e3e42a35abb2b441cf58f62eecd219b75ef6665fc94d67f5703"
         }
       ]
     },
@@ -487396,7 +487112,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "dc0f6e6683ab0c182328a05790995196da3c3791ac6e8ce40d71da89d29dc322"
+          "content": "cae80273b1e1422f8dbf044f4e06362aa8344b459be2e7047be91af4ffec3fb5"
         }
       ]
     },
@@ -487407,7 +487123,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ca97effe4cc89ff120bfe4cf9370ecba12b19b8ed430394a9e89977fa24a5b89"
+          "content": "2a8abd4eddb0d9b8c95e3f9084c028e451605f7fc221e14ffb8096684d218e4e"
         }
       ]
     },
@@ -487418,7 +487134,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "1e26a2da5852a141ce7b949dffa86b927f66c2d7d7d0f346c33ec3673aaec703"
+          "content": "b00d201368a157064a3c3f5163e90824eb7752b68090650e9210fc730b2495b7"
         }
       ]
     },
@@ -487429,7 +487145,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "5ba82472f8a4cf9d013c0e19f733116dc185cfde6ded395c7b0a005b5767d3af"
+          "content": "992bd0afd8611b3e96350fd880bff9cca5af6ea688d8864f1a91ff460ac508a4"
         }
       ]
     },
@@ -487440,7 +487156,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "b4ebe5a84b5b2abda297ffa6942df856d370272df69adf5ee77b1be5981c0e8e"
+          "content": "1925fbd71e0a71d1e1f565c0a321ee065dcac11e9ffdbbb24bc8e1b8691c79d8"
         }
       ]
     },
@@ -487451,7 +487167,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "99674184c6526947b7093b937c137209b89c8b81b9ce1e4265cabd39fc4b9268"
+          "content": "12cca2a84f59924681e9d91046a3eb4840b9e3907860848e547cdc69c8e68b3a"
         }
       ]
     },
@@ -487462,7 +487178,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "28254ae4de6e2bbc3604bf4e93a6c3f7b6d2bdd5a553a0eb33b96c48ffd27364"
+          "content": "4328e5568cab49fddff2a5bb9c3593d2d63e2db09a5cc13290efd6a3b09a2a2e"
         }
       ]
     },
@@ -487473,7 +487189,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "29adfb11a5efc6828d7c13f1b948ff6022f43fdafa6cd1d3cd0a78b7ab7a014c"
+          "content": "9dc4d369ea9618c0df55450592f304a4ddfabdd63f45c81fd311e95bee54eea3"
         }
       ]
     },
@@ -487484,7 +487200,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f2b60235a47c872f860297fa6cc4d0cbe9aaa7258a23baa6325b850a47f20b0e"
+          "content": "20dff4698ad158904c59a30febf47c78c96bbf5c6b882008d659ff75a5ee9f39"
         }
       ]
     },
@@ -487495,7 +487211,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "25cd69b3d65da0b2c660982ab3110a26bbc16057ed1444d2398861e6a8a23ba1"
+          "content": "273eda60eabd11215015ecbac9368c3c7d5ba3535ad1cb2b883dfba579f7f462"
         }
       ]
     },

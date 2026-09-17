@@ -1,5 +1,5 @@
-Results of jscpd linter (version 5.0.14)
-See documentation on https://megalinter.io/10.0.0/descriptors/copypaste_jscpd/
+Results of jscpd linter (version 5.0.16)
+See documentation on https://megalinter.io/10.1.0/descriptors/copypaste_jscpd/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -352,46 +352,52 @@ Clone found (yaml)
  - .github/workflows/automation.yml [8:1 - 23:3] (16 lines, 60 tokens)
    .github/workflows/automation.yml [26:1 - 41:3]
 Clone found (yaml)
- - .github/workflows/automation.yml [53:1 - 63:24] (11 lines, 62 tokens)
+ - .github/workflows/automation.yml [53:1 - 63:24] (11 lines, 61 tokens)
    .github/workflows/repository-intelligence.yml [40:1 - 50:24]
 Clone found (yaml)
- - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 75 tokens)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
    .github/workflows/codeql.yml [40:1 - 53:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 75 tokens)
+ - .github/workflows/automation.yml [56:1 - 69:15] (14 lines, 74 tokens)
    .github/workflows/lint-architecture.yml [50:1 - 63:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [56:1 - 67:32] (12 lines, 68 tokens)
-   .github/workflows/megalinter.yml [35:1 - 46:24]
+ - .github/workflows/automation.yml [56:1 - 67:11] (12 lines, 62 tokens)
+   .github/workflows/megalinter.yml [35:1 - 46:11]
 Clone found (yaml)
- - .github/workflows/automation.yml [59:1 - 69:15] (11 lines, 61 tokens)
+ - .github/workflows/automation.yml [59:1 - 69:15] (11 lines, 60 tokens)
    .github/workflows/mantle.yml [50:1 - 60:15]
 Clone found (yaml)
- - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 62 tokens)
+ - .github/workflows/automation.yml [59:1 - 69:15] (11 lines, 60 tokens)
+   .github/workflows/reusable-autofix.yml [52:1 - 62:15]
+Clone found (yaml)
+ - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
    .github/workflows/contributors.yml [19:1 - 29:24]
 Clone found (yaml)
- - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 62 tokens)
+ - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
    .github/workflows/lint-architecture.yml [47:1 - 57:24]
 Clone found (yaml)
- - .github/workflows/contributors.yml [22:1 - 34:11] (13 lines, 72 tokens)
+ - .github/workflows/contributors.yml [22:1 - 34:11] (13 lines, 71 tokens)
    .github/workflows/megalinter-fix.yml [29:1 - 41:11]
 Clone found (yaml)
- - .github/workflows/copilot-setup-steps.yml [32:1 - 47:32] (16 lines, 91 tokens)
-   .github/workflows/reusable-autofix.yml [46:1 - 62:15]
+ - .github/workflows/copilot-setup-steps.yml [32:1 - 46:11] (15 lines, 78 tokens)
+   .github/workflows/reusable-autofix.yml [46:1 - 60:11]
 Clone found (yaml)
- - .github/workflows/lint-architecture.yml [80:1 - 102:34] (23 lines, 139 tokens)
+ - .github/workflows/copilot-setup-steps.yml [38:1 - 46:24] (9 lines, 53 tokens)
+   .github/workflows/megalinter.yml [38:1 - 46:24]
+Clone found (yaml)
+ - .github/workflows/lint-architecture.yml [80:1 - 102:34] (23 lines, 138 tokens)
    .github/workflows/megalinter.yml [142:1 - 164:34]
 Clone found (yaml)
- - .github/workflows/lint-architecture.yml [83:1 - 95:15] (13 lines, 59 tokens)
+ - .github/workflows/lint-architecture.yml [83:1 - 95:15] (13 lines, 58 tokens)
    .github/workflows/osv-scan.yml [744:1 - 756:15]
 Clone found (yaml)
- - .github/workflows/megalinter.yml [33:1 - 47:32] (15 lines, 82 tokens)
+ - .github/workflows/megalinter.yml [33:1 - 47:32] (15 lines, 81 tokens)
    .github/workflows/ossf-scorecard.yml [33:1 - 48:15]
 Clone found (yaml)
- - .github/workflows/megalinter.yml [141:17 - 164:34] (24 lines, 149 tokens)
+ - .github/workflows/megalinter.yml [141:17 - 164:34] (24 lines, 148 tokens)
    .github/workflows/ossf-scorecard.yml [79:22 - 102:34]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [51:1 - 65:15] (15 lines, 86 tokens)
+ - .github/workflows/mindgarden-pages.yml [51:1 - 65:15] (15 lines, 85 tokens)
    .github/workflows/repository-intelligence.yml [43:1 - 57:15]
 Clone found (yaml)
  - .github/workflows/mindgarden-pages.yml [94:1 - 99:9] (6 lines, 82 tokens)
@@ -409,10 +415,10 @@ Clone found (yaml)
  - .github/workflows/osv-scan.yml [342:51 - 352:15] (11 lines, 85 tokens)
    .github/workflows/osv-scan.yml [388:54 - 398:15]
 Clone found (yaml)
- - .github/workflows/reusable-flutter-build.yml [52:1 - 68:15] (17 lines, 129 tokens)
+ - .github/workflows/reusable-flutter-build.yml [52:1 - 68:15] (17 lines, 128 tokens)
    .github/workflows/reusable-flutter-build.yml [85:1 - 101:15]
 Clone found (yaml)
- - .github/workflows/reusable-flutter-build.yml [52:1 - 72:21] (21 lines, 166 tokens)
+ - .github/workflows/reusable-flutter-build.yml [52:1 - 72:21] (21 lines, 165 tokens)
    .github/workflows/reusable-flutter-build.yml [120:1 - 140:21]
 Clone found (yaml)
  - .github/workflows/reusable-flutter-build.yml [59:1 - 72:21] (14 lines, 114 tokens)
@@ -534,9 +540,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
-Clone found (markdown)
- - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
-   .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 510:27] (14 lines, 479 tokens)
    .staging/.github/agents/awesome/gem-mobile-tester.agent.md:markdown [84:36 - 98:4]
@@ -1828,9 +1831,6 @@ Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [41:3 - 48:21] (8 lines, 98 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [41:3 - 48:21]
-Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
 Clone found (markdown)
@@ -2904,9 +2904,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
-Clone found (markdown)
- - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
-   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -3702,9 +3699,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.analyze.md:markdown [31:20 - 44:17] (14 lines, 84 tokens)
    .staging/.opencode/commands/speckit.analyze.md:markdown [221:16 - 234:17]
-Clone found (markdown)
- - .staging/.opencode/commands/speckit.analyze.md:markdown [226:8 - 241:2] (16 lines, 111 tokens)
-   .staging/.opencode/commands/speckit.checklist.md:markdown [359:8 - 372:88]
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.clarify.md:markdown [44:25 - 55:5] (12 lines, 92 tokens)
    .staging/.opencode/commands/speckit.constitution.md:markdown [44:25 - 55:4]
@@ -9514,7 +9508,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1721           │ 330310      │ 4257223      │ 689          │ 11698 (3.54%)    │ 172511 (4.05%)    │
+│ markdown     │ 1721           │ 330310      │ 4257223      │ 685          │ 11636 (3.52%)    │ 171965 (4.04%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9568,12 +9562,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 553            │ 57117       │ 316128       │ 347          │ 9355 (16.38%)    │ 105167 (33.27%)   │
+│ yaml         │ 553            │ 57117       │ 316096       │ 349          │ 9372 (16.41%)    │ 105247 (33.30%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4743           │ 981179      │ 7702647      │ 3147         │ 59496 (6.06%)    │ 762096 (9.89%)    │
+│ Total:       │ 4743           │ 981179      │ 7702615      │ 3145         │ 59451 (6.06%)    │ 761630 (9.89%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3147 clones.
+Found 3145 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 17.05s
+time: 15.92s
 

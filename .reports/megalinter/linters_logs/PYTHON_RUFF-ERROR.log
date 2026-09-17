@@ -1,5 +1,5 @@
-Results of ruff linter (version 0.16.2)
-See documentation on https://megalinter.io/10.0.0/descriptors/python_ruff/
+Results of ruff linter (version 0.16.5)
+See documentation on https://megalinter.io/10.1.0/descriptors/python_ruff/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace

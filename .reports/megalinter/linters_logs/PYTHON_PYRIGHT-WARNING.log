@@ -1,5 +1,5 @@
-Results of pyright linter (version 1.1.411)
-See documentation on https://megalinter.io/10.0.0/descriptors/python_pyright/
+Results of pyright linter (version 1.1.413)
+See documentation on https://megalinter.io/10.1.0/descriptors/python_pyright/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -7803,8 +7803,6 @@ Linter raw log:
   .staging/devenvironment/containers/services/api/src/app/infrastructure/messages/dao.py:23:15 - error: Return type is unknown (reportUnknownParameterType)
   .staging/devenvironment/containers/services/api/src/app/infrastructure/messages/dao.py:23:54 - error: Type of parameter "content" is unknown (reportUnknownParameterType)
   .staging/devenvironment/containers/services/api/src/app/infrastructure/messages/dao.py:27:15 - error: Return type is unknown (reportUnknownParameterType)
-  .staging/devenvironment/containers/services/api/src/app/infrastructure/messages/dao.py:30:9 - error: Type of parameter "content" is partially unknown
-    Parameter type is "str | Unknown" (reportUnknownParameterType)
   .staging/devenvironment/containers/services/api/src/app/infrastructure/messages/dao.py:34:13 - error: Type of "content_value" is unknown (reportUnknownVariableType)
   .staging/devenvironment/containers/services/api/src/app/infrastructure/messages/dao.py:34:34 - error: Type of "content" is unknown (reportUnknownMemberType)
   .staging/devenvironment/containers/services/api/src/app/infrastructure/messages/dao.py:34:42 - error: Cannot access attribute "content" for class "str"
@@ -12342,5 +12340,5 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8846 errors, 424 warnings, 0 informations
+8845 errors, 424 warnings, 0 informations
 

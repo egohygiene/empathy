@@ -3,8 +3,7 @@ path = 'egolint/.config/security/gitleaks/.gitleaks.toml'
 
 [allowlist]
 paths = [
-    '\.cache/',
-    '\.git/',
-    '\.reports/',
-    '\.reports/megalinter/',
+    '(^|/)\.git/',
+    '(^|/)\.reports/',
+    '(^|/)\.reports/megalinter/',
 ]
