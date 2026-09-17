@@ -42,7 +42,8 @@ class GitignoreBaselineTests(unittest.TestCase):
 
     def git(self, *arguments: str, check: bool = True) -> subprocess.CompletedProcess[str]:
         """Run Git without a shell or inherited Git configuration overrides."""
-        return subprocess.run(  # nosec B603
+        # An absolute Git executable receives only test-owned arguments, without a shell.
+        return subprocess.run(  # noqa: S603  # nosec B603
             [self.git_executable, *arguments],
             cwd=self.root,
             env=self.environment,
@@ -178,32 +179,32 @@ class GitignoreBaselineTests(unittest.TestCase):
 
     def test_ambiguous_paths_and_reviewed_artifacts_stay_visible(self) -> None:
         self.assert_paths(
-            tuple(
-                f"{directory}/source.txt"
-                for directory in (
-                    "bin",
-                    "build",
-                    "dist",
-                    "lib",
-                    "out",
-                    "pkg",
-                    "public",
-                    "reports",
-                    "target",
-                    "vendor",
-                    "coverage",
-                    "temp",
-                    "tmp",
-                    "venv",
-                    "obj",
-                    "Pods",
-                    "project/bin",
-                    "project/build",
-                    "project/dist",
-                    "project/target",
-                )
-            )
-            + (
+            (
+                *(
+                    f"{directory}/source.txt"
+                    for directory in (
+                        "bin",
+                        "build",
+                        "dist",
+                        "lib",
+                        "out",
+                        "pkg",
+                        "public",
+                        "reports",
+                        "target",
+                        "vendor",
+                        "coverage",
+                        "temp",
+                        "tmp",
+                        "venv",
+                        "obj",
+                        "Pods",
+                        "project/bin",
+                        "project/build",
+                        "project/dist",
+                        "project/target",
+                    )
+                ),
                 "fixtures/reference.zip",
                 "fixtures/reference.tar.gz",
                 "fixtures/reference.patch",
