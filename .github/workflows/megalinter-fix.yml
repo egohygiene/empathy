@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
         with:
           egress-policy: audit
 
@@ -45,7 +45,7 @@ jobs:
         id: megalinter
         continue-on-error: true
         # oxsecurity/megalinter v10.0.0
-        uses: oxsecurity/megalinter@15e5b45552097e318c93de385779ce3b1084052c
+        uses: oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2
         env:
           APPLY_FIXES: "${{ inputs.apply-fixes }}"
           GITHUB_TOKEN: "${{ github.token }}"
