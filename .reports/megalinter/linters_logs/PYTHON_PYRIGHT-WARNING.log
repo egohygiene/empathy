@@ -11913,462 +11913,16 @@ mindgarden/tests/test_validate_garden.py
     Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
   mindgarden/tests/test_validate_garden.py:168:41 - error: Argument type is unknown
     Argument corresponds to parameter "expected_exception" in function "assertRaisesRegex" (reportUnknownArgumentType)
-tests/test_foundation_contract.py
-  tests/test_foundation_contract.py:24:9 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:24:23 - error: Type of "load_json" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:24:34 - error: "load_json" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:25:9 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:25:24 - error: Type of "load_json" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:25:35 - error: "load_json" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:30:30 - error: Type of "validate_catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:30:41 - error: "validate_catalog" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:30:58 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:31:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:31:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:31:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:31:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:31:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:31:70 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:33:30 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNotNone" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:36:36 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:37:40 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:41:13 - error: Type of "REQUIRED_CATEGORIES" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:41:24 - error: "REQUIRED_CATEGORIES" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:41:49 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:41:49 - error: Argument type is unknown
-    Argument corresponds to parameter "iterable" in function "__init__" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:45:39 - error: Type of "artifact" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:45:51 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:49:40 - error: Type of "artifact" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:49:52 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:53:9 - error: Type of "first" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:53:16 - error: Type of "first_errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:53:31 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:53:42 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:53:59 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:53:73 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:54:9 - error: Type of "second" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:54:17 - error: Type of "second_errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:54:33 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:54:44 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:55:27 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:55:27 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:55:56 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:55:56 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:63:13 - error: Type of "render_resolved" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:63:24 - error: "render_resolved" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:63:48 - error: Type of "render_resolved" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:63:59 - error: "render_resolved" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:67:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:67:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:67:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:67:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:67:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:67:70 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:70:9 - error: Type of "artifacts" is partially unknown
-    Type of "artifacts" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
-  tests/test_foundation_contract.py:70:51 - error: Type of "artifact" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:80:9 - error: Type of "manifest" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:80:34 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:80:34 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:84:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:84:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:84:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:84:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:84:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:85:27 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:88:13 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:92:9 - error: Type of "unknown" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:92:33 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:92:33 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:94:9 - error: Type of "_" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:94:12 - error: Type of "unknown_errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:94:29 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:94:40 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:94:57 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:95:72 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:97:9 - error: Type of "conflict" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:97:34 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:97:34 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:98:9 - error: Type of "append" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:99:9 - error: Type of "_" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:99:12 - error: Type of "conflict_errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:99:30 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:99:41 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:99:58 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:101:47 - error: Type of "error" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:106:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:106:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:106:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:106:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:106:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:106:70 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:109:9 - error: Type of "selected" is partially unknown
-    Type of "selected" is "set[Unknown]" (reportUnknownVariableType)
-  tests/test_foundation_contract.py:109:40 - error: Type of "artifact" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:110:42 - error: Argument type is partially unknown
-    Argument corresponds to parameter "container" in function "assertNotIn"
-    Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:111:39 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:112:42 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:115:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:115:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:115:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:115:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:115:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:115:70 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:118:30 - error: Type of "validate_workspace" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:118:41 - error: "validate_workspace" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:121:9 - error: Type of "inventory" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:121:21 - error: Type of "render_inventory" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:121:32 - error: "render_inventory" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:121:49 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:122:37 - error: Type of "render_inventory" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:122:48 - error: "render_inventory" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:122:79 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:122:79 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:123:43 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:124:44 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:126:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:126:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:126:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:126:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:126:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:126:70 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:129:9 - error: Type of "contract" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:129:20 - error: Type of "render_egolint_contract" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:129:31 - error: "render_egolint_contract" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:130:62 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:131:46 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:132:55 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:133:50 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:136:9 - error: Type of "invalid_path" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:136:38 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:136:38 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:139:56 - error: Type of "error" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:139:65 - error: Type of "validate_catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:139:76 - error: "validate_catalog" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:142:9 - error: Type of "missing_marker" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:142:40 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:142:40 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:143:9 - error: Type of "generated" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:144:13 - error: Argument type is partially unknown
-    Argument corresponds to parameter "i" in function "next"
-    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
-  tests/test_foundation_contract.py:145:17 - error: Type of "artifact" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:152:21 - error: Type of "error" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:152:30 - error: Type of "validate_catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:152:41 - error: "validate_catalog" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:172:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:172:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_contract.py:172:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:172:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:172:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:172:70 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:176:13 - error: Type of "render_inventory" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:176:24 - error: "render_inventory" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_contract.py:176:41 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:182:13 - error: Type of "render_egolint_contract" is unknown (reportUnknownMemberType)
-  tests/test_foundation_contract.py:182:24 - error: "render_egolint_contract" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
 tests/test_foundation_ignore.py
-  tests/test_foundation_ignore.py:17:8 - warning: Import "test_gitignore_baseline" could not be resolved (reportMissingImports)
-  tests/test_foundation_ignore.py:22:8 - warning: Import "foundation_ignore" could not be resolved (reportMissingImports)
-  tests/test_foundation_ignore.py:27:5 - error: Return type, "tuple[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
-  tests/test_foundation_ignore.py:28:12 - error: Return type, "tuple[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:29:9 - error: Type of "load_json" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:29:20 - error: "load_json" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:30:9 - error: Type of "load_json" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:30:20 - error: "load_json" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:34:5 - error: Return type, "dict[str, str | list[Unknown]]", is partially unknown (reportUnknownParameterType)
-  tests/test_foundation_ignore.py:34:11 - error: Type annotation is missing for parameter "root" (reportMissingParameterType)
-  tests/test_foundation_ignore.py:34:21 - error: Type of parameter "overlays" is unknown (reportUnknownParameterType)
-  tests/test_foundation_ignore.py:34:21 - error: Type annotation is missing for parameter "overlays" (reportMissingParameterType)
-  tests/test_foundation_ignore.py:34:34 - error: Type annotation is missing for parameter "local" (reportMissingParameterType)
-  tests/test_foundation_ignore.py:35:12 - error: Return type, "dict[str, str | list[Unknown]]", is partially unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:35:44 - error: Argument type is unknown
-    Argument corresponds to parameter "iterable" in function "__init__" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:38:5 - error: Return type is unknown (reportUnknownParameterType)
-  tests/test_foundation_ignore.py:38:16 - error: Type of parameter "catalog" is unknown (reportUnknownParameterType)
-  tests/test_foundation_ignore.py:38:16 - error: Type annotation is missing for parameter "catalog" (reportMissingParameterType)
-  tests/test_foundation_ignore.py:39:12 - error: Return type is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:39:17 - error: Argument type is partially unknown
-    Argument corresponds to parameter "i" in function "next"
-    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:39:26 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:44:9 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:44:23 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:47:9 - error: Type of "first" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:47:16 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:47:25 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:47:36 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:47:51 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:47:65 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:49:9 - error: Type of "second" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:49:17 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:49:26 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:49:37 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:50:18 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "Iterator[tuple[Unknown, Unknown]]" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:50:27 - error: Argument type is partially unknown
-    Argument corresponds to parameter "sequence" in function "__new__"
-    Argument type is "list[tuple[Unknown, Unknown]]" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:50:32 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:50:32 - error: Type of "items" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:50:32 - error: Argument type is unknown
-    Argument corresponds to parameter "iterable" in function "__init__" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:50:57 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:53:26 - error: Type of "render_resolved" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:53:37 - error: "render_resolved" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:53:61 - error: Type of "render_resolved" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:53:72 - error: "render_resolved" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:56:13 - error: Type of "render_resolved" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:56:24 - error: "render_resolved" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:61:32 - error: Type of "layer" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:63:13 - error: Type of "file" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:65:32 - error: Type of "encode" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:65:32 - error: Argument type is unknown
-    Argument corresponds to parameter "string" in function "openssl_sha256" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:67:17 - error: Type of "layer" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:70:40 - error: Type of "read_bytes" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:70:40 - error: Argument type is unknown
-    Argument corresponds to parameter "string" in function "openssl_sha256" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:77:9 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:78:9 - error: Type of "first" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:78:16 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:78:25 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:78:36 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:78:51 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:78:65 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:80:9 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:80:9 - error: Type of "reverse" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:81:9 - error: Type of "second" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:81:17 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:81:26 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:81:37 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:81:52 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:81:66 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:85:71 - error: Type of "file" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:87:30 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:88:26 - error: Type of "digest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:92:13 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:93:9 - error: Type of "resolved" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:93:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:93:28 - error: Type of "resolve_manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:93:39 - error: "resolve_manifest" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:93:56 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:93:70 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:95:39 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:96:9 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:96:15 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:96:24 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:96:35 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:96:50 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:96:64 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:97:27 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:98:80 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:101:9 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:101:9 - error: Type of "remove" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:102:9 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:102:15 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:102:24 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:102:35 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:102:50 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:102:64 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:103:27 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:104:84 - error: Type of "error" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:105:9 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:106:9 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:106:15 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:106:24 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:106:35 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:106:50 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:106:64 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:109:55 - error: Type of "layer" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:113:9 - error: Type of "invalid" is partially unknown
-    Type of "invalid" is "list[dict[str, list[Unknown]] | dict[str, list[None]] | dict[str, list[dict[str, str | list[Never]]]] | dict[str, list[dict[str, str | list[Literal['missing']]]]] | dict[str, list[dict[str, str | list[Literal['rust-build']]]]] | None]" (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:124:9 - error: Type of "extend" is partially unknown
-    Type of "extend" is "(iterable: Iterable[dict[str, list[Unknown]] | dict[str, list[None]] | dict[str, list[dict[str, str | list[Never]]]] | dict[str, list[dict[str, str | list[Literal['missing']]]]] | dict[str, list[dict[str, str | list[Literal['rust-build']]]]] | None], /) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:142:9 - error: Type of "extend" is partially unknown
-    Type of "extend" is "(iterable: Iterable[dict[str, list[Unknown]] | dict[str, list[None]] | dict[str, list[dict[str, str | list[Never]]]] | dict[str, list[dict[str, str | list[Literal['missing']]]]] | dict[str, list[dict[str, str | list[Literal['rust-build']]]]] | None], /) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:143:37 - error: Argument of type "list[Unknown] | Literal['/cache/', 'bad\r\n', 'bad\u0000\n'] | None" cannot be assigned to parameter "local" of type "str" in function "scope"
-    Type "list[Unknown] | Literal['/cache/', 'bad\r\n', 'bad\u0000\n'] | None" is not assignable to type "str"
-      "list[Unknown]" is not assignable to "str" (reportArgumentType)
-  tests/test_foundation_ignore.py:144:17 - error: Type of "local" is partially unknown
-    Type of "local" is "list[Unknown] | Literal['/cache/', 'bad\r\n', 'bad\u0000\n'] | None" (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:146:9 - error: Type of "extend" is partially unknown
-    Type of "extend" is "(iterable: Iterable[dict[str, list[Unknown]] | dict[str, list[None]] | dict[str, list[dict[str, str | list[Never]]]] | dict[str, list[dict[str, str | list[Literal['missing']]]]] | dict[str, list[dict[str, str | list[Literal['rust-build']]]]] | None], /) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:147:62 - error: Type of "value" is partially unknown
+  tests/test_foundation_ignore.py:163:9 - error: Type of "invalid_overlays" is partially unknown
+    Type of "invalid_overlays" is "tuple[None, Literal['rust-build'], list[dict[Unknown, Unknown]]]" (reportUnknownVariableType)
+  tests/test_foundation_ignore.py:164:24 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "extend"
+    Argument type is "Generator[dict[str, list[dict[str, Any | list[dict[Unknown, Unknown]] | str | None]]], None, None]" (reportUnknownArgumentType)
+  tests/test_foundation_ignore.py:164:73 - error: Type of "value" is partially unknown
     Type of "value" is "list[dict[Unknown, Unknown]] | Literal['rust-build'] | None" (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:149:13 - error: Type of "selection" is partially unknown
-    Type of "selection" is "dict[str, list[Unknown]] | dict[str, list[None]] | dict[str, list[dict[str, str | list[Never]]]] | dict[str, list[dict[str, str | list[Literal['missing']]]]] | dict[str, list[dict[str, str | list[Literal['rust-build']]]]] | None" (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:151:17 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:152:17 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:152:23 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:152:32 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:152:43 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:152:58 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:152:72 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:153:35 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:157:9 - error: Type of "invalid" is partially unknown
-    Type of "invalid" is "list[dict[Unknown | str, Unknown | bool] | None]" (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:157:44 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:157:44 - error: Argument type is unknown
-    Argument corresponds to parameter "catalog" in function "definition" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:158:20 - error: Type of "value" is partially unknown
+  tests/test_foundation_ignore.py:174:20 - error: Type of "value" is partially unknown
     Type of "value" is "str | list[Unknown]" (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:164:13 - error: Type of "candidate" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:164:39 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:164:50 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:164:50 - error: Argument type is unknown
-    Argument corresponds to parameter "catalog" in function "definition" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:166:13 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: dict[Unknown | str, Unknown | bool] | None, /) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:166:28 - error: Argument type is unknown
-    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:167:9 - error: Type of "duplicate" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:167:35 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:167:46 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:167:46 - error: Argument type is unknown
-    Argument corresponds to parameter "catalog" in function "definition" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:168:9 - error: Type of "append" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:169:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: dict[Unknown | str, Unknown | bool] | None, /) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:169:24 - error: Argument type is unknown
-    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:170:13 - error: Type of "candidate" is partially unknown
-    Type of "candidate" is "dict[Unknown | str, Unknown | bool] | None" (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:172:17 - error: Type of "catalog" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:172:41 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:172:41 - error: Argument type is unknown
-    Argument corresponds to parameter "x" in function "deepcopy" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:173:22 - error: Argument type is partially unknown
-    Argument corresponds to parameter "i" in function "next"
-    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:173:31 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:176:17 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:176:23 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:176:32 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:176:43 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:176:67 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:177:35 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:183:13 - error: Type of "sources" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:183:34 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:183:34 - error: Argument type is unknown
-    Argument corresponds to parameter "catalog" in function "definition" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:184:13 - error: Type of "baseline" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:185:13 - error: Type of "path" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:186:13 - error: Type of "parent" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:186:13 - error: Type of "mkdir" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:187:13 - error: Type of "write_bytes" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:187:30 - error: Type of "read_bytes" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:188:13 - error: Type of "rust" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:198:25 - error: Type of "write_bytes" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:200:46 - error: Type of "digest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:201:21 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:201:27 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:201:36 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:201:47 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:201:62 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:201:76 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:202:39 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:203:63 - error: Type of "error" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:209:13 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:209:19 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:209:28 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:209:39 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:209:54 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:209:68 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:210:31 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
-  tests/test_foundation_ignore.py:211:68 - error: Type of "error" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:214:9 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:214:9 - error: Type of "append" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:215:9 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:217:9 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:217:15 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:217:24 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:217:35 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:217:50 - error: Type of "catalog" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:217:64 - error: Type of "manifest" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:219:9 - error: Type of "file" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:242:33 - error: Type of "main" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:242:44 - error: "main" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:243:33 - error: Type of "main" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:243:44 - error: "main" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:245:33 - error: Type of "main" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:245:44 - error: "main" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:250:20 - error: Type of "main" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:250:31 - error: "main" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:255:35 - error: Type of "GitignoreFixture" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:255:35 - error: Base class type is unknown, obscuring type of derived class (reportUntypedBaseClass)
-  tests/test_foundation_ignore.py:256:23 - error: Type of parameter "scopes" is unknown (reportUnknownParameterType)
-  tests/test_foundation_ignore.py:256:23 - error: Type annotation is missing for parameter "scopes" (reportMissingParameterType)
-  tests/test_foundation_ignore.py:257:9 - error: Type of "catalog" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:257:18 - error: Type of "manifest" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:259:9 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:259:15 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:259:24 - error: Type of "plan_gitignore" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:259:35 - error: "plan_gitignore" is not a known attribute of module "foundation" (reportAttributeAccessIssue)
-  tests/test_foundation_ignore.py:260:9 - error: Type of "assertEqual" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:261:13 - error: Type of "file" is unknown (reportUnknownVariableType)
-  tests/test_foundation_ignore.py:262:13 - error: Type of "write" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:265:9 - error: Type of "install" is partially unknown
-    Type of "install" is "(scopes: Unknown) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:266:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:269:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:281:9 - error: Type of "install" is partially unknown
-    Type of "install" is "(scopes: Unknown) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:282:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:283:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:286:9 - error: Type of "install" is partially unknown
-    Type of "install" is "(scopes: Unknown) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:287:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:290:9 - error: Type of "install" is partially unknown
-    Type of "install" is "(scopes: Unknown) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:300:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:303:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:307:9 - error: Type of "install" is partially unknown
-    Type of "install" is "(scopes: Unknown) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:309:13 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:322:13 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:336:9 - error: Type of "install" is partially unknown
-    Type of "install" is "(scopes: Unknown) -> None" (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:337:9 - error: Type of "write" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:338:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
-  tests/test_foundation_ignore.py:339:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
 tests/test_gitignore_adoption.py
   tests/test_gitignore_adoption.py:59:17 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
@@ -12378,18 +11932,6 @@ tests/test_gitignore_adoption.py
   tests/test_gitignore_adoption.py:62:34 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-tests/test_gitignore_baseline.py
-  tests/test_gitignore_baseline.py:46:16 - error: No overloads for "run" match the provided arguments (reportCallIssue)
-  tests/test_gitignore_baseline.py:46:16 - error: Return type is unknown (reportUnknownVariableType)
-  tests/test_gitignore_baseline.py:47:14 - error: Argument of type "list[str | None]" cannot be assigned to parameter "args" of type "_CMD" in function "run"
-    Type "str | None" is not assignable to type "StrOrBytesPath"
-      Type "None" is not assignable to type "StrOrBytesPath"
-        "None" is not assignable to "str"
-        "None" is not assignable to "bytes"
-        "None" is incompatible with protocol "PathLike[str]"
-          "__fspath__" is not present
-        "None" is incompatible with protocol "PathLike[bytes]"
-          "__fspath__" is not present (reportArgumentType)
 tests/test_mindgarden_agent_integration.py
   tests/test_mindgarden_agent_integration.py:16:6 - warning: Import "scripts.garden_agent" could not be resolved (reportMissingImports)
   tests/test_mindgarden_agent_integration.py:17:5 - error: Type of "build_index" is unknown (reportUnknownVariableType)
@@ -12424,208 +11966,186 @@ tests/test_mindgarden_publishing_integration.py
   tests/test_mindgarden_publishing_integration.py:32:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
   tests/test_mindgarden_publishing_integration.py:32:38 - error: Type of "path" is unknown (reportUnknownVariableType)
 tools/foundation.py
-  tools/foundation.py:17:8 - warning: Import "foundation_ignore" could not be resolved (reportMissingImports)
-  tools/foundation.py:40:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
-  tools/foundation.py:49:62 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:51:25 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:79:45 - error: Argument type is partially unknown
+  tools/foundation.py:44:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/foundation.py:53:62 - error: Type of "item" is unknown (reportUnknownVariableType)
+  tools/foundation.py:55:25 - error: Type of "item" is unknown (reportUnknownVariableType)
+  tools/foundation.py:83:45 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:85:5 - error: Type of "profile_ids" is partially unknown
+  tools/foundation.py:89:5 - error: Type of "profile_ids" is partially unknown
     Type of "profile_ids" is "list[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:85:20 - error: Type of "get" is partially unknown
+  tools/foundation.py:89:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:85:42 - error: Type of "profile" is unknown (reportUnknownVariableType)
-  tools/foundation.py:86:12 - error: Argument type is partially unknown
+  tools/foundation.py:89:42 - error: Type of "profile" is unknown (reportUnknownVariableType)
+  tools/foundation.py:90:12 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:86:32 - error: Argument type is partially unknown
+  tools/foundation.py:90:32 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:86:79 - error: Type of "item" is partially unknown
+  tools/foundation.py:90:79 - error: Type of "item" is partially unknown
     Type of "item" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:90:9 - error: Type of "profile_names" is partially unknown
-    Type of "profile_names" is "set[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:90:25 - error: Type "set[Unknown | None]" is not assignable to declared type "set[str]"
-    "set[Unknown | None]" is not assignable to "set[str]"
-      Type parameter "_T@set" is invariant, but "Unknown | None" is not the same as "str"
-      Consider switching from "set" to "Container" which is covariant (reportAssignmentType)
-  tools/foundation.py:90:29 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:91:38 - error: Argument type is partially unknown
+  tools/foundation.py:94:35 - error: Type of "item" is partially unknown
+    Type of "item" is "Unknown | None" (reportUnknownVariableType)
+  tools/foundation.py:95:38 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:94:16 - error: Type of "profile" is unknown (reportUnknownVariableType)
-  tools/foundation.py:94:37 - error: Argument type is partially unknown
+  tools/foundation.py:98:16 - error: Type of "profile" is unknown (reportUnknownVariableType)
+  tools/foundation.py:98:37 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:100:31 - error: Type of "get" is partially unknown
+  tools/foundation.py:104:31 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:100:63 - error: Type of "strip" is unknown (reportUnknownMemberType)
-  tools/foundation.py:103:43 - error: Type of "get" is partially unknown
+  tools/foundation.py:104:63 - error: Type of "strip" is unknown (reportUnknownMemberType)
+  tools/foundation.py:107:43 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:104:9 - error: Type of "name" is partially unknown
+  tools/foundation.py:108:9 - error: Type of "name" is partially unknown
     Type of "name" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:104:16 - error: Type of "get" is partially unknown
+  tools/foundation.py:108:16 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:107:9 - error: Type of "requires" is unknown (reportUnknownVariableType)
-  tools/foundation.py:107:20 - error: Type of "get" is partially unknown
+  tools/foundation.py:111:9 - error: Type of "requires" is unknown (reportUnknownVariableType)
+  tools/foundation.py:111:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:108:9 - error: Type of "conflicts" is unknown (reportUnknownVariableType)
-  tools/foundation.py:108:21 - error: Type of "get" is partially unknown
+  tools/foundation.py:112:9 - error: Type of "conflicts" is unknown (reportUnknownVariableType)
+  tools/foundation.py:112:21 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:110:13 - error: Type of "unknown" is partially unknown
+  tools/foundation.py:114:13 - error: Type of "unknown" is partially unknown
     Type of "unknown" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:110:28 - error: Argument type is partially unknown
+  tools/foundation.py:114:28 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:110:44 - error: Argument type is partially unknown
+  tools/foundation.py:114:44 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:113:85 - error: Argument type is partially unknown
+  tools/foundation.py:117:85 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:117:37 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:143:16 - error: Type of "artifact" is unknown (reportUnknownVariableType)
-  tools/foundation.py:143:38 - error: Argument type is partially unknown
+  tools/foundation.py:121:37 - error: Type of "item" is unknown (reportUnknownVariableType)
+  tools/foundation.py:147:16 - error: Type of "artifact" is unknown (reportUnknownVariableType)
+  tools/foundation.py:147:38 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:148:9 - error: Type of "identifier" is partially unknown
+  tools/foundation.py:152:9 - error: Type of "identifier" is partially unknown
     Type of "identifier" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:148:22 - error: Type of "get" is partially unknown
+  tools/foundation.py:152:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:149:9 - error: Type of "path" is partially unknown
+  tools/foundation.py:153:9 - error: Type of "path" is partially unknown
     Type of "path" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:149:16 - error: Type of "get" is partially unknown
+  tools/foundation.py:153:16 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:157:26 - error: Argument of type "Unknown | None" cannot be assigned to parameter "object" of type "str" in function "append"
-    Type "Unknown | None" is not assignable to type "str"
-      "None" is not assignable to "str" (reportArgumentType)
-  tools/foundation.py:158:12 - error: Type of "get" is partially unknown
+  tools/foundation.py:158:27 - error: Argument type is partially unknown
+    Argument corresponds to parameter "value" in function "_safe_path"
+    Argument type is "Unknown | None" (reportUnknownArgumentType)
+  tools/foundation.py:162:12 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:160:12 - error: Type of "get" is partially unknown
+  tools/foundation.py:164:12 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:162:9 - error: Type of "presence" is partially unknown
+  tools/foundation.py:166:9 - error: Type of "presence" is partially unknown
     Type of "presence" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:162:20 - error: Type of "get" is partially unknown
+  tools/foundation.py:166:20 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:165:9 - error: Type of "ownership" is partially unknown
+  tools/foundation.py:169:9 - error: Type of "ownership" is partially unknown
     Type of "ownership" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:165:21 - error: Type of "get" is partially unknown
+  tools/foundation.py:169:21 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:168:9 - error: Type of "artifact_profiles" is partially unknown
+  tools/foundation.py:172:9 - error: Type of "artifact_profiles" is partially unknown
     Type of "artifact_profiles" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:168:29 - error: Type of "get" is partially unknown
+  tools/foundation.py:172:29 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:171:13 - error: Type of "unknown" is partially unknown
+  tools/foundation.py:175:13 - error: Type of "unknown" is partially unknown
     Type of "unknown" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:171:27 - error: Argument type is partially unknown
+  tools/foundation.py:175:27 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:178:9 - error: Type of "markers" is partially unknown
+  tools/foundation.py:182:9 - error: Type of "markers" is partially unknown
     Type of "markers" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:178:19 - error: Type of "get" is partially unknown
+  tools/foundation.py:182:19 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:182:12 - error: Type of "get" is partially unknown
+  tools/foundation.py:186:12 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:182:43 - error: Type of "get" is partially unknown
+  tools/foundation.py:186:43 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:184:27 - error: Type of "get" is partially unknown
+  tools/foundation.py:188:27 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:184:68 - error: Type of "strip" is unknown (reportUnknownMemberType)
-  tools/foundation.py:187:23 - error: Type of "get" is partially unknown
+  tools/foundation.py:188:68 - error: Type of "strip" is unknown (reportUnknownMemberType)
+  tools/foundation.py:191:23 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:195:17 - error: Type of "validate_definition" is unknown (reportUnknownMemberType)
-  tools/foundation.py:195:17 - error: Argument type is unknown
-    Argument corresponds to parameter "iterable" in function "extend" (reportUnknownArgumentType)
-  tools/foundation.py:195:55 - error: Type of "get" is partially unknown
+  tools/foundation.py:199:55 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:208:9 - error: Type of "field_ids" is partially unknown
+  tools/foundation.py:212:9 - error: Type of "field_ids" is partially unknown
     Type of "field_ids" is "list[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:208:22 - error: Type of "get" is partially unknown
+  tools/foundation.py:212:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:208:42 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:209:16 - error: Argument type is partially unknown
+  tools/foundation.py:212:42 - error: Type of "field" is unknown (reportUnknownVariableType)
+  tools/foundation.py:213:16 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:209:34 - error: Argument type is partially unknown
+  tools/foundation.py:213:34 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:209:49 - error: Argument type is partially unknown
+  tools/foundation.py:213:49 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:209:67 - error: Argument type is partially unknown
+  tools/foundation.py:213:67 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "set[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:209:71 - error: Argument type is partially unknown
+  tools/foundation.py:213:71 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:211:20 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:211:39 - error: Argument type is partially unknown
+  tools/foundation.py:215:20 - error: Type of "field" is unknown (reportUnknownVariableType)
+  tools/foundation.py:215:39 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:212:47 - error: Type of "get" is partially unknown
+  tools/foundation.py:216:47 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:214:59 - error: Type of "get" is partially unknown
+  tools/foundation.py:218:59 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:222:20 - error: Type of "output" is unknown (reportUnknownVariableType)
-  tools/foundation.py:222:40 - error: Argument type is partially unknown
+  tools/foundation.py:226:20 - error: Type of "output" is unknown (reportUnknownVariableType)
+  tools/foundation.py:226:40 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:223:63 - error: Type of "get" is partially unknown
+  tools/foundation.py:227:63 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:226:33 - error: Argument type is unknown
+  tools/foundation.py:227:63 - error: Argument type is partially unknown
+    Argument corresponds to parameter "value" in function "_safe_path"
+    Argument type is "Unknown | None" (reportUnknownArgumentType)
+  tools/foundation.py:230:33 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
-  tools/foundation.py:271:69 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:272:72 - error: Argument type is partially unknown
+  tools/foundation.py:275:69 - error: Type of "item" is unknown (reportUnknownVariableType)
+  tools/foundation.py:276:72 - error: Argument type is partially unknown
     Argument corresponds to parameter "selected" in function "_resolve_profiles"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:290:17 - error: Type of "validate_selection" is unknown (reportUnknownMemberType)
-  tools/foundation.py:290:17 - error: Argument type is unknown
-    Argument corresponds to parameter "iterable" in function "extend" (reportUnknownArgumentType)
-  tools/foundation.py:301:16 - error: Type of "override" is unknown (reportUnknownVariableType)
-  tools/foundation.py:301:38 - error: Argument type is partially unknown
+  tools/foundation.py:305:16 - error: Type of "override" is unknown (reportUnknownVariableType)
+  tools/foundation.py:305:38 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:302:50 - error: Argument type is partially unknown
+  tools/foundation.py:306:50 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:305:9 - error: Type of "identifier" is partially unknown
+  tools/foundation.py:309:9 - error: Type of "identifier" is partially unknown
     Type of "identifier" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:305:22 - error: Type of "get" is partially unknown
+  tools/foundation.py:309:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:306:29 - error: Argument of type "Unknown | None" cannot be assigned to parameter "object" of type "str" in function "append"
-    Type "Unknown | None" is not assignable to type "str"
-      "None" is not assignable to "str" (reportArgumentType)
-  tools/foundation.py:307:12 - error: Type of "get" is partially unknown
+  tools/foundation.py:314:12 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:321:5 - error: Type of "unknown_fields" is partially unknown
+  tools/foundation.py:328:5 - error: Type of "unknown_fields" is partially unknown
     Type of "unknown_fields" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:323:76 - error: Argument type is partially unknown
+  tools/foundation.py:330:76 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:325:9 - error: Type of "value" is partially unknown
+  tools/foundation.py:332:9 - error: Type of "value" is partially unknown
     Type of "value" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:325:17 - error: Type of "get" is partially unknown
+  tools/foundation.py:332:17 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:343:9 - error: Type of "append" is partially unknown
+  tools/foundation.py:350:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation.py:357:5 - error: Type of "resolved" is partially unknown
+  tools/foundation.py:364:5 - error: Type of "resolved" is partially unknown
     Type of "resolved" is "dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None]" (reportUnknownVariableType)
-  tools/foundation.py:364:61 - error: Type of "key" is unknown (reportUnknownVariableType)
-  tools/foundation.py:364:75 - error: Argument type is partially unknown
+  tools/foundation.py:371:61 - error: Type of "key" is unknown (reportUnknownVariableType)
+  tools/foundation.py:371:75 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:370:12 - error: Return type, "tuple[dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None], list[str]]", is partially unknown (reportUnknownVariableType)
-  tools/foundation.py:381:12 - error: Type of "compose" is unknown (reportUnknownMemberType)
-  tools/foundation.py:381:12 - error: Return type is unknown (reportUnknownVariableType)
-  tools/foundation.py:596:9 - error: Type of "plan" is unknown (reportUnknownVariableType)
-  tools/foundation.py:596:15 - error: Type of "errors" is unknown (reportUnknownVariableType)
-  tools/foundation.py:596:24 - error: Type of "compose" is unknown (reportUnknownMemberType)
-  tools/foundation.py:598:17 - error: Type of "error" is unknown (reportUnknownVariableType)
-  tools/foundation.py:602:36 - error: Argument type is unknown
-    Argument corresponds to parameter "resolved" in function "render_resolved" (reportUnknownArgumentType)
+  tools/foundation.py:377:12 - error: Return type, "tuple[dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None], list[str]]", is partially unknown (reportUnknownVariableType)
 tools/foundation_ignore.py
   tools/foundation_ignore.py:50:5 - error: Type of "fields" is partially unknown
     Type of "fields" is "set[str] | set[str | Unknown]" (reportUnknownVariableType)
@@ -12792,5 +12312,5 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-9153 errors, 427 warnings, 0 informations
+8768 errors, 424 warnings, 0 informations
 
