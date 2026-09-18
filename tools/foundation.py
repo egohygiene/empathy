@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# ruff: noqa: PERF401, PLR0911, PLR0912, PLR0915, S101, T201, TRY003
+# ruff: noqa: PERF401, PLR0911, PLR0912, PLR0915, T201, TRY003
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 
@@ -12,9 +12,13 @@ import json
 from pathlib import Path, PurePosixPath
 import re
 import sys
-from typing import Any
+from typing import TYPE_CHECKING, Any, TypeGuard
 
-import foundation_ignore
+if TYPE_CHECKING:
+    # Resolve the source namespace statically while preserving standalone CLI imports.
+    from tools import foundation_ignore
+else:
+    import foundation_ignore
 
 SCHEMA_VERSION = "1.1.0"
 FOUNDATION_REFERENCE = "empathy/repository-foundation@1.1.0"
@@ -54,7 +58,7 @@ def _unique_strings(value: Any, path: str, *, allow_empty: bool = True) -> list[
     return errors
 
 
-def _safe_path(value: Any) -> bool:
+def _safe_path(value: object) -> TypeGuard[str]:
     if not isinstance(value, str) or not value or "\\" in value:
         return False
     path = PurePosixPath(value)
@@ -87,7 +91,7 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
         errors.append("every profile must have a string id")
         profile_names: set[str] = set()
     else:
-        profile_names = set(profile_ids)
+        profile_names = {item for item in profile_ids if isinstance(item, str)}
         if len(profile_names) != len(profile_ids):
             errors.append("profile ids must be unique")
     graph: dict[str, list[str]] = {}
@@ -303,6 +307,9 @@ def resolve_manifest(
             errors.append(f"overrides[{index}] must declare only artifact and mode")
             continue
         identifier = override.get("artifact")
+        if not isinstance(identifier, str) or not identifier:
+            errors.append(f"overrides[{index}].artifact must be a non-empty string")
+            continue
         override_ids.append(identifier)
         if override.get("mode") != "preserve":
             errors.append(f"overrides[{index}].mode must be preserve")
@@ -375,9 +382,8 @@ def plan_gitignore(
 ) -> tuple[dict[str, Any] | None, list[str]]:
     """Resolve and compose proposed ignore files without adopting them."""
     resolved, errors = resolve_manifest(catalog, manifest)
-    if errors:
-        return None, errors
-    assert resolved is not None
+    if errors or resolved is None:
+        return None, errors or ["foundation manifest resolution produced no result"]
     return foundation_ignore.compose(catalog, resolved, source_root)
 
 
@@ -550,8 +556,8 @@ def main(argv: list[str] | None = None) -> int:
     arguments = build_parser().parse_args(argv)
     try:
         catalog = load_json(arguments.catalog)
-    except (OSError, ValueError, json.JSONDecodeError) as error:
-        print(f"foundation catalog load failed: {error}", file=sys.stderr)
+    except (OSError, TypeError, ValueError) as exc:
+        print(f"foundation catalog load failed: {exc}", file=sys.stderr)
         return 2
     errors = validate_catalog(catalog)
     if errors:
@@ -577,15 +583,14 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     try:
         manifest = load_json(arguments.manifest)
-    except (OSError, ValueError, json.JSONDecodeError) as error:
-        print(f"foundation manifest load failed: {error}", file=sys.stderr)
+    except (OSError, TypeError, ValueError) as exc:
+        print(f"foundation manifest load failed: {exc}", file=sys.stderr)
         return 2
     resolved, errors = resolve_manifest(catalog, manifest)
-    if errors:
-        for error in errors:
+    if errors or resolved is None:
+        for error in errors or ["foundation manifest resolution produced no result"]:
             print(f"foundation manifest validation failed: {error}", file=sys.stderr)
         return 1
-    assert resolved is not None
     if arguments.command in {"plan-gitignore", "check-gitignore-plan"}:
         if arguments.output.suffix != ".json":
             print(
@@ -594,11 +599,10 @@ def main(argv: list[str] | None = None) -> int:
             )
             return 2
         plan, errors = foundation_ignore.compose(catalog, resolved, arguments.source_root)
-        if errors:
-            for error in errors:
+        if errors or plan is None:
+            for error in errors or ["gitignore composition produced no plan"]:
                 print(f"gitignore planning failed: {error}", file=sys.stderr)
             return 1
-        assert plan is not None
         rendered = render_resolved(plan)
         if arguments.command == "plan-gitignore":
             _write(arguments.output, rendered)
@@ -629,8 +633,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     try:
         rendered = render_egolint_contract(resolved, arguments.source_revision)
-    except ValueError as error:
-        print(f"foundation contract generation failed: {error}", file=sys.stderr)
+    except ValueError as exc:
+        print(f"foundation contract generation failed: {exc}", file=sys.stderr)
         return 2
     if arguments.command == "render-contract":
         _write(arguments.output, rendered)
