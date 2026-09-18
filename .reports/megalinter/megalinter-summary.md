@@ -4,61 +4,61 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.1.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.54s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.1.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       7.39s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.1.0/descriptors/bash_bash_exec)                                  |   55|     |     0|          |       0|       0.35s|
-|✅ BASH        |[shellcheck](https://megalinter.io/10.1.0/descriptors/bash_shellcheck)                                |  127|     |     0|          |       0|      11.19s|
-|✅ BASH        |[shfmt](https://megalinter.io/10.1.0/descriptors/bash_shfmt)                                          |   12|     |     0|          |       0|       0.03s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.1.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3151|          |      no|      27.26s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.1.0/descriptors/css_stylelint)                                   |   22|     |   330|          |       0|       2.11s|
-|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.1.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.16s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.1.0/descriptors/editorconfig_editorconfig_checker)    | 2481|     |     1|          |       0|       2.72s|
-|❌ HTML        |[htmlhint](https://megalinter.io/10.1.0/descriptors/html_htmlhint)                                    |   16|     |   356|          |       0|       1.04s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       1.81s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.31s|
-|❌ JSON        |[jsonlint](https://megalinter.io/10.1.0/descriptors/json_jsonlint)                                    |  178|     |     1|          |       0|       0.24s|
-|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.1.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.59s|
-|❌ JSON        |[prettier](https://megalinter.io/10.1.0/descriptors/json_prettier)                                    |  178|     |     1|          |       0|       3.04s|
-|✅ JSON        |[v8r](https://megalinter.io/10.1.0/descriptors/json_v8r)                                              |  178|     |     0|          |       0|     107.75s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.1.0/descriptors/latex_chktex)                                       |  298|     | 67774|          |       0|     167.77s|
-|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.1.0/descriptors/markdown_markdownlint)                        |  319|     |   400|          |       0|       4.43s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.1.0/descriptors/markdown_markdown_table_formatter)|  319|     |     1|          |       0|       0.86s|
-|✅ PERL        |[perlcritic](https://megalinter.io/10.1.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.58s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.1.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.35s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.1.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       1.24s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.1.0/descriptors/python_bandit)                                      |   55|     |    11|          |       0|       3.15s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.1.0/descriptors/python_mypy)                                          |  yes|     |   103|          |      no|      19.11s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.1.0/descriptors/python_pylint)                                      |   55|     |   255|          |       0|      17.34s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.1.0/descriptors/python_pyright)                                    |  yes|     |  8848|          |      no|      52.76s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.1.0/descriptors/python_ruff)                                          |   55|     |   731|          |       0|       5.49s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.1.0/descriptors/python_ruff_format)                            |   55|     |     1|          |       0|       0.06s|
-|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.1.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       2.29s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.1.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      58.54s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.1.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|      17.21s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.1.0/descriptors/repository_grype)                                    |  yes|     |   155|          |      no|     136.37s|
-|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.1.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|        2.2s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.1.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|       13.0s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.1.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       9.73s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.1.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      15.97s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.1.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      75.18s|
-|✅ REPOSITORY  |[trufflehog](https://megalinter.io/10.1.0/descriptors/repository_trufflehog)                          |  yes|     |    no|          |      no|      14.54s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.1.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.56s|
-|❌ RUST        |[clippy](https://megalinter.io/10.1.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.38s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.1.0/descriptors/spell_lychee)                                       |  734|     |   183|          |       0|      65.93s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.1.0/descriptors/spell_proselint)                                 |  341|     |   890|          |       0|      11.12s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.1.0/descriptors/spell_vale)                                           |  341|     |     1|          |       0|       0.95s|
-|❌ TSX         |[eslint](https://megalinter.io/10.1.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.88s|
-|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       1.76s|
-|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|        4.0s|
-|✅ XML         |[xmllint](https://megalinter.io/10.1.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.23s|
-|❌ YAML        |[prettier](https://megalinter.io/10.1.0/descriptors/yaml_prettier)                                    |  193|     |     1|          |      17|       3.62s|
-|✅ YAML        |[v8r](https://megalinter.io/10.1.0/descriptors/yaml_v8r)                                              |  193|     |     0|          |       0|      70.35s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.1.0/descriptors/yaml_yamllint)                                    |  193|     |   215|          |       0|      17.41s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.1.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.35s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.1.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|        8.8s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.1.0/descriptors/bash_bash_exec)                                  |   55|     |     0|          |       0|       0.32s|
+|✅ BASH        |[shellcheck](https://megalinter.io/10.1.0/descriptors/bash_shellcheck)                                |  127|     |     0|          |       0|       9.39s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.1.0/descriptors/bash_shfmt)                                          |   12|     |     0|          |       0|       0.02s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.1.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3152|          |      no|      23.64s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.1.0/descriptors/css_stylelint)                                   |   22|     |   330|          |       0|       1.97s|
+|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.1.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.06s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.1.0/descriptors/editorconfig_editorconfig_checker)    | 2485|     |     1|          |       0|       2.83s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.1.0/descriptors/html_htmlhint)                                    |   16|     |   356|          |       0|       1.21s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       1.61s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.33s|
+|❌ JSON        |[jsonlint](https://megalinter.io/10.1.0/descriptors/json_jsonlint)                                    |  179|     |     1|          |       0|       0.22s|
+|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.1.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.55s|
+|❌ JSON        |[prettier](https://megalinter.io/10.1.0/descriptors/json_prettier)                                    |  179|     |     1|          |       0|       2.65s|
+|✅ JSON        |[v8r](https://megalinter.io/10.1.0/descriptors/json_v8r)                                              |  179|     |     0|          |       0|     102.61s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.1.0/descriptors/latex_chktex)                                       |  298|     | 67774|          |       0|     157.65s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.1.0/descriptors/markdown_markdownlint)                        |  319|     |   400|          |       0|       4.78s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.1.0/descriptors/markdown_markdown_table_formatter)|  319|     |     1|          |       0|       0.76s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.1.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.37s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.1.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.09s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.1.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       1.02s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.1.0/descriptors/python_bandit)                                      |   57|     |    13|          |       0|       2.38s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.1.0/descriptors/python_mypy)                                          |  yes|     |   164|          |      no|      17.18s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.1.0/descriptors/python_pylint)                                      |   57|     |   259|          |       0|      15.79s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.1.0/descriptors/python_pyright)                                    |  yes|     |  9150|          |      no|      48.35s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.1.0/descriptors/python_ruff)                                          |   57|     |   731|          |       0|        6.8s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.1.0/descriptors/python_ruff_format)                            |   57|     |     1|          |       0|       0.07s|
+|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.1.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       3.11s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.1.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|       55.5s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.1.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|      13.04s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.1.0/descriptors/repository_grype)                                    |  yes|     |   155|          |      no|     154.66s|
+|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.1.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.53s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.1.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|      12.88s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.1.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       9.86s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.1.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      18.26s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.1.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      76.14s|
+|✅ REPOSITORY  |[trufflehog](https://megalinter.io/10.1.0/descriptors/repository_trufflehog)                          |  yes|     |    no|          |      no|      13.99s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.1.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       3.41s|
+|❌ RUST        |[clippy](https://megalinter.io/10.1.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.44s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.1.0/descriptors/spell_lychee)                                       |  735|     |   182|          |       0|      47.87s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.1.0/descriptors/spell_proselint)                                 |  341|     |   901|          |       0|      12.32s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.1.0/descriptors/spell_vale)                                           |  341|     |     1|          |       0|       1.03s|
+|❌ TSX         |[eslint](https://megalinter.io/10.1.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       2.14s|
+|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       2.04s|
+|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       5.18s|
+|✅ XML         |[xmllint](https://megalinter.io/10.1.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.38s|
+|❌ YAML        |[prettier](https://megalinter.io/10.1.0/descriptors/yaml_prettier)                                    |  193|     |     1|          |      17|       4.97s|
+|✅ YAML        |[v8r](https://megalinter.io/10.1.0/descriptors/yaml_v8r)                                              |  193|     |     0|          |       0|      66.43s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.1.0/descriptors/yaml_yamllint)                                    |  193|     |   215|          |       0|      19.17s|
 
 ## Detailed Issues
 
 <details>
-<summary>❌ PYTHON / bandit - 11 errors</summary>
+<summary>❌ PYTHON / bandit - 13 errors</summary>
 
 ```
 [_py_warnings]	WARNING	"\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
@@ -67,7 +67,7 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-09-17 13:59:16.643467+00:00
+Run started:2026-09-18 00:58:07.174392+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -136,10 +136,30 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
-   Location: ./tools/foundation.py:517:4
-516	        return 1
-517	    assert resolved is not None
-518	    if arguments.command == "validate-manifest":
+   Location: ./tools/foundation.py:380:4
+379	        return None, errors
+380	    assert resolved is not None
+381	    return foundation_ignore.compose(catalog, resolved, source_root)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: ./tools/foundation.py:588:4
+587	        return 1
+588	    assert resolved is not None
+589	    if arguments.command in {"plan-gitignore", "check-gitignore-plan"}:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: ./tools/foundation.py:601:8
+600	            return 1
+601	        assert plan is not None
+602	        rendered = render_resolved(plan)
 
 --------------------------------------------------
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -199,21 +219,21 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 10109
+	Total lines of code: 10710
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 24
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 11
+		Low: 13
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 11
+		High: 13
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)
@@ -1173,7 +1193,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.require (node:internal/modules/cjs/loader:1679:12)
     at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789653416497:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789692953029:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1214,7 +1234,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.require (node:internal/modules/cjs/loader:1679:12)
     at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789653416497:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789692953029:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1254,7 +1274,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.require (node:internal/modules/cjs/loader:1679:12)
     at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789653416497:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789692953029:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1288,7 +1308,7 @@ holon/packs/react-vite/template/infra/docker/Dockerfile:9 DL3025 warning: Use ar
 <summary>❌ HTML / htmlhint - 356 errors</summary>
 
 ```
-ref="web_credits.html">CREDITS</a></span>
+href="web_credits.html">CREDITS</a></span>
                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
       L65 |<div class="index_indent">
                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
@@ -1597,9 +1617,9 @@ ref="web_credits.html">CREDITS</a></span>
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 16 files, found 356 errors in 11 files (105 ms)
+Scanned 16 files, found 356 errors in 11 files (95 ms)
 
-(Truncated to last 25000 characters out of 66944)
+(Truncated to last 25000 characters out of 66943)
 ```
 
 </details>
@@ -1729,10 +1749,10 @@ Cargo.toml failed for `.toml` rules: kebabcase | snakecase
 </details>
 
 <details>
-<summary>❌ SPELL / lychee - 183 errors</summary>
+<summary>❌ SPELL / lychee - 182 errors</summary>
 
 ```
-ect
+/readme/templates/profile/assets/profile/banner-dark.svg (at 26:58) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/profile/assets/profile/banner-light.svg (at 27:59) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/profile/assets/profile/banner-light.svg (at 28:15) | File not found. Check if file exists and path is correct
 
@@ -1782,22 +1802,15 @@ Errors in mantle/.github/workflows/test.yml
 
 Redirects in mantle/.github/workflows/test.yml
 https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
+https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
 
 
 Errors in mindgarden/contracts/publish-profile.schema.json
 [ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
 
-Redirects in mindgarden/contracts/publish-profile.schema.json
-https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
-
-
 Errors in package.json
-[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
+[404] https://egohygiene.io/ (at 17:16) | Error (cached)
 [404] https://egohygiene.io/ (at 30:13) | Error (cached)
-
-Redirects in package.json
-https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-
 
 Errors in PURPOSE.md
 [ERROR] file://.staging/github/README.md (at 100:48) | File not found. Check if file exists and path is correct
@@ -1818,17 +1831,17 @@ Errors in schemas/staging-removal-approvals.v1.schema.json
 ---------------------
 
 Host: github.com
-  Total requests: 262
-  Successful: 243 (92.7%)
+  Total requests: 263
+  Successful: 244 (92.8%)
   Client errors (4xx): 19
-  Median response time: 392ms
-  Cache hit rate: 23.3%
-  Cache hits: 61, misses: 201
+  Median response time: 463ms
+  Cache hit rate: 23.6%
+  Cache hits: 62, misses: 201
 
 Host: json.schemastore.org
   Total requests: 96
   Successful: 96 (100.0%)
-  Median response time: 67ms
+  Median response time: 78ms
   Cache hit rate: 88.5%
   Cache hits: 85, misses: 11
 
@@ -1836,7 +1849,7 @@ Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 28ms
+  Median response time: 93ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
@@ -1844,21 +1857,21 @@ Host: raw.githubusercontent.com
   Total requests: 39
   Successful: 38 (97.4%)
   Client errors (4xx): 1
-  Median response time: 46ms
+  Median response time: 294ms
   Cache hit rate: 30.8%
   Cache hits: 12, misses: 27
 
 Host: img.shields.io
   Total requests: 26
   Successful: 26 (100.0%)
-  Median response time: 39ms
+  Median response time: 33ms
   Cache hit rate: 3.8%
   Cache hits: 1, misses: 25
 
 Host: json-schema.org
   Total requests: 18
   Successful: 18 (100.0%)
-  Median response time: 205ms
+  Median response time: 130ms
   Cache hit rate: 94.4%
   Cache hits: 17, misses: 1
 
@@ -1866,7 +1879,7 @@ Host: egohygiene.github.io
   Total requests: 15
   Successful: 8 (53.3%)
   Client errors (4xx): 7
-  Median response time: 41ms
+  Median response time: 171ms
   Cache hit rate: 40.0%
   Cache hits: 6, misses: 9
 
@@ -1874,14 +1887,14 @@ Host: creativecommons.org
   Total requests: 15
   Successful: 14 (93.3%)
   Client errors (4xx): 1
-  Median response time: 173ms
+  Median response time: 170ms
   Cache hit rate: 66.7%
   Cache hits: 10, misses: 5
 
 Host: taskfile.dev
   Total requests: 13
   Successful: 13 (100.0%)
-  Median response time: 57ms
+  Median response time: 129ms
   Cache hit rate: 76.9%
   Cache hits: 10, misses: 3
 
@@ -1889,541 +1902,547 @@ Host: egohygiene.io
   Total requests: 12
   Successful: 7 (58.3%)
   Client errors (4xx): 5
-  Median response time: 11ms
+  Median response time: 265ms
   Cache hit rate: 58.3%
   Cache hits: 7, misses: 5
-
-Host: www.overleaf.com
-  Total requests: 11
-  Successful: 11 (100.0%)
-  Median response time: 55ms
-  Cache hit rate: 9.1%
-  Cache hits: 1, misses: 10
 
 Host: www.schemastore.org
   Total requests: 11
   Successful: 11 (100.0%)
-  Median response time: 15ms
+  Median response time: 74ms
   Cache hit rate: 36.4%
   Cache hits: 4, misses: 7
 
-Host: sourceforge.net
-  Total requests: 9
-  Successful: 9 (100.0%)
-  Median response time: 461ms
-  Cache hit rate: 55.6%
-  Cache hits: 5, misses: 4
+Host: www.overleaf.com
+  Total requests: 11
+  Successful: 11 (100.0%)
+  Median response time: 82ms
+  Cache hit rate: 9.1%
+  Cache hits: 1, misses: 10
 
 Host: scripts.sil.org
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 249ms
+  Median response time: 716ms
   Cache hit rate: 88.9%
   Cache hits: 8, misses: 1
 
-Host: i.creativecommons.org
-  Total requests: 8
-  Successful: 8 (100.0%)
-  Median response time: 173ms
-  Cache hit rate: 87.5%
-  Cache hits: 7, misses: 1
+Host: sourceforge.net
+  Total requests: 9
+  Successful: 9 (100.0%)
+  Median response time: 234ms
+  Cache hit rate: 55.6%
+  Cache hits: 5, misses: 4
 
 Host: docs.ansible.com
   Total requests: 8
   Successful: 0 (0.0%)
   Rate limited: 8 (429 Too Many Requests)
-  Median response time: 15ms
+  Median response time: 16ms
+
+Host: i.creativecommons.org
+  Total requests: 8
+  Successful: 8 (100.0%)
+  Median response time: 203ms
+  Cache hit rate: 87.5%
+  Cache hits: 7, misses: 1
 
 Host: www.latextemplates.com
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 144ms
+  Median response time: 312ms
   Cache hit rate: 42.9%
   Cache hits: 3, misses: 4
 
-Host: sflogo.sourceforge.net
+Host: www.latex-project.org
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 184ms
-  Cache hit rate: 66.7%
-  Cache hits: 4, misses: 2
+  Median response time: 659ms
+  Cache hit rate: 50.0%
+  Cache hits: 3, misses: 3
 
 Host: docs.github.com
   Total requests: 6
   Successful: 4 (66.7%)
   Client errors (4xx): 2
-  Median response time: 5ms
-
-Host: www.latex-project.org
-  Total requests: 6
-  Successful: 6 (100.0%)
-  Median response time: 104ms
-  Cache hit rate: 50.0%
-  Cache hits: 3, misses: 3
+  Median response time: 118ms
 
 Host: jdujava.github.io
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 79ms
+  Median response time: 154ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
+
+Host: sflogo.sourceforge.net
+  Total requests: 6
+  Successful: 6 (100.0%)
+  Median response time: 94ms
+  Cache hit rate: 66.7%
+  Cache hits: 4, misses: 2
+
+Host: api.github.com
+  Total requests: 4
+  Successful: 3 (75.0%)
+  Client errors (4xx): 1
+  Median response time: 134ms
+
+Host: 3d.bk.tudelft.nl
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 599ms
+  Cache hit rate: 50.0%
+  Cache hits: 2, misses: 2
 
 Host: www.apostrophiclab.com
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 302ms
+  Median response time: 441ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
 
 Host: www.fontawesome.io
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 170ms
+  Median response time: 247ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
-
-Host: api.github.com
-  Total requests: 4
-  Successful: 3 (75.0%)
-  Client errors (4xx): 1
-  Median response time: 93ms
-
-Host: 3d.bk.tudelft.nl
-  Total requests: 4
-  Successful: 4 (100.0%)
-  Median response time: 346ms
-  Cache hit rate: 50.0%
-  Cache hits: 2, misses: 2
 
 Host: ansible.readthedocs.io
   Total requests: 4
   Successful: 0 (0.0%)
   Rate limited: 4 (429 Too Many Requests)
-  Median response time: 42ms
+  Median response time: 51ms
 
-Host: vite.dev
+Host: www.nongnu.org
   Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 37ms
-
-Host: i.imgur.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 3ms
-
-Host: www.checkov.io
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 27ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
-
-Host: www.ctan.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 589ms
-
-Host: api.star-history.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 303ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
+  Successful: 1 (33.3%)
+  Rate limited: 2 (429 Too Many Requests)
+  Median response time: 225ms
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 6ms
+  Median response time: 10ms
 
-Host: paypal.me
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 582ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: www.checkov.io
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 111ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
 
-Host: aquasecurity.github.io
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 33ms
+Host: api.star-history.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 639ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
 
-Host: info.arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 75ms
+Host: vite.dev
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 114ms
 
-Host: www.cyrius.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 260ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: www.ctan.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 845ms
 
-Host: clang.llvm.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 273ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: eslint.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 34ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.vel.nz
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 655ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: unpkg.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 128ms
-
-Host: tex.stackexchange.com
-  Total requests: 2
-  Successful: 0 (0.0%)
-  Client errors (4xx): 2
-  Median response time: 123ms
-
-Host: www.sharelatex.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 159ms
-
-Host: arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 14ms
+Host: i.imgur.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 124ms
 
 Host: yamllint.readthedocs.io
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 101ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.amazon.ca
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 30ms
-
-Host: en.wikipedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 12ms
-
-Host: commons.wikimedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 23ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: typedoc.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 157ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: femto-physique.fr
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 178ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: web.archive.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 3289ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: reuse.software
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 588ms
-
-Host: developer.salesforce.com
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 38ms
+  Median response time: 117ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: www.mff.cuni.cz
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 410ms
+  Median response time: 423ms
 
-Host: oss.anchore.com
+Host: aquasecurity.github.io
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 202ms
+
+Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 112ms
+  Median response time: 235ms
 
 Host: prettier.io
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 478ms
+  Median response time: 141ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: reuse.software
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 890ms
+
+Host: femto-physique.fr
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 780ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.amazon.ca
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 114ms
+
+Host: clang.llvm.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 106ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: paypal.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 953ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: web.archive.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 489ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: tex.stackexchange.com
+  Total requests: 2
+  Successful: 0 (0.0%)
+  Client errors (4xx): 2
+  Median response time: 153ms
+
+Host: commons.wikimedia.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 115ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.sharelatex.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 158ms
+
+Host: developer.salesforce.com
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 244ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: eslint.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 75ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: registry.npmjs.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 39ms
+  Median response time: 155ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: www.grammarly.com
+Host: typedoc.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 95ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.cyrius.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 650ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 111ms
+
+Host: oss.anchore.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 186ms
+
+Host: en.wikipedia.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 205ms
+
+Host: unpkg.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 190ms
+
+Host: www.vel.nz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 726ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: goss.rocks
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 136ms
+  Median response time: 947ms
 
-Host: prowritingaid.com
+Host: www.latofonts.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 316ms
+  Median response time: 837ms
 
-Host: www.businessinsider.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 109ms
-
-Host: www.chrisbehr.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 91ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 375ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 37ms
-
-Host: cyclonedx.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 132ms
-
-Host: api.scorecard.dev
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 54ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 294ms
-
-Host: docker.com
+Host: debarghyadas.com
   Total requests: 1
   Successful: 1 (100.0%)
   Median response time: 58ms
 
-Host: trivy.dev
+Host: www.businessinsider.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 94ms
+  Median response time: 309ms
 
-Host: humanstxt.org
+Host: protobuf.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 456ms
-
-Host: www.reddit.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 24ms
-
-Host: git-scm.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 128ms
-
-Host: agentskills.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 95ms
+  Median response time: 204ms
 
 Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 159ms
+  Median response time: 125ms
 
-Host: www.tilburgsciencehub.com
+Host: developercertificate.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 1235ms
+  Median response time: 476ms
+
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 20ms
+
+Host: checkstyle.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 134ms
+
+Host: texdoc.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 2474ms
+
+Host: stylelint.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 369ms
+
+Host: openapi.vercel.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 104ms
 
 Host: www.smashingmagazine.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 152ms
+  Median response time: 304ms
 
-Host: docs.rubocop.org
+Host: github.blog
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 64ms
-
-Host: fontawesome.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 35ms
-
-Host: micahrich.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 131ms
-
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 48ms
-
-Host: turborepo.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 65ms
-
-Host: openapi.vercel.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 50ms
-
-Host: recodehive.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 128ms
-
-Host: debarghyadas.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 533ms
-
-Host: securityscorecards.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 74ms
-
-Host: licensebuttons.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 21ms
-
-Host: www.rubyschema.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 114ms
-
-Host: stylelint.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 750ms
-
-Host: www.tylerfinck.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1050ms
-
-Host: hemingwayapp.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 106ms
-
-Host: golangci-lint.run
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 34ms
-
-Host: intellij-support.jetbrains.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 50ms
-
-Host: api.clearlydefined.io
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 53ms
+  Median response time: 39ms
 
 Host: www.writelatex.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 205ms
-
-Host: www.indeed.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 38ms
-
-Host: ls-lint.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 156ms
-
-Host: img.youtube.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 230ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 216ms
-
-Host: scancode-toolkit.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 221ms
-
-Host: www.hadilaksono.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 67ms
-
-Host: kiwiirc.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 855ms
-
-Host: www.ssw.com.au
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1675ms
+  Median response time: 212ms
 
 Host: fonts.google.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 482ms
+  Median response time: 571ms
 
-Host: rubystyle.guide
+Host: clearlydefined.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 52ms
+  Median response time: 423ms
+
+Host: hemingwayapp.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 387ms
+
+Host: docs.rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 137ms
+
+Host: raku.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1083ms
+
+Host: osv.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 63ms
+
+Host: sahiljhawar.in
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 771ms
+
+Host: kiwiirc.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 708ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 123ms
+
+Host: intellij-support.jetbrains.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 338ms
+
+Host: www.apache.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 66ms
+
+Host: securityscorecards.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 261ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 295ms
+
+Host: dev.to
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 78ms
+
+Host: git-lfs.github.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 193ms
+
+Host: v3.tailwindcss.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 165ms
 
 Host: chris48s.github.io
   Total requests: 1
   Successful: 1 (100.0%)
+  Median response time: 278ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 169ms
+
+Host: www.chrisbehr.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 320ms
+
+Host: rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 138ms
+
+Host: www.ssw.com.au
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1805ms
+
+Host: semver.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 295ms
+
+Host: thetechresume.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 544ms
+
+Host: fontawesome.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 86ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 122ms
+
+Host: scancode-toolkit.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 490ms
+
+Host: recodehive.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 143ms
+
+Host: phpstan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
   Median response time: 34ms
+
+Host: agentskills.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 242ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 473ms
+
+Host: psalm.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 188ms
+
+Host: www.paypal.me
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 484ms
+
+Host: realm.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 115ms
 
 Host: apostrophiclab.pedroreina.net
   Total requests: 1
@@ -2431,173 +2450,172 @@ Host: apostrophiclab.pedroreina.net
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: trufflesecurity.com
+Host: golangci-lint.run
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 199ms
+  Median response time: 57ms
 
-Host: rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 72ms
-
-Host: v3.tailwindcss.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 109ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 69ms
-
-Host: phpstan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 30ms
-
-Host: enhancv.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 25ms
-
-Host: mirrors.ctan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 295ms
-
-Host: git-lfs.github.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 33ms
-
-Host: resumake.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 87ms
-
-Host: www.linkedin.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Median response time: 223ms
-
-Host: google.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 33ms
-
-Host: www.latofonts.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 475ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 182ms
-
-Host: goss.rocks
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 102ms
-
-Host: osv.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 271ms
-
-Host: texdoc.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 2322ms
-
-Host: www.apache.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 26ms
-
-Host: thetechresume.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 548ms
-
-Host: biomejs.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 66ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 741ms
-
-Host: clearlydefined.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 120ms
-
-Host: realm.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 241ms
-
-Host: latexindentpl.readthedocs.io
+Host: prowritingaid.com
   Total requests: 1
   Successful: 1 (100.0%)
   Median response time: 216ms
 
-Host: semver.org
+Host: www.tylerfinck.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 14ms
+  Median response time: 2282ms
 
-Host: developercertificate.org
+Host: humanstxt.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 197ms
+  Median response time: 590ms
+
+Host: api.clearlydefined.io
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 314ms
+
+Host: www.linkedin.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Median response time: 249ms
+
+Host: rubystyle.guide
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 141ms
+
+Host: resumake.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 499ms
+
+Host: mirrors.ctan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 582ms
+
+Host: www.wnd.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 194ms
+
+Host: biomejs.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 176ms
+
+Host: cyclonedx.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 162ms
+
+Host: ls-lint.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 282ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 94ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 251ms
+
+Host: autofix.ci
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 184ms
+
+Host: www.hadilaksono.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 174ms
+
+Host: git-scm.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 76ms
+
+Host: enhancv.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 36ms
+
+Host: www.indeed.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 89ms
+
+Host: img.youtube.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 171ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 546ms
+
+Host: turborepo.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 219ms
+
+Host: install.python-poetry.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 209ms
+
+Host: www.reddit.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 111ms
+
+Host: docker.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 72ms
+
+Host: micahrich.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 348ms
 
 Host: tug.ctan.org
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 326ms
+  Median response time: 158ms
 
-Host: install.python-poetry.org
+Host: api.scorecard.dev
   Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 70ms
-
-Host: dev.to
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 40ms
-
-Host: sahiljhawar.in
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 313ms
-
-Host: www.wnd.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 143ms
-
-Host: www.paypal.me
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 597ms
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 125ms
 
 Host: pnpm.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 68ms
+  Median response time: 124ms
 
-Host: github.blog
+Host: www.tilburgsciencehub.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 690ms
+  Median response time: 1058ms
 
-Host: www.businessinsider.my
+Host: www.grammarly.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 303ms
+
+Host: github
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2609,25 +2627,21 @@ Host: 2by22.blog
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: x-access-token
-  Total requests: 0
-  Successful: 0 (100.0%)
-
 Host: www.youtube.com
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: www.nongnu.org
+Host: www.businessinsider.my
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: github
+Host: x-access-token
   Total requests: 0
   Successful: 0 (100.0%)
 
-Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."ansible.readthedocs.io"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
+Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."docs.ansible.com"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
 
-(Truncated to last 25000 characters out of 209320)
+(Truncated to last 25000 characters out of 210506)
 ```
 
 </details>
@@ -2827,152 +2841,153 @@ beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailin
 </details>
 
 <details>
-<summary>❌ PYTHON / mypy - 103 errors</summary>
+<summary>❌ PYTHON / mypy - 164 errors</summary>
 
 ```
-emoval_gate.py:15:1: error: Function is missing a return
-type annotation  [no-untyped-def]
-    def load_module(name: str, path: Path):
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "setUpClass" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:32:9: error: "type[StagingRemovalGateTests]"
-has no attribute "rows"  [attr-defined]
-            cls.rows = audit.build_rows(ROOT)
-            ^~~~~~~~
-tests/test_staging_removal_gate.py:33:9: error: "type[StagingRemovalGateTests]"
-has no attribute "row"  [attr-defined]
-            cls.row = next(row for row in cls.rows if row.source_path == "...
-            ^~~~~~~
-tests/test_staging_removal_gate.py:33:39: error:
-"type[StagingRemovalGateTests]" has no attribute "rows"  [attr-defined]
-            cls.row = next(row for row in cls.rows if row.source_path == "...
-                                          ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_missing_approval_blocks_removal" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:36:41: error: "StagingRemovalGateTests" has
-no attribute "rows"  [attr-defined]
-            errors = gate.validate_removals(self.rows, {}, [self.row.sourc...
-                                            ^~~~~~~~~
-tests/test_staging_removal_gate.py:36:57: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-    ... errors = gate.validate_removals(self.rows, {}, [self.row.source_path]...
-                                                        ^~~~~~~~
-tests/test_staging_removal_gate.py:37:56: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-    ...  self.assertEqual([f"missing removal approval: {self.row.source_path}...
-                                                        ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_exact_complete_approval_allows_removal" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:41:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "source_path": self.row.source_path,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:42:25: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "git_blob": self.row.git_blob,
-                            ^~~~~~~~
-tests/test_staging_removal_gate.py:43:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "destination": self.row.canonical_home,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:52:13: error: "StagingRemovalGateTests" has
-no attribute "rows"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                ^~~~~~~~~
-tests/test_staging_removal_gate.py:52:25: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                            ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_blob_change_invalidates_approval" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:58:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "source_path": self.row.source_path,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:60:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "destination": self.row.canonical_home,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:69:13: error: "StagingRemovalGateTests" has
-no attribute "rows"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                ^~~~~~~~~
-tests/test_staging_removal_gate.py:69:25: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                            ^~~~~~~~
-tests/test_staging_removal_gate.py:72:16: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                f"{self.row.source_path} approval blob does not match curr...
-                   ^~~~~~~~
-tests/test_staging_home_audit.py: note: In member "setUpClass" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:24:9: error: "type[StagingHomeAuditTests]" has
-no attribute "rows"  [attr-defined]
-            cls.rows = staging_home_audit.build_rows(REPOSITORY_ROOT)
-            ^~~~~~~~
-tests/test_staging_home_audit.py:25:9: error: "type[StagingHomeAuditTests]" has
-no attribute "by_path"  [attr-defined]
-            cls.by_path = {row.source_path: row for row in cls.rows}
-            ^~~~~~~~~~~
-tests/test_staging_home_audit.py:25:56: error: "type[StagingHomeAuditTests]"
-has no attribute "rows"  [attr-defined]
-            cls.by_path = {row.source_path: row for row in cls.rows}
-                                                           ^~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_every_staged_file_has_a_concrete_home" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:34:30: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            self.assertEqual(set(self.by_path), tracked_staging_paths)
-                                 ^~~~~~~~~~~~
-tests/test_staging_home_audit.py:35:75: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-    ...sertNotIn("manual-review", {row.canonical_owner for row in self.rows})
-                                                                  ^~~~~~~~~
-tests/test_staging_home_audit.py:36:64: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-    ...    self.assertNotIn("TBD", {row.canonical_home for row in self.rows})
-                                                                  ^~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_remaining_devcontainer_features_have_realm_destinations" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:46:23: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-                    row = self.by_path[path]
-                          ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_product_fixture_is_kept_out_of_realm" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:51:15: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            api = self.by_path[".staging/devenvironment/containers/service...
-                  ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_cross_cutting_sources_follow_capability_ownership" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:67:34: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-                    self.assertEqual(self.by_path[path].canonical_owner, e...
-                                     ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_community_instructions_remain_quarantined" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:70:42: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-            community_rows = [row for row in self.rows if row.collection.s...
-                                             ^~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_emoji_cache_is_classified_as_generated_renderflow_intake" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:82:24: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-                for row in self.rows
-                           ^~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_ledger_records_deletion_gate_fields" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:94:15: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            row = self.by_path[".staging/misc/ROADMAP.md"]
-                  ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_summary_json_covers_the_file_ledger" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:102:59: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-            rendered = staging_home_audit.render_summary_json(self.rows)
-                                                              ^~~~~~~~~
-tests/test_staging_home_audit.py:104:47: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-            self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
-                                                  ^~~~~~~~~
-tests/test_gitignore_baseline.py: note: In member "git" of class "GitignoreBaselineTests":
-tests/test_gitignore_baseline.py:47:14: error: List item 0 has incompatible
-type "str | None"; expected "str | bytes | PathLike[str] | PathLike[bytes]" 
-[list-item]
-                [self.git_executable, *arguments],
-                 ^~~~~~~~~~~~~~~~~~~
+no-untyped-call]
+                {"scopes": [scope(local=local)]}
+                            ^~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:146:23: error: Need type annotation for "value"
+ [var-annotated]
+            invalid.extend(
+                          ^
+tests/test_foundation_ignore.py:147:28: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+                {"scopes": [{**scope(), "overlays": value}]} for value in ...
+                               ^~~~~~~
+tests/test_foundation_ignore.py:152:32: error: Module has no attribute
+"plan_gitignore"  [attr-defined]
+                    plan, errors = foundation.plan_gitignore(self.catalog,...
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_invalid_source_metadata_fails_closed" of class "IgnoreContractTests":
+tests/test_foundation_ignore.py:157:33: error: Call to untyped function
+"definition" in typed context  [no-untyped-call]
+            invalid = [None, {}, {**definition(self.catalog), "unknown": T...
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:164:39: error: Call to untyped function
+"definition" in typed context  [no-untyped-call]
+                candidate = copy.deepcopy(definition(self.catalog))
+                                          ^~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:167:35: error: Call to untyped function
+"definition" in typed context  [no-untyped-call]
+            duplicate = copy.deepcopy(definition(self.catalog))
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:176:32: error: Module has no attribute
+"plan_gitignore"  [attr-defined]
+                    plan, errors = foundation.plan_gitignore(catalog, self...
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_missing_changed_unscoped_and_duplicate_sources_are_rejected" of class "IgnoreContractTests":
+tests/test_foundation_ignore.py:183:23: error: Call to untyped function
+"definition" in typed context  [no-untyped-call]
+                sources = definition(self.catalog)
+                          ^~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:201:36: error: Module has no attribute
+"plan_gitignore"  [attr-defined]
+                        plan, errors = foundation.plan_gitignore(self.cata...
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_source_symlink_cannot_escape_supplied_source_root" of class "IgnoreContractTests":
+tests/test_foundation_ignore.py:209:28: error: Module has no attribute
+"plan_gitignore"  [attr-defined]
+                plan, errors = foundation.plan_gitignore(self.catalog, sel...
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_preserve_metadata_does_not_drop_baseline_or_claim_materialization" of class "IgnoreContractTests":
+tests/test_foundation_ignore.py:217:24: error: Module has no attribute
+"plan_gitignore"  [attr-defined]
+            plan, errors = foundation.plan_gitignore(self.catalog, self.ma...
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_cli_checks_staleness_and_never_writes_consumer_ignore_files" of class "IgnoreContractTests":
+tests/test_foundation_ignore.py:242:33: error: Module has no attribute "main" 
+[attr-defined]
+                self.assertEqual(0, foundation.main([*prefix, "plan-gitign...
+                                    ^~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:243:33: error: Module has no attribute "main" 
+[attr-defined]
+                self.assertEqual(0, foundation.main([*prefix, "check-gitig...
+                                    ^~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:245:33: error: Module has no attribute "main" 
+[attr-defined]
+                self.assertEqual(1, foundation.main([*prefix, "check-gitig...
+                                    ^~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:250:20: error: Module has no attribute "main" 
+[attr-defined]
+                    2, foundation.main([*prefix, "plan-gitignore", *argume...
+                       ^~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:255:35: error: Class cannot subclass
+"GitignoreFixture" (has type "Any")  [misc]
+    class ComposedIgnoreBehaviorTests(test_gitignore_baseline.GitignoreFix...
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
+tests/test_foundation_ignore.py: note: In member "install" of class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:256:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def install(self, scopes):
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:257:29: error: Call to untyped function
+"inputs" in typed context  [no-untyped-call]
+            catalog, manifest = inputs()
+                                ^~~~~~~~
+tests/test_foundation_ignore.py:259:24: error: Module has no attribute
+"plan_gitignore"  [attr-defined]
+            plan, errors = foundation.plan_gitignore(catalog, manifest, RO...
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_nested_rust_scope_leaves_unrelated_target_sources_visible" of class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:265:9: error: Call to untyped function
+"install" in typed context  [no-untyped-call]
+            self.install([scope(), scope("apps/rust", ("rust-build",))])
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:265:23: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+            self.install([scope(), scope("apps/rust", ("rust-build",))])
+                          ^~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_root_rust_overlay_is_anchored_to_the_workspace" of class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:281:9: error: Call to untyped function
+"install" in typed context  [no-untyped-call]
+            self.install([scope(overlays=("rust-build",))])
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:281:23: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+            self.install([scope(overlays=("rust-build",))])
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_profile_selection_alone_does_not_install_any_overlay" of class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:286:9: error: Call to untyped function
+"install" in typed context  [no-untyped-call]
+            self.install([scope()])
+            ^~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:286:23: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+            self.install([scope()])
+                          ^~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_local_exception_reopens_parent_and_keeps_adjacent_output_ignored" of class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:290:9: error: Call to untyped function
+"install" in typed context  [no-untyped-call]
+            self.install(
+            ^~~~~~~~~~~~~
+tests/test_foundation_ignore.py:292:17: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+                    scope(),
+                    ^~~~~~~
+tests/test_foundation_ignore.py:293:17: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+                    scope(
+                    ^~~~~~
+tests/test_foundation_ignore.py: note: In member "test_baseline_wins_over_local_negations_in_every_declared_scope" of class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:307:9: error: Call to untyped function
+"install" in typed context  [no-untyped-call]
+            self.install([scope(local=local), scope("apps/rust", ("rust-bu...
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
+tests/test_foundation_ignore.py:307:23: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+            self.install([scope(local=local), scope("apps/rust", ("rust-bu...
+                          ^~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py: note: In member "test_unmanaged_nested_ignore_can_still_override_ancestor_baseline" of class "ComposedIgnoreBehaviorTests":
+tests/test_foundation_ignore.py:336:9: error: Call to untyped function
+"install" in typed context  [no-untyped-call]
+            self.install([scope()])
+            ^~~~~~~~~~~~~~~~~~~~~~~
+tests/test_foundation_ignore.py:336:23: error: Call to untyped function "scope"
+in typed context  [no-untyped-call]
+            self.install([scope()])
+                          ^~~~~~~
 tests/test_foundation_contract.py: note: In member "setUpClass" of class "FoundationContractTests":
 tests/test_foundation_contract.py:24:9: error: "type[FoundationContractTests]"
 has no attribute "catalog"  [attr-defined]
@@ -3217,9 +3232,9 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 103 errors in 7 files (checked 45 source files)
+Found 164 errors in 8 files (checked 47 source files)
 
-(Truncated to last 25000 characters out of 28941)
+(Truncated to last 25000 characters out of 45045)
 ```
 
 </details>
@@ -4073,7 +4088,26 @@ Found 731 errors.
 <summary>❌ PYTHON / ruff-format - 1 error</summary>
 
 ```
-- if it is an \annote command -> erase all but the annoted text"""
+outfile
+41  +         self.interactive = options.interactive
+42  +         self.processNotes = options.notes
+43  +         self.processChanges = options.changes
+44  +         self.document = []
+45  +
+46  +     def addSegment(self, line, fromIndex, toIndex, type):
+47  +         """adds a LineSegment to self.document"""
+48  +         self.document.append(LineSegment(line, fromIndex, toIndex, type))
+49  +
+50  +     def printBuffer(self, segments):
+51  +         """prints the given list of line segments to stderr ..."""
+52  +         for s in segments:
+53  +             s.output(sys.stderr)
+54  +         sys.stderr.write("\n")
+55  +
+56  +     def eraseNote(self, noteSegments):
+57  +         """erase segments that belong to the note:
+58  +         - if it is a \note command -> erase all
+59  +              - if it is an \annote command -> erase all but the annoted text"""
 60  +         if noteSegments[0].type == "noteCommand":
 61  +             for s in noteSegments:
 62  +                 s.hide()
@@ -4561,23 +4595,6 @@ unformatted: File would be reformatted
    |
 
 unformatted: File would be reformatted
-   --> tools/foundation.py:110:31
-    |
-109 |             if unknown:
-    -                 errors.append(f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}")
-110 +                 errors.append(
-111 +                     f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}"
-112 +                 )
-113 |             if name in requires or name in conflicts:
---------------------------------------------------------------------------------
-263 |         or (
-    -             artifact["presence"] == "profile"
-    -             and set(artifact["profiles"]) & set(resolved_profiles)
-264 +             artifact["presence"] == "profile" and set(artifact["profiles"]) & set(resolved_profiles)
-265 |         )
-    |
-
-unformatted: File would be reformatted
     --> tools/staging_home_audit.py:1335:43
      |
 1334 |                 "by_sensitivity": counts("sensitivity"),
@@ -4588,9 +4605,9 @@ unformatted: File would be reformatted
 1336 |             },
      |
 
-11 files would be reformatted, 42 files already formatted
+10 files would be reformatted, 45 files already formatted
 
-(Truncated to last 25000 characters out of 36553)
+(Truncated to last 25000 characters out of 35753)
 ```
 
 </details>
@@ -5234,66 +5251,66 @@ pnpm-workspace.yaml
 inThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,691 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-09-18 00:57:09,607 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,691 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-09-18 00:57:09,608 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,691 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-09-18 00:57:09,608 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,692 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-09-18 00:57:09,611 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,692 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-09-18 00:57:09,612 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,692 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-09-18 00:57:09,612 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,692 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-09-18 00:57:09,613 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,692 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-09-18 00:57:09,613 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-17 13:58:19,909 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-09-17 13:58:19,910 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-09-17 13:58:19,947 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-09-17 13:58:20,047 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-09-17 13:58:20,052 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-09-17 13:58:20,226 [MainThread  ] [INFO ]  Creating ARM graph
-2026-09-17 13:58:20,232 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-09-17 13:58:20,288 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-09-17 13:58:20,289 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-09-17 13:58:20,290 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-09-17 13:58:20,314 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-09-17 13:58:20,316 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-09-17 13:58:20,317 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-09-17 13:58:20,348 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-09-17 13:58:20,467 [MainThread  ] [INFO ]  Creating vertices
-2026-09-17 13:58:20,470 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-09-17 13:58:20,472 [MainThread  ] [INFO ]  Creating edges
-2026-09-17 13:58:20,473 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-09-17 13:58:21,281 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-09-17 13:58:21,296 [MainThread  ] [INFO ]  Creating vertices
-2026-09-17 13:58:21,296 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-09-17 13:58:21,296 [MainThread  ] [INFO ]  Creating edges
-2026-09-17 13:58:21,297 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-09-17 13:58:21,298 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-09-17 13:58:21,355 [MainThread  ] [INFO ]  Building cross variable edges
-2026-09-17 13:58:21,362 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-09-17 13:58:21,362 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-09-17 13:58:21,362 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-09-17 13:58:39,686 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-09-17 13:58:39,687 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-09-17 13:58:39,986 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-09-17 13:58:39,988 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-09-17 13:58:39,988 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-09-17 13:58:39,988 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-09-17 13:58:39,990 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-09-17 13:58:39,990 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-09-18 00:57:09,775 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-09-18 00:57:09,891 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-09-18 00:57:09,892 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-09-18 00:57:09,936 [MainThread  ] [INFO ]  Creating ARM graph
+2026-09-18 00:57:09,937 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-09-18 00:57:10,007 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-09-18 00:57:10,015 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-09-18 00:57:10,016 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-09-18 00:57:10,021 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-09-18 00:57:10,023 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-09-18 00:57:10,040 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-09-18 00:57:10,053 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-09-18 00:57:10,068 [MainThread  ] [INFO ]  Creating vertices
+2026-09-18 00:57:10,068 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-09-18 00:57:10,068 [MainThread  ] [INFO ]  Creating edges
+2026-09-18 00:57:10,068 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-09-18 00:57:10,135 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-09-18 00:57:10,160 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-09-18 00:57:10,771 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-09-18 00:57:10,777 [MainThread  ] [INFO ]  Creating vertices
+2026-09-18 00:57:10,778 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-09-18 00:57:10,778 [MainThread  ] [INFO ]  Creating edges
+2026-09-18 00:57:10,780 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-09-18 00:57:10,787 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-09-18 00:57:10,845 [MainThread  ] [INFO ]  Building cross variable edges
+2026-09-18 00:57:10,857 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-09-18 00:57:10,857 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-09-18 00:57:10,857 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-09-18 00:57:27,818 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-09-18 00:57:27,819 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-09-18 00:57:28,195 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-09-18 00:57:28,195 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-09-18 00:57:28,197 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-09-18 00:57:28,197 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-09-18 00:57:28,197 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-09-18 00:57:28,201 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
@@ -5302,14 +5319,14 @@ Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61
-Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
 Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
 Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -5715,20 +5732,16 @@ sharp                        0.35.3                                    0.35.4   
 asteval                      1.0.6                                     1.0.9     python         GHSA-9w56-46f6-3qhx  Medium    N/A           N/A           
 smol-toml                    1.5.2                                     1.6.1     npm            GHSA-v3rj-xjv7-4jmq  Medium    N/A           N/A           
 esbuild                      0.27.7                                    0.28.1    npm            GHSA-g7r4-m6w7-qqqr  Low       N/A           N/A
-[0135] ERROR discovered vulnerabilities at or above the severity threshold
+[0154] ERROR discovered vulnerabilities at or above the severity threshold
 ```
 
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 3151 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 3152 errors</summary>
 
 ```
-collection.sh [72:1 - 78:3] (7 lines, 64 tokens)
-   mantle/lib/bash/collection.sh [89:1 - 95:4]
-Clone found (bash)
- - mantle/lib/bash/file.sh [54:21 - 61:3] (8 lines, 80 tokens)
-   mantle/lib/bash/file.sh [68:22 - 75:3]
+e/lib/bash/file.sh [68:22 - 75:3]
 Clone found (bash)
  - mantle/lib/core/core.sh [217:1 - 238:8] (22 lines, 137 tokens)
    mantle/lib/core/core.sh [255:1 - 276:8]
@@ -5906,6 +5919,9 @@ Clone found (python)
 Clone found (python)
  - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
    mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
+Clone found (json)
+ - schemas/repository-foundation-catalog.v1.schema.json [70:42 - 83:10] (14 lines, 63 tokens)
+   schemas/repository-foundation-catalog.v1.schema.json [89:53 - 102:10]
 Clone found (python)
  - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
    tests/test_staging_removal_gate.py [64:49 - 71:14]
@@ -5923,7 +5939,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 413            │ 113696      │ 438044       │ 275          │ 6030 (5.30%)     │ 28883 (6.59%)     │
+│ bash         │ 414            │ 113911      │ 438214       │ 275          │ 6030 (5.29%)     │ 28883 (6.59%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5973,7 +5989,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 70             │ 22962       │ 63622        │ 58           │ 1321 (5.75%)     │ 5555 (8.73%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 233            │ 69005       │ 204967       │ 70           │ 1238 (1.79%)     │ 5388 (2.63%)      │
+│ json         │ 235            │ 69271       │ 206023       │ 71           │ 1251 (1.81%)     │ 5451 (2.65%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5987,7 +6003,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1724           │ 330773      │ 4292122      │ 691          │ 11630 (3.52%)    │ 172798 (4.03%)    │
+│ markdown     │ 1724           │ 330905      │ 4294220      │ 691          │ 11601 (3.51%)    │ 172459 (4.02%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6009,7 +6025,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 289            │ 72142       │ 444393       │ 130          │ 1307 (1.81%)     │ 12309 (2.77%)     │
+│ python       │ 291            │ 72812       │ 450808       │ 130          │ 1307 (1.80%)     │ 12309 (2.73%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -6041,16 +6057,16 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 553            │ 57119       │ 316104       │ 349          │ 9373 (16.41%)    │ 105251 (33.30%)   │
+│ yaml         │ 553            │ 57123       │ 316120       │ 349          │ 9375 (16.41%)    │ 105259 (33.30%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4748           │ 981974      │ 7739238      │ 3151         │ 59446 (6.05%)    │ 762467 (9.85%)    │
+│ Total:       │ 4753           │ 983261      │ 7748993      │ 3152         │ 59432 (6.04%)    │ 762199 (9.84%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3151 clones.
+Found 3152 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 16.13s
+ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
+time: 12.48s
 
-(Truncated to last 25000 characters out of 695604)
+(Truncated to last 25000 characters out of 695736)
 ```
 
 </details>
@@ -6128,7 +6144,7 @@ time: 16.13s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 890 errors</summary>
+<summary>⚠️ SPELL / proselint - 901 errors</summary>
 
 ```
 ve-development/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -6368,18 +6384,16 @@ mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
-(Truncated to last 25000 characters out of 125332)
+(Truncated to last 25000 characters out of 126663)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pylint - 255 errors</summary>
+<summary>⚠️ PYTHON / pylint - 259 errors</summary>
 
 ```
-: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:158:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:159:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+(bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:160:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:161:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:162:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -6506,16 +6520,21 @@ mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "retur
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 ************* Module test_foundation_contract
 tests/test_foundation_contract.py:16:0: C0413: Import "import foundation" should be placed at the top of the module (wrong-import-position)
+************* Module test_foundation_ignore
+tests/test_foundation_ignore.py:22:0: C0413: Import "import foundation_ignore" should be placed at the top of the module (wrong-import-position)
+tests/test_foundation_ignore.py:24:0: C0413: Import "import foundation" should be placed at the top of the module (wrong-import-position)
 ************* Module test_gitignore_baseline
 tests/test_gitignore_baseline.py:25:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module foundation
-tools/foundation.py:62:0: R0914: Too many local variables (34/20) (too-many-locals)
-tools/foundation.py:62:0: R0912: Too many branches (50/12) (too-many-branches)
-tools/foundation.py:62:0: R0915: Too many statements (127/60) (too-many-statements)
-tools/foundation.py:236:0: R0914: Too many local variables (23/20) (too-many-locals)
-tools/foundation.py:236:0: R0912: Too many branches (20/12) (too-many-branches)
-tools/foundation.py:478:0: R0911: Too many return statements (16/6) (too-many-return-statements)
-tools/foundation.py:478:0: R0912: Too many branches (18/12) (too-many-branches)
+tools/foundation.py:64:0: R0914: Too many local variables (34/20) (too-many-locals)
+tools/foundation.py:64:0: R0912: Too many branches (53/12) (too-many-branches)
+tools/foundation.py:64:0: R0915: Too many statements (133/60) (too-many-statements)
+tools/foundation.py:253:0: R0914: Too many local variables (25/20) (too-many-locals)
+tools/foundation.py:253:0: R0912: Too many branches (25/12) (too-many-branches)
+tools/foundation.py:253:0: R0915: Too many statements (68/60) (too-many-statements)
+tools/foundation.py:549:0: R0911: Too many return statements (21/6) (too-many-return-statements)
+tools/foundation.py:549:0: R0912: Too many branches (24/12) (too-many-branches)
+tools/foundation.py:549:0: R0915: Too many statements (61/60) (too-many-statements)
 ************* Module staging_home_audit
 tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1395/1000) (too-many-lines)
 tools/staging_home_audit.py:64:0: R0902: Too many instance attributes (24/12) (too-many-instance-attributes)
@@ -6532,229 +6551,252 @@ tools/staging_home_audit.py:1171:0: R0911: Too many return statements (8/6) (too
 tools/staging_home_audit.py:1230:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.50/10
+Your code has been rated at 9.52/10
 
-(Truncated to last 25000 characters out of 51126)
+(Truncated to last 25000 characters out of 51621)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pyright - 8848 errors</summary>
+<summary>⚠️ PYTHON / pyright - 9150 errors</summary>
 
 ```
-ableType)
-  tests/test_mindgarden_agent_integration.py:18:5 - error: Type of "canonical_json" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:19:5 - error: Type of "load_context_pack" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:20:5 - error: Type of "render_context_markdown" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:21:5 - error: Type of "render_llms_txt" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:23:6 - warning: Import "scripts.validate_garden" could not be resolved (reportMissingImports)
-  tests/test_mindgarden_agent_integration.py:23:37 - error: Type of "validate_repository" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:29:9 - error: Type of "first" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:30:9 - error: Type of "second" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:33:28 - error: Argument type is unknown
-    Argument corresponds to parameter "s" in function "loads" (reportUnknownArgumentType)
-  tests/test_mindgarden_agent_integration.py:34:9 - error: Type of "expected_llms" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:41:9 - error: Type of "index" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:42:9 - error: Type of "_" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:42:12 - error: Type of "profile" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:43:9 - error: Type of "rendered" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_agent_integration.py:45:34 - error: Argument type is unknown
-    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  tests/test_mindgarden_agent_integration.py:45:45 - error: Argument type is unknown
-    Argument corresponds to parameter "b" in function "assertLessEqual" (reportUnknownArgumentType)
-  tests/test_mindgarden_agent_integration.py:46:46 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
-  tests/test_mindgarden_agent_integration.py:47:43 - error: Argument type is unknown
-    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
-tests/test_mindgarden_publishing_integration.py
-  tests/test_mindgarden_publishing_integration.py:19:6 - warning: Import "scripts.publish_garden" could not be resolved (reportMissingImports)
-  tests/test_mindgarden_publishing_integration.py:19:36 - error: Type of "project_garden" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_publishing_integration.py:19:52 - error: Type of "verify_projection" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_publishing_integration.py:30:13 - error: Type of "paths" is unknown (reportUnknownVariableType)
-  tests/test_mindgarden_publishing_integration.py:32:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
-  tests/test_mindgarden_publishing_integration.py:32:38 - error: Type of "path" is unknown (reportUnknownVariableType)
-tools/foundation.py
-  tools/foundation.py:38:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
-  tools/foundation.py:47:62 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:49:25 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:77:45 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:83:5 - error: Type of "profile_ids" is partially unknown
-    Type of "profile_ids" is "list[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:83:20 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:83:42 - error: Type of "profile" is unknown (reportUnknownVariableType)
-  tools/foundation.py:84:12 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:84:32 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:84:79 - error: Type of "item" is partially unknown
-    Type of "item" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:88:9 - error: Type of "profile_names" is partially unknown
-    Type of "profile_names" is "set[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:88:25 - error: Type "set[Unknown | None]" is not assignable to declared type "set[str]"
-    "set[Unknown | None]" is not assignable to "set[str]"
-      Type parameter "_T@set" is invariant, but "Unknown | None" is not the same as "str"
-      Consider switching from "set" to "Container" which is covariant (reportAssignmentType)
-  tools/foundation.py:88:29 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:89:38 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:92:16 - error: Type of "profile" is unknown (reportUnknownVariableType)
-  tools/foundation.py:92:37 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:98:31 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:98:63 - error: Type of "strip" is unknown (reportUnknownMemberType)
-  tools/foundation.py:101:43 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:102:9 - error: Type of "name" is partially unknown
-    Type of "name" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:102:16 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:105:9 - error: Type of "requires" is unknown (reportUnknownVariableType)
-  tools/foundation.py:105:20 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:106:9 - error: Type of "conflicts" is unknown (reportUnknownVariableType)
-  tools/foundation.py:106:21 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:108:13 - error: Type of "unknown" is partially unknown
-    Type of "unknown" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:108:28 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:108:44 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:110:95 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:113:37 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:139:16 - error: Type of "artifact" is unknown (reportUnknownVariableType)
-  tools/foundation.py:139:38 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:144:9 - error: Type of "identifier" is partially unknown
-    Type of "identifier" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:144:22 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:145:9 - error: Type of "path" is partially unknown
-    Type of "path" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:145:16 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:153:26 - error: Argument of type "Unknown | None" cannot be assigned to parameter "object" of type "str" in function "append"
-    Type "Unknown | None" is not assignable to type "str"
-      "None" is not assignable to "str" (reportArgumentType)
-  tools/foundation.py:154:12 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:156:12 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:158:9 - error: Type of "presence" is partially unknown
-    Type of "presence" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:158:20 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:161:9 - error: Type of "ownership" is partially unknown
-    Type of "ownership" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:161:21 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:164:9 - error: Type of "artifact_profiles" is partially unknown
-    Type of "artifact_profiles" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:164:29 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:167:13 - error: Type of "unknown" is partially unknown
-    Type of "unknown" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:167:27 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:174:9 - error: Type of "markers" is partially unknown
+kers" is partially unknown
     Type of "markers" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:174:19 - error: Type of "get" is partially unknown
+  tools/foundation.py:178:19 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:178:12 - error: Type of "get" is partially unknown
+  tools/foundation.py:182:12 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:178:43 - error: Type of "get" is partially unknown
+  tools/foundation.py:182:43 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:180:27 - error: Type of "get" is partially unknown
+  tools/foundation.py:184:27 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:180:68 - error: Type of "strip" is unknown (reportUnknownMemberType)
-  tools/foundation.py:191:9 - error: Type of "field_ids" is partially unknown
+  tools/foundation.py:184:68 - error: Type of "strip" is unknown (reportUnknownMemberType)
+  tools/foundation.py:187:23 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/foundation.py:195:17 - error: Type of "validate_definition" is unknown (reportUnknownMemberType)
+  tools/foundation.py:195:17 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "extend" (reportUnknownArgumentType)
+  tools/foundation.py:195:55 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/foundation.py:208:9 - error: Type of "field_ids" is partially unknown
     Type of "field_ids" is "list[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:191:22 - error: Type of "get" is partially unknown
+  tools/foundation.py:208:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:191:42 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:192:16 - error: Argument type is partially unknown
+  tools/foundation.py:208:42 - error: Type of "field" is unknown (reportUnknownVariableType)
+  tools/foundation.py:209:16 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:192:34 - error: Argument type is partially unknown
+  tools/foundation.py:209:34 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:192:49 - error: Argument type is partially unknown
+  tools/foundation.py:209:49 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:192:67 - error: Argument type is partially unknown
+  tools/foundation.py:209:67 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "set[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:192:71 - error: Argument type is partially unknown
+  tools/foundation.py:209:71 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:194:20 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:194:39 - error: Argument type is partially unknown
+  tools/foundation.py:211:20 - error: Type of "field" is unknown (reportUnknownVariableType)
+  tools/foundation.py:211:39 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:195:47 - error: Type of "get" is partially unknown
+  tools/foundation.py:212:47 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:197:59 - error: Type of "get" is partially unknown
+  tools/foundation.py:214:59 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:205:20 - error: Type of "output" is unknown (reportUnknownVariableType)
-  tools/foundation.py:205:40 - error: Argument type is partially unknown
+  tools/foundation.py:222:20 - error: Type of "output" is unknown (reportUnknownVariableType)
+  tools/foundation.py:222:40 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:206:63 - error: Type of "get" is partially unknown
+  tools/foundation.py:223:63 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:209:33 - error: Argument type is unknown
+  tools/foundation.py:226:33 - error: Argument type is unknown
     Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
-  tools/foundation.py:252:69 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:253:72 - error: Argument type is partially unknown
+  tools/foundation.py:271:69 - error: Type of "item" is unknown (reportUnknownVariableType)
+  tools/foundation.py:272:72 - error: Argument type is partially unknown
     Argument corresponds to parameter "selected" in function "_resolve_profiles"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:271:16 - error: Type of "override" is unknown (reportUnknownVariableType)
-  tools/foundation.py:271:38 - error: Argument type is partially unknown
+  tools/foundation.py:290:17 - error: Type of "validate_selection" is unknown (reportUnknownMemberType)
+  tools/foundation.py:290:17 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "extend" (reportUnknownArgumentType)
+  tools/foundation.py:301:16 - error: Type of "override" is unknown (reportUnknownVariableType)
+  tools/foundation.py:301:38 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__new__"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:272:50 - error: Argument type is partially unknown
+  tools/foundation.py:302:50 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "__init__"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:275:9 - error: Type of "identifier" is partially unknown
+  tools/foundation.py:305:9 - error: Type of "identifier" is partially unknown
     Type of "identifier" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:275:22 - error: Type of "get" is partially unknown
+  tools/foundation.py:305:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:276:29 - error: Argument of type "Unknown | None" cannot be assigned to parameter "object" of type "str" in function "append"
+  tools/foundation.py:306:29 - error: Argument of type "Unknown | None" cannot be assigned to parameter "object" of type "str" in function "append"
     Type "Unknown | None" is not assignable to type "str"
       "None" is not assignable to "str" (reportArgumentType)
-  tools/foundation.py:277:12 - error: Type of "get" is partially unknown
+  tools/foundation.py:307:12 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:291:5 - error: Type of "unknown_fields" is partially unknown
+  tools/foundation.py:321:5 - error: Type of "unknown_fields" is partially unknown
     Type of "unknown_fields" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:293:76 - error: Argument type is partially unknown
+  tools/foundation.py:323:76 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:295:9 - error: Type of "value" is partially unknown
+  tools/foundation.py:325:9 - error: Type of "value" is partially unknown
     Type of "value" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:295:17 - error: Type of "get" is partially unknown
+  tools/foundation.py:325:17 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:313:9 - error: Type of "append" is partially unknown
+  tools/foundation.py:343:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation.py:334:61 - error: Type of "key" is unknown (reportUnknownVariableType)
-  tools/foundation.py:334:75 - error: Argument type is partially unknown
+  tools/foundation.py:357:5 - error: Type of "resolved" is partially unknown
+    Type of "resolved" is "dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None]" (reportUnknownVariableType)
+  tools/foundation.py:364:61 - error: Type of "key" is unknown (reportUnknownVariableType)
+  tools/foundation.py:364:75 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  tools/foundation.py:370:12 - error: Return type, "tuple[dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None], list[str]]", is partially unknown (reportUnknownVariableType)
+  tools/foundation.py:381:12 - error: Type of "compose" is unknown (reportUnknownMemberType)
+  tools/foundation.py:381:12 - error: Return type is unknown (reportUnknownVariableType)
+  tools/foundation.py:596:9 - error: Type of "plan" is unknown (reportUnknownVariableType)
+  tools/foundation.py:596:15 - error: Type of "errors" is unknown (reportUnknownVariableType)
+  tools/foundation.py:596:24 - error: Type of "compose" is unknown (reportUnknownMemberType)
+  tools/foundation.py:598:17 - error: Type of "error" is unknown (reportUnknownVariableType)
+  tools/foundation.py:602:36 - error: Argument type is unknown
+    Argument corresponds to parameter "resolved" in function "render_resolved" (reportUnknownArgumentType)
+tools/foundation_ignore.py
+  tools/foundation_ignore.py:50:5 - error: Type of "fields" is partially unknown
+    Type of "fields" is "set[str] | set[str | Unknown]" (reportUnknownVariableType)
+  tools/foundation_ignore.py:51:44 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:52:69 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "set[str] | set[str | Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:55:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:57:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:59:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:61:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:62:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:67:48 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:71:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:72:5 - error: Type of "extend" is partially unknown
+    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:75:9 - error: Type of "overlay" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:76:9 - error: Type of "extend" is partially unknown
+    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:78:9 - error: Type of "sources" is partially unknown
+    Type of "sources" is "list[Unknown]" (reportUnknownVariableType)
+  tools/foundation_ignore.py:80:13 - error: Type of "values" is partially unknown
+    Type of "values" is "list[Unknown]" (reportUnknownVariableType)
+  tools/foundation_ignore.py:80:23 - error: Type of "casefold" is unknown (reportUnknownMemberType)
+  tools/foundation_ignore.py:80:52 - error: Type of "source" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:81:20 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:81:35 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:81:39 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:82:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:83:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:87:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:91:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:94:5 - error: Type of "selected" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:95:76 - error: Type of "item" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:96:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:98:16 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:98:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:98:37 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:99:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:100:13 - error: Type of "identifier" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:102:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:104:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:107:5 - error: Type of "local" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:114:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:117:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:124:47 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:126:5 - error: Type of "scopes" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:131:9 - error: Type of "scope" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:132:9 - error: Type of "extend" is partially unknown
+    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:134:9 - error: Type of "roots" is partially unknown
+    Type of "roots" is "list[Unknown]" (reportUnknownVariableType)
+  tools/foundation_ignore.py:134:18 - error: Type of "casefold" is unknown (reportUnknownMemberType)
+  tools/foundation_ignore.py:134:47 - error: Type of "scope" is unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:135:16 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:135:30 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:135:34 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:136:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:138:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:139:23 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:154:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:156:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:159:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:161:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:164:12 - error: Return type, "tuple[Any, list[Unknown]]", is partially unknown (reportUnknownVariableType)
+  tools/foundation_ignore.py:182:9 - error: Type of "extend" is partially unknown
+    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:184:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:192:13 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:193:27 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "extend"
+    Argument type is "list[str | Unknown]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:195:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:198:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/foundation_ignore.py:200:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "extend"
+    Argument type is "list[Unknown | str]" (reportUnknownArgumentType)
+  tools/foundation_ignore.py:206:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
 tools/staging_home_audit.py
   tools/staging_home_audit.py:1300:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]" in function "writerow"
     "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]"
@@ -6789,9 +6831,9 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8848 errors, 424 warnings, 0 informations
+9150 errors, 427 warnings, 0 informations
 
-(Truncated to last 25000 characters out of 1656925)
+(Truncated to last 25000 characters out of 1699655)
 ```
 
 </details>
@@ -6800,90 +6842,93 @@ tools/task_catalog.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-09-17T13:58:46Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-09-17T13:58:46Z	INFO	[vulndb] Need to update DB
-2026-09-17T13:58:46Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-09-17T13:58:46Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-22.81 MiB / 113.84 MiB [------------>_______________________________________________] 20.04% ? p/s ?57.12 MiB / 113.84 MiB [------------------------------>_____________________________] 50.18% ? p/s ?91.47 MiB / 113.84 MiB [------------------------------------------------>___________] 80.35% ? p/s ?113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 151.51 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 151.51 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 151.51 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 141.73 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 132.59 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 132.59 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 132.59 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 124.03 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 116.03 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 108.55 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 108.55 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 108.55 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [------------------------------------------->] 100.00% 101.54 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 94.99 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 88.86 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 83.13 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 77.77 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-------------------------------------------->] 100.00% 77.77 MiB p/s ETA 0s113.84 MiB / 113.84 MiB [-----------------------------------------------] 100.00% 16.34 MiB p/s 7.2s2026-09-17T13:58:54Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-09-17T13:58:54Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-09-17T13:58:54Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-09-17T13:58:54Z	INFO	[checks-client] Need to update the checks bundle
-2026-09-17T13:58:54Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.84 MiB p/s 300ms2026-09-17T13:59:01Z	INFO	[npm] Run "npm install" to collect the license information of packages	dir=".staging/tools/emoji-precache/node_modules"
-2026-09-17T13:59:01Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-09-17T13:59:01Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="node_modules"
-2026-09-17T13:59:02Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+2026-09-18T00:57:34Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-09-18T00:57:34Z	INFO	[vulndb] Need to update DB
+2026-09-18T00:57:34Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-09-18T00:57:34Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+29.15 MiB / 113.92 MiB [--------------->____________________________________________] 25.59% ? p/s ?66.34 MiB / 113.92 MiB [---------------------------------->_________________________] 58.23% ? p/s ?106.06 MiB / 113.92 MiB [------------------------------------------------------>____] 93.10% ? p/s ?113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 141.22 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 141.22 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 141.22 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 132.11 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 132.11 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 132.11 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 123.59 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 123.59 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 123.59 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 115.61 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 115.61 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 115.61 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 108.15 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 108.15 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 108.15 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 101.18 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 101.18 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [------------------------------------------->] 100.00% 101.18 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 94.65 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 94.65 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 94.65 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 88.54 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 88.54 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 88.54 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 82.83 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 82.83 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 82.83 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 77.49 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 77.49 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 77.49 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 72.49 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 72.49 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 72.49 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 67.81 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-------------------------------------------->] 100.00% 67.81 MiB p/s ETA 0s113.92 MiB / 113.92 MiB [-----------------------------------------------] 100.00% 15.27 MiB p/s 7.7s2026-09-18T00:57:43Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-09-18T00:57:43Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-09-18T00:57:43Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-09-18T00:57:43Z	INFO	[checks-client] Need to update the checks bundle
+2026-09-18T00:57:43Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 2.22 MiB p/s 300ms2026-09-18T00:57:49Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-09-18T00:57:49Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-09-18T00:57:49Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-09-18T00:57:50Z	INFO	[npm] Run "npm install" to collect the license information of packages	dir=".staging/tools/emoji-precache/node_modules"
+2026-09-18T00:57:50Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
+2026-09-18T00:57:50Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="node_modules"
+2026-09-18T00:57:52Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2620392]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x130a6365d590)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x3bfe464a6780)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x130a610fb380?, 0x6, 0x7fbe657ef580?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x3bfe43bccc00?, 0x6, 0x7fb5c78f4f60?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x130a6624ab40, 0x7fbeac787bf0?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x3bfe43a901e0, 0x7fb68ea8d2f8?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x130a65d4791c, 0x130a6624ab40)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x3bfe46f68a09, 0x3bfe43a901e0)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x130a65d4791c, {0x5b84fc0?, 0x130a66a72ce3?}, {0x68cbdc0?, 0x130a5ff5c698?}, {0x130a668caa00, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x3bfe46f68a09, {0x5b84fc0?, 0x3bfe42ba93a3?}, {0x68cbdc0?, 0x3bfe465a52d8?}, {0x3bfe477c8b90, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x69341b8, 0x130a6365d360}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x69341b8, 0x3bfe464a6550}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x68cc900, 0x130a644c01e0}, {0x130a668caa00, 0x43}, {0x69341b8, 0x130a6365d360}, 0x130a60c24b80)
+io/fs.walkDir({0x68cc900, 0x3bfe461ae450}, {0x3bfe477c8b90, 0x43}, {0x69341b8, 0x3bfe464a6550}, 0x3bfe48aeeb80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x68cc900, 0x130a644c01e0}, {0x130a66a72cc0, 0x2d}, {0x69341b8, 0x130a65ea7ba8}, 0x130a60c24b80)
+io/fs.walkDir({0x68cc900, 0x3bfe461ae450}, {0x3bfe42ba9380, 0x2d}, {0x69341b8, 0x3bfe43f251a8}, 0x3bfe48aeeb80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x130a644c01e0}, {0x130a66a5e5d0, 0x22}, {0x69341b8, 0x130a65ea6c08}, 0x130a60c24b80)
+io/fs.walkDir({0x68cc900, 0x3bfe461ae450}, {0x3bfe43f6f710, 0x22}, {0x69341b8, 0x3bfe43ec8e88}, 0x3bfe48aeeb80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x130a644c01e0}, {0x130a66b35620, 0x17}, {0x69341b8, 0x130a65ea6988}, 0x130a60c24b80)
+io/fs.walkDir({0x68cc900, 0x3bfe461ae450}, {0x3bfe47d5f680, 0x17}, {0x69341b8, 0x3bfe43ec8988}, 0x3bfe48aeeb80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x130a644c01e0}, {0x130a6643a800, 0x8}, {0x69341b8, 0x130a65ea6848}, 0x130a60c24b80)
+io/fs.walkDir({0x68cc900, 0x3bfe461ae450}, {0x3bfe48d3e260, 0x8}, {0x69341b8, 0x3bfe43ec8668}, 0x3bfe48aeeb80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x130a644c01e0}, {0x68a94b8, 0x1}, {0x69335b0, 0x130a660ca600}, 0x130a60c24b80)
+io/fs.walkDir({0x68cc900, 0x3bfe461ae450}, {0x68a94b8, 0x1}, {0x69335b0, 0x3bfe44c6fa70}, 0x3bfe48aeeb80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x68cc900, 0x130a644c01e0}, {0x68a94b8, 0x1}, 0x130a60c24b80)
+io/fs.WalkDir({0x68cc900, 0x3bfe461ae450}, {0x68a94b8, 0x1}, 0x3bfe48aeeb80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6963a40, {0x6933348, 0x130a638b1aa0}, {0x68cc900, 0x130a644c01e0}, {0x68a94b8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6963a40, {0x6933348, 0x3bfe45843a70}, {0x68cc900, 0x3bfe461ae450}, {0x68a94b8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6963a40, {0x6933348, 0x130a638b1aa0}, {0x68cc900, 0x130a644c01e0}, {0x68a94b8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6963a40, {0x6933348, 0x3bfe45843a70}, {0x68cc900, 0x3bfe461ae450}, {0x68a94b8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x130a660c6240, {0x69333f0, 0x130a600d6070}, {0x68cc900, 0x130a64485c38})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x3bfe47167900, {0x69333f0, 0x3bfe4159a3f0}, {0x68cc900, 0x3bfe461ae138})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x130a660ba3a0, {0x69333f0?, 0x130a600d6070?}, {{0x68cc900, 0x130a64485c38}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x3bfe47287380, {0x69333f0?, 0x3bfe4159a3f0?}, {{0x68cc900, 0x3bfe461ae138}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x130a6608e9b0, {0x130a65f31800, 0x20, 0x20}, {0x130a65f31a00, 0x19, 0x20}, 0x130a660abc50, {0x130a601a66f7, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x3bfe471689a0, {0x3bfe4729c400, 0x20, 0x20}, {0x3bfe4729c600, 0x19, 0x20}, 0x3bfe4728eae0, {0x3bfe4245c687, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x130a6608e9b0, {0x130a65f31800, 0x20, 0x20}, {0x130a65f31a00, 0x19, 0x20}, 0x130a660abc50, {0x130a601a66f7, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x3bfe471689a0, {0x3bfe4729c400, 0x20, 0x20}, {0x3bfe4729c600, 0x19, 0x20}, 0x3bfe4728eae0, {0x3bfe4245c687, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffe4dc53116, 0x1}, 0x130a6608f260, {0x7fbde5502d68, 0x130a631f0600}, {0x68cc840, 0xa4f3640}, {0x130a6608e9b0, {0x130a65f31800, 0x20, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7fff5d419116, 0x1}, 0x3bfe47169250, {0x7fb5c79303a8, 0x3bfe4553a4e0}, {0x68cc840, 0xa4f3640}, {0x3bfe471689a0, {0x3bfe4729c400, 0x20, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x130a6099c1c0, 0x2, 0x2}, {0x130a609b6100, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x3bfe41610200, 0x2, 0x2}, {0x3bfe423cff40, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffe4dc52f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7fff5d418f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffe4dc52f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7fff5d418f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffe4dc52f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7fff5d418f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffe4dc52f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7fff5d418f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffe4dc52f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7fff5d418f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffe4dc52f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7fff5d418f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x130a5fd76908, {0x130a60a50a88, 0x1, 0x31})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x3bfe41a00f08, {0x3bfe42440a88, 0x1, 0x31})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0x130a5fd76908, {0x130a60a50708, 0x31, 0x31})
+github.com/spf13/cobra.(*Command).execute(0x3bfe41a00f08, {0x3bfe42440708, 0x31, 0x31})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0x130a5fd76008)
+github.com/spf13/cobra.(*Command).ExecuteC(0x3bfe41aa5808)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x6933738, 0x130a608db5c0})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x6933738, 0x3bfe42008f80})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c

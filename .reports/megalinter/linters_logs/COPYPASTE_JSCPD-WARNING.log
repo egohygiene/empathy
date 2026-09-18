@@ -88,9 +88,6 @@ Clone found (markdown)
  - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [24:93 - 29:45] (6 lines, 170 tokens)
    ONTOLOGY.md:markdown [127:167 - 129:3]
 Clone found (markdown)
- - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [24:93 - 29:12] (6 lines, 157 tokens)
-   docs/foundation/gitignore/README.md:markdown [9:153 - 11:10]
-Clone found (markdown)
  - .audits/egolint/2026-08-11-megalinter-v10-policy-audit.md:markdown [25:31 - 34:4] (10 lines, 218 tokens)
    .staging/.github/skills/markdown-to-html/references/basic-markdown.md:markdown [26:3 - 26:221]
 Clone found (markdown)
@@ -352,25 +349,25 @@ Clone found (yaml)
  - .github/workflow-profiles/security-optional/dependency-review.yml [29:1 - 42:11] (14 lines, 96 tokens)
    .github/workflows/dependency-review.yml [36:1 - 49:11]
 Clone found (yaml)
- - .github/workflows/automation.yml [8:1 - 24:3] (17 lines, 64 tokens)
-   .github/workflows/automation.yml [27:1 - 43:3]
+ - .github/workflows/automation.yml [8:1 - 26:3] (19 lines, 72 tokens)
+   .github/workflows/automation.yml [29:1 - 47:3]
 Clone found (yaml)
- - .github/workflows/automation.yml [55:1 - 65:24] (11 lines, 61 tokens)
+ - .github/workflows/automation.yml [59:1 - 69:24] (11 lines, 61 tokens)
    .github/workflows/repository-intelligence.yml [40:1 - 50:24]
 Clone found (yaml)
- - .github/workflows/automation.yml [58:1 - 71:15] (14 lines, 74 tokens)
+ - .github/workflows/automation.yml [62:1 - 75:15] (14 lines, 74 tokens)
    .github/workflows/codeql.yml [40:1 - 53:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [58:1 - 71:15] (14 lines, 74 tokens)
+ - .github/workflows/automation.yml [62:1 - 75:15] (14 lines, 74 tokens)
    .github/workflows/lint-architecture.yml [50:1 - 63:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [58:1 - 69:11] (12 lines, 62 tokens)
+ - .github/workflows/automation.yml [62:1 - 73:11] (12 lines, 62 tokens)
    .github/workflows/megalinter.yml [35:1 - 46:11]
 Clone found (yaml)
- - .github/workflows/automation.yml [61:1 - 71:15] (11 lines, 60 tokens)
+ - .github/workflows/automation.yml [65:1 - 75:15] (11 lines, 60 tokens)
    .github/workflows/mantle.yml [50:1 - 60:15]
 Clone found (yaml)
- - .github/workflows/automation.yml [61:1 - 71:15] (11 lines, 60 tokens)
+ - .github/workflows/automation.yml [65:1 - 75:15] (11 lines, 60 tokens)
    .github/workflows/reusable-autofix.yml [52:1 - 62:15]
 Clone found (yaml)
  - .github/workflows/commitlint.yml [24:1 - 34:24] (11 lines, 61 tokens)
@@ -2571,6 +2568,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [110:16 - 124:125] (15 lines, 576 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2526:50 - 2551:7]
+Clone found (markdown)
+ - .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [163:28 - 168:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [1282:112 - 1286:2]
 Clone found (yaml)
  - .staging/.github/skills/phoenix-cli/references/axial-coding.md:yaml [59:1 - 178:48] (120 lines, 71 tokens)
    .staging/.github/skills/phoenix-evals/references/axial-coding.md:yaml [29:1 - 73:48]
@@ -2706,6 +2706,9 @@ Clone found (yaml)
 Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
+Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [300:45 - 305:2] (6 lines, 50 tokens)
+   .staging/.github/skills/quality-playbook/SKILL.md:markdown [318:23 - 322:2]
 Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:184 - 334:5] (7 lines, 67 tokens)
    docs/foundation/gitignore/RULE_AUDIT.md:markdown [48:205 - 49:4]
@@ -2916,9 +2919,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
-Clone found (markdown)
- - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
-   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -8620,20 +8620,20 @@ Clone found (java)
  - egolint/tests/fixtures/checkstyle/GreetingService.java [27:1 - 34:2] (8 lines, 62 tokens)
    egolint/tests/fixtures/pmd/GreetingService.java [13:1 - 20:2]
 Clone found (json)
- - foundation/catalog.json [199:35 - 207:22] (9 lines, 50 tokens)
-   foundation/catalog.json [211:49 - 219:22]
+ - foundation/catalog.json [215:35 - 223:22] (9 lines, 50 tokens)
+   foundation/catalog.json [227:49 - 235:22]
 Clone found (json)
- - foundation/catalog.json [295:39 - 303:22] (9 lines, 50 tokens)
-   foundation/catalog.json [331:34 - 339:22]
+ - foundation/catalog.json [311:39 - 319:22] (9 lines, 50 tokens)
+   foundation/catalog.json [347:34 - 355:22]
 Clone found (json)
- - foundation/catalog.json [307:56 - 315:22] (9 lines, 50 tokens)
-   foundation/catalog.json [319:45 - 327:22]
+ - foundation/catalog.json [323:56 - 331:22] (9 lines, 50 tokens)
+   foundation/catalog.json [335:45 - 343:22]
 Clone found (json)
- - foundation/catalog.json [343:46 - 351:22] (9 lines, 50 tokens)
-   foundation/catalog.json [355:43 - 363:22]
+ - foundation/catalog.json [359:46 - 367:22] (9 lines, 50 tokens)
+   foundation/catalog.json [371:43 - 379:22]
 Clone found (json)
- - foundation/catalog.json [379:26 - 387:22] (9 lines, 50 tokens)
-   foundation/catalog.json [391:48 - 399:22]
+ - foundation/catalog.json [395:26 - 403:22] (9 lines, 50 tokens)
+   foundation/catalog.json [407:48 - 415:22]
 Clone found (yaml)
  - holon/packs/react-vite/template/.github/workflows/ci.yml [20:1 - 46:15] (27 lines, 159 tokens)
    holon/packs/react-vite/template/.github/workflows/ci.yml [54:1 - 80:15]
@@ -9447,6 +9447,9 @@ Clone found (python)
 Clone found (python)
  - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
    mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
+Clone found (json)
+ - schemas/repository-foundation-catalog.v1.schema.json [70:42 - 83:10] (14 lines, 63 tokens)
+   schemas/repository-foundation-catalog.v1.schema.json [89:53 - 102:10]
 Clone found (python)
  - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
    tests/test_staging_removal_gate.py [64:49 - 71:14]
@@ -9464,7 +9467,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 413            │ 113696      │ 438044       │ 275          │ 6030 (5.30%)     │ 28883 (6.59%)     │
+│ bash         │ 414            │ 113911      │ 438214       │ 275          │ 6030 (5.29%)     │ 28883 (6.59%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9514,7 +9517,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 70             │ 22962       │ 63622        │ 58           │ 1321 (5.75%)     │ 5555 (8.73%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 233            │ 69005       │ 204967       │ 70           │ 1238 (1.79%)     │ 5388 (2.63%)      │
+│ json         │ 235            │ 69271       │ 206023       │ 71           │ 1251 (1.81%)     │ 5451 (2.65%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9528,7 +9531,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1724           │ 330773      │ 4292122      │ 691          │ 11630 (3.52%)    │ 172798 (4.03%)    │
+│ markdown     │ 1724           │ 330905      │ 4294220      │ 691          │ 11601 (3.51%)    │ 172459 (4.02%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9550,7 +9553,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 289            │ 72142       │ 444393       │ 130          │ 1307 (1.81%)     │ 12309 (2.77%)     │
+│ python       │ 291            │ 72812       │ 450808       │ 130          │ 1307 (1.80%)     │ 12309 (2.73%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9582,12 +9585,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 553            │ 57119       │ 316104       │ 349          │ 9373 (16.41%)    │ 105251 (33.30%)   │
+│ yaml         │ 553            │ 57123       │ 316120       │ 349          │ 9375 (16.41%)    │ 105259 (33.30%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4748           │ 981974      │ 7739238      │ 3151         │ 59446 (6.05%)    │ 762467 (9.85%)    │
+│ Total:       │ 4753           │ 983261      │ 7748993      │ 3152         │ 59432 (6.04%)    │ 762199 (9.84%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3151 clones.
+Found 3152 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 16.13s
+ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
+time: 12.48s
 

@@ -731,23 +731,6 @@ unformatted: File would be reformatted
    |
 
 unformatted: File would be reformatted
-   --> tools/foundation.py:110:31
-    |
-109 |             if unknown:
-    -                 errors.append(f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}")
-110 +                 errors.append(
-111 +                     f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}"
-112 +                 )
-113 |             if name in requires or name in conflicts:
---------------------------------------------------------------------------------
-263 |         or (
-    -             artifact["presence"] == "profile"
-    -             and set(artifact["profiles"]) & set(resolved_profiles)
-264 +             artifact["presence"] == "profile" and set(artifact["profiles"]) & set(resolved_profiles)
-265 |         )
-    |
-
-unformatted: File would be reformatted
     --> tools/staging_home_audit.py:1335:43
      |
 1334 |                 "by_sensitivity": counts("sensitivity"),
@@ -758,5 +741,5 @@ unformatted: File would be reformatted
 1336 |             },
      |
 
-11 files would be reformatted, 42 files already formatted
+10 files would be reformatted, 45 files already formatted
 

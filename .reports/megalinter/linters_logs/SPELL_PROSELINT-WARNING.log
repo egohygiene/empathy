@@ -401,23 +401,36 @@ beacon/README.md:49:12: typography.symbols.curly_quotes: Use curly quotes “”
 beacon/templates/research-paper/example/paper.md:2:8: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/templates/research-paper/example/paper.md:3:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/ecosystem/CONTEXT.md:8:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/ITERATION-01.md:29:6: typography.diacritical_marks: Use diacritical marks in 'résumé'.
-docs/foundation/gitignore/ITERATION-01.md:43:114: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/ITERATION-01.md:45:122: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/ITERATION-01.md:46:81: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/ITERATION-01.md:47:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/ITERATION-01.md:48:124: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/ITERATION-01.md:49:127: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/ITERATION-01.md:50:124: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:11:115: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:12:99: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:13:117: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:14:129: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:15:137: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:16:110: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:17:114: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:18:148: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:20:108: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/INVENTORY.md:42:26: lexical_illusions: There's a lexical illusion in 'sources
+
+Sources' - a phrase is repeated.
+docs/foundation/gitignore/ITERATION-01.md:30:6: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+docs/foundation/gitignore/ITERATION-01.md:44:114: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/ITERATION-01.md:46:122: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/ITERATION-01.md:47:81: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/ITERATION-01.md:48:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/ITERATION-01.md:49:124: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/ITERATION-01.md:50:127: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/ITERATION-01.md:51:124: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:12:103: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:13:99: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:14:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:15:89: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:16:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:17:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:18:98: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:20:106: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:21:79: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:60:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:61:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:62:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:62:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:62:38: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:64:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:65:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:66:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:199:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:200:36: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/foundation/gitignore/RULE_AUDIT.md:31:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:32:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:33:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
