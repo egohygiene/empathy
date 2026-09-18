@@ -12,31 +12,38 @@ import io
 from pathlib import Path
 import sys
 import tempfile
+from typing import TYPE_CHECKING, Any
 import unittest
-
-import test_gitignore_baseline
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
-import foundation_ignore  # noqa: E402
+if TYPE_CHECKING:
+    from tests import test_gitignore_baseline
+    from tools import foundation, foundation_ignore
+else:
+    import foundation_ignore
 
-import foundation  # noqa: E402
+    import foundation
+    import test_gitignore_baseline
 
 
-def inputs():
+def inputs() -> tuple[dict[str, Any], dict[str, Any]]:
     return (
         foundation.load_json(ROOT / "foundation/catalog.json"),
         foundation.load_json(ROOT / "foundation/empathy.manifest.json"),
     )
 
 
-def scope(root=".", overlays=(), local=""):
+def scope(root: str = ".", overlays: tuple[str, ...] = (), local: str = "") -> dict[str, Any]:
     return {"root": root, "overlays": list(overlays), "local_additions": local}
 
 
-def definition(catalog):
-    return next(item for item in catalog["artifacts"] if item["id"] == "gitignore")["composition"]
+def definition(catalog: dict[str, Any]) -> dict[str, Any]:
+    composition: dict[str, Any] = next(
+        item for item in catalog["artifacts"] if item["id"] == "gitignore"
+    )["composition"]
+    return composition
 
 
 class IgnoreContractTests(unittest.TestCase):
@@ -46,10 +53,14 @@ class IgnoreContractTests(unittest.TestCase):
     def test_checked_in_plan_is_current_and_byte_repeatable(self) -> None:
         first, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
         self.assertEqual([], errors)
+        if first is None:
+            self.fail("The golden manifest must produce a composition plan")
         second, errors = foundation.plan_gitignore(
             dict(reversed(list(self.catalog.items()))), self.manifest, ROOT
         )
         self.assertEqual([], errors)
+        if second is None:
+            self.fail("Reordering the catalog must still produce a composition plan")
         self.assertEqual(foundation.render_resolved(first), foundation.render_resolved(second))
         self.assertEqual(
             (ROOT / "foundation/contracts/empathy.gitignore-plan.json").read_text(encoding="utf-8"),
@@ -77,6 +88,8 @@ class IgnoreContractTests(unittest.TestCase):
         self.manifest["gitignore"]["scopes"] = [scope("apps/rust", ("rust-build",), local), scope()]
         first, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
         self.assertEqual([], errors)
+        if first is None:
+            self.fail("Selected scopes must produce a composition plan")
         self.manifest["gitignore"]["scopes"].reverse()
         second, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
         self.assertEqual([], errors)
@@ -92,6 +105,8 @@ class IgnoreContractTests(unittest.TestCase):
         del self.manifest["gitignore"]
         resolved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
         self.assertEqual([], errors)
+        if resolved is None:
+            self.fail("Omitting ignore selection must still resolve the manifest")
         self.assertNotIn("gitignore", resolved)
         plan, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
         self.assertIsNone(plan)
@@ -105,12 +120,14 @@ class IgnoreContractTests(unittest.TestCase):
         self.manifest["gitignore"]["scopes"] = [scope()]
         plan, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
         self.assertEqual([], errors)
+        if plan is None:
+            self.fail("An explicitly empty overlay selection must still produce a plan")
         self.assertEqual(
             ["local", "baseline"], [layer["kind"] for layer in plan["files"][0]["layers"]]
         )
 
     def test_invalid_scope_configuration_fails_closed(self) -> None:
-        invalid = [
+        invalid: list[object] = [
             None,
             {},
             {"scopes": []},
@@ -139,13 +156,12 @@ class IgnoreContractTests(unittest.TestCase):
                 " leading",
             )
         )
+        invalid_local: tuple[object, ...] = ("/cache/", "bad\r\n", "bad\0\n", None, [])
         invalid.extend(
-            {"scopes": [scope(local=local)]}
-            for local in ("/cache/", "bad\r\n", "bad\0\n", None, [])
+            {"scopes": [{**scope(), "local_additions": local}]} for local in invalid_local
         )
-        invalid.extend(
-            {"scopes": [{**scope(), "overlays": value}]} for value in (None, "rust-build", [{}])
-        )
+        invalid_overlays: tuple[object, ...] = (None, "rust-build", [{}])
+        invalid.extend({"scopes": [{**scope(), "overlays": value}]} for value in invalid_overlays)
         for selection in invalid:
             with self.subTest(selection=selection):
                 self.manifest["gitignore"] = selection
@@ -167,12 +183,12 @@ class IgnoreContractTests(unittest.TestCase):
         duplicate = copy.deepcopy(definition(self.catalog))
         duplicate["overlays"].append(duplicate["overlays"][0])
         invalid.append(duplicate)
-        for candidate in invalid:
-            with self.subTest(candidate=candidate):
+        for invalid_definition in invalid:
+            with self.subTest(candidate=invalid_definition):
                 catalog = copy.deepcopy(self.catalog)
                 next(item for item in catalog["artifacts"] if item["id"] == "gitignore")[
                     "composition"
-                ] = candidate
+                ] = invalid_definition
                 plan, errors = foundation.plan_gitignore(catalog, self.manifest, ROOT)
                 self.assertIsNone(plan)
                 self.assertTrue(errors)
@@ -216,6 +232,8 @@ class IgnoreContractTests(unittest.TestCase):
         before = (ROOT / ".gitignore").read_bytes()
         plan, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
         self.assertEqual([], errors)
+        if plan is None:
+            self.fail("A preserve override must still produce a composition plan")
         file = plan["files"][0]
         self.assertEqual("preserve", file["override"])
         self.assertEqual("repository-owned", file["ownership"])
@@ -253,11 +271,13 @@ class IgnoreContractTests(unittest.TestCase):
 
 
 class ComposedIgnoreBehaviorTests(test_gitignore_baseline.GitignoreFixture):
-    def install(self, scopes):
+    def install(self, scopes: list[dict[str, Any]]) -> None:
         catalog, manifest = inputs()
         manifest["gitignore"]["scopes"] = scopes
         plan, errors = foundation.plan_gitignore(catalog, manifest, ROOT)
         self.assertEqual([], errors)
+        if plan is None:
+            self.fail("The selected scopes must produce a composition plan")
         for file in plan["files"]:
             self.write(file["path"], file["content"])
 

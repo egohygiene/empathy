@@ -20,8 +20,10 @@ class GitignoreFixture(unittest.TestCase):
     """Share isolated Git setup and assertions across ignore behavior suites."""
 
     def setUp(self) -> None:
-        self.git_executable = shutil.which("git")
-        self.assertIsNotNone(self.git_executable, "Git is required for behavior checks")
+        git_executable = shutil.which("git")
+        if git_executable is None:
+            self.fail("Git is required for behavior checks")
+        self.git_executable = git_executable
         temporary = tempfile.TemporaryDirectory(prefix="empathy-ignore-")
         self.addCleanup(temporary.cleanup)
         self.root = Path(temporary.name)

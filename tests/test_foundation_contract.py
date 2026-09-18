@@ -6,25 +6,32 @@ from __future__ import annotations
 import copy
 import json
 from pathlib import Path
+import subprocess  # nosec B404
 import sys
+import tempfile
 import tomllib
+from typing import TYPE_CHECKING, Any, ClassVar
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
-import foundation  # noqa: E402
+if TYPE_CHECKING:
+    from tools import foundation
+else:
+    import foundation
 
 SOURCE_REVISION = "a" * 40
 
 
 class FoundationContractTests(unittest.TestCase):
+    catalog: ClassVar[dict[str, Any]]
+    manifest: ClassVar[dict[str, Any]]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.catalog = foundation.load_json(ROOT / "foundation" / "catalog.json")
-        cls.manifest = foundation.load_json(
-            ROOT / "foundation" / "empathy.manifest.json"
-        )
+        cls.manifest = foundation.load_json(ROOT / "foundation" / "empathy.manifest.json")
 
     def test_catalog_and_golden_manifest_are_valid(self) -> None:
         self.assertEqual([], foundation.validate_catalog(self.catalog))
@@ -37,9 +44,7 @@ class FoundationContractTests(unittest.TestCase):
         self.assertIn("documentation", resolved["profiles"])
 
     def test_all_required_categories_and_presence_states_are_inventory_visible(self) -> None:
-        self.assertEqual(
-            foundation.REQUIRED_CATEGORIES, set(self.catalog["categories"])
-        )
+        self.assertEqual(foundation.REQUIRED_CATEGORIES, set(self.catalog["categories"]))
         self.assertEqual(
             {"optional", "profile", "required"},
             {artifact["presence"] for artifact in self.catalog["artifacts"]},
@@ -59,9 +64,7 @@ class FoundationContractTests(unittest.TestCase):
         assert first is not None
         assert second is not None
         self.assertEqual(first, second)
-        self.assertEqual(
-            foundation.render_resolved(first), foundation.render_resolved(second)
-        )
+        self.assertEqual(foundation.render_resolved(first), foundation.render_resolved(second))
 
     def test_safe_override_preserves_repository_ownership(self) -> None:
         resolved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
@@ -72,21 +75,78 @@ class FoundationContractTests(unittest.TestCase):
             "repository-owned", artifacts["issue-template-config"]["effective_ownership"]
         )
         self.assertEqual("preserve", artifacts["issue-template-config"]["override"])
-        self.assertEqual(
-            "required", artifacts["issue-template-config"]["ownership"]
-        )
+        self.assertEqual("required", artifacts["issue-template-config"]["ownership"])
 
     def test_generated_artifact_override_fails_closed(self) -> None:
         manifest = copy.deepcopy(self.manifest)
-        manifest["overrides"] = [
-            {"artifact": "ecosystem-context", "mode": "preserve"}
-        ]
+        manifest["overrides"] = [{"artifact": "ecosystem-context", "mode": "preserve"}]
         resolved, errors = foundation.resolve_manifest(self.catalog, manifest)
         self.assertIsNone(resolved)
         self.assertIn(
             "generated artifact cannot be preserved by override: ecosystem-context",
             errors,
         )
+
+    def test_override_artifact_must_be_a_nonempty_string(self) -> None:
+        invalid: tuple[object, ...] = (None, "", 42, [], {})
+        for identifier in invalid:
+            with self.subTest(identifier=identifier):
+                manifest = copy.deepcopy(self.manifest)
+                manifest["overrides"] = [{"artifact": identifier, "mode": "preserve"}]
+                resolved, errors = foundation.resolve_manifest(self.catalog, manifest)
+                self.assertIsNone(resolved)
+                self.assertIn("overrides[0].artifact must be a non-empty string", errors)
+
+    def test_cli_rejects_bad_inputs_without_writing_even_when_optimized(self) -> None:
+        invalid_override = copy.deepcopy(self.manifest)
+        invalid_override["overrides"] = [{"artifact": [], "mode": "preserve"}]
+        unselected = copy.deepcopy(self.manifest)
+        del unselected["gitignore"]
+        cases: tuple[tuple[object, object, int, str], ...] = (
+            ([], self.manifest, 2, "foundation catalog load failed:"),
+            (self.catalog, [], 2, "foundation manifest load failed:"),
+            (self.catalog, invalid_override, 1, "overrides[0].artifact must be a non-empty string"),
+            (self.catalog, unselected, 1, "manifest must select gitignore scopes before planning"),
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            catalog_path = directory / "catalog.json"
+            manifest_path = directory / "manifest.json"
+            output = directory / "plan.json"
+            original = "reviewed output must survive rejected inputs\n"
+            for optimization in ((), ("-O",)):
+                for catalog, manifest, status, message in cases:
+                    with self.subTest(optimization=optimization, message=message):
+                        catalog_path.write_text(json.dumps(catalog), encoding="utf-8")
+                        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+                        output.write_text(original, encoding="utf-8")
+                        # The interpreter and all inputs belong to this isolated test; no shell.
+                        result = subprocess.run(  # noqa: S603  # nosec B603
+                            [
+                                sys.executable,
+                                *optimization,
+                                str(ROOT / "tools/foundation.py"),
+                                "--catalog",
+                                str(catalog_path),
+                                "plan-gitignore",
+                                "--manifest",
+                                str(manifest_path),
+                                "--source-root",
+                                str(ROOT),
+                                "--output",
+                                str(output),
+                            ],
+                            cwd=directory,
+                            capture_output=True,
+                            text=True,
+                            check=False,
+                            timeout=10,
+                        )
+                        self.assertEqual(status, result.returncode, result.stderr)
+                        self.assertIn(message, result.stderr)
+                        self.assertNotIn("Traceback", result.stderr)
+                        self.assertEqual("", result.stdout)
+                        self.assertEqual(original, output.read_text(encoding="utf-8"))
 
     def test_unknown_and_conflicting_profiles_fail_closed(self) -> None:
         unknown = copy.deepcopy(self.manifest)
@@ -136,7 +196,10 @@ class FoundationContractTests(unittest.TestCase):
         invalid_path = copy.deepcopy(self.catalog)
         invalid_path["artifacts"][0]["path"] = "../README.md"
         self.assertTrue(
-            any("path must be normalized" in error for error in foundation.validate_catalog(invalid_path))
+            any(
+                "path must be normalized" in error
+                for error in foundation.validate_catalog(invalid_path)
+            )
         )
 
         missing_marker = copy.deepcopy(self.catalog)
@@ -159,14 +222,10 @@ class FoundationContractTests(unittest.TestCase):
             "repository-foundation-manifest.v1.schema.json",
         ):
             schema = json.loads((ROOT / "schemas" / name).read_text(encoding="utf-8"))
-            self.assertEqual(
-                "https://json-schema.org/draft/2020-12/schema", schema["$schema"]
-            )
+            self.assertEqual("https://json-schema.org/draft/2020-12/schema", schema["$schema"])
 
     def test_checked_in_inventory_and_contract_are_current(self) -> None:
-        contract_path = (
-            ROOT / "foundation" / "contracts" / "empathy.repository-contract.toml"
-        )
+        contract_path = ROOT / "foundation" / "contracts" / "empathy.repository-contract.toml"
         contract = tomllib.loads(contract_path.read_text(encoding="utf-8"))
         source_revision = contract["source"]["revision"]
         resolved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
@@ -174,9 +233,7 @@ class FoundationContractTests(unittest.TestCase):
         assert resolved is not None
         self.assertEqual(
             foundation.render_inventory(self.catalog),
-            (ROOT / "docs" / "foundation" / "INVENTORY.md").read_text(
-                encoding="utf-8"
-            ),
+            (ROOT / "docs" / "foundation" / "INVENTORY.md").read_text(encoding="utf-8"),
         )
         self.assertEqual(
             foundation.render_egolint_contract(resolved, source_revision),

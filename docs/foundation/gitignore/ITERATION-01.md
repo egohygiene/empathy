@@ -149,14 +149,51 @@ also exposes foundation typing/import and assertion-security debt in the full
 profile, beyond the existing pin mismatch and OSV gate. A fast PR check must
 not be described as full-profile conformance. Stop for maintainer review.
 
-## Next bounded part after part 3 review
+## Part 4 checkpoint: foundation validation cleanup
 
-Verify the root-adoption merge and review decisions. Reconcile remaining #82
-acceptance items, including the existing validation failures and recorded
-content-conformance boundary. Prepare Filament only against an accepted,
-immutable upstream revision, with its own local facts and no copied imported
-ignore policies. Link owner-specific follow-ups where a real integration gap
-remains. Keep #82 open until its complete acceptance is satisfied.
+[PR #88](https://github.com/egohygiene/empathy/pull/88) merged on 2026-09-18 as
+`2afbdca3e916647c67ace4e231ca6bde22486307`; its merge tree matches the reviewed
+root-adoption tree. GitHub closed #82 at that merge. Preserve the closure and
+track its remaining validation/content gaps explicitly through follow-up work
+and the master epic.
+
+[Issue #89](https://github.com/egohygiene/empathy/issues/89) owns this bounded
+foundation validation cleanup. Its base is
+`87d1d5b85ee06b7c98fcccc33b031092c2afa252`, including the report-only refreshes
+after #88. The completed full-profile scan reproduces strict typing and runtime
+assertion findings that the fast PR profile does not run. Scoped reproduction
+found 128 mypy errors across four foundation/test files and three Bandit
+assertion findings in the production CLI.
+
+Static imports now identify the Python source modules instead of the similarly
+named foundation data directory, while runtime imports preserve standalone CLI
+and unittest discovery behavior. Fixture/helper types and validated path/ID
+narrowing make the existing contracts visible to the checker. Production guards
+use explicit failure results instead of assertions. Malformed override IDs and
+non-object JSON now produce diagnostics instead of tracebacks. Regression cases
+run the CLI normally and with `python -O`, proving rejected inputs leave existing
+output intact. No lint configuration or production finding is suppressed.
+
+Foundation remains `1.1.0`. Catalog/schema sources, ignore rules, manifest,
+generated inventory/projections/plan, and the golden root are unchanged. This
+part preserves the established ownership boundaries and contributes validation
+evidence to `EMP-Q04` without completing the roadmap step. Exact local results
+and completed PR checks belong in #89 and its linked PR. Stop for maintainer
+review before starting another part.
+
+The process now requires checking the relevant full-profile tools with their
+actual configuration and versions, even when PR CI selects the fast profile.
+Report scoped results separately from the full repository's remaining findings.
+
+## Next bounded part after part 4 review
+
+Verify the cleanup merge and its review decisions. Reconcile the remaining CI
+release-pin/bootstrap failures and inherited ignore-policy exceptions with their
+owners; retain explicit tracking for wider validation and vulnerability debt.
+Prepare Filament only against an accepted immutable upstream revision, with its
+own local facts and no copied imported ignore policies. Link owner-specific
+follow-ups where a real integration gap remains. Issue #82's closure alone does
+not establish complete validation or content conformance.
 
 Fresh-chat entry: open the master epic, follow iteration 01 to the latest PR,
 verify whether it merged, read its review decisions and this checkpoint, then
