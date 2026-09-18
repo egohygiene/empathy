@@ -186,7 +186,7 @@ def compose(
     files = []
     for scope in resolved["gitignore"]["scopes"]:
         layers = []
-        chunks = ["# Composed ignore proposal; see the foundation plan for source hashes.\n"]
+        chunks = ["# Composed ignore rules; see the foundation plan for source hashes.\n"]
         for identifier in scope["overlays"]:
             source = sources_by_id[identifier]
             layers.append({"kind": "overlay", "owner": catalog["owner"], **source})

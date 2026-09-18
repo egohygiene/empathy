@@ -1,4 +1,85 @@
-# Operating systems
+# Composed ignore rules; see the foundation plan for source hashes.
+
+# Profile: rust-build
+# Empathy Rust build overlay; select the Cargo workspace/project root explicitly.
+# Anchoring keeps unrelated nested target/ source directories visible.
+/target/
+
+# Repository-owned local additions.
+# Empathy-owned integration rules; see docs/foundation/gitignore/MIGRATION-03.md.
+# Generated quality reports; retain the existing curated evidence exceptions.
+/.reports/*
+!/.reports/README.md
+!/.reports/egolint/
+/.reports/egolint/*
+!/.reports/egolint/architecture/
+!/.reports/egolint/architecture/README.md
+!/.reports/egolint/architecture/lint-architecture.svg
+!/.reports/megalinter/
+/.reports/megalinter/*
+!/.reports/megalinter/remediation.md
+
+# Repository intelligence and the selected root Mindgarden/Obsidian vault.
+/docs/generated/
+/.garden.local/
+/.garden/.index/
+/.obsidian/plugins/
+/.obsidian/workspace*.json
+
+# Root Python tooling: observed Ruff cache and the configured pytest project.
+/.ruff_cache/
+/.pytest_cache/
+
+# Imported Cargo projects without their own ignore file; root Rust uses the overlay.
+/beacon/target/
+/.staging/devenvironment/realm/target/
+
+# Executable language fixtures, scoped to their owning projects.
+/egolint/tests/fixtures/raku/**/.precomp/
+/egolint/tests/fixtures/dart-analyzer/.dart_tool/
+/egolint/tests/fixtures/dart-analyzer/.packages
+/.staging/.github/skills/winmd-api-search/scripts/cache-generator/bin/
+/.staging/.github/skills/winmd-api-search/scripts/cache-generator/obj/
+
+# Private key material mounted by the imported Apache development configuration.
+# Public certificates and keys used as reviewed fixtures elsewhere remain visible.
+/.staging/devenvironment/containers/services/apache/certs/**/*.key
+
+# Private Terraform state, plans, and auto-loaded variables at the actual IaC fixtures.
+# Other private material belongs in .secrets/; reviewed *.tfvars elsewhere stay visible.
+/egolint/tests/fixtures/kics/terraform/.terraform/
+/egolint/tests/fixtures/kics/terraform/terraform.tfstate
+/egolint/tests/fixtures/kics/terraform/terraform.tfstate.*
+/egolint/tests/fixtures/kics/terraform/.terraform.tfstate.lock.info
+/egolint/tests/fixtures/kics/terraform/terraform.tfvars
+/egolint/tests/fixtures/kics/terraform/terraform.tfvars.json
+/egolint/tests/fixtures/kics/terraform/*.auto.tfvars
+/egolint/tests/fixtures/kics/terraform/*.auto.tfvars.json
+/egolint/tests/fixtures/kics/terraform/*.tfplan
+/egolint/tests/fixtures/tflint/.terraform/
+/egolint/tests/fixtures/tflint/terraform.tfstate
+/egolint/tests/fixtures/tflint/terraform.tfstate.*
+/egolint/tests/fixtures/tflint/.terraform.tfstate.lock.info
+/egolint/tests/fixtures/tflint/terraform.tfvars
+/egolint/tests/fixtures/tflint/terraform.tfvars.json
+/egolint/tests/fixtures/tflint/*.auto.tfvars
+/egolint/tests/fixtures/tflint/*.auto.tfvars.json
+/egolint/tests/fixtures/tflint/*.tfplan
+/egolint/tests/fixtures/negative/terraform-fmt/.terraform/
+/egolint/tests/fixtures/negative/terraform-fmt/terraform.tfstate
+/egolint/tests/fixtures/negative/terraform-fmt/terraform.tfstate.*
+/egolint/tests/fixtures/negative/terraform-fmt/.terraform.tfstate.lock.info
+/egolint/tests/fixtures/negative/terraform-fmt/terraform.tfvars
+/egolint/tests/fixtures/negative/terraform-fmt/terraform.tfvars.json
+/egolint/tests/fixtures/negative/terraform-fmt/*.auto.tfvars
+/egolint/tests/fixtures/negative/terraform-fmt/*.auto.tfvars.json
+/egolint/tests/fixtures/negative/terraform-fmt/*.tfplan
+
+# Universal baseline (last in every declared scope).
+# Empathy universal ignore baseline; see docs/foundation/gitignore/README.md.
+# Registered for composition plans; active-root adoption is a separate step.
+
+# Operating-system metadata.
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -7,209 +88,36 @@ Thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Editors and IDEs
+# Editor-local state; shared .idea/ and .vscode/ configuration stays visible.
 *~
-*.bak
-*.orig
-*.rej
 *.swp
 *.swo
-.idea/
-.fleet/
-.history/
-.vscode/*
-!.vscode/extensions.json
-!.vscode/launch.json
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/*.code-snippets
-!.vscode/cspell.json
+**/.idea/workspace.xml
+**/.idea/usage.statistics.xml
+**/.idea/shelf/
 
-# Local secrets and credentials
+# Local environments. Template suffixes are deliberate, not prefix matches.
 .env
 .env.*
 !.env.example
 !.env.sample
 !.env.template
-*.jks
-*.key
-*.keystore
-*.p12
-*.pfx
-*.secrets.*
-!.secrets.baseline
+!.env.*.example
+!.env.*.sample
+!.env.*.template
+
+# Reserved private local namespace; public keys and fixtures stay visible.
 .secrets/
 
-# Logs, caches, temporary files, and generated reports
-*.log
-*.pid
-*.seed
+# Unambiguous local caches, environments, and installed dependencies.
 .cache/
-.reports/*
-!.reports/README.md
-!.reports/egolint/
-.reports/egolint/*
-!.reports/egolint/architecture/
-!.reports/egolint/architecture/README.md
-!.reports/egolint/architecture/lint-architecture.svg
-!.reports/megalinter/
-.reports/megalinter/*
-!.reports/megalinter/remediation.md
 .tmp/
-coverage/
-temp/
-temp.md
-temp.txt
-tmp/
-/docs/generated/
-
-# Mindgarden local overlays and generated indexes
-.garden.local/
-.garden/.index/
-
-# Obsidian device-local state and third-party plugin payloads
-.obsidian/plugins/
-.obsidian/workspace*.json
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.coverage
-.coverage.*
-.dmypy.json
-.hypothesis/
-.ipynb_checkpoints/
-.mypy_cache/
-.nox/
-.pyre/
-.pytest_cache/
-.pytype/
-.ruff_cache/
-.tox/
 .venv/
-coverage.xml
-htmlcov/
-pip-wheel-metadata/
-site-packages/
-venv/
-
-# Node.js and web tooling
+__pycache__/
 node_modules/
-.npm/
-.pnpm-store/
-.yarn/cache/
-.yarn/install-state.gz
-.yarn/unplugged/
-.next/
-.nuxt/
-.parcel-cache/
-.svelte-kit/
-.turbo/
-.vercel/
-.vite/
-.vitepress/cache/
-.vuepress/.cache/
-.vuepress/dist/
-.webpack/
-*.tsbuildinfo
-storybook-static/
 
-# Rust
-target/
-
-# Raku
-**/.precomp/
-
-# Dart and Flutter
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-.pub-cache/
-.pub/
-**/doc/api/
-**/ios/Flutter/.last_build_id
-
-# Java, Kotlin, Gradle, and Android
-.gradle/
-.cxx/
-.externalNativeBuild/
-**/.gradletasknamecache
-**/local.properties
-*.aab
-*.apk
-*.dex
-*.hprof
-
-# Apple development
-DerivedData/
-*.xcarchive
-*.xcuserstate
-**/*.xcodeproj/xcuserdata/
-**/*.xcworkspace/xcuserdata/
-Pods/
-
-# .NET
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-[Bb]in/
-[Oo]bj/
-TestResults/
-
-# Mantle's public CLI and CLI coverage map are source, not .NET output.
-!mantle/bin/
-!mantle/bin/**
-!mantle/tests/bin/
-!mantle/tests/bin/**
-
-# Build and package outputs
-**/build/
-**/dist/
-**/out/
-*.egg-info/
-*.whl
-
-# Go
-*.test
-coverage.out
-
-# Infrastructure tools
-.terraform/
-*.tfstate
-*.tfstate.*
-*.tfvars
-*.tfvars.json
-!*.tfvars.example
-.pulumi/
-.serverless/
-.aws-sam/
-
-# LaTeX-generated files
-*.aux
-*.bbl
-*.bcf
-*.blg
-*.fdb_latexmk
-*.fls
-*.glg
-*.glo
-*.gls
-*.idx
-*.ilg
-*.ind
-*.lof
-*.lot
-*.nav
-*.out.ps
-*.run.xml
-*.snm
-*.synctex.gz
-*.toc
-*.vrb
-_minted*/
-
-# Preserve placeholders in otherwise ignored directories.
-!**/.gitkeep
+# Language/build outputs, logs, reports, and credential extensions need
+# profile or repository ownership. Do not add universal bin/, build/, dist/,
+# out/, target/, vendor/, *.log, *.key, or whole-editor-directory rules.
+# Lockfiles, reviewed artifacts, and shared configuration remain trackable.
+# A blanket .gitkeep negation cannot reopen an ignored parent directory.

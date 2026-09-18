@@ -1,8 +1,9 @@
 # Layered gitignore contract
 
-This is the **part 2 composition contract** for [Empathy #82](https://github.com/egohygiene/empathy/issues/82).
-Part 1's universal rules are registered for planning; active-root adoption
-remains a separate review. The [iteration checkpoint](ITERATION-01.md) records
+This is the **part 3 golden-root adoption** for [Empathy #82](https://github.com/egohygiene/empathy/issues/82).
+The accepted baseline and composition model now drive Empathy's active root.
+The [migration record](MIGRATION-03.md) reconciles all old rules and records the
+consumer proof and remaining boundaries. The [iteration checkpoint](ITERATION-01.md) records
 the process and next bounded step.
 
 ## Contract record
@@ -18,7 +19,7 @@ the process and next bounded step.
 | Local variation | Narrow project rules and reviewed exceptions that retain baseline protections.              |
 | Update behavior | Emit/check a deterministic JSON plan; planning never reads or writes consumer ignore files. |
 | Validation      | Catalog/manifest validation, source integrity, repeatability, and actual Git behavior.      |
-| Adoption        | Golden-root migration and Filament adoption remain pending.                                 |
+| Adoption        | Empathy's root matches its plan; Filament adoption remains pending.                         |
 
 ## Universal rule decisions
 
@@ -40,9 +41,9 @@ environment patterns, the private `.secrets/` namespace, and `.cache/`, `.tmp/`,
   `vendor/`, and `coverage/` out of the universal layer. Profile rules need
   evidence of generated output and an explicit project scope.
 
-The [rule audit](RULE_AUDIT.md) classifies all 176 rules in the existing root at
-the recorded revision. Its relocation proposals still need reconciliation
-against actual project roots before active-root migration.
+The [historical audit](RULE_AUDIT.md) classifies the 176 old root rules.
+The [migration fixture](../../../tests/fixtures/gitignore/empathy-migration.json)
+reconciles every rule with evidence and actual Git behavior expectations.
 
 ## Selection and source identity
 
@@ -76,8 +77,9 @@ glob characters, and ignore-file/directory collisions are rejected. Profiles
 resolve through the existing dependency graph. Selecting `language-rust` alone
 installs nothing: each project scope must explicitly select `rust-build`. Use
 the Cargo workspace root when that workspace owns the build output. Empathy's
-proposed root scope follows its root Cargo workspace; it does not claim the
-other existing root exclusions have been migrated.
+root scope follows its declared Cargo workspace; the
+[migration record](MIGRATION-03.md) explains its local additions and imported
+project boundaries.
 
 Scopes sort by root. Overlay order within a scope is intentional and preserved.
 Duplicate or unknown selections and overlays whose profiles are not selected
@@ -208,7 +210,8 @@ the winning rule. It isolates inherited Git configuration, templates, and global
 excludes. Catalog, manifest, schemas, sources, and composer changes trigger the
 automation test suite.
 
-Fixtures prove composition and Git semantics. The golden plan proves
-repeatability, not adoption. Golden-root migration must reconcile the remaining
-audit rules and is the next bounded PR. Keep #82 open until its full acceptance
-criteria are met. Filament follows an accepted, immutable upstream contract.
+Composition fixtures prove repeatability and Git semantics. A separate golden
+adoption test now proves the active root equals the plan and exercises the
+[migration cases](MIGRATION-03.md), including existing nested-policy limits.
+Keep #82 open until its full acceptance criteria are met. Filament follows the
+accepted, immutable upstream contract with its own reviewed local selection.

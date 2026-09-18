@@ -7,7 +7,8 @@ including negations. No exact duplicate active rules were present.
 - Source commit: `16f260324219f2d437b2a4c19c961896274e29df`.
 - Source blob: `2dee7a36db8b554ee7b959da5c38c62636204980`.
 - [Immutable root file](https://github.com/egohygiene/empathy/blob/16f260324219f2d437b2a4c19c961896274e29df/.gitignore).
-- The existing root is unchanged in this part. Every disposition below is a proposal.
+- This historical input remains unchanged. The [part 3 migration](MIGRATION-03.md)
+  resolves these proposals; its fixture accounts for all 176 rules exactly once.
 
 ## Classification and ownership
 
