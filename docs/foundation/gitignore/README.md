@@ -1,99 +1,181 @@
 # Layered gitignore contract
 
-This is the **part 1 proposal** for [Empathy #82](https://github.com/egohygiene/empathy/issues/82).
-Review the universal rules and their behavior before adopting them. The
-[iteration checkpoint](ITERATION-01.md) records the process and next bounded step.
+This is the **part 2 composition contract** for [Empathy #82](https://github.com/egohygiene/empathy/issues/82).
+Part 1's universal rules are registered for planning; active-root adoption
+remains a separate review. The [iteration checkpoint](ITERATION-01.md) records
+the process and next bounded step.
 
 ## Contract record
 
-| Field            | Proposal                                                                                                                           |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Purpose          | Keep disposable local state out of Git without hiding reasonable source or reviewed artifacts.                                     |
-| Consumer path    | `.gitignore`; already required and repository-owned in the foundation catalog.                                                     |
-| Applicability    | Universal candidate plus explicitly selected profile rules and justified repository-local rules.                                   |
-| Canonical source | [`foundation/ignore/universal.gitignore`](../../../foundation/ignore/universal.gitignore), owned by Empathy.                       |
-| Content model    | Curated baseline with explicit profile composition and local additions; composition is not implemented in this part.               |
-| Source identity  | Review the source at a commit; no released artifact version or downstream pin exists yet.                                          |
-| Local variation  | Narrow project rules and reviewed exceptions; local rules must preserve required protections.                                      |
-| Update behavior  | Candidate only. Catalog integration, composition ordering, provenance, preservation, and rollback mechanics remain part 2 work.    |
-| Validation       | Actual Git ignore behavior in isolated temporary repositories, including intentionally visible paths and duplicate-rule detection. |
-| Adoption         | No golden-root or Filament adoption yet. The existing root `.gitignore` remains active.                                            |
+| Field           | Contract                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------- |
+| Purpose         | Keep disposable local state out of Git without hiding source or reviewed artifacts.         |
+| Consumer path   | `.gitignore`; required and repository-owned in the existing foundation catalog.             |
+| Applicability   | Universal baseline in every declared scope, selected profile overlays, and local rules.     |
+| Canonical owner | Empathy owns baseline/profile sources; consumers own local additions.                       |
+| Content model   | Selected overlays in order, verbatim local additions, then the universal baseline.          |
+| Source identity | Foundation `1.1.0`, format `empathy.gitignore/v1`, source IDs/paths and SHA-256 hashes.     |
+| Local variation | Narrow project rules and reviewed exceptions that retain baseline protections.              |
+| Update behavior | Emit/check a deterministic JSON plan; planning never reads or writes consumer ignore files. |
+| Validation      | Catalog/manifest validation, source integrity, repeatability, and actual Git behavior.      |
+| Adoption        | Golden-root migration and Filament adoption remain pending.                                 |
 
 ## Universal rule decisions
 
-The candidate has 27 active rules, including negations. It reserves only the
-reviewed OS/editor debris, local environment patterns, private `.secrets/`
-namespace, and unambiguous `.cache/`, `.tmp/`, `.venv/`, `__pycache__/`, and
-`node_modules/` directories. These namespaces are local at every depth.
+The [universal baseline](../../../foundation/ignore/universal.gitignore) has 27
+active rules, including negations. It reserves reviewed OS/editor debris, local
+environment patterns, the private `.secrets/` namespace, and `.cache/`, `.tmp/`,
+`.venv/`, `__pycache__/`, and `node_modules/` directories at every depth.
 
 - Keep shared `.vscode/` and `.idea/` configuration visible. Ignore only the
   named JetBrains user state covered by its
   [version-control guidance](https://intellij-support.jetbrains.com/hc/en-us/articles/206544839-How-to-manage-projects-under-Version-Control-Systems).
 - Ignore `.env` and local variants. Allow `.env.example`, `.env.sample`,
-  `.env.template`, and variants ending in those three suffixes, including
+  `.env.template`, and variants ending in those suffixes, including
   `.env.production.example`. Templates contain placeholders, never credentials.
-  `.env.example.local` remains ignored. Templates inside `.secrets/` remain hidden.
+  `.env.example.local` remains ignored, as do templates inside `.secrets/`.
 - Preserve lockfiles, public certificates, binary fixtures, archives, patches,
-  screenshots, snapshots, logs used as fixtures, and reviewed reports by default.
-- Keep `bin/`, `build/`, `dist/`, `out/`, `target/`, `vendor/`, `coverage/`, and
-  similar ambiguous names out of the universal layer. Profile rules require
-  evidence of generated output and an appropriate project scope.
+  screenshots, snapshots, fixture logs, and reviewed reports by default.
+- Keep ambiguous names such as `bin/`, `build/`, `dist/`, `out/`, `target/`,
+  `vendor/`, and `coverage/` out of the universal layer. Profile rules need
+  evidence of generated output and an explicit project scope.
 
 The [rule audit](RULE_AUDIT.md) classifies all 176 rules in the existing root at
-the recorded revision. Its relocation proposals do not claim that profiles or
-narrower secret protections have already been implemented.
+the recorded revision. Its relocation proposals still need reconciliation
+against actual project roots before active-root migration.
+
+## Selection and source identity
+
+The existing `gitignore` artifact in `foundation/catalog.json` has `composition`
+metadata. Empathy owns all registered sources. `universal` names the baseline;
+`rust-build` selects the [Rust overlay](../../../foundation/ignore/rust.gitignore)
+and requires the resolved `language-rust` profile. Source paths are Empathy
+inputs, not new required consumer files. Other language profiles do not yet
+have ignore overlays.
+
+The optional manifest `gitignore` field declares every planned ignore file:
+
+```json
+{
+  "gitignore": {
+    "scopes": [
+      { "root": ".", "overlays": [], "local_additions": "" },
+      {
+        "root": "apps/rust",
+        "overlays": ["rust-build"],
+        "local_additions": "# Owner: repository maintainer; reason: reviewed build note.\n!/target/\n/target/*\n!/target/README.md\n"
+      }
+    ]
+  }
+}
+```
+
+The root `.` must appear once. Roots are normalized repository-relative
+directories, unique ignoring case; traversal, absolute paths, Git metadata,
+glob characters, and ignore-file/directory collisions are rejected. Profiles
+resolve through the existing dependency graph. Selecting `language-rust` alone
+installs nothing: each project scope must explicitly select `rust-build`. Use
+the Cargo workspace root when that workspace owns the build output. Empathy's
+proposed root scope follows its root Cargo workspace; it does not claim the
+other existing root exclusions have been migrated.
+
+Scopes sort by root. Overlay order within a scope is intentional and preserved.
+Duplicate or unknown selections and overlays whose profiles are not selected
+fail validation. Omitting `gitignore` remains a valid presence-only manifest;
+requesting a plan without scopes fails.
+
+Planning verifies every registered source's raw UTF-8 SHA-256, including
+unselected overlays. Missing files, source paths escaping the supplied source
+root, duplicate active rules, and unanchored overlay patterns fail. Each overlay
+pattern must start with `/` or `!/`, relative to its selected scope. Canonical
+fragments and local additions use LF; nonempty text ends in LF.
 
 ## Layering and exceptions
 
-Proposed ownership remains: Empathy owns baseline/profile policy, consumers own
-their local facts, Holon owns materialization, EgoLint owns conformance semantics,
-Relay runs reusable checks, and Pace owns reviewed fleet convergence.
+Empathy owns baseline/profile policy, consumers own local facts, Holon owns
+materialization, EgoLint owns conformance semantics, Relay runs reusable checks,
+and Pace owns reviewed fleet convergence.
 
-The next part must define deterministic composition against the existing catalog
-and manifest. Avoid concatenating every language's rules into the root. A Rust
-project can own `/target/` in its nearest `.gitignore`, without hiding unrelated
-`target/` paths elsewhere. Existing profile names are not evidence that ignore
-overlays for them already exist.
+Each planned file contains selected overlays in manifest order, repository-local
+text verbatim, then the universal baseline. Local comments, blank lines, rule
+order, and intentional repetitions survive unchanged. The baseline comes last
+in **each declared scope**, so local `!.env`, `!/.secrets/`, or `!/node_modules/`
+rules cannot undo those protections. Its template exceptions also take
+precedence for traversable paths; templates must contain placeholders. Local
+additions can override profile outputs but cannot customize the baseline's final
+matches. Changes to that policy need review of the canonical source.
 
-Git applies directory scope and pattern order, rather than this ownership model:
-later matching rules win at the same level, and a closer `.gitignore` can override
-ancestor rules. A rule containing an internal slash is relative to its ignore
-file; a slashless name can match at any depth. A leading slash anchors the rule
-to that ignore file's directory. These are
-[Git's documented semantics](https://git-scm.com/docs/gitignore).
+Git applies directory scope and pattern order. Later matching rules win at the
+same level, while a closer `.gitignore` can override ancestor rules. Slashless
+names can match at any depth; a leading slash anchors a rule to the ignore file's
+directory. See [Git's documented semantics](https://git-scm.com/docs/gitignore).
 
-To keep a reviewed file inside an otherwise ignored output directory, keep the
-parent traversable and ignore its contents. For example, in a selected project's
-own `.gitignore`:
+For a reviewed file inside the Rust output directory, local additions can use:
 
 ```gitignore
-/build/*
-!/build/README.md
+!/target/
+/target/*
+!/target/README.md
 ```
 
-Using `/build/` followed by `!/build/README.md` does not work: Git cannot reinclude
-files beneath an excluded parent. A global `!**/.gitkeep` has the same limitation.
-Document the path, owner, and reason for an exception, and test both the exception
-and adjacent generated files. Do not use exceptions to expose private local state.
+The first line reopens the directory excluded by the overlay; the next two
+ignore its contents and reinclude only the reviewed note. Simply appending
+`!/target/README.md` after `/target/` does not work: Git cannot reinclude files
+beneath an excluded parent. A global `!**/.gitkeep` has the same limitation.
+Document the path, owner, and reason, and test the exception and adjacent output.
+
+## Preservation, updates, and rollback
+
+The plan records `status: plan-only`, generator, foundation version, repository,
+resolved profiles, ordered layer owners/IDs/paths/hashes, local text hash, and
+each proposed file's content and SHA-256. Catalog and resolved-manifest hashes
+use sorted-key compact JSON (`ensure_ascii=False`, separators `,` and `:`, UTF-8,
+no trailing newline). Fragment and content hashes cover exact UTF-8 bytes.
+Consumers should pin an accepted Empathy commit as well as its contract version;
+this part creates no release or downstream upgrade pin.
+
+`.gitignore` stays required and repository-owned. A `preserve` override is carried
+into the plan, not treated as permission to overwrite or bypass the baseline.
+Planning never reads an existing consumer `.gitignore` and cannot infer which
+lines are local. Adoption must review the existing file and represent retained
+local rules explicitly in the manifest. Unknown existing text and edits must
+be preserved or surfaced as a conflict by a future Holon materializer; this
+module does not implement that merge engine.
+
+For a source upgrade, change the reviewed fragment and catalog hash, then
+regenerate the plan and inventory. A hash mismatch fails instead of accepting
+drift. Keep local additions unless the maintainer explicitly reviews their
+change. The plan diff exposes ordering and visibility changes before adoption.
+Rollback restores the previous pinned catalog, matching resolver, manifest, and
+fragments and regenerates the plan. Restoring an adopted consumer file requires
+a reviewed materialization/revert, retaining intervening local edits; reverting
+the plan alone does not revert an active file.
+
+The EgoLint TOML is regenerated against a real source commit and advances with
+foundation `1.1.0`. It still projects presence, ownership, executable flags, and
+markers only. Ignore-content conformance belongs to EgoLint and is not implied
+by the plan or presence check.
 
 ## Secret boundary and migration gate
 
 Ignore rules do not remove already tracked files, prevent forced additions, or
-detect secrets. The behavior checks deliberately demonstrate that a nested
-`!.env` can bypass a root rule. A future conformance check must detect prohibited
-overrides; this candidate does not enforce that policy by itself.
+detect secrets. Tests demonstrate that an unmanaged nested `!.env` can bypass a
+root rule. Repeating the baseline protects declared scopes; it does not police
+deeper files or arbitrary local patterns. A future EgoLint conformance check
+must detect prohibited overrides; this composer does not provide
+organization-wide enforcement.
 
 Before replacing the active root, account for every current credential rule.
 For `*.key`, keystores, certificates, `*.secrets.*`, and infrastructure state or
 variables, identify the real private locations, add narrow profile/local rules,
 and test them alongside public/fixture exceptions. Use `.secrets/` for deliberate
 private local material; it does not cover secrets stored arbitrarily elsewhere.
-Keep secret scanning as a separate protection. Do not drop existing protections
-merely because an extension is absent from the universal candidate.
+Keep secret scanning separate. Do not drop existing protections merely because
+an extension is absent from the universal baseline.
 
-Migration must inspect untracked files newly exposed by changed rules without
-printing their contents or staging them wholesale. An ignored file is never
-evidence that deletion is safe. No cleanup is required by this proposal.
+Migration must inspect newly exposed untracked paths without printing their
+contents or staging them wholesale. An ignored file is never evidence that
+deletion is safe. No cleanup is required by this contract.
 
 ## Validation
 
@@ -102,25 +184,31 @@ Run from the repository root:
 ```bash
 python3 -m unittest discover \
   --start-directory tests \
-  --pattern "test_gitignore_baseline.py" \
+  --pattern "test_*ignore*.py" \
   --verbose
+python3 tools/foundation.py plan-gitignore \
+  --manifest "foundation/empathy.manifest.json" \
+  --source-root "." \
+  --output "foundation/contracts/empathy.gitignore-plan.json"
+python3 tools/foundation.py check-gitignore-plan \
+  --manifest "foundation/empathy.manifest.json" \
+  --source-root "." \
+  --output "foundation/contracts/empathy.gitignore-plan.json"
 ruff check \
   --config "egolint/.config/lint/python/ruff.toml" \
-  "tests/test_gitignore_baseline.py"
+  "tools/foundation.py" "tools/foundation_ignore.py" \
+  "tests/test_gitignore_baseline.py" "tests/test_foundation_ignore.py"
 ```
 
-Use the explicit Ruff configuration above to match MegaLinter. A bare
-`ruff check` resolves the root `pyproject.toml`, whose narrower rule selection
-does not cover the CI policy. Run the behavior and lint checks before handoff,
-then inspect the PR's final CI results before declaring validation complete.
+Use the explicit Ruff configuration to match MegaLinter; the root
+`pyproject.toml` selects fewer rules. Inspect completed CI before handoff.
+The harness installs baseline/composed content into temporary repositories and
+uses real untracked fixtures with `git check-ignore --no-index`. Failures show
+the winning rule. It isolates inherited Git configuration, templates, and global
+excludes. Catalog, manifest, schemas, sources, and composer changes trigger the
+automation test suite.
 
-The harness installs the candidate into temporary Git repositories, creates
-real untracked fixtures, and uses `git check-ignore --no-index`. Failures include
-the winning rule via `--verbose`. It isolates Git configuration, inherited Git
-environment overrides, templates, and global excludes. The full automation test
-job also runs these tests when the candidate changes.
-
-Nested examples prove Git semantics; they are not released profile fixtures or
-golden-consumer proof. Catalog/manifest validation, profile composition,
-generated inventory and contract checks, and root adoption remain required to
-finish #82. Filament follows an accepted, immutable upstream contract.
+Fixtures prove composition and Git semantics. The golden plan proves
+repeatability, not adoption. Golden-root migration must reconcile the remaining
+audit rules and is the next bounded PR. Keep #82 open until its full acceptance
+criteria are met. Filament follows an accepted, immutable upstream contract.

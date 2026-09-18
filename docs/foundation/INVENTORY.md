@@ -2,7 +2,7 @@
 
 > Generated from `foundation/catalog.json`. Do not edit by hand.
 
-- Contract: `empathy/repository-foundation@1.0.0`
+- Contract: `empathy/repository-foundation@1.1.0`
 - Canonical owner: `egohygiene/empathy`
 - Canonical artifacts: `30`
 
@@ -18,7 +18,7 @@
 | `.github/workflows/codeql.yml` | security | profile | required | risk-hardened | Static security analysis caller |
 | `.github/workflows/dependency-review.yml` | security | profile | required | risk-hardened | Dependency change gate |
 | `.github/workflows/megalinter.yml` | quality | profile | required | quality-baseline | Thin repository caller for reusable quality automation |
-| `.gitignore` | metadata | required | repository-owned | — | Repository-specific generated and local-state exclusions |
+| `.gitignore` | metadata | required | repository-owned | — | Repository-owned exclusions with explicit, scoped baseline composition |
 | `.identity/identity.toml` | metadata | profile | repository-owned | product | Consumer-owned product identity input |
 | `.mega-linter.yml` | quality | profile | repository-owned | quality-baseline | Repository-selected EgoLint and MegaLinter policy overlay |
 | `.release-please-manifest.json` | release | profile | repository-owned | release-automated | Repository release state |
@@ -39,10 +39,20 @@
 | `pyproject.toml` | metadata | profile | repository-owned | language-python | Python project intent |
 | `release-please-config.json` | release | profile | repository-owned | release-automated | Repository release strategy |
 
+## Gitignore composition sources
+
+Sources are owned by `egohygiene/empathy`; they are not required consumer paths.
+
+| ID | Profile | Source path | SHA-256 |
+| --- | --- | --- | --- |
+| `universal` | all declared scopes | `foundation/ignore/universal.gitignore` | `79280ac4f3147ead97a0b21b01f40241238f08fa5d63abe3f81c8b64e7f179f0` |
+| `rust-build` | language-rust | `foundation/ignore/rust.gitignore` | `16627c4b93c30be2aa2c977a48ee3157d0a7b8ff44e02008b9085f0bd8d94f96` |
+
 ## Generated outputs
 
 | Path | Owner | Canonical input | Checked in |
 | --- | --- | --- | --- |
 | `docs/ecosystem/CONTEXT.md` | `egohygiene/hygiene` | `catalog/repositories.yaml + catalog/repository-context.json` | `true` |
 | `docs/foundation/INVENTORY.md` | `egohygiene/empathy` | `foundation/catalog.json` | `true` |
+| `foundation/contracts/empathy.gitignore-plan.json` | `egohygiene/empathy` | `foundation/catalog.json + foundation/empathy.manifest.json + foundation/ignore/*` | `true` |
 | `foundation/contracts/empathy.repository-contract.toml` | `egohygiene/empathy` | `foundation/catalog.json + foundation/empathy.manifest.json` | `true` |

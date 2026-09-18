@@ -14,8 +14,10 @@ import re
 import sys
 from typing import Any
 
-SCHEMA_VERSION = "1.0.0"
-FOUNDATION_REFERENCE = "empathy/repository-foundation@1.0.0"
+import foundation_ignore
+
+SCHEMA_VERSION = "1.1.0"
+FOUNDATION_REFERENCE = "empathy/repository-foundation@1.1.0"
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 REQUIRED_CATEGORIES = {
     "agent-context",
@@ -107,7 +109,9 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
         if isinstance(requires, list) and isinstance(conflicts, list):
             unknown = (set(requires) | set(conflicts)) - profile_names
             if unknown:
-                errors.append(f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}")
+                errors.append(
+                    f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}"
+                )
             if name in requires or name in conflicts:
                 errors.append(f"profile {name} cannot require or conflict with itself")
             graph[name] = [item for item in requires if isinstance(item, str)]
@@ -179,6 +183,19 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
             errors.append(f"{prefix} directory cannot be executable")
         if not isinstance(artifact.get("description"), str) or not artifact["description"].strip():
             errors.append(f"{prefix}.description must be a non-empty string")
+        if identifier == "gitignore":
+            if (path, artifact.get("kind"), presence, ownership) != (
+                ".gitignore",
+                "file",
+                "required",
+                "repository-owned",
+            ):
+                errors.append("gitignore must remain a required repository-owned .gitignore file")
+            errors.extend(
+                foundation_ignore.validate_definition(artifact.get("composition"), profile_names)
+            )
+        elif "composition" in artifact:
+            errors.append("composition is supported only for the gitignore artifact")
     if len(ids) != len(set(ids)):
         errors.append("artifact ids must be unique")
     if len(paths) != len(set(paths)):
@@ -239,6 +256,8 @@ def resolve_manifest(
     """Resolve profile closure and safe ownership overrides."""
 
     errors = validate_catalog(catalog)
+    if errors:
+        return None, errors
     if manifest.get("schema_version") != SCHEMA_VERSION:
         errors.append(f"manifest schema_version must be {SCHEMA_VERSION}")
     if manifest.get("foundation") != FOUNDATION_REFERENCE:
@@ -259,10 +278,21 @@ def resolve_manifest(
         for identifier, artifact in artifacts.items()
         if artifact["presence"] == "required"
         or (
-            artifact["presence"] == "profile"
-            and set(artifact["profiles"]) & set(resolved_profiles)
+            artifact["presence"] == "profile" and set(artifact["profiles"]) & set(resolved_profiles)
         )
     }
+    ignore_selection = manifest.get("gitignore")
+    if "gitignore" in manifest:
+        if "gitignore" not in selected_artifacts:
+            errors.append("manifest gitignore requires the selected gitignore artifact")
+        else:
+            errors.extend(
+                foundation_ignore.validate_selection(
+                    ignore_selection,
+                    selected_artifacts["gitignore"]["composition"],
+                    resolved_profiles,
+                )
+            )
     overrides = manifest.get("overrides")
     if not isinstance(overrides, list):
         errors.append("overrides must be an array")
@@ -324,7 +354,7 @@ def resolve_manifest(
         for artifact in sorted(catalog["artifacts"], key=lambda artifact: artifact["id"])
         if artifact["presence"] == "optional"
     ]
-    return {
+    resolved = {
         "schema_version": SCHEMA_VERSION,
         "foundation": FOUNDATION_REFERENCE,
         "repository": repository,
@@ -332,7 +362,23 @@ def resolve_manifest(
         "artifacts": resolved_artifacts,
         "optional_artifacts": optional_artifacts,
         "repository_owned": {key: repository_owned[key] for key in sorted(repository_owned)},
-    }, []
+    }
+    if ignore_selection is not None:
+        resolved["gitignore"] = {
+            "scopes": sorted(ignore_selection["scopes"], key=lambda scope: scope["root"])
+        }
+    return resolved, []
+
+
+def plan_gitignore(
+    catalog: dict[str, Any], manifest: dict[str, Any], source_root: Path
+) -> tuple[dict[str, Any] | None, list[str]]:
+    """Resolve and compose proposed ignore files without adopting them."""
+    resolved, errors = resolve_manifest(catalog, manifest)
+    if errors:
+        return None, errors
+    assert resolved is not None
+    return foundation_ignore.compose(catalog, resolved, source_root)
 
 
 def render_resolved(resolved: dict[str, Any]) -> str:
@@ -363,6 +409,26 @@ def render_inventory(catalog: dict[str, Any]) -> str:
             f"| `{artifact['path']}` | {artifact['category']} | {artifact['presence']} | "
             f"{artifact['ownership']} | {profiles} | {description} |"
         )
+    for artifact in catalog["artifacts"]:
+        if "composition" not in artifact:
+            continue
+        definition = artifact["composition"]
+        lines.extend(
+            [
+                "",
+                "## Gitignore composition sources",
+                "",
+                f"Sources are owned by `{catalog['owner']}`; they are not required consumer paths.",
+                "",
+                "| ID | Profile | Source path | SHA-256 |",
+                "| --- | --- | --- | --- |",
+            ]
+        )
+        for source in [definition["baseline"], *definition["overlays"]]:
+            lines.append(
+                f"| `{source['id']}` | {source.get('profile', 'all declared scopes')} | "
+                f"`{source['path']}` | `{source['sha256']}` |"
+            )
     lines.extend(
         [
             "",
@@ -389,7 +455,7 @@ def render_egolint_contract(resolved: dict[str, Any], source_revision: str) -> s
     lines = [
         "schema-version = 1",
         'id = "empathy-universal-foundation"',
-        'version = "1.0.0"',
+        f'version = "{SCHEMA_VERSION}"',
         'profile = "empathy/golden-foundation"',
         "provisional = false",
         "",
@@ -472,6 +538,11 @@ def build_parser() -> argparse.ArgumentParser:
         subparser.add_argument("--manifest", type=Path, required=True)
         subparser.add_argument("--source-revision", required=True)
         subparser.add_argument("--output", type=Path, required=True)
+    for command in ("plan-gitignore", "check-gitignore-plan"):
+        subparser = subparsers.add_parser(command)
+        subparser.add_argument("--manifest", type=Path, required=True)
+        subparser.add_argument("--source-root", type=Path, default=Path())
+        subparser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -515,6 +586,29 @@ def main(argv: list[str] | None = None) -> int:
             print(f"foundation manifest validation failed: {error}", file=sys.stderr)
         return 1
     assert resolved is not None
+    if arguments.command in {"plan-gitignore", "check-gitignore-plan"}:
+        if arguments.output.suffix != ".json":
+            print(
+                "gitignore plan output must be a JSON file, not a consumer ignore file",
+                file=sys.stderr,
+            )
+            return 2
+        plan, errors = foundation_ignore.compose(catalog, resolved, arguments.source_root)
+        if errors:
+            for error in errors:
+                print(f"gitignore planning failed: {error}", file=sys.stderr)
+            return 1
+        assert plan is not None
+        rendered = render_resolved(plan)
+        if arguments.command == "plan-gitignore":
+            _write(arguments.output, rendered)
+            print(f"wrote gitignore plan: {arguments.output}")
+            return 0
+        if not _check(arguments.output, rendered):
+            print(f"generated gitignore plan is stale: {arguments.output}", file=sys.stderr)
+            return 1
+        print(f"generated gitignore plan current: {arguments.output}")
+        return 0
     if arguments.command == "validate-manifest":
         print(
             f"foundation manifest valid: {len(resolved['profiles'])} profiles, "

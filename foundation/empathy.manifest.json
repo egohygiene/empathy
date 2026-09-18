@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "repository": "egohygiene/empathy",
-  "foundation": "empathy/repository-foundation@1.0.0",
+  "foundation": "empathy/repository-foundation@1.1.0",
   "selected_profiles": [
     "agent-context",
     "community-health",
@@ -21,6 +21,15 @@
       "mode": "preserve"
     }
   ],
+  "gitignore": {
+    "scopes": [
+      {
+        "root": ".",
+        "overlays": ["rust-build"],
+        "local_additions": ""
+      }
+    ]
+  },
   "repository_owned": {
     "display_name": "Empathy",
     "description": "Golden repository baseline and integration consumer for Ego Hygiene",

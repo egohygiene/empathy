@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "id": "empathy/repository-foundation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "owner": "egohygiene/empathy",
   "holon_contract": {
     "owner": "egohygiene/holon",
@@ -168,7 +168,23 @@
       "profiles": [],
       "executable": false,
       "markers": [],
-      "description": "Repository-specific generated and local-state exclusions"
+      "description": "Repository-owned exclusions with explicit, scoped baseline composition",
+      "composition": {
+        "format": "empathy.gitignore/v1",
+        "baseline": {
+          "id": "universal",
+          "path": "foundation/ignore/universal.gitignore",
+          "sha256": "79280ac4f3147ead97a0b21b01f40241238f08fa5d63abe3f81c8b64e7f179f0"
+        },
+        "overlays": [
+          {
+            "id": "rust-build",
+            "path": "foundation/ignore/rust.gitignore",
+            "sha256": "16627c4b93c30be2aa2c977a48ee3157d0a7b8ff44e02008b9085f0bd8d94f96",
+            "profile": "language-rust"
+          }
+        ]
+      }
     },
     {
       "id": "taskfile",
@@ -484,6 +500,12 @@
     { "id": "license_expression", "type": "string", "required": true }
   ],
   "generated_outputs": [
+    {
+      "path": "foundation/contracts/empathy.gitignore-plan.json",
+      "owner": "egohygiene/empathy",
+      "source": "foundation/catalog.json + foundation/empathy.manifest.json + foundation/ignore/*",
+      "checked_in": true
+    },
     {
       "path": "docs/foundation/INVENTORY.md",
       "owner": "egohygiene/empathy",

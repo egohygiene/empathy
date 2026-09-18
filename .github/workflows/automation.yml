@@ -19,7 +19,9 @@ on:
       - "REUSE.toml"
       - "Taskfile.yml"
       - "egolint/**"
-      - "foundation/ignore/**"
+      - "foundation/**"
+      - "schemas/repository-foundation-*.schema.json"
+      - "tools/foundation*.py"
       - "tests/**"
   push:
     branches:
@@ -38,7 +40,9 @@ on:
       - "REUSE.toml"
       - "Taskfile.yml"
       - "egolint/**"
-      - "foundation/ignore/**"
+      - "foundation/**"
+      - "schemas/repository-foundation-*.schema.json"
+      - "tools/foundation*.py"
       - "tests/**"
   workflow_dispatch:
 
