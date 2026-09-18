@@ -14,19 +14,20 @@ before taking the next part. Do not close an issue from a partial PR.
 
 ## Repeatable process
 
+<!-- prettier-ignore -->
 1. **Inspect:** read live issues/PRs, instructions, architecture, decisions,
    contracts, roadmap, and any continuity record. Record the source revision and
    existing failures. Reuse an existing issue when its scope matches.
-2. **Define:** record purpose, applicability, canonical owner, content model,
+1. **Define:** record purpose, applicability, canonical owner, content model,
    permitted variation, update behavior, and validation. Choose the smallest
    reviewable outcome and identify real prerequisites.
-3. **Implement and prove:** change the canonical source and add meaningful
+1. **Implement and prove:** change the canonical source and add meaningful
    behavioral checks. Include both required behavior and content that must
    remain usable. Update affected projections only through their generators.
-4. **Review and checkpoint:** inspect the whole diff, run relevant checks, link
+1. **Review and checkpoint:** inspect the whole diff, run relevant checks, link
    the PR, distinguish new failures from existing ones, and record incomplete
    acceptance criteria and the exact next action. Keep the epic ledger current.
-5. **Resume after merge:** reread review decisions and live default branches;
+1. **Resume after merge:** reread review decisions and live default branches;
    confirm what actually landed. Update the checkpoint and continue to the
    next bounded part. Adopt in Filament only after the upstream contract is ready.
 
