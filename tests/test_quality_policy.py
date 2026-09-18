@@ -54,8 +54,10 @@ class QualityPolicyTests(unittest.TestCase):
             capture_output=True,
         )
 
-    def test_scratch_and_report_ignore_contract(self) -> None:
+    def test_reserved_scratch_and_report_ignore_contract(self) -> None:
         candidate_paths = [
+            ".tmp/scratch.txt",
+            ".cache/tool/state",
             "temp.txt",
             "nested/temp.txt",
             "temp.md",
@@ -73,10 +75,8 @@ class QualityPolicyTests(unittest.TestCase):
         self.assertEqual(
             ignored_paths,
             {
-                "temp.txt",
-                "nested/temp.txt",
-                "temp.md",
-                "nested/temp.md",
+                ".tmp/scratch.txt",
+                ".cache/tool/state",
                 ".reports/example.json",
             },
         )

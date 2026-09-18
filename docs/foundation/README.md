@@ -22,15 +22,18 @@ profiles.
 - `foundation/contracts/empathy.gitignore-plan.json` is a deterministic proposal
   with source and output hashes, not active-root adoption evidence.
 
-## Gitignore contract under review
+## Gitignore composition and golden adoption
 
 The [layered gitignore contract](gitignore/README.md) registers the universal
 baseline and a Rust overlay in foundation `1.1.0`. The manifest explicitly
 selects project roots, overlays, and repository-owned local additions. Planning
 checks source hashes and emits JSON; Holon retains filesystem materialization
-ownership. This is part 2 of
+ownership. The [root migration](gitignore/MIGRATION-03.md) adds golden-consumer
+proof in part 3 of
 [issue #82](https://github.com/egohygiene/empathy/issues/82).
-Golden-root migration and Filament adoption remain subsequent work.
+Empathy's active root now equals its generated plan; Filament adoption remains
+subsequent work. Existing nested policies are measured separately, so this does
+not claim whole-repository ignore-content conformance.
 
 The v1 schema filenames retain their major version; catalog/schema versions and
 manifest references advance together to `1.1.0`. The resolver requires an exact

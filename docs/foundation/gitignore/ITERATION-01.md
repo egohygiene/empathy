@@ -117,15 +117,46 @@ for maintainer review before beginning migration.
 - Merging this part accepts a bounded source proposal; it does not prove
   materialization, reusable CI conformance, or fleet adoption.
 
-## Next bounded part after part 2 review
+## Part 3 checkpoint: golden-root adoption
 
-Verify the part 2 merge and its review decisions, then prepare one PR to migrate
-Empathy's active root. Before that change, resolve every
-remaining audit relocation against actual project roots and keep private-material
-protection explicit and tested. Check for newly visible untracked files without
-exposing contents. Keep #82 open until its full acceptance criteria are met.
-Holon and Pace follow-ups and the Filament PR come after contract acceptance,
-as #82 requires.
+[PR #87](https://github.com/egohygiene/empathy/pull/87) merged on 2026-09-18 as
+`8e1b748c5b72c0036763e1528f1ffe14cecd99df`. Its reviewed head and completed CI
+were reverified; no additional review decisions or open Empathy PRs were present.
+The migration starts from that verified revision; subsequent report-only
+refreshes through `3e0b740a423b722790b3fb9a07f35407864b9b63` were synchronized
+before opening the PR.
+
+The [migration record](MIGRATION-03.md) explains the 80-rule composed root:
+accepted Rust/universal inputs plus evidence-backed Empathy-local exclusions.
+All 176 old rules are reconciled in 39 fixture groups, with 269 actual Git path
+expectations and the 17 existing nested ignore files present. The active root
+is checked byte-for-byte against the plan. The old blanket temp-file expectation
+is updated to the reserved scratch namespace.
+
+The path-only working-copy inspection found 62 ignored untracked files before
+migration and zero newly exposed files afterward. No ignored payload was read
+or staged. Private Apache keys, Terraform fixture state/variables, and the root
+garden overlay have narrow replacements; other private material has an explicit
+`.secrets/` storage contract. Imported nested policies and their known limits
+are recorded, not claimed conformant.
+
+This is consumer adoption of foundation `1.1.0`; the schema, catalog sources,
+inventory, and EgoLint presence projection are unaffected. The golden plan is
+regenerated from the changed manifest. Holon still owns materialization and
+EgoLint still owns reusable content conformance. Exact validation and completed
+CI belong in the linked PR and issue checkpoint. The report refresh after #87
+also exposes foundation typing/import and assertion-security debt in the full
+profile, beyond the existing pin mismatch and OSV gate. A fast PR check must
+not be described as full-profile conformance. Stop for maintainer review.
+
+## Next bounded part after part 3 review
+
+Verify the root-adoption merge and review decisions. Reconcile remaining #82
+acceptance items, including the existing validation failures and recorded
+content-conformance boundary. Prepare Filament only against an accepted,
+immutable upstream revision, with its own local facts and no copied imported
+ignore policies. Link owner-specific follow-ups where a real integration gap
+remains. Keep #82 open until its complete acceptance is satisfied.
 
 Fresh-chat entry: open the master epic, follow iteration 01 to the latest PR,
 verify whether it merged, read its review decisions and this checkpoint, then

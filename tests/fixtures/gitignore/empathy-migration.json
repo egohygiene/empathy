@@ -1,0 +1,818 @@
+{
+  "source_commit": "8e1b748c5b72c0036763e1528f1ffe14cecd99df",
+  "source_blob": "2dee7a36db8b554ee7b959da5c38c62636204980",
+  "owner": "egohygiene/empathy",
+  "adoption_scope": ".gitignore",
+  "existing_nested_ignores": [
+    ".devcontainer/.gitignore",
+    ".staging/.github/skills/azure-architecture-autopilot/.gitignore",
+    ".staging/.github/skills/draw-io-diagram-generator/scripts/.gitignore",
+    ".staging/.github/skills/excalidraw-diagram-generator/scripts/.gitignore",
+    ".staging/.github/skills/terraform-azurerm-set-diff-analyzer/scripts/.gitignore",
+    ".staging/devenvironment/containers/matchering/.gitignore",
+    ".staging/devenvironment/containers/services/api/.gitignore",
+    "beacon/.staging/latex/Academic Journals/acmart-primary/.gitignore",
+    "beacon/.staging/latex/CVs and Resumes/Awesome-CV/.gitignore",
+    "beacon/.staging/latex/CVs and Resumes/Deedy-Resume/.gitignore",
+    "beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/.gitignore",
+    "beacon/.staging/latex/Community/TeXtured/.gitignore",
+    "egolint/.gitignore",
+    "holon/packs/react-vite/template/.gitignore",
+    "mantle/.gitignore",
+    "mindgarden/.gitignore",
+    "notebooks/jupyter/.gitignore"
+  ],
+  "groups": [
+    {
+      "id": "universal",
+      "classification": "Universal",
+      "audited_rules": [
+        ".DS_Store",
+        ".AppleDouble",
+        ".LSOverride",
+        "._*",
+        "Thumbs.db",
+        "Desktop.ini",
+        "$RECYCLE.BIN/",
+        "*~",
+        "*.swp",
+        "*.swo",
+        ".cache/",
+        ".tmp/",
+        "__pycache__/",
+        ".venv/",
+        "node_modules/"
+      ],
+      "decision": "Retain the accepted universal rules at every depth.",
+      "evidence": ["foundation/ignore/universal.gitignore"],
+      "ignored": [
+        ".DS_Store",
+        "nested/Thumbs.db",
+        ".cache/tool/state",
+        ".tmp/scratch.txt",
+        "nested/.venv/state",
+        "node_modules/pkg/index.js",
+        "source/__pycache__/module.pyc"
+      ],
+      "visible": []
+    },
+    {
+      "id": "patches",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["*.bak", "*.orig", "*.rej"],
+      "decision": "Keep backups, patches, and merge residue visible for review; disposable scratch belongs in .tmp/.",
+      "evidence": ["foundation/ignore/universal.gitignore"],
+      "ignored": [".tmp/merge.rej"],
+      "visible": [
+        "fixtures/change.bak",
+        "fixtures/change.orig",
+        "fixtures/change.rej"
+      ]
+    },
+    {
+      "id": "jetbrains",
+      "classification": "Broad/ambiguous",
+      "audited_rules": [".idea/"],
+      "decision": "Replace whole-editor exclusion with the three accepted local-state rules.",
+      "evidence": ["foundation/ignore/universal.gitignore"],
+      "ignored": [
+        ".idea/workspace.xml",
+        "project/.idea/usage.statistics.xml",
+        "project/.idea/shelf/change.patch"
+      ],
+      "visible": [".idea/codeStyles/Project.xml", "project/.idea/modules.xml"]
+    },
+    {
+      "id": "other-editors",
+      "classification": "Broad/ambiguous",
+      "audited_rules": [".fleet/", ".history/"],
+      "decision": "No selected Fleet/history producer defines private local paths. Keep shared content visible; private editor exports belong in .secrets/.",
+      "evidence": ["foundation/ignore/universal.gitignore"],
+      "ignored": [".secrets/editor/history.json"],
+      "visible": [".fleet/settings.json", ".history/reviewed.txt"]
+    },
+    {
+      "id": "vscode",
+      "classification": "Broad/ambiguous",
+      "audited_rules": [".vscode/*"],
+      "decision": "Remove the directory-wide exclusion. All shared root VS Code configuration stays visible.",
+      "evidence": [".vscode/settings.json"],
+      "ignored": [],
+      "visible": [".vscode/custom-shared.json", "project/.vscode/settings.json"]
+    },
+    {
+      "id": "vscode-exceptions",
+      "classification": "Obsolete/duplicate",
+      "audited_rules": [
+        "!.vscode/extensions.json",
+        "!.vscode/launch.json",
+        "!.vscode/settings.json",
+        "!.vscode/tasks.json",
+        "!.vscode/*.code-snippets",
+        "!.vscode/cspell.json"
+      ],
+      "decision": "Remove compensation rules together with their broad parent exclusion.",
+      "evidence": [".vscode/settings.json"],
+      "ignored": [],
+      "visible": [
+        ".vscode/extensions.json",
+        ".vscode/launch.json",
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
+        ".vscode/project.code-snippets",
+        ".vscode/cspell.json"
+      ]
+    },
+    {
+      "id": "environment",
+      "classification": "Security-sensitive",
+      "audited_rules": [
+        ".env",
+        ".env.*",
+        "!.env.example",
+        "!.env.sample",
+        "!.env.template"
+      ],
+      "decision": "Retain local-environment protections and the accepted exact template suffixes.",
+      "evidence": ["foundation/ignore/universal.gitignore"],
+      "ignored": [".env", "app/.env.production", ".env.example.local"],
+      "visible": [
+        ".env.example",
+        ".env.sample",
+        ".env.template",
+        "app/.env.production.example",
+        "app/.env.production.sample",
+        "app/.env.production.template"
+      ]
+    },
+    {
+      "id": "private-material",
+      "classification": "Security-sensitive",
+      "audited_rules": [
+        "*.jks",
+        "*.key",
+        "*.keystore",
+        "*.p12",
+        "*.pfx",
+        "*.secrets.*"
+      ],
+      "decision": "Replace global extension exclusions with the actual Apache certs/**/*.key mount namespace and reserved .secrets/ storage. No other private keystore producer was found; private keystores and configuration belong in .secrets/, while reviewed fixtures stay visible.",
+      "evidence": [
+        ".staging/devenvironment/realm/ui/universal.base.yml",
+        ".staging/devenvironment/containers/services/apache/conf/httpd.template.conf"
+      ],
+      "ignored": [
+        ".staging/devenvironment/containers/services/apache/certs/development/cert.key",
+        ".staging/devenvironment/containers/services/apache/certs/rootCA.key",
+        ".secrets/signing.jks",
+        ".secrets/service.key",
+        ".secrets/signing.keystore",
+        ".secrets/client.p12",
+        ".secrets/client.pfx",
+        ".secrets/deploy.secrets.json"
+      ],
+      "visible": [
+        "fixtures/public.key",
+        "fixtures/example.jks",
+        "fixtures/example.keystore",
+        "fixtures/example.p12",
+        "fixtures/example.pfx",
+        "fixtures/example.secrets.json",
+        ".staging/devenvironment/containers/services/apache/certs/development/cert.crt",
+        ".staging/devenvironment/containers/services/apache/certs/rootCA.pem"
+      ]
+    },
+    {
+      "id": "scanner-baseline",
+      "classification": "Obsolete/duplicate",
+      "audited_rules": ["!.secrets.baseline"],
+      "decision": "The scanner baseline no longer needs a negation after the broad secrets-extension rule is removed.",
+      "evidence": [".secrets.baseline"],
+      "ignored": [],
+      "visible": [".secrets.baseline"]
+    },
+    {
+      "id": "private-namespace",
+      "classification": "Security-sensitive",
+      "audited_rules": [".secrets/"],
+      "decision": "Retain .secrets/ at every depth; even template-looking names inside it remain private.",
+      "evidence": ["foundation/ignore/universal.gitignore"],
+      "ignored": [".secrets/.env.example", "nested/.secrets/private.txt"],
+      "visible": []
+    },
+    {
+      "id": "scratch-and-logs",
+      "classification": "Broad/ambiguous",
+      "audited_rules": [
+        "*.log",
+        "*.pid",
+        "*.seed",
+        "coverage/",
+        "temp/",
+        "temp.md",
+        "temp.txt",
+        "tmp/"
+      ],
+      "decision": "Keep arbitrary logs, process fixtures, coverage evidence, and temp-named source visible. Local disposable data uses .cache/, .tmp/, and .reports/.",
+      "evidence": [".tasks/quality.yml", ".reports/README.md"],
+      "ignored": [".cache/tool/runtime.pid", ".tmp/debug.log"],
+      "visible": [
+        "fixtures/reference.log",
+        "fixtures/reference.pid",
+        "fixtures/reference.seed",
+        "coverage/reviewed.json",
+        "temp/source.txt",
+        "tmp/source.txt",
+        "temp.md",
+        "temp.txt",
+        "nested/temp.md",
+        "nested/temp.txt"
+      ]
+    },
+    {
+      "id": "reports",
+      "classification": "Repository-local",
+      "audited_rules": [
+        ".reports/*",
+        "!.reports/README.md",
+        "!.reports/egolint/",
+        ".reports/egolint/*",
+        "!.reports/egolint/architecture/",
+        "!.reports/egolint/architecture/README.md",
+        "!.reports/egolint/architecture/lint-architecture.svg",
+        "!.reports/megalinter/",
+        ".reports/megalinter/*",
+        "!.reports/megalinter/remediation.md"
+      ],
+      "decision": "Retain all ten existing root report rules with explicit anchoring. The trusted report publisher may force-add its generated snapshots under its separate contract.",
+      "evidence": [".reports/README.md", ".github/workflows/megalinter.yml"],
+      "ignored": [
+        ".reports/raw.json",
+        ".reports/osv/raw.json",
+        ".reports/egolint/raw.json",
+        ".reports/megalinter/raw.json"
+      ],
+      "visible": [
+        ".reports/README.md",
+        ".reports/egolint/architecture/README.md",
+        ".reports/egolint/architecture/lint-architecture.svg",
+        ".reports/megalinter/remediation.md",
+        "examples/.reports/reviewed.json"
+      ]
+    },
+    {
+      "id": "intelligence",
+      "classification": "Repository-local",
+      "audited_rules": ["/docs/generated/"],
+      "decision": "Retain the explicitly configured root repository-intelligence output directory.",
+      "evidence": [".github/workflows/repository-intelligence.yml"],
+      "ignored": ["docs/generated/tree.json"],
+      "visible": ["docs/reviewed.md", "examples/docs/generated/reviewed.md"]
+    },
+    {
+      "id": "garden",
+      "classification": "Profile-specific",
+      "audited_rules": [".garden.local/", ".garden/.index/"],
+      "decision": "Retain the selected garden's private overlay and generated index at their declared root paths.",
+      "evidence": [".garden/garden.yaml", ".garden/README.md"],
+      "ignored": [".garden.local/private.md", ".garden/.index/catalog.json"],
+      "visible": [".garden/home.md", ".garden/provenance/reviewed.json"]
+    },
+    {
+      "id": "obsidian",
+      "classification": "Profile-specific",
+      "audited_rules": [".obsidian/plugins/", ".obsidian/workspace*.json"],
+      "decision": "Retain device workspace and plugin payload exclusions at the selected root vault; shareable settings remain visible.",
+      "evidence": [".obsidian/README.md"],
+      "ignored": [
+        ".obsidian/workspace.json",
+        ".obsidian/workspace-mobile.json",
+        ".obsidian/plugins/local/data.json"
+      ],
+      "visible": [".obsidian/app.json", ".obsidian/snippets/mindgarden.css"]
+    },
+    {
+      "id": "python-fixtures",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["*.py[cod]", "coverage.xml", "htmlcov/", "venv/"],
+      "decision": "Remove global bytecode/binary, coverage-output, and venv-name patterns. Modern Python bytecode and .venv remain protected by the baseline; imported project-local policies remain in force.",
+      "evidence": ["pyproject.toml", "foundation/ignore/universal.gitignore"],
+      "ignored": ["tools/__pycache__/foundation.pyc"],
+      "visible": [
+        "fixtures/reference.pyc",
+        "fixtures/reference.pyo",
+        "fixtures/reference.pyd",
+        "coverage.xml",
+        "htmlcov/reviewed.html",
+        "venv/source.py"
+      ]
+    },
+    {
+      "id": "python-tools",
+      "classification": "Profile-specific",
+      "audited_rules": [
+        "*$py.class",
+        ".coverage",
+        ".coverage.*",
+        ".dmypy.json",
+        ".hypothesis/",
+        ".ipynb_checkpoints/",
+        ".mypy_cache/",
+        ".nox/",
+        ".pyre/",
+        ".pytest_cache/",
+        ".pytype/",
+        ".ruff_cache/",
+        ".tox/",
+        "pip-wheel-metadata/",
+        "site-packages/"
+      ],
+      "decision": "Scope the observed Ruff cache and configured pytest project to the root. Other root coverage/build/cache producers are not selected; canonical tooling uses .cache/. Existing imported Python ignore files retain their local rules.",
+      "evidence": [
+        "pyproject.toml",
+        "egolint/.config/lint/python/ruff.toml",
+        ".staging/devenvironment/containers/services/api/.gitignore"
+      ],
+      "ignored": [
+        ".ruff_cache/state",
+        ".pytest_cache/state",
+        ".staging/devenvironment/containers/services/api/.pytest_cache/state"
+      ],
+      "visible": [
+        "fixtures/example$py.class",
+        "fixtures/.coverage",
+        "fixtures/.coverage.sample",
+        "fixtures/.dmypy.json",
+        "examples/.hypothesis/reviewed",
+        "examples/.ipynb_checkpoints/reviewed.ipynb",
+        "examples/.mypy_cache/reviewed",
+        "examples/.nox/reviewed",
+        "examples/.pyre/reviewed",
+        "examples/.pytype/reviewed",
+        "examples/.tox/reviewed",
+        "pip-wheel-metadata/reviewed.txt",
+        "site-packages/source.py"
+      ]
+    },
+    {
+      "id": "node-tools",
+      "classification": "Profile-specific",
+      "audited_rules": [
+        ".npm/",
+        ".pnpm-store/",
+        ".yarn/install-state.gz",
+        ".yarn/unplugged/",
+        ".next/",
+        ".nuxt/",
+        ".parcel-cache/",
+        ".svelte-kit/",
+        ".turbo/",
+        ".vercel/",
+        ".vite/",
+        ".vitepress/cache/",
+        ".vuepress/.cache/",
+        ".vuepress/dist/",
+        ".webpack/",
+        "*.tsbuildinfo",
+        "storybook-static/"
+      ],
+      "decision": "Root package manifests declare no executable build producer; npm tasks explicitly cache in .cache/npm. Keep unselected framework state and reviewed build fixtures visible. The imported Holon template retains its own web-output rules. Baseline-reserved names such as .cache/ remain ignored at every depth.",
+      "evidence": [
+        "package.json",
+        ".tasks/quality.yml",
+        "holon/packs/react-vite/template/.gitignore"
+      ],
+      "ignored": [
+        ".cache/npm/package",
+        "holon/packs/react-vite/template/apps/web/dist/index.js",
+        "examples/.vuepress/.cache/reviewed"
+      ],
+      "visible": [
+        "examples/.npm/reviewed",
+        "examples/.pnpm-store/reviewed",
+        "examples/.yarn/install-state.gz",
+        "examples/.yarn/unplugged/reviewed",
+        "examples/.next/source",
+        "examples/.nuxt/source",
+        "examples/.parcel-cache/reviewed",
+        "examples/.svelte-kit/source",
+        "examples/.turbo/reviewed",
+        "examples/.vercel/reviewed",
+        "examples/.vite/reviewed",
+        "examples/.vitepress/cache/reviewed",
+        "examples/.vuepress/dist/source",
+        "examples/.webpack/reviewed",
+        "fixtures/reference.tsbuildinfo",
+        "storybook-static/reviewed.html"
+      ]
+    },
+    {
+      "id": "yarn",
+      "classification": "Broad/ambiguous",
+      "audited_rules": [".yarn/cache/"],
+      "decision": "Keep Yarn Zero-Install caches trackable; no root Yarn installation policy declares them disposable.",
+      "evidence": ["package.json"],
+      "ignored": [],
+      "visible": [".yarn/cache/reviewed-package.zip"]
+    },
+    {
+      "id": "rust",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["target/"],
+      "decision": "Use rust-build at the root; local rules protect beacon and the staged Realm Cargo project. EgoLint's existing nested ignore owns its workspace output. Other target directories stay visible outside inherited nested exclusions.",
+      "evidence": [
+        "Cargo.toml",
+        "beacon/Cargo.toml",
+        ".staging/devenvironment/realm/Cargo.toml",
+        "egolint/.gitignore"
+      ],
+      "ignored": [
+        "target/debug/program",
+        "beacon/target/debug/program",
+        ".staging/devenvironment/realm/target/debug/program",
+        "egolint/target/debug/program"
+      ],
+      "visible": [
+        "examples/target/source.rs",
+        "beacon/examples/target/source.rs",
+        "Cargo.lock",
+        "beacon/Cargo.lock",
+        "egolint/Cargo.lock"
+      ]
+    },
+    {
+      "id": "raku",
+      "classification": "Profile-specific",
+      "audited_rules": ["**/.precomp/"],
+      "decision": "Limit precompilation-cache exclusion to the executable Raku fixture, including its module directories.",
+      "evidence": ["egolint/tests/fixtures/raku/META6.json"],
+      "ignored": [
+        "egolint/tests/fixtures/raku/.precomp/cache",
+        "egolint/tests/fixtures/raku/lib/.precomp/cache"
+      ],
+      "visible": ["examples/.precomp/reviewed.txt"]
+    },
+    {
+      "id": "dart-flutter",
+      "classification": "Profile-specific",
+      "audited_rules": [
+        ".dart_tool/",
+        ".flutter-plugins",
+        ".flutter-plugins-dependencies",
+        ".packages",
+        ".pub-cache/",
+        ".pub/",
+        "**/ios/Flutter/.last_build_id"
+      ],
+      "decision": "The Dart analyzer fixture owns .dart_tool and legacy .packages. No Flutter application is selected; Flutter-specific state is not excluded globally.",
+      "evidence": ["egolint/tests/fixtures/dart-analyzer/pubspec.yaml"],
+      "ignored": [
+        "egolint/tests/fixtures/dart-analyzer/.dart_tool/package_config.json",
+        "egolint/tests/fixtures/dart-analyzer/.packages"
+      ],
+      "visible": [
+        "examples/.dart_tool/reviewed",
+        "fixtures/.flutter-plugins",
+        "fixtures/.flutter-plugins-dependencies",
+        "examples/.pub-cache/reviewed",
+        "examples/.pub/reviewed",
+        "examples/ios/Flutter/.last_build_id",
+        "egolint/tests/fixtures/dart-analyzer/pubspec.lock"
+      ]
+    },
+    {
+      "id": "api-docs",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["**/doc/api/"],
+      "decision": "Keep API documentation visible; no selected Flutter documentation-output producer exists.",
+      "evidence": ["egolint/tests/fixtures/dart-analyzer/pubspec.yaml"],
+      "ignored": [],
+      "visible": ["doc/api/reviewed.md", "examples/doc/api/reviewed.md"]
+    },
+    {
+      "id": "jvm-caches",
+      "classification": "Profile-specific",
+      "audited_rules": [
+        ".gradle/",
+        ".cxx/",
+        ".externalNativeBuild/",
+        "**/.gradletasknamecache"
+      ],
+      "decision": "No Gradle/Android build manifest is present in the tracked inventory. Keep unselected paths visible; Java lint fixtures are source, not a selected application build.",
+      "evidence": ["egolint/tests/fixtures/pmd/GreetingService.java"],
+      "ignored": [],
+      "visible": [
+        "examples/.gradle/reviewed",
+        "examples/.cxx/reviewed",
+        "examples/.externalNativeBuild/reviewed",
+        "fixtures/.gradletasknamecache"
+      ]
+    },
+    {
+      "id": "jvm-private",
+      "classification": "Security-sensitive",
+      "audited_rules": ["**/local.properties", "*.hprof"],
+      "decision": "No local.properties producer exists. The imported IDE configuration writes heap dumps to the user's .cache directory outside the checkout. Any private property files or captured dumps kept in this repository must use .secrets/ or .cache/, not arbitrary source paths.",
+      "evidence": [".staging/devenvironment/realm/idea64.vmoptions"],
+      "ignored": [
+        ".secrets/android/local.properties",
+        ".cache/.idea/java_error_in_idea.hprof",
+        ".secrets/diagnostics/private.hprof"
+      ],
+      "visible": ["fixtures/local.properties", "fixtures/synthetic.hprof"]
+    },
+    {
+      "id": "android-binaries",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["*.aab", "*.apk", "*.dex"],
+      "decision": "No Android build is selected; allow reviewed package/binary fixtures.",
+      "evidence": ["egolint/tests/fixtures/dart-analyzer/pubspec.yaml"],
+      "ignored": [],
+      "visible": [
+        "fixtures/reference.aab",
+        "fixtures/reference.apk",
+        "fixtures/reference.dex"
+      ]
+    },
+    {
+      "id": "apple-state",
+      "classification": "Profile-specific",
+      "audited_rules": [
+        "DerivedData/",
+        "*.xcuserstate",
+        "**/*.xcodeproj/xcuserdata/",
+        "**/*.xcworkspace/xcuserdata/"
+      ],
+      "decision": "No Xcode project is present in the tracked inventory. Keep reviewed templates and fixtures visible; future selected builds must declare their own output scope.",
+      "evidence": ["docs/foundation/gitignore/MIGRATION-03.md"],
+      "ignored": [],
+      "visible": [
+        "examples/DerivedData/source.txt",
+        "fixtures/reviewed.xcuserstate",
+        "examples/App.xcodeproj/xcuserdata/reviewed",
+        "examples/App.xcworkspace/xcuserdata/reviewed"
+      ]
+    },
+    {
+      "id": "apple-packages",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["*.xcarchive", "Pods/"],
+      "decision": "No selected CocoaPods/archive-output producer exists; preserve reviewed dependencies and archives.",
+      "evidence": ["docs/foundation/gitignore/MIGRATION-03.md"],
+      "ignored": [],
+      "visible": ["Pods/source.txt", "fixtures/reviewed.xcarchive/Info.plist"]
+    },
+    {
+      "id": "dotnet-ide",
+      "classification": "Profile-specific",
+      "audited_rules": ["*.suo", "*.userosscache", "*.sln.docstates"],
+      "decision": "The imported CacheGenerator project is a CLI build; no selected Visual Studio solution produces these sidecars. Keep fixtures visible; private editor exports belong in .secrets/.",
+      "evidence": [
+        ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj"
+      ],
+      "ignored": [".secrets/editor/private.suo"],
+      "visible": [
+        "fixtures/reviewed.suo",
+        "fixtures/reviewed.userosscache",
+        "fixtures/reviewed.sln.docstates"
+      ]
+    },
+    {
+      "id": "dotnet-build",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["*.user", "[Bb]in/", "[Oo]bj/", "TestResults/"],
+      "decision": "Scope bin/ and obj/ to the one imported .NET build project. Keep unrelated source, reviewed user-state fixtures, and results visible.",
+      "evidence": [
+        ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj"
+      ],
+      "ignored": [
+        ".staging/.github/skills/winmd-api-search/scripts/cache-generator/bin/program.dll",
+        ".staging/.github/skills/winmd-api-search/scripts/cache-generator/obj/cache"
+      ],
+      "visible": [
+        "bin/source.sh",
+        "obj/source.txt",
+        "Bin/source.txt",
+        "Obj/source.txt",
+        "TestResults/reviewed.json",
+        "fixtures/reviewed.user"
+      ]
+    },
+    {
+      "id": "mantle-source",
+      "classification": "Repository-local",
+      "audited_rules": [
+        "!mantle/bin/",
+        "!mantle/bin/**",
+        "!mantle/tests/bin/",
+        "!mantle/tests/bin/**"
+      ],
+      "decision": "Remove the four compensation rules after global bin/ exclusion is removed; Mantle public CLI and test source stays visible.",
+      "evidence": ["mantle/.gitignore"],
+      "ignored": [],
+      "visible": [
+        "mantle/bin/public-command",
+        "mantle/tests/bin/public-command.bats"
+      ]
+    },
+    {
+      "id": "build-packages",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["**/build/", "**/dist/", "**/out/", "*.whl"],
+      "decision": "Remove blanket build/dist/out and wheel exclusions. Root package.json has dist export declarations but no build script. Imported web/API projects retain their nested output rules; reviewed fixtures elsewhere remain visible.",
+      "evidence": [
+        "package.json",
+        "holon/packs/react-vite/template/.gitignore",
+        ".staging/devenvironment/containers/services/api/.gitignore"
+      ],
+      "ignored": [
+        "holon/packs/react-vite/template/packages/ui/dist/index.js",
+        ".staging/devenvironment/containers/services/api/build/generated"
+      ],
+      "visible": [
+        "build/tool.py",
+        "dist/source.js",
+        "out/source.txt",
+        "nested/build/tool.sh",
+        "fixtures/reviewed.whl"
+      ]
+    },
+    {
+      "id": "python-packaging",
+      "classification": "Profile-specific",
+      "audited_rules": ["*.egg-info/"],
+      "decision": "Root Python is not a packaged application (Poetry package-mode=false). Retain existing imported packaging ignores, but do not hide arbitrary metadata fixtures globally.",
+      "evidence": [
+        "pyproject.toml",
+        ".staging/.github/skills/excalidraw-diagram-generator/scripts/.gitignore"
+      ],
+      "ignored": [
+        ".staging/.github/skills/excalidraw-diagram-generator/scripts/example.egg-info/PKG-INFO"
+      ],
+      "visible": ["fixtures/reviewed.egg-info/PKG-INFO"]
+    },
+    {
+      "id": "go",
+      "classification": "Broad/ambiguous",
+      "audited_rules": ["*.test", "coverage.out"],
+      "decision": "Go source/vulnerability fixtures declare no test-binary or coverage producer. Keep reviewed binaries and coverage visible; disposable runs use .cache/ or .reports/.",
+      "evidence": ["egolint/tests/fixtures/govulncheck/go.mod"],
+      "ignored": [".reports/go/coverage.out"],
+      "visible": ["fixtures/reviewed.test", "coverage.out", "vendor/source.go"]
+    },
+    {
+      "id": "iac-caches",
+      "classification": "Profile-specific",
+      "audited_rules": [".terraform/", ".pulumi/", ".serverless/", ".aws-sam/"],
+      "decision": "Protect .terraform only at the three checked-in Terraform fixture roots. No Pulumi, Serverless, or SAM project is selected; private state for future tools must stay in .secrets/ or an explicitly declared scope.",
+      "evidence": [
+        "egolint/tests/fixtures/kics/terraform/main.tf",
+        "egolint/tests/fixtures/tflint/main.tf",
+        "egolint/tests/fixtures/negative/terraform-fmt/unformatted.tf"
+      ],
+      "ignored": [
+        "egolint/tests/fixtures/kics/terraform/.terraform/provider",
+        "egolint/tests/fixtures/tflint/.terraform/provider",
+        "egolint/tests/fixtures/negative/terraform-fmt/.terraform/provider"
+      ],
+      "visible": [
+        "examples/.terraform/reviewed",
+        "examples/.pulumi/reviewed",
+        "examples/.serverless/reviewed",
+        "examples/.aws-sam/reviewed"
+      ]
+    },
+    {
+      "id": "iac-private",
+      "classification": "Security-sensitive",
+      "audited_rules": [
+        "*.tfstate",
+        "*.tfstate.*",
+        "*.tfvars",
+        "*.tfvars.json"
+      ],
+      "decision": "Replace global extension rules with the default private state/lock, plan, and auto-loaded variable names at each Terraform fixture. Nondefault private files must use .secrets/; reviewed examples outside these exact names/scopes stay visible.",
+      "evidence": [
+        "egolint/tests/fixtures/kics/terraform/main.tf",
+        "egolint/tests/fixtures/tflint/main.tf",
+        "egolint/tests/fixtures/negative/terraform-fmt/unformatted.tf"
+      ],
+      "ignored": [
+        "egolint/tests/fixtures/kics/terraform/terraform.tfstate",
+        "egolint/tests/fixtures/kics/terraform/terraform.tfstate.backup",
+        "egolint/tests/fixtures/kics/terraform/.terraform.tfstate.lock.info",
+        "egolint/tests/fixtures/kics/terraform/terraform.tfvars",
+        "egolint/tests/fixtures/kics/terraform/terraform.tfvars.json",
+        "egolint/tests/fixtures/kics/terraform/private.auto.tfvars",
+        "egolint/tests/fixtures/kics/terraform/private.auto.tfvars.json",
+        "egolint/tests/fixtures/kics/terraform/private.tfplan",
+        "egolint/tests/fixtures/tflint/terraform.tfstate",
+        "egolint/tests/fixtures/tflint/terraform.tfstate.backup",
+        "egolint/tests/fixtures/tflint/.terraform.tfstate.lock.info",
+        "egolint/tests/fixtures/tflint/terraform.tfvars",
+        "egolint/tests/fixtures/tflint/terraform.tfvars.json",
+        "egolint/tests/fixtures/tflint/private.auto.tfvars",
+        "egolint/tests/fixtures/tflint/private.auto.tfvars.json",
+        "egolint/tests/fixtures/tflint/private.tfplan",
+        "egolint/tests/fixtures/negative/terraform-fmt/terraform.tfstate",
+        "egolint/tests/fixtures/negative/terraform-fmt/terraform.tfstate.backup",
+        "egolint/tests/fixtures/negative/terraform-fmt/.terraform.tfstate.lock.info",
+        "egolint/tests/fixtures/negative/terraform-fmt/terraform.tfvars",
+        "egolint/tests/fixtures/negative/terraform-fmt/terraform.tfvars.json",
+        "egolint/tests/fixtures/negative/terraform-fmt/private.auto.tfvars",
+        "egolint/tests/fixtures/negative/terraform-fmt/private.auto.tfvars.json",
+        "egolint/tests/fixtures/negative/terraform-fmt/private.tfplan",
+        ".secrets/infra/custom.tfvars",
+        ".secrets/infra/custom.tfstate"
+      ],
+      "visible": [
+        "fixtures/reviewed.tfstate",
+        "fixtures/reviewed.tfstate.example",
+        "fixtures/reviewed.tfvars",
+        "fixtures/reviewed.tfvars.json",
+        "egolint/tests/fixtures/tflint/terraform.tfvars.example"
+      ]
+    },
+    {
+      "id": "iac-example",
+      "classification": "Obsolete/duplicate",
+      "audited_rules": ["!*.tfvars.example"],
+      "decision": "Remove the redundant example negation: the old tfvars patterns never matched this suffix. Examples remain visible.",
+      "evidence": ["docs/foundation/gitignore/RULE_AUDIT.md"],
+      "ignored": [],
+      "visible": ["infra/terraform.tfvars.example"]
+    },
+    {
+      "id": "tex",
+      "classification": "Broad/ambiguous",
+      "audited_rules": [
+        "*.aux",
+        "*.bbl",
+        "*.bcf",
+        "*.blg",
+        "*.fdb_latexmk",
+        "*.fls",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.idx",
+        "*.ilg",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.nav",
+        "*.out.ps",
+        "*.run.xml",
+        "*.snm",
+        "*.synctex.gz",
+        "*.toc",
+        "*.vrb",
+        "_minted*/"
+      ],
+      "decision": "No root publication build is selected. The staged paper template already writes output/auxiliary files to .cache; imported TeX projects retain their own ignore files. Preserve reviewed bibliography, output, and binary fixtures elsewhere.",
+      "evidence": [
+        ".staging/templates/paper/.latexmkrc",
+        "beacon/.staging/latex/Academic Journals/acmart-primary/.gitignore"
+      ],
+      "ignored": [".staging/templates/paper/.cache/aux/main.aux"],
+      "visible": [
+        "fixtures/reviewed.aux",
+        "fixtures/reviewed.bbl",
+        "fixtures/reviewed.bcf",
+        "fixtures/reviewed.blg",
+        "fixtures/reviewed.fdb_latexmk",
+        "fixtures/reviewed.fls",
+        "fixtures/reviewed.glg",
+        "fixtures/reviewed.glo",
+        "fixtures/reviewed.gls",
+        "fixtures/reviewed.idx",
+        "fixtures/reviewed.ilg",
+        "fixtures/reviewed.ind",
+        "fixtures/reviewed.lof",
+        "fixtures/reviewed.lot",
+        "fixtures/reviewed.nav",
+        "fixtures/reviewed.out.ps",
+        "fixtures/reviewed.run.xml",
+        "fixtures/reviewed.snm",
+        "fixtures/reviewed.synctex.gz",
+        "fixtures/reviewed.toc",
+        "fixtures/reviewed.vrb",
+        "_minted-review/source.txt",
+        "fixtures/reviewed.zip",
+        "fixtures/reviewed.tar.gz",
+        "fixtures/reviewed.patch",
+        "screenshots/reviewed.png",
+        "snapshots/reviewed.snap"
+      ]
+    },
+    {
+      "id": "placeholders",
+      "classification": "Obsolete/duplicate",
+      "audited_rules": ["!**/.gitkeep"],
+      "decision": "Remove the ineffective global .gitkeep negation. Placeholders are visible outside excluded parents and stay ignored inside private/generated namespaces.",
+      "evidence": ["foundation/ignore/universal.gitignore"],
+      "ignored": [".secrets/.gitkeep", "target/.gitkeep"],
+      "visible": ["empty/.gitkeep"]
+    }
+  ]
+}
