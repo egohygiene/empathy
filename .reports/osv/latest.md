@@ -1,21 +1,21 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-09-17T13-54-25Z`
+- Generated: `2026-09-18T00-53-31Z`
 - Repository: `egohygiene/empathy`
-- Commit: `60a002418304ae379d373dc2d377b5b7cf1e2ceb`
+- Commit: `8e1b748c5b72c0036763e1528f1ffe14cecd99df`
 - Severity gate: `high`
-- Duration: `13s`
+- Duration: `14s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
 | Critical | 3 |
-| High | 80 |
+| High | 81 |
 | Medium | 63 |
 | Low | 18 |
 | Unknown | 0 |
-| **Total** | **164** |
+| **Total** | **165** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 72 packages affected by 164 known vulnerabilities (3 Critical, 80 High, 63 Medium, 18 Low, 0 Unknown) from 2 ecosystems.
-159 vulnerabilities can be fixed.
+Total 73 packages affected by 165 known vulnerabilities (3 Critical, 81 High, 63 Medium, 18 Low, 0 Unknown) from 2 ecosystems.
+160 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -190,6 +190,7 @@ Total 72 packages affected by 164 known vulnerabilities (3 Critical, 80 High, 63
 | https://osv.dev/PYSEC-2026-3982 | 8.7 | PyPI | gitpython | 3.1.59 | 3.1.60 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-3983 | 7.1 | PyPI | gitpython | 3.1.59 | 3.1.60 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-3984 | 7.5 | PyPI | gitpython | 3.1.59 | 3.1.60 | egolint/uv.lock |
+| https://osv.dev/GHSA-c3mw-737p-c7g2 | 7.1 | PyPI | jupyter-server | 2.20.0 | 2.21.0 | egolint/uv.lock |
 | https://osv.dev/GHSA-3jxr-9vmj-r5cp | 7.7 | npm | brace-expansion | 1.1.12 | 1.1.16 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-f886-m6hf-6m8v | 6.5 | npm | brace-expansion | 1.1.12 | 1.1.13 | .staging/tools/emoji-precache/package-lock.json |
 | https://osv.dev/GHSA-mh99-v99m-4gvg | 7.5 | npm | brace-expansion | 1.1.12 | 1.1.17 | .staging/tools/emoji-precache/package-lock.json |

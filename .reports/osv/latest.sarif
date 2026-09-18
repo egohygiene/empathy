@@ -2656,6 +2656,42 @@
         },
         {
           "partialFingerprints": {
+            "primaryLocationLineHash": "964abc60f0b41c2d42f107ce937cab91f7be37953ef88f6136e643f874aa391f"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/egolint/uv.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'jupyter-server@2.20.0' is vulnerable to 'CVE-2026-86049' (also known as 'GHSA-c3mw-737p-c7g2')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-86049",
+          "ruleIndex": 50,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
             "primaryLocationLineHash": "b1d98ca69865274bc71135b2b0771f7cd663688e0b01d2e1dd469efe4d6fcaf8"
           },
           "attachments": [],
@@ -2686,7 +2722,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-22150",
-          "ruleIndex": 50,
+          "ruleIndex": 51,
           "stacks": [],
           "taxa": []
         },
@@ -2722,7 +2758,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 51,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -2758,7 +2794,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84363",
-          "ruleIndex": 52,
+          "ruleIndex": 53,
           "stacks": [],
           "taxa": []
         },
@@ -2794,7 +2830,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-47279",
-          "ruleIndex": 53,
+          "ruleIndex": 54,
           "stacks": [],
           "taxa": []
         },
@@ -2830,7 +2866,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 54,
+          "ruleIndex": 55,
           "stacks": [],
           "taxa": []
         },
@@ -2866,7 +2902,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54269",
-          "ruleIndex": 55,
+          "ruleIndex": 56,
           "stacks": [],
           "taxa": []
         },
@@ -2902,7 +2938,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75975",
-          "ruleIndex": 56,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -2938,7 +2974,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75975",
-          "ruleIndex": 56,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -2974,7 +3010,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-33750",
-          "ruleIndex": 57,
+          "ruleIndex": 58,
           "stacks": [],
           "taxa": []
         },
@@ -3010,7 +3046,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 58,
+          "ruleIndex": 59,
           "stacks": [],
           "taxa": []
         },
@@ -3046,7 +3082,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 59,
+          "ruleIndex": 60,
           "stacks": [],
           "taxa": []
         },
@@ -3082,7 +3118,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75899",
-          "ruleIndex": 60,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -3118,7 +3154,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75899",
-          "ruleIndex": 60,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -3154,7 +3190,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44292",
-          "ruleIndex": 61,
+          "ruleIndex": 62,
           "stacks": [],
           "taxa": []
         },
@@ -3190,7 +3226,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 62,
+          "ruleIndex": 63,
           "stacks": [],
           "taxa": []
         },
@@ -3226,7 +3262,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 62,
+          "ruleIndex": 63,
           "stacks": [],
           "taxa": []
         },
@@ -3262,7 +3298,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 63,
+          "ruleIndex": 64,
           "stacks": [],
           "taxa": []
         },
@@ -3298,7 +3334,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84364",
-          "ruleIndex": 64,
+          "ruleIndex": 65,
           "stacks": [],
           "taxa": []
         },
@@ -3334,7 +3370,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-g7r4-m6w7-qqqr",
-          "ruleIndex": 65,
+          "ruleIndex": 66,
           "stacks": [],
           "taxa": []
         },
@@ -3370,7 +3406,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-11525",
-          "ruleIndex": 66,
+          "ruleIndex": 67,
           "stacks": [],
           "taxa": []
         },
@@ -3406,7 +3442,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22036",
-          "ruleIndex": 67,
+          "ruleIndex": 68,
           "stacks": [],
           "taxa": []
         },
@@ -3442,7 +3478,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 68,
+          "ruleIndex": 69,
           "stacks": [],
           "taxa": []
         },
@@ -3478,7 +3514,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 69,
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -3514,7 +3550,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 69,
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -3550,7 +3586,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 69,
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -3586,7 +3622,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 69,
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -3622,7 +3658,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 70,
+          "ruleIndex": 71,
           "stacks": [],
           "taxa": []
         },
@@ -3658,7 +3694,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84365",
-          "ruleIndex": 71,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -3694,7 +3730,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-4068",
-          "ruleIndex": 72,
+          "ruleIndex": 73,
           "stacks": [],
           "taxa": []
         },
@@ -3730,7 +3766,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53550",
-          "ruleIndex": 73,
+          "ruleIndex": 74,
           "stacks": [],
           "taxa": []
         },
@@ -3766,7 +3802,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 74,
+          "ruleIndex": 75,
           "stacks": [],
           "taxa": []
         },
@@ -3802,7 +3838,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32630",
-          "ruleIndex": 75,
+          "ruleIndex": 76,
           "stacks": [],
           "taxa": []
         },
@@ -3838,7 +3874,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45740",
-          "ruleIndex": 76,
+          "ruleIndex": 77,
           "stacks": [],
           "taxa": []
         },
@@ -3874,7 +3910,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 77,
+          "ruleIndex": 78,
           "stacks": [],
           "taxa": []
         },
@@ -3910,7 +3946,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 78,
+          "ruleIndex": 79,
           "stacks": [],
           "taxa": []
         },
@@ -3946,7 +3982,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-76172",
-          "ruleIndex": 79,
+          "ruleIndex": 80,
           "stacks": [],
           "taxa": []
         },
@@ -3982,7 +4018,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-76172",
-          "ruleIndex": 79,
+          "ruleIndex": 80,
           "stacks": [],
           "taxa": []
         },
@@ -4018,7 +4054,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44290",
-          "ruleIndex": 80,
+          "ruleIndex": 81,
           "stacks": [],
           "taxa": []
         },
@@ -4054,7 +4090,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 81,
+          "ruleIndex": 82,
           "stacks": [],
           "taxa": []
         },
@@ -4090,7 +4126,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 82,
+          "ruleIndex": 83,
           "stacks": [],
           "taxa": []
         },
@@ -4126,7 +4162,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-15157",
-          "ruleIndex": 83,
+          "ruleIndex": 84,
           "stacks": [],
           "taxa": []
         },
@@ -4162,7 +4198,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 84,
+          "ruleIndex": 85,
           "stacks": [],
           "taxa": []
         },
@@ -4198,7 +4234,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 85,
+          "ruleIndex": 86,
           "stacks": [],
           "taxa": []
         },
@@ -4234,7 +4270,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-14257",
-          "ruleIndex": 86,
+          "ruleIndex": 87,
           "stacks": [],
           "taxa": []
         },
@@ -4270,7 +4306,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 87,
+          "ruleIndex": 88,
           "stacks": [],
           "taxa": []
         },
@@ -4306,7 +4342,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 88,
+          "ruleIndex": 89,
           "stacks": [],
           "taxa": []
         },
@@ -4342,7 +4378,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-9679",
-          "ruleIndex": 89,
+          "ruleIndex": 90,
           "stacks": [],
           "taxa": []
         },
@@ -4378,7 +4414,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44705",
-          "ruleIndex": 90,
+          "ruleIndex": 91,
           "stacks": [],
           "taxa": []
         },
@@ -4414,7 +4450,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 91,
+          "ruleIndex": 92,
           "stacks": [],
           "taxa": []
         },
@@ -4450,7 +4486,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44288",
-          "ruleIndex": 92,
+          "ruleIndex": 93,
           "stacks": [],
           "taxa": []
         },
@@ -4486,7 +4522,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 93,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -4522,7 +4558,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34043",
-          "ruleIndex": 94,
+          "ruleIndex": 95,
           "stacks": [],
           "taxa": []
         },
@@ -4558,7 +4594,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 95,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -4594,7 +4630,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2021-23337",
-          "ruleIndex": 96,
+          "ruleIndex": 97,
           "stacks": [],
           "taxa": []
         },
@@ -4630,7 +4666,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 97,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -4666,7 +4702,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-rgj7-g3m4-5g8c",
-          "ruleIndex": 98,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -4702,7 +4738,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-rgj7-g3m4-5g8c",
-          "ruleIndex": 98,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -4738,7 +4774,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 99,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -4774,7 +4810,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 99,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -4810,7 +4846,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-16729",
-          "ruleIndex": 100,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -4846,7 +4882,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-v3rj-xjv7-4jmq",
-          "ruleIndex": 101,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -4882,7 +4918,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 102,
+          "ruleIndex": 103,
           "stacks": [],
           "taxa": []
         },
@@ -4918,7 +4954,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-2229",
-          "ruleIndex": 103,
+          "ruleIndex": 104,
           "stacks": [],
           "taxa": []
         },
@@ -4954,7 +4990,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 104,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         },
@@ -4990,7 +5026,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45822",
-          "ruleIndex": 105,
+          "ruleIndex": 106,
           "stacks": [],
           "taxa": []
         },
@@ -5026,7 +5062,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 106,
+          "ruleIndex": 107,
           "stacks": [],
           "taxa": []
         },
@@ -5062,7 +5098,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-1526",
-          "ruleIndex": 107,
+          "ruleIndex": 108,
           "stacks": [],
           "taxa": []
         },
@@ -5098,7 +5134,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-12151",
-          "ruleIndex": 108,
+          "ruleIndex": 109,
           "stacks": [],
           "taxa": []
         },
@@ -5134,7 +5170,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 109,
+          "ruleIndex": 110,
           "stacks": [],
           "taxa": []
         },
@@ -5170,7 +5206,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 109,
+          "ruleIndex": 110,
           "stacks": [],
           "taxa": []
         },
@@ -5206,7 +5242,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 109,
+          "ruleIndex": 110,
           "stacks": [],
           "taxa": []
         },
@@ -5242,7 +5278,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 109,
+          "ruleIndex": 110,
           "stacks": [],
           "taxa": []
         },
@@ -5278,7 +5314,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 110,
+          "ruleIndex": 111,
           "stacks": [],
           "taxa": []
         },
@@ -5314,7 +5350,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 110,
+          "ruleIndex": 111,
           "stacks": [],
           "taxa": []
         },
@@ -5350,7 +5386,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2020-7753",
-          "ruleIndex": 111,
+          "ruleIndex": 112,
           "stacks": [],
           "taxa": []
         },
@@ -5386,7 +5422,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 112,
+          "ruleIndex": 113,
           "stacks": [],
           "taxa": []
         },
@@ -5422,7 +5458,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 113,
+          "ruleIndex": 114,
           "stacks": [],
           "taxa": []
         },
@@ -5458,7 +5494,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48712",
-          "ruleIndex": 114,
+          "ruleIndex": 115,
           "stacks": [],
           "taxa": []
         },
@@ -5494,7 +5530,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 115,
+          "ruleIndex": 116,
           "stacks": [],
           "taxa": []
         },
@@ -5530,7 +5566,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 116,
+          "ruleIndex": 117,
           "stacks": [],
           "taxa": []
         },
@@ -5566,7 +5602,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 117,
+          "ruleIndex": 118,
           "stacks": [],
           "taxa": []
         },
@@ -5602,7 +5638,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-82562",
-          "ruleIndex": 118,
+          "ruleIndex": 119,
           "stacks": [],
           "taxa": []
         },
@@ -5638,7 +5674,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-82562",
-          "ruleIndex": 118,
+          "ruleIndex": 119,
           "stacks": [],
           "taxa": []
         },
@@ -5674,7 +5710,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 119,
+          "ruleIndex": 120,
           "stacks": [],
           "taxa": []
         },
@@ -5710,7 +5746,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 120,
+          "ruleIndex": 121,
           "stacks": [],
           "taxa": []
         },
@@ -5746,7 +5782,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41242",
-          "ruleIndex": 121,
+          "ruleIndex": 122,
           "stacks": [],
           "taxa": []
         },
@@ -5782,7 +5818,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 54,
+          "ruleIndex": 55,
           "stacks": [],
           "taxa": []
         },
@@ -5818,7 +5854,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-45768",
-          "ruleIndex": 122,
+          "ruleIndex": 123,
           "stacks": [],
           "taxa": []
         },
@@ -5854,7 +5890,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 74,
+          "ruleIndex": 75,
           "stacks": [],
           "taxa": []
         },
@@ -5926,7 +5962,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 95,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -5962,7 +5998,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 113,
+          "ruleIndex": 114,
           "stacks": [],
           "taxa": []
         },
@@ -5998,7 +6034,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 93,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -6106,7 +6142,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 78,
+          "ruleIndex": 79,
           "stacks": [],
           "taxa": []
         },
@@ -6142,7 +6178,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 58,
+          "ruleIndex": 59,
           "stacks": [],
           "taxa": []
         },
@@ -6178,7 +6214,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 112,
+          "ruleIndex": 113,
           "stacks": [],
           "taxa": []
         },
@@ -6214,7 +6250,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 120,
+          "ruleIndex": 121,
           "stacks": [],
           "taxa": []
         },
@@ -6286,7 +6322,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 116,
+          "ruleIndex": 117,
           "stacks": [],
           "taxa": []
         },
@@ -6466,7 +6502,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 70,
+          "ruleIndex": 71,
           "stacks": [],
           "taxa": []
         },
@@ -6538,7 +6574,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31900",
-          "ruleIndex": 123,
+          "ruleIndex": 124,
           "stacks": [],
           "taxa": []
         },
@@ -6610,7 +6646,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-7246",
-          "ruleIndex": 124,
+          "ruleIndex": 125,
           "stacks": [],
           "taxa": []
         },
@@ -6646,7 +6682,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 97,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -6718,7 +6754,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 85,
+          "ruleIndex": 86,
           "stacks": [],
           "taxa": []
         },
@@ -6754,7 +6790,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 68,
+          "ruleIndex": 69,
           "stacks": [],
           "taxa": []
         },
@@ -6790,7 +6826,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 119,
+          "ruleIndex": 120,
           "stacks": [],
           "taxa": []
         },
@@ -6826,7 +6862,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 117,
+          "ruleIndex": 118,
           "stacks": [],
           "taxa": []
         },
@@ -6862,7 +6898,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 115,
+          "ruleIndex": 116,
           "stacks": [],
           "taxa": []
         },
@@ -6898,7 +6934,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 51,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -7006,7 +7042,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 77,
+          "ruleIndex": 78,
           "stacks": [],
           "taxa": []
         },
@@ -7222,7 +7258,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 87,
+          "ruleIndex": 88,
           "stacks": [],
           "taxa": []
         },
@@ -7258,7 +7294,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 91,
+          "ruleIndex": 92,
           "stacks": [],
           "taxa": []
         },
@@ -7294,7 +7330,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 104,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         },
@@ -7330,7 +7366,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 106,
+          "ruleIndex": 107,
           "stacks": [],
           "taxa": []
         },
@@ -7366,7 +7402,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 84,
+          "ruleIndex": 85,
           "stacks": [],
           "taxa": []
         },
@@ -7402,7 +7438,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 63,
+          "ruleIndex": 64,
           "stacks": [],
           "taxa": []
         },
@@ -7438,7 +7474,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 81,
+          "ruleIndex": 82,
           "stacks": [],
           "taxa": []
         },
@@ -7474,7 +7510,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 82,
+          "ruleIndex": 83,
           "stacks": [],
           "taxa": []
         },
@@ -7510,7 +7546,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 88,
+          "ruleIndex": 89,
           "stacks": [],
           "taxa": []
         },
@@ -7582,7 +7618,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-87817",
-          "ruleIndex": 125,
+          "ruleIndex": 126,
           "stacks": [],
           "taxa": []
         },
@@ -7618,7 +7654,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-87818",
-          "ruleIndex": 126,
+          "ruleIndex": 127,
           "stacks": [],
           "taxa": []
         },
@@ -7654,7 +7690,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-87819",
-          "ruleIndex": 127,
+          "ruleIndex": 128,
           "stacks": [],
           "taxa": []
         },
@@ -7690,7 +7726,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 59,
+          "ruleIndex": 60,
           "stacks": [],
           "taxa": []
         },
@@ -7726,7 +7762,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 102,
+          "ruleIndex": 103,
           "stacks": [],
           "taxa": []
         }
@@ -8968,6 +9004,30 @@
             },
             {
               "deprecatedIds": [
+                "CVE-2026-86049",
+                "GHSA-c3mw-737p-c7g2"
+              ],
+              "fullDescription": {
+                "markdown": "### Summary\n\nWhen a request returns a 500, `jupyter_server/log.py` logs a small JSON block of request headers. \n\nThe Referer header was copied into it as-is, so a token in the Referer URL ended up in the logs in plain text.\n\n### Impact\n\nAnyone who can read the server logs can pick tokens out of these 500 entries. Tokens end up in the Referer during normal token-based login and launch flows.\n\nAffected: all versions before 2.21.0.\n\n### PoC\n\nAny malformed request that returns a 500 works:\n\n```bash\ncurl -i -X POST \\\n  -H 'Content-Type: application/json' \\\n  -H 'Referer: http://127.0.0.1:8899/tree?token=REFERTOKEN' \\\n  --data '{\"name\":123}' \\\n  'http://127.0.0.1:8899/api/kernels?token=VALIDTOKEN'\n```\n\nThe log shows the token twice, once raw and once redacted:\n\n```\n\"Referer\": \"http://127.0.0.1:8899/tree?token=REFERTOKEN\",\n[E ... ServerApp] 500 POST /api/kernels?token=[secret] (...) referer=http://127.0.0.1:8899/tree?token=[secret]\n```\n\n### Patches\n\nFixed in 2.21.0 by 5251352. Header values are now scrubbed before the block is logged. Upgrade to 2.21.0 or later.\n\n### Workarounds\n\nLimit who can read the server logs. If you can, avoid flows that put the token in the URL.",
+                "text": "### Summary\n\nWhen a request returns a 500, `jupyter_server/log.py` logs a small JSON block of request headers. \n\nThe Referer header was copied into it as-is, so a token in the Referer URL ended up in the logs in plain text.\n\n### Impact\n\nAnyone who can read the server logs can pick tokens out of these 500 entries. Tokens end up in the Referer during normal token-based login and launch flows.\n\nAffected: all versions before 2.21.0.\n\n### PoC\n\nAny malformed request that returns a 500 works:\n\n```bash\ncurl -i -X POST \\\n  -H 'Content-Type: application/json' \\\n  -H 'Referer: http://127.0.0.1:8899/tree?token=REFERTOKEN' \\\n  --data '{\"name\":123}' \\\n  'http://127.0.0.1:8899/api/kernels?token=VALIDTOKEN'\n```\n\nThe log shows the token twice, once raw and once redacted:\n\n```\n\"Referer\": \"http://127.0.0.1:8899/tree?token=REFERTOKEN\",\n[E ... ServerApp] 500 POST /api/kernels?token=[secret] (...) referer=http://127.0.0.1:8899/tree?token=[secret]\n```\n\n### Patches\n\nFixed in 2.21.0 by 5251352. Header values are now scrubbed before the block is logged. Upgrade to 2.21.0 or later.\n\n### Workarounds\n\nLimit who can read the server logs. If you can, avoid flows that put the token in the URL."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-86049](https://osv.dev/CVE-2026-86049)**.\n\n## [GHSA-c3mw-737p-c7g2](https://osv.dev/GHSA-c3mw-737p-c7g2)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e \n\u003e When a request returns a 500, `jupyter_server/log.py` logs a small JSON block of request headers. \n\u003e \n\u003e The Referer header was copied into it as-is, so a token in the Referer URL ended up in the logs in plain text.\n\u003e \n\u003e ### Impact\n\u003e \n\u003e Anyone who can read the server logs can pick tokens out of these 500 entries. Tokens end up in the Referer during normal token-based login and launch flows.\n\u003e \n\u003e Affected: all versions before 2.21.0.\n\u003e \n\u003e ### PoC\n\u003e \n\u003e Any malformed request that returns a 500 works:\n\u003e \n\u003e ```bash\n\u003e curl -i -X POST \\\n\u003e   -H 'Content-Type: application/json' \\\n\u003e   -H 'Referer: http://127.0.0.1:8899/tree?token=REFERTOKEN' \\\n\u003e   --data '{\"name\":123}' \\\n\u003e   'http://127.0.0.1:8899/api/kernels?token=VALIDTOKEN'\n\u003e ```\n\u003e \n\u003e The log shows the token twice, once raw and once redacted:\n\u003e \n\u003e ```\n\u003e \"Referer\": \"http://127.0.0.1:8899/tree?token=REFERTOKEN\",\n\u003e [E ... ServerApp] 500 POST /api/kernels?token=[secret] (...) referer=http://127.0.0.1:8899/tree?token=[secret]\n\u003e ```\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Fixed in 2.21.0 by 5251352. Header values are now scrubbed before the block is logged. Upgrade to 2.21.0 or later.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Limit who can read the server logs. If you can, avoid flows that put the token in the URL.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | jupyter-server | 2.20.0 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-c3mw-737p-c7g2 | jupyter-server | 2.21.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-86049\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-86049](https://osv.dev/CVE-2026-86049)**.\n\n## [GHSA-c3mw-737p-c7g2](https://osv.dev/GHSA-c3mw-737p-c7g2)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Summary\n\u003e \n\u003e When a request returns a 500, `jupyter_server/log.py` logs a small JSON block of request headers. \n\u003e \n\u003e The Referer header was copied into it as-is, so a token in the Referer URL ended up in the logs in plain text.\n\u003e \n\u003e ### Impact\n\u003e \n\u003e Anyone who can read the server logs can pick tokens out of these 500 entries. Tokens end up in the Referer during normal token-based login and launch flows.\n\u003e \n\u003e Affected: all versions before 2.21.0.\n\u003e \n\u003e ### PoC\n\u003e \n\u003e Any malformed request that returns a 500 works:\n\u003e \n\u003e ```bash\n\u003e curl -i -X POST \\\n\u003e   -H 'Content-Type: application/json' \\\n\u003e   -H 'Referer: http://127.0.0.1:8899/tree?token=REFERTOKEN' \\\n\u003e   --data '{\"name\":123}' \\\n\u003e   'http://127.0.0.1:8899/api/kernels?token=VALIDTOKEN'\n\u003e ```\n\u003e \n\u003e The log shows the token twice, once raw and once redacted:\n\u003e \n\u003e ```\n\u003e \"Referer\": \"http://127.0.0.1:8899/tree?token=REFERTOKEN\",\n\u003e [E ... ServerApp] 500 POST /api/kernels?token=[secret] (...) referer=http://127.0.0.1:8899/tree?token=[secret]\n\u003e ```\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Fixed in 2.21.0 by 5251352. Header values are now scrubbed before the block is logged. Upgrade to 2.21.0 or later.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Limit who can read the server logs. If you can, avoid flows that put the token in the URL.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/egolint/uv.lock | jupyter-server | 2.20.0 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-c3mw-737p-c7g2 | jupyter-server | 2.21.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/egolint/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-86049\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-86049",
+              "name": "CVE-2026-86049",
+              "properties": {
+                "security-severity": "7.1"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-86049: Jupyter Server: 5xx request logging leaks token-bearing Referer header values",
+                "text": "CVE-2026-86049: Jupyter Server: 5xx request logging leaks token-bearing Referer header values"
+              }
+            },
+            {
+              "deprecatedIds": [
                 "CVE-2025-22150",
                 "GHSA-c76h-2ccp-4975"
               ],
@@ -9075,8 +9135,8 @@
                 "text": "### Impact\n\nLodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\nThe issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\n### Patches\n\nThis issue is patched in 4.18.0.\n\n### Workarounds\n\nNone. Upgrade to the patched version."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2025-13465",
               "name": "CVE-2025-13465",
