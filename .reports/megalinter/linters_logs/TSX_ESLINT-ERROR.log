@@ -20,7 +20,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.require (node:internal/modules/cjs/loader:1679:12)
     at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789692953029:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1789695144520:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 

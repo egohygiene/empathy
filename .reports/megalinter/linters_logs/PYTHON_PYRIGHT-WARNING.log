@@ -12369,6 +12369,15 @@ tests/test_foundation_ignore.py
   tests/test_foundation_ignore.py:337:9 - error: Type of "write" is unknown (reportUnknownMemberType)
   tests/test_foundation_ignore.py:338:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
   tests/test_foundation_ignore.py:339:9 - error: Type of "assert_paths" is unknown (reportUnknownMemberType)
+tests/test_gitignore_adoption.py
+  tests/test_gitignore_adoption.py:59:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tests/test_gitignore_adoption.py:61:35 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tests/test_gitignore_adoption.py:62:34 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
 tests/test_gitignore_baseline.py
   tests/test_gitignore_baseline.py:46:16 - error: No overloads for "run" match the provided arguments (reportCallIssue)
   tests/test_gitignore_baseline.py:46:16 - error: Return type is unknown (reportUnknownVariableType)
@@ -12783,5 +12792,5 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-9150 errors, 427 warnings, 0 informations
+9153 errors, 427 warnings, 0 informations
 

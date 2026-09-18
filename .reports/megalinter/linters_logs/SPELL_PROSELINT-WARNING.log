@@ -412,26 +412,37 @@ docs/foundation/gitignore/ITERATION-01.md:48:109: typography.symbols.sentence_sp
 docs/foundation/gitignore/ITERATION-01.md:49:124: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/ITERATION-01.md:50:127: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/ITERATION-01.md:51:124: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:12:103: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:13:99: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:14:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:15:89: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:16:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:17:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:18:98: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:20:106: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:21:79: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:60:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:61:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:62:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:62:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:62:38: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:64:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/MIGRATION-03.md:43:131: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:44:209: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:45:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:46:193: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:47:145: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:48:219: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:49:217: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:50:267: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:51:142: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:52:210: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:53:272: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/MIGRATION-03.md:54:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:13:103: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:14:99: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:15:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:16:89: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:17:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:18:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:19:98: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:21:106: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:22:87: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:61:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:62:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:63:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:63:22: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:63:38: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/foundation/gitignore/README.md:65:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/foundation/gitignore/README.md:66:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:199:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:200:36: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/RULE_AUDIT.md:31:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:67:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:201:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:202:36: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/foundation/gitignore/RULE_AUDIT.md:32:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:33:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:34:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -439,39 +450,39 @@ docs/foundation/gitignore/RULE_AUDIT.md:35:187: typography.symbols.sentence_spac
 docs/foundation/gitignore/RULE_AUDIT.md:36:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:37:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:38:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:39:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:39:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:40:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:41:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:42:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:42:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:43:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:44:211: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:45:219: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:44:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:45:211: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:46:219: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:47:198: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:48:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:47:219: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:48:198: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:49:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:50:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:51:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:52:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:53:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:54:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:54:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:55:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:56:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:57:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:58:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:59:240: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:59:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:60:240: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:61:240: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:62:240: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:63:240: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:64:240: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:65:227: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:66:172: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:67:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:65:240: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:66:227: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:67:172: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:68:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:69:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:70:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:71:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:70:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:71:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:72:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:73:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:74:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -481,20 +492,20 @@ docs/foundation/gitignore/RULE_AUDIT.md:77:231: typography.symbols.sentence_spac
 docs/foundation/gitignore/RULE_AUDIT.md:78:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:79:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:80:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:81:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:82:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:81:231: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:82:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:83:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:84:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:85:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:86:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:87:224: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:88:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:87:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:88:224: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:89:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:90:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:90:233: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:91:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:92:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:93:243: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:94:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:92:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:93:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:94:243: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:95:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:96:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:97:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -507,17 +518,17 @@ docs/foundation/gitignore/RULE_AUDIT.md:103:203: typography.symbols.sentence_spa
 docs/foundation/gitignore/RULE_AUDIT.md:104:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:105:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:106:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:107:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:108:243: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:107:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:108:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:109:243: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:110:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:110:243: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:111:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:112:243: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:113:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:114:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:112:203: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:113:243: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:114:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:115:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:116:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:117:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:116:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:117:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:118:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:119:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:120:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -532,9 +543,9 @@ docs/foundation/gitignore/RULE_AUDIT.md:128:237: typography.symbols.sentence_spa
 docs/foundation/gitignore/RULE_AUDIT.md:129:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:130:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:131:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:132:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:133:210: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:134:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:132:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:133:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:134:210: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:135:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:136:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:137:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -542,49 +553,50 @@ docs/foundation/gitignore/RULE_AUDIT.md:138:229: typography.symbols.sentence_spa
 docs/foundation/gitignore/RULE_AUDIT.md:139:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:140:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:141:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:142:181: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:142:229: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:143:181: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:144:181: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:145:181: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:146:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:147:204: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:146:181: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:147:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:148:204: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:149:204: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:150:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:151:194: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:152:213: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:153:194: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:150:204: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:151:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:152:194: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:153:213: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:154:194: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:155:194: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:156:213: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:157:172: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:158:236: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:159:172: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:156:194: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:157:213: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:158:172: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:159:236: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:160:172: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:161:236: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:161:172: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:162:236: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:163:236: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:164:234: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:164:236: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:165:234: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:166:234: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:167:234: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:168:254: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:168:234: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:169:254: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:170:254: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:171:254: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:172:254: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:173:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:173:254: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:174:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:175:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:176:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:175:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:176:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:177:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:178:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:179:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:180:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:181:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:180:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:181:206: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:182:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:183:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/RULE_AUDIT.md:206:230: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:184:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/RULE_AUDIT.md:207:230: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
