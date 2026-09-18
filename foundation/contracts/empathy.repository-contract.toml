@@ -1,12 +1,12 @@
 schema-version = 1
 id = "empathy-universal-foundation"
-version = "1.0.0"
+version = "1.1.0"
 profile = "empathy/golden-foundation"
 provisional = false
 
 [source]
 repository = "egohygiene/empathy"
-revision = "2bc9d77b23acfeb0235f2fc5deb8d0616ab1ff9a"
+revision = "ee93d0bbf7e51aeb856eb0ae40c44d0f3e2edaa1"
 revision-kind = "git-commit"
 path = "foundation/catalog.json"
 decision = "https://github.com/egohygiene/empathy/issues/62"

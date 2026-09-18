@@ -16,8 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BASELINE = ROOT / "foundation" / "ignore" / "universal.gitignore"
 
 
-class GitignoreBaselineTests(unittest.TestCase):
-    """Check untracked files in isolated repositories, independent of Empathy."""
+class GitignoreFixture(unittest.TestCase):
+    """Share isolated Git setup and assertions across ignore behavior suites."""
 
     def setUp(self) -> None:
         self.git_executable = shutil.which("git")
@@ -74,6 +74,10 @@ class GitignoreBaselineTests(unittest.TestCase):
                         f"{path}: expected return code {expected}, got {result.returncode}; "
                         f"{diagnostic.stdout or diagnostic.stderr or result.stderr}"
                     )
+
+
+class GitignoreBaselineTests(GitignoreFixture):
+    """Check untracked files against the universal baseline."""
 
     def test_operating_system_and_editor_local_state_is_ignored(self) -> None:
         self.assert_paths(

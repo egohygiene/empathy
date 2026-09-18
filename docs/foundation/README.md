@@ -18,15 +18,24 @@ profiles.
 - `docs/foundation/INVENTORY.md` is the deterministic human-readable
   inventory.
 - `foundation/contracts/empathy.repository-contract.toml` is the canonical,
-  offline EgoLint projection.
+  offline EgoLint presence/ownership projection.
+- `foundation/contracts/empathy.gitignore-plan.json` is a deterministic proposal
+  with source and output hashes, not active-root adoption evidence.
 
 ## Gitignore contract under review
 
-The [layered gitignore proposal](gitignore/README.md) records the candidate
-universal rules, the existing-rule audit, Git behavior checks, and the first
-file-contract review checkpoint. It is the first bounded part of
-[issue #82](https://github.com/egohygiene/empathy/issues/82); catalog integration
-and adoption remain subsequent work.
+The [layered gitignore contract](gitignore/README.md) registers the universal
+baseline and a Rust overlay in foundation `1.1.0`. The manifest explicitly
+selects project roots, overlays, and repository-owned local additions. Planning
+checks source hashes and emits JSON; Holon retains filesystem materialization
+ownership. This is part 2 of
+[issue #82](https://github.com/egohygiene/empathy/issues/82).
+Golden-root migration and Filament adoption remain subsequent work.
+
+The v1 schema filenames retain their major version; catalog/schema versions and
+manifest references advance together to `1.1.0`. The resolver requires an exact
+version match. Existing `1.0.0` consumers keep their pinned input and resolver
+until explicitly upgraded. The selected Holon contract stays at `1.0.0`.
 
 ## Composition boundary
 
@@ -48,6 +57,8 @@ filesystem mutation engine. Identical catalog and manifest inputs resolve to
 byte-identical JSON and EgoLint TOML. Re-resolving the checked-in Empathy
 manifest produces no diff. Holon may later consume this released catalog when
 planning and materializing repositories; Pace may propose reviewed upgrades.
+The EgoLint projection still describes paths, ownership, executable flags, and
+markers; its version bump does not introduce ignore-content conformance.
 
 ## Validation
 
@@ -61,6 +72,10 @@ python3 tools/foundation.py validate-manifest \
   --manifest "foundation/empathy.manifest.json"
 python3 tools/foundation.py check-inventory \
   --output "docs/foundation/INVENTORY.md"
+python3 tools/foundation.py check-gitignore-plan \
+  --manifest "foundation/empathy.manifest.json" \
+  --source-root "." \
+  --output "foundation/contracts/empathy.gitignore-plan.json"
 python3 tools/foundation.py check-contract \
   --manifest "foundation/empathy.manifest.json" \
   --source-revision "<40-character-empathy-commit>" \

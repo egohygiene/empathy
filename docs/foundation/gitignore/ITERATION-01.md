@@ -14,19 +14,20 @@ before taking the next part. Do not close an issue from a partial PR.
 
 ## Repeatable process
 
+<!-- prettier-ignore -->
 1. **Inspect:** read live issues/PRs, instructions, architecture, decisions,
    contracts, roadmap, and any continuity record. Record the source revision and
    existing failures. Reuse an existing issue when its scope matches.
-2. **Define:** record purpose, applicability, canonical owner, content model,
+1. **Define:** record purpose, applicability, canonical owner, content model,
    permitted variation, update behavior, and validation. Choose the smallest
    reviewable outcome and identify real prerequisites.
-3. **Implement and prove:** change the canonical source and add meaningful
+1. **Implement and prove:** change the canonical source and add meaningful
    behavioral checks. Include both required behavior and content that must
    remain usable. Update affected projections only through their generators.
-4. **Review and checkpoint:** inspect the whole diff, run relevant checks, link
+1. **Review and checkpoint:** inspect the whole diff, run relevant checks, link
    the PR, distinguish new failures from existing ones, and record incomplete
    acceptance criteria and the exact next action. Keep the epic ledger current.
-5. **Resume after merge:** reread review decisions and live default branches;
+1. **Resume after merge:** reread review decisions and live default branches;
    confirm what actually landed. Update the checkpoint and continue to the
    next bounded part. Adopt in Filament only after the upstream contract is ready.
 
@@ -67,9 +68,37 @@ completed CI results. A passing local command or a merged PR does not establish
 that those checks passed. The known catalog/workflow pin mismatch remains a
 separate failure; this correction does not claim all-green repository CI.
 
-After the correction is reviewed, take profile composition and contract
-integration as the next bounded PR. Keep golden-root adoption in a later PR so
-the composition model can be reviewed before its migration effects.
+[PR #86](https://github.com/egohygiene/empathy/pull/86) merged as
+`60a002418304ae379d373dc2d377b5b7cf1e2ceb`. Its completed MegaLinter run passed.
+The next inspection verified that merge before starting part 2 from Empathy
+`4c87f02849949a5fe04d79f36f65eca4b3c28486`.
+
+## Part 2 checkpoint: composition and contract integration
+
+Foundation `1.1.0` registers the universal baseline and explicitly scoped Rust
+build overlay on the existing required, repository-owned `gitignore` artifact.
+The manifest chooses project roots and local text. Composition orders selected
+overlays, verbatim local additions, and the baseline last in every declared
+scope. The Rust fixture proves scoped build exclusion and a reviewed exception
+with adjacent output still ignored.
+
+`tools/foundation.py plan-gitignore` emits a JSON proposal with source and content
+hashes. `check-gitignore-plan` detects drift. The golden plan is not an assertion
+that the active root matches it. Inventory and EgoLint projections are
+regenerated; the latter still checks presence/ownership and markers, not ignore
+content. Its source revision must point to a real commit containing this
+catalog, not the old main revision.
+
+Preservation, updates, rollback, source identity, schema compatibility, and the
+unmanaged-nested-file limit are recorded in the [contract](README.md). Filesystem
+merging remains Holon's responsibility. This part performs no root migration,
+release, Filament adoption, or fleet operation. It contributes to `EMP-Q04`;
+the roadmap step and #82 remain incomplete.
+
+Review the explicit scope selection, baseline-last precedence, verbatim local
+text model, and source integrity contract in the linked part 2 PR. Record exact
+test results and completed CI there, then update #82 and the master epic. Stop
+for maintainer review before beginning migration.
 
 ## Edges learned in this part
 
@@ -88,20 +117,10 @@ the composition model can be reviewed before its migration effects.
 - Merging this part accepts a bounded source proposal; it does not prove
   materialization, reusable CI conformance, or fleet adoption.
 
-## Next bounded part after review
+## Next bounded part after part 2 review
 
-Reverify the merged part 1 PR and its validation correction. Then prepare one
-Empathy PR for scoped profile composition and deterministic contract integration:
-
-- Define the artifact identity, composition order, preservation, provenance,
-  and rollback behavior using the existing foundation catalog/manifest model.
-- Give applicable overlays explicit owners, selection conditions, and project
-  roots. A selected Rust project can ignore its own `/target/` without hiding
-  source under an unrelated `target/` directory.
-- Regenerate affected inventory/EgoLint projections and prove repeatability,
-  profile scope, and local exceptions in composition fixtures.
-
-A subsequent PR migrates Empathy's active root. Before that change, resolve every
+Verify the part 2 merge and its review decisions, then prepare one PR to migrate
+Empathy's active root. Before that change, resolve every
 remaining audit relocation against actual project roots and keep private-material
 protection explicit and tested. Check for newly visible untracked files without
 exposing contents. Keep #82 open until its full acceptance criteria are met.

@@ -1,5 +1,5 @@
-# Empathy universal ignore candidate; see docs/foundation/gitignore/README.md.
-# This source is not yet selected by the catalog or installed at the root.
+# Empathy universal ignore baseline; see docs/foundation/gitignore/README.md.
+# Registered for composition plans; active-root adoption is a separate step.
 
 # Operating-system metadata.
 .DS_Store
