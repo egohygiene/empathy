@@ -55,7 +55,7 @@ jobs:
           persist-credentials: false
 
       - name: Generate intelligence artifacts and dashboard
-        uses: egohygiene/relay/actions/repository-intelligence@b71b090406a3a9e4cd9f107e9d14a623bbecb127 # v1.4.0
+        uses: egohygiene/relay/actions/repository-intelligence@1eada5142f7fc7da7862f335589e3b8f5884ffaf # v1.5.0
         with:
           output-directory: "${{ inputs.dashboard-output-root }}"
           work-directory: "${{ inputs.output-root }}"
