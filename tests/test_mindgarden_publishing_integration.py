@@ -61,7 +61,10 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
                 continue
             self.assertRegex(target.rsplit("@", maxsplit=1)[-1], r"^[0-9a-f]{40}$")
         self.assertIn("github.event_name == 'push'", workflow)
-        self.assertIn("github.ref == 'refs/heads/main'", workflow)
+        self.assertIn(
+            "github.ref == format('refs/heads/{0}', github.event.repository.default_branch)",
+            workflow,
+        )
         self.assertIn("environment:\n      name: github-pages", workflow)
 
     def test_pages_workflow_composes_and_refreshes_repository_intelligence(self) -> None:
@@ -83,7 +86,12 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
         )
         self.assertIn('output-directory: ".cache/mindgarden/site/intelligence"', workflow)
         self.assertIn('path: ".cache/mindgarden/site"', workflow)
-        self.assertIn('".reports/*/summary.json"', workflow)
+        # Every source/report change participates in the complete PR/main build.
+        # Do not reintroduce a path filter that can omit represented inputs.
+        triggers = workflow.split("permissions:", maxsplit=1)[0]
+        self.assertIn("  pull_request:\n", triggers)
+        self.assertIn("  push:\n    branches:\n      - main\n", triggers)
+        self.assertNotIn("    paths:", triggers)
         self.assertIn("event != 'pull_request'", workflow)
         self.assertIn("head_branch == github.event.repository.default_branch", workflow)
         self.assertNotIn("workflow_run.conclusion", workflow)

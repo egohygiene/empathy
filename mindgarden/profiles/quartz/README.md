@@ -54,9 +54,12 @@ The equivalent Taskfile commands are `task garden:publish:check`,
 
 ## GitHub Pages
 
-The Pages workflow validates and builds the site for pull requests. A push to
-`main` additionally uploads the static artifact and deploys it through the
-`github-pages` environment.
+The Pages workflow validates the complete current composition and historical
+rollback replay for pull requests, retaining review artifacts without deploying.
+A push to `main`, or a manual `current` rebuild on `main`, additionally uploads
+the Pages artifact and deploys through the `github-pages` environment. The manual
+`rollback-v1.4` mode publishes the fixed reviewed historical point; a rehearsal
+must immediately restore `current` and verify it is live.
 
 The same Pages artifact includes the repository intelligence dashboard at
 <https://egohygiene.github.io/empathy/intelligence/>. The dashboard is generated
@@ -67,6 +70,13 @@ repository-owned workflow uploads both projections as one Pages artifact.
 Completed trusted OSV, MegaLinter, and OpenSSF Scorecard workflow runs republish
 the site after their stable summaries are committed, including failed
 executions whose state should remain visible.
+
+The [Repository Intelligence publication contract](../../../docs/integrations/REPOSITORY_INTELLIGENCE.md)
+defines the trusted producer predicates, exact input and deployment evidence,
+current manifest verification, and rollback procedure. Its duplicate-build proof
+repeats Relay against one Quartz baseline; it does not claim that fresh Quartz
+builds reproduce synthetic tag dates in feeds. Quartz's pin and reviewed-public
+projection remain unchanged.
 
 After merging the first publishing change, select **GitHub Actions** as the
 repository's Pages source under **Settings → Pages** if it is not already

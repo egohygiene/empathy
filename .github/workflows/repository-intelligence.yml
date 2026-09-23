@@ -4,12 +4,18 @@
 name: Generate repository intelligence
 
 on:
+  pull_request:
+    paths:
+      - ".github/workflows/repository-intelligence*.yml"
+      - "tools/*repository_intelligence*.py"
+      - "tests/test_repository_intelligence*.py"
+      - "docs/integrations/REPOSITORY_INTELLIGENCE.md"
   workflow_dispatch:
     inputs:
       output-root:
-        description: Repository-relative directory for tree and activity artifacts.
+        description: Private workspace; only public dashboard bytes are uploaded.
         required: true
-        default: "docs/generated"
+        default: ".cache/repository-intelligence"
         type: string
       dashboard-output-root:
         description: Repository-relative directory for the static dashboard bundle.
@@ -31,47 +37,124 @@ permissions:
   contents: read
 
 concurrency:
-  group: "repository-intelligence-${{ github.repository }}-${{ github.ref }}"
+  group: "consumer-repository-intelligence-${{ github.repository }}-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
   generate:
-    name: Generate deterministic repository artifacts
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-
+    name: Generate read-only review evidence
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
     steps:
       - name: Harden Runner
-        # step-security/harden-runner v2.20.0; observe egress before enforcing.
+        id: harden
+        # step-security/harden-runner v2.20.0; preserve existing audit policy.
         uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
         with:
           egress-policy: audit
 
       - name: Checkout complete repository history
+        id: checkout
         # actions/checkout v7.0.1
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Validate normalized report inputs
+        id: inputs
+        run: >-
+          python3 tools/repository_intelligence_publication.py collect-input-evidence
+          --repository-root .
+          --output .cache/repository-intelligence-publication/inputs.json
+
       - name: Generate intelligence artifacts and dashboard
-        uses: egohygiene/relay/actions/repository-intelligence@b71b090406a3a9e4cd9f107e9d14a623bbecb127 # v1.4.0
+        id: intelligence
+        # egohygiene/relay repository-intelligence v1.6.0
+        uses: egohygiene/relay/actions/repository-intelligence@9a6315978766c336566b9fa7139b800fa8789ba5
         with:
-          output-directory: "${{ inputs.dashboard-output-root }}"
-          work-directory: "${{ inputs.output-root }}"
+          output-directory: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
+          work-directory: "${{ inputs.output-root || '.cache/repository-intelligence' }}"
           reports-directory: ".reports"
-          activity-since: "${{ inputs.activity-since }}"
-          max-depth: "${{ inputs.max-depth }}"
+          activity-since: "${{ inputs.activity-since || '1 year ago' }}"
+          max-depth: "${{ inputs.max-depth || '10' }}"
           require-full-history: "true"
 
-      - name: Upload intelligence artifacts
+      - name: Upload public intelligence review artifact
+        id: review_artifact
         # actions/upload-artifact v7.0.1
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          name: "repository-intelligence-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: |
-            ${{ inputs.output-root }}
-            ${{ inputs.dashboard-output-root }}
+          name: "empathy-intelligence-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 30
           compression-level: 9
+
+      - name: Preserve sanitized run evidence
+        if: ${{ always() }}
+        env:
+          HARDEN_RESULT: ${{ steps.harden.outcome }}
+          CHECKOUT_RESULT: ${{ steps.checkout.outcome }}
+          INPUT_RESULT: ${{ steps.inputs.outcome }}
+          BUILD_RESULT: ${{ steps.intelligence.outcome }}
+          ARTIFACT_RESULT: ${{ steps.review_artifact.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PYTHON'
+          import json
+          import os
+          from pathlib import Path
+          stages = [("harden", "HARDEN_RESULT"), ("checkout", "CHECKOUT_RESULT"), ("inputs", "INPUT_RESULT"),
+                    ("intelligence", "BUILD_RESULT"), ("review_artifact", "ARTIFACT_RESULT")]
+          allowed = {"success", "failure", "cancelled", "skipped"}
+          observed = {}
+          for stage, key in stages:
+              result = os.environ.get(key)
+              observed[stage] = result if result in allowed else "unavailable"
+          failed = next((stage for stage, _ in stages if observed[stage] != "success"), None)
+          diagnostics = {
+              "harden": ("EMRI-001", "Restore runner hardening before rebuilding."),
+              "checkout": ("EMRI-001", "Restore the complete immutable consumer checkout."),
+              "inputs": ("EMRI-003", "Inspect normalized snapshot schema and provenance; retain unknown or stale evidence."),
+              "intelligence": ("EMRI-006", "Inspect the pinned Relay generation and public-safe diagnostic evidence."),
+              "review_artifact": ("EMRI-008", "Restore the complete public review artifact upload."),
+          }
+          code, guidance = diagnostics[failed] if failed else (None, None)
+          report = {
+              "schema": "egohygiene.empathy.repository-intelligence-run/v1",
+              "repository": "egohygiene/empathy",
+              "revision": os.environ["GITHUB_SHA"],
+              "run": {"id": int(os.environ["GITHUB_RUN_ID"]), "attempt": int(os.environ["GITHUB_RUN_ATTEMPT"])},
+              "stage": failed or "complete",
+              "conclusion": "failure" if failed else "success",
+              "error_code": code,
+              "rule": "empathy.intelligence." + (failed or "complete"),
+              "observed": observed,
+              "remediation": guidance,
+              "documentation": "https://github.com/egohygiene/empathy/blob/" + os.environ["GITHUB_SHA"] + "/docs/integrations/REPOSITORY_INTELLIGENCE.md",
+              "authority": "contents-read-artifact-only",
+              "sanitization": "allowlisted-metadata-only",
+          }
+          encoded = json.dumps(report, indent=2, sort_keys=True) + "\n"
+          if len(encoded.encode("utf-8")) > 8192:
+              raise SystemExit("intelligence evidence exceeds the bounded report size")
+          target = Path(os.environ["RUNNER_TEMP"]) / "empathy-intelligence-run.json"
+          target.write_text(encoded, encoding="utf-8")
+          if failed:
+              raise SystemExit("Repository Intelligence generation failed; inspect the sanitized report")
+          PYTHON
+
+      - name: Retain sanitized run evidence for 30 days
+        if: ${{ always() }}
+        # actions/upload-artifact v7.0.1
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-intelligence-report-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ runner.temp }}/empathy-intelligence-run.json"
+          if-no-files-found: error
+          retention-days: 30

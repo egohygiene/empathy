@@ -1,0 +1,210 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Repository Intelligence job gates
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    name: Intentionally skip an optional ancestor
+    # GitHub assigns positive run IDs; retain a runtime predicate for actionlint.
+    if: ${{ github.run_id == '0' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: exit 1
+
+  build:
+    name: Build after intentionally skipped review
+    if: ${{ always() }}
+    needs: review
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Assert skipped ancestor
+        env:
+          REVIEW_RESULT: ${{ needs.review.result }}
+        run: test "${REVIEW_RESULT}" = "skipped"
+
+  # The tests compare these guards with mindgarden-pages.yml after substituting
+  # only its trusted-event clause. These jobs never build or publish a site.
+  deploy:
+    name: Prove deployment guard survives skipped ancestor
+    if: >-
+      ${{ !cancelled() && needs.build.result == 'success' && true }}
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: printf 'Deployment gate executed without publishing.\n'
+
+  finalize-deployment:
+    name: Prove finalization guard survives skipped ancestor
+    if: >-
+      ${{ always() && needs.build.result == 'success' &&
+      needs.deploy.result != 'cancelled' && needs.deploy.result != 'skipped' && true }}
+    needs:
+      - build
+      - deploy
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: printf 'Finalization gate executed without a deployment receipt.\n'
+
+  verify-live:
+    name: Prove verification guard survives skipped ancestor
+    if: >-
+      ${{ !cancelled() && needs.build.result == 'success' &&
+      needs.deploy.result == 'success' && needs.finalize-deployment.result == 'success' && true }}
+    needs:
+      - build
+      - deploy
+      - finalize-deployment
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: printf 'Verification gate executed without accessing the public site.\n'
+
+  forbidden-pr-deploy:
+    name: Deny untrusted deployment
+    if: >-
+      ${{ !cancelled() && needs.build.result == 'success' && false }}
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: exit 1
+
+  forbidden-pr-finalize:
+    name: Deny untrusted receipt finalization
+    if: >-
+      ${{ always() && needs.build.result == 'success' &&
+      needs.deploy.result != 'cancelled' && needs.deploy.result != 'skipped' && false }}
+    needs:
+      - build
+      - deploy
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: exit 1
+
+  forbidden-pr-live:
+    name: Deny untrusted public verification
+    if: >-
+      ${{ !cancelled() && needs.build.result == 'success' &&
+      needs.deploy.result == 'success' && needs.finalize-deployment.result == 'success' && false }}
+    needs:
+      - build
+      - deploy
+      - finalize-deployment
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: exit 1
+
+  forbidden-failed-build-deploy:
+    name: Deny failed build prerequisite
+    if: >-
+      ${{ !cancelled() && 'failure' == 'success' && true }}
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: exit 1
+
+  forbidden-cancelled-deploy:
+    name: Deny cancelled run predicate
+    if: >-
+      ${{ !true && needs.build.result == 'success' && true }}
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: exit 1
+
+  assert-gates:
+    name: Assert provider scheduling and retain bounded evidence
+    if: ${{ always() }}
+    needs:
+      - review
+      - build
+      - deploy
+      - finalize-deployment
+      - verify-live
+      - forbidden-pr-deploy
+      - forbidden-pr-finalize
+      - forbidden-pr-live
+      - forbidden-failed-build-deploy
+      - forbidden-cancelled-deploy
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Record and assert gate results
+        env:
+          GATE_RESULTS: ${{ toJSON(needs) }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PYTHON'
+          import json
+          import os
+          from pathlib import Path
+
+          expected = {
+              "review": "skipped",
+              "build": "success",
+              "deploy": "success",
+              "finalize-deployment": "success",
+              "verify-live": "success",
+              "forbidden-pr-deploy": "skipped",
+              "forbidden-pr-finalize": "skipped",
+              "forbidden-pr-live": "skipped",
+              "forbidden-failed-build-deploy": "skipped",
+              "forbidden-cancelled-deploy": "skipped",
+          }
+          supplied = json.loads(os.environ["GATE_RESULTS"])
+          statuses = {"success", "failure", "cancelled", "skipped"}
+          observed = {}
+          for name in expected:
+              result = supplied.get(name, {}).get("result", "unavailable")
+              observed[name] = result if result in statuses else "unavailable"
+          passed = observed == expected
+          report = {
+              "schema": "egohygiene.empathy.repository-intelligence-job-gates/v1",
+              "schema_version": 1,
+              "represented_revision": os.environ["GITHUB_SHA"],
+              "run": {
+                  "id": int(os.environ["GITHUB_RUN_ID"]),
+                  "attempt": int(os.environ["GITHUB_RUN_ATTEMPT"]),
+              },
+              "conclusion": "success" if passed else "failure",
+              "expected": expected,
+              "observed": observed,
+          }
+          encoded = json.dumps(report, indent=2, sort_keys=True) + "\n"
+          if len(encoded.encode("utf-8")) > 8192:
+              raise SystemExit("gate evidence exceeds the bounded report size")
+          Path(os.environ["RUNNER_TEMP"], "empathy-gate-fixture.json").write_text(encoded, encoding="utf-8")
+          if not passed:
+              raise SystemExit("Repository Intelligence job gate scheduling did not match expectations")
+          print("Repository Intelligence skipped-ancestor and denial gates passed")
+          PYTHON
+
+      - name: Retain scheduling evidence
+        if: ${{ always() }}
+        # actions/upload-artifact v7.0.1
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-job-gates-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ runner.temp }}/empathy-gate-fixture.json"
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9

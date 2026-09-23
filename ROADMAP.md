@@ -49,6 +49,14 @@ updated: 2026-08-24
 
 Compose dist/roadmap/ into the repository's existing final site artifact at /roadmap/. The current Pages workflow remains the only deployer.
 
+**Repository Intelligence checkpoint (2026-09-23):** Empathy #94 upgrades both
+consumer integrations to reviewed Relay v1.6.0 while preserving Mindgarden,
+Quartz, report snapshots, and Empathy's deployment authority. The
+[publication contract](docs/integrations/REPOSITORY_INTELLIGENCE.md) separates
+PR composition evidence from the required post-merge deployment, producer
+refresh, failure-retention, rollback, and restored-current proof. This checkpoint
+remains open until that evidence is recorded; Relay #33 and #106 remain open.
+
 ### Quest line
 
 <!-- roadmap-step

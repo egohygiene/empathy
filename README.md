@@ -76,6 +76,8 @@ the holistic Egolint profile. Focused commands reduce that scope deliberately.
 See [the Egolint subsystem](egolint/README.md) and
 [the composite action catalog](.github/actions/README.md) for their contracts.
 See [Mindgarden](mindgarden/README.md) for the knowledge lifecycle,
+[Repository Intelligence publication](docs/integrations/REPOSITORY_INTELLIGENCE.md)
+for the pinned Relay integration, Pages evidence, trust boundaries, and rollback,
 [the Identity consumer integration](docs/integrations/IDENTITY.md) for the
 immutable visual-identity dependency and Empathy authority boundary, and
 [`beacon`](beacon/README.md) for reproducible document-project bootstrapping.

@@ -1,27 +1,11 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-
 name: Publish Mindgarden
-
 on:
   pull_request:
-    paths:
-      - ".garden/**"
-      - ".github/workflows/mindgarden-pages.yml"
-      - ".reports/*/summary.json"
-      - "mindgarden/**"
-      - "tests/test_mindgarden_publishing_integration.py"
-      - "Taskfile.yml"
   push:
     branches:
       - main
-    paths:
-      - ".garden/**"
-      - ".github/workflows/mindgarden-pages.yml"
-      - ".reports/*/summary.json"
-      - "mindgarden/**"
-      - "tests/test_mindgarden_publishing_integration.py"
-      - "Taskfile.yml"
   workflow_run:
     workflows:
       - MegaLinter
@@ -30,58 +14,150 @@ on:
     types:
       - completed
   workflow_dispatch:
-
+    inputs:
+      mode:
+        description: "Publish current main or rebuild the reviewed v1.4 rollback point."
+        required: true
+        default: current
+        type: choice
+        options:
+          - current
+          - rollback-v1.4
 permissions:
   contents: read
-
 concurrency:
-  group: "mindgarden-pages-${{ github.ref }}"
-  cancel-in-progress: true
-
+  group: "mindgarden-pages-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'publication' }}"
+  cancel-in-progress: "${{ github.event_name == 'pull_request' }}"
+env:
+  TZ: UTC
+  CANONICAL_ORIGIN: "https://egohygiene.github.io/empathy/"
+  RELAY_REVISION: "9a6315978766c336566b9fa7139b800fa8789ba5"
+  ROLLBACK_REVISION: "254185272ab27b6858b8b0393af6549c205c9a8d"
+  ROLLBACK_RELAY_REVISION: "b71b090406a3a9e4cd9f107e9d14a623bbecb127"
+  ROLLBACK_SITE_DIGEST: "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498"
 jobs:
   build:
-    name: Validate and build public garden
+    name: "Validate and build public garden (${{ matrix.mode }})"
     if: >-
-      github.event_name != 'workflow_run' ||
-      (github.event.workflow_run.event != 'pull_request' &&
-      github.event.workflow_run.head_branch == github.event.repository.default_branch)
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-
+      ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.event != 'pull_request' &&
+      contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) &&
+      contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) &&
+      github.event.workflow_run.repository.full_name == github.repository &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      github.event.workflow_run.head_branch == github.event.repository.default_branch) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pages: read
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: ${{ github.event_name == 'pull_request' && fromJSON('["current","rollback-v1.4"]') || fromJSON(format('["{0}"]', inputs.mode || 'current')) }}
+    outputs:
+      deployment-mode: "${{ steps.identity.outputs.deployment-mode }}"
+      represented-revision: "${{ steps.identity.outputs.represented-revision }}"
     steps:
       - name: Harden Runner
-        # step-security/harden-runner v2.20.0; observe egress before enforcing.
+        id: harden
+        # step-security/harden-runner v2.20.0; preserve existing audit policy.
         uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
         with:
           egress-policy: audit
 
       - name: Checkout complete repository history
-        # actions/checkout v7.0.1
+        id: checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
+          ref: "${{ github.sha }}"
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Preserve consumer verification tools for historical replay
+        id: helper_tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp tools/repository_intelligence_publication.py "${RUNNER_TEMP}/empathy-publication.py"
+          cp tools/verify_repository_intelligence_rollback.py "${RUNNER_TEMP}/empathy-rollback.py"
+
+      - name: Check out fixed historical consumer for rollback
+        id: rollback_checkout
+        if: matrix.mode == 'rollback-v1.4'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: "254185272ab27b6858b8b0393af6549c205c9a8d"
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Resolve exact represented identity
+        id: identity
+        env:
+          MODE: ${{ matrix.mode }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          represented_revision="$(git rev-parse HEAD)"
+          if [[ "${MODE}" == 'rollback-v1.4' ]]; then
+            [[ "${GITHUB_EVENT_NAME}" == 'pull_request' || "${GITHUB_EVENT_NAME}" == 'workflow_dispatch' ]]
+            [[ "${represented_revision}" == "${ROLLBACK_REVISION}" ]]
+            # Both pinned generators currently include the checkout basename.
+            [[ "${PWD##*/}" == 'empathy' ]]
+          else
+            [[ "${MODE}" == 'current' && "${represented_revision}" == "${GITHUB_SHA}" ]]
+          fi
+          printf 'represented-revision=%s\n' "${represented_revision}" >> "${GITHUB_OUTPUT}"
+          printf 'deployment-mode=%s\n' "${MODE}" >> "${GITHUB_OUTPUT}"
+
+      - name: Validate and retain normalized input identities
+        id: inputs
+        run: >-
+          python3 "${RUNNER_TEMP}/empathy-publication.py" collect-input-evidence
+          --repository-root .
+          --output .cache/mindgarden/publication/inputs.json
+
       - name: Set up Node.js 24
-        # actions/setup-node v6.0.0
+        id: runtime
+        # actions/setup-node v6.0.0; preserve the Quartz profile runtime.
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: "24"
 
       - name: Verify deterministic public boundary
+        id: garden
         run: >-
           python3 mindgarden/scripts/publish_garden.py
-          --repository-root .
-          verify
+          --repository-root . verify
 
       - name: Build the pinned Quartz site
+        id: quartz
         run: >-
           python3 mindgarden/scripts/quartz_site.py
-          --repository-root .
-          build
+          --repository-root . build
+
+      - name: Capture consumer routes before composition
+        id: baseline
+        if: matrix.mode == 'current'
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9a6315978766c336566b9fa7139b800fa8789ba5
+        with:
+          operation: capture-baseline
+          site-directory: .cache/mindgarden/site
+          intelligence-directory: .cache/mindgarden/site/intelligence
+          evidence-directory: .cache/mindgarden/publication
+          consumer-revision: "${{ steps.identity.outputs.represented-revision }}"
+
+      - name: Canonicalize captured baseline inventory
+        id: canonical_baseline
+        if: matrix.mode == 'current'
+        run: >-
+          python3 "${RUNNER_TEMP}/empathy-publication.py" canonicalize-baseline
+          --baseline .cache/mindgarden/publication/consumer-route-baseline.json
 
       - name: Generate repository intelligence dashboard
-        uses: egohygiene/relay/actions/repository-intelligence@b71b090406a3a9e4cd9f107e9d14a623bbecb127 # v1.4.0
+        id: intelligence
+        if: matrix.mode == 'current'
+        # egohygiene/relay repository-intelligence v1.6.0
+        uses: egohygiene/relay/actions/repository-intelligence@9a6315978766c336566b9fa7139b800fa8789ba5
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -90,52 +166,387 @@ jobs:
           max-depth: "10"
           require-full-history: "true"
 
+      - name: Preserve first composed build for duplicate verification
+        id: first_composition
+        if: matrix.mode == 'current'
+        run: cp -R .cache/mindgarden/site "${RUNNER_TEMP}/empathy-first-site"
+
+      - name: Rebuild identical Repository Intelligence inputs
+        id: intelligence_duplicate
+        if: matrix.mode == 'current'
+        uses: egohygiene/relay/actions/repository-intelligence@9a6315978766c336566b9fa7139b800fa8789ba5
+        with:
+          output-directory: ".cache/mindgarden/site/intelligence"
+          work-directory: ".cache/mindgarden/repository-intelligence"
+          reports-directory: ".reports"
+          activity-since: "1 year ago"
+          max-depth: "10"
+          require-full-history: "true"
+
+      - name: Verify identical payload and preserved composition
+        id: duplicate
+        if: matrix.mode == 'current'
+        run: >-
+          python3 "${RUNNER_TEMP}/empathy-publication.py" compare-sites
+          --left "${RUNNER_TEMP}/empathy-first-site"
+          --right .cache/mindgarden/site
+          --output .cache/mindgarden/publication/determinism.json
+
+      - name: Generate historical Repository Intelligence dashboard
+        id: intelligence_rollback
+        if: matrix.mode == 'rollback-v1.4'
+        # Frozen rollback dependency; current integrations both use v1.6.0.
+        uses: egohygiene/relay/actions/repository-intelligence@b71b090406a3a9e4cd9f107e9d14a623bbecb127
+        with:
+          output-directory: ".cache/mindgarden/site/intelligence"
+          work-directory: ".cache/mindgarden/repository-intelligence"
+          reports-directory: ".reports"
+          activity-since: "1 year ago"
+          max-depth: "10"
+          require-full-history: "true"
+
+      - name: Verify current provenance and Quartz non-clobber boundary
+        id: composition
+        if: matrix.mode == 'current'
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9a6315978766c336566b9fa7139b800fa8789ba5
+        with:
+          operation: verify-composition
+          site-directory: .cache/mindgarden/site
+          intelligence-directory: .cache/mindgarden/site/intelligence
+          evidence-directory: .cache/mindgarden/publication
+          consumer-revision: "${{ steps.identity.outputs.represented-revision }}"
+          relay-revision: "9a6315978766c336566b9fa7139b800fa8789ba5"
+          required-routes: >-
+            ["/","/intelligence/","/intelligence/now/","/intelligence/roadmap/",
+            "/intelligence/decisions/","/intelligence/journey/","/intelligence/dependencies/",
+            "/intelligence/health/","/intelligence/releases/","/intelligence/work/",
+            "/intelligence/search/","/intelligence/compare/","/intelligence/dashboard/"]
+          aliases: "[]"
+
+      - name: Verify historical rollback boundary
+        id: rollback
+        if: matrix.mode == 'rollback-v1.4'
+        run: >-
+          python3 "${RUNNER_TEMP}/empathy-rollback.py"
+          --repository-root .
+          --site-root .cache/mindgarden/site
+          --output .cache/mindgarden/publication/rollback.json
+
+      - name: Retain complete composed-site review artifact
+        id: review_artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-composed-${{ matrix.mode }}-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: ".cache/mindgarden/site"
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9
+
+      - name: Retain exact composition and receipt inputs
+        id: provenance_artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-provenance-${{ matrix.mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: |
+            .cache/mindgarden/site
+            .cache/mindgarden/publication
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9
+
       - name: Configure GitHub Pages
+        id: configure_pages
         if: >-
-          (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
-          (github.event_name == 'workflow_run' &&
-          github.event.workflow_run.event != 'pull_request' &&
-          github.event.workflow_run.head_branch == github.event.repository.default_branch)
-        # actions/configure-pages v6.0.0
+          ${{ ((github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+          github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) ||
+          (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' &&
+          contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) &&
+          contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) &&
+          github.event.workflow_run.repository.full_name == github.repository &&
+          github.event.workflow_run.head_repository.full_name == github.repository &&
+          github.event.workflow_run.head_branch == github.event.repository.default_branch)) }}
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
 
       - name: Upload GitHub Pages artifact
+        id: pages_artifact
         if: >-
-          (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
-          (github.event_name == 'workflow_run' &&
-          github.event.workflow_run.event != 'pull_request' &&
-          github.event.workflow_run.head_branch == github.event.repository.default_branch)
-        # actions/upload-pages-artifact v5.0.0
+          ${{ ((github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+          github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) ||
+          (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' &&
+          contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) &&
+          contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) &&
+          github.event.workflow_run.repository.full_name == github.repository &&
+          github.event.workflow_run.head_repository.full_name == github.repository &&
+          github.event.workflow_run.head_branch == github.event.repository.default_branch)) }}
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         with:
           path: ".cache/mindgarden/site"
 
+      - name: Preserve sanitized build result
+        if: ${{ always() }}
+        env:
+          RESULTS: ${{ toJSON(steps) }}
+          MODE: ${{ matrix.mode }}
+          PUBLISH_EXPECTED: >-
+            ${{ ((github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) || (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) && contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch)) }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PYTHON'
+          import json
+          import os
+          from pathlib import Path
+          supplied = json.loads(os.environ["RESULTS"])
+          allowed = {"success", "failure", "cancelled", "skipped"}
+          requested_mode = os.environ["MODE"]
+          mode = requested_mode if requested_mode in {"current", "rollback-v1.4"} else "unavailable"
+          publish_value = os.environ["PUBLISH_EXPECTED"]
+          publish_expected = publish_value == "true"
+          stages = ["harden", "checkout", "helper_tools"]
+          if mode == "rollback-v1.4":
+              stages.append("rollback_checkout")
+          stages += ["identity", "inputs", "runtime", "garden", "quartz"]
+          if mode == "current":
+              stages += ["baseline", "canonical_baseline", "intelligence", "first_composition",
+                         "intelligence_duplicate", "duplicate", "composition"]
+          else:
+              stages += ["intelligence_rollback", "rollback"]
+          stages += ["review_artifact", "provenance_artifact"]
+          if publish_expected:
+              stages += ["configure_pages", "pages_artifact"]
+          observed = {}
+          for stage in stages:
+              entry = supplied.get(stage, {})
+              result = entry.get("outcome") if isinstance(entry, dict) else None
+              observed[stage] = result if isinstance(result, str) and result in allowed else "unavailable"
+          failed = next((stage for stage in stages if observed[stage] != "success"), None)
+          if mode == "unavailable":
+              failed = "mode-selection"
+          elif publish_value not in {"true", "false"}:
+              failed = "publication-policy"
+          guidance = {
+              "EMRI-001": "Restore complete immutable checkout and consumer verification tools.",
+              "EMRI-002": "Restore the fixed rollback identity or the requested current revision.",
+              "EMRI-003": "Inspect normalized snapshot schema and provenance; retain unknown or stale evidence.",
+              "EMRI-004": "Restore the pinned runtime and reviewed public Mindgarden projection.",
+              "EMRI-005": "Inspect consumer baseline capture and non-clobber composition evidence.",
+              "EMRI-006": "Inspect the pinned Relay generation and deterministic duplicate evidence.",
+              "EMRI-007": "Restore the fixed historical Repository Intelligence rollback payload.",
+              "EMRI-008": "Restore complete review and provenance artifact retention before publication.",
+              "EMRI-009": "Inspect GitHub Pages configuration and complete-site artifact upload.",
+              "EMRI-010": "Restore the bounded mode and trusted publication event policy.",
+          }
+          stage_codes = {
+              "harden": "EMRI-001", "checkout": "EMRI-001", "helper_tools": "EMRI-001", "rollback_checkout": "EMRI-002",
+              "identity": "EMRI-002", "inputs": "EMRI-003", "runtime": "EMRI-004",
+              "garden": "EMRI-004", "quartz": "EMRI-004", "baseline": "EMRI-005",
+              "canonical_baseline": "EMRI-005", "composition": "EMRI-005",
+              "intelligence": "EMRI-006", "first_composition": "EMRI-006",
+              "intelligence_duplicate": "EMRI-006", "duplicate": "EMRI-006",
+              "intelligence_rollback": "EMRI-007", "rollback": "EMRI-007",
+              "review_artifact": "EMRI-008", "provenance_artifact": "EMRI-008",
+              "configure_pages": "EMRI-009", "pages_artifact": "EMRI-009",
+              "mode-selection": "EMRI-010", "publication-policy": "EMRI-010",
+          }
+          code = stage_codes[failed] if failed else None
+          report = {
+              "schema": "egohygiene.empathy.publication-run/v1",
+              "repository": "egohygiene/empathy",
+              "workflow_revision": os.environ["GITHUB_SHA"],
+              "run": {"id": int(os.environ["GITHUB_RUN_ID"]), "attempt": int(os.environ["GITHUB_RUN_ATTEMPT"])},
+              "mode": mode,
+              "publication_expected": publish_expected,
+              "stage": failed or "complete",
+              "conclusion": "failure" if failed else "success",
+              "error_code": code,
+              "rule": "empathy.publication." + (failed or "complete"),
+              "observed": observed,
+              "remediation": guidance[code] if code else None,
+              "documentation": "https://github.com/egohygiene/empathy/blob/" + os.environ["GITHUB_SHA"] + "/docs/integrations/REPOSITORY_INTELLIGENCE.md",
+              "sanitization": "allowlisted-metadata-only",
+          }
+          encoded = json.dumps(report, indent=2, sort_keys=True) + "\n"
+          if len(encoded.encode("utf-8")) > 8192:
+              raise SystemExit("publication evidence exceeds the bounded report size")
+          target = Path(os.environ["RUNNER_TEMP"]) / "empathy-publication-run.json"
+          target.write_text(encoded, encoding="utf-8")
+          if failed:
+              raise SystemExit("Repository Intelligence publication failed; inspect the sanitized report")
+          PYTHON
+
+      - name: Retain sanitized build result for 30 days
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-publication-report-${{ matrix.mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ runner.temp }}/empathy-publication-run.json"
+          if-no-files-found: error
+          retention-days: 30
+
   deploy:
     name: Deploy public garden
     if: >-
-      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
-      (github.event_name == 'workflow_run' &&
-      github.event.workflow_run.event != 'pull_request' &&
-      github.event.workflow_run.head_branch == github.event.repository.default_branch)
+      ${{ !cancelled() && needs.build.result == 'success' && (((github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) ||
+      (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' &&
+      contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) &&
+      contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) &&
+      github.event.workflow_run.repository.full_name == github.repository &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      github.event.workflow_run.head_branch == github.event.repository.default_branch))) }}
     needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
     permissions:
-      contents: read
       pages: write
       id-token: write
+    outputs:
+      deployment-conclusion: "${{ steps.deployment.outcome }}"
+      deployment-url: "${{ steps.deployment.outputs.page_url }}"
     environment:
       name: github-pages
       url: "${{ steps.deployment.outputs.page_url }}"
-
     steps:
-      - name: Harden Runner
-        # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
-        with:
-          egress-policy: audit
-
       - name: Deploy to GitHub Pages
         id: deployment
-        # actions/deploy-pages v5.0.0
-        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128
+
+  finalize-deployment:
+    name: Record separate deployment receipt
+    if: >-
+      ${{ always() && needs.build.result == 'success' &&
+      needs.deploy.result != 'cancelled' && needs.deploy.result != 'skipped' && (((github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) ||
+      (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' &&
+      contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) &&
+      contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) &&
+      github.event.workflow_run.repository.full_name == github.repository &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      github.event.workflow_run.head_branch == github.event.repository.default_branch))) }}
+    needs: [build, deploy]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Download exact composition and provenance inputs
+        id: download
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: "empathy-provenance-${{ needs.build.outputs.deployment-mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .cache/mindgarden
+
+      - name: Record current deployment receipt
+        id: receipt
+        if: needs.build.outputs.deployment-mode == 'current'
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9a6315978766c336566b9fa7139b800fa8789ba5
+        with:
+          operation: record-receipt
+          site-directory: .cache/mindgarden/site
+          intelligence-directory: .cache/mindgarden/site/intelligence
+          evidence-directory: .cache/mindgarden/publication
+          consumer-revision: "${{ needs.build.outputs.represented-revision }}"
+          relay-revision: "9a6315978766c336566b9fa7139b800fa8789ba5"
+          workflow-run-id: "${{ github.run_id }}"
+          workflow-run-attempt: "${{ github.run_attempt }}"
+          deployment-environment: github-pages
+          deployment-url: "${{ needs.deploy.outputs.deployment-url || 'https://egohygiene.github.io/empathy/' }}"
+          deployment-conclusion: "${{ needs.deploy.outputs.deployment-conclusion || needs.deploy.result }}"
+          required-routes: >-
+            ["/","/intelligence/","/intelligence/now/","/intelligence/roadmap/",
+            "/intelligence/decisions/","/intelligence/journey/","/intelligence/dependencies/",
+            "/intelligence/health/","/intelligence/releases/","/intelligence/work/",
+            "/intelligence/search/","/intelligence/compare/","/intelligence/dashboard/"]
+          aliases: "[]"
+          rollback-revision: "254185272ab27b6858b8b0393af6549c205c9a8d"
+          rollback-site-digest: "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498"
+          rollback-url: "https://egohygiene.github.io/empathy/"
+
+      - name: Retain separate current deployment receipt
+        if: ${{ always() && steps.receipt.outcome == 'success' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-deployment-receipt-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .cache/mindgarden/publication/deployment-receipt.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Reassert deployment and receipt outcome
+        if: ${{ always() }}
+        env:
+          DEPLOYMENT_MODE: ${{ needs.build.outputs.deployment-mode }}
+          DEPLOYMENT_RESULT: ${{ needs.deploy.outputs.deployment-conclusion || needs.deploy.result }}
+          DOWNLOAD_RESULT: ${{ steps.download.outcome }}
+          RECEIPT_RESULT: ${{ steps.receipt.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "${DEPLOYMENT_RESULT}" == 'success' && "${DOWNLOAD_RESULT}" == 'success' ]]
+          if [[ "${DEPLOYMENT_MODE}" == 'current' ]]; then
+            [[ "${RECEIPT_RESULT}" == 'success' ]]
+          fi
+
+  verify-live:
+    name: Verify served revision and public routes
+    if: >-
+      ${{ !cancelled() && needs.build.result == 'success' &&
+      needs.deploy.result == 'success' && needs.finalize-deployment.result == 'success' && (((github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) ||
+      (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' &&
+      contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) &&
+      contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) &&
+      github.event.workflow_run.repository.full_name == github.repository &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      github.event.workflow_run.head_branch == github.event.repository.default_branch))) }}
+    needs: [build, deploy, finalize-deployment]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Checkout consumer verification tools
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: "${{ github.sha }}"
+          persist-credentials: false
+
+      - name: Download expected public bytes
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: "empathy-provenance-${{ needs.build.outputs.deployment-mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .cache/mindgarden
+
+      - name: Verify live identity and routes
+        id: live
+        env:
+          MODE: ${{ needs.build.outputs.deployment-mode }}
+          REVISION: ${{ needs.build.outputs.represented-revision }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          live_mode=current
+          relay_revision="${RELAY_REVISION}"
+          if [[ "${MODE}" == 'rollback-v1.4' ]]; then
+            live_mode=rollback
+            relay_revision="${ROLLBACK_RELAY_REVISION}"
+          fi
+          python3 tools/repository_intelligence_publication.py verify-live \
+            --site-root .cache/mindgarden/site \
+            --consumer-revision "${REVISION}" --relay-revision "${relay_revision}" \
+            --mode "${live_mode}" --attempts 12 --delay 10 \
+            --output .cache/mindgarden/publication/live.json
+
+      - name: Retain live verification evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-live-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .cache/mindgarden/publication/live.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
