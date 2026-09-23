@@ -535,7 +535,11 @@ jobs:
             live_mode=rollback
             relay_revision="${ROLLBACK_RELAY_REVISION}"
           fi
-          python3 tools/repository_intelligence_publication.py verify-live             --site-root .cache/mindgarden/site             --consumer-revision "${REVISION}" --relay-revision "${relay_revision}"             --mode "${live_mode}" --attempts 12 --delay 10             --output .cache/mindgarden/publication/live.json
+          python3 tools/repository_intelligence_publication.py verify-live \
+            --site-root .cache/mindgarden/site \
+            --consumer-revision "${REVISION}" --relay-revision "${relay_revision}" \
+            --mode "${live_mode}" --attempts 12 --delay 10 \
+            --output .cache/mindgarden/publication/live.json
 
       - name: Retain live verification evidence
         if: ${{ always() }}

@@ -43,9 +43,7 @@ def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict:
     return result
 
 
-UniqueKeyLoader.add_constructor(
-    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, unique_mapping
-)
+UniqueKeyLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, unique_mapping)
 
 
 def workflow(name: str) -> dict:
@@ -106,10 +104,17 @@ def evaluate(source: str, context: dict, *, cancelled: bool = False) -> bool:
     return bool(visit(ast.parse(source, mode="eval").body))
 
 
-def event_context(event="push", *, ref="refs/heads/main", producer="MegaLinter",
-                  producer_event="push", producer_repository="egohygiene/empathy",
-                  workflow_repository="egohygiene/empathy", producer_branch="main",
-                  conclusion="success") -> dict:
+def event_context(
+    event="push",
+    *,
+    ref="refs/heads/main",
+    producer="MegaLinter",
+    producer_event="push",
+    producer_repository="egohygiene/empathy",
+    workflow_repository="egohygiene/empathy",
+    producer_branch="main",
+    conclusion="success",
+) -> dict:
     return {
         "github": {
             "event_name": event,
@@ -144,8 +149,9 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         self.standalone = workflow("repository-intelligence.yml")
         self.gates = workflow("repository-intelligence-gates.yml")
 
-    def run_report(self, step: dict, filename: str, extra_environment: dict,
-                   expected_status: int) -> dict:
+    def run_report(
+        self, step: dict, filename: str, extra_environment: dict, expected_status: int
+    ) -> dict:
         with TemporaryDirectory() as directory:
             environment = {
                 **os.environ,
@@ -157,8 +163,12 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 **extra_environment,
             }
             completed = subprocess.run(
-                ["bash", "-c", step["run"]], check=False, capture_output=True, text=True,
-                cwd=directory, env=environment,
+                ["bash", "-c", step["run"]],
+                check=False,
+                capture_output=True,
+                text=True,
+                cwd=directory,
+                env=environment,
             )
             self.assertEqual(completed.returncode, expected_status, completed.stderr)
             report_text = (Path(directory) / filename).read_text(encoding="utf-8")
@@ -177,8 +187,11 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         ):
             with self.subTest(source=source), self.assertRaisesRegex(ValueError, "duplicate"):
                 yaml.load(source, Loader=UniqueKeyLoader)
-        for name in ("mindgarden-pages.yml", "repository-intelligence.yml",
-                     "repository-intelligence-gates.yml"):
+        for name in (
+            "mindgarden-pages.yml",
+            "repository-intelligence.yml",
+            "repository-intelligence-gates.yml",
+        ):
             self.assertIn("on", workflow(name))
 
     def test_both_integrations_pin_the_reviewed_relay_revision(self) -> None:
@@ -204,11 +217,24 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         self.assertEqual(set(self.pages["on"]["workflow_run"]["workflows"]), set(PRODUCERS))
         self.assertEqual(self.pages["on"]["workflow_run"]["types"], ["completed"])
         for producer, producer_event, conclusion in product(
-            PRODUCERS, ("push", "schedule", "workflow_dispatch"),
-            ("success", "failure", "cancelled", "timed_out", "action_required", "neutral", "skipped"),
+            PRODUCERS,
+            ("push", "schedule", "workflow_dispatch"),
+            (
+                "success",
+                "failure",
+                "cancelled",
+                "timed_out",
+                "action_required",
+                "neutral",
+                "skipped",
+            ),
         ):
-            context = event_context("workflow_run", producer=producer,
-                                    producer_event=producer_event, conclusion=conclusion)
+            context = event_context(
+                "workflow_run",
+                producer=producer,
+                producer_event=producer_event,
+                conclusion=conclusion,
+            )
             with self.subTest(producer=producer, event=producer_event, conclusion=conclusion):
                 self.assertTrue(evaluate(build, context))
         for changes in (
@@ -239,20 +265,32 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             (event_context("workflow_run", producer_repository="untrusted/fork"), False, False),
         ):
             with self.subTest(context=context):
-                self.assertEqual(evaluate(self.pages["jobs"]["build"]["if"], context), build_allowed)
+                self.assertEqual(
+                    evaluate(self.pages["jobs"]["build"]["if"], context), build_allowed
+                )
                 for name in ("deploy", "finalize-deployment", "verify-live"):
-                    self.assertEqual(evaluate(self.pages["jobs"][name]["if"], context), publication_allowed, name)
+                    self.assertEqual(
+                        evaluate(self.pages["jobs"][name]["if"], context), publication_allowed, name
+                    )
 
     def test_deployment_status_gates_reject_failed_or_cancelled_prerequisites(self) -> None:
         jobs = self.pages["jobs"]
         self.assertIn("!cancelled()", expression(jobs["deploy"]["if"]))
         self.assertIn("!cancelled()", expression(jobs["verify-live"]["if"]))
         self.assertIn("always()", expression(jobs["finalize-deployment"]["if"]))
-        for cancelled, build, deployed, finalized in product((False, True), RESULTS, RESULTS, RESULTS):
+        for cancelled, build, deployed, finalized in product(
+            (False, True), RESULTS, RESULTS, RESULTS
+        ):
             context = event_context("workflow_dispatch")
-            for name, result in (("build", build), ("deploy", deployed), ("finalize-deployment", finalized)):
+            for name, result in (
+                ("build", build),
+                ("deploy", deployed),
+                ("finalize-deployment", finalized),
+            ):
                 context["needs"][name]["result"] = result
-            with self.subTest(cancelled=cancelled, build=build, deploy=deployed, finalized=finalized):
+            with self.subTest(
+                cancelled=cancelled, build=build, deploy=deployed, finalized=finalized
+            ):
                 self.assertEqual(
                     evaluate(jobs["deploy"]["if"], context, cancelled=cancelled),
                     not cancelled and build == "success",
@@ -276,7 +314,9 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                     self.assertEqual(writes, {"pages", "id-token"})
                     self.assertEqual(job["environment"]["name"], "github-pages")
                     self.assertEqual(len(job["steps"]), 1)
-                    self.assertRegex(job["steps"][0]["uses"], r"^actions/deploy-pages@[0-9a-f]{40}$")
+                    self.assertRegex(
+                        job["steps"][0]["uses"], r"^actions/deploy-pages@[0-9a-f]{40}$"
+                    )
                 else:
                     self.assertEqual(writes, set(), name)
                     self.assertNotIn("environment", job, name)
@@ -313,8 +353,17 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             if action.startswith(("actions/configure-pages@", "actions/upload-pages-artifact@")):
                 publications.append(step)
                 self.assertFalse(evaluate(step["if"], event_context("pull_request")))
-                self.assertFalse(evaluate(step["if"], event_context("workflow_run", producer_event="pull_request")))
-                self.assertFalse(evaluate(step["if"], event_context("workflow_run", producer_repository="untrusted/fork")))
+                self.assertFalse(
+                    evaluate(
+                        step["if"], event_context("workflow_run", producer_event="pull_request")
+                    )
+                )
+                self.assertFalse(
+                    evaluate(
+                        step["if"],
+                        event_context("workflow_run", producer_repository="untrusted/fork"),
+                    )
+                )
                 self.assertTrue(evaluate(step["if"], event_context("push")))
             if action.startswith("actions/upload-artifact@"):
                 artifacts.append(step)
@@ -327,7 +376,8 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             self.assertIn("github.run_id", matching[0]["with"]["name"])
             self.assertIn("github.run_attempt", matching[0]["with"]["name"])
         standalone_upload = next(
-            step for step in self.standalone["jobs"]["generate"]["steps"]
+            step
+            for step in self.standalone["jobs"]["generate"]["steps"]
             if step.get("name") == "Upload public intelligence review artifact"
         )
         self.assertNotIn("inputs.output-root", standalone_upload["with"]["path"])
@@ -335,15 +385,13 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
 
     def test_deployment_receipt_is_separate_from_deterministic_public_output(self) -> None:
         jobs = self.pages["jobs"]
-        operations = {
-            step.get("with", {}).get("operation")
-            for step in jobs["build"]["steps"]
-        }
+        operations = {step.get("with", {}).get("operation") for step in jobs["build"]["steps"]}
         self.assertIn("capture-baseline", operations)
         self.assertIn("verify-composition", operations)
         self.assertNotIn("record-receipt", operations)
         receipt = next(
-            step for step in jobs["finalize-deployment"]["steps"]
+            step
+            for step in jobs["finalize-deployment"]["steps"]
             if step.get("with", {}).get("operation") == "record-receipt"
         )
         options = receipt["with"]
@@ -355,7 +403,8 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         self.assertIn("github.run_attempt", options["workflow-run-attempt"])
         for name in ("finalize-deployment", "verify-live"):
             download = next(
-                step for step in jobs[name]["steps"]
+                step
+                for step in jobs[name]["steps"]
                 if step.get("uses", "").startswith("actions/download-artifact@")
             )
             self.assertIn("github.run_id", download["with"]["name"])
@@ -364,18 +413,27 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
 
     def test_build_report_requires_artifact_uploads_and_every_applicable_stage(self) -> None:
         steps = self.pages["jobs"]["build"]["steps"]
-        report_step = next(step for step in steps if step.get("name") == "Preserve sanitized build result")
+        report_step = next(
+            step for step in steps if step.get("name") == "Preserve sanitized build result"
+        )
         pages_upload = next(step for step in steps if step.get("id") == "pages_artifact")
-        self.assertEqual(expression(report_step["env"]["PUBLISH_EXPECTED"]), expression(pages_upload["if"]))
+        self.assertEqual(
+            expression(report_step["env"]["PUBLISH_EXPECTED"]), expression(pages_upload["if"])
+        )
         self.assertEqual(expression(report_step["if"]), "always()")
         statuses = {
             step["id"]: {"outcome": "success", "outputs": {"ignored": "private-output-sentinel"}}
-            for step in steps if "id" in step
+            for step in steps
+            if "id" in step
         }
         statuses["unrecognized-stage"] = {"outcome": "private-stage-sentinel"}
         filename = "empathy-publication-run.json"
         for mode, publish in product(("current", "rollback-v1.4"), ("true", "false")):
-            environment = {"RESULTS": json.dumps(statuses), "MODE": mode, "PUBLISH_EXPECTED": publish}
+            environment = {
+                "RESULTS": json.dumps(statuses),
+                "MODE": mode,
+                "PUBLISH_EXPECTED": publish,
+            }
             report = self.run_report(report_step, filename, environment, 0)
             self.assertEqual(report["conclusion"], "success")
             self.assertEqual(report["publication_expected"], publish == "true")
@@ -383,45 +441,80 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             self.assertEqual("rollback_checkout" in report["observed"], mode == "rollback-v1.4")
             self.assertEqual("canonical_baseline" in report["observed"], mode == "current")
             for stage, code in (
-                ("helper_tools", "EMRI-001"), ("runtime", "EMRI-004"),
-                ("review_artifact", "EMRI-008"), ("provenance_artifact", "EMRI-008"),
-                ("pages_artifact", "EMRI-009"), ("configure_pages", "EMRI-009"),
+                ("helper_tools", "EMRI-001"),
+                ("runtime", "EMRI-004"),
+                ("review_artifact", "EMRI-008"),
+                ("provenance_artifact", "EMRI-008"),
+                ("pages_artifact", "EMRI-009"),
+                ("configure_pages", "EMRI-009"),
                 ("rollback_checkout", "EMRI-002"),
             ):
                 if stage not in report["observed"]:
                     continue
-                failed = {**statuses, stage: {"outcome": "failure", "outputs": {"ignored": "private-output-sentinel"}}}
-                failure = self.run_report(report_step, filename, {**environment, "RESULTS": json.dumps(failed)}, 1)
+                failed = {
+                    **statuses,
+                    stage: {
+                        "outcome": "failure",
+                        "outputs": {"ignored": "private-output-sentinel"},
+                    },
+                }
+                failure = self.run_report(
+                    report_step, filename, {**environment, "RESULTS": json.dumps(failed)}, 1
+                )
                 self.assertEqual(failure["conclusion"], "failure")
                 self.assertEqual(failure["stage"], stage)
                 self.assertEqual(failure["error_code"], code)
                 self.assertTrue(failure["remediation"])
         statuses["review_artifact"]["outcome"] = "private-outcome-sentinel"
         failure = self.run_report(
-            report_step, filename,
-            {"RESULTS": json.dumps(statuses), "MODE": "current", "PUBLISH_EXPECTED": "false"}, 1,
+            report_step,
+            filename,
+            {"RESULTS": json.dumps(statuses), "MODE": "current", "PUBLISH_EXPECTED": "false"},
+            1,
         )
         self.assertEqual(failure["observed"]["review_artifact"], "unavailable")
         failure = self.run_report(
-            report_step, filename,
-            {"RESULTS": json.dumps(statuses), "MODE": "private-mode-sentinel", "PUBLISH_EXPECTED": "false"}, 1,
+            report_step,
+            filename,
+            {
+                "RESULTS": json.dumps(statuses),
+                "MODE": "private-mode-sentinel",
+                "PUBLISH_EXPECTED": "false",
+            },
+            1,
         )
         self.assertEqual(failure["mode"], "unavailable")
         self.assertEqual(failure["error_code"], "EMRI-010")
 
     def test_standalone_report_requires_review_upload_and_sanitizes_outcomes(self) -> None:
         steps = self.standalone["jobs"]["generate"]["steps"]
-        report_step = next(step for step in steps if step.get("name") == "Preserve sanitized run evidence")
+        report_step = next(
+            step for step in steps if step.get("name") == "Preserve sanitized run evidence"
+        )
         filename = "empathy-intelligence-run.json"
-        environment = {key: "success" for key in ("HARDEN_RESULT", "CHECKOUT_RESULT", "INPUT_RESULT", "BUILD_RESULT", "ARTIFACT_RESULT")}
+        environment = {
+            key: "success"
+            for key in (
+                "HARDEN_RESULT",
+                "CHECKOUT_RESULT",
+                "INPUT_RESULT",
+                "BUILD_RESULT",
+                "ARTIFACT_RESULT",
+            )
+        }
         report = self.run_report(report_step, filename, environment, 0)
         self.assertEqual(report["conclusion"], "success")
         for value in ("failure", "cancelled", "skipped", "private-outcome-sentinel"):
-            report = self.run_report(report_step, filename, {**environment, "ARTIFACT_RESULT": value}, 1)
+            report = self.run_report(
+                report_step, filename, {**environment, "ARTIFACT_RESULT": value}, 1
+            )
             self.assertEqual(report["conclusion"], "failure")
             self.assertEqual(report["stage"], "review_artifact")
             self.assertEqual(report["error_code"], "EMRI-008")
-            self.assertEqual(report["observed"]["review_artifact"], value if value != "private-outcome-sentinel" else "unavailable")
+            self.assertEqual(
+                report["observed"]["review_artifact"],
+                value if value != "private-outcome-sentinel" else "unavailable",
+            )
 
     def test_scheduler_fixture_preserves_production_status_guards(self) -> None:
         production = self.pages["jobs"]
@@ -465,7 +558,9 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         source = (WORKFLOWS / "repository-intelligence-gates.yml").read_text(encoding="utf-8")
         self.assertEqual(self.gates["permissions"], {"contents": "read"})
         self.assertNotRegex(source, r":\s*write\b|secrets[.:]|pull_request_target|environment:")
-        self.assertNotRegex(source, r"actions/(?:deploy-pages|upload-pages-artifact|configure-pages|checkout)@")
+        self.assertNotRegex(
+            source, r"actions/(?:deploy-pages|upload-pages-artifact|configure-pages|checkout)@"
+        )
         for job in self.gates["jobs"].values():
             self.assertLessEqual(int(job["timeout-minutes"]), 5)
             for step in job.get("steps", []):
@@ -473,16 +568,24 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                     self.assertRegex(step["uses"], r"^actions/upload-artifact@[0-9a-f]{40}$")
                     self.assertEqual(step["with"]["retention-days"], "30")
 
-    def test_scheduler_report_detects_skipped_deployment_and_excludes_private_payloads(self) -> None:
+    def test_scheduler_report_detects_skipped_deployment_and_excludes_private_payloads(
+        self,
+    ) -> None:
         report_step = next(
-            step for step in self.gates["jobs"]["assert-gates"]["steps"]
+            step
+            for step in self.gates["jobs"]["assert-gates"]["steps"]
             if step.get("name") == "Record and assert gate results"
         )
         expected = {
-            "review": "skipped", "build": "success", "deploy": "success",
-            "finalize-deployment": "success", "verify-live": "success",
-            "forbidden-pr-deploy": "skipped", "forbidden-pr-finalize": "skipped",
-            "forbidden-pr-live": "skipped", "forbidden-failed-build-deploy": "skipped",
+            "review": "skipped",
+            "build": "success",
+            "deploy": "success",
+            "finalize-deployment": "success",
+            "verify-live": "success",
+            "forbidden-pr-deploy": "skipped",
+            "forbidden-pr-finalize": "skipped",
+            "forbidden-pr-live": "skipped",
+            "forbidden-failed-build-deploy": "skipped",
             "forbidden-cancelled-deploy": "skipped",
         }
         results = {
@@ -499,17 +602,29 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 "GITHUB_RUN_ATTEMPT": "2",
                 "PRIVATE_SENTINEL": "private-environment-sentinel",
             }
-            for mutation, expected_status in ((None, 0), ("skipped", 1), ("private-result-sentinel", 1)):
+            for mutation, expected_status in (
+                (None, 0),
+                ("skipped", 1),
+                ("private-result-sentinel", 1),
+            ):
                 if mutation:
                     results["deploy"]["result"] = mutation
                 completed = subprocess.run(
-                    ["bash", "-c", report_step["run"]], check=False, capture_output=True,
-                    text=True, cwd=directory, env={**environment, "GATE_RESULTS": json.dumps(results)},
+                    ["bash", "-c", report_step["run"]],
+                    check=False,
+                    capture_output=True,
+                    text=True,
+                    cwd=directory,
+                    env={**environment, "GATE_RESULTS": json.dumps(results)},
                 )
                 self.assertEqual(completed.returncode, expected_status, completed.stderr)
-                report_text = (Path(directory) / "empathy-gate-fixture.json").read_text(encoding="utf-8")
+                report_text = (Path(directory) / "empathy-gate-fixture.json").read_text(
+                    encoding="utf-8"
+                )
                 report = json.loads(report_text)
-                self.assertEqual(report["conclusion"], "success" if expected_status == 0 else "failure")
+                self.assertEqual(
+                    report["conclusion"], "success" if expected_status == 0 else "failure"
+                )
                 self.assertEqual(report["run"], {"id": 123, "attempt": 2})
                 self.assertLessEqual(len(report_text.encode("utf-8")), 8192)
                 if mutation is None:

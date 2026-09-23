@@ -216,7 +216,9 @@ public-safe diagnostics, matching and failing live bytes, composition, receipt
 separation, and historical rollback failures. Retain YAML/JSON parsing and
 duplicate-key checks plus applicable Python, Bash, and JavaScript syntax checks.
 Record pre-existing MegaLinter catalog-SHA and task-catalog drift as baseline
-validation findings; this checkpoint does not change those unrelated catalogs.
+validation findings. The root Cargo workspace also references a missing
+`tests/fixtures/clippy/Cargo.toml`, which blocks the normal Beacon Rust gates.
+This checkpoint does not change those unrelated catalogs or workspace paths.
 
 After review and merge, record the following on #94 before changing its state:
 

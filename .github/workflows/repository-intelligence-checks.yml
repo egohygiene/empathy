@@ -44,6 +44,7 @@ jobs:
           import unittest
 
           suite = unittest.defaultTestLoader.discover("tests", pattern="test_repository_intelligence*.py")
+          suite.addTests(unittest.defaultTestLoader.discover("tests", pattern="test_mindgarden_publishing_integration.py"))
           result = unittest.TextTestRunner(verbosity=2).run(suite)
           report = {
               "schema": "egohygiene.empathy.repository-intelligence-contract-tests/v1",

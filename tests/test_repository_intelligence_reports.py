@@ -108,9 +108,7 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
         return path
 
     def project(self, producer: str = "osv", *, as_of: datetime = AS_OF) -> dict:
-        return self.renderer.load_report(
-            self.reports, producer, REPOSITORY, SOURCE_COMMIT, as_of
-        )
+        return self.renderer.load_report(self.reports, producer, REPOSITORY, SOURCE_COMMIT, as_of)
 
     def assert_unknown_findings(self, projection: dict) -> None:
         self.assertEqual(projection["findings"]["state"], "unknown")
@@ -134,7 +132,11 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
         document = self.report("megalinter")
         document["execution"]["state"] = "failure"
         document["findings"] = {
-            "state": "clear", "total": 0, "blocking": 0, "advisory": 0, "by_severity": {}
+            "state": "clear",
+            "total": 0,
+            "blocking": 0,
+            "advisory": 0,
+            "by_severity": {},
         }
         document["megalinter"] = {
             "profile": "holistic",
@@ -162,11 +164,13 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
     def test_successful_clear_report_is_accepted_only_with_matching_source(self) -> None:
         document = self.report()
         document["findings"] = {
-            "state": "clear", "total": 0, "blocking": 0, "advisory": 0, "by_severity": {}
+            "state": "clear",
+            "total": 0,
+            "blocking": 0,
+            "advisory": 0,
+            "by_severity": {},
         }
-        document["osv"]["scan"] = {
-            "vulnerabilities": 0, "affected_packages": 0, "severity": {}
-        }
+        document["osv"]["scan"] = {"vulnerabilities": 0, "affected_packages": 0, "severity": {}}
         self.write_report(document)
         projection = self.project()
         self.assertEqual(projection["execution"]["state"], "success")
@@ -179,7 +183,10 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
     def test_stale_scorecard_api_does_not_invent_an_aggregate_score(self) -> None:
         document = self.report("scorecard")
         document["findings"] = {
-            "state": "attention", "total": 3, "blocking": 0, "advisory": 3,
+            "state": "attention",
+            "total": 3,
+            "blocking": 0,
+            "advisory": 3,
             "by_severity": {"high": 2, "low": 1},
         }
         document["scorecard"] = {
