@@ -1,21 +1,21 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-09-18T14-13-48Z`
+- Generated: `2026-09-23T08-55-47Z`
 - Repository: `egohygiene/empathy`
-- Commit: `b44f798bb49259f9f48416b4ffebde1103e135c0`
+- Commit: `98778e8442d3be3ea7a3d1f62b71f33969346ecc`
 - Severity gate: `high`
-- Duration: `10s`
+- Duration: `11s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
-| Critical | 3 |
+| Critical | 4 |
 | High | 81 |
-| Medium | 63 |
+| Medium | 64 |
 | Low | 18 |
 | Unknown | 0 |
-| **Total** | **165** |
+| **Total** | **167** |
 
 ## Discovery
 
@@ -129,11 +129,13 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 73 packages affected by 165 known vulnerabilities (3 Critical, 81 High, 63 Medium, 18 Low, 0 Unknown) from 2 ecosystems.
-160 vulnerabilities can be fixed.
+Total 74 packages affected by 167 known vulnerabilities (4 Critical, 81 High, 64 Medium, 18 Low, 0 Unknown) from 2 ecosystems.
+162 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
+| https://osv.dev/GHSA-5p39-cfhj-2xmp | 6.8 | PyPI | anyio | 4.9.0 | 4.14.2 | .staging/devenvironment/containers/services/api/poetry.lock |
+| https://osv.dev/GHSA-82r6-8w77-94w6 | 9.3 | PyPI | anyio | 4.9.0 | 4.14.2 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2120 | 9.8 | PyPI | black | 25.1.0 | 26.3.0 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2121<br/>https://osv.dev/GHSA-3936-cmfr-pm3m | 8.7 | PyPI | black | 25.1.0 | 26.3.1 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2132 | 7.2 | PyPI | click | 8.2.1 | 8.3.3 | .staging/devenvironment/containers/services/api/poetry.lock |

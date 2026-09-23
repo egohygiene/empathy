@@ -1468,6 +1468,42 @@
         },
         {
           "partialFingerprints": {
+            "primaryLocationLineHash": "83743450108f35921ecfa5d2f7e8f4bef39f5d217b4c5505877c7965b668f2c2"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/poetry.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'anyio@4.9.0' is vulnerable to 'CVE-2026-64847' (also known as 'GHSA-5p39-cfhj-2xmp')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-64847",
+          "ruleIndex": 25,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
             "primaryLocationLineHash": "c44ddc4dcdc48dfd0564de2dfd31a85010283ed1cd079ea525bf70e83953cb04"
           },
           "attachments": [],
@@ -1498,7 +1534,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-5p4m-2wfm-xmqj",
-          "ruleIndex": 25,
+          "ruleIndex": 26,
           "stacks": [],
           "taxa": []
         },
@@ -1534,7 +1570,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53539",
-          "ruleIndex": 26,
+          "ruleIndex": 27,
           "stacks": [],
           "taxa": []
         },
@@ -1570,7 +1606,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31808",
-          "ruleIndex": 27,
+          "ruleIndex": 28,
           "stacks": [],
           "taxa": []
         },
@@ -1606,7 +1642,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45409",
-          "ruleIndex": 28,
+          "ruleIndex": 29,
           "stacks": [],
           "taxa": []
         },
@@ -1642,7 +1678,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44293",
-          "ruleIndex": 29,
+          "ruleIndex": 30,
           "stacks": [],
           "taxa": []
         },
@@ -1678,7 +1714,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44289",
-          "ruleIndex": 30,
+          "ruleIndex": 31,
           "stacks": [],
           "taxa": []
         },
@@ -1714,7 +1750,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53538",
-          "ruleIndex": 31,
+          "ruleIndex": 32,
           "stacks": [],
           "taxa": []
         },
@@ -1750,7 +1786,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84368",
-          "ruleIndex": 32,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -1786,7 +1822,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84368",
-          "ruleIndex": 32,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -1822,7 +1858,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84368",
-          "ruleIndex": 32,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -1858,7 +1894,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84368",
-          "ruleIndex": 32,
+          "ruleIndex": 33,
           "stacks": [],
           "taxa": []
         },
@@ -1894,7 +1930,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-71176",
-          "ruleIndex": 33,
+          "ruleIndex": 34,
           "stacks": [],
           "taxa": []
         },
@@ -1930,7 +1966,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32597",
-          "ruleIndex": 34,
+          "ruleIndex": 35,
           "stacks": [],
           "taxa": []
         },
@@ -1966,7 +2002,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44291",
-          "ruleIndex": 35,
+          "ruleIndex": 36,
           "stacks": [],
           "taxa": []
         },
@@ -2002,7 +2038,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-62727",
-          "ruleIndex": 36,
+          "ruleIndex": 37,
           "stacks": [],
           "taxa": []
         },
@@ -2038,7 +2074,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-27903",
-          "ruleIndex": 37,
+          "ruleIndex": 38,
           "stacks": [],
           "taxa": []
         },
@@ -2074,7 +2110,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-27903",
-          "ruleIndex": 37,
+          "ruleIndex": 38,
           "stacks": [],
           "taxa": []
         },
@@ -2110,7 +2146,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-85730",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
           "stacks": [],
           "taxa": []
         },
@@ -2146,7 +2182,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-85730",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
           "stacks": [],
           "taxa": []
         },
@@ -2182,7 +2218,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-85730",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
           "stacks": [],
           "taxa": []
         },
@@ -2218,7 +2254,43 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-85730",
-          "ruleIndex": 38,
+          "ruleIndex": 39,
+          "stacks": [],
+          "taxa": []
+        },
+        {
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ef97e395cb1519930dbd68c659bce9b5c6ca46fc49ec99a4395ad369526aac1f"
+          },
+          "attachments": [],
+          "codeFlows": [],
+          "fixes": [],
+          "graphTraversals": [],
+          "graphs": [],
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "annotations": [],
+              "id": -1,
+              "logicalLocations": [],
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": -1,
+                  "uri": "file:///home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/poetry.lock"
+                }
+              },
+              "relationships": []
+            }
+          ],
+          "message": {
+            "arguments": [],
+            "text": "Package 'anyio@4.9.0' is vulnerable to 'CVE-2026-63374' (also known as 'GHSA-82r6-8w77-94w6')."
+          },
+          "rank": -1,
+          "relatedLocations": [],
+          "ruleId": "CVE-2026-63374",
+          "ruleIndex": 40,
           "stacks": [],
           "taxa": []
         },
@@ -2254,7 +2326,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54283",
-          "ruleIndex": 39,
+          "ruleIndex": 41,
           "stacks": [],
           "taxa": []
         },
@@ -2290,7 +2362,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-14505",
-          "ruleIndex": 40,
+          "ruleIndex": 42,
           "stacks": [],
           "taxa": []
         },
@@ -2326,7 +2398,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-14505",
-          "ruleIndex": 40,
+          "ruleIndex": 42,
           "stacks": [],
           "taxa": []
         },
@@ -2362,7 +2434,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48710",
-          "ruleIndex": 41,
+          "ruleIndex": 43,
           "stacks": [],
           "taxa": []
         },
@@ -2398,7 +2470,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54285",
-          "ruleIndex": 42,
+          "ruleIndex": 44,
           "stacks": [],
           "taxa": []
         },
@@ -2434,7 +2506,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-55244",
-          "ruleIndex": 43,
+          "ruleIndex": 45,
           "stacks": [],
           "taxa": []
         },
@@ -2470,7 +2542,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-16728",
-          "ruleIndex": 44,
+          "ruleIndex": 46,
           "stacks": [],
           "taxa": []
         },
@@ -2506,7 +2578,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-4067",
-          "ruleIndex": 45,
+          "ruleIndex": 47,
           "stacks": [],
           "taxa": []
         },
@@ -2542,7 +2614,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 46,
+          "ruleIndex": 48,
           "stacks": [],
           "taxa": []
         },
@@ -2578,7 +2650,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-9w56-46f6-3qhx",
-          "ruleIndex": 47,
+          "ruleIndex": 49,
           "stacks": [],
           "taxa": []
         },
@@ -2614,7 +2686,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-45296",
-          "ruleIndex": 48,
+          "ruleIndex": 50,
           "stacks": [],
           "taxa": []
         },
@@ -2650,7 +2722,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 49,
+          "ruleIndex": 51,
           "stacks": [],
           "taxa": []
         },
@@ -2686,7 +2758,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-86049",
-          "ruleIndex": 50,
+          "ruleIndex": 52,
           "stacks": [],
           "taxa": []
         },
@@ -2722,7 +2794,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-22150",
-          "ruleIndex": 51,
+          "ruleIndex": 53,
           "stacks": [],
           "taxa": []
         },
@@ -2758,7 +2830,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 52,
+          "ruleIndex": 54,
           "stacks": [],
           "taxa": []
         },
@@ -2794,7 +2866,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84363",
-          "ruleIndex": 53,
+          "ruleIndex": 55,
           "stacks": [],
           "taxa": []
         },
@@ -2830,7 +2902,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-47279",
-          "ruleIndex": 54,
+          "ruleIndex": 56,
           "stacks": [],
           "taxa": []
         },
@@ -2866,7 +2938,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 55,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -2902,7 +2974,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54269",
-          "ruleIndex": 56,
+          "ruleIndex": 58,
           "stacks": [],
           "taxa": []
         },
@@ -2938,7 +3010,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75975",
-          "ruleIndex": 57,
+          "ruleIndex": 59,
           "stacks": [],
           "taxa": []
         },
@@ -2974,7 +3046,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75975",
-          "ruleIndex": 57,
+          "ruleIndex": 59,
           "stacks": [],
           "taxa": []
         },
@@ -3010,7 +3082,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-33750",
-          "ruleIndex": 58,
+          "ruleIndex": 60,
           "stacks": [],
           "taxa": []
         },
@@ -3046,7 +3118,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 59,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -3082,7 +3154,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 60,
+          "ruleIndex": 62,
           "stacks": [],
           "taxa": []
         },
@@ -3118,7 +3190,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75899",
-          "ruleIndex": 61,
+          "ruleIndex": 63,
           "stacks": [],
           "taxa": []
         },
@@ -3154,7 +3226,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-75899",
-          "ruleIndex": 61,
+          "ruleIndex": 63,
           "stacks": [],
           "taxa": []
         },
@@ -3190,7 +3262,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44292",
-          "ruleIndex": 62,
+          "ruleIndex": 64,
           "stacks": [],
           "taxa": []
         },
@@ -3226,7 +3298,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 63,
+          "ruleIndex": 65,
           "stacks": [],
           "taxa": []
         },
@@ -3262,7 +3334,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-6783",
-          "ruleIndex": 63,
+          "ruleIndex": 65,
           "stacks": [],
           "taxa": []
         },
@@ -3298,7 +3370,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 64,
+          "ruleIndex": 66,
           "stacks": [],
           "taxa": []
         },
@@ -3334,7 +3406,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84364",
-          "ruleIndex": 65,
+          "ruleIndex": 67,
           "stacks": [],
           "taxa": []
         },
@@ -3370,7 +3442,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-g7r4-m6w7-qqqr",
-          "ruleIndex": 66,
+          "ruleIndex": 68,
           "stacks": [],
           "taxa": []
         },
@@ -3406,7 +3478,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-11525",
-          "ruleIndex": 67,
+          "ruleIndex": 69,
           "stacks": [],
           "taxa": []
         },
@@ -3442,7 +3514,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22036",
-          "ruleIndex": 68,
+          "ruleIndex": 70,
           "stacks": [],
           "taxa": []
         },
@@ -3478,7 +3550,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 69,
+          "ruleIndex": 71,
           "stacks": [],
           "taxa": []
         },
@@ -3514,7 +3586,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 70,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -3550,7 +3622,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 70,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -3586,7 +3658,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 70,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -3622,7 +3694,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84367",
-          "ruleIndex": 70,
+          "ruleIndex": 72,
           "stacks": [],
           "taxa": []
         },
@@ -3658,7 +3730,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 71,
+          "ruleIndex": 73,
           "stacks": [],
           "taxa": []
         },
@@ -3694,7 +3766,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84365",
-          "ruleIndex": 72,
+          "ruleIndex": 74,
           "stacks": [],
           "taxa": []
         },
@@ -3730,7 +3802,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2024-4068",
-          "ruleIndex": 73,
+          "ruleIndex": 75,
           "stacks": [],
           "taxa": []
         },
@@ -3766,7 +3838,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53550",
-          "ruleIndex": 74,
+          "ruleIndex": 76,
           "stacks": [],
           "taxa": []
         },
@@ -3802,7 +3874,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 75,
+          "ruleIndex": 77,
           "stacks": [],
           "taxa": []
         },
@@ -3838,7 +3910,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32630",
-          "ruleIndex": 76,
+          "ruleIndex": 78,
           "stacks": [],
           "taxa": []
         },
@@ -3874,7 +3946,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45740",
-          "ruleIndex": 77,
+          "ruleIndex": 79,
           "stacks": [],
           "taxa": []
         },
@@ -3910,7 +3982,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 78,
+          "ruleIndex": 80,
           "stacks": [],
           "taxa": []
         },
@@ -3946,7 +4018,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 79,
+          "ruleIndex": 81,
           "stacks": [],
           "taxa": []
         },
@@ -3982,7 +4054,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-76172",
-          "ruleIndex": 80,
+          "ruleIndex": 82,
           "stacks": [],
           "taxa": []
         },
@@ -4018,7 +4090,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-76172",
-          "ruleIndex": 80,
+          "ruleIndex": 82,
           "stacks": [],
           "taxa": []
         },
@@ -4054,7 +4126,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44290",
-          "ruleIndex": 81,
+          "ruleIndex": 83,
           "stacks": [],
           "taxa": []
         },
@@ -4090,7 +4162,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 82,
+          "ruleIndex": 84,
           "stacks": [],
           "taxa": []
         },
@@ -4126,7 +4198,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 83,
+          "ruleIndex": 85,
           "stacks": [],
           "taxa": []
         },
@@ -4162,7 +4234,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-15157",
-          "ruleIndex": 84,
+          "ruleIndex": 86,
           "stacks": [],
           "taxa": []
         },
@@ -4198,7 +4270,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 85,
+          "ruleIndex": 87,
           "stacks": [],
           "taxa": []
         },
@@ -4234,7 +4306,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 86,
+          "ruleIndex": 88,
           "stacks": [],
           "taxa": []
         },
@@ -4270,7 +4342,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-14257",
-          "ruleIndex": 87,
+          "ruleIndex": 89,
           "stacks": [],
           "taxa": []
         },
@@ -4306,7 +4378,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 88,
+          "ruleIndex": 90,
           "stacks": [],
           "taxa": []
         },
@@ -4342,7 +4414,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 89,
+          "ruleIndex": 91,
           "stacks": [],
           "taxa": []
         },
@@ -4378,7 +4450,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-9679",
-          "ruleIndex": 90,
+          "ruleIndex": 92,
           "stacks": [],
           "taxa": []
         },
@@ -4414,7 +4486,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44705",
-          "ruleIndex": 91,
+          "ruleIndex": 93,
           "stacks": [],
           "taxa": []
         },
@@ -4450,7 +4522,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 92,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -4486,7 +4558,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44288",
-          "ruleIndex": 93,
+          "ruleIndex": 95,
           "stacks": [],
           "taxa": []
         },
@@ -4522,7 +4594,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 94,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -4558,7 +4630,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34043",
-          "ruleIndex": 95,
+          "ruleIndex": 97,
           "stacks": [],
           "taxa": []
         },
@@ -4594,7 +4666,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 96,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -4630,7 +4702,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2021-23337",
-          "ruleIndex": 97,
+          "ruleIndex": 99,
           "stacks": [],
           "taxa": []
         },
@@ -4666,7 +4738,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 98,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -4702,7 +4774,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-rgj7-g3m4-5g8c",
-          "ruleIndex": 99,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -4738,7 +4810,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-rgj7-g3m4-5g8c",
-          "ruleIndex": 99,
+          "ruleIndex": 101,
           "stacks": [],
           "taxa": []
         },
@@ -4774,7 +4846,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 100,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -4810,7 +4882,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69152",
-          "ruleIndex": 100,
+          "ruleIndex": 102,
           "stacks": [],
           "taxa": []
         },
@@ -4846,7 +4918,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-16729",
-          "ruleIndex": 101,
+          "ruleIndex": 103,
           "stacks": [],
           "taxa": []
         },
@@ -4882,7 +4954,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "GHSA-v3rj-xjv7-4jmq",
-          "ruleIndex": 102,
+          "ruleIndex": 104,
           "stacks": [],
           "taxa": []
         },
@@ -4918,7 +4990,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 103,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         },
@@ -4954,7 +5026,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-2229",
-          "ruleIndex": 104,
+          "ruleIndex": 106,
           "stacks": [],
           "taxa": []
         },
@@ -4990,7 +5062,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 105,
+          "ruleIndex": 107,
           "stacks": [],
           "taxa": []
         },
@@ -5026,7 +5098,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45822",
-          "ruleIndex": 106,
+          "ruleIndex": 108,
           "stacks": [],
           "taxa": []
         },
@@ -5062,7 +5134,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 107,
+          "ruleIndex": 109,
           "stacks": [],
           "taxa": []
         },
@@ -5098,7 +5170,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-1526",
-          "ruleIndex": 108,
+          "ruleIndex": 110,
           "stacks": [],
           "taxa": []
         },
@@ -5134,7 +5206,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-12151",
-          "ruleIndex": 109,
+          "ruleIndex": 111,
           "stacks": [],
           "taxa": []
         },
@@ -5170,7 +5242,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 110,
+          "ruleIndex": 112,
           "stacks": [],
           "taxa": []
         },
@@ -5206,7 +5278,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 110,
+          "ruleIndex": 112,
           "stacks": [],
           "taxa": []
         },
@@ -5242,7 +5314,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 110,
+          "ruleIndex": 112,
           "stacks": [],
           "taxa": []
         },
@@ -5278,7 +5350,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-84370",
-          "ruleIndex": 110,
+          "ruleIndex": 112,
           "stacks": [],
           "taxa": []
         },
@@ -5314,7 +5386,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 111,
+          "ruleIndex": 113,
           "stacks": [],
           "taxa": []
         },
@@ -5350,7 +5422,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41907",
-          "ruleIndex": 111,
+          "ruleIndex": 113,
           "stacks": [],
           "taxa": []
         },
@@ -5386,7 +5458,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2020-7753",
-          "ruleIndex": 112,
+          "ruleIndex": 114,
           "stacks": [],
           "taxa": []
         },
@@ -5422,7 +5494,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 113,
+          "ruleIndex": 115,
           "stacks": [],
           "taxa": []
         },
@@ -5458,7 +5530,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 114,
+          "ruleIndex": 116,
           "stacks": [],
           "taxa": []
         },
@@ -5494,7 +5566,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48712",
-          "ruleIndex": 115,
+          "ruleIndex": 117,
           "stacks": [],
           "taxa": []
         },
@@ -5530,7 +5602,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 116,
+          "ruleIndex": 118,
           "stacks": [],
           "taxa": []
         },
@@ -5566,7 +5638,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 117,
+          "ruleIndex": 119,
           "stacks": [],
           "taxa": []
         },
@@ -5602,7 +5674,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 118,
+          "ruleIndex": 120,
           "stacks": [],
           "taxa": []
         },
@@ -5638,7 +5710,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-82562",
-          "ruleIndex": 119,
+          "ruleIndex": 121,
           "stacks": [],
           "taxa": []
         },
@@ -5674,7 +5746,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-82562",
-          "ruleIndex": 119,
+          "ruleIndex": 121,
           "stacks": [],
           "taxa": []
         },
@@ -5710,7 +5782,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 120,
+          "ruleIndex": 122,
           "stacks": [],
           "taxa": []
         },
@@ -5746,7 +5818,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 121,
+          "ruleIndex": 123,
           "stacks": [],
           "taxa": []
         },
@@ -5782,7 +5854,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41242",
-          "ruleIndex": 122,
+          "ruleIndex": 124,
           "stacks": [],
           "taxa": []
         },
@@ -5818,7 +5890,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-13465",
-          "ruleIndex": 55,
+          "ruleIndex": 57,
           "stacks": [],
           "taxa": []
         },
@@ -5854,7 +5926,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-45768",
-          "ruleIndex": 123,
+          "ruleIndex": 125,
           "stacks": [],
           "taxa": []
         },
@@ -5890,7 +5962,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-67221",
-          "ruleIndex": 75,
+          "ruleIndex": 77,
           "stacks": [],
           "taxa": []
         },
@@ -5926,7 +5998,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32597",
-          "ruleIndex": 34,
+          "ruleIndex": 35,
           "stacks": [],
           "taxa": []
         },
@@ -5962,7 +6034,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-22701",
-          "ruleIndex": 96,
+          "ruleIndex": 98,
           "stacks": [],
           "taxa": []
         },
@@ -5998,7 +6070,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-68146",
-          "ruleIndex": 114,
+          "ruleIndex": 116,
           "stacks": [],
           "taxa": []
         },
@@ -6034,7 +6106,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44431",
-          "ruleIndex": 94,
+          "ruleIndex": 96,
           "stacks": [],
           "taxa": []
         },
@@ -6070,7 +6142,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48710",
-          "ruleIndex": 41,
+          "ruleIndex": 43,
           "stacks": [],
           "taxa": []
         },
@@ -6106,7 +6178,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48522",
-          "ruleIndex": 46,
+          "ruleIndex": 48,
           "stacks": [],
           "taxa": []
         },
@@ -6142,7 +6214,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48523",
-          "ruleIndex": 79,
+          "ruleIndex": 81,
           "stacks": [],
           "taxa": []
         },
@@ -6178,7 +6250,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48524",
-          "ruleIndex": 59,
+          "ruleIndex": 61,
           "stacks": [],
           "taxa": []
         },
@@ -6214,7 +6286,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48525",
-          "ruleIndex": 113,
+          "ruleIndex": 115,
           "stacks": [],
           "taxa": []
         },
@@ -6250,7 +6322,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48526",
-          "ruleIndex": 121,
+          "ruleIndex": 123,
           "stacks": [],
           "taxa": []
         },
@@ -6286,7 +6358,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-71176",
-          "ruleIndex": 33,
+          "ruleIndex": 34,
           "stacks": [],
           "taxa": []
         },
@@ -6322,7 +6394,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-24486",
-          "ruleIndex": 117,
+          "ruleIndex": 119,
           "stacks": [],
           "taxa": []
         },
@@ -6394,7 +6466,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-62727",
-          "ruleIndex": 36,
+          "ruleIndex": 37,
           "stacks": [],
           "taxa": []
         },
@@ -6502,7 +6574,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2025-66418",
-          "ruleIndex": 71,
+          "ruleIndex": 73,
           "stacks": [],
           "taxa": []
         },
@@ -6574,7 +6646,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-31900",
-          "ruleIndex": 124,
+          "ruleIndex": 126,
           "stacks": [],
           "taxa": []
         },
@@ -6646,7 +6718,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-7246",
-          "ruleIndex": 125,
+          "ruleIndex": 127,
           "stacks": [],
           "taxa": []
         },
@@ -6682,7 +6754,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-26007",
-          "ruleIndex": 98,
+          "ruleIndex": 100,
           "stacks": [],
           "taxa": []
         },
@@ -6718,7 +6790,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-45409",
-          "ruleIndex": 28,
+          "ruleIndex": 29,
           "stacks": [],
           "taxa": []
         },
@@ -6754,7 +6826,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-28684",
-          "ruleIndex": 86,
+          "ruleIndex": 88,
           "stacks": [],
           "taxa": []
         },
@@ -6790,7 +6862,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-25645",
-          "ruleIndex": 69,
+          "ruleIndex": 71,
           "stacks": [],
           "taxa": []
         },
@@ -6826,7 +6898,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48817",
-          "ruleIndex": 120,
+          "ruleIndex": 122,
           "stacks": [],
           "taxa": []
         },
@@ -6862,7 +6934,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-48818",
-          "ruleIndex": 118,
+          "ruleIndex": 120,
           "stacks": [],
           "taxa": []
         },
@@ -6898,7 +6970,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32874",
-          "ruleIndex": 116,
+          "ruleIndex": 118,
           "stacks": [],
           "taxa": []
         },
@@ -6934,7 +7006,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-32875",
-          "ruleIndex": 52,
+          "ruleIndex": 54,
           "stacks": [],
           "taxa": []
         },
@@ -6970,7 +7042,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-44660",
-          "ruleIndex": 49,
+          "ruleIndex": 51,
           "stacks": [],
           "taxa": []
         },
@@ -7042,7 +7114,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54282",
-          "ruleIndex": 78,
+          "ruleIndex": 80,
           "stacks": [],
           "taxa": []
         },
@@ -7078,7 +7150,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-54283",
-          "ruleIndex": 39,
+          "ruleIndex": 41,
           "stacks": [],
           "taxa": []
         },
@@ -7186,7 +7258,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53539",
-          "ruleIndex": 26,
+          "ruleIndex": 27,
           "stacks": [],
           "taxa": []
         },
@@ -7222,7 +7294,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53538",
-          "ruleIndex": 31,
+          "ruleIndex": 32,
           "stacks": [],
           "taxa": []
         },
@@ -7258,7 +7330,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-40347",
-          "ruleIndex": 88,
+          "ruleIndex": 90,
           "stacks": [],
           "taxa": []
         },
@@ -7294,7 +7366,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-42561",
-          "ruleIndex": 92,
+          "ruleIndex": 94,
           "stacks": [],
           "taxa": []
         },
@@ -7330,7 +7402,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53540",
-          "ruleIndex": 105,
+          "ruleIndex": 107,
           "stacks": [],
           "taxa": []
         },
@@ -7366,7 +7438,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-53537",
-          "ruleIndex": 107,
+          "ruleIndex": 109,
           "stacks": [],
           "taxa": []
         },
@@ -7402,7 +7474,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-34073",
-          "ruleIndex": 85,
+          "ruleIndex": 87,
           "stacks": [],
           "taxa": []
         },
@@ -7438,7 +7510,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69247",
-          "ruleIndex": 64,
+          "ruleIndex": 66,
           "stacks": [],
           "taxa": []
         },
@@ -7474,7 +7546,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69249",
-          "ruleIndex": 82,
+          "ruleIndex": 84,
           "stacks": [],
           "taxa": []
         },
@@ -7510,7 +7582,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-69248",
-          "ruleIndex": 83,
+          "ruleIndex": 85,
           "stacks": [],
           "taxa": []
         },
@@ -7546,7 +7618,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39892",
-          "ruleIndex": 89,
+          "ruleIndex": 91,
           "stacks": [],
           "taxa": []
         },
@@ -7582,7 +7654,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-55244",
-          "ruleIndex": 43,
+          "ruleIndex": 45,
           "stacks": [],
           "taxa": []
         },
@@ -7618,7 +7690,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-87817",
-          "ruleIndex": 126,
+          "ruleIndex": 128,
           "stacks": [],
           "taxa": []
         },
@@ -7654,7 +7726,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-87818",
-          "ruleIndex": 127,
+          "ruleIndex": 129,
           "stacks": [],
           "taxa": []
         },
@@ -7690,7 +7762,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-87819",
-          "ruleIndex": 128,
+          "ruleIndex": 130,
           "stacks": [],
           "taxa": []
         },
@@ -7726,7 +7798,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-39373",
-          "ruleIndex": 60,
+          "ruleIndex": 62,
           "stacks": [],
           "taxa": []
         },
@@ -7762,7 +7834,7 @@
           "rank": -1,
           "relatedLocations": [],
           "ruleId": "CVE-2026-41205",
-          "ruleIndex": 103,
+          "ruleIndex": 105,
           "stacks": [],
           "taxa": []
         }
@@ -8392,6 +8464,30 @@
             },
             {
               "deprecatedIds": [
+                "CVE-2026-64847",
+                "GHSA-5p39-cfhj-2xmp"
+              ],
+              "fullDescription": {
+                "markdown": "### Impact\nAnyIO starts process-pool workers with stderr connected to a pipe but never drains that pipe. The worker redirects stdin and stdout to /dev/null to protect its protocol, but does not redirect stderr even though the documentation says all three standard streams are redirected. Worker code that writes enough attacker-influenced data to stderr can fill the pipe, block before returning the stdout protocol response, and wedge the awaiting process-pool call.\n\nAnyone who runs untrusted or faulty code that writes too much to `stderr` is at risk.\n\n### Patches\nThis vulnerability will be patched in v4.14.2.\n\n### Workarounds\nClosing `sys.stderr` in the target function should at least prevent the deadlock.",
+                "text": "### Impact\nAnyIO starts process-pool workers with stderr connected to a pipe but never drains that pipe. The worker redirects stdin and stdout to /dev/null to protect its protocol, but does not redirect stderr even though the documentation says all three standard streams are redirected. Worker code that writes enough attacker-influenced data to stderr can fill the pipe, block before returning the stdout protocol response, and wedge the awaiting process-pool call.\n\nAnyone who runs untrusted or faulty code that writes too much to `stderr` is at risk.\n\n### Patches\nThis vulnerability will be patched in v4.14.2.\n\n### Workarounds\nClosing `sys.stderr` in the target function should at least prevent the deadlock."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-64847](https://osv.dev/CVE-2026-64847)**.\n\n## [GHSA-5p39-cfhj-2xmp](https://osv.dev/GHSA-5p39-cfhj-2xmp)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e AnyIO starts process-pool workers with stderr connected to a pipe but never drains that pipe. The worker redirects stdin and stdout to /dev/null to protect its protocol, but does not redirect stderr even though the documentation says all three standard streams are redirected. Worker code that writes enough attacker-influenced data to stderr can fill the pipe, block before returning the stdout protocol response, and wedge the awaiting process-pool call.\n\u003e \n\u003e Anyone who runs untrusted or faulty code that writes too much to `stderr` is at risk.\n\u003e \n\u003e ### Patches\n\u003e This vulnerability will be patched in v4.14.2.\n\u003e \n\u003e ### Workarounds\n\u003e Closing `sys.stderr` in the target function should at least prevent the deadlock.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/poetry.lock | anyio | 4.9.0 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-5p39-cfhj-2xmp | anyio | 4.14.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-64847\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-64847](https://osv.dev/CVE-2026-64847)**.\n\n## [GHSA-5p39-cfhj-2xmp](https://osv.dev/GHSA-5p39-cfhj-2xmp)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e AnyIO starts process-pool workers with stderr connected to a pipe but never drains that pipe. The worker redirects stdin and stdout to /dev/null to protect its protocol, but does not redirect stderr even though the documentation says all three standard streams are redirected. Worker code that writes enough attacker-influenced data to stderr can fill the pipe, block before returning the stdout protocol response, and wedge the awaiting process-pool call.\n\u003e \n\u003e Anyone who runs untrusted or faulty code that writes too much to `stderr` is at risk.\n\u003e \n\u003e ### Patches\n\u003e This vulnerability will be patched in v4.14.2.\n\u003e \n\u003e ### Workarounds\n\u003e Closing `sys.stderr` in the target function should at least prevent the deadlock.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/poetry.lock | anyio | 4.9.0 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-5p39-cfhj-2xmp | anyio | 4.14.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-64847\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-64847",
+              "name": "CVE-2026-64847",
+              "properties": {
+                "security-severity": "6.8"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-64847: AnyIO process-pool workers can block indefinitely on undrained stderr",
+                "text": "CVE-2026-64847: AnyIO process-pool workers can block indefinitely on undrained stderr"
+              }
+            },
+            {
+              "deprecatedIds": [
                 "GHSA-5p4m-2wfm-xmqj"
               ],
               "fullDescription": {
@@ -8729,6 +8825,30 @@
               "shortDescription": {
                 "markdown": "CVE-2026-85730: smol-toml: Denial of Service via malformed TOML documents",
                 "text": "CVE-2026-85730: smol-toml: Denial of Service via malformed TOML documents"
+              }
+            },
+            {
+              "deprecatedIds": [
+                "CVE-2026-63374",
+                "GHSA-82r6-8w77-94w6"
+              ],
+              "fullDescription": {
+                "markdown": "### Impact\nServices using internationalized (non-ASCII) domain names are potentially vulnerable to TLS connections made from AnyIO's `connect_tcp()` or directly via `TLSStream.wrap()` where the connection has (through other means) been hijacked and redirected to a malicious server. The attacker would obtain a legitimate certificate using the IDNA 2003 encoded version of the domain name and offer it to the connecting client, making the certificate validate properly on the client's end.\n\n### Patches\nThe vulnerability will be patched in v4.14.2.\n\n### Workarounds\nEncode host names via the `idna` package prior to connecting.",
+                "text": "### Impact\nServices using internationalized (non-ASCII) domain names are potentially vulnerable to TLS connections made from AnyIO's `connect_tcp()` or directly via `TLSStream.wrap()` where the connection has (through other means) been hijacked and redirected to a malicious server. The attacker would obtain a legitimate certificate using the IDNA 2003 encoded version of the domain name and offer it to the connecting client, making the certificate validate properly on the client's end.\n\n### Patches\nThe vulnerability will be patched in v4.14.2.\n\n### Workarounds\nEncode host names via the `idna` package prior to connecting."
+              },
+              "help": {
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-63374](https://osv.dev/CVE-2026-63374)**.\n\n## [GHSA-82r6-8w77-94w6](https://osv.dev/GHSA-82r6-8w77-94w6)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e Services using internationalized (non-ASCII) domain names are potentially vulnerable to TLS connections made from AnyIO's `connect_tcp()` or directly via `TLSStream.wrap()` where the connection has (through other means) been hijacked and redirected to a malicious server. The attacker would obtain a legitimate certificate using the IDNA 2003 encoded version of the domain name and offer it to the connecting client, making the certificate validate properly on the client's end.\n\u003e \n\u003e ### Patches\n\u003e The vulnerability will be patched in v4.14.2.\n\u003e \n\u003e ### Workarounds\n\u003e Encode host names via the `idna` package prior to connecting.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/poetry.lock | anyio | 4.9.0 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-82r6-8w77-94w6 | anyio | 4.14.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-63374\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-63374](https://osv.dev/CVE-2026-63374)**.\n\n## [GHSA-82r6-8w77-94w6](https://osv.dev/GHSA-82r6-8w77-94w6)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e Services using internationalized (non-ASCII) domain names are potentially vulnerable to TLS connections made from AnyIO's `connect_tcp()` or directly via `TLSStream.wrap()` where the connection has (through other means) been hijacked and redirected to a malicious server. The attacker would obtain a legitimate certificate using the IDNA 2003 encoded version of the domain name and offer it to the connecting client, making the certificate validate properly on the client's end.\n\u003e \n\u003e ### Patches\n\u003e The vulnerability will be patched in v4.14.2.\n\u003e \n\u003e ### Workarounds\n\u003e Encode host names via the `idna` package prior to connecting.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/poetry.lock | anyio | 4.9.0 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-82r6-8w77-94w6 | anyio | 4.14.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/.staging/devenvironment/containers/services/api/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-63374\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+              },
+              "id": "CVE-2026-63374",
+              "name": "CVE-2026-63374",
+              "properties": {
+                "security-severity": "9.3"
+              },
+              "relationships": [],
+              "shortDescription": {
+                "markdown": "CVE-2026-63374: AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing",
+                "text": "CVE-2026-63374: AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing"
               }
             },
             {
@@ -9135,8 +9255,8 @@
                 "text": "### Impact\n\nLodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\nThe issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\n### Patches\n\nThis issue is patched in 4.18.0.\n\n### Workarounds\n\nNone. Upgrade to the patched version."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2025-13465](https://osv.dev/CVE-2025-13465)**\n(Also published as: [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh), [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg), ).\n\n## [GHSA-f23m-r3pf-42rh](https://osv.dev/GHSA-f23m-r3pf-42rh)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\u003e \n\u003e The issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched in 4.18.0.\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e None. Upgrade to the patched version.\n\n\u003c/details\u003e\n\n## [GHSA-xxjr-mmjv-4gpg](https://osv.dev/GHSA-xxjr-mmjv-4gpg)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\u003e \n\u003e The issue permits deletion of properties but does not allow overwriting their original behavior.  \n\u003e \n\u003e ### Patches\n\u003e \n\u003e This issue is patched on 4.17.23.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-f23m-r3pf-42rh | lodash | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-es | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash-amd | 4.18.0 |\n| GHSA-f23m-r3pf-42rh | lodash.unset | 4.18.0 |\n| GHSA-xxjr-mmjv-4gpg | lodash-amd | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash | 4.17.23 |\n| GHSA-xxjr-mmjv-4gpg | lodash-es | 4.17.23 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2025-13465\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2025-13465",
               "name": "CVE-2025-13465",
@@ -10061,8 +10181,8 @@
                 "text": "## Summary\n\nprotobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\nThe issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\n## Impact\n\nAn attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\nThe practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\n## Preconditions\n\n- The application must decode protobuf binary data influenced by an attacker.\n- The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n- The application must rely on byte-level filtering or validation before protobuf string decoding.\n- The decoded string must then be used in a security-sensitive context.\n\n## Workarounds\n\nAvoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2026-44288](https://osv.dev/CVE-2026-44288)**.\n\n## [GHSA-q6x5-8v7m-xcrf](https://osv.dev/GHSA-q6x5-8v7m-xcrf)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ## Summary\n\u003e \n\u003e protobufjs includes a minimal UTF-8 decoder used in non-Node and fallback decoding paths. The affected decoder accepted overlong UTF-8 byte sequences and decoded them to their canonical characters instead of replacing them.\n\u003e \n\u003e The issue concerns overlong encodings and code points outside the Unicode range. protobufjs may still accept some non-strict UTF-8 input for compatibility, so applications should not rely on protobufjs as a general-purpose strict UTF-8 validator.\n\u003e \n\u003e ## Impact\n\u003e \n\u003e An attacker who can provide protobuf binary data decoded through the affected UTF-8 path may be able to bypass application-level checks that inspect raw bytes before protobuf string decoding. For example, bytes that do not contain certain ASCII characters could decode to strings containing those characters.\n\u003e \n\u003e The practical impact depends on downstream application validation and how decoded strings are used. Node.js Buffer-backed decoding paths are not directly affected when they use Node's native UTF-8 decoding.\n\u003e \n\u003e ## Preconditions\n\u003e \n\u003e - The application must decode protobuf binary data influenced by an attacker.\n\u003e - The affected protobuf string field must be decoded through protobufjs's minimal UTF-8 decoder rather than a native UTF-8 decoder.\n\u003e - The application must rely on byte-level filtering or validation before protobuf string decoding.\n\u003e - The decoded string must then be used in a security-sensitive context.\n\u003e \n\u003e ## Workarounds\n\u003e \n\u003e Avoid relying only on byte-level filtering before protobuf string decoding with affected versions. Validate decoded strings at the point where they are used, and prefer runtime paths that use native UTF-8 decoding where necessary.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | protobufjs | 6.11.6 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-q6x5-8v7m-xcrf | @protobufjs/utf8 | 1.1.1 |\n| GHSA-q6x5-8v7m-xcrf | protobufjs | 7.5.6, 8.0.2 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2026-44288\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2026-44288",
               "name": "CVE-2026-44288",
@@ -10161,8 +10281,8 @@
                 "text": "### Impact\n\nThe fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\nWhen an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\nAdditionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\n### Patches\n\nUsers should upgrade to version 4.18.0.\n\nThe fix applies two changes:\n1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\n### Workarounds\n\nDo not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names."
               },
               "help": {
-                "markdown": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
-                "text": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
+                "markdown": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n",
+                "text": "**Your dependency is vulnerable to [CVE-2021-23337](https://osv.dev/CVE-2021-23337)**.\n\n## [GHSA-r5fr-rjxr-66jc](https://osv.dev/GHSA-r5fr-rjxr-66jc)\n\n\u003cdetails\u003e\n\u003csummary\u003eDetails\u003c/summary\u003e\n\n\u003e ### Impact\n\u003e \n\u003e The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\u003e \n\u003e When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\u003e \n\u003e Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\u003e \n\u003e ### Patches\n\u003e \n\u003e Users should upgrade to version 4.18.0.\n\u003e \n\u003e The fix applies two changes:\n\u003e 1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n\u003e 2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\u003e \n\u003e ### Workarounds\n\u003e \n\u003e Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.\n\n\u003c/details\u003e\n\n---\n\n### Affected Packages\n\n| Source | Package Name | Package Version |\n| --- | --- | --- |\n| lockfile:/home/runner/work/empathy/empathy/pnpm-lock.yaml | lodash | 4.17.21 |\n\n## Remediation\n\nTo fix these vulnerabilities, update the vulnerabilities past the listed fixed versions below.\n\n### Fixed Versions\n\n| Vulnerability ID | Package Name | Fixed Version |\n| --- | --- | --- |\n| GHSA-r5fr-rjxr-66jc | lodash.template | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-es | 4.18.0 |\n| GHSA-r5fr-rjxr-66jc | lodash-amd | 4.18.0 |\n\nIf you believe these vulnerabilities do not affect your code and wish to ignore them, add them to the ignore list in an\n`osv-scanner.toml` file located in the same directory as the lockfile containing the vulnerable dependency.\n\nSee the format and more options in our documentation here: https://google.github.io/osv-scanner/configuration/\n\nAdd or append these values to the following config files to ignore this vulnerability:\n\n`/home/runner/work/empathy/empathy/osv-scanner.toml`\n\n```\n[[IgnoredVulns]]\nid = \"CVE-2021-23337\"\nreason = \"Your reason for ignoring this vulnerability\"\n```\n"
               },
               "id": "CVE-2021-23337",
               "name": "CVE-2021-23337",
