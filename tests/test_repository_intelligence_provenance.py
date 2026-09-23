@@ -18,9 +18,13 @@ import io
 import json
 import os
 from pathlib import Path
-import subprocess
+import subprocess  # nosec B404 # Fixed local Git fixture operations; no shell input.
 import tempfile
+from typing import TYPE_CHECKING, ClassVar, cast
 import unittest
+
+if TYPE_CHECKING:
+    from types import ModuleType
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 RELAY_REVISION = "9a6315978766c336566b9fa7139b800fa8789ba5"
@@ -37,7 +41,7 @@ OWNER_PATHS = (
 def checked_relay_root(root: Path) -> Path:
     """Reject mutable, wrong-revision or edited owner code before importing it."""
     # Only fixed local Git operations and fixture paths execute, without a shell.
-    revision = subprocess.run(  # noqa: S603
+    revision = subprocess.run(  # noqa: S603  # nosec B603, B607
         ["git", "-C", str(root), "rev-parse", "HEAD"],  # noqa: S607
         capture_output=True,
         text=True,
@@ -46,7 +50,8 @@ def checked_relay_root(root: Path) -> Path:
     if revision != RELAY_REVISION:
         message = "The owner fixtures require the reviewed immutable Relay revision."
         raise ValueError(message)
-    subprocess.run(  # noqa: S603 - Fixed local Git arguments, without a shell.
+    # Fixed local Git arguments and owner paths, without a shell.
+    subprocess.run(  # noqa: S603  # nosec B603, B607
         ["git", "-C", str(root), "diff", "--exit-code", "HEAD", "--", *OWNER_PATHS],  # noqa: S607
         capture_output=True,
         check=True,
@@ -54,7 +59,7 @@ def checked_relay_root(root: Path) -> Path:
     return root
 
 
-def load_module(name: str, path: Path):
+def load_module(name: str, path: Path) -> ModuleType:
     specification = importlib.util.spec_from_file_location(name, path)
     assert specification is not None
     assert specification.loader is not None
@@ -81,7 +86,7 @@ class OwnerCheckoutTrustTests(unittest.TestCase):
                 ],
             ):
                 # Arguments above create only the local temporary Git fixture.
-                subprocess.run(  # noqa: S603
+                subprocess.run(  # noqa: S603  # nosec B603, B607
                     ["git", "-C", str(root), *arguments],  # noqa: S607
                     check=True,
                     capture_output=True,
@@ -94,6 +99,11 @@ class OwnerCheckoutTrustTests(unittest.TestCase):
     os.environ.get("RELAY_CHECKOUT"), "Set RELAY_CHECKOUT to the reviewed Relay checkout."
 )
 class EmpathyProvenanceOwnerIntegrationTests(unittest.TestCase):
+    # Owner modules are loaded dynamically only after the immutable checkout check.
+    manifest_owner: ClassVar[ModuleType]
+    provenance_owner: ClassVar[ModuleType]
+    consumer: ClassVar[ModuleType]
+
     @classmethod
     def setUpClass(cls) -> None:
         owner = checked_relay_root(Path(os.environ["RELAY_CHECKOUT"]))
@@ -175,7 +185,8 @@ class EmpathyProvenanceOwnerIntegrationTests(unittest.TestCase):
 
     def invoke(self, operation: str, **overrides: str) -> int:
         with contextlib.redirect_stdout(io.StringIO()):
-            return self.provenance_owner.main(self.arguments(operation, **overrides))
+            # The reviewed owner CLI's return contract is an integer status.
+            return cast("int", self.provenance_owner.main(self.arguments(operation, **overrides)))
 
     def rewrite_manifest(self, field: str, value: object) -> None:
         manifest = json.loads(self.manifest_path.read_bytes())
@@ -291,6 +302,8 @@ class EmpathyProvenanceOwnerIntegrationTests(unittest.TestCase):
 
     def test_secret_bearing_url_fails_without_echoing_secret(self) -> None:
         for url in (
+            # Literal synthetic credentials exercise rejection; never used for authentication.
+            # secretlint-disable-next-line @secretlint/secretlint-rule-basicauth
             "https://user:SECRET@egohygiene.github.io/empathy/",
             "https://egohygiene.github.io/empathy/?token=SECRET",
             "http://127.0.0.1/SECRET",

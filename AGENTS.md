@@ -25,6 +25,14 @@ ran. Scope repeatability claims to declared inputs and checkout context; the
 portable checkout-name follow-up is tracked in Relay #109.
 For Python changes, run Ruff against `egolint/.config/lint/python/ruff.toml`,
 the canonical policy used by MegaLinter; the root Python defaults are narrower.
+The PR fast profile and focused checks do not establish full-profile readiness.
+Before declaring a change ready, run the canonical holistic profile on the exact
+review head, resolve introduced gating findings, and review warning-only
+diagnostics. Include Mypy, Bandit, Secretlint, and Lychee in that review. Record
+unrelated baseline failures separately; repository lint debt does not make a new
+finding pre-existing. Follow the publication
+document's feature-branch procedure to obtain holistic evidence without publishing
+report snapshots.
 
 Use reference-only issue links in implementation PRs (`Refs #<issue-number>`
 and an explicit parent reference). Avoid automatic issue-closing keywords, including

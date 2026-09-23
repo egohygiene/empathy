@@ -30,7 +30,10 @@ jobs:
           path: .cache/relay-contract
           persist-credentials: false
       - name: Install exact contract validation tools
-        run: python3 -m pip install --disable-pip-version-check PyYAML==6.0.3 ruff==0.16.5
+        run: >-
+          python3 -m pip install --disable-pip-version-check
+          PyYAML==6.0.3 ruff==0.16.5 mypy==1.19.1
+          types-PyYAML==6.0.12.20260906 bandit==1.9.4
       - name: Apply the canonical MegaLinter Python policy
         shell: bash
         run: |
@@ -43,6 +46,27 @@ jobs:
           )
           python3 -m ruff check --config egolint/.config/lint/python/ruff.toml "${files[@]}"
           python3 -m ruff format --check --config egolint/.config/lint/python/ruff.toml "${files[@]}"
+          python3 -m mypy --config-file egolint/.config/lint/python/.mypy.ini "${files[@]}"
+          python3 -m bandit --quiet --configfile egolint/.config/lint/python/.bandit.yml "${files[@]}"
+      - name: Set up Node.js for the canonical secret policy
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Apply the canonical MegaLinter secret policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          tool_root="${RUNNER_TEMP}/empathy-secretlint"
+          npm install --prefix "${tool_root}" --ignore-scripts --no-audit --no-fund --no-package-lock \
+            secretlint@13.0.5 @secretlint/secretlint-rule-preset-recommend@13.0.5
+          NODE_PATH="${tool_root}/node_modules" "${tool_root}/node_modules/.bin/secretlint" \
+            --secretlintrc egolint/.config/security/secretlint/.secretlintrc.json \
+            --secretlintignore egolint/.config/security/secretlint/.secretlintignore \
+            AGENTS.md docs/integrations/REPOSITORY_INTELLIGENCE.md \
+            .github/workflows/mindgarden-pages.yml .github/workflows/repository-intelligence*.yml \
+            tools/repository_intelligence_publication.py tools/verify_repository_intelligence_rollback.py \
+            tests/test_repository_intelligence*.py tests/test_mindgarden_publishing_integration.py
       - name: Exercise consumer and pinned-owner contracts
         env:
           RELAY_CHECKOUT: ${{ github.workspace }}/.cache/relay-contract

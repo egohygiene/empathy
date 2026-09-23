@@ -16,10 +16,12 @@ import json
 import os
 from pathlib import Path
 import re
-import subprocess
+
+# Fixed argument-vector Git operations use the trusted runner executable, never a shell.
+import subprocess  # nosec B404
 import sys
 import time
-from typing import Any
+from typing import Any, NoReturn, cast
 from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
@@ -113,7 +115,8 @@ def parse_json(data: bytes) -> dict[str, Any]:
         raise PublicationError("JSON is invalid.") from error
     if not isinstance(value, dict):
         raise PublicationError("JSON evidence must be an object.")
-    return value
+    # JSON object keys are strings; nested values remain validated by each boundary.
+    return cast("dict[str, Any]", value)
 
 
 def _reject_constant() -> None:
@@ -154,14 +157,18 @@ def canonicalize_baseline(path: Path) -> None:
     files = value.get("files")
     if not isinstance(files, list) or not files:
         raise PublicationError("Baseline files are missing.")
-    paths = []
-    for record in files:
-        if not isinstance(record, dict) or not isinstance(record.get("path"), str):
+    records: list[Any] = files
+    paths: list[str] = []
+    for record in records:
+        if not isinstance(record, dict):
+            raise PublicationError("Baseline file records are invalid.")
+        record = cast("dict[str, Any]", record)
+        if not isinstance(record.get("path"), str):
             raise PublicationError("Baseline file records are invalid.")
         paths.append(record["path"])
     if len(set(paths)) != len(paths):
         raise PublicationError("Baseline paths are ambiguous.")
-    value["files"] = sorted(files, key=lambda record: record["path"])
+    value["files"] = sorted(records, key=lambda record: record["path"])
     write_json(path, value)
 
 
@@ -181,7 +188,7 @@ def _positive(value: Any) -> int | None:
 
 def _git(root: Path, revision: str) -> str:
     # Trusted runner Git, fixed rev-parse operation and HEAD/tree references; never a shell.
-    return subprocess.run(  # noqa: S603
+    return subprocess.run(  # noqa: S603  # nosec B603, B607
         ["git", "-C", str(root), "rev-parse", "--verify", revision],  # noqa: S607
         check=True,
         capture_output=True,
@@ -194,11 +201,10 @@ def _enum(value: Any, allowed: set[str]) -> str:
 
 
 def _same_repository(value: Any) -> bool:
-    return (
-        isinstance(value, dict)
-        and isinstance(value.get("full_name"), str)
-        and value["full_name"].lower() == REPOSITORY
-    )
+    if not isinstance(value, dict):
+        return False
+    full_name = cast("dict[str, Any]", value).get("full_name")
+    return isinstance(full_name, str) and full_name.lower() == REPOSITORY
 
 
 def normalized_timestamp(value: Any) -> str | None:
@@ -234,6 +240,7 @@ def workflow_metadata(environment: dict[str, str]) -> dict[str, Any]:
     run = payload.get("workflow_run")
     if not isinstance(run, dict):
         raise PublicationError("Producer event metadata is incompatible.")
+    run = cast("dict[str, Any]", run)
     repository = run.get("repository", {})
     head_repository = run.get("head_repository", {})
     same_repository = _same_repository(repository) and _same_repository(head_repository)
@@ -304,7 +311,9 @@ def report_evidence(path: Path, producer: str, revision: str) -> dict[str, Any]:
     result["generated_at"] = normalized_timestamp(report.get("generated_at"))
     freshness = report.get("freshness")
     if isinstance(freshness, dict):
-        result["expires_at"] = normalized_timestamp(freshness.get("expires_at"))
+        result["expires_at"] = normalized_timestamp(
+            cast("dict[str, Any]", freshness).get("expires_at")
+        )
     commit = report.get("commit")
     if isinstance(commit, str) and REVISION.fullmatch(commit):
         result["source_revision"] = commit
@@ -312,7 +321,8 @@ def report_evidence(path: Path, producer: str, revision: str) -> dict[str, Any]:
     execution = report.get("execution")
     if isinstance(execution, dict):
         result["execution"] = _enum(
-            execution.get("state"), {"success", "failure", "cancelled", "unknown"}
+            cast("dict[str, Any]", execution).get("state"),
+            {"success", "failure", "cancelled", "unknown"},
         )
     return result
 
@@ -349,7 +359,7 @@ def site_inventory(root: Path) -> list[dict[str, Any]]:
     """Compare full Empathy compositions, using the pinned Relay inventory ordering."""
     if root.is_symlink() or not root.is_dir():
         raise PublicationError("The composed site must be a regular directory.")
-    records = []
+    records: list[dict[str, Any]] = []
     total = 0
     for path in sorted(root.rglob("*")):
         if path.is_symlink():
@@ -426,6 +436,8 @@ def fetch_public(path: str) -> bytes:
         if response.status != HTTPStatus.OK or response.geturl() != SITE_URL + path:
             raise PublicationError("The public route did not return an exact successful response.")
         data = response.read(MAX_FILE_BYTES + 1)
+        if not isinstance(data, bytes):
+            raise PublicationError("The public response must contain bytes.")
         if len(data) > MAX_FILE_BYTES:
             raise PublicationError("The public response exceeds its bound.")
         return data
@@ -437,7 +449,7 @@ def _probe_live_routes(site: Path, identity_path: str, expected: bytes) -> list[
     parse_json(actual)
     if actual != expected:
         raise PublicationError("The live deployment differs from the retained build.")
-    route_evidence = []
+    route_evidence: list[dict[str, Any]] = []
     for route in GARDEN_ROUTES + INTELLIGENCE_ROUTES:
         data = fetch_public(route)
         entrypoint = route + "index.html" if not route or route.endswith("/") else route
@@ -523,7 +535,7 @@ def failure_report(stage: str, environment: dict[str, str]) -> dict[str, Any]:
 
 class SafeParser(argparse.ArgumentParser):
     # argparse requires this signature; never echo its potentially private message.
-    def error(self, message: str) -> None:  # noqa: ARG002
+    def error(self, message: str) -> NoReturn:  # noqa: ARG002
         raise PublicationError("Publication command arguments are invalid.")
 
 

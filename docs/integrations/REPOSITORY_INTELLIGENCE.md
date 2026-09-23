@@ -161,9 +161,16 @@ during verification. Route availability alone is insufficient proof of revision.
 | Relay revision | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` |
 | Quartz revision | `075afd3f712da0088a07f5284a7b3aba37dd61b6` |
 | Known-good workflow | [35840040112, attempt 1](https://github.com/egohygiene/empathy/actions/runs/35840040112) |
-| Historical Pages archive | [10741177073](https://github.com/egohygiene/empathy/actions/runs/35840040112/artifacts/10741177073) |
+| Historical Pages archive | Artifact ID `10741177073`; authenticated access described below |
 | Archive SHA-256 | `3175c601487b61ecf4e87fc820a33ce8d3a137fa34bf21b2256d9868aa04257b` |
 | Original complete-site digest | `sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498` |
+
+Download the archive from the known-good run while signed into GitHub, or use
+the authenticated REST endpoint
+`GET /repos/egohygiene/empathy/actions/artifacts/10741177073/zip`.
+Verify its bytes against the archive SHA-256 above. An unauthenticated artifact
+link can return 404; the recorded ID and digest identify the previously verified
+archive. Download availability remains subject to artifact retention.
 
 [`verify_repository_intelligence_rollback.py`](../../tools/verify_repository_intelligence_rollback.py)
 requires the historical path inventory, exact old Relay provenance, and exact
@@ -222,6 +229,26 @@ Record pre-existing MegaLinter catalog-SHA and task-catalog drift as baseline
 validation findings. The root Cargo workspace also references a missing
 `tests/fixtures/clippy/Cargo.toml`, which blocks the normal Beacon Rust gates.
 This checkpoint does not change those unrelated catalogs or workspace paths.
+
+The focused consumer workflow applies the canonical EgoLint configurations to
+its eight Python files with Ruff 0.16.5, Mypy 1.19.1, Bandit 1.9.4, and
+`types-PyYAML==6.0.12.20260906`. It also runs Secretlint 13.0.5 and the matching
+recommended-rule preset against the consumer helpers, tests, workflows, and
+publication documentation. These bounded checks complement the PR fast profile;
+neither covers the complete holistic profile, including Lychee 0.24.2 links.
+
+Before declaring readiness, manually run the existing
+[`MegaLinter` workflow](../../.github/workflows/megalinter.yml) on the frozen
+review branch and verify that its recorded head SHA equals the proposed head.
+A manual run selects `.mega-linter.yml` and scans the complete repository.
+Inspect its individual linter results, resolve introduced gating findings,
+review warning-only diagnostics, and record unrelated baseline failures
+separately. On a nondefault branch the snapshot
+publisher must be skipped, and any resulting Pages refresh must be denied by
+its default-branch guard. The lint job can still upload SARIF using its existing
+`security-events: write` permission. Keep the run, attempt, logs, and artifact
+identities as exact-head review evidence; a successful fast-profile run cannot
+substitute for this check.
 
 After review and merge, record the following on #94 before changing its state:
 

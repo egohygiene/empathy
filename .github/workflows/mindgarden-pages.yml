@@ -364,7 +364,8 @@ jobs:
               "rule": "empathy.publication." + (failed or "complete"),
               "observed": observed,
               "remediation": guidance[code] if code else None,
-              "documentation": "https://github.com/egohygiene/empathy/blob/" + os.environ["GITHUB_SHA"] + "/docs/integrations/REPOSITORY_INTELLIGENCE.md",
+              "documentation": "/".join(("https://github.com", "egohygiene/empathy", "blob",
+                                         os.environ["GITHUB_SHA"], "docs/integrations/REPOSITORY_INTELLIGENCE.md")),
               "sanitization": "allowlisted-metadata-only",
           }
           encoded = json.dumps(report, indent=2, sort_keys=True) + "\n"

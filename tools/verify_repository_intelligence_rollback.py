@@ -16,8 +16,10 @@ from pathlib import Path
 import re
 import subprocess  # nosec B404
 import sys
-from typing import Any
-from xml.etree import ElementTree as ET
+from typing import Any, cast
+
+# normalized_feed_digest rejects declarations and non-UTF-8/NUL input before parsing.
+from xml.etree import ElementTree as ET  # nosec B405
 
 REPOSITORY = "egohygiene/empathy"
 SOURCE_COMMIT = "254185272ab27b6858b8b0393af6549c205c9a8d"
@@ -154,7 +156,8 @@ def verify_provenance(value: Any) -> None:
         "generated_at": "2026-09-23T08:56:50Z",
         "timestamp_source": "consumer-source-commit",
     }
-    if any(value.get(key) != expected_value for key, expected_value in expected.items()):
+    provenance = cast("dict[str, Any]", value)
+    if any(provenance.get(key) != expected_value for key, expected_value in expected.items()):
         raise RollbackError("ERB-004")
 
 
@@ -205,7 +208,7 @@ def verify_source(repository_root: Path) -> None:
     """Check the exact immutable consumer revision and tree when requested."""
     for reference, expected in (("HEAD", SOURCE_COMMIT), ("HEAD^{tree}", SOURCE_TREE)):
         # Trusted runner Git and fixed HEAD/tree references; never a shell.
-        result = subprocess.run(  # noqa: S603  # nosec B603
+        result = subprocess.run(  # noqa: S603  # nosec B603, B607
             ["git", "-C", str(repository_root), "rev-parse", "--verify", reference],  # noqa: S607
             check=False,
             capture_output=True,
