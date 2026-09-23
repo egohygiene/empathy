@@ -398,7 +398,7 @@ Clone found (yaml)
    .github/workflows/ossf-scorecard.yml [79:22 - 102:34]
 Clone found (yaml)
  - .github/workflows/mindgarden-pages.yml [42:49 - 47:87] (6 lines, 117 tokens)
-   .github/workflows/mindgarden-pages.yml [393:46 - 398:87]
+   .github/workflows/mindgarden-pages.yml [394:46 - 399:87]
 Clone found (yaml)
  - .github/workflows/mindgarden-pages.yml [60:1 - 70:9] (11 lines, 61 tokens)
    .github/workflows/repository-intelligence.yml [50:1 - 60:9]
@@ -412,14 +412,14 @@ Clone found (yaml)
  - .github/workflows/mindgarden-pages.yml [261:1 - 270:23] (10 lines, 202 tokens)
    .github/workflows/mindgarden-pages.yml [274:1 - 283:23]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [367:154 - 372:32] (6 lines, 56 tokens)
-   .github/workflows/repository-intelligence.yml [140:57 - 145:32]
+ - .github/workflows/mindgarden-pages.yml [368:116 - 373:32] (6 lines, 56 tokens)
+   .github/workflows/repository-intelligence.yml [141:57 - 146:32]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [391:58 - 399:12] (9 lines, 195 tokens)
-   .github/workflows/mindgarden-pages.yml [420:77 - 428:12]
+ - .github/workflows/mindgarden-pages.yml [392:58 - 400:12] (9 lines, 195 tokens)
+   .github/workflows/mindgarden-pages.yml [421:77 - 429:12]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [391:38 - 400:12] (10 lines, 207 tokens)
-   .github/workflows/mindgarden-pages.yml [497:68 - 505:26]
+ - .github/workflows/mindgarden-pages.yml [392:38 - 401:12] (10 lines, 207 tokens)
+   .github/workflows/mindgarden-pages.yml [498:68 - 506:26]
 Clone found (yaml)
  - .github/workflows/osv-scan.yml [330:1 - 339:22] (10 lines, 85 tokens)
    .github/workflows/osv-scan.yml [354:1 - 363:22]
@@ -1861,8 +1861,14 @@ Clone found (markdown)
  - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [10:81 - 62:53] (53 lines, 793 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [10:117 - 62:53]
 Clone found (markdown)
- - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [94:340 - 185:4] (92 lines, 85 tokens)
-   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [66:340 - 157:4]
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [124:22 - 131:3] (8 lines, 64 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [96:22 - 103:3]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [130:35 - 141:3] (12 lines, 179 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [102:35 - 113:3]
+Clone found (markdown)
+ - .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [140:35 - 148:124] (9 lines, 156 tokens)
+   .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [112:35 - 120:124]
 Clone found (markdown)
  - .staging/.github/skills/create-llms/SKILL.md:markdown [53:32 - 108:13] (56 lines, 562 tokens)
    .staging/.github/skills/update-llms/SKILL.md:markdown [47:42 - 96:13]
@@ -1875,9 +1881,6 @@ Clone found (txt)
 Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
-Clone found (markdown)
- - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
 Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
@@ -9481,14 +9484,14 @@ Clone found (json)
  - schemas/repository-foundation-catalog.v1.schema.json [70:42 - 83:10] (14 lines, 63 tokens)
    schemas/repository-foundation-catalog.v1.schema.json [89:53 - 102:10]
 Clone found (python)
- - tests/test_repository_intelligence_provenance.py [57:1 - 62:5] (6 lines, 68 tokens)
-   tests/test_staging_removal_gate.py [15:1 - 20:5]
+ - tests/test_repository_intelligence_provenance.py [62:53 - 67:5] (6 lines, 53 tokens)
+   tests/test_staging_removal_gate.py [15:39 - 20:5]
 Clone found (python)
- - tests/test_repository_intelligence_provenance.py [135:17 - 143:60] (9 lines, 55 tokens)
-   tests/test_repository_intelligence_provenance.py [206:18 - 214:60]
+ - tests/test_repository_intelligence_provenance.py [145:17 - 153:60] (9 lines, 55 tokens)
+   tests/test_repository_intelligence_provenance.py [217:18 - 225:60]
 Clone found (python)
- - tests/test_repository_intelligence_workflows.py [170:1 - 177:68] (8 lines, 58 tokens)
-   tests/test_repository_intelligence_workflows.py [610:1 - 617:68]
+ - tests/test_repository_intelligence_workflows.py [191:1 - 198:68] (8 lines, 58 tokens)
+   tests/test_repository_intelligence_workflows.py [636:1 - 643:68]
 Clone found (python)
  - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
    tests/test_staging_removal_gate.py [64:49 - 71:14]
@@ -9499,6 +9502,9 @@ Clone found (python)
  - tests/test_validate_automation.py [46:9 - 57:32] (12 lines, 56 tokens)
    tests/test_validate_automation.py [64:16 - 75:32]
 Clone found (python)
+ - tools/repository_intelligence_publication.py [361:80 - 366:19] (6 lines, 55 tokens)
+   tools/verify_repository_intelligence_rollback.py [79:38 - 84:19]
+Clone found (python)
  - tools/staging_home_audit.py [1343:5 - 1350:9] (8 lines, 54 tokens)
    tools/staging_removal_gate.py [72:25 - 79:9]
 ┌──────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
@@ -9506,7 +9512,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 415            │ 114129      │ 438449       │ 275          │ 6030 (5.28%)     │ 28883 (6.59%)     │
+│ bash         │ 415            │ 114136      │ 438449       │ 275          │ 6030 (5.28%)     │ 28883 (6.59%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9570,7 +9576,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1726           │ 331409      │ 4304130      │ 695          │ 11710 (3.53%)    │ 173045 (4.02%)    │
+│ markdown     │ 1726           │ 331444      │ 4304798      │ 696          │ 11639 (3.51%)    │ 173247 (4.02%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9592,7 +9598,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 299            │ 75862       │ 479502       │ 133          │ 1327 (1.75%)     │ 12490 (2.60%)     │
+│ python       │ 299            │ 75962       │ 480352       │ 134          │ 1332 (1.75%)     │ 12530 (2.61%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9624,12 +9630,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 556            │ 57963       │ 324537       │ 355          │ 9414 (16.24%)    │ 106045 (32.68%)   │
+│ yaml         │ 556            │ 57989       │ 324911       │ 355          │ 9414 (16.23%)    │ 106045 (32.64%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4768           │ 988692      │ 7799639      │ 3165         │ 59600 (6.03%)    │ 763752 (9.79%)    │
+│ Total:       │ 4768           │ 988860      │ 7801531      │ 3167         │ 59534 (6.02%)    │ 763994 (9.79%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3165 clones.
+Found 3167 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
-time: 16.13s
+time: 11.91s
 
