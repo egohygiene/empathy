@@ -70,7 +70,7 @@
           </div>
           <div class="stat-card stat-red">
             <h3>Duplicated Lines</h3>
-            <div class="val">59362 (6.03%)</div>
+            <div class="val">59560 (6.05%)</div>
           </div>
         </div>
       </section>
@@ -394,8 +394,8 @@
               <td>1725</td>
               <td>331127</td>
               <td>695</td>
-              <td>11531 (3.48%)</td>
-              <td>174008 (4.05%)</td>
+              <td>11729 (3.54%)</td>
+              <td>173216 (4.03%)</td>
             </tr>
             
             <tr>
@@ -646,8 +646,8 @@
               <td>4756</td>
               <td>984491</td>
               <td>3156</td>
-              <td>59362 (6.03%)</td>
-              <td>763748 (9.84%)</td>
+              <td>59560 (6.05%)</td>
+              <td>762956 (9.83%)</td>
             </tr>
           </tbody>
         </table>
@@ -57342,13 +57342,112 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/agents/awesome/specification.agent.md:markdown (Line 31:1 - Line 114:28),
-              .staging/.github/skills/create-specification/SKILL.md:markdown (Line 29:1 - Line 112:28)
+              .staging/.github/agents/awesome/specification.agent.md:markdown (Line 28:53 - Line 116:8),
+              .staging/.github/skills/create-specification/SKILL.md:markdown (Line 26:53 - Line 114:12)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-192')">Show code</button>
             </div>
-            <pre id="code-markdown-192" class="code-block">---
+            <pre id="code-markdown-192" class="code-block">Specification files must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:
+
+```md
+---
+title: [Concise Title Describing the Specification&#39;s Focus]
+version: [Optional: e.g., 1.0, Date]
+date_created: [YYYY-MM-DD]
+last_updated: [Optional: YYYY-MM-DD]
+owner: [Optional: Team/Individual responsible for this spec]
+tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `process`, `design`, `app` etc]
+---
+
+# Introduction
+
+[A short concise introduction to the specification and the goal it is intended to achieve.]
+
+## 1. Purpose &#38; Scope
+
+[Provide a clear, concise description of the specification&#39;s purpose and the scope of its application. State the intended audience and any assumptions.]
+
+## 2. Definitions
+
+[List and define all acronyms, abbreviations, and domain-specific terms used in this specification.]
+
+## 3. Requirements, Constraints &#38; Guidelines
+
+[Explicitly list all requirements, constraints, rules, and guidelines. Use bullet points or tables for clarity.]
+
+- **REQ-001**: Requirement 1
+- **SEC-001**: Security Requirement 1
+- **[3 LETTERS]-001**: Other Requirement 1
+- **CON-001**: Constraint 1
+- **GUD-001**: Guideline 1
+- **PAT-001**: Pattern to follow 1
+
+## 4. Interfaces &#38; Data Contracts
+
+[Describe the interfaces, APIs, data contracts, or integration points. Use tables or code blocks for schemas and examples.]
+
+## 5. Acceptance Criteria
+
+[Define clear, testable acceptance criteria for each requirement using Given-When-Then format where appropriate.]
+
+- **AC-001**: Given [context], When [action], Then [expected outcome]
+- **AC-002**: The system shall [specific behavior] when [condition]
+- **AC-003**: [Additional acceptance criteria as needed]
+
+## 6. Test Automation Strategy
+
+[Define the testing approach, frameworks, and automation requirements.]
+
+- **Test Levels**: Unit, Integration, End-to-End
+- **Frameworks**: MSTest, FluentAssertions, Moq (for .NET applications)
+- **Test Data Management**: [approach for test data creation and cleanup]
+- **CI/CD Integration**: [automated testing in GitHub Actions pipelines]
+- **Coverage Requirements**: [minimum code coverage thresholds]
+- **Performance Testing**: [approach for load and performance testing]
+
+## 7. Rationale &#38; Context
+
+[Explain the reasoning behind the requirements, constraints, and guidelines. Provide context for design decisions.]
+
+## 8. Dependencies &#38; External Integrations
+
+[Define the external systems, services, and architectural dependencies required for this specification. Focus on **what** is needed rather than **how** it&#39;s implemented. Avoid specific package or library versions unless they represent architectural constraints.]
+
+### External Systems
+- **EXT-001**: [External system name] - [Purpose and integration type]
+
+### Third-Party Services
+- **SVC-001**: [Service name] - [Required capabilities and SLA requirements]
+
+### Infrastructure Dependencies
+- **INF-001**: [Infrastructure component] - [Requirements and constraints]
+
+### Data Dependencies
+- **DAT-001**: [External data source] - [Format, frequency, and access requirements]
+
+### Technology Platform Dependencies
+- **PLT-001**: [Platform/runtime requirement] - [Version constraints and rationale]
+
+### Compliance Dependencies
+- **COM-001**: [Regulatory or compliance requirement] - [Impact on implementation]
+
+**Note**: This section should focus on architectural and business dependencies, not specific package implementations. For example, specify &#34;OAuth 2.0 authentication library&#34; rather than &#34;Microsoft.AspNetCore.Authentication.JwtBearer v6.0.1&#34;.
+
+## 9. Examples &#38; Edge Cases
+
+```code</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/agents/awesome/specification.agent.md:markdown (Line 31:1 - Line 114:28),
+              .staging/.github/skills/create-specification/SKILL.md:markdown (Line 29:1 - Line 112:28)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-193')">Show code</button>
+            </div>
+            <pre id="code-markdown-193" class="code-block">---
 title: [Concise Title Describing the Specification&#39;s Focus]
 version: [Optional: e.g., 1.0, Date]
 date_created: [YYYY-MM-DD]
@@ -57440,9 +57539,9 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
               .staging/.github/skills/update-specification/SKILL.md:markdown (Line 29:1 - Line 115:110)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-193')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-194')">Show code</button>
             </div>
-            <pre id="code-markdown-193" class="code-block">---
+            <pre id="code-markdown-194" class="code-block">---
 title: [Concise Title Describing the Specification&#39;s Focus]
 version: [Optional: e.g., 1.0, Date]
 date_created: [YYYY-MM-DD]
@@ -57533,17 +57632,13 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/agents/awesome/specification.agent.md:markdown (Line 33:25 - Line 58:4),
-              .staging/.github/skills/create-specification/SKILL.md:markdown (Line 31:25 - Line 56:4)
+              .staging/.github/agents/awesome/specification.agent.md:markdown (Line 37:1 - Line 124:40),
+              .staging/.github/skills/update-specification/SKILL.md:markdown (Line 35:1 - Line 122:40)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-194')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-195')">Show code</button>
             </div>
-            <pre id="code-markdown-194" class="code-block">version: [Optional: e.g., 1.0, Date]
-date_created: [YYYY-MM-DD]
-last_updated: [Optional: YYYY-MM-DD]
-owner: [Optional: Team/Individual responsible for this spec]
-tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `process`, `design`, `app` etc]
+            <pre id="code-markdown-195" class="code-block">tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `process`, `design`, `app` etc]
 ---
 
 # Introduction
@@ -57564,18 +57659,8 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
 
 - **REQ-001**: Requirement 1
 - **SEC-001**: Security Requirement 1
-- **[3 LETTERS]-001**: Other Requirement 1</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              .staging/.github/agents/awesome/specification.agent.md:markdown (Line 59:1 - Line 116:2),
-              .staging/.github/skills/create-specification/SKILL.md:markdown (Line 57:1 - Line 114:5)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-195')">Show code</button>
-            </div>
-            <pre id="code-markdown-195" class="code-block">- **CON-001**: Constraint 1
+- **[3 LETTERS]-001**: Other Requirement 1
+- **CON-001**: Constraint 1
 - **GUD-001**: Guideline 1
 - **PAT-001**: Pattern to follow 1
 
@@ -57632,7 +57717,15 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
 
 ## 9. Examples &#38; Edge Cases
 
-```code</pre>
+```code
+// Code snippet or data example demonstrating the correct application of the guidelines, including edge cases
+```
+
+## 10. Validation Criteria
+
+[List the criteria or tests that must be satisfied for compliance with this specification.]
+
+## 11. Related Specifications / Further Reading</pre>
           </div>
           
           <div class="clone-item">
@@ -62476,31 +62569,49 @@ All implementation plans must strictly adhere to the following template. Each se
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/create-implementation-plan/SKILL.md:markdown (Line 124:22 - Line 131:3),
-              .staging/.github/skills/update-implementation-plan/SKILL.md:markdown (Line 96:22 - Line 103:3)
+              .staging/.github/skills/create-implementation-plan/SKILL.md:markdown (Line 94:340 - Line 185:4),
+              .staging/.github/skills/update-implementation-plan/SKILL.md:markdown (Line 66:340 - Line 157:4)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-374')">Show code</button>
             </div>
-            <pre id="code-markdown-374" class="code-block">## 2. Implementation Steps
+            <pre id="code-markdown-374" class="code-block">The status of the implementation plan must be clearly defined in the front matter and must reflect the current state of the plan. The status can be one of the following (status_color in brackets): `Completed` (bright green badge), `In progress` (yellow badge), `Planned` (blue badge), `Deprecated` (red badge), or `On Hold` (orange badge). It should also be displayed as a badge in the introduction section.
+
+```md
+---
+goal: [Concise Title Describing the Package Implementation Plan&#39;s Goal]
+version: [Optional: e.g., 1.0, Date]
+date_created: [YYYY-MM-DD]
+last_updated: [Optional: YYYY-MM-DD]
+owner: [Optional: Team/Individual responsible for this spec]
+status: &#39;Completed&#39;|&#39;In progress&#39;|&#39;Planned&#39;|&#39;Deprecated&#39;|&#39;On Hold&#39;
+tags: [Optional: List of relevant tags or categories, e.g., `feature`, `upgrade`, `chore`, `architecture`, `migration`, `bug` etc]
+---
+
+# Introduction
+
+![Status: &#60;status&#62;](https://img.shields.io/badge/status-&#60;status&#62;-&#60;status_color&#62;)
+
+[A short concise introduction to the plan and the goal it is intended to achieve.]
+
+## 1. Requirements &#38; Constraints
+
+[Explicitly list all requirements &#38; constraints that affect the plan and constrain how it is implemented. Use bullet points or tables for clarity.]
+
+- **REQ-001**: Requirement 1
+- **SEC-001**: Security Requirement 1
+- **[3 LETTERS]-001**: Other Requirement 1
+- **CON-001**: Constraint 1
+- **GUD-001**: Guideline 1
+- **PAT-001**: Pattern to follow 1
+
+## 2. Implementation Steps
 
 ### Implementation Phase 1
 
 - GOAL-001: [Describe the goal of this phase, e.g., &#34;Implement feature X&#34;, &#34;Refactor module Y&#34;, etc.]
 
 | Task | Description | Completed | Date |
-|------|-------------|-----------|------|</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              .staging/.github/skills/create-implementation-plan/SKILL.md:markdown (Line 130:35 - Line 141:3),
-              .staging/.github/skills/update-implementation-plan/SKILL.md:markdown (Line 102:35 - Line 113:3)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-375')">Show code</button>
-            </div>
-            <pre id="code-markdown-375" class="code-block">| Task | Description | Completed | Date |
 |------|-------------|-----------|------|
 | TASK-001 | Description of task 1 | ✅ | 2025-04-25 |
 | TASK-002 | Description of task 2 | |  |
@@ -62511,18 +62622,6 @@ All implementation plans must strictly adhere to the following template. Each se
 - GOAL-002: [Describe the goal of this phase, e.g., &#34;Implement feature X&#34;, &#34;Refactor module Y&#34;, etc.]
 
 | Task | Description | Completed | Date |
-|------|-------------|-----------|------|</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
-              .staging/.github/skills/create-implementation-plan/SKILL.md:markdown (Line 140:35 - Line 148:124),
-              .staging/.github/skills/update-implementation-plan/SKILL.md:markdown (Line 112:35 - Line 120:124)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-376')">Show code</button>
-            </div>
-            <pre id="code-markdown-376" class="code-block">| Task | Description | Completed | Date |
 |------|-------------|-----------|------|
 | TASK-004 | Description of task 4 | |  |
 | TASK-005 | Description of task 5 | |  |
@@ -62530,7 +62629,44 @@ All implementation plans must strictly adhere to the following template. Each se
 
 ## 3. Alternatives
 
-[A bullet point list of any alternative approaches that were considered and why they were not chosen. This helps to provide context and rationale for the chosen approach.]</pre>
+[A bullet point list of any alternative approaches that were considered and why they were not chosen. This helps to provide context and rationale for the chosen approach.]
+
+- **ALT-001**: Alternative approach 1
+- **ALT-002**: Alternative approach 2
+
+## 4. Dependencies
+
+[List any dependencies that need to be addressed, such as libraries, frameworks, or other components that the plan relies on.]
+
+- **DEP-001**: Dependency 1
+- **DEP-002**: Dependency 2
+
+## 5. Files
+
+[List the files that will be affected by the feature or refactoring task.]
+
+- **FILE-001**: Description of file 1
+- **FILE-002**: Description of file 2
+
+## 6. Testing
+
+[List the tests that need to be implemented to verify the feature or refactoring task.]
+
+- **TEST-001**: Description of test 1
+- **TEST-002**: Description of test 2
+
+## 7. Risks &#38; Assumptions
+
+[List any risks or assumptions related to the implementation of the plan.]
+
+- **RISK-001**: Risk 1
+- **ASSUMPTION-001**: Assumption 1
+
+## 8. Related Specifications / Further Reading
+
+[Link to related spec 1]
+[Link to relevant external documentation]
+```</pre>
           </div>
           
           <div class="clone-item">
@@ -62539,9 +62675,9 @@ All implementation plans must strictly adhere to the following template. Each se
               .staging/.github/skills/update-llms/SKILL.md:markdown (Line 47:42 - Line 96:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-377')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-375')">Show code</button>
             </div>
-            <pre id="code-markdown-377" class="code-block">The `llms.txt` file must follow this exact structure per the specification:
+            <pre id="code-markdown-375" class="code-block">The `llms.txt` file must follow this exact structure per the specification:
 
 1. **H1 Header**: Single line with repository/project name (required)
 2. **Blockquote Summary**: Brief description in blockquote format (optional but recommended)
@@ -62605,9 +62741,9 @@ Exclude files that:
               .staging/.github/skills/update-llms/SKILL.md:markdown (Line 121:28 - Line 146:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-378')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-376')">Show code</button>
             </div>
-            <pre id="code-markdown-378" class="code-block">4. Confirm the file is both human and machine readable
+            <pre id="code-markdown-376" class="code-block">4. Confirm the file is both human and machine readable
 
 ## Quality Assurance
 
@@ -62644,9 +62780,9 @@ Exclude files that:
               .staging/.github/skills/update-specification/SKILL.md:markdown (Line 8:123 - Line 22:119)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-379')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-377')">Show code</button>
             </div>
-            <pre id="code-markdown-379" class="code-block">Your goal is to create a new specification file for `${input:SpecPurpose}`.
+            <pre id="code-markdown-377" class="code-block">Your goal is to create a new specification file for `${input:SpecPurpose}`.
 
 The specification file must define the requirements, constraints, and interfaces for the solution components in a manner that is clear, unambiguous, and structured for effective use by Generative AIs. Follow established documentation standards and ensure the content is machine-readable and self-contained.
 
@@ -62665,13 +62801,30 @@ The specification should be saved in the [/spec/](/spec/) directory and named ac
           
           <div class="clone-item">
             <div class="clone-info">
+              .staging/.github/skills/create-specification/SKILL.md:markdown (Line 10:136 - Line 16:53),
+              .staging/.github/skills/update-specification/SKILL.md:markdown (Line 10:136 - Line 16:53)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-378')">Show code</button>
+            </div>
+            <pre id="code-markdown-378" class="code-block">The specification file must define the requirements, constraints, and interfaces for the solution components in a manner that is clear, unambiguous, and structured for effective use by Generative AIs. Follow established documentation standards and ensure the content is machine-readable and self-contained.
+
+## Best Practices for AI-Ready Specifications
+
+- Use precise, explicit, and unambiguous language.
+- Clearly distinguish between requirements, constraints, and recommendations.
+- Use structured formatting (headings, lists, tables) for easy parsing.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
               .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown (Line 6:26 - Line 31:43),
               .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown (Line 6:28 - Line 31:43)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-380')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-379')">Show code</button>
             </div>
-            <pre id="code-markdown-380" class="code-block"># Create Spring Boot Java project prompt
+            <pre id="code-markdown-379" class="code-block"># Create Spring Boot Java project prompt
 
 - Please make sure you have the following software installed on your system:
 
@@ -62705,9 +62858,9 @@ curl https://start.spring.io/starter.zip \</pre>
               .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown (Line 78:1 - Line 96:10)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-381')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-380')">Show code</button>
             </div>
-            <pre id="code-markdown-381" class="code-block">- Insert SpringDoc configurations into `application.properties` file
+            <pre id="code-markdown-380" class="code-block">- Insert SpringDoc configurations into `application.properties` file
 
 ```properties
 # SpringDoc configurations
@@ -62734,9 +62887,9 @@ spring.data.redis.password=rootroot
               .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown (Line 121:1 - Line 135:51)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-382')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-381')">Show code</button>
             </div>
-            <pre id="code-markdown-382" class="code-block">- Create `docker-compose.yaml` at project root and add following services: `redis:6`, `postgresql:17` and `mongo:8`.
+            <pre id="code-markdown-381" class="code-block">- Create `docker-compose.yaml` at project root and add following services: `redis:6`, `postgresql:17` and `mongo:8`.
 
   - redis service should have
     - password `rootroot`
@@ -62759,9 +62912,9 @@ spring.data.redis.password=rootroot
               .staging/.github/skills/csharp-tunit/SKILL.md:markdown (Line 8:62 - Line 13:13)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-383')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-382')">Show code</button>
             </div>
-            <pre id="code-markdown-383" class="code-block">Your goal is to help me write effective unit tests with NUnit, covering both standard and data-driven testing approaches.
+            <pre id="code-markdown-382" class="code-block">Your goal is to help me write effective unit tests with NUnit, covering both standard and data-driven testing approaches.
 
 ## Project Setup
 
@@ -62775,9 +62928,9 @@ spring.data.redis.password=rootroot
               .staging/.github/skills/csharp-xunit/SKILL.md:markdown (Line 8:62 - Line 13:37)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-384')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-383')">Show code</button>
             </div>
-            <pre id="code-markdown-384" class="code-block">Your goal is to help me write effective unit tests with NUnit, covering both standard and data-driven testing approaches.
+            <pre id="code-markdown-383" class="code-block">Your goal is to help me write effective unit tests with NUnit, covering both standard and data-driven testing approaches.
 
 ## Project Setup
 
@@ -62791,9 +62944,9 @@ spring.data.redis.password=rootroot
               .staging/.github/skills/csharp-xunit/SKILL.md:markdown (Line 13:73 - Line 19:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-385')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-384')">Show code</button>
             </div>
-            <pre id="code-markdown-385" class="code-block">- Reference Microsoft.NET.Test.Sdk, NUnit, and NUnit3TestAdapter packages
+            <pre id="code-markdown-384" class="code-block">- Reference Microsoft.NET.Test.Sdk, NUnit, and NUnit3TestAdapter packages
 - Create test classes that match the classes being tested (e.g., `CalculatorTests` for `Calculator`)
 - Use .NET SDK test commands: `dotnet test` for running tests
 
@@ -62808,9 +62961,9 @@ spring.data.redis.password=rootroot
               .staging/.github/skills/csharp-xunit/SKILL.md:markdown (Line 27:1 - Line 38:9)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-386')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-385')">Show code</button>
             </div>
-            <pre id="code-markdown-386" class="code-block">## Standard Tests
+            <pre id="code-markdown-385" class="code-block">## Standard Tests
 
 - Keep tests focused on a single behavior
 - Avoid testing multiple behaviors in one test method
@@ -62830,9 +62983,9 @@ spring.data.redis.password=rootroot
               .staging/.github/skills/csharp-xunit/SKILL.md:markdown (Line 58:1 - Line 65:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-387')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-386')">Show code</button>
             </div>
-            <pre id="code-markdown-387" class="code-block">- Mock dependencies to isolate units under test
+            <pre id="code-markdown-386" class="code-block">- Mock dependencies to isolate units under test
 - Use interfaces to facilitate mocking
 - Consider using a DI container for complex test setups
 
@@ -62848,9 +63001,9 @@ spring.data.redis.password=rootroot
               mantle/audits/mantle-holistic-polish-20260806T124442Z.md:markdown (Line 346:90 - Line 352:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-388')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-387')">Show code</button>
             </div>
-            <pre id="code-markdown-388" class="code-block">For monorepos with many packages, use glob patterns to avoid listing each directory:
+            <pre id="code-markdown-387" class="code-block">For monorepos with many packages, use glob patterns to avoid listing each directory:
 
 ```yaml
 - package-ecosystem: &#34;npm&#34;
@@ -62866,9 +63019,9 @@ spring.data.redis.password=rootroot
               .staging/.github/skills/github-actions-runtime-upgrade-conventions/SKILL.md:markdown (Line 32:11 - Line 40:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-389')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-388')">Show code</button>
             </div>
-            <pre id="code-markdown-389" class="code-block">### By Name Pattern
+            <pre id="code-markdown-388" class="code-block">### By Name Pattern
 
 ```yaml
 groups:
@@ -62888,9 +63041,9 @@ groups:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 208:1 - Line 214:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-390')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-389')">Show code</button>
             </div>
-            <pre id="code-markdown-390" class="code-block">```yaml
+            <pre id="code-markdown-389" class="code-block">```yaml
 labels:
   - &#34;dependencies&#34;
   - &#34;npm&#34;
@@ -62905,9 +63058,9 @@ Set `labels: []` to disable all labels including defaults. SemVer labels (`major
               holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:markdown (Line 92:136 - Line 93:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-391')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-390')">Show code</button>
             </div>
-            <pre id="code-markdown-391" class="code-block">### Commit Messages
+            <pre id="code-markdown-390" class="code-block">### Commit Messages
 
 ```yaml
 commit-message:
@@ -62921,9 +63074,9 @@ commit-message:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 226:15 - Line 232:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-392')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-391')">Show code</button>
             </div>
-            <pre id="code-markdown-392" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
+            <pre id="code-markdown-391" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
 
 ```yaml
 schedule:
@@ -62937,9 +63090,9 @@ schedule:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 281:30 - Line 287:48)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-393')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-392')">Show code</button>
             </div>
-            <pre id="code-markdown-393" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
+            <pre id="code-markdown-392" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
 
 ```yaml
 schedule:
@@ -62955,9 +63108,9 @@ schedule:
               docs/foundation/gitignore/RULE_AUDIT.md:markdown (Line 55:22 - Line 55:74)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-394')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-393')">Show code</button>
             </div>
-            <pre id="code-markdown-394" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
+            <pre id="code-markdown-393" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
 
 ```yaml
 schedule:
@@ -62971,9 +63124,9 @@ schedule:
               mantle/CONTRIBUTING.md:markdown (Line 14:40 - Line 14:95)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-395')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-394')">Show code</button>
             </div>
-            <pre id="code-markdown-395" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
+            <pre id="code-markdown-394" class="code-block">Supported: `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron`
 
 ```yaml
 schedule:
@@ -62987,9 +63140,9 @@ schedule:
               .staging/.github/skills/dependabot/SKILL.md:markdown (Line 394:20 - Line 410:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-396')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-395')">Show code</button>
             </div>
-            <pre id="code-markdown-396" class="code-block">### Ignore Specific Dependencies
+            <pre id="code-markdown-395" class="code-block">### Ignore Specific Dependencies
 
 ```yaml
 ignore:
@@ -63011,9 +63164,9 @@ ignore:
               .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown (Line 93:52 - Line 99:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-397')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-396')">Show code</button>
             </div>
-            <pre id="code-markdown-397" class="code-block">**GitHub Copilot CLI (inside `copilot`):**
+            <pre id="code-markdown-396" class="code-block">**GitHub Copilot CLI (inside `copilot`):**
 ```text
 &#62; /plugin install advanced-security@copilot-plugins
 ```
@@ -63029,9 +63182,9 @@ ignore:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 124:59 - Line 138:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-398')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-397')">Show code</button>
             </div>
-            <pre id="code-markdown-398" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
+            <pre id="code-markdown-397" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
 
 ```yaml
 schedule:
@@ -63058,9 +63211,9 @@ Group dependencies into fewer PRs.
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 162:78 - Line 170:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-399')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-398')">Show code</button>
             </div>
-            <pre id="code-markdown-399" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
+            <pre id="code-markdown-398" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
 
 ```yaml
 schedule:
@@ -63076,9 +63229,9 @@ schedule:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 178:125 - Line 189:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-400')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-399')">Show code</button>
             </div>
-            <pre id="code-markdown-400" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
+            <pre id="code-markdown-399" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
 
 ```yaml
 schedule:
@@ -63103,9 +63256,9 @@ Group dependencies into fewer PRs.
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 269:78 - Line 281:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-401')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-400')">Show code</button>
             </div>
-            <pre id="code-markdown-401" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
+            <pre id="code-markdown-400" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
 
 ```yaml
 schedule:
@@ -63128,9 +63281,9 @@ Group dependencies into fewer PRs.</pre>
               holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:markdown (Line 93:98 - Line 93:195)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-402')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-401')">Show code</button>
             </div>
-            <pre id="code-markdown-402" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
+            <pre id="code-markdown-401" class="code-block">| `cronjob` | Cron expression | Required when interval is `cron` |
 
 ```yaml
 schedule:
@@ -63147,9 +63300,9 @@ schedule:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 172:46 - Line 177:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-403')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-402')">Show code</button>
             </div>
-            <pre id="code-markdown-403" class="code-block">Explicitly define which dependencies to maintain.
+            <pre id="code-markdown-402" class="code-block">Explicitly define which dependencies to maintain.
 
 | Parameter | Purpose |
 |---|---|
@@ -63163,9 +63316,9 @@ schedule:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 232:19 - Line 241:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-404')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-403')">Show code</button>
             </div>
-            <pre id="code-markdown-404" class="code-block">### `milestone`
+            <pre id="code-markdown-403" class="code-block">### `milestone`
 
 ```yaml
 milestone: 4  # numeric ID from milestone URL
@@ -63185,9 +63338,9 @@ commit-message:
               .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown (Line 241:29 - Line 248:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-405')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-404')">Show code</button>
             </div>
-            <pre id="code-markdown-405" class="code-block">### `milestone`
+            <pre id="code-markdown-404" class="code-block">### `milestone`
 
 ```yaml
 milestone: 4  # numeric ID from milestone URL
@@ -63204,9 +63357,9 @@ milestone: 4  # numeric ID from milestone URL
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 421:122 - Line 431:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-406')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-405')">Show code</button>
             </div>
-            <pre id="code-markdown-406" class="code-block">Supported by: `bundler`, `mix`, `pip`.
+            <pre id="code-markdown-405" class="code-block">Supported by: `bundler`, `mix`, `pip`.
 
 ```yaml
 insecure-external-code-execution: &#34;allow&#34;
@@ -63232,9 +63385,9 @@ registries:
               .staging/.github/skills/draw-io-diagram-generator/references/shape-libraries.md:markdown (Line 142:14 - Line 147:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-407')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-406')">Show code</button>
             </div>
-            <pre id="code-markdown-407" class="code-block">#### Use Case Diagrams
+            <pre id="code-markdown-406" class="code-block">#### Use Case Diagrams
 
 | Shape | Style String |
 | ------- | ------------- |
@@ -63248,9 +63401,9 @@ registries:
               .staging/.github/skills/md-to-docx/SKILL.md:markdown (Line 22:1 - Line 27:12)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-408')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-407')">Show code</button>
             </div>
-            <pre id="code-markdown-408" class="code-block">### Skill Folder Contents
+            <pre id="code-markdown-407" class="code-block">### Skill Folder Contents
 
 | File | Purpose |
 |------|---------|
@@ -63264,9 +63417,9 @@ registries:
               .staging/.github/skills/eval-driven-dev/references/2c-capture-and-verify-trace.md:markdown (Line 23:87 - Line 29:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-409')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-408')">Show code</button>
             </div>
-            <pre id="code-markdown-409" class="code-block">| -------------------- | ------------------------------------- | ------------------------------------------------------------------ |
+            <pre id="code-markdown-408" class="code-block">| -------------------- | ------------------------------------- | ------------------------------------------------------------------ |
 | Web scraper          | URL + prompt + schema definition      | The HTML page content                                              |
 | Research agent       | Research question + scope constraints | Source documents, search results                                   |
 | Customer support bot | Customer&#39;s spoken message             | Customer profile from CRM, conversation history from session store |
@@ -63281,9 +63434,9 @@ If a field ends up holding data the app would normally fetch itself, it probably
               .staging/.github/skills/eval-driven-dev/references/evaluators.md:markdown (Line 212:36 - Line 221:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-410')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-409')">Show code</button>
             </div>
-            <pre id="code-markdown-410" class="code-block">e.g. customer support answers, knowledge-base queries.
+            <pre id="code-markdown-409" class="code-block">e.g. customer support answers, knowledge-base queries.
 
 **Requires `expected_output`**: Yes — do NOT use on items without
 `expected_output`; produces meaningless scores.
@@ -63301,9 +63454,9 @@ client: OpenAI client instance.
               .staging/.github/skills/excalidraw-diagram-generator/SKILL.md:markdown (Line 409:112 - Line 415:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-411')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-410')">Show code</button>
             </div>
-            <pre id="code-markdown-411" class="code-block">     &#60;diagram-path&#62; &#60;icon-name&#62; &#60;x&#62; &#60;y&#62; [--label &#34;Text&#34;] [--library-path PATH]
+            <pre id="code-markdown-410" class="code-block">     &#60;diagram-path&#62; &#60;icon-name&#62; &#60;x&#62; &#60;y&#62; [--label &#34;Text&#34;] [--library-path PATH]
    ```
    - Edit via `.excalidraw.edit` is enabled by default to avoid overwrite issues; pass `--no-use-edit-suffix` to disable.
    
@@ -63318,9 +63471,9 @@ client: OpenAI client instance.
               .staging/.github/skills/excalidraw-diagram-generator/references/element-types.md:markdown (Line 82:1 - Line 92:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-412')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-411')">Show code</button>
             </div>
-            <pre id="code-markdown-412" class="code-block">  fontSize: 20,
+            <pre id="code-markdown-411" class="code-block">  fontSize: 20,
   textAlign: &#34;center&#34;,
   verticalAlign: &#34;middle&#34;
 }
@@ -63339,9 +63492,9 @@ client: OpenAI client instance.
               .staging/.github/skills/excalidraw-diagram-generator/references/element-types.md:markdown (Line 278:1 - Line 285:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-413')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-412')">Show code</button>
             </div>
-            <pre id="code-markdown-413" class="code-block">}
+            <pre id="code-markdown-412" class="code-block">}
 ```
 
 ### Use Cases
@@ -63357,9 +63510,9 @@ client: OpenAI client instance.
               .staging/.github/skills/excalidraw-diagram-generator/scripts/README.md:markdown (Line 169:1 - Line 174:15)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-414')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-413')">Show code</button>
             </div>
-            <pre id="code-markdown-414" class="code-block">-- `--use-edit-suffix` : Edit via `.excalidraw.edit` to avoid editor overwrite issues (enabled by default; pass `--no-use-edit-suffix` to disable)
+            <pre id="code-markdown-413" class="code-block">-- `--use-edit-suffix` : Edit via `.excalidraw.edit` to avoid editor overwrite issues (enabled by default; pass `--no-use-edit-suffix` to disable)
 
 ### Examples
 
@@ -63373,9 +63526,9 @@ client: OpenAI client instance.
               .staging/.github/skills/finnish-humanizer/references/patterns.md:markdown (Line 74:74 - Line 79:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-415')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-414')">Show code</button>
             </div>
-            <pre id="code-markdown-415" class="code-block">AI ei käytä partikkeleita (-han/-hän, -pa/-pä, kyllä, vaan) koska ne ovat epämuodollisia. Suomessa ne ovat normaalia kirjoituskieltä.
+            <pre id="code-markdown-414" class="code-block">AI ei käytä partikkeleita (-han/-hän, -pa/-pä, kyllä, vaan) koska ne ovat epämuodollisia. Suomessa ne ovat normaalia kirjoituskieltä.
 
 Ennen: Tämä on totta. Kyse on kuitenkin siitä, että tilanne on monimutkainen.
 Jälkeen: Onhan se totta. Tilanne on vaan monimutkainen.
@@ -63389,9 +63542,9 @@ Jälkeen: Onhan se totta. Tilanne on vaan monimutkainen.
               .staging/.github/skills/flowstudio-power-automate-debug/SKILL.md:markdown (Line 27:1 - Line 34:60)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-416')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-415')">Show code</button>
             </div>
-            <pre id="code-markdown-416" class="code-block">---
+            <pre id="code-markdown-415" class="code-block">---
 
 ## Source of Truth
 
@@ -63407,9 +63560,9 @@ Jälkeen: Onhan se totta. Tilanne on vaan monimutkainen.
               .staging/.github/skills/flowstudio-power-automate-debug/SKILL.md:markdown (Line 34:70 - Line 62:59)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-417')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-416')">Show code</button>
             </div>
-            <pre id="code-markdown-417" class="code-block">&#62; This skill covers response shapes, behavioral notes, and build patterns —
+            <pre id="code-markdown-416" class="code-block">&#62; This skill covers response shapes, behavioral notes, and build patterns —
 &#62; things tool schemas cannot tell you. If this document disagrees with
 &#62; `tool_search` or a real API response, the API wins.
 
@@ -63446,9 +63599,9 @@ def mcp(tool, **kwargs):
               .staging/.github/skills/flowstudio-power-automate-mcp/SKILL.md:markdown (Line 19:34 - Line 25:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-418')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-417')">Show code</button>
             </div>
-            <pre id="code-markdown-418" class="code-block">cloud flows through the FlowStudio MCP server.
+            <pre id="code-markdown-417" class="code-block">cloud flows through the FlowStudio MCP server.
 
 &#62; **Real debugging examples**: [Expression error in child flow](https://github.com/ninihen1/power-automate-mcp-skills/blob/main/examples/fix-expression-error.md) |
 &#62; [Data entry, not a flow bug](https://github.com/ninihen1/power-automate-mcp-skills/blob/main/examples/data-not-flow.md) |
@@ -63463,9 +63616,9 @@ def mcp(tool, **kwargs):
               .staging/.github/skills/flowstudio-power-automate-monitoring/SKILL.md:markdown (Line 16:56 - Line 24:20)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-419')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-418')">Show code</button>
             </div>
-            <pre id="code-markdown-419" class="code-block">failure-rate dashboards, load `flowstudio-power-automate-monitoring` instead.
+            <pre id="code-markdown-418" class="code-block">failure-rate dashboards, load `flowstudio-power-automate-monitoring` instead.
 
 &#62; **⚠️ Pro+ subscription required.** This skill calls `store_*` tools that
 &#62; only work for FlowStudio for Teams or MCP Pro+ subscribers.
@@ -63482,9 +63635,9 @@ def mcp(tool, **kwargs):
               .staging/.github/skills/flowstudio-power-automate-mcp/references/tool-reference.md:markdown (Line 11:1 - Line 18:10)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-420')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-419')">Show code</button>
             </div>
-            <pre id="code-markdown-420" class="code-block">---
+            <pre id="code-markdown-419" class="code-block">---
 
 ## Source of Truth
 
@@ -63500,9 +63653,9 @@ def mcp(tool, **kwargs):
               .staging/.github/skills/from-the-other-side-quinn/SKILL.md:markdown (Line 57:62 - Line 64:34)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-421')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-420')">Show code</button>
             </div>
-            <pre id="code-markdown-421" class="code-block">- Anitta tests whether claims are justified by evidence.
+            <pre id="code-markdown-420" class="code-block">- Anitta tests whether claims are justified by evidence.
 
 ## How These Profiles Work Together
 
@@ -63518,9 +63671,9 @@ These profiles can be used independently or as a coordinated set.
               .staging/.github/skills/from-the-other-side-wiggins/SKILL.md:markdown (Line 44:64 - Line 65:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-422')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-421')">Show code</button>
             </div>
-            <pre id="code-markdown-422" class="code-block">- Anitta tests whether claims are justified by evidence.
+            <pre id="code-markdown-421" class="code-block">- Anitta tests whether claims are justified by evidence.
 
 ## How These Profiles Work Together
 
@@ -63552,9 +63705,9 @@ Handoff triggers:
               .staging/.github/skills/from-the-other-side-quinn/SKILL.md:markdown (Line 64:42 - Line 71:64)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-423')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-422')">Show code</button>
             </div>
-            <pre id="code-markdown-423" class="code-block">- Anitta stress-tests assumptions and claim strength.
+            <pre id="code-markdown-422" class="code-block">- Anitta stress-tests assumptions and claim strength.
 - Wiggins synthesizes meaning, framing, and audience alignment.
 
 Default handoff pattern when all three are needed:
@@ -63570,9 +63723,9 @@ Default handoff pattern when all three are needed:
               .staging/.github/skills/kotlin-mcp-server-generator/SKILL.md:markdown (Line 335:37 - Line 343:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-424')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-423')">Show code</button>
             </div>
-            <pre id="code-markdown-424" class="code-block">./{{PROJECT_NAME}}
+            <pre id="code-markdown-423" class="code-block">./{{PROJECT_NAME}}
 \`\`\`
 
 ## Configuration
@@ -63589,9 +63742,9 @@ Configure via environment variables:
               .staging/.github/skills/gtm-partnership-architecture/SKILL.md:markdown (Line 137:1 - Line 143:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-425')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-424')">Show code</button>
             </div>
-            <pre id="code-markdown-425" class="code-block">**Common Mistake:**
+            <pre id="code-markdown-424" class="code-block">**Common Mistake:**
 
 Defaulting to curated because &#34;we need quality control.&#34; This works when you have 10 partners. At 100+, you become the bottleneck. Build discovery and trust systems instead.
 
@@ -63606,9 +63759,9 @@ Defaulting to curated because &#34;we need quality control.&#34; This works when
               .staging/.github/skills/java-refactoring-remove-parameter/SKILL.md:markdown (Line 70:25 - Line 75:43)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-426')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-425')">Show code</button>
             </div>
-            <pre id="code-markdown-426" class="code-block">Apply **Extract Method** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.
+            <pre id="code-markdown-425" class="code-block">Apply **Extract Method** to improve readability, testability, maintainability, reusability, modularity, cohesion, low coupling, and consistency.
 
 Always return a complete and compilable method (Java 17).
 
@@ -63622,9 +63775,9 @@ Perform intermediate steps internally:
               .staging/.github/skills/kotlin-springboot/SKILL.md:markdown (Line 28:76 - Line 33:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-427')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-426')">Show code</button>
             </div>
-            <pre id="code-markdown-427" class="code-block">- **Secrets Management:** Do not hardcode secrets. Use environment variables, or a dedicated secret management tool like HashiCorp Vault or AWS Secrets Manager.
+            <pre id="code-markdown-426" class="code-block">- **Secrets Management:** Do not hardcode secrets. Use environment variables, or a dedicated secret management tool like HashiCorp Vault or AWS Secrets Manager.
 
 ## Web Layer (Controllers)
 
@@ -63638,9 +63791,9 @@ Perform intermediate steps internally:
               .staging/.github/skills/react-container-presentation-component/references/component-architecture.md:markdown (Line 49:181 - Line 51:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-428')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-427')">Show code</button>
             </div>
-            <pre id="code-markdown-428" class="code-block">| Feature        | Description                    |
+            <pre id="code-markdown-427" class="code-block">| Feature        | Description                    |
 | -------------- | ------------------------------ |
 | Memory size    | 256 Kbits (32 KB)              |
 | Organization   | 32,768 x 8 bits                |
@@ -63659,9 +63812,9 @@ Perform intermediate steps internally:
               .staging/.github/skills/legacy-circuit-mockups/references/6C62256.md:markdown (Line 45:7 - Line 54:35)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-429')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-428')">Show code</button>
             </div>
-            <pre id="code-markdown-429" class="code-block">| WE  | Write Enable (active low)  |
+            <pre id="code-markdown-428" class="code-block">| WE  | Write Enable (active low)  |
 | VCC | +5 V power supply          |
 | GND | Ground                     |
 
@@ -63679,9 +63832,9 @@ Perform intermediate steps internally:
               .staging/.github/skills/legacy-circuit-mockups/references/6C62256.md:markdown (Line 56:1 - Line 69:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-430')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-429')">Show code</button>
             </div>
-            <pre id="code-markdown-430" class="code-block">```text
+            <pre id="code-markdown-429" class="code-block">```text
 Address Range: 0000h - 7FFFh
 Data Width:    8 bits
 ```
@@ -63703,9 +63856,9 @@ Data Width:    8 bits
               ONTOLOGY.md:markdown (Line 89:25 - Line 90:12)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-431')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-430')">Show code</button>
             </div>
-            <pre id="code-markdown-431" class="code-block">| -------------- | -------------------------------- |
+            <pre id="code-markdown-430" class="code-block">| -------------- | -------------------------------- |
 | Data width     | 8-bit                            |
 | Addressing     | Memory-mapped I/O                |
 | Registers      | 16 (4-bit register select)       |
@@ -63726,9 +63879,9 @@ Data Width:    8 bits
               .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 42:43 - Line 52:11)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-432')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-431')">Show code</button>
             </div>
-            <pre id="code-markdown-432" class="code-block">**Result:** When you insert the battery, the LED will light up.
+            <pre id="code-markdown-431" class="code-block">**Result:** When you insert the battery, the LED will light up.
 
 **Troubleshooting:**
 
@@ -63745,6 +63898,27 @@ Data Width:    8 bits
             <div class="clone-info">
               .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 200:60 - Line 210:15),
               .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 224:59 - Line 234:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-432')">Show code</button>
+            </div>
+            <pre id="code-markdown-432" class="code-block">**Components:** 555 timer IC, piezo speaker, 220Ω resistor, 1000Ω resistor, capacitor, push button, jumper wires, battery with holder
+
+**Steps:**
+
+1. Insert the black jumper wire into the breadboard from **A1** to **A11**.
+2. Insert the red jumper wire into the breadboard from **J1** to **J11**.
+3. Place the 555 integrated circuit chip into the middle of the breadboard with the top pins on row 11.
+4. Insert a jumper wire into the breadboard connecting **D12** to **G13**.
+5. Insert a jumper wire into the breadboard connecting **D14** to **G11**.
+6. Insert the capacitor into the breadboard from **A12** to **B11**.
+7. Insert the 220Ω resistor into the breadboard from **C12** to **C13**.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 200:66 - Line 210:15),
+              .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 289:64 - Line 299:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-433')">Show code</button>
@@ -63764,34 +63938,13 @@ Data Width:    8 bits
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 200:66 - Line 210:15),
-              .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 289:64 - Line 299:15)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-434')">Show code</button>
-            </div>
-            <pre id="code-markdown-434" class="code-block">**Components:** 555 timer IC, piezo speaker, 220Ω resistor, 1000Ω resistor, capacitor, push button, jumper wires, battery with holder
-
-**Steps:**
-
-1. Insert the black jumper wire into the breadboard from **A1** to **A11**.
-2. Insert the red jumper wire into the breadboard from **J1** to **J11**.
-3. Place the 555 integrated circuit chip into the middle of the breadboard with the top pins on row 11.
-4. Insert a jumper wire into the breadboard connecting **D12** to **G13**.
-5. Insert a jumper wire into the breadboard connecting **D14** to **G11**.
-6. Insert the capacitor into the breadboard from **A12** to **B11**.
-7. Insert the 220Ω resistor into the breadboard from **C12** to **C13**.</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
               .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 210:29 - Line 218:67),
               .staging/.github/skills/legacy-circuit-mockups/references/connecting-electronic-components.md:markdown (Line 234:28 - Line 242:67)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-435')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-434')">Show code</button>
             </div>
-            <pre id="code-markdown-435" class="code-block">7. Insert the 220Ω resistor into the breadboard from **C12** to **C13**.
+            <pre id="code-markdown-434" class="code-block">7. Insert the 220Ω resistor into the breadboard from **C12** to **C13**.
 8. Place the push button horizontally in the middle of the breadboard so the top pins are on row 15 and on opposite sides of the breadboard.
 9. Insert the piezo speaker into the breadboard with the positive pin in **A9** and the negative pin in **A6**.
 10. Insert the 1000Ω resistor into the breadboard from **E6** to **A13**.
@@ -63808,9 +63961,9 @@ Data Width:    8 bits
               .staging/.github/skills/markdown-to-html/SKILL.md:markdown (Line 593:1 - Line 598:14)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-436')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-435')">Show code</button>
             </div>
-            <pre id="code-markdown-436" class="code-block">### Supported Markdown Flavors
+            <pre id="code-markdown-435" class="code-block">### Supported Markdown Flavors
 
 | Flavor | Support |
 |--------|---------|
@@ -63824,9 +63977,9 @@ Data Width:    8 bits
               .staging/.github/skills/markdown-to-html/references/collapsed-sections-to-html.md:markdown (Line 57:14 - Line 71:11)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-437')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-436')">Show code</button>
             </div>
-            <pre id="code-markdown-437" class="code-block">&#60;details&#62;
+            <pre id="code-markdown-436" class="code-block">&#60;details&#62;
 
 &#60;summary&#62;Tips for collapsed sections&#60;/summary&#62;
 
@@ -63849,9 +64002,9 @@ You can add an image or a code block, too.
               .staging/.github/skills/markdown-to-html/references/collapsed-sections.md:markdown (Line 14:1 - Line 22:43)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-438')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-437')">Show code</button>
             </div>
-            <pre id="code-markdown-438" class="code-block">&#60;details&#62;
+            <pre id="code-markdown-437" class="code-block">&#60;details&#62;
 
 &#60;summary&#62;Tips for collapsed sections&#60;/summary&#62;
 
@@ -63868,9 +64021,9 @@ You can add an image or a code block, too.</pre>
               .staging/.github/skills/markdown-to-html/references/tables.md:markdown (Line 11:1 - Line 64:25)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-439')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-438')">Show code</button>
             </div>
-            <pre id="code-markdown-439" class="code-block">| First Header  | Second Header |
+            <pre id="code-markdown-438" class="code-block">| First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
@@ -64015,9 +64168,9 @@ You can add an image or a code block, too.</pre>
               .staging/.github/skills/remember/SKILL.md:markdown (Line 8:263 - Line 21:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-440')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-439')">Show code</button>
             </div>
-            <pre id="code-markdown-440" class="code-block">**Use the todo list** to track your progress through the process steps and keep the user informed.
+            <pre id="code-markdown-439" class="code-block">**Use the todo list** to track your progress through the process steps and keep the user informed.
 
 ## Scopes
 
@@ -64039,9 +64192,9 @@ Throughout this prompt, `&#60;global-prompts&#62;` and `&#60;workspace-instructi
               .staging/.github/skills/semantic-kernel/SKILL.md:markdown (Line 10:117 - Line 16:85)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-441')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-440')">Show code</button>
             </div>
-            <pre id="code-markdown-441" class="code-block">Microsoft Agent Framework is the unified successor to Semantic Kernel and AutoGen, combining their strengths with new capabilities. Because it is still in public preview and changes quickly, always ground implementation advice in the latest official documentation and samples rather than relying on stale knowledge.
+            <pre id="code-markdown-440" class="code-block">Microsoft Agent Framework is the unified successor to Semantic Kernel and AutoGen, combining their strengths with new capabilities. Because it is still in public preview and changes quickly, always ground implementation advice in the latest official documentation and samples rather than relying on stale knowledge.
 
 ## Determine the target language first
 
@@ -64056,9 +64209,9 @@ Choose the language workflow before making recommendations or code changes:
               .staging/.github/skills/semantic-kernel/SKILL.md:markdown (Line 16:82 - Line 23:12)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-442')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-441')">Show code</button>
             </div>
-            <pre id="code-markdown-442" class="code-block">1. Use the **.NET** workflow when the repository contains `.cs`, `.csproj`, `.sln`, `.slnx`, or other .NET project files, or when the user explicitly asks for C# or .NET guidance. Follow [references/dotnet.md](references/dotnet.md).
+            <pre id="code-markdown-441" class="code-block">1. Use the **.NET** workflow when the repository contains `.cs`, `.csproj`, `.sln`, `.slnx`, or other .NET project files, or when the user explicitly asks for C# or .NET guidance. Follow [references/dotnet.md](references/dotnet.md).
 2. Use the **Python** workflow when the repository contains `.py`, `pyproject.toml`, `requirements.txt`, or the user explicitly asks for Python guidance. Follow [references/python.md](references/python.md).
 3. If the repository contains both ecosystems, match the language used by the files being edited or the user&#39;s stated target.
 4. If the language is ambiguous, inspect the current workspace first and then choose the closest language-specific reference.
@@ -64074,9 +64227,9 @@ Choose the language workflow before making recommendations or code changes:
               .staging/.github/skills/semantic-kernel/SKILL.md:markdown (Line 37:72 - Line 43:21)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-443')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-442')">Show code</button>
             </div>
-            <pre id="code-markdown-443" class="code-block">- Preserve behavior first, then adopt native Agent Framework patterns incrementally.
+            <pre id="code-markdown-442" class="code-block">- Preserve behavior first, then adopt native Agent Framework patterns incrementally.
 
 ## Workflow
 
@@ -64091,9 +64244,9 @@ Choose the language workflow before making recommendations or code changes:
               .staging/.github/skills/semantic-kernel/SKILL.md:markdown (Line 43:36 - Line 56:29)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-444')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-443')">Show code</button>
             </div>
-            <pre id="code-markdown-444" class="code-block">3. Apply the shared agent and workflow guidance from this skill.
+            <pre id="code-markdown-443" class="code-block">3. Apply the shared agent and workflow guidance from this skill.
 4. Use the language-specific package, repository, sample paths, and coding practices from the chosen reference.
 5. When examples in the repo differ from current docs, explain the difference and follow the current supported pattern.
 
@@ -64115,9 +64268,9 @@ Choose the language workflow before making recommendations or code changes:
               .staging/.github/skills/semantic-kernel/references/dotnet.md:markdown (Line 1:18 - Line 7:22)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-445')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-444')">Show code</button>
             </div>
-            <pre id="code-markdown-445" class="code-block"># Microsoft Agent Framework for .NET
+            <pre id="code-markdown-444" class="code-block"># Microsoft Agent Framework for .NET
 
 Use this reference when the target project is written in C# or another .NET language.
 
@@ -64132,9 +64285,9 @@ Use this reference when the target project is written in C# or another .NET lang
               .staging/.github/skills/microsoft-docs/SKILL.md:markdown (Line 29:1 - Line 43:90)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-446')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-445')">Show code</button>
             </div>
-            <pre id="code-markdown-446" class="code-block"># Run directly (no install needed)
+            <pre id="code-markdown-445" class="code-block"># Run directly (no install needed)
 npx @microsoft/learn-cli search &#34;BlobClient UploadAsync Azure.Storage.Blobs&#34;
 
 # Or install globally, then run
@@ -64157,9 +64310,9 @@ Pass `--json` to `search` or `code-search` to get raw JSON output for further pr
               .staging/.github/skills/microsoft-skill-creator/SKILL.md:markdown (Line 51:1 - Line 57:63)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-447')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-446')">Show code</button>
             </div>
-            <pre id="code-markdown-447" class="code-block">```
+            <pre id="code-markdown-446" class="code-block">```
 
 | MCP Tool | CLI Command |
 |----------|-------------|
@@ -64174,9 +64327,9 @@ Pass `--json` to `search` or `code-search` to get raw JSON output for further pr
               .staging/.github/skills/microsoft-skill-creator/references/skill-templates.md:markdown (Line 7:204 - Line 15:119)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-448')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-447')">Show code</button>
             </div>
-            <pre id="code-markdown-448" class="code-block">If the Learn MCP server is not available, use the `mslearn` CLI instead:
+            <pre id="code-markdown-447" class="code-block">If the Learn MCP server is not available, use the `mslearn` CLI instead:
 
 | MCP Tool | CLI Command |
 |----------|-------------|
@@ -64193,9 +64346,9 @@ Run directly with `npx @microsoft/learn-cli &#60;command&#62;` or install global
               .staging/.github/skills/msstore-cli/SKILL.md:markdown (Line 286:1 - Line 298:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-449')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-448')">Show code</button>
             </div>
-            <pre id="code-markdown-449" class="code-block">```
+            <pre id="code-markdown-448" class="code-block">```
 
 **Arguments:**
 
@@ -64216,9 +64369,9 @@ Run directly with `npx @microsoft/learn-cli &#60;command&#62;` or install global
               .staging/.github/skills/msstore-cli/SKILL.md:markdown (Line 317:46 - Line 333:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-450')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-449')">Show code</button>
             </div>
-            <pre id="code-markdown-450" class="code-block">Package an application for Microsoft Store submission.
+            <pre id="code-markdown-449" class="code-block">Package an application for Microsoft Store submission.
 
 ```bash
 msstore package &#60;pathOrUrl&#62; [options]
@@ -64243,9 +64396,9 @@ msstore package &#60;pathOrUrl&#62; [options]
               .staging/.github/skills/mvvm-toolkit-di/references/dependency-injection.md:markdown (Line 79:1 - Line 108:57)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-451')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-450')">Show code</button>
             </div>
-            <pre id="code-markdown-451" class="code-block">```
+            <pre id="code-markdown-450" class="code-block">```
 
 ---
 
@@ -64283,9 +64436,9 @@ Why constructor injection beats a service locator:
               .staging/.github/skills/mvvm-toolkit-di/references/dependency-injection.md:markdown (Line 114:1 - Line 122:66)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-452')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-451')">Show code</button>
             </div>
-            <pre id="code-markdown-452" class="code-block">---
+            <pre id="code-markdown-451" class="code-block">---
 
 ## Lifetimes
 
@@ -64302,9 +64455,9 @@ Why constructor injection beats a service locator:
               .staging/.github/skills/mvvm-toolkit-di/references/dependency-injection.md:markdown (Line 135:5 - Line 151:25)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-453')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-452')">Show code</button>
             </div>
-            <pre id="code-markdown-453" class="code-block">own dependencies:
+            <pre id="code-markdown-452" class="code-block">own dependencies:
 
 ```csharp
 public sealed partial class ContactPage : Page
@@ -64329,9 +64482,9 @@ Bind in XAML with `{x:Bind ViewModel.Xxx}` (compiled bindings) or
               .staging/.github/skills/mvvm-toolkit-messenger/references/messenger-patterns.md:markdown (Line 64:57 - Line 89:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-454')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-453')">Show code</button>
             </div>
-            <pre id="code-markdown-454" class="code-block">`this` out of the lambda — use the `recipient` parameter instead.
+            <pre id="code-markdown-453" class="code-block">`this` out of the lambda — use the `recipient` parameter instead.
 
 ### `IRecipient&#60;TMessage&#62;` interface style
 
@@ -64364,9 +64517,9 @@ WeakReferenceMessenger.Default.RegisterAll(this);
               .staging/.github/skills/mvvm-toolkit-messenger/references/messenger-patterns.md:markdown (Line 149:1 - Line 166:22)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-455')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-454')">Show code</button>
             </div>
-            <pre id="code-markdown-455" class="code-block">```
+            <pre id="code-markdown-454" class="code-block">```
 
 ### Async request
 
@@ -64392,9 +64545,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/mvvm-toolkit-messenger/references/messenger-patterns.md:markdown (Line 208:27 - Line 214:23)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-456')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-455')">Show code</button>
             </div>
-            <pre id="code-markdown-456" class="code-block">6. **Cross-thread updates.** The messenger is thread-agnostic. If a
+            <pre id="code-markdown-455" class="code-block">6. **Cross-thread updates.** The messenger is thread-agnostic. If a
    handler updates UI, marshal manually
    (`DispatcherQueue.TryEnqueue` / `Dispatcher.BeginInvoke`).
 
@@ -64409,9 +64562,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 66:114 - Line 72:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-457')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-456')">Show code</button>
             </div>
-            <pre id="code-markdown-457" class="code-block">Lists all domains in the account.
+            <pre id="code-markdown-456" class="code-block">Lists all domains in the account.
 
 **Additional Parameters:**
 
@@ -64426,9 +64579,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 92:35 - Line 104:26)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-458')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-457')">Show code</button>
             </div>
-            <pre id="code-markdown-458" class="code-block">Lists all domains in the account.
+            <pre id="code-markdown-457" class="code-block">Lists all domains in the account.
 
 **Additional Parameters:**
 
@@ -64446,9 +64599,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 122:95 - Line 128:37)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-459')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-458')">Show code</button>
             </div>
-            <pre id="code-markdown-459" class="code-block">Lists all domains in the account.
+            <pre id="code-markdown-458" class="code-block">Lists all domains in the account.
 
 **Additional Parameters:**
 
@@ -64463,9 +64616,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 226:75 - Line 232:64)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-460')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-459')">Show code</button>
             </div>
-            <pre id="code-markdown-460" class="code-block">Lists all domains in the account.
+            <pre id="code-markdown-459" class="code-block">Lists all domains in the account.
 
 **Additional Parameters:**
 
@@ -64480,9 +64633,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 278:27 - Line 286:47)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-461')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-460')">Show code</button>
             </div>
-            <pre id="code-markdown-461" class="code-block">Lists all domains in the account.
+            <pre id="code-markdown-460" class="code-block">Lists all domains in the account.
 
 **Additional Parameters:**
 
@@ -64499,9 +64652,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 154:1 - Line 159:35)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-462')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-461')">Show code</button>
             </div>
-            <pre id="code-markdown-462" class="code-block">**Additional Parameters:**
+            <pre id="code-markdown-461" class="code-block">**Additional Parameters:**
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
@@ -64515,9 +64668,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 175:67 - Line 183:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-463')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-462')">Show code</button>
             </div>
-            <pre id="code-markdown-463" class="code-block">Gets the list of DNS servers associated with a domain (shows whether it uses Namecheap DNS or custom nameservers).
+            <pre id="code-markdown-462" class="code-block">Gets the list of DNS servers associated with a domain (shows whether it uses Namecheap DNS or custom nameservers).
 
 **Additional Parameters:**
 
@@ -64533,9 +64686,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 96:14 - Line 105:58)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-464')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-463')">Show code</button>
             </div>
-            <pre id="code-markdown-464" class="code-block">| Parameter | Required | Description |
+            <pre id="code-markdown-463" class="code-block">| Parameter | Required | Description |
 |-----------|----------|-------------|
 | `SLD` | Yes | Second-level domain (e.g., `example` for `example.com`) |
 | `TLD` | Yes | Top-level domain (e.g., `com` for `example.com`) |
@@ -64553,9 +64706,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 201:31 - Line 207:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-465')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-464')">Show code</button>
             </div>
-            <pre id="code-markdown-465" class="code-block">Gets DNS host records for a domain.
+            <pre id="code-markdown-464" class="code-block">Gets DNS host records for a domain.
 
 **Additional Parameters:**
 
@@ -64570,9 +64723,9 @@ a `Reply` from every responding recipient:</pre>
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 253:41 - Line 261:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-466')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-465')">Show code</button>
             </div>
-            <pre id="code-markdown-466" class="code-block">Gets DNS host records for a domain.
+            <pre id="code-markdown-465" class="code-block">Gets DNS host records for a domain.
 
 **Additional Parameters:**
 
@@ -64586,6 +64739,25 @@ a `Reply` from every responding recipient:</pre>
             <div class="clone-info">
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 278:8 - Line 286:47),
               .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 302:23 - Line 310:47)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-466')">Show code</button>
+            </div>
+            <pre id="code-markdown-466" class="code-block">Deletes a child nameserver.
+
+**Additional Parameters:**
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `SLD` | Yes | Second-level domain |
+| `TLD` | Yes | Top-level domain |
+| `Nameserver` | Yes | Nameserver hostname to delete |</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 278:8 - Line 286:47),
+              .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 330:26 - Line 338:47)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-467')">Show code</button>
@@ -64603,32 +64775,13 @@ a `Reply` from every responding recipient:</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 278:8 - Line 286:47),
-              .staging/.github/skills/namecheap/references/namecheap-api.md:markdown (Line 330:26 - Line 338:47)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-468')">Show code</button>
-            </div>
-            <pre id="code-markdown-468" class="code-block">Deletes a child nameserver.
-
-**Additional Parameters:**
-
-| Parameter | Required | Description |
-|-----------|----------|-------------|
-| `SLD` | Yes | Second-level domain |
-| `TLD` | Yes | Top-level domain |
-| `Nameserver` | Yes | Nameserver hostname to delete |</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
               .staging/.github/skills/pdftk-server/references/download.md:markdown (Line 39:1 - Line 45:51),
               .staging/.github/skills/pdftk-server/references/pdftk-server-license.md:markdown (Line 9:1 - Line 15:51)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-469')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-468')">Show code</button>
             </div>
-            <pre id="code-markdown-469" class="code-block">## PDFtk Server Redistribution License
+            <pre id="code-markdown-468" class="code-block">## PDFtk Server Redistribution License
 
 If you plan to distribute PDFtk Server as part of your own software, you will need a PDFtk Server Redistribution License. The exception to this rule is if your software is licensed to the public under the GPL or another compatible license.
 
@@ -64643,9 +64796,9 @@ The commercial redistribution license allows you, subject to the terms of the li
               .staging/.github/skills/pdftk-server/references/third-party-materials.md:markdown (Line 37:221 - Line 43:55)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-470')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-469')">Show code</button>
             </div>
-            <pre id="code-markdown-470" class="code-block">The libgcj library is licensed under the terms of the GNU General Public License.
+            <pre id="code-markdown-469" class="code-block">The libgcj library is licensed under the terms of the GNU General Public License.
 
 Linking this library statically or dynamically with other modules is making a combined work based on this library. Thus, the terms and conditions of the GNU General Public License cover the whole combination.
 
@@ -64660,9 +64813,9 @@ As a special exception, the copyright holders of this library give you permissio
               .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown (Line 170:16 - Line 181:8)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-471')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-470')">Show code</button>
             </div>
-            <pre id="code-markdown-471" class="code-block">## Example Taxonomy
+            <pre id="code-markdown-470" class="code-block">## Example Taxonomy
 
 ```yaml
 failure_taxonomy:
@@ -64680,6 +64833,31 @@ failure_taxonomy:
             <div class="clone-info">
               .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown (Line 110:20 - Line 124:132),
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 583:90 - Line 610:4)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-471')">Show code</button>
+            </div>
+            <pre id="code-markdown-471" class="code-block">Minimal trace example:
+
+```bash
+px trace annotate &#60;trace-id&#62; \
+  --name axial_coding_category \
+  --label answered_off_topic \
+  --explanation &#34;asked about returns; answer covered shipping&#34; \
+  --annotator-kind HUMAN \
+  --identifier &#34;$CODING_ANNOTATION_IDENTIFIER&#34; \
+  --format raw --no-progress
+```
+
+Then add a matching JSONL row to `$AXIAL_SIDECAR` using the line shape above. For span or session labels, change `entity_kind`, `entity_id`, and the `px` subcommand accordingly.
+
+Accepted flags: `--name`, `--label`, `--score`, `--explanation`, `--annotator-kind` (`HUMAN`, `LLM`, `CODE`), `--identifier`. There is no `--sync` flag — the CLI passes `sync=true` itself.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown (Line 110:16 - Line 124:125),
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2526:50 - Line 2551:7)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-472')">Show code</button>
@@ -64703,38 +64881,13 @@ Accepted flags: `--name`, `--label`, `--score`, `--explanation`, `--annotator-ki
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown (Line 110:16 - Line 124:125),
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2526:50 - Line 2551:7)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-473')">Show code</button>
-            </div>
-            <pre id="code-markdown-473" class="code-block">Minimal trace example:
-
-```bash
-px trace annotate &#60;trace-id&#62; \
-  --name axial_coding_category \
-  --label answered_off_topic \
-  --explanation &#34;asked about returns; answer covered shipping&#34; \
-  --annotator-kind HUMAN \
-  --identifier &#34;$CODING_ANNOTATION_IDENTIFIER&#34; \
-  --format raw --no-progress
-```
-
-Then add a matching JSONL row to `$AXIAL_SIDECAR` using the line shape above. For span or session labels, change `entity_kind`, `entity_id`, and the `px` subcommand accordingly.
-
-Accepted flags: `--name`, `--label`, `--score`, `--explanation`, `--annotator-kind` (`HUMAN`, `LLM`, `CODE`), `--identifier`. There is no `--sync` flag — the CLI passes `sync=true` itself.</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
               .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown (Line 163:28 - Line 168:2),
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1282:112 - Line 1286:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-474')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-473')">Show code</button>
             </div>
-            <pre id="code-markdown-474" class="code-block">    --format raw --no-progress
+            <pre id="code-markdown-473" class="code-block">    --format raw --no-progress
 done
 rm -f &#34;$NOTES_SIDECAR&#34; &#34;$AXIAL_SIDECAR&#34;
 ```
@@ -64748,9 +64901,9 @@ Each `px &#60;entity&#62;-annotations delete` call removes notes, axial-coding l
               .staging/.github/skills/phoenix-evals/references/experiments-running-typescript.md:markdown (Line 74:1 - Line 80:104)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-475')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-474')">Show code</button>
             </div>
-            <pre id="code-markdown-475" class="code-block">```
+            <pre id="code-markdown-474" class="code-block">```
 
 ## Stability
 
@@ -64765,9 +64918,9 @@ Averaging over repetitions lets the score you report reflect the prompt rather t
               .staging/.github/skills/phoenix-evals/references/experiments-running-typescript.md:markdown (Line 87:1 - Line 101:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-476')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-475')">Show code</button>
             </div>
-            <pre id="code-markdown-476" class="code-block">```
+            <pre id="code-markdown-475" class="code-block">```
 
 Things to consider:
 
@@ -64790,9 +64943,9 @@ Repetitions are also what `repetitions=1` (default) silently relies on — don&#
               .staging/.github/skills/phoenix-evals/references/experiments-synthetic-typescript.md:markdown (Line 15:1 - Line 20:64)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-477')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-476')">Show code</button>
             </div>
-            <pre id="code-markdown-477" class="code-block">```
+            <pre id="code-markdown-476" class="code-block">```
 
 ## Two-Step Generation
 
@@ -64806,9 +64959,9 @@ Repetitions are also what `repetitions=1` (default) silently relies on — don&#
               .staging/.github/skills/phoenix-evals/references/experiments-synthetic-typescript.md:markdown (Line 56:1 - Line 62:55)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-478')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-477')">Show code</button>
             </div>
-            <pre id="code-markdown-478" class="code-block">```
+            <pre id="code-markdown-477" class="code-block">```
 
 ## Quality Control
 
@@ -64823,9 +64976,9 @@ Repetitions are also what `repetitions=1` (default) silently relies on — don&#
               .staging/.github/skills/phoenix-evals/references/experiments-synthetic-typescript.md:markdown (Line 72:1 - Line 86:42)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-479')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-478')">Show code</button>
             </div>
-            <pre id="code-markdown-479" class="code-block">## When to Use
+            <pre id="code-markdown-478" class="code-block">## When to Use
 
 | Use Synthetic | Use Real Data |
 | ------------- | ------------- |
@@ -64848,9 +65001,9 @@ Repetitions are also what `repetitions=1` (default) silently relies on — don&#
               .staging/.github/skills/phoenix-evals/references/observe-sampling-typescript.md:markdown (Line 136:1 - Line 147:69)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-480')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-479')">Show code</button>
             </div>
-            <pre id="code-markdown-480" class="code-block">```
+            <pre id="code-markdown-479" class="code-block">```
 
 ## Sample Size Guidelines
 
@@ -64870,9 +65023,9 @@ Repetitions are also what `repetitions=1` (default) silently relies on — don&#
               .staging/.github/skills/phoenix-tracing/references/annotations-typescript.md:markdown (Line 32:1 - Line 38:175)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-481')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-480')">Show code</button>
             </div>
-            <pre id="code-markdown-481" class="code-block">```
+            <pre id="code-markdown-480" class="code-block">```
 
 ## Span Notes
 
@@ -64887,9 +65040,9 @@ Notes are **append-only**: each call auto-generates a UUIDv4 identifier, so mult
               .staging/.github/skills/phoenix-tracing/references/instrumentation-manual-typescript.md:markdown (Line 136:1 - Line 141:16)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-482')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-481')">Show code</button>
             </div>
-            <pre id="code-markdown-482" class="code-block">**Why this matters:**
+            <pre id="code-markdown-481" class="code-block">**Why this matters:**
 - Phoenix evaluators require `input.value` and `output.value`
 - Phoenix UI displays I/O prominently for debugging
 - Enables exporting data for fine-tuning datasets
@@ -64903,9 +65056,9 @@ Notes are **append-only**: each call auto-generates a UUIDv4 identifier, so mult
               .staging/.github/skills/phoenix-tracing/references/production-typescript.md:markdown (Line 1:48 - Line 15:142)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-483')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-482')">Show code</button>
             </div>
-            <pre id="code-markdown-483" class="code-block"># Phoenix Tracing: Production Guide (Python)
+            <pre id="code-markdown-482" class="code-block"># Phoenix Tracing: Production Guide (Python)
 
 **CRITICAL: Configure batching, data masking, and span filtering for production deployment.**
 
@@ -64928,9 +65081,9 @@ Notes are **append-only**: each call auto-generates a UUIDv4 identifier, so mult
               .staging/.github/skills/phoenix-tracing/references/projects-typescript.md:markdown (Line 1:40 - Line 17:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-484')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-483')">Show code</button>
             </div>
-            <pre id="code-markdown-484" class="code-block"># Phoenix Tracing: Projects (Python)
+            <pre id="code-markdown-483" class="code-block"># Phoenix Tracing: Projects (Python)
 
 **Organize traces by application using projects (Phoenix&#39;s top-level grouping).**
 
@@ -64955,9 +65108,9 @@ export PHOENIX_PROJECT_NAME=&#34;my-app-prod&#34;
               EPISTEMOLOGY.md:markdown (Line 37:130 - Line 39:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-485')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-484')">Show code</button>
             </div>
-            <pre id="code-markdown-485" class="code-block">| Attribute  | Value                               |
+            <pre id="code-markdown-484" class="code-block">| Attribute  | Value                               |
 | ---------- | ----------------------------------- |
 | Priority   | Critical - required for all tracing |
 | Setup Time | &#60;5 min                              |
@@ -64988,9 +65141,9 @@ pip install arize-phoenix-otel
               META.md:markdown (Line 42:124 - Line 44:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-486')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-485')">Show code</button>
             </div>
-            <pre id="code-markdown-486" class="code-block">| Attribute  | Value                               |
+            <pre id="code-markdown-485" class="code-block">| Attribute  | Value                               |
 | ---------- | ----------------------------------- |
 | Priority   | Critical - required for all tracing |
 | Setup Time | &#60;5 min                              |
@@ -65019,6 +65172,23 @@ pip install arize-phoenix-otel
               .staging/.github/skills/phoenix-tracing/references/span-evaluator.md:markdown (Line 5:113 - Line 11:48)
             </div>
             <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-486')">Show code</button>
+            </div>
+            <pre id="code-markdown-486" class="code-block">EMBEDDING spans represent vector generation operations (text-to-vector conversion for semantic search).
+
+## Required Attributes
+
+| Attribute | Type | Description | Required |
+|-----------|------|-------------|----------|
+| `openinference.span.kind` | String | Must be &#34;EMBEDDING&#34; | Yes |</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/phoenix-tracing/references/span-embedding.md:markdown (Line 5:102 - Line 11:48),
+              .staging/.github/skills/phoenix-tracing/references/span-guardrail.md:markdown (Line 5:104 - Line 11:48)
+            </div>
+            <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-487')">Show code</button>
             </div>
             <pre id="code-markdown-487" class="code-block">EMBEDDING spans represent vector generation operations (text-to-vector conversion for semantic search).
@@ -65033,7 +65203,7 @@ pip install arize-phoenix-otel
           <div class="clone-item">
             <div class="clone-info">
               .staging/.github/skills/phoenix-tracing/references/span-embedding.md:markdown (Line 5:102 - Line 11:48),
-              .staging/.github/skills/phoenix-tracing/references/span-guardrail.md:markdown (Line 5:104 - Line 11:48)
+              .staging/.github/skills/phoenix-tracing/references/span-reranker.md:markdown (Line 5:96 - Line 11:48)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-488')">Show code</button>
@@ -65049,8 +65219,8 @@ pip install arize-phoenix-otel
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/phoenix-tracing/references/span-embedding.md:markdown (Line 5:102 - Line 11:48),
-              .staging/.github/skills/phoenix-tracing/references/span-reranker.md:markdown (Line 5:96 - Line 11:48)
+              .staging/.github/skills/phoenix-tracing/references/span-embedding.md:markdown (Line 5:95 - Line 11:48),
+              .staging/.github/skills/phoenix-tracing/references/span-retriever.md:markdown (Line 5:109 - Line 11:48)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-489')">Show code</button>
@@ -65066,30 +65236,13 @@ pip install arize-phoenix-otel
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/phoenix-tracing/references/span-embedding.md:markdown (Line 5:95 - Line 11:48),
-              .staging/.github/skills/phoenix-tracing/references/span-retriever.md:markdown (Line 5:109 - Line 11:48)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-490')">Show code</button>
-            </div>
-            <pre id="code-markdown-490" class="code-block">EMBEDDING spans represent vector generation operations (text-to-vector conversion for semantic search).
-
-## Required Attributes
-
-| Attribute | Type | Description | Required |
-|-----------|------|-------------|----------|
-| `openinference.span.kind` | String | Must be &#34;EMBEDDING&#34; | Yes |</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
               .staging/.github/skills/phoenix-tracing/references/span-evaluator.md:markdown (Line 11:59 - Line 17:42),
               .staging/.github/skills/phoenix-tracing/references/span-guardrail.md:markdown (Line 11:59 - Line 17:42)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-491')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-490')">Show code</button>
             </div>
-            <pre id="code-markdown-491" class="code-block">| `openinference.span.kind` | String | Must be &#34;EVALUATOR&#34; | Yes |
+            <pre id="code-markdown-490" class="code-block">| `openinference.span.kind` | String | Must be &#34;EVALUATOR&#34; | Yes |
 
 ## Common Attributes
 
@@ -65104,9 +65257,9 @@ pip install arize-phoenix-otel
               .staging/.github/skills/rust-mcp-server-generator/SKILL.md:markdown (Line 8:123 - Line 14:34)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-492')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-491')">Show code</button>
             </div>
-            <pre id="code-markdown-492" class="code-block">You are a PHP MCP server generator. Create a complete, production-ready PHP MCP server project using the official PHP SDK.
+            <pre id="code-markdown-491" class="code-block">You are a PHP MCP server generator. Create a complete, production-ready PHP MCP server project using the official PHP SDK.
 
 ## Project Requirements
 
@@ -65121,9 +65274,9 @@ Ask the user for:
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 318:23 - Line 322:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-493')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-492')">Show code</button>
             </div>
-            <pre id="code-markdown-493" class="code-block">    &#34;total&#34;: 3, &#34;confirmed_open&#34;: 1, &#34;red_failed&#34;: 0, &#34;green_failed&#34;: 0, &#34;verified&#34;: 2
+            <pre id="code-markdown-492" class="code-block">    &#34;total&#34;: 3, &#34;confirmed_open&#34;: 1, &#34;red_failed&#34;: 0, &#34;green_failed&#34;: 0, &#34;verified&#34;: 2
   }
 }
 ```
@@ -65135,6 +65288,23 @@ Ask the user for:
             <div class="clone-info">
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 328:184 - Line 334:5),
               docs/foundation/gitignore/RULE_AUDIT.md:markdown (Line 49:205 - Line 50:4)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-493')">Show code</button>
+            </div>
+            <pre id="code-markdown-493" class="code-block">**Lifecycle:** Create this file at the start of Phase 1. Update `phases_completed`, `bug_count`, and `end_time` as each phase finishes. The final update happens after the terminal gate.
+
+```json
+{
+  &#34;schema_version&#34;: &#34;1.0&#34;,
+  &#34;skill_version&#34;: &#34;1.5.6&#34;,
+  &#34;project&#34;: &#34;repo-name&#34;,</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 328:184 - Line 334:16),
+              docs/foundation/gitignore/RULE_AUDIT.md:markdown (Line 155:193 - Line 156:3)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-494')">Show code</button>
@@ -65150,25 +65320,40 @@ Ask the user for:
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 328:184 - Line 334:16),
-              docs/foundation/gitignore/RULE_AUDIT.md:markdown (Line 155:193 - Line 156:3)
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1223:63 - Line 1244:14),
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2150:63 - Line 2166:62)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-495')">Show code</button>
             </div>
-            <pre id="code-markdown-495" class="code-block">**Lifecycle:** Create this file at the start of Phase 1. Update `phases_completed`, `bug_count`, and `end_time` as each phase finishes. The final update happens after the terminal gate.
+            <pre id="code-markdown-495" class="code-block">**End-of-phase message (mandatory — print this after Phase 1 completes, then STOP):**
 
-```json
-{
-  &#34;schema_version&#34;: &#34;1.0&#34;,
-  &#34;skill_version&#34;: &#34;1.5.6&#34;,
-  &#34;project&#34;: &#34;repo-name&#34;,</pre>
+```
+# Phase 1 Complete — Exploration
+
+I&#39;ve finished exploring the codebase and written my findings to `quality/EXPLORATION.md`.
+[Summarize: how many candidate bugs, which subsystems explored, key risks identified.]
+
+To continue to Phase 2 (Generate quality artifacts), say:
+
+    Run quality playbook phase 2.
+
+Or say &#34;keep going&#34; to continue automatically.
+```
+
+**After printing this message, STOP. Do not proceed to Phase 2 unless the user explicitly asks.**
+
+---
+
+## Phase 2: Generate the Quality Playbook
+
+**v1.5.6 instrumentation:** Append `phase_start phase=2` to `quality/run_state.jsonl` now. At phase end, cross-validate by calling `bin/run_state_lib.validate_phase_artifacts(quality_dir, 2)` — it checks the full Generate contract (REQUIREMENTS.md, QUALITY.md, CONTRACTS.md, COVERAGE_MATRIX.md, COMPLETENESS_REPORT.md, RUN_CODE_REVIEW.md, RUN_INTEGRATION_TESTS.md, RUN_SPEC_AUDIT.md, RUN_TDD_TESTS.md, plus one non-empty `quality/test_functional.&#60;ext&#62;`). If validation passes, append `phase_end phase=2`. If it fails, append an `error` event with `recoverable: true` and re-run the missing artifact generation. (BUG-014 fix: pre-v1.5.6 this note referenced the v1.5.5-design triage model that never shipped.)</pre>
           </div>
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1223:63 - Line 1244:14),
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2150:63 - Line 2166:62)
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1223:63 - Line 1244:648),
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2354:63 - Line 2388:56)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-496')">Show code</button>
@@ -65199,8 +65384,8 @@ Or say &#34;keep going&#34; to continue automatically.
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1223:63 - Line 1244:648),
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2354:63 - Line 2388:56)
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1223:63 - Line 1244:256),
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2390:74 - Line 2412:56)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-497')">Show code</button>
@@ -65231,45 +65416,13 @@ Or say &#34;keep going&#34; to continue automatically.
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1223:63 - Line 1244:256),
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2390:74 - Line 2412:56)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-498')">Show code</button>
-            </div>
-            <pre id="code-markdown-498" class="code-block">**End-of-phase message (mandatory — print this after Phase 1 completes, then STOP):**
-
-```
-# Phase 1 Complete — Exploration
-
-I&#39;ve finished exploring the codebase and written my findings to `quality/EXPLORATION.md`.
-[Summarize: how many candidate bugs, which subsystems explored, key risks identified.]
-
-To continue to Phase 2 (Generate quality artifacts), say:
-
-    Run quality playbook phase 2.
-
-Or say &#34;keep going&#34; to continue automatically.
-```
-
-**After printing this message, STOP. Do not proceed to Phase 2 unless the user explicitly asks.**
-
----
-
-## Phase 2: Generate the Quality Playbook
-
-**v1.5.6 instrumentation:** Append `phase_start phase=2` to `quality/run_state.jsonl` now. At phase end, cross-validate by calling `bin/run_state_lib.validate_phase_artifacts(quality_dir, 2)` — it checks the full Generate contract (REQUIREMENTS.md, QUALITY.md, CONTRACTS.md, COVERAGE_MATRIX.md, COMPLETENESS_REPORT.md, RUN_CODE_REVIEW.md, RUN_INTEGRATION_TESTS.md, RUN_SPEC_AUDIT.md, RUN_TDD_TESTS.md, plus one non-empty `quality/test_functional.&#60;ext&#62;`). If validation passes, append `phase_end phase=2`. If it fails, append an `error` event with `recoverable: true` and re-run the missing artifact generation. (BUG-014 fix: pre-v1.5.6 this note referenced the v1.5.5-design triage model that never shipped.)</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 1533:236 - Line 1538:5),
               .staging/.github/skills/quality-playbook/references/review_protocols.md:markdown (Line 142:97 - Line 147:6)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-499')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-498')">Show code</button>
             </div>
-            <pre id="code-markdown-499" class="code-block">- **Rust:** `#[ignore]` attribute on the test function (the standard &#34;don&#39;t run in default suite&#34; mechanism). Use `#[should_panic]` only for bugs that manifest as panics; use `compile_fail` doctest annotation only for compile-time bugs.
+            <pre id="code-markdown-498" class="code-block">- **Rust:** `#[ignore]` attribute on the test function (the standard &#34;don&#39;t run in default suite&#34; mechanism). Use `#[should_panic]` only for bugs that manifest as panics; use `compile_fail` doctest annotation only for compile-time bugs.
 - **TypeScript/JavaScript (Jest):** `test.failing(&#34;BUG-NNN: [description]&#34;, () =&#62; { ... })`
 - **TypeScript/JavaScript (Vitest):** `test.fails(&#34;BUG-NNN: [description]&#34;, () =&#62; { ... })`
 - **JavaScript (Mocha):** `it.skip(&#34;BUG-NNN: [description]&#34;, () =&#62; { ... })` or `this.skip()` inside the test body for conditional skipping.
@@ -65281,6 +65434,22 @@ When a bug is fixed (fix patch applied permanently), remove the skip guard and u
             <div class="clone-info">
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2194:66 - Line 2199:34),
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2212:2 - Line 2217:6)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-499')">Show code</button>
+            </div>
+            <pre id="code-markdown-499" class="code-block">Record in PROGRESS.md under `## Phase 6 Mechanical Closure` and append to `quality/results/phase6-verification.log`:
+```
+[Step 6.1] Mechanical verification: PASS (exit 0)
+```
+
+**Why this is non-substitutable:** In v1.3.23, the model replaced `bash verify.sh` with `python3 -c &#34;from pathlib import Path; ...&#34;` that read the (forged) artifact file and asserted on its contents — a circular check that passed despite the artifact being fabricated. The only trustworthy verification is re-running the same shell pipeline that produced the artifact and diffing the results. Any other method can be fooled by a corrupted intermediate file.</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2194:71 - Line 2199:396),
+              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2257:25 - Line 2267:4)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-500')">Show code</button>
@@ -65295,29 +65464,13 @@ When a bug is fixed (fix patch applied permanently), remove the skip guard and u
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2194:71 - Line 2199:396),
-              .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2257:25 - Line 2267:4)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-501')">Show code</button>
-            </div>
-            <pre id="code-markdown-501" class="code-block">Record in PROGRESS.md under `## Phase 6 Mechanical Closure` and append to `quality/results/phase6-verification.log`:
-```
-[Step 6.1] Mechanical verification: PASS (exit 0)
-```
-
-**Why this is non-substitutable:** In v1.3.23, the model replaced `bash verify.sh` with `python3 -c &#34;from pathlib import Path; ...&#34;` that read the (forged) artifact file and asserted on its contents — a circular check that passed despite the artifact being fabricated. The only trustworthy verification is re-running the same shell pipeline that produced the artifact and diffing the results. Any other method can be fooled by a corrupted intermediate file.</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2210:447 - Line 2217:24),
               .staging/.github/skills/quality-playbook/SKILL.md:markdown (Line 2276:343 - Line 2283:8)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-502')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-501')">Show code</button>
             </div>
-            <pre id="code-markdown-502" class="code-block">Read `quality/results/quality-gate.log`. If it reports any FAIL results, fix each failing check before proceeding. The most common FAILs are: (1) missing `quality/patches/BUG-NNN-regression-test.patch` files, (2) non-canonical JSON field names like `bug_id` instead of `id`, (3) missing `confirmed_open` in the TDD summary, (4) writeups without inline fix diffs, (5) missing TDD red/green log files. Do not proceed until `quality_gate.py` exits 0.
+            <pre id="code-markdown-501" class="code-block">Read `quality/results/quality-gate.log`. If it reports any FAIL results, fix each failing check before proceeding. The most common FAILs are: (1) missing `quality/patches/BUG-NNN-regression-test.patch` files, (2) non-canonical JSON field names like `bug_id` instead of `id`, (3) missing `confirmed_open` in the TDD summary, (4) writeups without inline fix diffs, (5) missing TDD red/green log files. Do not proceed until `quality_gate.py` exits 0.
 
 Append to `quality/results/phase6-verification.log`:
 ```
@@ -65333,9 +65486,9 @@ This step covers verification benchmarks: 14 (sidecar JSON), 17 (test file exten
               .staging/.github/skills/quality-playbook/agents/quality-playbook.agent.md:markdown (Line 13:102 - Line 35:25)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-503')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-502')">Show code</button>
             </div>
-            <pre id="code-markdown-503" class="code-block">Your ONLY jobs are: (1) spawn sub-agents to execute phases, (2) verify their output files exist on disk, (3) report progress to the user. You do NOT execute phase logic yourself. Never explore source code for bugs, write findings, generate requirements, or draft tests in your own context. If you find yourself doing any of that, you have violated your role.
+            <pre id="code-markdown-502" class="code-block">Your ONLY jobs are: (1) spawn sub-agents to execute phases, (2) verify their output files exist on disk, (3) report progress to the user. You do NOT execute phase logic yourself. Never explore source code for bugs, write findings, generate requirements, or draft tests in your own context. If you find yourself doing any of that, you have violated your role.
 
 ## File-writing override
 
@@ -65366,9 +65519,9 @@ Any of these means you&#39;re about to replicate the casbin failure. Spawn the s
               .staging/.github/skills/quality-playbook/agents/quality-playbook.agent.md:markdown (Line 41:1 - Line 46:61)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-504')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-503')">Show code</button>
             </div>
-            <pre id="code-markdown-504" class="code-block">3. `.github/skills/SKILL.md` (Copilot, flat layout)
+            <pre id="code-markdown-503" class="code-block">3. `.github/skills/SKILL.md` (Copilot, flat layout)
 4. `.cursor/skills/quality-playbook/SKILL.md` (Cursor)
 5. `.continue/skills/quality-playbook/SKILL.md` (Continue)
 6. `.github/skills/quality-playbook/SKILL.md` (Copilot, nested layout)
@@ -65382,9 +65535,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               mantle/ARCHITECTURE.md:markdown (Line 20:171 - Line 22:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-505')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-504')">Show code</button>
             </div>
-            <pre id="code-markdown-505" class="code-block">| Operation                                     | Description                           |
+            <pre id="code-markdown-504" class="code-block">| Operation                                     | Description                           |
 | --------------------------------------------- | ------------------------------------- |
 | Extract Method                                | Turn code fragment into method        |
 | Extract Class                                 | Move behavior to new class            |
@@ -65399,9 +65552,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               .staging/.github/skills/reviewing-oracle-to-postgres-migration/references/oracle-to-postgres-to-char-numeric.md:markdown (Line 126:20 - Line 132:7)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-506')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-505')">Show code</button>
             </div>
-            <pre id="code-markdown-506" class="code-block">Search for `FROM (` in:
+            <pre id="code-markdown-505" class="code-block">Search for `FROM (` in:
 
 - ✅ Stored procedures and functions (DDL scripts)
 - ✅ Application data access layers (DAL classes)
@@ -65416,9 +65569,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               .staging/.github/skills/setup-my-iq/assets/templates/team.md:markdown (Line 29:59 - Line 35:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-507')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-506')">Show code</button>
             </div>
-            <pre id="code-markdown-507" class="code-block">&#60;!-- Brief description of your relationship with this team and what you need from / provide to them. --&#62;
+            <pre id="code-markdown-506" class="code-block">&#60;!-- Brief description of your relationship with this team and what you need from / provide to them. --&#62;
 
 | Name | Email | Notes |
 |------|-------|-------|
@@ -65433,9 +65586,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               .staging/.github/skills/setup-my-iq/assets/templates/team.md:markdown (Line 32:15 - Line 37:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-508')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-507')">Show code</button>
             </div>
-            <pre id="code-markdown-508" class="code-block">|------|-------|-------|
+            <pre id="code-markdown-507" class="code-block">|------|-------|-------|
 | &#60;!-- name --&#62; | &#60;!-- email --&#62; | &#60;!-- role, focus area --&#62; |
 
 ---
@@ -65449,9 +65602,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               .staging/.github/skills/setup-my-iq/assets/templates/tools-systems-and-config.md:markdown (Line 79:31 - Line 88:18)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-509')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-508')">Show code</button>
             </div>
-            <pre id="code-markdown-509" class="code-block">## &#60;!-- Team/Workstream Name 1 --&#62;
+            <pre id="code-markdown-508" class="code-block">## &#60;!-- Team/Workstream Name 1 --&#62;
 
 ### Azure DevOps
 
@@ -65469,9 +65622,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               .staging/.github/skills/suggest-awesome-github-copilot-instructions/SKILL.md:markdown (Line 29:35 - Line 37:46)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-510')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-509')">Show code</button>
             </div>
-            <pre id="code-markdown-510" class="code-block">    - Update outdated agents by replacing with latest version from awesome-copilot
+            <pre id="code-markdown-509" class="code-block">    - Update outdated agents by replacing with latest version from awesome-copilot
     - Do NOT adjust content of the files
     - Use `#fetch` tool to download assets, but may use `curl` using `#runInTerminal` tool to ensure all content is retrieved
     - Use `#todos` tool to track progress
@@ -65489,9 +65642,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               .staging/.github/skills/suggest-awesome-github-copilot-skills/SKILL.md:markdown (Line 31:1 - Line 40:50)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-511')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-510')">Show code</button>
             </div>
-            <pre id="code-markdown-511" class="code-block">    - Do NOT adjust content of the files
+            <pre id="code-markdown-510" class="code-block">    - Do NOT adjust content of the files
     - Use `#fetch` tool to download assets, but may use `curl` using `#runInTerminal` tool to ensure all content is retrieved
     - Use `#todos` tool to track progress
 
@@ -65511,9 +65664,9 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
               .staging/.github/skills/suggest-awesome-github-copilot-skills/SKILL.md:markdown (Line 42:54 - Line 48:36)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-512')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-511')">Show code</button>
             </div>
-            <pre id="code-markdown-512" class="code-block">- Documentation needs (README, specs, ADRs)
+            <pre id="code-markdown-511" class="code-block">- Documentation needs (README, specs, ADRs)
 
 🗨️ **Chat History Context**:
 
@@ -65527,6 +65680,27 @@ Also check for a `references/` directory alongside SKILL.md.</pre>
             <div class="clone-info">
               .staging/.github/skills/suggest-awesome-github-copilot-agents/SKILL.md:markdown (Line 91:1 - Line 101:15),
               .staging/.github/skills/suggest-awesome-github-copilot-instructions/SKILL.md:markdown (Line 107:1 - Line 117:15)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-512')">Show code</button>
+            </div>
+            <pre id="code-markdown-512" class="code-block">- Don&#39;t provide any additional information or context beyond the table and the analysis
+
+## Icons Reference
+
+- ✅ Already installed and up-to-date
+- ⚠️ Installed but outdated (update available)
+- ❌ Not installed in repo
+
+## Update Handling
+
+When outdated agents are identified:</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/suggest-awesome-github-copilot-agents/SKILL.md:markdown (Line 91:1 - Line 101:15),
+              .staging/.github/skills/suggest-awesome-github-copilot-skills/SKILL.md:markdown (Line 114:1 - Line 124:15)
             </div>
             <div>
               <button class="toggle-btn" onclick="toggle('code-markdown-513')">Show code</button>
@@ -65546,34 +65720,13 @@ When outdated agents are identified:</pre>
           
           <div class="clone-item">
             <div class="clone-info">
-              .staging/.github/skills/suggest-awesome-github-copilot-agents/SKILL.md:markdown (Line 91:1 - Line 101:15),
-              .staging/.github/skills/suggest-awesome-github-copilot-skills/SKILL.md:markdown (Line 114:1 - Line 124:15)
-            </div>
-            <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-514')">Show code</button>
-            </div>
-            <pre id="code-markdown-514" class="code-block">- Don&#39;t provide any additional information or context beyond the table and the analysis
-
-## Icons Reference
-
-- ✅ Already installed and up-to-date
-- ⚠️ Installed but outdated (update available)
-- ❌ Not installed in repo
-
-## Update Handling
-
-When outdated agents are identified:</pre>
-          </div>
-          
-          <div class="clone-item">
-            <div class="clone-info">
               .staging/.github/skills/suggest-awesome-github-copilot-agents/SKILL.md:markdown (Line 101:21 - Line 106:39),
               .staging/.github/skills/suggest-awesome-github-copilot-instructions/SKILL.md:markdown (Line 117:27 - Line 122:39)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-515')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-514')">Show code</button>
             </div>
-            <pre id="code-markdown-515" class="code-block">When outdated agents are identified:
+            <pre id="code-markdown-514" class="code-block">When outdated agents are identified:
 1. Include them in the output table with ⚠️ status
 2. Document specific differences in the &#34;Suggestion Rationale&#34; column
 3. Provide recommendation to update with key changes noted
@@ -65587,9 +65740,9 @@ When outdated agents are identified:</pre>
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-assessment.md:markdown (Line 105:52 - Line 112:15)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-516')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-515')">Show code</button>
             </div>
-            <pre id="code-markdown-516" class="code-block">## [First Component Name]
+            <pre id="code-markdown-515" class="code-block">## [First Component Name]
 ```
 
 3. **STRIDE categories may produce 0, 1, 2, 3+ threats** per component. Do NOT cap at 1 threat per category. Components with rich security surfaces should typically have 2-4 threats per relevant category. If every STRIDE cell in the Summary table is 0 or 1, the analysis is too shallow — go back and identify additional threat vectors. The Summary table columns reflect actual threat counts.
@@ -65798,9 +65951,9 @@ Standard assessment sections (all 7 mandatory) plus incremental-specific section
               .staging/.github/skills/threat-model-analyst/references/incremental-orchestrator.md:markdown (Line 482:12 - Line 487:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-517')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-516')">Show code</button>
             </div>
-            <pre id="code-markdown-517" class="code-block">### Threat Status
+            <pre id="code-markdown-516" class="code-block">### Threat Status
 | Status | Count |
 |--------|-------|
 | Still Present | X |
@@ -65814,9 +65967,9 @@ Standard assessment sections (all 7 mandatory) plus incremental-specific section
               .staging/.github/skills/threat-model-analyst/references/incremental-orchestrator.md:markdown (Line 487:26 - Line 493:5)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-518')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-517')">Show code</button>
             </div>
-            <pre id="code-markdown-518" class="code-block">| Fixed | Y |
+            <pre id="code-markdown-517" class="code-block">| Fixed | Y |
 | New (Code) | Z |
 | New (Modified) | M |
 | Previously Unidentified | W |
@@ -65831,9 +65984,9 @@ Standard assessment sections (all 7 mandatory) plus incremental-specific section
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-architecture.md:markdown (Line 116:126 - Line 122:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-519')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-518')">Show code</button>
             </div>
-            <pre id="code-markdown-519" class="code-block">&#60;!-- How deployed? On-prem, cloud, hybrid? Containers, VMs? --&#62;
+            <pre id="code-markdown-518" class="code-block">&#60;!-- How deployed? On-prem, cloud, hybrid? Containers, VMs? --&#62;
 
 ## Security Infrastructure Inventory
 | Component | Security Role | Configuration | Notes |
@@ -65847,9 +66000,9 @@ Standard assessment sections (all 7 mandatory) plus incremental-specific section
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-stride-analysis.md:markdown (Line 15:1 - Line 23:258)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-520')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-519')">Show code</button>
             </div>
-            <pre id="code-markdown-520" class="code-block">## Exploitability Tiers
+            <pre id="code-markdown-519" class="code-block">## Exploitability Tiers
 
 Threats are classified into three exploitability tiers based on the prerequisites an attacker needs:
 
@@ -65866,9 +66019,9 @@ Threats are classified into three exploitability tiers based on the prerequisite
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-stride-analysis.md:markdown (Line 20:44 - Line 25:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-521')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-520')">Show code</button>
             </div>
-            <pre id="code-markdown-521" class="code-block">|------|-------|---------------|----------------|
+            <pre id="code-markdown-520" class="code-block">|------|-------|---------------|----------------|
 | **Tier 1** | Direct Exposure | `None` | Exploitable by unauthenticated external attacker with NO prior access. The prerequisite field MUST say `None`. |
 | **Tier 2** | Conditional Risk | Single prerequisite: `Authenticated User`, `Privileged User`, `Internal Network`, or single `{Boundary} Access` | Requires exactly ONE form of access. The prerequisite field has ONE item. |
 | **Tier 3** | Defense-in-Depth | `Host/OS Access`, `Admin Credentials`, `{Component} Compromise`, `Physical Access`, or MULTIPLE prerequisites joined with `+` | Requires significant prior breach, infrastructure access, or multiple combined prerequisites. |
@@ -66099,9 +66252,9 @@ Send an unauthenticated GET request to `/api/v1/resources` — should return 401
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-assessment.md:markdown (Line 13:1 - Line 21:4)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-522')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-521')">Show code</button>
             </div>
-            <pre id="code-markdown-522" class="code-block">## Report Files
+            <pre id="code-markdown-521" class="code-block">## Report Files
 
 | File | Description |
 |------|-------------|
@@ -66118,9 +66271,9 @@ Send an unauthenticated GET request to `/api/v1/resources` — should return 401
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-assessment.md:markdown (Line 20:76 - Line 23:2)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-523')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-522')">Show code</button>
             </div>
-            <pre id="code-markdown-523" class="code-block">| [1.2-threatmodel-summary.mmd](1.2-threatmodel-summary.mmd) | Summary DFD (only if generated) |
+            <pre id="code-markdown-522" class="code-block">| [1.2-threatmodel-summary.mmd](1.2-threatmodel-summary.mmd) | Summary DFD (only if generated) |
 | [2-stride-analysis.md](2-stride-analysis.md) | Full STRIDE-A analysis for all components |
 | [3-findings.md](3-findings.md) | Prioritized security findings with remediation |
 ```
@@ -66145,9 +66298,9 @@ Include at end of Executive Summary:
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-assessment.md:markdown (Line 154:1 - Line 159:12)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-524')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-523')">Show code</button>
             </div>
-            <pre id="code-markdown-524" class="code-block">## Analysis Context &#38; Assumptions
+            <pre id="code-markdown-523" class="code-block">## Analysis Context &#38; Assumptions
 
 ### Analysis Scope
 | Constraint | Description |
@@ -66161,9 +66314,9 @@ Include at end of Executive Summary:
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-assessment.md:markdown (Line 188:1 - Line 197:18)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-525')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-524')">Show code</button>
             </div>
-            <pre id="code-markdown-525" class="code-block">## References Consulted
+            <pre id="code-markdown-524" class="code-block">## References Consulted
 
 ### Security Standards
 | Standard | URL | How Used |
@@ -66181,9 +66334,9 @@ Include at end of Executive Summary:
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-assessment.md:markdown (Line 125:12 - Line 130:3)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-526')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-525')">Show code</button>
             </div>
-            <pre id="code-markdown-526" class="code-block">### Threat Status
+            <pre id="code-markdown-525" class="code-block">### Threat Status
 | Status | Count |
 |--------|-------|
 | Existing | [FILL] |
@@ -66197,9 +66350,9 @@ Include at end of Executive Summary:
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown (Line 78:65 - Line 84:30)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-527')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-526')">Show code</button>
             </div>
-            <pre id="code-markdown-527" class="code-block">[REPEAT: one finding block per Tier 1 finding, sorted by severity (Critical→Important→Moderate→Low) then CVSS descending]
+            <pre id="code-markdown-526" class="code-block">[REPEAT: one finding block per Tier 1 finding, sorted by severity (Critical→Important→Moderate→Low) then CVSS descending]
 
 ### FIND-[FILL: NN]: [FILL: title]
 
@@ -66214,9 +66367,9 @@ Include at end of Executive Summary:
               .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown (Line 122:38 - Line 158:32)
             </div>
             <div>
-              <button class="toggle-btn" onclick="toggle('code-markdown-528')">Show code</button>
+              <button class="toggle-btn" onclick="toggle('code-markdown-527')">Show code</button>
             </div>
-            <pre id="code-markdown-528" class="code-block">[REPEAT: one finding block per Tier 1 finding, sorted by severity (Critical→Important→Moderate→Low) then CVSS descending]
+            <pre id="code-markdown-527" class="code-block">[REPEAT: one finding block per Tier 1 finding, sorted by severity (Critical→Important→Moderate→Low) then CVSS descending]
 
 ### FIND-[FILL: NN]: [FILL: title]
 
@@ -66231,6 +66384,51 @@ Include at end of Executive Summary:
 | Remediation Effort | [FILL: Low / Medium / High] |
 | Mitigation Type | [FILL: Redesign / Standard Mitigation / Custom Mitigation / Existing Control / Accept Risk / Transfer Risk] |
 | Component | [FILL: component name] |</pre>
+          </div>
+          
+          <div class="clone-item">
+            <div class="clone-info">
+              .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown (Line 80:21 - Line 114:33),
+              .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown (Line 124:21 - Line 158:33)
+            </div>
+            <div>
+              <button class="toggle-btn" onclick="toggle('code-markdown-528')">Show code</button>
+            </div>
+            <pre id="code-markdown-528" class="code-block">### FIND-[FILL: NN]: [FILL: title]
+
+| Attribute | Value |
+|-----------|-------|
+| SDL Bugbar Severity | [FILL] |
+| CVSS 4.0 | [FILL] (CVSS:4.0/[FILL]) |
+| CWE | [CWE-[FILL]](https://cwe.mitre.org/data/definitions/[FILL].html): [FILL] |
+| OWASP | A[FILL]:2025 – [FILL] |
+| Exploitation Prerequisites | [FILL] |
+| Exploitability Tier | Tier [FILL] — [FILL] |
+| Remediation Effort | [FILL] |
+| Mitigation Type | [FILL] |
+| Component | [FILL] |
+| Related Threats | [FILL] |
+
+#### Description
+
+[FILL-PROSE]
+
+#### Evidence
+
+**Prerequisite basis:** [FILL: cite the specific code/config that determines this finding&#39;s prerequisite — must match the Component Exposure Table in 0.1-architecture.md]
+
+[FILL]
+
+#### Remediation
+
+[FILL]
+
+#### Verification
+
+[FILL]
+
+[END-REPEAT]
+[CONDITIONAL-EMPTY: If no Tier 2 findings, include this line instead of the REPEAT block]</pre>
           </div>
           
           <div class="clone-item">
