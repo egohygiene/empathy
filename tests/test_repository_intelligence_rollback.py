@@ -13,15 +13,16 @@ import hashlib
 from io import StringIO
 import json
 from pathlib import Path
-import subprocess
+import subprocess  # nosec B404 # CompletedProcess values only; execution is mocked.
 from tempfile import TemporaryDirectory
+from typing import Any
 import unittest
 from unittest.mock import patch
 
 from tools import verify_repository_intelligence_rollback as rollback
 
 
-def canonical_digest(records: list[dict]) -> str:
+def canonical_digest(records: list[dict[str, Any]]) -> str:
     """Compute fixture expectations independently of the production helper."""
     text = json.dumps(records, separators=(",", ":"), sort_keys=True) + "\n"
     return "sha256:" + hashlib.sha256(text.encode()).hexdigest()
@@ -89,7 +90,7 @@ class RepositoryIntelligenceRollbackTests(unittest.TestCase):
         )
 
     @staticmethod
-    def fixture_inventory(root: Path) -> list[dict]:
+    def fixture_inventory(root: Path) -> list[dict[str, Any]]:
         records = []
         for path in sorted(root.rglob("*")):
             if path.is_file():
@@ -103,7 +104,7 @@ class RepositoryIntelligenceRollbackTests(unittest.TestCase):
                 )
         return records
 
-    def verify(self) -> dict:
+    def verify(self) -> dict[str, Any]:
         return rollback.verify_site(self.site, baseline=self.baseline)
 
     def test_verified_report_keeps_new_composition_separate_from_historical_deployment(
@@ -220,7 +221,10 @@ class RepositoryIntelligenceRollbackTests(unittest.TestCase):
             ],
         ):
             with (
-                patch.object(rollback.subprocess, "run", side_effect=results),
+                patch(
+                    "tools.verify_repository_intelligence_rollback.subprocess.run",
+                    side_effect=results,
+                ),
                 self.assertRaisesRegex(rollback.RollbackError, "ERB-006"),
             ):
                 rollback.verify_source(self.root)

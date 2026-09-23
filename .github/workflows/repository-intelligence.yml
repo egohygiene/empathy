@@ -136,7 +136,8 @@ jobs:
               "rule": "empathy.intelligence." + (failed or "complete"),
               "observed": observed,
               "remediation": guidance,
-              "documentation": "https://github.com/egohygiene/empathy/blob/" + os.environ["GITHUB_SHA"] + "/docs/integrations/REPOSITORY_INTELLIGENCE.md",
+              "documentation": "/".join(("https://github.com", "egohygiene/empathy", "blob",
+                                         os.environ["GITHUB_SHA"], "docs/integrations/REPOSITORY_INTELLIGENCE.md")),
               "authority": "contents-read-artifact-only",
               "sanitization": "allowlisted-metadata-only",
           }

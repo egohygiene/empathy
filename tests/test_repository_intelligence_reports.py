@@ -15,9 +15,13 @@ import importlib.util
 import json
 import os
 from pathlib import Path
-import subprocess
+import subprocess  # nosec B404 # Fixed local Git queries; no shell input.
 from tempfile import TemporaryDirectory
+from typing import TYPE_CHECKING, Any, ClassVar, cast
 import unittest
+
+if TYPE_CHECKING:
+    from types import ModuleType
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 RELAY_REVISION = "9a6315978766c336566b9fa7139b800fa8789ba5"
@@ -29,6 +33,8 @@ AS_OF = datetime(2026, 9, 23, 12, tzinfo=UTC)
 class RepositoryIntelligenceReportTests(unittest.TestCase):
     """Exercise the released renderer without copying its implementation."""
 
+    renderer: ClassVar[ModuleType]
+
     @classmethod
     def setUpClass(cls) -> None:
         checkout = os.environ.get("RELAY_CHECKOUT")
@@ -37,7 +43,7 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
             raise unittest.SkipTest(message)
         relay_root = Path(checkout).resolve(strict=True)
         # Only fixed local Git operations execute; no shell or remote input is used.
-        revision = subprocess.run(  # noqa: S603
+        revision = subprocess.run(  # noqa: S603  # nosec B603, B607
             ["git", "-C", str(relay_root), "rev-parse", "HEAD"],  # noqa: S607
             check=True,
             capture_output=True,
@@ -63,7 +69,7 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
         self.reports = Path(directory.name) / ".reports"
 
     @staticmethod
-    def report(producer: str = "osv") -> dict:
+    def report(producer: str = "osv") -> dict[str, Any]:
         """Declare consumer fixture data using the normalized report contract."""
 
         return {
@@ -105,16 +111,20 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
             },
         }
 
-    def write_report(self, document: dict, producer: str = "osv") -> Path:
+    def write_report(self, document: dict[str, Any], producer: str = "osv") -> Path:
         path = self.reports / producer / "summary.json"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(document), encoding="utf-8")
         return path
 
-    def project(self, producer: str = "osv", *, as_of: datetime = AS_OF) -> dict:
-        return self.renderer.load_report(self.reports, producer, REPOSITORY, SOURCE_COMMIT, as_of)
+    def project(self, producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[str, Any]:
+        # JSON payloads cross the dynamic owner boundary and are asserted below.
+        return cast(
+            "dict[str, Any]",
+            self.renderer.load_report(self.reports, producer, REPOSITORY, SOURCE_COMMIT, as_of),
+        )
 
-    def assert_unknown_findings(self, projection: dict) -> None:
+    def assert_unknown_findings(self, projection: dict[str, Any]) -> None:
         self.assertEqual(projection["findings"]["state"], "unknown")
         for count in ("total", "blocking", "advisory"):
             self.assertIsNone(projection["findings"][count])
@@ -280,7 +290,7 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
 
     def test_committed_reports_keep_their_original_source_commit(self) -> None:
         # Read only the local fixture revision using fixed Git arguments.
-        source_commit = subprocess.run(  # noqa: S603
+        source_commit = subprocess.run(  # noqa: S603  # nosec B603, B607
             ["git", "-C", str(REPOSITORY_ROOT), "rev-parse", "HEAD"],  # noqa: S607
             check=True,
             capture_output=True,

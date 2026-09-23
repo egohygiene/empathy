@@ -18,12 +18,17 @@ import json
 import os
 from pathlib import Path
 import re
-import subprocess
+
+# Only checked-in snippets/fixed argv run in read-only temporary fixtures.
+import subprocess  # nosec B404
 from tempfile import TemporaryDirectory
-from typing import ClassVar
+from typing import TYPE_CHECKING, Any, ClassVar, cast
 import unittest
 
 import yaml
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = REPOSITORY_ROOT / ".github/workflows"
@@ -36,11 +41,12 @@ class UniqueKeyLoader(yaml.SafeLoader):
     """Keep GitHub's `on` key a string and reject overwritten policy fields."""
 
     # Workflow scalars stay textual, while SafeLoader rejects arbitrary object tags.
-    yaml_implicit_resolvers: ClassVar[dict] = {}
+    # PyYAML defines this on its class; its stubs currently declare an instance field.
+    yaml_implicit_resolvers: ClassVar[dict[str, list[tuple[str, re.Pattern[str]]]]] = {}  # type: ignore[misc]
 
 
-def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict:
-    result = {}
+def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict[str, Any]:
+    result: dict[str, Any] = {}
     for key_node, value_node in node.value:
         key = loader.construct_object(key_node, deep=True)
         if key in result:
@@ -53,16 +59,24 @@ def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict:
 UniqueKeyLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, unique_mapping)
 
 
-def workflow(name: str) -> dict:
+def workflow(name: str) -> dict[str, Any]:
     # The custom loader inherits SafeLoader and adds duplicate-key rejection.
-    return yaml.load((WORKFLOWS / name).read_text(encoding="utf-8"), Loader=UniqueKeyLoader)  # noqa: S506
+    document = yaml.load(  # nosec B506
+        (WORKFLOWS / name).read_text(encoding="utf-8"),
+        Loader=UniqueKeyLoader,  # noqa: S506
+    )
+    if not isinstance(document, dict):
+        message = "workflow fixture must contain an object"
+        raise TypeError(message)
+    # Checked-in YAML object values vary by workflow section.
+    return cast("dict[str, Any]", document)
 
 
 def expression(source: str) -> str:
     return re.sub(r"\s+", " ", source.strip().removeprefix("${{").removesuffix("}}")).strip()
 
 
-def evaluate(source: str, context: dict, *, cancelled: bool = False) -> bool:
+def evaluate(source: str, context: dict[str, Any], *, cancelled: bool = False) -> bool:
     """Evaluate only the small, fail-closed expression grammar used by these gates."""
 
     source = expression(source).replace("&&", " and ").replace("||", " or ")
@@ -73,13 +87,16 @@ def evaluate(source: str, context: dict, *, cancelled: bool = False) -> bool:
         source,
     )
 
-    def value(path: str):
-        result = context
+    def value(path: str) -> Any:
+        result: Any = context
         for segment in path.split("."):
-            result = result.get(segment, "") if isinstance(result, dict) else ""
+            result = (
+                cast("dict[str, Any]", result).get(segment, "") if isinstance(result, dict) else ""
+            )
         return result
 
-    functions = {
+    # Expression values are the same heterogeneous JSON scalars/objects as event fixtures.
+    functions: dict[str, Callable[..., Any]] = {
         "value": value,
         "cancelled": lambda: cancelled,
         "always": lambda: True,
@@ -89,7 +106,7 @@ def evaluate(source: str, context: dict, *, cancelled: bool = False) -> bool:
     }
 
     # Explicit branches keep this small allowlisted AST grammar easy to audit.
-    def visit(node):  # noqa: PLR0911
+    def visit(node: ast.AST) -> Any:  # noqa: PLR0911
         if isinstance(node, ast.Constant):
             return node.value
         if isinstance(node, ast.Name) and node.id in ("true", "false"):
@@ -120,16 +137,16 @@ def evaluate(source: str, context: dict, *, cancelled: bool = False) -> bool:
 
 # Independent event fields remain named so each adversarial fixture is explicit.
 def event_context(  # noqa: PLR0913
-    event="push",
+    event: str = "push",
     *,
-    ref="refs/heads/main",
-    producer="MegaLinter",
-    producer_event="push",
-    producer_repository="egohygiene/empathy",
-    workflow_repository="egohygiene/empathy",
-    producer_branch="main",
-    conclusion="success",
-) -> dict:
+    ref: str = "refs/heads/main",
+    producer: str = "MegaLinter",
+    producer_event: str = "push",
+    producer_repository: str = "egohygiene/empathy",
+    workflow_repository: str = "egohygiene/empathy",
+    producer_branch: str = "main",
+    conclusion: str = "success",
+) -> dict[str, Any]:
     return {
         "github": {
             "event_name": event,
@@ -165,8 +182,12 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         self.gates = workflow("repository-intelligence-gates.yml")
 
     def run_report(
-        self, step: dict, filename: str, extra_environment: dict, expected_status: int
-    ) -> dict:
+        self,
+        step: dict[str, Any],
+        filename: str,
+        extra_environment: dict[str, str],
+        expected_status: int,
+    ) -> dict[str, Any]:
         with TemporaryDirectory() as directory:
             environment = {
                 **os.environ,
@@ -178,7 +199,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 **extra_environment,
             }
             # Execute only checked-in workflow snippets in a temporary fixture directory.
-            completed = subprocess.run(  # noqa: S603
+            completed = subprocess.run(  # noqa: S603  # nosec B603, B607
                 ["bash", "-c", step["run"]],  # noqa: S607
                 check=False,
                 capture_output=True,
@@ -193,7 +214,9 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             self.assertNotIn("private-", public_output)
             self.assertNotIn(directory, public_output)
             self.assertNotIn("outputs", report_text)
-            return json.loads(report_text)
+            report = json.loads(report_text)
+            self.assertIsInstance(report, dict)
+            return cast("dict[str, Any]", report)
 
     def test_duplicate_yaml_keys_cannot_silently_replace_a_trust_guard(self) -> None:
         for source in (
@@ -203,10 +226,13 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         ):
             with self.subTest(source=source), self.assertRaisesRegex(ValueError, "duplicate"):
                 # SafeLoader subclass; these inputs intentionally contain duplicate keys.
-                yaml.load(source, Loader=UniqueKeyLoader)  # noqa: S506
+                yaml.load(source, Loader=UniqueKeyLoader)  # noqa: S506  # nosec B506
         with self.assertRaises(yaml.constructor.ConstructorError):
             # SafeLoader must reject Python object tags before constructing any object.
-            yaml.load("!!python/object:builtins.object {}", Loader=UniqueKeyLoader)  # noqa: S506
+            yaml.load(  # nosec B506
+                "!!python/object:builtins.object {}",
+                Loader=UniqueKeyLoader,  # noqa: S506
+            )
         for name in (
             "mindgarden-pages.yml",
             "repository-intelligence.yml",
@@ -624,7 +650,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 if mutation:
                     results["deploy"]["result"] = mutation
                 # The checked-in report snippet receives only controlled fixture values.
-                completed = subprocess.run(  # noqa: S603
+                completed = subprocess.run(  # noqa: S603  # nosec B603, B607
                     ["bash", "-c", report_step["run"]],  # noqa: S607
                     check=False,
                     capture_output=True,

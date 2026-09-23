@@ -13,11 +13,17 @@ import io
 import json
 from pathlib import Path
 import shutil
-import subprocess
+
+# Fixed Git commands initialize only temporary fixture repositories.
+import subprocess  # nosec B404
 import tempfile
+from typing import TYPE_CHECKING
 import unittest
 from unittest.mock import patch
 from urllib.error import URLError
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location(
@@ -29,6 +35,7 @@ publication = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(publication)
 REVISION = "a" * 40
 RELAY = "b" * 40
+SENTINEL = "SECRET"
 
 
 class PublicationEvidenceTests(unittest.TestCase):
@@ -75,7 +82,7 @@ class PublicationEvidenceTests(unittest.TestCase):
         self.write(root / "intelligence" / filename, identity)
         return root
 
-    def fetch_from(self, root: Path):
+    def fetch_from(self, root: Path) -> Callable[[str], bytes]:
         def fetch(route: str) -> bytes:
             entrypoint = route + "index.html" if not route or route.endswith("/") else route
             return (root / entrypoint).read_bytes()
@@ -163,7 +170,14 @@ class PublicationEvidenceTests(unittest.TestCase):
         evidence = publication.report_evidence(path, "osv", REVISION)
         self.assertEqual(evidence["generated_at"], "2026-09-23T10:00:00Z")
         self.assertEqual(evidence["expires_at"], "2026-09-30T10:00:00Z")
-        for value in ("SECRET", "2026-02-30T10:00:00Z", "2026-09-23T10:00:00", None, []):
+        malformed: tuple[object, ...] = (
+            "SECRET",
+            "2026-02-30T10:00:00Z",
+            "2026-09-23T10:00:00",
+            None,
+            [],
+        )
+        for value in malformed:
             report["generated_at"] = value
             report["freshness"] = {"expires_at": value}
             self.write(path, report)
@@ -173,17 +187,19 @@ class PublicationEvidenceTests(unittest.TestCase):
             self.assertNotIn("SECRET", json.dumps(evidence))
 
     def test_adversarial_nested_metadata_types_cannot_claim_a_trusted_refresh(self) -> None:
-        for change in (
+        malformed: tuple[dict[str, object], ...] = (
             {"repository": {"full_name": []}},
             {"head_repository": None},
             {"name": {}},
             {"event": []},
             {"head_sha": []},
-        ):
+        )
+        for change in malformed:
             with self.subTest(change=change):
                 metadata = publication.workflow_metadata(self.event(**change))
                 self.assertFalse(metadata["triggering_producer"]["trusted_refresh_candidate"])
-        metadata = publication.workflow_metadata(self.event(conclusion={"SECRET": True}))
+        # Synthetic sentinel proves malformed metadata cannot leak into public evidence.
+        metadata = publication.workflow_metadata(self.event(conclusion={SENTINEL: True}))
         self.assertEqual(metadata["triggering_producer"]["conclusion"], "unknown")
         self.assertNotIn("SECRET", json.dumps(metadata))
 
@@ -217,7 +233,8 @@ class PublicationEvidenceTests(unittest.TestCase):
             "GITHUB_EVENT_PATH": str(path),
             "GITHUB_RUN_ID": "456",
             "GITHUB_RUN_ATTEMPT": "1",
-            "GITHUB_TOKEN": "SECRET",
+            # Synthetic sentinel only: no requests or authentication are performed.
+            "GITHUB_TOKEN": SENTINEL,
         }
 
     def test_non_successful_producer_refresh_metadata_stays_useful_and_sanitized(self) -> None:
@@ -271,7 +288,7 @@ class PublicationEvidenceTests(unittest.TestCase):
             ],
         ):
             # Arguments above create only the local temporary Git fixture.
-            subprocess.run(  # noqa: S603
+            subprocess.run(  # noqa: S603  # nosec B603, B607
                 ["git", "-C", str(self.root), *arguments],  # noqa: S607
                 check=True,
                 capture_output=True,
@@ -395,11 +412,26 @@ class PublicationEvidenceTests(unittest.TestCase):
             publication.NoRedirects().redirect_request(None, None, 302, "", {}, "http://127.0.0.1/")
         )
 
+    def test_public_probe_requires_bounded_bytes(self) -> None:
+        with patch.object(publication, "build_opener") as opener:
+            response = opener.return_value.open.return_value.__enter__.return_value
+            response.status = 200
+            response.geturl.return_value = publication.SITE_URL
+            for payload in ("PRIVATE response", b"x" * (publication.MAX_FILE_BYTES + 1)):
+                response.read.return_value = payload
+                with self.subTest(kind=type(payload).__name__):
+                    with self.assertRaises(publication.PublicationError) as failure:
+                        publication.fetch_public("")
+                    self.assertNotIn("PRIVATE", str(failure.exception))
+            response.read.assert_called_with(publication.MAX_FILE_BYTES + 1)
+
     def test_failures_are_closed_public_safe_and_thirty_day(self) -> None:
         codes = set()
         for stage in publication.FAILURES:
             result = publication.failure_report(
-                stage, {"GITHUB_RUN_ID": "123", "GITHUB_RUN_ATTEMPT": "2", "SECRET": "token"}
+                # Synthetic value must never be copied to a public failure report.
+                stage,
+                {"GITHUB_RUN_ID": "123", "GITHUB_RUN_ATTEMPT": "2", SENTINEL: "token"},
             )
             self.assertEqual(result["retention_days"], 30)
             self.assertNotIn("token", json.dumps(result))
