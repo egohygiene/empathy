@@ -256,6 +256,21 @@ mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "retur
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 ************* Module test_gitignore_baseline
 tests/test_gitignore_baseline.py:27:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_provenance
+tests/test_repository_intelligence_provenance.py:110:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_publication
+tests/test_repository_intelligence_publication.py:36:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+tests/test_repository_intelligence_publication.py:280:57: W0212: Access to a protected member _git of a client class (protected-access)
+tests/test_repository_intelligence_publication.py:281:53: W0212: Access to a protected member _git of a client class (protected-access)
+tests/test_repository_intelligence_publication.py:34:0: R0904: Too many public methods (31/25) (too-many-public-methods)
+************* Module test_repository_intelligence_reports
+tests/test_repository_intelligence_reports.py:61:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_rollback
+tests/test_repository_intelligence_rollback.py:32:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_workflows
+tests/test_repository_intelligence_workflows.py:26:0: E0401: Unable to import 'yaml' (import-error)
+tests/test_repository_intelligence_workflows.py:92:4: R0911: Too many return statements (7/6) (too-many-return-statements)
+tests/test_repository_intelligence_workflows.py:122:0: R0913: Too many arguments (8/7) (too-many-arguments)
 ************* Module foundation
 tools/foundation.py:68:0: R0914: Too many local variables (34/20) (too-many-locals)
 tools/foundation.py:68:0: R0912: Too many branches (53/12) (too-many-branches)
@@ -265,6 +280,9 @@ tools/foundation.py:257:0: R0912: Too many branches (26/12) (too-many-branches)
 tools/foundation.py:257:0: R0915: Too many statements (71/60) (too-many-statements)
 tools/foundation.py:555:0: R0911: Too many return statements (21/6) (too-many-return-statements)
 tools/foundation.py:555:0: R0912: Too many branches (24/12) (too-many-branches)
+************* Module repository_intelligence_publication
+tools/repository_intelligence_publication.py:401:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+tools/repository_intelligence_publication.py:456:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
 ************* Module staging_home_audit
 tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1395/1000) (too-many-lines)
 tools/staging_home_audit.py:64:0: R0902: Too many instance attributes (24/12) (too-many-instance-attributes)
@@ -281,6 +299,6 @@ tools/staging_home_audit.py:1171:0: R0911: Too many return statements (8/6) (too
 tools/staging_home_audit.py:1230:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.54/10
+Your code has been rated at 9.61/10
 
 

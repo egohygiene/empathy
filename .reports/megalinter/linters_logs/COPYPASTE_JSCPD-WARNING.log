@@ -355,9 +355,6 @@ Clone found (yaml)
  - .github/workflows/automation.yml [8:1 - 26:3] (19 lines, 72 tokens)
    .github/workflows/automation.yml [29:1 - 47:3]
 Clone found (yaml)
- - .github/workflows/automation.yml [59:1 - 69:24] (11 lines, 61 tokens)
-   .github/workflows/repository-intelligence.yml [40:1 - 50:24]
-Clone found (yaml)
  - .github/workflows/automation.yml [62:1 - 75:15] (14 lines, 74 tokens)
    .github/workflows/codeql.yml [40:1 - 53:15]
 Clone found (yaml)
@@ -400,11 +397,29 @@ Clone found (yaml)
  - .github/workflows/megalinter.yml [141:17 - 164:34] (24 lines, 148 tokens)
    .github/workflows/ossf-scorecard.yml [79:22 - 102:34]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [51:1 - 65:15] (15 lines, 85 tokens)
-   .github/workflows/repository-intelligence.yml [43:1 - 57:15]
+ - .github/workflows/mindgarden-pages.yml [42:49 - 47:87] (6 lines, 117 tokens)
+   .github/workflows/mindgarden-pages.yml [393:46 - 398:87]
 Clone found (yaml)
- - .github/workflows/mindgarden-pages.yml [94:1 - 99:9] (6 lines, 82 tokens)
-   .github/workflows/mindgarden-pages.yml [103:1 - 108:9]
+ - .github/workflows/mindgarden-pages.yml [60:1 - 70:9] (11 lines, 61 tokens)
+   .github/workflows/repository-intelligence.yml [50:1 - 60:9]
+Clone found (yaml)
+ - .github/workflows/mindgarden-pages.yml [160:1 - 169:15] (10 lines, 69 tokens)
+   .github/workflows/mindgarden-pages.yml [177:1 - 186:15]
+Clone found (yaml)
+ - .github/workflows/mindgarden-pages.yml [161:1 - 169:24] (9 lines, 55 tokens)
+   .github/workflows/mindgarden-pages.yml [200:1 - 208:22]
+Clone found (yaml)
+ - .github/workflows/mindgarden-pages.yml [261:1 - 270:23] (10 lines, 202 tokens)
+   .github/workflows/mindgarden-pages.yml [274:1 - 283:23]
+Clone found (yaml)
+ - .github/workflows/mindgarden-pages.yml [367:154 - 372:32] (6 lines, 56 tokens)
+   .github/workflows/repository-intelligence.yml [140:57 - 145:32]
+Clone found (yaml)
+ - .github/workflows/mindgarden-pages.yml [391:58 - 399:12] (9 lines, 195 tokens)
+   .github/workflows/mindgarden-pages.yml [420:77 - 428:12]
+Clone found (yaml)
+ - .github/workflows/mindgarden-pages.yml [391:38 - 400:12] (10 lines, 207 tokens)
+   .github/workflows/mindgarden-pages.yml [497:68 - 505:26]
 Clone found (yaml)
  - .github/workflows/osv-scan.yml [330:1 - 339:22] (10 lines, 85 tokens)
    .github/workflows/osv-scan.yml [354:1 - 363:22]
@@ -417,6 +432,9 @@ Clone found (yaml)
 Clone found (yaml)
  - .github/workflows/osv-scan.yml [342:51 - 352:15] (11 lines, 85 tokens)
    .github/workflows/osv-scan.yml [388:54 - 398:15]
+Clone found (yaml)
+ - .github/workflows/repository-intelligence-gates.yml [42:23 - 47:14] (6 lines, 52 tokens)
+   .github/workflows/repository-intelligence-gates.yml [126:16 - 131:14]
 Clone found (yaml)
  - .github/workflows/reusable-flutter-build.yml [52:1 - 68:15] (17 lines, 128 tokens)
    .github/workflows/reusable-flutter-build.yml [85:1 - 101:15]
@@ -2931,9 +2949,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [17:127 - 31:13] (15 lines, 296 tokens)
    .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [122:38 - 158:32]
-Clone found (markdown)
- - .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [80:21 - 114:33] (35 lines, 282 tokens)
-   .staging/.github/skills/threat-model-analyst/references/skeletons/skeleton-findings.md:markdown [124:21 - 158:33]
 Clone found (typescript)
  - .staging/.github/skills/unit-test-vue-pinia/SKILL.md:typescript [39:1 - 89:19] (51 lines, 101 tokens)
    .staging/.github/skills/unit-test-vue-pinia/references/pinia-patterns.md:typescript [12:1 - 50:24]
@@ -3729,6 +3744,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.analyze.md:markdown [31:20 - 44:17] (14 lines, 84 tokens)
    .staging/.opencode/commands/speckit.analyze.md:markdown [221:16 - 234:17]
+Clone found (markdown)
+ - .staging/.opencode/commands/speckit.analyze.md:markdown [226:8 - 241:2] (16 lines, 111 tokens)
+   .staging/.opencode/commands/speckit.checklist.md:markdown [359:8 - 372:88]
 Clone found (markdown)
  - .staging/.opencode/commands/speckit.clarify.md:markdown [44:25 - 55:5] (12 lines, 92 tokens)
    .staging/.opencode/commands/speckit.constitution.md:markdown [44:25 - 55:4]
@@ -9463,6 +9481,15 @@ Clone found (json)
  - schemas/repository-foundation-catalog.v1.schema.json [70:42 - 83:10] (14 lines, 63 tokens)
    schemas/repository-foundation-catalog.v1.schema.json [89:53 - 102:10]
 Clone found (python)
+ - tests/test_repository_intelligence_provenance.py [57:1 - 62:5] (6 lines, 68 tokens)
+   tests/test_staging_removal_gate.py [15:1 - 20:5]
+Clone found (python)
+ - tests/test_repository_intelligence_provenance.py [135:17 - 143:60] (9 lines, 55 tokens)
+   tests/test_repository_intelligence_provenance.py [206:18 - 214:60]
+Clone found (python)
+ - tests/test_repository_intelligence_workflows.py [170:1 - 177:68] (8 lines, 58 tokens)
+   tests/test_repository_intelligence_workflows.py [610:1 - 617:68]
+Clone found (python)
  - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
    tests/test_staging_removal_gate.py [64:49 - 71:14]
 Clone found (python)
@@ -9479,7 +9506,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 414            │ 113916      │ 438214       │ 275          │ 6030 (5.29%)     │ 28883 (6.59%)     │
+│ bash         │ 415            │ 114129      │ 438449       │ 275          │ 6030 (5.28%)     │ 28883 (6.59%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9543,7 +9570,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1725           │ 331127      │ 4298960      │ 695          │ 11729 (3.54%)    │ 173216 (4.03%)    │
+│ markdown     │ 1726           │ 331409      │ 4304130      │ 695          │ 11710 (3.53%)    │ 173045 (4.02%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9565,7 +9592,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 292            │ 72996       │ 452833       │ 130          │ 1307 (1.79%)     │ 12309 (2.72%)     │
+│ python       │ 299            │ 75862       │ 479502       │ 133          │ 1327 (1.75%)     │ 12490 (2.60%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -9597,12 +9624,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 553            │ 57123       │ 316120       │ 349          │ 9375 (16.41%)    │ 105259 (33.30%)   │
+│ yaml         │ 556            │ 57963       │ 324537       │ 355          │ 9414 (16.24%)    │ 106045 (32.68%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4756           │ 984491      │ 7759148      │ 3156         │ 59560 (6.05%)    │ 762956 (9.83%)    │
+│ Total:       │ 4768           │ 988692      │ 7799639      │ 3165         │ 59600 (6.03%)    │ 763752 (9.79%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3156 clones.
+Found 3165 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
-time: 17.13s
+time: 16.13s
 

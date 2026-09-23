@@ -11965,6 +11965,627 @@ tests/test_mindgarden_publishing_integration.py
   tests/test_mindgarden_publishing_integration.py:30:13 - error: Type of "paths" is unknown (reportUnknownVariableType)
   tests/test_mindgarden_publishing_integration.py:32:18 - error: Type of "as_posix" is unknown (reportUnknownMemberType)
   tests/test_mindgarden_publishing_integration.py:32:38 - error: Type of "path" is unknown (reportUnknownVariableType)
+tests/test_repository_intelligence_publication.py
+  tests/test_repository_intelligence_publication.py:110:48 - error: No overloads for "__new__" match the provided arguments (reportCallIssue)
+  tests/test_repository_intelligence_publication.py:110:57 - error: Argument of type "Any | int | dict[str, str] | list[dict[str, str]]" cannot be assigned to parameter "sequence" of type "SupportsLenAndGetItem[_T@reversed]" in function "__new__"
+    Type "Any | int | dict[str, str] | list[dict[str, str]]" is not assignable to type "SupportsLenAndGetItem[_T@reversed]"
+      "int" is incompatible with protocol "SupportsLenAndGetItem[_T@reversed]"
+        "__len__" is not present
+        "__getitem__" is not present (reportArgumentType)
+  tests/test_repository_intelligence_publication.py:166:13 - error: Type of "value" is partially unknown
+    Type of "value" is "list[Unknown] | Literal['SECRET', '2026-02-30T10:00:00Z', '2026-09-23T10:00:00'] | None" (reportUnknownVariableType)
+  tests/test_repository_intelligence_publication.py:176:13 - error: Type of "change" is partially unknown
+    Type of "change" is "dict[str, dict[str, list[Unknown]]] | dict[str, None] | dict[str, dict[Unknown, Unknown]] | dict[str, list[Unknown]]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_publication.py:184:71 - error: Argument type is partially unknown
+    Argument corresponds to parameter "overrides" in function "event"
+    Argument type is "dict[Unknown, Unknown] | list[Unknown] | None" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_publication.py:212:9 - error: No overloads for "update" match the provided arguments (reportCallIssue)
+  tests/test_repository_intelligence_publication.py:212:20 - error: Argument of type "dict[str, object]" cannot be assigned to parameter "m" of type "Iterable[tuple[str, int | str | dict[str, Any] | dict[str, str]]]" in function "update"
+    "dict[str, object]" is not assignable to "Iterable[tuple[str, int | str | dict[str, Any] | dict[str, str]]]"
+      Type parameter "_T_co@Iterable" is covariant, but "str" is not a subtype of "tuple[str, int | str | dict[str, Any] | dict[str, str]]"
+        "str" is not assignable to "tuple[str, int | str | dict[str, Any] | dict[str, str]]" (reportArgumentType)
+  tests/test_repository_intelligence_publication.py:399:9 - error: Type of "codes" is partially unknown
+    Type of "codes" is "set[Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_publication.py:406:13 - error: Type of "add" is partially unknown
+    Type of "add" is "(element: Unknown, /) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_publication.py:407:30 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+tests/test_repository_intelligence_reports.py
+  tests/test_repository_intelligence_reports.py:66:9 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_reports.py:66:42 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_reports.py:69:16 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:108:28 - error: Type of parameter "document" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  tests/test_repository_intelligence_reports.py:108:38 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_reports.py:114:9 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_reports.py:114:77 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_reports.py:117:39 - error: Type of parameter "projection" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  tests/test_repository_intelligence_reports.py:117:51 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_reports.py:120:31 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_reports.py:123:9 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:123:20 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:124:9 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:125:9 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:125:22 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:136:9 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:136:20 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:150:9 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:151:9 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:151:22 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:162:17 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:162:30 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:166:17 - error: Type of "assert_unknown_findings" is partially unknown
+    Type of "assert_unknown_findings" is "(projection: dict[Unknown, Unknown]) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:169:9 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:169:20 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:178:9 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:179:9 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:179:22 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:184:9 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:185:9 - error: Type of "assert_unknown_findings" is partially unknown
+    Type of "assert_unknown_findings" is "(projection: dict[Unknown, Unknown]) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:185:38 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:188:9 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:188:20 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:204:9 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:205:9 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:205:22 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:206:27 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "assertIsNone" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_reports.py:212:9 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:212:27 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:219:17 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:219:30 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:232:17 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:232:28 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:234:17 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:235:17 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:235:30 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:239:17 - error: Type of "assert_unknown_findings" is partially unknown
+    Type of "assert_unknown_findings" is "(projection: dict[Unknown, Unknown]) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:242:16 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:242:34 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:244:9 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:244:22 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:246:9 - error: Type of "assert_unknown_findings" is partially unknown
+    Type of "assert_unknown_findings" is "(projection: dict[Unknown, Unknown]) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:258:17 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:258:28 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:262:51 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "fromkeys" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_reports.py:263:17 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:264:17 - error: Type of "projection" is partially unknown
+    Type of "projection" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:264:30 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:274:16 - error: Type of "write_report" is partially unknown
+    Type of "write_report" is "(document: dict[Unknown, Unknown], producer: str = "osv") -> Path" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:274:34 - error: Type of "report" is partially unknown
+    Type of "report" is "(producer: str = "osv") -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:276:9 - error: Type of "first" is partially unknown
+    Type of "first" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:276:17 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:277:9 - error: Type of "second" is partially unknown
+    Type of "second" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_reports.py:277:18 - error: Type of "project" is partially unknown
+    Type of "project" is "(producer: str = "osv", *, as_of: datetime = AS_OF) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_reports.py:302:21 - error: Type of "assert_unknown_findings" is partially unknown
+    Type of "assert_unknown_findings" is "(projection: dict[Unknown, Unknown]) -> None" (reportUnknownMemberType)
+tests/test_repository_intelligence_rollback.py
+  tests/test_repository_intelligence_rollback.py:24:22 - error: Type of parameter "records" is partially unknown
+    Parameter type is "list[dict[Unknown, Unknown]]" (reportUnknownParameterType)
+  tests/test_repository_intelligence_rollback.py:24:36 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_rollback.py:80:9 - error: Type of "records" is partially unknown
+    Type of "records" is "list[dict[Unknown, Unknown]]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_rollback.py:80:19 - error: Type of "fixture_inventory" is partially unknown
+    Type of "fixture_inventory" is "(root: Path) -> list[dict[Unknown, Unknown]]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:82:66 - error: Type of "record" is partially unknown
+    Type of "record" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_rollback.py:83:43 - error: Type of "fixture_inventory" is partially unknown
+    Type of "fixture_inventory" is "(root: Path) -> list[dict[Unknown, Unknown]]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:85:29 - error: Type of "record" is partially unknown
+    Type of "record" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_rollback.py:92:9 - error: Return type, "list[dict[Unknown, Unknown]]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_rollback.py:92:47 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_rollback.py:97:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:104:16 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_rollback.py:106:9 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_rollback.py:106:25 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_rollback.py:112:9 - error: Type of "report" is partially unknown
+    Type of "report" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_rollback.py:112:18 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:119:30 - error: Type of "fixture_inventory" is partially unknown
+    Type of "fixture_inventory" is "(root: Path) -> list[dict[Unknown, Unknown]]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:126:9 - error: Type of "before" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_rollback.py:126:18 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:130:9 - error: Type of "after" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_rollback.py:130:17 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:137:13 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:146:21 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:155:21 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:163:13 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:167:13 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:172:13 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:183:21 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:200:21 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_rollback.py:212:21 - error: Type of "verify" is partially unknown
+    Type of "verify" is "() -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+tests/test_repository_intelligence_workflows.py
+  tests/test_repository_intelligence_workflows.py:39:5 - error: Type of "yaml_implicit_resolvers" is partially unknown
+    Type of "yaml_implicit_resolvers" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:39:5 - error: Class variable "yaml_implicit_resolvers" overrides instance variable of same name in class "BaseResolver" (reportIncompatibleVariableOverride)
+  tests/test_repository_intelligence_workflows.py:39:39 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:42:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:42:72 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:45:9 - error: Type of "key" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:45:15 - error: Type of "construct_object" is partially unknown
+    Type of "construct_object" is "(node: Unknown, deep: bool = False) -> Unknown" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:49:23 - error: Type of "construct_object" is partially unknown
+    Type of "construct_object" is "(node: Unknown, deep: bool = False) -> Unknown" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:50:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:53:81 - error: Argument type is partially unknown
+    Argument corresponds to parameter "constructor" in function "add_constructor"
+    Argument type is "(loader: UniqueKeyLoader, node: MappingNode) -> dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:56:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:56:28 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:65:27 - error: Type of parameter "context" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:65:36 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:76:9 - error: Return type, "dict[Unknown, Unknown] | Unknown | Literal['']", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:77:9 - error: Type of "result" is partially unknown
+    Type of "result" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:79:13 - error: Type of "result" is partially unknown
+    Type of "result" is "Unknown | Literal['']" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:79:22 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:80:16 - error: Return type, "dict[Unknown, Unknown] | Unknown | Literal['']", is partially unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:82:5 - error: Type of "functions" is partially unknown
+    Type of "functions" is "dict[str, ((path: str) -> (dict[Unknown, Unknown] | Unknown | Literal[''])) | (() -> bool) | (() -> Literal[True]) | ((sequence: Unknown, item: Unknown) -> bool) | ((s: str | bytes | bytearray, *, cls: type[JSONDecoder] | None = None, object_hook: ((dict[Any, Any]) -> Any) | None = None, parse_float: ((str) -> Any) | None = None, parse_int: ((str) -> Any) | None = None, parse_constant: ((str) -> Any) | None = None, object_pairs_hook: ((list[tuple[Any, Any]]) -> Any) | None = None, **kwds: Any) -> Any) | ((template: Unknown, *args: Unknown) -> Unknown)]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:86:28 - error: Type of parameter "sequence" is unknown (reportUnknownLambdaType)
+  tests/test_repository_intelligence_workflows.py:86:38 - error: Type of parameter "item" is unknown (reportUnknownLambdaType)
+  tests/test_repository_intelligence_workflows.py:88:26 - error: Type of parameter "template" is unknown (reportUnknownLambdaType)
+  tests/test_repository_intelligence_workflows.py:88:37 - error: Type of parameter "args" is partially unknown (reportUnknownLambdaType)
+  tests/test_repository_intelligence_workflows.py:88:43 - error: Type of "format" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:88:43 - error: Return type of lambda is unknown (reportUnknownLambdaType)
+  tests/test_repository_intelligence_workflows.py:92:9 - error: Return type, "str | bytes | bool | int | float | complex | EllipsisType | Unknown | Any | dict[Unknown, Unknown] | None", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:92:15 - error: Type of parameter "node" is unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:92:15 - error: Type annotation is missing for parameter "node" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:98:28 - error: Argument type is unknown
+    Argument corresponds to parameter "o" in function "__new__" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:103:13 - error: Type of "left" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:103:19 - error: Type of "right" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:105:24 - error: Return type is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:107:24 - error: Return type is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:114:20 - error: Return type, "Any | Unknown | bool | dict[Unknown, Unknown] | Literal['']", is partially unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:114:45 - error: Argument type is unknown
+    Argument corresponds to parameter "s" in function "loads" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:114:45 - error: Argument type is unknown
+    Argument corresponds to parameter "template" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:114:45 - error: Argument type is unknown
+    Argument corresponds to parameter "args" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:114:45 - error: Argument type is unknown
+    Argument corresponds to parameter "sequence" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:114:45 - error: Argument type is unknown
+    Argument corresponds to parameter "item" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:114:45 - error: Argument type is unknown
+    Argument corresponds to parameter "path" in function "value" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:115:63 - error: Argument type is partially unknown
+    Argument corresponds to parameter "o" in function "__init__"
+    Argument type is "Compare | Unknown | Name | BoolOp | UnaryOp | Call" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:118:17 - error: Argument type is partially unknown
+    Argument corresponds to parameter "o" in function "__new__"
+    Argument type is "str | bytes | bool | int | float | complex | EllipsisType | Unknown | Any | dict[Unknown, Unknown] | None" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:122:5 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:123:5 - error: Type annotation is missing for parameter "event" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:125:5 - error: Type annotation is missing for parameter "ref" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:126:5 - error: Type annotation is missing for parameter "producer" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:127:5 - error: Type annotation is missing for parameter "producer_event" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:128:5 - error: Type annotation is missing for parameter "producer_repository" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:129:5 - error: Type annotation is missing for parameter "workflow_repository" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:130:5 - error: Type annotation is missing for parameter "producer_branch" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:131:5 - error: Type annotation is missing for parameter "conclusion" (reportMissingParameterType)
+  tests/test_repository_intelligence_workflows.py:132:6 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:133:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:163:9 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:164:9 - error: Type of "standalone" is partially unknown
+    Type of "standalone" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:165:9 - error: Type of "gates" is partially unknown
+    Type of "gates" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:167:9 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:168:15 - error: Type of parameter "step" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:168:21 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:168:42 - error: Type of parameter "extra_environment" is partially unknown
+    Parameter type is "dict[Unknown, Unknown]" (reportUnknownParameterType)
+  tests/test_repository_intelligence_workflows.py:168:61 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:169:10 - error: Expected type arguments for generic class "dict" (reportMissingTypeArgument)
+  tests/test_repository_intelligence_workflows.py:171:13 - error: Type of "environment" is partially unknown
+    Type of "environment" is "dict[str | Unknown, str | Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:182:17 - error: Argument type is partially unknown
+    Argument corresponds to parameter "args" in function "run"
+    Argument type is "list[Unknown | str]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:187:21 - error: Argument type is partially unknown
+    Argument corresponds to parameter "env" in function "run"
+    Argument type is "dict[str | Unknown, str | Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:215:33 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:235:9 - error: Type of "build" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:235:17 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:236:53 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:237:30 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:237:30 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "__init__" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:238:26 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:252:13 - error: Type of "context" is partially unknown
+    Type of "context" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:259:42 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:270:43 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:273:49 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:273:49 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:274:26 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:275:13 - error: Type of "context" is partially unknown
+    Type of "context" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:289:30 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:289:30 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:293:34 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:293:34 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:297:9 - error: Type of "jobs" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:297:16 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:298:50 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:299:50 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:300:46 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:304:13 - error: Type of "context" is partially unknown
+    Type of "context" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:315:30 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:319:30 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:323:30 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:328:13 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:328:26 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:328:38 - error: Type of "standalone" is partially unknown
+    Type of "standalone" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:329:30 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:330:17 - error: Type of "name" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:330:23 - error: Type of "job" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:330:30 - error: Type of "items" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:331:17 - error: Type of "permissions" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:331:31 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:332:17 - error: Type of "writes" is partially unknown
+    Type of "writes" is "set[Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:332:35 - error: Type of "key" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:332:40 - error: Type of "value" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:332:49 - error: Type of "items" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:333:32 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:336:42 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:338:25 - error: Argument type is unknown
+    Argument corresponds to parameter "text" in function "assertRegex" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:342:53 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:347:13 - error: Type of "document" is partially unknown
+    Type of "document" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:348:17 - error: Type of "job_name" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:348:27 - error: Type of "job" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:348:34 - error: Type of "items" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:351:21 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:351:29 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:352:21 - error: Type of "target" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:352:30 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:353:65 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:354:56 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:355:24 - error: Type of "startswith" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:356:42 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:356:42 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:357:24 - error: Type of "startswith" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:358:51 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:358:51 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:364:9 - error: Type of "build" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:364:17 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:365:9 - error: Type of "matrix" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:366:62 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:367:68 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:371:13 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:372:13 - error: Type of "action" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:372:22 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:373:16 - error: Type of "startswith" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:374:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:374:37 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:375:43 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:378:25 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:383:25 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:387:42 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "evaluate" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:388:16 - error: Type of "startswith" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:389:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:389:34 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:391:30 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:393:13 - error: Type of "matching" is partially unknown
+    Type of "matching" is "list[Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:393:34 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:393:55 - error: Type of "startswith" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:394:34 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:395:36 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:396:44 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:397:49 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:398:9 - error: Type of "standalone_upload" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:399:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "i" in function "next"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:400:17 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:400:25 - error: Type of "standalone" is partially unknown
+    Type of "standalone" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:401:16 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:403:48 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertNotIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:404:55 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:407:9 - error: Type of "jobs" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:407:16 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:408:9 - error: Type of "operations" is partially unknown
+    Type of "operations" is "set[Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:408:23 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:408:23 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:408:65 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:409:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:410:45 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertIn"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:411:44 - error: Argument type is partially unknown
+    Argument corresponds to parameter "container" in function "assertNotIn"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:412:9 - error: Type of "receipt" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:413:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "i" in function "next"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:414:17 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:415:16 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:415:16 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:417:9 - error: Type of "options" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:420:67 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:421:62 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:422:40 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:423:45 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:425:13 - error: Type of "download" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:426:17 - error: Argument type is partially unknown
+    Argument corresponds to parameter "i" in function "next"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:427:21 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:428:20 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:428:20 - error: Type of "startswith" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:430:44 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:431:49 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:432:66 - error: Argument type is unknown
+    Argument corresponds to parameter "container" in function "assertIn" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:435:9 - error: Type of "steps" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:435:17 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:436:9 - error: Type of "report_step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:437:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "i" in function "next"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:437:22 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:437:39 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:439:9 - error: Type of "pages_upload" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:439:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "i" in function "next"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:439:38 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:439:55 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:441:24 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:441:76 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:443:37 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:444:9 - error: Type of "statuses" is partially unknown
+    Type of "statuses" is "dict[Unknown, dict[str, str | dict[str, str]]]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:446:17 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:457:13 - error: Type of "report" is partially unknown
+    Type of "report" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:457:22 - error: Type of "run_report" is partially unknown
+    Type of "run_report" is "(step: dict[Unknown, Unknown], filename: str, extra_environment: dict[Unknown, Unknown], expected_status: int) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:457:38 - error: Argument type is unknown
+    Argument corresponds to parameter "step" in function "run_report" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:474:17 - error: Type of "failed" is partially unknown
+    Type of "failed" is "dict[Unknown | str, dict[str, str | dict[str, str]]]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:481:17 - error: Type of "failure" is partially unknown
+    Type of "failure" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:481:27 - error: Type of "run_report" is partially unknown
+    Type of "run_report" is "(step: dict[Unknown, Unknown], filename: str, extra_environment: dict[Unknown, Unknown], expected_status: int) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:482:21 - error: Argument type is unknown
+    Argument corresponds to parameter "step" in function "run_report" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:489:9 - error: Type of "failure" is partially unknown
+    Type of "failure" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:489:19 - error: Type of "run_report" is partially unknown
+    Type of "run_report" is "(step: dict[Unknown, Unknown], filename: str, extra_environment: dict[Unknown, Unknown], expected_status: int) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:490:13 - error: Argument type is unknown
+    Argument corresponds to parameter "step" in function "run_report" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:496:9 - error: Type of "failure" is partially unknown
+    Type of "failure" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:496:19 - error: Type of "run_report" is partially unknown
+    Type of "run_report" is "(step: dict[Unknown, Unknown], filename: str, extra_environment: dict[Unknown, Unknown], expected_status: int) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:497:13 - error: Argument type is unknown
+    Argument corresponds to parameter "step" in function "run_report" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:510:9 - error: Type of "steps" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:510:17 - error: Type of "standalone" is partially unknown
+    Type of "standalone" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:511:9 - error: Type of "report_step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:512:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "i" in function "next"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:512:22 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:512:39 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:519:9 - error: Type of "report" is partially unknown
+    Type of "report" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:519:18 - error: Type of "run_report" is partially unknown
+    Type of "run_report" is "(step: dict[Unknown, Unknown], filename: str, extra_environment: dict[Unknown, Unknown], expected_status: int) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:519:34 - error: Argument type is unknown
+    Argument corresponds to parameter "step" in function "run_report" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:522:13 - error: Type of "report" is partially unknown
+    Type of "report" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:522:22 - error: Type of "run_report" is partially unknown
+    Type of "run_report" is "(step: dict[Unknown, Unknown], filename: str, extra_environment: dict[Unknown, Unknown], expected_status: int) -> dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:523:17 - error: Argument type is unknown
+    Argument corresponds to parameter "step" in function "run_report" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:534:9 - error: Type of "production" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:534:22 - error: Type of "pages" is partially unknown
+    Type of "pages" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:535:9 - error: Type of "fixtures" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:535:20 - error: Type of "gates" is partially unknown
+    Type of "gates" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:536:29 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:542:36 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:545:28 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:553:28 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:554:28 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:559:24 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:563:24 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:566:37 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:567:37 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:569:37 - error: Argument type is unknown
+    Argument corresponds to parameter "source" in function "expression" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:573:26 - error: Type of "gates" is partially unknown
+    Type of "gates" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:578:13 - error: Type of "job" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:578:20 - error: Type of "gates" is partially unknown
+    Type of "gates" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:578:20 - error: Type of "values" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:579:38 - error: Argument type is unknown
+    Argument corresponds to parameter "x" in function "__new__" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:580:17 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:580:25 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:582:38 - error: Argument type is unknown
+    Argument corresponds to parameter "text" in function "assertRegex" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:588:9 - error: Type of "report_step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:589:13 - error: Argument type is partially unknown
+    Argument corresponds to parameter "i" in function "next"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+  tests/test_repository_intelligence_workflows.py:590:17 - error: Type of "step" is unknown (reportUnknownVariableType)
+  tests/test_repository_intelligence_workflows.py:590:25 - error: Type of "gates" is partially unknown
+    Type of "gates" is "dict[Unknown, Unknown]" (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:591:16 - error: Type of "get" is unknown (reportUnknownMemberType)
+  tests/test_repository_intelligence_workflows.py:628:21 - error: Argument type is partially unknown
+    Argument corresponds to parameter "args" in function "run"
+    Argument type is "list[Unknown | str]" (reportUnknownArgumentType)
 tools/foundation.py
   tools/foundation.py:44:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
   tools/foundation.py:53:62 - error: Type of "item" is unknown (reportUnknownVariableType)
@@ -12278,6 +12899,86 @@ tools/foundation_ignore.py
     Argument type is "list[Unknown | str]" (reportUnknownArgumentType)
   tools/foundation_ignore.py:206:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+tools/repository_intelligence_publication.py
+  tools/repository_intelligence_publication.py:116:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:158:9 - error: Type of "record" is unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:159:59 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:161:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:161:22 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:162:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:162:16 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:162:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:164:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:164:40 - error: Argument type is partially unknown
+    Argument corresponds to parameter "key" in function "sorted"
+    Argument type is "(record: Unknown) -> Unknown" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:164:47 - error: Type of parameter "record" is unknown (reportUnknownLambdaType)
+  tools/repository_intelligence_publication.py:164:55 - error: Return type of lambda is unknown (reportUnknownLambdaType)
+  tools/repository_intelligence_publication.py:197:12 - error: Return type, "Unknown | Literal[False]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:199:24 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:200:13 - error: Type of "lower" is unknown (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:237:5 - error: Type of "repository" is unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:237:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:238:5 - error: Type of "head_repository" is unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:238:23 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:240:5 - error: Type of "revision" is partially unknown
+    Type of "revision" is "Unknown | None" (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:240:16 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:241:28 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:242:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:243:24 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:244:5 - error: Type of "candidate" is partially unknown
+    Type of "candidate" is "Unknown | bool" (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:246:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:249:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:252:23 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:255:29 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:256:34 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:264:27 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:265:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "o" in function "__new__"
+    Argument type is "Unknown | bool" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:307:53 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:315:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:322:12 - warning: Unnecessary isinstance call; "str" is always an instance of "str" (reportUnnecessaryIsInstance)
+  tools/repository_intelligence_publication.py:361:42 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:363:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:368:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:446:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:452:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:526:9 - error: Method "error" overrides class "ArgumentParser" in an incompatible manner
+    Return type mismatch: base method returns type "NoReturn", override returns type "None"
+      Type "None" is not assignable to type "NoReturn" (reportIncompatibleMethodOverride)
 tools/staging_home_audit.py
   tools/staging_home_audit.py:1300:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]" in function "writerow"
     "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]"
@@ -12312,5 +13013,11 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8768 errors, 424 warnings, 0 informations
+tools/verify_repository_intelligence_rollback.py
+  tools/verify_repository_intelligence_rollback.py:157:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/verify_repository_intelligence_rollback.py:157:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "any"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+9168 errors, 425 warnings, 0 informations
 

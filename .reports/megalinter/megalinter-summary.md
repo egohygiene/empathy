@@ -4,132 +4,415 @@
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.1.0/descriptors/action_actionlint)                              |   17|     |     0|          |       0|       0.49s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.1.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       7.35s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.1.0/descriptors/bash_bash_exec)                                  |   55|     |     0|          |       0|       0.33s|
-|✅ BASH        |[shellcheck](https://megalinter.io/10.1.0/descriptors/bash_shellcheck)                                |  127|     |     0|          |       0|       9.56s|
-|✅ BASH        |[shfmt](https://megalinter.io/10.1.0/descriptors/bash_shfmt)                                          |   12|     |     0|          |       0|       0.03s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.1.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3156|          |      no|      26.87s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.1.0/descriptors/css_stylelint)                                   |   22|     |   330|          |       0|       2.25s|
-|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.1.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.14s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.1.0/descriptors/editorconfig_editorconfig_checker)    | 2488|     |     1|          |       0|       2.36s|
-|❌ HTML        |[htmlhint](https://megalinter.io/10.1.0/descriptors/html_htmlhint)                                    |   16|     |   356|          |       0|       1.12s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       2.01s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.29s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.1.0/descriptors/action_actionlint)                              |   20|     |     0|          |       0|        0.7s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.1.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       9.41s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.1.0/descriptors/bash_bash_exec)                                  |   55|     |     0|          |       0|       0.39s|
+|✅ BASH        |[shellcheck](https://megalinter.io/10.1.0/descriptors/bash_shellcheck)                                |  127|     |     0|          |       0|       9.16s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.1.0/descriptors/bash_shfmt)                                          |   12|     |     0|          |       0|       0.39s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.1.0/descriptors/copypaste_jscpd)                                     |  yes|     |  3165|          |      no|      27.69s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.1.0/descriptors/css_stylelint)                                   |   22|     |   330|          |       0|       2.06s|
+|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.1.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.22s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.1.0/descriptors/editorconfig_editorconfig_checker)    | 2499|     |     1|          |       0|       2.74s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.1.0/descriptors/html_htmlhint)                                    |   16|     |   356|          |       0|       1.04s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       2.09s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.33s|
 |❌ JSON        |[jsonlint](https://megalinter.io/10.1.0/descriptors/json_jsonlint)                                    |  180|     |     1|          |       0|       0.28s|
-|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.1.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.65s|
-|❌ JSON        |[prettier](https://megalinter.io/10.1.0/descriptors/json_prettier)                                    |  180|     |     1|          |       0|        3.0s|
-|✅ JSON        |[v8r](https://megalinter.io/10.1.0/descriptors/json_v8r)                                              |  180|     |     0|          |       0|     100.54s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.1.0/descriptors/latex_chktex)                                       |  298|     | 67774|          |       0|     166.32s|
-|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.1.0/descriptors/markdown_markdownlint)                        |  320|     |   400|          |       0|       3.56s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.1.0/descriptors/markdown_markdown_table_formatter)|  320|     |     1|          |       0|        0.5s|
-|✅ PERL        |[perlcritic](https://megalinter.io/10.1.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.01s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.1.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.23s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.1.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|        0.9s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.1.0/descriptors/python_bandit)                                      |   58|     |    10|          |       0|       3.16s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.1.0/descriptors/python_mypy)                                          |  yes|     |    36|          |      no|      18.63s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.1.0/descriptors/python_pylint)                                      |   58|     |   255|          |       0|      16.08s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.1.0/descriptors/python_pyright)                                    |  yes|     |  8768|          |      no|      48.62s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.1.0/descriptors/python_ruff)                                          |   58|     |   731|          |       0|       5.79s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.1.0/descriptors/python_ruff_format)                            |   58|     |     1|          |       0|       0.07s|
-|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.1.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       2.56s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.1.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      53.13s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.1.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       8.14s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.1.0/descriptors/repository_grype)                                    |  yes|     |   158|          |      no|     132.75s|
+|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.1.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.62s|
+|❌ JSON        |[prettier](https://megalinter.io/10.1.0/descriptors/json_prettier)                                    |  180|     |     1|          |       0|       2.82s|
+|✅ JSON        |[v8r](https://megalinter.io/10.1.0/descriptors/json_v8r)                                              |  180|     |     0|          |       0|     109.21s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.1.0/descriptors/latex_chktex)                                       |  298|     | 67774|          |       0|     165.58s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.1.0/descriptors/markdown_markdownlint)                        |  321|     |   400|          |       0|       4.21s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.1.0/descriptors/markdown_markdown_table_formatter)|  321|     |     1|          |       0|       0.67s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.1.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.33s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.1.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       1.24s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.1.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|        1.0s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.1.0/descriptors/python_bandit)                                      |   65|     |    42|          |       0|       3.31s|
+|❌ PYTHON      |[mypy](https://megalinter.io/10.1.0/descriptors/python_mypy)                                          |  yes|     |    98|          |      no|      21.26s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.1.0/descriptors/python_pylint)                                      |   65|     |   267|          |       0|       20.5s|
+|⚠️ PYTHON      |[pyright](https://megalinter.io/10.1.0/descriptors/python_pyright)                                    |  yes|     |  9168|          |      no|      55.93s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.1.0/descriptors/python_ruff)                                          |   65|     |   731|          |       0|        6.8s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.1.0/descriptors/python_ruff_format)                            |   65|     |     1|          |       0|       0.11s|
+|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.1.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|        2.8s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.1.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      56.08s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.1.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|       9.72s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.1.0/descriptors/repository_grype)                                    |  yes|     |   158|          |      no|     139.98s|
 |❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.1.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.74s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.1.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|      12.64s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.1.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       7.76s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.1.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      13.45s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.1.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      67.46s|
-|✅ REPOSITORY  |[trufflehog](https://megalinter.io/10.1.0/descriptors/repository_trufflehog)                          |  yes|     |    no|          |      no|      13.87s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.1.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       2.52s|
-|❌ RUST        |[clippy](https://megalinter.io/10.1.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.21s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.1.0/descriptors/spell_lychee)                                       |  737|     |   183|          |       0|      82.68s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.1.0/descriptors/spell_proselint)                                 |  342|     |   913|          |       0|      13.23s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.1.0/descriptors/spell_vale)                                           |  342|     |     1|          |       0|       0.78s|
-|❌ TSX         |[eslint](https://megalinter.io/10.1.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.26s|
-|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       1.24s|
-|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       4.77s|
-|✅ XML         |[xmllint](https://megalinter.io/10.1.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.33s|
-|❌ YAML        |[prettier](https://megalinter.io/10.1.0/descriptors/yaml_prettier)                                    |  193|     |     1|          |      17|       4.46s|
-|✅ YAML        |[v8r](https://megalinter.io/10.1.0/descriptors/yaml_v8r)                                              |  193|     |     0|          |       0|      63.25s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.1.0/descriptors/yaml_yamllint)                                    |  193|     |   215|          |       0|      15.68s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.1.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|      12.76s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.1.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       7.01s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.1.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      21.13s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.1.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      78.19s|
+|✅ REPOSITORY  |[trufflehog](https://megalinter.io/10.1.0/descriptors/repository_trufflehog)                          |  yes|     |    no|          |      no|      15.45s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.1.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       3.14s|
+|❌ RUST        |[clippy](https://megalinter.io/10.1.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.46s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.1.0/descriptors/spell_lychee)                                       |  741|     |   184|          |       0|      80.48s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.1.0/descriptors/spell_proselint)                                 |  343|     |   913|          |       0|      10.86s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.1.0/descriptors/spell_vale)                                           |  343|     |     1|          |       0|       0.99s|
+|❌ TSX         |[eslint](https://megalinter.io/10.1.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       1.59s|
+|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       1.73s|
+|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       5.26s|
+|✅ XML         |[xmllint](https://megalinter.io/10.1.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.34s|
+|❌ YAML        |[prettier](https://megalinter.io/10.1.0/descriptors/yaml_prettier)                                    |  196|     |     1|          |      17|       5.15s|
+|✅ YAML        |[v8r](https://megalinter.io/10.1.0/descriptors/yaml_v8r)                                              |  196|     |     0|          |       0|       72.1s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.1.0/descriptors/yaml_yamllint)                                    |  196|     |   215|          |       0|      21.16s|
 
 ## Detailed Issues
 
 <details>
-<summary>❌ PYTHON / bandit - 10 errors</summary>
+<summary>❌ PYTHON / bandit - 42 errors</summary>
 
 ```
-[_py_warnings]	WARNING	"\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+WE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_repository_intelligence_provenance.py:49:4
+48	        raise ValueError(message)
+49	    subprocess.run(  # noqa: S603 - Fixed local Git arguments, without a shell.
+50	        ["git", "-C", str(root), "diff", "--exit-code", "HEAD", "--", *OWNER_PATHS],  # noqa: S607
+51	        capture_output=True,
+52	        check=True,
+53	    )
+54	    return root
 
-[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:269
-[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
-[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
-[tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
-Run started:2026-09-23 10:20:05.038276+00:00
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_repository_intelligence_provenance.py:49:4
+48	        raise ValueError(message)
+49	    subprocess.run(  # noqa: S603 - Fixed local Git arguments, without a shell.
+50	        ["git", "-C", str(root), "diff", "--exit-code", "HEAD", "--", *OWNER_PATHS],  # noqa: S607
+51	        capture_output=True,
+52	        check=True,
+53	    )
+54	    return root
 
-Test results:
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_repository_intelligence_provenance.py:84:16
+83	                # Arguments above create only the local temporary Git fixture.
+84	                subprocess.run(  # noqa: S603
+85	                    ["git", "-C", str(root), *arguments],  # noqa: S607
+86	                    check=True,
+87	                    capture_output=True,
+88	                )
+89	            with self.assertRaisesRegex(ValueError, "reviewed immutable"):
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_repository_intelligence_provenance.py:84:16
+83	                # Arguments above create only the local temporary Git fixture.
+84	                subprocess.run(  # noqa: S603
+85	                    ["git", "-C", str(root), *arguments],  # noqa: S607
+86	                    check=True,
+87	                    capture_output=True,
+88	                )
+89	            with self.assertRaisesRegex(ValueError, "reviewed immutable"):
+
+--------------------------------------------------
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_identity_integration.py:12:0
-11	from pathlib import Path
-12	import subprocess
-13	import unittest
+   Location: ./tests/test_repository_intelligence_publication.py:16:0
+15	import shutil
+16	import subprocess
+17	import tempfile
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'True'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./tests/test_repository_intelligence_publication.py:186:72
+185	                self.assertFalse(metadata["triggering_producer"]["trusted_refresh_candidate"])
+186	        metadata = publication.workflow_metadata(self.event(conclusion={"SECRET": True}))
+187	        self.assertEqual(metadata["triggering_producer"]["conclusion"], "unknown")
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded HIDDEN_BY_MEGALINTER   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./tests/test_repository_intelligence_publication.py:220:12
+219	            "GITHUB_RUN_ATTEMPT": "1",
+220	            "GITHUB_TOKEN": "SECRET",
+221	        }
+222	
+223	    def test_non_successful_producer_refresh_metadata_stays_useful_and_sanitized(self) -> None:
+224	        for conclusion in ("failure", "cancelled", "timed_out", "neutral", "success"):
+225	            result = publication.workflow_metadata(self.event(conclusion=conclusion))
+226	            producer = result["triggering_producer"]
+227	            self.assertTrue(producer["trusted_refresh_candidate"])
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_identity_integration.py:88:8
-87	    def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-88	        subprocess.run(
-89	            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
-90	            check=True,
-91	        )
-92	        subprocess.run(
+   Location: ./tests/test_repository_intelligence_publication.py:274:12
+273	            # Arguments above create only the local temporary Git fixture.
+274	            subprocess.run(  # noqa: S603
+275	                ["git", "-C", str(self.root), *arguments],  # noqa: S607
+276	                check=True,
+277	                capture_output=True,
+278	            )
+279	        result = publication.collect_input_evidence(self.root, {})
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_identity_integration.py:88:8
-87	    def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-88	        subprocess.run(
-89	            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
-90	            check=True,
-91	        )
-92	        subprocess.run(
+   Location: ./tests/test_repository_intelligence_publication.py:274:12
+273	            # Arguments above create only the local temporary Git fixture.
+274	            subprocess.run(  # noqa: S603
+275	                ["git", "-C", str(self.root), *arguments],  # noqa: S607
+276	                check=True,
+277	                capture_output=True,
+278	            )
+279	        result = publication.collect_input_evidence(self.root, {})
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded HIDDEN_BY_MEGALINTER   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: ./tests/test_repository_intelligence_publication.py:402:75
+401	            result = publication.failure_report(
+402	                stage, {"GITHUB_RUN_ID": "123", "GITHUB_RUN_ATTEMPT": "2", "SECRET": "token"}
+403	            )
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tests/test_repository_intelligence_reports.py:18:0
+17	from pathlib import Path
+18	import subprocess
+19	from tempfile import TemporaryDirectory
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_identity_integration.py:92:8
-91	        )
-92	        subprocess.run(
-93	            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
-94	            check=True,
-95	        )
-96	
+   Location: ./tests/test_repository_intelligence_reports.py:40:19
+39	        # Only fixed local Git operations execute; no shell or remote input is used.
+40	        revision = subprocess.run(  # noqa: S603
+41	            ["git", "-C", str(relay_root), "rev-parse", "HEAD"],  # noqa: S607
+42	            check=True,
+43	            capture_output=True,
+44	            text=True,
+45	        ).stdout.strip()
+46	        if revision != RELAY_REVISION:
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_identity_integration.py:92:8
-91	        )
-92	        subprocess.run(
-93	            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
-94	            check=True,
-95	        )
-96	
+   Location: ./tests/test_repository_intelligence_reports.py:40:19
+39	        # Only fixed local Git operations execute; no shell or remote input is used.
+40	        revision = subprocess.run(  # noqa: S603
+41	            ["git", "-C", str(relay_root), "rev-parse", "HEAD"],  # noqa: S607
+42	            check=True,
+43	            capture_output=True,
+44	            text=True,
+45	        ).stdout.strip()
+46	        if revision != RELAY_REVISION:
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_repository_intelligence_reports.py:283:24
+282	        # Read only the local fixture revision using fixed Git arguments.
+283	        source_commit = subprocess.run(  # noqa: S603
+284	            ["git", "-C", str(REPOSITORY_ROOT), "rev-parse", "HEAD"],  # noqa: S607
+285	            check=True,
+286	            capture_output=True,
+287	            text=True,
+288	        ).stdout.strip()
+289	        for producer in ("osv", "megalinter", "scorecard"):
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_repository_intelligence_reports.py:283:24
+282	        # Read only the local fixture revision using fixed Git arguments.
+283	        source_commit = subprocess.run(  # noqa: S603
+284	            ["git", "-C", str(REPOSITORY_ROOT), "rev-parse", "HEAD"],  # noqa: S607
+285	            check=True,
+286	            capture_output=True,
+287	            text=True,
+288	        ).stdout.strip()
+289	        for producer in ("osv", "megalinter", "scorecard"):
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tests/test_repository_intelligence_rollback.py:16:0
+15	from pathlib import Path
+16	import subprocess
+17	from tempfile import TemporaryDirectory
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tests/test_repository_intelligence_workflows.py:21:0
+20	import re
+21	import subprocess
+22	from tempfile import TemporaryDirectory
+
+--------------------------------------------------
+>> Issue: [B506:yaml_load] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b506_yaml_load.html
+   Location: ./tests/test_repository_intelligence_workflows.py:58:11
+57	    # The custom loader inherits SafeLoader and adds duplicate-key rejection.
+58	    return yaml.load((WORKFLOWS / name).read_text(encoding="utf-8"), Loader=UniqueKeyLoader)  # noqa: S506
+59	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_repository_intelligence_workflows.py:181:24
+180	            # Execute only checked-in workflow snippets in a temporary fixture directory.
+181	            completed = subprocess.run(  # noqa: S603
+182	                ["bash", "-c", step["run"]],  # noqa: S607
+183	                check=False,
+184	                capture_output=True,
+185	                text=True,
+186	                cwd=directory,
+187	                env=environment,
+188	            )
+189	            self.assertEqual(completed.returncode, expected_status, completed.stderr)
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_repository_intelligence_workflows.py:181:24
+180	            # Execute only checked-in workflow snippets in a temporary fixture directory.
+181	            completed = subprocess.run(  # noqa: S603
+182	                ["bash", "-c", step["run"]],  # noqa: S607
+183	                check=False,
+184	                capture_output=True,
+185	                text=True,
+186	                cwd=directory,
+187	                env=environment,
+188	            )
+189	            self.assertEqual(completed.returncode, expected_status, completed.stderr)
+
+--------------------------------------------------
+>> Issue: [B506:yaml_load] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b506_yaml_load.html
+   Location: ./tests/test_repository_intelligence_workflows.py:206:16
+205	                # SafeLoader subclass; these inputs intentionally contain duplicate keys.
+206	                yaml.load(source, Loader=UniqueKeyLoader)  # noqa: S506
+207	        with self.assertRaises(yaml.constructor.ConstructorError):
+
+--------------------------------------------------
+>> Issue: [B506:yaml_load] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b506_yaml_load.html
+   Location: ./tests/test_repository_intelligence_workflows.py:209:12
+208	            # SafeLoader must reject Python object tags before constructing any object.
+209	            yaml.load("!!python/object:builtins.object {}", Loader=UniqueKeyLoader)  # noqa: S506
+210	        for name in (
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tests/test_repository_intelligence_workflows.py:627:28
+626	                # The checked-in report snippet receives only controlled fixture values.
+627	                completed = subprocess.run(  # noqa: S603
+628	                    ["bash", "-c", report_step["run"]],  # noqa: S607
+629	                    check=False,
+630	                    capture_output=True,
+631	                    text=True,
+632	                    cwd=directory,
+633	                    env={**environment, "GATE_RESULTS": json.dumps(results)},
+634	                )
+635	                self.assertEqual(completed.returncode, expected_status, completed.stderr)
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tests/test_repository_intelligence_workflows.py:627:28
+626	                # The checked-in report snippet receives only controlled fixture values.
+627	                completed = subprocess.run(  # noqa: S603
+628	                    ["bash", "-c", report_step["run"]],  # noqa: S607
+629	                    check=False,
+630	                    capture_output=True,
+631	                    text=True,
+632	                    cwd=directory,
+633	                    env={**environment, "GATE_RESULTS": json.dumps(results)},
+634	                )
+635	                self.assertEqual(completed.returncode, expected_status, completed.stderr)
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./tools/repository_intelligence_publication.py:19:0
+18	import re
+19	import subprocess
+20	import sys
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tools/repository_intelligence_publication.py:184:11
+183	    # Trusted runner Git, fixed rev-parse operation and HEAD/tree references; never a shell.
+184	    return subprocess.run(  # noqa: S603
+185	        ["git", "-C", str(root), "rev-parse", "--verify", revision],  # noqa: S607
+186	        check=True,
+187	        capture_output=True,
+188	        text=True,
+189	    ).stdout.strip()
+190	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./tools/repository_intelligence_publication.py:184:11
+183	    # Trusted runner Git, fixed rev-parse operation and HEAD/tree references; never a shell.
+184	    return subprocess.run(  # noqa: S603
+185	        ["git", "-C", str(root), "rev-parse", "--verify", revision],  # noqa: S607
+186	        check=True,
+187	        capture_output=True,
+188	        text=True,
+189	    ).stdout.strip()
+190	
 
 --------------------------------------------------
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -187,26 +470,53 @@ Test results:
 53	    payload = json.loads(completed.stdout)
 
 --------------------------------------------------
+>> Issue: [B405:blacklist] Using ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.
+   Severity: Low   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b405-import-xml-etree
+   Location: ./tools/verify_repository_intelligence_rollback.py:20:0
+19	from typing import Any
+20	from xml.etree import ElementTree as ET
+21	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./tools/verify_repository_intelligence_rollback.py:208:17
+207	        # Trusted runner Git and fixed HEAD/tree references; never a shell.
+208	        result = subprocess.run(  # noqa: S603  # nosec B603
+209	            ["git", "-C", str(repository_root), "rev-parse", "--verify", reference],  # noqa: S607
+210	            check=False,
+211	            capture_output=True,
+212	            text=True,
+213	        )
+214	        if result.returncode != 0 or result.stdout.strip() != expected:
+
+--------------------------------------------------
 
 Code scanned:
-	Total lines of code: 10870
+	Total lines of code: 13402
 	Total lines skipped (#nosec): 1
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 26
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 29
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 10
-		Medium: 0
+		Low: 39
+		Medium: 3
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
-		Medium: 0
-		High: 10
+		Medium: 3
+		High: 39
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)
+
+(Truncated to last 25000 characters out of 31169)
 ```
 
 </details>
@@ -1163,7 +1473,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.require (node:internal/modules/cjs/loader:1679:12)
     at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1790158673562:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1790161900895:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1204,7 +1514,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.require (node:internal/modules/cjs/loader:1679:12)
     at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1790158673562:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1790161900895:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1244,7 +1554,7 @@ Require stack:
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.require (node:internal/modules/cjs/loader:1679:12)
     at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1790158673562:25:21
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1790161900895:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1587,7 +1897,7 @@ ref="web_credits.html">CREDITS</a></span>
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 16 files, found 356 errors in 11 files (104 ms)
+Scanned 16 files, found 356 errors in 11 files (115 ms)
 
 (Truncated to last 25000 characters out of 66944)
 ```
@@ -1719,10 +2029,12 @@ Cargo.toml failed for `.toml` rules: kebabcase | snakecase
 </details>
 
 <details>
-<summary>❌ SPELL / lychee - 183 errors</summary>
+<summary>❌ SPELL / lychee - 184 errors</summary>
 
 ```
-e not found. Check if file exists and path is correct
+5) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/assets/profile/banner-dark.svg (at 26:58) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/assets/profile/banner-light.svg (at 27:59) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/profile/assets/profile/banner-light.svg (at 28:15) | File not found. Check if file exists and path is correct
 
 Errors in holon/packs/readme/templates/project/README.md
@@ -1771,23 +2083,15 @@ Errors in mantle/.github/workflows/test.yml
 
 Redirects in mantle/.github/workflows/test.yml
 https://github.com/bats-core/bats-core/archive/refs/tags/v$%7BBATS_VERSION%7D.tar.gz --[302]--> https://codeload.github.com/bats-core/bats-core/tar.gz/refs/tags/v%24%7BBATS_VERSION%7D
+https://github.com/reconquest/shdoc.git --[301]--> https://github.com/reconquest/shdoc
 
 
 Errors in mindgarden/contracts/publish-profile.schema.json
 [ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
 
-Redirects in mindgarden/contracts/publish-profile.schema.json
-https://github.com/jackyzha0/quartz.git --[301]--> https://github.com/jackyzha0/quartz
-
-
 Errors in package.json
-[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
-
-Redirects in package.json
-https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-https://json.schemastore.org/package.json --[301]--> https://www.schemastore.org/package.json
-
+[404] https://egohygiene.io/ (at 17:16) | Error (cached)
+[404] https://egohygiene.io/ (at 30:13) | Error (cached)
 
 Errors in PURPOSE.md
 [ERROR] file://.staging/github/README.md (at 100:48) | File not found. Check if file exists and path is correct
@@ -1808,25 +2112,25 @@ Errors in schemas/staging-removal-approvals.v1.schema.json
 ---------------------
 
 Host: github.com
-  Total requests: 268
-  Successful: 249 (92.9%)
-  Client errors (4xx): 19
-  Median response time: 377ms
-  Cache hit rate: 23.9%
-  Cache hits: 64, misses: 204
+  Total requests: 278
+  Successful: 257 (92.4%)
+  Client errors (4xx): 21
+  Median response time: 445ms
+  Cache hit rate: 23.4%
+  Cache hits: 65, misses: 213
 
 Host: json.schemastore.org
-  Total requests: 96
-  Successful: 96 (100.0%)
-  Median response time: 297ms
-  Cache hit rate: 88.5%
-  Cache hits: 85, misses: 11
+  Total requests: 99
+  Successful: 99 (100.0%)
+  Median response time: 145ms
+  Cache hit rate: 88.9%
+  Cache hits: 88, misses: 11
 
 Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 64ms
+  Median response time: 100ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
@@ -1834,44 +2138,44 @@ Host: raw.githubusercontent.com
   Total requests: 39
   Successful: 38 (97.4%)
   Client errors (4xx): 1
-  Median response time: 85ms
+  Median response time: 110ms
   Cache hit rate: 30.8%
   Cache hits: 12, misses: 27
 
 Host: img.shields.io
   Total requests: 26
   Successful: 26 (100.0%)
-  Median response time: 47ms
+  Median response time: 147ms
   Cache hit rate: 3.8%
   Cache hits: 1, misses: 25
+
+Host: egohygiene.github.io
+  Total requests: 18
+  Successful: 11 (61.1%)
+  Client errors (4xx): 7
+  Median response time: 180ms
+  Cache hit rate: 50.0%
+  Cache hits: 9, misses: 9
 
 Host: json-schema.org
   Total requests: 18
   Successful: 18 (100.0%)
-  Median response time: 211ms
+  Median response time: 56ms
   Cache hit rate: 94.4%
   Cache hits: 17, misses: 1
-
-Host: egohygiene.github.io
-  Total requests: 15
-  Successful: 8 (53.3%)
-  Client errors (4xx): 7
-  Median response time: 75ms
-  Cache hit rate: 40.0%
-  Cache hits: 6, misses: 9
 
 Host: creativecommons.org
   Total requests: 15
   Successful: 14 (93.3%)
   Client errors (4xx): 1
-  Median response time: 123ms
+  Median response time: 426ms
   Cache hit rate: 66.7%
   Cache hits: 10, misses: 5
 
 Host: taskfile.dev
   Total requests: 13
   Successful: 13 (100.0%)
-  Median response time: 49ms
+  Median response time: 134ms
   Cache hit rate: 76.9%
   Cache hits: 10, misses: 3
 
@@ -1879,95 +2183,89 @@ Host: egohygiene.io
   Total requests: 12
   Successful: 7 (58.3%)
   Client errors (4xx): 5
-  Median response time: 34ms
+  Median response time: 90ms
   Cache hit rate: 58.3%
   Cache hits: 7, misses: 5
-
-Host: www.schemastore.org
-  Total requests: 11
-  Successful: 11 (100.0%)
-  Median response time: 36ms
-  Cache hit rate: 36.4%
-  Cache hits: 4, misses: 7
 
 Host: www.overleaf.com
   Total requests: 11
   Successful: 11 (100.0%)
-  Median response time: 84ms
+  Median response time: 115ms
   Cache hit rate: 9.1%
   Cache hits: 1, misses: 10
+
+Host: www.schemastore.org
+  Total requests: 11
+  Successful: 11 (100.0%)
+  Median response time: 90ms
+  Cache hit rate: 36.4%
+  Cache hits: 4, misses: 7
 
 Host: sourceforge.net
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 1218ms
+  Median response time: 435ms
   Cache hit rate: 55.6%
   Cache hits: 5, misses: 4
 
 Host: scripts.sil.org
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 499ms
+  Median response time: 702ms
   Cache hit rate: 88.9%
   Cache hits: 8, misses: 1
-
-Host: i.creativecommons.org
-  Total requests: 8
-  Successful: 8 (100.0%)
-  Median response time: 279ms
-  Cache hit rate: 87.5%
-  Cache hits: 7, misses: 1
 
 Host: docs.ansible.com
   Total requests: 8
   Successful: 0 (0.0%)
   Rate limited: 8 (429 Too Many Requests)
-  Median response time: 7ms
+  Median response time: 10ms
+
+Host: i.creativecommons.org
+  Total requests: 8
+  Successful: 8 (100.0%)
+  Median response time: 146ms
+  Cache hit rate: 87.5%
+  Cache hits: 7, misses: 1
 
 Host: www.latextemplates.com
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 140ms
+  Median response time: 207ms
   Cache hit rate: 42.9%
   Cache hits: 3, misses: 4
+
+Host: sflogo.sourceforge.net
+  Total requests: 6
+  Successful: 6 (100.0%)
+  Median response time: 136ms
+  Cache hit rate: 66.7%
+  Cache hits: 4, misses: 2
 
 Host: jdujava.github.io
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 171ms
+  Median response time: 466ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
 
 Host: www.latex-project.org
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 111ms
+  Median response time: 625ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
-
-Host: sflogo.sourceforge.net
-  Total requests: 6
-  Successful: 6 (100.0%)
-  Median response time: 98ms
-  Cache hit rate: 66.7%
-  Cache hits: 4, misses: 2
 
 Host: docs.github.com
   Total requests: 6
   Successful: 4 (66.7%)
   Client errors (4xx): 2
-  Median response time: 94ms
+  Median response time: 117ms
 
-Host: ansible.readthedocs.io
-  Total requests: 4
-  Successful: 0 (0.0%)
-  Rate limited: 4 (429 Too Many Requests)
-  Median response time: 24ms
-
-Host: www.apostrophiclab.com
+Host: www.fontawesome.io
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 425ms
+  Median response time: 170ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
 
@@ -1975,160 +2273,143 @@ Host: api.github.com
   Total requests: 4
   Successful: 3 (75.0%)
   Client errors (4xx): 1
-  Median response time: 63ms
+  Median response time: 150ms
 
 Host: 3d.bk.tudelft.nl
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 412ms
+  Median response time: 494ms
   Cache hit rate: 50.0%
   Cache hits: 2, misses: 2
 
-Host: www.fontawesome.io
+Host: ansible.readthedocs.io
+  Total requests: 4
+  Successful: 0 (0.0%)
+  Rate limited: 4 (429 Too Many Requests)
+  Median response time: 33ms
+
+Host: www.apostrophiclab.com
   Total requests: 4
   Successful: 4 (100.0%)
-  Median response time: 224ms
+  Median response time: 498ms
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
 
 Host: vite.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 40ms
+  Median response time: 176ms
+
+Host: i.imgur.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 78ms
 
 Host: api.star-history.com
   Total requests: 3
-  Successful: 2 (66.7%)
-  Client errors (4xx): 1
-  Median response time: 440ms
+  Successful: 3 (100.0%)
+  Median response time: 401ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
 Host: www.ctan.org
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 631ms
-
-Host: dart.dev
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 88ms
-
-Host: i.imgur.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 72ms
+  Median response time: 742ms
 
 Host: www.checkov.io
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 81ms
+  Median response time: 134ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
-Host: clang.llvm.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 217ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: registry.npmjs.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 60ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: dart.dev
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 134ms
 
 Host: aquasecurity.github.io
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 93ms
+  Median response time: 151ms
 
-Host: unpkg.com
+Host: en.wikipedia.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 91ms
+  Median response time: 168ms
 
-Host: commons.wikimedia.org
+Host: developer.salesforce.com
   Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 155ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: eslint.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 84ms
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 90ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 195ms
+  Median response time: 249ms
 
-Host: arxiv.org
+Host: www.cyrius.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 7ms
-
-Host: yamllint.readthedocs.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 176ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: typedoc.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 88ms
+  Median response time: 416ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: www.sharelatex.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 169ms
+  Median response time: 239ms
 
-Host: www.vel.nz
+Host: yamllint.readthedocs.io
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 730ms
+  Median response time: 128ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: prettier.io
+Host: unpkg.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 296ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: en.wikipedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 160ms
-
-Host: www.mff.cuni.cz
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 1029ms
-
-Host: web.archive.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 556ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+  Median response time: 72ms
 
 Host: paypal.me
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 673ms
+  Median response time: 649ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 92ms
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 92ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: reuse.software
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 937ms
+
+Host: www.amazon.ca
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 117ms
+
+Host: eslint.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 132ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
@@ -2136,261 +2417,411 @@ Host: tex.stackexchange.com
   Total requests: 2
   Successful: 0 (0.0%)
   Client errors (4xx): 2
-  Median response time: 86ms
+  Median response time: 114ms
 
-Host: femto-physique.fr
+Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 381ms
+  Median response time: 129ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: developer.salesforce.com
+Host: www.mff.cuni.cz
   Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 53ms
+  Successful: 2 (100.0%)
+  Median response time: 465ms
+
+Host: registry.npmjs.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 39ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
-
-Host: www.amazon.ca
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 86ms
-
-Host: reuse.software
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 809ms
 
 Host: oss.anchore.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 90ms
+  Median response time: 106ms
 
-Host: www.cyrius.com
+Host: commons.wikimedia.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 385ms
+  Median response time: 188ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: chris48s.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 158ms
+Host: www.vel.nz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 729ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: cyclonedx.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 261ms
+Host: femto-physique.fr
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 682ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: biomejs.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 196ms
+Host: typedoc.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 157ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: goss.rocks
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 274ms
+Host: web.archive.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 458ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: img.youtube.com
+Host: golangci-lint.run
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 149ms
+  Median response time: 169ms
+
+Host: www.tylerfinck.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1834ms
 
 Host: install.python-poetry.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 82ms
-
-Host: recodehive.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 107ms
-
-Host: phpstan.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 128ms
-
-Host: v3.tailwindcss.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 129ms
-
-Host: licensebuttons.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 13ms
+  Median response time: 102ms
 
 Host: dev.to
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 163ms
+  Median response time: 51ms
 
-Host: docs.rubocop.org
+Host: humanstxt.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 77ms
+  Median response time: 775ms
 
-Host: www.ssw.com.au
+Host: rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 1672ms
+  Median response time: 166ms
+
+Host: www.indeed.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 85ms
+
+Host: resumake.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 198ms
+
+Host: micahrich.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 489ms
 
 Host: ls-lint.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 277ms
+  Median response time: 178ms
 
-Host: sahiljhawar.in
+Host: scancode-toolkit.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 443ms
+  Median response time: 275ms
 
-Host: realm.github.io
+Host: api.clearlydefined.io
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 353ms
+
+Host: thetechresume.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 591ms
+
+Host: osv.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 169ms
+
+Host: github.blog
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 744ms
+
+Host: www.reddit.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 54ms
+
+Host: biomejs.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 262ms
+
+Host: api.scorecard.dev
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 243ms
+
+Host: git-scm.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 102ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 130ms
+
+Host: www.writelatex.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 257ms
+
+Host: developercertificate.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 353ms
+
+Host: phpstan.org
   Total requests: 1
   Successful: 1 (100.0%)
   Median response time: 86ms
 
-Host: www.chrisbehr.com
+Host: pmd.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 160ms
+  Median response time: 128ms
 
-Host: www.latofonts.com
+Host: texdoc.net
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 520ms
+  Median response time: 2702ms
 
-Host: stylelint.io
+Host: kiwiirc.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 177ms
-
-Host: www.grammarly.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 185ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 194ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1046ms
-
-Host: agentskills.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 291ms
+  Median response time: 658ms
 
 Host: git-lfs.github.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 137ms
+  Median response time: 123ms
 
-Host: debarghyadas.com
+Host: turborepo.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 391ms
+  Median response time: 175ms
+
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 16ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 116ms
+
+Host: clearlydefined.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 419ms
+
+Host: stylelint.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 447ms
+
+Host: docker.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 146ms
+
+Host: www.ssw.com.au
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1479ms
+
+Host: chris48s.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 135ms
+
+Host: img.youtube.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 80ms
+
+Host: securityscorecards.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 149ms
+
+Host: hemingwayapp.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 258ms
+
+Host: semver.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 32ms
 
 Host: www.smashingmagazine.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 151ms
+  Median response time: 376ms
 
-Host: www.writelatex.com
+Host: cyclonedx.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 216ms
+  Median response time: 191ms
 
-Host: fontawesome.com
+Host: debarghyadas.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 22ms
+  Median response time: 304ms
 
-Host: google.github.io
+Host: www.paypal.me
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 381ms
+  Median response time: 477ms
 
-Host: humanstxt.org
+Host: rubystyle.guide
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 526ms
+  Median response time: 164ms
 
-Host: osv.dev
+Host: www.chrisbehr.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 386ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 199ms
-
-Host: scancode-toolkit.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 184ms
+  Median response time: 219ms
 
 Host: enhancv.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 61ms
+  Median response time: 64ms
 
-Host: prowritingaid.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 347ms
-
-Host: intellij-support.jetbrains.com
+Host: www.linkedin.com
   Total requests: 1
   Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 101ms
+  Median response time: 206ms
 
-Host: resumake.io
+Host: www.nongnu.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 292ms
+  Median response time: 305ms
 
-Host: htmlhint.com
+Host: raku.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 146ms
+  Median response time: 1184ms
 
-Host: git-scm.com
+Host: sahiljhawar.in
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 58ms
+  Median response time: 867ms
 
-Host: trivy.dev
+Host: openapi.vercel.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 78ms
+  Median response time: 206ms
+
+Host: pnpm.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 131ms
+
+Host: docs.rubocop.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 169ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 195ms
 
 Host: fonts.google.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 264ms
+  Median response time: 241ms
 
-Host: developercertificate.org
+Host: htmlhint.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 99ms
+  Median response time: 135ms
 
-Host: golangci-lint.run
+Host: protobuf.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 109ms
+  Median response time: 220ms
+
+Host: www.grammarly.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 234ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 317ms
+
+Host: fontawesome.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 319ms
+
+Host: autofix.ci
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 238ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 169ms
+
+Host: www.tilburgsciencehub.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1724ms
+
+Host: realm.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 267ms
+
+Host: prowritingaid.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 157ms
+
+Host: www.apache.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 226ms
+
+Host: intellij-support.jetbrains.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1039ms
+
+Host: zizmor.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 149ms
 
 Host: apostrophiclab.pedroreina.net
   Total requests: 1
@@ -2398,195 +2829,79 @@ Host: apostrophiclab.pedroreina.net
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 41ms
-
-Host: www.linkedin.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Median response time: 232ms
-
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 99ms
-
-Host: www.paypal.me
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 454ms
-
-Host: rubystyle.guide
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 129ms
-
-Host: www.hadilaksono.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 352ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 886ms
-
-Host: www.indeed.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 58ms
-
-Host: github.blog
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 796ms
-
-Host: semver.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 25ms
-
-Host: texdoc.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 2834ms
-
-Host: www.reddit.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 121ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 160ms
-
-Host: securityscorecards.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 115ms
-
-Host: api.scorecard.dev
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 108ms
-
-Host: www.tylerfinck.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1041ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 215ms
-
-Host: www.tilburgsciencehub.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 896ms
-
-Host: openapi.vercel.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 59ms
-
-Host: docker.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 40ms
-
-Host: micahrich.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 296ms
-
-Host: rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 72ms
-
-Host: turborepo.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 172ms
-
-Host: zizmor.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 179ms
-
-Host: www.apache.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 21ms
-
-Host: trufflesecurity.com
+Host: www.businessinsider.com
   Total requests: 1
   Successful: 1 (100.0%)
   Median response time: 229ms
 
-Host: clearlydefined.io
+Host: recodehive.github.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 282ms
+  Median response time: 157ms
 
-Host: www.rubyschema.org
+Host: v3.tailwindcss.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 205ms
+  Median response time: 126ms
+
+Host: goss.rocks
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 202ms
 
 Host: www.wnd.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 97ms
+  Median response time: 90ms
 
-Host: hemingwayapp.com
+Host: agentskills.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 107ms
+  Median response time: 203ms
 
-Host: kiwiirc.com
+Host: psalm.dev
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 460ms
+  Median response time: 317ms
 
-Host: api.clearlydefined.io
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 232ms
-
-Host: pnpm.io
+Host: www.hadilaksono.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 99ms
+  Median response time: 248ms
 
-Host: thetechresume.com
+Host: docs.stoplight.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 589ms
+  Median response time: 323ms
 
-Host: www.businessinsider.com
+Host: www.latofonts.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 134ms
+  Median response time: 774ms
+
+Host: checkstyle.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 64ms
 
 Host: mirrors.ctan.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 1238ms
+  Median response time: 557ms
 
-Host: www.businessinsider.my
+Host: egohygiene.dev
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: tug.ctan.org
   Total requests: 0
   Successful: 0 (100.0%)
 
 Host: www.youtube.com
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: www.businessinsider.my
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2598,25 +2913,13 @@ Host: x-access-token
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: egohygiene.dev
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: tug.ctan.org
-  Total requests: 0
-  Successful: 0 (100.0%)
-
 Host: github
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: www.nongnu.org
-  Total requests: 0
-  Successful: 0 (100.0%)
+Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."docs.ansible.com"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
 
-Hint: Encountered rate limit responses. You might be able to work around this by adding `[hosts."ansible.readthedocs.io"]` to the TOML config to adjust the `concurrency` and `request_interval` values.
-
-(Truncated to last 25000 characters out of 211604)
+(Truncated to last 25000 characters out of 215392)
 ```
 
 </details>
@@ -2816,79 +3119,10 @@ beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailin
 </details>
 
 <details>
-<summary>❌ PYTHON / mypy - 36 errors</summary>
+<summary>❌ PYTHON / mypy - 98 errors</summary>
 
 ```
-WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
-Collecting types-PyYAML
-  Downloading types_pyyaml-6.0.12.20260906-py3-none-any.whl.metadata (1.8 kB)
-Downloading types_pyyaml-6.0.12.20260906-py3-none-any.whl (21 kB)
-Installing collected packages: types-PyYAML
-Successfully installed types-PyYAML-6.0.12.20260906
-tools/staging_removal_gate.py: note: In function "load_audit_module":
-tools/staging_removal_gate.py:17:1: error: Function is missing a return type
-annotation  [no-untyped-def]
-    def load_audit_module(repository_root: Path):
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tools/staging_removal_gate.py: note: In function "validate_removals":
-tools/staging_removal_gate.py:43:1: error: Function is missing a type
-annotation for one or more arguments  [no-untyped-def]
-    def validate_removals(rows, approvals, source_paths: list[str]) -> lis...
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-tools/staging_removal_gate.py: note: In function "main":
-tools/staging_removal_gate.py:102:9: error: Assignment to variable "error"
-outside except: block  [misc]
-            for error in errors:
-            ^
-tools/staging_removal_gate.py:103:42: error: Trying to read deleted variable
-"error"  [misc]
-                print(f"removal gate failed: {error}", file=sys.stderr)
-                                             ^~~~~~
-tools/task_catalog.py: note: In function "render_catalog":
-tools/task_catalog.py:75:71: error: "object" has no attribute "__iter__"; maybe
-"__dir__" or "__str__"? (not iterable)  [attr-defined]
-    ...alias_text = ", ".join(f"`{escape_cell(alias)}`" for alias in aliases)
-                                                                     ^~~~~~~
-tests/test_staging_removal_gate.py: note: In function "load_module":
-tests/test_staging_removal_gate.py:15:1: error: Function is missing a return
-type annotation  [no-untyped-def]
-    def load_module(name: str, path: Path):
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "setUpClass" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:32:9: error: "type[StagingRemovalGateTests]"
-has no attribute "rows"  [attr-defined]
-            cls.rows = audit.build_rows(ROOT)
-            ^~~~~~~~
-tests/test_staging_removal_gate.py:33:9: error: "type[StagingRemovalGateTests]"
-has no attribute "row"  [attr-defined]
-            cls.row = next(row for row in cls.rows if row.source_path == "...
-            ^~~~~~~
-tests/test_staging_removal_gate.py:33:39: error:
-"type[StagingRemovalGateTests]" has no attribute "rows"  [attr-defined]
-            cls.row = next(row for row in cls.rows if row.source_path == "...
-                                          ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_missing_approval_blocks_removal" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:36:41: error: "StagingRemovalGateTests" has
-no attribute "rows"  [attr-defined]
-            errors = gate.validate_removals(self.rows, {}, [self.row.sourc...
-                                            ^~~~~~~~~
-tests/test_staging_removal_gate.py:36:57: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-    ... errors = gate.validate_removals(self.rows, {}, [self.row.source_path]...
-                                                        ^~~~~~~~
-tests/test_staging_removal_gate.py:37:56: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-    ...  self.assertEqual([f"missing removal approval: {self.row.source_path}...
-                                                        ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_exact_complete_approval_allows_removal" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:41:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "source_path": self.row.source_path,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:42:25: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "git_blob": self.row.git_blob,
-                            ^~~~~~~~
+^~~~~~~~
 tests/test_staging_removal_gate.py:43:28: error: "StagingRemovalGateTests" has
 no attribute "row"  [attr-defined]
                 "destination": self.row.canonical_home,
@@ -2987,11 +3221,303 @@ tests/test_staging_home_audit.py:104:47: error: "StagingHomeAuditTests" has no
 attribute "rows"  [attr-defined]
             self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
                                                   ^~~~~~~~~
+tests/test_repository_intelligence_rollback.py: note: In function "canonical_digest":
+tests/test_repository_intelligence_rollback.py:24:36: error: Missing type
+parameters for generic type "dict"  [type-arg]
+    def canonical_digest(records: list[dict]) -> str:
+                                       ^
+tests/test_repository_intelligence_rollback.py: note: In member "fixture_inventory" of class "RepositoryIntelligenceRollbackTests":
+tests/test_repository_intelligence_rollback.py:92:47: error: Missing type
+parameters for generic type "dict"  [type-arg]
+        def fixture_inventory(root: Path) -> list[dict]:
+                                                  ^
+tests/test_repository_intelligence_rollback.py: note: In member "verify" of class "RepositoryIntelligenceRollbackTests":
+tests/test_repository_intelligence_rollback.py:106:25: error: Missing type
+parameters for generic type "dict"  [type-arg]
+        def verify(self) -> dict:
+                            ^
+tests/test_repository_intelligence_rollback.py: note: In member "test_wrong_checkout_revision_or_tree_fails" of class "RepositoryIntelligenceRollbackTests":
+tests/test_repository_intelligence_rollback.py:223:30: error: Module
+"tools.verify_repository_intelligence_rollback" does not explicitly export
+attribute "subprocess"  [attr-defined]
+                    patch.object(rollback.subprocess, "run", side_effect=r...
+                                 ^~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_reports.py: note: In member "setUpClass" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:57:9: error:
+"type[RepositoryIntelligenceReportTests]" has no attribute "renderer" 
+[attr-defined]
+            cls.renderer = importlib.util.module_from_spec(spec)
+            ^~~~~~~~~~~~
+tests/test_repository_intelligence_reports.py:58:33: error:
+"type[RepositoryIntelligenceReportTests]" has no attribute "renderer" 
+[attr-defined]
+            spec.loader.exec_module(cls.renderer)
+                                    ^~~~~~~~~~~~
+tests/test_repository_intelligence_reports.py: note: In member "report" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:66:42: error: Missing type
+parameters for generic type "dict"  [type-arg]
+        def report(producer: str = "osv") -> dict:
+                                             ^
+tests/test_repository_intelligence_reports.py: note: In member "write_report" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:108:38: error: Missing type
+parameters for generic type "dict"  [type-arg]
+        def write_report(self, document: dict, producer: str = "osv") -> P...
+                                         ^
+tests/test_repository_intelligence_reports.py: note: In member "project" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:114:77: error: Missing type
+parameters for generic type "dict"  [type-arg]
+    ...ject(self, producer: str = "osv", *, as_of: datetime = AS_OF) -> dict:
+                                                                        ^
+tests/test_repository_intelligence_reports.py:115:9: error: Returning Any from
+function declared to return "dict[Any, Any]"  [no-any-return]
+            return self.renderer.load_report(self.reports, producer, REPOS...
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
+tests/test_repository_intelligence_reports.py:115:16: error:
+"RepositoryIntelligenceReportTests" has no attribute "renderer"  [attr-defined]
+            return self.renderer.load_report(self.reports, producer, REPOS...
+                   ^~~~~~~~~~~~~
+tests/test_repository_intelligence_reports.py: note: In member "assert_unknown_findings" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:117:51: error: Missing type
+parameters for generic type "dict"  [type-arg]
+        def assert_unknown_findings(self, projection: dict) -> None:
+                                                      ^
+tests/test_repository_intelligence_reports.py: note: In member "test_successful_scan_keeps_blocking_findings_and_provenance_links" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:133:44: error:
+"RepositoryIntelligenceReportTests" has no attribute "renderer"  [attr-defined]
+            self.assertIn("Findings: blocked", self.renderer.render_produc...
+                                               ^~~~~~~~~~~~~
+tests/test_repository_intelligence_reports.py: note: In member "test_failed_megalinter_execution_cannot_become_a_success_from_zero_findings" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:156:35: error:
+"RepositoryIntelligenceReportTests" has no attribute "renderer"  [attr-defined]
+                "Execution: failure", self.renderer.render_producer_card("...
+                                      ^~~~~~~~~~~~~
+tests/test_repository_intelligence_reports.py: note: In member "test_public_projection_omits_raw_payload_and_unsafe_urls" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:266:58: error:
+"RepositoryIntelligenceReportTests" has no attribute "renderer"  [attr-defined]
+    ...        public_output = json.dumps(projection) + self.renderer.render_...
+                                                        ^~~~~~~~~~~~~
+tests/test_repository_intelligence_reports.py: note: In member "test_committed_reports_keep_their_original_source_commit" of class "RepositoryIntelligenceReportTests":
+tests/test_repository_intelligence_reports.py:296:30: error:
+"RepositoryIntelligenceReportTests" has no attribute "renderer"  [attr-defined]
+                    projection = self.renderer.load_report(
+                                 ^~~~~~~~~~~~~
+tests/test_repository_intelligence_publication.py: note: In member "fetch_from" of class "PublicationEvidenceTests":
+tests/test_repository_intelligence_publication.py:78:5: error: Function is
+missing a return type annotation  [no-untyped-def]
+        def fetch_from(self, root: Path):
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_publication.py: note: In member "test_report_freshness_audit_normalizes_valid_instants_and_omits_arbitrary_values" of class "PublicationEvidenceTests":
+tests/test_repository_intelligence_publication.py:166:9: error: Need type
+annotation for "value"  [var-annotated]
+            for value in ("SECRET", "2026-02-30T10:00:00Z", "2026-09-23T10...
+            ^
+tests/test_repository_intelligence_publication.py: note: In member "test_adversarial_nested_metadata_types_cannot_claim_a_trusted_refresh" of class "PublicationEvidenceTests":
+tests/test_repository_intelligence_publication.py:176:9: error: Need type
+annotation for "change"  [var-annotated]
+            for change in (
+            ^
+tests/test_repository_intelligence_publication.py: note: In function "test_live_retries_are_bounded_and_transient_failure_can_recover":
+tests/test_repository_intelligence_publication.py:364:13: error: Returning Any
+from function declared to return "bytes"  [no-any-return]
+                return read(route)
+                ^~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In function "load_module":
+tests/test_repository_intelligence_provenance.py:57:1: error: Function is
+missing a return type annotation  [no-untyped-def]
+    def load_module(name: str, path: Path):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "setUpClass" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:100:9: error:
+"type[EmpathyProvenanceOwnerIntegrationTests]" has no attribute "manifest_owner"
+ [attr-defined]
+            cls.manifest_owner = load_module("empathy_manifest_owner_fixtu...
+            ^~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:101:9: error:
+"type[EmpathyProvenanceOwnerIntegrationTests]" has no attribute
+"provenance_owner"  [attr-defined]
+            cls.provenance_owner = load_module(
+            ^~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:104:9: error:
+"type[EmpathyProvenanceOwnerIntegrationTests]" has no attribute "consumer" 
+[attr-defined]
+            cls.consumer = load_module(
+            ^~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "setUp" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:115:22: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+            for route in self.consumer.GARDEN_ROUTES:
+                         ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:127:9: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+            self.consumer.canonicalize_baseline(self.baseline)
+            ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:129:22: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+            for route in self.consumer.INTELLIGENCE_ROUTES:
+                         ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:135:20: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "manifest_owner" 
+[attr-defined]
+            manifest = self.manifest_owner.build_manifest(
+                       ^~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:143:9: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "manifest_owner" 
+[attr-defined]
+            self.manifest_owner.write_json(self.manifest_path, manifest)
+            ^~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "arguments" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:160:64: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+    ...  ["/", "/projects/", *["/" + route for route in self.consumer.INTELLI...
+                                                        ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:166:31: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+                "deployment-url": self.consumer.SITE_URL,
+                                  ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:171:29: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+                "rollback-url": self.consumer.SITE_URL,
+                                ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "invoke" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:178:13: error: Returning Any
+from function declared to return "int"  [no-any-return]
+                return self.provenance_owner.main(self.arguments(operation...
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
+tests/test_repository_intelligence_provenance.py:178:20: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "provenance_owner" 
+[attr-defined]
+                return self.provenance_owner.main(self.arguments(operation...
+                       ^~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "rewrite_manifest" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:183:9: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "manifest_owner" 
+[attr-defined]
+            self.manifest_owner.write_json(self.manifest_path, manifest)
+            ^~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "test_real_owner_verifies_consumer_paths_and_separate_receipt" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:186:18: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+            before = self.consumer.site_inventory(self.site)
+                     ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:190:26: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "consumer" 
+[attr-defined]
+            self.assertEqual(self.consumer.site_inventory(self.site), befo...
+                             ^~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "test_repeated_owner_manifest_is_identical_before_and_after_receipt" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:206:21: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "manifest_owner" 
+[attr-defined]
+            generated = self.manifest_owner.build_manifest(
+                        ^~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py:214:9: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "manifest_owner" 
+[attr-defined]
+            self.manifest_owner.write_json(self.manifest_path, generated)
+            ^~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_provenance.py: note: In member "test_incomplete_receipt_cannot_verify" of class "EmpathyProvenanceOwnerIntegrationTests":
+tests/test_repository_intelligence_provenance.py:280:9: error:
+"EmpathyProvenanceOwnerIntegrationTests" has no attribute "provenance_owner" 
+[attr-defined]
+            self.provenance_owner.write_json(self.receipt, receipt)
+            ^~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py: note: In class "UniqueKeyLoader":
+tests/test_repository_intelligence_workflows.py:39:5: error: Cannot override
+instance variable (previously declared on base class "BaseResolver") with class
+variable  [misc]
+        yaml_implicit_resolvers: ClassVar[dict] = {}
+        ^~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:39:39: error: Missing type
+parameters for generic type "dict"  [type-arg]
+        yaml_implicit_resolvers: ClassVar[dict] = {}
+                                          ^
+tests/test_repository_intelligence_workflows.py: note: In function "unique_mapping":
+tests/test_repository_intelligence_workflows.py:42:72: error: Missing type
+parameters for generic type "dict"  [type-arg]
+    ...ique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict:
+                                                                        ^
+tests/test_repository_intelligence_workflows.py: note: In function "workflow":
+tests/test_repository_intelligence_workflows.py:56:28: error: Missing type
+parameters for generic type "dict"  [type-arg]
+    def workflow(name: str) -> dict:
+                               ^
+tests/test_repository_intelligence_workflows.py:58:5: error: Returning Any from
+function declared to return "dict[Any, Any]"  [no-any-return]
+        return yaml.load((WORKFLOWS / name).read_text(encoding="utf-8"), L...
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
+tests/test_repository_intelligence_workflows.py: note: In function "evaluate":
+tests/test_repository_intelligence_workflows.py:65:36: error: Missing type
+parameters for generic type "dict"  [type-arg]
+    def evaluate(source: str, context: dict, *, cancelled: bool = False) -...
+                                       ^
+tests/test_repository_intelligence_workflows.py:76:5: error: Function is
+missing a return type annotation  [no-untyped-def]
+        def value(path: str):
+        ^~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:92:5: error: Function is
+missing a type annotation  [no-untyped-def]
+        def visit(node):  # noqa: PLR0911
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:98:28: error: Call to untyped
+function "visit" in typed context  [no-untyped-call]
+                values = [bool(visit(child)) for child in node.values]
+                               ^~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:101:24: error: Call to untyped
+function "visit" in typed context  [no-untyped-call]
+                return not visit(node.operand)
+                           ^~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:103:27: error: Call to untyped
+function "visit" in typed context  [no-untyped-call]
+                left, right = visit(node.left), visit(node.comparators[0])
+                              ^~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:114:20: error: Cannot call
+function of unknown type  [operator]
+                return functions[node.func.id](*(visit(arg) for arg in nod...
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
+tests/test_repository_intelligence_workflows.py:114:46: error: Call to untyped
+function "visit" in typed context  [no-untyped-call]
+                return functions[node.func.id](*(visit(arg) for arg in nod...
+                                                 ^~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:118:17: error: Call to untyped
+function "visit" in typed context  [no-untyped-call]
+        return bool(visit(ast.parse(source, mode="eval").body))
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py: note: In function "event_context":
+tests/test_repository_intelligence_workflows.py:122:1: error: Function is
+missing a type annotation for one or more arguments  [no-untyped-def]
+    def event_context(  # noqa: PLR0913
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/test_repository_intelligence_workflows.py:132:6: error: Missing type
+parameters for generic type "dict"  [type-arg]
+    ) -> dict:
+         ^
+tests/test_repository_intelligence_workflows.py: note: In member "run_report" of class "RepositoryIntelligenceWorkflowTests":
+tests/test_repository_intelligence_workflows.py:168:21: error: Missing type
+parameters for generic type "dict"  [type-arg]
+            self, step: dict, filename: str, extra_environment: dict, expe...
+                        ^
+tests/test_repository_intelligence_workflows.py:169:10: error: Missing type
+parameters for generic type "dict"  [type-arg]
+        ) -> dict:
+             ^
+tests/test_repository_intelligence_workflows.py:196:13: error: Returning Any
+from function declared to return "dict[Any, Any]"  [no-any-return]
+                return json.loads(report_text)
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 36 errors in 4 files (checked 48 source files)
+Found 98 errors in 10 files (checked 55 source files)
+
+(Truncated to last 25000 characters out of 30275)
 ```
 
 </details>
@@ -4368,7 +4894,7 @@ unformatted: File would be reformatted
 1336 |             },
      |
 
-9 files would be reformatted, 47 files already formatted
+9 files would be reformatted, 54 files already formatted
 
 (Truncated to last 25000 characters out of 32001)
 ```
@@ -4379,10 +4905,13 @@ unformatted: File would be reformatted
 <summary>❌ REPOSITORY / secretlint - 1 error</summary>
 
 ```
+tests/test_repository_intelligence_provenance.py
+  294:13  error  [BasicAuth] found basic auth credential: ****************************************  @secretlint/secretlint-rule-preset-recommend > @secretlint/secretlint-rule-basicauth
+
 .staging/.github/skills/mcp-security-audit/SKILL.md
   102:19  error  [PostgreSQLConnection] found PostgreSQL connection string: *************************************************  @secretlint/secretlint-rule-preset-recommend > @secretlint/secretlint-rule-database-connection-string
 
-✖ 1 problem (1 error, 0 warnings, 0 infos)
+✖ 2 problems (2 errors, 0 warnings, 0 infos)
 ```
 
 </details>
@@ -5014,74 +5543,70 @@ pnpm-workspace.yaml
 inThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,830 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-09-23 11:13:09,340 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,830 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-09-23 11:13:09,340 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,830 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-09-23 11:13:09,340 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,831 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-09-23 11:13:09,340 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,831 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-09-23 11:13:09,341 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,831 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-09-23 11:13:09,341 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,831 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-09-23 11:13:09,341 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:11,831 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-09-23 11:13:09,341 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-09-23 10:19:12,023 [MainThread  ] [INFO ]  Creating ARM graph
-2026-09-23 10:19:12,026 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-09-23 10:19:12,169 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-09-23 10:19:12,170 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-09-23 10:19:12,180 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-09-23 10:19:12,180 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-09-23 10:19:12,182 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-09-23 10:19:12,206 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-09-23 10:19:12,213 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-09-23 10:19:12,215 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-09-23 10:19:12,246 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-09-23 10:19:12,263 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-09-23 10:19:12,453 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-09-23 10:19:12,503 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-09-23 10:19:12,509 [MainThread  ] [INFO ]  Creating vertices
-2026-09-23 10:19:12,509 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-09-23 10:19:12,509 [MainThread  ] [INFO ]  Creating edges
-2026-09-23 10:19:12,509 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-09-23 10:19:13,488 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-09-23 10:19:13,488 [MainThread  ] [INFO ]  Creating vertices
-2026-09-23 10:19:13,491 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-09-23 10:19:13,492 [MainThread  ] [INFO ]  Creating edges
-2026-09-23 10:19:13,501 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-09-23 10:19:13,501 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-09-23 10:19:13,555 [MainThread  ] [INFO ]  Building cross variable edges
-2026-09-23 10:19:13,555 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-09-23 10:19:13,555 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-09-23 10:19:13,556 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-09-23 10:19:31,434 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-09-23 10:19:31,435 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-09-23 10:19:31,691 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-09-23 10:19:31,693 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-09-23 10:19:31,694 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-09-23 10:19:31,694 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-09-23 10:19:31,694 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-09-23 10:19:31,697 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-09-23 11:13:09,531 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-09-23 11:13:09,531 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-09-23 11:13:09,675 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-09-23 11:13:09,749 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-09-23 11:13:09,763 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-09-23 11:13:09,764 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-09-23 11:13:09,764 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-09-23 11:13:09,783 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-09-23 11:13:09,874 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-09-23 11:13:09,899 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-09-23 11:13:09,929 [MainThread  ] [INFO ]  Creating ARM graph
+2026-09-23 11:13:09,931 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-09-23 11:13:10,017 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-09-23 11:13:10,078 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-09-23 11:13:10,080 [MainThread  ] [INFO ]  Creating vertices
+2026-09-23 11:13:10,080 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-09-23 11:13:10,080 [MainThread  ] [INFO ]  Creating edges
+2026-09-23 11:13:10,080 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-09-23 11:13:10,788 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-09-23 11:13:10,788 [MainThread  ] [INFO ]  Creating vertices
+2026-09-23 11:13:10,789 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-09-23 11:13:10,789 [MainThread  ] [INFO ]  Creating edges
+2026-09-23 11:13:10,790 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-09-23 11:13:10,800 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-09-23 11:13:10,872 [MainThread  ] [INFO ]  Building cross variable edges
+2026-09-23 11:13:10,873 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-09-23 11:13:10,873 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-09-23 11:13:10,873 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-09-23 11:13:28,483 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-09-23 11:13:28,484 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-09-23 11:13:28,608 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-09-23 11:13:28,611 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-09-23 11:13:28,611 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-09-23 11:13:28,611 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-09-23 11:13:28,611 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-09-23 11:13:28,615 [MainThread  ] [INFO ]  Successfully created Ansible graph
 terraform scan results:
 
 Passed checks: 9, Failed checks: 6, Skipped checks: 0
 
-Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61
 Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -5098,6 +5623,10 @@ Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
+Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61
 Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
 	FAILED for resource: aws_s3_bucket.fixture
 	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
@@ -5106,154 +5635,94 @@ cloudformation scan results:
 
 Passed checks: 7, Failed checks: 2, Skipped checks: 0
 
-Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
-	FAILED for resource: AWS::S3::Bucket.ExampleBucket
-	File: /egolint/tests/fixtures/cloudformation/valid-template.yml:7-20
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
 Check: CKV_AWS_21: "Ensure the S3 bucket has versioning enabled"
 	FAILED for resource: AWS::S3::Bucket.ExampleBucket
 	File: /egolint/tests/fixtures/cloudformation/valid-template.yml:7-20
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: AWS::S3::Bucket.ExampleBucket
+	File: /egolint/tests/fixtures/cloudformation/valid-template.yml:7-20
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
 kubernetes scan results:
 
 Passed checks: 164, Failed checks: 44, Skipped checks: 0
 
-Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
-Check: CKV_K8S_29: "Apply security context to your pods and containers"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
-Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_23: "Minimize the admission of root containers"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
-Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
-	FAILED for resource: Deployment.default.healthy
-	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
-Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
 Check: CKV_K8S_29: "Apply security context to your pods and containers"
 	FAILED for resource: Deployment.default.fragile
 	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
-Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_23: "Minimize the admission of root containers"
-	FAILED for resource: Deployment.default.fragile
-	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
 Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
 	FAILED for resource: Deployment.default.fragile
 	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
 Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
-Check: CKV_K8S_29: "Apply security context to your pods and containers"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
 Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
-Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
 Check: CKV_K8S_23: "Minimize the admission of root containers"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
-Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
-	FAILED for resource: Deployment.default.invalid-deployment
-	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
-Check: CKV_K8S_16: "Container should not be privileged"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-15
-Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
-Check: CKV_K8S_29: "Apply security context to your pods and containers"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
-Check: CKV_K8S_8: "Liveness Probe Should be Configured"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7
-Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
-Check: CKV_K8S_43: "Image should use digest"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39
-Check: CKV_K8S_9: "Readiness Probe Should be Configured"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
-Check: CKV_K8S_11: "CPU limits should be set"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-10
-Check: CKV_K8S_28: "Minimize the admission of containers with the NET_RAW capability"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27
-Check: CKV_K8S_13: "Memory limits should be set"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-12
-Check: CKV_K8S_10: "CPU requests should be set"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-9
 Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	FAILED for resource: Deployment.default.fragile
+	File: /egolint/tests/fixtures/negative/conftest/invalid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
-Check: CKV_K8S_12: "Memory requests should be set"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-11
-Check: CKV_K8S_37: "Minimize the admission of containers with capabilities assigned"
-	FAILED for resource: Pod.default.privileged-pod
-	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-34
 Check: CKV_K8S_15: "Image Pull Policy should be Always"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14
+Check: CKV_K8S_28: "Minimize the admission of containers with the NET_RAW capability"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27
+Check: CKV_K8S_29: "Apply security context to your pods and containers"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_16: "Container should not be privileged"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-15
+Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
+Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
+Check: CKV_K8S_12: "Memory requests should be set"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-11
 Check: CKV_K8S_20: "Containers should not run with allowPrivilegeEscalation"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-19
+Check: CKV_K8S_43: "Image should use digest"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39
+Check: CKV_K8S_13: "Memory limits should be set"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-12
+Check: CKV_K8S_11: "CPU limits should be set"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-10
+Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
+Check: CKV_K8S_37: "Minimize the admission of containers with capabilities assigned"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-34
 Check: CKV_K8S_22: "Use read-only filesystem for containers where possible"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
@@ -5262,30 +5731,90 @@ Check: CKV_K8S_23: "Minimize the admission of root containers"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
-Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
+Check: CKV_K8S_21: "The default namespace should not be used"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
 Check: CKV_K8S_8: "Liveness Probe Should be Configured"
-	FAILED for resource: Deployment.default.greeting-service
-	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7
-Check: CKV_K8S_43: "Image should use digest"
-	FAILED for resource: Deployment.default.greeting-service
-	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39
+Check: CKV_K8S_10: "CPU requests should be set"
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-9
 Check: CKV_K8S_9: "Readiness Probe Should be Configured"
-	FAILED for resource: Deployment.default.greeting-service
-	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	FAILED for resource: Pod.default.privileged-pod
+	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
+Check: CKV_K8S_29: "Apply security context to your pods and containers"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
+Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
+Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
+Check: CKV_K8S_23: "Minimize the admission of root containers"
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
 Check: CKV_K8S_21: "The default namespace should not be used"
-	FAILED for resource: Deployment.default.greeting-service
-	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	FAILED for resource: Deployment.default.invalid-deployment
+	File: /egolint/tests/fixtures/negative/kubernetes/invalid-deployment.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
+Check: CKV_K8S_29: "Apply security context to your pods and containers"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_31: "Ensure that the seccomp profile is set to docker/default or runtime/default"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29
+Check: CKV_K8S_38: "Ensure that Service Account Tokens are only mounted where necessary"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35
+Check: CKV_K8S_40: "Containers should run as a high UID to avoid host conflict"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37
+Check: CKV_K8S_23: "Minimize the admission of root containers"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22
+Check: CKV_K8S_21: "The default namespace should not be used"
+	FAILED for resource: Deployment.default.healthy
+	File: /egolint/tests/fixtures/conftest/valid.yml:2-7
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
 Check: CKV_K8S_15: "Image Pull Policy should be Always"
 	FAILED for resource: Deployment.default.greeting-service
 	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14
+Check: CKV_K8S_43: "Image should use digest"
+	FAILED for resource: Deployment.default.greeting-service
+	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39
+Check: CKV_K8S_21: "The default namespace should not be used"
+	FAILED for resource: Deployment.default.greeting-service
+	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
+Check: CKV_K8S_8: "Liveness Probe Should be Configured"
+	FAILED for resource: Deployment.default.greeting-service
+	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7
+Check: CKV_K8S_9: "Readiness Probe Should be Configured"
+	FAILED for resource: Deployment.default.greeting-service
+	File: /egolint/tests/fixtures/kubernetes/valid-deployment.yml:2-38
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
 Check: CKV2_K8S_6: "Minimize the admission of pods which lack an associated NetworkPolicy"
 	FAILED for resource: Pod.default.privileged-pod
 	File: /egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml:2-11
@@ -5300,25 +5829,21 @@ dockerfile scan results:
 
 Passed checks: 53, Failed checks: 2, Skipped checks: 0
 
-Check: CKV_DOCKER_2: "Ensure that HEALTHCHECK instructions have been added to container images"
-	FAILED for resource: /egolint/tests/fixtures/hadolint/Dockerfile.
-	File: /egolint/tests/fixtures/hadolint/Dockerfile:1-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images
 Check: CKV_DOCKER_3: "Ensure that a user for the container has been created"
 	FAILED for resource: /holon/packs/react-vite/template/infra/docker/Dockerfile.
 	File: /holon/packs/react-vite/template/infra/docker/Dockerfile:1-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-a-user-for-the-container-has-been-created
+Check: CKV_DOCKER_2: "Ensure that HEALTHCHECK instructions have been added to container images"
+	FAILED for resource: /egolint/tests/fixtures/hadolint/Dockerfile.
+	File: /egolint/tests/fixtures/hadolint/Dockerfile:1-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images
 openapi scan results:
 
 Passed checks: 6, Failed checks: 4, Skipped checks: 0
 
-Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
-	FAILED for resource: security
-	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 Check: CKV_OPENAPI_4: "Ensure that the global security field has rules defined"
 	FAILED for resource: security
-	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
+	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-the-global-security-field-has-rules-defined
 Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	FAILED for resource: security
@@ -5326,8 +5851,12 @@ Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 Check: CKV_OPENAPI_4: "Ensure that the global security field has rules defined"
 	FAILED for resource: security
-	File: /egolint/tests/fixtures/negative/vacuum/openapi.yml:2-9
+	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-the-global-security-field-has-rules-defined
+Check: CKV_OPENAPI_5: "Ensure that security operations is not empty."
+	FAILED for resource: security
+	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty
 
 (Truncated to last 25000 characters out of 36683)
 ```
@@ -5498,7 +6027,7 @@ sharp                        0.35.3                                    0.35.4   
 asteval                      1.0.6                                     1.0.9     python         GHSA-9w56-46f6-3qhx  Medium    N/A           N/A           
 smol-toml                    1.5.2                                     1.6.1     npm            GHSA-v3rj-xjv7-4jmq  Medium    N/A           N/A           
 esbuild                      0.27.7                                    0.28.1    npm            GHSA-g7r4-m6w7-qqqr  Low       N/A           N/A
-[0132] ERROR discovered vulnerabilities at or above the severity threshold
+[0139] ERROR discovered vulnerabilities at or above the severity threshold
 
 (Truncated to last 25000 characters out of 25012)
 ```
@@ -5506,21 +6035,10 @@ esbuild                      0.27.7                                    0.28.1   
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 3156 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 3165 errors</summary>
 
 ```
-e/lib/bash/file.sh [68:22 - 75:3]
-Clone found (bash)
- - mantle/lib/core/core.sh [217:1 - 238:8] (22 lines, 137 tokens)
-   mantle/lib/core/core.sh [255:1 - 276:8]
-Clone found (bash)
- - mantle/lib/extensions/wget.sh [195:52 - 201:5] (7 lines, 51 tokens)
-   mantle/lib/extensions/wget.sh [219:55 - 225:5]
-Clone found (bash)
- - mantle/lib/install/github.sh [411:1 - 423:5] (13 lines, 51 tokens)
-   mantle/lib/install/python-tool.sh [76:1 - 88:5]
-Clone found (bash)
- - mantle/lib/modules.sh [40:80 - 55:2] (16 lines, 84 tokens)
+s)
    mantle/lib/modules.sh [143:85 - 158:2]
 Clone found (bash)
  - mantle/libexec/mantle/installers/addlicense.sh [8:1 - 20:26] (13 lines, 63 tokens)
@@ -5691,6 +6209,15 @@ Clone found (json)
  - schemas/repository-foundation-catalog.v1.schema.json [70:42 - 83:10] (14 lines, 63 tokens)
    schemas/repository-foundation-catalog.v1.schema.json [89:53 - 102:10]
 Clone found (python)
+ - tests/test_repository_intelligence_provenance.py [57:1 - 62:5] (6 lines, 68 tokens)
+   tests/test_staging_removal_gate.py [15:1 - 20:5]
+Clone found (python)
+ - tests/test_repository_intelligence_provenance.py [135:17 - 143:60] (9 lines, 55 tokens)
+   tests/test_repository_intelligence_provenance.py [206:18 - 214:60]
+Clone found (python)
+ - tests/test_repository_intelligence_workflows.py [170:1 - 177:68] (8 lines, 58 tokens)
+   tests/test_repository_intelligence_workflows.py [610:1 - 617:68]
+Clone found (python)
  - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
    tests/test_staging_removal_gate.py [64:49 - 71:14]
 Clone found (python)
@@ -5707,7 +6234,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 414            │ 113916      │ 438214       │ 275          │ 6030 (5.29%)     │ 28883 (6.59%)     │
+│ bash         │ 415            │ 114129      │ 438449       │ 275          │ 6030 (5.28%)     │ 28883 (6.59%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5771,7 +6298,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1725           │ 331127      │ 4298960      │ 695          │ 11729 (3.54%)    │ 173216 (4.03%)    │
+│ markdown     │ 1726           │ 331409      │ 4304130      │ 695          │ 11710 (3.53%)    │ 173045 (4.02%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5793,7 +6320,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 292            │ 72996       │ 452833       │ 130          │ 1307 (1.79%)     │ 12309 (2.72%)     │
+│ python       │ 299            │ 75862       │ 479502       │ 133          │ 1327 (1.75%)     │ 12490 (2.60%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -5825,16 +6352,16 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 553            │ 57123       │ 316120       │ 349          │ 9375 (16.41%)    │ 105259 (33.30%)   │
+│ yaml         │ 556            │ 57963       │ 324537       │ 355          │ 9414 (16.24%)    │ 106045 (32.68%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4756           │ 984491      │ 7759148      │ 3156         │ 59560 (6.05%)    │ 762956 (9.83%)    │
+│ Total:       │ 4768           │ 988692      │ 7799639      │ 3165         │ 59600 (6.03%)    │ 763752 (9.79%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 3156 clones.
+Found 3165 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.0%) over threshold (3.0%)
-time: 17.13s
+time: 16.13s
 
-(Truncated to last 25000 characters out of 696644)
+(Truncated to last 25000 characters out of 698083)
 ```
 
 </details>
@@ -5843,7 +6370,7 @@ time: 17.13s
 <summary>⚠️ MARKDOWN / markdown-table-formatter - 1 error</summary>
 
 ```
-64 files contain markdown tables to format:
+65 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
 - .audits/2026-08-15-staging-home-audit.md
 - .audits/2026-08-16-misc-promotion.md
@@ -5876,6 +6403,7 @@ time: 17.13s
 - docs/foundation/gitignore/MIGRATION-03.md
 - docs/foundation/gitignore/README.md
 - docs/foundation/gitignore/RULE_AUDIT.md
+- docs/integrations/REPOSITORY_INTELLIGENCE.md
 - egolint/.agents/agents/AGENT-CONTRACT.md
 - egolint/.agents/skills/SKILL-CONTRACT.md
 - egolint/.agents/specs/SCHEMA.md
@@ -6159,18 +6687,10 @@ mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant.
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pylint - 255 errors</summary>
+<summary>⚠️ PYTHON / pylint - 267 errors</summary>
 
 ```
--geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:157:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:158:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:159:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:160:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:161:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:162:0: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:163:0: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:164:0: W0311: Bad indentation. Found 1 spaces, expected 4 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:165:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+n)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:169:0: C0303: Trailing whitespace (trailing-whitespace)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:170:56: C0303: Trailing whitespace (trailing-whitespace)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:170:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
@@ -6291,6 +6811,21 @@ mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "retur
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
 ************* Module test_gitignore_baseline
 tests/test_gitignore_baseline.py:27:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_provenance
+tests/test_repository_intelligence_provenance.py:110:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_publication
+tests/test_repository_intelligence_publication.py:36:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+tests/test_repository_intelligence_publication.py:280:57: W0212: Access to a protected member _git of a client class (protected-access)
+tests/test_repository_intelligence_publication.py:281:53: W0212: Access to a protected member _git of a client class (protected-access)
+tests/test_repository_intelligence_publication.py:34:0: R0904: Too many public methods (31/25) (too-many-public-methods)
+************* Module test_repository_intelligence_reports
+tests/test_repository_intelligence_reports.py:61:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_rollback
+tests/test_repository_intelligence_rollback.py:32:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_workflows
+tests/test_repository_intelligence_workflows.py:26:0: E0401: Unable to import 'yaml' (import-error)
+tests/test_repository_intelligence_workflows.py:92:4: R0911: Too many return statements (7/6) (too-many-return-statements)
+tests/test_repository_intelligence_workflows.py:122:0: R0913: Too many arguments (8/7) (too-many-arguments)
 ************* Module foundation
 tools/foundation.py:68:0: R0914: Too many local variables (34/20) (too-many-locals)
 tools/foundation.py:68:0: R0912: Too many branches (53/12) (too-many-branches)
@@ -6300,6 +6835,9 @@ tools/foundation.py:257:0: R0912: Too many branches (26/12) (too-many-branches)
 tools/foundation.py:257:0: R0915: Too many statements (71/60) (too-many-statements)
 tools/foundation.py:555:0: R0911: Too many return statements (21/6) (too-many-return-statements)
 tools/foundation.py:555:0: R0912: Too many branches (24/12) (too-many-branches)
+************* Module repository_intelligence_publication
+tools/repository_intelligence_publication.py:401:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+tools/repository_intelligence_publication.py:456:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
 ************* Module staging_home_audit
 tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1395/1000) (too-many-lines)
 tools/staging_home_audit.py:64:0: R0902: Too many instance attributes (24/12) (too-many-instance-attributes)
@@ -6316,124 +6854,18 @@ tools/staging_home_audit.py:1171:0: R0911: Too many return statements (8/6) (too
 tools/staging_home_audit.py:1230:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.54/10
+Your code has been rated at 9.61/10
 
-(Truncated to last 25000 characters out of 51024)
+(Truncated to last 25000 characters out of 52924)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pyright - 8768 errors</summary>
+<summary>⚠️ PYTHON / pyright - 9168 errors</summary>
 
 ```
-ls/foundation.py:169:9 - error: Type of "ownership" is partially unknown
-    Type of "ownership" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:169:21 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:172:9 - error: Type of "artifact_profiles" is partially unknown
-    Type of "artifact_profiles" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:172:29 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:175:13 - error: Type of "unknown" is partially unknown
-    Type of "unknown" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:175:27 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:182:9 - error: Type of "markers" is partially unknown
-    Type of "markers" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:182:19 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:186:12 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:186:43 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:188:27 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:188:68 - error: Type of "strip" is unknown (reportUnknownMemberType)
-  tools/foundation.py:191:23 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:199:55 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:212:9 - error: Type of "field_ids" is partially unknown
-    Type of "field_ids" is "list[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:212:22 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:212:42 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:213:16 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:213:34 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:213:49 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:213:67 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "set[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:213:71 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:215:20 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:215:39 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:216:47 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:218:59 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:226:20 - error: Type of "output" is unknown (reportUnknownVariableType)
-  tools/foundation.py:226:40 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:227:63 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:227:63 - error: Argument type is partially unknown
-    Argument corresponds to parameter "value" in function "_safe_path"
-    Argument type is "Unknown | None" (reportUnknownArgumentType)
-  tools/foundation.py:230:33 - error: Argument type is unknown
-    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
-  tools/foundation.py:275:69 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:276:72 - error: Argument type is partially unknown
-    Argument corresponds to parameter "selected" in function "_resolve_profiles"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:305:16 - error: Type of "override" is unknown (reportUnknownVariableType)
-  tools/foundation.py:305:38 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:306:50 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:309:9 - error: Type of "identifier" is partially unknown
-    Type of "identifier" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:309:22 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:314:12 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:328:5 - error: Type of "unknown_fields" is partially unknown
-    Type of "unknown_fields" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:330:76 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:332:9 - error: Type of "value" is partially unknown
-    Type of "value" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:332:17 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:350:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation.py:364:5 - error: Type of "resolved" is partially unknown
-    Type of "resolved" is "dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None]" (reportUnknownVariableType)
-  tools/foundation.py:371:61 - error: Type of "key" is unknown (reportUnknownVariableType)
-  tools/foundation.py:371:75 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:377:12 - error: Return type, "tuple[dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None], list[str]]", is partially unknown (reportUnknownVariableType)
-tools/foundation_ignore.py
-  tools/foundation_ignore.py:50:5 - error: Type of "fields" is partially unknown
-    Type of "fields" is "set[str] | set[str | Unknown]" (reportUnknownVariableType)
-  tools/foundation_ignore.py:51:44 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
+ion "__init__"
     Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
   tools/foundation_ignore.py:52:69 - error: Argument type is partially unknown
     Argument corresponds to parameter "iterable" in function "sorted"
@@ -6561,6 +6993,86 @@ tools/foundation_ignore.py
     Argument type is "list[Unknown | str]" (reportUnknownArgumentType)
   tools/foundation_ignore.py:206:9 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+tools/repository_intelligence_publication.py
+  tools/repository_intelligence_publication.py:116:12 - error: Return type, "dict[Unknown, Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:158:9 - error: Type of "record" is unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:159:59 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:161:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:161:22 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:162:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "set[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:162:16 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "__init__"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:162:31 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:164:29 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "sorted"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:164:40 - error: Argument type is partially unknown
+    Argument corresponds to parameter "key" in function "sorted"
+    Argument type is "(record: Unknown) -> Unknown" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:164:47 - error: Type of parameter "record" is unknown (reportUnknownLambdaType)
+  tools/repository_intelligence_publication.py:164:55 - error: Return type of lambda is unknown (reportUnknownLambdaType)
+  tools/repository_intelligence_publication.py:197:12 - error: Return type, "Unknown | Literal[False]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:199:24 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:200:13 - error: Type of "lower" is unknown (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:237:5 - error: Type of "repository" is unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:237:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:238:5 - error: Type of "head_repository" is unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:238:23 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:240:5 - error: Type of "revision" is partially unknown
+    Type of "revision" is "Unknown | None" (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:240:16 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:241:28 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:242:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:243:24 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:244:5 - error: Type of "candidate" is partially unknown
+    Type of "candidate" is "Unknown | bool" (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:246:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:249:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:252:23 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:255:29 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:256:34 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:264:27 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:265:43 - error: Argument type is partially unknown
+    Argument corresponds to parameter "o" in function "__new__"
+    Argument type is "Unknown | bool" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:307:53 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:315:13 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:322:12 - warning: Unnecessary isinstance call; "str" is always an instance of "str" (reportUnnecessaryIsInstance)
+  tools/repository_intelligence_publication.py:361:42 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  tools/repository_intelligence_publication.py:363:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:368:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:446:9 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  tools/repository_intelligence_publication.py:452:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  tools/repository_intelligence_publication.py:526:9 - error: Method "error" overrides class "ArgumentParser" in an incompatible manner
+    Return type mismatch: base method returns type "NoReturn", override returns type "None"
+      Type "None" is not assignable to type "NoReturn" (reportIncompatibleMethodOverride)
 tools/staging_home_audit.py
   tools/staging_home_audit.py:1300:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]" in function "writerow"
     "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]"
@@ -6595,9 +7107,15 @@ tools/task_catalog.py
   tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
   tools/task_catalog.py:75:71 - error: "object" is not iterable
     "__iter__" method not defined (reportGeneralTypeIssues)
-8768 errors, 424 warnings, 0 informations
+tools/verify_repository_intelligence_rollback.py
+  tools/verify_repository_intelligence_rollback.py:157:12 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
+  tools/verify_repository_intelligence_rollback.py:157:12 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "any"
+    Argument type is "Generator[Unknown, None, None]" (reportUnknownArgumentType)
+9168 errors, 425 warnings, 0 informations
 
-(Truncated to last 25000 characters out of 1649283)
+(Truncated to last 25000 characters out of 1724951)
 ```
 
 </details>
@@ -6606,92 +7124,91 @@ tools/task_catalog.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-09-23T10:19:35Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-09-23T10:19:35Z	INFO	[vulndb] Need to update DB
-2026-09-23T10:19:35Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-09-23T10:19:35Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-13.72 MiB / 116.40 MiB [------->____________________________________________________] 11.78% ? p/s ?48.20 MiB / 116.40 MiB [------------------------>___________________________________] 41.40% ? p/s ?82.89 MiB / 116.40 MiB [------------------------------------------>_________________] 71.21% ? p/s ?116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 172.02 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 172.02 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 172.02 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 160.92 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 160.92 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 160.92 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 150.54 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 150.54 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 150.54 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 140.83 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 140.83 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 140.83 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 131.74 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 131.74 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 131.74 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 123.24 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 123.24 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 123.24 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 115.29 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 115.29 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 115.29 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 107.85 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 107.85 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 107.85 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 100.89 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 100.89 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [------------------------------------------->] 100.00% 100.89 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 94.38 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 94.38 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 94.38 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 88.29 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 88.29 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-----------------------------------------------] 100.00% 16.74 MiB p/s 7.2s2026-09-23T10:19:43Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
-2026-09-23T10:19:43Z	INFO	[vuln] Vulnerability scanning is enabled
-2026-09-23T10:19:43Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-09-23T10:19:43Z	INFO	[checks-client] Need to update the checks bundle
-2026-09-23T10:19:43Z	INFO	[checks-client] Downloading the checks bundle...
-234.65 KiB / 234.65 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2026-09-23T10:19:47Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
-2026-09-23T10:19:47Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
-2026-09-23T10:19:47Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
-2026-09-23T10:19:47Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="egolint/node_modules"
-2026-09-23T10:19:47Z	INFO	[pnpm] Run "pnpm install" to collect the license information of packages	dir="node_modules"
-2026-09-23T10:19:48Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
+2026-09-23T11:13:33Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-09-23T11:13:33Z	INFO	[vulndb] Need to update DB
+2026-09-23T11:13:33Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-09-23T11:13:33Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+11.57 MiB / 116.40 MiB [------>______________________________________________________] 9.94% ? p/s ?27.98 MiB / 116.40 MiB [-------------->_____________________________________________] 24.04% ? p/s ?44.36 MiB / 116.40 MiB [---------------------->_____________________________________] 38.11% ? p/s ?60.42 MiB / 116.40 MiB [------------------------>______________________] 51.90% 81.39 MiB p/s ETA 0s78.17 MiB / 116.40 MiB [------------------------------->_______________] 67.16% 81.39 MiB p/s ETA 0s95.90 MiB / 116.40 MiB [-------------------------------------->________] 82.39% 81.39 MiB p/s ETA 0s113.08 MiB / 116.40 MiB [-------------------------------------------->_] 97.14% 81.80 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 81.80 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 81.80 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 76.88 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 76.88 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 76.88 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 71.92 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 71.92 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 71.92 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 67.28 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 67.28 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 67.28 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 62.94 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 62.94 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 62.94 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 58.88 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 58.88 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 58.88 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 55.08 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 55.08 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 55.08 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 51.53 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 51.53 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 51.53 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 48.20 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 48.20 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 48.20 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 45.09 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 45.09 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 45.09 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-------------------------------------------->] 100.00% 42.18 MiB p/s ETA 0s116.40 MiB / 116.40 MiB [-----------------------------------------------] 100.00% 15.89 MiB p/s 7.5s2026-09-23T11:13:42Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-09-23T11:13:42Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-09-23T11:13:42Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-09-23T11:13:42Z	INFO	[checks-client] Need to update the checks bundle
+2026-09-23T11:13:42Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [-----------------------------------------------] 100.00% 1.83 MiB p/s 300ms2026-09-23T11:13:49Z	INFO	[npm] Run "npm install" to collect the license information of packages	dir=".staging/tools/emoji-precache/node_modules"
+2026-09-23T11:13:49Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-09-23T11:13:49Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-09-23T11:13:49Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-09-23T11:13:54Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x2620392]
 
 goroutine 1 [running]:
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x1a4d6a3fb4a0)
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0x98ef15f97c0)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/linter/linter.go:74 +0x32
-github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x1a4d67e37880?, 0x6, 0x7fef133bece0?})
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0x98ee9d77380?, 0x6, 0x7f5e94785148?})
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/linter/linter.go:118 +0x12e
-github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x1a4d6c774be0, 0x7fef5a340bf0?)
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0x98eed783ae0, 0x7f5f5b9b7bf0?)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/instructions/parse.go:73 +0x57
 github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
 	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.32.2/frontend/dockerfile/instructions/parse.go:68
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x1a4d6ca09c40, 0x1a4d6c774be0)
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0x98eef574de9, 0x98eed783ae0)
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
-github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x1a4d6ca09c40, {0x5b84fc0?, 0x1a4d6dec4353?}, {0x68cbdc0?, 0x1a4d6988c448?}, {0x1a4d6dbd6fa0, 0x43})
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0x98eef574de9, {0x5b84fc0?, 0x98eed06e803?}, {0x68cbdc0?, 0x98ef0896258?}, {0x98eeccb9590, 0x43})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x21f
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x69341b8, 0x1a4d6a3fb270}, {0x0, 0x0})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0x69341b8, 0x98ef15f9590}, {0x0, 0x0})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
-io/fs.walkDir({0x68cc900, 0x1a4d686ccd20}, {0x1a4d6dbd6fa0, 0x43}, {0x69341b8, 0x1a4d6a3fb270}, 0x1a4d67812b80)
+io/fs.walkDir({0x68cc900, 0x98ef13a2768}, {0x98eeccb9590, 0x43}, {0x69341b8, 0x98ef15f9590}, 0x98eeec90b80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:73 +0x6c
-io/fs.walkDir({0x68cc900, 0x1a4d686ccd20}, {0x1a4d6dec4330, 0x2d}, {0x69341b8, 0x1a4d6c6ffc48}, 0x1a4d67812b80)
+io/fs.walkDir({0x68cc900, 0x98ef13a2768}, {0x98eed06e7e0, 0x2d}, {0x69341b8, 0x98eec386fc8}, 0x98eeec90b80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x1a4d686ccd20}, {0x1a4d6dcfbb60, 0x22}, {0x69341b8, 0x1a4d6c6feca8}, 0x1a4d67812b80)
+io/fs.walkDir({0x68cc900, 0x98ef13a2768}, {0x98ef00b60f0, 0x22}, {0x69341b8, 0x98eec3737e8}, 0x98eeec90b80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x1a4d686ccd20}, {0x1a4d6ccbb488, 0x17}, {0x69341b8, 0x1a4d6c6fea28}, 0x1a4d67812b80)
+io/fs.walkDir({0x68cc900, 0x98ef13a2768}, {0x98ef14e9b00, 0x17}, {0x69341b8, 0x98eec373428}, 0x98eeec90b80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x1a4d686ccd20}, {0x1a4d6c39a870, 0x8}, {0x69341b8, 0x1a4d6c6fe8e8}, 0x1a4d67812b80)
+io/fs.walkDir({0x68cc900, 0x98ef13a2768}, {0x98eee169380, 0x8}, {0x69341b8, 0x98eec3732e8}, 0x98eeec90b80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.walkDir({0x68cc900, 0x1a4d686ccd20}, {0x68a94b8, 0x1}, {0x69335b0, 0x1a4d6c7031a0}, 0x1a4d67812b80)
+io/fs.walkDir({0x68cc900, 0x98ef13a2768}, {0x68a94b8, 0x1}, {0x69335b0, 0x98ef13b57c0}, 0x98eeec90b80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:95 +0x2b5
-io/fs.WalkDir({0x68cc900, 0x1a4d686ccd20}, {0x68a94b8, 0x1}, 0x1a4d67812b80)
+io/fs.WalkDir({0x68cc900, 0x98ef13a2768}, {0x68a94b8, 0x1}, 0x98eeec90b80)
 	/opt/hostedtoolcache/go/1.26.6/x64/src/io/fs/walk.go:122 +0x9a
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6963a40, {0x6933348, 0x1a4d6cb64f30}, {0x68cc900, 0x1a4d686ccd20}, {0x68a94b8, 0x1})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x6963a40, {0x6933348, 0x98ef13b8030}, {0x68cc900, 0x98ef13a2768}, {0x68a94b8, 0x1})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
-github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6963a40, {0x6933348, 0x1a4d6cb64f30}, {0x68cc900, 0x1a4d686ccd20}, {0x68a94b8, 0x1?})
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x6963a40, {0x6933348, 0x98ef13b8030}, {0x68cc900, 0x98ef13a2768}, {0x68a94b8, 0x1?})
 	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
-github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x1a4d6bfd4400, {0x69333f0, 0x1a4d66d94070}, {0x68cc900, 0x1a4d686cc9c0})
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0x98eef7bf000, {0x69333f0, 0x98ee96a8690}, {0x68cc900, 0x98ef1403980})
 	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x293
-github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x1a4d66d4baa0, {0x69333f0?, 0x1a4d66d94070?}, {{0x68cc900, 0x1a4d686cc9c0}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0x98eef7c84e0, {0x69333f0?, 0x98ee96a8690?}, {{0x68cc900, 0x98ef1403980}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x1a4d690fa990, {0x1a4d6c641800, 0x20, 0x20}, {0x1a4d6c641a00, 0x19, 0x20}, 0x1a4d66dccc00, {0x1a4d666b9f37, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0x98eef7a4360, {0x98eef697800, 0x20, 0x20}, {0x98eef697a00, 0x19, 0x20}, 0x98eef7b7290, {0x98eea8145c7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:357 +0x72
-github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x1a4d690fa990, {0x1a4d6c641800, 0x20, 0x20}, {0x1a4d6c641a00, 0x19, 0x20}, 0x1a4d66dccc00, {0x1a4d666b9f37, 0x7}}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0x98eef7a4360, {0x98eef697800, 0x20, 0x20}, {0x98eef697a00, 0x19, 0x20}, 0x98eef7b7290, {0x98eea8145c7, 0x7}}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:587 +0x625
-github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7fff79cc8112, 0x1}, 0x1a4d690fb3f0, {0x7fef13294378, 0x1a4d69e965a0}, {0x68cc840, 0xa4f3640}, {0x1a4d690fa990, {0x1a4d6c641800, 0x20, ...}, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffe9c241116, 0x1}, 0x98eef7a4c10, {0x7f5e947484d8, 0x98eec404c00}, {0x68cc840, 0xa4f3640}, {0x98eef7a4360, {0x98eef697800, 0x20, ...}, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa2b
-github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x1a4d66f257c0, 0x2, 0x2}, {0x1a4d6769e380, ...}, ...})
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0x98eea1d2000, 0x2, 0x2}, {0x98eea7b9600, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7fff79cc7f3f, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffe9c240f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:705 +0x4df
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7fff79cc7f3f, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffe9c240f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7fff79cc7f3f, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffe9c240f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
-github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7fff79cc7f3f, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffe9c240f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
-github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7fff79cc7f3f, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffe9c240f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x72e
-github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7fff79cc7f3f, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffe9c240f43, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
 	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x20b
-github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x1a4d66bbd208, {0x1a4d67590008, 0x1, 0x31})
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0x98eea1fac08, {0x98eea7dee08, 0x1, 0x31})
 	/home/runner/work/trivy/trivy/pkg/commands/app.go:389 +0x185
-github.com/spf13/cobra.(*Command).execute(0x1a4d66bbd208, {0x1a4d66f40008, 0x31, 0x31})
+github.com/spf13/cobra.(*Command).execute(0x98eea1fac08, {0x98eea7dea88, 0x31, 0x31})
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0x1a4d66bbc308)
+github.com/spf13/cobra.(*Command).ExecuteC(0x98eea1fa608)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
 github.com/spf13/cobra.(*Command).Execute(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
 github.com/spf13/cobra.(*Command).ExecuteContext(...)
 	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
-github.com/aquasecurity/trivy/pkg/commands.Run({0x6933738, 0x1a4d6684aa00})
+github.com/aquasecurity/trivy/pkg/commands.Run({0x6933738, 0x98eea2c2a00})
 	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
 main.run()
 	/home/runner/work/trivy/trivy/cmd/trivy/main.go:50 +0x17c
