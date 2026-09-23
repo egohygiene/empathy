@@ -23,6 +23,8 @@ provider job scheduling, including skipped ancestors and explicit prerequisite
 results. A green workflow does not prove that deployment or live verification
 ran. Scope repeatability claims to declared inputs and checkout context; the
 portable checkout-name follow-up is tracked in Relay #109.
+For Python changes, run Ruff against `egolint/.config/lint/python/ruff.toml`,
+the canonical policy used by MegaLinter; the root Python defaults are narrower.
 
 Use reference-only issue links in implementation PRs (`Refs #<issue-number>`
 and an explicit parent reference). Avoid automatic issue-closing keywords, including

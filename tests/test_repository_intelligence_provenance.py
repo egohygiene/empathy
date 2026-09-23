@@ -1,5 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# Keep the repository's unittest exception assertions without a pytest dependency.
+# ruff: noqa: PT027
 
 """Consumer paths and trust fixtures against the exact reviewed Relay owner code.
 
@@ -34,13 +36,18 @@ OWNER_PATHS = (
 
 def checked_relay_root(root: Path) -> Path:
     """Reject mutable, wrong-revision or edited owner code before importing it."""
-    revision = subprocess.run(
-        ["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True, check=True
+    # Only fixed local Git operations and fixture paths execute, without a shell.
+    revision = subprocess.run(  # noqa: S603
+        ["git", "-C", str(root), "rev-parse", "HEAD"],  # noqa: S607
+        capture_output=True,
+        text=True,
+        check=True,
     ).stdout.strip()
     if revision != RELAY_REVISION:
-        raise ValueError("The owner fixtures require the reviewed immutable Relay revision.")
-    subprocess.run(
-        ["git", "-C", str(root), "diff", "--exit-code", "HEAD", "--", *OWNER_PATHS],
+        message = "The owner fixtures require the reviewed immutable Relay revision."
+        raise ValueError(message)
+    subprocess.run(  # noqa: S603 - Fixed local Git arguments, without a shell.
+        ["git", "-C", str(root), "diff", "--exit-code", "HEAD", "--", *OWNER_PATHS],  # noqa: S607
         capture_output=True,
         check=True,
     )
@@ -49,7 +56,8 @@ def checked_relay_root(root: Path) -> Path:
 
 def load_module(name: str, path: Path):
     specification = importlib.util.spec_from_file_location(name, path)
-    assert specification is not None and specification.loader is not None
+    assert specification is not None
+    assert specification.loader is not None
     module = importlib.util.module_from_spec(specification)
     specification.loader.exec_module(module)
     return module
@@ -72,8 +80,11 @@ class OwnerCheckoutTrustTests(unittest.TestCase):
                     "Unreviewed owner fixture",
                 ],
             ):
-                subprocess.run(
-                    ["git", "-C", str(root), *arguments], check=True, capture_output=True
+                # Arguments above create only the local temporary Git fixture.
+                subprocess.run(  # noqa: S603
+                    ["git", "-C", str(root), *arguments],  # noqa: S607
+                    check=True,
+                    capture_output=True,
                 )
             with self.assertRaisesRegex(ValueError, "reviewed immutable"):
                 checked_relay_root(root)

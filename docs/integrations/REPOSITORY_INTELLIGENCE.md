@@ -5,7 +5,7 @@ Mindgarden/Quartz site, its Pages deployment, and publication evidence. This is
 the consumer checkpoint for [Empathy #94](https://github.com/egohygiene/empathy/issues/94)
 and [Relay #33](https://github.com/egohygiene/relay/issues/33).
 Implementation and PR evidence precede the default-branch deployment proof;
-#94 remains open until the post-merge acceptance sequence below is recorded.
+Empathy #94 remains open until the post-merge acceptance sequence below is recorded.
 Relay #33 and [Relay #106](https://github.com/egohygiene/relay/issues/106) remain
 open for their broader acceptance and final reconciliation.
 
@@ -207,6 +207,9 @@ python3 mindgarden/scripts/garden_agent.py --repository-root . verify
 python3 mindgarden/scripts/publish_garden.py --repository-root . verify
 task architecture:check
 task taskfile:check
+uvx --from ruff==0.16.5 ruff check --config egolint/.config/lint/python/ruff.toml \
+  tools/repository_intelligence_publication.py tools/verify_repository_intelligence_rollback.py \
+  tests/test_repository_intelligence*.py tests/test_mindgarden_publishing_integration.py
 git diff --check
 ```
 

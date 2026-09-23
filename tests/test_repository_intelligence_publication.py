@@ -1,5 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# Keep the repository's unittest exception assertions without a pytest dependency.
+# ruff: noqa: PT027
 
 """Exercise Empathy's publication boundary without provider credentials or network."""
 
@@ -21,7 +23,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location(
     "publication", ROOT / "tools/repository_intelligence_publication.py"
 )
-assert SPEC and SPEC.loader
+assert SPEC is not None
+assert SPEC.loader is not None
 publication = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(publication)
 REVISION = "a" * 40
@@ -267,8 +270,11 @@ class PublicationEvidenceTests(unittest.TestCase):
                 "Fixture",
             ],
         ):
-            subprocess.run(
-                ["git", "-C", str(self.root), *arguments], check=True, capture_output=True
+            # Arguments above create only the local temporary Git fixture.
+            subprocess.run(  # noqa: S603
+                ["git", "-C", str(self.root), *arguments],  # noqa: S607
+                check=True,
+                capture_output=True,
             )
         result = publication.collect_input_evidence(self.root, {})
         self.assertEqual(result["consumer"]["revision"], publication._git(self.root, "HEAD"))
@@ -341,9 +347,9 @@ class PublicationEvidenceTests(unittest.TestCase):
             with (
                 self.subTest(changed=changed),
                 patch.object(publication, "fetch_public", side_effect=fetch),
+                self.assertRaises(publication.PublicationError),
             ):
-                with self.assertRaises(publication.PublicationError):
-                    publication.verify_live(site, REVISION, RELAY, "current", attempts=1)
+                publication.verify_live(site, REVISION, RELAY, "current", attempts=1)
 
     def test_live_retries_are_bounded_and_transient_failure_can_recover(self) -> None:
         site = self.site(self.root / "site")
@@ -353,7 +359,8 @@ class PublicationEvidenceTests(unittest.TestCase):
         def fetch(route: str) -> bytes:
             if failures:
                 failures.pop()
-                raise URLError("SECRET exception")
+                message = "SECRET exception"
+                raise URLError(message)
             return read(route)
 
         with (

@@ -17,7 +17,7 @@ import re
 import subprocess  # nosec B404
 import sys
 from typing import Any
-from xml.etree import ElementTree
+from xml.etree import ElementTree as ET
 
 REPOSITORY = "egohygiene/empathy"
 SOURCE_COMMIT = "254185272ab27b6858b8b0393af6549c205c9a8d"
@@ -161,14 +161,21 @@ def verify_provenance(value: Any) -> None:
 def normalized_feed_digest(path: Path) -> str:
     """Ignore only synthetic tag dates; pin all other historical feed content."""
     data = path.read_bytes()
-    if len(data) > MAX_JSON_BYTES or b"<!" in data:
-        # The known RSS feed has CDATA; only its fixed empty descriptions are
-        # admitted. DTD/entity declarations are never needed by either feed.
-        without_empty_cdata = data.replace(b"<![CDATA[  ]]>", b"")
-        if len(data) > MAX_JSON_BYTES or b"<!" in without_empty_cdata:
-            raise RollbackError("ERB-005")
+    if len(data) > MAX_JSON_BYTES:
+        raise RollbackError("ERB-005")
     try:
-        document = ElementTree.fromstring(data)  # nosec B314
+        text = data.decode("utf-8")
+    except UnicodeError as error:
+        raise RollbackError("ERB-005") from error
+    # Only the retained UTF-8 feeds are supported. NUL rejection also closes the
+    # UTF-16/32 encoding bypass of a byte-only declaration check.
+    without_empty_cdata = text.replace("<![CDATA[  ]]>", "")
+    if "\x00" in text or "<!" in without_empty_cdata:
+        raise RollbackError("ERB-005")
+    try:
+        # Bounded UTF-8 text above rejects all DTD/entity declarations; the only
+        # accepted declaration-like content is the retained empty CDATA marker.
+        document = ET.fromstring(text)  # noqa: S314  # nosec B314
         entries = (
             list(document) if path.name == "sitemap.xml" else document.findall("./channel/item")
         )
@@ -189,16 +196,17 @@ def normalized_feed_digest(path: Path) -> str:
             if instant.tzinfo is None or instant.utcoffset() != UTC.utcoffset(instant):
                 raise RollbackError("ERB-005")
             date.text = "RUNTIME_DATE"
-        return digest_bytes(ElementTree.tostring(document, encoding="utf-8"))
-    except (ElementTree.ParseError, ValueError, TypeError, OverflowError) as error:
+        return digest_bytes(ET.tostring(document, encoding="utf-8"))
+    except (ET.ParseError, ValueError, TypeError, OverflowError) as error:
         raise RollbackError("ERB-005") from error
 
 
 def verify_source(repository_root: Path) -> None:
     """Check the exact immutable consumer revision and tree when requested."""
     for reference, expected in (("HEAD", SOURCE_COMMIT), ("HEAD^{tree}", SOURCE_TREE)):
+        # Trusted runner Git and fixed HEAD/tree references; never a shell.
         result = subprocess.run(  # noqa: S603  # nosec B603
-            ["git", "-C", str(repository_root), "rev-parse", "--verify", reference],
+            ["git", "-C", str(repository_root), "rev-parse", "--verify", reference],  # noqa: S607
             check=False,
             capture_output=True,
             text=True,
@@ -274,6 +282,20 @@ def verify_site(
     }
 
 
+def write_report(site_root: Path, output: Path, repository_root: Path | None) -> None:
+    """Validate output isolation and write the bounded rollback evidence."""
+    if output.is_symlink() or any(parent.is_symlink() for parent in output.parents):
+        raise RollbackError("ERB-009")
+    if output.resolve().is_relative_to(site_root.resolve()):
+        raise RollbackError("ERB-009")
+    report = verify_site(site_root, repository_root)
+    text = json.dumps(report, indent=2, sort_keys=True) + "\n"
+    if len(text.encode("utf8")) > MAX_REPORT_BYTES:
+        raise RollbackError("ERB-002")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(text, encoding="utf8")
+
+
 def main(argv: list[str] | None = None) -> int:
     """Write a bounded private evidence report or a sanitized diagnostic."""
     parser = ArgumentParser(description=__doc__)
@@ -282,24 +304,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--repository-root", type=Path)
     arguments = parser.parse_args(argv)
     try:
-        output = arguments.output
-        if output.is_symlink() or any(parent.is_symlink() for parent in output.parents):
-            raise RollbackError("ERB-009")
-        if output.resolve().is_relative_to(arguments.site_root.resolve()):
-            raise RollbackError("ERB-009")
-        report = verify_site(arguments.site_root, arguments.repository_root)
-        text = json.dumps(report, indent=2, sort_keys=True) + "\n"
-        if len(text.encode("utf8")) > MAX_REPORT_BYTES:
-            raise RollbackError("ERB-002")
-        output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(text, encoding="utf8")
+        write_report(arguments.site_root, arguments.output, arguments.repository_root)
     except RollbackError as error:
-        print(f"Rollback verification failed: {error}", file=sys.stderr)
+        # RollbackError contains only a fixed ERB code, never source values.
+        print(f"Rollback verification failed: {error}", file=sys.stderr)  # noqa: T201
         return 1
     except (OSError, UnicodeError, RecursionError):
-        print("Rollback verification failed: ERB-010", file=sys.stderr)
+        # Fixed command-line diagnostic, including for lower-level failures.
+        print("Rollback verification failed: ERB-010", file=sys.stderr)  # noqa: T201
         return 1
-    print("Verified Empathy rollback publication")
+    # Intentional command-line success status.
+    print("Verified Empathy rollback publication")  # noqa: T201
     return 0
 
 

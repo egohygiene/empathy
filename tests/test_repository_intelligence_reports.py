@@ -33,23 +33,27 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         checkout = os.environ.get("RELAY_CHECKOUT")
         if not checkout:
-            raise unittest.SkipTest("Set RELAY_CHECKOUT to run the pinned Relay integration")
+            message = "Set RELAY_CHECKOUT to run the pinned Relay integration"
+            raise unittest.SkipTest(message)
         relay_root = Path(checkout).resolve(strict=True)
-        revision = subprocess.run(
-            ["git", "-C", str(relay_root), "rev-parse", "HEAD"],
+        # Only fixed local Git operations execute; no shell or remote input is used.
+        revision = subprocess.run(  # noqa: S603
+            ["git", "-C", str(relay_root), "rev-parse", "HEAD"],  # noqa: S607
             check=True,
             capture_output=True,
             text=True,
         ).stdout.strip()
         if revision != RELAY_REVISION:
-            raise AssertionError(f"RELAY_CHECKOUT must be at {RELAY_REVISION}")
+            message = f"RELAY_CHECKOUT must be at {RELAY_REVISION}"
+            raise AssertionError(message)
         module_path = (
             relay_root
             / "actions/repository-intelligence/scripts/generate_repository_intelligence_dashboard.py"
         )
         spec = importlib.util.spec_from_file_location("empathy_relay_reports", module_path)
         if spec is None or spec.loader is None:
-            raise AssertionError("Cannot load the reviewed Relay report renderer")
+            message = "Cannot load the reviewed Relay report renderer"
+            raise AssertionError(message)
         cls.renderer = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cls.renderer)
 
@@ -255,7 +259,7 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
                 document["execution"]["message"] = "DO-NOT-PUBLISH raw scanner exception"
                 document["osv"]["raw_log"] = "DO-NOT-PUBLISH"
                 document["provenance"]["private_context"] = "DO-NOT-PUBLISH"
-                document["links"] = {key: unsafe_url for key in document["links"]}
+                document["links"] = dict.fromkeys(document["links"], unsafe_url)
                 self.write_report(document)
                 projection = self.project()
                 self.assertEqual(projection["links"], {})
@@ -275,8 +279,9 @@ class RepositoryIntelligenceReportTests(unittest.TestCase):
         self.assertEqual(path.read_bytes(), original)
 
     def test_committed_reports_keep_their_original_source_commit(self) -> None:
-        source_commit = subprocess.run(
-            ["git", "-C", str(REPOSITORY_ROOT), "rev-parse", "HEAD"],
+        # Read only the local fixture revision using fixed Git arguments.
+        source_commit = subprocess.run(  # noqa: S603
+            ["git", "-C", str(REPOSITORY_ROOT), "rev-parse", "HEAD"],  # noqa: S607
             check=True,
             capture_output=True,
             text=True,

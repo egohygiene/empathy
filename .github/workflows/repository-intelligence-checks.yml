@@ -29,8 +29,20 @@ jobs:
           ref: 9a6315978766c336566b9fa7139b800fa8789ba5
           path: .cache/relay-contract
           persist-credentials: false
-      - name: Install exact YAML test parser
-        run: python3 -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: Install exact contract validation tools
+        run: python3 -m pip install --disable-pip-version-check PyYAML==6.0.3 ruff==0.16.5
+      - name: Apply the canonical MegaLinter Python policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          files=(
+            tools/repository_intelligence_publication.py
+            tools/verify_repository_intelligence_rollback.py
+            tests/test_repository_intelligence*.py
+            tests/test_mindgarden_publishing_integration.py
+          )
+          python3 -m ruff check --config egolint/.config/lint/python/ruff.toml "${files[@]}"
+          python3 -m ruff format --check --config egolint/.config/lint/python/ruff.toml "${files[@]}"
       - name: Exercise consumer and pinned-owner contracts
         env:
           RELAY_CHECKOUT: ${{ github.workspace }}/.cache/relay-contract

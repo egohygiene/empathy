@@ -1,5 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# Keep the repository's unittest exception assertions without a pytest dependency.
+# ruff: noqa: PT027
 
 """Consumer publication policy and real-scheduler fixture contracts.
 
@@ -18,6 +20,7 @@ from pathlib import Path
 import re
 import subprocess
 from tempfile import TemporaryDirectory
+from typing import ClassVar
 import unittest
 
 import yaml
@@ -29,8 +32,11 @@ RESULTS = ("success", "failure", "cancelled", "skipped")
 PRODUCERS = ("MegaLinter", "OpenSSF Scorecard", "🔍 OSV Vulnerability Scan")
 
 
-class UniqueKeyLoader(yaml.BaseLoader):
+class UniqueKeyLoader(yaml.SafeLoader):
     """Keep GitHub's `on` key a string and reject overwritten policy fields."""
+
+    # Workflow scalars stay textual, while SafeLoader rejects arbitrary object tags.
+    yaml_implicit_resolvers: ClassVar[dict] = {}
 
 
 def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict:
@@ -38,7 +44,8 @@ def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict:
     for key_node, value_node in node.value:
         key = loader.construct_object(key_node, deep=True)
         if key in result:
-            raise ValueError(f"duplicate YAML mapping key: {key}")
+            message = f"duplicate YAML mapping key: {key}"
+            raise ValueError(message)
         result[key] = loader.construct_object(value_node, deep=True)
     return result
 
@@ -47,7 +54,8 @@ UniqueKeyLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, 
 
 
 def workflow(name: str) -> dict:
-    return yaml.load((WORKFLOWS / name).read_text(encoding="utf-8"), Loader=UniqueKeyLoader)
+    # The custom loader inherits SafeLoader and adds duplicate-key rejection.
+    return yaml.load((WORKFLOWS / name).read_text(encoding="utf-8"), Loader=UniqueKeyLoader)  # noqa: S506
 
 
 def expression(source: str) -> str:
@@ -80,7 +88,8 @@ def evaluate(source: str, context: dict, *, cancelled: bool = False) -> bool:
         "format": lambda template, *args: template.format(*args),
     }
 
-    def visit(node):
+    # Explicit branches keep this small allowlisted AST grammar easy to audit.
+    def visit(node):  # noqa: PLR0911
         if isinstance(node, ast.Constant):
             return node.value
         if isinstance(node, ast.Name) and node.id in ("true", "false"):
@@ -96,15 +105,21 @@ def evaluate(source: str, context: dict, *, cancelled: bool = False) -> bool:
                 return left == right
             if isinstance(node.ops[0], ast.NotEq):
                 return left != right
-        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name):
-            if node.func.id in functions and not node.keywords:
-                return functions[node.func.id](*(visit(arg) for arg in node.args))
-        raise ValueError(f"unsupported policy expression node: {type(node).__name__}")
+        if (
+            isinstance(node, ast.Call)
+            and isinstance(node.func, ast.Name)
+            and node.func.id in functions
+            and not node.keywords
+        ):
+            return functions[node.func.id](*(visit(arg) for arg in node.args))
+        message = f"unsupported policy expression node: {type(node).__name__}"
+        raise ValueError(message)
 
     return bool(visit(ast.parse(source, mode="eval").body))
 
 
-def event_context(
+# Independent event fields remain named so each adversarial fixture is explicit.
+def event_context(  # noqa: PLR0913
     event="push",
     *,
     ref="refs/heads/main",
@@ -162,8 +177,9 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 "PRIVATE_SENTINEL": "private-environment-sentinel",
                 **extra_environment,
             }
-            completed = subprocess.run(
-                ["bash", "-c", step["run"]],
+            # Execute only checked-in workflow snippets in a temporary fixture directory.
+            completed = subprocess.run(  # noqa: S603
+                ["bash", "-c", step["run"]],  # noqa: S607
                 check=False,
                 capture_output=True,
                 text=True,
@@ -186,7 +202,11 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             "jobs:\n  deploy: {}\n  deploy: {}\n",
         ):
             with self.subTest(source=source), self.assertRaisesRegex(ValueError, "duplicate"):
-                yaml.load(source, Loader=UniqueKeyLoader)
+                # SafeLoader subclass; these inputs intentionally contain duplicate keys.
+                yaml.load(source, Loader=UniqueKeyLoader)  # noqa: S506
+        with self.assertRaises(yaml.constructor.ConstructorError):
+            # SafeLoader must reject Python object tags before constructing any object.
+            yaml.load("!!python/object:builtins.object {}", Loader=UniqueKeyLoader)  # noqa: S506
         for name in (
             "mindgarden-pages.yml",
             "repository-intelligence.yml",
@@ -492,16 +512,10 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             step for step in steps if step.get("name") == "Preserve sanitized run evidence"
         )
         filename = "empathy-intelligence-run.json"
-        environment = {
-            key: "success"
-            for key in (
-                "HARDEN_RESULT",
-                "CHECKOUT_RESULT",
-                "INPUT_RESULT",
-                "BUILD_RESULT",
-                "ARTIFACT_RESULT",
-            )
-        }
+        environment = dict.fromkeys(
+            ("HARDEN_RESULT", "CHECKOUT_RESULT", "INPUT_RESULT", "BUILD_RESULT", "ARTIFACT_RESULT"),
+            "success",
+        )
         report = self.run_report(report_step, filename, environment, 0)
         self.assertEqual(report["conclusion"], "success")
         for value in ("failure", "cancelled", "skipped", "private-outcome-sentinel"):
@@ -609,8 +623,9 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             ):
                 if mutation:
                     results["deploy"]["result"] = mutation
-                completed = subprocess.run(
-                    ["bash", "-c", report_step["run"]],
+                # The checked-in report snippet receives only controlled fixture values.
+                completed = subprocess.run(  # noqa: S603
+                    ["bash", "-c", report_step["run"]],  # noqa: S607
                     check=False,
                     capture_output=True,
                     text=True,

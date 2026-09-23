@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# Fixed public-safe CLI diagnostics belong beside their checks; no source values are interpolated.
+# ruff: noqa: TRY003
 
 """Empathy's bounded publication evidence adapters; Relay owns provenance validation."""
 
@@ -9,6 +11,7 @@ from __future__ import annotations
 import argparse
 from datetime import UTC, datetime
 import hashlib
+from http import HTTPStatus
 import json
 import os
 from pathlib import Path
@@ -29,6 +32,9 @@ REVISION = re.compile(r"[0-9a-f]{40}\Z")
 MAX_JSON_BYTES = 2 * 1024 * 1024
 MAX_FILE_BYTES = 32 * 1024 * 1024
 MAX_SITE_BYTES = 256 * 1024 * 1024
+MAX_SITE_FILES = 10000
+MAX_LIVE_ATTEMPTS = 12
+MAX_RETRY_DELAY_SECONDS = 30
 GARDEN_ROUTES = (
     "",
     "dashboard.html",
@@ -174,8 +180,9 @@ def _positive(value: Any) -> int | None:
 
 
 def _git(root: Path, revision: str) -> str:
-    return subprocess.run(
-        ["git", "-C", str(root), "rev-parse", "--verify", revision],
+    # Trusted runner Git, fixed rev-parse operation and HEAD/tree references; never a shell.
+    return subprocess.run(  # noqa: S603
+        ["git", "-C", str(root), "rev-parse", "--verify", revision],  # noqa: S607
         check=True,
         capture_output=True,
         text=True,
@@ -203,7 +210,7 @@ def normalized_timestamp(value: Any) -> str | None:
     ):
         return None
     try:
-        instant = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        instant = datetime.fromisoformat(value)
         return instant.astimezone(UTC).isoformat().replace("+00:00", "Z")
     except (ValueError, OverflowError):
         return None
@@ -351,7 +358,7 @@ def site_inventory(root: Path) -> list[dict[str, Any]]:
             continue
         data = _read(path, MAX_FILE_BYTES)
         total += len(data)
-        if total > MAX_SITE_BYTES or len(records) >= 10000:
+        if total > MAX_SITE_BYTES or len(records) >= MAX_SITE_FILES:
             raise PublicationError("Site evidence exceeds its bound.")
         records.append(
             {"path": path.relative_to(root).as_posix(), "bytes": len(data), "sha256": sha256(data)}
@@ -390,8 +397,15 @@ def compare_sites(left: Path, right: Path) -> dict[str, Any]:
 class NoRedirects(HTTPRedirectHandler):
     """Probe only fixed Empathy URLs; never follow a server-controlled redirect."""
 
-    def redirect_request(
-        self, req: Any, fp: Any, code: int, msg: str, headers: Any, newurl: str
+    # Preserve urllib's override signature; ignoring every argument blocks all redirects.
+    def redirect_request(  # noqa: PLR0913, PLR0917
+        self,
+        req: Any,  # noqa: ARG002
+        fp: Any,  # noqa: ARG002
+        code: int,  # noqa: ARG002
+        msg: str,  # noqa: ARG002
+        headers: Any,  # noqa: ARG002
+        newurl: str,  # noqa: ARG002
     ) -> None:
         return None
 
@@ -403,12 +417,13 @@ def fetch_public(path: str) -> bytes:
     }
     if path not in allowed:
         raise PublicationError("The public route is outside Empathy's fixed probe set.")
-    request = Request(
+    # The fixed HTTPS origin and allowlisted relative routes exclude other URL schemes.
+    request = Request(  # noqa: S310
         SITE_URL + path,
         headers={"User-Agent": "Empathy-publication-verifier/1", "Cache-Control": "no-cache"},
     )
     with build_opener(NoRedirects()).open(request, timeout=20) as response:
-        if response.status != 200 or response.geturl() != SITE_URL + path:
+        if response.status != HTTPStatus.OK or response.geturl() != SITE_URL + path:
             raise PublicationError("The public route did not return an exact successful response.")
         data = response.read(MAX_FILE_BYTES + 1)
         if len(data) > MAX_FILE_BYTES:
@@ -416,12 +431,38 @@ def fetch_public(path: str) -> bytes:
         return data
 
 
-def verify_live(
+def _probe_live_routes(site: Path, identity_path: str, expected: bytes) -> list[dict[str, Any]]:
+    """Check one complete publication attempt against retained public bytes."""
+    actual = fetch_public(identity_path)
+    parse_json(actual)
+    if actual != expected:
+        raise PublicationError("The live deployment differs from the retained build.")
+    route_evidence = []
+    for route in GARDEN_ROUTES + INTELLIGENCE_ROUTES:
+        data = fetch_public(route)
+        entrypoint = route + "index.html" if not route or route.endswith("/") else route
+        if data != _read(site / entrypoint, MAX_FILE_BYTES):
+            raise PublicationError("A live route differs from the retained composition.")
+        route_evidence.append(
+            {"url": SITE_URL + route, "status": HTTPStatus.OK, "sha256": sha256(data)}
+        )
+    # Detect a deployment change while the route requests were in flight.
+    if fetch_public(identity_path) != expected:
+        raise PublicationError("The live deployment changed during verification.")
+    return route_evidence
+
+
+# Keep the explicit CLI identity and bounded retry options together at this boundary.
+def verify_live(  # noqa: PLR0913, PLR0917
     site: Path, revision: str, relay_revision: str, mode: str, attempts: int = 12, delay: int = 10
 ) -> dict[str, Any]:
     _revision(revision)
     _revision(relay_revision)
-    if mode not in {"current", "rollback"} or not 1 <= attempts <= 12 or not 0 <= delay <= 30:
+    if (
+        mode not in {"current", "rollback"}
+        or not 1 <= attempts <= MAX_LIVE_ATTEMPTS
+        or not 0 <= delay <= MAX_RETRY_DELAY_SECONDS
+    ):
         raise PublicationError("Live verification options are outside the bounded contract.")
     identity_path = (
         "intelligence/build-manifest.json" if mode == "current" else "intelligence/provenance.json"
@@ -444,25 +485,9 @@ def verify_live(
             or generator.get("source_commit") != relay_revision
         ):
             raise PublicationError("Expected rollback provenance does not match the deployment.")
-    routes = GARDEN_ROUTES + INTELLIGENCE_ROUTES
     for attempt in range(1, attempts + 1):
         try:
-            actual = fetch_public(identity_path)
-            parse_json(actual)
-            if actual != expected:
-                raise PublicationError("The live deployment differs from the retained build.")
-            route_evidence = []
-            for route in routes:
-                data = fetch_public(route)
-                entrypoint = route + "index.html" if not route or route.endswith("/") else route
-                if data != _read(site / entrypoint, MAX_FILE_BYTES):
-                    raise PublicationError("A live route differs from the retained composition.")
-                route_evidence.append(
-                    {"url": SITE_URL + route, "status": 200, "sha256": sha256(data)}
-                )
-            # Recheck identity after route probes to detect a deployment change mid-check.
-            if fetch_public(identity_path) != expected:
-                raise PublicationError("The live deployment changed during verification.")
+            route_evidence = _probe_live_routes(site, identity_path, expected)
             return {
                 "schema": "empathy.repository-intelligence-live-verification/v1",
                 "mode": mode,
@@ -497,7 +522,8 @@ def failure_report(stage: str, environment: dict[str, str]) -> dict[str, Any]:
 
 
 class SafeParser(argparse.ArgumentParser):
-    def error(self, message: str) -> None:
+    # argparse requires this signature; never echo its potentially private message.
+    def error(self, message: str) -> None:  # noqa: ARG002
         raise PublicationError("Publication command arguments are invalid.")
 
 
@@ -508,7 +534,7 @@ def main(argv: list[str] | None = None) -> int:
         baseline = commands.add_parser("canonicalize-baseline")
         baseline.add_argument("--baseline", type=Path, required=True)
         inputs = commands.add_parser("collect-input-evidence")
-        inputs.add_argument("--repository-root", type=Path, default=Path("."))
+        inputs.add_argument("--repository-root", type=Path, default=Path())
         inputs.add_argument("--output", type=Path, required=True)
         compare = commands.add_parser("compare-sites")
         compare.add_argument("--left", type=Path, required=True)
@@ -557,13 +583,14 @@ def main(argv: list[str] | None = None) -> int:
                 failure_report(args.stage, dict(os.environ)),
                 sites=(Path(".cache/mindgarden/site"),),
             )
-        return 0
     except (PublicationError, OSError, subprocess.SubprocessError, TypeError, AttributeError):
-        print(
+        # Intentional fixed public-safe command-line diagnostic.
+        print(  # noqa: T201
             "Empathy publication check failed; review the fixed command contract and retained evidence.",
             file=sys.stderr,
         )
         return 1
+    return 0
 
 
 if __name__ == "__main__":

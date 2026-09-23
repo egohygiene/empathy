@@ -1,5 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# Keep the repository's unittest exception assertions without a pytest dependency.
+# ruff: noqa: PT027
 
 """Consumer rollback invariants, including historical Quartz date variance."""
 
@@ -183,12 +185,29 @@ class RepositoryIntelligenceRollbackTests(unittest.TestCase):
     def test_xml_entities_and_invalid_runtime_dates_fail(self) -> None:
         path = self.site / "sitemap.xml"
         original = path.read_text()
-        for content in (
-            '<!DOCTYPE urlset [<!ENTITY secret "private-secret">]>' + original,
-            original.replace("2026-09-23T08:57:41.288Z", "private-secret"),
-        ):
+        entity = '<!DOCTYPE urlset [<!ENTITY secret "private-secret">]>' + original
+        payloads = [
+            entity.encode("utf-8"),
+            ("<!DOCTYPE urlset>" + original).encode("utf-8"),
+            original.replace("2026-09-23T08:57:41.288Z", "private-secret").encode("utf-8"),
+        ]
+        for content in payloads:
             with self.subTest(content=content):
-                path.write_text(content, encoding="utf8")
+                path.write_bytes(content)
+                with self.assertRaisesRegex(rollback.RollbackError, "ERB-005"):
+                    rollback.normalized_feed_digest(path)
+                with self.assertRaisesRegex(rollback.RollbackError, "ERB-005"):
+                    self.verify()
+
+    def test_encoded_xml_declarations_cannot_bypass_utf8_guard(self) -> None:
+        path = self.site / "sitemap.xml"
+        entity = '<!DOCTYPE urlset [<!ENTITY secret "private-secret">]>' + path.read_text()
+        # NUL-interleaved encodings must not bypass declaration rejection.
+        for encoding in ("utf-16", "utf-32"):
+            with self.subTest(encoding=encoding):
+                path.write_bytes(entity.encode(encoding))
+                with self.assertRaisesRegex(rollback.RollbackError, "ERB-005"):
+                    rollback.normalized_feed_digest(path)
                 with self.assertRaisesRegex(rollback.RollbackError, "ERB-005"):
                     self.verify()
 
@@ -200,9 +219,11 @@ class RepositoryIntelligenceRollbackTests(unittest.TestCase):
                 subprocess.CompletedProcess([], 0, "f" * 40),
             ],
         ):
-            with patch.object(rollback.subprocess, "run", side_effect=results):
-                with self.assertRaisesRegex(rollback.RollbackError, "ERB-006"):
-                    rollback.verify_source(self.root)
+            with (
+                patch.object(rollback.subprocess, "run", side_effect=results),
+                self.assertRaisesRegex(rollback.RollbackError, "ERB-006"),
+            ):
+                rollback.verify_source(self.root)
 
     def test_public_output_and_diagnostics_cannot_leak_paths_or_payloads(self) -> None:
         self.provenance_path.write_text('{"private-secret":', encoding="utf8")
