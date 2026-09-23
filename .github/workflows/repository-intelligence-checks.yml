@@ -1,0 +1,105 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Repository Intelligence consumer checks
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contracts:
+    name: Validate pinned consumer contracts and negative fixtures
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Checkout reviewed Relay contract
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: egohygiene/relay
+          ref: 9a6315978766c336566b9fa7139b800fa8789ba5
+          path: .cache/relay-contract
+          persist-credentials: false
+      - name: Install exact YAML test parser
+        run: python3 -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: Exercise consumer and pinned-owner contracts
+        env:
+          RELAY_CHECKOUT: ${{ github.workspace }}/.cache/relay-contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYTHON'
+          import json
+          import os
+          from pathlib import Path
+          import unittest
+
+          suite = unittest.defaultTestLoader.discover("tests", pattern="test_repository_intelligence*.py")
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          report = {
+              "schema": "egohygiene.empathy.repository-intelligence-contract-tests/v1",
+              "consumer_revision": os.environ["GITHUB_SHA"],
+              "relay_revision": "9a6315978766c336566b9fa7139b800fa8789ba5",
+              "run": {"id": int(os.environ["GITHUB_RUN_ID"]), "attempt": int(os.environ["GITHUB_RUN_ATTEMPT"])},
+              "tests": result.testsRun,
+              "failures": len(result.failures),
+              "errors": len(result.errors),
+              "skipped": len(result.skipped),
+              "conclusion": "success" if result.wasSuccessful() and not result.skipped else "failure",
+          }
+          Path(os.environ["RUNNER_TEMP"], "empathy-contract-tests.json").write_text(
+              json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+          )
+          raise SystemExit(0 if report["conclusion"] == "success" else 1)
+          PYTHON
+      - name: Parse active YAML and normalized JSON without duplicate keys
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYTHON'
+          import json
+          from pathlib import Path
+          import yaml
+
+          def unique(pairs):
+              result = {}
+              for key, value in pairs:
+                  if key in result:
+                      raise ValueError("duplicate mapping key")
+                  result[key] = value
+              return result
+
+          class UniqueLoader(yaml.BaseLoader):
+              pass
+
+          def mapping(loader, node):
+              return unique((loader.construct_object(key), loader.construct_object(value)) for key, value in node.value)
+
+          UniqueLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, mapping)
+          yaml_files = list(Path(".github/workflows").glob("*.yml")) + list(Path(".github/actions").glob("*/action.yml"))
+          for path in yaml_files:
+              yaml.load(path.read_text(encoding="utf-8"), Loader=UniqueLoader)
+          json_files = list(Path(".reports").glob("*/summary.json")) + list(Path("mindgarden/contracts").glob("*.json"))
+          for path in json_files:
+              json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique)
+          print(f"Parsed {len(yaml_files)} YAML and {len(json_files)} JSON contracts with duplicate-key rejection")
+          PYTHON
+          python3 -m compileall -q tools tests mindgarden/scripts
+          git diff --check
+      - name: Retain bounded contract-test evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: "empathy-contract-tests-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ runner.temp }}/empathy-contract-tests.json"
+          if-no-files-found: error
+          retention-days: 30

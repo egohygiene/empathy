@@ -15,3 +15,16 @@ Beacon, Pace, Observatory, or product repositories.
 
 Generated files identify their source and generator. Change their canonical
 input or regenerate them; do not silently edit generated ownership fields.
+
+Before changing Repository Intelligence or Pages publication, read
+[`docs/integrations/REPOSITORY_INTELLIGENCE.md`](docs/integrations/REPOSITORY_INTELLIGENCE.md).
+Preserve the producer refresh and public-review boundaries, and verify actual
+provider job scheduling, including skipped ancestors and explicit prerequisite
+results. A green workflow does not prove that deployment or live verification
+ran. Scope repeatability claims to declared inputs and checkout context; the
+portable checkout-name follow-up is tracked in Relay #109.
+
+Use reference-only issue links in implementation PRs (`Refs #<issue-number>`
+and an explicit parent reference). Avoid automatic issue-closing keywords, including
+negated examples. Change acceptance issue state explicitly after the required
+post-merge deployment evidence is recorded.

@@ -1,0 +1,17 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Repository Intelligence intentional failure
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reject-invalid-input:
+    name: Prove RIW-002 without publication authority
+    permissions:
+      contents: read
+    # egohygiene/relay repository-intelligence v1.6.0
+    uses: egohygiene/relay/.github/workflows/repository-intelligence.yml@9a6315978766c336566b9fa7139b800fa8789ba5
+    with:
+      max-depth: "21"
+      artifact-retention-days: 30
