@@ -1,32 +1,32 @@
 {
-  "commit": "2a09d8c71c1ca9617b506448cffa04b721b4077d",
+  "commit": "d160044e08f3377afdf14f4856bc470ddd53b769",
   "execution": {
     "message": "Canonical OSV JSON and SARIF outputs were validated.",
     "state": "success"
   },
   "findings": {
-    "advisory": 82,
-    "blocking": 85,
+    "advisory": 145,
+    "blocking": 126,
     "by_severity": {
-      "critical": 4,
-      "high": 81,
-      "low": 18,
-      "medium": 64,
+      "critical": 7,
+      "high": 119,
+      "low": 33,
+      "medium": 112,
       "unknown": 0
     },
     "state": "blocked",
-    "total": 167
+    "total": 271
   },
   "freshness": {
-    "expires_at": "2026-10-01T13:34:26Z",
+    "expires_at": "2026-10-08T10:05:58Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-09-23T13:34:26Z",
+  "generated_at": "2026-09-30T10:05:58Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/2a09d8c71c1ca9617b506448cffa04b721b4077d/.reports/osv",
+    "detail": "https://github.com/egohygiene/empathy/tree/d160044e08f3377afdf14f4856bc470ddd53b769/.reports/osv",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/2a09d8c71c1ca9617b506448cffa04b721b4077d",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/35867808662"
+    "source": "https://github.com/egohygiene/empathy/commit/d160044e08f3377afdf14f4856bc470ddd53b769",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/36700249014"
   },
   "osv": {
     "discovery": {
@@ -93,14 +93,14 @@
         "SBOM"
       ]
     },
-    "event": "push",
+    "event": "schedule",
     "reports": {
       "json": ".reports/osv/latest.json",
       "markdown": ".reports/osv/latest.md",
       "sarif": ".reports/osv/latest.sarif"
     },
     "scan": {
-      "affected_packages": 74,
+      "affected_packages": 97,
       "files_scanned": [
         ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
         ".staging/devenvironment/containers/services/api/poetry.lock",
@@ -155,16 +155,16 @@
         "pyproject.toml"
       ],
       "severity": {
-        "critical": 4,
-        "high": 81,
-        "low": 18,
-        "medium": 64,
-        "total": 167,
+        "critical": 7,
+        "high": 119,
+        "low": 33,
+        "medium": 112,
+        "total": 271,
         "unknown": 0
       },
-      "vulnerabilities": 167
+      "vulnerabilities": 271
     },
-    "scan_duration_seconds": 10,
+    "scan_duration_seconds": 11,
     "scanner": {
       "name": "osv-scanner",
       "version": "2.5.0"
@@ -178,9 +178,9 @@
   },
   "producer": "osv",
   "provenance": {
-    "event": "push",
+    "event": "schedule",
     "run_attempt": 1,
-    "run_id": "35867808662",
+    "run_id": "36700249014",
     "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
   },
   "repository": "egohygiene/empathy",
