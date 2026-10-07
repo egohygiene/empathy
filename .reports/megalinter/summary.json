@@ -1,5 +1,5 @@
 {
-  "commit": "68a99149bbbb993824181a92a5300aec70995abb",
+  "commit": "2df5823eb0b847d99e6a23b32b72c925c4735b00",
   "execution": {
     "message": "MegaLinter returned a failing runner status.",
     "state": "failure"
@@ -12,15 +12,15 @@
     "total": 0
   },
   "freshness": {
-    "expires_at": "2026-10-08T11:27:52Z",
+    "expires_at": "2026-10-15T12:05:07Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-09-30T11:27:52Z",
+  "generated_at": "2026-10-07T12:05:07Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/68a99149bbbb993824181a92a5300aec70995abb/.reports/megalinter",
+    "detail": "https://github.com/egohygiene/empathy/tree/2df5823eb0b847d99e6a23b32b72c925c4735b00/.reports/megalinter",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/68a99149bbbb993824181a92a5300aec70995abb",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/36707826005"
+    "source": "https://github.com/egohygiene/empathy/commit/2df5823eb0b847d99e6a23b32b72c925c4735b00",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/37617652691"
   },
   "megalinter": {
     "diagnostics": {
@@ -46,7 +46,7 @@
   "provenance": {
     "event": "schedule",
     "run_attempt": 1,
-    "run_id": "36707826005",
+    "run_id": "37617652691",
     "workflow": "MegaLinter"
   },
   "repository": "egohygiene/empathy",
