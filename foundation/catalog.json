@@ -407,9 +407,9 @@
       "path": ".github/copilot-instructions.md",
       "kind": "file",
       "category": "agent-context",
-      "presence": "profile",
+      "presence": "required",
       "ownership": "repository-owned",
-      "profiles": ["agent-context"],
+      "profiles": [],
       "executable": false,
       "markers": [],
       "description": "Repository-specific Copilot projection"

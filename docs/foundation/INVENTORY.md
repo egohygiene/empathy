@@ -13,7 +13,7 @@
 | `.github/CODEOWNERS` | community-health | profile | repository-owned | community-health | Repository review ownership |
 | `.github/ISSUE_TEMPLATE/config.yml` | community-health | profile | required | community-health | Issue intake configuration |
 | `.github/PULL_REQUEST_TEMPLATE.md` | community-health | profile | repository-owned | community-health | Repository review checklist |
-| `.github/copilot-instructions.md` | agent-context | profile | repository-owned | agent-context | Repository-specific Copilot projection |
+| `.github/copilot-instructions.md` | agent-context | required | repository-owned | — | Repository-specific Copilot projection |
 | `.github/dependabot.yml` | security | required | repository-owned | — | Repository ecosystem dependency update intent |
 | `.github/workflows/codeql.yml` | security | profile | required | risk-hardened | Static security analysis caller |
 | `.github/workflows/dependency-review.yml` | security | profile | required | risk-hardened | Dependency change gate |

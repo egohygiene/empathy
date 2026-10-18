@@ -54,7 +54,7 @@ class FoundationContractTests(unittest.TestCase):
             {artifact["ownership"] for artifact in self.catalog["artifacts"]},
         )
 
-    def test_universal_consumer_requires_its_own_dependabot_configuration(self) -> None:
+    def test_universal_consumer_requires_repository_owned_tool_configuration(self) -> None:
         manifest = copy.deepcopy(self.manifest)
         manifest["selected_profiles"] = ["universal"]
         manifest["overrides"] = []
@@ -64,6 +64,11 @@ class FoundationContractTests(unittest.TestCase):
         assert resolved is not None
         artifacts = {artifact["id"]: artifact for artifact in resolved["artifacts"]}
         self.assertEqual("repository-owned", artifacts["dependabot"]["effective_ownership"])
+        self.assertEqual(
+            "repository-owned", artifacts["copilot-instructions"]["effective_ownership"]
+        )
+        self.assertNotIn("agent-instructions", artifacts)
+        self.assertNotIn("ecosystem-context", artifacts)
         self.assertNotIn("codeql-workflow", artifacts)
         self.assertNotIn("dependency-review-workflow", artifacts)
         self.assertNotIn("secret-baseline", artifacts)
@@ -71,13 +76,16 @@ class FoundationContractTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             workspace = Path(temporary)
             for artifact in resolved["artifacts"]:
-                if artifact["id"] == "dependabot":
+                if artifact["id"] in {"dependabot", "copilot-instructions"}:
                     continue
                 path = workspace / artifact["path"]
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text("repository-owned fixture\n", encoding="utf-8")
             self.assertEqual(
-                ["required file is missing: .github/dependabot.yml"],
+                [
+                    "required file is missing: .github/copilot-instructions.md",
+                    "required file is missing: .github/dependabot.yml",
+                ],
                 foundation.validate_workspace(workspace, resolved),
             )
             dependabot = workspace / ".github" / "dependabot.yml"
@@ -87,7 +95,15 @@ class FoundationContractTests(unittest.TestCase):
                 "    directory: /\n    schedule:\n      interval: weekly\n",
                 encoding="utf-8",
             )
+            self.assertEqual(
+                ["required file is missing: .github/copilot-instructions.md"],
+                foundation.validate_workspace(workspace, resolved),
+            )
+            copilot = workspace / ".github" / "copilot-instructions.md"
+            instructions = "# Copilot instructions\n\nFollow repository-owned conventions.\n"
+            copilot.write_text(instructions, encoding="utf-8")
             self.assertEqual([], foundation.validate_workspace(workspace, resolved))
+            self.assertEqual(instructions, copilot.read_text(encoding="utf-8"))
 
     def test_baseline_upgrade_is_explicit_without_changing_schema_shape(self) -> None:
         self.assertEqual("1.1.0", self.catalog["schema_version"])

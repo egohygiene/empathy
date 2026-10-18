@@ -64,6 +64,14 @@ fleet adoption retain their existing owners. Auto-merge is a separate policy.
 
 ## Composition boundary
 
+Foundation `2.0.0` also requires `.github/copilot-instructions.md` for every
+consumer, independently of the `agent-context` profile. Its content remains
+repository-owned. The existing profile still selects `AGENTS.md` and generated
+ecosystem context; this presence requirement does not change their applicability
+or automatically install skills. Shared agent guidance and compatibility
+reconciliation remain tracked in
+[Hygiene #64](https://github.com/egohygiene/hygiene/issues/64).
+
 Profiles vary independently across core, governance, quality, risk, release,
 publication, agent, language, and repository-class dimensions. Profile
 dependencies resolve transitively in stable order. Conflicts, unknown profiles,

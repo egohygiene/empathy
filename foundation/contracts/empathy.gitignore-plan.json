@@ -47,9 +47,9 @@
   ],
   "repository": "egohygiene/empathy",
   "source": {
-    "catalog_sha256": "1dbad4d1a0e34f9d4d1981b6d1516fda60582868b2e476f04f35d578d6b79ff3",
+    "catalog_sha256": "d9c9b3a7d735ceb5756678e76d4cbfb07eae8bd70985e6d2a70ce14a4d172f6b",
     "owner": "egohygiene/empathy",
-    "resolved_manifest_sha256": "8f79f802c60d311b8bef38a718e130daa0b630e733a19a8a88c812c3802563f7"
+    "resolved_manifest_sha256": "ab6d8b630574f8293b761c5213b175ea4d4c129478a0b646afdc0e6250423bf6"
   },
   "status": "plan-only"
 }
