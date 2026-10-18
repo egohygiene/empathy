@@ -61,7 +61,7 @@ jobs:
       - name: Harden Runner
         id: harden
         # step-security/harden-runner v2.20.0; preserve existing audit policy.
-        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1
+        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25
         with:
           egress-policy: audit
 
@@ -119,7 +119,7 @@ jobs:
       - name: Set up Node.js 24
         id: runtime
         # actions/setup-node v6.0.0; preserve the Quartz profile runtime.
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
           node-version: "24"
 
@@ -138,7 +138,7 @@ jobs:
       - name: Capture consumer routes before composition
         id: baseline
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9a6315978766c336566b9fa7139b800fa8789ba5
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f19b65b3f8bd8466884dee5529fa77f2430440b6
         with:
           operation: capture-baseline
           site-directory: .cache/mindgarden/site
@@ -208,7 +208,7 @@ jobs:
       - name: Verify current provenance and Quartz non-clobber boundary
         id: composition
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9a6315978766c336566b9fa7139b800fa8789ba5
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f19b65b3f8bd8466884dee5529fa77f2430440b6
         with:
           operation: verify-composition
           site-directory: .cache/mindgarden/site
@@ -234,7 +234,7 @@ jobs:
 
       - name: Retain complete composed-site review artifact
         id: review_artifact
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-composed-${{ matrix.mode }}-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}"
           path: ".cache/mindgarden/site"
@@ -245,7 +245,7 @@ jobs:
 
       - name: Retain exact composition and receipt inputs
         id: provenance_artifact
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-provenance-${{ matrix.mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
           path: |
@@ -379,7 +379,7 @@ jobs:
 
       - name: Retain sanitized build result for 30 days
         if: ${{ always() }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-publication-report-${{ matrix.mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
           path: "${{ runner.temp }}/empathy-publication-run.json"
@@ -435,7 +435,7 @@ jobs:
     steps:
       - name: Download exact composition and provenance inputs
         id: download
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
           name: "empathy-provenance-${{ needs.build.outputs.deployment-mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
           path: .cache/mindgarden
@@ -443,7 +443,7 @@ jobs:
       - name: Record current deployment receipt
         id: receipt
         if: needs.build.outputs.deployment-mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9a6315978766c336566b9fa7139b800fa8789ba5
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f19b65b3f8bd8466884dee5529fa77f2430440b6
         with:
           operation: record-receipt
           site-directory: .cache/mindgarden/site
@@ -468,7 +468,7 @@ jobs:
 
       - name: Retain separate current deployment receipt
         if: ${{ always() && steps.receipt.outcome == 'success' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-deployment-receipt-${{ github.run_id }}-${{ github.run_attempt }}"
           path: .cache/mindgarden/publication/deployment-receipt.json
@@ -517,7 +517,7 @@ jobs:
           persist-credentials: false
 
       - name: Download expected public bytes
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
           name: "empathy-provenance-${{ needs.build.outputs.deployment-mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
           path: .cache/mindgarden
@@ -544,7 +544,7 @@ jobs:
 
       - name: Retain live verification evidence
         if: ${{ always() }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-live-${{ github.run_id }}-${{ github.run_attempt }}"
           path: .cache/mindgarden/publication/live.json

@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: read
     # egohygiene/relay repository-intelligence v1.6.0
-    uses: egohygiene/relay/.github/workflows/repository-intelligence.yml@9a6315978766c336566b9fa7139b800fa8789ba5
+    uses: egohygiene/relay/.github/workflows/repository-intelligence.yml@f19b65b3f8bd8466884dee5529fa77f2430440b6
     with:
       max-depth: "21"
       artifact-retention-days: 30
