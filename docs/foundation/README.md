@@ -35,10 +35,32 @@ Empathy's active root now equals its generated plan; Filament adoption remains
 subsequent work. Existing nested policies are measured separately, so this does
 not claim whole-repository ignore-content conformance.
 
-The v1 schema filenames retain their major version; catalog/schema versions and
-manifest references advance together to `1.1.0`. The resolver requires an exact
-version match. Existing `1.0.0` consumers keep their pinned input and resolver
-until explicitly upgraded. The selected Holon contract stays at `1.0.0`.
+The authoring schema remains `1.1.0` with the existing v1 schema filenames.
+Foundation catalog `2.0.0` changes the required-file baseline without changing
+the JSON shape. Catalog version and schema version therefore have separate
+constants; manifests and the EgoLint projection identify foundation `2.0.0`.
+The resolver requires an exact foundation match. Existing consumers keep their
+pinned input and resolver until explicitly upgraded. The selected Holon contract
+stays at `1.0.0`.
+
+## Required Dependabot configuration
+
+Foundation `2.0.0` requires `.github/dependabot.yml` in the universal baseline,
+including repositories that do not select `risk-hardened`. The file remains
+repository-owned: configure the ecosystems, directories, schedule, grouping,
+and other supported options that the repository actually needs. Empathy's
+existing GitHub Actions and Python configuration remains its own consumer
+configuration.
+
+This is a breaking baseline change for universal consumers that previously
+omitted the file. To adopt it, add or review the repository's configuration and
+then update its immutable foundation input and manifest reference together.
+Other `risk-hardened` artifacts retain their profile applicability.
+
+The foundation workspace check establishes file presence; it does not prove
+Dependabot YAML correctness, complete ecosystem coverage, enabled GitHub
+settings, or successful update execution. Reusable validation and reviewed
+fleet adoption retain their existing owners. Auto-merge is a separate policy.
 
 ## Composition boundary
 
