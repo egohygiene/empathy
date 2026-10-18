@@ -376,9 +376,6 @@ holon/packs/react-vite/template/pnpm-workspace.yaml
 holon/packs/readme/pack.yaml
   1:1       warning  missing document start "---"  (document-start)
 
-mantle/.github/workflows/test.yml
-  1:1       warning  missing document start "---"  (document-start)
-
 mindgarden/profiles/quartz/profile.yaml
   2:1       warning  missing document start "---"  (document-start)
 

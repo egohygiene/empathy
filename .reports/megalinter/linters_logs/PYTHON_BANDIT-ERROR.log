@@ -18,7 +18,7 @@ Linter raw log:
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_reports.py:293
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tools/repository_intelligence_publication.py:191
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tools/repository_intelligence_publication.py:191
-Run started:2026-10-18 03:41:09.102679+00:00
+Run started:2026-10-18 12:02:37.443103+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
@@ -140,7 +140,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 13474
+	Total lines of code: 13294
 	Total lines skipped (#nosec): 1
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 58
 

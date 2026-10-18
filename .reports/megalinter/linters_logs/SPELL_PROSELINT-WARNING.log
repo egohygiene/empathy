@@ -154,8 +154,8 @@ TASKS.md:17:50: typography.symbols.sentence_spacing: More than two spaces after 
 TASKS.md:18:72: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:19:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:20:66: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-TASKS.md:316:20: annotations.misc: Annotation left in text.
-TASKS.md:316:46: annotations.misc: Annotation left in text.
+TASKS.md:312:20: annotations.misc: Annotation left in text.
+TASKS.md:312:46: annotations.misc: Annotation left in text.
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:1:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:250: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -597,6 +597,8 @@ docs/foundation/gitignore/RULE_AUDIT.md:182:218: typography.symbols.sentence_spa
 docs/foundation/gitignore/RULE_AUDIT.md:183:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:184:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:207:230: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/migration/MANTLE.md:35:62: annotations.misc: Annotation left in text.
+docs/migration/MANTLE.md:53:37: dates_times.dates.dash_and_from: When specifying a date range, write 'from X to Y'.
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -881,114 +883,6 @@ holon/packs/readme/templates/profile/README.md:226:10: typography.symbols.curly_
 holon/packs/readme/templates/project/README.md:25:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 holon/packs/readme/templates/project/README.md:242:59: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 holon/packs/readme/templates/project/README.md:362:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/ARCHITECTURE.md:22:109: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:23:116: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:24:117: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:25:128: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:26:122: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:27:132: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:29:141: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:30:144: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/ARCHITECTURE.md:31:149: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/CONTRIBUTING.md:1:19: lexical_illusions: There's a lexical illusion in 'Mantle
-
-Mantle' - a phrase is repeated.
-mantle/README.md:10:184: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:15:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:15:100: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:18:49: needless_variants: Needless variant. 'extendable' is the preferred form.
-mantle/README.md:127:149: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:128:171: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:129:162: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:131:152: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:132:157: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:133:177: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:134:180: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:179:52: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:180:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:263:1: lexical_illusions: There's a lexical illusion in 'mantle help
-mantle help' - a phrase is repeated.
-mantle/README.md:265:1: lexical_illusions: There's a lexical illusion in 'mantle version
-mantle version' - a phrase is repeated.
-mantle/README.md:268:1: lexical_illusions: There's a lexical illusion in 'mantle env
-mantle env' - a phrase is repeated.
-mantle/README.md:350:72: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:351:83: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:353:93: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:354:92: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:355:95: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-mantle/README.md:369:1: lexical_illusions: There's a lexical illusion in 'mantle config validate
-mantle config validate' - a phrase is repeated.
-mantle/README.md:372:1: lexical_illusions: There's a lexical illusion in 'mantle config explain
-mantle config explain' - a phrase is repeated.
-mantle/README.md:385:180: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:386:181: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:389:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:390:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:391:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:392:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:393:191: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:394:184: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:396:188: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:400:187: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:401:201: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:402:189: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:403:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:404:182: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:406:175: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:414:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:415:192: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:584:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/README.md:694:3: uncomparables: Comparison of an uncomparable: 'More complete' is not comparable.
-mantle/assets/presentation/mantle-banner.txt:1:2: lexical_illusions: There's a lexical illusion in '__  __' - a phrase is repeated.
-mantle/assets/presentation/mantle-banner.txt:1:12: lexical_illusions: There's a lexical illusion in '_    _   _ _' - a phrase is repeated.
-mantle/assets/presentation/mantle-banner.txt:1:27: lexical_illusions: There's a lexical illusion in '_ _     _' - a phrase is repeated.
-mantle/assets/presentation/mantle-banner.txt:2:23: lexical_illusions: There's a lexical illusion in '_   _' - a phrase is repeated.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:51:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:454:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:455:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:455:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:457:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:491:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:527:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:527:40: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:529:21: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:531:25: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:569:1: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:616:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:703:30: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:704:12: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:704:32: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/audits/mantle-holistic-polish-20260806T124442Z.md:975:87: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/lib/install/README.md:75:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/lib/install/README.md:77:34: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/runtime/shells/fish/README.md:9:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:81:35: lexical_illusions: There's a lexical illusion in 'bats
-bats' - a phrase is repeated.
-mantle/tests/README.md:82:37: lexical_illusions: There's a lexical illusion in 'bats
-bats' - a phrase is repeated.
-mantle/tests/README.md:101:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:101:75: lexical_illusions: There's a lexical illusion in 'bats
-bats' - a phrase is repeated.
-mantle/tests/README.md:159:34: lexical_illusions: There's a lexical illusion in 'bats
-bats' - a phrase is repeated.
-mantle/tests/README.md:217:31: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:255:39: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:255:50: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:255:88: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:256:18: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-mantle/tests/README.md:271:20: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:273:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:284:42: lexical_illusions: There's a lexical illusion in 'stub
-stub' - a phrase is repeated.
-mantle/tests/README.md:285:48: lexical_illusions: There's a lexical illusion in 'stub
-stub' - a phrase is repeated.
-mantle/tests/README.md:369:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:371:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:371:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:373:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-mantle/tests/README.md:392:38: lexical_illusions: There's a lexical illusion in 'bats
-   bats' - a phrase is repeated.
 mindgarden/profiles/agent/README.md:26:4: lexical_illusions: There's a lexical illusion in 'Search
 
 Search' - a phrase is repeated.

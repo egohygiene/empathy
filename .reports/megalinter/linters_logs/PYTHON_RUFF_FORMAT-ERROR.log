@@ -553,24 +553,6 @@ unformatted: File would be reformatted
     |
 
 unformatted: File would be reformatted
-   --> mantle/tests/validate_fastfetch.py:21:19
-    |
-20  | TEXT_PATH = MANTLE_ROOT / "assets/presentation/mantle-banner.txt"
-    - EXPECTED_SCHEMA = (
-    -     "https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json"
-    - )
-21  + EXPECTED_SCHEMA = "https://github.com/fastfetch-cli/fastfetch/raw/2.67.0/doc/json_schema.json"
-22  | EXPECTED_COMMANDS = (
---------------------------------------------------------------------------------
-143 |             command_texts.append(str(module.get("text", "")))
-    -         if module_type == "custom" and str(module.get("format", "")).startswith(
-    -             ("╭─", "├─", "╰─")
-    -         ):
-144 +         if module_type == "custom" and str(module.get("format", "")).startswith(("╭─", "├─", "╰─")):
-145 |             section_keys.append(module.get("key"))
-    |
-
-unformatted: File would be reformatted
   --> tests/test_dependency_review_workflow.py:32:1
    |
 31 |
@@ -662,16 +644,5 @@ unformatted: File would be reformatted
 72 |
    |
 
-unformatted: File would be reformatted
-    --> tools/staging_home_audit.py:1335:43
-     |
-1334 |                 "by_sensitivity": counts("sensitivity"),
-     -                 "unclassified_files": sum(
-     -                     row.canonical_owner == "manual-review" for row in rows
-     -                 ),
-1335 +                 "unclassified_files": sum(row.canonical_owner == "manual-review" for row in rows),
-1336 |             },
-     |
-
-9 files would be reformatted, 54 files already formatted
+7 files would be reformatted, 55 files already formatted
 

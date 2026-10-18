@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:f525eb71-063b-4b52-ad55-239b60034ae2",
+  "serialNumber": "urn:uuid:00fc7568-07d1-478a-96dd-5d6d4466cb91",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-18T03:42:23Z",
+    "timestamp": "2026-10-18T12:03:57Z",
     "tools": {
       "components": [
         {
@@ -158691,35 +158691,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=22a2fa36d81e093a",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "actions/checkout",
-      "version": "3d3c42e5aac5ba805825da76410c181273ba90b1",
-      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:3d3c42e5aac5ba805825da76410c181273ba90b1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/mantle.yml"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:github/actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1?package-id=f0f613a1cf210bb8",
       "type": "library",
       "supplier": {
@@ -159180,35 +159151,6 @@
         {
           "name": "syft:location:0:path",
           "value": "/.staging/.github/workflows/release-first-party-skills.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/actions/checkout@v4.2.2?package-id=32bec9a0db4be1a8",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "actions/checkout",
-      "version": "v4.2.2",
-      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v4.2.2:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/checkout@v4.2.2",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/mantle/.github/workflows/test.yml"
         }
       ]
     },
@@ -163670,55 +163612,6 @@
         {
           "name": "syft:location:0:path",
           "value": "/.staging/.github/workflows/release-first-party-skills.yml"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:github/actions/upload-artifact@v4.6.2?package-id=83fdb15ba76b0be0",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "actions/upload-artifact",
-      "version": "v4.6.2",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:v4.6.2:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@v4.6.2",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:v4.6.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:v4.6.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:v4.6.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:v4.6.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:v4.6.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/mantle/.github/workflows/test.yml"
         }
       ]
     },
@@ -440854,71 +440747,6 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=5afc7714e421945c",
-      "type": "library",
-      "supplier": {
-        "name": "Organization: Ego Hygiene"
-      },
-      "name": "step-security/harden-runner",
-      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "github-actions-usage-cataloger"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "github-action"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "github-actions-use-statement"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/.github/workflows/mantle.yml"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=a7363213360cd563",
       "type": "library",
       "supplier": {
@@ -487570,17 +487398,6 @@
       ]
     },
     {
-      "bom-ref": "22aa7667ab573984",
-      "type": "file",
-      "name": "/github/workspace/.github/workflows/mantle.yml",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "b692a4f43851db9b6958e31c247d0a35a7cae6409b01acbeeff2fa9b269e8725"
-        }
-      ]
-    },
-    {
       "bom-ref": "68fc38e13e38ae86",
       "type": "file",
       "name": "/github/workspace/.github/workflows/megalinter-fix.yml",
@@ -488226,17 +488043,6 @@
         {
           "alg": "SHA-256",
           "content": "6ec1a983a0438beb441c5004c2bcad74ead072ffc43a54a161ce0acf47203bcb"
-        }
-      ]
-    },
-    {
-      "bom-ref": "7aa6869a8abb630c",
-      "type": "file",
-      "name": "/github/workspace/mantle/.github/workflows/test.yml",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "02caa6dfc15dd614168e6d21d8b708a16b1d8f0ccbe1e78877ccf232b670f564"
         }
       ]
     },

@@ -176,5 +176,5 @@ Installing missing stub packages:
 /venvs/mypy/bin/python3 -m pip install types-PyYAML
 
 
-Found 36 errors in 4 files (checked 55 source files)
+Found 36 errors in 4 files (checked 54 source files)
 
