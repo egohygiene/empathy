@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:db4f6109-5f37-48e6-b9ea-69bef7e9828e",
+  "serialNumber": "urn:uuid:f525eb71-063b-4b52-ad55-239b60034ae2",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-14T10:38:47Z",
+    "timestamp": "2026-10-18T03:42:23Z",
     "tools": {
       "components": [
         {
@@ -160264,15 +160264,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c?package-id=f4f8b695abd9e196",
+      "bom-ref": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333?package-id=7d6c780786d90f76",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/download-artifact",
-      "version": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
-      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+      "version": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -160288,23 +160288,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -160313,15 +160313,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c?package-id=9d4b6570fa937d82",
+      "bom-ref": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333?package-id=4ea9cecfd53307f8",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/download-artifact",
-      "version": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
-      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+      "version": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -160337,23 +160337,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -160362,15 +160362,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c?package-id=ecd6e938ea033c21",
+      "bom-ref": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333?package-id=28cf27ed8e6b59b8",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/download-artifact",
-      "version": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
-      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+      "version": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -160386,23 +160386,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -160411,15 +160411,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c?package-id=df89071e8de794b8",
+      "bom-ref": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333?package-id=931deedcaf382da9",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/download-artifact",
-      "version": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
-      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+      "version": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -160435,23 +160435,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -160460,15 +160460,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c?package-id=833e8f97142e7b61",
+      "bom-ref": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333?package-id=d00c0a192d2a2de4",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/download-artifact",
-      "version": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
-      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+      "version": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+      "cpe": "cpe:2.3:a:actions\\/download-artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -160484,23 +160484,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download-artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download_artifact:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download-artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/download:actions\\/download_artifact:9000827ccba6bdab643e8b6fd33ac0654aef8333:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -161910,15 +161910,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/setup-node@820762786026740c76f36085b0efc47a31fe5020?package-id=046b78193c06041f",
+      "bom-ref": "pkg:github/actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1?package-id=4186617ba0f2b5d8",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/setup-node",
-      "version": "820762786026740c76f36085b0efc47a31fe5020",
-      "cpe": "cpe:2.3:a:actions\\/setup-node:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+      "version": "949feb2413d6458794dcd2491c4babbbce0c15c1",
+      "cpe": "cpe:2.3:a:actions\\/setup-node:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -161934,23 +161934,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup-node:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup-node:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -161959,15 +161959,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/setup-node@820762786026740c76f36085b0efc47a31fe5020?package-id=a5748faf32d001f2",
+      "bom-ref": "pkg:github/actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1?package-id=a3f0d54c7f032321",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/setup-node",
-      "version": "820762786026740c76f36085b0efc47a31fe5020",
-      "cpe": "cpe:2.3:a:actions\\/setup-node:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+      "version": "949feb2413d6458794dcd2491c4babbbce0c15c1",
+      "cpe": "cpe:2.3:a:actions\\/setup-node:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -161983,23 +161983,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup-node:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup-node:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -162008,15 +162008,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/setup-node@820762786026740c76f36085b0efc47a31fe5020?package-id=6b187146dbe6ae14",
+      "bom-ref": "pkg:github/actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1?package-id=c2b959861ee08c46",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/setup-node",
-      "version": "820762786026740c76f36085b0efc47a31fe5020",
-      "cpe": "cpe:2.3:a:actions\\/setup-node:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+      "version": "949feb2413d6458794dcd2491c4babbbce0c15c1",
+      "cpe": "cpe:2.3:a:actions\\/setup-node:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -162032,23 +162032,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup-node:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup-node:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup_node:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup-node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup-node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup_node:820762786026740c76f36085b0efc47a31fe5020:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/setup:actions\\/setup_node:949feb2413d6458794dcd2491c4babbbce0c15c1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -162939,15 +162939,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=003e4b6fbf17400d",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=925de4bc39a974c9",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -162963,23 +162963,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -162988,15 +162988,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=aebe916e7abd9b84",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=2b73a91fdccf5bf9",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163012,23 +163012,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163037,15 +163037,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=27f697be23f772a7",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=67b39fc940c52aba",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163061,23 +163061,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163086,15 +163086,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=1d1318fcac57f6ab",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=46ad0e7232509a99",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163110,23 +163110,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163135,15 +163135,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=1c1e736acb593ed7",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=1e0d713a96d1a739",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163159,23 +163159,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163184,15 +163184,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=37b451d89c60d7d0",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=e0a873b74f611863",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163208,23 +163208,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163233,15 +163233,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=aa5eb5f1d54ac773",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=7707cf589c47e0e2",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163257,23 +163257,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163282,15 +163282,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=36ed5871a8dc1fef",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=19ece9098ec8f4ba",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163306,23 +163306,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163331,15 +163331,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=931086efa1e662d0",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=0a69bfc260b16a1f",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163355,23 +163355,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163380,15 +163380,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=daf1493972415232",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=41652de7d010a8ce",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163404,23 +163404,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -163429,15 +163429,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a?package-id=6b9859efc744732c",
+      "bom-ref": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9?package-id=26dbb7a56c8a3087",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "actions/upload-artifact",
-      "version": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
-      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*",
-      "purl": "pkg:github/actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "version": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "cpe": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -163453,23 +163453,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload-artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload_artifact:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload-artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:actions\\/upload:actions\\/upload_artifact:cf430e030ddbb5b0abf93d22962f4752f3646cd9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225245,15 +225245,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@9a6315978766c336566b9fa7139b800fa8789ba5?package-id=2101176bd677b2b0#.github/workflows/repository-intelligence.yml",
+      "bom-ref": "pkg:github/egohygiene/relay@f19b65b3f8bd8466884dee5529fa77f2430440b6?package-id=738a433d1a230ca5#.github/workflows/repository-intelligence.yml",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/.github/workflows/repository-intelligence.yml",
-      "version": "9a6315978766c336566b9fa7139b800fa8789ba5",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@9a6315978766c336566b9fa7139b800fa8789ba5#.github/workflows/repository-intelligence.yml",
+      "version": "f19b65b3f8bd8466884dee5529fa77f2430440b6",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@f19b65b3f8bd8466884dee5529fa77f2430440b6#.github/workflows/repository-intelligence.yml",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225269,23 +225269,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -225896,15 +225896,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/egohygiene/relay@9a6315978766c336566b9fa7139b800fa8789ba5?package-id=53cc9a4fbf6770cb#actions/repository-intelligence-deployment-provenance",
+      "bom-ref": "pkg:github/egohygiene/relay@f19b65b3f8bd8466884dee5529fa77f2430440b6?package-id=384e747a4650f96a#actions/repository-intelligence-deployment-provenance",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "egohygiene/relay/actions/repository-intelligence-deployment-provenance",
-      "version": "9a6315978766c336566b9fa7139b800fa8789ba5",
-      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*",
-      "purl": "pkg:github/egohygiene/relay@9a6315978766c336566b9fa7139b800fa8789ba5#actions/repository-intelligence-deployment-provenance",
+      "version": "f19b65b3f8bd8466884dee5529fa77f2430440b6",
+      "cpe": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*",
+      "purl": "pkg:github/egohygiene/relay@f19b65b3f8bd8466884dee5529fa77f2430440b6#actions/repository-intelligence-deployment-provenance",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -225920,55 +225920,55 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -255177,15 +255177,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd?package-id=042baf52156a1270#analyze",
+      "bom-ref": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d?package-id=ef8cac62e116687b#analyze",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/analyze",
-      "version": "1c5b675653bb5c22dbe9b12b556ec555138e09fd",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd#analyze",
+      "version": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#analyze",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -255201,23 +255201,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -255226,15 +255226,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd?package-id=589140a7ec5ea0d5#init",
+      "bom-ref": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d?package-id=a2d7ab4b3147f57d#init",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/init",
-      "version": "1c5b675653bb5c22dbe9b12b556ec555138e09fd",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd#init",
+      "version": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#init",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -255250,23 +255250,23 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -255275,15 +255275,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd?package-id=236f9b0cf3dce802#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d?package-id=9547dec10c9aa7a7#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "1c5b675653bb5c22dbe9b12b556ec555138e09fd",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd#upload-sarif",
+      "version": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -255299,39 +255299,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -255340,15 +255340,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd?package-id=977eda28ca1a29f7#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d?package-id=70abf5e29affb8c2#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "1c5b675653bb5c22dbe9b12b556ec555138e09fd",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd#upload-sarif",
+      "version": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -255364,39 +255364,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -255405,15 +255405,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd?package-id=0e22f9a959ce4d3a#upload-sarif",
+      "bom-ref": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d?package-id=1f0223f4041e7524#upload-sarif",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "github/codeql-action/upload-sarif",
-      "version": "1c5b675653bb5c22dbe9b12b556ec555138e09fd",
-      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*",
-      "purl": "pkg:github/github/codeql-action@1c5b675653bb5c22dbe9b12b556ec555138e09fd#upload-sarif",
+      "version": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+      "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*",
+      "purl": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#upload-sarif",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -255429,39 +255429,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:1c5b675653bb5c22dbe9b12b556ec555138e09fd:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440334,15 +440334,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=0aa4726e46653781",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=8b2ff706efd4aac2",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440358,39 +440358,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440399,15 +440399,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=362456beed58aef3",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=b4fb73945253cb40",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440423,39 +440423,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440464,15 +440464,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=4c5819391ce1657d",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=aad0ea57a8ec96f2",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440488,39 +440488,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440529,15 +440529,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=8f29a93c8cd5865e",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=ece612e35174f003",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440553,39 +440553,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440594,15 +440594,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=aa2a6ffed5ef2e0e",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=803a5eb68b12db14",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440618,39 +440618,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440659,15 +440659,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=30f885ef875444fa",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=e9ee52c5adf1c0a3",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440683,39 +440683,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440724,15 +440724,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=fa86637593a0a63d",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=e6b4e6341d0e43f9",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440748,39 +440748,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440789,15 +440789,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=0b18e4390df339d8",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=3cf448084abe806b",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440813,39 +440813,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440854,15 +440854,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=3294043d2e438d10",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=5afc7714e421945c",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440878,39 +440878,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440919,15 +440919,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=e66f994acc6a0136",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=a7363213360cd563",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -440943,39 +440943,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -440984,15 +440984,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=da4cfb49cd61ee30",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=0fe0648e31f282bc",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -441008,39 +441008,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -441049,15 +441049,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=54bf09f4f25b5975",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=17effcca1fe57c35",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -441073,39 +441073,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -441114,15 +441114,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=a7aa89b21aae9250",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=ac42799682d32a8d",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -441138,39 +441138,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -441179,15 +441179,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=ff29aafe5885c9a6",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=a2f0efd96f843379",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -441203,39 +441203,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -441244,15 +441244,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=2fbde6dde6ea3ef7",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=3d1a73fc84521055",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -441268,39 +441268,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -441309,15 +441309,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=434aa0cd798a2d61",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=b41758a2c7ebc1cc",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -441333,39 +441333,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -441374,15 +441374,15 @@
       ]
     },
     {
-      "bom-ref": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1?package-id=585058d025fdd48d",
+      "bom-ref": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25?package-id=86275f2723f4115e",
       "type": "library",
       "supplier": {
         "name": "Organization: Ego Hygiene"
       },
       "name": "step-security/harden-runner",
-      "version": "e14015d583714f6e62063499dc959a02595150a1",
-      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*",
-      "purl": "pkg:github/step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1",
+      "version": "ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
+      "cpe": "cpe:2.3:a:step-security\\/harden-runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*",
+      "purl": "pkg:github/step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -441398,39 +441398,39 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden-runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden_runner:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step-security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step_security\\/harden:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step-security\\/harden-runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step-security\\/harden-runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:step:step_security\\/harden_runner:e14015d583714f6e62063499dc959a02595150a1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:step:step_security\\/harden_runner:ccd8616d44fd3846e67624a50d5aad6d37bf2d25:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -487488,7 +487488,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "dab786aea65669b180e39017a437cefabe567315562a356f2ecfed3f0b7c7791"
+          "content": "2b8273037a2503328f70cf5b8cd525e7266a89ebcc9323c6dc1f6345fa06db84"
         }
       ]
     },
@@ -487499,7 +487499,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "a6c90d8898a564ac0d44a38c6693a9d08f4fc7fd46e082755a381b3ce7d94fe0"
+          "content": "a02884418d1f521289ad79ffa03597f43b05233c34c17f8453752cd36926f604"
         }
       ]
     },
@@ -487510,7 +487510,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "d62371699bfe7dcac5aa5686fb04ae51f5bd7d60238013a40f6d75c348b8a31f"
+          "content": "a4bf923bdd17ab446b470afbc2e536f8c236b152a49e92de51dccc49b69038d6"
         }
       ]
     },
@@ -487521,7 +487521,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "c384503a7ff32b366d9ce924bd05f101aebd06b498f61014a7e7322f1dd48a1d"
+          "content": "f54c2e05c94e4996774fa54986d44130751f3d3d8cdde9b48d706b0a1f46391b"
         }
       ]
     },
@@ -487532,7 +487532,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "1e9b668b685847975ce27340975bf348a898b216885450c6c6a83c9106b8ff24"
+          "content": "7ab816095ba2441d5e05f0a071e2d7b69d7bc159cf1adf07be2e17f00818378d"
         }
       ]
     },
@@ -487543,7 +487543,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "93f12c92e10bf49dcd1a0af142330d70139ac27e807e57662acdf2390a7ede5d"
+          "content": "e9de8dc65ea531baed5e13f499d78007184a5c88aeddc00a1884a57b6cec03db"
         }
       ]
     },
@@ -487554,7 +487554,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ff2c3cb3eb892e3e42a35abb2b441cf58f62eecd219b75ef6665fc94d67f5703"
+          "content": "fed7b61bde4fda967b068c4b2272e21d15e2ad1f891b7bfbb70718d210ed46cb"
         }
       ]
     },
@@ -487565,7 +487565,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "b1ffe515b29cabec431972bd5222439df95d7adfae400f8abda3ff80c2488139"
+          "content": "cb07da94ddcdfce598a6aaebe9d90f81d587e16c098dea5ae1b93f570a92ab8d"
         }
       ]
     },
@@ -487576,7 +487576,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "2a8abd4eddb0d9b8c95e3f9084c028e451605f7fc221e14ffb8096684d218e4e"
+          "content": "b692a4f43851db9b6958e31c247d0a35a7cae6409b01acbeeff2fa9b269e8725"
         }
       ]
     },
@@ -487587,7 +487587,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "b00d201368a157064a3c3f5163e90824eb7752b68090650e9210fc730b2495b7"
+          "content": "e688e11b87ba258b8b4524f730bacd6543056ae5a6601817931ab26478e5b868"
         }
       ]
     },
@@ -487598,7 +487598,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "a3e908f808b4b0ce21f5be7067159d3e19cc53acadde5bd52cacfec51feaa491"
+          "content": "e5fbccd6314dbfca9c55082d771af5c22783c83b87f956de97f445726fe91abb"
         }
       ]
     },
@@ -487609,7 +487609,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "76d337f8bbfa13314d11ace25567e00a38dd01f3e8272fff3e49ee8e20799430"
+          "content": "09d476d83c56f49930636bca10d6191786e94343dec6bd154d8bf9fc2821704c"
         }
       ]
     },
@@ -487620,7 +487620,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "42e233f33d8bf0f6b5d0aed5be8d3dc02bea18b0f4d31635985883d1bd5a9b26"
+          "content": "70a39f642dcf61cb2a2db956d881295aed7397b93e19abce95cc5a0b203bb030"
         }
       ]
     },
@@ -487631,7 +487631,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "3ec7d315f7e5b39c2af893b599e88bab983c68673d134741177786eb6a226526"
+          "content": "3b583111fc4f0e50223dddad3ea526070ae1fea2e00a0b89653564381f3a8c94"
         }
       ]
     },
@@ -487642,7 +487642,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "870a5b20dab8c309326cceeafee9d9793f68c5ba3942dc5b2cd3fe07e5362f57"
+          "content": "ddf720be487e395c72f2b4140ecc223ccd95cdb872ebad854648fe9323d4608e"
         }
       ]
     },
@@ -487653,7 +487653,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "8b9374a54ea4b542d014c55aa368711648a7b67dcad427af85670f89ea381061"
+          "content": "3571c866e2aef1ec55645d6325bdd12416894d093ab682fa9c2d1710234de3b9"
         }
       ]
     },
@@ -487664,7 +487664,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "9fa9b2c129094cc2dcc0d488dade0fade06ebbb7d647ea81ea9687507449e83f"
+          "content": "db37c100317723488d353920a09e1681ae7e93a64706b0cc925e5bc6ffd93dd8"
         }
       ]
     },
@@ -487675,7 +487675,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "771615114a331829aaffda693fe2c8c5bd8feec0668ccb6f689dfe4496b9dbab"
+          "content": "e3ef50b3b2bd803744f55f88288c71b0f79235b0cdb63d2b412594b47c817ec7"
         }
       ]
     },
@@ -487686,7 +487686,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "20dff4698ad158904c59a30febf47c78c96bbf5c6b882008d659ff75a5ee9f39"
+          "content": "dcf5209a7f9bb30d7c9806a65e0a5286097ff75e6ea40bea659ee2f06d8c715d"
         }
       ]
     },
@@ -487697,7 +487697,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "273eda60eabd11215015ecbac9368c3c7d5ba3535ad1cb2b883dfba579f7f462"
+          "content": "c6735c6da334205fb8cb212f51aab7150fe3a0bf820b7838e486d64062ea64fe"
         }
       ]
     },
