@@ -1,10 +1,10 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-10-14T09-08-19Z`
+- Generated: `2026-10-18T03-36-10Z`
 - Repository: `egohygiene/empathy`
-- Commit: `556e9cdd9ecc672656f1e8f56bd8e4f3d00a3ad2`
+- Commit: `5a98fd14189fdca47e1c175d5b9ea8c6585dc95b`
 - Severity gate: `high`
-- Duration: `10s`
+- Duration: `11s`
 
 ## Findings
 
@@ -12,10 +12,10 @@
 | --- | ---: |
 | Critical | 27 |
 | High | 181 |
-| Medium | 173 |
+| Medium | 176 |
 | Low | 37 |
 | Unknown | 0 |
-| **Total** | **418** |
+| **Total** | **421** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 153 packages affected by 418 known vulnerabilities (27 Critical, 181 High, 173 Medium, 37 Low, 0 Unknown) from 2 ecosystems.
-402 vulnerabilities can be fixed.
+Total 153 packages affected by 421 known vulnerabilities (27 Critical, 181 High, 176 Medium, 37 Low, 0 Unknown) from 2 ecosystems.
+405 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -150,8 +150,8 @@ Total 153 packages affected by 418 known vulnerabilities (27 Critical, 181 High,
 | https://osv.dev/PYSEC-2026-215<br/>https://osv.dev/GHSA-65pc-fj4g-8rjx | 6.9 | PyPI | idna | 3.10 | 3.15 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-70<br/>https://osv.dev/GHSA-fjrm-76x2-c4q4 | 5.3 | PyPI | jwcrypto | 1.5.6 | 1.5.7 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2617<br/>https://osv.dev/GHSA-2h4p-vjrc-8xpq | 8.7 | PyPI | mako | 1.3.10 | 1.3.12 | .staging/devenvironment/containers/services/api/poetry.lock |
+| https://osv.dev/PYSEC-2026-4243<br/>https://osv.dev/GHSA-5639-2j2p-m4mx | 6.5 | PyPI | mako | 1.3.10 | 1.4.2 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-88<br/>https://osv.dev/GHSA-v92g-xgxw-vvmm | 7.7 | PyPI | mako | 1.3.10 | 1.3.11 | .staging/devenvironment/containers/services/api/poetry.lock |
-| https://osv.dev/GHSA-5639-2j2p-m4mx | 6.5 | PyPI | mako | 1.3.10 | 1.4.2 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-107<br/>https://osv.dev/GHSA-hx9q-6w63-j58v | 7.7 | PyPI | orjson | 3.10.18 | 3.11.5 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-2987<br/>https://osv.dev/GHSA-5239-wwwm-4pmq | 3.3 | PyPI | pygments | 2.19.2 | 2.20.0 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2025-183 | 7.0 | PyPI | pyjwt | 2.10.1 | -- | .staging/devenvironment/containers/services/api/poetry.lock |
@@ -212,8 +212,10 @@ Total 153 packages affected by 418 known vulnerabilities (27 Critical, 181 High,
 | https://osv.dev/PYSEC-2026-4055<br/>https://osv.dev/GHSA-3325-v43h-43rv | 5.4 | PyPI | jupyterlab | 4.6.3 | 4.6.4 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-4056<br/>https://osv.dev/GHSA-3jqq-pw4j-pqcj | 6.8 | PyPI | jupyterlab | 4.6.3 | 4.6.4 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-4057<br/>https://osv.dev/GHSA-6966-vjj6-99xv | 8.1 | PyPI | jupyterlab | 4.6.3 | 4.6.4 | egolint/uv.lock |
-| https://osv.dev/GHSA-54p9-h82j-f925 | 5.3 | PyPI | multidict | 6.7.1 | 6.9.1 | egolint/uv.lock |
+| https://osv.dev/GHSA-jwrc-gm9j-263p | 4.2 | PyPI | jupyterlab | 4.6.3 | 4.6.4 | egolint/uv.lock |
+| https://osv.dev/PYSEC-2026-4244<br/>https://osv.dev/GHSA-54p9-h82j-f925 | 5.3 | PyPI | multidict | 6.7.1 | 6.9.1 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-4112<br/>https://osv.dev/GHSA-6966-vjj6-99xv | 8.1 | PyPI | notebook | 7.6.2 | 7.6.3 | egolint/uv.lock |
+| https://osv.dev/GHSA-jwrc-gm9j-263p | 4.2 | PyPI | notebook | 7.6.2 | 7.6.3 | egolint/uv.lock |
 | https://osv.dev/GHSA-3hv7-mjh2-fv65 | 5.3 | PyPI | tornado | 6.5.8 | 6.5.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-c2m8-h5v5-343r | 8.2 | PyPI | tornado | 6.5.8 | 6.5.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-chx6-46f5-w4vp | 7.5 | PyPI | tornado | 6.5.8 | 6.5.9 | egolint/uv.lock |
@@ -452,8 +454,9 @@ Total 153 packages affected by 418 known vulnerabilities (27 Critical, 181 High,
 | https://osv.dev/GHSA-2883-xcg3-v3hh | 7.5 | npm | js-yaml | 4.3.1 | 4.3.2 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-r3ph-w7gj-g6xm | 5.3 | npm | js-yaml | 5.2.3 | 5.4.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-238p-pmpm-9mq7 | 2.1 | npm | katex | 0.16.47 | 0.18.2 | pnpm-lock.yaml |
-| https://osv.dev/GHSA-f23m-r3pf-42rh<br/>https://osv.dev/GHSA-xxjr-mmjv-4gpg | 6.9 | npm | lodash | 4.17.21 | 4.18.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-f23m-r3pf-42rh | 6.5 | npm | lodash | 4.17.21 | 4.18.0 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-r5fr-rjxr-66jc | 8.1 | npm | lodash | 4.17.21 | 4.18.0 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-xxjr-mmjv-4gpg | 6.9 | npm | lodash | 4.17.21 | 4.17.23 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-253c-mchw-3w2r | 6.3 | npm | markdown-it | 14.3.0 | 14.3.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-952p-6rrq-rcjv | 5.3 | npm | micromatch | 3.1.10 | 4.0.8 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-23c5-xmqv-rm74 | 7.5 | npm | minimatch | 10.1.1 | 10.2.3 | pnpm-lock.yaml |

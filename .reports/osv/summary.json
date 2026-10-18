@@ -1,32 +1,32 @@
 {
-  "commit": "556e9cdd9ecc672656f1e8f56bd8e4f3d00a3ad2",
+  "commit": "5a98fd14189fdca47e1c175d5b9ea8c6585dc95b",
   "execution": {
     "message": "Canonical OSV JSON and SARIF outputs were validated.",
     "state": "success"
   },
   "findings": {
-    "advisory": 210,
+    "advisory": 213,
     "blocking": 208,
     "by_severity": {
       "critical": 27,
       "high": 181,
       "low": 37,
-      "medium": 173,
+      "medium": 176,
       "unknown": 0
     },
     "state": "blocked",
-    "total": 418
+    "total": 421
   },
   "freshness": {
-    "expires_at": "2026-10-22T09:08:30Z",
+    "expires_at": "2026-10-26T03:36:21Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-10-14T09:08:30Z",
+  "generated_at": "2026-10-18T03:36:21Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/556e9cdd9ecc672656f1e8f56bd8e4f3d00a3ad2/.reports/osv",
+    "detail": "https://github.com/egohygiene/empathy/tree/5a98fd14189fdca47e1c175d5b9ea8c6585dc95b/.reports/osv",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/556e9cdd9ecc672656f1e8f56bd8e4f3d00a3ad2",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/38540098957"
+    "source": "https://github.com/egohygiene/empathy/commit/5a98fd14189fdca47e1c175d5b9ea8c6585dc95b",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/39094178999"
   },
   "osv": {
     "discovery": {
@@ -93,7 +93,7 @@
         "SBOM"
       ]
     },
-    "event": "schedule",
+    "event": "push",
     "reports": {
       "json": ".reports/osv/latest.json",
       "markdown": ".reports/osv/latest.md",
@@ -158,13 +158,13 @@
         "critical": 27,
         "high": 181,
         "low": 37,
-        "medium": 173,
-        "total": 418,
+        "medium": 176,
+        "total": 421,
         "unknown": 0
       },
-      "vulnerabilities": 418
+      "vulnerabilities": 421
     },
-    "scan_duration_seconds": 10,
+    "scan_duration_seconds": 11,
     "scanner": {
       "name": "osv-scanner",
       "version": "2.5.0"
@@ -178,9 +178,9 @@
   },
   "producer": "osv",
   "provenance": {
-    "event": "schedule",
+    "event": "push",
     "run_attempt": 1,
-    "run_id": "38540098957",
+    "run_id": "39094178999",
     "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
   },
   "repository": "egohygiene/empathy",

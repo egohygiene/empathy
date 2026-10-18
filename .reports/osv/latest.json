@@ -4786,6 +4786,18 @@
             },
             {
               "ids": [
+                "PYSEC-2026-4243",
+                "GHSA-5639-2j2p-m4mx"
+              ],
+              "aliases": [
+                "CVE-2026-102991",
+                "GHSA-5639-2j2p-m4mx",
+                "PYSEC-2026-4243"
+              ],
+              "max_severity": "6.5"
+            },
+            {
+              "ids": [
                 "PYSEC-2026-88",
                 "GHSA-v92g-xgxw-vvmm"
               ],
@@ -4795,16 +4807,6 @@
                 "PYSEC-2026-88"
               ],
               "max_severity": "7.7"
-            },
-            {
-              "ids": [
-                "GHSA-5639-2j2p-m4mx"
-              ],
-              "aliases": [
-                "CVE-2026-102991",
-                "GHSA-5639-2j2p-m4mx"
-              ],
-              "max_severity": "6.5"
             }
           ],
           "vulnerabilities": [
@@ -4964,6 +4966,166 @@
                 }
               ],
               "summary": "Mako vulnerable to path traversal via backslash URI on Windows in TemplateLookup"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/mako/PYSEC-2026-4243.yaml"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "mako",
+                    "purl": "pkg:pypi/mako"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.4.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.1.1",
+                    "0.1.10",
+                    "0.1.2",
+                    "0.1.3",
+                    "0.1.4",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.1.8",
+                    "0.1.9",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.2.5",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.3.5",
+                    "0.3.6",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.14",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.12",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-102991",
+                "GHSA-5639-2j2p-m4mx"
+              ],
+              "details": "## Summary\n\nOn Windows, a `TemplateLookup` URI beginning with a drive designator (e.g. `C:/../../secret.txt` or `C:\\..\\..\\secret.txt`) bypasses the directory traversal check in `Template.__init__`, allowing reads of files outside the configured template directory.\n\nThis is a third, independent instance of the root cause behind CVE-2026-41205 (the `//` prefix) and CVE-2026-44307 (the backslash form). Both of those fixes normalized a separator *spelling*. Neither addressed the other way `posixpath` and `ntpath` disagree: the drive designator. Both prior fixes remain effective on their own terms; this variant survives them for an independent reason.\n\n## Details\n\nThe root cause is the same `posixpath` / `os.path` mismatch: resolution is done with `posixpath`, confinement is checked with `os.path`, which is `ntpath` on Windows.\n\n```\n# mako/lookup.py -- resolution\n247:  srcfile = posixpath.normpath(posixpath.join(dir_, u))   # posixpath, always\n248:  if os.path.isfile(srcfile):                             # ntpath on Windows\n\n# mako/template.py -- confinement\n268:  u_norm = os.path.normpath(u_norm)                       # ntpath on Windows\n269:  if u_norm.startswith(\"..\"):                             # never true for a drive URI\n```\n\n`posixpath` has no concept of a drive, so it treats `C:` as an ordinary path component; the `..` segments pop `C:` and then escape the template root. `ntpath`, by contrast, splits the drive off and treats the remainder as rooted, discarding the `..` entirely -- so the guard on line 269 inspects a string from which the evidence has already been removed:\n\n| URI | `ntpath.normpath` (what the guard sees) | guard fires |\n|---|---|---|\n| `//../secret.txt` | `..\\secret.txt` | yes |\n| `\\..\\secret.txt` | `..\\secret.txt` | yes |\n| `C:/../../secret.txt` | `C:\\secret.txt` | **no** |\n\nBecause the guard cannot fire for *any* URI beginning with a single-letter drive designator, the traversal is unconstrained, and its depth does not have to be guessed. `posixpath.normpath()` saturates excess `..` segments at the root rather than erroring, so a URI carrying more `..` than the template root is deep reaches the volume root and descends from there. A single fixed payload therefore works regardless of where the template directory sits:\n\n```\ntemplate root = \u003cbase\u003e/srv/app/templates\n\n'C:/../../../../boot.ini'          -\u003e reads \u003cbase\u003e/boot.ini\n'C:/' + '../'*40 + 'etc/hostname'  -\u003e reads /etc/hostname   (no depth guess)\n'C:/../../../../../etc/hostname'   -\u003e TopLevelLookupException (wrong depth)\n```\n\nOn Windows the equivalent is `C:/../../../../../../../../Windows/win.ini`, which reads that file for any template root depth. Only a target addressed *relative* to the template root needs the `..` count to be exact; anything reachable from the volume root does not.\n\n### Affected code\n\n- `mako/template.py`: `Template.__init__()` URI validation uses `os.path.normpath()`, which on Windows strips the drive and discards the `..` segments before the `startswith(\"..\")` guard is applied.\n- `mako/lookup.py`: `TemplateLookup.get_template()` resolves with `posixpath.normpath`/`posixpath.join`, where `C:` is an ordinary component, then performs the existence check with `os.path.isfile()`.\n\n### Reproduction\n\nWindows is emulated with the technique already used by the project's own test suite (`test/test_template.py:1398-1401`):\n\n```python\nimport os, ntpath\nos.path = ntpath\n\nfrom mako.lookup import TemplateLookup\nlookup = TemplateLookup(directories=[\"root/tpl\"])\n\nfor uri in [\"ok.html\",\n            \"//../../secret.txt\",\n            \"\\\\..\\\\..\\\\secret.txt\",\n            \"../../secret.txt\",\n            \"C:/../../../secret.txt\",\n            \"C:\\\\..\\\\..\\\\..\\\\secret.txt\",\n            \"d:/../../../secret.txt\"]:\n    try:\n        t = lookup.get_template(uri)\n        print(repr(uri), \"-\u003e filename=\", t.filename, repr(t.render()))\n    except Exception as e:\n        print(repr(uri), \"-\u003e REFUSED\", type(e).__name__)\n```\n\nAgainst 1.4.1, with a sentinel file written outside the configured directory:\n\n```\n'ok.html'                    -\u003e root/tpl/ok.html        'OK'         (positive control)\n'//../../secret.txt'         -\u003e REFUSED   (CVE-2026-41205 fix works)\n'\\..\\..\\secret.txt'          -\u003e REFUSED   (CVE-2026-44307 fix works)\n'../../secret.txt'           -\u003e REFUSED\n'C:/../../../secret.txt'     -\u003e reads the sentinel\n'C:\\..\\..\\..\\secret.txt'     -\u003e reads the sentinel\n'd:/../../../secret.txt'     -\u003e reads the sentinel\n```\n\nOn POSIX the same URIs are refused, because `posixpath.normpath` keeps `C:` as an ordinary component and the `..` survive to be inspected. The issue is Windows-only.\n\nNote that `d:/../../../secret.txt` resolves relative to the template root, not to drive `D:` -- this is not a cross-drive read. Reaching another drive would require a leading `..`, which `ntpath.normpath` renders as `..\\..\\D:\\x` and the existing guard catches.\n\n## Impact\n\nIf an application on Windows passes user-controlled template names or include paths to `TemplateLookup.get_template()`, an attacker may load and disclose any file readable by the application process on the same volume as the template directory, not merely files adjacent to it. The primary impact is local file disclosure. If the targeted file contains Mako/Python template syntax, it may also be parsed and executed as a template.\n\nAs with CVE-2026-41205, the URI is not generally reachable through a raw URL path, since a conforming URL normalizer collapses `C:/../..` first. The relevant vectors are query strings, form and JSON bodies, route parameters, and `\u003c%include file=\"${...}\"/\u003e`.\n\n## Remediation\n\nNormalize both sides with the same module. The resolution side already commits to `posixpath`, so the confinement check should as well:\n\n```python\nu_norm = posixpath.normpath(self.uri.replace(\"\\\\\", \"/\").lstrip(\"/\"))\nif u_norm.startswith(\"..\"):\n    raise exceptions.TemplateLookupException(...)\n```\n\nThis closes the drive case for the same reason it closes `//`: `posixpath` treats `C:` as an ordinary component, so the `..` segments survive to be inspected. Verified to block all three drive forms with the full test suite passing.\n\n## Credit\n\nReported by Eurico Nicacio under coordinated disclosure.",
+              "id": "PYSEC-2026-4243",
+              "modified": "2026-10-15T14:45:09.219391525Z",
+              "published": "2026-10-15T10:22:45.090602Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/security/advisories/GHSA-5639-2j2p-m4mx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102991"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/issues/441"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/commit/000ed85e4e48771eff460bf4fc721fb43de80e08"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sqlalchemy/mako"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/releases/tag/rel_1_4_2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://pypi.org/project/mako"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-5639-2j2p-m4mx"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Mako: Path traversal via drive-letter URI on Windows in TemplateLookup"
             },
             {
               "affected": [
@@ -5362,7 +5524,8 @@
                 }
               ],
               "aliases": [
-                "CVE-2026-102991"
+                "CVE-2026-102991",
+                "PYSEC-2026-4243"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -5375,7 +5538,7 @@
               },
               "details": "## Summary\n\nOn Windows, a `TemplateLookup` URI beginning with a drive designator (e.g. `C:/../../secret.txt` or `C:\\..\\..\\secret.txt`) bypasses the directory traversal check in `Template.__init__`, allowing reads of files outside the configured template directory.\n\nThis is a third, independent instance of the root cause behind CVE-2026-41205 (the `//` prefix) and CVE-2026-44307 (the backslash form). Both of those fixes normalized a separator *spelling*. Neither addressed the other way `posixpath` and `ntpath` disagree: the drive designator. Both prior fixes remain effective on their own terms; this variant survives them for an independent reason.\n\n## Details\n\nThe root cause is the same `posixpath` / `os.path` mismatch: resolution is done with `posixpath`, confinement is checked with `os.path`, which is `ntpath` on Windows.\n\n```\n# mako/lookup.py -- resolution\n247:  srcfile = posixpath.normpath(posixpath.join(dir_, u))   # posixpath, always\n248:  if os.path.isfile(srcfile):                             # ntpath on Windows\n\n# mako/template.py -- confinement\n268:  u_norm = os.path.normpath(u_norm)                       # ntpath on Windows\n269:  if u_norm.startswith(\"..\"):                             # never true for a drive URI\n```\n\n`posixpath` has no concept of a drive, so it treats `C:` as an ordinary path component; the `..` segments pop `C:` and then escape the template root. `ntpath`, by contrast, splits the drive off and treats the remainder as rooted, discarding the `..` entirely -- so the guard on line 269 inspects a string from which the evidence has already been removed:\n\n| URI | `ntpath.normpath` (what the guard sees) | guard fires |\n|---|---|---|\n| `//../secret.txt` | `..\\secret.txt` | yes |\n| `\\..\\secret.txt` | `..\\secret.txt` | yes |\n| `C:/../../secret.txt` | `C:\\secret.txt` | **no** |\n\nBecause the guard cannot fire for *any* URI beginning with a single-letter drive designator, the traversal is unconstrained, and its depth does not have to be guessed. `posixpath.normpath()` saturates excess `..` segments at the root rather than erroring, so a URI carrying more `..` than the template root is deep reaches the volume root and descends from there. A single fixed payload therefore works regardless of where the template directory sits:\n\n```\ntemplate root = \u003cbase\u003e/srv/app/templates\n\n'C:/../../../../boot.ini'          -\u003e reads \u003cbase\u003e/boot.ini\n'C:/' + '../'*40 + 'etc/hostname'  -\u003e reads /etc/hostname   (no depth guess)\n'C:/../../../../../etc/hostname'   -\u003e TopLevelLookupException (wrong depth)\n```\n\nOn Windows the equivalent is `C:/../../../../../../../../Windows/win.ini`, which reads that file for any template root depth. Only a target addressed *relative* to the template root needs the `..` count to be exact; anything reachable from the volume root does not.\n\n### Affected code\n\n- `mako/template.py`: `Template.__init__()` URI validation uses `os.path.normpath()`, which on Windows strips the drive and discards the `..` segments before the `startswith(\"..\")` guard is applied.\n- `mako/lookup.py`: `TemplateLookup.get_template()` resolves with `posixpath.normpath`/`posixpath.join`, where `C:` is an ordinary component, then performs the existence check with `os.path.isfile()`.\n\n### Reproduction\n\nWindows is emulated with the technique already used by the project's own test suite (`test/test_template.py:1398-1401`):\n\n```python\nimport os, ntpath\nos.path = ntpath\n\nfrom mako.lookup import TemplateLookup\nlookup = TemplateLookup(directories=[\"root/tpl\"])\n\nfor uri in [\"ok.html\",\n            \"//../../secret.txt\",\n            \"\\\\..\\\\..\\\\secret.txt\",\n            \"../../secret.txt\",\n            \"C:/../../../secret.txt\",\n            \"C:\\\\..\\\\..\\\\..\\\\secret.txt\",\n            \"d:/../../../secret.txt\"]:\n    try:\n        t = lookup.get_template(uri)\n        print(repr(uri), \"-\u003e filename=\", t.filename, repr(t.render()))\n    except Exception as e:\n        print(repr(uri), \"-\u003e REFUSED\", type(e).__name__)\n```\n\nAgainst 1.4.1, with a sentinel file written outside the configured directory:\n\n```\n'ok.html'                    -\u003e root/tpl/ok.html        'OK'         (positive control)\n'//../../secret.txt'         -\u003e REFUSED   (CVE-2026-41205 fix works)\n'\\..\\..\\secret.txt'          -\u003e REFUSED   (CVE-2026-44307 fix works)\n'../../secret.txt'           -\u003e REFUSED\n'C:/../../../secret.txt'     -\u003e reads the sentinel\n'C:\\..\\..\\..\\secret.txt'     -\u003e reads the sentinel\n'd:/../../../secret.txt'     -\u003e reads the sentinel\n```\n\nOn POSIX the same URIs are refused, because `posixpath.normpath` keeps `C:` as an ordinary component and the `..` survive to be inspected. The issue is Windows-only.\n\nNote that `d:/../../../secret.txt` resolves relative to the template root, not to drive `D:` -- this is not a cross-drive read. Reaching another drive would require a leading `..`, which `ntpath.normpath` renders as `..\\..\\D:\\x` and the existing guard catches.\n\n## Impact\n\nIf an application on Windows passes user-controlled template names or include paths to `TemplateLookup.get_template()`, an attacker may load and disclose any file readable by the application process on the same volume as the template directory, not merely files adjacent to it. The primary impact is local file disclosure. If the targeted file contains Mako/Python template syntax, it may also be parsed and executed as a template.\n\nAs with CVE-2026-41205, the URI is not generally reachable through a raw URL path, since a conforming URL normalizer collapses `C:/../..` first. The relevant vectors are query strings, form and JSON bodies, route parameters, and `\u003c%include file=\"${...}\"/\u003e`.\n\n## Remediation\n\nNormalize both sides with the same module. The resolution side already commits to `posixpath`, so the confinement check should as well:\n\n```python\nu_norm = posixpath.normpath(self.uri.replace(\"\\\\\", \"/\").lstrip(\"/\"))\nif u_norm.startswith(\"..\"):\n    raise exceptions.TemplateLookupException(...)\n```\n\nThis closes the drive case for the same reason it closes `//`: `posixpath` treats `C:` as an ordinary component, so the `..` segments survive to be inspected. Verified to block all three drive forms with the full test suite passing.\n\n## Credit\n\nReported by Eurico Nicacio under coordinated disclosure.",
               "id": "GHSA-5639-2j2p-m4mx",
-              "modified": "2026-10-06T00:00:09.544711907Z",
+              "modified": "2026-10-15T14:55:45.473045835Z",
               "published": "2026-10-05T23:42:02Z",
               "references": [
                 {
@@ -69727,6 +69890,16 @@
                 "PYSEC-2026-4112"
               ],
               "max_severity": "8.1"
+            },
+            {
+              "ids": [
+                "GHSA-jwrc-gm9j-263p"
+              ],
+              "aliases": [
+                "CVE-2026-102832",
+                "GHSA-jwrc-gm9j-263p"
+              ],
+              "max_severity": "4.2"
             }
           ],
           "vulnerabilities": [
@@ -71407,6 +71580,209 @@
                 }
               ],
               "summary": "JupyterLab: Cross-site scripting (XSS) in JupyterLab via notebook cells pasted from the system clipboard"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.6.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jupyterlab",
+                    "purl": "pkg:pypi/jupyterlab"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.6.0"
+                        },
+                        {
+                          "fixed": "4.6.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.6.0",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.6.3"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.5.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jupyterlab",
+                    "purl": "pkg:pypi/jupyterlab"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.5.7"
+                        },
+                        {
+                          "fixed": "4.5.11"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.5.10",
+                    "4.5.7",
+                    "4.5.8",
+                    "4.5.9"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.6.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "notebook",
+                    "purl": "pkg:pypi/notebook"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.5.6"
+                        },
+                        {
+                          "fixed": "7.6.3"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "7.5.6",
+                    "7.5.7",
+                    "7.5.8",
+                    "7.6.0",
+                    "7.6.0a0",
+                    "7.6.0a1",
+                    "7.6.0a2",
+                    "7.6.0a3",
+                    "7.6.0a4",
+                    "7.6.0a5",
+                    "7.6.0b0",
+                    "7.6.0b1",
+                    "7.6.0rc0",
+                    "7.6.0rc1",
+                    "7.6.1",
+                    "7.6.2"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.8.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jupyterlite-core",
+                    "purl": "pkg:pypi/jupyterlite-core"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.7.5"
+                        },
+                        {
+                          "fixed": "0.8.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.0a0",
+                    "0.8.0a1",
+                    "0.8.0a2",
+                    "0.8.0b0",
+                    "0.8.0b1",
+                    "0.8.0rc0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-102832"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-367",
+                  "CWE-863"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-15T20:22:13Z",
+                "nvd_published_at": "2026-10-13T16:17:09Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Description\n\nA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once and Trust. Choosing Trust runs the command and marks the document trusted, so its later buttons run without a prompt.\n\nWhich document gets marked is decided when the user answers, not when they click. Both trust commands read whichever document is current at that moment: `markdownviewer:trust` uses `tracker.currentWidget`, and `notebook:trust` uses the equivalent lookup. If another document becomes current while the prompt is open, that document is the one marked trusted, and the one the user was looking at stays untrusted.\n\nUsers are affected if all of the following are true:\n\n- they run JupyterLab 4.5.7 through 4.6.3, or an application that bundles it such as Notebook 7.5+;\n- they open a Markdown file or notebook from someone else and click a button in it;\n- they answer Trust rather than Cancel or Run Once; and\n- a second document becomes the current one while the prompt is open, for example through a workspace restoring at startup, an extension activating a widget, or a command that opens a file\n\n### Impact\n\nThe user loses control over which document they trusted. Every button in the document that was (incorrectly) marked as trusted runs from then on without a prompt, so if that document also came from an untrusted source, its buttons fire on a single click with no confirmation. That is the state the prompt was added to prevent, in [GHSA-mqcg-5x36-vfcg](https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-mqcg-5x36-vfcg).\n\nThe command that ran had the user's consent, because the prompt named it and they pressed Trust. The document they were reading stays untrusted, so it prompts again on the next click.\n\n#### Notebooks are written to disk\n\nWhen the document marked is a notebook, the effect outlives the browser session. `notebook:trust` marks every cell trusted and then saves the file, which results in the server signing it, so the notebook stays trusted when it is next opened. The save also writes out any unsaved edits in that notebook. A second confirmation appears first, but it says only that a trusted notebook may execute hidden code, without naming the file, so it does not show the user which notebook is about to be trusted.\n\nA Markdown preview marked this way stays trusted only until it is closed. Nothing is written to disk.\n\n### Patches\n\nJupyterLab [`v4.6.4`](https://github.com/jupyterlab/jupyterlab/releases/tag/v4.6.4) and [`v4.5.11`](https://github.com/jupyterlab/jupyterlab/releases/tag/v4.5.11) contain the patch. The trust request now carries the document that was clicked, and the command is run only once that same document has been marked.\n\nUsers of applications that depend on JupyterLab, such as Notebook v7+, should update `jupyterlab` package too.\n\n### Workarounds\n\nGiven the high complexity of a potential exploit, we advise treating this as a defense in-depth and update at earliest opportunity, rather than apply the workarounds listed below. However, for users running in highly sensitive environments who are unable to upgrade the workarounds are included below. \n\nTurn off command linker, which removes the ability to execute frontend commands altogether:\n\n```json\n{\n  \"@jupyterlab/apputils-extension:sanitizer\": {\n    \"allowCommandLinker\": false\n  }\n}\n```\n\nIn such configuration the buttons in Markdown files and notebook outputs then do nothing when clicked. Documentation and extensions that use command links for navigation stop working, and the setting applies to every document, not only untrusted ones.\n\nIf disabling that setting is not desirable and update is not possible, advise users to choose \"Run Once\" rather than \"Trust\". \"Run Once\" makes the command run but no document is marked, so nothing can be trusted in error.",
+              "id": "GHSA-jwrc-gm9j-263p",
+              "modified": "2026-10-15T20:30:07.110246844Z",
+              "published": "2026-10-15T20:22:13Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-jwrc-gm9j-263p"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102832"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/commit/0fc18ab4ef67e431a8f6560e387193baf786c70a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/commit/b64bc88b8ca034cf158604a5cc48ca9170ea453b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/commit/f7e5f9803fdf2aaaa0e9bfb9cc73386a8cc5f0b2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jupyterlab/jupyterlab"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/releases/tag/v4.5.11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/releases/tag/v4.6.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked"
             }
           ]
         },
@@ -71685,16 +72061,97 @@
           "groups": [
             {
               "ids": [
+                "PYSEC-2026-4244",
                 "GHSA-54p9-h82j-f925"
               ],
               "aliases": [
                 "CVE-2026-104874",
-                "GHSA-54p9-h82j-f925"
+                "GHSA-54p9-h82j-f925",
+                "PYSEC-2026-4244"
               ],
               "max_severity": "5.3"
             }
           ],
           "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/multidict/PYSEC-2026-4244.yaml"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "multidict",
+                    "purl": "pkg:pypi/multidict"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.7.0"
+                        },
+                        {
+                          "fixed": "6.9.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "6.7.0",
+                    "6.7.1",
+                    "6.8.0",
+                    "6.9.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-104874",
+                "GHSA-54p9-h82j-f925"
+              ],
+              "details": "## Description\n\nA reference leak in the items-view union and subtraction operators of aio-libs/multidict 6.7.0 through 6.9.0 (C extension) lets a remote client drive unbounded, unreclaimable memory growth by having each operand element leak one key-identity object and one value object. The reflected-union path (`operand | d.items()`, `multidict_itemsview_or2_impl`) and the subtraction path (`d.items() - operand`, `multidict_itemsview_sub1_impl`) parse each element into new strong references but release only the tuple wrapper, never the identity and value. Servers in the aio-libs stack build these views over attacker-supplied HTTP headers and query strings, so the operand size is under remote control. Forced garbage collection does not recover the leaked objects, so resident memory rises monotonically until the process is killed.\n\n---\n\n## Root Cause\n\n`_multidict_itemsview_parse_item()` returns **new** references: a fresh identity via `md_calc_identity()` and a fresh value via `Py_NewRef()`. The `or2_impl` first parse loop requests both but clears only `arg`:\n\n```c\n// views.h:565 — or2_impl first parse loop\nwhile ((st = PyIter_NextItem(iter, \u0026arg)) \u003e 0) {\n    int tmp = _multidict_itemsview_parse_item(\n        self, arg, \u0026identity, NULL, \u0026value);   // identity + value: new refs\n    if (tmp \u003c 0) goto fail;\n    else if (tmp \u003e 0) {\n        if (_set_add(tmp_set, identity, value) \u003c 0) goto fail;\n    }\n    Py_CLEAR(arg);                             // :575 clears arg ONLY\n}\n```\n\n`_set_add()` builds its own tuple with `PyTuple_Pack` and `Py_DECREF`s it, so it never borrows the loop's `identity`/`value`. On the next iteration those variables are overwritten, so the previous references are lost permanently. The `sub1_impl` first loop (`:686-696`) has the identical omission.\n\nThis is an editing slip, not an ownership contract: every sibling path clears all three references per iteration, `and1_impl` (`:304-306`), `and2_impl` (`:389-391`), `or1_impl` (`:506-508`), and the second (`md_next`) loops of both functions (`:605-607`, `:726-728`). PR #1413 added a `Py_DECREF(tpl)` to the *second* loop of `or2`/`sub1`, fixing a different temporary-tuple leak; it never touched the first parse loop, so this leak remains on `master`.\n\n`views.h` is byte-identical between `v6.6.0` and `v6.7.0`, yet 6.6.4 does not leak and 6.7.0 does. The regression is behavioural, introduced by a key-identity ownership change in `hashtable.h` across that boundary that made `md_calc_identity()` return a fresh strong reference the unchanged parse loop never releases.\n\n---\n\n## Reproduction Environment\n\n| Item | Value |\n|------|-------|\n| **Runtime** | CPython 3.14.6 |\n| **multidict** | 6.9.0 (PyPI binary wheel, C extension) |\n| **OS** | macOS (darwin 25.6.0, arm64) |\n\n---\n\n## Proof of Concept\n\n### POC Source Code\n\n#### poc_refcount.py — leak proof with intersection control\n\n```python\nimport sys, gc\nfrom multidict import CIMultiDict\n\ndef probe(name, run_op):\n    d = CIMultiDict(); d[\"seed\"] = \"x\"\n    value = object()                 # unique sentinel\n    N = 100000\n    operand = [(\"k%d\" % i, value) for i in range(N)]\n    gc.collect(); before = sys.getrefcount(value)\n    run_op(d, operand)\n    gc.collect(); after = sys.getrefcount(value)\n    print(f\"[{name}] leaked strong refs = {after - before}\")\n\nprobe(\"or2  operand | items\", lambda d, o: o | d.items())    # reflected union\nprobe(\"sub1 items - operand\", lambda d, o: d.items() - o)    # subtraction\nprobe(\"and2 items \u0026 operand\", lambda d, o: d.items() \u0026 o)    # CONTROL: clears, expect 0\n```\n\n#### poc_dispatch.py — maps which paths leak\n\n```python\nimport sys, gc\nfrom multidict import CIMultiDict\n\ndef probe(name, fn):\n    d = CIMultiDict(); d[\"seed\"] = \"x\"\n    v = object(); N = 50000\n    operand = [(\"k%d\" % i, v) for i in range(N)]\n    gc.collect(); before = sys.getrefcount(v)\n    fn(d, operand); gc.collect(); after = sys.getrefcount(v)\n    print(f\"{name:35s} leaked={after - before}\")\n\nprobe(\"operand | d.items()  (or2)\",  lambda d, o: o | d.items())\nprobe(\"d.items() | operand  (or1)\",  lambda d, o: d.items() | o)\nprobe(\"d.items() - operand  (sub1)\", lambda d, o: d.items() - o)\nprobe(\"operand - d.items()  (rsub)\", lambda d, o: set(o) - d.items())\nprobe(\"d.items() \u0026 operand  (and)\",  lambda d, o: d.items() \u0026 o)\n```\n\n#### poc_rss.py — availability consequence\n\n```python\nimport sys, gc, resource\nfrom multidict import CIMultiDict\n\ndef rss_mb():\n    r = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss\n    return r / (1024 * 1024) if sys.platform == \"darwin\" else r / 1024\n\nd = CIMultiDict(); d[\"seed\"] = \"x\"\ngc.collect(); print(f\"start RSS = {rss_mb():.1f} MB\")\nfor i in range(200):\n    operand = [(f\"k{i}_{j}\", f\"v{i}_{j}\") for j in range(50000)]\n    _ = operand | d.items()\n    del operand\n    gc.collect()                     # prove GC cannot reclaim the leak\n    if (i + 1) % 40 == 0:\n        print(f\"after {(i+1)*50000:\u003e9,} elements: RSS = {rss_mb():.1f} MB\")\n```\n\n### Execution Steps\n\n1. `python3 -m venv venv` (CPython 3.10+).\n2. `./venv/bin/pip install \"multidict==6.9.0\"` (installs the C-extension wheel).\n3. From a directory that is **not** a multidict checkout, run each script with `./venv/bin/python`.\n\n### Actual Execution Evidence\n\n```\n[or2  operand | items] leaked strong refs = 100000\n[sub1 items - operand] leaked strong refs = 100000\n[and2 items \u0026 operand] leaked strong refs = 0        \u003c- control\n```\n\n```\noperand | d.items()  (or2)          leaked=50000\nd.items() | operand  (or1)          leaked=0\nd.items() - operand  (sub1)         leaked=50000\noperand - d.items()  (rsub)         leaked=0\nd.items() \u0026 operand  (and)          leaked=0\n```\n\n```\nstart RSS = 15.6 MB\nafter 2,000,000 elements: RSS = 288.1 MB\nafter 6,000,000 elements: RSS = 776.8 MB\nafter 10,000,000 elements: RSS = 1266.8 MB   (gc.collect() every iteration)\n```\n\n### Version-boundary evidence\n\nSame `poc_dispatch.py`, PyPI wheels, identical environment. Last-clean is `6.6.4`; first-affected is `6.7.0`:\n\n```\n6.6.4 : or2=0      sub1=0      others=0   (clean, last 6.6.x)\n6.7.0 : or2=50000  sub1=50000  others=0   (AFFECTED, first)\n6.9.0 : or2=50000  sub1=50000  others=0   (affected)\n```\n\nThe clean 6.6.x releases return correct set-operation results, so the zero leak reflects correct memory management, not a broken path.\n\n### Analysis of Results\n\nThe operand holds exactly `N` references to one sentinel value; after the union its refcount rises by another `N` and stays there post-GC, so each element leaked one strong reference. Subtraction shows the identical delta. The intersection control, which clears `identity` and `value`, leaks zero; the only code difference is the two missing `Py_CLEAR` calls, so the leak is caused by that omission and not the harness. RSS climbs from 15.6 MB to 1266.8 MB (~250 MB per 2M elements) despite per-iteration GC, confirming the objects are unreachable by the cyclic collector.\n\n---\n\n## Impact\n\nA process that evaluates items-view unions or subtractions over remote-influenced operands leaks one identity plus one value object per element, permanently. In the aio-libs stack multidict backs HTTP headers and query strings, so an attacker who enlarges the operand (for example, many repeated header items compared against a fixed allow/deny set) forces steady, unrecoverable heap growth and can eventually exhaust memory in a long-lived server. This is an availability defect only; results stay correct and no data is exposed.\n\nReachability depends on the application evaluating `operand | view.items()` (reflected union) or `view.items() - operand` (subtraction) over a sequence of 2-tuples whose count is remote-influenced. The forward union `view.items() | operand` routes to `or1_impl`, which clears correctly and does not leak; a non-tuple operand element takes the `parse_item` early-return and does not leak. Set algebra over items views is not the most common multidict usage, which bounds exposure and is why this is Medium, not High. This is distinct from PR #1413, which fixed a temporary-tuple leak in the second loop and did not release these per-element objects.\n\n---\n\n## Remediation\n\n**Recommended fix.** Clear the two per-element references at the end of the first parse loop in both functions, exactly as every sibling path does. In `or2_impl` (`views.h:575`) and `sub1_impl` (`views.h:696`), replace the lone `Py_CLEAR(arg);` with:\n\n```c\n    Py_CLEAR(arg);\n    Py_CLEAR(identity);\n    Py_CLEAR(value);\n```\n\nThis is an in-repo change to a static internal function; it alters no public API, type, or signature, and asks callers to change nothing. A leak test in the existing `tests/test_leaks.py` style would lock it in.\n\n**Workaround.** Avoid `operand | view.items()` and `view.items() - operand` on attacker-influenced operands, or install with `MULTIDICT_NO_EXTENSIONS=1` to use the unaffected pure-Python build.\n\n---",
+              "id": "PYSEC-2026-4244",
+              "modified": "2026-10-15T14:45:08.892406163Z",
+              "published": "2026-10-15T10:22:45.005441Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/multidict/security/advisories/GHSA-54p9-h82j-f925"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104874"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/multidict/commit/350b4a07bf8ff851b6d7544e81b1c748bdc74c40"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aio-libs/multidict"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/multidict/releases/tag/v6.9.1"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://pypi.org/project/multidict"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-54p9-h82j-f925"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Multidict: Reference leak in CIMultiDict/MultiDict items-view union and subtraction"
+            },
             {
               "affected": [
                 {
@@ -71729,7 +72186,8 @@
                 }
               ],
               "aliases": [
-                "CVE-2026-104874"
+                "CVE-2026-104874",
+                "PYSEC-2026-4244"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -71742,7 +72200,7 @@
               },
               "details": "## Description\n\nA reference leak in the items-view union and subtraction operators of aio-libs/multidict 6.7.0 through 6.9.0 (C extension) lets a remote client drive unbounded, unreclaimable memory growth by having each operand element leak one key-identity object and one value object. The reflected-union path (`operand | d.items()`, `multidict_itemsview_or2_impl`) and the subtraction path (`d.items() - operand`, `multidict_itemsview_sub1_impl`) parse each element into new strong references but release only the tuple wrapper, never the identity and value. Servers in the aio-libs stack build these views over attacker-supplied HTTP headers and query strings, so the operand size is under remote control. Forced garbage collection does not recover the leaked objects, so resident memory rises monotonically until the process is killed.\n\n---\n\n## Root Cause\n\n`_multidict_itemsview_parse_item()` returns **new** references: a fresh identity via `md_calc_identity()` and a fresh value via `Py_NewRef()`. The `or2_impl` first parse loop requests both but clears only `arg`:\n\n```c\n// views.h:565 — or2_impl first parse loop\nwhile ((st = PyIter_NextItem(iter, \u0026arg)) \u003e 0) {\n    int tmp = _multidict_itemsview_parse_item(\n        self, arg, \u0026identity, NULL, \u0026value);   // identity + value: new refs\n    if (tmp \u003c 0) goto fail;\n    else if (tmp \u003e 0) {\n        if (_set_add(tmp_set, identity, value) \u003c 0) goto fail;\n    }\n    Py_CLEAR(arg);                             // :575 clears arg ONLY\n}\n```\n\n`_set_add()` builds its own tuple with `PyTuple_Pack` and `Py_DECREF`s it, so it never borrows the loop's `identity`/`value`. On the next iteration those variables are overwritten, so the previous references are lost permanently. The `sub1_impl` first loop (`:686-696`) has the identical omission.\n\nThis is an editing slip, not an ownership contract: every sibling path clears all three references per iteration, `and1_impl` (`:304-306`), `and2_impl` (`:389-391`), `or1_impl` (`:506-508`), and the second (`md_next`) loops of both functions (`:605-607`, `:726-728`). PR #1413 added a `Py_DECREF(tpl)` to the *second* loop of `or2`/`sub1`, fixing a different temporary-tuple leak; it never touched the first parse loop, so this leak remains on `master`.\n\n`views.h` is byte-identical between `v6.6.0` and `v6.7.0`, yet 6.6.4 does not leak and 6.7.0 does. The regression is behavioural, introduced by a key-identity ownership change in `hashtable.h` across that boundary that made `md_calc_identity()` return a fresh strong reference the unchanged parse loop never releases.\n\n---\n\n## Reproduction Environment\n\n| Item | Value |\n|------|-------|\n| **Runtime** | CPython 3.14.6 |\n| **multidict** | 6.9.0 (PyPI binary wheel, C extension) |\n| **OS** | macOS (darwin 25.6.0, arm64) |\n\n---\n\n## Proof of Concept\n\n### POC Source Code\n\n#### poc_refcount.py — leak proof with intersection control\n\n```python\nimport sys, gc\nfrom multidict import CIMultiDict\n\ndef probe(name, run_op):\n    d = CIMultiDict(); d[\"seed\"] = \"x\"\n    value = object()                 # unique sentinel\n    N = 100000\n    operand = [(\"k%d\" % i, value) for i in range(N)]\n    gc.collect(); before = sys.getrefcount(value)\n    run_op(d, operand)\n    gc.collect(); after = sys.getrefcount(value)\n    print(f\"[{name}] leaked strong refs = {after - before}\")\n\nprobe(\"or2  operand | items\", lambda d, o: o | d.items())    # reflected union\nprobe(\"sub1 items - operand\", lambda d, o: d.items() - o)    # subtraction\nprobe(\"and2 items \u0026 operand\", lambda d, o: d.items() \u0026 o)    # CONTROL: clears, expect 0\n```\n\n#### poc_dispatch.py — maps which paths leak\n\n```python\nimport sys, gc\nfrom multidict import CIMultiDict\n\ndef probe(name, fn):\n    d = CIMultiDict(); d[\"seed\"] = \"x\"\n    v = object(); N = 50000\n    operand = [(\"k%d\" % i, v) for i in range(N)]\n    gc.collect(); before = sys.getrefcount(v)\n    fn(d, operand); gc.collect(); after = sys.getrefcount(v)\n    print(f\"{name:35s} leaked={after - before}\")\n\nprobe(\"operand | d.items()  (or2)\",  lambda d, o: o | d.items())\nprobe(\"d.items() | operand  (or1)\",  lambda d, o: d.items() | o)\nprobe(\"d.items() - operand  (sub1)\", lambda d, o: d.items() - o)\nprobe(\"operand - d.items()  (rsub)\", lambda d, o: set(o) - d.items())\nprobe(\"d.items() \u0026 operand  (and)\",  lambda d, o: d.items() \u0026 o)\n```\n\n#### poc_rss.py — availability consequence\n\n```python\nimport sys, gc, resource\nfrom multidict import CIMultiDict\n\ndef rss_mb():\n    r = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss\n    return r / (1024 * 1024) if sys.platform == \"darwin\" else r / 1024\n\nd = CIMultiDict(); d[\"seed\"] = \"x\"\ngc.collect(); print(f\"start RSS = {rss_mb():.1f} MB\")\nfor i in range(200):\n    operand = [(f\"k{i}_{j}\", f\"v{i}_{j}\") for j in range(50000)]\n    _ = operand | d.items()\n    del operand\n    gc.collect()                     # prove GC cannot reclaim the leak\n    if (i + 1) % 40 == 0:\n        print(f\"after {(i+1)*50000:\u003e9,} elements: RSS = {rss_mb():.1f} MB\")\n```\n\n### Execution Steps\n\n1. `python3 -m venv venv` (CPython 3.10+).\n2. `./venv/bin/pip install \"multidict==6.9.0\"` (installs the C-extension wheel).\n3. From a directory that is **not** a multidict checkout, run each script with `./venv/bin/python`.\n\n### Actual Execution Evidence\n\n```\n[or2  operand | items] leaked strong refs = 100000\n[sub1 items - operand] leaked strong refs = 100000\n[and2 items \u0026 operand] leaked strong refs = 0        \u003c- control\n```\n\n```\noperand | d.items()  (or2)          leaked=50000\nd.items() | operand  (or1)          leaked=0\nd.items() - operand  (sub1)         leaked=50000\noperand - d.items()  (rsub)         leaked=0\nd.items() \u0026 operand  (and)          leaked=0\n```\n\n```\nstart RSS = 15.6 MB\nafter 2,000,000 elements: RSS = 288.1 MB\nafter 6,000,000 elements: RSS = 776.8 MB\nafter 10,000,000 elements: RSS = 1266.8 MB   (gc.collect() every iteration)\n```\n\n### Version-boundary evidence\n\nSame `poc_dispatch.py`, PyPI wheels, identical environment. Last-clean is `6.6.4`; first-affected is `6.7.0`:\n\n```\n6.6.4 : or2=0      sub1=0      others=0   (clean, last 6.6.x)\n6.7.0 : or2=50000  sub1=50000  others=0   (AFFECTED, first)\n6.9.0 : or2=50000  sub1=50000  others=0   (affected)\n```\n\nThe clean 6.6.x releases return correct set-operation results, so the zero leak reflects correct memory management, not a broken path.\n\n### Analysis of Results\n\nThe operand holds exactly `N` references to one sentinel value; after the union its refcount rises by another `N` and stays there post-GC, so each element leaked one strong reference. Subtraction shows the identical delta. The intersection control, which clears `identity` and `value`, leaks zero; the only code difference is the two missing `Py_CLEAR` calls, so the leak is caused by that omission and not the harness. RSS climbs from 15.6 MB to 1266.8 MB (~250 MB per 2M elements) despite per-iteration GC, confirming the objects are unreachable by the cyclic collector.\n\n---\n\n## Impact\n\nA process that evaluates items-view unions or subtractions over remote-influenced operands leaks one identity plus one value object per element, permanently. In the aio-libs stack multidict backs HTTP headers and query strings, so an attacker who enlarges the operand (for example, many repeated header items compared against a fixed allow/deny set) forces steady, unrecoverable heap growth and can eventually exhaust memory in a long-lived server. This is an availability defect only; results stay correct and no data is exposed.\n\nReachability depends on the application evaluating `operand | view.items()` (reflected union) or `view.items() - operand` (subtraction) over a sequence of 2-tuples whose count is remote-influenced. The forward union `view.items() | operand` routes to `or1_impl`, which clears correctly and does not leak; a non-tuple operand element takes the `parse_item` early-return and does not leak. Set algebra over items views is not the most common multidict usage, which bounds exposure and is why this is Medium, not High. This is distinct from PR #1413, which fixed a temporary-tuple leak in the second loop and did not release these per-element objects.\n\n---\n\n## Remediation\n\n**Recommended fix.** Clear the two per-element references at the end of the first parse loop in both functions, exactly as every sibling path does. In `or2_impl` (`views.h:575`) and `sub1_impl` (`views.h:696`), replace the lone `Py_CLEAR(arg);` with:\n\n```c\n    Py_CLEAR(arg);\n    Py_CLEAR(identity);\n    Py_CLEAR(value);\n```\n\nThis is an in-repo change to a static internal function; it alters no public API, type, or signature, and asks callers to change nothing. A leak test in the existing `tests/test_leaks.py` style would lock it in.\n\n**Workaround.** Avoid `operand | view.items()` and `view.items() - operand` on attacker-influenced operands, or install with `MULTIDICT_NO_EXTENSIONS=1` to use the unaffected pure-Python build.\n\n---",
               "id": "GHSA-54p9-h82j-f925",
-              "modified": "2026-10-06T00:00:09.468260817Z",
+              "modified": "2026-10-15T14:56:05.601333622Z",
               "published": "2026-10-05T23:40:58Z",
               "references": [
                 {
@@ -71868,6 +72326,16 @@
                 "PYSEC-2026-4112"
               ],
               "max_severity": "8.1"
+            },
+            {
+              "ids": [
+                "GHSA-jwrc-gm9j-263p"
+              ],
+              "aliases": [
+                "CVE-2026-102832",
+                "GHSA-jwrc-gm9j-263p"
+              ],
+              "max_severity": "4.2"
             }
           ],
           "vulnerabilities": [
@@ -72249,6 +72717,209 @@
                 }
               ],
               "summary": "JupyterLab: Cross-site scripting (XSS) in JupyterLab via notebook cells pasted from the system clipboard"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.6.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jupyterlab",
+                    "purl": "pkg:pypi/jupyterlab"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.6.0"
+                        },
+                        {
+                          "fixed": "4.6.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.6.0",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.6.3"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.5.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jupyterlab",
+                    "purl": "pkg:pypi/jupyterlab"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.5.7"
+                        },
+                        {
+                          "fixed": "4.5.11"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.5.10",
+                    "4.5.7",
+                    "4.5.8",
+                    "4.5.9"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.6.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "notebook",
+                    "purl": "pkg:pypi/notebook"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.5.6"
+                        },
+                        {
+                          "fixed": "7.6.3"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "7.5.6",
+                    "7.5.7",
+                    "7.5.8",
+                    "7.6.0",
+                    "7.6.0a0",
+                    "7.6.0a1",
+                    "7.6.0a2",
+                    "7.6.0a3",
+                    "7.6.0a4",
+                    "7.6.0a5",
+                    "7.6.0b0",
+                    "7.6.0b1",
+                    "7.6.0rc0",
+                    "7.6.0rc1",
+                    "7.6.1",
+                    "7.6.2"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.8.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-jwrc-gm9j-263p/GHSA-jwrc-gm9j-263p.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jupyterlite-core",
+                    "purl": "pkg:pypi/jupyterlite-core"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.7.5"
+                        },
+                        {
+                          "fixed": "0.8.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.0a0",
+                    "0.8.0a1",
+                    "0.8.0a2",
+                    "0.8.0b0",
+                    "0.8.0b1",
+                    "0.8.0rc0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-102832"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-367",
+                  "CWE-863"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-15T20:22:13Z",
+                "nvd_published_at": "2026-10-13T16:17:09Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Description\n\nA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once and Trust. Choosing Trust runs the command and marks the document trusted, so its later buttons run without a prompt.\n\nWhich document gets marked is decided when the user answers, not when they click. Both trust commands read whichever document is current at that moment: `markdownviewer:trust` uses `tracker.currentWidget`, and `notebook:trust` uses the equivalent lookup. If another document becomes current while the prompt is open, that document is the one marked trusted, and the one the user was looking at stays untrusted.\n\nUsers are affected if all of the following are true:\n\n- they run JupyterLab 4.5.7 through 4.6.3, or an application that bundles it such as Notebook 7.5+;\n- they open a Markdown file or notebook from someone else and click a button in it;\n- they answer Trust rather than Cancel or Run Once; and\n- a second document becomes the current one while the prompt is open, for example through a workspace restoring at startup, an extension activating a widget, or a command that opens a file\n\n### Impact\n\nThe user loses control over which document they trusted. Every button in the document that was (incorrectly) marked as trusted runs from then on without a prompt, so if that document also came from an untrusted source, its buttons fire on a single click with no confirmation. That is the state the prompt was added to prevent, in [GHSA-mqcg-5x36-vfcg](https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-mqcg-5x36-vfcg).\n\nThe command that ran had the user's consent, because the prompt named it and they pressed Trust. The document they were reading stays untrusted, so it prompts again on the next click.\n\n#### Notebooks are written to disk\n\nWhen the document marked is a notebook, the effect outlives the browser session. `notebook:trust` marks every cell trusted and then saves the file, which results in the server signing it, so the notebook stays trusted when it is next opened. The save also writes out any unsaved edits in that notebook. A second confirmation appears first, but it says only that a trusted notebook may execute hidden code, without naming the file, so it does not show the user which notebook is about to be trusted.\n\nA Markdown preview marked this way stays trusted only until it is closed. Nothing is written to disk.\n\n### Patches\n\nJupyterLab [`v4.6.4`](https://github.com/jupyterlab/jupyterlab/releases/tag/v4.6.4) and [`v4.5.11`](https://github.com/jupyterlab/jupyterlab/releases/tag/v4.5.11) contain the patch. The trust request now carries the document that was clicked, and the command is run only once that same document has been marked.\n\nUsers of applications that depend on JupyterLab, such as Notebook v7+, should update `jupyterlab` package too.\n\n### Workarounds\n\nGiven the high complexity of a potential exploit, we advise treating this as a defense in-depth and update at earliest opportunity, rather than apply the workarounds listed below. However, for users running in highly sensitive environments who are unable to upgrade the workarounds are included below. \n\nTurn off command linker, which removes the ability to execute frontend commands altogether:\n\n```json\n{\n  \"@jupyterlab/apputils-extension:sanitizer\": {\n    \"allowCommandLinker\": false\n  }\n}\n```\n\nIn such configuration the buttons in Markdown files and notebook outputs then do nothing when clicked. Documentation and extensions that use command links for navigation stop working, and the setting applies to every document, not only untrusted ones.\n\nIf disabling that setting is not desirable and update is not possible, advise users to choose \"Run Once\" rather than \"Trust\". \"Run Once\" makes the command run but no document is marked, so nothing can be trusted in error.",
+              "id": "GHSA-jwrc-gm9j-263p",
+              "modified": "2026-10-15T20:30:07.110246844Z",
+              "published": "2026-10-15T20:22:13Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-jwrc-gm9j-263p"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102832"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/commit/0fc18ab4ef67e431a8f6560e387193baf786c70a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/commit/b64bc88b8ca034cf158604a5cc48ca9170ea453b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/commit/f7e5f9803fdf2aaaa0e9bfb9cc73386a8cc5f0b2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jupyterlab/jupyterlab"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/releases/tag/v4.5.11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jupyterlab/jupyterlab/releases/tag/v4.6.4"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked"
             }
           ]
         },
@@ -105474,28 +106145,33 @@
           "groups": [
             {
               "ids": [
-                "GHSA-f23m-r3pf-42rh",
-                "GHSA-xxjr-mmjv-4gpg"
+                "GHSA-f23m-r3pf-42rh"
               ],
               "aliases": [
-                "CVE-2025-13465",
                 "CVE-2026-2950",
-                "GHSA-f23m-r3pf-42rh",
-                "GHSA-xxjr-mmjv-4gpg"
+                "GHSA-f23m-r3pf-42rh"
               ],
-              "max_severity": "6.9"
+              "max_severity": "6.5"
             },
             {
               "ids": [
                 "GHSA-r5fr-rjxr-66jc"
               ],
               "aliases": [
-                "CVE-2021-23337",
                 "CVE-2026-4800",
-                "GHSA-35jh-r3h4-6jhm",
                 "GHSA-r5fr-rjxr-66jc"
               ],
               "max_severity": "8.1"
+            },
+            {
+              "ids": [
+                "GHSA-xxjr-mmjv-4gpg"
+              ],
+              "aliases": [
+                "CVE-2025-13465",
+                "GHSA-xxjr-mmjv-4gpg"
+              ],
+              "max_severity": "6.9"
             }
           ],
           "vulnerabilities": [
@@ -105598,9 +106274,7 @@
                 }
               ],
               "aliases": [
-                "CVE-2025-13465",
-                "CVE-2026-2950",
-                "GHSA-xxjr-mmjv-4gpg"
+                "CVE-2026-2950"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -105613,7 +106287,7 @@
               },
               "details": "### Impact\n\nLodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\nThe issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\n### Patches\n\nThis issue is patched in 4.18.0.\n\n### Workarounds\n\nNone. Upgrade to the patched version.",
               "id": "GHSA-f23m-r3pf-42rh",
-              "modified": "2026-09-10T03:50:44.050013812Z",
+              "modified": "2026-10-17T02:56:13.084362346Z",
               "published": "2026-04-01T23:50:27Z",
               "references": [
                 {
@@ -105741,9 +106415,7 @@
                 }
               ],
               "aliases": [
-                "CVE-2021-23337",
-                "CVE-2026-4800",
-                "GHSA-35jh-r3h4-6jhm"
+                "CVE-2026-4800"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -105756,7 +106428,7 @@
               },
               "details": "### Impact\n\nThe fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\nWhen an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\nAdditionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\n### Patches\n\nUsers should upgrade to version 4.18.0.\n\nThe fix applies two changes:\n1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\n### Workarounds\n\nDo not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.",
               "id": "GHSA-r5fr-rjxr-66jc",
-              "modified": "2026-09-10T03:51:02.970455926Z",
+              "modified": "2026-10-17T02:56:15.633068434Z",
               "published": "2026-04-01T23:51:12Z",
               "references": [
                 {
@@ -105892,9 +106564,7 @@
                 }
               ],
               "aliases": [
-                "CVE-2025-13465",
-                "CVE-2026-2950",
-                "GHSA-f23m-r3pf-42rh"
+                "CVE-2025-13465"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -105907,7 +106577,7 @@
               },
               "details": "### Impact\n\nLodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.  \n\n### Patches\n\nThis issue is patched on 4.17.23.",
               "id": "GHSA-xxjr-mmjv-4gpg",
-              "modified": "2026-09-10T03:50:33.722177022Z",
+              "modified": "2026-10-17T02:55:54.229635593Z",
               "published": "2026-01-21T23:01:22Z",
               "references": [
                 {
