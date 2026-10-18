@@ -13,8 +13,12 @@ as `task check` remain short while their ownership stays explicit.
 | `git.yml`        | Read-only, repository-independent Git inspection helpers                    |
 
 Subsystem-owned Taskfiles are imported directly at the root and retain their
-namespaces: `beacon:`, `egolint:`, `mantle:`, `react-vite:`, and `tool:`. Do not
+namespaces: `beacon:`, `egolint:`, `react-vite:`, and `tool:`. Do not
 copy subsystem implementation into these modules merely to remove a namespace.
+
+Shell and workstation behavior is maintained and validated in the standalone
+[Mantle repository](https://github.com/egohygiene/mantle). Empathy does not import
+its source tree or Taskfile; Mantle validation runs in its owning repository.
 
 ## Design rules
 

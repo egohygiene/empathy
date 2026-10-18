@@ -18,7 +18,6 @@
     "beacon/.staging/latex/Community/TeXtured/.gitignore",
     "egolint/.gitignore",
     "holon/packs/react-vite/template/.gitignore",
-    "mantle/.gitignore",
     "mindgarden/.gitignore",
     "notebooks/jupyter/.gitignore"
   ],
@@ -607,8 +606,8 @@
         "!mantle/tests/bin/",
         "!mantle/tests/bin/**"
       ],
-      "decision": "Remove the four compensation rules after global bin/ exclusion is removed; Mantle public CLI and test source stays visible.",
-      "evidence": ["mantle/.gitignore"],
+      "decision": "Retire the superseded Mantle source snapshot. Keep the historical visibility examples to prove the removed global bin/ exclusion stays absent; the canonical CLI and tests belong to egohygiene/mantle.",
+      "evidence": ["docs/migration/MANTLE.md"],
       "ignored": [],
       "visible": [
         "mantle/bin/public-command",

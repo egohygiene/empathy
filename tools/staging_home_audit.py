@@ -432,11 +432,15 @@ def classify_devenvironment(relative: str) -> Classification:
         )
     if inner.startswith("workstation/shared/shell/"):
         suffix = inner.removeprefix("workstation/shared/shell/")
+        canonical = {
+            ".bash_logout": "mantle/config/session/bash_logout",
+            ".hushlogin": "mantle/config/session/hushlogin",
+        }.get(suffix, f"mantle/runtime/shells/{suffix}")
         return Classification(
             "portable shell session defaults",
             "mantle",
             f"mantle/.staging/runtime/shells/{suffix}",
-            f"mantle/runtime/shells/{suffix}",
+            canonical,
             "merge-with-shell-runtime",
             "mantle-shell-session-defaults",
             "host-runtime-configuration",
@@ -1332,9 +1336,7 @@ def render_summary_json(rows: list[LedgerRow]) -> str:
                 "by_owner": counts("canonical_owner"),
                 "by_migration_state": counts("migration_state"),
                 "by_sensitivity": counts("sensitivity"),
-                "unclassified_files": sum(
-                    row.canonical_owner == "manual-review" for row in rows
-                ),
+                "unclassified_files": sum(row.canonical_owner == "manual-review" for row in rows),
             },
             indent=2,
             ensure_ascii=False,

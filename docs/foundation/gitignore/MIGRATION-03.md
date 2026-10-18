@@ -99,14 +99,25 @@ This part changes the root and its composition inputs. Existing imported nested
 ignore policies remain visible in the evidence and retain their current
 ownership; the root cannot overrule them.
 
-Measured pre-existing exceptions include `.devcontainer/.gitignore` allowing its
+At root adoption, measured pre-existing exceptions included `.devcontainer/.gitignore` allowing its
 tracked `.env`, Mantle and the Holon React template allowing prefix-style
 `.env.example.*`/`.env.sample.*` variants, and EgoLint's unanchored `target` rule
-hiding target-named source within its subtree. A test reproduces these limits
+hiding target-named source within its subtree. A test reproduces the remaining limits
 rather than reporting whole-repository content conformance. Fresh Filament
 adoption must select its own local rules and must not copy these imported
 policies. Reconciliation of inherited content and reusable enforcement stays
 with the owning contract and EgoLint; Holon retains merging/materialization.
+
+### Mantle retirement follow-up — 2026-10-18
+
+The [Mantle extraction record](../../migration/MANTLE.md) accounts for removal of
+the superseded `mantle/` snapshot and its nested ignore file. The current fixture
+no longer imports that nested policy and verifies that
+`mantle/.env.example.local` follows the root's ignored environment-file policy.
+The four historical Mantle compensation rules remain in the rule-disposition
+audit, with their visibility examples retained to prove the blanket `bin/`
+exclusion remains absent. This retires the Mantle-specific exception under #92;
+the devcontainer, Holon, and EgoLint cases remain separate follow-up work.
 
 ## Working-copy inspection
 

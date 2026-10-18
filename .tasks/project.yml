@@ -86,7 +86,6 @@ tasks:
       - garden:check
       - identity:check
       - lint
-      - mantle:check
       - react-vite:check
       - taskfile:check
       - test
