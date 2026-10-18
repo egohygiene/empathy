@@ -1,4 +1,38 @@
 {
   "schema_version": "1.0.0",
-  "approvals": []
+  "approvals": [
+    {
+      "source_path": ".staging/.github/scripts/delete-gone-branches.sh",
+      "git_blob": "fed8f691ec2e4b7ad698d430ff9b8920261d38f3",
+      "destination": "mantle/bin/git-delete-gone-branches",
+      "destination_revision": "e776b70eee24f8cbe5ad1760bf1355141cb23c4c",
+      "validation_evidence": "https://github.com/egohygiene/mantle/pull/40 ; focused runtime/Git/Fish/CLI/installer tests, strict static validation (9 groups), and temporary-prefix lifecycle smoke passed. Exact destination native workflow: https://github.com/egohygiene/mantle/actions/runs/39095909596 (see docs/migration/MANTLE.md and PR checks for final results).",
+      "provenance_resolution": "First-party Ego Hygiene material under the Empathy MIT license; exact source path/blob remains in Empathy history at b344dcbbbd51397cb1e9b1afa6f289af856054f4. Reconstructed in canonical Mantle with retained MIT copyright/SPDX notices.",
+      "sensitivity_resolution": "Reviewed executable contains no credentials or private data. Replacement defaults to a local dry run, fetch requires --fetch, deletion requires --apply, and unmerged/current/linked-worktree branches are preserved.",
+      "approved_by": "szmyty — explicit cleanup authorization in this work session",
+      "approved_at": "2026-10-18T03:32:03Z"
+    },
+    {
+      "source_path": ".staging/devenvironment/workstation/shared/shell/.bash_logout",
+      "git_blob": "88161704eae81d4c012f35e384873f3ef9e1278b",
+      "destination": "mantle/config/session/bash_logout",
+      "destination_revision": "e776b70eee24f8cbe5ad1760bf1355141cb23c4c",
+      "validation_evidence": "https://github.com/egohygiene/mantle/pull/40 ; focused runtime/Git/Fish/CLI/installer tests, strict static validation (9 groups), and temporary-prefix lifecycle smoke passed. Exact destination native workflow: https://github.com/egohygiene/mantle/actions/runs/39095909596 (see docs/migration/MANTLE.md and PR checks for final results).",
+      "provenance_resolution": "First-party Ego Hygiene material under the Empathy MIT license; exact source path/blob remains in Empathy history at b344dcbbbd51397cb1e9b1afa6f289af856054f4. Reconstructed in canonical Mantle with retained MIT copyright/SPDX notices.",
+      "sensitivity_resolution": "Reviewed session default contains no credentials or private data. Owner asset remains inert and opt-in; Mantle never installs or sources it automatically.",
+      "approved_by": "szmyty — explicit cleanup authorization in this work session",
+      "approved_at": "2026-10-18T03:32:03Z"
+    },
+    {
+      "source_path": ".staging/devenvironment/workstation/shared/shell/.hushlogin",
+      "git_blob": "1237801c72f7efa91bcd25cf1a2f6ac347f226cf",
+      "destination": "mantle/config/session/hushlogin",
+      "destination_revision": "e776b70eee24f8cbe5ad1760bf1355141cb23c4c",
+      "validation_evidence": "https://github.com/egohygiene/mantle/pull/40 ; focused runtime/Git/Fish/CLI/installer tests, strict static validation (9 groups), and temporary-prefix lifecycle smoke passed. Exact destination native workflow: https://github.com/egohygiene/mantle/actions/runs/39095909596 (see docs/migration/MANTLE.md and PR checks for final results).",
+      "provenance_resolution": "First-party Ego Hygiene material under the Empathy MIT license; exact source path/blob remains in Empathy history at b344dcbbbd51397cb1e9b1afa6f289af856054f4. Reconstructed in canonical Mantle with retained MIT copyright/SPDX notices.",
+      "sensitivity_resolution": "Reviewed session default contains no credentials or private data. Owner asset remains inert and opt-in; Mantle never installs or sources it automatically.",
+      "approved_by": "szmyty — explicit cleanup authorization in this work session",
+      "approved_at": "2026-10-18T03:32:03Z"
+    }
+  ]
 }

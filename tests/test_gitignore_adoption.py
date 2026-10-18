@@ -87,14 +87,16 @@ class GitignoreAdoptionTests(test_gitignore_baseline.GitignoreFixture):
         self.assert_paths(
             (
                 ".devcontainer/.env",
-                "mantle/.env.example.local",
                 "holon/packs/react-vite/template/.env.sample.local",
             ),
             ignored=False,
         )
         self.assert_paths(("egolint/examples/target/source.rs",), ignored=True)
         self.assert_paths(("examples/target/source.rs",), ignored=False)
-        self.assert_paths(("examples/.env.example.local",), ignored=True)
+        # Retiring the Mantle snapshot also retires its nested template exception.
+        self.assert_paths(
+            ("examples/.env.example.local", "mantle/.env.example.local"), ignored=True
+        )
 
 
 if __name__ == "__main__":

@@ -28,13 +28,16 @@ The universal lifecycle stays intentionally small and predictable:
 | `garden:`     | Mindgarden indexing, context, projection, and Quartz site |
 | `git:`        | Read-only Git inspection helpers                          |
 | `identity:`   | Identity validation, planning, and handoff                |
-| `mantle:`     | Repository development-environment contract               |
 | `react-vite:` | Incubated React + Vite repository pack                    |
 | `tool:`       | Complementary non-MegaLinter tools                        |
 
 The root [`Taskfile.yml`](Taskfile.yml) only composes modules and subsystem
 Taskfiles. Universal task implementations live under [`.tasks/`](.tasks/), and
 subsystems retain their own Taskfiles and namespaces.
+
+Shell and workstation commands are maintained and validated in the standalone
+[Mantle repository](https://github.com/egohygiene/mantle). They are not part of
+Empathy's local task graph.
 
 ## Command catalog
 
@@ -46,7 +49,7 @@ After changing a public task name, description, or alias, run
 <!-- prettier-ignore-start -->
 <!-- BEGIN GENERATED TASK CATALOG -->
 
-_Generated from the live Taskfile graph: 248 public commands._
+_Generated from the live Taskfile graph: 241 public commands._
 
 | Command | Description | Aliases |
 | --- | --- | --- |
@@ -224,9 +227,10 @@ _Generated from the live Taskfile graph: 248 public commands._
 | `task git:summary` | Show concise worktree status and the five most recent commits | — |
 | `task hooks:check` | Verify Git hook ownership and executability | — |
 | `task hooks:install` | Install Husky as the repository's sole Git hook manager | — |
-| `task identity:check` | Validate the incubated identity holon and Empathy identity contract | — |
-| `task identity:handoff` | Build the contextual creative handoff for Empathy | — |
-| `task identity:plan` | Render Empathy's resolved identity target plan | — |
+| `task identity:check` | Validate Empathy's immutable Identity v1 consumer contract. | — |
+| `task identity:v1:check` | Validate Empathy's pinned Identity v1 source contract. | — |
+| `task identity:v1:generate` | Generate Empathy's complete Identity v1 package from reviewed source. | — |
+| `task identity:v1:verify` | Verify Empathy's complete Identity v1 package has no missing or drifted files. | — |
 | `task license:check` | Validate MIT/SPDX headers and REUSE compliance | — |
 | `task lint` | Lint the complete repository through the canonical holistic policy | — |
 | `task lint:all` | Lint the complete repository through the universal Egolint profile | — |
@@ -238,14 +242,6 @@ _Generated from the live Taskfile graph: 248 public commands._
 | `task lint:fast` | Lint changed repository files through the deterministic fast policy | — |
 | `task lint:fix` | Apply supported Egolint fixes for explicit review | — |
 | `task lint:holistic` | Run every supported Egolint descriptor against the repository | — |
-| `task mantle:check` | Run the local Mantle validation and installation contract | — |
-| `task mantle:ci` | Reproduce the strict Mantle CI contract locally | — |
-| `task mantle:default` | List the Mantle task contract | `mantle` |
-| `task mantle:docs` | Validate Mantle's documentation contract | — |
-| `task mantle:install:smoke` | Exercise a hermetic temporary-prefix install lifecycle | — |
-| `task mantle:lint` | Run Mantle's developer-friendly static validation | — |
-| `task mantle:status` | Diagnose the repository-local Mantle installation | — |
-| `task mantle:test` | Run Mantle's complete developer-friendly validation suite | — |
 | `task platform` | Print the host platform detected by Task | — |
 | `task precommit:all` | Run the complete manual pre-commit profile | — |
 | `task precommit:staged` | Run the automatic structural and security profile | — |

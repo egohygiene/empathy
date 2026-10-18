@@ -18,7 +18,6 @@
     "beacon/.staging/latex/Community/TeXtured/.gitignore",
     "egolint/.gitignore",
     "holon/packs/react-vite/template/.gitignore",
-    "mantle/.gitignore",
     "mindgarden/.gitignore",
     "notebooks/jupyter/.gitignore"
   ],
@@ -63,11 +62,7 @@
       "decision": "Keep backups, patches, and merge residue visible for review; disposable scratch belongs in .tmp/.",
       "evidence": ["foundation/ignore/universal.gitignore"],
       "ignored": [".tmp/merge.rej"],
-      "visible": [
-        "fixtures/change.bak",
-        "fixtures/change.orig",
-        "fixtures/change.rej"
-      ]
+      "visible": ["fixtures/change.bak", "fixtures/change.orig", "fixtures/change.rej"]
     },
     {
       "id": "jetbrains",
@@ -126,13 +121,7 @@
     {
       "id": "environment",
       "classification": "Security-sensitive",
-      "audited_rules": [
-        ".env",
-        ".env.*",
-        "!.env.example",
-        "!.env.sample",
-        "!.env.template"
-      ],
+      "audited_rules": [".env", ".env.*", "!.env.example", "!.env.sample", "!.env.template"],
       "decision": "Retain local-environment protections and the accepted exact template suffixes.",
       "evidence": ["foundation/ignore/universal.gitignore"],
       "ignored": [".env", "app/.env.production", ".env.example.local"],
@@ -148,14 +137,7 @@
     {
       "id": "private-material",
       "classification": "Security-sensitive",
-      "audited_rules": [
-        "*.jks",
-        "*.key",
-        "*.keystore",
-        "*.p12",
-        "*.pfx",
-        "*.secrets.*"
-      ],
+      "audited_rules": ["*.jks", "*.key", "*.keystore", "*.p12", "*.pfx", "*.secrets.*"],
       "decision": "Replace global extension exclusions with the actual Apache certs/**/*.key mount namespace and reserved .secrets/ storage. No other private keystore producer was found; private keystores and configuration belong in .secrets/, while reviewed fixtures stay visible.",
       "evidence": [
         ".staging/devenvironment/realm/ui/universal.base.yml",
@@ -492,12 +474,7 @@
     {
       "id": "jvm-caches",
       "classification": "Profile-specific",
-      "audited_rules": [
-        ".gradle/",
-        ".cxx/",
-        ".externalNativeBuild/",
-        "**/.gradletasknamecache"
-      ],
+      "audited_rules": [".gradle/", ".cxx/", ".externalNativeBuild/", "**/.gradletasknamecache"],
       "decision": "No Gradle/Android build manifest is present in the tracked inventory. Keep unselected paths visible; Java lint fixtures are source, not a selected application build.",
       "evidence": ["egolint/tests/fixtures/pmd/GreetingService.java"],
       "ignored": [],
@@ -528,11 +505,7 @@
       "decision": "No Android build is selected; allow reviewed package/binary fixtures.",
       "evidence": ["egolint/tests/fixtures/dart-analyzer/pubspec.yaml"],
       "ignored": [],
-      "visible": [
-        "fixtures/reference.aab",
-        "fixtures/reference.apk",
-        "fixtures/reference.dex"
-      ]
+      "visible": ["fixtures/reference.aab", "fixtures/reference.apk", "fixtures/reference.dex"]
     },
     {
       "id": "apple-state",
@@ -607,13 +580,10 @@
         "!mantle/tests/bin/",
         "!mantle/tests/bin/**"
       ],
-      "decision": "Remove the four compensation rules after global bin/ exclusion is removed; Mantle public CLI and test source stays visible.",
-      "evidence": ["mantle/.gitignore"],
+      "decision": "Retire the superseded Mantle source snapshot. Keep the historical visibility examples to prove the removed global bin/ exclusion stays absent; the canonical CLI and tests belong to egohygiene/mantle.",
+      "evidence": ["docs/migration/MANTLE.md"],
       "ignored": [],
-      "visible": [
-        "mantle/bin/public-command",
-        "mantle/tests/bin/public-command.bats"
-      ]
+      "visible": ["mantle/bin/public-command", "mantle/tests/bin/public-command.bats"]
     },
     {
       "id": "build-packages",
@@ -685,12 +655,7 @@
     {
       "id": "iac-private",
       "classification": "Security-sensitive",
-      "audited_rules": [
-        "*.tfstate",
-        "*.tfstate.*",
-        "*.tfvars",
-        "*.tfvars.json"
-      ],
+      "audited_rules": ["*.tfstate", "*.tfstate.*", "*.tfvars", "*.tfvars.json"],
       "decision": "Replace global extension rules with the default private state/lock, plan, and auto-loaded variable names at each Terraform fixture. Nondefault private files must use .secrets/; reviewed examples outside these exact names/scopes stay visible.",
       "evidence": [
         "egolint/tests/fixtures/kics/terraform/main.tf",
