@@ -138,7 +138,7 @@ jobs:
       - name: Capture consumer routes before composition
         id: baseline
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f19b65b3f8bd8466884dee5529fa77f2430440b6
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@b4a88db20bc26f9ddefbee174baa8162cbe94ff2
         with:
           operation: capture-baseline
           site-directory: .cache/mindgarden/site
@@ -208,7 +208,7 @@ jobs:
       - name: Verify current provenance and Quartz non-clobber boundary
         id: composition
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f19b65b3f8bd8466884dee5529fa77f2430440b6
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@b4a88db20bc26f9ddefbee174baa8162cbe94ff2
         with:
           operation: verify-composition
           site-directory: .cache/mindgarden/site
@@ -443,7 +443,7 @@ jobs:
       - name: Record current deployment receipt
         id: receipt
         if: needs.build.outputs.deployment-mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f19b65b3f8bd8466884dee5529fa77f2430440b6
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@b4a88db20bc26f9ddefbee174baa8162cbe94ff2
         with:
           operation: record-receipt
           site-directory: .cache/mindgarden/site
