@@ -21,7 +21,8 @@ else:
     import foundation_ignore
 
 SCHEMA_VERSION = "1.1.0"
-FOUNDATION_REFERENCE = "empathy/repository-foundation@1.1.0"
+CATALOG_VERSION = "2.0.0"
+FOUNDATION_REFERENCE = f"empathy/repository-foundation@{CATALOG_VERSION}"
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 REQUIRED_CATEGORIES = {
     "agent-context",
@@ -73,8 +74,8 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
         errors.append(f"schema_version must be {SCHEMA_VERSION}")
     if catalog.get("id") != "empathy/repository-foundation":
         errors.append("catalog id must be empathy/repository-foundation")
-    if catalog.get("version") != SCHEMA_VERSION:
-        errors.append(f"catalog version must be {SCHEMA_VERSION}")
+    if catalog.get("version") != CATALOG_VERSION:
+        errors.append(f"catalog version must be {CATALOG_VERSION}")
     if catalog.get("owner") != "egohygiene/empathy":
         errors.append("catalog owner must be egohygiene/empathy")
 
@@ -461,7 +462,7 @@ def render_egolint_contract(resolved: dict[str, Any], source_revision: str) -> s
     lines = [
         "schema-version = 1",
         'id = "empathy-universal-foundation"',
-        f'version = "{SCHEMA_VERSION}"',
+        f'version = "{CATALOG_VERSION}"',
         'profile = "empathy/golden-foundation"',
         "provisional = false",
         "",

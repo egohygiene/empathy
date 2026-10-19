@@ -8,18 +8,18 @@ the process and next bounded step.
 
 ## Contract record
 
-| Field           | Contract                                                                                    |
-| --------------- | ------------------------------------------------------------------------------------------- |
-| Purpose         | Keep disposable local state out of Git without hiding source or reviewed artifacts.         |
-| Consumer path   | `.gitignore`; required and repository-owned in the existing foundation catalog.             |
-| Applicability   | Universal baseline in every declared scope, selected profile overlays, and local rules.     |
-| Canonical owner | Empathy owns baseline/profile sources; consumers own local additions.                       |
-| Content model   | Selected overlays in order, verbatim local additions, then the universal baseline.          |
-| Source identity | Foundation `1.1.0`, format `empathy.gitignore/v1`, source IDs/paths and SHA-256 hashes.     |
-| Local variation | Narrow project rules and reviewed exceptions that retain baseline protections.              |
-| Update behavior | Emit/check a deterministic JSON plan; planning never reads or writes consumer ignore files. |
-| Validation      | Catalog/manifest validation, source integrity, repeatability, and actual Git behavior.      |
-| Adoption        | Empathy's root matches its plan; Filament adoption remains pending.                         |
+| Field           | Contract                                                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Purpose         | Keep disposable local state out of Git without hiding source or reviewed artifacts.                                                                    |
+| Consumer path   | `.gitignore`; required and repository-owned in the existing foundation catalog.                                                                        |
+| Applicability   | Universal baseline in every declared scope, selected profile overlays, and local rules.                                                                |
+| Canonical owner | Empathy owns baseline/profile sources; consumers own local additions.                                                                                  |
+| Content model   | Selected overlays in order, verbatim local additions, then the universal baseline.                                                                     |
+| Source identity | Foundation `2.0.0` carries the composition introduced in `1.1.0`; format `empathy.gitignore/v1`, source IDs/paths and SHA-256 hashes remain unchanged. |
+| Local variation | Narrow project rules and reviewed exceptions that retain baseline protections.                                                                         |
+| Update behavior | Emit/check a deterministic JSON plan; planning never reads or writes consumer ignore files.                                                            |
+| Validation      | Catalog/manifest validation, source integrity, repeatability, and actual Git behavior.                                                                 |
+| Adoption        | Empathy's root matches its plan; Filament adoption remains pending.                                                                                    |
 
 ## Universal rule decisions
 
@@ -154,7 +154,7 @@ a reviewed materialization/revert, retaining intervening local edits; reverting
 the plan alone does not revert an active file.
 
 The EgoLint TOML is regenerated against a real source commit and advances with
-foundation `1.1.0`. It still projects presence, ownership, executable flags, and
+foundation `2.0.0`. It still projects presence, ownership, executable flags, and
 markers only. Ignore-content conformance belongs to EgoLint and is not implied
 by the plan or presence check.
 

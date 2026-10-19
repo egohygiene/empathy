@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "id": "empathy/repository-foundation",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "owner": "egohygiene/empathy",
   "holon_contract": {
     "owner": "egohygiene/holon",
@@ -311,9 +311,9 @@
       "path": ".github/dependabot.yml",
       "kind": "file",
       "category": "security",
-      "presence": "profile",
+      "presence": "required",
       "ownership": "repository-owned",
-      "profiles": ["risk-hardened"],
+      "profiles": [],
       "executable": false,
       "markers": [],
       "description": "Repository ecosystem dependency update intent"
@@ -407,9 +407,9 @@
       "path": ".github/copilot-instructions.md",
       "kind": "file",
       "category": "agent-context",
-      "presence": "profile",
+      "presence": "required",
       "ownership": "repository-owned",
-      "profiles": ["agent-context"],
+      "profiles": [],
       "executable": false,
       "markers": [],
       "description": "Repository-specific Copilot projection"

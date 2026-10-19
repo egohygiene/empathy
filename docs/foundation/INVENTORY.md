@@ -2,7 +2,7 @@
 
 > Generated from `foundation/catalog.json`. Do not edit by hand.
 
-- Contract: `empathy/repository-foundation@1.1.0`
+- Contract: `empathy/repository-foundation@2.0.0`
 - Canonical owner: `egohygiene/empathy`
 - Canonical artifacts: `30`
 
@@ -13,8 +13,8 @@
 | `.github/CODEOWNERS` | community-health | profile | repository-owned | community-health | Repository review ownership |
 | `.github/ISSUE_TEMPLATE/config.yml` | community-health | profile | required | community-health | Issue intake configuration |
 | `.github/PULL_REQUEST_TEMPLATE.md` | community-health | profile | repository-owned | community-health | Repository review checklist |
-| `.github/copilot-instructions.md` | agent-context | profile | repository-owned | agent-context | Repository-specific Copilot projection |
-| `.github/dependabot.yml` | security | profile | repository-owned | risk-hardened | Repository ecosystem dependency update intent |
+| `.github/copilot-instructions.md` | agent-context | required | repository-owned | — | Repository-specific Copilot projection |
+| `.github/dependabot.yml` | security | required | repository-owned | — | Repository ecosystem dependency update intent |
 | `.github/workflows/codeql.yml` | security | profile | required | risk-hardened | Static security analysis caller |
 | `.github/workflows/dependency-review.yml` | security | profile | required | risk-hardened | Dependency change gate |
 | `.github/workflows/megalinter.yml` | quality | profile | required | quality-baseline | Thin repository caller for reusable quality automation |

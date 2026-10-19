@@ -15,7 +15,7 @@
   "properties": {
     "schema_version": { "const": "1.1.0" },
     "repository": { "type": "string", "pattern": "^[a-z0-9.-]+/[a-z0-9.-]+$" },
-    "foundation": { "const": "empathy/repository-foundation@1.1.0" },
+    "foundation": { "const": "empathy/repository-foundation@2.0.0" },
     "selected_profiles": {
       "type": "array",
       "minItems": 1,

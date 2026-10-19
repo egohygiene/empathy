@@ -54,6 +54,68 @@ class FoundationContractTests(unittest.TestCase):
             {artifact["ownership"] for artifact in self.catalog["artifacts"]},
         )
 
+    def test_universal_consumer_requires_repository_owned_tool_configuration(self) -> None:
+        manifest = copy.deepcopy(self.manifest)
+        manifest["selected_profiles"] = ["universal"]
+        manifest["overrides"] = []
+        manifest.pop("gitignore", None)
+        resolved, errors = foundation.resolve_manifest(self.catalog, manifest)
+        self.assertEqual([], errors)
+        assert resolved is not None
+        artifacts = {artifact["id"]: artifact for artifact in resolved["artifacts"]}
+        self.assertEqual("repository-owned", artifacts["dependabot"]["effective_ownership"])
+        self.assertEqual(
+            "repository-owned", artifacts["copilot-instructions"]["effective_ownership"]
+        )
+        self.assertNotIn("agent-instructions", artifacts)
+        self.assertNotIn("ecosystem-context", artifacts)
+        self.assertNotIn("codeql-workflow", artifacts)
+        self.assertNotIn("dependency-review-workflow", artifacts)
+        self.assertNotIn("secret-baseline", artifacts)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = Path(temporary)
+            for artifact in resolved["artifacts"]:
+                if artifact["id"] in {"dependabot", "copilot-instructions"}:
+                    continue
+                path = workspace / artifact["path"]
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("repository-owned fixture\n", encoding="utf-8")
+            self.assertEqual(
+                [
+                    "required file is missing: .github/copilot-instructions.md",
+                    "required file is missing: .github/dependabot.yml",
+                ],
+                foundation.validate_workspace(workspace, resolved),
+            )
+            dependabot = workspace / ".github" / "dependabot.yml"
+            dependabot.parent.mkdir(parents=True, exist_ok=True)
+            dependabot.write_text(
+                "version: 2\nupdates:\n  - package-ecosystem: github-actions\n"
+                "    directory: /\n    schedule:\n      interval: weekly\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                ["required file is missing: .github/copilot-instructions.md"],
+                foundation.validate_workspace(workspace, resolved),
+            )
+            copilot = workspace / ".github" / "copilot-instructions.md"
+            instructions = "# Copilot instructions\n\nFollow repository-owned conventions.\n"
+            copilot.write_text(instructions, encoding="utf-8")
+            self.assertEqual([], foundation.validate_workspace(workspace, resolved))
+            self.assertEqual(instructions, copilot.read_text(encoding="utf-8"))
+
+    def test_baseline_upgrade_is_explicit_without_changing_schema_shape(self) -> None:
+        self.assertEqual("1.1.0", self.catalog["schema_version"])
+        legacy_catalog = copy.deepcopy(self.catalog)
+        legacy_catalog["version"] = "1.1.0"
+        self.assertIn("catalog version must be 2.0.0", foundation.validate_catalog(legacy_catalog))
+        legacy_manifest = copy.deepcopy(self.manifest)
+        legacy_manifest["foundation"] = "empathy/repository-foundation@1.1.0"
+        resolved, errors = foundation.resolve_manifest(self.catalog, legacy_manifest)
+        self.assertIsNone(resolved)
+        self.assertIn("manifest foundation must be empathy/repository-foundation@2.0.0", errors)
+
     def test_resolution_is_byte_idempotent(self) -> None:
         first, first_errors = foundation.resolve_manifest(self.catalog, self.manifest)
         second, second_errors = foundation.resolve_manifest(
@@ -188,6 +250,7 @@ class FoundationContractTests(unittest.TestCase):
         assert resolved is not None
         contract = foundation.render_egolint_contract(resolved, SOURCE_REVISION)
         self.assertIn('id = "empathy-universal-foundation"', contract)
+        self.assertEqual(self.catalog["version"], tomllib.loads(contract)["version"])
         self.assertIn("provisional = false", contract)
         self.assertIn('revision-kind = "git-commit"', contract)
         self.assertIn('ownership = "generated"', contract)
