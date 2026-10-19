@@ -1,21 +1,21 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-10-18T03-36-10Z`
+- Generated: `2026-10-19T17-20-21Z`
 - Repository: `egohygiene/empathy`
-- Commit: `5a98fd14189fdca47e1c175d5b9ea8c6585dc95b`
+- Commit: `9e2f3975e5a95f4b72f2db515f2d7e116f282461`
 - Severity gate: `high`
-- Duration: `11s`
+- Duration: `9s`
 
 ## Findings
 
 | Severity | Count |
 | --- | ---: |
 | Critical | 27 |
-| High | 181 |
+| High | 183 |
 | Medium | 176 |
 | Low | 37 |
-| Unknown | 0 |
-| **Total** | **421** |
+| Unknown | 1 |
+| **Total** | **424** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 153 packages affected by 421 known vulnerabilities (27 Critical, 181 High, 176 Medium, 37 Low, 0 Unknown) from 2 ecosystems.
-405 vulnerabilities can be fixed.
+Total 154 packages affected by 424 known vulnerabilities (27 Critical, 183 High, 176 Medium, 37 Low, 1 Unknown) from 2 ecosystems.
+408 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -202,6 +202,9 @@ Total 153 packages affected by 421 known vulnerabilities (27 Critical, 181 High,
 | https://osv.dev/PYSEC-2026-4012<br/>https://osv.dev/GHSA-9h9j-4vrj-gf7g | 5.8 | PyPI | virtualenv (dev) | 20.31.2 | 21.7.11 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-4013<br/>https://osv.dev/GHSA-p58f-9548-mpm2 | 7.8 | PyPI | virtualenv (dev) | 20.31.2 | 21.7.13 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-4014<br/>https://osv.dev/GHSA-x78j-v8h9-3j2q | 7.3 | PyPI | virtualenv (dev) | 20.31.2 | 21.7.12 | .staging/devenvironment/containers/services/api/poetry.lock |
+| https://osv.dev/GHSA-2g87-pp6c-29x5 | 8.7 | PyPI | aiohttp | 3.14.3 | 3.14.4 | egolint/uv.lock |
+| https://osv.dev/GHSA-494j-54xm-rwp3 |  | PyPI | aiohttp | 3.14.3 | 3.14.4 | egolint/uv.lock |
+| https://osv.dev/GHSA-5wr8-gcqf-gqf3 | 8.2 | PyPI | aiohttp | 3.14.3 | 3.14.4 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-3807<br/>https://osv.dev/GHSA-89v8-rhwq-hf77 | 5.0 | PyPI | asteval | 1.0.6 | 1.0.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-9w56-46f6-3qhx | 5.5 | PyPI | asteval | 1.0.6 | 1.0.9 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-3982<br/>https://osv.dev/GHSA-239g-whfq-7xj9 | 8.8 | PyPI | gitpython | 3.1.59 | 3.1.60 | egolint/uv.lock |
