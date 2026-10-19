@@ -1,0 +1,504 @@
+{
+  "schema": "empathy.audit-validation-receipt/v1",
+  "audit_id": "empathy-completeness-20261019T132001Z",
+  "repository": "egohygiene/empathy",
+  "repository_revision": "480d70bc59c989f46abf7a323e645699b11c7d4a",
+  "status": "partial",
+  "observation_date": "2026-10-19",
+  "scope_note": "Bounded audit checks; overlapping suites are not additive; no full-profile readiness claim.",
+  "temporary_path_normalization": {
+    "checkout": "<empathy-checkout>",
+    "external_relay": "<pinned-relay-checkout>",
+    "evidence": "<temporary-audit-evidence>"
+  },
+  "owner_inputs": {
+    "relay": "9a6315978766c336566b9fa7139b800fa8789ba5",
+    "identity_gitlink": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
+    "aether_audit_contract": "dc8a16851f452763ef4f7fbe4bf057d4500b1921"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "node": "24.19.0",
+    "isolated_tools": {
+      "ruff": "0.16.5",
+      "mypy": "1.19.1",
+      "types-PyYAML": "6.0.12.20260906",
+      "bandit": "1.9.4",
+      "reuse": "6.2.0"
+    },
+    "unavailable": ["task", "docker", "cargo", "secretlint", "lychee"]
+  },
+  "executed_receipts": [
+    {
+      "name": "architecture-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tests.test_architecture_documents",
+        "--verbose"
+      ],
+      "exit_code": 0,
+      "seconds": 0.072
+    },
+    {
+      "name": "automation-validator",
+      "command": [
+        "python3",
+        ".github/actions/validate-automation/validate_automation.py",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.065
+    },
+    {
+      "name": "beacon-template-validator",
+      "command": [
+        "python3",
+        "beacon/scripts/validate_templates.py",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.054
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "--start-directory",
+        "egolint/tests",
+        "--pattern",
+        "test_*.py",
+        "--verbose"
+      ],
+      "exit_code": 1,
+      "seconds": 1.31,
+      "name": "egolint-unittest"
+    },
+    {
+      "name": "garden-agent",
+      "command": [
+        "python3",
+        "mindgarden/scripts/garden_agent.py",
+        "--repository-root",
+        ".",
+        "verify"
+      ],
+      "exit_code": 0,
+      "seconds": 0.079
+    },
+    {
+      "name": "garden-publish",
+      "command": [
+        "python3",
+        "mindgarden/scripts/publish_garden.py",
+        "--repository-root",
+        ".",
+        "verify"
+      ],
+      "exit_code": 0,
+      "seconds": 0.084
+    },
+    {
+      "name": "garden-validator",
+      "command": [
+        "python3",
+        "mindgarden/scripts/validate_garden.py",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.056
+    },
+    {
+      "command": [
+        "python3",
+        "identity/scripts/validate_identity.py",
+        "--repository-root",
+        ".",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.082,
+      "name": "identity-validator"
+    },
+    {
+      "name": "lint-architecture",
+      "command": [
+        "python3",
+        ".github/actions/generate-lint-infographic/generate_lint_infographic.py",
+        "--repository-root",
+        ".",
+        "--output-directory",
+        ".reports/egolint/architecture",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "name": "mindgarden-unittest",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "--start-directory",
+        "mindgarden/tests",
+        "--pattern",
+        "test_*.py",
+        "--verbose"
+      ],
+      "exit_code": 0,
+      "seconds": 0.179
+    },
+    {
+      "command": ["node", "scripts/checks/check-workspace.ts"],
+      "cwd": "holon/packs/react-vite/template",
+      "exit_code": 0,
+      "name": "react-vite-workspace"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "--start-directory",
+        "tests",
+        "--pattern",
+        "test_repository_intelligence*.py",
+        "--verbose"
+      ],
+      "environment": {
+        "RELAY_CHECKOUT": "<pinned-relay-checkout>"
+      },
+      "exit_code": 0,
+      "seconds": 2.568,
+      "name": "relay-integration-unittest"
+    },
+    {
+      "name": "root-bandit",
+      "command": [
+        "uvx",
+        "--from",
+        "bandit==1.9.4",
+        "bandit",
+        "--configfile",
+        "egolint/.config/lint/python/.bandit.yml",
+        "--recursive",
+        "--format",
+        "json",
+        "tools",
+        "tests",
+        ".github/actions"
+      ],
+      "exit_code": 1,
+      "seconds": 13.056
+    },
+    {
+      "name": "root-mypy",
+      "command": [
+        "uvx",
+        "--from",
+        "mypy==1.19.1",
+        "--with",
+        "types-PyYAML==6.0.12.20260906",
+        "mypy",
+        "--config-file",
+        "egolint/.config/lint/python/.mypy.ini",
+        "--cache-dir",
+        "<temporary-audit-evidence>/mypy-cache",
+        "tools",
+        "tests",
+        ".github/actions"
+      ],
+      "exit_code": 1,
+      "seconds": 15.137
+    },
+    {
+      "name": "root-ruff-format",
+      "command": [
+        "uvx",
+        "--from",
+        "ruff==0.16.5",
+        "ruff",
+        "format",
+        "--check",
+        "--config",
+        "egolint/.config/lint/python/ruff.toml",
+        "--no-cache",
+        "tools",
+        "tests",
+        ".github/actions"
+      ],
+      "exit_code": 1,
+      "seconds": 0.037
+    },
+    {
+      "name": "root-ruff",
+      "command": [
+        "uvx",
+        "--from",
+        "ruff==0.16.5",
+        "ruff",
+        "check",
+        "--config",
+        "egolint/.config/lint/python/ruff.toml",
+        "--no-cache",
+        "--output-format",
+        "json",
+        "tools",
+        "tests",
+        ".github/actions"
+      ],
+      "exit_code": 1,
+      "seconds": 0.04
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "--start-directory",
+        "tests",
+        "--pattern",
+        "test_*.py",
+        "--verbose"
+      ],
+      "exit_code": 1,
+      "seconds": 12.68,
+      "name": "root-unittest"
+    },
+    {
+      "name": "task-catalog",
+      "command": [
+        "python3",
+        "tools/task_catalog.py",
+        "--repository-root",
+        ".",
+        "--check"
+      ],
+      "exit_code": 1,
+      "seconds": 0.044
+    }
+  ],
+  "counts": {
+    "root_unittest": {
+      "tests": 184,
+      "failures": 1,
+      "skips": 17,
+      "phase": "before owner checkout initialization"
+    },
+    "egolint_unittest": {
+      "tests": 31,
+      "failures": 1,
+      "skips": 0
+    },
+    "relay_integration_unittest": {
+      "tests": 78,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "mindgarden_unittest": {
+      "tests": 23,
+      "failures": 0
+    },
+    "architecture_tests": {
+      "tests": 5,
+      "failures": 0
+    },
+    "staging_tests": {
+      "tests": 11,
+      "failures": 0
+    },
+    "root_ruff": {
+      "diagnostics": 15,
+      "files": 4
+    },
+    "root_ruff_format": {
+      "would_reformat_files": 4
+    },
+    "root_mypy": {
+      "errors": 36,
+      "files_with_errors": 4,
+      "checked_files": 33
+    },
+    "root_bandit": {
+      "low": 10,
+      "medium": 0,
+      "high": 0,
+      "review": "Fixed argv subprocess/import/partial-executable warnings; no exploit established."
+    }
+  },
+  "additional_inspections": [
+    {
+      "command": [
+        "python3",
+        "tools/staging_home_audit.py",
+        "--repository-root",
+        ".",
+        "--check"
+      ],
+      "outcome": "passed; independent path/mode/blob/bytes equality for9583rows"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "--start-directory",
+        "tests",
+        "--pattern",
+        "test_staging*.py",
+        "--verbose"
+      ],
+      "outcome": "passed11tests"
+    },
+    {
+      "command": ["python3", "tools/foundation.py", "validate-catalog"],
+      "outcome": "passed12profiles30artifacts"
+    },
+    {
+      "command": ["python3", "tools/foundation.py", "validate-manifest"],
+      "outcome": "passed10resolvedprofiles25artifacts"
+    },
+    {
+      "command": ["python3", "tools/foundation.py", "verify-workspace"],
+      "outcome": "passed declared presence/markers"
+    },
+    {
+      "command": ["python3", "tools/foundation.py", "check-inventory"],
+      "outcome": "passed"
+    },
+    {
+      "command": ["python3", "tools/foundation.py", "check-gitignore-plan"],
+      "outcome": "passed"
+    },
+    {
+      "inspection": "in-memory foundation mutations",
+      "observations": [
+        "string executable: validation errors = []",
+        "projected readme: [{'id': 'readme', 'path': 'README.md', 'kind': 'file', 'ownership': 'repository-owned', 'executable': True}]",
+        "missing holon contract: validation errors = []",
+        "missing generated owner: validation errors = []",
+        "malformed requires: raised TypeError: unhashable type: 'dict'",
+        "quoted path: validation errors = []",
+        "TOML parsing failed: Expected newline or end of document after a statement (at line 136, column 11)",
+        "non-normal path: validation errors = []",
+        "dot path: validation errors = []"
+      ]
+    },
+    {
+      "inspection": "actual YAML-derived MegaLinter pre-command through bash -n",
+      "outcome": "exit2 syntax error at standalone ||; no npm execution"
+    },
+    {
+      "inspection": "36tracked Markdown files inline relative-path scan",
+      "outcome": "3missing targets, all .staging/github/README.md; anchors/remote/reference-style/HTML not checked"
+    }
+  ],
+  "reuse_sample_metadata": {
+    "tool": "reuse",
+    "version": "6.2.0",
+    "method": "Project.from_directory(root).reuse_info_of(path), read-only per-file metadata probe",
+    "base_revision": "480d70bc59c989f46abf7a323e645699b11c7d4a",
+    "samples": [
+      {
+        "path": "beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md",
+        "sha256": "dac9657e3eede941738eaf93e8bbd15b0f6aa2d6e058dad22180f2aee5ee677b",
+        "effective_spdx_expressions": ["MIT"],
+        "copyright": ["Copyright 2014 Debarghya Das"],
+        "sources": [
+          {
+            "source_path": "beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md",
+            "source_type": "SourceType.FILE_HEADER"
+          },
+          {
+            "source_path": "REUSE.toml",
+            "source_type": "SourceType.REUSE_TOML"
+          }
+        ]
+      },
+      {
+        "path": "beacon/.staging/latex/Community/TeXtured/README.md",
+        "sha256": "64ae6ae77f24d7f8164a8bc64d5e96ebcc04784b8f4345ae5a6833a31dfe30e4",
+        "effective_spdx_expressions": ["MIT"],
+        "copyright": ["SPDX-FileCopyrightText: 2026 Ego Hygiene"],
+        "sources": [
+          {
+            "source_path": "REUSE.toml",
+            "source_type": "SourceType.REUSE_TOML"
+          }
+        ]
+      },
+      {
+        "path": ".staging/tools/emoji-precache/assets/emojis/noto_261d_1f3fe_svg.svg",
+        "sha256": "3b2dec28a6e9162027ab243b52377b35f4a081c44ea28c82eacc0ffda24da298",
+        "effective_spdx_expressions": ["MIT"],
+        "copyright": ["SPDX-FileCopyrightText: 2026 Ego Hygiene"],
+        "sources": [
+          {
+            "source_path": "REUSE.toml",
+            "source_type": "SourceType.REUSE_TOML"
+          }
+        ]
+      },
+      {
+        "path": ".staging/tools/emoji-precache/assets/emojis/noto_1faf0_svg.pdf",
+        "sha256": "5f37ec772891f7e8da88d790e5e2a348d21b8b669621292872c1783b01ad79a7",
+        "effective_spdx_expressions": ["MIT"],
+        "copyright": ["SPDX-FileCopyrightText: 2026 Ego Hygiene"],
+        "sources": [
+          {
+            "source_path": "REUSE.toml",
+            "source_type": "SourceType.REUSE_TOML"
+          }
+        ]
+      }
+    ]
+  },
+  "provider_evidence": [
+    {
+      "run": 39240875694,
+      "source": "480d70bc59c989f46abf7a323e645699b11c7d4a",
+      "outcome": "Scorecard scanner succeeded; publisher failed unsupported Git option exit129"
+    },
+    {
+      "run": 39241145815,
+      "source": "480d70bc59c989f46abf7a323e645699b11c7d4a",
+      "outcome": "Pages build/deploy/receipt/live verification actually succeeded"
+    },
+    {
+      "run": 39127620329,
+      "pr": 104,
+      "head": "2978b6cd3e8aeb8c1b4d03e3a478e1facf3506c3",
+      "outcome": "fast lint failed, inherited pre-command plus introduced MD060; normalization discrepancy needs artifact investigation"
+    },
+    {
+      "run": 39230652061,
+      "pr": 106,
+      "head": "5efef434d709dcefd67953408ebfa1c24a16e44c",
+      "outcome": "OSV severity gate failed208blockingfindings after report retention; not independent exploitability assessment"
+    }
+  ],
+  "not_completed": [
+    "canonical exact-head holistic MegaLinter",
+    "full Task lifecycle/catalog validation",
+    "Cargo build/fmt/clippy/test and Identity generation/verification",
+    "frontend dependency install/build/unit/browser/accessibility",
+    "Secretlint",
+    "Lychee",
+    "container boot",
+    "cross-platform smoke",
+    "whole-corpus original license/source research"
+  ]
+}
