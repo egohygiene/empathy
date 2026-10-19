@@ -270,14 +270,14 @@ tests/test_repository_intelligence_workflows.py:28:0: E0401: Unable to import 'y
 tests/test_repository_intelligence_workflows.py:109:4: R0911: Too many return statements (7/6) (too-many-return-statements)
 tests/test_repository_intelligence_workflows.py:139:0: R0913: Too many arguments (8/7) (too-many-arguments)
 ************* Module foundation
-tools/foundation.py:68:0: R0914: Too many local variables (34/20) (too-many-locals)
-tools/foundation.py:68:0: R0912: Too many branches (53/12) (too-many-branches)
-tools/foundation.py:68:0: R0915: Too many statements (133/60) (too-many-statements)
-tools/foundation.py:257:0: R0914: Too many local variables (25/20) (too-many-locals)
-tools/foundation.py:257:0: R0912: Too many branches (26/12) (too-many-branches)
-tools/foundation.py:257:0: R0915: Too many statements (71/60) (too-many-statements)
-tools/foundation.py:555:0: R0911: Too many return statements (21/6) (too-many-return-statements)
-tools/foundation.py:555:0: R0912: Too many branches (24/12) (too-many-branches)
+tools/foundation.py:69:0: R0914: Too many local variables (34/20) (too-many-locals)
+tools/foundation.py:69:0: R0912: Too many branches (53/12) (too-many-branches)
+tools/foundation.py:69:0: R0915: Too many statements (133/60) (too-many-statements)
+tools/foundation.py:258:0: R0914: Too many local variables (25/20) (too-many-locals)
+tools/foundation.py:258:0: R0912: Too many branches (26/12) (too-many-branches)
+tools/foundation.py:258:0: R0915: Too many statements (71/60) (too-many-statements)
+tools/foundation.py:556:0: R0911: Too many return statements (21/6) (too-many-return-statements)
+tools/foundation.py:556:0: R0912: Too many branches (24/12) (too-many-branches)
 ************* Module repository_intelligence_publication
 tools/repository_intelligence_publication.py:411:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
 tools/repository_intelligence_publication.py:468:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
@@ -297,6 +297,6 @@ tools/staging_home_audit.py:1175:0: R0911: Too many return statements (8/6) (too
 tools/staging_home_audit.py:1234:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.60/10
+Your code has been rated at 9.61/10
 
 

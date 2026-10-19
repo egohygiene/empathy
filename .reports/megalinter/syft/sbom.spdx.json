@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-3f78dd52-2118-460e-99fa-b1219037d7e9",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-dc074156-ac8d-4b6a-b7fc-85c79b3be5ef",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.51.1"
   ],
-  "created": "2026-10-18T12:03:56Z"
+  "created": "2026-10-19T17:30:06Z"
  },
  "packages": [
   {
@@ -214134,8 +214134,8 @@
   },
   {
    "name": "egohygiene/relay/.github/workflows/repository-intelligence.yml",
-   "SPDXID": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-738a433d1a230ca5",
-   "versionInfo": "f19b65b3f8bd8466884dee5529fa77f2430440b6",
+   "SPDXID": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-bc7a8a1e83988611",
+   "versionInfo": "b4a88db20bc26f9ddefbee174baa8162cbe94ff2",
    "supplier": "Organization: egohygiene",
    "originator": "Organization: egohygiene",
    "downloadLocation": "NOASSERTION",
@@ -214148,37 +214148,37 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/egohygiene/relay@f19b65b3f8bd8466884dee5529fa77f2430440b6#.github/workflows/repository-intelligence.yml"
+     "referenceLocator": "pkg:github/egohygiene/relay@b4a88db20bc26f9ddefbee174baa8162cbe94ff2#.github/workflows/repository-intelligence.yml"
     }
    ]
   },
@@ -214824,8 +214824,8 @@
   },
   {
    "name": "egohygiene/relay/actions/repository-intelligence-deployment-provenance",
-   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-384e747a4650f96a",
-   "versionInfo": "f19b65b3f8bd8466884dee5529fa77f2430440b6",
+   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-4c8b6b44689e7292",
+   "versionInfo": "b4a88db20bc26f9ddefbee174baa8162cbe94ff2",
    "supplier": "Organization: egohygiene",
    "originator": "Organization: egohygiene",
    "downloadLocation": "NOASSERTION",
@@ -214838,77 +214838,77 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:f19b65b3f8bd8466884dee5529fa77f2430440b6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/egohygiene/relay@f19b65b3f8bd8466884dee5529fa77f2430440b6#actions/repository-intelligence-deployment-provenance"
+     "referenceLocator": "pkg:github/egohygiene/relay@b4a88db20bc26f9ddefbee174baa8162cbe94ff2#actions/repository-intelligence-deployment-provenance"
     }
    ]
   },
@@ -242081,8 +242081,8 @@
   },
   {
    "name": "github/codeql-action/analyze",
-   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-analyze-ef8cac62e116687b",
-   "versionInfo": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-analyze-cb1f911a1a1feb72",
+   "versionInfo": "6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee",
    "supplier": "Organization: github",
    "originator": "Organization: github",
    "downloadLocation": "NOASSERTION",
@@ -242095,44 +242095,44 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql-action\\/analyze:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/analyze:github\\/codeql_action\\/analyze:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql-action\\/analyze:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/analyze:github\\/codeql_action\\/analyze:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/analyze:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/analyze:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#analyze"
+     "referenceLocator": "pkg:github/github/codeql-action@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee#analyze"
     }
    ]
   },
   {
    "name": "github/codeql-action/init",
-   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-init-a2d7ab4b3147f57d",
-   "versionInfo": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-init-4f7f6982b1220eb5",
+   "versionInfo": "6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee",
    "supplier": "Organization: github",
    "originator": "Organization: github",
    "downloadLocation": "NOASSERTION",
@@ -242145,44 +242145,44 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql-action\\/init:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/init:github\\/codeql_action\\/init:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql-action\\/init:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/init:github\\/codeql_action\\/init:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/init:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/init:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#init"
+     "referenceLocator": "pkg:github/github/codeql-action@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee#init"
     }
    ]
   },
   {
    "name": "github/codeql-action/upload-sarif",
-   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-9547dec10c9aa7a7",
-   "versionInfo": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-2be91ed5a912d9fd",
+   "versionInfo": "6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee",
    "supplier": "Organization: github",
    "originator": "Organization: github",
    "downloadLocation": "NOASSERTION",
@@ -242195,64 +242195,64 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#upload-sarif"
+     "referenceLocator": "pkg:github/github/codeql-action@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee#upload-sarif"
     }
    ]
   },
   {
    "name": "github/codeql-action/upload-sarif",
-   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-70abf5e29affb8c2",
-   "versionInfo": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-0abe44fdf8bade1c",
+   "versionInfo": "6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee",
    "supplier": "Organization: github",
    "originator": "Organization: github",
    "downloadLocation": "NOASSERTION",
@@ -242265,64 +242265,64 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#upload-sarif"
+     "referenceLocator": "pkg:github/github/codeql-action@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee#upload-sarif"
     }
    ]
   },
   {
    "name": "github/codeql-action/upload-sarif",
-   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-1f0223f4041e7524",
-   "versionInfo": "24c54180a607b1449ed407dd24f251e4e9147c8d",
+   "SPDXID": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-aaad170306cc1999",
+   "versionInfo": "6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee",
    "supplier": "Organization: github",
    "originator": "Organization: github",
    "downloadLocation": "NOASSERTION",
@@ -242335,57 +242335,57 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:24c54180a607b1449ed407dd24f251e4e9147c8d:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/github/codeql-action@24c54180a607b1449ed407dd24f251e4e9147c8d#upload-sarif"
+     "referenceLocator": "pkg:github/github/codeql-action@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee#upload-sarif"
     }
    ]
   },
@@ -337573,8 +337573,8 @@
   },
   {
    "name": "ossf/scorecard-action",
-   "SPDXID": "SPDXRef-Package-github-action-ossf-scorecard-action-e40eba6a35e61027",
-   "versionInfo": "2d1146689b8cda280b9bc96326124645441f03bc",
+   "SPDXID": "SPDXRef-Package-github-action-ossf-scorecard-action-ad7c4dad9cd6bd6d",
+   "versionInfo": "fa7117db83c52d787ae5a89f350999701505d78e",
    "supplier": "Organization: ossf",
    "originator": "Organization: ossf",
    "downloadLocation": "NOASSERTION",
@@ -337587,37 +337587,37 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard-action:ossf\\/scorecard-action:2d1146689b8cda280b9bc96326124645441f03bc:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard-action:ossf\\/scorecard-action:fa7117db83c52d787ae5a89f350999701505d78e:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard-action:ossf\\/scorecard_action:2d1146689b8cda280b9bc96326124645441f03bc:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard-action:ossf\\/scorecard_action:fa7117db83c52d787ae5a89f350999701505d78e:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard_action:ossf\\/scorecard-action:2d1146689b8cda280b9bc96326124645441f03bc:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard_action:ossf\\/scorecard-action:fa7117db83c52d787ae5a89f350999701505d78e:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard_action:ossf\\/scorecard_action:2d1146689b8cda280b9bc96326124645441f03bc:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard_action:ossf\\/scorecard_action:fa7117db83c52d787ae5a89f350999701505d78e:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard:ossf\\/scorecard-action:2d1146689b8cda280b9bc96326124645441f03bc:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard:ossf\\/scorecard-action:fa7117db83c52d787ae5a89f350999701505d78e:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard:ossf\\/scorecard_action:2d1146689b8cda280b9bc96326124645441f03bc:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:ossf\\/scorecard:ossf\\/scorecard_action:fa7117db83c52d787ae5a89f350999701505d78e:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/ossf/scorecard-action@2d1146689b8cda280b9bc96326124645441f03bc"
+     "referenceLocator": "pkg:github/ossf/scorecard-action@fa7117db83c52d787ae5a89f350999701505d78e"
     }
    ]
   },
@@ -463431,7 +463431,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "a02884418d1f521289ad79ffa03597f43b05233c34c17f8453752cd36926f604"
+     "checksumValue": "27bf64b665ae907e03f43392ae0d4d2862ef51cc758ef17294a63584e805fd81"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463575,7 +463575,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "e5fbccd6314dbfca9c55082d771af5c22783c83b87f956de97f445726fe91abb"
+     "checksumValue": "0d4d0b17c4fec060e54f3a0e0590f4e71b507dce47c1077b9874fa8d1f047095"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463593,7 +463593,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "09d476d83c56f49930636bca10d6191786e94343dec6bd154d8bf9fc2821704c"
+     "checksumValue": "0365c07384bb084b3b05c51f9f1f7cabaa0e6dc344129164af90624483cb232c"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463611,7 +463611,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "70a39f642dcf61cb2a2db956d881295aed7397b93e19abce95cc5a0b203bb030"
+     "checksumValue": "f429e36d1c908d7d85a792448e7f05c6d653d972ae9cc5fc2225b2ac408aa216"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463629,7 +463629,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "3b583111fc4f0e50223dddad3ea526070ae1fea2e00a0b89653564381f3a8c94"
+     "checksumValue": "b8650e9bedfc6a6f8166b7573a89fc0b1a6d588ed8e5c7f135a93cb40789c9d0"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463665,7 +463665,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "3571c866e2aef1ec55645d6325bdd12416894d093ab682fa9c2d1710234de3b9"
+     "checksumValue": "836f63ce6aec2a5483ec9f0888f9f513c6c669c711921b3455b531a7396a954d"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -640793,6 +640793,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-0abe44fdf8bade1c",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-csso-0abe59e77c01e719",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -644837,12 +644843,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-1f0223f4041e7524",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-osv-scan.yml-28289e589bf36e7a",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-npm-micromark-util-sanitize-uri-1f07b543f6b54e38",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
    "relationshipType": "OTHER",
@@ -647489,6 +647489,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-2be91ed5a912d9fd",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-megalinter.yml-e06c6f17a0229f7b",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-is-binary-path-2bea138c0173c75e",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -649999,12 +650005,6 @@
   {
    "spdxElementId": "SPDXRef-Package-github-action-.-.github-actions-install-linux-build-deps-384a28d8711627be",
    "relatedSpdxElement": "SPDXRef-File-...workflows-reusable-flutter-build.yml-da961b9175df85a9",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-384e747a4650f96a",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -653897,6 +653897,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-4c8b6b44689e7292",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-griffelib-4c8ba6adf59229cc",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
    "relationshipType": "OTHER",
@@ -654511,6 +654517,12 @@
   {
    "spdxElementId": "SPDXRef-Package-github-action-actions-github-script-4f71d00c7ac5ec86",
    "relatedSpdxElement": "SPDXRef-File-...resource-staleness-report.lock.yml-7229438666d04b74",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-init-4f7f6982b1220eb5",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-codeql.yml-f4fe0eee66e1ba99",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -661079,12 +661091,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-70abf5e29affb8c2",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-npm-node-int64-70bf7150c9efeec7",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -661627,12 +661633,6 @@
   {
    "spdxElementId": "SPDXRef-Package-npm--esbuild-linux-loong64-73816daad467f1ca",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-738a433d1a230ca5",
-   "relatedSpdxElement": "SPDXRef-File-...repository-intelligence-failure.yml-c114e2b6e498dbf8",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -668369,12 +668369,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-9547dec10c9aa7a7",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-megalinter.yml-e06c6f17a0229f7b",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-normalize-repository-report-954ce968974d682e",
    "relatedSpdxElement": "SPDXRef-File-.github-workflows-osv-scan.yml-28289e589bf36e7a",
    "relationshipType": "OTHER",
@@ -670985,12 +670979,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-init-a2d7ab4b3147f57d",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-codeql.yml-f4fe0eee66e1ba99",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-npm-marked-a2d9eb1e67e06652",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -672719,6 +672707,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-aaad170306cc1999",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-osv-scan.yml-28289e589bf36e7a",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm--babel-plugin-transform-optional-catch-binding-aab967ae8f16d4dc",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
    "relationshipType": "OTHER",
@@ -673171,6 +673165,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-prop-types-ad62259d3b774700",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-ossf-scorecard-action-ad7c4dad9cd6bd6d",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -676033,6 +676033,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-read-cache-bc74c11b432d75bf",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-bc7a8a1e83988611",
+   "relatedSpdxElement": "SPDXRef-File-...repository-intelligence-failure.yml-c114e2b6e498dbf8",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -679297,6 +679303,12 @@
   {
    "spdxElementId": "SPDXRef-Package-github-action-actions-download-artifact-cb1d2dfefcf67d6d",
    "relatedSpdxElement": "SPDXRef-File-...cli-for-beginners-sync.lock.yml-4d012c52ce2123a4",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-analyze-cb1f911a1a1feb72",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-codeql.yml-f4fe0eee66e1ba99",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -684329,12 +684341,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-ossf-scorecard-action-e40eba6a35e61027",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-ossf-scorecard.yml-59e15f909db52e91",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-npm-p-queue-e414f53a1828c4fb",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
    "relationshipType": "OTHER",
@@ -686647,12 +686653,6 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-domhandler-ef8505ca414acaac",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-github-action-github-codeql-action-analyze-ef8cac62e116687b",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-codeql.yml-f4fe0eee66e1ba99",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -709403,7 +709403,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-738a433d1a230ca5",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-bc7a8a1e83988611",
    "relationshipType": "CONTAINS"
   },
   {
@@ -709458,7 +709458,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-384e747a4650f96a",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-4c8b6b44689e7292",
    "relationshipType": "CONTAINS"
   },
   {
@@ -712158,27 +712158,27 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-analyze-ef8cac62e116687b",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-analyze-cb1f911a1a1feb72",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-init-a2d7ab4b3147f57d",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-init-4f7f6982b1220eb5",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-9547dec10c9aa7a7",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-2be91ed5a912d9fd",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-70abf5e29affb8c2",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-0abe44fdf8bade1c",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-1f0223f4041e7524",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-github-codeql-action-upload-sarif-aaad170306cc1999",
    "relationshipType": "CONTAINS"
   },
   {
@@ -720673,7 +720673,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-ossf-scorecard-action-e40eba6a35e61027",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-ossf-scorecard-action-ad7c4dad9cd6bd6d",
    "relationshipType": "CONTAINS"
   },
   {

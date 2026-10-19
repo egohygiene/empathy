@@ -156,6 +156,38 @@ TASKS.md:19:69: typography.symbols.sentence_spacing: More than two spaces after 
 TASKS.md:20:66: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:312:20: annotations.misc: Annotation left in text.
 TASKS.md:312:46: annotations.misc: Annotation left in text.
+audits/empathy-completeness-20261019T132001Z.md:85:42: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+audits/empathy-completeness-20261019T132001Z.md:193:43: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+audits/empathy-completeness-20261019T132001Z.md:447:7: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+audits/empathy-completeness-20261019T132001Z.md:692:277: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:693:263: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:694:278: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:696:283: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:697:288: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:698:268: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:699:261: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:700:270: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:701:62: needless_variants: Needless variant. 'extendable' is the preferred form.
+audits/empathy-completeness-20261019T132001Z.md:701:246: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:702:286: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:703:278: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:710:359: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:812:256: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:813:277: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:814:260: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:815:237: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:816:234: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:817:230: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:818:261: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:819:223: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:820:213: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:821:205: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:822:202: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:823:216: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:824:241: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:826:230: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:827:238: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+audits/empathy-completeness-20261019T132001Z.md:828:207: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:1:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:190: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/LatexPackage/license.txt:27:250: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -429,8 +461,8 @@ docs/foundation/gitignore/README.md:14:99: typography.symbols.sentence_spacing: 
 docs/foundation/gitignore/README.md:15:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:16:89: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:17:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/foundation/gitignore/README.md:18:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:19:98: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/README.md:20:111: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:21:106: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:22:87: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:61:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".

@@ -457,6 +457,9 @@ Clone found (markdown)
  - .staging/.github/agents/agentic-workflows.md:markdown [183:18 - 226:189] (44 lines, 2777 tokens)
    .staging/.github/agents/awesome/terraform-azure-planning.agent.md:markdown [62:32 - 162:5]
 Clone found (markdown)
+ - .staging/.github/agents/agentic-workflows.md:markdown [183:17 - 207:62] (25 lines, 542 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [786:53 - 787:36]
+Clone found (markdown)
  - .staging/.github/agents/architect.agent.md:markdown [29:1 - 35:122] (7 lines, 129 tokens)
    egolint/.agents/agents/architect/AGENT.md:markdown [44:2 - 50:122]
 Clone found (markdown)
@@ -517,6 +520,12 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [185:55 - 192:10] (8 lines, 147 tokens)
    .staging/.github/skills/web-design-reviewer/SKILL.md:markdown [302:39 - 315:5]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [185:55 - 192:17] (8 lines, 154 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [788:408 - 789:3]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [185:55 - 192:4] (8 lines, 141 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [790:421 - 791:3]
+Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [192:160 - 201:24] (10 lines, 229 tokens)
    .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [210:90 - 215:4]
 Clone found (markdown)
@@ -550,6 +559,9 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [280:25 - 291:3] (12 lines, 305 tokens)
    .staging/.github/instructions/awesome-copilot/update-docs-on-code-change.instructions.md:markdown [465:69 - 480:5]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [482:40 - 495:14] (14 lines, 281 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [794:282 - 795:4]
+Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [489:68 - 495:5] (7 lines, 55 tokens)
    .staging/.github/agents/awesome/project-documenter.agent.md:markdown [277:20 - 282:5]
 Clone found (markdown)
@@ -573,6 +585,18 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 515:31] (19 lines, 604 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:185 - 352:5]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 502:113] (6 lines, 188 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [710:359 - 712:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 502:12] (6 lines, 87 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [815:237 - 816:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 502:43] (6 lines, 118 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [821:205 - 822:3]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 502:39] (6 lines, 114 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [828:207 - 828:321]
 Clone found (markdown)
  - .staging/.github/agents/awesome/azure-verified-modules-owner-triage.agent.md:markdown [497:290 - 502:24] (6 lines, 99 tokens)
    docs/foundation/gitignore/RULE_AUDIT.md:markdown [67:172 - 68:3]
@@ -832,8 +856,14 @@ Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [73:1 - 157:3] (85 lines, 1124 tokens)
    .staging/.github/skills/update-implementation-plan/SKILL.md:markdown [69:1 - 156:42]
 Clone found (markdown)
+ - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [75:25 - 95:4] (21 lines, 260 tokens)
+   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [99:25 - 119:4]
+Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [91:105 - 100:4] (10 lines, 116 tokens)
    .staging/.github/agents/awesome/specification.agent.md:markdown [54:70 - 63:4]
+Clone found (markdown)
+ - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [96:1 - 106:12] (11 lines, 102 tokens)
+   .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [120:1 - 130:8]
 Clone found (markdown)
  - .staging/.github/agents/awesome/implementation-plan.agent.md:markdown [120:55 - 160:42] (41 lines, 421 tokens)
    .staging/.github/skills/create-implementation-plan/SKILL.md:markdown [144:41 - 184:42]
@@ -1035,9 +1065,6 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [31:1 - 117:110] (87 lines, 1127 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [29:1 - 115:110]
-Clone found (markdown)
- - .staging/.github/agents/awesome/specification.agent.md:markdown [37:1 - 124:40] (88 lines, 101 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [35:1 - 122:40]
 Clone found (markdown)
  - .staging/.github/agents/awesome/specification.agent.md:markdown [120:1 - 128:4] (9 lines, 77 tokens)
    .staging/.github/skills/create-specification/SKILL.md:markdown [118:1 - 127:4]
@@ -1321,11 +1348,17 @@ Clone found (markdown)
  - .staging/.github/instructions/awesome-copilot/springboot-4-migration.instructions.md:markdown [1168:22 - 1180:12] (13 lines, 336 tokens)
    .staging/.github/instructions/awesome-copilot/springboot-4-migration.instructions.md:markdown [1282:38 - 1294:4]
 Clone found (markdown)
+ - .staging/.github/instructions/awesome-copilot/springboot-4-migration.instructions.md:markdown [1168:22 - 1182:72] (15 lines, 467 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [810:176 - 812:3]
+Clone found (markdown)
  - .staging/.github/instructions/awesome-copilot/springboot-4-migration.instructions.md:markdown [1218:92 - 1234:35] (17 lines, 578 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2461:270 - 2492:3]
 Clone found (swift)
  - .staging/.github/instructions/awesome-copilot/swift-mcp-server.instructions.md:swift [295:1 - 302:64] (8 lines, 56 tokens)
    .staging/.github/skills/swift-mcp-server-generator/SKILL.md:swift [63:1 - 70:64]
+Clone found (markdown)
+ - .staging/.github/instructions/awesome-copilot/task-implementation.instructions.md:markdown [102:26 - 113:34] (12 lines, 514 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [707:131 - 708:102]
 Clone found (markdown)
  - .staging/.github/instructions/awesome-copilot/tasksync.instructions.md:markdown [253:5 - 259:28] (7 lines, 63 tokens)
    .staging/.github/instructions/awesome-copilot/tasksync.instructions.md:markdown [412:1 - 417:28]
@@ -1549,6 +1582,9 @@ Clone found (markdown)
  - .staging/.github/skills/aspire/references/cli-reference.md:markdown [32:1 - 65:10] (34 lines, 251 tokens)
    ONTOLOGY.md:markdown [51:35 - 52:4]
 Clone found (markdown)
+ - .staging/.github/skills/aspire/references/cli-reference.md:markdown [287:90 - 292:25] (6 lines, 176 tokens)
+   docs/foundation/gitignore/README.md:markdown [11:172 - 13:10]
+Clone found (markdown)
  - .staging/.github/skills/aspire/references/polyglot-apis.md:markdown [55:59 - 60:4] (6 lines, 59 tokens)
    .staging/.github/skills/aspire/references/polyglot-apis.md:markdown [93:63 - 98:4]
 Clone found (markdown)
@@ -1725,6 +1761,12 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/cli-mastery/references/module-4-agents.md:markdown [20:19 - 40:91] (21 lines, 491 tokens)
    .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [42:17 - 63:4]
+Clone found (markdown)
+ - .staging/.github/skills/cli-mastery/references/module-4-agents.md:markdown [20:21 - 32:13] (13 lines, 107 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [719:115 - 719:222]
+Clone found (markdown)
+ - .staging/.github/skills/cli-mastery/references/module-4-agents.md:markdown [20:21 - 29:3] (10 lines, 86 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [828:84 - 828:170]
 Clone found (python)
  - .staging/.github/skills/code-tour/scripts/generate_from_docs.py [258:1 - 263:9] (6 lines, 67 tokens)
    .staging/.github/skills/code-tour/scripts/validate_tour.py [317:1 - 322:9]
@@ -1849,9 +1891,6 @@ Clone found (markdown)
  - .staging/.github/skills/create-specification/SKILL.md:markdown [8:75 - 22:119] (15 lines, 285 tokens)
    .staging/.github/skills/update-specification/SKILL.md:markdown [8:123 - 22:119]
 Clone found (markdown)
- - .staging/.github/skills/create-specification/SKILL.md:markdown [10:136 - 16:53] (7 lines, 112 tokens)
-   .staging/.github/skills/update-specification/SKILL.md:markdown [10:136 - 16:53]
-Clone found (markdown)
  - .staging/.github/skills/create-spring-boot-java-project/SKILL.md:markdown [6:26 - 31:43] (26 lines, 237 tokens)
    .staging/.github/skills/create-spring-boot-kotlin-project/SKILL.md:markdown [6:28 - 31:43]
 Clone found (markdown)
@@ -1912,14 +1951,17 @@ Clone found (markdown)
  - .staging/.github/skills/dependabot/SKILL.md:markdown [249:86 - 256:5] (8 lines, 120 tokens)
    .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [281:30 - 287:48]
 Clone found (markdown)
- - .staging/.github/skills/dependabot/SKILL.md:markdown [249:86 - 254:16] (6 lines, 52 tokens)
-   docs/foundation/gitignore/RULE_AUDIT.md:markdown [55:22 - 55:74]
+ - .staging/.github/skills/dependabot/SKILL.md:markdown [249:86 - 254:18] (6 lines, 54 tokens)
+   docs/foundation/gitignore/RULE_AUDIT.md:markdown [55:22 - 55:76]
 Clone found (markdown)
  - .staging/.github/skills/dependabot/SKILL.md:markdown [335:30 - 348:5] (14 lines, 216 tokens)
    .staging/.github/skills/dependabot/SKILL.md:markdown [394:20 - 410:4]
 Clone found (markdown)
  - .staging/.github/skills/dependabot/SKILL.md:markdown [436:38 - 443:22] (8 lines, 248 tokens)
    .staging/.github/skills/phoenix-cli/references/axial-coding.md:markdown [93:52 - 99:3]
+Clone found (markdown)
+ - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [75:62 - 92:22] (18 lines, 246 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [793:316 - 794:3]
 Clone found (markdown)
  - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [100:64 - 118:11] (19 lines, 220 tokens)
    .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [124:59 - 138:5]
@@ -1933,8 +1975,8 @@ Clone found (markdown)
  - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [100:65 - 114:33] (15 lines, 162 tokens)
    .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [269:78 - 281:6]
 Clone found (markdown)
- - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [100:65 - 108:2] (9 lines, 97 tokens)
-   holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:markdown [93:98 - 93:195]
+ - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [100:65 - 110:3] (11 lines, 101 tokens)
+   holon/packs/react-vite/template/docs/provenance/universal-ui-source-audit.md:markdown [93:98 - 95:5]
 Clone found (markdown)
  - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [157:49 - 162:4] (6 lines, 97 tokens)
    .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [172:46 - 177:4]
@@ -1947,6 +1989,9 @@ Clone found (markdown)
 Clone found (markdown)
  - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [325:36 - 342:12] (18 lines, 329 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [421:122 - 431:5]
+Clone found (markdown)
+ - .staging/.github/skills/dependabot/references/dependabot-yml-reference.md:markdown [335:29 - 346:40] (12 lines, 205 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [690:143 - 691:23]
 Clone found (yaml)
  - .staging/.github/skills/dependabot/references/example-configs.md:yaml [38:1 - 44:41] (7 lines, 51 tokens)
    .staging/.github/skills/dependabot/references/example-configs.md:yaml [272:1 - 278:41]
@@ -2701,11 +2746,20 @@ Clone found (python)
  - .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [65:1 - 72:13] (8 lines, 59 tokens)
    .staging/.github/skills/python-pypi-package-builder/scripts/scaffold.py [183:1 - 190:13]
 Clone found (markdown)
- - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:184 - 334:5] (7 lines, 67 tokens)
-   docs/foundation/gitignore/RULE_AUDIT.md:markdown [49:205 - 50:4]
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:184 - 333:28] (6 lines, 63 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [698:267 - 699:5]
 Clone found (markdown)
- - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:184 - 334:16] (7 lines, 78 tokens)
-   docs/foundation/gitignore/RULE_AUDIT.md:markdown [155:193 - 156:3]
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:183 - 334:25] (7 lines, 88 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [701:244 - 702:7]
+Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:184 - 334:2] (7 lines, 64 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [814:259 - 815:3]
+Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:184 - 335:16] (8 lines, 103 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [819:222 - 820:5]
+Clone found (markdown)
+ - .staging/.github/skills/quality-playbook/SKILL.md:markdown [328:184 - 336:4] (9 lines, 122 tokens)
+   audits/empathy-completeness-20261019T132001Z.md:markdown [822:201 - 823:3]
 Clone found (markdown)
  - .staging/.github/skills/quality-playbook/SKILL.md:markdown [1223:63 - 1244:14] (22 lines, 530 tokens)
    .staging/.github/skills/quality-playbook/SKILL.md:markdown [2150:63 - 2166:62]
@@ -8614,17 +8668,11 @@ Clone found (json)
  - foundation/catalog.json [215:35 - 223:22] (9 lines, 50 tokens)
    foundation/catalog.json [227:49 - 235:22]
 Clone found (json)
- - foundation/catalog.json [311:39 - 319:22] (9 lines, 50 tokens)
-   foundation/catalog.json [347:34 - 355:22]
-Clone found (json)
  - foundation/catalog.json [323:56 - 331:22] (9 lines, 50 tokens)
    foundation/catalog.json [335:45 - 343:22]
 Clone found (json)
  - foundation/catalog.json [359:46 - 367:22] (9 lines, 50 tokens)
    foundation/catalog.json [371:43 - 379:22]
-Clone found (json)
- - foundation/catalog.json [395:26 - 403:22] (9 lines, 50 tokens)
-   foundation/catalog.json [407:48 - 415:22]
 Clone found (yaml)
  - holon/packs/react-vite/template/.github/workflows/ci.yml [20:1 - 46:15] (27 lines, 159 tokens)
    holon/packs/react-vite/template/.github/workflows/ci.yml [54:1 - 80:15]
@@ -8732,7 +8780,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 230            │ 60514       │ 106408       │ 61           │ 3106 (5.13%)     │ 11507 (10.81%)    │
+│ bash         │ 230            │ 60544       │ 106408       │ 61           │ 3106 (5.13%)     │ 11507 (10.81%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -8782,7 +8830,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ javascript   │ 70             │ 22962       │ 63622        │ 58           │ 1321 (5.75%)     │ 5555 (8.73%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 237            │ 70072       │ 209303       │ 71           │ 1251 (1.79%)     │ 5451 (2.60%)      │
+│ json         │ 238            │ 70576       │ 211342       │ 69           │ 1235 (1.75%)     │ 5351 (2.53%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -8796,7 +8844,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1715           │ 328648      │ 4227934      │ 663          │ 11420 (3.47%)    │ 165632 (3.92%)    │
+│ markdown     │ 1716           │ 329514      │ 4276308      │ 681          │ 11529 (3.50%)    │ 169508 (3.96%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -8818,7 +8866,7 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 288            │ 67972       │ 423703       │ 123          │ 1220 (1.79%)     │ 11644 (2.75%)     │
+│ python       │ 288            │ 68036       │ 424322       │ 123          │ 1220 (1.79%)     │ 11644 (2.74%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -8850,12 +8898,12 @@ Clone found (python)
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 552            │ 57514       │ 322103       │ 353          │ 9379 (16.31%)    │ 105737 (32.83%)   │
+│ yaml         │ 553            │ 57539       │ 322394       │ 353          │ 9379 (16.30%)    │ 105737 (32.80%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4552           │ 921838      │ 7331549      │ 2907         │ 56244 (6.10%)    │ 737809 (10.06%)   │
+│ Total:       │ 4555           │ 923327      │ 7382872      │ 2923         │ 56337 (6.10%)    │ 741585 (10.04%)   │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 2907 clones.
+Found 2923 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
 ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 15.95s
+time: 10.64s
 
