@@ -61,7 +61,7 @@ jobs:
       - name: Harden Runner
         id: harden
         # step-security/harden-runner v2.20.0; preserve existing audit policy.
-        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25
+        uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43
         with:
           egress-policy: audit
 
