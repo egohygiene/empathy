@@ -1,0 +1,2 @@
+# Reviewed candidate source for Empathy #65 and Mindgarden #20; not a published 1.0 release.
+mindgarden @ git+https://github.com/egohygiene/mindgarden.git@a3cbac93d2a68e99e7955ddb18302e0358f53247
