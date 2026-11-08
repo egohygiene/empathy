@@ -2,8 +2,8 @@
 
 Refs #65; parent [Mindgarden #20](https://github.com/egohygiene/mindgarden/issues/20).
 This optional consumer lane installs the standalone Python package from immutable
-source `a3cbac93d2a68e99e7955ddb18302e0358f53247`, reviewed in
-[Mindgarden #95](https://github.com/egohygiene/mindgarden/pull/95). It is an
+source `f3a88ccf7d67deb8ecf188d10d9cd496ed6a4973`, the merged
+[Mindgarden #93–#109 baseline](https://github.com/egohygiene/mindgarden/blob/f3a88ccf7d67deb8ecf188d10d9cd496ed6a4973/docs/learning-evaluation-checkpoints.md). It is an
 unreleased 0.1.0 candidate, not 1.0 publication evidence.
 
 Empathy retains its canonical `.garden/` and consumes the external command.
@@ -52,3 +52,51 @@ Commands: `python3 -m unittest discover --start-directory tests --pattern
 task commands in order. Task is unavailable in the local environment, so these
 commands were executed directly. No manual workflow or publication was launched.
 The required holistic profile has not run for this draft.
+
+## Non-destructive cutover rehearsal (2026-11-08)
+
+The merged engine pin above was installed through VCS in a fresh environment.
+PEP 610 identifies the full commit, and `mindgarden.__file__` resolves inside the
+interpreter prefix. The staged consumer represents `4e721715ec56a126f4efe2043298a34e6559335e`.
+Only its committed public `.garden`, README, tracked `llms.txt`, and the
+document/workflow files cited by those notes were copied. The existing Quartz
+profile was supplied as repository-relative configuration. No incubated Python
+engine was present in staging. Document evidence under `mindgarden/profiles`
+remains necessary for existing citations; it is not an engine import.
+
+Results in the network-restricted verification environment: version, five-note
+validation, search, bounded JSON context, public projection and deterministic
+public verification all return 0. The unchanged staged `llms.txt` initially
+returns 3 under strict `verify`, preserving the actual cutover finding. Running
+the installed `mindgarden llms --repository-root STAGE --write` **only in that
+scratch copy**, then `mindgarden verify --repository-root STAGE`, returns 0.
+This proves the proposed external entrypoint is reproducible without changing
+the working consumer's `.garden`, tracked `llms.txt`, tasks or Pages authority.
+It does not accept that canonical cutover or a deployed site.
+
+Reproduce using a new empty scratch directory and the installed pinned engine:
+
+```sh
+PROOF_STAGE=/tmp/new-empathy-public-proof
+mkdir --parents "$PROOF_STAGE"
+git archive 4e721715ec56a126f4efe2043298a34e6559335e \
+  .garden README.md llms.txt mindgarden/profiles/obsidian/README.md \
+  mindgarden/profiles/quartz/profile.yaml .github/workflows/ossf-scorecard.yml \
+  .github/workflows/osv-scan.yml .github/workflows/megalinter.yml \
+  .github/workflows/mindgarden-pages.yml | tar --extract --directory "$PROOF_STAGE"
+.cache/mindgarden-standalone/bin/mindgarden validate --repository-root "$PROOF_STAGE"
+.cache/mindgarden-standalone/bin/mindgarden publish project \
+  --repository-root "$PROOF_STAGE" --profile mindgarden/profiles/quartz/profile.yaml \
+  --output-directory exports
+.cache/mindgarden-standalone/bin/mindgarden publish verify \
+  --repository-root "$PROOF_STAGE" --profile mindgarden/profiles/quartz/profile.yaml
+.cache/mindgarden-standalone/bin/mindgarden llms --repository-root "$PROOF_STAGE" --write
+.cache/mindgarden-standalone/bin/mindgarden verify --repository-root "$PROOF_STAGE"
+```
+
+The full canonical holistic profile is still unverified on this draft. The
+repository instruction requires a manual exact-head MegaLinter run before
+readiness; the maintainer's current instruction prohibits manually launching
+paid workflows, so no dispatch was made. This remains a review draft, with
+canonical entrypoint acceptance, full-profile evidence, Relay #40 migration and
+post-merge deployment explicitly open. No real private archive or model was used.
