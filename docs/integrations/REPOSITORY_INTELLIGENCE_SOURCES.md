@@ -3,7 +3,7 @@
 This implementation checkpoint starts from Empathy main
 `322f8d0a6657ea8584c80fb688aeaf6ac2184ca7`, which merged the native
 Journey/attributed Search selection in #123. The current Relay source is
-`94e3a3a4a18f9ced7b3694fe258ae397eed55953`; final review must retain one exact
+`981ddf4367c67fcd625e54321d95bab027f6c0f2`; final review must retain one exact
 reviewed immutable pin across the source producer, generators and provenance
 helpers. Refs [Empathy #105](https://github.com/egohygiene/empathy/issues/105),
 [Relay #146](https://github.com/egohygiene/relay/issues/146),

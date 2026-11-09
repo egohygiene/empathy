@@ -17,7 +17,7 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 | Input | Reviewed revision | Role |
 | --- | --- | --- |
-| Relay public-source candidate | `94e3a3a4a18f9ced7b3694fe258ae397eed55953` | Current source producer and builders with Work/Health/Releases capture intake, Journey and attributed Search; matching current metadata; qualification pending |
+| Relay public-source candidate | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Current source producer and builders with Work/Health/Releases capture intake, Journey and attributed Search; matching current metadata; qualification pending |
 | Previous Journey/Search selection | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim |
 | Previous portable source selection | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point |
 | Previous qualified current builder | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively |

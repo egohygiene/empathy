@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = REPOSITORY_ROOT / ".github/workflows"
-RELAY_REVISION = "94e3a3a4a18f9ced7b3694fe258ae397eed55953"
+RELAY_REVISION = "981ddf4367c67fcd625e54321d95bab027f6c0f2"
 RESULTS = ("success", "failure", "cancelled", "skipped")
 PRODUCERS = ("MegaLinter", "OpenSSF Scorecard", "🔍 OSV Vulnerability Scan")
 

@@ -77,7 +77,7 @@ jobs:
       - name: Capture public Work, Health and Releases sources
         id: public_sources
         if: github.event_name == 'workflow_dispatch'
-        uses: egohygiene/relay/actions/repository-intelligence-github-sources@94e3a3a4a18f9ced7b3694fe258ae397eed55953
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@981ddf4367c67fcd625e54321d95bab027f6c0f2
         with:
           github-token: "${{ github.token }}"
           include-titles: "true"
@@ -96,7 +96,7 @@ jobs:
       - name: Generate intelligence artifacts and dashboard
         id: intelligence
         # Portable Relay candidate; qualify the exact source before readiness.
-        uses: egohygiene/relay/actions/repository-intelligence@94e3a3a4a18f9ced7b3694fe258ae397eed55953
+        uses: egohygiene/relay/actions/repository-intelligence@981ddf4367c67fcd625e54321d95bab027f6c0f2
         with:
           output-directory: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
           work-directory: "${{ inputs.output-root || '.cache/repository-intelligence' }}"

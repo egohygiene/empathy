@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: read
     # Portable Relay candidate; preserve the existing intentional failure contract.
-    uses: egohygiene/relay/.github/workflows/repository-intelligence.yml@94e3a3a4a18f9ced7b3694fe258ae397eed55953
+    uses: egohygiene/relay/.github/workflows/repository-intelligence.yml@981ddf4367c67fcd625e54321d95bab027f6c0f2
     with:
       max-depth: "21"
       artifact-retention-days: 30
