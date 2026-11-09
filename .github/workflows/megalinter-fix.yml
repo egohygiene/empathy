@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a
         with:
           egress-policy: audit
 
@@ -45,7 +45,7 @@ jobs:
         id: megalinter
         continue-on-error: true
         # oxsecurity/megalinter v10.0.0
-        uses: oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2
+        uses: oxsecurity/megalinter@f2fe8c1cba37091848df3e524066c8c23ef353ed
         env:
           APPLY_FIXES: "${{ inputs.apply-fixes }}"
           GITHUB_TOKEN: "${{ github.token }}"
@@ -103,7 +103,7 @@ jobs:
       - name: Open auto-fix pull request
         if: steps.changes.outputs.changed == 'true'
         # peter-evans/create-pull-request v8.1.1
-        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1
+        uses: peter-evans/create-pull-request@15733dbdfeedb4f7fdb73d13c6f5ac83b710fab8
         with:
           token: "${{ github.token }}"
           add-paths: "."
