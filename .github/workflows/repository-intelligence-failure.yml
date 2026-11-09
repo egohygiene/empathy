@@ -10,8 +10,8 @@ jobs:
     name: Prove RIW-002 without publication authority
     permissions:
       contents: read
-    # egohygiene/relay repository-intelligence v1.6.0
-    uses: egohygiene/relay/.github/workflows/repository-intelligence.yml@b4a88db20bc26f9ddefbee174baa8162cbe94ff2
+    # Portable Relay candidate; preserve the existing intentional failure contract.
+    uses: egohygiene/relay/.github/workflows/repository-intelligence.yml@49046d88ef6fe2e31e9a9f443a61157b598efb78
     with:
       max-depth: "21"
       artifact-retention-days: 30

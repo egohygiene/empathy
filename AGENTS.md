@@ -21,8 +21,12 @@ Before changing Repository Intelligence or Pages publication, read
 Preserve the producer refresh and public-review boundaries, and verify actual
 provider job scheduling, including skipped ancestors and explicit prerequisite
 results. A green workflow does not prove that deployment or live verification
-ran. Scope repeatability claims to declared inputs and checkout context; the
-portable checkout-name follow-up is tracked in Relay #109.
+ran. Current generator qualification belongs to Empathy #105; #94 is the
+completed historical canary. Preserve its fixed rollback pins and byte contract.
+The current portable Relay candidate is recorded in the publication guide and
+its qualification checkpoint. Scope repeatability claims to actual declared
+inputs and checkout evidence; a portable owner implementation does not establish
+consumer qualification for Relay #109.
 For Python changes, run Ruff against `egolint/.config/lint/python/ruff.toml`,
 the canonical policy used by MegaLinter; the root Python defaults are narrower.
 The PR fast profile and focused checks do not establish full-profile readiness.
