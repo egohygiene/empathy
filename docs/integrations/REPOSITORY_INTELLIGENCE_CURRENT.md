@@ -1,5 +1,13 @@
 # Current Repository Intelligence candidate
 
+Current source selection is now the
+[native Journey/attributed Search candidate](REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md),
+using Relay `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff`.
+The portable-only source checkpoint below is retained as history from #122;
+its old pin and source-disabled description do not describe the new candidate.
+
+## Historical portable-only checkpoint
+
 This is the source handoff for
 [Empathy #105](https://github.com/egohygiene/empathy/issues/105), prepared on
 2026-11-09 from Empathy main

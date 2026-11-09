@@ -7,7 +7,7 @@ the publication contract established by the completed
 [Relay #33](https://github.com/egohygiene/relay/issues/33).
 Current generator qualification belongs to
 [Empathy #105](https://github.com/egohygiene/empathy/issues/105).
-The [portable candidate checkpoint](REPOSITORY_INTELLIGENCE_CURRENT.md) records
+The [native Journey/Search checkpoint](REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md) records
 the selected source and remaining qualification work. Historical acceptance
 evidence remains bound to its original revisions; #94 stays completed.
 
@@ -15,7 +15,8 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 | Input | Reviewed revision | Role |
 | --- | --- | --- |
-| Relay portable candidate | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Current builder in both integrations; provenance, failure workflow and owner-contract fixtures use the same exact source; qualification pending |
+| Relay Journey/Search candidate | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Current builder in both integrations with Journey and attributed Search; matching provenance, failure workflow and owner-contract metadata; qualification pending |
+| Previous portable source selection | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point |
 | Previous qualified current builder | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively |
 | Relay v1.4.0 | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` | Previous Repository Intelligence builder pin, frozen for historical replay |
 | Quartz | `075afd3f712da0088a07f5284a7b3aba37dd61b6` | Existing external site engine; Node.js 24 and profile behavior preserved |
@@ -36,11 +37,12 @@ consumer file outside `intelligence/` keeps its exact bytes.
 
 Empathy is the only Pages composition and deployment authority. Relay generates
 and validates evidence; it receives no Pages deployment authority. Observatory
-views without a supplied commit-matched read model intentionally say evidence
-is unavailable. Neither current integration enables ADR/Roadmap collectors,
-capture plans or artifact intake, or supplies an Observatory snapshot/comparison.
-The portable shell and graph therefore retain explicit unavailable semantic
-sources. Producer-source qualification remains separate in
+views without supported evidence intentionally say evidence is unavailable.
+The current composed, duplicate and standalone paths enable native Git Journey
+and owner-produced attributed Search on the same final public projection.
+They select no ADR/Roadmap or other domain collector, capture plan/artifact,
+external snapshot/comparison or retained Compare baseline. Missing source
+domains remain explicitly unavailable. Producer-source qualification remains separate in
 [Empathy #98](https://github.com/egohygiene/empathy/issues/98).
 
 ## Events and trust boundaries
