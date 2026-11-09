@@ -14,7 +14,14 @@ helpers. Refs [Empathy #105](https://github.com/egohygiene/empathy/issues/105),
 ## Selected production path
 
 The existing current Mindgarden build acquires public Work, Health and Releases
-captures on `push` and `workflow_dispatch`. The standalone artifact workflow
+captures on `push` and `workflow_dispatch`. Those successfully uploaded capture
+paths also select `collect-dependencies`, using the same actual post-capture
+evaluation boundary for Hygiene
+`49639c1845cdfd08fbd5a768261a8b3cf515f80f` public catalog admission. The earlier
+commit-time clock on PR/workflow-run paths cannot bind that later catalog, so
+those paths leave the dependency source off. Declared `depends-on` edges are
+authored owner evidence, without runtime adoption or a new inventory coverage
+domain. The standalone artifact workflow
 does the same on manual dispatch. The pinned Relay source producer checks
 unauthenticated public repository identity before and after its bounded reads,
 verifies the exact represented Git/API commit, and writes only allowlisted JSON

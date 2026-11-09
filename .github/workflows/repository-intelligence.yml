@@ -103,6 +103,7 @@ jobs:
           reports-directory: ".reports"
           collect-journey: "true"
           search-attribution: "true"
+          collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
           source-capture-artifact-id: "${{ steps.source_capture_upload.outputs.artifact-id }}"
           source-capture-artifact-digest: "${{ steps.source_capture_upload.outputs.artifact-digest }}"
           as-of: "${{ steps.public_sources.outputs.as-of }}"
