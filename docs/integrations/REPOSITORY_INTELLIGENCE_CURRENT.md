@@ -1,10 +1,10 @@
 # Current Repository Intelligence candidate
 
-Current source selection is now the
-[native Journey/attributed Search candidate](REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md),
-using Relay `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff`.
-The portable-only source checkpoint below is retained as history from #122;
-its old pin and source-disabled description do not describe the new candidate.
+Current source selection is the
+[public Work/Health/Releases checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md),
+using Relay `981ddf4367c67fcd625e54321d95bab027f6c0f2` and retaining native Journey
+and attributed Search. The portable-only checkpoint below is history from #122;
+its old pin and source-disabled description do not describe this candidate.
 
 ## Historical portable-only checkpoint
 

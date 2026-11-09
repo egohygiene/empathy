@@ -31,7 +31,7 @@ concurrency:
 env:
   TZ: UTC
   CANONICAL_ORIGIN: "https://egohygiene.github.io/empathy/"
-  RELAY_REVISION: "9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff"
+  RELAY_REVISION: "981ddf4367c67fcd625e54321d95bab027f6c0f2"
   ROLLBACK_REVISION: "254185272ab27b6858b8b0393af6549c205c9a8d"
   ROLLBACK_RELAY_REVISION: "b71b090406a3a9e4cd9f107e9d14a623bbecb127"
   ROLLBACK_SITE_DIGEST: "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498"
@@ -50,6 +50,10 @@ jobs:
     permissions:
       contents: read
       pages: read
+      actions: read
+      issues: read
+      pull-requests: read
+      checks: read
     strategy:
       fail-fast: false
       matrix:
@@ -138,7 +142,7 @@ jobs:
       - name: Capture consumer routes before composition
         id: baseline
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@981ddf4367c67fcd625e54321d95bab027f6c0f2
         with:
           operation: capture-baseline
           site-directory: .cache/mindgarden/site
@@ -153,17 +157,47 @@ jobs:
           python3 "${RUNNER_TEMP}/empathy-publication.py" canonicalize-baseline
           --baseline .cache/mindgarden/publication/consumer-route-baseline.json
 
+      - name: Capture public Work, Health and Releases sources
+        id: public_sources
+        if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@981ddf4367c67fcd625e54321d95bab027f6c0f2
+        with:
+          github-token: "${{ github.token }}"
+          include-titles: "true"
+
+      - name: Retain exact same-run source captures
+        id: source_capture_upload
+        if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        # Ordinary immutable capture artifact; never a Pages upload.
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: "${{ steps.public_sources.outputs.artifact-name }}"
+          path: "${{ steps.public_sources.outputs.artifact-directory }}"
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Preserve source producer receipt outside the public site
+        id: source_receipt
+        if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        env:
+          SOURCE_PRODUCER_RECEIPT: "${{ steps.public_sources.outputs.producer-receipt }}"
+        run: cp -- "${SOURCE_PRODUCER_RECEIPT}" .cache/mindgarden/publication/source-producer.json
+
       - name: Generate repository intelligence dashboard
         id: intelligence
         if: matrix.mode == 'current'
         # Reviewed portable Relay candidate; exact source qualification remains pending.
-        uses: egohygiene/relay/actions/repository-intelligence@9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff
+        uses: egohygiene/relay/actions/repository-intelligence@981ddf4367c67fcd625e54321d95bab027f6c0f2
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
           reports-directory: ".reports"
           collect-journey: "true"
           search-attribution: "true"
+          collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
+          source-capture-artifact-id: "${{ steps.source_capture_upload.outputs.artifact-id }}"
+          source-capture-artifact-digest: "${{ steps.source_capture_upload.outputs.artifact-digest }}"
+          as-of: "${{ steps.public_sources.outputs.as-of }}"
           activity-since: "1 year ago"
           max-depth: "10"
           require-full-history: "true"
@@ -176,13 +210,17 @@ jobs:
       - name: Rebuild identical Repository Intelligence inputs
         id: intelligence_duplicate
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence@9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff
+        uses: egohygiene/relay/actions/repository-intelligence@981ddf4367c67fcd625e54321d95bab027f6c0f2
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
           reports-directory: ".reports"
           collect-journey: "true"
           search-attribution: "true"
+          collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
+          source-capture-artifact-id: "${{ steps.source_capture_upload.outputs.artifact-id }}"
+          source-capture-artifact-digest: "${{ steps.source_capture_upload.outputs.artifact-digest }}"
+          as-of: "${{ steps.public_sources.outputs.as-of }}"
           activity-since: "1 year ago"
           max-depth: "10"
           require-full-history: "true"
@@ -212,14 +250,14 @@ jobs:
       - name: Verify current provenance and Quartz non-clobber boundary
         id: composition
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@981ddf4367c67fcd625e54321d95bab027f6c0f2
         with:
           operation: verify-composition
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ steps.identity.outputs.represented-revision }}"
-          relay-revision: "9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff"
+          relay-revision: "981ddf4367c67fcd625e54321d95bab027f6c0f2"
           required-routes: >-
             ["/","/intelligence/","/intelligence/now/","/intelligence/roadmap/",
             "/intelligence/decisions/","/intelligence/journey/","/intelligence/dependencies/",
@@ -293,6 +331,7 @@ jobs:
         env:
           RESULTS: ${{ toJSON(steps) }}
           MODE: ${{ matrix.mode }}
+          CAPTURE_EXPECTED: ${{ matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
           PUBLISH_EXPECTED: >-
             ${{ ((github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) || (github.event_name == 'workflow_run' && (github.event.workflow_run.event != 'pull_request' && contains(fromJSON('["push","schedule","workflow_dispatch"]'), github.event.workflow_run.event) && contains(fromJSON('["MegaLinter","OpenSSF Scorecard","🔍 OSV Vulnerability Scan"]'), github.event.workflow_run.name) && github.event.workflow_run.repository.full_name == github.repository && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == github.event.repository.default_branch)) }}
         shell: bash
@@ -313,7 +352,10 @@ jobs:
               stages.append("rollback_checkout")
           stages += ["identity", "inputs", "runtime", "garden", "quartz"]
           if mode == "current":
-              stages += ["baseline", "canonical_baseline", "intelligence", "first_composition",
+              stages += ["baseline", "canonical_baseline"]
+              if os.environ["CAPTURE_EXPECTED"] == "true":
+                  stages += ["public_sources", "source_capture_upload", "source_receipt"]
+              stages += ["intelligence", "first_composition",
                          "intelligence_duplicate", "duplicate", "composition"]
           else:
               stages += ["intelligence_rollback", "rollback"]
@@ -341,12 +383,14 @@ jobs:
               "EMRI-008": "Restore complete review and provenance artifact retention before publication.",
               "EMRI-009": "Inspect GitHub Pages configuration and complete-site artifact upload.",
               "EMRI-010": "Restore the bounded mode and trusted publication event policy.",
+              "EMRI-011": "Restore bounded public source capture and exact same-run artifact handoff.",
           }
           stage_codes = {
               "harden": "EMRI-001", "checkout": "EMRI-001", "helper_tools": "EMRI-001", "rollback_checkout": "EMRI-002",
               "identity": "EMRI-002", "inputs": "EMRI-003", "runtime": "EMRI-004",
               "garden": "EMRI-004", "quartz": "EMRI-004", "baseline": "EMRI-005",
               "canonical_baseline": "EMRI-005", "composition": "EMRI-005",
+              "public_sources": "EMRI-011", "source_capture_upload": "EMRI-011", "source_receipt": "EMRI-011",
               "intelligence": "EMRI-006", "first_composition": "EMRI-006",
               "intelligence_duplicate": "EMRI-006", "duplicate": "EMRI-006",
               "intelligence_rollback": "EMRI-007", "rollback": "EMRI-007",
@@ -447,14 +491,14 @@ jobs:
       - name: Record current deployment receipt
         id: receipt
         if: needs.build.outputs.deployment-mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@981ddf4367c67fcd625e54321d95bab027f6c0f2
         with:
           operation: record-receipt
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ needs.build.outputs.represented-revision }}"
-          relay-revision: "9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff"
+          relay-revision: "981ddf4367c67fcd625e54321d95bab027f6c0f2"
           workflow-run-id: "${{ github.run_id }}"
           workflow-run-attempt: "${{ github.run_attempt }}"
           deployment-environment: github-pages
