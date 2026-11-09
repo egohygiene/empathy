@@ -73,11 +73,13 @@ jobs:
       - name: Generate intelligence artifacts and dashboard
         id: intelligence
         # Portable Relay candidate; qualify the exact source before readiness.
-        uses: egohygiene/relay/actions/repository-intelligence@49046d88ef6fe2e31e9a9f443a61157b598efb78
+        uses: egohygiene/relay/actions/repository-intelligence@9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff
         with:
           output-directory: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
           work-directory: "${{ inputs.output-root || '.cache/repository-intelligence' }}"
           reports-directory: ".reports"
+          collect-journey: "true"
+          search-attribution: "true"
           activity-since: "${{ inputs.activity-since || '1 year ago' }}"
           max-depth: "${{ inputs.max-depth || '10' }}"
           require-full-history: "true"

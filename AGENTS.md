@@ -23,8 +23,12 @@ provider job scheduling, including skipped ancestors and explicit prerequisite
 results. A green workflow does not prove that deployment or live verification
 ran. Current generator qualification belongs to Empathy #105; #94 is the
 completed historical canary. Preserve its fixed rollback pins and byte contract.
-The current portable Relay candidate is recorded in the publication guide and
-its qualification checkpoint. Scope repeatability claims to actual declared
+The current Journey/attributed Search source selection is recorded in the
+publication guide and [native-source checkpoint](docs/integrations/REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md).
+Only current generator paths select those two opt-ins; the historical rollback
+does not. Compare requires separately reviewed real captured pairs and an
+explicit artifact lease; this consumer has no selected baseline.
+Scope repeatability claims to actual declared
 inputs and checkout evidence; a portable owner implementation does not establish
 consumer qualification for Relay #109.
 For Python changes, run Ruff against `egolint/.config/lint/python/ruff.toml`,
