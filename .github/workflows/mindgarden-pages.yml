@@ -31,7 +31,7 @@ concurrency:
 env:
   TZ: UTC
   CANONICAL_ORIGIN: "https://egohygiene.github.io/empathy/"
-  RELAY_REVISION: "9a6315978766c336566b9fa7139b800fa8789ba5"
+  RELAY_REVISION: "49046d88ef6fe2e31e9a9f443a61157b598efb78"
   ROLLBACK_REVISION: "254185272ab27b6858b8b0393af6549c205c9a8d"
   ROLLBACK_RELAY_REVISION: "b71b090406a3a9e4cd9f107e9d14a623bbecb127"
   ROLLBACK_SITE_DIGEST: "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498"
@@ -101,7 +101,7 @@ jobs:
           if [[ "${MODE}" == 'rollback-v1.4' ]]; then
             [[ "${GITHUB_EVENT_NAME}" == 'pull_request' || "${GITHUB_EVENT_NAME}" == 'workflow_dispatch' ]]
             [[ "${represented_revision}" == "${ROLLBACK_REVISION}" ]]
-            # Both pinned generators currently include the checkout basename.
+            # The frozen historical generator includes the checkout basename.
             [[ "${PWD##*/}" == 'empathy' ]]
           else
             [[ "${MODE}" == 'current' && "${represented_revision}" == "${GITHUB_SHA}" ]]
@@ -138,7 +138,7 @@ jobs:
       - name: Capture consumer routes before composition
         id: baseline
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@b4a88db20bc26f9ddefbee174baa8162cbe94ff2
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@49046d88ef6fe2e31e9a9f443a61157b598efb78
         with:
           operation: capture-baseline
           site-directory: .cache/mindgarden/site
@@ -156,8 +156,8 @@ jobs:
       - name: Generate repository intelligence dashboard
         id: intelligence
         if: matrix.mode == 'current'
-        # egohygiene/relay repository-intelligence v1.6.0
-        uses: egohygiene/relay/actions/repository-intelligence@9a6315978766c336566b9fa7139b800fa8789ba5
+        # Reviewed portable Relay candidate; exact source qualification remains pending.
+        uses: egohygiene/relay/actions/repository-intelligence@49046d88ef6fe2e31e9a9f443a61157b598efb78
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -174,7 +174,7 @@ jobs:
       - name: Rebuild identical Repository Intelligence inputs
         id: intelligence_duplicate
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence@9a6315978766c336566b9fa7139b800fa8789ba5
+        uses: egohygiene/relay/actions/repository-intelligence@49046d88ef6fe2e31e9a9f443a61157b598efb78
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -195,7 +195,7 @@ jobs:
       - name: Generate historical Repository Intelligence dashboard
         id: intelligence_rollback
         if: matrix.mode == 'rollback-v1.4'
-        # Frozen rollback dependency; current integrations both use v1.6.0.
+        # Frozen rollback dependency; never replace with the current candidate.
         uses: egohygiene/relay/actions/repository-intelligence@b71b090406a3a9e4cd9f107e9d14a623bbecb127
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
@@ -208,14 +208,14 @@ jobs:
       - name: Verify current provenance and Quartz non-clobber boundary
         id: composition
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@b4a88db20bc26f9ddefbee174baa8162cbe94ff2
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@49046d88ef6fe2e31e9a9f443a61157b598efb78
         with:
           operation: verify-composition
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ steps.identity.outputs.represented-revision }}"
-          relay-revision: "9a6315978766c336566b9fa7139b800fa8789ba5"
+          relay-revision: "49046d88ef6fe2e31e9a9f443a61157b598efb78"
           required-routes: >-
             ["/","/intelligence/","/intelligence/now/","/intelligence/roadmap/",
             "/intelligence/decisions/","/intelligence/journey/","/intelligence/dependencies/",
@@ -443,14 +443,14 @@ jobs:
       - name: Record current deployment receipt
         id: receipt
         if: needs.build.outputs.deployment-mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@b4a88db20bc26f9ddefbee174baa8162cbe94ff2
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@49046d88ef6fe2e31e9a9f443a61157b598efb78
         with:
           operation: record-receipt
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ needs.build.outputs.represented-revision }}"
-          relay-revision: "9a6315978766c336566b9fa7139b800fa8789ba5"
+          relay-revision: "49046d88ef6fe2e31e9a9f443a61157b598efb78"
           workflow-run-id: "${{ github.run_id }}"
           workflow-run-attempt: "${{ github.run_attempt }}"
           deployment-environment: github-pages

@@ -2,18 +2,21 @@
 
 Empathy consumes Relay's Repository Intelligence builder and owns the complete
 Mindgarden/Quartz site, its Pages deployment, and publication evidence. This is
-the consumer checkpoint for [Empathy #94](https://github.com/egohygiene/empathy/issues/94)
-and [Relay #33](https://github.com/egohygiene/relay/issues/33).
-Implementation and PR evidence precede the default-branch deployment proof;
-Empathy #94 remains open until the post-merge acceptance sequence below is recorded.
-Relay #33 and [Relay #106](https://github.com/egohygiene/relay/issues/106) remain
-open for their broader acceptance and final reconciliation.
+the publication contract established by the completed
+[Empathy #94](https://github.com/egohygiene/empathy/issues/94) canary and
+[Relay #33](https://github.com/egohygiene/relay/issues/33).
+Current generator qualification belongs to
+[Empathy #105](https://github.com/egohygiene/empathy/issues/105).
+The [portable candidate checkpoint](REPOSITORY_INTELLIGENCE_CURRENT.md) records
+the selected source and remaining qualification work. Historical acceptance
+evidence remains bound to its original revisions; #94 stays completed.
 
 ## Immutable inputs and ownership
 
 | Input | Reviewed revision | Role |
 | --- | --- | --- |
-| Relay v1.6.0 | `9a6315978766c336566b9fa7139b800fa8789ba5` | Current builder in both integrations; composition and receipt validation |
+| Relay portable candidate | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Current builder in both integrations; provenance, failure workflow and owner-contract fixtures use the same exact source; qualification pending |
+| Previous qualified current builder | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively |
 | Relay v1.4.0 | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` | Previous Repository Intelligence builder pin, frozen for historical replay |
 | Quartz | `075afd3f712da0088a07f5284a7b3aba37dd61b6` | Existing external site engine; Node.js 24 and profile behavior preserved |
 
@@ -34,8 +37,11 @@ consumer file outside `intelligence/` keeps its exact bytes.
 Empathy is the only Pages composition and deployment authority. Relay generates
 and validates evidence; it receives no Pages deployment authority. Observatory
 views without a supplied commit-matched read model intentionally say evidence
-is unavailable. This checkpoint does not introduce that read model or expand
-into Observatory #24, Relay #102, #101 polish, or fleet adoption.
+is unavailable. Neither current integration enables ADR/Roadmap collectors,
+capture plans or artifact intake, or supplies an Observatory snapshot/comparison.
+The portable shell and graph therefore retain explicit unavailable semantic
+sources. Producer-source qualification remains separate in
+[Empathy #98](https://github.com/egohygiene/empathy/issues/98).
 
 ## Events and trust boundaries
 
@@ -120,11 +126,12 @@ repeatability of Repository Intelligence within that build context; it does not
 claim two fresh Quartz builds are byte-identical. Quartz's synthetic tag entries
 use runtime dates in `index.xml` and `sitemap.xml`.
 
-The pinned Relay versions also incorporate the checkout basename. The rollback
-lane requires the provider checkout basename `empathy` and `TZ=UTC`. Arbitrary
-checkout-directory portability is tracked separately in
-[Relay #109](https://github.com/egohygiene/relay/issues/109); do not generalize the
-same-context duplicate-build proof into a portability claim.
+The frozen historical Relay generator incorporates the checkout basename. The
+rollback lane still requires the provider checkout basename `empathy` and
+`TZ=UTC`. The current candidate contains Relay's portable generator changes;
+Empathy has not yet qualified it across checkout names. Keep that consumer
+evidence distinct from the existing same-context duplicate-build proof and
+[Relay #109](https://github.com/egohygiene/relay/issues/109).
 
 Current builds retain these distinct pieces of evidence for 30 days:
 
@@ -146,7 +153,10 @@ separately.
 Live verification uses only `https://egohygiene.github.io/empathy/`. It requires
 HTTP 200 without following redirects, exact manifest bytes for current builds
 (historical provenance bytes for rollback), and exact retained HTML bytes for
-all five Mindgarden entry points and all twelve Repository Intelligence routes.
+all five Mindgarden entry points and the configured twelve core Repository
+Intelligence routes. Candidate route aliases, additional source-availability
+routes and graph assets still need their own qualification; this pin change
+does not expand the existing live-probe inventory.
 It checks identity again after route probes to detect a deployment changing
 during verification. Route availability alone is insufficient proof of revision.
 
@@ -250,7 +260,9 @@ its default-branch guard. The lint job can still upload SARIF using its existing
 identities as exact-head review evidence; a successful fast-profile run cannot
 substitute for this check.
 
-After review and merge, record the following on #94 before changing its state:
+For the current candidate, record the following on #105 after separate review,
+merge and publication authorization. These are new-revision qualification
+requirements; retain the completed #94 evidence and issue state:
 
 1. Exact merged SHA/tree and successful default-branch build, deployment,
    receipt finalization, and exact live identity/routes.
@@ -269,6 +281,6 @@ After review and merge, record the following on #94 before changing its state:
    report, rollback proof, and restored-current proof. Distinguish implemented
    behavior, PR validation, and consumer-side execution still pending.
 
-Use reference-only issue links in PR text, for example `Refs #94` and
+Use reference-only issue links in PR text, for example `Refs #105` and
 `Refs egohygiene/Relay#33`. Issue completion requires the durable post-merge proof
 above, independently of whether the implementation PR is merged.
