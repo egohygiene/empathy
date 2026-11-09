@@ -26,7 +26,9 @@ completed historical canary. Preserve its fixed rollback pins and byte contract.
 The current Journey/attributed Search source selection is recorded in the
 publication guide and [native-source checkpoint](docs/integrations/REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md).
 Only current generator paths select those two opt-ins; the historical rollback
-does not. Compare requires separately reviewed real captured pairs and an
+does not. The [public-source checkpoint](docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md)
+adds bounded Work/Health/Releases capture intake on current push/manual paths;
+PR and trusted workflow-run paths keep their existing no-capture selection. Compare requires separately reviewed real captured pairs and an
 explicit artifact lease; this consumer has no selected baseline.
 Scope repeatability claims to actual declared
 inputs and checkout evidence; a portable owner implementation does not establish

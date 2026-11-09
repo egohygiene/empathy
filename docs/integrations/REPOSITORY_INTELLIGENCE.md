@@ -7,15 +7,18 @@ the publication contract established by the completed
 [Relay #33](https://github.com/egohygiene/relay/issues/33).
 Current generator qualification belongs to
 [Empathy #105](https://github.com/egohygiene/empathy/issues/105).
-The [native Journey/Search checkpoint](REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md) records
-the selected source and remaining qualification work. Historical acceptance
+The [public source checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md) records the
+current bounded Work/Health/Releases feeds and remaining qualification work. The
+[native Journey/Search checkpoint](REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md)
+retains the preceding source selection. Historical acceptance
 evidence remains bound to its original revisions; #94 stays completed.
 
 ## Immutable inputs and ownership
 
 | Input | Reviewed revision | Role |
 | --- | --- | --- |
-| Relay Journey/Search candidate | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Current builder in both integrations with Journey and attributed Search; matching provenance, failure workflow and owner-contract metadata; qualification pending |
+| Relay public-source candidate | `94e3a3a4a18f9ced7b3694fe258ae397eed55953` | Current source producer and builders with Work/Health/Releases capture intake, Journey and attributed Search; matching current metadata; qualification pending |
+| Previous Journey/Search selection | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim |
 | Previous portable source selection | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point |
 | Previous qualified current builder | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively |
 | Relay v1.4.0 | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` | Previous Repository Intelligence builder pin, frozen for historical replay |
@@ -40,9 +43,11 @@ and validates evidence; it receives no Pages deployment authority. Observatory
 views without supported evidence intentionally say evidence is unavailable.
 The current composed, duplicate and standalone paths enable native Git Journey
 and owner-produced attributed Search on the same final public projection.
-They select no ADR/Roadmap or other domain collector, capture plan/artifact,
-external snapshot/comparison or retained Compare baseline. Missing source
-domains remain explicitly unavailable. Producer-source qualification remains separate in
+On current push/manual paths they also admit one exact same-run public capture
+artifact for Work, Health and Releases; the duplicate generator reuses that same
+artifact and evaluation time. PR and trusted workflow-run paths retain their
+existing no-capture selection. They select no ADR/Roadmap, external snapshot/
+comparison or retained Compare baseline. Missing domains remain unavailable. Producer-source qualification remains separate in
 [Empathy #98](https://github.com/egohygiene/empathy/issues/98).
 
 ## Events and trust boundaries
@@ -97,7 +102,8 @@ source identity remain separate. A successful OSV scan can have blocking finding
 a failed MegaLinter execution can have zero recorded findings. Missing evidence
 is unknown, and malformed or incompatible evidence is invalid. Expired accepted
 evidence is stale at its declared expiry. Freshness evaluation is anchored to
-the declared build instant, normally the represented commit timestamp.
+the declared build instant: the actual post-capture `as-of` on current source
+capture paths, otherwise the existing represented-commit boundary.
 
 The hardened Relay contract requires a report's original scanner commit to match
 the represented consumer commit. A subsequent snapshot-publication commit does

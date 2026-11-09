@@ -47,6 +47,10 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read
+      actions: read
+      issues: read
+      pull-requests: read
+      checks: read
     steps:
       - name: Harden Runner
         id: harden
@@ -70,16 +74,38 @@ jobs:
           --repository-root .
           --output .cache/repository-intelligence-publication/inputs.json
 
+      - name: Capture public Work, Health and Releases sources
+        id: public_sources
+        if: github.event_name == 'workflow_dispatch'
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@94e3a3a4a18f9ced7b3694fe258ae397eed55953
+        with:
+          github-token: "${{ github.token }}"
+          include-titles: "true"
+
+      - name: Retain exact same-run source captures
+        id: source_capture_upload
+        if: github.event_name == 'workflow_dispatch'
+        # Ordinary immutable capture artifact; never a Pages upload.
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: "${{ steps.public_sources.outputs.artifact-name }}"
+          path: "${{ steps.public_sources.outputs.artifact-directory }}"
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Generate intelligence artifacts and dashboard
         id: intelligence
         # Portable Relay candidate; qualify the exact source before readiness.
-        uses: egohygiene/relay/actions/repository-intelligence@9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff
+        uses: egohygiene/relay/actions/repository-intelligence@94e3a3a4a18f9ced7b3694fe258ae397eed55953
         with:
           output-directory: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
           work-directory: "${{ inputs.output-root || '.cache/repository-intelligence' }}"
           reports-directory: ".reports"
           collect-journey: "true"
           search-attribution: "true"
+          source-capture-artifact-id: "${{ steps.source_capture_upload.outputs.artifact-id }}"
+          source-capture-artifact-digest: "${{ steps.source_capture_upload.outputs.artifact-digest }}"
+          as-of: "${{ steps.public_sources.outputs.as-of }}"
           activity-since: "${{ inputs.activity-since || '1 year ago' }}"
           max-depth: "${{ inputs.max-depth || '10' }}"
           require-full-history: "true"
@@ -102,6 +128,9 @@ jobs:
           HARDEN_RESULT: ${{ steps.harden.outcome }}
           CHECKOUT_RESULT: ${{ steps.checkout.outcome }}
           INPUT_RESULT: ${{ steps.inputs.outcome }}
+          CAPTURE_EXPECTED: ${{ github.event_name == 'workflow_dispatch' }}
+          CAPTURE_RESULT: ${{ steps.public_sources.outcome }}
+          CAPTURE_UPLOAD_RESULT: ${{ steps.source_capture_upload.outcome }}
           BUILD_RESULT: ${{ steps.intelligence.outcome }}
           ARTIFACT_RESULT: ${{ steps.review_artifact.outcome }}
         shell: bash
@@ -113,6 +142,8 @@ jobs:
           from pathlib import Path
           stages = [("harden", "HARDEN_RESULT"), ("checkout", "CHECKOUT_RESULT"), ("inputs", "INPUT_RESULT"),
                     ("intelligence", "BUILD_RESULT"), ("review_artifact", "ARTIFACT_RESULT")]
+          if os.environ["CAPTURE_EXPECTED"] == "true":
+              stages[3:3] = [("public_sources", "CAPTURE_RESULT"), ("source_capture_upload", "CAPTURE_UPLOAD_RESULT")]
           allowed = {"success", "failure", "cancelled", "skipped"}
           observed = {}
           for stage, key in stages:
@@ -123,6 +154,8 @@ jobs:
               "harden": ("EMRI-001", "Restore runner hardening before rebuilding."),
               "checkout": ("EMRI-001", "Restore the complete immutable consumer checkout."),
               "inputs": ("EMRI-003", "Inspect normalized snapshot schema and provenance; retain unknown or stale evidence."),
+              "public_sources": ("EMRI-011", "Restore bounded public source admission without relabeling unavailable evidence."),
+              "source_capture_upload": ("EMRI-011", "Restore exact same-run source capture retention and digest handoff."),
               "intelligence": ("EMRI-006", "Inspect the pinned Relay generation and public-safe diagnostic evidence."),
               "review_artifact": ("EMRI-008", "Restore the complete public review artifact upload."),
           }
@@ -158,6 +191,8 @@ jobs:
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-intelligence-report-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: "${{ runner.temp }}/empathy-intelligence-run.json"
+          path: |
+            ${{ runner.temp }}/empathy-intelligence-run.json
+            ${{ steps.public_sources.outputs.producer-receipt }}
           if-no-files-found: error
           retention-days: 30

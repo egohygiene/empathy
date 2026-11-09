@@ -1,5 +1,9 @@
 # Native Journey and attributed Search consumer checkpoint
 
+This preceding source checkpoint is retained as history from #123. The
+[current public source integration](REPOSITORY_INTELLIGENCE_SOURCES.md) extends
+its two native opt-ins with bounded push/manual Work/Health/Releases captures.
+
 This follow-up is prepared from Empathy main
 `7a0725a3006df6780b9edb43de4e5baeeb4bd72c`, which merged the portable source
 selection in [PR #122](https://github.com/egohygiene/empathy/pull/122).
