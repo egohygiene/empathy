@@ -7,8 +7,10 @@ the publication contract established by the completed
 [Relay #33](https://github.com/egohygiene/relay/issues/33).
 Current generator qualification belongs to
 [Empathy #105](https://github.com/egohygiene/empathy/issues/105).
-The [public source checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md) records the
-current bounded Work/Health/Releases feeds and remaining qualification work. The
+The [typed review-feed checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md) records
+current Audits/Sanity composition alongside bounded Work/Health/Releases feeds.
+The [preceding public source checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md)
+retains its historical capture selection and qualification limits. The
 [native Journey/Search checkpoint](REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md)
 retains the preceding source selection. Historical acceptance
 evidence remains bound to its original revisions; #94 stays completed.
@@ -17,7 +19,8 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 | Input | Reviewed revision | Role |
 | --- | --- | --- |
-| Relay public-source candidate | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Current source producer and builders with Work/Health/Releases capture intake, Journey and attributed Search; matching current metadata; qualification pending |
+| Relay typed-review-feed candidate | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Current producers/builders, Audits/Sanity normalization, capture/Journey/Search and matching provenance metadata; qualification pending |
+| Previous public-source selection | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim |
 | Previous Journey/Search selection | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim |
 | Previous portable source selection | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point |
 | Previous qualified current builder | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively |
