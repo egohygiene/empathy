@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-247699b5-b42c-4ff6-b657-b28f3fdbce33",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-0d5267b4-7b17-4fe2-bf44-00d05726bc08",
  "creationInfo": {
   "licenseListVersion": "3.28",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.51.1"
   ],
-  "created": "2026-11-04T13:19:27Z"
+  "created": "2026-11-11T12:59:55Z"
  },
  "packages": [
   {
@@ -214134,8 +214134,8 @@
   },
   {
    "name": "egohygiene/relay/.github/workflows/repository-intelligence.yml",
-   "SPDXID": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-bc7a8a1e83988611",
-   "versionInfo": "b4a88db20bc26f9ddefbee174baa8162cbe94ff2",
+   "SPDXID": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-eea0e5f457376436",
+   "versionInfo": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
    "supplier": "Organization: egohygiene",
    "originator": "Organization: egohygiene",
    "downloadLocation": "NOASSERTION",
@@ -214148,37 +214148,37 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository-intelligence.yml:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/.github\\/workflows\\/repository:egohygiene\\/relay\\/.github\\/workflows\\/repository_intelligence.yml:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/egohygiene/relay@b4a88db20bc26f9ddefbee174baa8162cbe94ff2#.github/workflows/repository-intelligence.yml"
+     "referenceLocator": "pkg:github/egohygiene/relay@981ddf4367c67fcd625e54321d95bab027f6c0f2#.github/workflows/repository-intelligence.yml"
     }
    ]
   },
@@ -214674,8 +214674,8 @@
   },
   {
    "name": "egohygiene/relay/actions/repository-intelligence",
-   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deca0ce6bc38a045",
-   "versionInfo": "9a6315978766c336566b9fa7139b800fa8789ba5",
+   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-8f75dc2c8c371d7f",
+   "versionInfo": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
    "supplier": "Organization: egohygiene",
    "originator": "Organization: egohygiene",
    "downloadLocation": "NOASSERTION",
@@ -214688,44 +214688,44 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/egohygiene/relay@9a6315978766c336566b9fa7139b800fa8789ba5#actions/repository-intelligence"
+     "referenceLocator": "pkg:github/egohygiene/relay@981ddf4367c67fcd625e54321d95bab027f6c0f2#actions/repository-intelligence"
     }
    ]
   },
   {
    "name": "egohygiene/relay/actions/repository-intelligence",
-   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-35f62f0a6bfd38b0",
-   "versionInfo": "9a6315978766c336566b9fa7139b800fa8789ba5",
+   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-5b7735fd78f3bcda",
+   "versionInfo": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
    "supplier": "Organization: egohygiene",
    "originator": "Organization: egohygiene",
    "downloadLocation": "NOASSERTION",
@@ -214738,37 +214738,37 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:9a6315978766c336566b9fa7139b800fa8789ba5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/egohygiene/relay@9a6315978766c336566b9fa7139b800fa8789ba5#actions/repository-intelligence"
+     "referenceLocator": "pkg:github/egohygiene/relay@981ddf4367c67fcd625e54321d95bab027f6c0f2#actions/repository-intelligence"
     }
    ]
   },
@@ -214824,8 +214824,8 @@
   },
   {
    "name": "egohygiene/relay/actions/repository-intelligence-deployment-provenance",
-   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-4c8b6b44689e7292",
-   "versionInfo": "b4a88db20bc26f9ddefbee174baa8162cbe94ff2",
+   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-7365d178b35b5426",
+   "versionInfo": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
    "supplier": "Organization: egohygiene",
    "originator": "Organization: egohygiene",
    "downloadLocation": "NOASSERTION",
@@ -214838,77 +214838,257 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-deployment-provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:b4a88db20bc26f9ddefbee174baa8162cbe94ff2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_deployment_provenance:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:github/egohygiene/relay@b4a88db20bc26f9ddefbee174baa8162cbe94ff2#actions/repository-intelligence-deployment-provenance"
+     "referenceLocator": "pkg:github/egohygiene/relay@981ddf4367c67fcd625e54321d95bab027f6c0f2#actions/repository-intelligence-deployment-provenance"
+    }
+   ]
+  },
+  {
+   "name": "egohygiene/relay/actions/repository-intelligence-github-sources",
+   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-github-sources-c4268c0d62aaf72d",
+   "versionInfo": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+   "supplier": "Organization: egohygiene",
+   "originator": "Organization: egohygiene",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/mindgarden-pages.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/egohygiene/relay@981ddf4367c67fcd625e54321d95bab027f6c0f2#actions/repository-intelligence-github-sources"
+    }
+   ]
+  },
+  {
+   "name": "egohygiene/relay/actions/repository-intelligence-github-sources",
+   "SPDXID": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-github-sources-e7ec32d9b315b35c",
+   "versionInfo": "981ddf4367c67fcd625e54321d95bab027f6c0f2",
+   "supplier": "Organization: egohygiene",
+   "originator": "Organization: egohygiene",
+   "downloadLocation": "NOASSERTION",
+   "filesAnalyzed": false,
+   "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/repository-intelligence.yml",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence-github:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence_github:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository-intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository_intelligence:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository-intelligence-github-sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:egohygiene\\/relay\\/actions\\/repository:egohygiene\\/relay\\/actions\\/repository_intelligence_github_sources:981ddf4367c67fcd625e54321d95bab027f6c0f2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:github/egohygiene/relay@981ddf4367c67fcd625e54321d95bab027f6c0f2#actions/repository-intelligence-github-sources"
     }
    ]
   },
@@ -463593,7 +463773,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "0365c07384bb084b3b05c51f9f1f7cabaa0e6dc344129164af90624483cb232c"
+     "checksumValue": "b4bb903c5f229fd910aaff147d8998d618c4c36f9441b307daf44c29c0db1ae1"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463647,7 +463827,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "ddf720be487e395c72f2b4140ecc223ccd95cdb872ebad854648fe9323d4608e"
+     "checksumValue": "3a7339a0aaae4f260230dd61822e476c6e1b7154f23c47988d6e718284a9a364"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463665,7 +463845,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "836f63ce6aec2a5483ec9f0888f9f513c6c669c711921b3455b531a7396a954d"
+     "checksumValue": "07f2f75baa830681b70bfe8c92bdf675f64b9eb09f54afec00be28bc33b91021"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -463701,7 +463881,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "e3ef50b3b2bd803744f55f88288c71b0f79235b0cdb63d2b412594b47c817ec7"
+     "checksumValue": "fa642805684574b62295132b7dd1018e83c57c10ed97e306ef26fbb5fb347cee"
     }
    ],
    "licenseConcluded": "NOASSERTION",
@@ -649493,12 +649673,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-35f62f0a6bfd38b0",
-   "relatedSpdxElement": "SPDXRef-File-...workflows-repository-intelligence.yml-ff6bf8d1270a8b38",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-npm-hast-util-to-parse5-360cc7e54398db78",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
    "relationshipType": "OTHER",
@@ -653897,12 +654071,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-4c8b6b44689e7292",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-python-griffelib-4c8ba6adf59229cc",
    "relatedSpdxElement": "SPDXRef-File-egolint-uv.lock-da7b66ee987f89bd",
    "relationshipType": "OTHER",
@@ -656827,6 +656995,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-parse-filepath-5b76e9d2abffe87b",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-5b7735fd78f3bcda",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-repository-intelligence.yml-ff6bf8d1270a8b38",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -661603,6 +661777,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-pump-7364affb0273470b",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-7365d178b35b5426",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -667357,6 +667537,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-jju-8f72088ff26a19bf",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-8f75dc2c8c371d7f",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -676037,12 +676223,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-bc7a8a1e83988611",
-   "relatedSpdxElement": "SPDXRef-File-...repository-intelligence-failure.yml-c114e2b6e498dbf8",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-npm--vue-compiler-ssr-bc87b69f9b1843af",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -677731,6 +677911,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-path-exists-c4154d38dc428210",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-github-sources-c4268c0d62aaf72d",
+   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -683381,12 +683567,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deca0ce6bc38a045",
-   "relatedSpdxElement": "SPDXRef-File-.github-workflows-mindgarden-pages.yml-8c89efc4702a5fab",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-npm-execa-decd6831f7578974",
    "relatedSpdxElement": "SPDXRef-File-pnpm-lock.yaml-c895fb8e872e275f",
    "relationshipType": "OTHER",
@@ -685151,6 +685331,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-github-sources-e7ec32d9b315b35c",
+   "relatedSpdxElement": "SPDXRef-File-...workflows-repository-intelligence.yml-ff6bf8d1270a8b38",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-npm-camelcase-e7edaf9ec2dc97d7",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
    "relationshipType": "OTHER",
@@ -686437,6 +686623,12 @@
   {
    "spdxElementId": "SPDXRef-Package-npm-postcss-color-rebeccapurple-eea0d8b0cdaae949",
    "relatedSpdxElement": "SPDXRef-File-egolint-pnpm-lock.yaml-fb07bd5d74837461",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-eea0e5f457376436",
+   "relatedSpdxElement": "SPDXRef-File-...repository-intelligence-failure.yml-c114e2b6e498dbf8",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
@@ -709403,7 +709595,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-bc7a8a1e83988611",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-workflow-egohygiene-relay-.github-workflows-repository-intelligence.yml-eea0e5f457376436",
    "relationshipType": "CONTAINS"
   },
   {
@@ -709443,12 +709635,12 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deca0ce6bc38a045",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-8f75dc2c8c371d7f",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-35f62f0a6bfd38b0",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-5b7735fd78f3bcda",
    "relationshipType": "CONTAINS"
   },
   {
@@ -709458,7 +709650,17 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
-   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-4c8b6b44689e7292",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-deployment-provenance-7365d178b35b5426",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-github-sources-c4268c0d62aaf72d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DocumentRoot-Directory-egohygiene",
+   "relatedSpdxElement": "SPDXRef-Package-github-action-egohygiene-relay-actions-repository-intelligence-github-sources-e7ec32d9b315b35c",
    "relationshipType": "CONTAINS"
   },
   {

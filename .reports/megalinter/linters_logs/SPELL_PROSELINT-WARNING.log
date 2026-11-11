@@ -112,6 +112,9 @@ ARCHITECTURE.md:129:29: typography.symbols.curly_quotes: Use curly quotes “”
 ARCHITECTURE.md:130:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:131:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:143:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+CONTINUITY.md:21:56: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'same exact'.
+CONTINUITY.md:128:4: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+CONTINUITY.md:144:160: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'same exact'.
 DECISIONS.md:314:87: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 DESIGN.md:128:1: misc.preferred_forms: 'sans serif' is the preferred form.
 DESIGN_SYSTEM.md:68:38: misc.preferred_forms: 'sans serif' is the preferred form.
@@ -629,6 +632,11 @@ docs/foundation/gitignore/RULE_AUDIT.md:182:218: typography.symbols.sentence_spa
 docs/foundation/gitignore/RULE_AUDIT.md:183:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:184:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:207:230: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/integrations/REPOSITORY_INTELLIGENCE.md:46:50: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'exact same'.
+docs/integrations/REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md:24:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/integrations/REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md:24:52: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md:21:8: redundancy.misc.after_the_deadline: Redundancy. Use 'clock' instead of 'time clock'.
+docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md:30:19: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'same exact'.
 docs/migration/MANTLE.md:35:62: annotations.misc: Annotation left in text.
 docs/migration/MANTLE.md:53:37: dates_times.dates.dash_and_from: When specifying a date range, write 'from X to Y'.
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
