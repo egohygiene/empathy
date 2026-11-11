@@ -118,6 +118,7 @@ jobs:
         with:
           name: "empathy-intelligence-owner-reviews-${{ github.run_id }}-${{ github.run_attempt }}"
           path: "${{ steps.review_feed.outputs.artifact-directory }}"
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 7
 
