@@ -7,23 +7,24 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-09T18:05:21Z'
+  updated_at: '2026-11-11T19:18:00Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  purpose: Adopt the shared source-bound typed review feed in Empathy's existing Repository Intelligence publisher.
   includes:
-  - Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2,
-    merged through Relay PR 176.
-  - Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases,
-    upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate
-    native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their
-    existing no-capture path.
-  - Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures
-    and bounded operational receipts stay outside the public site. Existing publication, failure and rollback
-    guards are preserved.
+  - Current action, builder and provenance selectors adopt exact public Relay 5d27be5ce1599df883e31f14cd894eb18622c18c
+    from draft PR181. Optional explicit checked-in typed reports feed the existing Observatory repository models
+    at the actual current represented revision and shared capture clock; original report subjects and times
+    remain historical when applicable.
+  - Ordinary bounded feed artifacts and receipt/upload/source bindings stay outside the Pages tree. Empty or
+    absent selections retain unavailable evidence; malformed selected reports deny the candidate without weakening
+    existing publication gates.
+  - Existing native product composition, job/event/permission guards, frozen recovery selections, and historical
+    receipt/helper bytes remain intact. No audit, architecture review, owner normalization, native build, provider
+    or publication was executed.
   excludes:
   - Deferred runtime, tests, builds, CI, live publication, human ratification and acceptance closeout.
   precedence:
@@ -40,71 +41,76 @@ scope:
   - .github/workflows/mindgarden-pages.yml
   - .github/workflows/repository-intelligence.yml
   - docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md
+  - docs/integrations/REPOSITORY_INTELLIGENCE_REVIEWS.md
+  - .github/workflows/repository-intelligence-failure.yml
+  - .github/workflows/repository-intelligence-checks.yml
   - https://github.com/egohygiene/pace/issues/13
 work:
-  objective: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  objective: Adopt the shared source-bound typed review feed in Empathy's existing Repository Intelligence
+    publisher.
   success_conditions:
-  - Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and
-    observation clock.
-  - Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen
-    recovery paths preserve their prior selection.
-  - Consumer publication authority, product composition, historical recovery bytes and existing job gates remain
-    intact.
+  - Same-frame owner models feed the repository builder, while fleet models and operational receipts remain
+    separate ordinary evidence.
+  - Empty and historical evidence does not become current, passing or human-approved evidence.
+  - Existing consumer publisher and frozen recovery gates are preserved.
   active_issue:
     provider: github
     id: egohygiene/pace#13
     url: https://github.com/egohygiene/pace/issues/13
   next:
     kind: action
-    id: qualify-current-public-source-adoption
-    description: During the deferred organization verification pass, retain real provider/artifact/native and
-      consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+    id: review-typed-feed-adoption
+    description: Review this draft with Relay181 and the other consumer/organization slices. During the separately
+      deferred qualification phase, supply actual compatible reports and retain transport, native, publication
+      and recovery evidence before acceptance closeout.
     readiness: ready
     references:
     - https://github.com/egohygiene/pace/issues/13
     depends_on: []
 state:
   base:
-    revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    revision: eefbd80636544e34c69aa3038f3567f4f858b33a
     ref: refs/heads/main
-    verified_at: '2026-11-09T18:05:21Z'
+    verified_at: '2026-11-11T19:18:00Z'
   candidate:
-    branch: codex/intelligence-public-source-feeds
+    branch: codex/intelligence-empathy-review-feeds
     revision: null
     pull_request: null
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-09T18:05:21Z'
-    default_branch_revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    observed_at: '2026-11-11T19:18:00Z'
+    default_branch_revision: eefbd80636544e34c69aa3038f3567f4f858b33a
     issue_state: open
     pull_request_state: not-applicable
-    notes: Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production
-      integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture,
-      native execution, upload or publication is claimed.
+    notes: Fresh main eefbd80636544e34c69aa3038f3567f4f858b33a remains the candidate base. Functional consumer
+      source 0b2d9780bf841db577f3e0e7019e56fa217ab35d received independent static peer review; Relay181 exposes
+      the exact selected functional source. Pace13 and organization41 remain open. No execution, upload or
+      deployment is claimed.
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-09T18:05:21Z'
+  reviewed_at: '2026-11-11T19:18:00Z'
   reviewed_by: Codex
   evidence:
-  - command: Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and
-      edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace
+  - command: Independent static source/clock/API/pin/privacy and original publisher-guard review; YAML, embedded
+      Bash/Python syntax, bounded hidden-artifact retention, frozen source/helper preservation, continuity
+      schema/size/links and whitespace
     outcome: limited
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-11T19:18:00Z'
     notes: Static source and metadata inspection only; no application execution.
   - command: Native/runtime execution, tests, builds, CI investigation, browser/provider/consumer/publication
       qualification
     outcome: not-run
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-11T19:18:00Z'
     notes: Deferred at maintainer request; source merges do not establish acceptance.
   environment_limitations:
-  - Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and
-    recovery qualification were not run.
-  - Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime
-    budgets remain explicit acceptance inputs; no success or approval is invented.
-  - The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds
-    retain their owners.
+  - Tests, builds, owner/helper/native/application execution, actual provider/artifact transport, CI, browsers,
+    publication and recovery qualification remain deferred at user request.
+  - This checked-in report profile preserves historical subjects and observation clocks; it does not execute
+    the audit sweep or supply a current-review capture profile.
+  - Real human dispositions, existing source holds, ordinary consumer compatibility and final acceptance retain
+    their owning sources.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -131,35 +137,35 @@ Read scoped instructions, canonical sources above and this checkpoint. Verify mu
 
 ## Current objective and success conditions
 
-Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline. Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and observation clock. Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen recovery paths preserve their prior selection. Consumer publication authority, product composition, historical recovery bytes and existing job gates remain intact.
+Adopt the shared source-bound typed review feed in Empathy's existing Repository Intelligence publisher. Same-frame owner models feed the repository builder, while fleet models and operational receipts remain separate ordinary evidence. Empty and historical evidence does not become current, passing or human-approved evidence. Existing consumer publisher and frozen recovery gates are preserved.
 
 ## State snapshot
 
-Candidate `codex/intelligence-public-source-feeds` is based on observed main `322f8d0a6657ea8584c80fb688aeaf6ac2184ca7`. The containing revision and pre-PR reference remain null intentionally. Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture, native execution, upload or publication is claimed.
+Candidate `codex/intelligence-empathy-review-feeds` is based on observed main `eefbd80636544e34c69aa3038f3567f4f858b33a`. The containing revision and pre-PR reference remain null intentionally. Fresh main eefbd80636544e34c69aa3038f3567f4f858b33a remains the candidate base. Functional consumer source 0b2d9780bf841db577f3e0e7019e56fa217ab35d received independent static peer review; Relay181 exposes the exact selected functional source. Pace13 and organization41 remain open. No execution, upload or deployment is claimed.
 
 ## Completed and material changes
 
-Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2, merged through Relay PR 176.
+Current action, builder and provenance selectors adopt exact public Relay 5d27be5ce1599df883e31f14cd894eb18622c18c from draft PR181. Optional explicit checked-in typed reports feed the existing Observatory repository models at the actual current represented revision and shared capture clock; original report subjects and times remain historical when applicable.
 
-Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases, upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their existing no-capture path.
+Ordinary bounded feed artifacts and receipt/upload/source bindings stay outside the Pages tree. Empty or absent selections retain unavailable evidence; malformed selected reports deny the candidate without weakening existing publication gates.
 
-Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures and bounded operational receipts stay outside the public site. Existing publication, failure and rollback guards are preserved.
+Existing native product composition, job/event/permission guards, frozen recovery selections, and historical receipt/helper bytes remain intact. No audit, architecture review, owner normalization, native build, provider or publication was executed.
 
 ## Validation and review evidence
 
-Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace. Static inspection only. Native/runtime execution, tests, builds, CI investigation, browsers, provider reads and publication qualification were not run.
+Independent static source/clock/API/pin/privacy and original publisher-guard review; YAML, embedded Bash/Python syntax, bounded hidden-artifact retention, frozen source/helper preservation, continuity schema/size/links and whitespace. Static source inspection only. Native/application execution, tests, builds, CI investigation, browser/model/source-capture provider execution and publication qualification were not run. Read-only source and Git metadata observations are separate.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and recovery qualification were not run. Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime budgets remain explicit acceptance inputs; no success or approval is invented. The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds retain their owners.
+Tests, builds, owner/helper/native/application execution, actual provider/artifact transport, CI, browsers, publication and recovery qualification remain deferred at user request. This checked-in report profile preserves historical subjects and observation clocks; it does not execute the audit sweep or supply a current-review capture profile. Real human dispositions, existing source holds, ordinary consumer compatibility and final acceptance retain their owning sources.
 
 ## Next dependency-ready work
 
-During the deferred organization verification pass, retain real provider/artifact/native and consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+Review this draft with Relay181 and the other consumer/organization slices. During the separately deferred qualification phase, supply actual compatible reports and retain transport, native, publication and recovery evidence before acceptance closeout.
 
 ## Parallel changes and reconciliation
 
-ADR not required: routine adoption of the already merged bounded source/capture/dependency contracts in the existing consumer-owned publisher. All immutable recovery selections and unrelated canonical content are preserved; source merge is distinct from accepted publication.
+Reference Empathy ADR0001 pinned specialist-consumption boundary; routine input adoption adds no new owner or ADR. Preserve all54 original step guards and frozen recovery bytes, including unrelated newer main changes. User will review the new draft PRs; do not merge this batch.
 
 ## Privacy and redaction
 
