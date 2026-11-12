@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-12T11:16:29Z'
+  updated_at: '2026-11-12T11:19:42Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -53,11 +53,10 @@ work:
   next:
     kind: action
     id: integrate-open-source-prs
-    description: After PR120 source merge, reconcile PR125, then121,130,131,129; retain exact heads, source
-      checks and outstanding qualification.
+    description: Integrate PR125 at its reconciled reviewed head, then121,130,131,129; preserve merged120
+      and all outstanding qualification.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/pull/120
     - https://github.com/egohygiene/empathy/pull/125
     - https://github.com/egohygiene/empathy/pull/121
     - https://github.com/egohygiene/empathy/pull/130
@@ -66,29 +65,27 @@ work:
     depends_on: []
 state:
   base:
-    revision: 058d92a0f8c970f98a58d446408716936e593c99
+    revision: 520d3f608030beca1b291265d1cbe0ddf57a416e
     ref: refs/heads/main
-    verified_at: '2026-11-12T11:16:29Z'
+    verified_at: '2026-11-12T11:19:42Z'
   candidate:
-    branch: feature/65-standalone-mindgarden-consumer
+    branch: codex/intelligence-empathy-review-feeds
     revision: null
     pull_request:
       provider: github
-      id: egohygiene/empathy#120
-      url: https://github.com/egohygiene/empathy/pull/120
+      id: egohygiene/empathy#125
+      url: https://github.com/egohygiene/empathy/pull/125
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-12T11:16:29Z'
-    default_branch_revision: 058d92a0f8c970f98a58d446408716936e593c99
+    observed_at: '2026-11-12T11:19:42Z'
+    default_branch_revision: 520d3f608030beca1b291265d1cbe0ddf57a416e
     issue_state: open
     pull_request_state: draft
-    notes: Observed six open Empathy PRs120/121/125/129/130/131 with no submitted reviews or inline threads.
-      User explicitly authorized standard source merges; no bypass or runtime acceptance is inferred.
+    notes: PR120 merged at520d3f608030beca1b291265d1cbe0ddf57a416e. PR125 selects reachable immutable
+      Relay5d27 source from open181. Source merge and source selection do not establish CI, actual execution
+      or upstream release/acceptance.
   parallel_changes:
-  - provider: github
-    id: egohygiene/empathy#125
-    url: https://github.com/egohygiene/empathy/pull/125
   - provider: github
     id: egohygiene/empathy#121
     url: https://github.com/egohygiene/empathy/pull/121
@@ -103,14 +100,16 @@ state:
     url: https://github.com/egohygiene/empathy/pull/129
 review:
   status: partial
-  reviewed_at: '2026-11-12T11:16:29Z'
+  reviewed_at: '2026-11-12T11:19:42Z'
   reviewed_by: Codex
   evidence:
-  - command: Independent source review, unique-key Task YAML, embedded Bash/Python syntax, immutable requirement
-      and unchanged existing task/garden/publication source comparison
+  - command: Independent source peer, workflow/Task unique YAML and embedded Bash/Python syntax, current/frozen
+      pins, immutable input and existing guard/owner/source comparisons
     outcome: limited
-    observed_at: '2026-11-12T11:16:29Z'
-    notes: PR120 optional commands and historical evidence reviewed; current consumer execution is deferred.
+    observed_at: '2026-11-12T11:19:42Z'
+    notes: Merged120 and reconciled125 source reviewed. Typed feed shares actual source-capture clock
+      and duplicate repository models; all original guards and frozen recovery remain. Current consumer
+      execution is deferred.
   - command: TASK_BIN selected preinstalled Task3.54.0; python3 tools/task_catalog.py --write --repository-root
       .
     outcome: passed
@@ -158,11 +157,11 @@ Integrate all six user-authorized Empathy PRs in order120→125→121→130→13
 
 ## State snapshot
 
-The candidate PR120 incorporates current main, its optional lane and deterministic catalog regeneration. Its containing commit is not self-referenced. Remaining candidates stay separately reviewable; actual merge identities belong to GitHub.
+PR120 merged at520d3f608030beca1b291265d1cbe0ddf57a416e. The PR125 candidate includes that actual main and resolves only the continuity overlap; its containing commit is not self-referenced. Four later candidates remain separately reviewable.
 
 ## Completed and material changes
 
-PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. Current RI still selects981ddf until125 is integrated; frozen b71b/254185 recovery remains unchanged.
+PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. The PR125 candidate selects Relay5d27be5ce1599df883e31f14cd894eb18622c18c for current typed review/source/build/provenance paths, reusing one actual capture clock and repository models. Its empty selection plan leaves reports unavailable. Relay181 remains open; frozen b71b/254185 recovery and source receipts remain unchanged.
 
 ## Validation and review evidence
 
@@ -174,7 +173,7 @@ Current suites, linters, builds, native/helper consumer qualification, CI, actua
 
 ## Next dependency-ready work
 
-Merge120 at its exact reviewed head, then reconcile125 and121 before the independently based130/131/129 source slices. Recheck live heads before each standard merge; do not bypass rules.
+Merge125 at its exact reviewed head, then reconcile121 before the independently based130/131/129 source slices. Recheck live heads before each standard merge; do not bypass rules.
 
 ## Parallel changes and reconciliation
 
