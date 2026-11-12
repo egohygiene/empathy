@@ -4,6 +4,33 @@
 version: "3"
 
 tasks:
+  garden:standalone:install:
+    desc: Install the immutable standalone Mindgarden candidate in a separate environment
+    cmds:
+      - python3 -m venv .cache/mindgarden-standalone
+      - .cache/mindgarden-standalone/bin/python -m pip install --requirement requirements/mindgarden-standalone.txt
+
+  garden:standalone:verify:
+    desc: Verify the pinned external engine against the existing canonical Empathy garden
+    preconditions:
+      - sh: test -x .cache/mindgarden-standalone/bin/mindgarden
+        msg: Run garden:standalone:install before the offline consumer verification
+    cmds:
+      - >-
+        .cache/mindgarden-standalone/bin/python -I -c
+        "import importlib.metadata, json, pathlib, sys, mindgarden;
+        pin = pathlib.Path('requirements/mindgarden-standalone.txt').read_text().strip().rsplit('@', 1)[1];
+        actual = json.loads(importlib.metadata.distribution('mindgarden').read_text('direct_url.json'));
+        assert actual['vcs_info']['commit_id'] == pin;
+        assert pathlib.Path(mindgarden.__file__).resolve().is_relative_to(pathlib.Path(sys.prefix).resolve())"
+      - .cache/mindgarden-standalone/bin/mindgarden --version
+      - .cache/mindgarden-standalone/bin/mindgarden validate --repository-root .
+      - .cache/mindgarden-standalone/bin/mindgarden search --repository-root . --query "garden"
+      - .cache/mindgarden-standalone/bin/mindgarden context --repository-root . --pack empathy-agent-default --format json
+      - .cache/mindgarden-standalone/bin/mindgarden publish project --repository-root . --profile mindgarden/profiles/quartz/profile.yaml --output-directory .cache/mindgarden-standalone-projection
+      - .cache/mindgarden-standalone/bin/mindgarden publish verify --repository-root . --profile mindgarden/profiles/quartz/profile.yaml
+      - .cache/mindgarden-standalone/bin/mindgarden verify --repository-root .
+
   garden:check:
     desc: Validate the incubated Mindgarden contract and Empathy garden
     cmds:
