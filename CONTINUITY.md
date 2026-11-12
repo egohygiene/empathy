@@ -119,7 +119,7 @@ review:
   environment_limitations:
   - Standalone Mindgarden strict canonical entrypoint cutover and exact-head holistic qualification remain
     open; original dated evidence is preserved.
-  - Typed feed selection in pending125 references reachable immutable Relay5d27be5ce1599df883e31f14cd894eb18622c18c
+  - Typed feed selection in merged125 references reachable immutable Relay5d27be5ce1599df883e31f14cd894eb18622c18c
     from open Relay181, not a claimed upstream merge.
   - Rust79, lint110/runtime-catalog qualification, actual owner scenarios, scanner remediation/exception
     review, staging authority and publication/recovery acceptance remain separate.
