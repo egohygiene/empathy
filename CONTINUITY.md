@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-12T11:19:42Z'
+  updated_at: '2026-11-12T11:24:34Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -53,11 +53,10 @@ work:
   next:
     kind: action
     id: integrate-open-source-prs
-    description: Integrate PR125 at its reconciled reviewed head, then121,130,131,129; preserve merged120
-      and all outstanding qualification.
+    description: Integrate PR121 approved Actions at its reconciled head, then130,131,129; preserve merged120/125
+      and all source/qualification boundaries.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/pull/125
     - https://github.com/egohygiene/empathy/pull/121
     - https://github.com/egohygiene/empathy/pull/130
     - https://github.com/egohygiene/empathy/pull/131
@@ -65,30 +64,27 @@ work:
     depends_on: []
 state:
   base:
-    revision: 520d3f608030beca1b291265d1cbe0ddf57a416e
+    revision: 8a2d32eb903a8f76ec4ec8d68e1682fc54885254
     ref: refs/heads/main
-    verified_at: '2026-11-12T11:19:42Z'
+    verified_at: '2026-11-12T11:24:34Z'
   candidate:
-    branch: codex/intelligence-empathy-review-feeds
+    branch: dependabot/github_actions/github-actions-b0dcb82de8
     revision: null
     pull_request:
       provider: github
-      id: egohygiene/empathy#125
-      url: https://github.com/egohygiene/empathy/pull/125
+      id: egohygiene/empathy#121
+      url: https://github.com/egohygiene/empathy/pull/121
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-12T11:19:42Z'
-    default_branch_revision: 520d3f608030beca1b291265d1cbe0ddf57a416e
+    observed_at: '2026-11-12T11:24:34Z'
+    default_branch_revision: 8a2d32eb903a8f76ec4ec8d68e1682fc54885254
     issue_state: open
-    pull_request_state: draft
-    notes: PR120 merged at520d3f608030beca1b291265d1cbe0ddf57a416e. PR125 selects reachable immutable
-      Relay5d27 source from open181. Source merge and source selection do not establish CI, actual execution
-      or upstream release/acceptance.
+    pull_request_state: open
+    notes: PR120 merged520d3f608030beca1b291265d1cbe0ddf57a416e; PR125 merged8a2d32eb903a8f76ec4ec8d68e1682fc54885254.
+      Candidate121 changes approved current Actions refs/comments only; source selection is not runtime/lint
+      or publication acceptance.
   parallel_changes:
-  - provider: github
-    id: egohygiene/empathy#121
-    url: https://github.com/egohygiene/empathy/pull/121
   - provider: github
     id: egohygiene/empathy#130
     url: https://github.com/egohygiene/empathy/pull/130
@@ -100,16 +96,16 @@ state:
     url: https://github.com/egohygiene/empathy/pull/129
 review:
   status: partial
-  reviewed_at: '2026-11-12T11:19:42Z'
+  reviewed_at: '2026-11-12T11:24:34Z'
   reviewed_by: Codex
   evidence:
   - command: Independent source peer, workflow/Task unique YAML and embedded Bash/Python syntax, current/frozen
       pins, immutable input and existing guard/owner/source comparisons
     outcome: limited
-    observed_at: '2026-11-12T11:19:42Z'
-    notes: Merged120 and reconciled125 source reviewed. Typed feed shares actual source-capture clock
-      and duplicate repository models; all original guards and frozen recovery remain. Current consumer
-      execution is deferred.
+    observed_at: '2026-11-12T11:24:34Z'
+    notes: Merged120/125 and reconciled121 source reviewed. Current action refs select approved immutable
+      Dependabot targets; every non-uses workflow field, typed feed binding and fixed recovery remains
+      unchanged. Version comments are reconciled, not qualification evidence.
   - command: TASK_BIN selected preinstalled Task3.54.0; python3 tools/task_catalog.py --write --repository-root
       .
     outcome: passed
@@ -125,8 +121,8 @@ review:
     open; original dated evidence is preserved.
   - Typed feed selection in pending125 references reachable immutable Relay5d27be5ce1599df883e31f14cd894eb18622c18c
     from open Relay181, not a claimed upstream merge.
-  - Rust79, lint110, actual owner scenarios, scanner remediation/exception review, staging authority and
-    publication/recovery acceptance remain separate.
+  - Rust79, lint110/runtime-catalog qualification, actual owner scenarios, scanner remediation/exception
+    review, staging authority and publication/recovery acceptance remain separate.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -157,11 +153,11 @@ Integrate all six user-authorized Empathy PRs in order120→125→121→130→13
 
 ## State snapshot
 
-PR120 merged at520d3f608030beca1b291265d1cbe0ddf57a416e. The PR125 candidate includes that actual main and resolves only the continuity overlap; its containing commit is not self-referenced. Four later candidates remain separately reviewable.
+PR120 merged520d3f608030beca1b291265d1cbe0ddf57a416e and125 merged8a2d32eb903a8f76ec4ec8d68e1682fc54885254. Candidate121 includes that actual main and reconciles version comments; its containing commit is not self-referenced. Three later source candidates remain.
 
 ## Completed and material changes
 
-PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. The PR125 candidate selects Relay5d27be5ce1599df883e31f14cd894eb18622c18c for current typed review/source/build/provenance paths, reusing one actual capture clock and repository models. Its empty selection plan leaves reports unavailable. Relay181 remains open; frozen b71b/254185 recovery and source receipts remain unchanged.
+PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. Merged125 selects Relay5d27be5ce1599df883e31f14cd894eb18622c18c for current typed review/source/build/provenance paths, reusing one actual capture clock and repository models. Its empty selection plan leaves reports unavailable. Relay181 remains open; frozen b71b/254185 recovery and source receipts remain unchanged. Candidate121 selects Harden Runner2.22.4, CodeQL4.39.3, MegaLinter10.2.0 and create-pull-request8.1.2 at exact approved SHAs, with matching version comments and no workflow-gate changes.
 
 ## Validation and review evidence
 
@@ -173,7 +169,7 @@ Current suites, linters, builds, native/helper consumer qualification, CI, actua
 
 ## Next dependency-ready work
 
-Merge125 at its exact reviewed head, then reconcile121 before the independently based130/131/129 source slices. Recheck live heads before each standard merge; do not bypass rules.
+Merge121 at its exact reviewed head, then reconcile independently based130/131/129 source slices without reverting current action pins. Recheck live heads before each standard merge; do not bypass rules.
 
 ## Parallel changes and reconciliation
 

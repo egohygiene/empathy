@@ -34,8 +34,8 @@ jobs:
 
     steps:
       - name: Harden Runner
-        # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25
+        # step-security/harden-runner v2.22.4; observe egress before enforcing.
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a
         with:
           egress-policy: audit
 
@@ -48,8 +48,8 @@ jobs:
 
       - name: Run MegaLinter
         id: megalinter
-        # oxsecurity/megalinter v10.0.0
-        uses: oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2
+        # oxsecurity/megalinter v10.2.0
+        uses: oxsecurity/megalinter@f2fe8c1cba37091848df3e524066c8c23ef353ed
         env:
           APPLY_FIXES: none
           GITHUB_TOKEN: "${{ github.token }}"
@@ -116,8 +116,8 @@ jobs:
           steps.sarif.outputs.upload == 'true' &&
           (github.event_name != 'pull_request' ||
           github.event.pull_request.head.repo.full_name == github.repository)
-        # github/codeql-action v4.37.6
-        uses: github/codeql-action/upload-sarif@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee
+        # github/codeql-action v4.39.3
+        uses: github/codeql-action/upload-sarif@33d7b85da1a04171e211befe2c739303b9a4c066
         with:
           sarif_file: .reports/megalinter/megalinter-report.sarif
           category: megalinter
@@ -149,8 +149,8 @@ jobs:
 
     steps:
       - name: Harden Runner
-        # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25
+        # step-security/harden-runner v2.22.4; observe egress before enforcing.
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a
         with:
           egress-policy: audit
 
