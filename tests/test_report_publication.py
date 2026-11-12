@@ -5,7 +5,9 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
+import re
 import unittest
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
@@ -21,10 +23,21 @@ class ReportPublicationPolicyTests(unittest.TestCase):
 
     def test_commitlint_uses_the_locked_local_node_toolchain(self) -> None:
         workflow = self.workflow("commitlint.yml")
+        package = json.loads((REPOSITORY_ROOT / "egolint/package.json").read_text(encoding="utf-8"))
         self.assertNotIn("wagoid/commitlint-github-action", workflow)
-        self.assertIn("actions/setup-node@820762786026740c76f36085b0efc47a31fe5020", workflow)
-        self.assertIn("pnpm@11.21.0", workflow)
+        setup_references = re.findall(r"(?m)^\s+uses: (actions/setup-node@\S+)\s*$", workflow)
+        self.assertEqual(len(setup_references), 1)
+        self.assertRegex(setup_references[0], r"^actions/setup-node@[0-9a-f]{40}$")
+        self.assertIn(f'node-version: "{package["engines"]["node"].removeprefix(">=")}"', workflow)
+        self.assertIn(f'corepack prepare {package["packageManager"]} --activate', workflow)
+        self.assertIn("cd egolint", workflow)
+        self.assertIn("sh scripts/pnpm.sh install", workflow)
         self.assertIn("--frozen-lockfile", workflow)
+        self.assertIn("--ignore-scripts", workflow)
+        self.assertIn("sh scripts/pnpm.sh exec commitlint", workflow)
+        self.assertIn("--config .config/lint/commits/commitlint.emoji.config.cjs", workflow)
+        self.assertIn('BASE_SHA: "${{ github.event.pull_request.base.sha }}"', workflow)
+        self.assertIn('HEAD_SHA: "${{ github.event.pull_request.head.sha }}"', workflow)
         self.assertIn('--from "${BASE_SHA}"', workflow)
         self.assertIn('--to "${HEAD_SHA}"', workflow)
 
