@@ -1,5 +1,8 @@
 # GitHub Copilot Instructions
 
+Read the applicable [repository agent instructions](../AGENTS.md) for ownership,
+work navigation, validation, and issue acceptance.
+
 ## Purpose
 
 This repository follows a structured, reusable, and automation-focused

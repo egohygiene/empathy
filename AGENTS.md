@@ -1,5 +1,8 @@
 # Repository agent context
 
+Use the [current-work guide](docs/current-state-backlog.md) to locate the live
+issue roadmap and dated audit before selecting backlog work.
+
 Before architecture-changing work in this repository:
 
 1. Read [`docs/ecosystem/CONTEXT.md`](docs/ecosystem/CONTEXT.md).

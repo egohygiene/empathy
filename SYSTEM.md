@@ -112,18 +112,16 @@ contributor can reproduce canonical repository behavior.
 ### Visual Identity System
 
 Defines project-owned creative intent, canonical source requirements, versioned
-platform targets, tool-neutral creative handoffs, and the future deterministic
-generation and verification lifecycle for branded assets.
+platform targets, tool-neutral creative handoffs, and deterministic package
+generation and verification for Empathy.
 
-- **Current evidence:** the reusable Rust holon under `identity/`, Empathy's
-  `.identity/` consumer contract, target profiles, integration tests, and
-  identity validation workflow.
+- **Current evidence:** the pinned `identity/` submodule, Empathy's `.identity/`
+  consumer inputs, and the [Identity v1 validation and generation workflow](docs/integrations/IDENTITY_V1.md).
 - **Boundary:** designers and AI tools may author candidates, but only explicit
   human approval promotes canonical sources; generated assets never replace
   their source contract.
-- **State:** foundation implemented for initialization, validation, planning,
-  and handoff; rendering, import, visual checks, framework adapters, and
-  Renderflow integration remain future work.
+- **State:** Identity v1 source validation, package generation, and generated
+  snapshot verification are wired into the Empathy consumer.
 
 ### Evidence and Observability System
 
@@ -139,17 +137,18 @@ workflow artifacts so findings can support review without becoming accidental so
 Preserves imported or candidate material without allowing it to affect active behavior until its
 applicability, owner, dependencies, security, and lifecycle are resolved.
 
-- **Current evidence:** `.staging/github/README.md` and categorized inert workflows.
-- **State:** implemented as a repository boundary; no general machine-readable disposition catalog
-  exists yet.
+- **Current evidence:** the [staging contract](docs/migration/STAGING.md),
+  [intake boundary](.staging/README.md), and file-level ownership ledger.
+- **State:** the deterministic ledger and evidence-backed removal contract are
+  implemented. See the live roadmap for remaining adoption and enforcement work.
 
 ### Distribution and Consumer Conformance System
 
 Builds versioned foundation distributions, projections, provenance, checksums, migrations, and
 consumer conformance results.
 
-- **Current evidence:** source-specific builders inside the imported Aether corpus and existing
-  generated-report conventions.
+- **Current evidence:** the [foundation contract](docs/foundation/README.md),
+  resolved inventory, ignore plan, and offline EgoLint projection.
 - **State:** target system; Empathy does not yet publish a canonical consumer distribution.
 
 ## Responsibilities and Capability Ownership
