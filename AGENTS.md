@@ -33,6 +33,9 @@ does not. The [public-source checkpoint](docs/integrations/REPOSITORY_INTELLIGEN
 adds bounded Work/Health/Releases capture intake on current push/manual paths;
 PR and trusted workflow-run paths keep their existing no-capture selection. Compare requires separately reviewed real captured pairs and an
 explicit artifact lease; this consumer has no selected baseline.
+The [typed review-feed checkpoint](docs/integrations/REPOSITORY_INTELLIGENCE_REVIEWS.md)
+selects repository Audits/Sanity models at that same actual capture clock; empty
+report selections remain unavailable and do not establish human approval.
 Scope repeatability claims to actual declared
 inputs and checkout evidence; a portable owner implementation does not establish
 consumer qualification for Relay #109.

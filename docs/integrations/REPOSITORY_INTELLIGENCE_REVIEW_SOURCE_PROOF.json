@@ -1,0 +1,94 @@
+{
+  "base_revision": "eefbd80636544e34c69aa3038f3567f4f858b33a",
+  "builder_binding": {
+    "as_of": "public_sources.outputs.as-of",
+    "compare_baseline": "not-selected",
+    "repository_models": "same review_feed outputs reused by both duplicate builds",
+    "represented_commit": "existing current identity output; github.sha for standalone manual"
+  },
+  "current_relay_revision": "5d27be5ce1599df883e31f14cd894eb18622c18c",
+  "frozen_step_ids": [
+    "helper_tools",
+    "rollback_checkout",
+    "identity",
+    "intelligence_rollback",
+    "rollback"
+  ],
+  "frozen_step_map_encoding": "sorted compact UTF-8 JSON of BaseLoader parsed step maps with final newline",
+  "frozen_step_map_sha256": "e637e9f19260d08d8ad2821c4c8c6d4f3f4920a6224d615b7ddfd23ee0d196a7",
+  "job_fields_unchanged": [
+    "if",
+    "needs",
+    "permissions",
+    "strategy",
+    "environment",
+    "runs-on",
+    "timeout-minutes",
+    "outputs"
+  ],
+  "new_feed_guard": "identical to the existing public_sources guard",
+  "new_manual_input": "review-plan",
+  "new_retention_guard": "only new feed evidence steps: always with original capture event/mode plus nonempty produced-path guard",
+  "not_run": [
+    "tests",
+    "holistic lint",
+    "native/owner/helper execution",
+    "builds",
+    "provider/artifact transport",
+    "CI",
+    "browser/live publication",
+    "recovery rehearsal"
+  ],
+  "review": "static-source-only",
+  "rollback": {
+    "canonical_origin": "https://egohygiene.github.io/empathy/",
+    "consumer_revision": "254185272ab27b6858b8b0393af6549c205c9a8d",
+    "relay_revision": "b71b090406a3a9e4cd9f107e9d14a623bbecb127",
+    "site_digest": "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498",
+    "timezone": "UTC"
+  },
+  "schema": "egohygiene.empathy.review-feed-source-review/v1",
+  "static_parse": {
+    "bash_blocks": 21,
+    "embedded_python_blocks": 4,
+    "fixture_modules": 3,
+    "plan_schema": "exact Relay5d27be5 owner plan schema"
+  },
+  "unchanged_files": [
+    {
+      "path": "tools/repository_intelligence_publication.py",
+      "sha256": "451354df570dad83b7145d3a15d56ee1cbfb4e77c707100ea4800a4415505f42"
+    },
+    {
+      "path": "tools/verify_repository_intelligence_rollback.py",
+      "sha256": "8557a47b8e6c7cce01e0db3085b7cfb89494839e02314815f4c5a788fb0ba008"
+    },
+    {
+      "path": "tests/test_repository_intelligence_rollback.py",
+      "sha256": "47d243e9612085e93a8192e5b4d9d02a2c4a576a6603bc908e6f7affb390e70c"
+    }
+  ],
+  "workflow_boundaries": [
+    {
+      "existing_step_guards_unchanged": 36,
+      "path": ".github/workflows/mindgarden-pages.yml"
+    },
+    {
+      "existing_step_guards_unchanged": 9,
+      "path": ".github/workflows/repository-intelligence.yml"
+    },
+    {
+      "existing_step_guards_unchanged": 0,
+      "path": ".github/workflows/repository-intelligence-failure.yml"
+    },
+    {
+      "existing_step_guards_unchanged": 9,
+      "path": ".github/workflows/repository-intelligence-checks.yml"
+    }
+  ],
+  "workflow_fields_unchanged": [
+    "existing events and manual inputs",
+    "permissions",
+    "concurrency"
+  ]
+}

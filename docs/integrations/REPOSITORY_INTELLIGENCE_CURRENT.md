@@ -1,9 +1,9 @@
 # Current Repository Intelligence candidate
 
 Current source selection is the
-[public Work/Health/Releases checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md),
-using Relay `981ddf4367c67fcd625e54321d95bab027f6c0f2` and retaining native Journey
-and attributed Search. The portable-only checkpoint below is history from #122;
+[typed Audits/Sanity checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md),
+using Relay `5d27be5ce1599df883e31f14cd894eb18622c18c` while retaining bounded public
+Work/Health/Releases captures, native Journey and attributed Search. The portable-only checkpoint below is history from #122;
 its old pin and source-disabled description do not describe this candidate.
 
 ## Historical portable-only checkpoint
@@ -17,7 +17,7 @@ It selects the shared portable Relay implementation at
 [Relay #167](https://github.com/egohygiene/relay/pull/167).
 This is an unqualified draft consumer candidate, not deployment or live proof.
 
-## Current source selection
+## Historical portable-only source selection
 
 The composed current generator, its duplicate build, and the standalone
 artifact-only generator use the same full Relay SHA. Current baseline capture,

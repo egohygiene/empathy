@@ -32,6 +32,11 @@ on:
         required: true
         default: "1 year ago"
         type: string
+      review-plan:
+        description: Repository-relative typed public review plan; absent report selections stay unavailable.
+        required: false
+        default: ".config/repository-intelligence/review-plan.json"
+        type: string
 
 permissions:
   contents: read
@@ -77,7 +82,7 @@ jobs:
       - name: Capture public Work, Health and Releases sources
         id: public_sources
         if: github.event_name == 'workflow_dispatch'
-        uses: egohygiene/relay/actions/repository-intelligence-github-sources@981ddf4367c67fcd625e54321d95bab027f6c0f2
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@5d27be5ce1599df883e31f14cd894eb18622c18c
         with:
           github-token: "${{ github.token }}"
           include-titles: "true"
@@ -93,10 +98,34 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
+      - name: Normalize selected public Audits and Sanity reports
+        id: review_feed
+        if: github.event_name == 'workflow_dispatch'
+        # Reviewed typed feed source; original report times and human authority remain separate.
+        uses: egohygiene/relay/actions/repository-intelligence-review-feed@5d27be5ce1599df883e31f14cd894eb18622c18c
+        with:
+          source-root: "."
+          plan: "${{ inputs.review-plan || '.config/repository-intelligence/review-plan.json' }}"
+          repository: "${{ github.repository }}"
+          represented-commit: "${{ github.sha }}"
+          as-of: "${{ steps.public_sources.outputs.as-of }}"
+          output-directory: ".cache/repository-intelligence-review-feed"
+
+      - name: Retain separate normalized review feed evidence
+        id: review_feed_upload
+        if: ${{ always() && github.event_name == 'workflow_dispatch' && steps.review_feed.outputs.artifact-directory != '' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: "empathy-intelligence-owner-reviews-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ steps.review_feed.outputs.artifact-directory }}"
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Generate intelligence artifacts and dashboard
         id: intelligence
         # Portable Relay candidate; qualify the exact source before readiness.
-        uses: egohygiene/relay/actions/repository-intelligence@981ddf4367c67fcd625e54321d95bab027f6c0f2
+        uses: egohygiene/relay/actions/repository-intelligence@5d27be5ce1599df883e31f14cd894eb18622c18c
         with:
           output-directory: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
           work-directory: "${{ inputs.output-root || '.cache/repository-intelligence' }}"
@@ -107,6 +136,8 @@ jobs:
           source-capture-artifact-id: "${{ steps.source_capture_upload.outputs.artifact-id }}"
           source-capture-artifact-digest: "${{ steps.source_capture_upload.outputs.artifact-digest }}"
           as-of: "${{ steps.public_sources.outputs.as-of }}"
+          observatory-audits: "${{ steps.review_feed.outputs.repository-audits }}"
+          observatory-sanity: "${{ steps.review_feed.outputs.repository-sanity }}"
           activity-since: "${{ inputs.activity-since || '1 year ago' }}"
           max-depth: "${{ inputs.max-depth || '10' }}"
           require-full-history: "true"
@@ -132,6 +163,8 @@ jobs:
           CAPTURE_EXPECTED: ${{ github.event_name == 'workflow_dispatch' }}
           CAPTURE_RESULT: ${{ steps.public_sources.outcome }}
           CAPTURE_UPLOAD_RESULT: ${{ steps.source_capture_upload.outcome }}
+          REVIEW_FEED_RESULT: ${{ steps.review_feed.outcome }}
+          REVIEW_FEED_UPLOAD_RESULT: ${{ steps.review_feed_upload.outcome }}
           BUILD_RESULT: ${{ steps.intelligence.outcome }}
           ARTIFACT_RESULT: ${{ steps.review_artifact.outcome }}
         shell: bash
@@ -144,7 +177,8 @@ jobs:
           stages = [("harden", "HARDEN_RESULT"), ("checkout", "CHECKOUT_RESULT"), ("inputs", "INPUT_RESULT"),
                     ("intelligence", "BUILD_RESULT"), ("review_artifact", "ARTIFACT_RESULT")]
           if os.environ["CAPTURE_EXPECTED"] == "true":
-              stages[3:3] = [("public_sources", "CAPTURE_RESULT"), ("source_capture_upload", "CAPTURE_UPLOAD_RESULT")]
+              stages[3:3] = [("public_sources", "CAPTURE_RESULT"), ("source_capture_upload", "CAPTURE_UPLOAD_RESULT"),
+                             ("review_feed", "REVIEW_FEED_RESULT"), ("review_feed_upload", "REVIEW_FEED_UPLOAD_RESULT")]
           allowed = {"success", "failure", "cancelled", "skipped"}
           observed = {}
           for stage, key in stages:
@@ -157,6 +191,8 @@ jobs:
               "inputs": ("EMRI-003", "Inspect normalized snapshot schema and provenance; retain unknown or stale evidence."),
               "public_sources": ("EMRI-011", "Restore bounded public source admission without relabeling unavailable evidence."),
               "source_capture_upload": ("EMRI-011", "Restore exact same-run source capture retention and digest handoff."),
+              "review_feed": ("EMRI-012", "Restore typed public review admission at the actual capture clock."),
+              "review_feed_upload": ("EMRI-012", "Restore separate review feed evidence retention."),
               "intelligence": ("EMRI-006", "Inspect the pinned Relay generation and public-safe diagnostic evidence."),
               "review_artifact": ("EMRI-008", "Restore the complete public review artifact upload."),
           }
@@ -195,5 +231,6 @@ jobs:
           path: |
             ${{ runner.temp }}/empathy-intelligence-run.json
             ${{ steps.public_sources.outputs.producer-receipt }}
+            ${{ steps.review_feed.outputs.receipt-path }}
           if-no-files-found: error
           retention-days: 30

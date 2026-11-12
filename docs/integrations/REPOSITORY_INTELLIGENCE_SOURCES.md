@@ -1,4 +1,8 @@
-# Public GitHub source feeds
+# Historical public GitHub source-feed checkpoint
+
+Current source and typed Audits/Sanity composition are recorded in the
+[review-feed checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md). The immutable pins
+and observations below describe the preceding capture integration.
 
 This implementation checkpoint starts from Empathy main
 `322f8d0a6657ea8584c80fb688aeaf6ac2184ca7`, which merged the native
