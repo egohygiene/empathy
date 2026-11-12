@@ -19,7 +19,8 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 | Input | Reviewed revision | Role |
 | --- | --- | --- |
-| Relay typed-review-feed candidate | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Current producers/builders, Audits/Sanity normalization, capture/Journey/Search and matching provenance metadata; qualification pending |
+| Relay typed-review-feed candidate | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Current producers/builders and matching provenance/check metadata; documentation-only successor of the original typed-feed source; qualification pending |
+| Original typed-review-feed source | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; all executable owner bytes equal the current successor |
 | Previous public-source selection | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim |
 | Previous Journey/Search selection | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim |
 | Previous portable source selection | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point |

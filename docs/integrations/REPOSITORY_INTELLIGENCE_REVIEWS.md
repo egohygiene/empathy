@@ -4,9 +4,14 @@ Refs [Empathy #105](https://github.com/egohygiene/empathy/issues/105),
 [Pace #13](https://github.com/egohygiene/pace/issues/13) and
 [organization #41](https://github.com/egohygiene/.github/issues/41).
 
-This source-only consumer checkpoint starts from actual Empathy main
+Current source selection is Relay `d7c60473626f8dcc901210a208ad01a6474e8c1d`, the
+documentation-only successor selected by PR #132. All current builder, capture,
+feed, provenance, check and fixture references match that pin. The original
+source-comparison receipt remains bound to its original PR #125 inputs below.
+
+The original source-only consumer checkpoint starts from actual Empathy main
 `eefbd80636544e34c69aa3038f3567f4f858b33a`, preserving the concurrent work after
-the earlier source-feed integration. All current builders, source/feed producers,
+the earlier source-feed integration. At that PR #125 checkpoint, builders, source/feed producers,
 baseline/composition/receipt helpers, failure workflow and owner-contract/fixture
 references select reviewed Relay `5d27be5ce1599df883e31f14cd894eb18622c18c`. The historical
 rollback selections remain independently fixed.
@@ -71,7 +76,8 @@ existing publication job's required results.
 ## Preserved history and qualification
 
 The original source checkpoints in the neighboring guides retain their historical
-pins and observations. Current source selection is this checkpoint. The frozen
+pins and observations. The original typed-feed selection above is historical;
+the current documentation-only successor is recorded at the top. The frozen
 consumer SHA `254185272ab27b6858b8b0393af6549c205c9a8d`, Relay
 `b71b090406a3a9e4cd9f107e9d14a623bbecb127`, complete-site digest
 `sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498`,
@@ -93,3 +99,25 @@ The [source comparison record](REPOSITORY_INTELLIGENCE_REVIEW_SOURCE_PROOF.json)
 retains the exact starting revision, unchanged guard counts, helper/frozen-byte
 hashes and deferred checks. This is a review candidate; no merge, deployment or
 new live qualification is claimed.
+
+## Documentation-only source reconciliation — 2026-11-12
+
+PR #132 starts from Empathy `0f0669739ae173ec8b374103a915c71968ac9304`.
+The owner diff from the original typed-feed source to the selected successor
+contains exactly one commit and only `CONTINUITY.md`. Every executable action,
+workflow, helper, owner lock and contract retains its exact bytes. This does not
+turn a reachable candidate into an upstream release, merge or runtime result.
+
+The automatic update changed eight uses across three workflows. Consumer
+reconciliation also binds all three native builders, the current environment
+revision, explicit provenance inputs, owner-contract checkout/report identity
+and the three fixture constants to the same successor. All other workflow
+fields, original clocks, guards, unavailable report plan and publication paths
+remain unchanged. Frozen recovery identities, verifier bytes and the original
+PR #125 source-comparison JSON remain byte-identical. Its `current_relay_revision`
+field describes the original comparison, not this later source selection.
+
+Only source, syntax, hash/tree and schema-metadata checks were performed for this
+update. No generation, helper/native consumer, tests, lint, build, CI or actual
+artifact/publication/recovery qualification was run. Existing acceptance and
+human-source holds remain separate from this source reconciliation.
