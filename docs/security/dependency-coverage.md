@@ -47,7 +47,7 @@ were read statically. Native and normalized receipts remain unchanged.
 
 The [manifest inventory](data/dependency-manifests-2026-11-12.csv) lists tracked
 package/lock/config inputs with their Git blobs, scope, owner, and disposition
-at the pinned058 inspection. It includes manifests that the scan skipped or did not discover;
+at the pinned 058 inspection. It includes manifests that the scan skipped or did not discover;
 discovery is not proof that a dependency graph was scanned.
 
 | Input | Actual applicability | Owner and update disposition |
@@ -152,9 +152,9 @@ Before #113 acceptance:
 
 ## Source integration — 2026-11-12
 
-This source integrates after PR120 (optional Mindgarden),125 (typed Intelligence
+This source integrates after PR #120 (optional Mindgarden),125 (typed Intelligence
 feeds),121 (Actions),130 (baseline evidence) and131 (staging receipts). The
-existing Actions group configuration is retained. PR121 merged at
+existing Actions group configuration is retained. PR #121 merged at
 `946364370e9c39637d6d0de49c297c3f81776590`; its approved immutable selection
 is a source update, not fresh runtime/catalog or vulnerability evidence. The
 original open-PR observation above remains historical at its recorded head.
@@ -163,15 +163,15 @@ The dated JSON/CSV evidence remains byte-identical to its original inspection
 against `058d92a0f8c970f98a58d446408716936e593c99`. In particular, its staging
 CSV identity (`03aaab30d752d2ebfe57cc41ce42bf6d6a5acc52`, SHA-256
 `839477a6de4a5163b15aa00a142d15ee7b644885832d24565c4023dfc68ca6b1`)
-is historical. PR131's separately authorized inert canonical refresh changed
+is historical. PR #131's separately authorized inert canonical refresh changed
 only one ROADMAP duplicate-metadata row in the current rolling staging ledger,
 which now has SHA-256
 `c3d0d967a8a1cb326fb9fcfeef6beae284d2ad955fc9b762089080b9f7e1bb22`.
 That generation changes neither the older dependency evidence nor the preserved
 staged source or approval records. No new scan or exception renewal occurred.
 
-PR120 also adds `requirements/mindgarden-standalone.txt`, an isolated optional
-VCS-pinned engine install lane absent from the dated54-input manifest inventory.
+PR #120 also adds `requirements/mindgarden-standalone.txt`, an isolated optional
+VCS-pinned engine install lane absent from the dated inventory of 54 manifest inputs.
 The consumer reviews that immutable pin explicitly under #65; current hosted
 updater discovery/coverage of this additional requirements path is unverified.
 Do not infer recursive coverage from the existing root pip entry or replace

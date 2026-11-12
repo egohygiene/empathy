@@ -153,15 +153,15 @@ remain distinct from tests, actual consumer execution and accepted rollout.
 
 ## State snapshot
 
-Five standard merges are observed: #120 at520d3f60, #125 at8a2d32eb, #121
-at94636437, #130 atbccf17cb and #131 at6b3be687. Their full identities remain
+Five standard merges are observed: #120 at 520d3f60, #125 at 8a2d32eb, #121
+at 94636437, #130 at bccf17cb and #131 at 6b3be687. Their full identities remain
 in GitHub. This pre-merge checkpoint binds candidate #129 to that actual main;
 verify its eventual merge and the final open-PR inventory through GitHub.
 
 ## Completed and material changes
 
 The optional Mindgarden lane retains the canonical garden, tracked entrypoint
-and publisher. Typed Intelligence uses reachable immutable Relay5d27 source
+and publisher. Typed Intelligence uses reachable immutable Relay 5d27 source
 from still-open Relay #181, one capture clock and unavailable empty selections.
 Current approved Actions are retained, while b71b/254185 recovery identities,
 helpers, workflow profiles and historical source receipts stay unchanged.
@@ -169,7 +169,7 @@ helpers, workflow profiles and historical source receipts stay unchanged.
 Baseline suite commands have independent outcomes/logs and always unqualified
 acceptance. Staging adds an independent read-only immutable receipt gate; no
 staged source or approval bytes change. Dependency intake adds bounded root npm
-coverage while retaining dated058 ownership/blocker evidence without a new scan.
+coverage while retaining dated 058 ownership/blocker evidence without a new scan.
 
 ## Validation and review evidence
 
@@ -184,7 +184,7 @@ Suites, linters, builds, native/helper consumer qualification, CI, transport and
 publication/recovery remain deferred. Mindgarden strict cutover, Rust #79, lint
 #110, required owner scenarios, staging human/destination authority and fresh
 vulnerability/exception review remain open. New optional requirements are not
-covered by the historical54-input inventory or an inferred updater result.
+covered by the historical inventory of 54 inputs or an inferred updater result.
 
 ## Next dependency-ready work
 
