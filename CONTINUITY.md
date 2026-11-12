@@ -7,23 +7,24 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-09T18:05:21Z'
+  updated_at: '2026-11-12T05:51:37Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  purpose: Require immutable staged preimages and durable prior receipt claims before destructive staging changes.
   includes:
-  - Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2,
-    merged through Relay PR 176.
-  - Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases,
-    upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate
-    native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their
-    existing no-capture path.
-  - Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures
-    and bounded operational receipts stay outside the public site. Existing publication, failure and rollback
-    guards are preserved.
+  - The new read-only gate enumerates exact base/head Git trees and requires an unchanged base-admitted path/mode/blob
+    receipt for every removed or replaced staged preimage, including type/mode changes and rename source paths.
+    Same-PR evidence cannot self-approve deletion or transfer approval to another path with identical bytes.
+  - A closed append-only receipt ledger starts empty and retains source/destination/provenance/sensitivity/human-claim
+    evidence. Historical Mantle approval bytes remain unchanged and are not silently promoted. The current
+    generated CSV remains separate and is checked against represented head/index/staged bytes and its canonical
+    classifier.
+  - An independent automation job covers staging/control changes and explicit manual bases without weakening
+    the existing validation job. Operator guidance, metadata-only Git hardening and16 authored disposable regression
+    methods preserve all production staged files; no cleanup or authenticated human decision is performed.
   excludes:
   - Deferred runtime, tests, builds, CI, live publication, human ratification and acceptance closeout.
   precedence:
@@ -35,76 +36,94 @@ scope:
   canonical_sources:
   - AGENTS.md
   - ARCHITECTURE.md
+  - ROADMAP.md
   - docs/ecosystem/CONTEXT.md
   - docs/decisions/ADR-0001-foundation-ownership.md
-  - .github/workflows/mindgarden-pages.yml
-  - .github/workflows/repository-intelligence.yml
-  - docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md
-  - https://github.com/egohygiene/pace/issues/13
+  - .github/workflows/automation.yml
+  - tools/staging_diff_gate.py
+  - tools/staging_home_audit.py
+  - migration/staging-removal-receipts.json
+  - schemas/staging-removal-receipts.v1.schema.json
+  - docs/migration/STAGING.md
+  - docs/migration/STAGING_RECEIPTS.md
+  - tests/test_staging_diff_gate.py
+  - https://github.com/egohygiene/empathy/issues/112
 work:
-  objective: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  objective: Require immutable staged preimages and durable prior receipt claims before destructive staging
+    changes.
   success_conditions:
-  - Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and
-    observation clock.
-  - Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen
-    recovery paths preserve their prior selection.
-  - Consumer publication authority, product composition, historical recovery bytes and existing job gates remain
-    intact.
+  - Every removed/replaced source preimage has an exact unchanged receipt already present in the selected base
+    and a matching canonical base-ledger destination.
+  - Historical evidence remains durable after current inventory rows disappear; source/ledger identity checks
+    never authenticate human or destination claims.
+  - Existing staged content, old approvals and native publisher/validation gates remain preserved.
   active_issue:
     provider: github
-    id: egohygiene/pace#13
-    url: https://github.com/egohygiene/pace/issues/13
+    id: egohygiene/empathy#112
+    url: https://github.com/egohygiene/empathy/issues/112
   next:
     kind: action
-    id: qualify-current-public-source-adoption
-    description: During the deferred organization verification pass, retain real provider/artifact/native and
-      consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+    id: review-staging-receipts-then-qualify-without-cleanup
+    description: Review the new gate with109/113. Before qualification update the review branch to the exact
+      ancestor base/head pair, run disposable regression/ledger and holistic checks, then obtain actual destination
+      and human evidence in separate reviewed receipt work before any later cleanup.
     readiness: ready
     references:
-    - https://github.com/egohygiene/pace/issues/13
+    - https://github.com/egohygiene/empathy/issues/112
     depends_on: []
 state:
   base:
-    revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    revision: 058d92a0f8c970f98a58d446408716936e593c99
     ref: refs/heads/main
-    verified_at: '2026-11-09T18:05:21Z'
+    verified_at: '2026-11-12T05:51:37Z'
   candidate:
-    branch: codex/intelligence-public-source-feeds
+    branch: codex/empathy-112-staging-approvals
     revision: null
     pull_request: null
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-09T18:05:21Z'
-    default_branch_revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    observed_at: '2026-11-12T05:51:37Z'
+    default_branch_revision: 058d92a0f8c970f98a58d446408716936e593c99
     issue_state: open
     pull_request_state: not-applicable
-    notes: Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production
-      integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture,
-      native execution, upload or publication is claimed.
-  parallel_changes: []
+    notes: Fresh main058d92a0f8c970f98a58d446408716936e593c99 remains the base. Empathy112/118 are open. Functional
+      source379d2f3e1fa9ef1fb964856e7af4f95d8df650da received independent source peer and root review. No staged
+      file, old approval or current CSV was changed; no gate/helper/fixture/test/CI execution or cleanup occurred.
+  parallel_changes:
+  - provider: github
+    id: egohygiene/empathy#130
+    url: https://github.com/egohygiene/empathy/pull/130
+  - provider: github
+    id: egohygiene/empathy#129
+    url: https://github.com/egohygiene/empathy/pull/129
+  - provider: github
+    id: egohygiene/empathy#125
+    url: https://github.com/egohygiene/empathy/pull/125
 review:
   status: partial
-  reviewed_at: '2026-11-09T18:05:21Z'
+  reviewed_at: '2026-11-12T05:51:37Z'
   reviewed_by: Codex
   evidence:
-  - command: Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and
-      edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace
+  - command: Independent static source peer and root review of exact Git preimages, prior unchanged receipts,
+      canonical ledger/destination links, history/human-claim limits and scheduling; Python AST, JSON/schema
+      definitions, unique workflow YAML and source Git/CSV metadata comparison, continuity schema/size/links
+      and whitespace
     outcome: limited
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-12T05:51:37Z'
     notes: Static source and metadata inspection only; no application execution.
   - command: Native/runtime execution, tests, builds, CI investigation, browser/provider/consumer/publication
       qualification
     outcome: not-run
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-12T05:51:37Z'
     notes: Deferred at maintainer request; source merges do not establish acceptance.
   environment_limitations:
-  - Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and
-    recovery qualification were not run.
-  - Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime
-    budgets remain explicit acceptance inputs; no success or approval is invented.
-  - The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds
-    retain their owners.
+  - User deferred tests, linters, builds, CI, helper/generator/native execution and holistic/provider qualification;16
+    authored disposable fixture methods remain unexecuted.
+  - The selected base must be an ancestor of the exact head; diverged PRs intentionally require branch update/re-review
+    rather than implicit merge-base substitution.
+  - Receipt bindings and raw JSON do not authenticate human authority or validate a destination run. The initial
+    canonical receipt list is empty; no existing removal is authorized or source drained.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -131,35 +150,35 @@ Read scoped instructions, canonical sources above and this checkpoint. Verify mu
 
 ## Current objective and success conditions
 
-Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline. Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and observation clock. Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen recovery paths preserve their prior selection. Consumer publication authority, product composition, historical recovery bytes and existing job gates remain intact.
+Require immutable staged preimages and durable prior receipt claims before destructive staging changes. Every removed/replaced source preimage has an exact unchanged receipt already present in the selected base and a matching canonical base-ledger destination. Historical evidence remains durable after current inventory rows disappear; source/ledger identity checks never authenticate human or destination claims. Existing staged content, old approvals and native publisher/validation gates remain preserved.
 
 ## State snapshot
 
-Candidate `codex/intelligence-public-source-feeds` is based on observed main `322f8d0a6657ea8584c80fb688aeaf6ac2184ca7`. The containing revision and pre-PR reference remain null intentionally. Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture, native execution, upload or publication is claimed.
+Candidate `codex/empathy-112-staging-approvals` is based on observed main `058d92a0f8c970f98a58d446408716936e593c99`. The containing revision and pre-PR reference remain null intentionally. Fresh main058d92a0f8c970f98a58d446408716936e593c99 remains the base. Empathy112/118 are open. Functional source379d2f3e1fa9ef1fb964856e7af4f95d8df650da received independent source peer and root review. No staged file, old approval or current CSV was changed; no gate/helper/fixture/test/CI execution or cleanup occurred.
 
 ## Completed and material changes
 
-Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2, merged through Relay PR 176.
+The new read-only gate enumerates exact base/head Git trees and requires an unchanged base-admitted path/mode/blob receipt for every removed or replaced staged preimage, including type/mode changes and rename source paths. Same-PR evidence cannot self-approve deletion or transfer approval to another path with identical bytes.
 
-Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases, upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their existing no-capture path.
+A closed append-only receipt ledger starts empty and retains source/destination/provenance/sensitivity/human-claim evidence. Historical Mantle approval bytes remain unchanged and are not silently promoted. The current generated CSV remains separate and is checked against represented head/index/staged bytes and its canonical classifier.
 
-Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures and bounded operational receipts stay outside the public site. Existing publication, failure and rollback guards are preserved.
+An independent automation job covers staging/control changes and explicit manual bases without weakening the existing validation job. Operator guidance, metadata-only Git hardening and16 authored disposable regression methods preserve all production staged files; no cleanup or authenticated human decision is performed.
 
 ## Validation and review evidence
 
-Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace. Static inspection only. Native/runtime execution, tests, builds, CI investigation, browsers, provider reads and publication qualification were not run.
+Independent static source peer and root review of exact Git preimages, prior unchanged receipts, canonical ledger/destination links, history/human-claim limits and scheduling; Python AST, JSON/schema definitions, unique workflow YAML and source Git/CSV metadata comparison, continuity schema/size/links and whitespace. Static source/metadata inspection only, including comparison of committed Git path/mode/blob identities to the current CSV. No gate, audit generator, regression fixture, test/lint, helper/native/application, build, CI or staging cleanup was executed.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and recovery qualification were not run. Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime budgets remain explicit acceptance inputs; no success or approval is invented. The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds retain their owners.
+User deferred tests, linters, builds, CI, helper/generator/native execution and holistic/provider qualification;16 authored disposable fixture methods remain unexecuted. The selected base must be an ancestor of the exact head; diverged PRs intentionally require branch update/re-review rather than implicit merge-base substitution. Receipt bindings and raw JSON do not authenticate human authority or validate a destination run. The initial canonical receipt list is empty; no existing removal is authorized or source drained.
 
 ## Next dependency-ready work
 
-During the deferred organization verification pass, retain real provider/artifact/native and consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+Review the new gate with109/113. Before qualification update the review branch to the exact ancestor base/head pair, run disposable regression/ledger and holistic checks, then obtain actual destination and human evidence in separate reviewed receipt work before any later cleanup.
 
 ## Parallel changes and reconciliation
 
-ADR not required: routine adoption of the already merged bounded source/capture/dependency contracts in the existing consumer-owned publisher. All immutable recovery selections and unrelated canonical content are preserved; source merge is distinct from accepted publication.
+Reference existing Empathy ADR0001 and staging migration boundary. This enforces source/evidence integrity without changing domain ownership or granting deletion authority. Preserve independent109 automation deltas at later merge; existing validation job and legacy records remain intact. Draft for maintainer review; no self-merge.
 
 ## Privacy and redaction
 
