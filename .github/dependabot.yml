@@ -3,6 +3,8 @@
 
 version: 2
 
+# Scope and deferred owner-managed roots: docs/security/dependency-coverage.md.
+# Keep Actions separate: PR #121 records the merged approved Actions selection.
 updates:
   - package-ecosystem: github-actions
     directory: "/"
@@ -19,6 +21,39 @@ updates:
         patterns:
           - "*"
 
+  # npm is Dependabot's ecosystem for the retained root pnpm graph.
+  # Do not recursively enroll specialist copies, templates, or frozen intake.
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:30"
+      timezone: UTC
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      root-runtime:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
+      root-tooling:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
+      root-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  # Forward-compatible baseline: root Python currently has no dependencies.
   - package-ecosystem: pip
     directory: "/"
     schedule:
