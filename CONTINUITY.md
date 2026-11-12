@@ -7,23 +7,23 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-09T18:05:21Z'
+  updated_at: '2026-11-12T05:44:32Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  purpose: Retain independent baseline validation outcomes and repair local Python/task/toolchain assumptions.
   includes:
-  - Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2,
-    merged through Relay PR 176.
-  - Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases,
-    upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate
-    native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their
-    existing no-capture path.
-  - Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures
-    and bounded operational receipts stay outside the public site. Existing publication, failure and rollback
-    guards are preserved.
+  - The existing automation job now invokes a fixed two-process unittest adapter so either suite failure, timeout
+    or launch failure cannot hide the second suite. It retains actual per-suite logs/exit outcomes and an ordinary14-day
+    result artifact; acceptance stays explicitly unqualified.
+  - The local Task catalog adapter validates consumed JSON into typed records instead of stringifying malformed
+    fields. Focused Identity fixture formatting/subprocess dispositions and immutable setup-node/current locked
+    toolchain assertions repair baseline-owned assumptions without changing canonical lint or owner inputs.
+  - Meaningful independent failure/timeout/Task-shape regression source is authored but unexecuted. Original
+    workflow prerequisites, permissions, events, concurrency and publisher/source/recovery boundaries remain
+    intact; Cargo/staging/specialist-policy decisions stay in their owners.
   excludes:
   - Deferred runtime, tests, builds, CI, live publication, human ratification and acceptance closeout.
   precedence:
@@ -37,74 +37,88 @@ scope:
   - ARCHITECTURE.md
   - docs/ecosystem/CONTEXT.md
   - docs/decisions/ADR-0001-foundation-ownership.md
-  - .github/workflows/mindgarden-pages.yml
-  - .github/workflows/repository-intelligence.yml
-  - docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md
-  - https://github.com/egohygiene/pace/issues/13
+  - .github/workflows/automation.yml
+  - tools/baseline_tests.py
+  - tools/task_catalog.py
+  - tests/test_baseline_tests.py
+  - tests/test_task_catalog.py
+  - tests/test_identity_integration.py
+  - tests/test_report_publication.py
+  - docs/BASELINE_VALIDATION.md
+  - https://github.com/egohygiene/empathy/issues/109
 work:
-  objective: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  objective: Retain independent baseline validation outcomes and repair local Python/task/toolchain assumptions.
   success_conditions:
-  - Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and
-    observation clock.
-  - Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen
-    recovery paths preserve their prior selection.
-  - Consumer publication authority, product composition, historical recovery bytes and existing job gates remain
-    intact.
+  - Both fixed suites are independently attempted and any failed/unavailable process fails the aggregate.
+  - Actual logs retain counts/skips; exit0 or source review does not establish required-scenario or holistic
+    acceptance.
+  - Task/toolchain assertions retain their actual source authority and narrow reviewed subprocess boundaries.
   active_issue:
     provider: github
-    id: egohygiene/pace#13
-    url: https://github.com/egohygiene/pace/issues/13
+    id: egohygiene/empathy#109
+    url: https://github.com/egohygiene/empathy/issues/109
   next:
     kind: action
-    id: qualify-current-public-source-adoption
-    description: During the deferred organization verification pass, retain real provider/artifact/native and
-      consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+    id: review-baseline-validation-then-qualify-exact-head
+    description: Review this source slice with112 staging enforcement and113 dependency coverage. Later execute
+      the declared owner scenarios, inspect skips and run the exact-head canonical holistic profile before109
+      acceptance; Rust79 and lint110 remain separate.
     readiness: ready
     references:
-    - https://github.com/egohygiene/pace/issues/13
+    - https://github.com/egohygiene/empathy/issues/109
     depends_on: []
 state:
   base:
-    revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    revision: 058d92a0f8c970f98a58d446408716936e593c99
     ref: refs/heads/main
-    verified_at: '2026-11-09T18:05:21Z'
+    verified_at: '2026-11-12T05:44:32Z'
   candidate:
-    branch: codex/intelligence-public-source-feeds
+    branch: codex/empathy-109-baseline-validation
     revision: null
     pull_request: null
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-09T18:05:21Z'
-    default_branch_revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    observed_at: '2026-11-12T05:44:32Z'
+    default_branch_revision: 058d92a0f8c970f98a58d446408716936e593c99
     issue_state: open
     pull_request_state: not-applicable
-    notes: Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production
-      integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture,
-      native execution, upload or publication is claimed.
-  parallel_changes: []
+    notes: Fresh main058d92a0f8c970f98a58d446408716936e593c99 remains the base. Empathy109/118 are open. Functional
+      source86f680e58984d2d6e042c9015ee4ccf03d91c756 received independent source peer and root review. No unittest,
+      Task discovery, owner validator, Cargo, formatter, linter, native build or CI execution ran.
+  parallel_changes:
+  - provider: github
+    id: egohygiene/empathy#112
+    url: https://github.com/egohygiene/empathy/issues/112
+  - provider: github
+    id: egohygiene/empathy#129
+    url: https://github.com/egohygiene/empathy/pull/129
+  - provider: github
+    id: egohygiene/empathy#125
+    url: https://github.com/egohygiene/empathy/pull/125
 review:
   status: partial
-  reviewed_at: '2026-11-09T18:05:21Z'
+  reviewed_at: '2026-11-12T05:44:32Z'
   reviewed_by: Codex
   evidence:
-  - command: Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and
-      edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace
+  - command: Independent source peer and root review of two-process failure retention/exit semantics, narrow
+      Python dispositions, typed Task JSON and immutable toolchain assertions; Python AST, unique-key workflow
+      YAML/embedded Bash and exact original gate/input comparisons; continuity schema/size/links and whitespace
     outcome: limited
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-12T05:44:32Z'
     notes: Static source and metadata inspection only; no application execution.
   - command: Native/runtime execution, tests, builds, CI investigation, browser/provider/consumer/publication
       qualification
     outcome: not-run
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-12T05:44:32Z'
     notes: Deferred at maintainer request; source merges do not establish acceptance.
   environment_limitations:
-  - Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and
-    recovery qualification were not run.
-  - Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime
-    budgets remain explicit acceptance inputs; no success or approval is invented.
-  - The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds
-    retain their owners.
+  - User deferred tests, linters, builds, CI, owner/helper/native/application execution and exact-head holistic
+    qualification; authored regressions have not run.
+  - Command success does not prove actual required scenario execution or turn environment skips into acceptance.
+    Existing job cancellation/setup/time limits can prevent evidence; absent artifacts are not success.
+  - Root Cargo79, lint-runtime110, staging112, dependency113 and source-owner compatibility remain separate
+    open work.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -131,35 +145,35 @@ Read scoped instructions, canonical sources above and this checkpoint. Verify mu
 
 ## Current objective and success conditions
 
-Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline. Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and observation clock. Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen recovery paths preserve their prior selection. Consumer publication authority, product composition, historical recovery bytes and existing job gates remain intact.
+Retain independent baseline validation outcomes and repair local Python/task/toolchain assumptions. Both fixed suites are independently attempted and any failed/unavailable process fails the aggregate. Actual logs retain counts/skips; exit0 or source review does not establish required-scenario or holistic acceptance. Task/toolchain assertions retain their actual source authority and narrow reviewed subprocess boundaries.
 
 ## State snapshot
 
-Candidate `codex/intelligence-public-source-feeds` is based on observed main `322f8d0a6657ea8584c80fb688aeaf6ac2184ca7`. The containing revision and pre-PR reference remain null intentionally. Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture, native execution, upload or publication is claimed.
+Candidate `codex/empathy-109-baseline-validation` is based on observed main `058d92a0f8c970f98a58d446408716936e593c99`. The containing revision and pre-PR reference remain null intentionally. Fresh main058d92a0f8c970f98a58d446408716936e593c99 remains the base. Empathy109/118 are open. Functional source86f680e58984d2d6e042c9015ee4ccf03d91c756 received independent source peer and root review. No unittest, Task discovery, owner validator, Cargo, formatter, linter, native build or CI execution ran.
 
 ## Completed and material changes
 
-Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2, merged through Relay PR 176.
+The existing automation job now invokes a fixed two-process unittest adapter so either suite failure, timeout or launch failure cannot hide the second suite. It retains actual per-suite logs/exit outcomes and an ordinary14-day result artifact; acceptance stays explicitly unqualified.
 
-Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases, upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their existing no-capture path.
+The local Task catalog adapter validates consumed JSON into typed records instead of stringifying malformed fields. Focused Identity fixture formatting/subprocess dispositions and immutable setup-node/current locked toolchain assertions repair baseline-owned assumptions without changing canonical lint or owner inputs.
 
-Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures and bounded operational receipts stay outside the public site. Existing publication, failure and rollback guards are preserved.
+Meaningful independent failure/timeout/Task-shape regression source is authored but unexecuted. Original workflow prerequisites, permissions, events, concurrency and publisher/source/recovery boundaries remain intact; Cargo/staging/specialist-policy decisions stay in their owners.
 
 ## Validation and review evidence
 
-Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace. Static inspection only. Native/runtime execution, tests, builds, CI investigation, browsers, provider reads and publication qualification were not run.
+Independent source peer and root review of two-process failure retention/exit semantics, narrow Python dispositions, typed Task JSON and immutable toolchain assertions; Python AST, unique-key workflow YAML/embedded Bash and exact original gate/input comparisons; continuity schema/size/links and whitespace. Static source and metadata inspection only. No unittest, Task discovery, owner validator, Cargo, formatter/linter, helper/native/application, build or CI execution; authored regressions remain unexecuted.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and recovery qualification were not run. Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime budgets remain explicit acceptance inputs; no success or approval is invented. The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds retain their owners.
+User deferred tests, linters, builds, CI, owner/helper/native/application execution and exact-head holistic qualification; authored regressions have not run. Command success does not prove actual required scenario execution or turn environment skips into acceptance. Existing job cancellation/setup/time limits can prevent evidence; absent artifacts are not success. Root Cargo79, lint-runtime110, staging112, dependency113 and source-owner compatibility remain separate open work.
 
 ## Next dependency-ready work
 
-During the deferred organization verification pass, retain real provider/artifact/native and consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+Review this source slice with112 staging enforcement and113 dependency coverage. Later execute the declared owner scenarios, inspect skips and run the exact-head canonical holistic profile before109 acceptance; Rust79 and lint110 remain separate.
 
 ## Parallel changes and reconciliation
 
-ADR not required: routine adoption of the already merged bounded source/capture/dependency contracts in the existing consumer-owned publisher. All immutable recovery selections and unrelated canonical content are preserved; source merge is distinct from accepted publication.
+Reference existing Empathy ADR0001 baseline integration boundary; this is a routine local evidence adapter/fixture correction, not a new policy or specialist ownership decision. Preserve parallel112 automation additions and113 coverage independently at later integration; draft for review, no self-merge.
 
 ## Privacy and redaction
 
