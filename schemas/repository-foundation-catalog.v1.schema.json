@@ -45,6 +45,10 @@
     }
   },
   "$defs": {
+    "repositoryPath": {
+      "type": "string",
+      "pattern": "^(?![a-zA-Z]:)(?!\\s*$)(?!(?:[^/]+/)*\\.{1,2}(?:/|$))[^/\\\\\\x00-\\x1F\\x7F]+(?:/[^/\\\\\\x00-\\x1F\\x7F]+)*(?![\\s\\S])"
+    },
     "ignoreComposition": {
       "type": "object",
       "additionalProperties": false,
@@ -143,7 +147,7 @@
       ],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]+$" },
-        "path": { "type": "string", "minLength": 1 },
+        "path": { "$ref": "#/$defs/repositoryPath" },
         "kind": { "enum": ["file", "directory"] },
         "category": { "type": "string", "minLength": 1 },
         "presence": { "enum": ["required", "optional", "profile"] },
@@ -185,8 +189,8 @@
       "additionalProperties": false,
       "required": ["path", "owner", "source", "checked_in"],
       "properties": {
-        "path": { "type": "string", "minLength": 1 },
-        "owner": { "type": "string", "pattern": "^egohygiene/" },
+        "path": { "$ref": "#/$defs/repositoryPath" },
+        "owner": { "type": "string", "pattern": "^egohygiene/[a-z0-9.-]+$" },
         "source": { "type": "string", "minLength": 1 },
         "checked_in": { "type": "boolean" }
       }

@@ -8,8 +8,9 @@
 from __future__ import annotations
 
 import argparse
+from graphlib import CycleError, TopologicalSorter
 import json
-from pathlib import Path, PurePosixPath
+from pathlib import Path
 import re
 import sys
 from typing import TYPE_CHECKING, Any, TypeGuard
@@ -24,6 +25,11 @@ SCHEMA_VERSION = "1.1.0"
 CATALOG_VERSION = "2.0.0"
 FOUNDATION_REFERENCE = f"empathy/repository-foundation@{CATALOG_VERSION}"
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
+IDENTIFIER_PATTERN = re.compile(r"[a-z][a-z0-9-]+")
+OWNED_FIELD_PATTERN = re.compile(r"[a-z][a-z0-9_]+")
+REPOSITORY_PATTERN = re.compile(r"[a-z0-9.-]+/[a-z0-9.-]+")
+SURROGATE_PATTERN = re.compile(r"[\ud800-\udfff]")
+UNSAFE_PATH_PATTERN = re.compile(r"^[a-zA-Z]:|[\\\x00-\x1f\x7f]")
 REQUIRED_CATEGORIES = {
     "agent-context",
     "community-health",
@@ -45,13 +51,17 @@ def load_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def _nonempty_string(value: object) -> TypeGuard[str]:
+    return isinstance(value, str) and bool(value.strip()) and not SURROGATE_PATTERN.search(value)
+
+
 def _unique_strings(value: Any, path: str, *, allow_empty: bool = True) -> list[str]:
     if not isinstance(value, list):
         return [f"{path} must be an array"]
     errors: list[str] = []
     if not allow_empty and not value:
         errors.append(f"{path} must not be empty")
-    if any(not isinstance(item, str) or not item.strip() for item in value):
+    if any(not _nonempty_string(item) for item in value):
         errors.append(f"{path} must contain non-empty strings")
     strings = [item for item in value if isinstance(item, str)]
     if len(strings) != len(set(strings)):
@@ -59,17 +69,50 @@ def _unique_strings(value: Any, path: str, *, allow_empty: bool = True) -> list[
     return errors
 
 
+def _object_fields(
+    value: dict[str, Any],
+    path: str,
+    required: set[str],
+    *,
+    optional: frozenset[str] = frozenset(),
+) -> list[str]:
+    missing = required - value.keys()
+    unsupported = value.keys() - required - optional
+    errors: list[str] = []
+    if missing:
+        errors.append(f"{path} is missing required fields: {', '.join(sorted(missing))}")
+    if unsupported:
+        errors.append(f"{path} has unsupported fields: {', '.join(sorted(unsupported))}")
+    return errors
+
+
 def _safe_path(value: object) -> TypeGuard[str]:
-    if not isinstance(value, str) or not value or "\\" in value:
-        return False
-    path = PurePosixPath(value)
-    return not path.is_absolute() and all(part not in {"", ".", ".."} for part in path.parts)
+    return (
+        _nonempty_string(value)
+        and not UNSAFE_PATH_PATTERN.search(value)
+        and all(part not in {"", ".", ".."} for part in value.split("/"))
+    )
 
 
 def validate_catalog(catalog: dict[str, Any]) -> list[str]:
     """Return stable semantic errors for the foundation catalog."""
 
-    errors: list[str] = []
+    errors = _object_fields(
+        catalog,
+        "catalog",
+        {
+            "schema_version",
+            "id",
+            "version",
+            "owner",
+            "holon_contract",
+            "categories",
+            "profiles",
+            "artifacts",
+            "repository_owned_fields",
+            "generated_outputs",
+        },
+    )
     if catalog.get("schema_version") != SCHEMA_VERSION:
         errors.append(f"schema_version must be {SCHEMA_VERSION}")
     if catalog.get("id") != "empathy/repository-foundation":
@@ -78,10 +121,15 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
         errors.append(f"catalog version must be {CATALOG_VERSION}")
     if catalog.get("owner") != "egohygiene/empathy":
         errors.append("catalog owner must be egohygiene/empathy")
+    if not isinstance(catalog.get("holon_contract"), dict):
+        errors.append("holon_contract must be an object")
 
     categories = catalog.get("categories")
     errors.extend(_unique_strings(categories, "categories", allow_empty=False))
-    if isinstance(categories, list) and set(categories) != REQUIRED_CATEGORIES:
+    if (
+        isinstance(categories, list)
+        and {item for item in categories if isinstance(item, str)} != REQUIRED_CATEGORIES
+    ):
         errors.append("categories must cover all version-1 repository concerns")
 
     profiles = catalog.get("profiles")
@@ -101,44 +149,38 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
         if not isinstance(profile, dict):
             errors.append(f"{prefix} must be an object")
             continue
+        errors.extend(
+            _object_fields(
+                profile, prefix, {"id", "dimension", "description", "requires", "conflicts"}
+            )
+        )
         for field in ("dimension", "description"):
-            if not isinstance(profile.get(field), str) or not profile[field].strip():
+            if not _nonempty_string(profile.get(field)):
                 errors.append(f"{prefix}.{field} must be a non-empty string")
         for field in ("requires", "conflicts"):
             errors.extend(_unique_strings(profile.get(field), f"{prefix}.{field}"))
         name = profile.get("id")
-        if not isinstance(name, str):
+        if not isinstance(name, str) or not IDENTIFIER_PATTERN.fullmatch(name):
+            errors.append(f"{prefix}.id must be a lowercase identifier")
             continue
         requires = profile.get("requires", [])
         conflicts = profile.get("conflicts", [])
         if isinstance(requires, list) and isinstance(conflicts, list):
-            unknown = (set(requires) | set(conflicts)) - profile_names
+            known_requires = [item for item in requires if isinstance(item, str)]
+            known_conflicts = [item for item in conflicts if isinstance(item, str)]
+            unknown = (set(known_requires) | set(known_conflicts)) - profile_names
             if unknown:
                 errors.append(
                     f"profile {name} references unknown profiles: {', '.join(sorted(unknown))}"
                 )
-            if name in requires or name in conflicts:
+            if name in known_requires or name in known_conflicts:
                 errors.append(f"profile {name} cannot require or conflict with itself")
-            graph[name] = [item for item in requires if isinstance(item, str)]
+            graph[name] = sorted(known_requires)
 
-    visiting: set[str] = set()
-    visited: set[str] = set()
-
-    def visit(name: str, stack: list[str]) -> None:
-        if name in visiting:
-            start = stack.index(name)
-            errors.append(f"profile dependency cycle: {' -> '.join([*stack[start:], name])}")
-            return
-        if name in visited:
-            return
-        visiting.add(name)
-        for dependency in graph.get(name, []):
-            visit(dependency, [*stack, name])
-        visiting.remove(name)
-        visited.add(name)
-
-    for profile_name in sorted(profile_names):
-        visit(profile_name, [])
+    try:
+        TopologicalSorter(dict(sorted(graph.items()))).prepare()
+    except CycleError as error:
+        errors.append(f"profile dependency cycle: {' -> '.join(error.args[1])}")
 
     artifacts = catalog.get("artifacts")
     if not isinstance(artifacts, list) or not artifacts:
@@ -150,30 +192,50 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
         if not isinstance(artifact, dict):
             errors.append(f"{prefix} must be an object")
             continue
+        errors.extend(
+            _object_fields(
+                artifact,
+                prefix,
+                {
+                    "id",
+                    "path",
+                    "kind",
+                    "category",
+                    "presence",
+                    "ownership",
+                    "profiles",
+                    "executable",
+                    "markers",
+                    "description",
+                },
+                optional=frozenset({"composition"}),
+            )
+        )
         identifier = artifact.get("id")
         path = artifact.get("path")
-        if not isinstance(identifier, str) or not identifier:
-            errors.append(f"{prefix}.id must be a non-empty string")
+        if not isinstance(identifier, str) or not IDENTIFIER_PATTERN.fullmatch(identifier):
+            errors.append(f"{prefix}.id must be a lowercase identifier")
         else:
             ids.append(identifier)
         if not _safe_path(path):
             errors.append(f"{prefix}.path must be normalized and repository-relative")
         else:
             paths.append(path)
-        if artifact.get("kind") not in {"file", "directory"}:
+        if artifact.get("kind") not in ("file", "directory"):
             errors.append(f"{prefix}.kind is invalid")
-        if artifact.get("category") not in REQUIRED_CATEGORIES:
+        category = artifact.get("category")
+        if not isinstance(category, str) or category not in REQUIRED_CATEGORIES:
             errors.append(f"{prefix}.category is invalid")
         presence = artifact.get("presence")
-        if presence not in {"required", "optional", "profile"}:
+        if presence not in ("required", "optional", "profile"):
             errors.append(f"{prefix}.presence is invalid")
         ownership = artifact.get("ownership")
-        if ownership not in {"generated", "required", "repository-owned"}:
+        if ownership not in ("generated", "required", "repository-owned"):
             errors.append(f"{prefix}.ownership is invalid")
         artifact_profiles = artifact.get("profiles")
         errors.extend(_unique_strings(artifact_profiles, f"{prefix}.profiles"))
         if isinstance(artifact_profiles, list):
-            unknown = set(artifact_profiles) - profile_names
+            unknown = {item for item in artifact_profiles if isinstance(item, str)} - profile_names
             if unknown:
                 errors.append(f"{prefix}.profiles references unknown profiles")
             if presence == "profile" and not artifact_profiles:
@@ -184,9 +246,12 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
         errors.extend(_unique_strings(markers, f"{prefix}.markers"))
         if ownership == "generated" and not markers:
             errors.append(f"{prefix} generated artifact must declare deterministic markers")
-        if artifact.get("executable") and artifact.get("kind") != "file":
+        executable = artifact.get("executable")
+        if not isinstance(executable, bool):
+            errors.append(f"{prefix}.executable must be boolean")
+        elif executable and artifact.get("kind") != "file":
             errors.append(f"{prefix} directory cannot be executable")
-        if not isinstance(artifact.get("description"), str) or not artifact["description"].strip():
+        if not _nonempty_string(artifact.get("description")):
             errors.append(f"{prefix}.description must be a non-empty string")
         if identifier == "gitignore":
             if (path, artifact.get("kind"), presence, ownership) != (
@@ -210,14 +275,24 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
     if not isinstance(fields, list) or not fields:
         errors.append("repository_owned_fields must be a non-empty array")
     else:
-        field_ids = [field.get("id") for field in fields if isinstance(field, dict)]
-        if len(field_ids) != len(fields) or len(field_ids) != len(set(field_ids)):
-            errors.append("repository-owned field ids must be present and unique")
+        field_ids: set[str] = set()
         for index, field in enumerate(fields):
-            if not isinstance(field, dict) or field.get("type") not in {"string", "string-array"}:
-                errors.append(f"repository_owned_fields[{index}] has an invalid type")
-            if isinstance(field, dict) and not isinstance(field.get("required"), bool):
-                errors.append(f"repository_owned_fields[{index}].required must be boolean")
+            prefix = f"repository_owned_fields[{index}]"
+            if not isinstance(field, dict):
+                errors.append(f"{prefix} must be an object")
+                continue
+            errors.extend(_object_fields(field, prefix, {"id", "type", "required"}))
+            identifier = field.get("id")
+            if not isinstance(identifier, str) or not OWNED_FIELD_PATTERN.fullmatch(identifier):
+                errors.append(f"{prefix}.id must be a lowercase field identifier")
+            elif identifier in field_ids:
+                errors.append("repository-owned field ids must be unique")
+            else:
+                field_ids.add(identifier)
+            if field.get("type") not in ("string", "string-array"):
+                errors.append(f"{prefix}.type is invalid")
+            if not isinstance(field.get("required"), bool):
+                errors.append(f"{prefix}.required must be boolean")
 
     outputs = catalog.get("generated_outputs")
     if not isinstance(outputs, list) or not outputs:
@@ -225,10 +300,27 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
     else:
         output_paths: list[str] = []
         for index, output in enumerate(outputs):
-            if not isinstance(output, dict) or not _safe_path(output.get("path")):
-                errors.append(f"generated_outputs[{index}].path is invalid")
+            prefix = f"generated_outputs[{index}]"
+            if not isinstance(output, dict):
+                errors.append(f"{prefix} must be an object")
                 continue
-            output_paths.append(output["path"])
+            errors.extend(_object_fields(output, prefix, {"path", "owner", "source", "checked_in"}))
+            path = output.get("path")
+            if _safe_path(path):
+                output_paths.append(path)
+            else:
+                errors.append(f"{prefix}.path must be normalized and repository-relative")
+            owner = output.get("owner")
+            if (
+                not isinstance(owner, str)
+                or not owner.startswith("egohygiene/")
+                or not REPOSITORY_PATTERN.fullmatch(owner)
+            ):
+                errors.append(f"{prefix}.owner must identify an egohygiene repository")
+            if not _nonempty_string(output.get("source")):
+                errors.append(f"{prefix}.source must be a non-empty string")
+            if not isinstance(output.get("checked_in"), bool):
+                errors.append(f"{prefix}.checked_in must be boolean")
         if len(output_paths) != len(set(output_paths)):
             errors.append("generated output paths must be unique")
     return sorted(set(errors))
@@ -263,12 +355,27 @@ def resolve_manifest(
     errors = validate_catalog(catalog)
     if errors:
         return None, errors
+    errors.extend(
+        _object_fields(
+            manifest,
+            "manifest",
+            {
+                "schema_version",
+                "foundation",
+                "repository",
+                "selected_profiles",
+                "overrides",
+                "repository_owned",
+            },
+            optional=frozenset({"gitignore"}),
+        )
+    )
     if manifest.get("schema_version") != SCHEMA_VERSION:
         errors.append(f"manifest schema_version must be {SCHEMA_VERSION}")
     if manifest.get("foundation") != FOUNDATION_REFERENCE:
         errors.append(f"manifest foundation must be {FOUNDATION_REFERENCE}")
     repository = manifest.get("repository")
-    if not isinstance(repository, str) or repository.count("/") != 1:
+    if not isinstance(repository, str) or not REPOSITORY_PATTERN.fullmatch(repository):
         errors.append("manifest repository must use owner/name form")
     selected = manifest.get("selected_profiles")
     errors.extend(_unique_strings(selected, "selected_profiles", allow_empty=False))
@@ -308,7 +415,7 @@ def resolve_manifest(
             errors.append(f"overrides[{index}] must declare only artifact and mode")
             continue
         identifier = override.get("artifact")
-        if not isinstance(identifier, str) or not identifier:
+        if not _nonempty_string(identifier):
             errors.append(f"overrides[{index}].artifact must be a non-empty string")
             continue
         override_ids.append(identifier)
@@ -331,12 +438,11 @@ def resolve_manifest(
         errors.append(f"unknown repository-owned fields: {', '.join(sorted(unknown_fields))}")
     for identifier, field in field_contract.items():
         value = repository_owned.get(identifier)
-        if field["required"] and value is None:
-            errors.append(f"required repository-owned field is missing: {identifier}")
+        if identifier not in repository_owned:
+            if field["required"]:
+                errors.append(f"required repository-owned field is missing: {identifier}")
             continue
-        if value is None:
-            continue
-        if field["type"] == "string" and (not isinstance(value, str) or not value.strip()):
+        if field["type"] == "string" and not _nonempty_string(value):
             errors.append(f"repository-owned field {identifier} must be a non-empty string")
         if field["type"] == "string-array":
             errors.extend(_unique_strings(value, f"repository_owned.{identifier}"))
@@ -454,6 +560,12 @@ def render_inventory(catalog: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _toml_string(value: str) -> str:
+    # JSON and TOML share the emitted escapes. Keep Unicode scalar values
+    # literal so supplementary characters never become JSON surrogate pairs.
+    return json.dumps(value, ensure_ascii=False).replace("\x7f", "\\u007f")
+
+
 def render_egolint_contract(resolved: dict[str, Any], source_revision: str) -> str:
     """Render the selected golden foundation as EgoLint repository-contract TOML."""
 
@@ -478,10 +590,10 @@ def render_egolint_contract(resolved: dict[str, Any], source_revision: str) -> s
         lines.extend(
             [
                 "[[requirements]]",
-                f'id = "{artifact["id"]}"',
-                f'path = "{artifact["path"]}"',
-                f'kind = "{artifact["kind"]}"',
-                f'ownership = "{artifact["effective_ownership"]}"',
+                f"id = {_toml_string(artifact['id'])}",
+                f"path = {_toml_string(artifact['path'])}",
+                f"kind = {_toml_string(artifact['kind'])}",
+                f"ownership = {_toml_string(artifact['effective_ownership'])}",
             ]
         )
         if artifact["executable"]:
@@ -489,7 +601,7 @@ def render_egolint_contract(resolved: dict[str, Any], source_revision: str) -> s
         if artifact["markers"]:
             lines.append("markers = [")
             for marker in artifact["markers"]:
-                lines.append(f"  {json.dumps(marker)},")
+                lines.append(f"  {_toml_string(marker)},")
             lines.append("]")
         lines.append("")
     return "\n".join(lines)
