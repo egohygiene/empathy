@@ -23,6 +23,11 @@ on:
       - "schemas/repository-foundation-*.schema.json"
       - "tools/foundation*.py"
       - "tests/**"
+      - ".staging/**"
+      - "migration/**"
+      - "tools/staging_*.py"
+      - "schemas/staging-*.schema.json"
+      - "docs/migration/**"
   push:
     branches:
       - main
@@ -44,7 +49,17 @@ on:
       - "schemas/repository-foundation-*.schema.json"
       - "tools/foundation*.py"
       - "tests/**"
+      - ".staging/**"
+      - "migration/**"
+      - "tools/staging_*.py"
+      - "schemas/staging-*.schema.json"
+      - "docs/migration/**"
   workflow_dispatch:
+    inputs:
+      staging_base:
+        description: Full reviewed ancestor commit for the immutable staging diff.
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -54,6 +69,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  staging:
+    name: Validate staging preimages and durable receipt bindings
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25
+        with:
+          egress-policy: audit
+
+      - name: Read the exact reviewed head and its source history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Check actual base/head staging changes and committed ledger freshness
+        env:
+          STAGING_BASE: ${{ github.event.pull_request.base.sha || github.event.before || inputs.staging_base }}
+          STAGING_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I tools/staging_diff_gate.py \
+            --repository-root . --base "$STAGING_BASE" --head "$STAGING_HEAD"
+
   validate:
     name: Validate workflows and actions
     runs-on: ubuntu-latest

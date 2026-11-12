@@ -13,6 +13,7 @@ import csv
 from dataclasses import asdict, dataclass
 import io
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -209,7 +210,23 @@ RELAY_WORKFLOWS = {
 
 
 def run_git(repository_root: Path, *arguments: str) -> bytes:
-    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
+    environment = {
+        "PATH": os.defpath,
+        "LC_ALL": "C.UTF-8",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_CONFIG_GLOBAL": os.devnull,
+        "GIT_NO_REPLACE_OBJECTS": "1",
+        "GIT_NO_LAZY_FETCH": "1",
+        "GIT_OPTIONAL_LOCKS": "0",
+    }
+    return subprocess.check_output(
+        [
+            "git", "--no-lazy-fetch", "--no-optional-locks",
+            "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false",
+            "-c", "protocol.allow=never", *arguments,
+        ],
+        cwd=repository_root, env=environment, stderr=subprocess.PIPE, timeout=60,
+    )
 
 
 def tracked_entries(repository_root: Path) -> list[tuple[str, str, str]]:
