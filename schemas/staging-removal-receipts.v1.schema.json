@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://egohygiene.io/schemas/empathy/staging-removal-receipts.v1.schema.json",
+  "title": "Durable Empathy staging preimage receipt claims v1",
+  "description": "Exact source/destination/evidence binding. JSON and CI never authenticate human authority; receipt must already exist unchanged in the base before a destructive change.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "egohygiene.empathy.staging-removal-receipts/v1"
+    },
+    "receipts": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "$ref": "#/$defs/receipt"
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "receipts"
+  ],
+  "$defs": {
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 80,
+          "pattern": "^STG-[A-Za-z0-9][A-Za-z0-9._-]*$"
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "revision": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "path": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024,
+              "pattern": "^\\.staging/"
+            },
+            "mode": {
+              "enum": [
+                "100644",
+                "100755",
+                "120000"
+              ]
+            },
+            "blob": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            }
+          },
+          "required": [
+            "revision",
+            "path",
+            "mode",
+            "blob"
+          ]
+        },
+        "destination": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "canonical_home": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "revision": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "validation_evidence": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "canonical_home",
+            "revision",
+            "validation_evidence"
+          ]
+        },
+        "provenance_resolution": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "sensitivity_resolution": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "authority": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "human-claim"
+            },
+            "actor": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            "recorded_at": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+            },
+            "evidence": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "kind",
+            "actor",
+            "recorded_at",
+            "evidence"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "destination",
+        "provenance_resolution",
+        "sensitivity_resolution",
+        "authority"
+      ]
+    }
+  }
+}

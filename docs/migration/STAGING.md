@@ -72,8 +72,13 @@ Migrate one bounded merge group at a time:
 3. Refactor and validate the owner-owned result independently.
 4. Record the immutable destination revision and validation evidence.
 5. Open a separate Empathy cleanup change.
-6. Add a removal approval matching the exact staged path and Git blob.
-7. Run the removal gate before deleting the source.
+6. Prepare the exact source/destination receipt and actual human evidence in a
+   separate review, before the cleanup base. Historical approval claims remain
+   preserved; the new receipt file initially contains no invented approvals.
+7. Review the actual immutable base/head preimages through the
+   [durable receipt and diff gate](STAGING_RECEIPTS.md). A receipt introduced in
+   the deletion change cannot authorize that change; the gate never authenticates
+   human authority.
 8. Refresh the ledger and confirm the file count decreases by the intended
    amount only.
 
@@ -103,7 +108,7 @@ python3 tools/staging_home_audit.py \
   --output "/tmp/empathy-staging-summary.json"
 ```
 
-Check a proposed removal after adding an approval record:
+The historical manual path interface remains available for compatibility:
 
 ```bash
 python3 tools/staging_removal_gate.py \
@@ -111,6 +116,13 @@ python3 tools/staging_removal_gate.py \
   --approvals "migration/staging-removal-approvals.json" \
   --source-path ".staging/example/path"
 ```
+
+New cleanup changes use `tools/staging_diff_gate.py --base FULL_BASE_SHA --head
+FULL_HEAD_SHA` as described in the [operator path](STAGING_RECEIPTS.md). It checks
+actual removed/replaced Git preimages, immutable source/receipt bindings and
+committed current-ledger freshness. Durable receipt claims survive regeneration
+and removal of the corresponding current CSV row. No production deletion or
+approval is performed by either command.
 
 ## Definition of drained
 

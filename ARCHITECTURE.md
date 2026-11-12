@@ -108,6 +108,13 @@ distribution and golden-consumer graduation remain tracked on the
 
 ## Boundary Rules
 
+The [staging receipt gate](docs/migration/STAGING_RECEIPTS.md) enforces the
+existing preservation boundary against exact base/head Git preimages and the
+reviewed base disposition ledger. Durable receipt claims remain separate from
+the generated current intake CSV. The gate cannot authenticate human authority,
+validate a destination run or perform source cleanup. Its operational fixtures
+and hosted scheduling remain unqualified until separately executed.
+
 1. Higher layers define meaning; lower layers implement or evaluate it.
 2. An execution adapter may translate a capability contract but cannot silently change its policy.
 3. Composition may select and configure a capability but cannot claim canonical ownership of its
