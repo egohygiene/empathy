@@ -106,8 +106,9 @@ post-merge deployment explicitly open. No real private archive or model was used
 The maintainer explicitly authorized merging the open Empathy source changes
 while deferring current tests, linters, builds, helper/native qualification, CI
 and publication qualification. Deterministic derived-document refresh was
-separately authorized for this source integration. The preceding dated focused results remain bound to
-their original source; they are not fresh evidence for the integration head.
+separately authorized for this source integration. The preceding dated focused
+results remain bound to their original source; they are not fresh evidence for
+the integration head.
 
 The two optional standalone tasks leave the canonical garden, tracked entrypoint,
 incubated commands and Pages authority unchanged. The existing canonical command

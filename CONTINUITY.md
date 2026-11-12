@@ -76,7 +76,7 @@ state:
       provider: github
       id: egohygiene/empathy#120
       url: https://github.com/egohygiene/empathy/pull/120
-    handoff_state: ready-for-source-merge
+    handoff_state: ready-for-review
   live:
     status: verified
     observed_at: '2026-11-12T11:16:29Z'
