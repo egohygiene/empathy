@@ -49,7 +49,7 @@ After changing a public task name, description, or alias, run
 <!-- prettier-ignore-start -->
 <!-- BEGIN GENERATED TASK CATALOG -->
 
-_Generated from the live Taskfile graph: 241 public commands._
+_Generated from the live Taskfile graph: 243 public commands._
 
 | Command | Description | Aliases |
 | --- | --- | --- |
@@ -219,6 +219,8 @@ _Generated from the live Taskfile graph: 241 public commands._
 | `task garden:publish:check` | Verify the deterministic reviewed-public projection | — |
 | `task garden:site:build` | Build the public garden with the pinned Quartz engine | — |
 | `task garden:site:serve` | Serve the public garden locally with the pinned Quartz engine | — |
+| `task garden:standalone:install` | Install the immutable standalone Mindgarden candidate in a separate environment | — |
+| `task garden:standalone:verify` | Verify the pinned external engine against the existing canonical Empathy garden | — |
 | `task git:branch` | Print the current Git branch | — |
 | `task git:changes` | Summarize unstaged and staged changes separately | — |
 | `task git:contributors` | List contributors ordered by commit count | — |
