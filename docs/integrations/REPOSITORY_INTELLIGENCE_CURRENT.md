@@ -2,9 +2,11 @@
 
 Current source selection is the
 [typed Audits/Sanity checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md),
-using Relay `5d27be5ce1599df883e31f14cd894eb18622c18c` while retaining bounded public
+using Relay `d7c60473626f8dcc901210a208ad01a6474e8c1d` while retaining bounded public
 Work/Health/Releases captures, native Journey and attributed Search. The portable-only checkpoint below is history from #122;
 its old pin and source-disabled description do not describe this candidate.
+PR #132 selects the documentation-only successor to the original typed-feed
+source; executable owner bytes and consumer qualification limits are unchanged.
 
 ## Historical portable-only checkpoint
 
