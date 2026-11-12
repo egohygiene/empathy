@@ -1,0 +1,55 @@
+path,inspection_git_blob,ecosystem,canonical_owner,scope,updater_disposition,investigation,references
+.staging/.github/skills/drawio/scripts/package.json,f3468fbfe2cdf92be5b2ee0bebc079135c5d944c,npm,aether,frozen-staged-intake,not-enrolled,aether-staged-migration,#113; #79; staging-file-disposition
+.staging/.github/skills/md-to-docx/scripts/package.json,2f5c1cf949219e85ae861583a6f033cffb06d7b3,npm,aether,frozen-staged-intake,not-enrolled,aether-staged-migration,#113; #79; staging-file-disposition
+.staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj,63b52471c676daa7fd73eecd1041a274d5b9a8c3,NuGet,aether,frozen-staged-intake,not-enrolled,aether-staged-migration,#113; #79; staging-file-disposition
+.staging/devenvironment/containers/services/api/poetry.lock,3ce031c515313bcd45e2b41a7d4bd89db2a50d28,PyPI,holon,frozen-staged-intake,not-enrolled,holon-staged-migration,#113; #79; staging-file-disposition
+.staging/devenvironment/containers/services/api/pyproject.toml,235d13987591002f730290ee20d9c9e6428ed6dc,PyPI,holon,frozen-staged-intake,not-enrolled,holon-staged-migration,#113; #79; staging-file-disposition
+.staging/devenvironment/realm/Cargo.toml,e73edfad6134f4d922b1f610f51f071f897dd381,crates.io,realm,frozen-staged-intake,not-enrolled,realm-staged-migration,#113; #79; staging-file-disposition
+.staging/devenvironment/realm/pyproject.toml,8dea5f953db524ae9d4af6e8199f3a25015a9c79,PyPI,realm,frozen-staged-intake,not-enrolled,realm-staged-migration,#113; #79; staging-file-disposition
+.staging/tools/emoji-precache/package-lock.json,59d9ba6f5a0389655abe4d1a5331ede6e48bc060,npm,renderflow,frozen-staged-intake,not-enrolled,renderflow-staged-migration,#113; #79; staging-file-disposition
+.staging/tools/emoji-precache/package.json,5dbd8179b54a3e4add82f3cf1c8125c8eabec243,npm,renderflow,frozen-staged-intake,not-enrolled,renderflow-staged-migration,#113; #79; staging-file-disposition
+Cargo.toml,14b6bca841947a5f676a5bcc74110183d5fb34bb,crates.io,empathy,invalid-root-composition,deferred-invalid-root,empathy-cargo-composition,#113; #109
+beacon/Cargo.toml,966886d29ed3e324f56b65eadf5b5c513f13f986,crates.io,beacon,optional-specialist-scenario,owner-managed-unverified,beacon-owner-refresh,#113; #79
+egolint/.config/lint/python/pyproject.toml,a79928aa75654f6bcb5c860d1496b541c327cdfa,PyPI,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/Cargo.lock,3169c07f832a28168c0b7b7407b735e53c103628,crates.io,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/Cargo.toml,14b6bca841947a5f676a5bcc74110183d5fb34bb,crates.io,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/package.json,4360291281ff6405e607213b0baa6145bde9d164,npm,egolint,active-embedded-tooling,owner-managed-unverified,egolint-owner-refresh,#113; #110; #79
+egolint/pnpm-lock.yaml,ebfe6299246ae81fb0d69598607ead735fea7345,npm,egolint,active-embedded-tooling,owner-managed-unverified,egolint-owner-refresh,#113; #110; #79
+egolint/pyproject.toml,6f13f1dfe6ee955149fed746f001b0fc8c9542d4,PyPI,egolint,optional-embedded-tooling,owner-managed-unverified,egolint-owner-refresh,#113; #110; #79
+egolint/tests/fixtures/clippy/Cargo.toml,c5c41c80d40c8128bce34c22ccb669c504d11454,crates.io,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/dart-analyzer/pubspec.lock,e8763b315a9b13b54a22a5d5b2e1cba3b8f1810c,Pub,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/dart-analyzer/pubspec.yaml,500ac7350e1953af1b2f5f61e9079d1016d01a36,Pub,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/deptry/pyproject.toml,990175070a2df7d4be818e4a87e49201cd407891,PyPI,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/govulncheck/go.mod,25e102b7ed6d497bfa5abe08da9c4b642c18eddb,Go,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/knip/package.json,0666c01b61c7f8cd11e2ed934f008be5372741da,npm,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/negative/deptry/pyproject.toml,de0e27bf685629e9bebc3447c9af83880793f7ab,PyPI,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/negative/knip/package.json,9d8c08c608c8cb5c96c4be1406804b1b8b96759b,npm,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/negative/v8r/package.json,16c1c015d0599537d967973abc4c2ef332b00c8b,npm,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/npm-package-json-lint/package.json,3ce59c5b316d414388aa612c3e660e9be18ea210,npm,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/tests/fixtures/v8r/package.json,2fe93b9c778004da71c02323cd5e260159ed4f1e,npm,egolint,specialist-policy-or-fixture,owner-managed-unverified,egolint-fixture-review,#113; #110; #79
+egolint/uv.lock,ee0eac006ab0a05e9a688a68385dcec1ae7d7073,PyPI,egolint,optional-embedded-tooling,owner-managed-unverified,egolint-owner-refresh,#113; #110; #79
+holon/packs/react-vite/template/apps/docs/package.json,5d614c7dafbbffe4fc4b9ce4d92d132ebff6bdf1,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/apps/playground/package.json,12cdba22d45071774cfce54c43c04b54f759ffed,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/apps/storefront/package.json,6e58912bd27f9bcddad307881c6d1ed77e98a922,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/apps/web/package.json,d63dcc57d88791cd860c7d6b2b41d16ee4de74eb,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/package.json,a320cea726007886f98952b679717586037863f2,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/api-client/package.json,1ecbb20e7d413f0c03f093c366e5ee130d734cf8,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/auth/package.json,9c30faff92a5cc0d7a0f178a49dbdecf4df98ffe,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/commerce/package.json,5d8420940b06eed8ed7f39d670953ef91571a12a,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/config/package.json,3a519c2baca1e4fe970ffdd62bf612dce3569f09,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/content/package.json,3cb19e11dec9c9bf42cb1c6907808e203df4926b,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/design-tokens/package.json,d2e98504ccbf5dee61b1d32506b9b125601a0ee9,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/i18n/package.json,ce07223a86b66eb2bedc9badbc0a0594d5a5c2de,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/icons/package.json,33f48d4617eb64757dbf503cdffb3cbe6589af56,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/schemas/package.json,c292b097afb47658546146512f372044d501e3c2,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/store-config/package.json,c1381d50bf8acc4db0c305f8ff4837c4e98c66a7,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/store-ui/package.json,5b97b8b3bda9f71f56163fc1c3cfb9b757d3b129,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/tailwind-config/package.json,92f7482ee1003dd6666d433d0b359691385e976f,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/themes/package.json,28fb92f78f93b6bed10fb0557c978dcbbe657888,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/ui/package.json,06d86314a0e89a23e7f96902cec6ba6efb82447f,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/utilities/package.json,0958a00b2d9d36c5ceb0f0a29dee40652a2ddf1c,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/visualizations/package.json,1f8e9676151aaca0e3e2673221da62015fb4df0c,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+holon/packs/react-vite/template/packages/vite-config/package.json,33f921a662d823aac3dcc581e13c5c5d34b82c7f,npm,holon,optional-template-scenario,owner-managed-unverified,holon-template-refresh,#113; #79
+package.json,6f154627ef182d5203f851b8d7e6d8db38a4a406,npm,empathy,active-root-tooling,npm-root-added-unqualified,empathy-root-remediation,#113
+pnpm-lock.yaml,386be62b4122f76b26422d5ff1e4c69e533c82ec,npm,empathy,active-root-tooling,npm-root-added-unqualified,empathy-root-remediation,#113
+pyproject.toml,27eaf11e3d945aaf300afc0a1fe087157c4a1e88,PyPI,empathy,dependency-free-root-metadata,pip-root-retained,empathy-python-baseline,#113

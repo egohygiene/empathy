@@ -1,0 +1,105 @@
+{
+  "schema": "empathy.dependency-review-evidence/v1",
+  "inspection_source": "058d92a0f8c970f98a58d446408716936e593c99",
+  "scan_source": "18d22e113e87c306b76d24873841249d41358c77",
+  "scan_generated_at": "2026-11-11T11:34:05Z",
+  "provider_run": "https://github.com/egohygiene/empathy/actions/runs/43012917456",
+  "review_kind": "static-source-inspection-only",
+  "new_scanner_execution": false,
+  "exception_renewal": false,
+  "manifest_inventory_rows": 54,
+  "blocking_ledger_rows": 313,
+  "blocking_grain": "source path x package/version x native advisory group with max_severity >= 7",
+  "identity_files": {
+    ".reports/osv/latest.json": {
+      "inspection_git_blob": "04089e26e06b481b299832534822d3d63ca80fbb",
+      "sha256": "097c091d05c6d0514558a1fea79633e8aee13066d418c373462de827fe4de4f3"
+    },
+    ".reports/osv/summary.json": {
+      "inspection_git_blob": "c64db5c009247b04f55e2bc1d679c3f85a010d6d",
+      "sha256": "6846c4f768d74a19deae9877b1731cfff7231c3fe0d5a78d82a3e25676fba2ad"
+    },
+    ".reports/osv/latest.sarif": {
+      "inspection_git_blob": "5fa1010ef8d527af3ae2014c4c07c718fc2912b8",
+      "sha256": "28395e8e6d1f19eef38881030e65fc9c0c82fb9d1b7c71fe5f229f7e2384b047"
+    },
+    "osv-scanner.toml": {
+      "inspection_git_blob": "bb84e0d08f8f35980d5d4d0f151cdd69b6633e0b",
+      "sha256": "66514b4a1f2954745543995bc6180bdfad3f23fe4614d629086519f4ae4e314d"
+    },
+    ".audits/data/2026-08-15-staging-file-disposition.csv": {
+      "inspection_git_blob": "03aaab30d752d2ebfe57cc41ce42bf6d6a5acc52",
+      "sha256": "839477a6de4a5163b15aa00a142d15ee7b644885832d24565c4023dfc68ca6b1"
+    }
+  },
+  "scanned_inputs": [
+    {
+      "path": ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
+      "scan_source_git_blob": "63b52471c676daa7fd73eecd1041a274d5b9a8c3",
+      "inspection_git_blob": "63b52471c676daa7fd73eecd1041a274d5b9a8c3",
+      "blocking_groups": {}
+    },
+    {
+      "path": ".staging/devenvironment/containers/services/api/poetry.lock",
+      "scan_source_git_blob": "3ce031c515313bcd45e2b41a7d4bd89db2a50d28",
+      "inspection_git_blob": "3ce031c515313bcd45e2b41a7d4bd89db2a50d28",
+      "blocking_groups": {
+        "critical": 5,
+        "high": 42
+      }
+    },
+    {
+      "path": ".staging/tools/emoji-precache/package-lock.json",
+      "scan_source_git_blob": "59d9ba6f5a0389655abe4d1a5331ede6e48bc060",
+      "inspection_git_blob": "59d9ba6f5a0389655abe4d1a5331ede6e48bc060",
+      "blocking_groups": {
+        "high": 8
+      }
+    },
+    {
+      "path": "egolint/Cargo.lock",
+      "scan_source_git_blob": "3169c07f832a28168c0b7b7407b735e53c103628",
+      "inspection_git_blob": "3169c07f832a28168c0b7b7407b735e53c103628",
+      "blocking_groups": {}
+    },
+    {
+      "path": "egolint/pnpm-lock.yaml",
+      "scan_source_git_blob": "ebfe6299246ae81fb0d69598607ead735fea7345",
+      "inspection_git_blob": "ebfe6299246ae81fb0d69598607ead735fea7345",
+      "blocking_groups": {
+        "high": 72,
+        "critical": 11
+      }
+    },
+    {
+      "path": "egolint/uv.lock",
+      "scan_source_git_blob": "ee0eac006ab0a05e9a688a68385dcec1ae7d7073",
+      "inspection_git_blob": "ee0eac006ab0a05e9a688a68385dcec1ae7d7073",
+      "blocking_groups": {
+        "high": 56,
+        "critical": 7
+      }
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "scan_source_git_blob": "386be62b4122f76b26422d5ff1e4c69e533c82ec",
+      "inspection_git_blob": "386be62b4122f76b26422d5ff1e4c69e533c82ec",
+      "blocking_groups": {
+        "high": 101,
+        "critical": 11
+      }
+    }
+  ],
+  "projection_definition": {
+    "blockers": "Native results/packages/groups, max_severity >= 7; native_json_pointer identifies each exact input group. Fixed candidates are the union of matching package affected/ranges/events.fixed across group member records; publication and version-branch applicability are unverified.",
+    "manifest_inventory": "Tracked package.json, pnpm-lock.yaml, package-lock.json, pyproject.toml, uv.lock, poetry.lock, Cargo.toml, Cargo.lock, go.mod, go.sum, pubspec.yaml, pubspec.lock and .csproj/.fsproj/.vbproj inputs at inspection_source; submodule contents excluded.",
+    "ownership": "ADR-0001 for specialist and baseline roots; exact canonical_owner from preserved staging-file-disposition CSV for .staging inputs.",
+    "authority": "These are dated review projections. Native OSV receipts and canonical ownership/staging records remain authoritative; no suppression or package fix is created by this evidence."
+  },
+  "updater_reference_review": {
+    "observed_on": "2026-11-12",
+    "ecosystems": "https://docs.github.com/en/code-security/reference/supply-chain-security/supported-ecosystems-and-repositories",
+    "options": "https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference",
+    "support_observation": "GitHub documentation lists pnpm 11 under the npm ecosystem and supports group dependency-type, update-types minor/patch, and applies-to security-updates. Hosted behavior for this exact root remains unqualified."
+  }
+}
