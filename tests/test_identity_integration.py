@@ -1,6 +1,5 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
-# ruff: noqa: S603, S607
 
 """Evidence for Empathy's immutable, calm Identity v1 consumer."""
 
@@ -9,7 +8,8 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
-import subprocess
+import subprocess  # nosec B404 - fixed local owner validators; no shell or supplied command.
+import sys
 import unittest
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
@@ -42,17 +42,16 @@ class IdentityIntegrationTests(unittest.TestCase):
 
     def test_only_reviewed_product_differences_override_shared_defaults(self) -> None:
         layers = self.project["layers"]
-        self.assertEqual([layer["kind"] for layer in layers], ["organization-defaults", "product-override"])
+        self.assertEqual(
+            [layer["kind"] for layer in layers],
+            ["organization-defaults", "product-override"],
+        )
         self.assertEqual(layers[0]["sha256"], ORGANIZATION_DEFAULT_SHA256)
         self.assertEqual(
-            hashlib.sha256(
-                (REPOSITORY_ROOT / layers[0]["tokens"]).read_bytes()
-            ).hexdigest(),
+            hashlib.sha256((REPOSITORY_ROOT / layers[0]["tokens"]).read_bytes()).hexdigest(),
             ORGANIZATION_DEFAULT_SHA256,
         )
-        overrides = json.loads(
-            (REPOSITORY_ROOT / layers[1]["tokens"]).read_text(encoding="utf-8")
-        )
+        overrides = json.loads((REPOSITORY_ROOT / layers[1]["tokens"]).read_text(encoding="utf-8"))
         primary = overrides["color"]["brand"]["primary"]
         self.assertEqual(primary["$value"]["components"], [0.431, 0.369, 0.745])
         self.assertEqual(
@@ -78,19 +77,39 @@ class IdentityIntegrationTests(unittest.TestCase):
         "Identity package has not been generated",
     )
     def test_generated_package_snapshot_preserves_the_reviewed_calm_violet(self) -> None:
-        css = (
-            REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css"
-        ).read_text(encoding="utf-8")
+        css = (REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css").read_text(
+            encoding="utf-8",
+        )
         self.assertIn("--identity-color-brand-primary: #6e5ebe;", css)
 
-    @unittest.skipUnless((IDENTITY_ROOT / "Cargo.toml").is_file(), "Identity submodule is not initialized")
+    @unittest.skipUnless(
+        (IDENTITY_ROOT / "Cargo.toml").is_file(),
+        "Identity submodule is not initialized",
+    )
     def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-        subprocess.run(
-            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
+        # The selected immutable owner supplies this validator, using the active interpreter.
+        subprocess.run(  # noqa: S603  # nosec B603
+            [
+                sys.executable,
+                str(IDENTITY_ROOT / "scripts/validate_identity.py"),
+                "--repository-root",
+                str(REPOSITORY_ROOT),
+            ],
             check=True,
         )
-        subprocess.run(
-            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
+        # Cargo is an explicit equipped-environment prerequisite; all arguments are fixed.
+        subprocess.run(  # noqa: S603, S607  # nosec B603,B607
+            [
+                "cargo",
+                "run",
+                "--quiet",
+                "--manifest-path",
+                str(IDENTITY_ROOT / "Cargo.toml"),
+                "--",
+                "v1-verify",
+                "--repository-root",
+                str(REPOSITORY_ROOT),
+            ],
             check=True,
         )
 

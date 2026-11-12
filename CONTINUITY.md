@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-12T11:24:34Z'
+  updated_at: '2026-11-12T11:27:43Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -53,41 +53,37 @@ work:
   next:
     kind: action
     id: integrate-open-source-prs
-    description: Integrate PR121 approved Actions at its reconciled head, then130,131,129; preserve merged120/125
-      and all source/qualification boundaries.
+    description: Integrate PR130 independent baseline command evidence at its reconciled head, then131
+      and129; preserve merged120/125/121 and current approved Actions.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/pull/121
     - https://github.com/egohygiene/empathy/pull/130
     - https://github.com/egohygiene/empathy/pull/131
     - https://github.com/egohygiene/empathy/pull/129
     depends_on: []
 state:
   base:
-    revision: 8a2d32eb903a8f76ec4ec8d68e1682fc54885254
+    revision: 946364370e9c39637d6d0de49c297c3f81776590
     ref: refs/heads/main
-    verified_at: '2026-11-12T11:24:34Z'
+    verified_at: '2026-11-12T11:27:43Z'
   candidate:
-    branch: dependabot/github_actions/github-actions-b0dcb82de8
+    branch: codex/empathy-109-baseline-validation
     revision: null
     pull_request:
       provider: github
-      id: egohygiene/empathy#121
-      url: https://github.com/egohygiene/empathy/pull/121
+      id: egohygiene/empathy#130
+      url: https://github.com/egohygiene/empathy/pull/130
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-12T11:24:34Z'
-    default_branch_revision: 8a2d32eb903a8f76ec4ec8d68e1682fc54885254
+    observed_at: '2026-11-12T11:27:43Z'
+    default_branch_revision: 946364370e9c39637d6d0de49c297c3f81776590
     issue_state: open
-    pull_request_state: open
-    notes: PR120 merged520d3f608030beca1b291265d1cbe0ddf57a416e; PR125 merged8a2d32eb903a8f76ec4ec8d68e1682fc54885254.
-      Candidate121 changes approved current Actions refs/comments only; source selection is not runtime/lint
-      or publication acceptance.
+    pull_request_state: draft
+    notes: PR120 merged520d3f60;125 merged8a2d32eb;121 merged946364370e9c39637d6d0de49c297c3f81776590.
+      Candidate130 preserves current1d88384 Harden Runner and existing automation prerequisites while
+      adding independent suite command evidence. No suite was executed.
   parallel_changes:
-  - provider: github
-    id: egohygiene/empathy#130
-    url: https://github.com/egohygiene/empathy/pull/130
   - provider: github
     id: egohygiene/empathy#131
     url: https://github.com/egohygiene/empathy/pull/131
@@ -96,16 +92,16 @@ state:
     url: https://github.com/egohygiene/empathy/pull/129
 review:
   status: partial
-  reviewed_at: '2026-11-12T11:24:34Z'
+  reviewed_at: '2026-11-12T11:27:43Z'
   reviewed_by: Codex
   evidence:
   - command: Independent source peer, workflow/Task unique YAML and embedded Bash/Python syntax, current/frozen
       pins, immutable input and existing guard/owner/source comparisons
     outcome: limited
-    observed_at: '2026-11-12T11:24:34Z'
-    notes: Merged120/125 and reconciled121 source reviewed. Current action refs select approved immutable
-      Dependabot targets; every non-uses workflow field, typed feed binding and fixed recovery remains
-      unchanged. Version comments are reconciled, not qualification evidence.
+    observed_at: '2026-11-12T11:27:43Z'
+    notes: Merged120/125/121 and reconciled130 source reviewed. Baseline adapter retains separate command
+      outcomes/logs, always unqualified; original action bump/prerequisites and frozen source remain.
+      Authored regressions are unexecuted.
   - command: TASK_BIN selected preinstalled Task3.54.0; python3 tools/task_catalog.py --write --repository-root
       .
     outcome: passed
@@ -153,11 +149,11 @@ Integrate all six user-authorized Empathy PRs in order120→125→121→130→13
 
 ## State snapshot
 
-PR120 merged520d3f608030beca1b291265d1cbe0ddf57a416e and125 merged8a2d32eb903a8f76ec4ec8d68e1682fc54885254. Candidate121 includes that actual main and reconciles version comments; its containing commit is not self-referenced. Three later source candidates remain.
+PR120 merged520d3f608030beca1b291265d1cbe0ddf57a416e,125 merged8a2d32eb903a8f76ec4ec8d68e1682fc54885254 and121 merged946364370e9c39637d6d0de49c297c3f81776590. Candidate130 includes that actual main; two later source candidates remain.
 
 ## Completed and material changes
 
-PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. Merged125 selects Relay5d27be5ce1599df883e31f14cd894eb18622c18c for current typed review/source/build/provenance paths, reusing one actual capture clock and repository models. Its empty selection plan leaves reports unavailable. Relay181 remains open; frozen b71b/254185 recovery and source receipts remain unchanged. Candidate121 selects Harden Runner2.22.4, CodeQL4.39.3, MegaLinter10.2.0 and create-pull-request8.1.2 at exact approved SHAs, with matching version comments and no workflow-gate changes.
+PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. Merged125 selects Relay5d27be5ce1599df883e31f14cd894eb18622c18c for current typed review/source/build/provenance paths, reusing one actual capture clock and repository models. Its empty selection plan leaves reports unavailable. Relay181 remains open; frozen b71b/254185 recovery and source receipts remain unchanged. Merged121 selects Harden Runner2.22.4, CodeQL4.39.3, MegaLinter10.2.0 and create-pull-request8.1.2 at exact approved SHAs, with matching version comments and no workflow-gate changes. Candidate130 adds separate fixed unittest processes/logs and a failing aggregate for failed/unavailable commands; acceptance stays unqualified. Typed Task metadata and stale toolchain fixtures are repaired without running them.
 
 ## Validation and review evidence
 
@@ -169,7 +165,7 @@ Current suites, linters, builds, native/helper consumer qualification, CI, actua
 
 ## Next dependency-ready work
 
-Merge121 at its exact reviewed head, then reconcile independently based130/131/129 source slices without reverting current action pins. Recheck live heads before each standard merge; do not bypass rules.
+Merge130 at its exact reviewed head, then reconcile131 and129 without reverting current action pins or validation prerequisites. Recheck live heads before each standard merge; do not bypass rules.
 
 ## Parallel changes and reconciliation
 
