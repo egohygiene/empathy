@@ -7,23 +7,23 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-09T18:05:21Z'
+  updated_at: '2026-11-12T05:43:22Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  purpose: Make retained dependency ownership and updater coverage inspectable without claiming fresh remediation.
   includes:
-  - Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2,
-    merged through Relay PR 176.
-  - Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases,
-    upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate
-    native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their
-    existing no-capture path.
-  - Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures
-    and bounded operational receipts stay outside the public site. Existing publication, failure and rollback
-    guards are preserved.
+  - Root npm Dependabot coverage now groups runtime and tooling minor/patch changes separately and retains
+    a distinct security-update group. Existing Actions/pip entries and open Actions PR121 are untouched; no
+    dependency or lock version is changed.
+  - A 54-input source ownership inventory distinguishes active Empathy roots, owner-managed copies, inert staging,
+    fixtures and templates. A 313-row blocker ledger binds exact native JSON pointers/group identities to the
+    existing dated scanner receipt; advisory fixed events remain registry-unverified.
+  - The evidence checkpoint compares exact scanned source/policy blobs without refreshing their clocks. The
+    nine configured exception IDs now have explicit review ownership and reopening conditions; no suppression
+    is added, renewed or represented as current verified safety.
   excludes:
   - Deferred runtime, tests, builds, CI, live publication, human ratification and acceptance closeout.
   precedence:
@@ -37,74 +37,90 @@ scope:
   - ARCHITECTURE.md
   - docs/ecosystem/CONTEXT.md
   - docs/decisions/ADR-0001-foundation-ownership.md
-  - .github/workflows/mindgarden-pages.yml
-  - .github/workflows/repository-intelligence.yml
-  - docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md
-  - https://github.com/egohygiene/pace/issues/13
+  - .github/dependabot.yml
+  - .github/security/dependabot-dismissals.md
+  - docs/security/dependency-coverage.md
+  - docs/security/data/dependency-blockers-2026-11-11.csv
+  - docs/security/data/dependency-manifests-2026-11-12.csv
+  - docs/security/data/dependency-evidence-2026-11-11.json
+  - https://github.com/egohygiene/empathy/issues/113
 work:
-  objective: Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline.
+  objective: Make retained dependency ownership and updater coverage inspectable without claiming fresh remediation.
   success_conditions:
-  - Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and
-    observation clock.
-  - Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen
-    recovery paths preserve their prior selection.
-  - Consumer publication authority, product composition, historical recovery bytes and existing job gates remain
-    intact.
+  - Retained graph ownership, existing source-bound blockers and updater gaps have concrete dispositions.
+  - Root updater configuration adds supported bounded intake without forking specialist or staged source.
+  - Historical scanner facts and unverified exception/registry/hosted behavior remain explicit.
   active_issue:
     provider: github
-    id: egohygiene/pace#13
-    url: https://github.com/egohygiene/pace/issues/13
+    id: egohygiene/empathy#113
+    url: https://github.com/egohygiene/empathy/issues/113
   next:
     kind: action
-    id: qualify-current-public-source-adoption
-    description: During the deferred organization verification pass, retain real provider/artifact/native and
-      consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+    id: review-dependency-coverage-then-remediate-with-owners
+    description: Review this source/config checkpoint with Empathy109/112; later review owner remedies and
+      all nine exception rationales, qualify hosted updater behavior and retain fresh canonical scanner evidence
+      before113 acceptance.
     readiness: ready
     references:
-    - https://github.com/egohygiene/pace/issues/13
+    - https://github.com/egohygiene/empathy/issues/113
     depends_on: []
 state:
   base:
-    revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    revision: 058d92a0f8c970f98a58d446408716936e593c99
     ref: refs/heads/main
-    verified_at: '2026-11-09T18:05:21Z'
+    verified_at: '2026-11-12T05:43:22Z'
   candidate:
-    branch: codex/intelligence-public-source-feeds
+    branch: codex/empathy-113-dependency-coverage
     revision: null
     pull_request: null
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-09T18:05:21Z'
-    default_branch_revision: 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7
+    observed_at: '2026-11-12T05:43:22Z'
+    default_branch_revision: 058d92a0f8c970f98a58d446408716936e593c99
     issue_state: open
     pull_request_state: not-applicable
-    notes: Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production
-      integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture,
-      native execution, upload or publication is claimed.
-  parallel_changes: []
+    notes: Fresh main058d92a0f8c970f98a58d446408716936e593c99 remains the base. Empathy113/118 are open. Functional
+      sourcea90ee51e33ec8bf5c2de321bd8f29fc05271b258 received independent source peer and root review. Native/normalized
+      reports remain dated2026-11-11T11:34:05Z at source18d22e113e87c306b76d24873841249d41358c77; no scanner
+      or update ran.
+  parallel_changes:
+  - provider: github
+    id: egohygiene/empathy#109
+    url: https://github.com/egohygiene/empathy/issues/109
+  - provider: github
+    id: egohygiene/empathy#112
+    url: https://github.com/egohygiene/empathy/issues/112
+  - provider: github
+    id: egohygiene/empathy#121
+    url: https://github.com/egohygiene/empathy/pull/121
+  - provider: github
+    id: egohygiene/empathy#125
+    url: https://github.com/egohygiene/empathy/pull/125
 review:
   status: partial
-  reviewed_at: '2026-11-09T18:05:21Z'
+  reviewed_at: '2026-11-12T05:43:22Z'
   reviewed_by: Codex
   evidence:
-  - command: Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and
-      edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace
+  - command: Independent static source peer and root review; unique YAML/JSON/CSV syntax, exact native ledger
+      group/identity/hash reconciliation, unchanged Actions/pip/suppression and source lock comparisons, documentation
+      reference review, continuity schema/size/links and whitespace
     outcome: limited
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-12T05:43:22Z'
     notes: Static source and metadata inspection only; no application execution.
   - command: Native/runtime execution, tests, builds, CI investigation, browser/provider/consumer/publication
       qualification
     outcome: not-run
-    observed_at: '2026-11-09T18:05:21Z'
+    observed_at: '2026-11-12T05:43:22Z'
     notes: Deferred at maintainer request; source merges do not establish acceptance.
   environment_limitations:
-  - Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and
-    recovery qualification were not run.
-  - Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime
-    budgets remain explicit acceptance inputs; no success or approval is invented.
-  - The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds
-    retain their owners.
+  - User deferred tests, linters, builds, CI, installs, audits, owner/helper/native execution and hosted updater
+    qualification.
+  - The313 rows represent grouped high/critical source/package/advisory occurrences at the existing receipt,
+    not unique vulnerabilities or demonstrated exploitation. No fresh advisory or registry availability was
+    verified.
+  - Actual remediation, source-owner migration, nine exception reviews, skipped scan coverage and fresh scanner/consumer
+    evidence remain open under their existing owning issues.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -131,35 +147,35 @@ Read scoped instructions, canonical sources above and this checkpoint. Verify mu
 
 ## Current objective and success conditions
 
-Adopt real public Repository Intelligence source feeds in empathy's existing Pages pipeline. Current captures use the exact reviewed producer/builder/profile pin and actual artifact ID/digest and observation clock. Declared dependencies enable only when fresh current capture evidence is present; PR, older event and frozen recovery paths preserve their prior selection. Consumer publication authority, product composition, historical recovery bytes and existing job gates remain intact.
+Make retained dependency ownership and updater coverage inspectable without claiming fresh remediation. Retained graph ownership, existing source-bound blockers and updater gaps have concrete dispositions. Root updater configuration adds supported bounded intake without forking specialist or staged source. Historical scanner facts and unverified exception/registry/hosted behavior remain explicit.
 
 ## State snapshot
 
-Candidate `codex/intelligence-public-source-feeds` is based on observed main `322f8d0a6657ea8584c80fb688aeaf6ac2184ca7`. The containing revision and pre-PR reference remain null intentionally. Observed main 322f8d0a6657ea8584c80fb688aeaf6ac2184ca7 remains the consumer base. Relay production integration is merged through PR 176 at main 50027a1; Pace 13 remains open. No actual provider capture, native execution, upload or publication is claimed.
+Candidate `codex/empathy-113-dependency-coverage` is based on observed main `058d92a0f8c970f98a58d446408716936e593c99`. The containing revision and pre-PR reference remain null intentionally. Fresh main058d92a0f8c970f98a58d446408716936e593c99 remains the base. Empathy113/118 are open. Functional sourcea90ee51e33ec8bf5c2de321bd8f29fc05271b258 received independent source peer and root review. Native/normalized reports remain dated2026-11-11T11:34:05Z at source18d22e113e87c306b76d24873841249d41358c77; no scanner or update ran.
 
 ## Completed and material changes
 
-Current producer, generator, profile and provenance references select reviewed Relay 981ddf4367c67fcd625e54321d95bab027f6c0f2, merged through Relay PR 176.
+Root npm Dependabot coverage now groups runtime and tooling minor/patch changes separately and retains a distinct security-update group. Existing Actions/pip entries and open Actions PR121 are untouched; no dependency or lock version is changed.
 
-Current Mindgarden push/manual builds and the standalone manual artifact path capture Work/Health/Releases, upload the closed same-run artifact and replay the same exact ID/digest and actual producer clock for duplicate native builds. Only captured paths select Dependencies; PR/workflow_run/frozen recovery remain on their existing no-capture path.
+A 54-input source ownership inventory distinguishes active Empathy roots, owner-managed copies, inert staging, fixtures and templates. A 313-row blocker ledger binds exact native JSON pointers/group identities to the existing dated scanner receipt; advisory fixed events remain registry-unverified.
 
-Only Actions/issues/PR/check read scopes are added for the existing token and artifact intake. Raw captures and bounded operational receipts stay outside the public site. Existing publication, failure and rollback guards are preserved.
+The evidence checkpoint compares exact scanned source/policy blobs without refreshing their clocks. The nine configured exception IDs now have explicit review ownership and reopening conditions; no suppression is added, renewed or represented as current verified safety.
 
 ## Validation and review evidence
 
-Independent static source and workflow-gate review, unique-key YAML, embedded Bash/Python and edited JavaScript syntax, current/frozen pin inspection, continuity schema/size/links and whitespace. Static inspection only. Native/runtime execution, tests, builds, CI investigation, browsers, provider reads and publication qualification were not run.
+Independent static source peer and root review; unique YAML/JSON/CSV syntax, exact native ledger group/identity/hash reconciliation, unchanged Actions/pip/suppression and source lock comparisons, documentation reference review, continuity schema/size/links and whitespace. Static source/metadata inspection and documentation reads only; evidence tables are authored from existing committed native reports. No scanner, package manager, install, helper/native/application, tests, lint, build, CI or hosted updater was executed.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Tests, builds, native/application execution, actual API/artifact transport, CI, browsers, publication and recovery qualification were not run. Producer-specific Health gaps, real Compare baselines, available release metadata and provider/runtime budgets remain explicit acceptance inputs; no success or approval is invented. The implementation remains a bounded current consumer adoption; existing source-policy and roadmap holds retain their owners.
+User deferred tests, linters, builds, CI, installs, audits, owner/helper/native execution and hosted updater qualification. The313 rows represent grouped high/critical source/package/advisory occurrences at the existing receipt, not unique vulnerabilities or demonstrated exploitation. No fresh advisory or registry availability was verified. Actual remediation, source-owner migration, nine exception reviews, skipped scan coverage and fresh scanner/consumer evidence remain open under their existing owning issues.
 
 ## Next dependency-ready work
 
-During the deferred organization verification pass, retain real provider/artifact/native and consumer publication/recovery evidence at the selected exact pin before closing adoption acceptance.
+Review this source/config checkpoint with Empathy109/112; later review owner remedies and all nine exception rationales, qualify hosted updater behavior and retain fresh canonical scanner evidence before113 acceptance.
 
 ## Parallel changes and reconciliation
 
-ADR not required: routine adoption of the already merged bounded source/capture/dependency contracts in the existing consumer-owned publisher. All immutable recovery selections and unrelated canonical content are preserved; source merge is distinct from accepted publication.
+Reference existing Empathy ADR0001 specialist ownership; root updater/owned evidence intake is routine and does not transfer implementation authority. Preserve immutable owner copies and unrelated current main authoring changes; parallel109/112/RI125/Mindgarden120/Actions121 remain separate. Draft for maintainer review; no self-merge.
 
 ## Privacy and redaction
 
