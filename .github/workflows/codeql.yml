@@ -39,8 +39,8 @@ jobs:
 
     steps:
       - name: Harden Runner
-        # step-security/harden-runner v2.20.0; observe egress before enforcing.
-        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25
+        # step-security/harden-runner v2.22.4; observe egress before enforcing.
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a
         with:
           egress-policy: audit
 
@@ -51,13 +51,13 @@ jobs:
           persist-credentials: false
 
       - name: Initialize CodeQL
-        # github/codeql-action v4.37.6
-        uses: github/codeql-action/init@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee
+        # github/codeql-action v4.39.3
+        uses: github/codeql-action/init@33d7b85da1a04171e211befe2c739303b9a4c066
         with:
           languages: "${{ matrix.language }}"
 
       - name: Analyze repository
-        # github/codeql-action v4.37.6
-        uses: github/codeql-action/analyze@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee
+        # github/codeql-action v4.39.3
+        uses: github/codeql-action/analyze@33d7b85da1a04171e211befe2c739303b9a4c066
         with:
           category: "/language:${{ matrix.language }}"
