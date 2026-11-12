@@ -20,7 +20,6 @@ quality layers:
 - a frozen, deterministic [staging migration contract](docs/migration/STAGING.md)
   with file-level ownership, JSON projections, and evidence-backed deletion
   gates;
-
 - immutable external action references;
 - least-privilege workflow permissions and bounded job runtimes;
 - repository-local adapters plus immutable Relay actions for reusable
@@ -52,8 +51,7 @@ quality layers:
   Tailwind CSS v3 into one comprehensive pnpm workspace.
 
 Imported workflows that still depend on a product, toolchain, secret set, or
-release strategy are preserved in [`.staging/github/`](.staging/github/README.md)
-and are intentionally inert.
+release strategy are preserved as inert intake under [`.staging/`](.staging/README.md).
 
 ## Repository contract
 
@@ -113,3 +111,6 @@ Empathy is converging from an integration workspace into the versioned universal
 baseline. Staged and incubated material is preserved for migration, must not be
 treated as baseline content, and will graduate through Sanctuary or its canonical
 owner before the baseline is declared stable.
+
+Start with the [current-work guide](docs/current-state-backlog.md) for the live
+GitHub roadmap, dated audit, and scoped consumer checks.

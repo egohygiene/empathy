@@ -24,6 +24,10 @@ supersedes: []
 
 # Empathy Roadmap
 
+Use the [live issue roadmap](https://github.com/egohygiene/empathy/issues/118)
+for current sequencing, acceptance, and blockers. The [current-work guide](docs/current-state-backlog.md)
+links the dated audit and consumer entry points.
+
 <!-- BEGIN ROADMAP EXECUTION SNAPSHOT -->
 <!-- roadmap-manifest
 schema: hygiene.roadmap/v1alpha1
@@ -35,7 +39,9 @@ updated: 2026-08-24
 -->
 ## 2026-08-24 execution snapshot
 
-> This evidence-reconciled snapshot is the issue-generation and visual-roadmap handoff. The longer-horizon strategy below remains canonical context; generated HTML, JSON, progress, issue plans, and commit lists are projections.
+> This dated execution snapshot preserves the visual-roadmap handoff and its
+> inputs. Its observations are historical. The longer-horizon strategy below
+> remains architectural context.
 
 **Lifecycle:** converging integration monorepo  
 **Current gate:** Restore the security baseline: PR #72 is red and the audit observed 57 high-or-greater OSV findings plus OpenSSF failures.  

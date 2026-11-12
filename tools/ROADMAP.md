@@ -1,4 +1,8 @@
-# Sanctuary Tools Roadmap
+# Historical Sanctuary tools proposal
+
+This document preserves the original Sanctuary tools proposal. For the current
+Empathy tools, see the [current-work guide](../docs/current-state-backlog.md)
+and [repository task catalog](../TASKS.md).
 
 ## Purpose
 

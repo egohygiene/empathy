@@ -97,7 +97,7 @@ manager, or a promise that one baseline fits every project unchanged.
 
 - Governing specification: `architecture-purpose` version `2.0.0`.
 - Primary repository evidence: [`README.md`](README.md), [`pyproject.toml`](pyproject.toml), and the
-  active/staged automation split documented in [`.staging/github/README.md`](.staging/github/README.md).
+  active/staged automation split documented in [`docs/migration/STAGING.md`](docs/migration/STAGING.md).
 - The statement identifies beneficiaries and enduring value without depending on a specific tool,
   framework, or current roadmap item.
 - Scope distinguishes integration responsibility from capability ownership.

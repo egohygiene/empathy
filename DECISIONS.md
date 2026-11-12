@@ -184,7 +184,7 @@ GitHub discovery paths until explicitly adopted or retired.
 
 #### Rationale and Evidence
 
-[`.staging/github/README.md`](.staging/github/README.md) defines the inert classification boundary.
+[`docs/migration/STAGING.md`](docs/migration/STAGING.md) defines the inert classification boundary.
 Active workflows live only under `.github/workflows/`.
 
 #### Alternatives, Trade-Offs, and Consequences

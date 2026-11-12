@@ -101,8 +101,10 @@ OpenSSF, SARIF, generated architecture, `.reports/`, and `.audits/`.
 Produces traceable profile projections or distributions and allows a consumer repository to adopt,
 configure, validate, upgrade, or remove them without losing local identity.
 
-This layer is architectural target state; Empathy does not yet provide a stable end-to-end
-distribution contract.
+The [foundation contract](docs/foundation/README.md) provides deterministic
+profile resolution and reviewable projections today. Stable end-to-end
+distribution and golden-consumer graduation remain tracked on the
+[live issue roadmap](https://github.com/egohygiene/empathy/issues/118).
 
 ## Boundary Rules
 
@@ -172,7 +174,7 @@ may inform intent, but generated output does not directly mutate governance.
 | Automation                   | Execution; Verification               | `.github/actions/`, `.github/workflows/`                            |
 | Intelligence Artifacts       | Source Contracts; Distribution target | `egolint/.agents/` provisional import                               |
 | Development Environment      | Composition; Execution                | `.devcontainer/`, `.vscode/`, workspace/manifests                   |
-| Visual Identity              | Source Contracts through Distribution | `identity/`, `.identity/`, future generated assets                  |
+| Visual Identity              | Source Contracts through Distribution | Pinned `identity/`, `.identity/`, generated package evidence                  |
 | Evidence and Observability   | Verification                          | `.reports/`, `.audits/`, workflow artifacts                         |
 | Staging and Classification   | Isolated from active layers           | `.staging/`                                                         |
 | Distribution and Conformance | Distribution target                   | Foundation catalog, golden manifest, and offline EgoLint projection |
@@ -186,9 +188,10 @@ may inform intent, but generated output does not directly mutate governance.
 - **Implemented:** The repository foundation catalog, selectable profile
   resolution, safe preserve overrides, and Empathy golden-consumer fixture are
   machine-readable and deterministic.
-- **Missing:** A released Holon materialization engine and the organization-wide
-  Pace convergence path.
-- **Unresolved:** Holon may own part of Layers 3 and 6 at organization scale.
+- **External ownership:** [Holon](https://github.com/egohygiene/holon) owns
+  materialization, and [Pace](https://github.com/egohygiene/pace) owns fleet
+  reconciliation. The live roadmap tracks Empathy-specific qualification and
+  rollout evidence.
 
 ## Open Questions
 
