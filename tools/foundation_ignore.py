@@ -109,10 +109,11 @@ def _scope_errors(scope: Any, overlays: dict[str, Any], profiles: list[str]) -> 
         not isinstance(local, str)
         or "\r" in local
         or "\0" in local
+        or re.search(r"[\ud800-\udfff]", local)
         or (local and not local.endswith("\n"))
     ):
         errors.append(
-            "gitignore local_additions must be empty or LF-terminated text without CR or NUL"
+            "gitignore local_additions must be empty or LF-terminated Unicode text without CR or NUL"
         )
     return errors
 

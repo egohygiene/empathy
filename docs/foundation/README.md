@@ -78,6 +78,12 @@ dependencies resolve transitively in stable order. Conflicts, unknown profiles,
 duplicate paths, generated artifacts without markers, unsafe paths, and
 attempts to preserve generated content fail closed.
 
+The dependency-free resolver checks the authoring shape and cross-field rules
+before rendering. Repository paths use forward slashes with no empty, dot, or
+parent components. Quotes, spaces, and Unicode are preserved in the EgoLint
+TOML projection. This hardening leaves the catalog and schema versions
+unchanged and preserves the checked-in golden projections.
+
 An override may only mark a selected non-generated artifact as `preserve`.
 That retains repository ownership without changing the universal path or
 weakening the existence requirement. Generated paths remain owned by their

@@ -159,16 +159,72 @@ class FoundationContractTests(unittest.TestCase):
                 self.assertIsNone(resolved)
                 self.assertIn("overrides[0].artifact must be a non-empty string", errors)
 
+    def test_catalog_rejects_invalid_nested_authoring_values(self) -> None:
+        cases: tuple[tuple[str, str, object, str], ...] = (
+            ("profiles", "requires", [{}], "profiles[0].requires"),
+            ("profiles", "id", [], "profiles[0].id"),
+            ("artifacts", "executable", "false", "artifacts[0].executable"),
+            ("artifacts", "kind", {}, "artifacts[0].kind"),
+            ("artifacts", "profiles", [[]], "artifacts[0].profiles"),
+            ("repository_owned_fields", "id", {}, "repository_owned_fields[0].id"),
+            ("generated_outputs", "checked_in", 1, "generated_outputs[0].checked_in"),
+            ("generated_outputs", "unexpected", True, "generated_outputs[0] has unsupported"),
+        )
+        for group, field, value, diagnostic in cases:
+            with self.subTest(group=group, field=field):
+                catalog = copy.deepcopy(self.catalog)
+                catalog[group][0][field] = value
+                errors = foundation.validate_catalog(catalog)
+                self.assertTrue(any(diagnostic in error for error in errors), errors)
+
+    def test_contract_paths_are_normalized_and_escaped(self) -> None:
+        catalog = copy.deepcopy(self.catalog)
+        artifact = next(item for item in catalog["artifacts"] if item["id"] == "agent-instructions")
+        for invalid in (
+            ".",
+            "..",
+            "/root",
+            "dir//file",
+            "dir/./file",
+            "dir/../file",
+            "dir/",
+            "C:file",
+        ):
+            with self.subTest(path=invalid):
+                artifact["path"] = invalid
+                errors = foundation.validate_catalog(catalog)
+                self.assertTrue(any(".path must be normalized" in error for error in errors))
+
+        artifact["path"] = 'dir/quoted "żółć 🌱".md'
+        artifact["markers"] = ['quote " and slash \\ and Unicode 🌱\x7f']
+        resolved, errors = foundation.resolve_manifest(catalog, self.manifest)
+        self.assertEqual([], errors)
+        assert resolved is not None
+        projection = tomllib.loads(foundation.render_egolint_contract(resolved, SOURCE_REVISION))
+        requirement = next(
+            item for item in projection["requirements"] if item["id"] == artifact["id"]
+        )
+        self.assertEqual(artifact["path"], requirement["path"])
+        self.assertEqual(artifact["markers"], requirement["markers"])
+
     def test_cli_rejects_bad_inputs_without_writing_even_when_optimized(self) -> None:
         invalid_override = copy.deepcopy(self.manifest)
         invalid_override["overrides"] = [{"artifact": [], "mode": "preserve"}]
         unselected = copy.deepcopy(self.manifest)
         del unselected["gitignore"]
+        missing_metadata = copy.deepcopy(self.catalog)
+        del missing_metadata["generated_outputs"][0]["owner"]
+        invalid_requires = copy.deepcopy(self.catalog)
+        invalid_requires["profiles"][0]["requires"] = [{}]
+        unsupported_manifest = {**self.manifest, "unsupported": True}
         cases: tuple[tuple[object, object, int, str], ...] = (
             ([], self.manifest, 2, "foundation catalog load failed:"),
             (self.catalog, [], 2, "foundation manifest load failed:"),
             (self.catalog, invalid_override, 1, "overrides[0].artifact must be a non-empty string"),
             (self.catalog, unselected, 1, "manifest must select gitignore scopes before planning"),
+            (missing_metadata, self.manifest, 1, "generated_outputs[0] is missing required fields"),
+            (invalid_requires, self.manifest, 1, "profiles[0].requires"),
+            (self.catalog, unsupported_manifest, 1, "manifest has unsupported fields"),
         )
         with tempfile.TemporaryDirectory() as temporary:
             directory = Path(temporary)
