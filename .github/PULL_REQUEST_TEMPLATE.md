@@ -1,93 +1,22 @@
-# 📦 Pull Request
+# Pull request
 
-## 🎯 Summary
+## Summary
 
-Provide a concise summary of the changes introduced in this pull request.
+Explain the reason for the change and the implementation reviewers should focus on.
 
-Include:
+## Related work
 
-- motivation
-- implementation approach
-- relevant architectural or design context
+<!-- Reference related issues with `Refs #<issue-number>` and name the parent
+roadmap or tracker on its own line when one exists. Issue acceptance is recorded
+explicitly after the required evidence is available. -->
 
----
+## Validation
 
-## 🔗 Related Issues
+Record the reviewed head SHA, relevant checks and outcomes, and evidence links.
+Distinguish failures, deferred checks, and checks that could not run. Include
+deployment or publication evidence only when the change calls for it.
 
-- Closes #
-- Related to #
+## Acceptance handoff
 
----
-
-## ✅ Checklist
-
-### General
-
-- [ ] This pull request is scoped to a single responsibility
-- [ ] The implementation has been self-reviewed
-- [ ] Code follows repository conventions and standards
-- [ ] No unrelated changes or accidental modifications are included
-
-### Quality
-
-- [ ] Linting passes successfully
-- [ ] Tests pass successfully
-- [ ] New tests were added where appropriate
-- [ ] Manual testing was performed where appropriate
-
-### Documentation
-
-- [ ] Documentation has been updated where necessary
-- [ ] README changes were included where applicable
-- [ ] Comments and developer-facing explanations were added where helpful
-
----
-
-## 🧪 Testing
-
-Describe how this change was validated.
-
-Examples:
-
-- local testing
-- CI validation
-- container testing
-- cross-platform verification
-- screenshots or logs
-
----
-
-## 🏗️ Architectural Notes
-
-Document any important implementation details, tradeoffs, or future considerations.
-
-Examples:
-
-- technical debt introduced intentionally
-- follow-up work
-- migration considerations
-- performance implications
-- security considerations
-
----
-
-## 📸 Screenshots / Logs (Optional)
-
-Add screenshots, terminal output, or logs if relevant.
-
----
-
-## 🗒️ Additional Notes
-
-Include any extra context, blockers, concerns, or reviewer guidance here.
-
----
-
-> 🛠️ Thank you for contributing to the project.
->
-> Please keep pull requests:
->
-> - focused
-> - intentional
-> - reproducible
-> - easy to review
+Record any remaining evidence, its owner, and the next action needed before
+acceptance.
