@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-12T11:27:43Z'
+  updated_at: '2026-11-12T11:33:56Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -18,8 +18,9 @@ scope:
   includes:
   - Optional standalone Mindgarden lane, typed Repository Intelligence feeds, approved Actions pins, independent
     baseline suite evidence, immutable staging receipts and dependency intake/coverage.
-  - Current source changes and deterministic Task-list-derived catalog refresh; frozen recovery, source
-    holds, generated ownership and existing publication gates remain preserved.
+  - Current source changes plus explicitly authorized deterministic Task-list catalog and inert staging
+    CSV generation; source bytes, receipts, frozen recovery, generated ownership and publication gates
+    remain preserved.
   excludes:
   - Current tests, linters, builds, suites, native consumer/helper qualification, CI investigation/dispatch,
     deployment and live verification.
@@ -53,61 +54,62 @@ work:
   next:
     kind: action
     id: integrate-open-source-prs
-    description: Integrate PR130 independent baseline command evidence at its reconciled head, then131
-      and129; preserve merged120/125/121 and current approved Actions.
+    description: Integrate PR131 immutable preimage/receipt source at its reviewed reconciled head, then129;
+      retain cumulative source changes and all qualification gaps.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/pull/130
     - https://github.com/egohygiene/empathy/pull/131
     - https://github.com/egohygiene/empathy/pull/129
     depends_on: []
 state:
   base:
-    revision: 946364370e9c39637d6d0de49c297c3f81776590
+    revision: bccf17cb38b64d99fd918fbf4aab202e4c1c8741
     ref: refs/heads/main
-    verified_at: '2026-11-12T11:27:43Z'
+    verified_at: '2026-11-12T11:33:56Z'
   candidate:
-    branch: codex/empathy-109-baseline-validation
+    branch: codex/empathy-112-staging-approvals
     revision: null
     pull_request:
       provider: github
-      id: egohygiene/empathy#130
-      url: https://github.com/egohygiene/empathy/pull/130
+      id: egohygiene/empathy#131
+      url: https://github.com/egohygiene/empathy/pull/131
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-12T11:27:43Z'
-    default_branch_revision: 946364370e9c39637d6d0de49c297c3f81776590
+    observed_at: '2026-11-12T11:33:56Z'
+    default_branch_revision: bccf17cb38b64d99fd918fbf4aab202e4c1c8741
     issue_state: open
     pull_request_state: draft
-    notes: PR120 merged520d3f60;125 merged8a2d32eb;121 merged946364370e9c39637d6d0de49c297c3f81776590.
-      Candidate130 preserves current1d88384 Harden Runner and existing automation prerequisites while
-      adding independent suite command evidence. No suite was executed.
+    notes: PR120 merged520d3f60;125 merged8a2d32eb;121 merged94636437;130 mergedbccf17cb38b64d99fd918fbf4aab202e4c1c8741.
+      Candidate131 combines an independent read-only staging job with the unchanged validation job and
+      current approved hardener. No gate/test/fixture or staged source was executed.
   parallel_changes:
-  - provider: github
-    id: egohygiene/empathy#131
-    url: https://github.com/egohygiene/empathy/pull/131
   - provider: github
     id: egohygiene/empathy#129
     url: https://github.com/egohygiene/empathy/pull/129
 review:
   status: partial
-  reviewed_at: '2026-11-12T11:27:43Z'
+  reviewed_at: '2026-11-12T11:33:56Z'
   reviewed_by: Codex
   evidence:
   - command: Independent source peer, workflow/Task unique YAML and embedded Bash/Python syntax, current/frozen
       pins, immutable input and existing guard/owner/source comparisons
     outcome: limited
-    observed_at: '2026-11-12T11:27:43Z'
-    notes: Merged120/125/121 and reconciled130 source reviewed. Baseline adapter retains separate command
-      outcomes/logs, always unqualified; original action bump/prerequisites and frozen source remain.
-      Authored regressions are unexecuted.
+    observed_at: '2026-11-12T11:33:56Z'
+    notes: Merged120/125/121/130 and reconciled131 source reviewed. Validation job stays byte-semantically
+      unchanged; staging job uses approved current hardener. The single generated CSV row delta removes
+      stale duplicate metadata without touching staged sources or approvals.
   - command: TASK_BIN selected preinstalled Task3.54.0; python3 tools/task_catalog.py --write --repository-root
       .
     outcome: passed
     observed_at: '2026-11-12T11:16:29Z'
     notes: Explicitly authorized deterministic Task-list-only generation. Catalog changes only241 to243
       commands plus the two new rows; no tasks or suites executed.
+  - command: python3 tools/staging_home_audit.py --repository-root . --output .audits/data/2026-08-15-staging-file-disposition.csv
+    outcome: passed
+    observed_at: '2026-11-12T11:33:56Z'
+    notes: Explicitly authorized inert canonical source generation only;9583 rows, one metadata row changes.
+      No gate/test/fixture/staged-code execution or removal approval.
   - command: Current tests, lint, builds, native/helper consumer qualification, CI and live/recovery verification
     outcome: not-run
     observed_at: '2026-11-12T11:16:29Z'
@@ -149,15 +151,15 @@ Integrate all six user-authorized Empathy PRs in order120→125→121→130→13
 
 ## State snapshot
 
-PR120 merged520d3f608030beca1b291265d1cbe0ddf57a416e,125 merged8a2d32eb903a8f76ec4ec8d68e1682fc54885254 and121 merged946364370e9c39637d6d0de49c297c3f81776590. Candidate130 includes that actual main; two later source candidates remain.
+PR120 merged520d3f60,125 merged8a2d32eb,121 merged94636437 and130 mergedbccf17cb38b64d99fd918fbf4aab202e4c1c8741. Candidate131 includes that actual main and the authorized one-row inventory refresh;129 remains pending.
 
 ## Completed and material changes
 
-PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. Merged125 selects Relay5d27be5ce1599df883e31f14cd894eb18622c18c for current typed review/source/build/provenance paths, reusing one actual capture clock and repository models. Its empty selection plan leaves reports unavailable. Relay181 remains open; frozen b71b/254185 recovery and source receipts remain unchanged. Merged121 selects Harden Runner2.22.4, CodeQL4.39.3, MegaLinter10.2.0 and create-pull-request8.1.2 at exact approved SHAs, with matching version comments and no workflow-gate changes. Candidate130 adds separate fixed unittest processes/logs and a failing aggregate for failed/unavailable commands; acceptance stays unqualified. Typed Task metadata and stale toolchain fixtures are repaired without running them.
+PR120 adds an isolated pinned standalone Mindgarden install/verify lane without changing the canonical garden, tracked entrypoint, incubated tasks or Pages authority. Existing Task-list-derived catalog generation adds only the two optional rows and actual generated count. Merged125 selects Relay5d27be5ce1599df883e31f14cd894eb18622c18c for current typed review/source/build/provenance paths, reusing one actual capture clock and repository models. Its empty selection plan leaves reports unavailable. Relay181 remains open; frozen b71b/254185 recovery and source receipts remain unchanged. Merged121 selects Harden Runner2.22.4, CodeQL4.39.3, MegaLinter10.2.0 and create-pull-request8.1.2 at exact approved SHAs, with matching version comments and no workflow-gate changes. Merged130 adds separate fixed unittest processes/logs and a failing aggregate for failed/unavailable commands; acceptance stays unqualified. Typed Task metadata and stale toolchain fixtures are repaired without running them. Candidate131 adds independent immutable preimage/receipt checking with an empty new receipt ledger. Inert canonical CSV generation repairs one obsolete ROADMAP duplicate claim; source and approval bytes are preserved.
 
 ## Validation and review evidence
 
-Source/syntax comparisons and independent static review are limited evidence. Only the explicitly authorized canonical Task-list-only catalog generation executed. Historical focused results retain their original pins and dates; no current test count or passing consumer qualification is invented.
+Source/syntax comparisons and independent static review are limited evidence. Only explicitly authorized canonical Task-list-only catalog generation and inert staging CSV generation executed. Historical focused results retain their original pins and dates; no current test count or passing consumer qualification is invented.
 
 ## Blockers, risks, unknowns, and deferred work
 
@@ -165,7 +167,7 @@ Current suites, linters, builds, native/helper consumer qualification, CI, actua
 
 ## Next dependency-ready work
 
-Merge130 at its exact reviewed head, then reconcile131 and129 without reverting current action pins or validation prerequisites. Recheck live heads before each standard merge; do not bypass rules.
+Merge131 at its exact reviewed head, then reconcile129. Keep its058 dependency evidence historical, add current coverage/ledger context, and recheck the final open-PR inventory. Recheck live heads before each standard merge; do not bypass rules.
 
 ## Parallel changes and reconciliation
 

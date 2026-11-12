@@ -132,6 +132,10 @@ issues: []
 **Current evidence:**
 
 - The current gate includes ownership drain from the integration monorepo.
+- The [exact staging diff/receipt implementation](docs/migration/STAGING_RECEIPTS.md)
+  preserves immutable preimages and durable claims separately from current intake.
+  Runtime, fixtures, holistic validation and actual hosted trigger qualification
+  remain unrun; no drain or human acceptance is inferred.
 
 <!-- roadmap-step
 id: EMP-Q04
