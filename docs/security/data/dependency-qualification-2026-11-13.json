@@ -1,0 +1,364 @@
+{
+  "repository": "egohygiene/empathy",
+  "issue": 113,
+  "source_base": "4853a1e55808bc5104dc509199c411e798d104dc",
+  "observed_at": "2026-11-13T03:35:27Z",
+  "scanner": {
+    "name": "osv-scanner",
+    "version": "2.5.0",
+    "binary_sha256": "edcfc41d257db36148f065055655fe3fcfc434b0b423ea67468a84c207524e0c",
+    "command": "osv-scanner scan source --recursive --no-call-analysis=go,rust --config=osv-scanner.toml --all-packages --format=json --output-file=qualified-native.json .",
+    "exit_code": 1,
+    "call_analysis": "disabled; no consumer/build scripts executed",
+    "policy_sha256": "3c816f754763b6b1e2f2b161839c7a08fdd9adaa6b8b62bfc0a019782efa9db7",
+    "native_report": "Retained task-local; public projection excludes local absolute paths and unbounded advisory prose.",
+    "filtered_vulnerability_records": 8,
+    "counts_after_configured_filtering": true
+  },
+  "sources": [
+    {
+      "path": ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
+      "git_blob": "63b52471c676daa7fd73eecd1041a274d5b9a8c3",
+      "sha256": "18f9e1622ef856e91333afcb944a81d6f63e66c35ca21d9e62f9438b8c1095c8",
+      "packages": 3,
+      "groups": 0
+    },
+    {
+      "path": ".staging/devenvironment/containers/services/api/poetry.lock",
+      "git_blob": "3ce031c515313bcd45e2b41a7d4bd89db2a50d28",
+      "sha256": "372a823da960f45f70db23e30a2804ca1c3d3caa40279df7629ba8876c3d87f6",
+      "packages": 96,
+      "groups": 89
+    },
+    {
+      "path": ".staging/tools/emoji-precache/package-lock.json",
+      "git_blob": "59d9ba6f5a0389655abe4d1a5331ede6e48bc060",
+      "sha256": "82d7674f75a332f557bad2cfa99fe7d1e9fa64e71e3c35243d73faefaa849277",
+      "packages": 27,
+      "groups": 10
+    },
+    {
+      "path": "egolint/Cargo.lock",
+      "git_blob": "3169c07f832a28168c0b7b7407b735e53c103628",
+      "sha256": "ae60bae3e34d4fcd1dad9c8c1bc045db53ceaded70bd0d6f19a90d231717609b",
+      "packages": 1,
+      "groups": 0
+    },
+    {
+      "path": "egolint/pnpm-lock.yaml",
+      "git_blob": "ebfe6299246ae81fb0d69598607ead735fea7345",
+      "sha256": "13a19009a8d8672f55043b3117c6dffbebbc7b29d54e434d88576f62d7b1beb4",
+      "packages": 3939,
+      "groups": 184
+    },
+    {
+      "path": "egolint/uv.lock",
+      "git_blob": "ee0eac006ab0a05e9a688a68385dcec1ae7d7073",
+      "sha256": "bf93067de49e6ddd2828746f4b3858d382832fcfe70a2917fbe50c16b9dc79ed",
+      "packages": 363,
+      "groups": 121
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "git_blob": "386be62b4122f76b26422d5ff1e4c69e533c82ec",
+      "sha256": "9172b44976aec4b1ac3efe400a0008dff6be051dd576eebee427843634479d7d",
+      "packages": 3847,
+      "groups": 259
+    }
+  ],
+  "packages": 8276,
+  "grouped_advisory_occurrences": 663,
+  "severity_counts": {
+    "medium": 281,
+    "critical": 34,
+    "high": 286,
+    "low": 60,
+    "unknown": 2
+  },
+  "blocking_grouped_occurrences": 320,
+  "ledger": {
+    "path": "docs/security/data/dependency-findings-2026-11-13.csv",
+    "sha256": "78a379675978e6eff681d266ef336ceba8b12c33d54a74b5c6dec8c5473c60dc",
+    "rows": 663
+  },
+  "unresolved_version_expressions": [
+    {
+      "path": ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
+      "name": "Microsoft.WindowsAppSDK",
+      "version": "$(WinAppSdkVersion)",
+      "ecosystem": "NuGet",
+      "disposition": "Version expression is not a resolved package version; absence of findings is not clean dependency coverage."
+    }
+  ],
+  "suppression_review": {
+    "registry_probes": [
+      {
+        "ecosystem": "npm",
+        "package": "decompress",
+        "requested_version": "4.2.2",
+        "url": "https://registry.npmjs.org/decompress/4.2.2",
+        "http_status": 404,
+        "declared_version": null,
+        "observed_at": "2026-11-13T03:35:27Z"
+      },
+      {
+        "ecosystem": "npm",
+        "package": "image-size",
+        "requested_version": "2.0.3",
+        "url": "https://registry.npmjs.org/image-size/2.0.3",
+        "http_status": 200,
+        "declared_version": "2.0.3",
+        "observed_at": "2026-11-13T03:35:27Z"
+      },
+      {
+        "ecosystem": "PyPI",
+        "package": "ecdsa",
+        "requested_version": "0.19.2",
+        "url": "https://pypi.org/pypi/ecdsa/0.19.2/json",
+        "http_status": 200,
+        "declared_version": "0.19.2",
+        "observed_at": "2026-11-13T03:35:27Z"
+      },
+      {
+        "ecosystem": "PyPI",
+        "package": "httpie",
+        "requested_version": "3.2.3",
+        "url": "https://pypi.org/pypi/httpie/3.2.3/json",
+        "http_status": 200,
+        "declared_version": "3.2.3",
+        "observed_at": "2026-11-13T03:35:27Z"
+      },
+      {
+        "ecosystem": "PyPI",
+        "package": "httpie",
+        "requested_version": "3.2.4",
+        "url": "https://pypi.org/pypi/httpie/3.2.4/json",
+        "http_status": 200,
+        "declared_version": "3.2.4",
+        "observed_at": "2026-11-13T03:35:27Z"
+      }
+    ],
+    "advisory_probes": [
+      {
+        "id": "GHSA-5p2g-fcmc-qvqq",
+        "modified": "2026-09-24T18:45:10.915244487Z",
+        "aliases": [
+          "CVE-2025-71329"
+        ],
+        "affected": [
+          {
+            "package": {
+              "name": "image-size",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/image-size"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "1.2.0"
+                  },
+                  {
+                    "fixed": "2.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-w3rx-r6r6-pgpr",
+        "modified": "2026-09-24T18:30:11.322772203Z",
+        "aliases": [
+          "CVE-2025-71330"
+        ],
+        "affected": [
+          {
+            "package": {
+              "name": "image-size",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/image-size"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.6.3"
+                  },
+                  {
+                    "fixed": "2.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wj6h-64fc-37mp",
+        "modified": "2026-09-10T03:50:09.447249599Z",
+        "aliases": [
+          "CVE-2024-23342",
+          "PYSEC-2026-1325"
+        ],
+        "affected": [
+          {
+            "package": {
+              "name": "ecdsa",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/ecdsa"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8r96-8889-qg2x",
+        "modified": "2026-09-10T03:49:58.880686355Z",
+        "aliases": [
+          "CVE-2023-48052",
+          "PYSEC-2023-242"
+        ],
+        "affected": [
+          {
+            "package": {
+              "name": "httpie",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/httpie"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.2.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "removed": [
+      "GHSA-w3rx-r6r6-pgpr",
+      "GHSA-5p2g-fcmc-qvqq",
+      "GHSA-8r96-8889-qg2x",
+      "PYSEC-2023-242"
+    ],
+    "reason": "Image-size2.0.3 is published and both advisories specify that fixed version; HTTPie advisory specifies fixed3.2.3, which is published (latest3.2.4 also published). No dependency version is changed.",
+    "retained": "Decompress4.2.2 registry404 and ecdsa advisory without fixed version remain unresolved owner review, not accepted exploitability exceptions. Duplicate ecdsa PYSEC alias remains an explicitly reported unused ignore.",
+    "review_boundary": "Recheck on advisory, registry or owner-input change and before renewed suppression/accepted disposition.",
+    "retained_package_occurrences": [
+      {
+        "source_path": "egolint/pnpm-lock.yaml",
+        "name": "decompress",
+        "version": "4.2.1",
+        "ecosystem": "npm",
+        "disposition": "retained suppression, unresolved owner/applicability review; not an accepted exploitability exception",
+        "owner": "egolint",
+        "references": [
+          "#113",
+          "#79",
+          "#51",
+          "#110"
+        ]
+      },
+      {
+        "source_path": "egolint/uv.lock",
+        "name": "ecdsa",
+        "version": "0.19.2",
+        "ecosystem": "PyPI",
+        "disposition": "retained suppression, unresolved owner/applicability review; not an accepted exploitability exception",
+        "owner": "egolint",
+        "references": [
+          "#113",
+          "#79",
+          "#51",
+          "#110"
+        ]
+      },
+      {
+        "source_path": "pnpm-lock.yaml",
+        "name": "decompress",
+        "version": "4.2.1",
+        "ecosystem": "npm",
+        "disposition": "retained suppression, unresolved owner/applicability review; not an accepted exploitability exception",
+        "owner": "empathy",
+        "references": [
+          "#113",
+          "#79",
+          "#51"
+        ]
+      }
+    ]
+  },
+  "root_updater": {
+    "package_manager": "pnpm11.17.0",
+    "command": "pnpm install --frozen-lockfile --lockfile-only --ignore-scripts --offline",
+    "context": "disposable exact copy of the five public root package/lock/workspace/npmrc/pnpmfile inputs; identity-only hook inspected",
+    "exit_code": 0,
+    "input_sha256": {
+      "package.json": "248e7373b259078db6b288dec40a289c21d4d90822e6d21d1c65f221bc929760",
+      "pnpm-lock.yaml": "9172b44976aec4b1ac3efe400a0008dff6be051dd576eebee427843634479d7d",
+      "pnpm-workspace.yaml": "38bcedd5d59b0ea0aa3f9087e5cdb5086d0a488faefd78082f78c0c95875484a",
+      ".npmrc": "77ec85a9bc168be5fd78f44e976edfa76721d0cbfa2fe4c86f7cfaf7352fa004",
+      ".pnpmfile.cjs": "7a47093da123f299c0ffd6e85489c5644e407ff77f525a6b4ec2c2f2e140d147"
+    },
+    "output_sha256": {
+      "package.json": "248e7373b259078db6b288dec40a289c21d4d90822e6d21d1c65f221bc929760",
+      "pnpm-lock.yaml": "9172b44976aec4b1ac3efe400a0008dff6be051dd576eebee427843634479d7d",
+      "pnpm-workspace.yaml": "38bcedd5d59b0ea0aa3f9087e5cdb5086d0a488faefd78082f78c0c95875484a",
+      ".npmrc": "77ec85a9bc168be5fd78f44e976edfa76721d0cbfa2fe4c86f7cfaf7352fa004",
+      ".pnpmfile.cjs": "7a47093da123f299c0ffd6e85489c5644e407ff77f525a6b4ec2c2f2e140d147"
+    },
+    "original_repository_inputs_unchanged": true,
+    "copy_bytes_unchanged": true,
+    "hosted_dependabot": "unverified; local package-manager compatibility is not provider acceptance"
+  },
+  "limits": [
+    "All grouped occurrences retain unresolved owner/applicability/remediation dispositions; these are not unique production vulnerabilities or exploitability conclusions.",
+    "No automatic dependency upgrade, staged source execution/deletion, human exception acceptance or full holistic proof.",
+    "Seven scanner result roots do not establish coverage of every retained manifest or the exact-VCS optional Mindgarden input.",
+    "Hosted root npm Dependabot parsing/update-PR behavior remains unverified; owner graph refreshes still follow110/79/51."
+  ],
+  "focused_quality": {
+    "secretlint": {
+      "version": "13.0.5",
+      "errors": 0
+    },
+    "lychee": {
+      "total": 27,
+      "unique": 27,
+      "successful": 27,
+      "timeouts": 0,
+      "excludes": 0,
+      "errors": 0
+    }
+  },
+  "input_correspondence": {
+    "compared_revision": "03165e926804c7142922c0a59f2592159d38071e",
+    "all_seven_scan_source_git_blobs_match": true,
+    "clock_refreshed": false,
+    "meaning": "Later source integration preserves scanned manifest bytes; it is not a new advisory/database observation."
+  },
+  "generated_by": {
+    "source": "actual OSV Scanner2.5.0 native JSON with all-packages and recorded config",
+    "projection": "Bounded source/package/advisory/group metadata; CVSS groups classified at >=9 critical, >=7 high, >=4 medium, lower low, missing unknown. Existing owner dispositions retained; fixed versions are advisory candidates, not upgrade approvals."
+  }
+}
