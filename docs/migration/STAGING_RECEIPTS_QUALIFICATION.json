@@ -1,0 +1,186 @@
+{
+  "repository": "egohygiene/empathy",
+  "issue": 112,
+  "source_revision": "4853a1e55808bc5104dc509199c411e798d104dc",
+  "base_revision": "0f0669739ae173ec8b374103a915c71968ac9304",
+  "local_tests": {
+    "command": "python -m unittest discover --start-directory tests --pattern test_staging*.py --verbose",
+    "count": 27,
+    "skips": 0,
+    "outcome": "passed"
+  },
+  "local_actual_gate": {
+    "head": "4853a1e55808bc5104dc509199c411e798d104dc",
+    "base": "0f0669739ae173ec8b374103a915c71968ac9304",
+    "outcome": "passed"
+  },
+  "hosted": {
+    "run": {
+      "conclusion": "failure",
+      "created_at": "2026-11-13T03:02:47Z",
+      "event": "workflow_dispatch",
+      "head_sha": "4853a1e55808bc5104dc509199c411e798d104dc",
+      "html_url": "https://github.com/egohygiene/empathy/actions/runs/43356272034",
+      "id": 43356272034,
+      "run_attempt": 1,
+      "status": "completed",
+      "updated_at": "2026-11-13T03:03:42Z"
+    },
+    "jobs": [
+      {
+        "conclusion": "failure",
+        "id": 131658962993,
+        "name": "Validate workflows and actions",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Pre Harden Runner",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Harden Runner",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Checkout repository",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Validate GitHub automation",
+            "status": "completed"
+          },
+          {
+            "conclusion": "failure",
+            "name": "Validate repository policy tests",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Retain independent baseline test results",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Checkout repository",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Harden Runner",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "status": "completed"
+          }
+        ]
+      },
+      {
+        "conclusion": "success",
+        "id": 131658963205,
+        "name": "Validate staging preimages and durable receipt bindings",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Pre Harden Runner",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Harden Runner",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Read the exact reviewed head and its source history",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Check actual base/head staging changes and committed ledger freshness",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Read the exact reviewed head and its source history",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Harden Runner",
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "status": "completed"
+          }
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "digest": "sha256:8709d5aa67494bb6edaff6e00a820805fb495bb31750e8e12d007218ec58e06f",
+        "expired": false,
+        "expires_at": "2026-11-27T03:03:37Z",
+        "id": 14005589244,
+        "name": "baseline-unittest-43356272034-1",
+        "size_in_bytes": 10543
+      }
+    ],
+    "scope": "workflow_dispatch on reviewed existing read-only main automation; no publisher or staging mutation",
+    "downloaded_artifact": {
+      "id": 14005589244,
+      "archive_sha256": "8709d5aa67494bb6edaff6e00a820805fb495bb31750e8e12d007218ec58e06f",
+      "entries": [
+        "egolint.log",
+        "results.json",
+        "repository.log",
+        "summary.md"
+      ],
+      "results": {
+        "schema": "empathy.baseline-unittest-commands/v1",
+        "acceptance": "unqualified",
+        "suites": [
+          {
+            "suite": "repository",
+            "exit_code": 1,
+            "unavailable": null
+          },
+          {
+            "suite": "egolint",
+            "exit_code": 1,
+            "unavailable": null
+          }
+        ]
+      }
+    }
+  },
+  "criteria": {
+    "unauthorized_and_stale_removal_negative_fixtures": "passed",
+    "valid_exact_source_fixture": "passed; synthetic only",
+    "durable_receipts_and_generated_ledger": "passed",
+    "both_trigger_path_filters": "source fixture passed; real manual job scheduling passed; PR-specific event proof remains separate"
+  },
+  "limits": [
+    "Overall hosted workflow failed the independent baseline job; only staging passed.",
+    "No human authority authenticated, destination live proof, production source removal or promotion.",
+    "Canonical broad/holistic acceptance and additional staging tool type/style diagnostics remain outside these runtime fixture results."
+  ]
+}

@@ -7,26 +7,26 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T03:10:04Z'
+  updated_at: '2026-11-13T03:20:02Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Correct unsupported attribution fallback and qualify bounded third-party sample metadata without
-    changing retained source bytes.
+  purpose: Qualify the implemented staging preimage/receipt gate with disposable negative fixtures and
+    actual read-only hosted scheduling, preserving source and human authority.
   includes:
-  - Root REUSE mapping now covers explicitly owned foundation source/documentation instead of every retained
-    file. File-specific Deedy/TeXtured README licenses come from existing notices and adjacent license
-    text.
-  - Three actual REUSE6.2.0 regression tests preserve explicit headers, prevent new unresolved intake
-    from inheriting first-party metadata and verify the saved real samples. Original source/sample bytes
-    are unchanged; missing emoji provenance remains unresolved.
+  - The source-bound qualification record retains27 passed staging tests with zero skips and an actual
+    immutable base/head current-main gate pass. All staged bytes, approval/receipt inputs and gate logic
+    are preserved.
+  - Hosted automation43356272034/1 at source4853 ran and passed staging job131658963205 independently
+    of the failing baseline job. The latter retained an actual downloaded four-file artifact with provider-matching
+    archive digest and unqualified failed command results.
   excludes: &id001
-  - Full retained-source rights research, immutable per-output provenance and owner acceptance remain
-    under117/79/51; no distribution, legal certification, promotion or source-removal approval.
-  - Canonical holistic/broad CI and unrelated runtime/catalog110 work are not qualified by these focused
-    checks.
+  - Manual hosted scheduling and source filter fixtures do not substitute for every actual PR-specific
+    event, full holistic/type/style or supported-platform qualification.
+  - No production staging deletion, legacy approval edit, human ratification, destination validation or
+    cleanup authorization. Existing canonical staging-tool diagnostic debt remains visible.
   precedence:
   - user-and-runtime-instructions
   - scoped-repository-instructions
@@ -37,42 +37,44 @@ scope:
   - AGENTS.md
   - docs/current-state-backlog.md
   - docs/decisions/ADR-0001-foundation-ownership.md
-  - docs/security/attribution-review.md
-  - https://github.com/egohygiene/empathy/issues/117
+  - docs/migration/STAGING_RECEIPTS.md
+  - https://github.com/egohygiene/empathy/issues/112
   - https://github.com/egohygiene/empathy/issues/118
 work:
-  objective: Correct unsupported attribution fallback and qualify bounded third-party sample metadata
-    without changing retained source bytes.
+  objective: Qualify the implemented staging preimage/receipt gate with disposable negative fixtures and
+    actual read-only hosted scheduling, preserving source and human authority.
   success_conditions:
-  - Saved samples no longer inherit unsupported first-party MIT/author metadata.
-  - Existing source/notice identity, unresolved classes and per-owner review queues stay explicit.
+  - Disposable approval/preimage/ledger positive and forbidden cases execute without touching production
+    source.
+  - Actual job and artifact outcomes remain independent from workflow-wide green status and human acceptance.
   active_issue:
     provider: github
-    id: egohygiene/empathy#117
-    url: https://github.com/egohygiene/empathy/issues/117
+    id: egohygiene/empathy#112
+    url: https://github.com/egohygiene/empathy/issues/112
   next:
     kind: action
-    id: review-empathy-117
-    description: Review this exact attribution source and receipt with the independent peer; root owns
-      ordinary integration and any explicit issue disposition.
+    id: review-empathy-112
+    description: Independent exact-head review of this qualification record, then root-owned ordinary
+      integration and explicit acceptance disposition; preserve baseline failures and remaining PR-event
+      proof.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/issues/117
+    - https://github.com/egohygiene/empathy/issues/112
     depends_on: []
 state:
   base:
-    revision: 4853a1e55808bc5104dc509199c411e798d104dc
+    revision: 030329dd19f4df15d500d09b5595449f725a6dd5
     ref: refs/heads/main
-    verified_at: '2026-11-13T03:10:04Z'
+    verified_at: '2026-11-13T03:20:02Z'
   candidate:
-    branch: codex/empathy-117-attribution
+    branch: codex/empathy-112-qualified
     revision: null
     pull_request: null
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-13T03:10:04Z'
-    default_branch_revision: 4853a1e55808bc5104dc509199c411e798d104dc
+    observed_at: '2026-11-13T03:20:02Z'
+    default_branch_revision: 030329dd19f4df15d500d09b5595449f725a6dd5
     issue_state: open
     pull_request_state: not-applicable
     notes: Direct GitHub main and active issue reads at this checkpoint. Candidate PR/merge remain future
@@ -80,20 +82,22 @@ state:
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-13T03:10:04Z'
+  reviewed_at: '2026-11-13T03:20:02Z'
   reviewed_by: Codex
   evidence:
-  - command: python -m unittest discover --start-directory tests --pattern test_attribution.py --verbose
+  - command: python -m unittest discover --start-directory tests --pattern test_staging*.py --verbose;
+      actual read-only gate from0f066 to4853
     outcome: passed
-    observed_at: '2026-11-13T03:10:04Z'
-    notes: 'Actual REUSE6.2.0: three tests passed with zero skips, covering real samples, synthetic unknown
-      owner paths, baseline scope and preserved explicit headers.'
-  - command: Canonical Ruff check/format, strict Mypy and Bandit for tests/test_attribution.py; static
-      TOML/JSON and unchanged sample/license text hashes
-    outcome: passed
-    observed_at: '2026-11-13T03:10:04Z'
-    notes: Focused Python policy checks passed; actual metadata inspection and saved policy/sample hashes
-      distinguish declared licenses from unresolved authorship. No corpus-wide clean badge is claimed.
+    observed_at: '2026-11-13T03:20:02Z'
+    notes: 27 tests passed with zero skips; exact-source actual-main gate passed. Unauthorized/stale/self-supplied/renamed
+      approvals and generated-ledger drift reject in disposable Git fixtures.
+  - command: Existing automation.yml workflow_dispatch43356272034/1; provider job metadata and downloaded
+      artifact14005589244 digest/inventory inspection
+    outcome: limited
+    observed_at: '2026-11-13T03:20:02Z'
+    notes: Staging job131658963205 passed. Independent baseline job failed but retained both logs/results/summary;
+      downloaded ZIP SHA2568709d5aa67494bb6edaff6e00a820805fb495bb31750e8e12d007218ec58e06f matches provider.
+      Overall workflow failed and remains unqualified.
   environment_limitations: *id001
 privacy:
   classification: public-repository
@@ -118,24 +122,24 @@ source-removal authority.
 
 ## Resume protocol
 
-Read AGENTS, the current-work guide, active issue #117 and roadmap #118.
+Read AGENTS, the current-work guide, active issue #112 and roadmap #118.
 Verify actual main, candidate, reviews and remaining acceptance before resuming.
 
 ## Current objective and success conditions
 
-Correct unsupported attribution fallback and qualify bounded third-party sample metadata without changing retained source bytes.
+Qualify the implemented staging preimage/receipt gate with disposable negative fixtures and actual read-only hosted scheduling, preserving source and human authority.
 
 ## State snapshot
 
-Base main is `4853a1e55808bc5104dc509199c411e798d104dc`. Candidate `codex/empathy-117-attribution`
+Base main is `030329dd19f4df15d500d09b5595449f725a6dd5`. Candidate `codex/empathy-112-qualified`
 is prepared for independent review. Its eventual PR and merge are not recorded
 as completed inside their own candidate source.
 
 ## Completed and material changes
 
-Root REUSE mapping now covers explicitly owned foundation source/documentation instead of every retained file. File-specific Deedy/TeXtured README licenses come from existing notices and adjacent license text.
+The source-bound qualification record retains27 passed staging tests with zero skips and an actual immutable base/head current-main gate pass. All staged bytes, approval/receipt inputs and gate logic are preserved.
 
-Three actual REUSE6.2.0 regression tests preserve explicit headers, prevent new unresolved intake from inheriting first-party metadata and verify the saved real samples. Original source/sample bytes are unchanged; missing emoji provenance remains unresolved.
+Hosted automation43356272034/1 at source4853 ran and passed staging job131658963205 independently of the failing baseline job. The latter retained an actual downloaded four-file artifact with provider-matching archive digest and unqualified failed command results.
 
 The prior source integrations remain preserved: optional Mindgarden, typed
 review feeds, current Actions selection, independent baseline results, staging
@@ -144,15 +148,15 @@ receipts retain their original source identities.
 
 ## Validation and review evidence
 
-Actual REUSE6.2.0: three tests passed with zero skips, covering real samples, synthetic unknown owner paths, baseline scope and preserved explicit headers.
+27 tests passed with zero skips; exact-source actual-main gate passed. Unauthorized/stale/self-supplied/renamed approvals and generated-ledger drift reject in disposable Git fixtures.
 
-Focused Python policy checks passed; actual metadata inspection and saved policy/sample hashes distinguish declared licenses from unresolved authorship. No corpus-wide clean badge is claimed.
+Staging job131658963205 passed. Independent baseline job failed but retained both logs/results/summary; downloaded ZIP SHA2568709d5aa67494bb6edaff6e00a820805fb495bb31750e8e12d007218ec58e06f matches provider. Overall workflow failed and remains unqualified.
 
 ## Blockers, risks and unknowns
 
-Full retained-source rights research, immutable per-output provenance and owner acceptance remain under117/79/51; no distribution, legal certification, promotion or source-removal approval.
+Manual hosted scheduling and source filter fixtures do not substitute for every actual PR-specific event, full holistic/type/style or supported-platform qualification.
 
-Canonical holistic/broad CI and unrelated runtime/catalog110 work are not qualified by these focused checks.
+No production staging deletion, legacy approval edit, human ratification, destination validation or cleanup authorization. Existing canonical staging-tool diagnostic debt remains visible.
 
 ## Decision disposition
 
@@ -160,10 +164,10 @@ Existing ADR-0001 applies; no new capability ownership, policy, publication auth
 
 ## Next checkpoint
 
-Review this exact attribution source and receipt with the independent peer; root owns ordinary integration and any explicit issue disposition.
+Independent exact-head review of this qualification record, then root-owned ordinary integration and explicit acceptance disposition; preserve baseline failures and remaining PR-event proof.
 
 ## Handoff and privacy
 
-The canonical details are in `docs/security/attribution-review.md`. Retain raw local
+The canonical details are in `docs/migration/STAGING_RECEIPTS.md`. Retain raw local
 logs separately; this public handoff excludes credentials, local machine paths,
-private context and unreviewed source text. Acceptance remains in #117.
+private context and unreviewed source text. Acceptance remains in #112.
