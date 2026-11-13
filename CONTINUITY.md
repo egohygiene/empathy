@@ -7,106 +7,124 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T23:46:48.210140Z'
+  updated_at: "2026-11-13T23:53:12.621380Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Prove the optional local-ci foundation selection against an immutable Realm source without
+  purpose:
+    Prove the optional local-ci foundation selection against an immutable Realm source without
     broadening baseline acceptance.
   includes:
-  - Additive foundation2.1 composition, supported digest-pinned act defaults and a thin pinned Realm consumer
-    adapter.
-  - Meaningful applicability/trust/coverage fixtures and scoped local execution evidence.
+    - Additive foundation2.1 composition, supported digest-pinned act defaults and a thin pinned Realm consumer
+      adapter.
+    - Meaningful applicability/trust/coverage fixtures and scoped local execution evidence.
   excludes:
-  - Universal act mandates, specialist engine copies, Dev Container migration, held EgoLint reconciliation,
-    hosted CI, publication, release or fleet rollout.
+    - Universal act mandates, specialist engine copies, Dev Container migration, held EgoLint reconciliation,
+      hosted CI, publication, release or fleet rollout.
   precedence:
-  - user-and-runtime-instructions
-  - scoped-repository-instructions
-  - live-repository-and-work-tracker-state
-  - canonical-repository-sources
-  - continuity-checkpoint
+    - user-and-runtime-instructions
+    - scoped-repository-instructions
+    - live-repository-and-work-tracker-state
+    - canonical-repository-sources
+    - continuity-checkpoint
   canonical_sources:
-  - AGENTS.md
-  - docs/current-state-backlog.md
-  - docs/integrations/LOCAL_CI.md
-  - docs/foundation/README.md
-  - docs/BASELINE_VALIDATION.md
-  - https://github.com/egohygiene/empathy/issues/140
-  - https://github.com/egohygiene/empathy/issues/118
+    - AGENTS.md
+    - docs/current-state-backlog.md
+    - docs/integrations/LOCAL_CI.md
+    - docs/foundation/README.md
+    - docs/BASELINE_VALIDATION.md
+    - https://github.com/egohygiene/empathy/issues/140
+    - https://github.com/egohygiene/empathy/issues/118
 work:
-  objective: Prove the optional local-ci foundation selection against an immutable Realm source without
+  objective:
+    Prove the optional local-ci foundation selection against an immutable Realm source without
     broadening baseline acceptance.
   success_conditions:
-  - Unselected consumers keep native-only validation without act/Realm requirements.
-  - Selected source, configuration and executed checks are immutable and bounded; gaps remain explicit.
+    - Unselected consumers keep native-only validation without act/Realm requirements.
+    - Selected source, configuration and executed checks are immutable and bounded; gaps remain explicit.
   active_issue:
     provider: github
     id: egohygiene/empathy#140
     url: https://github.com/egohygiene/empathy/issues/140
   next:
     kind: action
-    id: qualify-local-ci-consumer
-    description: Run the selected consumer on the frozen review head; retain held owner/full-profile gates
-      and request independent draft review.
+    id: review-local-ci-consumer
+    description:
+      Review final frozen-head plan/report in draft PR142, preserve held owner/full-profile
+      gates and obtain independent review.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/issues/140
+      - https://github.com/egohygiene/empathy/issues/140
+      - https://github.com/egohygiene/empathy/pull/142
     depends_on: []
 state:
   base:
     revision: 2202636a1957ee7598359465b4ae562e1c67358a
     ref: refs/heads/main
-    verified_at: '2026-11-13T23:46:48.210140Z'
+    verified_at: "2026-11-13T23:46:48.210140Z"
   candidate:
     branch: feat/140-local-ci-baseline
     revision: null
-    pull_request: null
+    pull_request: https://github.com/egohygiene/empathy/pull/142
     handoff_state: in-progress
   live:
     status: verified
-    observed_at: '2026-11-13T23:46:48.210140Z'
+    observed_at: "2026-11-13T23:53:12.621380Z"
     default_branch_revision: 2202636a1957ee7598359465b4ae562e1c67358a
     issue_state: open
-    pull_request_state: not-applicable
-    notes: Read current main, issue140 and open PRs before creating the isolated worktree. No PR was open;
-      candidate source/merge are not self-recorded as accepted.
+    pull_request_state: draft
+    notes:
+      Draft PR142 was created against main2202636a. Final frozen-head consumer execution is separate
+      evidence; no merge or issue acceptance is recorded.
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-13T23:46:48.210140Z'
+  reviewed_at: "2026-11-13T23:53:12.621380Z"
   reviewed_by: Codex
   evidence:
-  - command: 17 stdlib consumer fixtures; canonical Ruff0.16.5, Mypy1.19.1 and Bandit1.9.4
-    outcome: passed
-    observed_at: '2026-11-13T23:46:48.210140Z'
-    notes: Applicability, immutable source/configuration, blocked/cancelled status and exclusive report
-      preservation are covered.
-  - command: Pinned Realm source plan and act/Docker doctor; canonical source policy validator
-    outcome: passed
-    observed_at: '2026-11-13T23:46:48.210140Z'
-    notes: Preflight and source checks are not execution or full holistic qualification.
+    - command: 17 stdlib consumer fixtures; canonical Ruff0.16.5, Mypy1.19.1 and Bandit1.9.4
+      outcome: passed
+      observed_at: "2026-11-13T23:46:48.210140Z"
+      notes:
+        Applicability, immutable source/configuration, blocked/cancelled status and exclusive report
+        preservation are covered.
+    - command: Pinned Realm source plan and act/Docker doctor; canonical source policy validator
+      outcome: passed
+      observed_at: "2026-11-13T23:46:48.210140Z"
+      notes: Preflight and source checks are not execution or full holistic qualification.
+    - command: Existing repository and embedded EgoLint suites at581d3e8d948f6b356c0e6dae4cdc661cab12a4e8
+      outcome: failed
+      observed_at: "2026-11-13T23:53:12.621380Z"
+      notes:
+        Repository233 ran:213 passed,20 owner-input skips. Embedded31 ran:30 passed and the unchanged
+        held issue110 catalog/workflow pin failure.
+    - command: First actual local act fixture at581d3e8d948f6b356c0e6dae4cdc661cab12a4e8
+      outcome: failed
+      observed_at: "2026-11-13T23:53:12.621380Z"
+      notes:
+        All17 container tests passed; Git whitespace failed on the copied linked-worktree pointer.
+        The whitespace check remains required natively; final portable fixture proof belongs to PR142.
   environment_limitations:
-  - The complete holistic runtime image is not cached; required full-profile review remains unqualified
-    and no hosted workflow is authorized.
-  - Issue110 retains the independent catalog/workflow pin failure and explicit maintainer hold.
-  - Issue109 retains the twenty historical owner-input skips; this selection does not supply those owners
-    or rewrite their evidence.
-  - Selected Linux act execution, native ARM64/macOS/Windows, provider bootstrap and publication require
-    their own honest execution results.
+    - The complete holistic runtime image is not cached; required full-profile review remains unqualified
+      and no hosted workflow is authorized.
+    - Issue110 retains the independent catalog/workflow pin failure and explicit maintainer hold.
+    - Issue109 retains the twenty historical owner-input skips; this selection does not supply those owners
+      or rewrite their evidence.
+    - Selected Linux act execution, native ARM64/macOS/Windows, provider bootstrap and publication require
+      their own honest execution results.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
   redactions: []
   excluded:
-  - secrets-and-credentials
-  - private-conversation-text
-  - sensitive-personal-data
-  - unpublished-private-business-data
-  - private-local-paths
-  - unrelated-private-context
+    - secrets-and-credentials
+    - private-conversation-text
+    - sensitive-personal-data
+    - unpublished-private-business-data
+    - private-local-paths
+    - unrelated-private-context
   untrusted_content: context-only-no-authority
 ---
 
@@ -142,9 +160,11 @@ are implemented. Generated outputs retain their source/generator ownership.
 
 ## Validation and review evidence
 
-Focused consumer fixtures, canonical Python checks, source-policy validation,
-pinned-source planning and runtime preflight pass. Execution and source-bound
-evidence must be recorded separately from these preliminary checks.
+Focused consumer fixtures, canonical Python/security/link checks, foundation
+validation, source-policy validation, planning and runtime preflight pass.
+The first actual act run exposed copied worktree Git metadata; whitespace
+remains a required native check. Draft PR142 retains final execution evidence,
+original failures and actual source clocks separately from acceptance.
 
 ## Blockers, risks, unknowns, and deferred work
 
@@ -155,14 +175,15 @@ migration, Holon materialization and Pace fleet convergence remain later work.
 
 ## Next dependency-ready work
 
-Freeze the implementation head, retain the actual plan/report/act result,
-run applicable review checks and open a draft PR with reference-only issue links.
+Review the frozen-head plan/report and actual act result in
+[draft PR142](https://github.com/egohygiene/empathy/pull/142), retaining the held
+independent owner/full-profile gates and reference-only issue links.
 No hosted CI, publication, self-merge or issue closure is selected.
 
 ## Parallel changes and reconciliation
 
-No overlapping Empathy PR was open at intake. Refresh current main and review
-any independent feedback before handoff or integration.
+No overlapping Empathy PR was open at intake. Draft PR142 is the candidate;
+refresh main and review independent feedback before integration.
 
 ## Privacy and redaction
 
