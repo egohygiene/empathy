@@ -5,6 +5,11 @@ under [#118](https://github.com/egohygiene/empathy/issues/118). This checkpoint 
 root Node update coverage and dispositions for retained dependency inputs. It
 does not establish remediation, exploitability, or final issue acceptance.
 
+The [2026-11-13 executed qualification](data/dependency-qualification-2026-11-13.json)
+and [fresh findings ledger](data/dependency-findings-2026-11-13.csv) now supplement
+this earlier source-only checkpoint. The dated source, scanner and inventory
+observations below retain their original identities; they are not retimed.
+
 ## Evidence boundary
 
 The source inspection uses Empathy
@@ -183,3 +188,71 @@ Task-list catalog refresh and inert staging inventory refresh. Tests, installs,
 registry probes, scanner/audit runs, builds, native/helper consumer qualification
 and CI remain deferred. Source integration does not remediate the reported
 occurrences or qualify the hosted updater.
+
+
+## Executed scanner and updater checkpoint — 2026-11-13
+
+Official OSV Scanner2.5.0 was downloaded with its release SHA-256 verified and
+run against source4853 plus the explicitly reviewed `osv-scanner.toml` change.
+The exact command and policy/manifest hashes are in the current qualification
+record. Call analysis was disabled, so scanning did not execute Go/Rust build
+scripts or staged source. Native output remains task-local; the public CSV/JSON
+projection excludes machine paths and unbounded advisory prose.
+
+The fresh scan reports seven result roots, 8,276 package records and **663 grouped
+advisory occurrences**, including **34 critical and 286 high** (320 blocking
+groups). It returns1 after the retained configuration filters eight vulnerability
+records; retained affected-package occurrences remain explicit in the receipt.
+These are grouped scanner observations, not unique
+production vulnerabilities or demonstrated exploits. Every ledger row retains
+an unresolved owner/applicability/remediation investigation and existing
+#113/#79/#51 references, plus #110 for embedded EgoLint inputs. The older645/313
+receipt and ownership inventory remain historical. No blanket clean scan or
+reviewed exploitability exception is inferred.
+
+The seven result roots do not establish complete coverage of every retained
+manifest. In particular, the NuGet input still contains an unresolved version
+expression, and the optional Mindgarden exact-VCS requirement retains its manual
+upgrade/provenance boundary. Zero findings in those contexts are not clean
+runtime coverage.
+
+### Suppression correction
+
+Actual official-registry and OSV-record probes establish:
+
+- `image-size@2.0.3` is now published; both retained image-size advisories specify
+  that fixed version. Their obsolete “not published” suppressions were removed.
+- HTTPie's advisory specifies fixed3.2.3; both3.2.3 and3.2.4 are published.
+  Its obsolete no-patch suppression and explicit alias were removed.
+- `decompress@4.2.2` still returns404, and ECDSA's advisory has no fixed range
+  while PyPI latest is0.19.2. Those retained entries remain unresolved owner
+  review, with dated reasons that no longer claim “never shipped to production.”
+  The duplicate ECDSA PYSEC entry is reported as unused; it is not hidden.
+
+No package version or lockfile was upgraded. Candidate fixed versions in the
+ledger still require owner, compatibility and registry review; selected probes
+do not validate every candidate. Recheck suppressions when advisory, registry
+or owner inputs change and before renewal or accepted disposition.
+
+### Root updater compatibility
+
+An exact disposable copy of `package.json`, `pnpm-lock.yaml`,
+`pnpm-workspace.yaml`, `.npmrc` and the inspected identity-only `.pnpmfile.cjs`
+passed pnpm11.17.0's frozen, lockfile-only, offline install with lifecycle scripts
+disabled. Its 3,847 lock entries passed the package manager's supply-chain policy;
+all five copied inputs and original repository files remained byte-identical.
+
+This establishes local selected-package-manager compatibility, not GitHub's
+hosted Dependabot parser or update-PR behavior. Actual hosted root-npm acceptance
+remains unknown. Embedded specialist locks, intentionally negative fixtures and
+quarantined graphs retain their separate owner dispositions. The checkpoint
+adds no second updater, automatic bump, source drain or provider setting.
+
+ADR disposition: existing ADR-0001 applies. Correcting obsolete consumer scan
+suppressions and recording scoped evidence selects no new capability owner,
+organization vulnerability policy or human exception authority.
+
+Focused Secretlint13.0.5 reports zero errors across the four changed inputs
+and records; Lychee0.24.2 checked all27 unique guide links successfully, with no
+errors, exclusions or timeouts. These checks do not establish a full holistic
+or hosted updater acceptance result.
