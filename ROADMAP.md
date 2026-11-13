@@ -8,7 +8,7 @@ status: draft
 owners:
   - egohygiene
 created: 2026-08-11
-updated: 2026-08-24
+updated: 2026-11-13
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -27,6 +27,22 @@ supersedes: []
 Use the [live issue roadmap](https://github.com/egohygiene/empathy/issues/118)
 for current sequencing, acceptance, and blockers. The [current-work guide](docs/current-state-backlog.md)
 links the dated audit and consumer entry points.
+
+## Current foundation checkpoint — 2026-11-13
+
+The six selected source and qualification slices are merged. Their bounded
+evidence lives with [attribution](docs/security/attribution-review.md),
+[baseline validation](docs/BASELINE_VALIDATION.md),
+[staging safety](docs/migration/STAGING_RECEIPTS.md),
+[shared gitignore integration](docs/foundation/gitignore/SHARED-INTEGRATION-04.md),
+[report source binding](docs/integrations/REPOSITORY_INTELLIGENCE_REPORT_SOURCES.md),
+and [dependency coverage](docs/security/dependency-coverage.md).
+
+The live issue roadmap remains the current work and acceptance ledger. Recorded
+checks retain their own source revisions and clocks; remaining inherited-policy,
+runtime, publication and owner-remediation gates stay explicit. Full foundation
+and release stages retain their existing states. The execution snapshot below
+is historical.
 
 <!-- BEGIN ROADMAP EXECUTION SNAPSHOT -->
 <!-- roadmap-manifest
