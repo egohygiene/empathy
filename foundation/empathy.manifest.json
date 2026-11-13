@@ -32,14 +32,8 @@
   "repository_owned": {
     "display_name": "Empathy",
     "description": "Golden repository baseline and integration consumer for Ego Hygiene",
-    "maintainers": [
-      "szmyty"
-    ],
-    "topics": [
-      "developer-experience",
-      "golden-repository",
-      "integration"
-    ],
+    "maintainers": ["szmyty"],
+    "topics": ["developer-experience", "golden-repository", "integration"],
     "domains": [],
     "license_expression": "MIT"
   }
