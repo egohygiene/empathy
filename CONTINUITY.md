@@ -171,22 +171,40 @@ Two full file-level lifecycles passed; four nativepositive runs valid with all c
 
 Health executed focused source/guide checks successfully. Independent source/hash review matches16 nested policy witnesses and exact nativebinary; source-only positive/negative/unknown states remain separate.
 
-## Blockers, risks and unknowns
+## Blockers, risks, unknowns, and deferred work
 
 Three inherited consumer deviations remain deferred/unapproved under their explicit owner/source adoption dispositions; no full-repository semantic conformance, cleanup, human exception or fleet rollout is inferred.
 
 Current2.0 owner compatibility upgrade is a separate future boundary. Full holistic and held110 runtime/catalog/bootstrap work, full-foundation release and supported-platform acceptance are not established by this file-level proof.
 
-## Decision disposition
-
 Existing ADR-0001 applies; no new capability ownership, policy, publication authority or human approval state is selected.
 
-## Next checkpoint
+## Next dependency-ready work
 
 Independent final exact-head review and root-owned ordinary integration; keep92 acceptance open for the three explicitly deferred inherited cases and preserve the accepted1.1 proof independently.
 
-## Handoff and privacy
+## Parallel changes and reconciliation
+
+The serialized integration retains the earlier attribution, staging, report,
+baseline-validation and dependency changes from the recorded main. The six
+gitignore qualification paths retain their reviewed functional source; this
+handoff correction changes only the required Markdown structure.
+
+## Privacy and redaction
 
 The canonical details are in `docs/foundation/gitignore/SHARED-INTEGRATION-04.md`. Retain raw local
 logs separately; this public handoff excludes credentials, local machine paths,
 private context and unreviewed source text. Acceptance remains in #92.
+
+## Handoff update protocol
+
+After an authorized change, reconcile this snapshot against actual source and
+provider state, retain original execution clocks, and record new evidence
+separately. Refresh the handoff before PR review without treating an open or
+unverified PR as merged.
+
+## Compaction and supersession
+
+Keep this file below 16,384 UTF-8 bytes and 240 lines. Replace stale current-state
+prose rather than appending history; Git and the work tracker retain chronology.
+Mark stale or superseded state explicitly with its required reason or pointer.
