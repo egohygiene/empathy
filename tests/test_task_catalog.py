@@ -1,5 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# ruff: noqa: PT027
+# These stdlib unittest fixtures retain assertRaises; pytest is not a dependency.
 
 from __future__ import annotations
 

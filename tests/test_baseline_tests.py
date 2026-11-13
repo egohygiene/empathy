@@ -36,7 +36,7 @@ class BaselineTestsRunnerTests(unittest.TestCase):
             tempfile.TemporaryDirectory() as temporary,
             redirect_stdout(io.StringIO()),
             patch.object(
-                baseline_tests.subprocess,
+                subprocess,
                 "run",
                 side_effect=[
                     subprocess.CompletedProcess(["fixture"], 1),
@@ -59,7 +59,7 @@ class BaselineTestsRunnerTests(unittest.TestCase):
                 tempfile.TemporaryDirectory() as temporary,
                 redirect_stdout(io.StringIO()),
                 patch.object(
-                    baseline_tests.subprocess,
+                    subprocess,
                     "run",
                     side_effect=[failure, subprocess.CompletedProcess(["fixture"], 0)],
                 ),

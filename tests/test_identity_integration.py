@@ -8,6 +8,7 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import subprocess  # nosec B404 - fixed local owner validators; no shell or supplied command.
 import sys
 import unittest
@@ -98,9 +99,12 @@ class IdentityIntegrationTests(unittest.TestCase):
             check=True,
         )
         # Cargo is an explicit equipped-environment prerequisite; all arguments are fixed.
-        subprocess.run(  # noqa: S603, S607  # nosec B603,B607
+        cargo = shutil.which("cargo")
+        if cargo is None:
+            self.fail("Cargo is required for the selected Identity compiler scenario")
+        subprocess.run(  # noqa: S603  # nosec B603
             [
-                "cargo",
+                cargo,
                 "run",
                 "--quiet",
                 "--manifest-path",
