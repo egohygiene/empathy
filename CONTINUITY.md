@@ -7,26 +7,26 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T03:10:04Z'
+  updated_at: '2026-11-13T03:22:46Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Correct unsupported attribution fallback and qualify bounded third-party sample metadata without
-    changing retained source bytes.
+  purpose: Repair and execute baseline-owned Python validation with declared exact owner inputs, retaining
+    independent held-owner failures instead of false full readiness.
   includes:
-  - Root REUSE mapping now covers explicitly owned foundation source/documentation instead of every retained
-    file. File-specific Deedy/TeXtured README licenses come from existing notices and adjacent license
-    text.
-  - Three actual REUSE6.2.0 regression tests preserve explicit headers, prevent new unresolved intake
-    from inheriting first-party metadata and verify the saved real samples. Original source/sample bytes
-    are unchanged; missing emoji provenance remains unresolved.
+  - Current capture/retention fixtures now cover source and review upload outcomes while preserving publication/frozen
+    rollback guards; Task metadata type errors, mock typing and resolved Cargo invocation are repaired
+    in the six baseline files.
+  - With exact Relay d7 and Identity481e inputs, generated26 disposable Identity projections then ran224
+    repository tests with zero skips. The independent31-test embedded EgoLint suite retains one catalog/runtime
+    failure under110 and fails the aggregate honestly. Disposable generated assets are excluded from source.
   excludes: &id001
-  - Full retained-source rights research, immutable per-output provenance and owner acceptance remain
-    under117/79/51; no distribution, legal certification, promotion or source-removal approval.
-  - Canonical holistic/broad CI and unrelated runtime/catalog110 work are not qualified by these focused
-    checks.
+  - Canonical110 image/catalog/bootstrap consumption remains held; its independent failing test and failed
+    aggregate are retained.
+  - Staging type/style diagnostics, rootRust79 membership disposition, Secretlint/Lychee/full holistic
+    and wider supported-platform acceptance remain separately unqualified.
   precedence:
   - user-and-runtime-instructions
   - scoped-repository-instructions
@@ -37,42 +37,44 @@ scope:
   - AGENTS.md
   - docs/current-state-backlog.md
   - docs/decisions/ADR-0001-foundation-ownership.md
-  - docs/security/attribution-review.md
-  - https://github.com/egohygiene/empathy/issues/117
+  - docs/BASELINE_VALIDATION.md
+  - https://github.com/egohygiene/empathy/issues/109
   - https://github.com/egohygiene/empathy/issues/118
 work:
-  objective: Correct unsupported attribution fallback and qualify bounded third-party sample metadata
-    without changing retained source bytes.
+  objective: Repair and execute baseline-owned Python validation with declared exact owner inputs, retaining
+    independent held-owner failures instead of false full readiness.
   success_conditions:
-  - Saved samples no longer inherit unsupported first-party MIT/author metadata.
-  - Existing source/notice identity, unresolved classes and per-owner review queues stay explicit.
+  - Equipped repository tests and scoped canonical Python checks produce actual independently retained
+    results.
+  - Owner/runtime110, staging diagnostics and root Rust79 membership remain separately visible rather
+    than suppressed.
   active_issue:
     provider: github
-    id: egohygiene/empathy#117
-    url: https://github.com/egohygiene/empathy/issues/117
+    id: egohygiene/empathy#109
+    url: https://github.com/egohygiene/empathy/issues/109
   next:
     kind: action
-    id: review-empathy-117
-    description: Review this exact attribution source and receipt with the independent peer; root owns
-      ordinary integration and any explicit issue disposition.
+    id: review-empathy-109
+    description: Independent exact-head peer, root-owned integration and explicit partial issue disposition;
+      continue named staging diagnostic and owner-runtime/profile gates without copying specialist source.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/issues/117
+    - https://github.com/egohygiene/empathy/issues/109
     depends_on: []
 state:
   base:
-    revision: 4853a1e55808bc5104dc509199c411e798d104dc
+    revision: 030329dd19f4df15d500d09b5595449f725a6dd5
     ref: refs/heads/main
-    verified_at: '2026-11-13T03:10:04Z'
+    verified_at: '2026-11-13T03:22:46Z'
   candidate:
-    branch: codex/empathy-117-attribution
+    branch: codex/empathy-109-qualified
     revision: null
     pull_request: null
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-13T03:10:04Z'
-    default_branch_revision: 4853a1e55808bc5104dc509199c411e798d104dc
+    observed_at: '2026-11-13T03:22:46Z'
+    default_branch_revision: 030329dd19f4df15d500d09b5595449f725a6dd5
     issue_state: open
     pull_request_state: not-applicable
     notes: Direct GitHub main and active issue reads at this checkpoint. Candidate PR/merge remain future
@@ -80,20 +82,27 @@ state:
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-13T03:10:04Z'
+  reviewed_at: '2026-11-13T03:22:46Z'
   reviewed_by: Codex
   evidence:
-  - command: python -m unittest discover --start-directory tests --pattern test_attribution.py --verbose
+  - command: tools/baseline_tests.py with exact Relay/Identity inputs and generated disposable Identity
+      package
+    outcome: limited
+    observed_at: '2026-11-13T03:22:46Z'
+    notes: Actual repository224 tests passed with zero skips; independent embedded EgoLint31 tests has
+      one known catalog/runtime pin failure under110. Aggregate remains failed/acceptance unqualified;
+      logs/results preserved.
+  - command: Canonical Ruff check/format, strict Mypy and Bandit across the six changed baseline Python
+      files
     outcome: passed
-    observed_at: '2026-11-13T03:10:04Z'
-    notes: 'Actual REUSE6.2.0: three tests passed with zero skips, covering real samples, synthetic unknown
-      owner paths, baseline scope and preserved explicit headers.'
-  - command: Canonical Ruff check/format, strict Mypy and Bandit for tests/test_attribution.py; static
-      TOML/JSON and unchanged sample/license text hashes
-    outcome: passed
-    observed_at: '2026-11-13T03:10:04Z'
-    notes: Focused Python policy checks passed; actual metadata inspection and saved policy/sample hashes
-      distinguish declared licenses from unresolved authorship. No corpus-wide clean badge is claimed.
+    observed_at: '2026-11-13T03:22:46Z'
+    notes: Six changed files pass focused canonical policy; reviewed stdlib unittest/PyYAML stubs and
+      fixed subprocess annotations remain narrow. No shared policy/config changes.
+  - command: Whole root tools/tests canonical Ruff diagnostic inventory; root cargo metadata --no-deps
+    outcome: limited
+    observed_at: '2026-11-13T03:22:46Z'
+    notes: 44 remaining Ruff diagnostics are confined to four staging tool/fixture files. Actual root
+      Cargo metadata fails missing tests/fixtures/clippy; source ownership/profile decision remains79.
   environment_limitations: *id001
 privacy:
   classification: public-repository
@@ -118,24 +127,24 @@ source-removal authority.
 
 ## Resume protocol
 
-Read AGENTS, the current-work guide, active issue #117 and roadmap #118.
+Read AGENTS, the current-work guide, active issue #109 and roadmap #118.
 Verify actual main, candidate, reviews and remaining acceptance before resuming.
 
 ## Current objective and success conditions
 
-Correct unsupported attribution fallback and qualify bounded third-party sample metadata without changing retained source bytes.
+Repair and execute baseline-owned Python validation with declared exact owner inputs, retaining independent held-owner failures instead of false full readiness.
 
 ## State snapshot
 
-Base main is `4853a1e55808bc5104dc509199c411e798d104dc`. Candidate `codex/empathy-117-attribution`
+Base main is `030329dd19f4df15d500d09b5595449f725a6dd5`. Candidate `codex/empathy-109-qualified`
 is prepared for independent review. Its eventual PR and merge are not recorded
 as completed inside their own candidate source.
 
 ## Completed and material changes
 
-Root REUSE mapping now covers explicitly owned foundation source/documentation instead of every retained file. File-specific Deedy/TeXtured README licenses come from existing notices and adjacent license text.
+Current capture/retention fixtures now cover source and review upload outcomes while preserving publication/frozen rollback guards; Task metadata type errors, mock typing and resolved Cargo invocation are repaired in the six baseline files.
 
-Three actual REUSE6.2.0 regression tests preserve explicit headers, prevent new unresolved intake from inheriting first-party metadata and verify the saved real samples. Original source/sample bytes are unchanged; missing emoji provenance remains unresolved.
+With exact Relay d7 and Identity481e inputs, generated26 disposable Identity projections then ran224 repository tests with zero skips. The independent31-test embedded EgoLint suite retains one catalog/runtime failure under110 and fails the aggregate honestly. Disposable generated assets are excluded from source.
 
 The prior source integrations remain preserved: optional Mindgarden, typed
 review feeds, current Actions selection, independent baseline results, staging
@@ -144,15 +153,17 @@ receipts retain their original source identities.
 
 ## Validation and review evidence
 
-Actual REUSE6.2.0: three tests passed with zero skips, covering real samples, synthetic unknown owner paths, baseline scope and preserved explicit headers.
+Actual repository224 tests passed with zero skips; independent embedded EgoLint31 tests has one known catalog/runtime pin failure under110. Aggregate remains failed/acceptance unqualified; logs/results preserved.
 
-Focused Python policy checks passed; actual metadata inspection and saved policy/sample hashes distinguish declared licenses from unresolved authorship. No corpus-wide clean badge is claimed.
+Six changed files pass focused canonical policy; reviewed stdlib unittest/PyYAML stubs and fixed subprocess annotations remain narrow. No shared policy/config changes.
+
+44 remaining Ruff diagnostics are confined to four staging tool/fixture files. Actual root Cargo metadata fails missing tests/fixtures/clippy; source ownership/profile decision remains79.
 
 ## Blockers, risks and unknowns
 
-Full retained-source rights research, immutable per-output provenance and owner acceptance remain under117/79/51; no distribution, legal certification, promotion or source-removal approval.
+Canonical110 image/catalog/bootstrap consumption remains held; its independent failing test and failed aggregate are retained.
 
-Canonical holistic/broad CI and unrelated runtime/catalog110 work are not qualified by these focused checks.
+Staging type/style diagnostics, rootRust79 membership disposition, Secretlint/Lychee/full holistic and wider supported-platform acceptance remain separately unqualified.
 
 ## Decision disposition
 
@@ -160,10 +171,10 @@ Existing ADR-0001 applies; no new capability ownership, policy, publication auth
 
 ## Next checkpoint
 
-Review this exact attribution source and receipt with the independent peer; root owns ordinary integration and any explicit issue disposition.
+Independent exact-head peer, root-owned integration and explicit partial issue disposition; continue named staging diagnostic and owner-runtime/profile gates without copying specialist source.
 
 ## Handoff and privacy
 
-The canonical details are in `docs/security/attribution-review.md`. Retain raw local
+The canonical details are in `docs/BASELINE_VALIDATION.md`. Retain raw local
 logs separately; this public handoff excludes credentials, local machine paths,
-private context and unreviewed source text. Acceptance remains in #117.
+private context and unreviewed source text. Acceptance remains in #109.

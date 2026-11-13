@@ -2,7 +2,6 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # Standalone repository-maintenance entry point, not a Python package.
-# ruff: noqa: INP001
 
 """Generate and validate the repository's public Task command catalog."""
 
@@ -58,7 +57,7 @@ def parse_tasks(payload: object) -> list[TaskRecord]:
     """Validate the consumed JSON fields instead of stringifying malformed data."""
     if not isinstance(payload, dict):
         message = "Task JSON must contain a tasks array"
-        raise ValueError(message)
+        raise TypeError(message)
     entries: object = payload.get("tasks")
     if not isinstance(entries, list):
         message = "Task JSON must contain a tasks array"

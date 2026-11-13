@@ -1,0 +1,87 @@
+{
+  "repository": "egohygiene/empathy",
+  "issue": 109,
+  "source_base": "030329dd19f4df15d500d09b5595449f725a6dd5",
+  "scope": "six baseline-owned Python files; real independent repository/embedded-owner commands with required local owner inputs",
+  "tools": {
+    "python": "3.12.14",
+    "cargo": "1.97.1",
+    "Task": "3.54.0",
+    "ruff": "0.16.2",
+    "mypy": "2.3.0",
+    "bandit": "1.9.4",
+    "PyYAML": "6.0.3"
+  },
+  "owner_inputs": {
+    "relay": "d7c60473626f8dcc901210a208ad01a6474e8c1d",
+    "identity": {
+      "owner_revision": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
+      "generated_manifest_sha256": "cbe6c9e2632e2fff6f26638f8dec014aefb0ccc4eada11f884481664f9e13914",
+      "generated_projections": 26,
+      "generated_output": "disposable, not source-committed"
+    }
+  },
+  "independent_suites": {
+    "repository": {
+      "tests": 224,
+      "skipped": 0,
+      "failed_tests": [],
+      "errors": [],
+      "exit_code": 0
+    },
+    "egolint": {
+      "tests": 31,
+      "skipped": 0,
+      "failed_tests": [
+        "test_catalog_is_pinned_to_the_workflow_release (test_megalinter_policy.MegaLinterPolicyTests.test_catalog_is_pinned_to_the_workflow_release)"
+      ],
+      "errors": [],
+      "exit_code": 1
+    }
+  },
+  "acceptance": "partial",
+  "focused_python_policy": {
+    "files": [
+      "tools/task_catalog.py",
+      "tools/baseline_tests.py",
+      "tests/test_task_catalog.py",
+      "tests/test_baseline_tests.py",
+      "tests/test_identity_integration.py",
+      "tests/test_repository_intelligence_workflows.py"
+    ],
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "strict_mypy": "passed",
+    "bandit": "passed with reviewed fixed-subprocess annotations; unused-comment warnings were inspected"
+  },
+  "whole_baseline_ruff_residual": {
+    "count": 44,
+    "by_file": {
+      "tests/test_staging_diff_gate.py": 19,
+      "tests/test_staging_removal_gate.py": 1,
+      "tools/staging_diff_gate.py": 17,
+      "tools/staging_removal_gate.py": 7
+    },
+    "by_code": {
+      "PT018": 1,
+      "S603": 2,
+      "S607": 1,
+      "PT027": 15,
+      "S506": 1,
+      "I001": 1,
+      "TRY003": 8,
+      "PLR2004": 6,
+      "UP017": 1,
+      "PLR0912": 1,
+      "PLR0915": 1,
+      "T201": 5,
+      "TRY300": 1
+    }
+  },
+  "remaining": [
+    "Independent embedded EgoLint catalog/runtime test remains a failure under110; its source/pins were not changed or waived.",
+    "Root cargo metadata fails on missing tests/fixtures/clippy; retained under79 profile/ownership decision, not patched by copying specialist Rust source.",
+    "Staging tools/tests retain separately reported canonical type/style diagnostics under109/112.",
+    "Broad exact-head holistic/runtime-image qualification and additional platforms remain unqualified."
+  ]
+}

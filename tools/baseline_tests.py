@@ -2,7 +2,6 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
 # Standalone repository-maintenance entry point, not a Python package.
-# ruff: noqa: INP001
 
 """Attempt both baseline unittest commands and retain their independent outcomes."""
 
@@ -88,10 +87,12 @@ def render_summary(outcomes: list[SuiteOutcome]) -> str:
     lines.extend(
         [
             "",
-            "These are independent command outcomes, not full acceptance evidence. "
-            "Each verbose log retains actual counts, failures, and environment skips. "
-            "Required owner scenarios, Rust disposition (#79), and canonical lint "
-            "qualification (#109/#110) remain separate gates.",
+            (
+                "These are independent command outcomes, not full acceptance evidence. "
+                "Each verbose log retains actual counts, failures, and environment skips. "
+                "Required owner scenarios, Rust disposition (#79), and canonical lint "
+                "qualification (#109/#110) remain separate gates."
+            ),
             "",
         ],
     )
