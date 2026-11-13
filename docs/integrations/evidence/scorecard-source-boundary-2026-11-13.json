@@ -1,0 +1,101 @@
+{
+  "schema": "empathy.report-source-boundary-evidence/v1",
+  "observed_at": "2026-11-13T03:24:44Z",
+  "functional_fix": "042fccfcbb597f0c1f4eb7b42f92ec39bbfef481",
+  "observed_consumer": {
+    "repository": "egohygiene/empathy",
+    "revision": "4853a1e55808bc5104dc509199c411e798d104dc",
+    "tree": "95fe1ddd8fdf06fd49ea87724f6cd6cd2f5b6c3d"
+  },
+  "committed_report_inputs": [
+    {
+      "producer": "osv",
+      "state": "recognized-schema",
+      "source_revision": "18d22e113e87c306b76d24873841249d41358c77",
+      "execution": "success",
+      "matches_consumer_revision": false
+    },
+    {
+      "producer": "megalinter",
+      "state": "recognized-schema",
+      "source_revision": "e313e00d311397566450fd90ec1b18df8f8f40de",
+      "execution": "failure",
+      "matches_consumer_revision": false
+    },
+    {
+      "producer": "scorecard",
+      "state": "missing",
+      "source_revision": null,
+      "execution": "unknown",
+      "matches_consumer_revision": false
+    }
+  ],
+  "historical_hosted_scorecard": {
+    "run_id": 39240875694,
+    "run_attempt": 1,
+    "source_commit": "480d70bc59c989f46abf7a323e645699b11c7d4a",
+    "event": "schedule",
+    "scanner_job": "success",
+    "artifact_upload": "success",
+    "artifact_id": 12181865348,
+    "archive_sha256": "3b1d9c4c41608116b32078f8b51bc6dded80759f85aef6b13d883617fee00183",
+    "artifact_created_at": "2026-10-19T10:56:39Z",
+    "publisher_job": "failure",
+    "cleanup_exit_code": 129,
+    "cleanup_diagnostic": "unknown option recursive",
+    "normalization_and_snapshot_publication": "skipped"
+  },
+  "native_replay": {
+    "normalizer_revision": "1eada5142f7fc7da7862f335589e3b8f5884ffaf",
+    "renderer_revision": "d7c60473626f8dcc901210a208ad01a6474e8c1d",
+    "clock": "2026-10-19T10:56:39Z",
+    "clock_disposition": "Explicit frozen historical artifact-creation clock for local replay; not a new scan or current freshness claim",
+    "matching_at_capture": {
+      "availability": "available",
+      "execution": "success",
+      "findings": "attention",
+      "aggregate_score": null
+    },
+    "matching_historical_now": {
+      "availability": "available",
+      "freshness": "stale"
+    },
+    "current_source_mismatch": {
+      "availability": "invalid",
+      "findings": "unknown"
+    },
+    "actual_committed_absence": {
+      "availability": "unavailable",
+      "execution": "unknown",
+      "findings": "unknown"
+    },
+    "input_bytes_preserved": true,
+    "scorecard_api_aggregate": "not supplied; remains unavailable"
+  },
+  "cleanup_regression": {
+    "method": "Execute exact updated workflow cleanup in an owned disposable Git fixture, twice",
+    "tracked_summary_removed": true,
+    "already_absent_summary_accepted": true,
+    "other_producer_preserved": true
+  },
+  "checks": {
+    "pinned_report_projection_tests": 11,
+    "report_publication_policy_tests": 7,
+    "canonical_ruff_and_format": "passed",
+    "canonical_mypy": "passed",
+    "canonical_bandit": "passed; fixed Git subprocess suppressions reviewed",
+    "focused_secretlint": "passed",
+    "focused_lychee": "passed;5links/5successful with canonical configuration and cache disabled"
+  },
+  "disposition": {
+    "scorecard_applicability": "Configured existing optional producer; historical successful scan proves execution, not current input availability",
+    "current_input": "Absent until actual subsequent normalization/publication; preserve unknown state",
+    "source_cycle": "Report snapshot commits change consumer HEAD; no report is relabelled to that new commit. Coordinated exact represented-source/artifact handoff remains required for full acceptance.",
+    "issue": "Remain open; actual current producer, composed preview/live and existing recovery qualification are separate."
+  },
+  "limits": [
+    "No current scanner dispatch, snapshot write, report retiming, report-byte change, EmpathyPages deployment or rollback performed",
+    "No full canonical holistic MegaLinter or broad CI qualification claimed",
+    "No copied owner implementation, pin/schema change or new report/model assembler"
+  ]
+}

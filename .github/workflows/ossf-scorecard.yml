@@ -103,7 +103,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git rm --force --recursive --ignore-unmatch -- ".reports/scorecard"
+          git rm --force -r --ignore-unmatch -- ".reports/scorecard"
           mkdir --parents ".cache/scorecard" ".reports/scorecard"
 
       - name: Download Scorecard SARIF
