@@ -98,6 +98,34 @@ class GitignoreAdoptionTests(test_gitignore_baseline.GitignoreFixture):
             ("examples/.env.example.local", "mantle/.env.example.local"), ignored=True
         )
 
+    def test_inherited_template_suffixes_do_not_imply_environment_conformance(self) -> None:
+        # The imported Holon policy both exposes local variants and hides valid
+        # suffix templates. Its historical ownership does not grant an exception.
+        self.assert_paths(
+            (
+                "holon/packs/react-vite/template/.env.example.local",
+                "holon/packs/react-vite/template/.env.template.backup",
+            ),
+            ignored=False,
+        )
+        self.assert_paths(
+            (
+                "holon/packs/react-vite/template/.env.production.example",
+                "holon/packs/react-vite/template/.env.production.sample",
+            ),
+            ignored=True,
+        )
+        self.assert_paths(("examples/.env.production.example",), ignored=False)
+        self.assert_paths(("examples/.env.template.backup",), ignored=True)
+
+    def test_inherited_target_policy_hides_source_beyond_its_build_root(self) -> None:
+        # An unanchored inherited rule differs from the current owner's /target/.
+        self.assert_paths(
+            ("egolint/examples/target/source.rs", "egolint/fixtures/target/README.md"),
+            ignored=True,
+        )
+        self.assert_paths(("examples/target/source.rs", "fixtures/target/README.md"), ignored=False)
+
 
 if __name__ == "__main__":
     unittest.main()

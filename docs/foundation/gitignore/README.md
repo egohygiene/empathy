@@ -160,12 +160,18 @@ by the plan or presence check.
 
 ## Secret boundary and migration gate
 
+The [2026-11-13 shared integration checkpoint](SHARED-INTEGRATION-04.md)
+qualifies the accepted foundation 1.1 path through pinned Holon and native
+EgoLint for disposable golden and Filament representations. Its receipt keeps
+current inherited-policy failures and the separate foundation 2.0 owner-upgrade
+boundary explicit; it does not certify complete repository conformance.
+
 Ignore rules do not remove already tracked files, prevent forced additions, or
 detect secrets. Tests demonstrate that an unmanaged nested `!.env` can bypass a
 root rule. Repeating the baseline protects declared scopes; it does not police
-deeper files or arbitrary local patterns. A future EgoLint conformance check
-must detect prohibited overrides; this composer does not provide
-organization-wide enforcement.
+deeper files or arbitrary local patterns. The pinned native EgoLint path in the
+shared checkpoint detects observed inherited overrides; this composer does not
+provide organization-wide enforcement or certify current imported policies.
 
 Before replacing the active root, account for every current credential rule.
 For `*.key`, keystores, certificates, `*.secrets.*`, and infrastructure state or
