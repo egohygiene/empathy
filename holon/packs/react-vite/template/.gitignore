@@ -116,12 +116,11 @@ lerna-debug.log*
 .env
 .env.*
 !.env.example
-!.env.example.*
 !.env.sample
-!.env.sample.*
 !.env.template
-!.env.template.*
-!.env.defaults
+!.env.*.example
+!.env.*.sample
+!.env.*.template
 
 .direnv/
 

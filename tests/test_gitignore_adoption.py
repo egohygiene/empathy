@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 from collections import Counter
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -81,50 +82,64 @@ class GitignoreAdoptionTests(test_gitignore_baseline.GitignoreFixture):
             contents.endswith(test_gitignore_baseline.BASELINE.read_text(encoding="utf-8"))
         )
 
-    def test_existing_nested_exceptions_are_measured_not_claimed_conformant(self) -> None:
-        # These inherited exceptions predate this root migration. They are recorded
-        # explicitly in MIGRATION-03.md and still need their owning contract reviewed.
+    def test_reconciled_nested_policies_preserve_environment_and_source_boundaries(self) -> None:
         self.assert_paths(
             (
                 ".devcontainer/.env",
                 "holon/packs/react-vite/template/.env.sample.local",
             ),
-            ignored=False,
+            ignored=True,
         )
-        self.assert_paths(("egolint/examples/target/source.rs",), ignored=True)
+        self.assert_paths(("egolint/examples/target/source.rs",), ignored=False)
         self.assert_paths(("examples/target/source.rs",), ignored=False)
         # Retiring the Mantle snapshot also retires its nested template exception.
         self.assert_paths(
             ("examples/.env.example.local", "mantle/.env.example.local"), ignored=True
         )
 
-    def test_inherited_template_suffixes_do_not_imply_environment_conformance(self) -> None:
-        # The imported Holon policy both exposes local variants and hides valid
-        # suffix templates. Its historical ownership does not grant an exception.
+    def test_imported_template_uses_the_accepted_literal_suffix_policy(self) -> None:
         self.assert_paths(
             (
                 "holon/packs/react-vite/template/.env.example.local",
                 "holon/packs/react-vite/template/.env.template.backup",
             ),
-            ignored=False,
+            ignored=True,
         )
         self.assert_paths(
             (
                 "holon/packs/react-vite/template/.env.production.example",
                 "holon/packs/react-vite/template/.env.production.sample",
             ),
-            ignored=True,
+            ignored=False,
         )
         self.assert_paths(("examples/.env.production.example",), ignored=False)
         self.assert_paths(("examples/.env.template.backup",), ignored=True)
 
-    def test_inherited_target_policy_hides_source_beyond_its_build_root(self) -> None:
-        # An unanchored inherited rule differs from the current owner's /target/.
+    def test_accepted_target_policy_does_not_hide_target_named_source(self) -> None:
         self.assert_paths(
             ("egolint/examples/target/source.rs", "egolint/fixtures/target/README.md"),
-            ignored=True,
+            ignored=False,
         )
         self.assert_paths(("examples/target/source.rs", "fixtures/target/README.md"), ignored=False)
+        self.assert_paths(("egolint/target/debug/program",), ignored=True)
+
+    def test_devcontainer_marker_is_explicit_configuration_not_a_tracked_environment_file(self) -> None:
+        self.assertFalse((ROOT / ".devcontainer/.env").exists())
+        configuration = json.loads((ROOT / ".devcontainer/devcontainer.json").read_text())
+        for section in ("containerEnv", "remoteEnv"):
+            with self.subTest(section=section):
+                self.assertIn(
+                    configuration[section]["IN_DEVCONTAINER"].casefold(), {"true", "1", "yes", "on"}
+                )
+
+    def test_scoped_owner_adoptions_bind_the_actual_policy_bytes(self) -> None:
+        record = json.loads(
+            (ROOT / "docs/foundation/gitignore/data/nested-adoptions-20261113.json").read_text()
+        )
+        for adoption in record["policy_adoptions"]:
+            with self.subTest(path=adoption["path"]):
+                actual = hashlib.sha256((ROOT / adoption["path"]).read_bytes()).hexdigest()
+                self.assertEqual(actual, adoption["after_sha256"])
 
 
 if __name__ == "__main__":

@@ -1,1 +1,2 @@
-!.env
+# Local environment files inherit the accepted root policy.
+# The container marker is declared in devcontainer.json, not a tracked .env.
