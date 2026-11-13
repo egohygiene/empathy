@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: "2026-11-13T23:53:12.621380Z"
+  updated_at: "2026-11-13T23:56:31.746641Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -52,8 +52,8 @@ work:
     kind: action
     id: review-local-ci-consumer
     description:
-      Review final frozen-head plan/report in draft PR142, preserve held owner/full-profile
-      gates and obtain independent review.
+      Review frozen-head plan/report in draft142 and independently reconcile its continuity
+      handoff with concurrent141 before integration. Preserve held owner/full-profile gates.
     readiness: ready
     references:
       - https://github.com/egohygiene/empathy/issues/140
@@ -67,18 +67,24 @@ state:
   candidate:
     branch: feat/140-local-ci-baseline
     revision: null
-    pull_request: https://github.com/egohygiene/empathy/pull/142
+    pull_request:
+      provider: github
+      id: egohygiene/empathy#142
+      url: https://github.com/egohygiene/empathy/pull/142
     handoff_state: in-progress
   live:
     status: verified
-    observed_at: "2026-11-13T23:53:12.621380Z"
+    observed_at: "2026-11-13T23:56:31.746641Z"
     default_branch_revision: 2202636a1957ee7598359465b4ae562e1c67358a
     issue_state: open
     pull_request_state: draft
     notes:
-      Draft PR142 was created against main2202636a. Final frozen-head consumer execution is separate
-      evidence; no merge or issue acceptance is recorded.
-  parallel_changes: []
+      Fresh default ref remains2202636a. Draft142 and concurrent draft141 are open; they overlap
+      only in CONTINUITY.md. No pending branch was merged, rebased or borrowed.
+  parallel_changes:
+    - provider: github
+      id: egohygiene/empathy#141
+      url: https://github.com/egohygiene/empathy/pull/141
 review:
   status: partial
   reviewed_at: "2026-11-13T23:53:12.621380Z"
@@ -106,6 +112,13 @@ review:
       notes:
         All17 container tests passed; Git whitespace failed on the copied linked-worktree pointer.
         The whitespace check remains required natively; final portable fixture proof belongs to PR142.
+    - command: Selected local-CI run at8c1e2d3d0943403de445a9a1b78dd318cf288859
+      outcome: passed
+      observed_at: "2026-11-13T23:56:31.746641Z"
+      notes:
+        All3 required selections passed:17 native fixture tests,17 act fixture tests and native whitespace.
+        Complete holistic, provider and native-platform gaps remain explicit. Final handoff-only head is
+        rechecked in PR142.
   environment_limitations:
     - The complete holistic runtime image is not cached; required full-profile review remains unqualified
       and no hosted workflow is authorized.
@@ -182,8 +195,10 @@ No hosted CI, publication, self-merge or issue closure is selected.
 
 ## Parallel changes and reconciliation
 
-No overlapping Empathy PR was open at intake. Draft PR142 is the candidate;
-refresh main and review independent feedback before integration.
+No overlapping Empathy PR was open at intake. Concurrent PR141 now updates
+staging evidence and overlaps this candidate only in CONTINUITY.md. It remains
+independent and unmerged; reconcile both handoffs before integration. The latest
+default ref remains2202636a. Review independent feedback before integration.
 
 ## Privacy and redaction
 
