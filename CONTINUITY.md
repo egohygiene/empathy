@@ -7,36 +7,26 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T03:34:15Z'
+  updated_at: '2026-11-13T03:38:09Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Repair the concrete Scorecard snapshot cleanup failure and qualify actual represented-source,
-    historical, mismatch and absent-input behavior without relabelling reports or claiming full acceptance.
+  purpose: Repair and execute baseline-owned Python validation with declared exact owner inputs, retaining
+    independent held-owner failures instead of false full readiness.
   includes:
-  - Functional042fccfcbb597f0c1f4eb7b42f92ec39bbfef481 replaces unsupported git rm --recursive with supported-r
-    only. The native regression executes the real workflow cleanup against tracked and absent Scorecard
-    summaries and preserves another producer. Existing triggers, trusted publication guard, permissions,
-    owner pins and rollback remain unchanged.
-  - Actual historical run39240875694/1 at480d70bc59c989f46abf7a323e645699b11c7d4a has successful Scorecard/SARIF
-    upload and a publisher cleanup failure129 before normalization/publication. Artifact12181865348 is
-    downloaded and matches provider archiveSHA3b1d9c4c41608116b32078f8b51bc6dded80759f85aef6b13d883617fee00183.
-  - Exact normalizer1eada5142f7fc7da7862f335589e3b8f5884ffaf and readerd7c60473626f8dcc901210a208ad01a6474e8c1d
-    replay actual SARIF at its original artifact clock. Matching-at-capture is available/success/attention
-    with null aggregate; historical evaluation is stale, current-source mismatch invalid/unknown and actual
-    committed absence unavailable/unknown. No input bytes or source clocks are rewritten.
-  - Clean4853 consumer observation confirms literal OSV18d22e/MegaLintere313e source mismatches and absent
-    Scorecard. The new guide/receipt retain public-safe actual source/outcome evidence, precise Scorecard
-    configured-but-missing disposition and the unresolved snapshot-source cycle. Main e147 attribution/staging
-    source integrations are preserved without changing their authority or validation claims.
-  excludes:
-  - New current scanner/report publication, Empathy Pages deployment/rollback, report retiming, owner
-    normalizer/schema changes, full issue acceptance or automatic closure.
-  - Broad/full holistic MegaLinter and whole-repository native/CI qualification remain separate; this
-    checkpoint executes focused report and quality checks only. No Reuse, staging, dependency or baseline-validation
-    ownership changes.
+  - Current capture/retention fixtures now cover source and review upload outcomes while preserving publication/frozen
+    rollback guards; Task metadata type errors, mock typing and resolved Cargo invocation are repaired
+    in the six baseline files.
+  - With exact Relay d7 and Identity481e inputs, generated26 disposable Identity projections then ran224
+    repository tests with zero skips. The independent31-test embedded EgoLint suite retains one catalog/runtime
+    failure under110 and fails the aggregate honestly. Disposable generated assets are excluded from source.
+  excludes: &id001
+  - Canonical110 image/catalog/bootstrap consumption remains held; its independent failing test and failed
+    aggregate are retained.
+  - Staging type/style diagnostics, rootRust79 membership disposition, full holistic and wider supported-platform
+    acceptance remain separately unqualified.
   precedence:
   - user-and-runtime-instructions
   - scoped-repository-instructions
@@ -47,117 +37,87 @@ scope:
   - AGENTS.md
   - docs/current-state-backlog.md
   - docs/decisions/ADR-0001-foundation-ownership.md
-  - docs/integrations/REPOSITORY_INTELLIGENCE.md
-  - .github/workflows/ossf-scorecard.yml
-  - tests/test_report_publication.py
-  - tests/test_repository_intelligence_reports.py
-  - tools/repository_intelligence_publication.py
-  - docs/integrations/REPOSITORY_INTELLIGENCE_REPORT_SOURCES.md
-  - docs/integrations/evidence/scorecard-source-boundary-2026-11-13.json
-  - https://github.com/egohygiene/empathy/issues/98
+  - docs/BASELINE_VALIDATION.md
+  - https://github.com/egohygiene/empathy/issues/109
   - https://github.com/egohygiene/empathy/issues/118
 work:
-  objective: Repair the concrete Scorecard snapshot cleanup failure and qualify actual represented-source,
-    historical, mismatch and absent-input behavior without relabelling reports or claiming full acceptance.
+  objective: Repair and execute baseline-owned Python validation with declared exact owner inputs, retaining
+    independent held-owner failures instead of false full readiness.
   success_conditions:
-  - Execute the fixed cleanup with real local Git for tracked and absent summaries while retaining other
-    producers.
-  - Exercise actual historical SARIF through exact pinned owner tools; preserve matching/historical/mismatch/absence
-    and execution/findings/freshness distinctions.
-  - Retain exact limited proof and the remaining current-source cycle/producer/composed/live gates without
-    treating a source merge as acceptance.
+  - Equipped repository tests and scoped canonical Python checks produce actual independently retained
+    results.
+  - Owner/runtime110, staging diagnostics and root Rust79 membership remain separately visible rather
+    than suppressed.
   active_issue:
     provider: github
-    id: egohygiene/empathy#98
-    url: https://github.com/egohygiene/empathy/issues/98
+    id: egohygiene/empathy#109
+    url: https://github.com/egohygiene/empathy/issues/109
   next:
     kind: action
-    id: peer-source-and-coordinate-represented-report-boundary
-    description: 'Review and integrate the bounded Scorecard source fix, then coordinate an actual correctly
-      attributed producer/normalization/snapshot and exact represented-source artifact boundary for composed
-      preview/live acceptance. Do not relabel the scanner source as its later snapshot commit. Preserve
-      original reports and frozen #94 recovery; keep wider generator #105 and full holistic #110 qualification
-      separate. Root owns ordinary source merge and issue disposition.'
+    id: review-empathy-109
+    description: Independent exact-head peer, root-owned integration and explicit partial issue disposition;
+      continue named staging diagnostic and owner-runtime/profile gates without copying specialist source.
     readiness: ready
     references:
-    - docs/integrations/REPOSITORY_INTELLIGENCE_REPORT_SOURCES.md
-    - https://github.com/egohygiene/empathy/issues/118
+    - https://github.com/egohygiene/empathy/issues/109
     depends_on: []
 state:
   base:
-    revision: e147bdfb1c01dbcafc19d45d16f455df3d6669e2
+    revision: 772efa7f66a3285dc70a14480249f386b471d798
     ref: refs/heads/main
-    verified_at: '2026-11-13T03:34:15Z'
+    verified_at: '2026-11-13T03:38:09Z'
   candidate:
-    branch: codex/empathy-scorecard-source
+    branch: codex/empathy-109-qualified
     revision: null
-    pull_request:
-      provider: github
-      id: egohygiene/empathy#135
-      url: https://github.com/egohygiene/empathy/pull/135
+    pull_request: null
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-13T03:34:15Z'
-    default_branch_revision: e147bdfb1c01dbcafc19d45d16f455df3d6669e2
+    observed_at: '2026-11-13T03:38:09Z'
+    default_branch_revision: 772efa7f66a3285dc70a14480249f386b471d798
     issue_state: open
-    pull_request_state: draft
-    notes: Actual main e147 was fetched and merged after attribution117 and staging112 source integrations.
-      PR135 is open draft. All four original non-continuity files remain byte-identical to d5, and original
-      test/historical replay observation clocks remain unchanged; this reconciliation adds no execution
-      claim. Issue98 and parent118 remain open. Root owns ordinary integration and remaining source-cycle/current
-      producer/preview/live acceptance.
+    pull_request_state: not-applicable
+    notes: Direct GitHub main and active issue reads at this checkpoint. Candidate PR/merge remain future
+      provider facts; no acceptance or issue closure is inferred.
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-13T03:34:15Z'
+  reviewed_at: '2026-11-13T03:38:09Z'
   reviewed_by: Codex
   evidence:
-  - command: Exact Relay d7 native report tests; consumer report publication tests including actual extracted
-      cleanup step
-    outcome: passed
-    observed_at: '2026-11-13T03:28:52Z'
-    notes: 11+7 pass without skips. Matching/mismatch/expiry/absence, execution/findings, safe projection,
-      duplicate stability and cleanup tracked/absent/other-producer preservation all retain their original
-      policies.
-  - command: Actual historical producer/job logs and artifact digest; native1eada normalizer/d7 projection
-      on real SARIF; actual4853 committed-input collection; original cleanup replay
-    outcome: passed
-    observed_at: '2026-11-13T03:28:52Z'
-    notes: Scanner success/publisher129 failure observed; archive hash verified. Frozen historical replay
-      yields expected available/stale/invalid/unavailable distinctions and null weighted aggregate; original
-      reports unchanged. Unsupported cleanup reproduces129.
-  - command: Canonical Ruff/format, Mypy, Bandit, focused Secretlint13.0.5 and Lychee0.24.2
-    outcome: passed
-    observed_at: '2026-11-13T03:28:52Z'
-    notes: Changed test/source and new guide/receipt checked. Fixed local Git/bash subprocess suppressions
-      reviewed; Bandit has no gating findings. Lychee5/5 links successful; only cache disabled. Fresh
-      tools are isolated outside source and primary dependencies.
-  - command: Static unique workflow YAML/shell syntax, only intended source delta, report/rollback preservation
-      and bounded Aether continuity/schema/links/whitespace
+  - command: tools/baseline_tests.py with exact Relay/Identity inputs and generated disposable Identity
+      package
     outcome: limited
-    observed_at: '2026-11-13T03:28:52Z'
-    notes: Independent exact-head source peer and root ordinary merge/issue disposition remain separate.
-  - command: Canonical full holistic MegaLinter, fresh current Scorecard scan/snapshot, composed preview/Pages/live/recovery
-    outcome: not-run
-    observed_at: '2026-11-13T03:28:52Z'
-    notes: No complete issue or full-profile readiness claimed. Broad qualification and provider writes
-      remain coordinated separately from this bounded source proof.
-  - command: Merge actual main e147 into PR135; exact original non-continuity blob/mode comparison and
-      bounded continuity metadata
+    observed_at: '2026-11-13T03:26:24Z'
+    notes: Actual repository224 tests passed with zero skips; independent embedded EgoLint31 tests has
+      one known catalog/runtime pin failure under110. Aggregate remains failed/acceptance unqualified;
+      logs/results preserved.
+  - command: Canonical Ruff check/format, strict Mypy and Bandit across the six changed baseline Python
+      files
+    outcome: passed
+    observed_at: '2026-11-13T03:26:24Z'
+    notes: Six changed files pass focused canonical policy; reviewed stdlib unittest/PyYAML stubs and
+      fixed subprocess annotations remain narrow. No shared policy/config changes.
+  - command: Whole root tools/tests canonical Ruff diagnostic inventory; root cargo metadata --no-deps
     outcome: limited
-    observed_at: '2026-11-13T03:34:15Z'
-    notes: Only shared CONTINUITY conflict resolved. No tests/scanner/helper rerun or original evidence
-      clock refresh; four source/doc evidence files and main-owned source remain exact. Independent Journey
-      final exact-head peer follows.
-  environment_limitations:
-  - The real SARIF comes from a historical Oct19 scan. The explicit artifact-created replay clock is not
-    a new normalization/publication observation or current freshness claim.
-  - Current committed OSV/MegaLinter summaries describe different older source commits and Scorecard is
-    absent. Report snapshot commits still change the consumer HEAD; the exact represented-source/artifact
-    selection needs coordinated remaining work.
-  - No owner code is copied or repaired here, and no report payload, scanner identity, existing Pages/rollback
-    gate or human disposition changes. Current source merges remain distinct from acceptance.
+    observed_at: '2026-11-13T03:26:24Z'
+    notes: 44 remaining Ruff diagnostics are confined to four staging tool/fixture files. Actual root
+      Cargo metadata fails missing tests/fixtures/clippy; source ownership/profile decision remains79.
+  - command: Secretlint13.0.5 canonical config across nine changed files; Lychee0.24.2 on the changed
+      baseline guide
+    outcome: passed
+    observed_at: '2026-11-13T03:26:24Z'
+    notes: Actual focused Secretlint reported zero errors; Lychee checked seven unique guide links successfully
+      with no errors, exclusions or timeouts. These results do not establish the held full holistic/image
+      profile.
+  - command: Static integration of actual main772efa7f66a3285dc70a14480249f386b471d798 after117/112/98;
+      exact functional file comparison against eee1d260
+    outcome: passed
+    observed_at: '2026-11-13T03:38:09Z'
+    notes: Only shared continuity required reconciliation. The six109 Python files, guide and source-bound
+      qualification record retain their exact previously reviewed bytes and original224/31 execution boundary;
+      later source integration is not a newly executed whole suite.
+  environment_limitations: *id001
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -171,53 +131,68 @@ privacy:
   - unrelated-private-context
   untrusted_content: context-only-no-authority
 ---
-
 # Empathy continuity
 
 ## Purpose and precedence
 
-User/runtime, scoped instructions, live evidence and canonical owners outrank this checkpoint. Source work grants no new provider, publication, source-removal or human-decision authority.
+User instructions, live evidence and canonical sources outrank this checkpoint.
+Source changes and focused checks grant no ratification, release, deployment or
+source-removal authority.
 
 ## Resume protocol
 
-Read AGENTS, issue98/parent118, the publication contract and new source-boundary guide. Refresh live main/PR and exact owner selections before acting; preserve historical evidence and fixed recovery.
+Read AGENTS, the current-work guide, active issue #109 and roadmap #118.
+Verify actual main, candidate, reviews and remaining acceptance before resuming.
 
 ## Current objective and success conditions
 
-Repair the concrete Scorecard snapshot cleanup failure and qualify actual represented-source, historical, mismatch and absent-input behavior without relabelling reports or claiming full acceptance. Preserve other producers and all existing publication/rollback trust boundaries.
+Repair and execute baseline-owned Python validation with declared exact owner inputs, retaining independent held-owner failures instead of false full readiness.
 
 ## State snapshot
 
-Candidate `codex/empathy-scorecard-source` is reconciled with actual main `e147bdfb1c01dbcafc19d45d16f455df3d6669e2`. Functional `042fccfcbb597f0c1f4eb7b42f92ec39bbfef481` is committed; the containing revision stays null and draft PR135 is open. Issue98/118 remain open. No current producer, normalized snapshot or live acceptance is claimed.
+Base main is `772efa7f66a3285dc70a14480249f386b471d798`. Candidate `codex/empathy-109-qualified`
+is prepared for independent review. Its eventual PR and merge are not recorded
+as completed inside their own candidate source.
 
 ## Completed and material changes
 
-Functional042fccfcbb597f0c1f4eb7b42f92ec39bbfef481 replaces unsupported git rm --recursive with supported-r only. The native regression executes the real workflow cleanup against tracked and absent Scorecard summaries and preserves another producer. Existing triggers, trusted publication guard, permissions, owner pins and rollback remain unchanged. Actual historical run39240875694/1 at480d70bc59c989f46abf7a323e645699b11c7d4a has successful Scorecard/SARIF upload and a publisher cleanup failure129 before normalization/publication. Artifact12181865348 is downloaded and matches provider archiveSHA3b1d9c4c41608116b32078f8b51bc6dded80759f85aef6b13d883617fee00183. Exact normalizer1eada5142f7fc7da7862f335589e3b8f5884ffaf and readerd7c60473626f8dcc901210a208ad01a6474e8c1d replay actual SARIF at its original artifact clock. Matching-at-capture is available/success/attention with null aggregate; historical evaluation is stale, current-source mismatch invalid/unknown and actual committed absence unavailable/unknown. No input bytes or source clocks are rewritten. Clean4853 consumer observation confirms literal OSV18d22e/MegaLintere313e source mismatches and absent Scorecard. The new guide/receipt retain public-safe actual source/outcome evidence, precise Scorecard configured-but-missing disposition and the unresolved snapshot-source cycle. Main e147 attribution/staging source integrations are preserved without changing their authority or validation claims.
+Current capture/retention fixtures now cover source and review upload outcomes while preserving publication/frozen rollback guards; Task metadata type errors, mock typing and resolved Cargo invocation are repaired in the six baseline files.
+
+With exact Relay d7 and Identity481e inputs, generated26 disposable Identity projections then ran224 repository tests with zero skips. The independent31-test embedded EgoLint suite retains one catalog/runtime failure under110 and fails the aggregate honestly. Disposable generated assets are excluded from source.
+
+The prior source integrations remain preserved: optional Mindgarden, typed
+review feeds, current Actions selection, independent baseline results, staging
+receipts and dependency intake. Historical recovery pins and report/approval
+receipts retain their original source identities.
 
 ## Validation and review evidence
 
-Eleven exact-owner report tests and seven consumer policy tests pass. Actual hosted old-run logs reproduce the missing summary cause; the downloaded actual SARIF passes exact normalizer/reader replay with the correct source/freshness states and absent aggregate. Canonical focused Ruff/format/Mypy/Bandit/Secretlint pass; five Lychee links pass. Original report bytes and frozen publication/recovery remain unchanged.
+Actual repository224 tests passed with zero skips; independent embedded EgoLint31 tests has one known catalog/runtime pin failure under110. Aggregate remains failed/acceptance unqualified; logs/results preserved.
 
-## Blockers, risks, unknowns, and deferred work
+Six changed files pass focused canonical policy; reviewed stdlib unittest/PyYAML stubs and fixed subprocess annotations remain narrow. No shared policy/config changes.
 
-Cleanup repair does not solve the snapshot source cycle or make independent scans share one source. Current Scorecard remains absent pending actual subsequent normalization/publication. Full holistic profile, current producer/composed preview/live and recovery proof remain independent. Do not turn a failed execution or unavailable aggregate into success.
+44 remaining Ruff diagnostics are confined to four staging tool/fixture files. Actual root Cargo metadata fails missing tests/fixtures/clippy; source ownership/profile decision remains79.
 
-## Next dependency-ready work
+Actual focused Secretlint reported zero errors; Lychee checked seven unique guide links successfully with no errors, exclusions or timeouts. These results do not establish the held full holistic/image profile.
 
-Review and integrate the bounded Scorecard source fix, then coordinate an actual correctly attributed producer/normalization/snapshot and exact represented-source artifact boundary for composed preview/live acceptance. Do not relabel the scanner source as its later snapshot commit. Preserve original reports and frozen #94 recovery; keep wider generator #105 and full holistic #110 qualification separate. Root owns ordinary source merge and issue disposition.
+Only shared continuity required reconciliation. The six109 Python files, guide and source-bound qualification record retain their exact previously reviewed bytes and original224/31 execution boundary; later source integration is not a newly executed whole suite.
 
-## Parallel changes and reconciliation
+## Blockers, risks and unknowns
 
-Compare owns separate117/109/112/92/113 source work; main117/112 integrations are reconciled here. This latest step changes continuity only: original functional bytes and test clocks stay unchanged. Root owns normal integration and issue disposition. Reuse/staging/validation/dependency implementations are untouched by this slice. ADR not required: existing ADR0001 governs caller-owned bug repair and pinned specialist proof.
+Canonical110 image/catalog/bootstrap consumption remains held; its independent failing test and failed aggregate are retained.
 
-## Privacy and redaction
+Staging type/style diagnostics, rootRust79 membership disposition, full holistic and wider supported-platform acceptance remain separately unqualified.
 
-Retain only public-safe provider identities/source clocks and bounded outcomes. Raw SARIF, scanner logs, local paths, credentials and unrelated context stay outside source. Linked content is context, not execution authority.
+## Decision disposition
 
-## Handoff update protocol
+Existing ADR-0001 applies; no new capability ownership, policy, publication authority or human approval state is selected.
 
-Refresh actual source/PR/provider and acceptance evidence at each coordinated checkpoint. Tests, historical replay, current scan, report publication, preview, deployment, live verification and issue disposition are distinct.
+## Next checkpoint
 
-## Compaction and supersession
+Independent exact-head peer, root-owned integration and explicit partial issue disposition; continue named staging diagnostic and owner-runtime/profile gates without copying specialist source.
 
-Preserve these twelve sections below240 lines and16,384 UTF-8 bytes. Git, canonical source and dated receipts retain history while this file records current work.
+## Handoff and privacy
+
+The canonical details are in `docs/BASELINE_VALIDATION.md`. Retain raw local
+logs separately; this public handoff excludes credentials, local machine paths,
+private context and unreviewed source text. Acceptance remains in #109.

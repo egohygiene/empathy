@@ -48,11 +48,12 @@ class UniqueKeyLoader(yaml.SafeLoader):
 def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict[str, Any]:
     result: dict[str, Any] = {}
     for key_node, value_node in node.value:
-        key = loader.construct_object(key_node, deep=True)
+        # PyYAML's dynamically dispatched constructor has no typed stub signature.
+        key = loader.construct_object(key_node, deep=True)  # type: ignore[no-untyped-call]
         if key in result:
             message = f"duplicate YAML mapping key: {key}"
             raise ValueError(message)
-        result[key] = loader.construct_object(value_node, deep=True)
+        result[key] = loader.construct_object(value_node, deep=True)  # type: ignore[no-untyped-call]
     return result
 
 
@@ -413,7 +414,15 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 self.assertTrue(evaluate(step["if"], event_context("push")))
             if action.startswith("actions/upload-artifact@"):
                 artifacts.append(step)
-                self.assertEqual(step["with"]["retention-days"], "30")
+                if step.get("id") in {"source_capture_upload", "review_feed_upload"}:
+                    self.assertEqual(step["with"]["retention-days"], "7")
+                    if step.get("id") == "review_feed_upload":
+                        self.assertEqual(step["with"]["include-hidden-files"], "true")
+                        self.assertIn(
+                            "steps.review_feed.outputs.artifact-directory", step["with"]["path"]
+                        )
+                else:
+                    self.assertEqual(step["with"]["retention-days"], "30")
         self.assertEqual(len(publications), 2)
         for prefix in ("empathy-composed-", "empathy-provenance-"):
             matching = [step for step in artifacts if step["with"]["name"].startswith(prefix)]
@@ -474,11 +483,16 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         }
         statuses["unrecognized-stage"] = {"outcome": "private-stage-sentinel"}
         filename = "empathy-publication-run.json"
-        for mode, publish in product(("current", "rollback-v1.4"), ("true", "false")):
+        for mode, publish, capture in product(
+            ("current", "rollback-v1.4"), ("true", "false"), ("true", "false")
+        ):
+            if mode == "rollback-v1.4" and capture == "true":
+                continue
             environment = {
                 "RESULTS": json.dumps(statuses),
                 "MODE": mode,
                 "PUBLISH_EXPECTED": publish,
+                "CAPTURE_EXPECTED": capture,
             }
             report = self.run_report(report_step, filename, environment, 0)
             self.assertEqual(report["conclusion"], "success")
@@ -494,6 +508,10 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 ("pages_artifact", "EMRI-009"),
                 ("configure_pages", "EMRI-009"),
                 ("rollback_checkout", "EMRI-002"),
+                ("public_sources", "EMRI-011"),
+                ("source_capture_upload", "EMRI-011"),
+                ("review_feed", "EMRI-012"),
+                ("review_feed_upload", "EMRI-012"),
             ):
                 if stage not in report["observed"]:
                     continue
@@ -515,7 +533,12 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         failure = self.run_report(
             report_step,
             filename,
-            {"RESULTS": json.dumps(statuses), "MODE": "current", "PUBLISH_EXPECTED": "false"},
+            {
+                "RESULTS": json.dumps(statuses),
+                "MODE": "current",
+                "PUBLISH_EXPECTED": "false",
+                "CAPTURE_EXPECTED": "false",
+            },
             1,
         )
         self.assertEqual(failure["observed"]["review_artifact"], "unavailable")
@@ -526,6 +549,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 "RESULTS": json.dumps(statuses),
                 "MODE": "private-mode-sentinel",
                 "PUBLISH_EXPECTED": "false",
+                "CAPTURE_EXPECTED": "false",
             },
             1,
         )
@@ -539,9 +563,20 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         )
         filename = "empathy-intelligence-run.json"
         environment = dict.fromkeys(
-            ("HARDEN_RESULT", "CHECKOUT_RESULT", "INPUT_RESULT", "BUILD_RESULT", "ARTIFACT_RESULT"),
+            (
+                "HARDEN_RESULT",
+                "CHECKOUT_RESULT",
+                "INPUT_RESULT",
+                "BUILD_RESULT",
+                "ARTIFACT_RESULT",
+                "CAPTURE_RESULT",
+                "CAPTURE_UPLOAD_RESULT",
+                "REVIEW_FEED_RESULT",
+                "REVIEW_FEED_UPLOAD_RESULT",
+            ),
             "success",
         )
+        environment["CAPTURE_EXPECTED"] = "false"
         report = self.run_report(report_step, filename, environment, 0)
         self.assertEqual(report["conclusion"], "success")
         for value in ("failure", "cancelled", "skipped", "private-outcome-sentinel"):
@@ -555,6 +590,19 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 report["observed"]["review_artifact"],
                 value if value != "private-outcome-sentinel" else "unavailable",
             )
+        environment["CAPTURE_EXPECTED"] = "true"
+        report = self.run_report(report_step, filename, environment, 0)
+        self.assertEqual(report["conclusion"], "success")
+        for stage, key, code in (
+            ("public_sources", "CAPTURE_RESULT", "EMRI-011"),
+            ("source_capture_upload", "CAPTURE_UPLOAD_RESULT", "EMRI-011"),
+            ("review_feed", "REVIEW_FEED_RESULT", "EMRI-012"),
+            ("review_feed_upload", "REVIEW_FEED_UPLOAD_RESULT", "EMRI-012"),
+        ):
+            for outcome in ("failure", "cancelled", "skipped", "private-outcome-sentinel"):
+                failed = self.run_report(report_step, filename, {**environment, key: outcome}, 1)
+                self.assertEqual(failed["stage"], stage)
+                self.assertEqual(failed["error_code"], code)
 
     def test_scheduler_fixture_preserves_production_status_guards(self) -> None:
         production = self.pages["jobs"]
