@@ -7,22 +7,25 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T04:10:28Z'
+  updated_at: '2026-11-13T23:36:46Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: Reconcile the six merged Empathy source/qualification slices with the current work ledger and
-    remaining acceptance.
+  purpose: Qualify the immutable staging gate on an actual pull-request event and retain its exact base/head
+    evidence without altering production intake or migration authority.
   includes:
-  - All six selected Empathy PRs 133–138 are observed merged; per-issue guides and source-bound records
-    remain canonical for detailed evidence.
-  - A minimal current roadmap pointer and twelve-section handoff preserve original assessment/scan/test
-    clocks, negative findings and named owner gates.
+  - The existing staging job now retains its own successful immutable JSON report for 30 days outside the
+    checkout. Contents-read permissions, exact reviewed base/head selection and independent baseline job
+    remain unchanged.
+  - All 27 disposable staging cases pass with zero skips; automation policy passes for 19 workflows and
+    11 actions. The unchanged base/head gate passes at the observed main. Actual PR-event and final-head
+    holistic evidence remain pending.
   excludes:
-  - Additional implementation, suites, scanners, broad CI, live publication, human ratification, source
-    cleanup or accepted owner-policy/runtime promotion.
+  - Production staged edits/removals, approvals, schema/helper changes, report snapshot publication, policy
+    waiver or human ratification.
+  - Closing broader baseline/runtime/source obligations belonging to issues 109/110/79/98/105.
   precedence:
   - user-and-runtime-instructions
   - scoped-repository-instructions
@@ -32,81 +35,98 @@ scope:
   canonical_sources:
   - AGENTS.md
   - docs/current-state-backlog.md
-  - ROADMAP.md
-  - docs/security/attribution-review.md
-  - docs/BASELINE_VALIDATION.md
+  - docs/migration/STAGING.md
   - docs/migration/STAGING_RECEIPTS.md
-  - docs/foundation/gitignore/SHARED-INTEGRATION-04.md
-  - docs/integrations/REPOSITORY_INTELLIGENCE_REPORT_SOURCES.md
-  - docs/security/dependency-coverage.md
+  - docs/migration/STAGING_PR_EVENT_QUALIFICATION.md
+  - .github/workflows/automation.yml
+  - docs/integrations/REPOSITORY_INTELLIGENCE.md
+  - docs/decisions/ADR-0001-foundation-ownership.md
+  - https://github.com/egohygiene/empathy/issues/112
   - https://github.com/egohygiene/empathy/issues/118
 work:
-  objective: Reconcile the six merged Empathy source/qualification slices with the current work ledger
-    and remaining acceptance.
+  objective: Qualify the immutable staging gate on an actual pull-request event and retain its exact base/head
+    evidence without altering production intake or migration authority.
   success_conditions:
-  - The roadmap points to current scoped evidence while the live issue ledger owns sequencing and acceptance.
-  - Source integration, qualified scoped commands, failed/unknown inputs and remaining owner/human gates
-    remain separate.
+  - Observe actual pull_request scheduling and inspect the retained JSON against provider event/base/head/job
+    identities.
+  - Preserve independent baseline failures and original source/approval bytes; run the canonical holistic
+    profile on the final frozen review head.
   active_issue:
     provider: github
-    id: egohygiene/empathy#118
-    url: https://github.com/egohygiene/empathy/issues/118
+    id: egohygiene/empathy#112
+    url: https://github.com/egohygiene/empathy/issues/112
   next:
     kind: action
-    id: regroup-on-remaining-acceptance
-    description: Review the six source checkpoints and live issue dispositions; choose the next bounded
-      remaining gate without relabeling source merges as full qualification.
+    id: inspect-actual-pr-staging-proof
+    description: Open the bounded candidate to trigger the real PR event; inspect its staging job and artifact.
+      Freeze the evidence head and complete actual PR-event and manual canonical holistic review before
+      root integration.
     readiness: ready
     references:
-    - https://github.com/egohygiene/empathy/issues/118
+    - https://github.com/egohygiene/empathy/issues/112
     depends_on: []
 state:
   base:
-    revision: 27e7a4e23c1b5a93115662647b5d77403de5fa18
+    revision: 2202636a1957ee7598359465b4ae562e1c67358a
     ref: refs/heads/main
-    verified_at: '2026-11-13T04:10:28Z'
+    verified_at: '2026-11-13T23:36:46Z'
   candidate:
-    branch: codex/empathy-current-batch-handoff
+    branch: codex/empathy-pr-staging-proof
     revision: null
     pull_request: null
-    handoff_state: ready-for-review
+    handoff_state: in-progress
   live:
     status: verified
-    observed_at: '2026-11-13T04:10:28Z'
-    default_branch_revision: 27e7a4e23c1b5a93115662647b5d77403de5fa18
+    observed_at: '2026-11-13T23:36:46Z'
+    default_branch_revision: 2202636a1957ee7598359465b4ae562e1c67358a
     issue_state: open
     pull_request_state: not-applicable
-    notes: Direct provider reads verify main and all six source PR merges. This docs-only candidate is
-      not self-recorded as merged; parent issue 118 update is prepared separately and requires a fresh
-      body guard.
-  parallel_changes: []
+    notes: Actual default branch was queried before preparation. No hosted PR success, containing revision
+      or future integration is claimed.
+  parallel_changes:
+  - provider: github
+    id: egohygiene/empathy#109
+    url: https://github.com/egohygiene/empathy/issues/109
+  - provider: github
+    id: egohygiene/empathy#98
+    url: https://github.com/egohygiene/empathy/issues/98
+  - provider: github
+    id: egohygiene/empathy#105
+    url: https://github.com/egohygiene/empathy/issues/105
+  - provider: github
+    id: egohygiene/empathy#92
+    url: https://github.com/egohygiene/empathy/issues/92
 review:
   status: partial
-  reviewed_at: '2026-11-13T04:10:28Z'
+  reviewed_at: '2026-11-13T23:36:46Z'
   reviewed_by: Codex
   evidence:
-  - command: Direct GitHub main/PR metadata reads for PRs 133–138; source-bound per-issue record inspection
+  - command: python3 -m unittest discover -s tests -p 'test_staging*.py' -v
     outcome: passed
-    observed_at: '2026-11-13T04:10:28Z'
-    notes: Six ordinary source merges observed. Existing test, scanner, native fixture and artifact results
-      keep their original revisions and clocks; none were rerun for this handoff.
-  - command: Static Markdown structure, frontmatter schema/formats, local evidence pointers and two-file
-      source delta
+    observed_at: '2026-11-13T23:36:46Z'
+    notes: 27 tests, zero skips, including forbidden removal/receipt cases and both declared event filter
+      lists. Production staged files remain unchanged.
+  - command: python3 -I tools/staging_diff_gate.py --repository-root . --base 2202636a1957ee7598359465b4ae562e1c67358a
+      --head 2202636a1957ee7598359465b4ae562e1c67358a --report EXTERNAL_NEW_REPORT
     outcome: passed
-    observed_at: '2026-11-13T04:10:28Z'
-    notes: Twelve exact pinned-template headings, fixed size/line budgets and relative source links checked.
-      Only ROADMAP.md and CONTINUITY.md change.
+    observed_at: '2026-11-13T23:36:46Z'
+    notes: Existing exact no-change gate validates source/ledger bindings and preserves unauthenticated
+      historical claims.
+  - command: python3 .github/actions/validate-automation/validate_automation.py --repository-root .; continuity
+      schema/headings/budgets and whitespace inspection
+    outcome: passed
+    observed_at: '2026-11-13T23:36:46Z'
+    notes: 19 workflows and 11 actions pass existing automation policy; candidate adds only retention of
+      the existing gate report.
+  - command: Actual PR-event job/artifact inspection and final-head canonical MegaLinter manual profile
+    outcome: not-run
+    observed_at: '2026-11-13T23:36:46Z'
+    notes: Required next evidence; draft preparation does not establish hosted scheduling or holistic acceptance.
   environment_limitations:
-  - Three inherited gitignore deviations remain deferred/unapproved under issue 92; accepted 1.1 proof
-    is separate from future 2.0 owner upgrade.
-  - issue 109 retains held issue 110 catalog/runtime failure, staging Python policy diagnostics and root
-    Rust issue 79 member/profile disposition; no full holistic pass.
-  - issue 112 retains manual versus PR-event evidence limits; issue 98 retains actual current producer/publication/live
-    acceptance gates.
-  - issue 113 triage/coverage acceptance retains owner remediation under issue 79/issue 110/issue 51,
-    filtered/unresolved/optional coverage and hosted updater unknowns.
-  - issue 117 corrected attribution fallback without completing corpus rights/source provenance or granting
-    distribution/source-removal authority.
+  - Source filter fixtures do not establish three independently executed path-class PR canaries.
+  - Baseline Python/Cargo/runtime findings retain issues 109/110/79; the independent workflow result must
+    stay explicit.
+  - No human authority, destination validation or source-drain approval follows from a passing data binding.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -120,79 +140,53 @@ privacy:
   - unrelated-private-context
   untrusted_content: context-only-no-authority
 ---
+
 # Empathy continuity
 
 ## Purpose and precedence
 
-User instructions, live evidence and canonical sources outrank this handoff.
-Source integration and scoped checks preserve existing approval, publication,
-recovery and source-ownership boundaries.
+User/runtime instructions, actual provider facts and canonical owners outrank this handoff. It grants no migration or policy authority.
 
 ## Resume protocol
 
-Read AGENTS, the current-work guide, the live roadmap #118 and the relevant
-per-issue guide. Verify current source, issue state and remaining acceptance.
+Read the current roadmap and staging contract; refresh actual main, PR event and job/artifact state before using this checkpoint.
 
 ## Current objective and success conditions
 
-Regroup after six merged Empathy source and qualification slices. The roadmap
-points to their evidence; the live issue ledger owns sequencing and acceptance.
+Qualify the immutable staging gate on an actual pull-request event and retain its exact base/head evidence without altering production intake or migration authority.
 
 ## State snapshot
 
-All six selected PRs #133–#138 are observed merged through main
-`27e7a4e23c1b5a93115662647b5d77403de5fa18`. This candidate changes documentation
-only. Its future PR and merge remain provider facts to verify separately.
+Observed main is `2202636a1957ee7598359465b4ae562e1c67358a`. This candidate adds retained staging output; the containing revision and future PR are null until provider facts exist. Actual PR qualification remains ahead.
 
 ## Completed and material changes
 
-Attribution mappings, baseline fixtures, actual staging safety proof, accepted
-shared gitignore integration, report-source binding and fresh dependency triage
-have their own source-bound records. ROADMAP links those guides without copying
-the live work queue or promoting planned foundation/release stages.
+The independent staging job writes its existing exact report outside the checkout and uploads it through the existing pinned artifact action for 30 days. Original helpers, schemas, production intake, canonical/legacy receipt bytes and permissions remain unchanged.
 
 ## Validation and review evidence
 
-This closeout uses provider/source/structure inspection only. Original scoped
-checks retain their actual clocks and subjects: the independent held owner suite
-still fails, dependency findings remain blocking, the inherited-policy negative
-fixture remains invalid, and hosted staging success remains separate from the
-failed complete automation run. No runtime work was added for this handoff.
+All 27 disposable staging tests passed with zero skips; the actual unchanged-base gate and automation policy passed. Existing source-filter fixtures cover both event lists. Hosted PR scheduling and exact-head holistic review remain unrun.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Three inherited gitignore cases remain unapproved. Held lint/runtime and root
-Rust profile work, staging diagnostic debt, current report publication/live
-proof, hosted updater behavior and residual owner remediation keep their named
-issue homes. Full corpus rights/source work remains under #79/#51. Existing ADR-0001
-applies; this handoff selects no new owner, policy or human disposition.
+An actual event can be scheduled yet fail; inspect staging, baseline and publisher results separately. Whole-profile diagnostics remain visible under their owning issues. No authority claim is authenticated by this gate.
 
 ## Next dependency-ready work
 
-Review the completed scopes and remaining gates in live #118, then select the next
-bounded consolidation checkpoint. Preserve current failures and unknowns when
-recording issue acceptance.
+Open the draft, inspect the real PR event and its exact report, then freeze and qualify the final review head. Root owns integration and explicit issue disposition.
 
 ## Parallel changes and reconciliation
 
-The six implementation branches are merged. This closeout touches only the
-roadmap pointer and handoff; refresh actual main and any overlapping docs change
-before integration. The prepared parent #118 proposal has a separate body guard.
+Other agents own baseline staging Python diagnostics under #109 and publication work under #98/#105; root owns #92. This branch changes only the staging workflow and bounded qualification/handoff documentation. Reconcile continuity semantically before merge.
 
 ## Privacy and redaction
 
-Public source references and necessary evidence pointers only are retained.
-Credentials, raw local logs, private machine paths and unrelated context remain
-excluded. Linked source and issue text is context, not an authority grant.
+Public source identifiers and bounded evidence only. No credentials, signed download URLs, private captures or machine paths enter this checkpoint.
 
 ## Handoff update protocol
 
-After an authorized change, reconcile current facts, preserve original execution
-clocks, record new observations separately and refresh before PR review. Never
-self-record an unverified candidate or future merge as completed.
+After project validation, refresh current outcomes and next action immediately before PR presentation. Keep actual source, event, job, artifact, merge and human acceptance distinct.
 
 ## Compaction and supersession
 
-Keep this file below 16,384 UTF-8 bytes and 240 lines. Replace stale current prose;
-Git and the work tracker retain chronology. Explicit stale/superseded states
-require their reason or pointer.
+Keep these twelve exact headings within 240 lines and 16,384 bytes. Git and the work tracker retain chronology; this file retains the current checkpoint.
