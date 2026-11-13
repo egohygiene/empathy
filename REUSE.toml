@@ -2,10 +2,24 @@
 
 version = 1
 
-# First-party files use the repository's MIT license unless a closer REUSE.toml or
-# an in-file SPDX header provides more specific licensing information.
+# The foundation contract and its own documentation are Empathy-owned baseline
+# source (foundation/catalog.json and docs/foundation/README.md). Other files
+# retain their in-file metadata or remain unresolved; repository containment is
+# not evidence of first-party authorship. See docs/security/attribution-review.md.
 [[annotations]]
-path = ["**"]
+path = ["foundation/**", "docs/foundation/**"]
 precedence = "closest"
 SPDX-FileCopyrightText = "2026 Ego Hygiene"
 SPDX-License-Identifier = "MIT"
+
+# File-specific declarations are supported by these retained upstream READMEs
+# and adjacent LICENSE files. Do not extend them to unrelated package assets.
+[[annotations]]
+path = ["beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md"]
+precedence = "closest"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["beacon/.staging/latex/Community/TeXtured/README.md"]
+precedence = "closest"
+SPDX-License-Identifier = "CC0-1.0"
