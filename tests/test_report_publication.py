@@ -8,6 +8,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import re
+import subprocess  # nosec B404 # Fixed local commands in an owned disposable Git fixture.
+from tempfile import TemporaryDirectory
+import textwrap
 import unittest
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
@@ -29,7 +32,7 @@ class ReportPublicationPolicyTests(unittest.TestCase):
         self.assertEqual(len(setup_references), 1)
         self.assertRegex(setup_references[0], r"^actions/setup-node@[0-9a-f]{40}$")
         self.assertIn(f'node-version: "{package["engines"]["node"].removeprefix(">=")}"', workflow)
-        self.assertIn(f'corepack prepare {package["packageManager"]} --activate', workflow)
+        self.assertIn(f"corepack prepare {package['packageManager']} --activate", workflow)
         self.assertIn("cd egolint", workflow)
         self.assertIn("sh scripts/pnpm.sh install", workflow)
         self.assertIn("--frozen-lockfile", workflow)
@@ -87,6 +90,50 @@ class ReportPublicationPolicyTests(unittest.TestCase):
         self.assertIn("normalize-repository-report", summary_job)
         self.assertIn("publish-report-snapshot", summary_job)
         self.assertIn(".repo.commit == $commit", summary_job)
+
+    def test_scorecard_cleanup_executes_without_removing_other_producers(self) -> None:
+        """Run the real cleanup step against tracked and already-absent summaries."""
+
+        workflow = self.workflow("ossf-scorecard.yml")
+        cleanup = workflow.split("      - name: Clear the previous Scorecard summary\n", 1)[1]
+        script = textwrap.dedent(cleanup.split("run: |\n", 1)[1].split("\n      - name:", 1)[0])
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            scorecard = root / ".reports/scorecard/summary.json"
+            osv = root / ".reports/osv/summary.json"
+            for path in (scorecard, osv):
+                path.parent.mkdir(parents=True)
+                path.write_text("preserved source fixture\n", encoding="utf-8")
+            subprocess.run(  # nosec B603, B607
+                ["git", "init", "--quiet", "--initial-branch=main"],  # noqa: S607
+                cwd=root,
+                check=True,
+                capture_output=True,
+            )
+            subprocess.run(  # nosec B603, B607
+                ["git", "add", ".reports"],  # noqa: S607
+                cwd=root,
+                check=True,
+                capture_output=True,
+            )
+            for _attempt in range(2):
+                subprocess.run(  # noqa: S603 # nosec B603, B607
+                    ["bash", "-euo", "pipefail", "-c", script],  # noqa: S607
+                    cwd=root,
+                    check=True,
+                    capture_output=True,
+                )
+                self.assertTrue(scorecard.parent.is_dir())
+                self.assertFalse(scorecard.exists())
+                self.assertEqual(osv.read_text(encoding="utf-8"), "preserved source fixture\n")
+            tracked = subprocess.run(  # nosec B603, B607 # Fixed local Git arguments, no shell.
+                ["git", "ls-files"],  # noqa: S607
+                cwd=root,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.splitlines()
+            self.assertEqual(tracked, [".reports/osv/summary.json"])
 
     def test_existing_producers_emit_normalized_summaries(self) -> None:
         for workflow_name in ("megalinter.yml", "osv-scan.yml", "ossf-scorecard.yml"):
