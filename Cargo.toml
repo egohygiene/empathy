@@ -1,7 +1,0 @@
-# Cargo.toml
-
-[workspace]
-members = [
-  "tests/fixtures/clippy",
-]
-resolver = "3"
