@@ -69,9 +69,7 @@
       "kind": "exact-staging-report",
       "archive_sha256": "02e722cd484f78dce6f2ed08a0a66831caf6305527475f5865b41b04d11f268a",
       "size_bytes": 1340,
-      "members": [
-        "staging-diff-evidence.json"
-      ],
+      "members": ["staging-diff-evidence.json"],
       "expires_at": "2026-12-13T23:38:06Z",
       "report_sha256": "c1494a5383a9191642e51b0d5fc392bd8f9ecf48e0aaa07995893596b469486b"
     },
@@ -122,10 +120,7 @@
     "result": "passed"
   },
   "declared_filter_fixture": {
-    "events": [
-      "pull_request",
-      "push"
-    ],
+    "events": ["pull_request", "push"],
     "patterns": [
       ".staging/**",
       "migration/**",

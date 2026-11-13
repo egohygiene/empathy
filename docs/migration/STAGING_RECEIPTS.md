@@ -158,8 +158,8 @@ review was performed. The later source-integration exception below records inert
 inventory generation separately. Fixture execution, gate execution, canonical Ruff,
 Mypy, Bandit, Secretlint, Lychee, holistic build/profile and hosted trigger/event
 qualification remain unrun. No green gate, migration completion, authenticated
-human acceptance or successful destination validation is claimed. Keep #112,
-#118 and #79 open for their actual remaining acceptance.
+human acceptance or successful destination validation is claimed. Keep issues #112, #118 and #79
+open for their actual remaining acceptance.
 
 ADR disposition: reference ADR-0001. This enforces the already documented
 source-preservation and separately reviewed migration boundary without changing
