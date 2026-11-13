@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T03:28:52Z'
+  updated_at: '2026-11-13T03:34:15Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -29,8 +29,8 @@ scope:
     committed absence unavailable/unknown. No input bytes or source clocks are rewritten.
   - Clean4853 consumer observation confirms literal OSV18d22e/MegaLintere313e source mismatches and absent
     Scorecard. The new guide/receipt retain public-safe actual source/outcome evidence, precise Scorecard
-    configured-but-missing disposition and the unresolved snapshot-source cycle. Main030329 attribution
-    integration is preserved.
+    configured-but-missing disposition and the unresolved snapshot-source cycle. Main e147 attribution/staging
+    source integrations are preserved without changing their authority or validation claims.
   excludes:
   - New current scanner/report publication, Empathy Pages deployment/rollback, report retiming, owner
     normalizer/schema changes, full issue acceptance or automatic closure.
@@ -85,28 +85,32 @@ work:
     depends_on: []
 state:
   base:
-    revision: 030329dd19f4df15d500d09b5595449f725a6dd5
+    revision: e147bdfb1c01dbcafc19d45d16f455df3d6669e2
     ref: refs/heads/main
-    verified_at: '2026-11-13T03:28:52Z'
+    verified_at: '2026-11-13T03:34:15Z'
   candidate:
     branch: codex/empathy-scorecard-source
     revision: null
-    pull_request: null
+    pull_request:
+      provider: github
+      id: egohygiene/empathy#135
+      url: https://github.com/egohygiene/empathy/pull/135
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-13T03:28:52Z'
-    default_branch_revision: 030329dd19f4df15d500d09b5595449f725a6dd5
+    observed_at: '2026-11-13T03:34:15Z'
+    default_branch_revision: e147bdfb1c01dbcafc19d45d16f455df3d6669e2
     issue_state: open
-    pull_request_state: not-applicable
-    notes: Remote current main030329 was fetched and reconciled after117. Live98 and parent118 remain
-      open; the user selected the current bounded issue batch rather than inferring authority from an
-      older roadmap order. This candidate has no owner PR or actual current Scorecard producer/snapshot/live
-      run yet. Historical392408 run is expressly dated, not new scan proof.
+    pull_request_state: draft
+    notes: Actual main e147 was fetched and merged after attribution117 and staging112 source integrations.
+      PR135 is open draft. All four original non-continuity files remain byte-identical to d5, and original
+      test/historical replay observation clocks remain unchanged; this reconciliation adds no execution
+      claim. Issue98 and parent118 remain open. Root owns ordinary integration and remaining source-cycle/current
+      producer/preview/live acceptance.
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-13T03:28:52Z'
+  reviewed_at: '2026-11-13T03:34:15Z'
   reviewed_by: Codex
   evidence:
   - command: Exact Relay d7 native report tests; consumer report publication tests including actual extracted
@@ -139,6 +143,13 @@ review:
     observed_at: '2026-11-13T03:28:52Z'
     notes: No complete issue or full-profile readiness claimed. Broad qualification and provider writes
       remain coordinated separately from this bounded source proof.
+  - command: Merge actual main e147 into PR135; exact original non-continuity blob/mode comparison and
+      bounded continuity metadata
+    outcome: limited
+    observed_at: '2026-11-13T03:34:15Z'
+    notes: Only shared CONTINUITY conflict resolved. No tests/scanner/helper rerun or original evidence
+      clock refresh; four source/doc evidence files and main-owned source remain exact. Independent Journey
+      final exact-head peer follows.
   environment_limitations:
   - The real SARIF comes from a historical Oct19 scan. The explicit artifact-created replay clock is not
     a new normalization/publication observation or current freshness claim.
@@ -177,11 +188,11 @@ Repair the concrete Scorecard snapshot cleanup failure and qualify actual repres
 
 ## State snapshot
 
-Candidate `codex/empathy-scorecard-source` is reconciled with actual main `030329dd19f4df15d500d09b5595449f725a6dd5`. Functional `042fccfcbb597f0c1f4eb7b42f92ec39bbfef481` is committed; containing revision/pre-PR reference remain null. Issue98/118 remain open. No current producer, normalized snapshot or live acceptance is claimed.
+Candidate `codex/empathy-scorecard-source` is reconciled with actual main `e147bdfb1c01dbcafc19d45d16f455df3d6669e2`. Functional `042fccfcbb597f0c1f4eb7b42f92ec39bbfef481` is committed; the containing revision stays null and draft PR135 is open. Issue98/118 remain open. No current producer, normalized snapshot or live acceptance is claimed.
 
 ## Completed and material changes
 
-Functional042fccfcbb597f0c1f4eb7b42f92ec39bbfef481 replaces unsupported git rm --recursive with supported-r only. The native regression executes the real workflow cleanup against tracked and absent Scorecard summaries and preserves another producer. Existing triggers, trusted publication guard, permissions, owner pins and rollback remain unchanged. Actual historical run39240875694/1 at480d70bc59c989f46abf7a323e645699b11c7d4a has successful Scorecard/SARIF upload and a publisher cleanup failure129 before normalization/publication. Artifact12181865348 is downloaded and matches provider archiveSHA3b1d9c4c41608116b32078f8b51bc6dded80759f85aef6b13d883617fee00183. Exact normalizer1eada5142f7fc7da7862f335589e3b8f5884ffaf and readerd7c60473626f8dcc901210a208ad01a6474e8c1d replay actual SARIF at its original artifact clock. Matching-at-capture is available/success/attention with null aggregate; historical evaluation is stale, current-source mismatch invalid/unknown and actual committed absence unavailable/unknown. No input bytes or source clocks are rewritten. Clean4853 consumer observation confirms literal OSV18d22e/MegaLintere313e source mismatches and absent Scorecard. The new guide/receipt retain public-safe actual source/outcome evidence, precise Scorecard configured-but-missing disposition and the unresolved snapshot-source cycle. Main030329 attribution integration is preserved.
+Functional042fccfcbb597f0c1f4eb7b42f92ec39bbfef481 replaces unsupported git rm --recursive with supported-r only. The native regression executes the real workflow cleanup against tracked and absent Scorecard summaries and preserves another producer. Existing triggers, trusted publication guard, permissions, owner pins and rollback remain unchanged. Actual historical run39240875694/1 at480d70bc59c989f46abf7a323e645699b11c7d4a has successful Scorecard/SARIF upload and a publisher cleanup failure129 before normalization/publication. Artifact12181865348 is downloaded and matches provider archiveSHA3b1d9c4c41608116b32078f8b51bc6dded80759f85aef6b13d883617fee00183. Exact normalizer1eada5142f7fc7da7862f335589e3b8f5884ffaf and readerd7c60473626f8dcc901210a208ad01a6474e8c1d replay actual SARIF at its original artifact clock. Matching-at-capture is available/success/attention with null aggregate; historical evaluation is stale, current-source mismatch invalid/unknown and actual committed absence unavailable/unknown. No input bytes or source clocks are rewritten. Clean4853 consumer observation confirms literal OSV18d22e/MegaLintere313e source mismatches and absent Scorecard. The new guide/receipt retain public-safe actual source/outcome evidence, precise Scorecard configured-but-missing disposition and the unresolved snapshot-source cycle. Main e147 attribution/staging source integrations are preserved without changing their authority or validation claims.
 
 ## Validation and review evidence
 
@@ -197,7 +208,7 @@ Review and integrate the bounded Scorecard source fix, then coordinate an actual
 
 ## Parallel changes and reconciliation
 
-Compare owns separate117/109/112/92/113 source work; only main117 was reconciled here. Root owns normal integration and issue disposition. Reuse/staging/validation/dependency implementations are untouched by this slice. ADR not required: existing ADR0001 governs caller-owned bug repair and pinned specialist proof.
+Compare owns separate117/109/112/92/113 source work; main117/112 integrations are reconciled here. This latest step changes continuity only: original functional bytes and test clocks stay unchanged. Root owns normal integration and issue disposition. Reuse/staging/validation/dependency implementations are untouched by this slice. ADR not required: existing ADR0001 governs caller-owned bug repair and pinned specialist proof.
 
 ## Privacy and redaction
 

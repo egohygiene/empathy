@@ -190,3 +190,31 @@ new gate, tests, fixtures or staged code, authenticate authority, validate a
 destination, or demonstrate hosted scheduling. All qualification gates above
 remain separate. Dated dependency inspection against source058 retains its
 original CSV identity and is not rewritten as a new audit.
+
+## Executed qualification — 2026-11-13
+
+The [source-bound qualification record](STAGING_RECEIPTS_QUALIFICATION.json)
+adds actual execution without changing the historical statements above.
+
+- All **27** staging tests passed with **zero skips**, including unauthorized
+  deletion, changed preimages, missing/stale/self-supplied approvals, path rename,
+  exact synthetic receipt, ledger freshness and both event path-filter lists.
+- The actual read-only gate passed from base
+  `0f0669739ae173ec8b374103a915c71968ac9304` to main
+  `4853a1e55808bc5104dc509199c411e798d104dc`.
+- [Hosted run 43356272034, attempt 1](https://github.com/egohygiene/empathy/actions/runs/43356272034)
+  dispatched the existing manual workflow at that exact main. The staging job
+  **131658963205 passed** its complete checkout and immutable diff/ledger step.
+- The independent baseline job failed, then successfully retained
+  [artifact 14005589244](https://github.com/egohygiene/empathy/actions/runs/43356272034/artifacts/14005589244).
+  Its downloaded ZIP matched the provider digest and contained both verbose logs,
+  `results.json` and `summary.md`. Both commands failed; acceptance is explicitly
+  `unqualified`. The overall run is **failed**, not green staging acceptance.
+
+This proves the selected local negative cases and actual manual job scheduling
+and isolation. PR-specific event scheduling remains separate from manual proof;
+the source fixtures verify both declared filter lists. Newer main attribution
+changes preserve all tested staging workflow/helper/schema bytes. Canonical
+staging tool type/style diagnostics and whole-profile review remain outstanding.
+No production staged source, legacy approval or durable receipt was changed;
+human authority and destination evidence were not authenticated by these checks.
