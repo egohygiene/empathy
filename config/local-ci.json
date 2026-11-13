@@ -35,6 +35,13 @@
       "required_secrets": []
     },
     {
+      "id": "native-whitespace",
+      "kind": "direct",
+      "command": ["git", "diff", "--check"],
+      "timeout_seconds": 60,
+      "required": true
+    },
+    {
       "id": "holistic-baseline",
       "kind": "unsupported",
       "required": false,

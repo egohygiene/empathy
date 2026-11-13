@@ -120,7 +120,10 @@ Empathy does not maintain a second runner implementation.
 
 `config/local-ci.json` is the explicit selection. Its direct check and
 `.github/act/local-validation.yml` fixture exercise the bounded foundation
-consumer tests. The fixture lives outside `.github/workflows`, so GitHub does
+consumer tests. A separate required native `git diff --check` preserves the
+whitespace gate on the host. A linked worktree's `.git` pointer cannot be resolved
+inside act's copied workspace, so the container fixture does not depend on it.
+The fixture lives outside `.github/workflows`, so GitHub does
 not schedule it. act's checkout emulation copies the working tree; it does not
 qualify the remote checkout Action itself.
 
