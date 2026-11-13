@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T23:36:46Z'
+  updated_at: '2026-11-13T23:42:41Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -19,9 +19,8 @@ scope:
   - The existing staging job now retains its own successful immutable JSON report for 30 days outside the
     checkout. Contents-read permissions, exact reviewed base/head selection and independent baseline job
     remain unchanged.
-  - All 27 disposable staging cases pass with zero skips; automation policy passes for 19 workflows and
-    11 actions. The unchanged base/head gate passes at the observed main. Actual PR-event and final-head
-    holistic evidence remain pending.
+  - All 27 staging cases pass with zero skips. Real PR141/run43528478023 staging job132239988245 passed;
+    artifact14085398870 binds exact base/head. Its independent baseline fails and overall run remains failed/unqualified.
   excludes:
   - Production staged edits/removals, approvals, schema/helper changes, report snapshot publication, policy
     waiver or human ratification.
@@ -43,6 +42,7 @@ scope:
   - docs/decisions/ADR-0001-foundation-ownership.md
   - https://github.com/egohygiene/empathy/issues/112
   - https://github.com/egohygiene/empathy/issues/118
+  - docs/migration/STAGING_PR_EVENT_QUALIFICATION.json
 work:
   objective: Qualify the immutable staging gate on an actual pull-request event and retain its exact base/head
     evidence without altering production intake or migration authority.
@@ -57,10 +57,9 @@ work:
     url: https://github.com/egohygiene/empathy/issues/112
   next:
     kind: action
-    id: inspect-actual-pr-staging-proof
-    description: Open the bounded candidate to trigger the real PR event; inspect its staging job and artifact.
-      Freeze the evidence head and complete actual PR-event and manual canonical holistic review before
-      root integration.
+    id: freeze-and-qualify-final-pr-head
+    description: After this evidence commit freezes, inspect its actual PR-event artifact, corrected commit
+      policy and exact-head manual canonical holistic run; root owns integration and explicit issue disposition.
     readiness: ready
     references:
     - https://github.com/egohygiene/empathy/issues/112
@@ -73,16 +72,19 @@ state:
   candidate:
     branch: codex/empathy-pr-staging-proof
     revision: null
-    pull_request: null
+    pull_request:
+      provider: github
+      id: egohygiene/empathy#141
+      url: https://github.com/egohygiene/empathy/pull/141
     handoff_state: in-progress
   live:
     status: verified
-    observed_at: '2026-11-13T23:36:46Z'
+    observed_at: '2026-11-13T23:42:41Z'
     default_branch_revision: 2202636a1957ee7598359465b4ae562e1c67358a
     issue_state: open
-    pull_request_state: not-applicable
-    notes: Actual default branch was queried before preparation. No hosted PR success, containing revision
-      or future integration is claimed.
+    pull_request_state: draft
+    notes: Real PR141 first-event staging and artifact pass; independent baseline fails. Final evidence-head
+      PR/holistic qualification follows this authored checkpoint. The containing revision remains null.
   parallel_changes:
   - provider: github
     id: egohygiene/empathy#109
@@ -98,7 +100,7 @@ state:
     url: https://github.com/egohygiene/empathy/issues/92
 review:
   status: partial
-  reviewed_at: '2026-11-13T23:36:46Z'
+  reviewed_at: '2026-11-13T23:42:41Z'
   reviewed_by: Codex
   evidence:
   - command: python3 -m unittest discover -s tests -p 'test_staging*.py' -v
@@ -118,15 +120,24 @@ review:
     observed_at: '2026-11-13T23:36:46Z'
     notes: 19 workflows and 11 actions pass existing automation policy; candidate adds only retention of
       the existing gate report.
-  - command: Actual PR-event job/artifact inspection and final-head canonical MegaLinter manual profile
+  - command: Final frozen evidence-head PR-event artifact, commit policy and exact-head canonical MegaLinter
+      manual profile
     outcome: not-run
     observed_at: '2026-11-13T23:36:46Z'
-    notes: Required next evidence; draft preparation does not establish hosted scheduling or holistic acceptance.
+    notes: Required after this evidence commit; initial event proof does not substitute for final-head review.
+  - command: Actual PR141/run43528478023 artifact download, provider ZIP digest and JSON exact-source/claims
+      inspection
+    outcome: passed
+    observed_at: '2026-11-13T23:42:41Z'
+    notes: Staging job132239988245 and artifact14085398870 pass. Independent baseline job failed with artifact14086436736;
+      overall remains unqualified.
   environment_limitations:
   - Source filter fixtures do not establish three independently executed path-class PR canaries.
   - Baseline Python/Cargo/runtime findings retain issues 109/110/79; the independent workflow result must
     stay explicit.
   - No human authority, destination validation or source-drain approval follows from a passing data binding.
+  - Initial introduced commit-header failure was corrected with an owned-branch explicit head lease and
+    unchanged tree.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -157,7 +168,7 @@ Qualify the immutable staging gate on an actual pull-request event and retain it
 
 ## State snapshot
 
-Observed main is `2202636a1957ee7598359465b4ae562e1c67358a`. This candidate adds retained staging output; the containing revision and future PR are null until provider facts exist. Actual PR qualification remains ahead.
+Observed main is `2202636a1957ee7598359465b4ae562e1c67358a`. This candidate adds retained staging output; the containing revision and future PR are null until provider facts exist. Initial PR-event staging proof is retained; final evidence-head review remains ahead.
 
 ## Completed and material changes
 
@@ -165,7 +176,7 @@ The independent staging job writes its existing exact report outside the checkou
 
 ## Validation and review evidence
 
-All 27 disposable staging tests passed with zero skips; the actual unchanged-base gate and automation policy passed. Existing source-filter fixtures cover both event lists. Hosted PR scheduling and exact-head holistic review remain unrun.
+All 27 disposable staging tests passed with zero skips; the actual unchanged-base gate and automation policy passed. Existing source-filter fixtures cover both event lists. Initial PR-event staging/report passed with byte-inspected provider evidence. Its independent baseline failed; final evidence-head PR/holistic review remains ahead.
 
 ## Blockers, risks, unknowns, and deferred work
 
@@ -173,7 +184,7 @@ An actual event can be scheduled yet fail; inspect staging, baseline and publish
 
 ## Next dependency-ready work
 
-Open the draft, inspect the real PR event and its exact report, then freeze and qualify the final review head. Root owns integration and explicit issue disposition.
+Freeze this evidence head, inspect its actual PR-event artifact and corrected commit policy, then run canonical holistic review. Root owns integration and explicit issue disposition.
 
 ## Parallel changes and reconciliation
 
