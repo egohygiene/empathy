@@ -247,11 +247,13 @@ class StagingDiffFixtureTests(unittest.TestCase):
             gate.receipts(json.dumps({"schema": gate.SCHEMA, "receipts": [receipt]}).encode())
 
     def test_malformed_evidence_url_has_no_payload_diagnostic(self) -> None:
+        # Construct explicit fake userinfo as fixture data, not a credential-looking source URL.
+        synthetic_userinfo = "synthetic-user:synthetic-password"
         for value in (
             "https://example.org:secret/",
             "https://example.org/white space",
             "https://example.org\\evil/",
-            "https://actor:secret@example.org/",
+            f"https://{synthetic_userinfo}@example.invalid/",
         ):
             with (
                 self.subTest(value=value),
