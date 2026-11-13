@@ -1,0 +1,12 @@
+{
+  "schema_version": "empathy.realm-local-ci-source/v1",
+  "repository": "egohygiene/realm",
+  "revision": "75c1b2e1475b972a0ce1c8594e8daba2e1cf8686",
+  "act_version": "0.2.97",
+  "files": {
+    "config/act.v1.json": "0cb86eb04ce43b945ed65eaa39afb121ece9a932ef9e8e626e1caa66a1d48dea",
+    "tools/realm_act.py": "1776c5641fdb8a6d08204f70937e42a6b2692146e175402c317f60ed0d4f90be",
+    "tools/realm_act_network.py": "4f97c1ceb78cdf0823f1632effbf122a5ab7700a2397d4d95be8cdd27ae83e33",
+    "tools/realm_local_ci.py": "640e2edcc290a22ccc84f158b70a33ad35cde5dfd68aac3bec3f12a4bcc675ef"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "id": "empathy/repository-foundation",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "owner": "egohygiene/empathy",
   "holon_contract": {
     "owner": "egohygiene/holon",
@@ -107,6 +107,13 @@
       "description": "Publication source manifest",
       "requires": ["agent-context"],
       "conflicts": ["product"]
+    },
+    {
+      "id": "local-ci",
+      "dimension": "execution",
+      "description": "Explicit opt-in local act validation; native-only consumers leave this profile unselected",
+      "requires": ["universal"],
+      "conflicts": []
     }
   ],
   "artifacts": [
@@ -489,15 +496,99 @@
       "executable": false,
       "markers": [],
       "description": "Publication-specific source manifest"
+    },
+    {
+      "id": "act-defaults",
+      "path": ".actrc",
+      "kind": "file",
+      "category": "quality",
+      "presence": "profile",
+      "ownership": "repository-owned",
+      "profiles": ["local-ci"],
+      "executable": false,
+      "markers": [],
+      "description": "Reviewed act project defaults for the selected Linux validation fixture"
+    },
+    {
+      "id": "local-ci-selection",
+      "path": "config/local-ci.json",
+      "kind": "file",
+      "category": "quality",
+      "presence": "profile",
+      "ownership": "repository-owned",
+      "profiles": ["local-ci"],
+      "executable": false,
+      "markers": [],
+      "description": "Repository-owned bounded native and act checks with explicit unsupported coverage"
+    },
+    {
+      "id": "realm-local-ci-source",
+      "path": "integrations/realm/local-ci.source.json",
+      "kind": "file",
+      "category": "quality",
+      "presence": "profile",
+      "ownership": "repository-owned",
+      "profiles": ["local-ci"],
+      "executable": false,
+      "markers": [],
+      "description": "Immutable Realm source and act version consumed without copying its runner"
+    },
+    {
+      "id": "local-ci-consumer",
+      "path": "tools/local_ci.py",
+      "kind": "file",
+      "category": "quality",
+      "presence": "profile",
+      "ownership": "repository-owned",
+      "profiles": ["local-ci"],
+      "executable": false,
+      "markers": [],
+      "description": "Thin Empathy composition and source-verification adapter for the Realm runner"
+    },
+    {
+      "id": "local-ci-fixture",
+      "path": ".github/act/local-validation.yml",
+      "kind": "file",
+      "category": "quality",
+      "presence": "profile",
+      "ownership": "repository-owned",
+      "profiles": ["local-ci"],
+      "executable": false,
+      "markers": [],
+      "description": "Local-only portable consumer test job; not a hosted workflow"
     }
   ],
   "repository_owned_fields": [
-    { "id": "display_name", "type": "string", "required": true },
-    { "id": "description", "type": "string", "required": true },
-    { "id": "maintainers", "type": "string-array", "required": true },
-    { "id": "topics", "type": "string-array", "required": false },
-    { "id": "domains", "type": "string-array", "required": false },
-    { "id": "license_expression", "type": "string", "required": true }
+    {
+      "id": "display_name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "id": "description",
+      "type": "string",
+      "required": true
+    },
+    {
+      "id": "maintainers",
+      "type": "string-array",
+      "required": true
+    },
+    {
+      "id": "topics",
+      "type": "string-array",
+      "required": false
+    },
+    {
+      "id": "domains",
+      "type": "string-array",
+      "required": false
+    },
+    {
+      "id": "license_expression",
+      "type": "string",
+      "required": true
+    }
   ],
   "generated_outputs": [
     {

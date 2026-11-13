@@ -1,22 +1,7 @@
-# -----------------------------------------------------------------------------
-# Repository act Configuration
-# -----------------------------------------------------------------------------
-#
-# Purpose:
-#   Repository-specific defaults for local GitHub Actions execution.
-# -----------------------------------------------------------------------------
-
-# Use the repository root.
---directory .
-
-# Cache actions inside the repository.
---action-cache-path ./.cache/act/actions
-
-# Cache layers inside the repository.
---cache-server-path ./.cache/act/cache
-
-# Store workflow artifacts inside the repository cache.
---artifact-server-path ./.cache/act/artifacts
-
-# Default runner image.
---platform ubuntu-latest=catthehacker/ubuntu:act-latest
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+# Host resources, credentials and network settings belong to the reviewed Realm launcher.
+--json
+--rm
+--pull=false
+--platform ubuntu-24.04=ghcr.io/catthehacker/ubuntu:act-24.04@sha256:19619a010b204f44c5340bff7d39b68551109fe6a56a53f75201ea91e05d4270

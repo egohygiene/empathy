@@ -17,6 +17,8 @@ quality layers:
 - a versioned [repository foundation catalog](docs/foundation/README.md) with
   universal, language, product, publication, risk, release, documentation, and
   agent-context profiles, plus a canonical offline EgoLint projection;
+- an optional [local CI consumer](docs/integrations/LOCAL_CI.md) with explicit
+  coverage and an immutable Realm source pin;
 - a frozen, deterministic [staging migration contract](docs/migration/STAGING.md)
   with file-level ownership, JSON projections, and evidence-backed deletion
   gates;

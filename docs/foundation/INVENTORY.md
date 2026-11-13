@@ -2,17 +2,19 @@
 
 > Generated from `foundation/catalog.json`. Do not edit by hand.
 
-- Contract: `empathy/repository-foundation@2.0.0`
+- Contract: `empathy/repository-foundation@2.1.0`
 - Canonical owner: `egohygiene/empathy`
-- Canonical artifacts: `30`
+- Canonical artifacts: `35`
 
 | Path | Category | Presence | Ownership | Profiles | Description |
 | --- | --- | --- | --- | --- | --- |
+| `.actrc` | quality | profile | repository-owned | local-ci | Reviewed act project defaults for the selected Linux validation fixture |
 | `.editorconfig` | metadata | required | required | — | Cross-editor whitespace and line-ending baseline |
 | `.gitattributes` | metadata | required | required | — | Git text, EOL, binary, and generated-file behavior |
 | `.github/CODEOWNERS` | community-health | profile | repository-owned | community-health | Repository review ownership |
 | `.github/ISSUE_TEMPLATE/config.yml` | community-health | profile | required | community-health | Issue intake configuration |
 | `.github/PULL_REQUEST_TEMPLATE.md` | community-health | profile | repository-owned | community-health | Repository review checklist |
+| `.github/act/local-validation.yml` | quality | profile | repository-owned | local-ci | Local-only portable consumer test job; not a hosted workflow |
 | `.github/copilot-instructions.md` | agent-context | required | repository-owned | — | Repository-specific Copilot projection |
 | `.github/dependabot.yml` | security | required | repository-owned | — | Repository ecosystem dependency update intent |
 | `.github/workflows/codeql.yml` | security | profile | required | risk-hardened | Static security analysis caller |
@@ -32,12 +34,15 @@
 | `README.md` | documentation | required | repository-owned | — | Repository-specific introduction and navigation |
 | `SECURITY.md` | security | optional | repository-owned | — | Repository-specific vulnerability reporting policy |
 | `Taskfile.yml` | quality | required | repository-owned | — | Stable local task interface |
+| `config/local-ci.json` | quality | profile | repository-owned | local-ci | Repository-owned bounded native and act checks with explicit unsupported coverage |
 | `docs` | documentation | profile | repository-owned | documentation | Repository-owned detailed documentation |
 | `docs/ecosystem/CONTEXT.md` | agent-context | profile | generated | agent-context | Pinned Hygiene ecosystem context projection |
+| `integrations/realm/local-ci.source.json` | quality | profile | repository-owned | local-ci | Immutable Realm source and act version consumed without copying its runner |
 | `package.json` | metadata | profile | repository-owned | language-node | Node.js workspace intent |
 | `publication.json` | metadata | profile | repository-owned | publication | Publication-specific source manifest |
 | `pyproject.toml` | metadata | profile | repository-owned | language-python | Python project intent |
 | `release-please-config.json` | release | profile | repository-owned | release-automated | Repository release strategy |
+| `tools/local_ci.py` | quality | profile | repository-owned | local-ci | Thin Empathy composition and source-verification adapter for the Realm runner |
 
 ## Gitignore composition sources
 

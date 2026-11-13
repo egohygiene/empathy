@@ -22,7 +22,7 @@ else:
     import foundation_ignore
 
 SCHEMA_VERSION = "1.1.0"
-CATALOG_VERSION = "2.0.0"
+CATALOG_VERSION = "2.1.0"
 FOUNDATION_REFERENCE = f"empathy/repository-foundation@{CATALOG_VERSION}"
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 IDENTIFIER_PATTERN = re.compile(r"[a-z][a-z0-9-]+")
