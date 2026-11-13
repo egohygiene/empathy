@@ -418,9 +418,9 @@
       "id": "rust",
       "classification": "Broad/ambiguous",
       "audited_rules": ["target/"],
-      "decision": "Use rust-build at the root; local rules protect beacon and the staged Realm Cargo project. EgoLint's existing nested ignore owns its workspace output. Other target directories stay visible outside inherited nested exclusions.",
+      "decision": "Keep /target/ as an explicit local cache rule for opt-in Rust commands; local rules protect Beacon and the staged Realm Cargo project. The golden default has no root Rust package. EgoLint owns its nested workspace output; unrelated target source directories remain visible.",
       "evidence": [
-        "Cargo.toml",
+        "docs/BASELINE_VALIDATION.md",
         "beacon/Cargo.toml",
         ".staging/devenvironment/realm/Cargo.toml",
         "egolint/.gitignore"
@@ -437,6 +437,14 @@
         "Cargo.lock",
         "beacon/Cargo.lock",
         "egolint/Cargo.lock"
+      ],
+      "historical_evidence": [
+        {
+          "revision": "2202636a1957ee7598359465b4ae562e1c67358a",
+          "path": "Cargo.toml",
+          "git_blob": "14b6bca841947a5f676a5bcc74110183d5fb34bb",
+          "disposition": "Dangling root virtual workspace removed through109; no specialist fixture or source removed."
+        }
       ]
     },
     {
