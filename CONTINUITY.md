@@ -49,7 +49,7 @@ work:
     remain separate.
   active_issue:
     provider: github
-    id: egohygiene/empathyissue 118
+    id: egohygiene/empathy#118
     url: https://github.com/egohygiene/empathy/issues/118
   next:
     kind: action
