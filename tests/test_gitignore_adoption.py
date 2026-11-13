@@ -123,7 +123,9 @@ class GitignoreAdoptionTests(test_gitignore_baseline.GitignoreFixture):
         self.assert_paths(("examples/target/source.rs", "fixtures/target/README.md"), ignored=False)
         self.assert_paths(("egolint/target/debug/program",), ignored=True)
 
-    def test_devcontainer_marker_is_explicit_configuration_not_a_tracked_environment_file(self) -> None:
+    def test_devcontainer_marker_is_explicit_configuration_not_a_tracked_environment_file(
+        self,
+    ) -> None:
         self.assertFalse((ROOT / ".devcontainer/.env").exists())
         configuration = json.loads((ROOT / ".devcontainer/devcontainer.json").read_text())
         for section in ("containerEnv", "remoteEnv"):
