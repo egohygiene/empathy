@@ -83,5 +83,20 @@
     "Root cargo metadata fails on missing tests/fixtures/clippy; retained under79 profile/ownership decision, not patched by copying specialist Rust source.",
     "Staging tools/tests retain separately reported canonical type/style diagnostics under109/112.",
     "Broad exact-head holistic/runtime-image qualification and additional platforms remain unqualified."
-  ]
+  ],
+  "focused_supplemental": {
+    "secretlint": {
+      "version": "13.0.5",
+      "scope": "nine changed source/evidence/handoff files",
+      "errors": 0,
+      "outcome": "passed"
+    },
+    "lychee": {
+      "version": "0.24.2",
+      "scope": "docs/BASELINE_VALIDATION.md",
+      "successful": 7,
+      "errors": 0,
+      "outcome": "passed"
+    }
+  }
 }

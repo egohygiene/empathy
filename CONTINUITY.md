@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-13T03:22:46Z'
+  updated_at: '2026-11-13T03:26:24Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -25,8 +25,8 @@ scope:
   excludes: &id001
   - Canonical110 image/catalog/bootstrap consumption remains held; its independent failing test and failed
     aggregate are retained.
-  - Staging type/style diagnostics, rootRust79 membership disposition, Secretlint/Lychee/full holistic
-    and wider supported-platform acceptance remain separately unqualified.
+  - Staging type/style diagnostics, rootRust79 membership disposition, full holistic and wider supported-platform
+    acceptance remain separately unqualified.
   precedence:
   - user-and-runtime-instructions
   - scoped-repository-instructions
@@ -65,7 +65,7 @@ state:
   base:
     revision: 030329dd19f4df15d500d09b5595449f725a6dd5
     ref: refs/heads/main
-    verified_at: '2026-11-13T03:22:46Z'
+    verified_at: '2026-11-13T03:26:24Z'
   candidate:
     branch: codex/empathy-109-qualified
     revision: null
@@ -73,7 +73,7 @@ state:
     handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: '2026-11-13T03:22:46Z'
+    observed_at: '2026-11-13T03:26:24Z'
     default_branch_revision: 030329dd19f4df15d500d09b5595449f725a6dd5
     issue_state: open
     pull_request_state: not-applicable
@@ -82,27 +82,34 @@ state:
   parallel_changes: []
 review:
   status: partial
-  reviewed_at: '2026-11-13T03:22:46Z'
+  reviewed_at: '2026-11-13T03:26:24Z'
   reviewed_by: Codex
   evidence:
   - command: tools/baseline_tests.py with exact Relay/Identity inputs and generated disposable Identity
       package
     outcome: limited
-    observed_at: '2026-11-13T03:22:46Z'
+    observed_at: '2026-11-13T03:26:24Z'
     notes: Actual repository224 tests passed with zero skips; independent embedded EgoLint31 tests has
       one known catalog/runtime pin failure under110. Aggregate remains failed/acceptance unqualified;
       logs/results preserved.
   - command: Canonical Ruff check/format, strict Mypy and Bandit across the six changed baseline Python
       files
     outcome: passed
-    observed_at: '2026-11-13T03:22:46Z'
+    observed_at: '2026-11-13T03:26:24Z'
     notes: Six changed files pass focused canonical policy; reviewed stdlib unittest/PyYAML stubs and
       fixed subprocess annotations remain narrow. No shared policy/config changes.
   - command: Whole root tools/tests canonical Ruff diagnostic inventory; root cargo metadata --no-deps
     outcome: limited
-    observed_at: '2026-11-13T03:22:46Z'
+    observed_at: '2026-11-13T03:26:24Z'
     notes: 44 remaining Ruff diagnostics are confined to four staging tool/fixture files. Actual root
       Cargo metadata fails missing tests/fixtures/clippy; source ownership/profile decision remains79.
+  - command: Secretlint13.0.5 canonical config across nine changed files; Lychee0.24.2 on the changed
+      baseline guide
+    outcome: passed
+    observed_at: '2026-11-13T03:26:24Z'
+    notes: Actual focused Secretlint reported zero errors; Lychee checked seven unique guide links successfully
+      with no errors, exclusions or timeouts. These results do not establish the held full holistic/image
+      profile.
   environment_limitations: *id001
 privacy:
   classification: public-repository
@@ -159,11 +166,13 @@ Six changed files pass focused canonical policy; reviewed stdlib unittest/PyYAML
 
 44 remaining Ruff diagnostics are confined to four staging tool/fixture files. Actual root Cargo metadata fails missing tests/fixtures/clippy; source ownership/profile decision remains79.
 
+Actual focused Secretlint reported zero errors; Lychee checked seven unique guide links successfully with no errors, exclusions or timeouts. These results do not establish the held full holistic/image profile.
+
 ## Blockers, risks and unknowns
 
 Canonical110 image/catalog/bootstrap consumption remains held; its independent failing test and failed aggregate are retained.
 
-Staging type/style diagnostics, rootRust79 membership disposition, Secretlint/Lychee/full holistic and wider supported-platform acceptance remain separately unqualified.
+Staging type/style diagnostics, rootRust79 membership disposition, full holistic and wider supported-platform acceptance remain separately unqualified.
 
 ## Decision disposition
 

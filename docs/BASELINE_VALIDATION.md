@@ -133,3 +133,8 @@ Reproduce the equipped owner checks using the guide above: initialize the exact
 Identity input, generate disposable output before verification, set
 `RELAY_CHECKOUT` to the exact recorded owner revision, and run
 `tools/baseline_tests.py`. Preserve both logs and every nonzero outcome.
+
+Focused Secretlint13.0.5 with the canonical configuration reports zero errors
+across the nine changed files. Lychee0.24.2 checked all seven unique links in
+this guide successfully, with no errors or exclusions. These checks remain
+separate from the held full holistic/runtime-image qualification.
