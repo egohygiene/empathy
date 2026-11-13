@@ -11,14 +11,30 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
-from typing import Any
+from typing import TYPE_CHECKING, Any, Protocol
+
+if TYPE_CHECKING:
+    from collections.abc import Mapping, Sequence
+    from types import ModuleType
 
 
-def load_audit_module(repository_root: Path):
+class StagedRow(Protocol):
+    source_path: str
+    git_blob: str
+    canonical_home: str
+
+
+def require(value: object, message: str) -> None:
+    if not value:
+        raise ValueError(message)
+
+
+def load_audit_module(repository_root: Path) -> ModuleType:
     path = repository_root / "tools" / "staging_home_audit.py"
     specification = importlib.util.spec_from_file_location("staging_home_audit", path)
     if specification is None or specification.loader is None:
-        raise RuntimeError(f"cannot load staging audit module: {path}")
+        message = f"cannot load staging audit module: {path}"
+        raise RuntimeError(message)
     module = importlib.util.module_from_spec(specification)
     sys.modules[specification.name] = module
     specification.loader.exec_module(module)
@@ -27,20 +43,26 @@ def load_audit_module(repository_root: Path):
 
 def load_approvals(path: Path) -> dict[str, dict[str, Any]]:
     data = json.loads(path.read_text(encoding="utf-8"))
-    if data.get("schema_version") != "1.0.0" or not isinstance(data.get("approvals"), list):
-        raise ValueError("removal approvals must use schema version 1.0.0")
+    require(
+        data.get("schema_version") == "1.0.0" and isinstance(data.get("approvals"), list),
+        "removal approvals must use schema version 1.0.0",
+    )
     approvals: dict[str, dict[str, Any]] = {}
     for approval in data["approvals"]:
         source_path = approval.get("source_path") if isinstance(approval, dict) else None
         if not isinstance(source_path, str) or not source_path.startswith(".staging/"):
-            raise ValueError("every approval needs a .staging source_path")
-        if source_path in approvals:
-            raise ValueError(f"duplicate removal approval: {source_path}")
+            message = "every approval needs a .staging source_path"
+            raise ValueError(message)
+        require(source_path not in approvals, f"duplicate removal approval: {source_path}")
         approvals[source_path] = approval
     return approvals
 
 
-def validate_removals(rows, approvals, source_paths: list[str]) -> list[str]:
+def validate_removals(
+    rows: Sequence[StagedRow],
+    approvals: Mapping[str, dict[str, Any]],
+    source_paths: list[str],
+) -> list[str]:
     by_path = {row.source_path: row for row in rows}
     errors: list[str] = []
     required = (
@@ -95,14 +117,14 @@ def main() -> int:
         rows = audit.build_rows(root)
         approvals = load_approvals(approvals_path)
     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as error:
-        print(f"removal gate failed: {error}", file=sys.stderr)
+        sys.stderr.write(f"removal gate failed: {error}\n")
         return 2
     errors = validate_removals(rows, approvals, arguments.source_path)
     if errors:
-        for error in errors:
-            print(f"removal gate failed: {error}", file=sys.stderr)
+        for diagnostic in errors:
+            sys.stderr.write(f"removal gate failed: {diagnostic}\n")
         return 1
-    print(f"removal gate passed for {len(arguments.source_path)} staged file(s)")
+    sys.stdout.write(f"removal gate passed for {len(arguments.source_path)} staged file(s)\n")
     return 0
 
 
