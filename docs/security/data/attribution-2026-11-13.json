@@ -1,0 +1,77 @@
+{
+  "repository": "egohygiene/empathy",
+  "issue": 117,
+  "source_base": "4853a1e55808bc5104dc509199c411e798d104dc",
+  "observed_at": "2026-11-13T03:04:41Z",
+  "tool": {
+    "name": "reuse",
+    "version": "6.2.0",
+    "method": "Project.from_directory(root).reuse_info_of(sample)"
+  },
+  "policy_sha256": "41253eea43fb986cac09ecd766308073743f703744bf044e753277fe62780bd1",
+  "scope": "four saved samples, explicit first-party foundation paths, synthetic extension/header regression cases",
+  "samples": [
+    {
+      "path": "beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md",
+      "sha256": "dac9657e3eede941738eaf93e8bbd15b0f6aa2d6e058dad22180f2aee5ee677b",
+      "source_bytes_preserved": true,
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "copyright": [
+        "Copyright 2014 Debarghya Das"
+      ],
+      "metadata_sources": [
+        "REUSE.toml",
+        "beacon/.staging/latex/CVs and Resumes/Deedy-Resume/README.md"
+      ],
+      "rights_review": "unresolved",
+      "promotion_authorized": false
+    },
+    {
+      "path": "beacon/.staging/latex/Community/TeXtured/README.md",
+      "sha256": "64ae6ae77f24d7f8164a8bc64d5e96ebcc04784b8f4345ae5a6833a31dfe30e4",
+      "source_bytes_preserved": true,
+      "licenses": [
+        "CC0-1.0"
+      ],
+      "copyright": [],
+      "metadata_sources": [
+        "REUSE.toml"
+      ],
+      "rights_review": "unresolved",
+      "promotion_authorized": false
+    },
+    {
+      "path": ".staging/tools/emoji-precache/assets/emojis/noto_261d_1f3fe_svg.svg",
+      "sha256": "3b2dec28a6e9162027ab243b52377b35f4a081c44ea28c82eacc0ffda24da298",
+      "source_bytes_preserved": true,
+      "licenses": [],
+      "copyright": [],
+      "metadata_sources": [],
+      "rights_review": "unresolved",
+      "promotion_authorized": false
+    },
+    {
+      "path": ".staging/tools/emoji-precache/assets/emojis/noto_1faf0_svg.pdf",
+      "sha256": "5f37ec772891f7e8da88d790e5e2a348d21b8b669621292872c1783b01ad79a7",
+      "source_bytes_preserved": true,
+      "licenses": [],
+      "copyright": [],
+      "metadata_sources": [],
+      "rights_review": "unresolved",
+      "promotion_authorized": false
+    }
+  ],
+  "regression": {
+    "command": "python -m unittest discover --start-directory tests --pattern test_attribution.py --verbose",
+    "tests": 3,
+    "result": "passed",
+    "skips": 0
+  },
+  "limitations": [
+    "No whole-corpus provenance review, legal determination, distribution approval or clean REUSE badge.",
+    "File-specific declared licenses do not assert that every embedded asset has that license.",
+    "Unmapped files retain their own metadata or remain explicitly unresolved."
+  ]
+}
