@@ -78,8 +78,9 @@
   "blocking_grouped_occurrences": 320,
   "ledger": {
     "path": "docs/security/data/dependency-findings-2026-11-13.csv",
-    "sha256": "78a379675978e6eff681d266ef336ceba8b12c33d54a74b5c6dec8c5473c60dc",
-    "rows": 663
+    "sha256": "5f5448745a4650d947613e4fbc826dec3bb16dff9315da5fdd65622cc9c4a2dd",
+    "rows": 663,
+    "encoding": "UTF-8 with LF row delimiters"
   },
   "unresolved_version_expressions": [
     {
