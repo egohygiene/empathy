@@ -6,13 +6,16 @@ from __future__ import annotations
 import importlib.util
 from pathlib import Path
 import sys
+from typing import TYPE_CHECKING, Any, ClassVar
 import unittest
 
+if TYPE_CHECKING:
+    from types import ModuleType
 
 ROOT = Path(__file__).parents[1]
 
 
-def load_module(name: str, path: Path):
+def load_module(name: str, path: Path) -> ModuleType:
     specification = importlib.util.spec_from_file_location(name, path)
     assert specification is not None
     assert specification.loader is not None
@@ -27,6 +30,9 @@ gate = load_module("staging_removal_gate", ROOT / "tools" / "staging_removal_gat
 
 
 class StagingRemovalGateTests(unittest.TestCase):
+    rows: ClassVar[list[Any]]
+    row: ClassVar[Any]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.rows = audit.build_rows(ROOT)
@@ -68,9 +74,7 @@ class StagingRemovalGateTests(unittest.TestCase):
         errors = gate.validate_removals(
             self.rows, {self.row.source_path: approval}, [self.row.source_path]
         )
-        self.assertIn(
-            f"{self.row.source_path} approval blob does not match current source", errors
-        )
+        self.assertIn(f"{self.row.source_path} approval blob does not match current source", errors)
 
 
 if __name__ == "__main__":
