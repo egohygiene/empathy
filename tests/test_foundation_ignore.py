@@ -68,7 +68,7 @@ class IgnoreContractTests(unittest.TestCase):
         )
         self.assertEqual("plan-only", first["status"])
         self.assertEqual(
-            ["overlay", "local", "baseline"],
+            ["local", "baseline"],
             [layer["kind"] for layer in first["files"][0]["layers"]],
         )
         for file in first["files"]:
@@ -84,6 +84,7 @@ class IgnoreContractTests(unittest.TestCase):
                     self.assertEqual("egohygiene/empathy", layer["owner"])
 
     def test_scopes_are_sorted_but_local_text_is_preserved(self) -> None:
+        self.manifest["selected_profiles"].append("language-rust")
         local = "# Keep the reviewed build note.\n!/target/\n/target/*\n!/target/README.md\n\n# Repetition is intentional.\n/target/*\n!/target/README.md\n"
         self.manifest["gitignore"]["scopes"] = [scope("apps/rust", ("rust-build",), local), scope()]
         first, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
@@ -113,7 +114,8 @@ class IgnoreContractTests(unittest.TestCase):
         self.assertIn("manifest must select gitignore scopes before planning", errors)
 
     def test_overlay_requires_profile_and_explicit_scope_selection(self) -> None:
-        self.manifest["selected_profiles"].remove("language-rust")
+        # The default is language-neutral for Rust; an overlay still requires an explicit opt-in.
+        self.manifest["gitignore"]["scopes"] = [scope(overlays=("rust-build",))]
         plan, errors = foundation.plan_gitignore(self.catalog, self.manifest, ROOT)
         self.assertIsNone(plan)
         self.assertTrue(any("requires selected profile language-rust" in error for error in errors))
@@ -237,7 +239,8 @@ class IgnoreContractTests(unittest.TestCase):
         file = plan["files"][0]
         self.assertEqual("preserve", file["override"])
         self.assertEqual("repository-owned", file["ownership"])
-        self.assertEqual("egohygiene/fixture", file["layers"][1]["owner"])
+        local = next(layer for layer in file["layers"] if layer["kind"] == "local")
+        self.assertEqual("egohygiene/fixture", local["owner"])
         self.assertEqual("baseline", file["layers"][-1]["kind"])
         self.assertEqual(before, (ROOT / ".gitignore").read_bytes())
 
@@ -273,6 +276,8 @@ class IgnoreContractTests(unittest.TestCase):
 class ComposedIgnoreBehaviorTests(test_gitignore_baseline.GitignoreFixture):
     def install(self, scopes: list[dict[str, Any]]) -> None:
         catalog, manifest = inputs()
+        # This fixture specifically exercises the existing opt-in Rust overlay.
+        manifest["selected_profiles"].append("language-rust")
         manifest["gitignore"]["scopes"] = scopes
         plan, errors = foundation.plan_gitignore(catalog, manifest, ROOT)
         self.assertEqual([], errors)
