@@ -181,6 +181,15 @@ issues: []
 
 - No clean-room Holon proof or durable baseline release was observed.
 
+**Dated integration evidence — 2026-11-13:** The accepted foundation 1.1
+[shared gitignore checkpoint](docs/foundation/gitignore/SHARED-INTEGRATION-04.md)
+proves disposable golden and Filament file-level adoption, fresh unchanged
+replay, reviewed update, native validation, verification, and guarded rollback
+through the pinned owners. It is not full-foundation materialization or a
+baseline release. Three inherited Empathy policy deviations remain unapproved;
+the current foundation 2.0 adapter upgrade is a separate future boundary.
+`EMP-Q04`/`EMP-Q05` remain planned and #92 remains open.
+
 ### Roadmap-to-issue handoff
 
 - A step is complete only when its exit criteria and required evidence are satisfied; commit count never determines progress.

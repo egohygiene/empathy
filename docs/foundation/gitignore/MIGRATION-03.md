@@ -136,6 +136,12 @@ consumer change; preserve intervening local edits for explicit review.
 
 ## Validation and next action
 
+The dated [shared integration follow-up](SHARED-INTEGRATION-04.md) now records
+actual accepted-owner CLI/native qualification for golden and Filament
+representations. It also records the three remaining inherited deviations and
+their deferred source-adoption/reconciliation owners. The original checkpoint
+below retains its historical scope and validation limits.
+
 The migration proof uses isolated Git configuration and real untracked files.
 It verifies the byte-identical golden root, complete historical disposition,
 source evidence paths, duplicate absence, ignored/visible behavior, and the

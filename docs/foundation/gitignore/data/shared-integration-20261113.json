@@ -1,0 +1,363 @@
+{
+  "record": "empathy.gitignore-shared-integration/2026-11-13",
+  "assessment_revision": "772efa7f66a3285dc70a14480249f386b471d798",
+  "observed_at": "2026-11-13T03:42:02Z",
+  "scope": "Accepted foundation1.1 file-level consumer integration; no fleet mutation, full-foundation materialization, or new human exceptions.",
+  "owners": {
+    "empathy": "b44f798bb49259f9f48416b4ffebde1103e135c0",
+    "holon": "660b941f99618806fcadd589bcdae61c519f96e4",
+    "egolint": "ec97ed8b3f1a4a2198aec03355600ea6c9caa1e1"
+  },
+  "native_binary_sha256": "21531ec8083dcfb4efdbe172510fcd906b7a88ce808b5e8e6e28100b2cd77e2d",
+  "consumer_lifecycles": [
+    {
+      "repository": "egohygiene/empathy",
+      "accepted_source": "b44f798bb49259f9f48416b4ffebde1103e135c0",
+      "initial_file_sha256": "75ccd106992da2dac355e64f8b77defb510fce7eeb96dcf626e5b39fdb315bed",
+      "current_or_pilot_bytes_match": true,
+      "adoption": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "1abd1bbfe6fc4cf622f96db428567175ee0a670f2e7b3acd4e7ebf0afde680a5",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "noop": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "1abd1bbfe6fc4cf622f96db428567175ee0a670f2e7b3acd4e7ebf0afde680a5",
+        "status": "noop",
+        "tracked_files": 1
+      },
+      "updated": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "ea506f6b2576e7ac234af93f7e34f68dbabaf52ef48cfa8db9e992f204709002",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "guarded_rollback_refused_unreviewed_edit": true,
+      "exact_file_state_readme_restored": true,
+      "initial_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "evaluation_date": "2026-11-13",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "behavior_probes": 128,
+        "diagnostic_count": 0,
+        "composition_sha256": "d1db0843a859abfa62306079c65e516b2cb7b47af37a05903b64530e140fec05"
+      },
+      "updated_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "evaluation_date": "2026-11-13",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "behavior_probes": 129,
+        "diagnostic_count": 0,
+        "composition_sha256": "ceb709880fb25206867c28f161c2029402e6f3429290243cfab3b8dacb9b6c6b"
+      }
+    },
+    {
+      "repository": "egohygiene/filament",
+      "accepted_source": "b44f798bb49259f9f48416b4ffebde1103e135c0",
+      "initial_file_sha256": "3637ea33004215037e745cf898f59e7c2a3195f8b66df5bae0921186ec731373",
+      "current_or_pilot_bytes_match": true,
+      "adoption": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "593ae24d5fe63f122d8a357b02fadf807002cce69f1728c93aa2ea004da270af",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "noop": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "593ae24d5fe63f122d8a357b02fadf807002cce69f1728c93aa2ea004da270af",
+        "status": "noop",
+        "tracked_files": 1
+      },
+      "updated": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "70c8862b09514412791253a26254fd76490997233160679d9d9fd8b6620662e8",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "guarded_rollback_refused_unreviewed_edit": true,
+      "exact_file_state_readme_restored": true,
+      "initial_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "evaluation_date": "2026-11-13",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "behavior_probes": 128,
+        "diagnostic_count": 0,
+        "composition_sha256": "aa2eee88be4b0922be640c30b0ed22ea381d25339a11e524221bd6620eb996ab"
+      },
+      "updated_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "evaluation_date": "2026-11-13",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "behavior_probes": 129,
+        "diagnostic_count": 0,
+        "composition_sha256": "b5c0547174daf934b8467098bd046c1f5a0f5cb3e9ea7daea5fb8116a9b5249d"
+      }
+    }
+  ],
+  "filament_pilot_revision": "c3eb64b8087face7504e7571dc8396c19525649f",
+  "unchanged_current_source_bytes": {
+    ".gitignore": "75ccd106992da2dac355e64f8b77defb510fce7eeb96dcf626e5b39fdb315bed",
+    "foundation/ignore/rust.gitignore": "16627c4b93c30be2aa2c977a48ee3157d0a7b8ff44e02008b9085f0bd8d94f96",
+    "foundation/ignore/universal.gitignore": "79280ac4f3147ead97a0b21b01f40241238f08fa5d63abe3f81c8b64e7f179f0"
+  },
+  "current_source_refusal": {
+    "exit_code": 1,
+    "reason": "Empathy catalog digest mismatch; supply the accepted pinned source",
+    "plan_written": false,
+    "current_catalog_sha256": "d9c9b3a7d735ceb5756678e76d4cbfb07eae8bd70985e6d2a70ce14a4d172f6b",
+    "accepted_catalog_sha256": "c3a74a7acc2cda2644e8ef21e7ef1b4dcde928c9e781937d849e834b2067919c"
+  },
+  "inherited_negative": {
+    "evaluation_date": "2026-11-13",
+    "exit_code": 1,
+    "status": "invalid",
+    "checks": {
+      "source_integrity": "passed",
+      "composition": "passed",
+      "presence": "passed",
+      "content": "passed",
+      "effective_behavior": "failed",
+      "nested_policy": "incomplete",
+      "tracked_files": "failed",
+      "coverage": "passed"
+    },
+    "selected_behavior": [
+      {
+        "path": ".devcontainer/.env",
+        "scope": ".devcontainer",
+        "expected_ignored": true,
+        "actual_ignored": false,
+        "winning_rule": {
+          "path": ".devcontainer/.gitignore",
+          "line": 1,
+          "pattern": "!.env"
+        },
+        "tracked": true,
+        "exception": null
+      },
+      {
+        "path": "egolint/examples/target/source.rs",
+        "scope": "egolint",
+        "expected_ignored": false,
+        "actual_ignored": true,
+        "winning_rule": {
+          "path": "egolint/.gitignore",
+          "line": 4,
+          "pattern": "target"
+        },
+        "tracked": false,
+        "exception": null
+      },
+      {
+        "path": "holon/packs/react-vite/template/.env.sample.local",
+        "scope": "holon/packs/react-vite/template",
+        "expected_ignored": true,
+        "actual_ignored": false,
+        "winning_rule": {
+          "path": "holon/packs/react-vite/template/.gitignore",
+          "line": 121,
+          "pattern": "!.env.sample.*"
+        },
+        "tracked": false,
+        "exception": null
+      }
+    ],
+    "diagnostic_counts": {
+      "EGO-IGNORE-BEHAVIOR-001": 21,
+      "EGO-IGNORE-NESTED-001": 3,
+      "EGO-IGNORE-TRACKED-001": 1
+    },
+    "fixture_content": "Only authored nonsecret placeholder payloads; .devcontainer/.env force-added only inside the disposable negative fixture. No consumer payload was read or staged."
+  },
+  "nested_policy_inventory": [
+    {
+      "path": ".devcontainer/.gitignore",
+      "sha256": "a2cf477b4ff7f34e936d092c635a7180afed1eb98093d43b2d3258bb25a8bc6d",
+      "disposition": "deferred-owned-review",
+      "owner": "egohygiene/empathy; environment integration with egohygiene/realm",
+      "reason": "Tracked .devcontainer/.env remains visible. No tracked-file approval or content-safety claim exists in this proof."
+    },
+    {
+      "path": ".staging/.github/skills/azure-architecture-autopilot/.gitignore",
+      "sha256": "2ef716b6955bf906cc3fa93ad21dbd2a6d8a9fdec154262ce62f6b852fbd42be",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": ".staging/.github/skills/draw-io-diagram-generator/scripts/.gitignore",
+      "sha256": "e46e17a5808f62786c2c800d6e7e9186873dce392c04f5e0929d69f7339b8733",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": ".staging/.github/skills/excalidraw-diagram-generator/scripts/.gitignore",
+      "sha256": "49f9ee4c099793eb02a72838891842a5ce6e26ecde0a79bd658dab5af79fa8ca",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": ".staging/.github/skills/terraform-azurerm-set-diff-analyzer/scripts/.gitignore",
+      "sha256": "7502062f46709c1d2c7da4f5458e139455185810e9b4a2bf1deced5d4949b5aa",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": ".staging/devenvironment/containers/matchering/.gitignore",
+      "sha256": "ca71b9f5421f7f9a59a0e5b8d093f67941ca4cc41b344608418c2c0691463123",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": ".staging/devenvironment/containers/services/api/.gitignore",
+      "sha256": "8fcc4246fa12465a5aeafca40988839961fdd49413cb067676cc423cbf9b1083",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": "beacon/.staging/latex/Academic Journals/acmart-primary/.gitignore",
+      "sha256": "e0ae64681b9429c43833e96fb130f262026e47dd387b37828220e747d08cc7f7",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": "beacon/.staging/latex/CVs and Resumes/Awesome-CV/.gitignore",
+      "sha256": "46331dcf2a93248085260108e765dc94334cb2f13ea3da42866c3b1c5a0d702a",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": "beacon/.staging/latex/CVs and Resumes/Deedy-Resume/.gitignore",
+      "sha256": "3cee3f867c8635347535f94109891f8355466b89f9a3f821ec9c1f854cf3d4aa",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": "beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/.gitignore",
+      "sha256": "cd982d0f8383fea893fbc362f67e846605acb90d773962c79cce7e63fe425883",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": "beacon/.staging/latex/Community/TeXtured/.gitignore",
+      "sha256": "0cc67013070431f9bccd52717d98918b26eee5913a8c2b21a01d95865308f551",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": "egolint/.gitignore",
+      "sha256": "a38caa829ecdc7fdc18ad40bdb9d7e3da08b93cd712a558aabf524ac6e36037e",
+      "disposition": "deferred-source-adoption",
+      "owner": "egohygiene/egolint; imported consumer copy in egohygiene/empathy",
+      "reason": "Accepted EgoLintec97 root uses /target/; this imported copy remains unanchored. Consume the owner correction through reviewed source adoption, not an unrecorded copied-file patch.",
+      "upstream_evidence": {
+        "repository": "egohygiene/egolint",
+        "revision": "ec97ed8b3f1a4a2198aec03355600ea6c9caa1e1",
+        "path": ".gitignore",
+        "sha256": "1aa3c9e146c4dff716f21c89c3302c274129db405a78e55c0c9ca00525b06009",
+        "scope": "Source reference only; not an approved migration or behavior exception for the inherited consumer copy."
+      }
+    },
+    {
+      "path": "holon/packs/react-vite/template/.gitignore",
+      "sha256": "d67dfbbfcc559afff902f08bc7e22dda3010eab102bf7413998bf4eba4eb1f56",
+      "disposition": "deferred-source-adoption",
+      "owner": "egohygiene/holon; imported consumer copy in egohygiene/empathy",
+      "reason": "Accepted Holon660 blueprint has only build rules; adopting its source and retiring this old template requires the separate source-migration boundary.",
+      "upstream_evidence": {
+        "repository": "egohygiene/holon",
+        "revision": "660b941f99618806fcadd589bcdae61c519f96e4",
+        "path": "blueprints/react-vite/files/.gitignore",
+        "sha256": "87b0c23341a0c1ffefe8e4522edd41958a37a36fb928ed531f288e9e8b779a57",
+        "scope": "Source reference only; not an approved migration or behavior exception for the inherited consumer copy."
+      }
+    },
+    {
+      "path": "mindgarden/.gitignore",
+      "sha256": "353d67d267422275d784007556f3703940c8a0973cff3157122f35eaa5be67f1",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    },
+    {
+      "path": "notebooks/jupyter/.gitignore",
+      "sha256": "48c89e9dcf53d705c4919f2a29b10e7ad34fb6f809afc1e269157c4b9fd26487",
+      "disposition": "preserved-unassessed-inherited-policy",
+      "owner": "preserved intake; Empathy disposition owner",
+      "reason": "Retained inherited/project-local policy; this checkpoint neither authorizes a semantic exception nor certifies this subtree."
+    }
+  ],
+  "retired_cases": [
+    {
+      "path": "mantle/.gitignore",
+      "disposition": "retired-with-source-extraction",
+      "reference": "docs/migration/MANTLE.md",
+      "current_negative_control": "mantle/.env.example.local remains ignored by the root"
+    }
+  ],
+  "acceptance": {
+    "accepted_shared_1_1_integration": "proved",
+    "inherited_policy_semantic_conformance": "not-established; three explicit unapproved deviations",
+    "current_2_0_owner_upgrade": "unsupported by the selected legacy adapters; separate future owner review",
+    "whole_repository_validation": "not-claimed by this bounded record",
+    "fleet_or_release_completion": "not-claimed"
+  },
+  "privacy": "Public-safe projection of local qualification results. Machine paths, raw native payloads and actual environment contents are excluded."
+}
