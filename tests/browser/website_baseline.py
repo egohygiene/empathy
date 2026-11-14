@@ -49,6 +49,18 @@ def inventory(root: Path) -> dict[str, str]:
     }
 
 
+def check_skip_link(page: Any) -> dict[str, bool]:
+    """Wait for the browser's actual keyboard navigation before judging its URL."""
+    page.keyboard.press("Tab")
+    focused = "Skip to content" in page.evaluate("document.activeElement.textContent")
+    page.keyboard.press("Enter")
+    page.wait_for_url(re.compile(r".*#(?:main-content|content)$"), timeout=5000)
+    return {
+        "keyboard_skip_link": focused,
+        "keyboard_skip_destination": page.url.endswith("#main-content") or "#content" in page.url,
+    }
+
+
 def inspect(args: argparse.Namespace) -> dict[str, Any]:
     """Exercise actual generated DOM and the pinned automatic accessibility engine."""
     before = inventory(args.site_root)
@@ -116,14 +128,7 @@ def inspect(args: argparse.Namespace) -> dict[str, Any]:
                             "identity_accent": facts["accent"] == accent[1].strip(),
                         }
                         if route == "/":
-                            page.keyboard.press("Tab")
-                            checks["keyboard_skip_link"] = "Skip to content" in page.evaluate(
-                                "document.activeElement.textContent"
-                            )
-                            page.keyboard.press("Enter")
-                            checks["keyboard_skip_destination"] = (
-                                page.url.endswith("#main-content") or "#content" in page.url
-                            )
+                            checks.update(check_skip_link(page))
                             page.screenshot(
                                 path=str(
                                     args.output.with_name(f"{args.variant}-{width}-{scheme}.png")

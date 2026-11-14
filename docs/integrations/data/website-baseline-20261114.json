@@ -1,8 +1,8 @@
 {
   "schema": "empathy.website-baseline-evidence/v1",
-  "observed_at": "2026-11-14T20:41:17.914702Z",
-  "execution_started_at": "2026-11-14T20:38:28.632754Z",
-  "execution_completed_at": "2026-11-14T20:40:25.382819Z",
+  "observed_at": "2026-11-14T21:13:22.706320Z",
+  "execution_started_at": "2026-11-14T21:09:45.144069Z",
+  "execution_completed_at": "2026-11-14T21:11:37.745432Z",
   "subject": {
     "consumer_base": "c864ae656d0f96987492397440670524963f337c",
     "scope": "Functional added consumer inputs/scripts over this accepted main, before containing review commit. Exact reviewed source head belongs to the PR; source bytes are identified below.",
@@ -10,13 +10,13 @@
       "integrations/website/browser-tools.json": "73a724772742b3c14f275f97db28ff17f4a6bc83621a5b9d06c0ef3b9ce2ee9a",
       "integrations/website/browserslist": "1a2808998791bf883bdc49c2f40d0a50de92532deedb41e67036a5070636b973",
       "integrations/website/generic.manifest.json": "73c18cf086aff1a9bccc92ce7d8fc5b316653c0f66e19cca39214014f0c8d67f",
-      "integrations/website/identity-bridge.css": "9dd76a497533266e64ec1314cfad3f8a19916df7ea7655d8af2a5eb6150d1f36",
+      "integrations/website/identity-bridge.css": "a8ca3be2e0fb1e41da275ab0935372464758bbce5c751eb7276d3c0209e7735d",
       "integrations/website/launchkit.manifest.json": "eedcf49ef18fc5cd6baac8057dadee23771b1fff58c45e2e620918048db39098",
       "integrations/website/profiles.json": "55235fa6350c8bbd15a22243aeaf7a54ba0a3d4da5eaabf365602586975a876e",
       "integrations/website/source.json": "45df60fdd1eaf18f7a979df151b5dd421202b4cf190b44dfbfdde988e967d5be",
       "tools/website_baseline.py": "bcb17ef954b2277ae918d486e0d2ef3f78b48309a1e09111a117bcfde211d966",
       "tests/test_website_baseline.py": "051d62d6e5fdbcac83e6d0e111c97419dd5fe64399fba3d7d1655e1bbc13e3f9",
-      "tests/browser/website_baseline.py": "a104de497b35811fe1d34dff73ed8cd6945c8798980403e69d2efcbf521bb7e9"
+      "tests/browser/website_baseline.py": "d7b04adfb3dfaf244a72e15752991fa5b990e6ca58f44a2fe76085162a249bf4"
     },
     "identity_source_files": 14,
     "identity_source_inventory_sha256": "76e86c930a4ec362d298904ce524c121017e0ba385fe189a280621da2832bd33"
@@ -62,13 +62,28 @@
     "compiler_sha256": "eea5397c9bc4140210edc9a56c68679c89ddc496cf37aa207078719a3e93eac3",
     "v1_generate": "PASS: 26 real projections",
     "v1_verify": "PASS",
-    "assets": {
-      "favicon.svg": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
-      "social.png": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623",
-      "tokens.css": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b",
-      "tailwind.theme.json": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140",
-      "website.css": "ee9fc8abfef1d0e63a68228990a74f76ee9747e9283126c5123f24241a5ef979"
-    },
+    "assets": [
+      {
+        "path": "favicon.svg",
+        "sha256": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6"
+      },
+      {
+        "path": "social.png",
+        "sha256": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623"
+      },
+      {
+        "path": "tokens.css",
+        "sha256": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b"
+      },
+      {
+        "path": "tailwind.theme.json",
+        "sha256": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140"
+      },
+      {
+        "path": "website.css",
+        "sha256": "41ac4a4b9f8367cacd9d5182cd2072c4246f3604880b8593360fd48123626d2e"
+      }
+    ],
     "semantic_aliases": "Exact generated CSS token bytes plus the declared consumer mapping; no CSS import or invented palette."
   },
   "tools": {
@@ -111,7 +126,7 @@
   },
   "variants": {
     "generic": {
-      "completed_at": "2026-11-14T20:39:25.396527Z",
+      "completed_at": "2026-11-14T21:10:40.242255Z",
       "managed_files": 40,
       "generated_files": 55,
       "native_quality": "PASS: format/lint/types/tests/build",
@@ -123,19 +138,19 @@
       "guarded_rollback_preserved_all_bytes": true,
       "clean_rollback_preserved_identity_assets": true,
       "browser_cases": 36,
-      "browser_artifact_sha256": "07f1d8aee0910932675826204575eb35acd6a1d260dc13600b7f4f4b07d2547f",
-      "browser_receipt_sha256": "a4377fe570a7cb34d1569d05f18eab43db9eac49ec343b4ec3c0d304a62a882f",
+      "browser_artifact_sha256": "34572b2d48313fe045066625b5db66d4a05898ddd69bff5f54b66abd6300fdd4",
+      "browser_receipt_sha256": "671577415df04b2cdc9a6bb304c2600d9e29957810bfb7c0db8fbd933ddd8a8d",
       "axe_violations": 0,
       "axe_incomplete_rule_observations": 10,
       "application_errors": 0,
       "failed_requests": 0,
       "all_declared_browser_checks_pass": true,
       "artifact_unchanged_by_browser": true,
-      "native_log_sha256": "29984d6539989724c1ceb7a56c48b67d4945cbf44054086abff7748c0d7116e3",
+      "native_log_sha256": "402e3c3d8521db3c2f6964f5f65e41ac5a8a447f63d0bfcecd0113b5749e29b0",
       "plan_sha256": "b92113dd96a8dd3eabdff74a21df1538141fac1ef53111899907c70065c74f12"
     },
     "launchkit": {
-      "completed_at": "2026-11-14T20:40:25.378187Z",
+      "completed_at": "2026-11-14T21:11:37.743668Z",
       "managed_files": 53,
       "generated_files": 55,
       "native_quality": "PASS: format/lint/types/tests/build",
@@ -147,15 +162,15 @@
       "guarded_rollback_preserved_all_bytes": true,
       "clean_rollback_preserved_identity_assets": true,
       "browser_cases": 36,
-      "browser_artifact_sha256": "693ade980c92f2f3bc16add9375683e7acc7f82da0cc9b387bc55e9a0938dfc4",
-      "browser_receipt_sha256": "7d9b8354757a8f10faf56dbfcb83b2fc2dd4f1070cc6d903cef731fc1e610014",
+      "browser_artifact_sha256": "35a1c1384ca83231a8c3d5dfa22ad956e428c032552a821e7bdab8eed0ab99f7",
+      "browser_receipt_sha256": "12c9f4c55c98f3ad1bb931e5de3e22130a1e81b5164f4b8137fbc16b3e38315b",
       "axe_violations": 0,
       "axe_incomplete_rule_observations": 16,
       "application_errors": 0,
       "failed_requests": 0,
       "all_declared_browser_checks_pass": true,
       "artifact_unchanged_by_browser": true,
-      "native_log_sha256": "3cc9bd82824177363fbffe25a1aaad091451f1e7207df00a9ea14b7c932d3ad0",
+      "native_log_sha256": "9183041b649a1dcbf7afd938f0419b7a17ece2ee943c17a96ec3ab7e445b5166",
       "plan_sha256": "24eaac319f32bf10c470958735105284b72805d6b84db108f976342e97e51185"
     }
   },
@@ -183,6 +198,8 @@
     "English and Unicode content are qualified for readiness; translated routing and all-language typography remain unqualified.",
     "Optional native search and remote repository statistics are omitted by the supported Holon minimal profile; repository Intelligence Search remains independent.",
     "Whole-foundation adoption, Aether agent release, Realm host/runtime qualification, ADR ratification and Identity approval remain separate.",
-    "Existing imported source, migration, staging, universal catalog, publication workflows and original Repository Intelligence proof are outside this new-file-only slice."
+    "Existing imported source, migration, staging, universal catalog, publication workflows and original Repository Intelligence proof are outside this new-file-only slice.",
+    "Native quality checks ran with a clean owned documentation cache. Rechecking after a Zensical build can fail on generated autorefs.json formatting; its exact cache bytes are retained as an owner follow-up. The two actual builds remain byte-identical.",
+    "Fonts and Mermaid use the selected native renderer's external CDNs. One retained browser run observed upstream503 responses; the recorded qualifying run followed independently observed recovery and passed without request interception or suppression. Offline availability is not qualified."
   ]
 }
