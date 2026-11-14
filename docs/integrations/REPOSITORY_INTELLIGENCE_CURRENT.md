@@ -1,6 +1,6 @@
 # Current Repository Intelligence candidate
 
-Current source selection is Relay `f7f9bd44713606d9c099adda715db2542c8b66bf`, retaining the
+Current source selection is Relay `2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a`, retaining the
 [typed Audits/Sanity checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md), bounded
 public Work/Health/Releases captures, native Journey and attributed Search.
 This compatible owner source includes the canonical Hygiene admission update,
@@ -11,6 +11,9 @@ the original Observatory contracts. The combined source also repairs repeated
 Health projection aggregation, source URL encoding and finalized MegaLinter
 finding attribution. The [artifact report checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md)
 records the original failures and pending consumer qualification.
+The [SVG navigation successor](REPOSITORY_INTELLIGENCE_SVG_NAVIGATION.md)
+repairs shared initialization and graph interaction for native SVG links;
+its consumer publication and canonical browser qualification remain separate.
 
 The portable-only checkpoint below is history from #122; its old pin,
 source-disabled description and deferred checks do not describe this candidate.
