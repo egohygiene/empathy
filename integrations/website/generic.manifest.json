@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "egohygiene/empathy",
+  "repository_class": "tool",
+  "security_level": "hardened",
+  "pins": {
+    "architecture": "egohygiene/hygiene@architecture-v0.1.0",
+    "adr_policy": "egohygiene/hygiene@a05b14f8b9e2772124f879f818e09a911e996ad8",
+    "foundation": "egohygiene/holon@ffbe5f8527a5b79457ef886a6489aed1a69eceea",
+    "aether": "egohygiene/aether@dc8a16851f452763ef4f7fbe4bf057d4500b1921",
+    "realm": "egohygiene/realm@75c1b2e1475b972a0ce1c8594e8daba2e1cf8686"
+  },
+  "capabilities": {
+    "include": ["site-react-vite"],
+    "exclude": []
+  },
+  "sites": ["landing", "docs", "architecture", "legal"],
+  "preserve_paths": ["LICENSE"],
+  "parameters": {
+    "canonical_url": "https://127.0.0.1:9443/",
+    "identity_favicon_url": "https://127.0.0.1:9443/assets/identity/favicon.svg",
+    "identity_stylesheet": "https://127.0.0.1:9443/assets/identity/website.css",
+    "package_name": "@egohygiene/empathy-website-generic",
+    "repository_url": "https://github.com/egohygiene/empathy",
+    "site_base_path": "/",
+    "site_description": "A disposable Empathy consumer proving optional website profile boundaries.",
+    "site_title": "Empathy website canary — ようこそ",
+    "site_suite_content": {
+      "schema": "holon.site-suite-content/v1",
+      "product": {
+        "name": "Empathy website canary — ようこそ",
+        "description": "A disposable consumer of independent repository website profiles.",
+        "repositoryUrl": "https://github.com/egohygiene/empathy"
+      },
+      "documentation": {
+        "title": "Empathy consumer documentation",
+        "introduction": "This disposable site tests optional website composition without changing the repository publication.",
+        "pages": [
+          {
+            "slug": "profiles",
+            "title": "Choose a website profile",
+            "summary": "The universal repository baseline does not require a website.",
+            "body": "Select the generic React/Vite profile for an application shell or the LaunchKit profile for developer-product content. Both compose Zensical documentation, architecture and legal surfaces through pinned Holon inputs."
+          },
+          {
+            "slug": "localization",
+            "title": "Localization readiness",
+            "summary": "Content remains repository-owned and Unicode-safe.",
+            "body": "The current renderer declares English. Unicode source such as café, ようこそ and مرحبا must survive generation. Translated routing and locale selection require a supported owner interface; this canary does not claim those features."
+          }
+        ]
+      },
+      "architecture": {
+        "title": "Website composition boundaries",
+        "introduction": "Empathy supplies reviewed repository intent; specialist implementations remain with their owners.",
+        "diagram": "flowchart LR\n  Empathy[Consumer intent] --> Holon[Holon profiles]\n  Identity[Identity tokens] --> Holon\n  Holon --> Artifact[Disposable site artifact]\n  Artifact --> Review[Human review]",
+        "decisions": [
+          {
+            "id": "ADR-0001",
+            "title": "Preserve specialist ownership",
+            "status": "proposed",
+            "summary": "The existing repository decision is accepted for review, rather than a newly ratified decision. Website generation remains in Holon; token generation remains in Identity.",
+            "href": "https://github.com/egohygiene/empathy/blob/41d4c8bdba88cd5cc17318647d542eea57a70364/docs/decisions/ADR-0001-foundation-ownership.md"
+          }
+        ]
+      },
+      "legal": {
+        "title": "Attribution and source boundaries",
+        "introduction": "This fixture reuses public repository sources and does not create a new legal policy.",
+        "pages": [
+          {
+            "slug": "attribution",
+            "title": "Made with Love",
+            "summary": "Made with love by Ego Hygiene.",
+            "body": "Empathy supplies integration intent. Holon supplies the generic and LaunchKit website profiles; Zensical supplies documentation rendering; Identity supplies generated brand tokens and assets. See the pinned owners and their preserved upstream notices before redistribution.",
+            "lastUpdated": "2026-11-14"
+          },
+          {
+            "slug": "license",
+            "title": "Source licensing",
+            "summary": "Use the canonical repository license and retained third-party notices.",
+            "body": "The Empathy repository LICENSE is the canonical source for its content. Generated consumers preserve Holon and Zensical third-party notices. This fixture does not infer rights approval for other imported files.",
+            "lastUpdated": "2026-11-14"
+          }
+        ]
+      }
+    }
+  }
+}
