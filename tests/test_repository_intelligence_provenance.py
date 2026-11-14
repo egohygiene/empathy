@@ -27,7 +27,7 @@ if TYPE_CHECKING:
     from types import ModuleType
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
-RELAY_REVISION = "2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a"
+RELAY_REVISION = "41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b"
 CONSUMER_REVISION = "a" * 40
 ROLLBACK_REVISION = "254185272ab27b6858b8b0393af6549c205c9a8d"
 SOURCE_EPOCH = 1_800_000_000

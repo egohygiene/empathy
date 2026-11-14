@@ -165,7 +165,7 @@ jobs:
 
       - name: Normalize repository-intelligence summary
         id: normalize
-        uses: egohygiene/relay/actions/normalize-repository-report@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a # reviewed finalized-report parser
+        uses: egohygiene/relay/actions/normalize-repository-report@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b # reviewed finalized-report parser
         with:
           producer: scorecard
           input: .cache/scorecard/results.sarif
