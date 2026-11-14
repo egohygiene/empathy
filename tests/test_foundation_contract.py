@@ -126,12 +126,12 @@ class FoundationContractTests(unittest.TestCase):
         self.assertEqual("1.1.0", self.catalog["schema_version"])
         legacy_catalog = copy.deepcopy(self.catalog)
         legacy_catalog["version"] = "1.1.0"
-        self.assertIn("catalog version must be 2.0.0", foundation.validate_catalog(legacy_catalog))
+        self.assertIn("catalog version must be 2.1.0", foundation.validate_catalog(legacy_catalog))
         legacy_manifest = copy.deepcopy(self.manifest)
         legacy_manifest["foundation"] = "empathy/repository-foundation@1.1.0"
         resolved, errors = foundation.resolve_manifest(self.catalog, legacy_manifest)
         self.assertIsNone(resolved)
-        self.assertIn("manifest foundation must be empathy/repository-foundation@2.0.0", errors)
+        self.assertIn("manifest foundation must be empathy/repository-foundation@2.1.0", errors)
 
     def test_resolution_is_byte_idempotent(self) -> None:
         first, first_errors = foundation.resolve_manifest(self.catalog, self.manifest)
