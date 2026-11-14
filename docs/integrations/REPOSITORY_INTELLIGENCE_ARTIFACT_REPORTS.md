@@ -139,7 +139,7 @@ Hygiene496 profile locked by Observatory. Relay
 [#185](https://github.com/egohygiene/relay/pull/185) separately authenticates
 that historical profile, preserving strict equality, public ownership and
 original Observatory contracts while retaining the current dependency profile.
-Current consumers select immutable Relay `f7f9bd44713606d9c099adda715db2542c8b66bf`.
+Current consumers select immutable Relay `2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a`.
 
 The actual captured previews at Empathy
 `7639304babcba9d4baf21ccea163f31f9045a0c6` passed typed-feed admission but

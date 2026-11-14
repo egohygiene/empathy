@@ -41,7 +41,7 @@ concurrency:
 env:
   TZ: UTC
   CANONICAL_ORIGIN: "https://egohygiene.github.io/empathy/"
-  RELAY_REVISION: "f7f9bd44713606d9c099adda715db2542c8b66bf"
+  RELAY_REVISION: "2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a"
   ROLLBACK_REVISION: "254185272ab27b6858b8b0393af6549c205c9a8d"
   ROLLBACK_RELAY_REVISION: "b71b090406a3a9e4cd9f107e9d14a623bbecb127"
   ROLLBACK_SITE_DIGEST: "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498"
@@ -171,7 +171,7 @@ jobs:
       - name: Capture consumer routes before composition
         id: baseline
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           operation: capture-baseline
           site-directory: .cache/mindgarden/site
@@ -189,7 +189,7 @@ jobs:
       - name: Capture public Work, Health and Releases sources
         id: public_sources
         if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-        uses: egohygiene/relay/actions/repository-intelligence-github-sources@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           github-token: "${{ github.token }}"
           include-titles: "true"
@@ -216,7 +216,7 @@ jobs:
         id: review_feed
         if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         # Reviewed typed feed source; original report times and human authority remain separate.
-        uses: egohygiene/relay/actions/repository-intelligence-review-feed@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence-review-feed@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           source-root: "."
           plan: "${{ inputs.review-plan || '.config/repository-intelligence/review-plan.json' }}"
@@ -247,7 +247,7 @@ jobs:
         id: intelligence
         if: matrix.mode == 'current'
         # Reviewed portable Relay candidate; exact source qualification remains pending.
-        uses: egohygiene/relay/actions/repository-intelligence@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -272,7 +272,7 @@ jobs:
       - name: Rebuild identical Repository Intelligence inputs
         id: intelligence_duplicate
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -314,14 +314,14 @@ jobs:
       - name: Verify current provenance and Quartz non-clobber boundary
         id: composition
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           operation: verify-composition
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ steps.identity.outputs.represented-revision }}"
-          relay-revision: "f7f9bd44713606d9c099adda715db2542c8b66bf"
+          relay-revision: "2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a"
           required-routes: >-
             ["/","/intelligence/","/intelligence/now/","/intelligence/roadmap/",
             "/intelligence/decisions/","/intelligence/journey/","/intelligence/dependencies/",
@@ -573,14 +573,14 @@ jobs:
       - name: Record current deployment receipt
         id: receipt
         if: needs.build.outputs.deployment-mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           operation: record-receipt
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ needs.build.outputs.represented-revision }}"
-          relay-revision: "f7f9bd44713606d9c099adda715db2542c8b66bf"
+          relay-revision: "2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a"
           workflow-run-id: "${{ github.run_id }}"
           workflow-run-attempt: "${{ github.run_attempt }}"
           deployment-environment: github-pages

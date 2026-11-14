@@ -95,7 +95,7 @@ jobs:
       - name: Capture public Work, Health and Releases sources
         id: public_sources
         if: github.event_name == 'workflow_dispatch'
-        uses: egohygiene/relay/actions/repository-intelligence-github-sources@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           github-token: "${{ github.token }}"
           include-titles: "true"
@@ -115,7 +115,7 @@ jobs:
         id: review_feed
         if: github.event_name == 'workflow_dispatch'
         # Reviewed typed feed source; original report times and human authority remain separate.
-        uses: egohygiene/relay/actions/repository-intelligence-review-feed@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence-review-feed@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           source-root: "."
           plan: "${{ inputs.review-plan || '.config/repository-intelligence/review-plan.json' }}"
@@ -138,7 +138,7 @@ jobs:
       - name: Generate intelligence artifacts and dashboard
         id: intelligence
         # Portable Relay candidate; qualify the exact source before readiness.
-        uses: egohygiene/relay/actions/repository-intelligence@f7f9bd44713606d9c099adda715db2542c8b66bf
+        uses: egohygiene/relay/actions/repository-intelligence@2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a
         with:
           output-directory: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
           work-directory: "${{ inputs.output-root || '.cache/repository-intelligence' }}"

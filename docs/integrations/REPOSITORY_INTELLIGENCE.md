@@ -13,6 +13,8 @@ artifacts and artifact-only scan mode for a frozen proof cycle.
 The [aggregate source checkpoint](REPOSITORY_INTELLIGENCE_BATCH10.json) binds
 the reviewed slices and local outcomes; its final provider and live acceptance
 remain pending separately.
+The [SVG navigation checkpoint](REPOSITORY_INTELLIGENCE_SVG_NAVIGATION.md)
+records the current source successor and preserves that dated evidence.
 The [typed review-feed checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md) records
 current Audits/Sanity composition alongside bounded Work/Health/Releases feeds.
 The [preceding public source checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md)
@@ -25,7 +27,7 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 | Input                                 | Reviewed revision                          | Role                                                                                                                                                                                    |
 | ------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Relay current native-source candidate | `f7f9bd44713606d9c099adda715db2542c8b66bf` | Current captures/builders and matching provenance/check metadata; compatible Hygiene admission, complete Journey object inspection and chronological composition; qualification pending |
+| Relay current native-source candidate | `2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a` | Current captures/builders and matching provenance/check metadata; compatible Hygiene admission, complete Journey object inspection and chronological composition; qualification pending |
 | Previous typed-review-feed selection  | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Documentation-only successor of the original typed-feed source; historical source and negative/control evidence                                                                         |
 | Original typed-review-feed source     | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; executable owner bytes equal the previous documentation-only successor                                                                |
 | Previous public-source selection      | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim                                                                                             |
