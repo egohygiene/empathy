@@ -1,12 +1,12 @@
 schema-version = 1
 id = "empathy-universal-foundation"
-version = "2.1.0"
+version = "3.0.0"
 profile = "empathy/golden-foundation"
 provisional = false
 
 [source]
 repository = "egohygiene/empathy"
-revision = "b80a585653be803c8fab3711b021b2e12de5b3fb"
+revision = "8b35788abaee32a7649dadc56ec2634e5c81ce10"
 revision-kind = "git-commit"
 path = "foundation/catalog.json"
 decision = "https://github.com/egohygiene/empathy/issues/62"
@@ -92,6 +92,12 @@ ownership = "repository-owned"
 [[requirements]]
 id = "identity-input"
 path = ".identity/identity.toml"
+kind = "file"
+ownership = "repository-owned"
+
+[[requirements]]
+id = "mailmap"
+path = ".mailmap"
 kind = "file"
 ownership = "repository-owned"
 

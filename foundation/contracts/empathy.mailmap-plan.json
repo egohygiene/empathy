@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "baseline_sha256": "2bbd232d1a5e08e330deb949b9ddabf865e42f61e290d390ad64dbabc50cb41b",
+      "content": "# Mailmap presentation changes do not rewrite commits or commit IDs.\n# Identity values belong to the consumer; Git's matching rules are authoritative.\n# See https://git-scm.com/docs/gitmailmap and docs/foundation/mailmap/README.md.\n\n# Repository-owned local mappings and comments.\n# .mailmap - Simplified mapping of author and committer names and email addresses\n# https://git-scm.com/docs/gitmailmap\n#\n# This file is used to standardize author/committer names and email addresses in git history.\n# The format is as follows:\n#\n# 1. Map a canonical name/email to an alternative name/email\n#    Example: Correct Name <correct.email@example.com> <incorrect.email@example.com>\n#\n# 2. Map a canonical name/email to a name without an email\n#    Example: Correct Name <correct.email@example.com> Name Without Email\n#\n# 3. Map a canonical name/email to a name and email without an email\n#    Example: Correct Name <correct.email@example.com> Name Without Email <email@without.example.com>\n#\n# Below is a basic configuration for this project.\n\n\n# Consumer-approved baseline.\nAlan Szmyt <14865041+szmyty@users.noreply.github.com>\n",
+      "content_sha256": "6952a09a8e2b7ac4c2e6ebd5844b41c5a608ae6b0a7d8fb94a60bd19f9f0deec",
+      "local_additions_sha256": "5f7e70c5ac9d13a15b7a878b8d499520c9255fb996effa36e6879392452b4425",
+      "ownership": "repository-owned",
+      "path": ".mailmap"
+    }
+  ],
+  "format": "empathy.mailmap/v1",
+  "foundation": "empathy/repository-foundation@3.0.0",
+  "generator": "tools/foundation.py plan-mailmap",
+  "identity_evidence": [
+    "https://github.com/egohygiene/empathy/blob/41d4c8bdba88cd5cc17318647d542eea57a70364/.mailmap"
+  ],
+  "repository": "egohygiene/empathy",
+  "source": {
+    "catalog_sha256": "59e10d8beae359219b64558f4bf1a46b52aa7021217e2b22956cc092f45f5574",
+    "header": {
+      "path": "foundation/mailmap/universal.mailmap",
+      "sha256": "1d584c2f3bdb78e18bf69edf9a137439888532c490ea6423725f4dbdb7fbbd48"
+    },
+    "owner": "egohygiene/empathy",
+    "resolved_manifest_sha256": "8bb55ce1c002556123c9ee08389e8dce6aa02e250649088703e492d633fa06b7"
+  },
+  "status": "plan-only"
+}
