@@ -71,23 +71,23 @@ is rejected for historical rollback.
 1. Review and integrate all consumer changes before freezing source **S**. Do
    not add a report-selection Git commit after the scans: selections are
    explicit manual inputs, and their receipts are retained artifacts.
-2. Dispatch the existing three producers on main at **S**, each with
+1. Dispatch the existing three producers on main at **S**, each with
    `publish-snapshot: false`. Keep ordinary severity and lint policies. Wait
    for actual scan, normalization and artifact stages; verify each snapshot
    writer is skipped and main remains **S**.
-3. Inspect the actual retained artifact archives and compute both digests.
+1. Inspect the actual retained artifact archives and compute both digests.
    Build the closed selection above from those real provider identities.
-4. Dispatch the standalone Intelligence workflow on main with that selection.
+1. Dispatch the standalone Intelligence workflow on main with that selection.
    Review its summary, source identity, exact inputs and native report states
    before publication. Standalone remains artifact-only.
-5. After root review, dispatch `Publish Mindgarden`, `mode: current`, on the
+1. After root review, dispatch `Publish Mindgarden`, `mode: current`, on the
    same source with the same selection. Inspect build, upload, deployment,
    separate receipt and live verification individually. A green workflow with
    skipped descendants does not establish publication.
-6. During the separately authorized fixed rollback rehearsal, retain the real
+1. During the separately authorized fixed rollback rehearsal, retain the real
    old identity and restore `current` immediately. Supply the same selection
    on the restored current run while source **S** remains unchanged.
-7. Record final external run/artifact/live evidence in the work tracker and
+1. Record final external run/artifact/live evidence in the work tracker and
    organization review packet. A documentation-only Empathy commit after the
    freeze creates a new source boundary and needs fresh evidence.
 
@@ -104,16 +104,22 @@ Initial real feature-branch runs at source
 and [composed 43528378294](https://github.com/egohygiene/empathy/actions/runs/43528378294).
 Capture, retention and typed review feed passed; Quartz also passed in the
 composed run. Both builders then denied `collection-validation-normalization`.
-Publication/configuration/deployment were correctly skipped. This is a real
-remaining source-build failure, not completed live qualification.
+Publication/configuration/deployment were correctly skipped. These are
+historical negative/control receipts; they do not establish live qualification.
 
-Independent native replay identified the full-plan denial as the admitted
-Empathy-to-Mantle dependency having no matching relationship policy. Canonical
-declaration/policy reconciliation belongs to Hygiene, followed by an explicit
-compatible Relay owner-lock upgrade and consumer adoption. The Dependencies
-opt-in and owner-source equality remain enabled; current source selection must
-not silently skip that failing domain. A Journey/Search-only replay is an
-isolating control, not acceptance of the full configured plan.
+Independent native replay identified missing relationship-policy admission for
+the declared Empathy-to-Mantle and Empathy-to-EgoLint dependencies. Hygiene
+[#119](https://github.com/egohygiene/hygiene/pull/119) reconciles only those
+memberships. A separate actual PR-source failure exposed a native Journey
+frontier discrepancy: 256 original objects were captured but only 255 inspected.
+Relay [#183](https://github.com/egohygiene/relay/pull/183) authenticates all 256
+original objects in disjoint reachable batches under one bounded deadline;
+[#184](https://github.com/egohygiene/relay/pull/184) combines the compatible exact
+Hygiene profile and chronological event composition. Current consumers select
+the combined immutable Relay `d7604056e36633a59735318454f20f2984602726`.
+Dependencies remain enabled, selected Journey objects are not pruned, and source
+equality is unchanged. Owner replay and different-checkout byte equality do not
+replace final aggregate consumer, provider and live qualification.
 
 The caller retains only the owner's closed `source-build-failure/v1`
 diagnostic when available. Raw native working trees, captures, exceptions,

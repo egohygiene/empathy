@@ -22,8 +22,9 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 | Input | Reviewed revision | Role |
 | --- | --- | --- |
-| Relay typed-review-feed candidate | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Current producers/builders and matching provenance/check metadata; documentation-only successor of the original typed-feed source; qualification pending |
-| Original typed-review-feed source | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; all executable owner bytes equal the current successor |
+| Relay current native-source candidate | `d7604056e36633a59735318454f20f2984602726` | Current captures/builders and matching provenance/check metadata; compatible Hygiene admission, complete Journey object inspection and chronological composition; qualification pending |
+| Previous typed-review-feed selection | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Documentation-only successor of the original typed-feed source; historical source and negative/control evidence |
+| Original typed-review-feed source | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; executable owner bytes equal the previous documentation-only successor |
 | Previous public-source selection | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim |
 | Previous Journey/Search selection | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim |
 | Previous portable source selection | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point |
@@ -54,7 +55,8 @@ On current push/manual paths they also admit one exact same-run public capture
 artifact for Work, Health and Releases; the duplicate generator reuses that same
 artifact and evaluation time. PR and trusted workflow-run paths retain their
 existing no-capture selection. They select no ADR/Roadmap, external snapshot/
-comparison or retained Compare baseline. Missing domains remain unavailable. Producer-source qualification remains separate in
+comparison or retained Compare baseline. Missing domains remain unavailable. Producer-source qualification
+remains separate in
 [Empathy #98](https://github.com/egohygiene/empathy/issues/98).
 
 ## Events and trust boundaries
@@ -281,17 +283,17 @@ requirements; retain the completed #94 evidence and issue state:
 
 1. Exact merged SHA/tree and successful default-branch build, deployment,
    receipt finalization, and exact live identity/routes.
-2. A successful manual `current` rebuild, including its separate receipt and
+1. A successful manual `current` rebuild, including its separate receipt and
    exact public bytes; and a trusted producer refresh that preserves useful
    non-success conclusion evidence and the original summary identities.
-3. Dispatch **Repository Intelligence intentional failure**. Its bounded
+1. Dispatch **Repository Intelligence intentional failure**. Its bounded
    `max-depth=21` fixture must fail with `RIW-002`, retain a sanitized 30-day
    report with stage/rule/remediation, upload no Pages artifact, perform no
    deployment, and leave the last known-good site unchanged.
-4. Exercise `rollback-v1.4`, capture its actual deployment and live historical
+1. Exercise `rollback-v1.4`, capture its actual deployment and live historical
    identity, immediately dispatch `current`, and verify the restored current
    deployment through every job.
-5. Record exact run attempts, artifact URLs and archive hashes, input hashes,
+1. Record exact run attempts, artifact URLs and archive hashes, input hashes,
    manifest/bundle/composition digests, receipt, route evidence, negative-path
    report, rollback proof, and restored-current proof. Distinguish implemented
    behavior, PR validation, and consumer-side execution still pending.
