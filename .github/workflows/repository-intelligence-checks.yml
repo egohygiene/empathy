@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: egohygiene/relay
-          ref: d7604056e36633a59735318454f20f2984602726
+          ref: 95105a9f5d99239af0d44d7dbd796fd1507fef31
           path: .cache/relay-contract
           persist-credentials: false
       - name: Install exact contract validation tools
@@ -88,7 +88,7 @@ jobs:
           report = {
               "schema": "egohygiene.empathy.repository-intelligence-contract-tests/v1",
               "consumer_revision": os.environ["GITHUB_SHA"],
-              "relay_revision": "d7604056e36633a59735318454f20f2984602726",
+              "relay_revision": "95105a9f5d99239af0d44d7dbd796fd1507fef31",
               "run": {"id": int(os.environ["GITHUB_RUN_ID"]), "attempt": int(os.environ["GITHUB_RUN_ATTEMPT"])},
               "tests": result.testsRun,
               "failures": len(result.failures),

@@ -4,9 +4,13 @@ Refs [Empathy #105](https://github.com/egohygiene/empathy/issues/105),
 [Pace #13](https://github.com/egohygiene/pace/issues/13) and
 [organization #41](https://github.com/egohygiene/.github/issues/41).
 
-Current source selection is Relay `d7604056e36633a59735318454f20f2984602726`, including the compatible
+Current source selection is Relay `95105a9f5d99239af0d44d7dbd796fd1507fef31`, including the compatible
 Hygiene admission and complete native Journey inspection repairs recorded in the
 [artifact report checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md).
+The typed feed retains its independently authenticated historical Hygiene496
+admission profile and original Observatory schema/receipt bindings; the current
+Hygiene627 dependency profile remains separate. Strict admission equality and
+public ownership checks remain required.
 All current builder, capture, feed, provenance, check and fixture references
 match that pin. The original source-comparison receipt remains bound to its
 original PR #125 inputs below; dated source-only qualifications remain historical.

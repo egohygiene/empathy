@@ -1,11 +1,13 @@
 # Current Repository Intelligence candidate
 
-Current source selection is Relay `d7604056e36633a59735318454f20f2984602726`, retaining the
+Current source selection is Relay `95105a9f5d99239af0d44d7dbd796fd1507fef31`, retaining the
 [typed Audits/Sanity checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md), bounded
 public Work/Health/Releases captures, native Journey and attributed Search.
 This compatible owner source includes the canonical Hygiene admission update,
 authenticates all selected Journey objects without pruning, and orders composed
-events chronologically. The [artifact report checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md)
+events chronologically. Its typed-feed repair authenticates the separately locked
+historical catalog profile without changing the current dependency profile or
+the original Observatory contracts. The [artifact report checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md)
 records the original failures and pending consumer qualification.
 
 The portable-only checkpoint below is history from #122; its old pin,

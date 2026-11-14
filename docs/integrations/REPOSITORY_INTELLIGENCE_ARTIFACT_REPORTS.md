@@ -36,13 +36,13 @@ selection. A nonempty input is a JSON object with exactly:
 
 Each entry has exactly these fields:
 
-| Field | Required identity |
-| --- | --- |
-| `producer` | `osv`, `megalinter` or `scorecard` |
-| `run_id`, `run_attempt` | Actual positive integer producer run and attempt |
-| `artifact_id` | Actual positive integer dedicated-summary artifact ID |
-| `archive_sha256` | Lowercase SHA-256 of the retained ZIP, without a prefix |
-| `summary_sha256` | Lowercase SHA-256 of its exact `summary.json` bytes |
+| Field                   | Required identity                                       |
+| ----------------------- | ------------------------------------------------------- |
+| `producer`              | `osv`, `megalinter` or `scorecard`                      |
+| `run_id`, `run_attempt` | Actual positive integer producer run and attempt        |
+| `artifact_id`           | Actual positive integer dedicated-summary artifact ID   |
+| `archive_sha256`        | Lowercase SHA-256 of the retained ZIP, without a prefix |
+| `summary_sha256`        | Lowercase SHA-256 of its exact `summary.json` bytes     |
 
 The one local [consumer action](../../.github/actions/report-artifacts/action.yml)
 admits only completed runs of the three named workflows, from this repository
@@ -118,8 +118,15 @@ frontier discrepancy: 256 original objects were captured but only 255 inspected.
 Relay [#183](https://github.com/egohygiene/relay/pull/183) authenticates all 256
 original objects in disjoint reachable batches under one bounded deadline;
 [#184](https://github.com/egohygiene/relay/pull/184) combines the compatible exact
-Hygiene profile and chronological event composition. Current consumers select
-the combined immutable Relay `d7604056e36633a59735318454f20f2984602726`.
+Hygiene profile and chronological event composition. The preceding combined
+source was immutable Relay `d7604056e36633a59735318454f20f2984602726`. Its actual captured
+Empathy previews at `382508fe2fbdfb37777a005aa71ddd3af56485c3` denied the typed
+feed with `PIN`: the current Hygiene627 admission differed from the historical
+Hygiene496 profile locked by Observatory. Relay
+[#185](https://github.com/egohygiene/relay/pull/185) separately authenticates
+that historical profile, preserving strict equality, public ownership and
+original Observatory contracts while retaining the current dependency profile.
+Current consumers select immutable Relay `95105a9f5d99239af0d44d7dbd796fd1507fef31`.
 Dependencies remain enabled, selected Journey objects are not pruned, and source
 equality is unchanged. Owner replay and different-checkout byte equality do not
 replace final aggregate consumer, provider and live qualification.
