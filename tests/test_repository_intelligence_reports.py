@@ -24,7 +24,7 @@ if TYPE_CHECKING:
     from types import ModuleType
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
-RELAY_REVISION = "2d0d88bdcfa1c9614a9a6bf7f66b26a397dfec2a"
+RELAY_REVISION = "41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b"
 REPOSITORY = "egohygiene/empathy"
 SOURCE_COMMIT = "1" * 40
 AS_OF = datetime(2026, 9, 23, 12, tzinfo=UTC)
