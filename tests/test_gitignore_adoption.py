@@ -9,6 +9,7 @@ from collections import Counter
 import hashlib
 import json
 from pathlib import Path
+import subprocess  # nosec B404
 import sys
 from typing import TYPE_CHECKING
 import unittest
@@ -126,7 +127,23 @@ class GitignoreAdoptionTests(test_gitignore_baseline.GitignoreFixture):
     def test_devcontainer_marker_is_explicit_configuration_not_a_tracked_environment_file(
         self,
     ) -> None:
-        self.assertFalse((ROOT / ".devcontainer/.env").exists())
+        indexed = subprocess.run(  # noqa: S603  # nosec B603
+            [
+                self.git_executable,
+                "-C",
+                str(ROOT),
+                "ls-files",
+                "--error-unmatch",
+                "--",
+                ".devcontainer/.env",
+            ],
+            env=self.environment,
+            capture_output=True,
+            text=True,
+            timeout=10,
+            check=False,
+        )
+        self.assertEqual(indexed.returncode, 1)
         configuration = json.loads((ROOT / ".devcontainer/devcontainer.json").read_text())
         for section in ("containerEnv", "remoteEnv"):
             with self.subTest(section=section):
