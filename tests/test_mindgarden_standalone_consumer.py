@@ -109,6 +109,22 @@ class InstalledMindgardenGoldenTests(unittest.TestCase):
             self.assertNotIn("Unreviewed imported source", text)
             self.assertFalse((safe / "sources").exists())
 
+    def test_external_public_projection_preserves_all_reviewed_compatibility_bytes(self) -> None:
+        publishing = importlib.import_module("mindgarden.adapters.publishing")
+        sys.path.insert(0, str(ROOT / "mindgarden"))
+        compatibility = importlib.import_module("scripts.publish_garden")
+        profile = Path("mindgarden/profiles/quartz/profile.yaml")
+        with tempfile.TemporaryDirectory() as directory:
+            parent = Path(directory)
+            selected_paths = publishing.project_garden(ROOT, parent / "external", profile)
+            retained_paths = compatibility.project_garden(ROOT, parent / "compatibility", profile)
+            self.assertEqual(selected_paths, retained_paths)
+            self.assertEqual(5, len(selected_paths))
+            self.assertEqual(
+                consumer.inventory(parent / "external"),
+                consumer.inventory(parent / "compatibility"),
+            )
+
     def test_openwiki_and_obsidian_file_round_trips_do_not_promote_imports(self) -> None:
         for target in ["openwiki", "obsidian"]:
             with self.subTest(target=target), tempfile.TemporaryDirectory() as directory:

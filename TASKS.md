@@ -222,8 +222,8 @@ _Generated from the live Taskfile graph: 248 public commands._
 | `task garden:llms:write` | Regenerate the committed llms.txt agent entrypoint | — |
 | `task garden:publish` | Materialize the disposable reviewed-public projection | — |
 | `task garden:publish:check` | Verify the deterministic reviewed-public projection | — |
-| `task garden:site:build` | Build the public garden with the pinned Quartz engine | — |
-| `task garden:site:serve` | Serve the public garden locally with the pinned Quartz engine | — |
+| `task garden:site:build` | Build the public garden through standalone Mindgarden and pinned Quartz | — |
+| `task garden:site:serve` | Serve the public garden through standalone Mindgarden and pinned Quartz | — |
 | `task garden:standalone:install` | Install the immutable standalone Mindgarden candidate in a separate environment | — |
 | `task garden:standalone:verify` | Verify the pinned external engine against the existing canonical Empathy garden | — |
 | `task git:branch` | Print the current Git branch | — |

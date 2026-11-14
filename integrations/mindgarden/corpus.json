@@ -1,6 +1,6 @@
 {
   "schema": "empathy.mindgarden-corpus/v1",
-  "source_revision": "8366ac00fd322d1a4f8d07a047c2825165ae45cb",
+  "source_revision": "7138798ed233ff0575e81f8901ecc00e6223b73d",
   "captured": "2026-11-14",
   "sources": [
     {
@@ -193,7 +193,7 @@
     },
     {
       "path": ".github/workflows/mindgarden-pages.yml",
-      "sha256": "89ba872025a401c38db3e047b3010f66b4a3585b9103e93bc3fe3a3562734f98"
+      "sha256": "de6f08fd7890d2862b0499e12c80384e987d694097e50b40c9bb6f6297f36d5d"
     },
     {
       "path": ".github/workflows/ossf-scorecard.yml",
