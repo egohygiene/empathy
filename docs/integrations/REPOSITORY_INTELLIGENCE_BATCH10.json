@@ -1,0 +1,266 @@
+{
+  "schema": "egohygiene.empathy.batch-integration-checkpoint/v1",
+  "observed_at": "2026-11-14T01:14:02Z",
+  "parent_issue": "https://github.com/egohygiene/empathy/issues/118",
+  "base_revision": "2202636a1957ee7598359465b4ae562e1c67358a",
+  "assembled_source_revision": "331e82cd4b2e234776a1c7b4d971595baf9ef964",
+  "containing_checkpoint_revision": null,
+  "candidate_branch": "codex/empathy-batch10-integration",
+  "slice_heads": {
+    "145": "4511edfdda90d1c824cad82b47a3e6d0dcba75e6",
+    "143": "f7c69f5ce581f8451edb93ae09b2d9a3c04e8245",
+    "141": "0be166309c6238462ac00693cabfb6cc40906333",
+    "144": "453a87c9ec032b4c19c2e68461da5e37921dd9b3"
+  },
+  "current_relay_revision": "d7604056e36633a59735318454f20f2984602726",
+  "fixed_rollback": {
+    "consumer_revision": "254185272ab27b6858b8b0393af6549c205c9a8d",
+    "relay_revision": "b71b090406a3a9e4cd9f107e9d14a623bbecb127",
+    "site_digest": "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498",
+    "verifier_bytes_unchanged": true
+  },
+  "source_bound_local_review": {
+    "source_revision": "331e82cd4b2e234776a1c7b4d971595baf9ef964",
+    "root_suite": {
+      "tests": 239,
+      "failures": 0,
+      "skips": 0,
+      "exit_code": 0
+    },
+    "embedded_egolint_suite": {
+      "tests": 31,
+      "failures": 1,
+      "exit_code": 1,
+      "held_failure": "test_catalog_is_pinned_to_the_workflow_release",
+      "owner_issue": "https://github.com/egohygiene/empathy/issues/110"
+    },
+    "whole_root_python": {
+      "ruff": "0.16.5",
+      "mypy": ["1.19.1", "2.3.0"],
+      "mypy_source_files": 38
+    },
+    "commands": [
+      {
+        "name": "baseline-independent",
+        "exit_code": 1,
+        "started_at": "2026-11-14T01:10:22.398538+00:00",
+        "finished_at": "2026-11-14T01:10:40.893966+00:00",
+        "stdout_sha256": "ee995e9d3e8998e9234ba0ba6ae1cdbb183aa2ea1d1a735a18d26d4e85dd0a95"
+      },
+      {
+        "name": "ruff-whole-root",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:40.894270+00:00",
+        "finished_at": "2026-11-14T01:10:40.922624+00:00",
+        "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      {
+        "name": "mypy119-whole-root",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:40.922695+00:00",
+        "finished_at": "2026-11-14T01:10:43.442038+00:00",
+        "stdout_sha256": "5b8ce7baba93409ab8ce52693c77459567344e2c2f77fe3cf14b888e34f7e451"
+      },
+      {
+        "name": "mypy23-whole-root",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:43.442102+00:00",
+        "finished_at": "2026-11-14T01:10:46.313053+00:00",
+        "stdout_sha256": "5b8ce7baba93409ab8ce52693c77459567344e2c2f77fe3cf14b888e34f7e451"
+      },
+      {
+        "name": "foundation-catalog",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.313308+00:00",
+        "finished_at": "2026-11-14T01:10:46.359451+00:00",
+        "stdout_sha256": "37739b47038443d39f3c201d16e3d54862a94f28a2b7619f5b2222d06eba2410"
+      },
+      {
+        "name": "foundation-manifest",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.359521+00:00",
+        "finished_at": "2026-11-14T01:10:46.421260+00:00",
+        "stdout_sha256": "919e7f8151a8bc711da3ae8f1b783dc740968796000976d20d6113cbcaf54164"
+      },
+      {
+        "name": "foundation-workspace",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.421331+00:00",
+        "finished_at": "2026-11-14T01:10:46.467734+00:00",
+        "stdout_sha256": "34dc74b2a5e2aa7da7a41c21065244e815198c819c53d248b558e897f8b80897"
+      },
+      {
+        "name": "foundation-ignore-plan",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.467800+00:00",
+        "finished_at": "2026-11-14T01:10:46.514555+00:00",
+        "stdout_sha256": "cba46d60fdb59e020040f46183af30e93ca4f2d7236eb0b06a4673d3cdaff083"
+      },
+      {
+        "name": "foundation-contract",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.514624+00:00",
+        "finished_at": "2026-11-14T01:10:46.564538+00:00",
+        "stdout_sha256": "ec1781df874c6900219e85967f66d4561f4bca5029361c3dc5a225e59b651d1a"
+      },
+      {
+        "name": "automation-policy",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.564609+00:00",
+        "finished_at": "2026-11-14T01:10:46.620698+00:00",
+        "stdout_sha256": "8579fb86041274d1a159f405b84399d8d402e1e8918593ec0360198315952fa5"
+      },
+      {
+        "name": "architecture",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.620762+00:00",
+        "finished_at": "2026-11-14T01:10:46.775481+00:00",
+        "stdout_sha256": "3619b94f02382f37f78a076ae9fe2100c2e9f0734d0b8be41ab803458582b805"
+      },
+      {
+        "name": "task-catalog",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:46.775554+00:00",
+        "finished_at": "2026-11-14T01:10:47.239911+00:00",
+        "stdout_sha256": "280c257209ef9443004b3c17dfd059a5412351204dbc9688b04536caada66da6"
+      },
+      {
+        "name": "actual-staging-diff",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:10:47.239983+00:00",
+        "finished_at": "2026-11-14T01:10:53.105503+00:00",
+        "stdout_sha256": "a818d2edce4bdd094463e822f01fbf0bd3ba14737c21c1e68d9bbb54b09f6fb5"
+      }
+    ],
+    "identity_revision": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
+    "generated_identity_files": 27,
+    "generated_inputs_removed_after_checks": true
+  },
+  "metadata_only_correction": {
+    "scope": "Owned unmerged task DAG only; no accepted history rewrite.",
+    "original_heads": {
+      "143": "d65b5204aaa4618442ca399c7e63446c63e92c09",
+      "145": "bf0fcd88f684156eb33afc5aed3cb83c9355f725"
+    },
+    "archive_refs": {
+      "143": "refs/heads/archive/empathy-batch10-109-d65b5204",
+      "145": "refs/heads/archive/empathy-batch10-92-bf0fcd88"
+    },
+    "replacement_heads": {
+      "143": "f7c69f5ce581f8451edb93ae09b2d9a3c04e8245",
+      "145": "4511edfdda90d1c824cad82b47a3e6d0dcba75e6"
+    },
+    "mapping": [
+      {
+        "old": "72bb5d2cf2be7afd6a1974c5a93e178ff7e69af6",
+        "new": "08124944d5c961f762821c5f41abb656cc481194",
+        "tree": "dad39463b154cb327de7fcc5b64b302b24e64191"
+      },
+      {
+        "old": "70037cdce0e4144e2538d164c1766d513361b266",
+        "new": "0f41a0137181dea08381feea584dea67e32565f4",
+        "tree": "3fe15be983c22c0d78fbcf00cfb5dc466c51f337"
+      },
+      {
+        "old": "6f8a5cf4350251f99be8f63735f5c09152f98de7",
+        "new": "b6400c0c951544517f46f02b7b03ec3d263716ea",
+        "tree": "3b42bcb5200d232f9768edef4759690c9d729a3e"
+      },
+      {
+        "old": "7635c3d211f4704d00d2b533147f26010e14d76a",
+        "new": "9f264500202ef851dc53ece023fd9da23198eee3",
+        "tree": "33b5d834ecdfa1e671497a5d2b731c26c9352411"
+      },
+      {
+        "old": "99d9cf3e3a3cf778b2c04f54d07aabc3975a04dc",
+        "new": "9007589729f68d7498f74e4ddc59729bffb40806",
+        "tree": "0164bcde7717eb4e0ece145709a7e7269dc32c5b"
+      },
+      {
+        "old": "d70c37e34104e84a07e2795ab15b6ccdd7d58fac",
+        "new": "ebf44844a262db437ae4e66fc348f724fd2e2d63",
+        "tree": "2f1e8eea062a505b607ee331e169f7fd5a378f77"
+      },
+      {
+        "old": "c6c906e90eba02ce1238312c8e56706ef1f0f020",
+        "new": "c3eb2309c419f3c946b0f53b67f230b5c698bae2",
+        "tree": "a1d59c5907b2d3bd5944b799cda76006df29ce7c"
+      },
+      {
+        "old": "624a953e149b7ac681483fdbe643d830409026ac",
+        "new": "02ac50e552d56947a695fc13942bda99368a11ae",
+        "tree": "23c0fa2d9c20ad9dbf0e96e38ab4ceb465c5a700"
+      },
+      {
+        "old": "08c520451f143ed1d99f1b821357ef22843da87e",
+        "new": "d6c1c480bff093e6638f12abe22ee8841480ddd4",
+        "tree": "8387d95b05690451ae0e4fb206ceb83cef360b2a"
+      },
+      {
+        "old": "7990c8f36ff739675d33c07a2d0ac4c4f3ee958f",
+        "new": "04fc91f6e49d551efc3e2244e4bc9c06303539a1",
+        "tree": "6aeb5bacc3b235ffb6322e0b9bd20a64ac1b1336"
+      },
+      {
+        "old": "0c27e1011834e572fb19507c63d753dc5544e6dd",
+        "new": "79a170c4fda06649a0b25e7ad7076d03c4d140d4",
+        "tree": "6d76ce53c4db8aa44ce2c01985a44cadb28f97fd"
+      },
+      {
+        "old": "a41fcedbeaa7b7457d2ab6ac975cb12283c2563f",
+        "new": "f0df749243ca573acf8244908dc594d8c6c5c039",
+        "tree": "708c03dc408aa5379508e6287f8eca282f6eef6c"
+      },
+      {
+        "old": "1ef910c6d0819da6e0657ea5b5886f4415400238",
+        "new": "4e4064a076a62464bcc82707dfd4da01cd5cbfcb",
+        "tree": "5cfcf64ac45831b77eff9eb2a6dd5e7d7fb78feb"
+      },
+      {
+        "old": "bf0fcd88f684156eb33afc5aed3cb83c9355f725",
+        "new": "4511edfdda90d1c824cad82b47a3e6d0dcba75e6",
+        "tree": "6eb344069f8c9b01ee8a15ed61d98596fbe0b942"
+      },
+      {
+        "old": "f502804e304a6902f07374d24276ae0e5afb8933",
+        "new": "4dc261c3f0d7f92d7fdc4fce321a997b4edc2966",
+        "tree": "c5836124e140ef649c72606be9abfe651705e1bf"
+      },
+      {
+        "old": "d65b5204aaa4618442ca399c7e63446c63e92c09",
+        "new": "f7c69f5ce581f8451edb93ae09b2d9a3c04e8245",
+        "tree": "8b78de4d5429adb0e62114508bc4aa31249eb63f"
+      }
+    ],
+    "all_mapped_trees_identical": true,
+    "all_author_and_committer_identities_and_dates_preserved": true,
+    "all_message_bodies_and_parent_order_preserved": true,
+    "source_content_changes": false,
+    "evidence_boundary": "Original source/test/CI hashes and clocks remain bound to archived originals."
+  },
+  "preserved_boundaries": [
+    "All four current slice heads are reachable through ordinary merges; shared ancestry is preserved.",
+    "The frozen staged tree, approval and receipt objects retain their base bytes; human authority is not authenticated.",
+    "The current Relay pin delta changes four workflow bindings and three test constants only.",
+    "The fixed rollback generator, source identity, digest and verifier remain unchanged.",
+    "Read-only report normalization is separate from the default-branch-only snapshot publisher.",
+    "No feature-branch report snapshots or deployment are authorized by this checkpoint."
+  ],
+  "acceptance_at_authorship": {
+    "status": "partial",
+    "exact_containing_head_pr_event_staging": "pending provider execution after checkpoint freeze",
+    "exact_containing_head_canonical_holistic": "pending provider execution after checkpoint freeze",
+    "current_and_fixed_rollback_readonly_previews": "pending provider execution after checkpoint freeze",
+    "postmerge_same_source_artifact_to_live_cycle": "separate root-owned acceptance after ordinary merge",
+    "issue_states": "unchanged; references only",
+    "historical_evidence": "Original source/run hashes and clocks remain original; no old execution is relabelled.",
+    "later_receipts": "Bind actual frozen head and provider results in the integration PR and root handoff, avoiding a new evidence-only head."
+  },
+  "limits": [
+    "A passing fast profile or source merge does not establish canonical holistic or live acceptance.",
+    "The embedded EgoLint failure and unrelated full-profile debt remain visible; no checks are waived.",
+    "Preview inputs may truthfully remain mismatched or unavailable; fresh same-source producer evidence belongs to the postmerge phase.",
+    "Thirteen preserved nested policies, catalog2 adoption, container qualification, release/fleet adoption and human approval remain outside this batch.",
+    "No Compare baseline is selected; empty Audits/Sanity plan selections do not imply human review."
+  ]
+}

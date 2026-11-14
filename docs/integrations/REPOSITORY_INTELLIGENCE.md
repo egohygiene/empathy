@@ -10,6 +10,9 @@ Current generator qualification belongs to
 The [exact-source artifact checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md)
 documents optional manual selection of reviewed same-source normalized producer
 artifacts and artifact-only scan mode for a frozen proof cycle.
+The [aggregate source checkpoint](REPOSITORY_INTELLIGENCE_BATCH10.json) binds
+the reviewed slices and local outcomes; its final provider and live acceptance
+remain pending separately.
 The [typed review-feed checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md) records
 current Audits/Sanity composition alongside bounded Work/Health/Releases feeds.
 The [preceding public source checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md)
@@ -20,17 +23,17 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 ## Immutable inputs and ownership
 
-| Input | Reviewed revision | Role |
-| --- | --- | --- |
+| Input                                 | Reviewed revision                          | Role                                                                                                                                                                                    |
+| ------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Relay current native-source candidate | `d7604056e36633a59735318454f20f2984602726` | Current captures/builders and matching provenance/check metadata; compatible Hygiene admission, complete Journey object inspection and chronological composition; qualification pending |
-| Previous typed-review-feed selection | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Documentation-only successor of the original typed-feed source; historical source and negative/control evidence |
-| Original typed-review-feed source | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; executable owner bytes equal the previous documentation-only successor |
-| Previous public-source selection | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim |
-| Previous Journey/Search selection | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim |
-| Previous portable source selection | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point |
-| Previous qualified current builder | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively |
-| Relay v1.4.0 | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` | Previous Repository Intelligence builder pin, frozen for historical replay |
-| Quartz | `075afd3f712da0088a07f5284a7b3aba37dd61b6` | Existing external site engine; Node.js 24 and profile behavior preserved |
+| Previous typed-review-feed selection  | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Documentation-only successor of the original typed-feed source; historical source and negative/control evidence                                                                         |
+| Original typed-review-feed source     | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; executable owner bytes equal the previous documentation-only successor                                                                |
+| Previous public-source selection      | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim                                                                                             |
+| Previous Journey/Search selection     | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim                                                                                                      |
+| Previous portable source selection    | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point                                                                                                         |
+| Previous qualified current builder    | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively                                                                                      |
+| Relay v1.4.0                          | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` | Previous Repository Intelligence builder pin, frozen for historical replay                                                                                                              |
+| Quartz                                | `075afd3f712da0088a07f5284a7b3aba37dd61b6` | Existing external site engine; Node.js 24 and profile behavior preserved                                                                                                                |
 
 The two current integrations are
 [`mindgarden-pages.yml`](../../.github/workflows/mindgarden-pages.yml) and
@@ -61,14 +64,14 @@ remains separate in
 
 ## Events and trust boundaries
 
-| Entry point | Build and retained evidence | Publication authority |
-| --- | --- | --- |
-| Pull request | Complete current composition and fixed `rollback-v1.4` replay; 30-day review artifacts | No Pages configuration, Pages artifact, deployment, receipt, or privileged refresh |
-| Default-branch push | Current composition, duplicate Relay build, provenance, and run report | Empathy's existing `deploy` job |
-| Manual `current` on `main` | Same current build and evidence | Empathy's existing `deploy` job |
-| Manual `rollback-v1.4` on `main` | Fixed historical source and verified rollback evidence | Empathy's existing `deploy` job |
-| Trusted producer `workflow_run` | Current default-branch checkout, committed summaries, and producer identifiers | Empathy's existing `deploy` job |
-| Standalone Repository Intelligence workflow | Public bundle and sanitized run evidence | Artifact-only; no deployment |
+| Entry point                                 | Build and retained evidence                                                            | Publication authority                                                              |
+| ------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Pull request                                | Complete current composition and fixed `rollback-v1.4` replay; 30-day review artifacts | No Pages configuration, Pages artifact, deployment, receipt, or privileged refresh |
+| Default-branch push                         | Current composition, duplicate Relay build, provenance, and run report                 | Empathy's existing `deploy` job                                                    |
+| Manual `current` on `main`                  | Same current build and evidence                                                        | Empathy's existing `deploy` job                                                    |
+| Manual `rollback-v1.4` on `main`            | Fixed historical source and verified rollback evidence                                 | Empathy's existing `deploy` job                                                    |
+| Trusted producer `workflow_run`             | Current default-branch checkout, committed summaries, and producer identifiers         | Empathy's existing `deploy` job                                                    |
+| Standalone Repository Intelligence workflow | Public bundle and sanitized run evidence                                               | Artifact-only; no deployment                                                       |
 
 A manual run on another branch may build but cannot publish. The producer refresh
 accepts only completed `MegaLinter`, `OpenSSF Scorecard`, or
@@ -152,13 +155,13 @@ evidence distinct from the existing same-context duplicate-build proof and
 
 Current builds retain these distinct pieces of evidence for 30 days:
 
-| Artifact family | Evidence |
-| --- | --- |
-| `empathy-composed-current-*` | Complete public composition for PR review, including hidden files |
-| `empathy-provenance-current-*` | Exact site bytes, normalized input identities, Quartz baseline, composition report, and repeatability report |
-| `empathy-publication-report-current-*` | Allowlisted stage, rule, outcomes, and remediation link |
-| `empathy-deployment-receipt-*` | Exact current consumer/Relay identities, manifest and bundle digests, composed digest, workflow run/attempt, environment, deployment outcome and URL, routes, and rollback point |
-| `empathy-live-*` | Verified public identity and exact route-byte digests |
+| Artifact family                        | Evidence                                                                                                                                                                         |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `empathy-composed-current-*`           | Complete public composition for PR review, including hidden files                                                                                                                |
+| `empathy-provenance-current-*`         | Exact site bytes, normalized input identities, Quartz baseline, composition report, and repeatability report                                                                     |
+| `empathy-publication-report-current-*` | Allowlisted stage, rule, outcomes, and remediation link                                                                                                                          |
+| `empathy-deployment-receipt-*`         | Exact current consumer/Relay identities, manifest and bundle digests, composed digest, workflow run/attempt, environment, deployment outcome and URL, routes, and rollback point |
+| `empathy-live-*`                       | Verified public identity and exact route-byte digests                                                                                                                            |
 
 The deterministic `intelligence/build-manifest.json` identifies the source and
 generator, input contract versions, and bundle inventory. Deployment-specific
@@ -181,16 +184,16 @@ during verification. Route availability alone is insufficient proof of revision.
 
 `rollback-v1.4` rebuilds this reviewed historical point:
 
-| Identity | Value |
-| --- | --- |
-| Consumer revision | `254185272ab27b6858b8b0393af6549c205c9a8d` |
-| Consumer tree | `a5cdaba679c8c0b9d677730273c9779569649929` |
-| Relay revision | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` |
-| Quartz revision | `075afd3f712da0088a07f5284a7b3aba37dd61b6` |
-| Known-good workflow | [35840040112, attempt 1](https://github.com/egohygiene/empathy/actions/runs/35840040112) |
-| Historical Pages archive | Artifact ID `10741177073`; authenticated access described below |
-| Archive SHA-256 | `3175c601487b61ecf4e87fc820a33ce8d3a137fa34bf21b2256d9868aa04257b` |
-| Original complete-site digest | `sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498` |
+| Identity                      | Value                                                                                    |
+| ----------------------------- | ---------------------------------------------------------------------------------------- |
+| Consumer revision             | `254185272ab27b6858b8b0393af6549c205c9a8d`                                               |
+| Consumer tree                 | `a5cdaba679c8c0b9d677730273c9779569649929`                                               |
+| Relay revision                | `b71b090406a3a9e4cd9f107e9d14a623bbecb127`                                               |
+| Quartz revision               | `075afd3f712da0088a07f5284a7b3aba37dd61b6`                                               |
+| Known-good workflow           | [35840040112, attempt 1](https://github.com/egohygiene/empathy/actions/runs/35840040112) |
+| Historical Pages archive      | Artifact ID `10741177073`; authenticated access described below                          |
+| Archive SHA-256               | `3175c601487b61ecf4e87fc820a33ce8d3a137fa34bf21b2256d9868aa04257b`                       |
+| Original complete-site digest | `sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498`                |
 
 Download the archive from the known-good run while signed into GitHub, or use
 the authenticated REST endpoint
@@ -252,10 +255,13 @@ real provider job guards, strict JSON intake, report states and freshness,
 public-safe diagnostics, matching and failing live bytes, composition, receipt
 separation, and historical rollback failures. Retain YAML/JSON parsing and
 duplicate-key checks plus applicable Python, Bash, and JavaScript syntax checks.
-Record pre-existing MegaLinter catalog-SHA and task-catalog drift as baseline
-validation findings. The root Cargo workspace also references a missing
-`tests/fixtures/clippy/Cargo.toml`, which blocks the normal Beacon Rust gates.
-This checkpoint does not change those unrelated catalogs or workspace paths.
+Keep the embedded EgoLint catalog-SHA failure separate from root-suite results.
+The coordinated [baseline correction](../BASELINE_VALIDATION.md) retires the
+orphan root Cargo workspace and makes Rust an explicit profile opt-in; selected
+Rust repositories still require their own `Cargo.toml`. Historical Beacon Rust
+failures retain their original source evidence. Specialist Rust qualification
+under #79 and bootstrap/runtime repair under #110 remain separate; this source
+integration does not claim their acceptance.
 
 The focused consumer workflow applies the canonical EgoLint configurations to
 its eight Python files with Ruff 0.16.5, Mypy 1.19.1, Bandit 1.9.4, and
