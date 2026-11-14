@@ -51,10 +51,7 @@
   },
   "selection": {
     "universal_default": null,
-    "profiles": [
-      "generic",
-      "launchkit"
-    ],
+    "profiles": ["generic", "launchkit"],
     "site_scope": "site-artifact-only",
     "whole_foundation": "unqualified",
     "aether_distribution_selected": false,
@@ -123,16 +120,9 @@
         "height": 1000
       }
     ],
-    "color_schemes": [
-      "light",
-      "dark"
-    ],
+    "color_schemes": ["light", "dark"],
     "reduced_motion": "reduce",
-    "wcag_tags": [
-      "wcag2a",
-      "wcag2aa",
-      "wcag21aa"
-    ],
+    "wcag_tags": ["wcag2a", "wcag2aa", "wcag21aa"],
     "total_cases": 72
   },
   "variants": {
