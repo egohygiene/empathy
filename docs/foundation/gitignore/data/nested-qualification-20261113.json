@@ -104,5 +104,10 @@
         "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       }
     ]
+  },
+  "initial_shared_tool_observation": {
+    "ruff": "0.16.2",
+    "mypy": "2.3.0",
+    "outcome": "Canonical-config scoped checks passed, then separately repeated with exact listed pinned versions in an isolated venv. Shared tools were not changed."
   }
 }
