@@ -13,6 +13,7 @@ PyYAML 6.0.3 is a validation-only dependency, installed by the contract workflow
 from __future__ import annotations
 
 import ast
+import io
 from itertools import product
 import json
 import os
@@ -24,6 +25,7 @@ import subprocess  # nosec B404
 from tempfile import TemporaryDirectory
 from typing import TYPE_CHECKING, Any, ClassVar, cast
 import unittest
+import zipfile
 
 import yaml
 
@@ -469,6 +471,69 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             self.assertIn("github.run_attempt", download["with"]["name"])
             self.assertIn("needs.build.outputs.deployment-mode", download["with"]["name"])
 
+    def test_provenance_archive_roundtrip_preserves_receipt_and_live_consumer_layout(self) -> None:
+        """Multiple upload paths must share the root expected by both later jobs."""
+        jobs = self.pages["jobs"]
+        steps = {step["id"]: step for step in jobs["build"]["steps"] if "id" in step}
+        retain = steps["report_selection_receipt"]
+        self.assertEqual(retain["if"], "matrix.mode == 'current'")
+        manifest_bytes = b'{"consumer": "exact retained site fixture"}\n'
+        receipt_bytes = b'{"mode": "selected-artifacts", "reports": []}\n'
+        with TemporaryDirectory() as directory:
+            upload = Path(directory) / "upload-runner"
+            manifest = upload / ".cache/mindgarden/site/intelligence/build-manifest.json"
+            manifest.parent.mkdir(parents=True)
+            manifest.write_bytes(manifest_bytes)
+            receipt = upload / ".cache/repository-intelligence-publication/report-selection.json"
+            receipt.parent.mkdir(parents=True)
+            receipt.write_bytes(receipt_bytes)
+            (upload / ".cache/mindgarden/publication").mkdir(parents=True)
+            # Only the checked-in fixed cp command runs in this owned fixture.
+            subprocess.run(  # noqa: S603 # nosec B603, B607
+                ["bash", "-e", "-c", retain["run"]],  # noqa: S607
+                cwd=upload,
+                check=True,
+                capture_output=True,
+            )
+            paths = [
+                upload / line for line in steps["provenance_artifact"]["with"]["path"].splitlines()
+            ]
+            self.assertTrue(all(path.exists() for path in paths))
+            # The pinned upload-artifact roots multi-path archives at the
+            # least common ancestor of the configured search paths.
+            root = Path(os.path.commonpath(paths))
+            archive = io.BytesIO()
+            with zipfile.ZipFile(archive, "w") as package:
+                for path in paths:
+                    files = [path] if path.is_file() else sorted(path.rglob("*"))
+                    for file in files:
+                        if file.is_file():
+                            package.write(file, file.relative_to(root).as_posix())
+            for job in ("finalize-deployment", "verify-live"):
+                with self.subTest(job=job):
+                    download = next(
+                        step
+                        for step in jobs[job]["steps"]
+                        if step.get("uses", "").startswith("actions/download-artifact@")
+                    )
+                    destination = Path(directory) / job / download["with"]["path"]
+                    with zipfile.ZipFile(archive) as package:
+                        # These are controlled fixture members, never external ZIPs.
+                        for member in package.namelist():
+                            target = destination / member
+                            target.parent.mkdir(parents=True, exist_ok=True)
+                            target.write_bytes(package.read(member))
+                    consumer_root = Path(directory) / job / ".cache/mindgarden"
+                    self.assertEqual(
+                        (consumer_root / "site/intelligence/build-manifest.json").read_bytes(),
+                        manifest_bytes,
+                    )
+                    self.assertEqual(
+                        (consumer_root / "publication/report-selection.json").read_bytes(),
+                        receipt_bytes,
+                    )
+            self.assertEqual(receipt.read_bytes(), receipt_bytes)
+
     def test_build_report_requires_artifact_uploads_and_every_applicable_stage(self) -> None:
         steps = self.pages["jobs"]["build"]["steps"]
         report_step = next(
@@ -508,6 +573,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 ("runtime", "EMRI-004"),
                 ("review_artifact", "EMRI-008"),
                 ("provenance_artifact", "EMRI-008"),
+                ("report_selection_receipt", "EMRI-008"),
                 ("pages_artifact", "EMRI-009"),
                 ("configure_pages", "EMRI-009"),
                 ("rollback_checkout", "EMRI-002"),

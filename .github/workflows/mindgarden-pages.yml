@@ -142,6 +142,13 @@ jobs:
           --reports-directory "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           --output .cache/mindgarden/publication/inputs.json
 
+      - name: Preserve report admission in the existing provenance archive layout
+        id: report_selection_receipt
+        if: matrix.mode == 'current'
+        run: >-
+          cp -- .cache/repository-intelligence-publication/report-selection.json
+          .cache/mindgarden/publication/report-selection.json
+
       - name: Set up Node.js 24
         id: runtime
         # actions/setup-node v6.0.0; preserve the Quartz profile runtime.
@@ -350,7 +357,6 @@ jobs:
           path: |
             .cache/mindgarden/site
             .cache/mindgarden/publication
-            .cache/repository-intelligence-publication/report-selection.json
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 30
@@ -418,7 +424,10 @@ jobs:
           stages += ["identity"]
           if mode == "current":
               stages.append("report_selection")
-          stages += ["inputs", "runtime", "garden", "quartz"]
+          stages += ["inputs"]
+          if mode == "current":
+              stages.append("report_selection_receipt")
+          stages += ["runtime", "garden", "quartz"]
           if mode == "current":
               stages += ["baseline", "canonical_baseline"]
               if os.environ["CAPTURE_EXPECTED"] == "true":
@@ -465,7 +474,7 @@ jobs:
               "intelligence": "EMRI-006", "first_composition": "EMRI-006",
               "intelligence_duplicate": "EMRI-006", "duplicate": "EMRI-006",
               "intelligence_rollback": "EMRI-007", "rollback": "EMRI-007",
-              "review_artifact": "EMRI-008", "provenance_artifact": "EMRI-008",
+              "report_selection_receipt": "EMRI-008", "review_artifact": "EMRI-008", "provenance_artifact": "EMRI-008",
               "configure_pages": "EMRI-009", "pages_artifact": "EMRI-009",
               "mode-selection": "EMRI-010", "publication-policy": "EMRI-010",
           }
