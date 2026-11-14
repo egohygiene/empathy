@@ -49,7 +49,7 @@ After changing a public task name, description, or alias, run
 <!-- prettier-ignore-start -->
 <!-- BEGIN GENERATED TASK CATALOG -->
 
-_Generated from the live Taskfile graph: 243 public commands._
+_Generated from the live Taskfile graph: 248 public commands._
 
 | Command | Description | Aliases |
 | --- | --- | --- |
@@ -211,9 +211,14 @@ _Generated from the live Taskfile graph: 243 public commands._
 | `task egolint:yamllint` | Validate YAML syntax and style with yamllint | — |
 | `task format` | Format supported text files | — |
 | `task format:check` | Verify supported text formatting | — |
-| `task garden:check` | Validate the incubated Mindgarden contract and Empathy garden | — |
+| `task garden:architecture:check` | Qualify the pinned native Aether architecture authority against the golden documents | — |
+| `task garden:check` | Validate selected standalone Mindgarden and its real golden consumer cases | — |
 | `task garden:context` | Render Empathy's default reviewed context pack | — |
+| `task garden:corpus:check` | Reproduce and compare an existing disposable corpus without repairing it | — |
+| `task garden:corpus:index` | Index explicitly pinned public architecture/context through the standalone owner | — |
+| `task garden:exchange:prototype` | Export reviewed public Markdown and re-import it as unreviewed prototype evidence | — |
 | `task garden:index` | Materialize the disposable deterministic Mindgarden catalog | — |
+| `task garden:legacy:check` | Retained incubation checks for migration evidence, not selected standalone agents | — |
 | `task garden:llms:write` | Regenerate the committed llms.txt agent entrypoint | — |
 | `task garden:publish` | Materialize the disposable reviewed-public projection | — |
 | `task garden:publish:check` | Verify the deterministic reviewed-public projection | — |

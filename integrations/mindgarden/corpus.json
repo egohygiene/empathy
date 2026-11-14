@@ -1,0 +1,235 @@
+{
+  "schema": "empathy.mindgarden-corpus/v1",
+  "source_revision": "8366ac00fd322d1a4f8d07a047c2825165ae45cb",
+  "captured": "2026-11-14",
+  "sources": [
+    {
+      "path": "AI_CONSTITUTION.md",
+      "artifact_id": "empathy-ai-constitution",
+      "declared_status": "draft",
+      "sha256": "5ea5a6eb56e733d3cb8f59db08ef7e729fba9931bb707ae641aabd28a8670e04"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "artifact_id": "empathy-architecture",
+      "declared_status": "draft",
+      "sha256": "0bbeb1fde536400eb7a36e4850c09dd28ba171213d70041969cdc62ed929b705"
+    },
+    {
+      "path": "DECISIONS.md",
+      "artifact_id": "empathy-decisions",
+      "declared_status": "draft",
+      "sha256": "5d1a0b99d2aa868606f907422499eeaeb68f507ab12286d2d4f47007e269005a"
+    },
+    {
+      "path": "DESIGN.md",
+      "artifact_id": "empathy-design",
+      "declared_status": "draft",
+      "sha256": "6fadb7ca45abb6c117e595a642cc67b31be39b3dd297201c30851026594a8bfc"
+    },
+    {
+      "path": "DESIGN_SYSTEM.md",
+      "artifact_id": "empathy-design-system",
+      "declared_status": "draft",
+      "sha256": "c1709d8c186ef964555097b37a35d8ef268ef0ff5ac1419e972662a587eb8440"
+    },
+    {
+      "path": "EPISTEMOLOGY.md",
+      "artifact_id": "empathy-epistemology",
+      "declared_status": "draft",
+      "sha256": "2da928f98daac2b0a26dcf5ae09b21e6410a0d9769cee12d3741ace88bb14c10"
+    },
+    {
+      "path": "FOUNDATIONS.md",
+      "artifact_id": "empathy-foundations",
+      "declared_status": "draft",
+      "sha256": "035517e25bddbbfd388d01f0efe689055a2395aa990c130b76151de5cab09129"
+    },
+    {
+      "path": "MANIFESTO.md",
+      "artifact_id": "empathy-manifesto",
+      "declared_status": "draft",
+      "sha256": "4a38b7179628f2655974b08b5efadd52586fb59a47b8848e2f4490178d38255c"
+    },
+    {
+      "path": "META.md",
+      "artifact_id": "empathy-meta",
+      "declared_status": "draft",
+      "sha256": "c527a2f6df0c16d2f1fec59244b72d03260f8b2dd3950de354770d4e5d91e301"
+    },
+    {
+      "path": "METHODOLOGY.md",
+      "artifact_id": "empathy-methodology",
+      "declared_status": "draft",
+      "sha256": "4115a5beadd871cb0364a013342eeaaa13d060e24ce20fe998a0f035aa26bc16"
+    },
+    {
+      "path": "ONTOLOGY.md",
+      "artifact_id": "empathy-ontology",
+      "declared_status": "draft",
+      "sha256": "9b845d8b538a9700ebd728e8d625f11c6ca9882ca129c0fe00653f6e56022868"
+    },
+    {
+      "path": "PERSONAL_MODEL.md",
+      "artifact_id": "empathy-personal-model",
+      "declared_status": "draft",
+      "sha256": "51971b86aabe9f43058fea23df8d47a2d1c6763a52a126048ad3188b765dee4c"
+    },
+    {
+      "path": "PILLARS.md",
+      "artifact_id": "empathy-pillars",
+      "declared_status": "draft",
+      "sha256": "dc4fda275ae924930a4ce597d5516b57e9dd130ce1bbaac819ad042c5224a30f"
+    },
+    {
+      "path": "PRINCIPLES.md",
+      "artifact_id": "empathy-principles",
+      "declared_status": "draft",
+      "sha256": "c3e47ba1f1f827a7843d67efec8ca0c3b2bc7620f1e0e6c91cc9b80c6a41d412"
+    },
+    {
+      "path": "PURPOSE.md",
+      "artifact_id": "empathy-purpose",
+      "declared_status": "draft",
+      "sha256": "2c05cd472b3c0bd3134943fbc79c581549c2362ddfa8fc72d0bd9290a85c7ac2"
+    },
+    {
+      "path": "ROADMAP.md",
+      "artifact_id": "empathy-roadmap",
+      "declared_status": "draft",
+      "sha256": "f57364e0db7c28b3502f0a39e277b7d3d3f4e5edcb6cca8e5ece438fe7637880"
+    },
+    {
+      "path": "SYSTEM.md",
+      "artifact_id": "empathy-system",
+      "declared_status": "draft",
+      "sha256": "fc219ade7b6f06ba185d6b30c600ae2d90c30600694574579516c587d9e283e0"
+    },
+    {
+      "path": "VISION.md",
+      "artifact_id": "empathy-vision",
+      "declared_status": "draft",
+      "sha256": "e6ff54d227d3cb089d79f3a007898b5917ad52b15fa75f03d3cfa6f0fbf9b49a"
+    },
+    {
+      "path": "docs/ecosystem/CONTEXT.md",
+      "artifact_id": "empathy-ecosystem-context",
+      "declared_status": "generated-pinned-context",
+      "sha256": "8a76b070f059f91d348bde8c8ced47af9a89804feb1100330fb9f2a1691b95d0"
+    }
+  ],
+  "support_files": [
+    {
+      "path": ".garden/README.md",
+      "sha256": "d8eb148d4394b62384bf73bd14f69b1dc1cca7eb8ec3c7bd0b2d391abf994350"
+    },
+    {
+      "path": ".garden/attachments/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".garden/concepts/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".garden/context-packs/agent-default.yaml",
+      "sha256": "7a82ecc07918aed33d7c77ba4935b64081011d10bee14f807c640525cead5694"
+    },
+    {
+      "path": ".garden/dashboard.md",
+      "sha256": "df75c79d2b9bbb6ea4f40f039a36243d55ab5046e904d9ba50584fd1605a3e6e"
+    },
+    {
+      "path": ".garden/decisions/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".garden/garden.yaml",
+      "sha256": "5a5052e600ae4545adb60707b30a381835b7604decbcc956c5e35b5cb8a410e5"
+    },
+    {
+      "path": ".garden/home.md",
+      "sha256": "5b2abd3527b4c64ff4ec5f5be4b5d394a47a6d1cfc0944b0aea28a65bd78cfa9"
+    },
+    {
+      "path": ".garden/inbox/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".garden/procedures/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".garden/projects/README.md",
+      "sha256": "81b3c659a16fba58ace16de75044bef20639b531f23587d6edce79f4e779a6e6"
+    },
+    {
+      "path": ".garden/projects/egohygiene-web-namespace.md",
+      "sha256": "45fda3dc248c6bb842763b1861239b25b926960a6b832d8868db22314ea95a4f"
+    },
+    {
+      "path": ".garden/projects/repository-intelligence-dashboard.md",
+      "sha256": "6fa4f8e9af949f8edeaadce4a35f6606fe51e53627cf9f0b437f0e516fbed513"
+    },
+    {
+      "path": ".garden/provenance/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".garden/sources/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".garden/templates/note.md",
+      "sha256": "e3f46c0b6ffccd771a9dd7c25c607fa66178674dae8fb466825560d744c53ebe"
+    },
+    {
+      "path": ".garden/views/knowledge.base",
+      "sha256": "53cb8233a9217643637933200360815ac9e11ee01681c467251610e103ad4b28"
+    },
+    {
+      "path": ".github/workflows/megalinter.yml",
+      "sha256": "551b233d2919b30730d4abe553295f99bf7fc6e2acf511ba556a941045f6a0e4"
+    },
+    {
+      "path": ".github/workflows/mindgarden-pages.yml",
+      "sha256": "89ba872025a401c38db3e047b3010f66b4a3585b9103e93bc3fe3a3562734f98"
+    },
+    {
+      "path": ".github/workflows/ossf-scorecard.yml",
+      "sha256": "eb9687fe602861138bd4b5d32e81f9144edb190cb8021f70e7ecb71f16263654"
+    },
+    {
+      "path": ".github/workflows/osv-scan.yml",
+      "sha256": "f6086b0c14d6359b2dc3e5fa0d11795897950961e901f35cee909085a7fd21fd"
+    },
+    {
+      "path": ".obsidian/README.md",
+      "sha256": "be6659177538f228ba0e07149ad0b5d8c11e6ba95e691c18d506d02d762a12c4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6cf5820affa55d442c942a6e7b586c297d57e954dd08df2383f7e39c8c52e998"
+    },
+    {
+      "path": "mindgarden/profiles/obsidian/README.md",
+      "sha256": "807cd4348cda76ea3d6ae863212d9bbf05d430ce2748ce85bcd06a7476857266"
+    },
+    {
+      "path": "mindgarden/profiles/obsidian/profile.json",
+      "sha256": "4da8abd8e75cb676e31b1b9ae88b66ef93f9e928fe5fe710d41e9b6d9fe581fc"
+    },
+    {
+      "path": "mindgarden/profiles/quartz/README.md",
+      "sha256": "1d2b842cb915a53b08604f58a2a18cae16dd6c54698ae66be750031674379aae"
+    },
+    {
+      "path": "mindgarden/profiles/quartz/profile.yaml",
+      "sha256": "11520d28fb34db72d60a32a5e17f19f327feb536015b584ef4d97697aff75fb1"
+    },
+    {
+      "path": "mindgarden/profiles/quartz/quartz.config.yaml",
+      "sha256": "2221600b76f7cb8c4021451feca88cb10abf52759fce95a832bf6b0bac1cc84a"
+    }
+  ]
+}
