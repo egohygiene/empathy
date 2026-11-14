@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: '2026-11-14T01:05:10Z'
+  updated_at: '2026-11-14T01:22:56Z'
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -113,14 +113,14 @@ state:
     url: https://github.com/egohygiene/empathy/issues/92
 review:
   status: partial
-  reviewed_at: '2026-11-14T01:05:10Z'
+  reviewed_at: '2026-11-14T01:22:56Z'
   reviewed_by: Codex
   evidence:
-  - command: 87 pinned native consumer/report/workflow/rollback tests and7 publisher policy tests; canonical Ruff0.16.5, Mypy1.19.1,
+  - command: 88 pinned native consumer/report/workflow/rollback tests and7 publisher policy tests; canonical Ruff0.16.5, Mypy1.19.1,
       Bandit1.9.4, Secretlint13.0.5 and Lychee0.24.2
     outcome: passed
-    observed_at: '2026-11-14T01:05:10Z'
-    notes: 'All87 pinned checks pass at d7604056; the guide has10/10 valid links with canonical cache disabled only. Reviewed fixed Git
+    observed_at: '2026-11-14T01:22:56Z'
+    notes: 'All88 pinned checks pass at d7604056; the guide has10/10 valid links with canonical cache disabled only. Reviewed fixed Git
       subprocess suppressions retain informational Bandit warnings. The original frozen verifier and rollback action inputs
       are unchanged. The PyYAML constructor now consumes the same version-robust typed callable hunk as parallel #109; exact1.19.1
       passes; canonical Markdown,31 YAML contracts and11 current owner interfaces also pass.'
@@ -145,8 +145,8 @@ review:
       pinned Identity projections, then task-created assets were moved outside source. The independent31-test EgoLint suite
       retains its one #110 catalog mismatch. These preflight results precede final aggregate-head qualification.'
   environment_limitations:
-  - The compatible owner source is selected; final aggregate source and provider qualification remain pending. Dependencies
-    stay enabled and source equality is unchanged.
+  - The native owner fixes are selected; an actual captured preview exposed a typed-review owner-profile PIN mismatch. Root
+    coordinates a compatible upgrade before final aggregate/provider qualification; source equality is unchanged.
   - 'Canonical exact-head holistic and warning diagnostics remain required; the separate #110 bootstrap/runtime hold is unchanged.'
   - Root coordinates all parallel Empathy merges before producer scans. No reviewed-source hash is invented and no final external
     publication result is written into its own source.
@@ -193,22 +193,21 @@ Pages; current live qualification is not claimed.
 Three existing producers retain normalized-only artifacts. Artifact-only manual scans preserve default
 snapshot behavior while denying writes for the frozen proof cycle. A single consumer action admits explicit
 exact-source identities and stages byte-pinned summaries outside Pages. Scorecard normalization is read-only;
-its stable publisher is a separate guarded write job. Closed native failure retention improves diagnosis
-without uploading raw private trees.
+its stable publisher is a separate guarded write job. Admission receipts retain the existing archive layout;
+closed native failure retention improves diagnosis without uploading raw private trees.
 
 ## Validation and review evidence
 
 Pinned native consumer/report/workflow/rollback tests and publisher-policy checks pass, together with scoped
-canonical Python quality. The initial real provider runs preserve their native failure; no green-step-only
-publication inference is made. Exact-head holistic and actual post-merge source-matched publication remain
-mandatory separate evidence.
+canonical Python quality; archive roundtrip protects later receipt/live downloads. Initial provider failures
+remain literal. Exact-head holistic and actual post-merge source-matched publication remain mandatory evidence.
 
 ## Blockers, risks, unknowns, and deferred work
 
 Original provider failures exposed missing dependency admission and incomplete native Journey inspection.
 The selected compatible owner source repairs both while preserving all original objects and strict source
-equality; final consumer/provider/live qualification remains. Existing #110 runtime and broader
-foundation/human holds remain.
+equality. A captured aggregate preview exposed a typed-review owner-profile PIN mismatch; root coordinates
+a compatible owner upgrade before final consumer/provider/live proof. Existing #110 and foundation/human holds remain.
 
 ## Next dependency-ready work
 

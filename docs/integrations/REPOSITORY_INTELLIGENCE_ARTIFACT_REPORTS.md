@@ -62,8 +62,11 @@ they cannot silently fall back to committed historical evidence.
 Only the existing Relay reader validates and projects report semantics. Both
 current composed builds consume the same staged directory, so duplicate
 generation uses identical reports. Selection provenance and input hashes stay
-outside the public site. The rollback generator call and original #94 bytes,
-pins, digest and recovery order are unchanged. A nonempty artifact selection
+outside the public site. The composed workflow copies the unchanged admission
+receipt into its existing private publication evidence directory, preserving
+the archive root expected by receipt finalization and live-verification jobs.
+The rollback generator call and original #94 bytes, pins, digest and recovery
+order are unchanged. A nonempty artifact selection
 is rejected for historical rollback.
 
 ## Frozen-source execution
