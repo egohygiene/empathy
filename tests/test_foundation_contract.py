@@ -43,6 +43,23 @@ class FoundationContractTests(unittest.TestCase):
         self.assertIn("universal", resolved["profiles"])
         self.assertIn("documentation", resolved["profiles"])
 
+    def test_rust_is_an_explicit_golden_profile_opt_in(self) -> None:
+        resolved, errors = foundation.resolve_manifest(self.catalog, self.manifest)
+        self.assertEqual([], errors)
+        assert resolved is not None
+        self.assertNotIn("language-rust", resolved["profiles"])
+        self.assertNotIn("rust-manifest", {row["id"] for row in resolved["artifacts"]})
+        # Selecting Rust still requires real repository-owned Cargo metadata;
+        # the universal default does not import a specialist's test workspace.
+        opted_in = copy.deepcopy(self.manifest)
+        opted_in["selected_profiles"].append("language-rust")
+        selected, errors = foundation.resolve_manifest(self.catalog, opted_in)
+        self.assertEqual([], errors)
+        assert selected is not None
+        rust = next(row for row in selected["artifacts"] if row["id"] == "rust-manifest")
+        self.assertEqual("Cargo.toml", rust["path"])
+        self.assertEqual("repository-owned", rust["effective_ownership"])
+
     def test_all_required_categories_and_presence_states_are_inventory_visible(self) -> None:
         self.assertEqual(foundation.REQUIRED_CATEGORIES, set(self.catalog["categories"]))
         self.assertEqual(

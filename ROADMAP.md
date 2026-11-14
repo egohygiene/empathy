@@ -202,9 +202,12 @@ issues: []
 proves disposable golden and Filament file-level adoption, fresh unchanged
 replay, reviewed update, native validation, verification, and guarded rollback
 through the pinned owners. It is not full-foundation materialization or a
-baseline release. Three inherited Empathy policy deviations remain unapproved;
-the current foundation 2.0 adapter upgrade is a separate future boundary.
-`EMP-Q04`/`EMP-Q05` remain planned and #92 remains open.
+baseline release. The later [scoped nested-policy adoption](docs/foundation/gitignore/NESTED-ADOPTION-05.md)
+records explicit correction of the three known inherited cases and fresh
+accepted-owner file-level qualification. Current foundation 2.0 adapter adoption
+is a separate future boundary. `EMP-Q04`/`EMP-Q05` remain planned; #92 acceptance
+remains subject to its current source review, integration and explicit tracker
+disposition rather than a whole-foundation release claim.
 
 ### Roadmap-to-issue handoff
 

@@ -1,11 +1,9 @@
 # Composed ignore rules; see the foundation plan for source hashes.
 
-# Profile: rust-build
-# Empathy Rust build overlay; select the Cargo workspace/project root explicitly.
-# Anchoring keeps unrelated nested target/ source directories visible.
+# Repository-owned local additions.
+# Optional Rust project checks may share a disposable root target cache.
 /target/
 
-# Repository-owned local additions.
 # Empathy-owned integration rules; see docs/foundation/gitignore/MIGRATION-03.md.
 # Generated quality reports; retain the existing curated evidence exceptions.
 /.reports/*
@@ -30,7 +28,7 @@
 /.ruff_cache/
 /.pytest_cache/
 
-# Imported Cargo projects without their own ignore file; root Rust uses the overlay.
+# Imported Cargo projects without their own ignore file; each owns its manifest.
 /beacon/target/
 /.staging/devenvironment/realm/target/
 

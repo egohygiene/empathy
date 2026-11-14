@@ -1,0 +1,193 @@
+{
+  "record": "empathy.gitignore-nested-qualification/2026-11-13",
+  "observed_at": "2026-11-13T23:58:27Z",
+  "source_revision": "624a953e149b7ac681483fdbe643d830409026ac",
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_gitignore*.py' -v",
+      "tests": 21,
+      "skipped": 0,
+      "outcome": "passed",
+      "source_revision": "99d9cf3e3a3cf778b2c04f54d07aabc3975a04dc",
+      "log_sha256": "6dd25fa6127d3bc0e1b010266de343c2b493a464a18d8b20d9cd6cd42cabc549"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_foundation*.py' -v",
+      "tests": 35,
+      "skipped": 0,
+      "outcome": "passed",
+      "source_revision": "99d9cf3e3a3cf778b2c04f54d07aabc3975a04dc",
+      "log_sha256": "4bd436b8ebf67720e3006a289a06f6110acf6626c7ac99cee37071b87a4d1554"
+    },
+    {
+      "command": "Equipped Python3.12.14 -m unittest discover -s tests -p 'test_*.py' -v with pinned Relay d7 and Identity481 setup",
+      "tests": 230,
+      "skipped": 0,
+      "outcome": "passed",
+      "source_revision": "d70c37e34104e84a07e2795ab15b6ccdd7d58fac",
+      "log_sha256": "a3b7cb22d1f4d3380728fb9092cabb76252a1090da6ac09498def3cb82a08bcd",
+      "setup": {
+        "identity_revision": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
+        "relay_revision": "d7c60473626f8dcc901210a208ad01a6474e8c1d",
+        "identity_command": "cargo run --quiet --manifest-path identity/Cargo.toml --locked -- v1-generate --repository-root .",
+        "identity_generated_files": 27,
+        "disposition": "Disposable generated assets removed from candidate after suite; no generated product asset is adopted."
+      }
+    }
+  ],
+  "later_source_change": "An integrated #109 test-only synthetic authorization fixture follow-up is included at current624a953e; runtime/profile bytes remain unchanged. Exact final source/profile observations are recorded separately in PR review.",
+  "holistic_profile": "Actual frozen1ef manual holistic completed and all blocking/warning diagnostics were reviewed; introduced guide/JSON formatting repaired in the bounded follow-up. Exact aggregate qualification remains root-owned.",
+  "other_boundaries": [
+    "Independent EgoLint runtime/catalog failure remains held under110.",
+    "Current foundation2.0 adapter identity remains distinct from accepted1.1 comparison.",
+    "Thirteen other nested policies remain preserved/unassessed; no whole imported-tree conformance claim.",
+    "No container build, source-corpus cleanup, release, fleet adoption or human exception approval."
+  ],
+  "scoped_checks": [
+    {
+      "tool": "Ruff0.16.5",
+      "configuration": "egolint/.config/lint/python/ruff.toml",
+      "outcome": "passed",
+      "scope": "tests/test_gitignore_adoption.py check and format --check"
+    },
+    {
+      "tool": "Mypy1.19.1",
+      "configuration": "egolint/.config/lint/python/.mypy.ini",
+      "outcome": "passed",
+      "scope": "tests/test_gitignore_adoption.py"
+    },
+    {
+      "tool": "Bandit1.9.4",
+      "configuration": "egolint/.config/lint/python/.bandit.yml",
+      "outcome": "passed",
+      "scope": "tests/test_gitignore_adoption.py"
+    },
+    {
+      "tool": "Secretlint13.0.5",
+      "configuration": "egolint/.config/security/secretlint/.secretlintrc.json and existing ignore",
+      "outcome": "passed",
+      "scope": "Changed policy/test/guide/receipt/roadmap files"
+    },
+    {
+      "tool": "Lychee0.24.2",
+      "configuration": "egolint/.config/lint/prose/spell/lychee.toml",
+      "outcome": "passed",
+      "scope": "NESTED-ADOPTION-05.md with actual owner links"
+    }
+  ],
+  "pinned_scoped_tools": {
+    "observed_at": "2026-11-14T00:01:26Z",
+    "versions": {
+      "ruff": "ruff 0.16.5",
+      "mypy": "mypy 1.19.1 (compiled: yes)",
+      "bandit": "bandit 1.9.4\n  python version = 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    },
+    "checks": [
+      {
+        "check": "ruff-check",
+        "exit_code": 0,
+        "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      {
+        "check": "ruff-format",
+        "exit_code": 0,
+        "log_sha256": "fd2299c9f1c6dc869070883e281051bfe93aacf66c1a3b0069f45b4aa410ca50"
+      },
+      {
+        "check": "mypy",
+        "exit_code": 0,
+        "log_sha256": "5d4b6d285b77932e3d08212c3b4974d0a803f98ec60408ac6ccf6a063fa6c19e"
+      },
+      {
+        "check": "bandit",
+        "exit_code": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "initial_shared_tool_observation": {
+    "ruff": "0.16.2",
+    "mypy": "2.3.0",
+    "outcome": "Canonical-config scoped checks passed, then separately repeated with exact listed pinned versions in an isolated venv. Shared tools were not changed."
+  },
+  "holistic_review": {
+    "run_id": 43532024604,
+    "run_attempt": 1,
+    "head": "1ef910c6d0819da6e0657ea5b5886f4415400238",
+    "conclusion": "failure",
+    "artifact_id": 14087733913,
+    "artifact_archive_sha256": "6cdac3d1820c77c958248707fe15fe0819886d234bc26d2828a72ea40701cb3e",
+    "artifact_bytes": 7445981,
+    "descriptor_records": 101,
+    "reported_success_records": 70,
+    "warning_records": 8,
+    "blocking_error_records": 23,
+    "active_descriptors": 50,
+    "active_success": 19,
+    "active_warnings": 8,
+    "active_errors": 23,
+    "whole_codebase_selected": true,
+    "focused_tool_observations": {
+      "PYTHON_MYPY": {
+        "status": "error",
+        "actual_version": "1.19.1",
+        "own_test_selected": true
+      },
+      "PYTHON_BANDIT": {
+        "status": "error",
+        "actual_version": "1.9.4",
+        "own_test_selected": true
+      },
+      "PYTHON_RUFF": {
+        "status": "error",
+        "actual_version": "0.17.2",
+        "own_test_selected": true
+      },
+      "PYTHON_RUFF_FORMAT": {
+        "status": "error",
+        "actual_version": "0.17.2",
+        "own_test_selected": true
+      },
+      "REPOSITORY_SECRETLINT": {
+        "status": "error",
+        "actual_version": "13.0.7",
+        "own_test_selected": false
+      },
+      "SPELL_LYCHEE": {
+        "status": "error",
+        "actual_version": "0.24.2",
+        "own_test_selected": false
+      }
+    },
+    "introduced_findings": [
+      {
+        "tool": "MARKDOWN_MARKDOWNLINT",
+        "finding": "Two MD018 parses from line-leading issue references in the new guide",
+        "resolution": "Prefix issue references with ordinary prose; focused canonical markdownlint0.49.1 passes."
+      },
+      {
+        "tool": "JSON_PRETTIER",
+        "finding": "New nested-adoptions JSON formatting",
+        "resolution": "Format with actual Prettier3.9.10 and canonical owner config; JSON semantics/source hashes remain unchanged."
+      }
+    ],
+    "baseline_109_typing_followup": {
+      "findings": 16,
+      "files": 2,
+      "owner_commit": "f502804e304a6902f07374d24276ae0e5afb8933",
+      "disposition": "Root aggregate will integrate the finalized109 typing follow-up; the old1ef run remains failed and is not relabeled passing."
+    },
+    "warning_review": {
+      "COPYPASTE_JSCPD": "Existing corpus duplication plus repeated protocol evidence in the three new receipt cases. Distinct observed native outputs are intentionally retained; no new runtime code duplication or abstraction is introduced.",
+      "MARKDOWN_MARKDOWN_TABLE_FORMATTER": "Existing tables and the new guide table were flagged for spacing. The new table was subsequently formatted with the canonical Prettier config; no policy or severity was changed.",
+      "PYTHON_PYLINT": "Existing root/imported complexity/style findings; no new adoption-test path finding.",
+      "REPOSITORY_CHECKOV": "Existing infrastructure and intentional negative security fixtures; active devcontainer configuration bytes are unchanged.",
+      "REPOSITORY_GRYPE": "Existing dependency inventory findings. This scoped adoption adds no project dependency; no vulnerability closure is claimed.",
+      "REPOSITORY_TRIVY": "Repository scanner execution warning/panic; not a successful scan or empty finding set.",
+      "SPELL_PROSELINT": "Existing prose/typography findings outside the new owned guide; no source-corpus rewrite is authorized.",
+      "SPELL_VALE": "Existing imported kaobook front-matter/parser failure; not a successful prose scan."
+    },
+    "snapshot_publication": "Actual Publish curated MegaLinter snapshot job skipped",
+    "aggregate_gate": "Root will execute the exact canonical aggregate profile and actual PR-event acceptance before ordinary integration; this slice makes no full-profile pass claim."
+  }
+}

@@ -1,5 +1,7 @@
 # Copyright 2026 Ego Hygiene
 # SPDX-License-Identifier: MIT
+# Stdlib unittest is the repository framework; do not add pytest for exception assertions.
+# ruff: noqa: PT027
 """Disposable Git histories only; no production staged file is edited or removed."""
 
 from __future__ import annotations
@@ -8,7 +10,10 @@ import importlib.util
 import json
 import os
 from pathlib import Path
-import subprocess
+import shutil
+
+# Controlled disposable Git histories only; no shell or supplied executable.
+import subprocess  # nosec B404
 import sys
 import tempfile
 from typing import Any
@@ -20,7 +25,8 @@ ROOT = Path(__file__).parents[1]
 SPEC = importlib.util.spec_from_file_location(
     "staging_diff_gate", ROOT / "tools/staging_diff_gate.py"
 )
-assert SPEC is not None and SPEC.loader is not None
+assert SPEC is not None
+assert SPEC.loader is not None
 gate = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = gate
 SPEC.loader.exec_module(gate)
@@ -45,14 +51,32 @@ class StagingDiffFixtureTests(unittest.TestCase):
 
     def git(self, *arguments: str) -> str:
         environment = {
-            "PATH": os.defpath, "LC_ALL": "C.UTF-8", "GIT_CONFIG_NOSYSTEM": "1",
+            "PATH": os.defpath,
+            "LC_ALL": "C.UTF-8",
+            "GIT_CONFIG_NOSYSTEM": "1",
             "GIT_CONFIG_GLOBAL": os.devnull,
         }
-        return subprocess.check_output(
-            ["git", "-c", "core.hooksPath=/dev/null", "-c", "commit.gpgsign=false",
-             "-C", str(self.root), *arguments],
-            env=environment, stderr=subprocess.DEVNULL, timeout=30,
-        ).decode().strip()
+        executable = shutil.which("git", path=os.defpath)
+        self.assertIsNotNone(executable)
+        return (
+            subprocess.check_output(  # noqa: S603  # nosec B603
+                [
+                    str(executable),
+                    "-c",
+                    "core.hooksPath=/dev/null",
+                    "-c",
+                    "commit.gpgsign=false",
+                    "-C",
+                    str(self.root),
+                    *arguments,
+                ],
+                env=environment,
+                stderr=subprocess.DEVNULL,
+                timeout=30,
+            )
+            .decode()
+            .strip()
+        )
 
     def write(self, path: str, content: str) -> None:
         destination = self.root / path
@@ -71,21 +95,32 @@ class StagingDiffFixtureTests(unittest.TestCase):
     def receipt(self) -> dict[str, Any]:
         return {
             "id": "STG-synthetic-mantle-session",
-            "source": {"revision": self.source, "path": STAGED,
-                       "mode": "100644", "blob": self.source_blob},
-            "destination": {"canonical_home": "mantle/config/session/bash_logout",
-                            "revision": "1" * 40,
-                            "validation_evidence": "https://github.com/egohygiene/mantle/pull/40"},
+            "source": {
+                "revision": self.source,
+                "path": STAGED,
+                "mode": "100644",
+                "blob": self.source_blob,
+            },
+            "destination": {
+                "canonical_home": "mantle/config/session/bash_logout",
+                "revision": "1" * 40,
+                "validation_evidence": "https://github.com/egohygiene/mantle/pull/40",
+            },
             "provenance_resolution": "Synthetic first-party fixture; no real migration claim.",
             "sensitivity_resolution": "Inert disposable text, never sourced or installed.",
-            "authority": {"kind": "human-claim", "actor": "synthetic-unverified-actor",
-                          "recorded_at": "2026-10-18T03:32:03Z",
-                          "evidence": "https://github.com/egohygiene/empathy/issues/112"},
+            "authority": {
+                "kind": "human-claim",
+                "actor": "synthetic-unverified-actor",
+                "recorded_at": "2026-10-18T03:32:03Z",
+                "evidence": "https://github.com/egohygiene/empathy/issues/112",
+            },
         }
 
     def admit(self, receipt: dict[str, Any] | None = None) -> str:
-        self.write(gate.RECEIPTS, json.dumps({"schema": gate.SCHEMA,
-                                           "receipts": [receipt or self.receipt()]}))
+        self.write(
+            gate.RECEIPTS,
+            json.dumps({"schema": gate.SCHEMA, "receipts": [receipt or self.receipt()]}),
+        )
         return self.commit()
 
     def test_deletion_without_receipt_denies(self) -> None:
@@ -170,12 +205,15 @@ class StagingDiffFixtureTests(unittest.TestCase):
     def test_legacy_claim_alone_cannot_authorize_new_cleanup(self) -> None:
         receipt = self.receipt()
         legacy = {
-            "source_path": STAGED, "git_blob": self.source_blob,
+            "source_path": STAGED,
+            "git_blob": self.source_blob,
             "destination": receipt["destination"]["canonical_home"],
             "destination_revision": "1" * 40,
             "validation_evidence": "synthetic fixture evidence only",
-            "provenance_resolution": "synthetic source", "sensitivity_resolution": "inert text",
-            "approved_by": "synthetic unverified claim", "approved_at": "2026-10-18T03:32:03Z",
+            "provenance_resolution": "synthetic source",
+            "sensitivity_resolution": "inert text",
+            "approved_by": "synthetic unverified claim",
+            "approved_at": "2026-10-18T03:32:03Z",
         }
         self.write(gate.LEGACY, json.dumps({"schema_version": "1.0.0", "approvals": [legacy]}))
         base = self.commit()
@@ -209,20 +247,35 @@ class StagingDiffFixtureTests(unittest.TestCase):
             gate.receipts(json.dumps({"schema": gate.SCHEMA, "receipts": [receipt]}).encode())
 
     def test_malformed_evidence_url_has_no_payload_diagnostic(self) -> None:
-        for value in ("https://example.org:secret/", "https://example.org/white space",
-                      "https://example.org\\evil/", "https://actor:secret@example.org/"):
-            with self.subTest(value=value), self.assertRaisesRegex(
-                ValueError, "^HTTPS evidence required$"
+        # Construct explicit fake userinfo as fixture data, not a credential-looking source URL.
+        synthetic_userinfo = "synthetic-user:synthetic-password"
+        for value in (
+            "https://example.org:secret/",
+            "https://example.org/white space",
+            "https://example.org\\evil/",
+            f"https://{synthetic_userinfo}@example.invalid/",
+        ):
+            with (
+                self.subTest(value=value),
+                self.assertRaisesRegex(ValueError, "^HTTPS evidence required$"),
             ):
                 gate.url(value)
 
     def test_pr_and_push_filters_cover_each_staging_control_surface(self) -> None:
         # Source scheduling contract only. Hosted event qualification is separate.
-        workflow = yaml.load((ROOT / ".github/workflows/automation.yml").read_text(),
-                             Loader=yaml.BaseLoader)
+        # BaseLoader constructs scalar strings only, preserving GitHub's literal on key.
+        workflow = yaml.load(  # nosec B506
+            (ROOT / ".github/workflows/automation.yml").read_text(),
+            Loader=yaml.BaseLoader,  # noqa: S506
+        )
         for event in ("pull_request", "push"):
-            for pattern in (".staging/**", "migration/**", "tools/staging_*.py",
-                            "schemas/staging-*.schema.json", "docs/migration/**"):
+            for pattern in (
+                ".staging/**",
+                "migration/**",
+                "tools/staging_*.py",
+                "schemas/staging-*.schema.json",
+                "docs/migration/**",
+            ):
                 self.assertIn(pattern, workflow["on"][event]["paths"])
         job = workflow["jobs"]["staging"]
         self.assertNotIn("needs", job)
