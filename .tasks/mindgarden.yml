@@ -30,9 +30,17 @@ tasks:
       - .cache/mindgarden-standalone/bin/mindgarden publish project --repository-root . --profile mindgarden/profiles/quartz/profile.yaml --output-directory .cache/mindgarden-standalone-projection
       - .cache/mindgarden-standalone/bin/mindgarden publish verify --repository-root . --profile mindgarden/profiles/quartz/profile.yaml
       - .cache/mindgarden-standalone/bin/mindgarden verify --repository-root .
+      - >-
+        .cache/mindgarden-standalone/bin/python -I -m unittest discover
+        --start-directory tests --pattern test_mindgarden_standalone_consumer.py --verbose
 
   garden:check:
-    desc: Validate the incubated Mindgarden contract and Empathy garden
+    desc: Validate selected standalone Mindgarden and its real golden consumer cases
+    cmds:
+      - task: garden:standalone:verify
+
+  garden:legacy:check:
+    desc: Retained incubation checks for migration evidence, not selected standalone agents
     cmds:
       - >-
         python3 -m unittest discover
@@ -65,18 +73,16 @@ tasks:
     desc: Materialize the disposable deterministic Mindgarden catalog
     cmds:
       - >-
-        python3 mindgarden/scripts/garden_agent.py
+        .cache/mindgarden-standalone/bin/mindgarden index
         --repository-root .
-        index
         --write
 
   garden:context:
     desc: Render Empathy's default reviewed context pack
     cmds:
       - >-
-        python3 mindgarden/scripts/garden_agent.py
+        .cache/mindgarden-standalone/bin/mindgarden context
         --repository-root .
-        context
         --pack "empathy-agent-default"
         --format "markdown"
 
@@ -84,26 +90,25 @@ tasks:
     desc: Regenerate the committed llms.txt agent entrypoint
     cmds:
       - >-
-        python3 mindgarden/scripts/garden_agent.py
+        .cache/mindgarden-standalone/bin/mindgarden llms
         --repository-root .
-        llms
         --write
 
   garden:publish:check:
     desc: Verify the deterministic reviewed-public projection
     cmds:
       - >-
-        python3 mindgarden/scripts/publish_garden.py
+        .cache/mindgarden-standalone/bin/mindgarden publish verify
         --repository-root .
-        verify
+        --profile mindgarden/profiles/quartz/profile.yaml
 
   garden:publish:
     desc: Materialize the disposable reviewed-public projection
     cmds:
       - >-
-        python3 mindgarden/scripts/publish_garden.py
+        .cache/mindgarden-standalone/bin/mindgarden publish project
         --repository-root .
-        project
+        --profile mindgarden/profiles/quartz/profile.yaml
         --output-directory ".cache/mindgarden/publish"
 
   garden:site:build:
@@ -122,3 +127,39 @@ tasks:
         --repository-root .
         serve
         --port "{{.SITE_PORT | default 8080}}"
+
+  garden:corpus:index:
+    desc: Index explicitly pinned public architecture/context through the standalone owner
+    preconditions:
+      - sh: test -x .cache/mindgarden-standalone/bin/python
+        msg: Run garden:standalone:install before indexing
+    cmds:
+      - >-
+        .cache/mindgarden-standalone/bin/python -I tools/mindgarden_consumer.py
+        --repository-root . --output "{{.OUTPUT | default ".cache/mindgarden-corpus"}}"
+
+  garden:corpus:check:
+    desc: Reproduce and compare an existing disposable corpus without repairing it
+    cmds:
+      - >-
+        .cache/mindgarden-standalone/bin/python -I tools/mindgarden_consumer.py
+        --repository-root . --output "{{.OUTPUT | default ".cache/mindgarden-corpus"}}" --check
+
+  garden:exchange:prototype:
+    desc: Export reviewed public Markdown and re-import it as unreviewed prototype evidence
+    requires:
+      vars: [EXCHANGE]
+    cmds:
+      - >-
+        .cache/mindgarden-standalone/bin/python -I tools/mindgarden_consumer.py
+        --repository-root . --exchange "{{.EXCHANGE}}"
+        --output "{{.OUTPUT | default ".cache/mindgarden-exchange"}}"
+
+  garden:architecture:check:
+    desc: Qualify the pinned native Aether architecture authority against the golden documents
+    requires:
+      vars: [AETHER_ROOT]
+    env:
+      AETHER_ROOT: "{{.AETHER_ROOT}}"
+    cmds:
+      - python3 -m unittest discover --start-directory tests --pattern test_architecture_documents.py --verbose

@@ -23,10 +23,11 @@ confidence metadata, and do not silently promote agent-authored drafts.
 
 ## Agent access
 
-- [Agent profile](mindgarden/profiles/agent/README.md): Deterministic ingestion,
-  indexing, search, context, and verification commands.
-- [Mindgarden contract](mindgarden/README.md): Knowledge ownership and adapter
-  boundaries.
+- [Agent
+  profile](https://github.com/egohygiene/mindgarden/blob/main/profiles/agent/README.md):
+  Deterministic ingestion, indexing, search, context, and verification commands.
+- [Mindgarden contract](https://github.com/egohygiene/mindgarden/blob/main/README.md):
+  Knowledge ownership and adapter boundaries.
 - [Empathy Agent Context](.garden/context-packs/agent-default.yaml): Context-pack
   profile `empathy-agent-default`.
 

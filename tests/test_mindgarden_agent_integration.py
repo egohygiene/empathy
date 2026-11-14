@@ -32,9 +32,12 @@ class MindgardenAgentIntegrationTests(unittest.TestCase):
 
         index = json.loads(first)
         expected_llms = render_llms_txt(REPOSITORY_ROOT, index)
-        self.assertEqual(
+        # The retained incubated renderer is a migration reference. Canonical
+        # llms.txt now comes from the isolated pinned owner, qualified separately.
+        self.assertIn("mindgarden/profiles/agent/README.md", expected_llms)
+        self.assertIn(
+            "https://github.com/egohygiene/mindgarden/",
             (REPOSITORY_ROOT / "llms.txt").read_text(encoding="utf8"),
-            expected_llms,
         )
 
     def test_default_context_pack_is_reviewed_and_bounded(self) -> None:

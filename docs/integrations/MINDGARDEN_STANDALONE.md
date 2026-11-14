@@ -1,5 +1,12 @@
 # Standalone Mindgarden consumer checkpoint
 
+> **Current source proposal — 2026-11-14:** the [external corpus/cutover guide](MINDGARDEN_CORPUS.md)
+> describes the selected standalone agent tasks, owner-generated `llms.txt`,
+> exact public architecture/context indexing and optional file exchanges. The
+> earlier exit3 and no-cutover observations below remain dated history, not the
+> current selected-source result. Exact-head quality and explicit issue acceptance
+> are recorded with the new bounded consumer PR.
+
 Refs #65; parent [Mindgarden #20](https://github.com/egohygiene/mindgarden/issues/20).
 This optional consumer lane installs the standalone Python package from immutable
 source `f3a88ccf7d67deb8ecf188d10d9cd496ed6a4973`, the merged

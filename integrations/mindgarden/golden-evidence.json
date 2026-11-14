@@ -1,0 +1,77 @@
+{
+  "schema": "empathy.mindgarden-golden-evidence/v1",
+  "observed_at": "2026-11-14T20:18:10Z",
+  "canonical_input_revision": "8366ac00fd322d1a4f8d07a047c2825165ae45cb",
+  "implementation": {
+    "path": "tools/mindgarden_consumer.py",
+    "sha256": "c4edae5b9392c17dfc3583e6b0b872e810ec35e217c920598eb14158f07a7354"
+  },
+  "input_manifest_sha256": "df4d2e4df2873d47ec5d39bf6a48e4e28da96ff65db3bd0a19b5eb38bc2f80b2",
+  "engine": {
+    "repository": "egohygiene/mindgarden",
+    "source_revision": "f3a88ccf7d67deb8ecf188d10d9cd496ed6a4973",
+    "version": "0.1.0",
+    "status": "unreleased-source-candidate",
+    "actual_vcs_and_prefix_checks": true
+  },
+  "corpus": {
+    "sources": 19,
+    "indexed_notes": 24,
+    "new_capture_state": "proposed/unreviewed",
+    "declared_source_states": "retained; no approval inferred",
+    "deterministic_file_inventory_reproduced": true,
+    "canonical_input_hashes_unchanged": true
+  },
+  "reviewed_public": {
+    "notes": 5,
+    "files": {
+      ".mindgarden-projection.json": "534e450f5117a0471e58cc6039fa6a76700194a47efe7c1d1e18be195324927d",
+      "dashboard.md": "adef63c9df20b25c68e4efaa2b8e2cf57de9791904b3883eccc5444f6fa1dfd4",
+      "index.md": "2d6a80f76c59f7571f3210eea81c05bbad5562a30b2672b0f54b680031756638",
+      "projects/egohygiene-web-namespace.md": "8d59f050df4859be081fd967b964dd45642751e8ef8edeba0c5c7ee62f6bb670",
+      "projects/index.md": "7cb49fe6d52cf4be22a3b1789df2e75e23db11a685cbb3c14a186d3975db6172",
+      "projects/repository-intelligence-dashboard.md": "2b60f90e32c5aa80167a823850e5267c2ad3bf3dd0b3b5e9500706fed872ce49"
+    },
+    "private_negative": "Actual owner rejects synthetic private knowledge before creating output",
+    "new_proposed_captures": "excluded"
+  },
+  "fixtures": {
+    "installed_external": {
+      "tests": 5,
+      "skips": 0
+    },
+    "native_aether": {
+      "tests": 5,
+      "skips": 0,
+      "owner_revision": "dc8a16851f452763ef4f7fbe4bf057d4500b1921"
+    },
+    "retained_garden_integrations": {
+      "tests": 12,
+      "skips": 0
+    }
+  },
+  "exchange_prototypes": {
+    "openwiki": "actual Markdown export and owner-native proposed re-import",
+    "obsidian": "actual Markdown export and owner-native proposed re-import",
+    "host_or_api_acceptance": "not-exercised"
+  },
+  "preserved_legacy_family": {
+    "files": 22,
+    "all_current_blobs_equal_recorded_preimages": true,
+    "comparison_sha256": "bb43765c3fd389e44f060684190663aa2772b504c0c292b565920f4b7dcae649",
+    "semantic_deltas": "retained-unaccepted-under-79",
+    "cleanup_authority": false
+  },
+  "llms_sha256": "7c4e7d72a9a2bdc1bdf8b19e4d23ba5009a5eb52a70e77de762b3090aa5d42e6",
+  "limits": [
+    "Offline source-bound consumer proof; no new live Pages release is inferred.",
+    "The selected package and Aether source candidates do not establish published releases.",
+    "No human ADR/rights acceptance, canonical knowledge mutation or source cleanup."
+  ],
+  "implementation_qualification": {
+    "source_revision": "dcdea401f544de42bf3885a0c0a42d64c07c6edf",
+    "observed_at": "2026-11-14T20:29:51.697403Z",
+    "validation_report_sha256": "aa71e742830bc14c8f4d4c588f3294f21ebe429f8f7cfdec6c91baf65ae795ef",
+    "scope": "Later exact-head local checks; original corpus bytes and observation clock retained; no new publication."
+  }
+}
