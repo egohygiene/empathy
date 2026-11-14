@@ -128,6 +128,6 @@ source removal, rights approval, release metadata or cleanup receipt is created.
 The immutable Aether source candidate remains distinct from a released bundle.
 
 Refs #65; parent #118. Acceptance belongs to the actual source/consumer review;
-#79 retains broader graduation, migration rights and separately authorized
+Issue #79 retains broader graduation, migration rights and separately authorized
 cleanup. Existing publication and historical qualification keep their own pins
 and observation clocks.
