@@ -1,0 +1,13 @@
+/*
+ * Copyright 2026 Ego Hygiene
+ * SPDX-License-Identifier: MIT
+ */
+
+/* Consumer mapping over generated Identity tokens; no independent palette. */
+:root {
+  --identity-color-accent: var(--identity-color-action-primary);
+  --identity-color-surface-strong: var(--identity-color-text);
+  --identity-color-on-surface-strong: var(--identity-color-canvas);
+  --identity-color-ink: var(--identity-color-text);
+  --identity-font-body: var(--identity-typography-body-family);
+}

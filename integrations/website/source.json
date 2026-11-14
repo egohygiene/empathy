@@ -1,0 +1,28 @@
+{
+  "schema": "empathy.website-source/v1",
+  "holon": {
+    "repository": "egohygiene/holon",
+    "revision": "ffbe5f8527a5b79457ef886a6489aed1a69eceea",
+    "profile": "blueprints/site-suite/blueprint.json",
+    "profile_sha256": "2b1e0102d951804efbd4eedd6ec0ca0afd717eee91249e298ae302e34290aa7a",
+    "scope": "explicit site-suite projection; whole foundation unqualified"
+  },
+  "identity": {
+    "repository": "egohygiene/identity",
+    "revision": "aaad8839104704cf57bfa846539b3b875421e03d",
+    "release": "v1.0.0",
+    "asset": "identity",
+    "asset_sha256": "eea5397c9bc4140210edc9a56c68679c89ddc496cf37aa207078719a3e93eac3",
+    "platform": "linux-x86_64-gnu",
+    "command": "v1-generate/v1-verify",
+    "consumer_source": ".identity"
+  },
+  "aether": {
+    "repository": "egohygiene/aether",
+    "revision": "dc8a16851f452763ef4f7fbe4bf057d4500b1921",
+    "distribution": "source-built candidate; not a release",
+    "full_materialization": "unselected by site-only projection; the original complete-foundation Aether release admission remains unchanged"
+  },
+  "publication": "disposable-local-only; no Pages selection or deployment",
+  "realm_source_only": "75c1b2e1475b972a0ce1c8594e8daba2e1cf8686"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "empathy.website-profiles/v1",
+  "default": null,
+  "selection": "explicit opt-in",
+  "profiles": {
+    "generic": {
+      "manifest": "integrations/website/generic.manifest.json",
+      "landing": "generic React/Vite",
+      "locale": "en",
+      "status": "candidate"
+    },
+    "launchkit": {
+      "manifest": "integrations/website/launchkit.manifest.json",
+      "landing": "LaunchKit developer-tool profile",
+      "locale": "en",
+      "status": "candidate"
+    }
+  },
+  "ownership": {
+    "intent": "egohygiene/empathy",
+    "rendering": "egohygiene/holon",
+    "branding": "egohygiene/identity",
+    "deployment": "egohygiene/relay"
+  },
+  "qualification": "a source/plan fixture is not release, deployment or full-browser acceptance"
+}
