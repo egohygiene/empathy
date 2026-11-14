@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: "2026-11-14T01:50:18Z"
+  updated_at: "2026-11-14T02:37:06Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -19,8 +19,8 @@ scope:
   includes:
     - Reviewed slices and accepted142 local-CI/catalog2.1 source retain their original evidence; combined
       Rust default intent and two derived outputs are reconciled explicitly.
-    - The successor repairs actual typed-feed admission, provenance archive layout, digest metadata false
-      positives and three producer blank lines; original 382 failures remain historical.
+    - The combined source repairs typed-feed admission, repeated Health aggregation, source URL identity,
+      report attribution, archive layout and scoped lint findings; original382/763 outcomes remain historical.
     - Final exact-head provider qualification and read-only previews remain pending; root owns ordinary
       merge and the separate frozen-default-source artifact/live cycle.
   excludes:
@@ -72,7 +72,7 @@ state:
   base:
     revision: 04ddb82548ce1509428e4095dc8f018197136635
     ref: refs/heads/main
-    verified_at: "2026-11-14T01:50:18Z"
+    verified_at: "2026-11-14T02:37:06Z"
   candidate:
     branch: codex/empathy-batch10-integration
     revision: null
@@ -83,17 +83,16 @@ state:
     handoff_state: in-progress
   live:
     status: verified
-    observed_at: "2026-11-14T01:50:18Z"
+    observed_at: "2026-11-14T02:37:06Z"
     default_branch_revision: 04ddb82548ce1509428e4095dc8f018197136635
     issue_state: open
     pull_request_state: draft
     notes:
-      Main 04 is provider-verified. Accepted142 local-CI/catalog2.1 source is preserved; owner CLI
-      regenerates only the two existing derived outputs at b80. Successor source 62f40e29517438c422c2c03cd3c970265d4566fc
-      retains current slice ancestry, fc01 packaging and Relay 95105a9f5d99239af0d44d7dbd796fd1507fef31.
-      Draft 146 exists; the containing checkpoint revision remains null intentionally. Original 382 provider
-      failures are historical. Successor provider/live acceptance is pending; no main write or issue disposition
-      occurred.
+      Main04 is provider-verified. Source8592794977221f7553181675b8b34eeb1bba2610 preserves accepted142/catalog2.1
+      and every slice head, selecting combined Relayf7f9bd44713606d9c099adda715db2542c8b66bf for current
+      generators and three normalizers. Three publishers remain1eada. Draft146 exists; containing checkpoint
+      SHA is null intentionally. Actual763 failures stay historical; final provider/live acceptance is
+      pending.
   parallel_changes:
     - provider: github
       id: egohygiene/empathy#92
@@ -112,14 +111,14 @@ state:
       url: https://github.com/egohygiene/empathy/issues/105
 review:
   status: partial
-  reviewed_at: "2026-11-14T01:50:18Z"
+  reviewed_at: "2026-11-14T02:37:06Z"
   reviewed_by: Codex
   evidence:
     - command:
-        Equipped successor root suite at 62f40e29517438c422c2c03cd3c970265d4566fc; independent embedded
+        Equipped successor root suite at 8592794977221f7553181675b8b34eeb1bba2610; independent embedded
         EgoLint suite
       outcome: limited
-      observed_at: "2026-11-14T01:50:18Z"
+      observed_at: "2026-11-14T02:37:06Z"
       notes:
         257 root tests pass with zero skips; embedded EgoLint 31 retains one held policy-pin failure.
         Exact source, command clocks and hashes are in the aggregate JSON.
@@ -127,20 +126,20 @@ review:
         Whole-root canonical Ruff and both Mypy versions; foundation/automation/architecture/Task/staging
         consistency
       outcome: passed
-      observed_at: "2026-11-14T01:50:18Z"
+      observed_at: "2026-11-14T02:37:06Z"
       notes:
         All 40 root Python files pass both Mypy versions. Frozen staging/approval/receipt and rollback
         verifier bytes remain unchanged; generated Identity 27 inputs stay disposable. Direct local-CI17
         and the accepted2.1 inventory/contract/plan pass.
     - command:
-        Original 382 canonical holistic 43539593909/1 and actual captured/no-capture previews; introduced
-        corrections and independent peers
+        Actual frozen763 PR/holistic/captured evidence and independent source/diagnostic peers; combined
+        owner186/187/188 corrections
       outcome: limited
-      observed_at: "2026-11-14T01:25:07Z"
+      observed_at: "2026-11-14T02:00:58Z"
       notes:
-        Original holistic 71 success / 8 warnings / 22 errors stays failed; snapshot skipped. Captured
-        typed feed denied PIN; no-capture current/rollback previews passed without deployment. Separate
-        successor corrections preserve original receipts; final exact-head provider evidence remains pending.
+        Original holistic72success/8warnings/21errors stays failed; publisher skipped. PR staging/commit/fast/current/rollback
+        pass. Captured Health and normalized finding attribution failed; exact raw proof and original clock
+        remain in aggregate JSON. Final combined-source provider execution is pending.
   environment_limitations:
     - Final canonical holistic must inspect Mypy, Bandit, Secretlint, Lychee and warning-only diagnostics;
       focused/fast checks confer no waiver.
@@ -183,29 +182,28 @@ separate native/live acceptance.
 
 ## State snapshot
 
-Main 04 is verified; accepted142 local-CI/catalog2.1 source remains byte-identical outside the combined manifest and two
-owner-generated outputs. Successor source 62f40e29 retains all four current PR heads and the archive-layout correction.
-The containing checkpoint SHA is intentionally null. Actual successor provider and live acceptance remain pending.
+Main04 is verified. Functional source85927949 preserves accepted142/catalog2.1 and every reviewed slice, with combined
+Relayf7 for current generators and three normalizers. Publishers1eada and fixed rollbackb71 remain unchanged. The
+containing checkpoint SHA is intentionally null; final provider/live acceptance is pending.
 
 ## Completed and material changes
 
-The reviewed ignore adoption, optional Rust/profile correction, root typing and actual PR-event staging proof remain
-integrated. The successor fixes strict typed-feed owner admission, provenance archive layout, digest-metadata false
-positives and three producer blank lines without relaxing guards or altering fixed rollback.
+Reviewed ignore/profile/typing/staging work remains integrated. Accepted owner fixes preserve typed-feed admission,
+deduplicate Health composition, encode source URLs and normalize finalized lint results. The archive-layout,
+digest-record and YAML corrections retain their exact prior evidence; no guard or policy is relaxed.
 
 ## Validation and review evidence
 
-Equipped root 257 / zero skips passes; embedded EgoLint 31 retains one held failure. Whole-root Ruff, both Mypy versions
-and consistency checks pass. Actual original 382 holistic remains 71 success / 8 warnings / 22 errors;
-current/fixed-rollback no-capture previews passed and captured previews denied PIN. The JSON preserves exact original
-run/artifact/source bindings and successor corrections.
+At source85927949, equipped root257/zero skips, direct local-CI17, whole-root Ruff/both Mypy40 and source consistency
+pass; embedded EgoLint31 retains one held failure. Frozen763 staging/commit/fast and no-capture current/rollback pass;
+canonical72/8/21 remains failed, captured Health fails and old normalized counts are incorrect. Exact
+source/run/artifact/clock distinctions remain in aggregate JSON.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Final successor exact-head holistic, PR-event staging/gates and read-only previews remain pending. Committed report
-inputs may truthfully remain mismatched/unavailable; fresh default-main same-source artifacts and live receipt are a
-separate postmerge gate. Held #110, thirteen unassessed policies, shared-adapter upgrades, container/release/fleet and
-human disposition remain separate.
+Final combined-source exact-head PR gates, canonical holistic, captured previews and truthful normalized summary
+attribution remain pending. Fresh default-main same-source artifacts and live receipts are separate postmerge gates.
+Held110, unassessed imported policies, shared-adapter/container/release/fleet and human disposition remain separate.
 
 ## Next dependency-ready work
 

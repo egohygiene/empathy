@@ -1,9 +1,9 @@
 {
   "schema": "egohygiene.empathy.batch-integration-checkpoint/v1",
-  "observed_at": "2026-11-14T01:50:18Z",
+  "observed_at": "2026-11-14T02:37:06Z",
   "parent_issue": "https://github.com/egohygiene/empathy/issues/118",
   "base_revision": "04ddb82548ce1509428e4095dc8f018197136635",
-  "assembled_source_revision": "62f40e29517438c422c2c03cd3c970265d4566fc",
+  "assembled_source_revision": "8592794977221f7553181675b8b34eeb1bba2610",
   "containing_checkpoint_revision": null,
   "candidate_branch": "codex/empathy-batch10-integration",
   "slice_heads": {
@@ -12,7 +12,7 @@
     "141": "0be166309c6238462ac00693cabfb6cc40906333",
     "144": "fc01ff52bc5a94ba553a24d0d9f16bea0aa2568c"
   },
-  "current_relay_revision": "95105a9f5d99239af0d44d7dbd796fd1507fef31",
+  "current_relay_revision": "f7f9bd44713606d9c099adda715db2542c8b66bf",
   "fixed_rollback": {
     "consumer_revision": "254185272ab27b6858b8b0393af6549c205c9a8d",
     "relay_revision": "b71b090406a3a9e4cd9f107e9d14a623bbecb127",
@@ -20,7 +20,7 @@
     "verifier_bytes_unchanged": true
   },
   "source_bound_local_review": {
-    "source_revision": "62f40e29517438c422c2c03cd3c970265d4566fc",
+    "source_revision": "8592794977221f7553181675b8b34eeb1bba2610",
     "root_suite": {
       "tests": 257,
       "failures": 0,
@@ -43,106 +43,106 @@
       {
         "name": "baseline-independent",
         "exit_code": 1,
-        "started_at": "2026-11-14T01:48:54.275422+00:00",
-        "finished_at": "2026-11-14T01:49:11.131630+00:00",
-        "stdout_sha256": "529a90cb41b93ed5028c7586e1f7a3d1c6db3e233747cb153bf012e805a90608"
+        "started_at": "2026-11-14T02:34:23.069464+00:00",
+        "finished_at": "2026-11-14T02:34:41.813237+00:00",
+        "stdout_sha256": "ca8a0f5a64c298129e59de7a405c57432ecf19725128ddca332ee13c59199099"
       },
       {
         "name": "ruff-whole-root",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:11.131948+00:00",
-        "finished_at": "2026-11-14T01:49:11.156289+00:00",
+        "started_at": "2026-11-14T02:34:41.813564+00:00",
+        "finished_at": "2026-11-14T02:34:41.849468+00:00",
         "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
       },
       {
         "name": "mypy119-whole-root",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:11.156362+00:00",
-        "finished_at": "2026-11-14T01:49:13.710257+00:00",
+        "started_at": "2026-11-14T02:34:41.849544+00:00",
+        "finished_at": "2026-11-14T02:34:44.399940+00:00",
         "stdout_sha256": "ecc16c0564b42e826048bd3cc3026ed6f52b5dc94d3419716c4a1f1ab458ac8d"
       },
       {
         "name": "mypy23-whole-root",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:13.710319+00:00",
-        "finished_at": "2026-11-14T01:49:16.032365+00:00",
+        "started_at": "2026-11-14T02:34:44.400000+00:00",
+        "finished_at": "2026-11-14T02:34:46.886110+00:00",
         "stdout_sha256": "ecc16c0564b42e826048bd3cc3026ed6f52b5dc94d3419716c4a1f1ab458ac8d"
       },
       {
         "name": "foundation-catalog",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.032419+00:00",
-        "finished_at": "2026-11-14T01:49:16.069380+00:00",
+        "started_at": "2026-11-14T02:34:46.886192+00:00",
+        "finished_at": "2026-11-14T02:34:46.938533+00:00",
         "stdout_sha256": "de00f9c30696400dabb2e022b0c5df4066a05a2d1c767ed68e63c13f0d9c4670"
       },
       {
         "name": "foundation-manifest",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.069425+00:00",
-        "finished_at": "2026-11-14T01:49:16.105566+00:00",
+        "started_at": "2026-11-14T02:34:46.938595+00:00",
+        "finished_at": "2026-11-14T02:34:46.977250+00:00",
         "stdout_sha256": "77f385769ac84fc599317daf15bf0cdd3b611b0890058749f9df766357c00402"
       },
       {
         "name": "foundation-workspace",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.105612+00:00",
-        "finished_at": "2026-11-14T01:49:16.143335+00:00",
+        "started_at": "2026-11-14T02:34:46.977313+00:00",
+        "finished_at": "2026-11-14T02:34:47.014229+00:00",
         "stdout_sha256": "34dc74b2a5e2aa7da7a41c21065244e815198c819c53d248b558e897f8b80897"
       },
       {
         "name": "foundation-ignore-plan",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.143377+00:00",
-        "finished_at": "2026-11-14T01:49:16.181352+00:00",
+        "started_at": "2026-11-14T02:34:47.014280+00:00",
+        "finished_at": "2026-11-14T02:34:47.062035+00:00",
         "stdout_sha256": "cba46d60fdb59e020040f46183af30e93ca4f2d7236eb0b06a4673d3cdaff083"
       },
       {
         "name": "foundation-contract",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.181395+00:00",
-        "finished_at": "2026-11-14T01:49:16.218236+00:00",
+        "started_at": "2026-11-14T02:34:47.062096+00:00",
+        "finished_at": "2026-11-14T02:34:47.099192+00:00",
         "stdout_sha256": "ec1781df874c6900219e85967f66d4561f4bca5029361c3dc5a225e59b651d1a"
       },
       {
         "name": "automation-policy",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.218280+00:00",
-        "finished_at": "2026-11-14T01:49:16.266946+00:00",
+        "started_at": "2026-11-14T02:34:47.099249+00:00",
+        "finished_at": "2026-11-14T02:34:47.144309+00:00",
         "stdout_sha256": "8579fb86041274d1a159f405b84399d8d402e1e8918593ec0360198315952fa5"
       },
       {
         "name": "architecture",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.267030+00:00",
-        "finished_at": "2026-11-14T01:49:16.388418+00:00",
-        "stdout_sha256": "90dcc1bce5741d64fd83ad024e89b8ade9bea593d8b688c6f9b8d72bfa6536e6"
+        "started_at": "2026-11-14T02:34:47.144369+00:00",
+        "finished_at": "2026-11-14T02:34:47.283632+00:00",
+        "stdout_sha256": "3619b94f02382f37f78a076ae9fe2100c2e9f0734d0b8be41ab803458582b805"
       },
       {
         "name": "task-catalog",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.388682+00:00",
-        "finished_at": "2026-11-14T01:49:16.951626+00:00",
+        "started_at": "2026-11-14T02:34:47.283703+00:00",
+        "finished_at": "2026-11-14T02:34:47.750823+00:00",
         "stdout_sha256": "280c257209ef9443004b3c17dfd059a5412351204dbc9688b04536caada66da6"
       },
       {
         "name": "local-ci-direct",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:16.951707+00:00",
-        "finished_at": "2026-11-14T01:49:17.291221+00:00",
-        "stdout_sha256": "9a3771de536275295b44174dc2af4d60ac063668dce013622915d816fb3c0f1f"
+        "started_at": "2026-11-14T02:34:47.750891+00:00",
+        "finished_at": "2026-11-14T02:34:48.087365+00:00",
+        "stdout_sha256": "29ee6961419ef193648f6c89ff51d0f49154cd206e4a22bbd5dd8243b7616046"
       },
       {
         "name": "foundation-inventory",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:17.291294+00:00",
-        "finished_at": "2026-11-14T01:49:17.327357+00:00",
+        "started_at": "2026-11-14T02:34:48.087432+00:00",
+        "finished_at": "2026-11-14T02:34:48.123330+00:00",
         "stdout_sha256": "b16d29e9e4d11b12908cd7ec9d9d1d4d230e8a217c5f6e0c30ea921c1cce722e"
       },
       {
         "name": "actual-staging-diff",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:49:17.327412+00:00",
-        "finished_at": "2026-11-14T01:49:22.537620+00:00",
+        "started_at": "2026-11-14T02:34:48.123387+00:00",
+        "finished_at": "2026-11-14T02:34:53.726337+00:00",
         "stdout_sha256": "a818d2edce4bdd094463e822f01fbf0bd3ba14737c21c1e68d9bbb54b09f6fb5"
       }
     ],
@@ -365,6 +365,14 @@
     {
       "finding": "Three producer workflow files contained an introduced surplus blank line.",
       "correction": "Canonical formatting removes one blank line per file; all parsed semantics, pins and publication guards remain equal."
+    },
+    {
+      "finding": "Captured Health composition failed the freshness/identifier guard.",
+      "correction": "Adopt accepted owner186 aggregation repair; preserve the strict renderer and source facts."
+    },
+    {
+      "finding": "Final763 scan failed while the old normalized tool/findings projection incorrectly reported all50 passed and clear0.",
+      "correction": "Adopt accepted owner188 finalized-result parser, with owner187 source-URL fix; preserve execution failure, source, original clocks and all publisher boundaries."
     }
   ],
   "historical_introduced_diagnostic_review": {
@@ -393,5 +401,100 @@
     "root_tests": 240,
     "skips": 0,
     "scope": "Exact Relay951 functional source before the separately accepted main04 local-CI reconciliation; not relabelled as the later source."
+  },
+  "current_normalizer_revision": "f7f9bd44713606d9c099adda715db2542c8b66bf",
+  "snapshot_publisher_revision": "1eada5142f7fc7da7862f335589e3b8f5884ffaf",
+  "combined_owner_acceptance": {
+    "revision": "f7f9bd44713606d9c099adda715db2542c8b66bf",
+    "pull_requests": [186, 187, 188],
+    "scope": "Health aggregation, canonical source URL identity and finalized MegaLinter attribution; preserves guarded publishers and original contracts.",
+    "local_owner_replay": "Separate owner evidence; not a new scan or provider execution of this consumer head."
+  },
+  "qualification_history_763": {
+    "head": "7639304babcba9d4baf21ccea163f31f9045a0c6",
+    "base_revision": "04ddb82548ce1509428e4095dc8f018197136635",
+    "relay_revision": "95105a9f5d99239af0d44d7dbd796fd1507fef31",
+    "staging": {
+      "run": 43543469411,
+      "job": 132289126311,
+      "artifact": 14093470181,
+      "zip_sha256": "20c383a44c89a76ad0bacc255d7b9c2430f280a04fde3923a10fd4b94f26d4b5",
+      "status": "success",
+      "changes": 0,
+      "new_receipts": 0,
+      "human_authority": "not-authenticated"
+    },
+    "commit_gate": {
+      "run": 43543469320,
+      "job": 132289126061,
+      "status": "success"
+    },
+    "fast_lint": {
+      "run": 43543469538,
+      "status": "success",
+      "snapshot": "skipped"
+    },
+    "canonical_holistic": {
+      "run": 43543368762,
+      "attempt": 1,
+      "artifact": 14092638403,
+      "zip_sha256": "1606bc614c6a9497bbac2cd37e6b0e0dbf4393abce91151757a574f2963235b5",
+      "raw_report_sha256": "ba3846dbeb53e2d425b671f993c150288ca4d931a21777e1c6aafe3afc667c0f",
+      "status": "failed",
+      "all_descriptor_counts": {
+        "success": 72,
+        "warning": 8,
+        "error": 21
+      },
+      "active_descriptor_counts": {
+        "success": 21,
+        "warning": 8,
+        "error": 21
+      },
+      "snapshot": "skipped"
+    },
+    "normalized_summary_defect": {
+      "artifact": 14092703255,
+      "payload_sha256": "c13105386260953b9a34e6cb96e8164797faaefa4b520670a3049f63bbde884c",
+      "generated_at": "2026-11-14T02:00:58Z",
+      "overall_execution": "failure",
+      "incorrect_findings": "clear/0",
+      "incorrect_tools": "50 passed",
+      "actual_finalized_tools": "21 passed / 21 blocking / 8 advisory",
+      "actual_diagnostics": {
+        "errors": 74527,
+        "warnings": 17
+      },
+      "corrected_offline_replay_sha256": "04cba3dc81ebcd2227be2a487bc2c91a6e9e6c593d7cc8542985fd3b36ad7852",
+      "offline_boundary": "Owner replay preserves source and clock; it is not a replacement provider artifact."
+    },
+    "captured_previews": {
+      "standalone": 43543368971,
+      "composed": 43543369199,
+      "status": "failed",
+      "stage": "Health rendering",
+      "error": "freshness.unknown must match unknown_ids",
+      "capture_artifact": 14093290779,
+      "capture_zip_sha256": "fc1999fcd4001b8944bf9a7fd8e81f9c8d4fc0f2b66f24526ddf2f1f13bc17d1",
+      "as_of": "2026-11-14T01:55:36Z",
+      "review_artifact": 14093011293,
+      "review_zip_sha256": "b664534291ccb8fb257d2d0baa9bbf11897344517a16a6b8409be86f8c023f32"
+    },
+    "actual_pr_composition": {
+      "run": 43543469353,
+      "represented_consumer": "c405d63cdec0e72272469451ca56eae521955a7d",
+      "current": "success",
+      "rollback": "success",
+      "deployment": "skipped",
+      "finalization": "skipped",
+      "live": "skipped",
+      "current_artifact": 14092653624,
+      "current_zip_sha256": "b8328f3bd6ccbf868f585a274e6a8f8891797634bab64250bd43d1935e7dd551",
+      "rollback_artifact": 14093140981,
+      "rollback_zip_sha256": "c61b97cf592ef78abbeff9b5f3062bb043d4b6937187cdd5653f86c4fb3128bf",
+      "actual_archive_roots": ["site", "publication"],
+      "current_duplicate_identical": true
+    },
+    "acceptance": "Historical results remain exact and unqualified; final combined-source provider evidence is pending."
   }
 }
