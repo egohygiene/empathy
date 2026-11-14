@@ -61,6 +61,7 @@ def inspect(args: argparse.Namespace) -> dict[str, Any]:
         ("127.0.0.1", 9443), partial(QuietHandler, directory=str(args.site_root))
     )
     tls = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+    tls.minimum_version = ssl.TLSVersion.TLSv1_2
     tls.load_cert_chain(args.certificate, args.private_key)
     server.socket = tls.wrap_socket(server.socket, server_side=True)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
