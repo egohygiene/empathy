@@ -30,18 +30,18 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 ## Immutable inputs and ownership
 
-| Input                                 | Reviewed revision                          | Role                                                                                                                                                                                    |
-| ------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Relay current UI generator            | `5de708368b42601e140c58f4ab8f305fe2dc5c82` | Current composed, duplicate and standalone generator; calmer navigation and responsive layout; new consumer publication remains separate |
-| Relay retained source/report helpers  | `41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b` | Existing captures, typed review-feed, provenance and report contracts; preceding S4 generator qualification remains historical |
-| Previous typed-review-feed selection  | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Documentation-only successor of the original typed-feed source; historical source and negative/control evidence                                                                         |
-| Original typed-review-feed source     | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; executable owner bytes equal the previous documentation-only successor                                                                |
-| Previous public-source selection      | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim                                                                                             |
-| Previous Journey/Search selection     | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim                                                                                                      |
-| Previous portable source selection    | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point                                                                                                         |
-| Previous qualified current builder    | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively                                                                                      |
-| Relay v1.4.0                          | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` | Previous Repository Intelligence builder pin, frozen for historical replay                                                                                                              |
-| Quartz                                | `075afd3f712da0088a07f5284a7b3aba37dd61b6` | Existing external site engine; Node.js 24 and profile behavior preserved                                                                                                                |
+| Input                                | Reviewed revision                          | Role                                                                                                                                     |
+| ------------------------------------ | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Relay current UI generator           | `5de708368b42601e140c58f4ab8f305fe2dc5c82` | Current composed, duplicate and standalone generator; calmer navigation and responsive layout; new consumer publication remains separate |
+| Relay retained source/report helpers | `41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b` | Existing captures, typed review-feed, provenance and report contracts; preceding S4 generator qualification remains historical           |
+| Previous typed-review-feed selection | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Documentation-only successor of the original typed-feed source; historical source and negative/control evidence                          |
+| Original typed-review-feed source    | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; executable owner bytes equal the previous documentation-only successor                 |
+| Previous public-source selection     | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim                                              |
+| Previous Journey/Search selection    | `9358083e6dd8b15a0f2a3bb23c0b1e2b3ea3b2ff` | Merged in #123; historical source checkpoint, without a replacement rollback claim                                                       |
+| Previous portable source selection   | `49046d88ef6fe2e31e9a9f443a61157b598efb78` | Merged in #122; source-only checkpoint, not a new live-qualified rollback point                                                          |
+| Previous qualified current builder   | `9a6315978766c336566b9fa7139b800fa8789ba5` | Original #94 current-builder evidence; superseded only for this new candidate, never retroactively                                       |
+| Relay v1.4.0                         | `b71b090406a3a9e4cd9f107e9d14a623bbecb127` | Previous Repository Intelligence builder pin, frozen for historical replay                                                               |
+| Quartz                               | `075afd3f712da0088a07f5284a7b3aba37dd61b6` | Existing external site engine; Node.js 24 and profile behavior preserved                                                                 |
 
 The two current integrations are
 [`mindgarden-pages.yml`](../../.github/workflows/mindgarden-pages.yml) and
