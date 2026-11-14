@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Consume pinned website owners in an explicitly selected disposable target."""
 
 from __future__ import annotations

@@ -1,3 +1,6 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Protect immutable owner admission and consumer asset preservation."""
 
 from __future__ import annotations

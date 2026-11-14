@@ -1,22 +1,23 @@
 {
   "schema": "empathy.website-baseline-evidence/v1",
-  "observed_at": "2026-11-14T20:32:41.189616Z",
-  "execution_started_at": "2026-11-14T20:28:49.824436Z",
-  "execution_completed_at": "2026-11-14T20:30:42.695223Z",
+  "observed_at": "2026-11-14T20:41:17.914702Z",
+  "execution_started_at": "2026-11-14T20:38:28.632754Z",
+  "execution_completed_at": "2026-11-14T20:40:25.382819Z",
   "subject": {
-    "consumer_base": "8366ac00fd322d1a4f8d07a047c2825165ae45cb",
-    "scope": "Functional added consumer inputs/scripts over this base, before containing review commit. Exact reviewed source head belongs to the PR.",
+    "consumer_base": "c864ae656d0f96987492397440670524963f337c",
+    "scope": "Functional added consumer inputs/scripts over this accepted main, before containing review commit. Exact reviewed source head belongs to the PR; source bytes are identified below.",
     "source_files": {
       "integrations/website/browser-tools.json": "73a724772742b3c14f275f97db28ff17f4a6bc83621a5b9d06c0ef3b9ce2ee9a",
       "integrations/website/browserslist": "1a2808998791bf883bdc49c2f40d0a50de92532deedb41e67036a5070636b973",
       "integrations/website/generic.manifest.json": "73c18cf086aff1a9bccc92ce7d8fc5b316653c0f66e19cca39214014f0c8d67f",
-      "integrations/website/identity-bridge.css": "a7edc610843e8559a18510c866fa69be41b7823c61122e3528ced1fbf302128b",
+      "integrations/website/identity-bridge.css": "9dd76a497533266e64ec1314cfad3f8a19916df7ea7655d8af2a5eb6150d1f36",
       "integrations/website/launchkit.manifest.json": "eedcf49ef18fc5cd6baac8057dadee23771b1fff58c45e2e620918048db39098",
       "integrations/website/profiles.json": "55235fa6350c8bbd15a22243aeaf7a54ba0a3d4da5eaabf365602586975a876e",
       "integrations/website/source.json": "45df60fdd1eaf18f7a979df151b5dd421202b4cf190b44dfbfdde988e967d5be",
-      "tools/website_baseline.py": "5e0d27bdf5a51fcb11c486d264343af47bb7c50018de1e3e936bb2f41e10c5e7",
-      "tests/test_website_baseline.py": "82b75de5578fa330513f851ba1afcc0ca8a33f16d916f75d982ec81f710da706",
-      "tests/browser/website_baseline.py": "35922ffbaf8dec9e3c673126d08ac8e7574ad5dacdd61df88d16fee1dc03b6a9"
+      "tools/website_baseline.py": "bcb17ef954b2277ae918d486e0d2ef3f78b48309a1e09111a117bcfde211d966",
+      "tests/test_website_baseline.py": "051d62d6e5fdbcac83e6d0e111c97419dd5fe64399fba3d7d1655e1bbc13e3f9",
+      "tests/browser/website_baseline.py": "a104de497b35811fe1d34dff73ed8cd6945c8798980403e69d2efcbf521bb7e9",
+      "tests/browser/__init__.py": "75d48e1fba6272c6a9671c8b040e40960e48e3eb0968274cb9e623c98de7683b"
     },
     "identity_source_files": 14,
     "identity_source_inventory_sha256": "76e86c930a4ec362d298904ce524c121017e0ba385fe189a280621da2832bd33"
@@ -66,7 +67,8 @@
       "favicon.svg": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
       "social.png": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623",
       "tokens.css": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b",
-      "tailwind.theme.json": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140"
+      "tailwind.theme.json": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140",
+      "website.css": "ee9fc8abfef1d0e63a68228990a74f76ee9747e9283126c5123f24241a5ef979"
     },
     "semantic_aliases": "Exact generated CSS token bytes plus the declared consumer mapping; no CSS import or invented palette."
   },
@@ -110,7 +112,7 @@
   },
   "variants": {
     "generic": {
-      "completed_at": "2026-11-14T20:29:46.810898Z",
+      "completed_at": "2026-11-14T20:39:25.396527Z",
       "managed_files": 40,
       "generated_files": 55,
       "native_quality": "PASS: format/lint/types/tests/build",
@@ -122,25 +124,19 @@
       "guarded_rollback_preserved_all_bytes": true,
       "clean_rollback_preserved_identity_assets": true,
       "browser_cases": 36,
-      "browser_artifact_sha256": "297a2fa6978bca0630217db5d00f1943225017327f831d5d64b58eb3842fb52c",
-      "browser_receipt_sha256": "fa6b448c321b2f4014422a4a711f223bced318b155b5bbda24707a2c90a5f80a",
+      "browser_artifact_sha256": "07f1d8aee0910932675826204575eb35acd6a1d260dc13600b7f4f4b07d2547f",
+      "browser_receipt_sha256": "a4377fe570a7cb34d1569d05f18eab43db9eac49ec343b4ec3c0d304a62a882f",
       "axe_violations": 0,
       "axe_incomplete_rule_observations": 10,
       "application_errors": 0,
       "failed_requests": 0,
       "all_declared_browser_checks_pass": true,
       "artifact_unchanged_by_browser": true,
-      "native_log_sha256": "208be8303b1661eb5400655427e352174de34255e1ded893c6d4499e4629202e",
-      "plan_sha256": "b92113dd96a8dd3eabdff74a21df1538141fac1ef53111899907c70065c74f12",
-      "input_format_reconciliation": {
-        "tested_manifest_sha256": "aa237259888bd596e38002524ff3fb3a190caac156b22883d63cd8aad966617b",
-        "formatted_manifest_sha256": "73c18cf086aff1a9bccc92ce7d8fc5b316653c0f66e19cca39214014f0c8d67f",
-        "parsed_manifest_equal": true,
-        "exact_owner_noop_plan_bytes_equal": true
-      }
+      "native_log_sha256": "29984d6539989724c1ceb7a56c48b67d4945cbf44054086abff7748c0d7116e3",
+      "plan_sha256": "b92113dd96a8dd3eabdff74a21df1538141fac1ef53111899907c70065c74f12"
     },
     "launchkit": {
-      "completed_at": "2026-11-14T20:30:42.691767Z",
+      "completed_at": "2026-11-14T20:40:25.378187Z",
       "managed_files": 53,
       "generated_files": 55,
       "native_quality": "PASS: format/lint/types/tests/build",
@@ -152,22 +148,16 @@
       "guarded_rollback_preserved_all_bytes": true,
       "clean_rollback_preserved_identity_assets": true,
       "browser_cases": 36,
-      "browser_artifact_sha256": "8a48de94bca140d7bdee4a1ec18fbfc3bec6ef8acdfebd8439fe1895b9a5e64a",
-      "browser_receipt_sha256": "e0c6eeab101e500c656edfe6f5b4ee22ebc8b1719864dc1739a9feee8e89d708",
+      "browser_artifact_sha256": "693ade980c92f2f3bc16add9375683e7acc7f82da0cc9b387bc55e9a0938dfc4",
+      "browser_receipt_sha256": "7d9b8354757a8f10faf56dbfcb83b2fc2dd4f1070cc6d903cef731fc1e610014",
       "axe_violations": 0,
       "axe_incomplete_rule_observations": 16,
       "application_errors": 0,
       "failed_requests": 0,
       "all_declared_browser_checks_pass": true,
       "artifact_unchanged_by_browser": true,
-      "native_log_sha256": "965aa41c7807622e3aacd09237fac34b2b70140db7d871087f392195fdb4c29b",
-      "plan_sha256": "24eaac319f32bf10c470958735105284b72805d6b84db108f976342e97e51185",
-      "input_format_reconciliation": {
-        "tested_manifest_sha256": "3b996790ae5e43d286b44021c44486a992328cd3bb49fc2d2f8dc70f50d8f985",
-        "formatted_manifest_sha256": "eedcf49ef18fc5cd6baac8057dadee23771b1fff58c45e2e620918048db39098",
-        "parsed_manifest_equal": true,
-        "exact_owner_noop_plan_bytes_equal": true
-      }
+      "native_log_sha256": "3cc9bd82824177363fbffe25a1aaad091451f1e7207df00a9ea14b7c932d3ad0",
+      "plan_sha256": "24eaac319f32bf10c470958735105284b72805d6b84db108f976342e97e51185"
     }
   },
   "acceptance": {
@@ -193,7 +183,6 @@
     "Chromium and automated WCAG checks with recorded incomplete observations are bounded evidence, not full accessibility or all-browser certification.",
     "English and Unicode content are qualified for readiness; translated routing and all-language typography remain unqualified.",
     "Optional native search and remote repository statistics are omitted by the supported Holon minimal profile; repository Intelligence Search remains independent.",
-    "Manifest whitespace was formatted after the native/browser execution; parsed manifests and final actual owner no-op plan bytes were independently equal. Original tested-byte hashes and formatted-byte hashes remain distinct.",
     "Whole-foundation adoption, Aether agent release, Realm host/runtime qualification, ADR ratification and Identity approval remain separate.",
     "Existing imported source, migration, staging, universal catalog, publication workflows and original Repository Intelligence proof are outside this new-file-only slice."
   ]

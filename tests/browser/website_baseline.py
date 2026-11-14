@@ -1,3 +1,6 @@
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+
 """Opt-in real Chromium/axe checks over a disposable, unchanged HTTPS site."""
 
 from __future__ import annotations
