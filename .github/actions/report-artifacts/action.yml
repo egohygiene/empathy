@@ -1,0 +1,73 @@
+---
+# Copyright 2026 Ego Hygiene
+# SPDX-License-Identifier: MIT
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+name: Admit selected Empathy report artifacts
+description: Bind exact trusted producer artifacts to the current checkout without modifying it.
+inputs:
+  selection:
+    description: Closed reviewed JSON selection; empty preserves committed historical report inputs.
+    required: false
+    default: ""
+  github-token:
+    description: Read-only token for exact same-repository producer metadata and artifact reads.
+    required: true
+  deployment-mode:
+    description: Only current builds can select artifacts; historical rollback stays fixed.
+    required: false
+    default: current
+outputs:
+  reports-directory:
+    description: Unchanged committed reports or an ignored directory of byte-pinned current summaries.
+    value: "${{ steps.admit.outputs.reports-directory }}"
+runs:
+  using: composite
+  steps:
+    - name: Admit exact source, producer and artifact identities
+      id: admit
+      shell: bash
+      env:
+        REPORT_ARTIFACTS: "${{ inputs.selection }}"
+        GH_TOKEN: "${{ inputs.github-token }}"
+        DEPLOYMENT_MODE: "${{ inputs.deployment-mode }}"
+        DEFAULT_BRANCH: "${{ github.event.repository.default_branch }}"
+      run: >-
+        python3 -m tools.repository_intelligence_report_artifacts admit
+        --receipt .cache/repository-intelligence-publication/report-selection.json
+        --github-output "$GITHUB_OUTPUT"
+    - name: Download the admitted OSV summary
+      if: steps.admit.outputs.osv-artifact-id != ''
+      uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: "${{ steps.admit.outputs.osv-artifact-id }}"
+        run-id: "${{ steps.admit.outputs.osv-run-id }}"
+        repository: "${{ github.repository }}"
+        github-token: "${{ inputs.github-token }}"
+        path: ".cache/repository-intelligence-publication/report-artifacts/${{ steps.admit.outputs.osv-artifact-name }}"
+        digest-mismatch: error
+    - name: Download the admitted MegaLinter summary
+      if: steps.admit.outputs.megalinter-artifact-id != ''
+      uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: "${{ steps.admit.outputs.megalinter-artifact-id }}"
+        run-id: "${{ steps.admit.outputs.megalinter-run-id }}"
+        repository: "${{ github.repository }}"
+        github-token: "${{ inputs.github-token }}"
+        path: ".cache/repository-intelligence-publication/report-artifacts/${{ steps.admit.outputs.megalinter-artifact-name }}"
+        digest-mismatch: error
+    - name: Download the admitted Scorecard summary
+      if: steps.admit.outputs.scorecard-artifact-id != ''
+      uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: "${{ steps.admit.outputs.scorecard-artifact-id }}"
+        run-id: "${{ steps.admit.outputs.scorecard-run-id }}"
+        repository: "${{ github.repository }}"
+        github-token: "${{ inputs.github-token }}"
+        path: ".cache/repository-intelligence-publication/report-artifacts/${{ steps.admit.outputs.scorecard-artifact-name }}"
+        digest-mismatch: error
+    - name: Stage only exact source-bound normalized summary bytes
+      if: steps.admit.outputs.selected-artifacts == 'true'
+      shell: bash
+      run: >-
+        python3 -m tools.repository_intelligence_report_artifacts stage
+        --receipt .cache/repository-intelligence-publication/report-selection.json

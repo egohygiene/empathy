@@ -40,6 +40,7 @@ jobs:
           set -euo pipefail
           files=(
             tools/repository_intelligence_publication.py
+            tools/repository_intelligence_report_artifacts.py
             tools/verify_repository_intelligence_rollback.py
             tests/test_repository_intelligence*.py
             tests/test_mindgarden_publishing_integration.py
@@ -65,7 +66,9 @@ jobs:
             --secretlintignore egolint/.config/security/secretlint/.secretlintignore \
             AGENTS.md docs/integrations/REPOSITORY_INTELLIGENCE.md \
             .github/workflows/mindgarden-pages.yml .github/workflows/repository-intelligence*.yml \
-            tools/repository_intelligence_publication.py tools/verify_repository_intelligence_rollback.py \
+            .github/actions/report-artifacts/action.yml \
+            tools/repository_intelligence_publication.py tools/repository_intelligence_report_artifacts.py \
+            tools/verify_repository_intelligence_rollback.py \
             tests/test_repository_intelligence*.py tests/test_mindgarden_publishing_integration.py
       - name: Exercise consumer and pinned-owner contracts
         env:

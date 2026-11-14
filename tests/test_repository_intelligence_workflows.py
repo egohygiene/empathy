@@ -47,13 +47,16 @@ class UniqueKeyLoader(yaml.SafeLoader):
 
 def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict[str, Any]:
     result: dict[str, Any] = {}
+    # PyYAML dynamically dispatches this bound method; stub versions differ.
+    # Give that single foreign call boundary a stable signature instead of
+    # version-sensitive ignores on the mapping logic.
+    construct_object = cast("Callable[..., Any]", loader.construct_object)
     for key_node, value_node in node.value:
-        # PyYAML's dynamically dispatched constructor has no typed stub signature.
-        key = loader.construct_object(key_node, deep=True)  # type: ignore[no-untyped-call]
+        key = construct_object(key_node, deep=True)
         if key in result:
             message = f"duplicate YAML mapping key: {key}"
             raise ValueError(message)
-        result[key] = loader.construct_object(value_node, deep=True)  # type: ignore[no-untyped-call]
+        result[key] = construct_object(value_node, deep=True)
     return result
 
 
@@ -567,6 +570,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 "HARDEN_RESULT",
                 "CHECKOUT_RESULT",
                 "INPUT_RESULT",
+                "REPORT_SELECTION_RESULT",
                 "BUILD_RESULT",
                 "ARTIFACT_RESULT",
                 "CAPTURE_RESULT",
@@ -594,6 +598,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         report = self.run_report(report_step, filename, environment, 0)
         self.assertEqual(report["conclusion"], "success")
         for stage, key, code in (
+            ("report_selection", "REPORT_SELECTION_RESULT", "EMRI-003"),
             ("public_sources", "CAPTURE_RESULT", "EMRI-011"),
             ("source_capture_upload", "CAPTURE_UPLOAD_RESULT", "EMRI-011"),
             ("review_feed", "REVIEW_FEED_RESULT", "EMRI-012"),

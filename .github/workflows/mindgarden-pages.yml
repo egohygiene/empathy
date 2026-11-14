@@ -23,6 +23,11 @@ on:
         options:
           - current
           - rollback-v1.4
+      report-artifacts:
+        description: "Reviewed same-source producer artifact selection JSON; empty retains committed report history."
+        required: false
+        default: ""
+        type: string
       review-plan:
         description: "Repository-relative typed public review plan at the represented source; empty report selections remain unavailable."
         required: false
@@ -103,11 +108,13 @@ jobs:
         id: identity
         env:
           MODE: ${{ matrix.mode }}
+          REPORT_ARTIFACTS: "${{ inputs.report-artifacts || '' }}"
         shell: bash
         run: |
           set -euo pipefail
           represented_revision="$(git rev-parse HEAD)"
           if [[ "${MODE}" == 'rollback-v1.4' ]]; then
+            [[ -z "${REPORT_ARTIFACTS}" ]]
             [[ "${GITHUB_EVENT_NAME}" == 'pull_request' || "${GITHUB_EVENT_NAME}" == 'workflow_dispatch' ]]
             [[ "${represented_revision}" == "${ROLLBACK_REVISION}" ]]
             # The frozen historical generator includes the checkout basename.
@@ -118,11 +125,21 @@ jobs:
           printf 'represented-revision=%s\n' "${represented_revision}" >> "${GITHUB_OUTPUT}"
           printf 'deployment-mode=%s\n' "${MODE}" >> "${GITHUB_OUTPUT}"
 
+      - name: Select exact source-bound normalized report artifacts
+        id: report_selection
+        if: matrix.mode == 'current'
+        uses: ./.github/actions/report-artifacts
+        with:
+          selection: "${{ inputs.report-artifacts || '' }}"
+          github-token: "${{ github.token }}"
+          deployment-mode: "${{ matrix.mode }}"
+
       - name: Validate and retain normalized input identities
         id: inputs
         run: >-
           python3 "${RUNNER_TEMP}/empathy-publication.py" collect-input-evidence
           --repository-root .
+          --reports-directory "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           --output .cache/mindgarden/publication/inputs.json
 
       - name: Set up Node.js 24
@@ -227,7 +244,7 @@ jobs:
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
-          reports-directory: ".reports"
+          reports-directory: "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           collect-journey: "true"
           search-attribution: "true"
           collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
@@ -252,7 +269,7 @@ jobs:
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
-          reports-directory: ".reports"
+          reports-directory: "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           collect-journey: "true"
           search-attribution: "true"
           collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
@@ -333,6 +350,7 @@ jobs:
           path: |
             .cache/mindgarden/site
             .cache/mindgarden/publication
+            .cache/repository-intelligence-publication/report-selection.json
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 30
@@ -366,6 +384,13 @@ jobs:
         with:
           path: ".cache/mindgarden/site"
 
+      - name: Retain only a closed native source failure diagnostic
+        if: ${{ always() && (steps.intelligence.outcome == 'failure' || steps.intelligence_duplicate.outcome == 'failure') }}
+        run: >-
+          python3 "${RUNNER_TEMP}/empathy-publication.py" retain-source-failure
+          --input .cache/mindgarden/repository-intelligence/sources/failure.json
+          --output .cache/mindgarden/publication/source-build-failure.json
+
       - name: Preserve sanitized build result
         if: ${{ always() }}
         env:
@@ -390,7 +415,10 @@ jobs:
           stages = ["harden", "checkout", "helper_tools"]
           if mode == "rollback-v1.4":
               stages.append("rollback_checkout")
-          stages += ["identity", "inputs", "runtime", "garden", "quartz"]
+          stages += ["identity"]
+          if mode == "current":
+              stages.append("report_selection")
+          stages += ["inputs", "runtime", "garden", "quartz"]
           if mode == "current":
               stages += ["baseline", "canonical_baseline"]
               if os.environ["CAPTURE_EXPECTED"] == "true":
@@ -429,7 +457,7 @@ jobs:
           }
           stage_codes = {
               "harden": "EMRI-001", "checkout": "EMRI-001", "helper_tools": "EMRI-001", "rollback_checkout": "EMRI-002",
-              "identity": "EMRI-002", "inputs": "EMRI-003", "runtime": "EMRI-004",
+              "identity": "EMRI-002", "report_selection": "EMRI-003", "inputs": "EMRI-003", "runtime": "EMRI-004",
               "garden": "EMRI-004", "quartz": "EMRI-004", "baseline": "EMRI-005",
               "canonical_baseline": "EMRI-005", "composition": "EMRI-005",
               "public_sources": "EMRI-011", "source_capture_upload": "EMRI-011", "source_receipt": "EMRI-011",
@@ -473,7 +501,9 @@ jobs:
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-publication-report-${{ matrix.mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: "${{ runner.temp }}/empathy-publication-run.json"
+          path: |
+            ${{ runner.temp }}/empathy-publication-run.json
+            .cache/mindgarden/publication/source-build-failure.json
           if-no-files-found: error
           retention-days: 30
 

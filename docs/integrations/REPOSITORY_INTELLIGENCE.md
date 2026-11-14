@@ -7,6 +7,9 @@ the publication contract established by the completed
 [Relay #33](https://github.com/egohygiene/relay/issues/33).
 Current generator qualification belongs to
 [Empathy #105](https://github.com/egohygiene/empathy/issues/105).
+The [exact-source artifact checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md)
+documents optional manual selection of reviewed same-source normalized producer
+artifacts and artifact-only scan mode for a frozen proof cycle.
 The [typed review-feed checkpoint](REPOSITORY_INTELLIGENCE_REVIEWS.md) records
 current Audits/Sanity composition alongside bounded Work/Health/Releases feeds.
 The [preceding public source checkpoint](REPOSITORY_INTELLIGENCE_SOURCES.md)
@@ -100,7 +103,7 @@ permissions. Inspect the expected jobs and steps, not just a green workflow badg
 
 ## Report snapshots remain truthful
 
-The consumer still reads `.reports/{osv,megalinter,scorecard}/summary.json` using
+By default the consumer reads `.reports/{osv,megalinter,scorecard}/summary.json` using
 `egohygiene.repository-report-summary/v1`. Execution, findings, freshness, and
 source identity remain separate. A successful OSV scan can have blocking findings;
 a failed MegaLinter execution can have zero recorded findings. Missing evidence

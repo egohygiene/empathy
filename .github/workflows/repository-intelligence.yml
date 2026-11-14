@@ -32,6 +32,11 @@ on:
         required: true
         default: "1 year ago"
         type: string
+      report-artifacts:
+        description: "Reviewed same-source producer artifact selection JSON; empty retains committed report history."
+        required: false
+        default: ""
+        type: string
       review-plan:
         description: Repository-relative typed public review plan; absent report selections stay unavailable.
         required: false
@@ -72,11 +77,19 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Select exact source-bound normalized report artifacts
+        id: report_selection
+        uses: ./.github/actions/report-artifacts
+        with:
+          selection: "${{ inputs.report-artifacts || '' }}"
+          github-token: "${{ github.token }}"
+
       - name: Validate normalized report inputs
         id: inputs
         run: >-
           python3 tools/repository_intelligence_publication.py collect-input-evidence
           --repository-root .
+          --reports-directory "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           --output .cache/repository-intelligence-publication/inputs.json
 
       - name: Capture public Work, Health and Releases sources
@@ -129,7 +142,7 @@ jobs:
         with:
           output-directory: "${{ inputs.dashboard-output-root || '.cache/mindgarden/site/intelligence' }}"
           work-directory: "${{ inputs.output-root || '.cache/repository-intelligence' }}"
-          reports-directory: ".reports"
+          reports-directory: "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           collect-journey: "true"
           search-attribution: "true"
           collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
@@ -154,12 +167,22 @@ jobs:
           retention-days: 30
           compression-level: 9
 
+      - name: Retain only a closed native source failure diagnostic
+        if: ${{ always() && steps.intelligence.outcome == 'failure' }}
+        env:
+          NATIVE_WORK_DIRECTORY: "${{ inputs.output-root || '.cache/repository-intelligence' }}"
+        run: >-
+          python3 tools/repository_intelligence_publication.py retain-source-failure
+          --input "${NATIVE_WORK_DIRECTORY}/sources/failure.json"
+          --output .cache/repository-intelligence-publication/source-build-failure.json
+
       - name: Preserve sanitized run evidence
         if: ${{ always() }}
         env:
           HARDEN_RESULT: ${{ steps.harden.outcome }}
           CHECKOUT_RESULT: ${{ steps.checkout.outcome }}
           INPUT_RESULT: ${{ steps.inputs.outcome }}
+          REPORT_SELECTION_RESULT: ${{ steps.report_selection.outcome }}
           CAPTURE_EXPECTED: ${{ github.event_name == 'workflow_dispatch' }}
           CAPTURE_RESULT: ${{ steps.public_sources.outcome }}
           CAPTURE_UPLOAD_RESULT: ${{ steps.source_capture_upload.outcome }}
@@ -174,10 +197,10 @@ jobs:
           import json
           import os
           from pathlib import Path
-          stages = [("harden", "HARDEN_RESULT"), ("checkout", "CHECKOUT_RESULT"), ("inputs", "INPUT_RESULT"),
+          stages = [("harden", "HARDEN_RESULT"), ("checkout", "CHECKOUT_RESULT"), ("report_selection", "REPORT_SELECTION_RESULT"), ("inputs", "INPUT_RESULT"),
                     ("intelligence", "BUILD_RESULT"), ("review_artifact", "ARTIFACT_RESULT")]
           if os.environ["CAPTURE_EXPECTED"] == "true":
-              stages[3:3] = [("public_sources", "CAPTURE_RESULT"), ("source_capture_upload", "CAPTURE_UPLOAD_RESULT"),
+              stages[4:4] = [("public_sources", "CAPTURE_RESULT"), ("source_capture_upload", "CAPTURE_UPLOAD_RESULT"),
                              ("review_feed", "REVIEW_FEED_RESULT"), ("review_feed_upload", "REVIEW_FEED_UPLOAD_RESULT")]
           allowed = {"success", "failure", "cancelled", "skipped"}
           observed = {}
@@ -188,6 +211,7 @@ jobs:
           diagnostics = {
               "harden": ("EMRI-001", "Restore runner hardening before rebuilding."),
               "checkout": ("EMRI-001", "Restore the complete immutable consumer checkout."),
+              "report_selection": ("EMRI-003", "Restore exact reviewed same-source report artifact admission."),
               "inputs": ("EMRI-003", "Inspect normalized snapshot schema and provenance; retain unknown or stale evidence."),
               "public_sources": ("EMRI-011", "Restore bounded public source admission without relabeling unavailable evidence."),
               "source_capture_upload": ("EMRI-011", "Restore exact same-run source capture retention and digest handoff."),
@@ -230,6 +254,8 @@ jobs:
           name: "empathy-intelligence-report-${{ github.run_id }}-${{ github.run_attempt }}"
           path: |
             ${{ runner.temp }}/empathy-intelligence-run.json
+            .cache/repository-intelligence-publication/report-selection.json
+            .cache/repository-intelligence-publication/source-build-failure.json
             ${{ steps.public_sources.outputs.producer-receipt }}
             ${{ steps.review_feed.outputs.receipt-path }}
           if-no-files-found: error

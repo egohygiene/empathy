@@ -327,12 +327,19 @@ def report_evidence(path: Path, producer: str, revision: str) -> dict[str, Any]:
     return result
 
 
-def collect_input_evidence(root: Path, environment: dict[str, str]) -> dict[str, Any]:
+def collect_input_evidence(
+    root: Path, environment: dict[str, str], reports_directory: Path = Path(".reports")
+) -> dict[str, Any]:
     supplied_repository = environment.get("GITHUB_REPOSITORY", REPOSITORY)
     if not isinstance(supplied_repository, str) or supplied_repository.lower() != REPOSITORY:
         raise PublicationError("Only Empathy publication evidence is supported.")
     revision = _revision(_git(root, "HEAD"))
     tree = _revision(_git(root, "HEAD^{tree}"))
+    if reports_directory.as_posix() not in {
+        ".reports",
+        ".cache/repository-intelligence-publication/selected-reports",
+    }:
+        raise PublicationError("Only the declared report input namespaces are supported.")
     profile = _read(root / "mindgarden/profiles/quartz/profile.yaml")
     matches = re.findall(rb"(?m)^quartz_commit: ([0-9a-f]{40})\s*$", profile)
     if len(matches) != 1:
@@ -348,11 +355,39 @@ def collect_input_evidence(root: Path, environment: dict[str, str]) -> dict[str,
             ),
         },
         "reports": [
-            report_evidence(root / ".reports" / name / "summary.json", name, revision)
+            report_evidence(root / reports_directory / name / "summary.json", name, revision)
             for name in ("osv", "megalinter", "scorecard")
         ],
         "workflow": workflow_metadata(environment),
     }
+
+
+def retain_source_failure(path: Path, output: Path) -> None:
+    """Retain only the pinned owner's closed diagnostic, never its private tree."""
+    if not path.exists():
+        return
+    value = parse_json(_read(path, 8192))
+    if (
+        set(value) != {"schema", "status", "publication", "stage", "source", "code"}
+        or value["schema"] != "egohygiene.relay.source-build-failure/v1"
+        or value["status"] != "denied"
+        or value["publication"] != "denied"
+        or value["code"] != "SOURCE_BUILD_DENIED"
+        or value["stage"] not in {"input", "acquisition", "collection-validation-normalization"}
+        or value["source"]
+        not in {
+            None,
+            "decisions",
+            "roadmap",
+            "work",
+            "health",
+            "journey",
+            "releases",
+            "dependencies",
+        }
+    ):
+        raise PublicationError("Native source failure evidence is incompatible.")
+    write_json(output, value, sites=(Path(".cache/mindgarden/site"),))
 
 
 def site_inventory(root: Path) -> list[dict[str, Any]]:
@@ -547,7 +582,11 @@ def main(argv: list[str] | None = None) -> int:
         baseline.add_argument("--baseline", type=Path, required=True)
         inputs = commands.add_parser("collect-input-evidence")
         inputs.add_argument("--repository-root", type=Path, default=Path())
+        inputs.add_argument("--reports-directory", type=Path, default=Path(".reports"))
         inputs.add_argument("--output", type=Path, required=True)
+        source_failure = commands.add_parser("retain-source-failure")
+        source_failure.add_argument("--input", type=Path, required=True)
+        source_failure.add_argument("--output", type=Path, required=True)
         compare = commands.add_parser("compare-sites")
         compare.add_argument("--left", type=Path, required=True)
         compare.add_argument("--right", type=Path, required=True)
@@ -569,9 +608,13 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "collect-input-evidence":
             write_json(
                 args.output,
-                collect_input_evidence(args.repository_root, dict(os.environ)),
+                collect_input_evidence(
+                    args.repository_root, dict(os.environ), args.reports_directory
+                ),
                 sites=(args.repository_root / ".cache/mindgarden/site",),
             )
+        elif args.command == "retain-source-failure":
+            retain_source_failure(args.input, args.output)
         elif args.command == "compare-sites":
             write_json(
                 args.output, compare_sites(args.left, args.right), sites=(args.left, args.right)

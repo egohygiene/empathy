@@ -7,6 +7,11 @@ It does not claim the complete issue, current scan results or Pages acceptance.
 The existing [publication contract](REPOSITORY_INTELLIGENCE.md), completed #94
 canary and fixed rollback remain unchanged.
 
+The later [exact-source artifact checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md)
+adds reviewed manual report selection and artifact-only scans. Its actual
+producer/preview/live qualification remains distinct from the dated Scorecard
+repair and historical replay below.
+
 ## Observed publisher failure and repair
 
 Historical [run 39240875694, attempt 1](https://github.com/egohygiene/empathy/actions/runs/39240875694)
