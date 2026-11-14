@@ -34,36 +34,117 @@
     "relay_revision": "d7c60473626f8dcc901210a208ad01a6474e8c1d",
     "identity_revision": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
     "identity_generated_outputs": 27,
-    "identity_generated_input_sha256": {
-      "assets/identity/.identity-manifest.json": "cbe6c9e2632e2fff6f26638f8dec014aefb0ccc4eada11f884481664f9e13914",
-      "assets/identity/docs/document.css": "8aee221038de4005dfdae1e63af03c325009c0b0452ca4a1019aeac0498e6e85",
-      "assets/identity/web/favicon-32.png": "811c4767d40dbc14ecfb2fab90e070385f879fc75fe5be1c587517186c32f1ce",
-      "assets/identity/web/favicon.svg": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
-      "assets/identity/web/favicon-64.png": "790b44a71587a38024bad9e9c086c629e6a4c2e80a157b74e23ee1ac9cfd18a7",
-      "assets/identity/social/card-1200x630.png": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623",
-      "assets/identity/github/social-preview.png": "de38bf51df05d28c5ed89e583f0128659a2a59535d74e2bad556a0b9ed7394ff",
-      "assets/identity/brand/mark.svg": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
-      "assets/identity/pwa/icon-512.png": "af7b134257d811918a69ead539fb9f5a875cda87a6ab7aedd3e3bb7cff03879a",
-      "assets/identity/pwa/icon-maskable-512.png": "a40c0787e70570a4b58a1c432900d8cbd3f48b40d97deba029fad9f7fba2210c",
-      "assets/identity/pwa/icon-192.png": "ed9291397d611e39645f7e8b9ef859c4db07123b5de8d48e770d33b0ddffc118",
-      "assets/identity/pwa/manifest-icons.json": "badc8d57c723fe34a0489bda0251b569739f06b7e7806b9584edbb606d0ff2a0",
-      "assets/identity/packages/tokens/package.json": "d37c7947f8662c1c970b03d2bdfb05e5e4a629f2c9156edee0bf217d1ec27843",
-      "assets/identity/packages/tokens/tokens.d.ts": "3e8f23156481845d31e3964c302887c503da69041a2e5af3779ddd08a75290ea",
-      "assets/identity/packages/tokens/tailwind.theme.json": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140",
-      "assets/identity/packages/tokens/tokens.css": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b",
-      "assets/identity/packages/tokens/tokens.json": "e0bc421093f98b47dbfbff0f03b49a05e35a645f790195c68cd4393a68103a8e",
-      "assets/identity/packages/tokens/tokens.js": "4ecc65f53722fe932b2fba028595c666d69c39477cf2dffb395a0d71e6cf0766",
-      "assets/identity/packages/metadata/open-graph.html": "1ade5cc1f4e26f13c28416ae8173e269a8756fed2388b880b0ebd00a640cdb7b",
-      "assets/identity/packages/metadata/package.json": "5d1f5a5db300379fa7fafe7845311b1d5796f0bffb083ed6a44cd3cc51dd528f",
-      "assets/identity/packages/metadata/metadata.json": "92f11718c86eb3ab515ba555406aa02cff37969715570e602cba935be979e190",
-      "assets/identity/packages/brand-kit/index.json": "65963c537f1c1edab35d04bc615c5a129c4461f3f95da7e856ac1508b63bf922",
-      "assets/identity/packages/brand-kit/checksums.json": "889d74113e7dc7cd24d8196c620369ea73296526d8bee8781be536f5e2c8f2e2",
-      "assets/identity/packages/brand-kit/brand-kit.zip": "d2c4cf06681b366fbe43bbbb2cadaa957d66d251063560f2618679faeaab263f",
-      "assets/identity/packages/guidance/voice-and-usage.json": "88c3f107f53bcd56cdc96bf208e1df1de99661ff99bd5216e771caaded34c158",
-      "assets/identity/packages/guidance/README.md": "cdf7465380b00a10c1ad0b227572010ba71152d681e0dae91d1b68d44718889a",
-      "assets/identity/packages/renderer/brand-kit.view-model.json": "ae0fe071a6cf602ea9d224c569601d86102bd52a29c672b914a2679e9a0628f5"
-    },
-    "generation_boundary": "Task-owned disposable validation inputs, not source-committed; moved outside checkout after suites."
+    "generation_boundary": "Task-owned disposable validation inputs, not source-committed; moved outside checkout after suites.",
+    "identity_generated_inputs": [
+      {
+        "path": "assets/identity/.identity-manifest.json",
+        "sha256": "cbe6c9e2632e2fff6f26638f8dec014aefb0ccc4eada11f884481664f9e13914"
+      },
+      {
+        "path": "assets/identity/docs/document.css",
+        "sha256": "8aee221038de4005dfdae1e63af03c325009c0b0452ca4a1019aeac0498e6e85"
+      },
+      {
+        "path": "assets/identity/web/favicon-32.png",
+        "sha256": "811c4767d40dbc14ecfb2fab90e070385f879fc75fe5be1c587517186c32f1ce"
+      },
+      {
+        "path": "assets/identity/web/favicon.svg",
+        "sha256": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6"
+      },
+      {
+        "path": "assets/identity/web/favicon-64.png",
+        "sha256": "790b44a71587a38024bad9e9c086c629e6a4c2e80a157b74e23ee1ac9cfd18a7"
+      },
+      {
+        "path": "assets/identity/social/card-1200x630.png",
+        "sha256": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623"
+      },
+      {
+        "path": "assets/identity/github/social-preview.png",
+        "sha256": "de38bf51df05d28c5ed89e583f0128659a2a59535d74e2bad556a0b9ed7394ff"
+      },
+      {
+        "path": "assets/identity/brand/mark.svg",
+        "sha256": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6"
+      },
+      {
+        "path": "assets/identity/pwa/icon-512.png",
+        "sha256": "af7b134257d811918a69ead539fb9f5a875cda87a6ab7aedd3e3bb7cff03879a"
+      },
+      {
+        "path": "assets/identity/pwa/icon-maskable-512.png",
+        "sha256": "a40c0787e70570a4b58a1c432900d8cbd3f48b40d97deba029fad9f7fba2210c"
+      },
+      {
+        "path": "assets/identity/pwa/icon-192.png",
+        "sha256": "ed9291397d611e39645f7e8b9ef859c4db07123b5de8d48e770d33b0ddffc118"
+      },
+      {
+        "path": "assets/identity/pwa/manifest-icons.json",
+        "sha256": "badc8d57c723fe34a0489bda0251b569739f06b7e7806b9584edbb606d0ff2a0"
+      },
+      {
+        "path": "assets/identity/packages/tokens/package.json",
+        "sha256": "d37c7947f8662c1c970b03d2bdfb05e5e4a629f2c9156edee0bf217d1ec27843"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.d.ts",
+        "sha256": "3e8f23156481845d31e3964c302887c503da69041a2e5af3779ddd08a75290ea"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tailwind.theme.json",
+        "sha256": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.css",
+        "sha256": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.json",
+        "sha256": "e0bc421093f98b47dbfbff0f03b49a05e35a645f790195c68cd4393a68103a8e"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.js",
+        "sha256": "4ecc65f53722fe932b2fba028595c666d69c39477cf2dffb395a0d71e6cf0766"
+      },
+      {
+        "path": "assets/identity/packages/metadata/open-graph.html",
+        "sha256": "1ade5cc1f4e26f13c28416ae8173e269a8756fed2388b880b0ebd00a640cdb7b"
+      },
+      {
+        "path": "assets/identity/packages/metadata/package.json",
+        "sha256": "5d1f5a5db300379fa7fafe7845311b1d5796f0bffb083ed6a44cd3cc51dd528f"
+      },
+      {
+        "path": "assets/identity/packages/metadata/metadata.json",
+        "sha256": "92f11718c86eb3ab515ba555406aa02cff37969715570e602cba935be979e190"
+      },
+      {
+        "path": "assets/identity/packages/brand-kit/index.json",
+        "sha256": "65963c537f1c1edab35d04bc615c5a129c4461f3f95da7e856ac1508b63bf922"
+      },
+      {
+        "path": "assets/identity/packages/brand-kit/checksums.json",
+        "sha256": "889d74113e7dc7cd24d8196c620369ea73296526d8bee8781be536f5e2c8f2e2"
+      },
+      {
+        "path": "assets/identity/packages/brand-kit/brand-kit.zip",
+        "sha256": "d2c4cf06681b366fbe43bbbb2cadaa957d66d251063560f2618679faeaab263f"
+      },
+      {
+        "path": "assets/identity/packages/guidance/voice-and-usage.json",
+        "sha256": "88c3f107f53bcd56cdc96bf208e1df1de99661ff99bd5216e771caaded34c158"
+      },
+      {
+        "path": "assets/identity/packages/guidance/README.md",
+        "sha256": "cdf7465380b00a10c1ad0b227572010ba71152d681e0dae91d1b68d44718889a"
+      },
+      {
+        "path": "assets/identity/packages/renderer/brand-kit.view-model.json",
+        "sha256": "ae0fe071a6cf602ea9d224c569601d86102bd52a29c672b914a2679e9a0628f5"
+      }
+    ]
   },
   "initial_regression": {
     "revision": "70037cdce0e4144e2538d164c1766d513361b266",
