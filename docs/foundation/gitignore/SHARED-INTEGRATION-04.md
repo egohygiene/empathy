@@ -1,5 +1,9 @@
 # Shared gitignore consumer qualification — 2026-11-13
 
+This is the dated accepted-owner proof and inherited-policy observation. The
+later [scoped source adoption](NESTED-ADOPTION-05.md) supersedes its three deferred
+consumer dispositions while preserving the original receipt and negative case.
+
 This checkpoint supplies the accepted shared-owner proof for
 [Empathy #92](https://github.com/egohygiene/empathy/issues/92), following
 [the root migration](MIGRATION-03.md). The public

@@ -1,0 +1,204 @@
+{
+  "record": "empathy.gitignore-shared-requalification/2026-11-13",
+  "observed_at": "2026-11-13T23:52:36Z",
+  "consumer_revision": "99d9cf3e3a3cf778b2c04f54d07aabc3975a04dc",
+  "accepted_owner_revisions": {
+    "empathy": "b44f798bb49259f9f48416b4ffebde1103e135c0",
+    "holon": "660b941f99618806fcadd589bcdae61c519f96e4",
+    "egolint": "ec97ed8b3f1a4a2198aec03355600ea6c9caa1e1"
+  },
+  "native_binary_sha256": "918cbca72b94af09e03209d0bec4abd53308940fe5a1fa3bed3376c2c2f17dcc",
+  "consumers": [
+    {
+      "case": "accepted-golden",
+      "repository": "egohygiene/empathy",
+      "initial_content_sha256": "75ccd106992da2dac355e64f8b77defb510fce7eeb96dcf626e5b39fdb315bed",
+      "current_root_bytes_equal": false,
+      "adoption": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "1abd1bbfe6fc4cf622f96db428567175ee0a670f2e7b3acd4e7ebf0afde680a5",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "noop": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "1abd1bbfe6fc4cf622f96db428567175ee0a670f2e7b3acd4e7ebf0afde680a5",
+        "status": "noop",
+        "tracked_files": 1
+      },
+      "updated": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "a56aa704722c6d7a96c1f3deafb5f9373e6687d0827cddf879d8bae80656d05e",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "guarded_rollback_refused": true,
+      "exact_prior_file_state_readme_restored": true,
+      "initial_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "diagnostics": 0,
+        "report_sha256": "2faa3a317d3bfb14b5e06e46bf89ed43d43539071a1a614b7a9ef3f4f2f061a4"
+      },
+      "updated_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "diagnostics": 0,
+        "report_sha256": "5ffb34500ed4e3e649be3ed9eba3b1a581975356b95a3b72cfccd5292e216e20"
+      }
+    },
+    {
+      "case": "filament-pilot",
+      "repository": "egohygiene/filament",
+      "initial_content_sha256": "3637ea33004215037e745cf898f59e7c2a3195f8b66df5bae0921186ec731373",
+      "current_root_bytes_equal": false,
+      "adoption": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "593ae24d5fe63f122d8a357b02fadf807002cce69f1728c93aa2ea004da270af",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "noop": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "593ae24d5fe63f122d8a357b02fadf807002cce69f1728c93aa2ea004da270af",
+        "status": "noop",
+        "tracked_files": 1
+      },
+      "updated": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "5325536a1eb1568792f0ef6928198c08f2993d4cc6ffb8e19c7ebd97d558a774",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "guarded_rollback_refused": true,
+      "exact_prior_file_state_readme_restored": true,
+      "initial_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "diagnostics": 0,
+        "report_sha256": "18756d93c63d18a5a487871d2d617b89eaca5a6473559473f53b72a7f4713a40"
+      },
+      "updated_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "diagnostics": 0,
+        "report_sha256": "6848d68f19bca640ed6b031599da1f14e3598a1408eb6f582109bcdfb29d3f79"
+      }
+    },
+    {
+      "case": "current-rules-comparison",
+      "repository": "egohygiene/empathy",
+      "initial_content_sha256": "713d801ef244e18f38cddb4832da4e030ddb6fff3c15ab2f3d7ed43e5fe7baa0",
+      "current_root_bytes_equal": true,
+      "adoption": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "db74e2e0797fead3b3c42b507ee84ab4fd604ec854effb1b4e2d0fb19055d777",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "noop": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "db74e2e0797fead3b3c42b507ee84ab4fd604ec854effb1b4e2d0fb19055d777",
+        "status": "noop",
+        "tracked_files": 1
+      },
+      "updated": {
+        "schema_version": "holon.gitignore-apply-result/v1",
+        "state_path": ".holon/gitignore-state.v1.json",
+        "state_sha256": "c61323be06677aaed6f2b79b12482ce6359f831b05dcdb2a012fb67645f2fc98",
+        "status": "applied",
+        "tracked_files": 1
+      },
+      "guarded_rollback_refused": true,
+      "exact_prior_file_state_readme_restored": true,
+      "initial_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "diagnostics": 0,
+        "report_sha256": "2669b936f306013f96d831f1fc81c1c1f1d060d38f1ecf626b1d870c0ec563b5"
+      },
+      "updated_native": {
+        "exit_code": 0,
+        "status": "valid",
+        "checks": {
+          "source_integrity": "passed",
+          "composition": "passed",
+          "presence": "passed",
+          "content": "passed",
+          "effective_behavior": "passed",
+          "nested_policy": "passed",
+          "tracked_files": "passed",
+          "coverage": "passed"
+        },
+        "diagnostics": 0,
+        "report_sha256": "ccc68586ceb38deb5523f2aa590a9a5f875d78d61908c525eccf8fef8051bc61"
+      }
+    }
+  ],
+  "boundary": "Accepted1.1 disposable representations only. The current-rules comparison explicitly retargets the supplied manifest to accepted1.1 solely to compare exact ignore bytes; it is not current2.0 adapter compatibility, current imported-tree semantics, a live consumer mutation or whole-repository conformance.",
+  "native_build": {
+    "command": "cargo +1.97.1 build --locked --bin egolint --manifest-path <exact accepted owner Cargo.toml>",
+    "source_revision": "ec97ed8b3f1a4a2198aec03355600ea6c9caa1e1",
+    "source_status_clean": true,
+    "cargo_lock_sha256": "ecca8f57ebf40c8207ae113a7e14e4522393a8a10dc5f6576b59b6f7b48a96ab",
+    "binary_sha256": "918cbca72b94af09e03209d0bec4abd53308940fe5a1fa3bed3376c2c2f17dcc"
+  }
+}
