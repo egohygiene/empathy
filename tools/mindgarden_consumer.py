@@ -78,6 +78,11 @@ def source_bytes(root: Path, row: dict[str, Any]) -> bytes:
 
 def build(root: Path, output: Path, exchange: str | None = None) -> dict[str, Any]:
     """Delegate normalization/index/privacy gates; never mutate canonical knowledge."""
+    root = root.resolve()
+    if any(path.is_symlink() for path in (output, *output.parents)):
+        message = "Corpus destination must not follow a symlink alias"
+        raise ValueError(message)
+    output = output.resolve()
     if output.is_relative_to(root) and not output.is_relative_to(root / ".cache"):
         message = "Repository corpus outputs belong under ignored .cache, never canonical knowledge"
         raise ValueError(message)
@@ -235,7 +240,7 @@ def main() -> int:
         report = (
             check(args.repository_root.resolve(), args.output.resolve(), args.exchange)
             if args.check
-            else build(args.repository_root.resolve(), args.output.resolve(), args.exchange)
+            else build(args.repository_root, args.output, args.exchange)
         )
     except (OSError, TypeError, ValueError, importlib.metadata.PackageNotFoundError) as error:
         sys.stderr.write(f"Mindgarden consumer unavailable: {error}\n")

@@ -4,7 +4,7 @@
   "canonical_input_revision": "8366ac00fd322d1a4f8d07a047c2825165ae45cb",
   "implementation": {
     "path": "tools/mindgarden_consumer.py",
-    "sha256": "80c061094f9445cc31a529190d523d6e43317f3228bdd006b709c4282bb1598e"
+    "sha256": "3e55fc0bf8b04c68a882b8380637d42a1469ad951a28b1afeff6f2ff8d49c309"
   },
   "input_manifest_sha256": "df4d2e4df2873d47ec5d39bf6a48e4e28da96ff65db3bd0a19b5eb38bc2f80b2",
   "engine": {

@@ -36,8 +36,17 @@ class CorpusInputTests(unittest.TestCase):
                     consumer.source_bytes(root, row)
 
     def test_canonical_destination_is_refused(self) -> None:
-        with self.assertRaisesRegex(ValueError, "canonical knowledge"):
-            consumer.build(ROOT, ROOT / ".garden/new-export")
+        for destination in [ROOT / ".garden/new-export", ROOT / ".cache/../.garden/new-export"]:
+            with (
+                self.subTest(destination=destination),
+                self.assertRaisesRegex(ValueError, "canonical knowledge"),
+            ):
+                consumer.build(ROOT, destination)
+        with tempfile.TemporaryDirectory() as directory:
+            alias = Path(directory) / "canonical-alias"
+            alias.symlink_to(ROOT / ".garden", target_is_directory=True)
+            with self.assertRaisesRegex(ValueError, "symlink alias"):
+                consumer.build(ROOT, alias / "new-export")
 
 
 class InstalledMindgardenGoldenTests(unittest.TestCase):
