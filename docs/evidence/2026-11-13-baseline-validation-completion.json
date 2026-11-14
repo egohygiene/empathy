@@ -1,0 +1,557 @@
+{
+  "repository": "egohygiene/empathy",
+  "issue": 109,
+  "parent": 118,
+  "source_base": "2202636a1957ee7598359465b4ae562e1c67358a",
+  "functional_revision": "c6c906e90eba02ce1238312c8e56706ef1f0f020",
+  "recorded_at": "2026-11-13T23:57:34Z",
+  "scope": "baseline staging maintenance policy/typing and explicit optional Rust composition; no staged/specialist source changes",
+  "functional_file_sha256": {
+    ".gitignore": "713d801ef244e18f38cddb4832da4e030ddb6fff3c15ab2f3d7ed43e5fe7baa0",
+    "foundation/contracts/empathy.gitignore-plan.json": "25c0216c6eb3f334785c4ddceead304188d5844844c521dfaadfa04d898af792",
+    "foundation/contracts/empathy.repository-contract.toml": "8c816b7beb0968ee05b0a1af774bd036af0e38726fc76de3cfe23813edca62cd",
+    "foundation/empathy.manifest.json": "750b9e097eef4af5c9a3c4514762fc68588fc736efb0801b9afc5bdf8dde2e62",
+    "tests/fixtures/gitignore/empathy-migration.json": "c308cd7426d8751fb787b807e6664c58e6143d033940bacdc2302dce43ee423d",
+    "tests/test_foundation_contract.py": "2905b28a025ef87fa2cbbf88d6b7cdb0a0d68c9ad100f5010aa22b609fc50d38",
+    "tests/test_foundation_ignore.py": "8592908ecd59251314ae49d1b742aa37566cfe5bbc65205279ca20a15eae2f51",
+    "tests/test_staging_diff_gate.py": "c06ce2ed4e259814f75e0b68851b8b32e8cae1701a09340a18c5b8223784032a",
+    "tests/test_staging_removal_gate.py": "8dca9dde9c4b6189e15aa1fb771a1d576eae56e16ec4bd093e2efd6ff6a138d2",
+    "tools/staging_diff_gate.py": "35f56c55732dafbf9715be2dd3201e7aa83ffa67a210abbba6ffda60d4dea235",
+    "tools/staging_removal_gate.py": "e3c831861ebe4a3b0990665f3029da6efde6b0787bce49d191eb156d1661cba0"
+  },
+  "tools": {
+    "python": "3.12.14",
+    "Task": "3.54.0",
+    "Cargo": "1.97.1",
+    "rustc": "1.97.1",
+    "ruff": "0.16.5",
+    "mypy": "2.3.0",
+    "bandit": "1.9.4"
+  },
+  "owner_inputs": {
+    "relay_revision": "d7c60473626f8dcc901210a208ad01a6474e8c1d",
+    "identity_revision": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
+    "identity_generated_outputs": 27,
+    "identity_generated_input_sha256": {
+      "assets/identity/.identity-manifest.json": "cbe6c9e2632e2fff6f26638f8dec014aefb0ccc4eada11f884481664f9e13914",
+      "assets/identity/docs/document.css": "8aee221038de4005dfdae1e63af03c325009c0b0452ca4a1019aeac0498e6e85",
+      "assets/identity/web/favicon-32.png": "811c4767d40dbc14ecfb2fab90e070385f879fc75fe5be1c587517186c32f1ce",
+      "assets/identity/web/favicon.svg": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
+      "assets/identity/web/favicon-64.png": "790b44a71587a38024bad9e9c086c629e6a4c2e80a157b74e23ee1ac9cfd18a7",
+      "assets/identity/social/card-1200x630.png": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623",
+      "assets/identity/github/social-preview.png": "de38bf51df05d28c5ed89e583f0128659a2a59535d74e2bad556a0b9ed7394ff",
+      "assets/identity/brand/mark.svg": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
+      "assets/identity/pwa/icon-512.png": "af7b134257d811918a69ead539fb9f5a875cda87a6ab7aedd3e3bb7cff03879a",
+      "assets/identity/pwa/icon-maskable-512.png": "a40c0787e70570a4b58a1c432900d8cbd3f48b40d97deba029fad9f7fba2210c",
+      "assets/identity/pwa/icon-192.png": "ed9291397d611e39645f7e8b9ef859c4db07123b5de8d48e770d33b0ddffc118",
+      "assets/identity/pwa/manifest-icons.json": "badc8d57c723fe34a0489bda0251b569739f06b7e7806b9584edbb606d0ff2a0",
+      "assets/identity/packages/tokens/package.json": "d37c7947f8662c1c970b03d2bdfb05e5e4a629f2c9156edee0bf217d1ec27843",
+      "assets/identity/packages/tokens/tokens.d.ts": "3e8f23156481845d31e3964c302887c503da69041a2e5af3779ddd08a75290ea",
+      "assets/identity/packages/tokens/tailwind.theme.json": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140",
+      "assets/identity/packages/tokens/tokens.css": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b",
+      "assets/identity/packages/tokens/tokens.json": "e0bc421093f98b47dbfbff0f03b49a05e35a645f790195c68cd4393a68103a8e",
+      "assets/identity/packages/tokens/tokens.js": "4ecc65f53722fe932b2fba028595c666d69c39477cf2dffb395a0d71e6cf0766",
+      "assets/identity/packages/metadata/open-graph.html": "1ade5cc1f4e26f13c28416ae8173e269a8756fed2388b880b0ebd00a640cdb7b",
+      "assets/identity/packages/metadata/package.json": "5d1f5a5db300379fa7fafe7845311b1d5796f0bffb083ed6a44cd3cc51dd528f",
+      "assets/identity/packages/metadata/metadata.json": "92f11718c86eb3ab515ba555406aa02cff37969715570e602cba935be979e190",
+      "assets/identity/packages/brand-kit/index.json": "65963c537f1c1edab35d04bc615c5a129c4461f3f95da7e856ac1508b63bf922",
+      "assets/identity/packages/brand-kit/checksums.json": "889d74113e7dc7cd24d8196c620369ea73296526d8bee8781be536f5e2c8f2e2",
+      "assets/identity/packages/brand-kit/brand-kit.zip": "d2c4cf06681b366fbe43bbbb2cadaa957d66d251063560f2618679faeaab263f",
+      "assets/identity/packages/guidance/voice-and-usage.json": "88c3f107f53bcd56cdc96bf208e1df1de99661ff99bd5216e771caaded34c158",
+      "assets/identity/packages/guidance/README.md": "cdf7465380b00a10c1ad0b227572010ba71152d681e0dae91d1b68d44718889a",
+      "assets/identity/packages/renderer/brand-kit.view-model.json": "ae0fe071a6cf602ea9d224c569601d86102bd52a29c672b914a2679e9a0628f5"
+    },
+    "generation_boundary": "Task-owned disposable validation inputs, not source-committed; moved outside checkout after suites."
+  },
+  "initial_regression": {
+    "revision": "70037cdce0e4144e2538d164c1766d513361b266",
+    "root_tests": 228,
+    "failures": 8,
+    "errors": 1,
+    "cause": "Existing ignore-composition fixtures implicitly selected the old golden Rust default and required obsolete Cargo.toml as current evidence. Explicit opt-in fixtures and retained immutable historical evidence repair those assumptions without dropping scenarios."
+  },
+  "independent_suites": {
+    "repository": {
+      "tests": 228,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "egolint": {
+      "tests": 31,
+      "skipped": 0,
+      "failures": 1,
+      "errors": 0,
+      "exit_code": 1,
+      "owner_issue": 110,
+      "failed_test": "test_catalog_is_pinned_to_the_workflow_release"
+    }
+  },
+  "commands": [
+    {
+      "name": "foundation-catalog",
+      "command": ["python3", "tools/foundation.py", "validate-catalog"],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:09.588249+00:00",
+      "finished_at": "2026-11-13T23:56:09.652223+00:00"
+    },
+    {
+      "name": "foundation-manifest",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "validate-manifest",
+        "--manifest",
+        "foundation/empathy.manifest.json"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:09.652726+00:00",
+      "finished_at": "2026-11-13T23:56:09.716693+00:00"
+    },
+    {
+      "name": "foundation-workspace",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "verify-workspace",
+        "--manifest",
+        "foundation/empathy.manifest.json",
+        "--workspace",
+        "."
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:09.717214+00:00",
+      "finished_at": "2026-11-13T23:56:09.781164+00:00"
+    },
+    {
+      "name": "foundation-inventory",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "check-inventory",
+        "--output",
+        "docs/foundation/INVENTORY.md"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:09.781623+00:00",
+      "finished_at": "2026-11-13T23:56:09.845561+00:00"
+    },
+    {
+      "name": "foundation-gitignore",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "check-gitignore-plan",
+        "--manifest",
+        "foundation/empathy.manifest.json",
+        "--source-root",
+        ".",
+        "--output",
+        "foundation/contracts/empathy.gitignore-plan.json"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:09.846072+00:00",
+      "finished_at": "2026-11-13T23:56:09.910039+00:00"
+    },
+    {
+      "name": "foundation-contract",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "check-contract",
+        "--manifest",
+        "foundation/empathy.manifest.json",
+        "--source-revision",
+        "d597e6fac0b5e8205e4878eaf133101af3487e98",
+        "--output",
+        "foundation/contracts/empathy.repository-contract.toml"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:09.910687+00:00",
+      "finished_at": "2026-11-13T23:56:09.974755+00:00"
+    },
+    {
+      "name": "independent-suites",
+      "command": [
+        "python3",
+        "tools/baseline_tests.py",
+        "--output-directory",
+        "<disposable-results>"
+      ],
+      "exit_code": 1,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:09.975322+00:00",
+      "finished_at": "2026-11-13T23:56:26.410421+00:00"
+    },
+    {
+      "name": "architecture",
+      "command": ["task", "architecture:check"],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:26.411935+00:00",
+      "finished_at": "2026-11-13T23:56:26.577272+00:00"
+    },
+    {
+      "name": "task-catalog",
+      "command": ["task", "taskfile:check"],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:26.578112+00:00",
+      "finished_at": "2026-11-13T23:56:27.044340+00:00"
+    },
+    {
+      "name": "ruff-root",
+      "command": [
+        "uvx",
+        "--from",
+        "ruff==0.16.5",
+        "ruff",
+        "check",
+        "--config",
+        "egolint/.config/lint/python/ruff.toml",
+        "tools",
+        "tests"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:27.044782+00:00",
+      "finished_at": "2026-11-13T23:56:27.076706+00:00"
+    },
+    {
+      "name": "ruff-format",
+      "command": [
+        "uvx",
+        "--from",
+        "ruff==0.16.5",
+        "ruff",
+        "format",
+        "--check",
+        "--config",
+        "egolint/.config/lint/python/ruff.toml",
+        "tools/staging_diff_gate.py",
+        "tools/staging_removal_gate.py",
+        "tests/test_staging_diff_gate.py",
+        "tests/test_staging_removal_gate.py",
+        "tests/test_foundation_contract.py"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:27.077136+00:00",
+      "finished_at": "2026-11-13T23:56:27.109020+00:00"
+    },
+    {
+      "name": "mypy",
+      "command": [
+        "mypy",
+        "--config-file",
+        "egolint/.config/lint/python/.mypy.ini",
+        "tools/staging_diff_gate.py",
+        "tools/staging_removal_gate.py",
+        "tests/test_staging_diff_gate.py",
+        "tests/test_staging_removal_gate.py",
+        "tests/test_foundation_contract.py"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:27.109523+00:00",
+      "finished_at": "2026-11-13T23:56:27.381361+00:00"
+    },
+    {
+      "name": "bandit",
+      "command": [
+        "bandit",
+        "-c",
+        "egolint/.config/lint/python/.bandit.yml",
+        "tools/staging_diff_gate.py",
+        "tools/staging_removal_gate.py",
+        "tests/test_staging_diff_gate.py",
+        "tests/test_staging_removal_gate.py",
+        "tests/test_foundation_contract.py",
+        "-f",
+        "json",
+        "-o",
+        "<disposable-results>"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-13T23:56:27.390786+00:00",
+      "finished_at": "2026-11-13T23:56:27.709733+00:00"
+    }
+  ],
+  "python_policy": {
+    "root_tools_tests_ruff_before": 44,
+    "root_tools_tests_ruff_after": 0,
+    "strict_mypy_staging_before": 32,
+    "strict_mypy_touched_after": 0,
+    "bandit_findings": 0,
+    "reviewed_annotations": [
+      "Stdlib unittest exception assertions remain the existing framework; no new test framework.",
+      "Strings-only PyYAML BaseLoader preserves literal GitHub on/event keys and cannot construct Python objects.",
+      "Git execution resolves only the fixed system executable with controlled argv, disabled hooks/config/protocols and no shell.",
+      "Bandit emits two unused-B603 warnings on the controlled fixture call during other subprocess plugin passes; the selected B603 call is explicitly reviewed and all findings are empty."
+    ],
+    "fixture_scan_followup": "Secretlint initially flags an inherited literal BasicAuth-looking negative URL. The test now constructs clearly synthetic userinfo into a reserved .invalid URL, retaining the same rejection scenario without a scanner waiver; final focused scan has zero messages."
+  },
+  "rust_profile_disposition": {
+    "default_root_package": "not-selected",
+    "root_cargo_manifest": "removed orphan virtual workspace whose only member was absent",
+    "catalog_rust_profile": "still supported as explicit opt-in with repository-owned Cargo metadata",
+    "existing_commands": "Root build, Beacon and Identity commands already use explicit project manifests; no task or language checker removed.",
+    "root_target_ignore": "Same /target/ rule retained as a repository-local cache allowance; unrelated ignore behavior unchanged.",
+    "historical_root_cargo": {
+      "revision": "2202636a1957ee7598359465b4ae562e1c67358a",
+      "path": "Cargo.toml",
+      "git_blob": "14b6bca841947a5f676a5bcc74110183d5fb34bb"
+    },
+    "canonical_catalog_source_revision": "d597e6fac0b5e8205e4878eaf133101af3487e98",
+    "corpus_cleanup": "none",
+    "root_cargo_commands": "No root Cargo package/workspace is claimed; use the declared project manifest for the selected opt-in."
+  },
+  "rust_execution": [
+    {
+      "name": "cargo-version",
+      "command": ["cargo", "--version"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.398758+00:00",
+      "finished_at": "2026-11-13T23:42:17.430721+00:00"
+    },
+    {
+      "name": "rustc-version",
+      "command": ["rustc", "--version"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.431292+00:00",
+      "finished_at": "2026-11-13T23:42:17.447209+00:00"
+    },
+    {
+      "name": "egolint-metadata",
+      "command": [
+        "cargo",
+        "metadata",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--format-version",
+        "1",
+        "--no-deps",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.447626+00:00",
+      "finished_at": "2026-11-13T23:42:17.479620+00:00"
+    },
+    {
+      "name": "egolint-fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-11-13T23:42:17.480283+00:00",
+      "finished_at": "2026-11-13T23:42:17.544450+00:00"
+    },
+    {
+      "name": "egolint-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--all-targets",
+        "--all-features",
+        "--locked",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.545156+00:00",
+      "finished_at": "2026-11-13T23:42:17.759709+00:00"
+    },
+    {
+      "name": "egolint-test",
+      "command": [
+        "cargo",
+        "test",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--all-features",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.760169+00:00",
+      "finished_at": "2026-11-13T23:42:18.024632+00:00"
+    },
+    {
+      "name": "beacon-metadata",
+      "command": [
+        "cargo",
+        "metadata",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--format-version",
+        "1",
+        "--no-deps",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:18.025206+00:00",
+      "finished_at": "2026-11-13T23:42:18.041146+00:00"
+    },
+    {
+      "name": "beacon-fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-11-13T23:42:18.041623+00:00",
+      "finished_at": "2026-11-13T23:42:18.105482+00:00"
+    },
+    {
+      "name": "beacon-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--all-targets",
+        "--all-features",
+        "--locked",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 101,
+      "started_at": "2026-11-13T23:42:18.105975+00:00",
+      "finished_at": "2026-11-13T23:42:18.678923+00:00"
+    },
+    {
+      "name": "beacon-test",
+      "command": [
+        "cargo",
+        "test",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--all-features",
+        "--locked"
+      ],
+      "exit_code": 101,
+      "started_at": "2026-11-13T23:42:18.679501+00:00",
+      "finished_at": "2026-11-13T23:42:19.044223+00:00"
+    },
+    {
+      "name": "identity-generate",
+      "command": [
+        "cargo",
+        "run",
+        "--quiet",
+        "--manifest-path",
+        "identity/Cargo.toml",
+        "--locked",
+        "--",
+        "v1-generate",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:19.044938+00:00",
+      "finished_at": "2026-11-13T23:42:39.634774+00:00"
+    },
+    {
+      "name": "beacon-lock",
+      "command": ["cargo", "generate-lockfile", "--offline"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:46:51.306315+00:00",
+      "finished_at": "2026-11-13T23:46:51.521092+00:00"
+    },
+    {
+      "name": "beacon-disposable-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--all-targets",
+        "--all-features",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 101,
+      "started_at": "2026-11-13T23:46:51.521458+00:00",
+      "finished_at": "2026-11-13T23:46:55.056221+00:00"
+    },
+    {
+      "name": "beacon-disposable-test",
+      "command": ["cargo", "test", "--all-features", "--locked", "--offline"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:46:55.056706+00:00",
+      "finished_at": "2026-11-13T23:46:57.395397+00:00"
+    }
+  ],
+  "rust_result_interpretation": {
+    "egolint": "metadata/clippy/test pass; one test passes. Existing fixture rustfmt check fails. No owner source edited.",
+    "beacon": "metadata passes. Source has no Cargo.lock, so strict locked compile refuses to create it. An isolated exact-source consumer resolves a disposable offline lockfile: all six tests pass, existing clippy unnecessary_wraps and rustfmt findings remain failures. No lockfile or source change committed.",
+    "identity": "Pinned owner generation and equipped root verification pass with Rust1.97.1."
+  },
+  "holistic": {
+    "required": "Manual MegaLinter workflow on frozen review branch; inspect exact source head and every linter/permission outcome.",
+    "state_at_document_creation": "not-yet-dispatched",
+    "evidence_location": "Actual run/attempt and artifacts must be bound in the PR after the final documentation commit; source docs do not invent a self-containing head/run."
+  },
+  "acceptance": "partial; aggregate remains failed and no full holistic/runtime/platform readiness claim",
+  "remaining": [
+    "Held canonical EgoLint policy/runtime reconciliation remains under110; no direct bootstrap repair or owner-pin migration.",
+    "Optional specialist formatting/clippy and canonical lock/source graduation remain under79 and their owners.",
+    "Exact final-head holistic and any introduced findings must be reviewed before handoff; no report snapshot or Pages deployment is authorized from this feature-branch check."
+  ],
+  "supplemental": {
+    "secretlint": {
+      "version": "13.0.5",
+      "source_files": 14,
+      "exit_code": 0,
+      "messages": 0,
+      "errors": 0,
+      "started_at": "2026-11-13T23:56:43.536778+00:00",
+      "finished_at": "2026-11-13T23:56:43.879419+00:00"
+    },
+    "lychee": {
+      "version": "0.24.2",
+      "scope": "docs/BASELINE_VALIDATION.md",
+      "result": {
+        "total": 10,
+        "unique": 8,
+        "successful": 10,
+        "unknown": 0,
+        "unsupported": 0,
+        "timeouts": 0,
+        "redirects": 0,
+        "remaps": 0,
+        "excludes": 0,
+        "errors": 0,
+        "cached": 0,
+        "timeout_map": {},
+        "suggestion_map": {},
+        "duration": {
+          "secs": 1,
+          "nanos": 985527094
+        },
+        "detailed_stats": false
+      }
+    }
+  }
+}
