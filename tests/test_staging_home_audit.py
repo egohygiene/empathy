@@ -6,7 +6,11 @@ from __future__ import annotations
 import importlib.util
 from pathlib import Path
 import sys
+from typing import TYPE_CHECKING, ClassVar
 import unittest
+
+if TYPE_CHECKING:
+    from tools.staging_home_audit import LedgerRow
 
 REPOSITORY_ROOT = Path(__file__).parents[1]
 MODULE_PATH = REPOSITORY_ROOT / "tools/staging_home_audit.py"
@@ -19,6 +23,9 @@ SPEC.loader.exec_module(staging_home_audit)
 
 
 class StagingHomeAuditTests(unittest.TestCase):
+    rows: ClassVar[list[LedgerRow]]
+    by_path: ClassVar[dict[str, LedgerRow]]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.rows = staging_home_audit.build_rows(REPOSITORY_ROOT)
@@ -86,9 +93,7 @@ class StagingHomeAuditTests(unittest.TestCase):
         self.assertGreater(len(rows), 7_000)
         self.assertEqual({row.canonical_owner for row in rows}, {"renderflow"})
         self.assertEqual({row.migration_state for row in rows}, {"quarantined"})
-        self.assertEqual(
-            {row.provenance_state for row in rows}, {"needs-source-license-review"}
-        )
+        self.assertEqual({row.provenance_state for row in rows}, {"needs-source-license-review"})
 
     def test_ledger_records_deletion_gate_fields(self) -> None:
         row = self.by_path[".staging/misc/ROADMAP.md"]

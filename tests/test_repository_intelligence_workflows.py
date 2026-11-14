@@ -47,13 +47,16 @@ class UniqueKeyLoader(yaml.SafeLoader):
 
 def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict[str, Any]:
     result: dict[str, Any] = {}
+    # PyYAML dynamically dispatches this bound method; stub versions differ.
+    # Give that single foreign call boundary a stable signature instead of
+    # version-sensitive ignores on the mapping logic.
+    construct_object = cast("Callable[..., Any]", loader.construct_object)
     for key_node, value_node in node.value:
-        # PyYAML's dynamically dispatched constructor has no typed stub signature.
-        key = loader.construct_object(key_node, deep=True)  # type: ignore[no-untyped-call]
+        key = construct_object(key_node, deep=True)
         if key in result:
             message = f"duplicate YAML mapping key: {key}"
             raise ValueError(message)
-        result[key] = loader.construct_object(value_node, deep=True)  # type: ignore[no-untyped-call]
+        result[key] = construct_object(value_node, deep=True)
     return result
 
 
