@@ -7,7 +7,12 @@
     "owner": "egohygiene/holon",
     "schema_version": "1.0.0",
     "capability": "community-health",
-    "compatible_repository_classes": ["library", "product", "publication", "tool"]
+    "compatible_repository_classes": [
+      "library",
+      "product",
+      "publication",
+      "tool"
+    ]
   },
   "categories": [
     "agent-context",
