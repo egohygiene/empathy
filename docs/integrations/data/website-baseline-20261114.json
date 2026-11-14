@@ -16,8 +16,7 @@
       "integrations/website/source.json": "45df60fdd1eaf18f7a979df151b5dd421202b4cf190b44dfbfdde988e967d5be",
       "tools/website_baseline.py": "bcb17ef954b2277ae918d486e0d2ef3f78b48309a1e09111a117bcfde211d966",
       "tests/test_website_baseline.py": "051d62d6e5fdbcac83e6d0e111c97419dd5fe64399fba3d7d1655e1bbc13e3f9",
-      "tests/browser/website_baseline.py": "a104de497b35811fe1d34dff73ed8cd6945c8798980403e69d2efcbf521bb7e9",
-      "tests/browser/__init__.py": "75d48e1fba6272c6a9671c8b040e40960e48e3eb0968274cb9e623c98de7683b"
+      "tests/browser/website_baseline.py": "a104de497b35811fe1d34dff73ed8cd6945c8798980403e69d2efcbf521bb7e9"
     },
     "identity_source_files": 14,
     "identity_source_inventory_sha256": "76e86c930a4ec362d298904ce524c121017e0ba385fe189a280621da2832bd33"
