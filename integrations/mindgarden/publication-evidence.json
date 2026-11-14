@@ -1,0 +1,93 @@
+{
+  "schema": "empathy.mindgarden-publication-evidence/v1",
+  "observed_at": "2026-11-14T21:06:56.135442+00:00",
+  "implementation_source": "7138798ed233ff0575e81f8901ecc00e6223b73d",
+  "canonical_input_revision": "7138798ed233ff0575e81f8901ecc00e6223b73d",
+  "input_manifest_sha256": "93b6b429b034d52b2f83ac3cd01613c49f24f37d5f1f69369ce564639e8a71a6",
+  "engine": {
+    "repository": "egohygiene/mindgarden",
+    "source_revision": "f3a88ccf7d67deb8ecf188d10d9cd496ed6a4973",
+    "version": "0.1.0",
+    "status": "unreleased-source-candidate",
+    "actual_vcs_and_prefix_checks": true,
+    "interface": "Standalone publish/site commands for the existing v0 garden"
+  },
+  "current_pages_selection": "Installed standalone publish verify and site build; existing v0 garden/profile; exact Node24 and Quartz pin retained.",
+  "historical_rollback": "Original compatibility commands and immutable consumer/generator/site identities preserved.",
+  "reviewed_public": {
+    "notes": 5,
+    "projection_files": {
+      "sha256": {
+        ".mindgarden-projection.json": "534e450f5117a0471e58cc6039fa6a76700194a47efe7c1d1e18be195324927d",
+        "dashboard.md": "adef63c9df20b25c68e4efaa2b8e2cf57de9791904b3883eccc5444f6fa1dfd4",
+        "index.md": "2d6a80f76c59f7571f3210eea81c05bbad5562a30b2672b0f54b680031756638",
+        "projects/egohygiene-web-namespace.md": "8d59f050df4859be081fd967b964dd45642751e8ef8edeba0c5c7ee62f6bb670",
+        "projects/index.md": "7cb49fe6d52cf4be22a3b1789df2e75e23db11a685cbb3c14a186d3975db6172",
+        "projects/repository-intelligence-dashboard.md": "2b60f90e32c5aa80167a823850e5267c2ad3bf3dd0b3b5e9500706fed872ce49"
+      },
+      "count": 6
+    },
+    "all_prior_reviewed_projection_bytes_equal": true,
+    "private_negative": "Actual owner rejects synthetic private knowledge before creating public output.",
+    "proposed_captures": "19 remain unreviewed and excluded"
+  },
+  "native_site": {
+    "build_started_at": "2026-11-14T21:03:26.307554+00:00",
+    "build_completed_at": "2026-11-14T21:03:38.782799+00:00",
+    "exit_code": 0,
+    "files": 63,
+    "html_pages": 19,
+    "reviewed_note_routes": {
+      "dashboard.html": "sha256:1acc33f50d8a458bd4ec02f11bccdc5f7bdfb13e6ed01d91c807e628d258dcc6",
+      "index.html": "sha256:64881d7fb759cb81b44ab9a7157caeb6f9cdc93440dc68b96d8a13981780b3ea",
+      "projects/index.html": "sha256:968d44627505c16db02cd96c36b5fcac3bdab4ed380d6d87ad62d6c97bcb6138",
+      "projects/egohygiene-web-namespace.html": "sha256:338fcd782fb64a4c6f94537ac480b75501ae609fcb9153f0738530ed73196916",
+      "projects/repository-intelligence-dashboard.html": "sha256:a0b36f4c98713ab7587c6185d24b76ede789a06b209b10409c44c7cf944d6e32"
+    },
+    "inventory_sha256": "74c833865b7ed40d7d016eef56c9e778dec766d9facf421907f71457ed59fdde"
+  },
+  "same_input_compatibility_comparison": {
+    "build_completed_at": "2026-11-14T21:04:54.546607+00:00",
+    "exit_code": 0,
+    "byte_identical_files": 61,
+    "all_html_and_static_assets_identical": true,
+    "clock_only_differences": {
+      "index.xml": {
+        "field": "pubDate",
+        "values": 10
+      },
+      "sitemap.xml": {
+        "field": "lastmod",
+        "values": 13
+      }
+    },
+    "raw_output_identities": "Retained separately; generated XML timestamps are not rewritten."
+  },
+  "source_preservation": {
+    "explicit_inputs": 47,
+    "changed_input_paths": [".github/workflows/mindgarden-pages.yml"],
+    "architecture_context_sources": 19,
+    "canonical_garden_unchanged": true,
+    "staged_git_preimages_unchanged": 22,
+    "legacy_source_comparison_preserved": true
+  },
+  "installed_owner_cases": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "completed_at": "2026-11-14T20:56:39.441867+00:00"
+  },
+  "historical_evidence": {
+    "path": "integrations/mindgarden/golden-evidence.json",
+    "sha256": "d3ed7ae50d4db819bc72253555ca417b56e63654691d11782453bd2786cdfecc",
+    "original_corpus_revision": "8366ac00fd322d1a4f8d07a047c2825165ae45cb",
+    "original_observed_at": "2026-11-14T20:18:10Z",
+    "status": "Retained original observation; no retiming or replacement."
+  },
+  "publication": "pending-root-frozen-main-provider-run",
+  "limits": [
+    "Local native/source proof does not establish hosted publication, package release or fleet adoption.",
+    "No human ADR/rights acceptance or issue79 cleanup authority is inferred."
+  ]
+}

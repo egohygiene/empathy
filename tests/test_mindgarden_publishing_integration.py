@@ -110,6 +110,33 @@ class MindgardenPublishingIntegrationTests(unittest.TestCase):
             workflow.index("Upload GitHub Pages artifact"),
         )
 
+    def test_pages_current_uses_external_owner_and_preserves_rollback_compatibility(self) -> None:
+        workflow = (REPOSITORY_ROOT / ".github/workflows/mindgarden-pages.yml").read_text()
+        garden = workflow.split("- name: Verify deterministic public boundary", 1)[1].split(
+            "- name: Build the pinned Quartz site", 1
+        )[0]
+        quartz = workflow.split("- name: Build the pinned Quartz site", 1)[1].split(
+            "- name: Retain standalone garden owner", 1
+        )[0]
+        for selected in (garden, quartz):
+            self.assertIn('GARDEN_MODE: "${{ matrix.mode }}"', selected)
+            self.assertIn('if [[ "${GARDEN_MODE}" == "current" ]]; then', selected)
+            self.assertIn("else\n", selected)
+            self.assertIn("set -euo pipefail", selected)
+        self.assertIn("--requirement requirements/mindgarden-standalone.txt", garden)
+        self.assertIn("from mindgarden_consumer import engine", garden)
+        self.assertIn("engine(Path.cwd())", garden)
+        self.assertIn("-I -m mindgarden publish verify", garden.split("else\n", 1)[0])
+        self.assertIn("python3 mindgarden/scripts/publish_garden.py", garden.split("else\n", 1)[1])
+        self.assertIn("-I -m mindgarden site", quartz.split("else\n", 1)[0])
+        self.assertIn("python3 mindgarden/scripts/quartz_site.py", quartz.split("else\n", 1)[1])
+        receipt = workflow.split("- name: Retain standalone garden owner", 1)[1].split(
+            "- name: Capture consumer routes", 1
+        )[0]
+        self.assertIn("if: matrix.mode == 'current'", receipt)
+        self.assertIn(".cache/mindgarden/publication/mindgarden-owner.json", receipt)
+        self.assertIn('"projection_sha256"', receipt)
+
     def test_task_and_documentation_surface_the_publish_contract(self) -> None:
         root_taskfile = (REPOSITORY_ROOT / "Taskfile.yml").read_text(encoding="utf8")
         taskfile = (REPOSITORY_ROOT / ".tasks/mindgarden.yml").read_text(encoding="utf8")

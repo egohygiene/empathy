@@ -23,8 +23,9 @@ The selected `garden:check`, `garden:index`, `garden:context`, `garden:llms:writ
 and public-projection commands use the external installation. The retained
 `garden:legacy:check` keeps old migration paths explicit. Its strict agent check
 can report the deliberate entrypoint difference after this cutover; it is not
-the selected golden check. Existing Quartz/Pages workflow paths and staged
-implementation remain unchanged for their separate migration/release work.
+the selected golden check. Current local site commands and Pages builds also
+use the installed owner's native publishing and Quartz adapter. The retained
+staged implementation and fixed historical rollback keep their original paths.
 
 ```sh
 task garden:standalone:install
@@ -111,6 +112,34 @@ The installed, explicitly selected lane must run those cases without skips.
 Local generated Markdown and prototype evidence do not claim a fresh Pages
 release, released package, host interoperability or wider fleet adoption.
 
+## Standalone Pages delegation
+
+The current Pages garden step installs the same immutable requirement into an
+isolated environment and verifies its full PEP 610 source identity and package
+prefix through the existing consumer boundary. It then calls the owner's
+`publish verify` and `site build` interfaces. Quartz remains the pinned renderer;
+Empathy adds no publishing engine. The historical rollback selects its original
+compatibility commands and does not install the current standalone package.
+
+The native owner projection is compared byte for byte with the retained
+compatibility projection: the same five Markdown routes and ownership marker.
+Both paths keep only reviewed public notes. Private injection must fail before
+output creation; proposed corpus captures stay outside the public projection.
+
+After a successful current native build, the existing private provenance archive
+retains `publication/mindgarden-owner.json`: the actual package source/version,
+represented consumer revision, observation clock and public input hashes. This
+receipt does not enter the served site or imply a package release. The existing
+composition, route preservation, duplicate-build and deployment/live verification
+remain the publication gates. Source qualification alone is not a new live run.
+
+`integrations/mindgarden/publication-evidence.json` records the later committed
+input frame and actual native build. Its fresh 63-file site matches a fresh
+same-input compatibility build in all 19 HTML pages and static assets. The two
+XML feeds differ only in their real generated `pubDate`/`lastmod` clocks; both
+raw identities are retained. The original `golden-evidence.json` observation and
+its earlier input frame stay historical, with their original clocks and hashes.
+
 ## Architecture authority and preserved legacy sources
 
 The canonical Aether architecture validator, from the exact owner source recorded
@@ -128,6 +157,6 @@ source removal, rights approval, release metadata or cleanup receipt is created.
 The immutable Aether source candidate remains distinct from a released bundle.
 
 Refs #65; parent #118. Acceptance belongs to the actual source/consumer review;
-#79 retains broader graduation, migration rights and separately authorized
+Issue #79 retains broader graduation, migration rights and separately authorized
 cleanup. Existing publication and historical qualification keep their own pins
 and observation clocks.
