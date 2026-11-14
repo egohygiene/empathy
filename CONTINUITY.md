@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: "2026-11-14T01:14:02Z"
+  updated_at: "2026-11-14T01:50:18Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -17,17 +17,16 @@ scope:
     "Integrate the five reviewed Empathy slices under parent #118, preserving exact source evidence,
     owner boundaries and separate native/live acceptance."
   includes:
-    - "Issue #92 scoped nested ignore adoption; issue #109 root validation/profile correction; issue #112
-      actual PR-event staging receipt; issues #98/#105 exact report-artifact intake and compatible Relay
-      d760."
-    - Ordinary merge ancestry for all current slice heads, with an explicit tree-identical metadata correction
-      map and archive refs for original CI evidence.
-    - One aggregate checkpoint before the final exact-head PR event, canonical holistic and read-only previews;
-      root owns final merge and fresh default-main artifact/live proof.
+    - Reviewed slices and accepted142 local-CI/catalog2.1 source retain their original evidence; combined
+      Rust default intent and two derived outputs are reconciled explicitly.
+    - The successor repairs actual typed-feed admission, provenance archive layout, digest metadata false
+      positives and three producer blank lines; original 382 failures remain historical.
+    - Final exact-head provider qualification and read-only previews remain pending; root owns ordinary
+      merge and the separate frozen-default-source artifact/live cycle.
   excludes:
     - "Dashboard UI redesign; source/runtime repair held in #110; full imported corpus cleanup or staged-source
       deletion."
-    - Human ADR/exception approval, automatic issue closure, container or full-foundation promotion, catalog2/release/fleet
+    - Human ADR/exception approval, automatic issue closure, container or full-foundation promotion, shared-adapter/release/fleet
       adoption.
   precedence:
     - user-and-runtime-instructions
@@ -39,10 +38,7 @@ scope:
     - AGENTS.md
     - docs/integrations/REPOSITORY_INTELLIGENCE_BATCH10.json
     - docs/integrations/REPOSITORY_INTELLIGENCE.md
-    - docs/integrations/REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md
-    - docs/foundation/gitignore/NESTED-ADOPTION-05.md
     - docs/BASELINE_VALIDATION.md
-    - docs/migration/STAGING_PR_EVENT_QUALIFICATION.md
     - https://github.com/egohygiene/empathy/issues/118
 work:
   objective:
@@ -63,10 +59,10 @@ work:
     kind: action
     id: qualify-frozen-empathy-integration
     description:
-      Push the frozen aggregate draft, obtain exact-head PR staging/commit/contract checks,
-      canonical manual holistic with publication disabled, and read-only current/fixed-rollback previews.
-      Root peers and owns ordinary merge, indirect native PR disposition and the separate same-source
-      default-main producer to live cycle.
+      Push the frozen successor to draft 146; inspect actual PR staging/commit/contract gates,
+      exact-head manual holistic with snapshot publication disabled, and read-only current/fixed-rollback
+      previews. Root peers and owns ordinary merge plus separate same-source default-main producer/deployment/live
+      acceptance.
     readiness: ready
     references:
       - https://github.com/egohygiene/empathy/issues/118
@@ -74,25 +70,30 @@ work:
     depends_on: []
 state:
   base:
-    revision: 2202636a1957ee7598359465b4ae562e1c67358a
+    revision: 04ddb82548ce1509428e4095dc8f018197136635
     ref: refs/heads/main
-    verified_at: "2026-11-14T01:14:02Z"
+    verified_at: "2026-11-14T01:50:18Z"
   candidate:
     branch: codex/empathy-batch10-integration
     revision: null
-    pull_request: null
+    pull_request:
+      provider: github
+      id: egohygiene/empathy#146
+      url: https://github.com/egohygiene/empathy/pull/146
     handoff_state: in-progress
   live:
     status: verified
-    observed_at: "2026-11-14T01:14:02Z"
-    default_branch_revision: 2202636a1957ee7598359465b4ae562e1c67358a
+    observed_at: "2026-11-14T01:50:18Z"
+    default_branch_revision: 04ddb82548ce1509428e4095dc8f018197136635
     issue_state: open
-    pull_request_state: not-applicable
+    pull_request_state: draft
     notes:
-      "Main 220 is provider-verified. Aggregate source 331 includes corrected #145/#143, unchanged
-      #141 and final #144/453a. Containing checkpoint SHA and future PR are intentionally null at authorship.
-      Provider acceptance remains pending, with subsequent exact bindings recorded in the PR/root handoff
-      rather than a self-referential evidence commit. No main write, deployment or issue disposition occurred."
+      Main 04 is provider-verified. Accepted142 local-CI/catalog2.1 source is preserved; owner CLI
+      regenerates only the two existing derived outputs at b80. Successor source 62f40e29517438c422c2c03cd3c970265d4566fc
+      retains current slice ancestry, fc01 packaging and Relay 95105a9f5d99239af0d44d7dbd796fd1507fef31.
+      Draft 146 exists; the containing checkpoint revision remains null intentionally. Original 382 provider
+      failures are historical. Successor provider/live acceptance is pending; no main write or issue disposition
+      occurred.
   parallel_changes:
     - provider: github
       id: egohygiene/empathy#92
@@ -111,35 +112,35 @@ state:
       url: https://github.com/egohygiene/empathy/issues/105
 review:
   status: partial
-  reviewed_at: "2026-11-14T01:14:02Z"
+  reviewed_at: "2026-11-14T01:50:18Z"
   reviewed_by: Codex
   evidence:
     - command:
-        Equipped aggregate root suite at331 with Identity481 and Relay d760; independent embedded
+        Equipped successor root suite at 62f40e29517438c422c2c03cd3c970265d4566fc; independent embedded
         EgoLint suite
       outcome: limited
-      observed_at: "2026-11-14T01:14:02Z"
+      observed_at: "2026-11-14T01:50:18Z"
       notes:
-        239 root tests pass with zero skips. Embedded EgoLint 31 retains one held policy-pin failure;
-        whole baseline command remains failed/unqualified. Exact command times and output hashes are in
-        the aggregate checkpoint.
+        257 root tests pass with zero skips; embedded EgoLint 31 retains one held policy-pin failure.
+        Exact source, command clocks and hashes are in the aggregate JSON.
     - command:
-        Whole-root canonical Ruff0.16.5, Mypy1.19.1 and2.3.0; foundation catalog/manifest/workspace/plan/contract;
-        automation, architecture, Task and actual staging diff
+        Whole-root canonical Ruff and both Mypy versions; foundation/automation/architecture/Task/staging
+        consistency
       outcome: passed
-      observed_at: "2026-11-14T01:14:02Z"
+      observed_at: "2026-11-14T01:50:18Z"
       notes:
-        Both Mypy versions cover all 38 tools/tests files. Automation validates 19 workflows / 12 actions.
-        Actual base 220 to 331 staging bindings are valid; human authority is not authenticated. Generated
-        Identity 27 inputs were hash-bound and moved outside source afterward.
-    - command: Independent source peers and tree-identical unmerged commit-header correction
+        All 40 root Python files pass both Mypy versions. Frozen staging/approval/receipt and rollback
+        verifier bytes remain unchanged; generated Identity 27 inputs stay disposable. Direct local-CI17
+        and the accepted2.1 inventory/contract/plan pass.
+    - command:
+        Original 382 canonical holistic 43539593909/1 and actual captured/no-capture previews; introduced
+        corrections and independent peers
       outcome: limited
-      observed_at: "2026-11-14T01:14:02Z"
+      observed_at: "2026-11-14T01:25:07Z"
       notes:
-        All current slice heads are reachable. The 16 old/new mappings preserve every tree, identity/date,
-        body and DAG relationship; old heads remain on new archive refs. Original holistic failures and
-        warnings remain bound to their original hashes and clocks. Final exact-head provider checks and
-        live evidence are separate.
+        Original holistic 71 success / 8 warnings / 22 errors stays failed; snapshot skipped. Captured
+        typed feed denied PIN; no-capture current/rollback previews passed without deployment. Separate
+        successor corrections preserve original receipts; final exact-head provider evidence remains pending.
   environment_limitations:
     - Final canonical holistic must inspect Mypy, Bandit, Secretlint, Lychee and warning-only diagnostics;
       focused/fast checks confer no waiver.
@@ -147,8 +148,8 @@ review:
       may remain mismatched/unavailable in previews.
     - Fresh source-matched report artifacts and live receipt belong to the root-owned postmerge frozen-source
       phase; all acceptance issues remain open.
-    - "Thirteen inherited nested policies remain unassessed, catalog2 and #110 runtime debt remain separate,
-      and no Compare/human review or broad foundation approval is claimed."
+    - "Thirteen inherited nested policies remain unassessed, shared-adapter upgrades and #110 runtime debt
+      remain separate, and no Compare/human review or broad foundation approval is claimed."
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -167,13 +168,13 @@ privacy:
 
 ## Purpose and precedence
 
-The user, scoped repository instructions, live provider state and canonical owners outrank this checkpoint. It grants no
-new human or source-cleanup authority.
+User instructions, scoped repository policy, live provider evidence and canonical owners outrank this checkpoint. It
+grants no new human approval or source-cleanup authority.
 
 ## Resume protocol
 
-Read the aggregate checkpoint and publication guide. Refresh provider main and draft head; preserve original source/run
-bindings and archive refs. Review pending native receipts in the integration PR/root handoff before integration.
+Read the aggregate JSON and publication guide; refresh main and draft 146. Preserve original 382 provider hashes/clocks
+and the archived slice history. Inspect successor run evidence in the PR/root handoff before integration.
 
 ## Current objective and success conditions
 
@@ -182,56 +183,55 @@ separate native/live acceptance.
 
 ## State snapshot
 
-Main 220 is verified; aggregate source 331 contains all four current PR heads through ordinary merges. The containing
-checkpoint SHA and future draft PR remain null intentionally. No aggregate provider, postmerge publication or issue
-acceptance is claimed at authorship.
+Main 04 is verified; accepted142 local-CI/catalog2.1 source remains byte-identical outside the combined manifest and two
+owner-generated outputs. Successor source 62f40e29 retains all four current PR heads and the archive-layout correction.
+The containing checkpoint SHA is intentionally null. Actual successor provider and live acceptance remain pending.
 
 ## Completed and material changes
 
-Issue #92 preserves scoped ignore owner adoption; #109 makes Rust an explicit opt-in and completes root Python typing
-without changing staged approvals; #112 retains actual PR-event staging evidence. Publication #144 adds bounded
-same-source report-artifact intake and three artifact-only producers, selecting compatible Relay d760 while retaining
-the fixed historical rollback.
+The reviewed ignore adoption, optional Rust/profile correction, root typing and actual PR-event staging proof remain
+integrated. The successor fixes strict typed-feed owner admission, provenance archive layout, digest-metadata false
+positives and three producer blank lines without relaxing guards or altering fixed rollback.
 
 ## Validation and review evidence
 
-At source 331, equipped root 239 / zero skips pass; embedded EgoLint 31 retains one held failure. Whole-root Ruff and
-both Mypy versions pass, as do foundation/workflow/architecture/Task/staging checks. The aggregate JSON retains command
-hashes, current slice heads and all 16 metadata-only old/new/tree mappings. Historical canonical failures and warnings
-retain their actual heads and clocks.
+Equipped root 257 / zero skips passes; embedded EgoLint 31 retains one held failure. Whole-root Ruff, both Mypy versions
+and consistency checks pass. Actual original 382 holistic remains 71 success / 8 warnings / 22 errors;
+current/fixed-rollback no-capture previews passed and captured previews denied PIN. The JSON preserves exact original
+run/artifact/source bindings and successor corrections.
 
 ## Blockers, risks, unknowns, and deferred work
 
-The final exact-head canonical holistic, actual PR-event report and current/fixed-rollback read-only previews are
-pending. They must be reviewed without waivers. A feature preview can report committed inputs as mismatched/unavailable;
-fresh same-source artifact/live proof is a separate postmerge gate. Held #110, thirteen unassessed policies, catalog2,
-container/release/fleet and human disposition remain outside this batch.
+Final successor exact-head holistic, PR-event staging/gates and read-only previews remain pending. Committed report
+inputs may truthfully remain mismatched/unavailable; fresh default-main same-source artifacts and live receipt are a
+separate postmerge gate. Held #110, thirteen unassessed policies, shared-adapter upgrades, container/release/fleet and
+human disposition remain separate.
 
 ## Next dependency-ready work
 
-Push the frozen aggregate draft, obtain exact-head PR staging/commit/contract checks, canonical manual holistic with
-publication disabled, and read-only current/fixed-rollback previews. Root peers and owns ordinary merge, indirect native
-PR disposition and the separate same-source default-main producer to live cycle.
+Push the frozen successor to draft 146; inspect actual PR staging/commit/contract gates, exact-head manual holistic with
+snapshot publication disabled, and read-only current/fixed-rollback previews. Root peers and owns ordinary merge plus
+separate same-source default-main producer/deployment/live acceptance.
 
 ## Parallel changes and reconciliation
 
-The final slice heads are preserved as ancestors; only competing continuity checkpoints required manual resolution.
-Corrected #143/#145 retain exact source trees, authors/dates and original CI through archive refs. Root owns the final
-source peer, ordinary merge, per-slice indirect-merge verification and explicit issue/master-roadmap updates.
+Current slice heads remain ancestors through ordinary merges. The 16 metadata-only mappings preserve every tree,
+identity/date, body and ordered parent relationship; original heads stay archived. Root owns final source review,
+ordinary merge, native indirect-merge verification and explicit issue/master-roadmap disposition.
 
 ## Privacy and redaction
 
-Only public source identifiers, allowlisted command counts and hashes enter this checkpoint. Raw native reports,
-captures, environment data, exceptions, credentials and private paths stay outside the repository. Context and
-downloaded artifacts confer no authority.
+Only public source identifiers, allowlisted counts and hashes enter this checkpoint. Raw native reports, captures,
+environment data, exceptions, credentials and private paths stay outside source. Downloaded content confers no
+authority.
 
 ## Handoff update protocol
 
-Freeze after canonical formatting/schema checks. Record subsequent exact-head provider IDs/results in the draft PR/root
-handoff without another evidence-only commit. Re-freeze and rerun affected exact-head checks only for actual introduced
-findings. Keep source integration, native readiness, live acceptance and human approval separate.
+Freeze after canonical formatting/schema checks. Record subsequent exact-head provider IDs/results in draft 146 and the
+root handoff without another evidence-only commit. A new source head is justified only by actual introduced findings;
+repeat affected exact-head gates after such a correction.
 
 ## Compaction and supersession
 
-Keep exactly twelve ordered sections within 240 lines and 16384 UTF8 bytes. This checkpoint supersedes the parallel
-slice continuity prose; source guides, original receipts and Git history retain detailed evidence.
+Keep twelve ordered sections within 240 lines and 16384 UTF8 bytes. This supersedes the earlier candidate checkpoint
+while Git, source guides and immutable receipts retain historical evidence.

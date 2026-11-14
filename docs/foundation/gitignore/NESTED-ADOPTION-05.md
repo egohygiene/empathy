@@ -59,14 +59,16 @@ explicit local-rule update, native validation, verify, guarded rollback refusal
 and exact prior ignore/state/authored-CRLF-README restoration:
 
 1. The accepted foundation 1.1 golden selection.
-2. Filament's already accepted pilot selection.
-3. An explicitly labeled comparison of the corrected current ignore bytes,
+1. Filament's already accepted pilot selection.
+1. An explicitly labeled comparison of the corrected current ignore bytes,
    using an isolated manifest retargeted to supported foundation 1.1.
 
 All six native runs returned `valid`/zero and every check passed. No semantic or
 tracked-file exception was supplied. The third representation's ignore bytes
 equal the actual current golden root; it does **not** claim that the unchanged
-owner adapters accept the current foundation 2.0 catalog. Its isolated root
+owner adapters accept the current foundation 2.1 catalog. That later local-CI
+catalog selection was accepted separately in #142; the original qualification
+receipts retain their earlier source and catalog identities. Its isolated root
 representation also does not certify the full imported nested-policy tree.
 The current nested tests provide the separate known-case behavior evidence.
 Reproduce the CLI sequence using the preceding guide's accepted owner contract;
@@ -83,7 +85,7 @@ not publish report snapshots from the feature branch.
 The historical #82 environment criterion now has explicit source correction and
 accepted shared semantic evidence for its scoped cases. Full-suite/profile
 findings remain separate: #109 owns baseline diagnostics and profile intent,
-Issue #110 retains its direct bootstrap/runtime hold, and foundation 2.0 adapter
+Issue #110 retains its direct bootstrap/runtime hold, and foundation 2.x adapter
 adoption remains a future owner upgrade. No full holistic pass or whole-Empathy
 conformance is inferred from these file-specific results.
 

@@ -1,18 +1,18 @@
 {
   "schema": "egohygiene.empathy.batch-integration-checkpoint/v1",
-  "observed_at": "2026-11-14T01:14:02Z",
+  "observed_at": "2026-11-14T01:50:18Z",
   "parent_issue": "https://github.com/egohygiene/empathy/issues/118",
-  "base_revision": "2202636a1957ee7598359465b4ae562e1c67358a",
-  "assembled_source_revision": "331e82cd4b2e234776a1c7b4d971595baf9ef964",
+  "base_revision": "04ddb82548ce1509428e4095dc8f018197136635",
+  "assembled_source_revision": "62f40e29517438c422c2c03cd3c970265d4566fc",
   "containing_checkpoint_revision": null,
   "candidate_branch": "codex/empathy-batch10-integration",
   "slice_heads": {
     "145": "4511edfdda90d1c824cad82b47a3e6d0dcba75e6",
     "143": "f7c69f5ce581f8451edb93ae09b2d9a3c04e8245",
     "141": "0be166309c6238462ac00693cabfb6cc40906333",
-    "144": "453a87c9ec032b4c19c2e68461da5e37921dd9b3"
+    "144": "fc01ff52bc5a94ba553a24d0d9f16bea0aa2568c"
   },
-  "current_relay_revision": "d7604056e36633a59735318454f20f2984602726",
+  "current_relay_revision": "95105a9f5d99239af0d44d7dbd796fd1507fef31",
   "fixed_rollback": {
     "consumer_revision": "254185272ab27b6858b8b0393af6549c205c9a8d",
     "relay_revision": "b71b090406a3a9e4cd9f107e9d14a623bbecb127",
@@ -20,9 +20,9 @@
     "verifier_bytes_unchanged": true
   },
   "source_bound_local_review": {
-    "source_revision": "331e82cd4b2e234776a1c7b4d971595baf9ef964",
+    "source_revision": "62f40e29517438c422c2c03cd3c970265d4566fc",
     "root_suite": {
-      "tests": 239,
+      "tests": 257,
       "failures": 0,
       "skips": 0,
       "exit_code": 0
@@ -37,98 +37,112 @@
     "whole_root_python": {
       "ruff": "0.16.5",
       "mypy": ["1.19.1", "2.3.0"],
-      "mypy_source_files": 38
+      "mypy_source_files": 40
     },
     "commands": [
       {
         "name": "baseline-independent",
         "exit_code": 1,
-        "started_at": "2026-11-14T01:10:22.398538+00:00",
-        "finished_at": "2026-11-14T01:10:40.893966+00:00",
-        "stdout_sha256": "ee995e9d3e8998e9234ba0ba6ae1cdbb183aa2ea1d1a735a18d26d4e85dd0a95"
+        "started_at": "2026-11-14T01:48:54.275422+00:00",
+        "finished_at": "2026-11-14T01:49:11.131630+00:00",
+        "stdout_sha256": "529a90cb41b93ed5028c7586e1f7a3d1c6db3e233747cb153bf012e805a90608"
       },
       {
         "name": "ruff-whole-root",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:40.894270+00:00",
-        "finished_at": "2026-11-14T01:10:40.922624+00:00",
+        "started_at": "2026-11-14T01:49:11.131948+00:00",
+        "finished_at": "2026-11-14T01:49:11.156289+00:00",
         "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
       },
       {
         "name": "mypy119-whole-root",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:40.922695+00:00",
-        "finished_at": "2026-11-14T01:10:43.442038+00:00",
-        "stdout_sha256": "5b8ce7baba93409ab8ce52693c77459567344e2c2f77fe3cf14b888e34f7e451"
+        "started_at": "2026-11-14T01:49:11.156362+00:00",
+        "finished_at": "2026-11-14T01:49:13.710257+00:00",
+        "stdout_sha256": "ecc16c0564b42e826048bd3cc3026ed6f52b5dc94d3419716c4a1f1ab458ac8d"
       },
       {
         "name": "mypy23-whole-root",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:43.442102+00:00",
-        "finished_at": "2026-11-14T01:10:46.313053+00:00",
-        "stdout_sha256": "5b8ce7baba93409ab8ce52693c77459567344e2c2f77fe3cf14b888e34f7e451"
+        "started_at": "2026-11-14T01:49:13.710319+00:00",
+        "finished_at": "2026-11-14T01:49:16.032365+00:00",
+        "stdout_sha256": "ecc16c0564b42e826048bd3cc3026ed6f52b5dc94d3419716c4a1f1ab458ac8d"
       },
       {
         "name": "foundation-catalog",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.313308+00:00",
-        "finished_at": "2026-11-14T01:10:46.359451+00:00",
-        "stdout_sha256": "37739b47038443d39f3c201d16e3d54862a94f28a2b7619f5b2222d06eba2410"
+        "started_at": "2026-11-14T01:49:16.032419+00:00",
+        "finished_at": "2026-11-14T01:49:16.069380+00:00",
+        "stdout_sha256": "de00f9c30696400dabb2e022b0c5df4066a05a2d1c767ed68e63c13f0d9c4670"
       },
       {
         "name": "foundation-manifest",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.359521+00:00",
-        "finished_at": "2026-11-14T01:10:46.421260+00:00",
-        "stdout_sha256": "919e7f8151a8bc711da3ae8f1b783dc740968796000976d20d6113cbcaf54164"
+        "started_at": "2026-11-14T01:49:16.069425+00:00",
+        "finished_at": "2026-11-14T01:49:16.105566+00:00",
+        "stdout_sha256": "77f385769ac84fc599317daf15bf0cdd3b611b0890058749f9df766357c00402"
       },
       {
         "name": "foundation-workspace",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.421331+00:00",
-        "finished_at": "2026-11-14T01:10:46.467734+00:00",
+        "started_at": "2026-11-14T01:49:16.105612+00:00",
+        "finished_at": "2026-11-14T01:49:16.143335+00:00",
         "stdout_sha256": "34dc74b2a5e2aa7da7a41c21065244e815198c819c53d248b558e897f8b80897"
       },
       {
         "name": "foundation-ignore-plan",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.467800+00:00",
-        "finished_at": "2026-11-14T01:10:46.514555+00:00",
+        "started_at": "2026-11-14T01:49:16.143377+00:00",
+        "finished_at": "2026-11-14T01:49:16.181352+00:00",
         "stdout_sha256": "cba46d60fdb59e020040f46183af30e93ca4f2d7236eb0b06a4673d3cdaff083"
       },
       {
         "name": "foundation-contract",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.514624+00:00",
-        "finished_at": "2026-11-14T01:10:46.564538+00:00",
+        "started_at": "2026-11-14T01:49:16.181395+00:00",
+        "finished_at": "2026-11-14T01:49:16.218236+00:00",
         "stdout_sha256": "ec1781df874c6900219e85967f66d4561f4bca5029361c3dc5a225e59b651d1a"
       },
       {
         "name": "automation-policy",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.564609+00:00",
-        "finished_at": "2026-11-14T01:10:46.620698+00:00",
+        "started_at": "2026-11-14T01:49:16.218280+00:00",
+        "finished_at": "2026-11-14T01:49:16.266946+00:00",
         "stdout_sha256": "8579fb86041274d1a159f405b84399d8d402e1e8918593ec0360198315952fa5"
       },
       {
         "name": "architecture",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.620762+00:00",
-        "finished_at": "2026-11-14T01:10:46.775481+00:00",
-        "stdout_sha256": "3619b94f02382f37f78a076ae9fe2100c2e9f0734d0b8be41ab803458582b805"
+        "started_at": "2026-11-14T01:49:16.267030+00:00",
+        "finished_at": "2026-11-14T01:49:16.388418+00:00",
+        "stdout_sha256": "90dcc1bce5741d64fd83ad024e89b8ade9bea593d8b688c6f9b8d72bfa6536e6"
       },
       {
         "name": "task-catalog",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:46.775554+00:00",
-        "finished_at": "2026-11-14T01:10:47.239911+00:00",
+        "started_at": "2026-11-14T01:49:16.388682+00:00",
+        "finished_at": "2026-11-14T01:49:16.951626+00:00",
         "stdout_sha256": "280c257209ef9443004b3c17dfd059a5412351204dbc9688b04536caada66da6"
+      },
+      {
+        "name": "local-ci-direct",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:49:16.951707+00:00",
+        "finished_at": "2026-11-14T01:49:17.291221+00:00",
+        "stdout_sha256": "9a3771de536275295b44174dc2af4d60ac063668dce013622915d816fb3c0f1f"
+      },
+      {
+        "name": "foundation-inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-14T01:49:17.291294+00:00",
+        "finished_at": "2026-11-14T01:49:17.327357+00:00",
+        "stdout_sha256": "b16d29e9e4d11b12908cd7ec9d9d1d4d230e8a217c5f6e0c30ea921c1cce722e"
       },
       {
         "name": "actual-staging-diff",
         "exit_code": 0,
-        "started_at": "2026-11-14T01:10:47.239983+00:00",
-        "finished_at": "2026-11-14T01:10:53.105503+00:00",
+        "started_at": "2026-11-14T01:49:17.327412+00:00",
+        "finished_at": "2026-11-14T01:49:22.537620+00:00",
         "stdout_sha256": "a818d2edce4bdd094463e822f01fbf0bd3ba14737c21c1e68d9bbb54b09f6fb5"
       }
     ],
@@ -241,7 +255,7 @@
   "preserved_boundaries": [
     "All four current slice heads are reachable through ordinary merges; shared ancestry is preserved.",
     "The frozen staged tree, approval and receipt objects retain their base bytes; human authority is not authenticated.",
-    "The current Relay pin delta changes four workflow bindings and three test constants only.",
+    "The current Relay adoption changes four workflow bindings and three test constants; separately recorded archive/format corrections preserve privileged job and rollback boundaries.",
     "The fixed rollback generator, source identity, digest and verifier remain unchanged.",
     "Read-only report normalization is separate from the default-branch-only snapshot publisher.",
     "No feature-branch report snapshots or deployment are authorized by this checkpoint."
@@ -260,7 +274,124 @@
     "A passing fast profile or source merge does not establish canonical holistic or live acceptance.",
     "The embedded EgoLint failure and unrelated full-profile debt remain visible; no checks are waived.",
     "Preview inputs may truthfully remain mismatched or unavailable; fresh same-source producer evidence belongs to the postmerge phase.",
-    "Thirteen preserved nested policies, catalog2 adoption, container qualification, release/fleet adoption and human approval remain outside this batch.",
+    "Thirteen preserved nested policies, shared-adapter upgrades, container qualification, release/fleet adoption and human approval remain outside this batch.",
     "No Compare baseline is selected; empty Audits/Sanity plan selections do not imply human review."
-  ]
+  ],
+  "accepted_main_reconciliation": {
+    "accepted_main": "04ddb82548ce1509428e4095dc8f018197136635",
+    "accepted_paths_byte_identical": [
+      ".actrc",
+      ".github/act/local-validation.yml",
+      "README.md",
+      "config/local-ci.json",
+      "docs/current-state-backlog.md",
+      "docs/foundation/INVENTORY.md",
+      "docs/foundation/README.md",
+      "docs/integrations/LOCAL_CI.md",
+      "foundation/catalog.json",
+      "integrations/realm/local-ci.source.json",
+      "tests/test_local_ci_consumer.py",
+      "tools/foundation.py",
+      "tools/local_ci.py"
+    ],
+    "semantic_reconciliation": [
+      "CONTINUITY.md",
+      "foundation/contracts/empathy.gitignore-plan.json",
+      "foundation/contracts/empathy.repository-contract.toml",
+      "foundation/empathy.manifest.json",
+      "tests/test_foundation_contract.py"
+    ],
+    "root_ignore_equal_to_reviewed145": true,
+    "Rust_default_deselected": true,
+    "local_ci_selected": true,
+    "foundation": "2.1.0",
+    "generated_contract_source": "b80a585653be803c8fab3711b021b2e12de5b3fb"
+  },
+  "superseded_candidate_review": {
+    "head": "382508fe2fbdfb37777a005aa71ddd3af56485c3",
+    "base_revision": "2202636a1957ee7598359465b4ae562e1c67358a",
+    "pull_request": "https://github.com/egohygiene/empathy/pull/146",
+    "original_local_source": "331e82cd4b2e234776a1c7b4d971595baf9ef964",
+    "canonical_holistic": {
+      "run_id": 43539593909,
+      "attempt": 1,
+      "status": "failed",
+      "artifact_id": 14091756435,
+      "zip_sha256": "f5ce2f99c94795395bdeceb28603d89a3104fb195d4dd85457ccf3cd2d215ee8",
+      "report_sha256": "9d7f7b82452016ff3fd6f7e0014aefca45220bf99a724d64ca64271fb6bf1352",
+      "descriptor_counts": {
+        "success": 71,
+        "warning": 8,
+        "error": 22
+      },
+      "snapshot_job_id": 132279603269,
+      "snapshot_job_result": "skipped"
+    },
+    "actual_pr_previews": {
+      "standalone_run": 43539567428,
+      "composed_run": 43539567426,
+      "represented_consumer": "84491ae6e076a2faf3c8e3ad0af515eb82ede2a5",
+      "source_scope": "Hosted synthetic merge; immutable run head remains the frozen candidate above.",
+      "current": "success",
+      "fixed_rollback": "success",
+      "deployment": "skipped",
+      "finalization": "skipped",
+      "live": "skipped"
+    },
+    "actual_captured_previews": {
+      "standalone_run": 43539593798,
+      "composed_run": 43539594133,
+      "result": "failed",
+      "stage": "typed review feed",
+      "closed_diagnostic": "PIN",
+      "denial_artifact": 14090499041,
+      "denial_zip_sha256": "2896baad1260aeb560980d25e514c468364880c63b47ea06506c9b8da63a6d00"
+    },
+    "evidence_boundary": "These original results remain historical and are not relabelled as executions of the successor source."
+  },
+  "introduced_findings_and_corrections": [
+    {
+      "finding": "Strict typed-feed admission compared current Hygiene 627 to the locked Observatory Hygiene 496 profile.",
+      "correction": "Adopt the separately authenticated owner successor above; preserve strict equality and original Observatory contract."
+    },
+    {
+      "finding": "A third provenance upload search path changed the archive root expected by both downstream consumers.",
+      "correction": "Retain the byte-identical admission receipt in the existing publication tree and restore the original two upload paths; actual archive roundtrip regression passes."
+    },
+    {
+      "finding": "Four raw Betterleaks matches treated historical token-asset path to digest entries as credential assignments.",
+      "correction": "Encode every original path/hash pair as explicit path and sha256 records. Exact 1.7.3 same-config control reproduces four original findings and zero corrected findings; no excludes or redaction."
+    },
+    {
+      "finding": "Three producer workflow files contained an introduced surplus blank line.",
+      "correction": "Canonical formatting removes one blank line per file; all parsed semantics, pins and publication guards remain equal."
+    }
+  ],
+  "historical_introduced_diagnostic_review": {
+    "head": "382508fe2fbdfb37777a005aa71ddd3af56485c3",
+    "private_peer_report_sha256": "1ddc14799aea72aa23a4eef3926507cba14d7bd1f1956d1c932ba0d60a5fad36",
+    "additional_owned_blocking_findings_observed": 0,
+    "required_checks": {
+      "Mypy": "Native success.",
+      "Bandit": "Three Low findings refer to exact base-identical source.",
+      "Secretlint": "One finding refers to exact base-identical source; no raw value retained here.",
+      "Lychee": "The two failing authored URLs in changed files already exist in base220."
+    },
+    "introduced_advisory_disposition": [
+      "Exact int type checks intentionally reject bool in closed provider admission; do not weaken them to isinstance.",
+      "TemporaryDirectory with addCleanup spans the unittest fixture lifetime; explicit closed validation conditions remain reviewable.",
+      "The new test yaml import encounters hosted Pylint missing the already-required PyYAML dependency, as existing tests do; it is an introduced advisory at that path with an inherited environment cause.",
+      "Resume-verb/table-padding suggestions, formatter disagreement and repeated contract/evidence/test structures are reviewed advisory output under unchanged policy."
+    ],
+    "other_warnings": "Dependency/container inventory and existing class/local complexity debt remain explicit; no advisory policy or detector exclusions changed.",
+    "fast_summary_limit": "Original fast run43539567488 failed. Its structured success/zero-findings summary omitted the four raw detector findings and three formatting failures; raw logs govern the correction.",
+    "provider_baseline_limit": "Original automation run43539567397 root suite reports228 tests with20 skips; embedded EgoLint31 retains one failure. This differs from the separately equipped root suite and establishes no broad acceptance."
+  },
+  "corrected_identity_digest_evidence_sha256": "a01d9af29a54e0b1fc5881a391acc713c509ac2b9565832533fb490b1da8ebc6",
+  "prior_functional_checkpoint": {
+    "source": "7a4bbd8eac1bd49ce5cef61a1bc972eb22fb78ed",
+    "root_tests": 240,
+    "skips": 0,
+    "scope": "Exact Relay951 functional source before the separately accepted main04 local-CI reconciliation; not relabelled as the later source."
+  }
 }
