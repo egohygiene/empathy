@@ -133,6 +133,13 @@ receipt does not enter the served site or imply a package release. The existing
 composition, route preservation, duplicate-build and deployment/live verification
 remain the publication gates. Source qualification alone is not a new live run.
 
+`integrations/mindgarden/publication-evidence.json` records the later committed
+input frame and actual native build. Its fresh 63-file site matches a fresh
+same-input compatibility build in all 19 HTML pages and static assets. The two
+XML feeds differ only in their real generated `pubDate`/`lastmod` clocks; both
+raw identities are retained. The original `golden-evidence.json` observation and
+its earlier input frame stay historical, with their original clocks and hashes.
+
 ## Architecture authority and preserved legacy sources
 
 The canonical Aether architecture validator, from the exact owner source recorded

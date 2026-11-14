@@ -7,7 +7,7 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: "2026-11-14T20:52:32Z"
+  updated_at: "2026-11-14T21:07:28Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
@@ -30,6 +30,7 @@ scope:
     - AGENTS.md
     - requirements/mindgarden-standalone.txt
     - integrations/mindgarden/corpus.json
+    - integrations/mindgarden/publication-evidence.json
     - integrations/mindgarden/architecture-source-comparison.json
     - tools/mindgarden_consumer.py
     - .github/workflows/mindgarden-pages.yml
@@ -85,6 +86,10 @@ review:
       outcome: passed
       observed_at: "2026-11-14T20:15:39Z"
       notes: Fresh candidate installation and strict entrypoint verification pass;19proposed sources/24index notes/5public notes; five actual external fixtures and five native Aether cases pass.
+    - command: Standalone native site build and fresh same-input compatibility build
+      outcome: passed
+      observed_at: "2026-11-14T21:04:54Z"
+      notes: Both builds pass;6projected files and19HTML pages match exactly;61of63site files are byte-identical, with only generated XML clocks different. Raw outputs and prior corpus clocks are preserved.
   environment_limitations:
     - OpenWiki/Obsidian file prototypes do not establish host application/API interoperability.
     - The package and Aether source candidates remain unreleased inputs, not fabricated release metadata.
@@ -135,6 +140,8 @@ historical rollback keeps its original commands and pins.
 Real owner fixtures cover deterministic indexing, no canonical overwrite, private-content rejection,
 Markdown export/import prototypes and unreviewed states. Native Aether fixtures cover current documents,
 identity coverage, missing metadata, modern version/lifecycle shape, duplicate IDs and cycles.
+Later native standalone/compatibility builds at functional713 preserve all reviewed routes and public
+projection bytes; only two generated XML timestamp fields differ across build clocks.
 
 ## Blockers, risks, unknowns, and deferred work
 
