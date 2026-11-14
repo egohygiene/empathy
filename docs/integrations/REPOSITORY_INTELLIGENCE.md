@@ -7,6 +7,9 @@ the publication contract established by the completed
 [Relay #33](https://github.com/egohygiene/relay/issues/33).
 Current generator qualification belongs to
 [Empathy #105](https://github.com/egohygiene/empathy/issues/105).
+The [calmer UI adoption](REPOSITORY_INTELLIGENCE_CALM_UI.md) selects a new
+current generator while preserving the accepted historical qualification and
+the independent helper, report writer and rollback pins.
 The [exact-source artifact checkpoint](REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md)
 documents optional manual selection of reviewed same-source normalized producer
 artifacts and artifact-only scan mode for a frozen proof cycle.
@@ -29,7 +32,8 @@ evidence remains bound to its original revisions; #94 stays completed.
 
 | Input                                 | Reviewed revision                          | Role                                                                                                                                                                                    |
 | ------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Relay current native-source candidate | `41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b` | Current captures/builders and matching provenance/check metadata; compatible Hygiene admission, complete Journey object inspection and chronological composition; qualification pending |
+| Relay current UI generator            | `5de708368b42601e140c58f4ab8f305fe2dc5c82` | Current composed, duplicate and standalone generator; calmer navigation and responsive layout; new consumer publication remains separate |
+| Relay retained source/report helpers  | `41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b` | Existing captures, typed review-feed, provenance and report contracts; preceding S4 generator qualification remains historical |
 | Previous typed-review-feed selection  | `d7c60473626f8dcc901210a208ad01a6474e8c1d` | Documentation-only successor of the original typed-feed source; historical source and negative/control evidence                                                                         |
 | Original typed-review-feed source     | `5d27be5ce1599df883e31f14cd894eb18622c18c` | Historical PR #125 source and comparison receipt; executable owner bytes equal the previous documentation-only successor                                                                |
 | Previous public-source selection      | `981ddf4367c67fcd625e54321d95bab027f6c0f2` | Historical Work/Health/Releases integration; no replacement rollback or qualification claim                                                                                             |
