@@ -21,6 +21,7 @@ from typing import Any
 
 MAX_FILE_BYTES = 1024 * 1024
 MAX_OUTPUT_FILES = 1000
+REPOSITORY_ORIGIN = "https://github.com/egohygiene/empathy"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -107,11 +108,7 @@ def build(root: Path, output: Path, exchange: str | None = None) -> dict[str, An
             input=stage / row["path"],
             source_id=identifier,
             title="Source: " + row["artifact_id"],
-            origin="https://github.com/egohygiene/empathy"
-            + "/blob/"
-            + manifest["source_revision"]
-            + "/"
-            + row["path"],
+            origin=REPOSITORY_ORIGIN + "/blob/" + manifest["source_revision"] + "/" + row["path"],
             captured=manifest["captured"],
             owner="egohygiene",
             rights="Existing tracked first-party source; repository MIT license; source status retained.",
