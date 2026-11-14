@@ -41,7 +41,7 @@ concurrency:
 env:
   TZ: UTC
   CANONICAL_ORIGIN: "https://egohygiene.github.io/empathy/"
-  RELAY_REVISION: "41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b"
+  RELAY_REVISION: "5de708368b42601e140c58f4ab8f305fe2dc5c82"
   ROLLBACK_REVISION: "254185272ab27b6858b8b0393af6549c205c9a8d"
   ROLLBACK_RELAY_REVISION: "b71b090406a3a9e4cd9f107e9d14a623bbecb127"
   ROLLBACK_SITE_DIGEST: "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498"
@@ -246,8 +246,8 @@ jobs:
       - name: Generate repository intelligence dashboard
         id: intelligence
         if: matrix.mode == 'current'
-        # Reviewed portable Relay candidate; exact source qualification remains pending.
-        uses: egohygiene/relay/actions/repository-intelligence@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        # Reviewed calm UI generator; current consumer qualification is separate.
+        uses: egohygiene/relay/actions/repository-intelligence@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -272,7 +272,7 @@ jobs:
       - name: Rebuild identical Repository Intelligence inputs
         id: intelligence_duplicate
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
@@ -321,7 +321,7 @@ jobs:
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ steps.identity.outputs.represented-revision }}"
-          relay-revision: "41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b"
+          relay-revision: "5de708368b42601e140c58f4ab8f305fe2dc5c82"
           required-routes: >-
             ["/","/intelligence/","/intelligence/now/","/intelligence/roadmap/",
             "/intelligence/decisions/","/intelligence/journey/","/intelligence/dependencies/",
@@ -580,7 +580,7 @@ jobs:
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ needs.build.outputs.represented-revision }}"
-          relay-revision: "41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b"
+          relay-revision: "5de708368b42601e140c58f4ab8f305fe2dc5c82"
           workflow-run-id: "${{ github.run_id }}"
           workflow-run-attempt: "${{ github.run_attempt }}"
           deployment-environment: github-pages
