@@ -99,7 +99,18 @@ jobs:
         run: |
           set -euo pipefail
           python3 -I tools/staging_diff_gate.py \
-            --repository-root . --base "$STAGING_BASE" --head "$STAGING_HEAD"
+            --repository-root . --base "$STAGING_BASE" --head "$STAGING_HEAD" \
+            --report "$RUNNER_TEMP/staging-diff-evidence.json"
+
+      - name: Retain immutable staging diff evidence
+        if: ${{ !cancelled() && (success() || failure()) }}
+        # actions/upload-artifact v7.0.0; only a successful gate creates this report.
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: "staging-diff-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: "${{ runner.temp }}/staging-diff-evidence.json"
+          if-no-files-found: warn
+          retention-days: 30
 
   validate:
     name: Validate workflows and actions
