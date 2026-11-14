@@ -3,18 +3,20 @@
   "issue": 109,
   "parent": 118,
   "source_base": "2202636a1957ee7598359465b4ae562e1c67358a",
-  "functional_revision": "c6c906e90eba02ce1238312c8e56706ef1f0f020",
-  "recorded_at": "2026-11-13T23:57:34Z",
+  "functional_revision": "f502804e304a6902f07374d24276ae0e5afb8933",
+  "recorded_at": "2026-11-14T00:23:09Z",
   "scope": "baseline staging maintenance policy/typing and explicit optional Rust composition; no staged/specialist source changes",
   "functional_file_sha256": {
     ".gitignore": "713d801ef244e18f38cddb4832da4e030ddb6fff3c15ab2f3d7ed43e5fe7baa0",
     "foundation/contracts/empathy.gitignore-plan.json": "25c0216c6eb3f334785c4ddceead304188d5844844c521dfaadfa04d898af792",
     "foundation/contracts/empathy.repository-contract.toml": "8c816b7beb0968ee05b0a1af774bd036af0e38726fc76de3cfe23813edca62cd",
-    "foundation/empathy.manifest.json": "750b9e097eef4af5c9a3c4514762fc68588fc736efb0801b9afc5bdf8dde2e62",
+    "foundation/empathy.manifest.json": "d01085720e4207455a965a5e018489bdf7e5fa8402ca1fefcffa01807b322b51",
     "tests/fixtures/gitignore/empathy-migration.json": "c308cd7426d8751fb787b807e6664c58e6143d033940bacdc2302dce43ee423d",
     "tests/test_foundation_contract.py": "2905b28a025ef87fa2cbbf88d6b7cdb0a0d68c9ad100f5010aa22b609fc50d38",
     "tests/test_foundation_ignore.py": "8592908ecd59251314ae49d1b742aa37566cfe5bbc65205279ca20a15eae2f51",
+    "tests/test_repository_intelligence_workflows.py": "6a6b72ecffbbf914112c34dc052353756eaf384e2e88c45759e3c771e77e2423",
     "tests/test_staging_diff_gate.py": "c06ce2ed4e259814f75e0b68851b8b32e8cae1701a09340a18c5b8223784032a",
+    "tests/test_staging_home_audit.py": "23f0a06b5d1089dd1f9517bc8313c6ab15f411acb9ef7c4f7d12788301c3ab8a",
     "tests/test_staging_removal_gate.py": "8dca9dde9c4b6189e15aa1fb771a1d576eae56e16ec4bd093e2efd6ff6a138d2",
     "tools/staging_diff_gate.py": "35f56c55732dafbf9715be2dd3201e7aa83ffa67a210abbba6ffda60d4dea235",
     "tools/staging_removal_gate.py": "e3c831861ebe4a3b0990665f3029da6efde6b0787bce49d191eb156d1661cba0"
@@ -94,8 +96,8 @@
       "command": ["python3", "tools/foundation.py", "validate-catalog"],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:09.588249+00:00",
-      "finished_at": "2026-11-13T23:56:09.652223+00:00"
+      "started_at": "2026-11-14T00:18:06.134996+00:00",
+      "finished_at": "2026-11-14T00:18:06.199221+00:00"
     },
     {
       "name": "foundation-manifest",
@@ -108,8 +110,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:09.652726+00:00",
-      "finished_at": "2026-11-13T23:56:09.716693+00:00"
+      "started_at": "2026-11-14T00:18:06.199621+00:00",
+      "finished_at": "2026-11-14T00:18:06.263699+00:00"
     },
     {
       "name": "foundation-workspace",
@@ -124,8 +126,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:09.717214+00:00",
-      "finished_at": "2026-11-13T23:56:09.781164+00:00"
+      "started_at": "2026-11-14T00:18:06.264238+00:00",
+      "finished_at": "2026-11-14T00:18:06.328267+00:00"
     },
     {
       "name": "foundation-inventory",
@@ -138,8 +140,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:09.781623+00:00",
-      "finished_at": "2026-11-13T23:56:09.845561+00:00"
+      "started_at": "2026-11-14T00:18:06.328691+00:00",
+      "finished_at": "2026-11-14T00:18:06.392901+00:00"
     },
     {
       "name": "foundation-gitignore",
@@ -156,8 +158,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:09.846072+00:00",
-      "finished_at": "2026-11-13T23:56:09.910039+00:00"
+      "started_at": "2026-11-14T00:18:06.393415+00:00",
+      "finished_at": "2026-11-14T00:18:06.457429+00:00"
     },
     {
       "name": "foundation-contract",
@@ -174,8 +176,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:09.910687+00:00",
-      "finished_at": "2026-11-13T23:56:09.974755+00:00"
+      "started_at": "2026-11-14T00:18:06.458395+00:00",
+      "finished_at": "2026-11-14T00:18:06.577175+00:00"
     },
     {
       "name": "independent-suites",
@@ -187,24 +189,24 @@
       ],
       "exit_code": 1,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:09.975322+00:00",
-      "finished_at": "2026-11-13T23:56:26.410421+00:00"
+      "started_at": "2026-11-14T00:18:06.580345+00:00",
+      "finished_at": "2026-11-14T00:18:23.924858+00:00"
     },
     {
       "name": "architecture",
       "command": ["task", "architecture:check"],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:26.411935+00:00",
-      "finished_at": "2026-11-13T23:56:26.577272+00:00"
+      "started_at": "2026-11-14T00:18:23.925973+00:00",
+      "finished_at": "2026-11-14T00:18:24.093350+00:00"
     },
     {
       "name": "task-catalog",
       "command": ["task", "taskfile:check"],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:26.578112+00:00",
-      "finished_at": "2026-11-13T23:56:27.044340+00:00"
+      "started_at": "2026-11-14T00:18:24.093786+00:00",
+      "finished_at": "2026-11-14T00:18:24.560506+00:00"
     },
     {
       "name": "ruff-root",
@@ -221,8 +223,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:27.044782+00:00",
-      "finished_at": "2026-11-13T23:56:27.076706+00:00"
+      "started_at": "2026-11-14T00:18:24.561294+00:00",
+      "finished_at": "2026-11-14T00:18:24.625556+00:00"
     },
     {
       "name": "ruff-format",
@@ -243,8 +245,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:27.077136+00:00",
-      "finished_at": "2026-11-13T23:56:27.109020+00:00"
+      "started_at": "2026-11-14T00:18:24.626074+00:00",
+      "finished_at": "2026-11-14T00:18:24.658157+00:00"
     },
     {
       "name": "mypy",
@@ -260,8 +262,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:27.109523+00:00",
-      "finished_at": "2026-11-13T23:56:27.381361+00:00"
+      "started_at": "2026-11-14T00:18:24.658567+00:00",
+      "finished_at": "2026-11-14T00:18:24.823182+00:00"
     },
     {
       "name": "bandit",
@@ -281,8 +283,8 @@
       ],
       "exit_code": 0,
       "unavailable": null,
-      "started_at": "2026-11-13T23:56:27.390786+00:00",
-      "finished_at": "2026-11-13T23:56:27.709733+00:00"
+      "started_at": "2026-11-14T00:18:24.823672+00:00",
+      "finished_at": "2026-11-14T00:18:25.088960+00:00"
     }
   ],
   "python_policy": {
@@ -297,7 +299,38 @@
       "Git execution resolves only the fixed system executable with controlled argv, disabled hooks/config/protocols and no shell.",
       "Bandit emits two unused-B603 warnings on the controlled fixture call during other subprocess plugin passes; the selected B603 call is explicitly reviewed and all findings are empty."
     ],
-    "fixture_scan_followup": "Secretlint initially flags an inherited literal BasicAuth-looking negative URL. The test now constructs clearly synthetic userinfo into a reserved .invalid URL, retaining the same rejection scenario without a scanner waiver; final focused scan has zero messages."
+    "fixture_scan_followup": "Secretlint initially flags an inherited literal BasicAuth-looking negative URL. The test now constructs clearly synthetic userinfo into a reserved .invalid URL, retaining the same rejection scenario without a scanner waiver; final focused scan has zero messages.",
+    "whole_root_mypy_followup": {
+      "scope": "tools tests,36 source files",
+      "initial_remaining_errors": 16,
+      "final_errors": 0,
+      "checked_versions": ["1.19.1", "2.3.0"],
+      "correction": "LedgerRow ClassVar declarations for existing fixture state and one typed bound PyYAML callable replace version-sensitive ignores; workflow semantics unchanged.",
+      "native_context": "First hosted run identified14 class-attribute errors; exact local current-stub check additionally identified2 unused historical ignores. The final mapping boundary passes both tool/stub selections."
+    },
+    "ruff_native_version_supplement": {
+      "version": "0.17.2",
+      "scope": "root tools/tests",
+      "outcome": "passed; canonical0.16.5 also passes"
+    },
+    "bandit_touched_files": 8,
+    "unchanged_classifier_bandit_dispositions": [
+      {
+        "id": "B404",
+        "path": "tools/staging_home_audit.py",
+        "disposition": "The stdlib subprocess import supports one fixed local Git metadata operation; no shell, caller-provided executable or remote content is executed."
+      },
+      {
+        "id": "B603",
+        "path": "tools/staging_home_audit.py",
+        "disposition": "The only argv is git -C <operator-selected root> ls-files --stage -z. It reads index metadata and does not execute staged payloads, Git hooks or checkout filters."
+      },
+      {
+        "id": "B607",
+        "path": "tools/staging_home_audit.py",
+        "disposition": "Normal Git lookup in the local operator environment is existing CLI trust, not an untrusted remote selection. Kept visible as a source-context observation; no blanket policy ignore or imported source rewrite."
+      }
+    ]
   },
   "rust_profile_disposition": {
     "default_root_package": "not-selected",
@@ -509,15 +542,17 @@
     "identity": "Pinned owner generation and equipped root verification pass with Rust1.97.1."
   },
   "holistic": {
-    "required": "Manual MegaLinter workflow on frozen review branch; inspect exact source head and every linter/permission outcome.",
-    "state_at_document_creation": "not-yet-dispatched",
-    "evidence_location": "Actual run/attempt and artifacts must be bound in the PR after the final documentation commit; source docs do not invent a self-containing head/run."
+    "required": "Canonical holistic execution bound to the actual final review/integration head; inspect linter outcomes and feature-branch publication guards.",
+    "initial_execution": "Run43531062730/1 at7990 completed failure;101 linters70success8warning23error, artifact14088365106 exact archive hash retained. Snapshot publication was skipped.",
+    "current_boundary": "Final local corrections are independently scoped. A final slice/integration run must bind the later review head; initial7990 execution is never relabeled as that later head.",
+    "evidence_location": "PR actual run/head/artifact receipts and final aggregate qualification coordinated by root."
   },
   "acceptance": "partial; aggregate remains failed and no full holistic/runtime/platform readiness claim",
   "remaining": [
-    "Held canonical EgoLint policy/runtime reconciliation remains under110; no direct bootstrap repair or owner-pin migration.",
-    "Optional specialist formatting/clippy and canonical lock/source graduation remain under79 and their owners.",
-    "Exact final-head holistic and any introduced findings must be reviewed before handoff; no report snapshot or Pages deployment is authorized from this feature-branch check."
+    "Held canonical EgoLint policy/runtime reconciliation stays under110; independent31-test suite still has one catalog/runtime failure and aggregate remains failed.",
+    "Full native report retains imported/scaffold/dependency/link debt and reviewed warning-only observations; no global conformance claim or suppressed linter.",
+    "Optional specialist formatting/Clippy/canonical lock and source graduation stay79/owner work; no specialist source copied or edited.",
+    "Final exact integration-head holistic and actual provider outcomes remain root-coordinated, separate from source snapshots."
   ],
   "supplemental": {
     "secretlint": {
@@ -552,6 +587,668 @@
         },
         "detailed_stats": false
       }
+    },
+    "final_typed_secretlint": {
+      "source_files": 16,
+      "version": "13.0.5",
+      "exit_code": 0,
+      "messages": 0,
+      "errors": 0,
+      "started_at": "2026-11-14T00:23:58.854920+00:00",
+      "finished_at": "2026-11-14T00:23:59.240991+00:00"
+    },
+    "final_typed_lychee": {
+      "version": "0.24.2",
+      "scope": "docs/BASELINE_VALIDATION.md",
+      "total": 11,
+      "unique": 9,
+      "successful": 11,
+      "errors": 0,
+      "excludes": 0
     }
+  },
+  "holistic_initial": {
+    "repository": "egohygiene/empathy",
+    "workflow": "MegaLinter",
+    "run_id": 43531062730,
+    "run_attempt": 1,
+    "head": "7990c8f36ff739675d33c07a2d0ac4c4f3ee958f",
+    "profile": ".mega-linter.yml",
+    "event": "workflow_dispatch",
+    "conclusion": "failure",
+    "artifact_id": 14088365106,
+    "archive_sha256": "50ed1e1b5e87f8b918ede27fc1267b49074f0dadc154c1350f0227c0d02ff47c",
+    "archive_bytes": 7435367,
+    "raw_report_bytes": 42238806,
+    "linters": 101,
+    "status_counts": {
+      "success": 70,
+      "warning": 8,
+      "error": 23
+    },
+    "publish_snapshot_job": "skipped",
+    "sarif_upload_step": "skipped",
+    "report_upload_step": "success",
+    "summaries": [
+      {
+        "name": "ACTION_ACTIONLINT",
+        "version": "1.7.12",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "ANSIBLE_ANSIBLE_LINT",
+        "version": "26.10.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "API_SPECTRAL",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "ARM_ARM_TTK",
+        "version": "0.0.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BASH_EXEC",
+        "version": "5.3.9",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BASH_SHELLCHECK",
+        "version": "0.11.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BASH_SHFMT",
+        "version": "3.14.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BICEP_BICEP_LINTER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "C_CLANG_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "C_CPPCHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "C_CPPLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CLOJURE_CLJSTYLE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CLOJURE_CLJ_KONDO",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CLOUDFORMATION_CFN_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "COPYPASTE_JSCPD",
+        "version": "5.4.2",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CPP_CLANG_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CPP_CPPCHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CPP_CPPLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSHARP_CSHARPIER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSHARP_DOTNET_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSHARP_ROSLYNATOR",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSS_STYLELINT",
+        "version": "17.16.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "DART_DARTANALYZER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "DOCKERFILE_HADOLINT",
+        "version": "2.15.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "EDITORCONFIG_EDITORCONFIG_CHECKER",
+        "version": "4.0.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "ENV_DOTENV_LINTER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "GHERKIN_GHERKIN_LINT",
+        "version": "0.0.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "GO_REVIVE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "GROOVY_NPM_GROOVY_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "HTML_HTMLHINT",
+        "version": "1.9.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JAVA_CHECKSTYLE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "JAVA_PMD",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "JAVASCRIPT_ES",
+        "version": "10.13.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JAVASCRIPT_PRETTIER",
+        "version": "3.9.10",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "JSON_JSONLINT",
+        "version": "17.0.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JSON_NPM_PACKAGE_JSON_LINT",
+        "version": "11.0.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JSON_PRETTIER",
+        "version": "3.9.10",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JSON_V8R",
+        "version": "6.1.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "KOTLIN_DETEKT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "KOTLIN_KTLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "LATEX_CHKTEX",
+        "version": "1.7.8",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "LUA_LUACHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "LUA_STYLUA",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "MARKDOWN_MARKDOWNLINT",
+        "version": "0.49.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "MARKDOWN_MARKDOWN_TABLE_FORMATTER",
+        "version": "1.7.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PERL_PERLCRITIC",
+        "version": "1.156",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPCS",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPCSFIXER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPSTAN",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PSALM",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "POWERSHELL_POWERSHELL",
+        "version": "7.6.8",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "POWERSHELL_POWERSHELL_FORMATTER",
+        "version": "7.6.8",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PROTOBUF_PROTOLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PYTHON_BANDIT",
+        "version": "1.9.4",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "PYTHON_MYPY",
+        "version": "1.19.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "PYTHON_PYLINT",
+        "version": "4.1.3",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PYTHON_PYRIGHT",
+        "version": "1.1.414",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PYTHON_RUFF",
+        "version": "0.17.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "PYTHON_RUFF_FORMAT",
+        "version": "0.17.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "R_LINTR",
+        "version": "0.0.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RAKU_RAKU",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_BETTERLEAKS",
+        "version": "1.7.3",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "REPOSITORY_CHECKOV",
+        "version": "3.3.30",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_DUSTILOCK",
+        "version": "1.2.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_GRYPE",
+        "version": "0.121.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_LS_LINT",
+        "version": "2.3.2",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_SECRETLINT",
+        "version": "13.0.7",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "REPOSITORY_SYFT",
+        "version": "1.55.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_TRIVY",
+        "version": "0.76.1",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_TRIVY_SBOM",
+        "version": "0.76.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_TRUFFLEHOG",
+        "version": "3.99.7",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "ROBOTFRAMEWORK_ROBOCOP",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RST_RSTCHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RST_RSTFMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RST_RST_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RUBY_RUBOCOP",
+        "version": "1.92.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RUST_CLIPPY",
+        "version": "0.1.99",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "SCALA_SCALAFIX",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SNAKEMAKE_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SNAKEMAKE_SNAKEFMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SPELL_CSPELL",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SPELL_LYCHEE",
+        "version": "0.24.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "SPELL_PROSELINT",
+        "version": "0.16.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SPELL_VALE",
+        "version": "3.24.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SQL_SQLFLUFF",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SWIFT_SWIFTLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TEKTON_TEKTON_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TERRAFORM_FMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TERRAGRUNT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TFLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TOFU_FMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TOFU_VALIDATE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TSX_ESLINT",
+        "version": "10.13.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "TYPESCRIPT_ES",
+        "version": "10.13.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "TYPESCRIPT_PRETTIER",
+        "version": "3.9.10",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "VBDOTNET_DOTNET_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "XML_XMLLINT",
+        "version": "21309",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "YAML_PRETTIER",
+        "version": "3.9.10",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "YAML_V8R",
+        "version": "6.1.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "YAML_YAMLLINT",
+        "version": "1.38.0",
+        "status": "error",
+        "command_exit_code": 1
+      }
+    ],
+    "warning_review": {
+      "COPYPASTE_JSCPD": "Repeated negative fixtures, module-load and controlled Git boundary patterns; intentional test clarity, no behavior or policy waiver.",
+      "MARKDOWN_MARKDOWN_TABLE_FORMATTER": "Historical repository tables; no new target table finding in this guide/handoff.",
+      "PYTHON_PYLINT": "Existing PyYAML availability, unittest addCleanup resource lifetime and local variable-count warnings; runtime/scoped typing proven separately.",
+      "REPOSITORY_CHECKOV": "Existing repository/cloud configuration observations; no workflow/IaC source changed here.",
+      "REPOSITORY_GRYPE": "Existing dependency vulnerability observations; no source dependency selection changed.",
+      "REPOSITORY_TRIVY": "Existing dependency/IaC observations; no source dependency or deployment policy changed.",
+      "SPELL_PROSELINT": "Mandatory Resume protocol heading uses the verb, not the CV noun; the accent suggestion does not apply.",
+      "SPELL_VALE": "Broader repository prose observations; no owned target finding identified in the inspected output."
+    },
+    "followup": "Native Mypy identified14 baseline-owned class attributes, and local exact-stub whole-root check exposed2 version-sensitive comments. Both were corrected at f502804e; all36 root Python files pass Mypy1.19.1 and2.3.0. Final review-head holistic execution remains separate.",
+    "privacy": "Raw report contains runtime/cache metadata and stays outside source. Only allowlisted identity/status/version fields and bounded dispositions are retained.",
+    "followup_functional_revision": "f502804e304a6902f07374d24276ae0e5afb8933"
   }
 }

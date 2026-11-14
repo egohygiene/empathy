@@ -3,7 +3,7 @@
 ## Current bounded completion — 2026-11-13 UTC
 
 The [current source-bound evidence](evidence/2026-11-13-baseline-validation-completion.json)
-records functional source `c6c906e90eba02ce1238312c8e56706ef1f0f020`.
+records functional source `f502804e304a6902f07374d24276ae0e5afb8933`.
 All **228 equipped root tests pass with zero skips**. The independent embedded
 EgoLint command still runs 31 tests with one held catalog/runtime failure under
 [#110](https://github.com/egohygiene/empathy/issues/110); the aggregate remains
@@ -12,12 +12,36 @@ their original revisions and execution clocks.
 
 Canonical Ruff now reports **zero diagnostics across root tools/tests**, resolving
 the 44 staged-helper findings. Strict Mypy resolves the 32 reproduced staging
-errors; the touched code uses typed row interfaces and separates immutable change
-classification from checkout/receipt validation. No receipt rule or staged source
+errors. A full current-stub check then identified 14 additional fixture attributes
+and two version-sensitive YAML stub annotations. All **36 root tools/tests files**
+now pass Mypy 1.19.1 and 2.3.0; one typed bound constructor preserves the YAML
+behavior across both selections. The code uses typed row interfaces and separates
+immutable change classification from checkout/receipt validation. No receipt rule or staged source
 is weakened. Stdlib unittest and the strings-only YAML loader retain narrow,
 explained annotations; no test framework or shared policy configuration changes.
 Bandit has no findings; its two unused-B603 warnings on other plugin passes over
 the fixed Git fixture call were reviewed separately.
+
+### Hosted holistic boundary
+
+Actual manual [run 43531062730/1](https://github.com/egohygiene/empathy/actions/runs/43531062730)
+at source `7990c8f36ff739675d33c07a2d0ac4c4f3ee958f` completed with 101 linter
+outcomes: 70 success, eight warning and 23 error. Artifact `14088365106` retains
+the exact report; its raw ZIP hash and allowlisted per-linter identities/statuses
+are in the source-bound evidence. The curated snapshot publication job was
+**skipped** on the feature branch. This is actual failed qualification, not a
+passing-profile claim. The report's 14 root fixture typing errors triggered the
+bounded correction above; a later final-head run must be bound separately.
+
+All eight warning-only linters were reviewed. Repeated negative fixtures remain
+intentional; unittest `addCleanup` supplies the resource lifetime; the required
+Resume heading uses the operational verb, not the accented CV noun. Existing
+cloud/dependency/prose/table findings keep their actual scope. The unchanged
+classifier's three low Bandit observations concern a fixed local Git index query,
+normal operator executable lookup and the supporting stdlib import; their
+explicit dispositions stay visible without a blanket ignore or source cleanup.
+Raw native reports contain runtime/cache metadata and are retained outside source;
+only allowlisted status/version/identity fields enter this guide's evidence.
 
 ### Explicit optional Rust composition
 
