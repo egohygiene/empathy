@@ -17,31 +17,53 @@
     "generated_outputs"
   ],
   "properties": {
-    "schema_version": { "const": "1.1.0" },
-    "id": { "const": "empathy/repository-foundation" },
-    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
-    "owner": { "const": "egohygiene/empathy" },
-    "holon_contract": { "type": "object" },
-    "categories": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "schema_version": {
+      "const": "1.2.0"
+    },
+    "id": {
+      "const": "empathy/repository-foundation"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "const": "3.0.0"
+    },
+    "owner": {
+      "const": "egohygiene/empathy"
+    },
+    "holon_contract": {
+      "type": "object"
+    },
+    "categories": {
+      "$ref": "#/$defs/nonEmptyUniqueStrings"
+    },
     "profiles": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#/$defs/profile" }
+      "items": {
+        "$ref": "#/$defs/profile"
+      }
     },
     "artifacts": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#/$defs/artifact" }
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
     },
     "repository_owned_fields": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#/$defs/repositoryOwnedField" }
+      "items": {
+        "$ref": "#/$defs/repositoryOwnedField"
+      }
     },
     "generated_outputs": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#/$defs/generatedOutput" }
+      "items": {
+        "$ref": "#/$defs/generatedOutput"
+      }
     }
   },
   "$defs": {
@@ -113,21 +135,44 @@
     "uniqueStrings": {
       "type": "array",
       "uniqueItems": true,
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "nonEmptyUniqueStrings": {
-      "allOf": [{ "$ref": "#/$defs/uniqueStrings" }, { "minItems": 1 }]
+      "allOf": [
+        {
+          "$ref": "#/$defs/uniqueStrings"
+        },
+        {
+          "minItems": 1
+        }
+      ]
     },
     "profile": {
       "type": "object",
       "additionalProperties": false,
       "required": ["id", "dimension", "description", "requires", "conflicts"],
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]+$" },
-        "dimension": { "type": "string", "minLength": 1 },
-        "description": { "type": "string", "minLength": 1 },
-        "requires": { "$ref": "#/$defs/uniqueStrings" },
-        "conflicts": { "$ref": "#/$defs/uniqueStrings" }
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "dimension": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requires": {
+          "$ref": "#/$defs/uniqueStrings"
+        },
+        "conflicts": {
+          "$ref": "#/$defs/uniqueStrings"
+        }
       }
     },
     "artifact": {
@@ -146,31 +191,110 @@
         "description"
       ],
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]+$" },
-        "path": { "$ref": "#/$defs/repositoryPath" },
-        "kind": { "enum": ["file", "directory"] },
-        "category": { "type": "string", "minLength": 1 },
-        "presence": { "enum": ["required", "optional", "profile"] },
-        "ownership": { "enum": ["generated", "required", "repository-owned"] },
-        "profiles": { "$ref": "#/$defs/uniqueStrings" },
-        "executable": { "type": "boolean" },
-        "markers": { "$ref": "#/$defs/uniqueStrings" },
-        "description": { "type": "string", "minLength": 1 },
-        "composition": { "$ref": "#/$defs/ignoreComposition" }
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "kind": {
+          "enum": ["file", "directory"]
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "presence": {
+          "enum": ["required", "optional", "profile"]
+        },
+        "ownership": {
+          "enum": ["generated", "required", "repository-owned"]
+        },
+        "profiles": {
+          "$ref": "#/$defs/uniqueStrings"
+        },
+        "executable": {
+          "type": "boolean"
+        },
+        "markers": {
+          "$ref": "#/$defs/uniqueStrings"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "composition": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ignoreComposition"
+            },
+            {
+              "$ref": "#/$defs/mailmapComposition"
+            }
+          ]
+        }
       },
       "allOf": [
         {
-          "if": { "properties": { "id": { "const": "gitignore" } } },
+          "if": {
+            "properties": {
+              "id": {
+                "const": "gitignore"
+              }
+            }
+          },
           "then": {
             "required": ["composition"],
             "properties": {
-              "path": { "const": ".gitignore" },
-              "kind": { "const": "file" },
-              "presence": { "const": "required" },
-              "ownership": { "const": "repository-owned" }
+              "path": {
+                "const": ".gitignore"
+              },
+              "kind": {
+                "const": "file"
+              },
+              "presence": {
+                "const": "required"
+              },
+              "ownership": {
+                "const": "repository-owned"
+              }
             }
           },
-          "else": { "not": { "required": ["composition"] } }
+          "else": {
+            "if": {
+              "properties": {
+                "id": {
+                  "const": "mailmap"
+                }
+              }
+            },
+            "then": {
+              "required": ["composition"],
+              "properties": {
+                "path": {
+                  "const": ".mailmap"
+                },
+                "kind": {
+                  "const": "file"
+                },
+                "presence": {
+                  "const": "required"
+                },
+                "ownership": {
+                  "const": "repository-owned"
+                },
+                "composition": {
+                  "$ref": "#/$defs/mailmapComposition"
+                }
+              }
+            },
+            "else": {
+              "not": {
+                "required": ["composition"]
+              }
+            }
+          }
         }
       ]
     },
@@ -179,9 +303,16 @@
       "additionalProperties": false,
       "required": ["id", "type", "required"],
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]+$" },
-        "type": { "enum": ["string", "string-array"] },
-        "required": { "type": "boolean" }
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]+$"
+        },
+        "type": {
+          "enum": ["string", "string-array"]
+        },
+        "required": {
+          "type": "boolean"
+        }
       }
     },
     "generatedOutput": {
@@ -189,10 +320,44 @@
       "additionalProperties": false,
       "required": ["path", "owner", "source", "checked_in"],
       "properties": {
-        "path": { "$ref": "#/$defs/repositoryPath" },
-        "owner": { "type": "string", "pattern": "^egohygiene/[a-z0-9.-]+$" },
-        "source": { "type": "string", "minLength": 1 },
-        "checked_in": { "type": "boolean" }
+        "path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^egohygiene/[a-z0-9.-]+$"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checked_in": {
+          "type": "boolean"
+        }
+      }
+    },
+    "mailmapComposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["format", "header"],
+      "properties": {
+        "format": {
+          "const": "empathy.mailmap/v1"
+        },
+        "header": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "sha256"],
+          "properties": {
+            "path": {
+              "const": "foundation/mailmap/universal.mailmap"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        }
       }
     }
   }

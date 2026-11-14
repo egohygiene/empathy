@@ -17,12 +17,13 @@ from typing import TYPE_CHECKING, Any, TypeGuard
 
 if TYPE_CHECKING:
     # Resolve the source namespace statically while preserving standalone CLI imports.
-    from tools import foundation_ignore
+    from tools import foundation_ignore, foundation_mailmap
 else:
     import foundation_ignore
+    import foundation_mailmap
 
-SCHEMA_VERSION = "1.1.0"
-CATALOG_VERSION = "2.1.0"
+SCHEMA_VERSION = "1.2.0"
+CATALOG_VERSION = "3.0.0"
 FOUNDATION_REFERENCE = f"empathy/repository-foundation@{CATALOG_VERSION}"
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 IDENTIFIER_PATTERN = re.compile(r"[a-z][a-z0-9-]+")
@@ -264,8 +265,17 @@ def validate_catalog(catalog: dict[str, Any]) -> list[str]:
             errors.extend(
                 foundation_ignore.validate_definition(artifact.get("composition"), profile_names)
             )
+        elif identifier == "mailmap":
+            if (path, artifact.get("kind"), presence, ownership) != (
+                ".mailmap",
+                "file",
+                "required",
+                "repository-owned",
+            ):
+                errors.append("mailmap must remain a required repository-owned .mailmap file")
+            errors.extend(foundation_mailmap.validate_definition(artifact.get("composition")))
         elif "composition" in artifact:
-            errors.append("composition is supported only for the gitignore artifact")
+            errors.append("composition is supported only for gitignore and mailmap artifacts")
     if len(ids) != len(set(ids)):
         errors.append("artifact ids must be unique")
     if len(paths) != len(set(paths)):
@@ -367,7 +377,7 @@ def resolve_manifest(
                 "overrides",
                 "repository_owned",
             },
-            optional=frozenset({"gitignore"}),
+            optional=frozenset({"gitignore", "mailmap"}),
         )
     )
     if manifest.get("schema_version") != SCHEMA_VERSION:
@@ -405,6 +415,10 @@ def resolve_manifest(
                     resolved_profiles,
                 )
             )
+    if "mailmap" in manifest:
+        if "mailmap" not in selected_artifacts:
+            errors.append("manifest mailmap requires the selected mailmap artifact")
+        errors.extend(foundation_mailmap.validate_selection(manifest["mailmap"]))
     overrides = manifest.get("overrides")
     if not isinstance(overrides, list):
         errors.append("overrides must be an array")
@@ -481,6 +495,8 @@ def resolve_manifest(
         resolved["gitignore"] = {
             "scopes": sorted(ignore_selection["scopes"], key=lambda scope: scope["root"])
         }
+    if "mailmap" in manifest:
+        resolved["mailmap"] = manifest["mailmap"]
     return resolved, []
 
 
@@ -523,7 +539,7 @@ def render_inventory(catalog: dict[str, Any]) -> str:
             f"{artifact['ownership']} | {profiles} | {description} |"
         )
     for artifact in catalog["artifacts"]:
-        if "composition" not in artifact:
+        if artifact["id"] != "gitignore":
             continue
         definition = artifact["composition"]
         lines.extend(
@@ -657,7 +673,7 @@ def build_parser() -> argparse.ArgumentParser:
         subparser.add_argument("--manifest", type=Path, required=True)
         subparser.add_argument("--source-revision", required=True)
         subparser.add_argument("--output", type=Path, required=True)
-    for command in ("plan-gitignore", "check-gitignore-plan"):
+    for command in ("plan-gitignore", "check-gitignore-plan", "plan-mailmap", "check-mailmap-plan"):
         subparser = subparsers.add_parser(command)
         subparser.add_argument("--manifest", type=Path, required=True)
         subparser.add_argument("--source-root", type=Path, default=Path())
@@ -704,6 +720,27 @@ def main(argv: list[str] | None = None) -> int:
         for error in errors or ["foundation manifest resolution produced no result"]:
             print(f"foundation manifest validation failed: {error}", file=sys.stderr)
         return 1
+    if arguments.command in {"plan-mailmap", "check-mailmap-plan"}:
+        if arguments.output.suffix != ".json":
+            print(
+                "mailmap plan output must be JSON, never a consumer mailmap file", file=sys.stderr
+            )
+            return 2
+        plan, errors = foundation_mailmap.compose(catalog, resolved, arguments.source_root)
+        if errors or plan is None:
+            for error in errors or ["mailmap composition produced no plan"]:
+                print(f"mailmap planning failed: {error}", file=sys.stderr)
+            return 1
+        rendered = render_resolved(plan)
+        if arguments.command == "plan-mailmap":
+            _write(arguments.output, rendered)
+            print(f"wrote mailmap plan: {arguments.output}")
+            return 0
+        if not _check(arguments.output, rendered):
+            print(f"generated mailmap plan is stale: {arguments.output}", file=sys.stderr)
+            return 1
+        print(f"generated mailmap plan current: {arguments.output}")
+        return 0
     if arguments.command in {"plan-gitignore", "check-gitignore-plan"}:
         if arguments.output.suffix != ".json":
             print(

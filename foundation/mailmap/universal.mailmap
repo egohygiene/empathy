@@ -1,0 +1,3 @@
+# Mailmap presentation changes do not rewrite commits or commit IDs.
+# Identity values belong to the consumer; Git's matching rules are authoritative.
+# See https://git-scm.com/docs/gitmailmap and docs/foundation/mailmap/README.md.
