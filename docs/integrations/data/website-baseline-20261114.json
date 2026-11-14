@@ -51,7 +51,10 @@
   },
   "selection": {
     "universal_default": null,
-    "profiles": ["generic", "launchkit"],
+    "profiles": [
+      "generic",
+      "launchkit"
+    ],
     "site_scope": "site-artifact-only",
     "whole_foundation": "unqualified",
     "aether_distribution_selected": false,
@@ -62,14 +65,30 @@
     "compiler_sha256": "eea5397c9bc4140210edc9a56c68679c89ddc496cf37aa207078719a3e93eac3",
     "v1_generate": "PASS: 26 real projections",
     "v1_verify": "PASS",
-    "assets": {
-      "favicon.svg": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6",
-      "social.png": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623",
-      "tokens.css": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b",
-      "tailwind.theme.json": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140",
-      "website.css": "ee9fc8abfef1d0e63a68228990a74f76ee9747e9283126c5123f24241a5ef979"
-    },
-    "semantic_aliases": "Exact generated CSS token bytes plus the declared consumer mapping; no CSS import or invented palette."
+    "assets": [
+      {
+        "path": "favicon.svg",
+        "sha256": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6"
+      },
+      {
+        "path": "social.png",
+        "sha256": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623"
+      },
+      {
+        "path": "tokens.css",
+        "sha256": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b"
+      },
+      {
+        "path": "tailwind.theme.json",
+        "sha256": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140"
+      },
+      {
+        "path": "website.css",
+        "sha256": "ee9fc8abfef1d0e63a68228990a74f76ee9747e9283126c5123f24241a5ef979"
+      }
+    ],
+    "semantic_aliases": "Exact generated CSS token bytes plus the declared consumer mapping; no CSS import or invented palette.",
+    "asset_digest_serialization": "Path/SHA-256 pairs preserve the original public file hashes; stylesheet token names are file identities, not credentials."
   },
   "tools": {
     "python": "Python 3.12.14",
@@ -104,9 +123,16 @@
         "height": 1000
       }
     ],
-    "color_schemes": ["light", "dark"],
+    "color_schemes": [
+      "light",
+      "dark"
+    ],
     "reduced_motion": "reduce",
-    "wcag_tags": ["wcag2a", "wcag2aa", "wcag21aa"],
+    "wcag_tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21aa"
+    ],
     "total_cases": 72
   },
   "variants": {
@@ -184,5 +210,12 @@
     "Optional native search and remote repository statistics are omitted by the supported Holon minimal profile; repository Intelligence Search remains independent.",
     "Whole-foundation adoption, Aether agent release, Realm host/runtime qualification, ADR ratification and Identity approval remain separate.",
     "Existing imported source, migration, staging, universal catalog, publication workflows and original Repository Intelligence proof are outside this new-file-only slice."
+  ],
+  "review_followups": [
+    {
+      "source_revision": "ed632856b7e11438753363189d4f953981022fdb",
+      "change": "Explicit TLS1.2 minimum in an isolated browser-fixture context; public asset hashes serialized as path/digest pairs.",
+      "validation": "Six website source/asset admission tests, canonical Ruff lint/format, Python compilation and actual SSLContext minimum-version inspection pass. The original complete browser matrix retains its original source hashes and execution clocks; it is not retimed or represented as rerun by this follow-up."
+    }
   ]
 }
