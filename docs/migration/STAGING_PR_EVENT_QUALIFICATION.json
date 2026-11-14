@@ -1,0 +1,159 @@
+{
+  "schema": "egohygiene.empathy.staging-pr-event-qualification/v1alpha1",
+  "observed_at": "2026-11-13T23:42:41Z",
+  "pull_request": {
+    "number": 141,
+    "event": "pull_request",
+    "base": "2202636a1957ee7598359465b4ae562e1c67358a",
+    "head": "4eaedc284ed7d7025c23ec7a93a2e08731f9435e",
+    "url": "https://github.com/egohygiene/empathy/pull/141"
+  },
+  "provider_run": {
+    "id": 43528478023,
+    "run_attempt": 1,
+    "path": ".github/workflows/automation.yml",
+    "event": "pull_request",
+    "head_sha": "4eaedc284ed7d7025c23ec7a93a2e08731f9435e",
+    "conclusion": "failure",
+    "html_url": "https://github.com/egohygiene/empathy/actions/runs/43528478023"
+  },
+  "staging_job": {
+    "id": 132239988245,
+    "conclusion": "success",
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success"
+      },
+      {
+        "name": "Pre Harden Runner",
+        "conclusion": "success"
+      },
+      {
+        "name": "Harden Runner",
+        "conclusion": "success"
+      },
+      {
+        "name": "Read the exact reviewed head and its source history",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check actual base/head staging changes and committed ledger freshness",
+        "conclusion": "success"
+      },
+      {
+        "name": "Retain immutable staging diff evidence",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Read the exact reviewed head and its source history",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Harden Runner",
+        "conclusion": "success"
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "independent_baseline_job": {
+    "id": 132239988758,
+    "conclusion": "failure"
+  },
+  "retained_artifacts": [
+    {
+      "id": 14085398870,
+      "kind": "exact-staging-report",
+      "archive_sha256": "02e722cd484f78dce6f2ed08a0a66831caf6305527475f5865b41b04d11f268a",
+      "size_bytes": 1340,
+      "members": ["staging-diff-evidence.json"],
+      "expires_at": "2026-12-13T23:38:06Z",
+      "report_sha256": "c1494a5383a9191642e51b0d5fc392bd8f9ecf48e0aaa07995893596b469486b"
+    },
+    {
+      "id": 14086436736,
+      "kind": "independent-baseline-results",
+      "archive_sha256": "1b6794463bddc6520f76d881d3a8cc73b86030274df3390c502627e770f2c656",
+      "size_bytes": 10396,
+      "members": [
+        "egolint.log",
+        "repository.log",
+        "results.json",
+        "summary.md"
+      ],
+      "expires_at": "2026-11-27T23:38:16Z"
+    }
+  ],
+  "gate_report": {
+    "schema": "egohygiene.empathy.staging-diff-evidence/v1",
+    "base": "2202636a1957ee7598359465b4ae562e1c67358a",
+    "head": "4eaedc284ed7d7025c23ec7a93a2e08731f9435e",
+    "binding": "valid",
+    "human_authority": "not-authenticated",
+    "changes": []
+  },
+  "retained_legacy_claims": 3,
+  "canonical_new_receipts": 0,
+  "baseline_results": {
+    "schema": "empathy.baseline-unittest-commands/v1",
+    "acceptance": "unqualified",
+    "suites": [
+      {
+        "suite": "repository",
+        "exit_code": 0,
+        "unavailable": null
+      },
+      {
+        "suite": "egolint",
+        "exit_code": 1,
+        "unavailable": null
+      }
+    ]
+  },
+  "local_tests": {
+    "command": "python3 -m unittest discover -s tests -p 'test_staging*.py' -v",
+    "tests": 27,
+    "skips": 0,
+    "result": "passed"
+  },
+  "declared_filter_fixture": {
+    "events": ["pull_request", "push"],
+    "patterns": [
+      ".staging/**",
+      "migration/**",
+      "tools/staging_*.py",
+      "schemas/staging-*.schema.json",
+      "docs/migration/**"
+    ],
+    "job_needs": null,
+    "workflow_permissions": {
+      "contents": "read"
+    }
+  },
+  "source_preservation": {
+    "production_staged_changes": 0,
+    "canonical_and_legacy_receipts": "unchanged",
+    "helpers_and_schemas": "unchanged",
+    "original_qualification_record": "unchanged"
+  },
+  "review_head_transition": {
+    "initial_head": "4eaedc284ed7d7025c23ec7a93a2e08731f9435e",
+    "corrected_header_head": "abca4e09f2e1add01f304b62ebe11f553995d5e1",
+    "tree_unchanged": true,
+    "reason": "Initial commit-header failure was corrected on this owned branch with an explicit remote-head lease. The original event and retained artifact remain historical evidence."
+  },
+  "final_review": {
+    "state": "pending-at-authorship",
+    "requirement": "After this evidence commit freezes, inspect its new actual PR-event staging artifact, corrected commit policy and exact-head manual canonical holistic run. Mutable final bindings are reported separately on the PR/root handoff."
+  },
+  "adr_disposition": "Reference egohygiene/empathy#ADR-0001: retain the existing exact-source output without changing ownership or human authority.",
+  "limits": [
+    "Overall automation is failed/unqualified because the independent EgoLint baseline command fails. Staging success is not full repository conformance.",
+    "Declared filter lists pass source fixtures; this real provider canary touches workflow and migration documentation. Three separate path-class PR canaries were not executed.",
+    "Run.head_sha is immutable event identity. Its pull_requests association may reflect a newer current PR head and is not substituted for the report/run source binding.",
+    "No production staged source, helper, schema, canonical/legacy receipt or original qualification record changed. Disposable negative fixtures do not authenticate human approval or destination validation."
+  ]
+}

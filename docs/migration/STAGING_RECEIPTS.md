@@ -149,13 +149,17 @@ SHA are synthetic and never become production receipts. Tests do not edit,
 delete, install or execute production staged files. Source scheduling checks
 cover both filter lists; actual hosted scheduling remains separate evidence.
 
+The [PR-event qualification checkpoint](STAGING_PR_EVENT_QUALIFICATION.md)
+records the new retained job report and distinguishes actual event evidence
+from source-filter fixtures and the historical manual canary.
+
 At the original functional checkpoint, only source/AST/JSON/schema/YAML metadata
 review was performed. The later source-integration exception below records inert
 inventory generation separately. Fixture execution, gate execution, canonical Ruff,
 Mypy, Bandit, Secretlint, Lychee, holistic build/profile and hosted trigger/event
 qualification remain unrun. No green gate, migration completion, authenticated
-human acceptance or successful destination validation is claimed. Keep #112,
-#118 and #79 open for their actual remaining acceptance.
+human acceptance or successful destination validation is claimed. Keep issues #112, #118 and #79
+open for their actual remaining acceptance.
 
 ADR disposition: reference ADR-0001. This enforces the already documented
 source-preservation and separately reviewed migration boundary without changing

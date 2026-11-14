@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: egohygiene/relay
-          ref: d7c60473626f8dcc901210a208ad01a6474e8c1d
+          ref: f7f9bd44713606d9c099adda715db2542c8b66bf
           path: .cache/relay-contract
           persist-credentials: false
       - name: Install exact contract validation tools
@@ -40,6 +40,7 @@ jobs:
           set -euo pipefail
           files=(
             tools/repository_intelligence_publication.py
+            tools/repository_intelligence_report_artifacts.py
             tools/verify_repository_intelligence_rollback.py
             tests/test_repository_intelligence*.py
             tests/test_mindgarden_publishing_integration.py
@@ -65,7 +66,9 @@ jobs:
             --secretlintignore egolint/.config/security/secretlint/.secretlintignore \
             AGENTS.md docs/integrations/REPOSITORY_INTELLIGENCE.md \
             .github/workflows/mindgarden-pages.yml .github/workflows/repository-intelligence*.yml \
-            tools/repository_intelligence_publication.py tools/verify_repository_intelligence_rollback.py \
+            .github/actions/report-artifacts/action.yml \
+            tools/repository_intelligence_publication.py tools/repository_intelligence_report_artifacts.py \
+            tools/verify_repository_intelligence_rollback.py \
             tests/test_repository_intelligence*.py tests/test_mindgarden_publishing_integration.py
       - name: Exercise consumer and pinned-owner contracts
         env:
@@ -85,7 +88,7 @@ jobs:
           report = {
               "schema": "egohygiene.empathy.repository-intelligence-contract-tests/v1",
               "consumer_revision": os.environ["GITHUB_SHA"],
-              "relay_revision": "d7c60473626f8dcc901210a208ad01a6474e8c1d",
+              "relay_revision": "f7f9bd44713606d9c099adda715db2542c8b66bf",
               "run": {"id": int(os.environ["GITHUB_RUN_ID"]), "attempt": int(os.environ["GITHUB_RUN_ATTEMPT"])},
               "tests": result.testsRun,
               "failures": len(result.failures),

@@ -85,11 +85,17 @@ class ReportPublicationPolicyTests(unittest.TestCase):
 
     def test_scorecard_normalization_runs_outside_the_attested_job(self) -> None:
         workflow = self.workflow("ossf-scorecard.yml")
-        scorecard_job, summary_job = workflow.split("\n  publish-summary:\n", maxsplit=1)
+        scorecard_job, normalization_job = workflow.split("\n  normalize-summary:\n", maxsplit=1)
+        normalization_job, summary_job = normalization_job.split(
+            "\n  publish-summary:\n", maxsplit=1
+        )
         self.assertNotIn("normalize-repository-report", scorecard_job)
-        self.assertIn("normalize-repository-report", summary_job)
+        self.assertIn("normalize-repository-report", normalization_job)
         self.assertIn("publish-report-snapshot", summary_job)
-        self.assertIn(".repo.commit == $commit", summary_job)
+        self.assertIn(".repo.commit == $commit", normalization_job)
+        self.assertIn("contents: read", normalization_job)
+        self.assertNotIn("contents: write", normalization_job)
+        self.assertIn("needs.normalize-summary.result == 'success'", summary_job)
 
     def test_scorecard_cleanup_executes_without_removing_other_producers(self) -> None:
         """Run the real cleanup step against tracked and already-absent summaries."""

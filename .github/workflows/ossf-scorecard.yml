@@ -12,6 +12,12 @@ on:
   schedule:
     - cron: "23 5 * * 1"
   workflow_dispatch:
+    inputs:
+      publish-snapshot:
+        description: "Commit the stable report snapshot; disable for an artifact-only frozen-source proof."
+        required: true
+        default: true
+        type: boolean
 
 permissions:
   contents: read
@@ -71,8 +77,8 @@ jobs:
           retention-days: 90
           if-no-files-found: error
 
-  publish-summary:
-    name: Publish normalized Scorecard summary
+  normalize-summary:
+    name: Normalize and retain Scorecard summary
     needs: scorecard
     if: >-
       always() &&
@@ -83,7 +89,8 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      contents: write
+      contents: read
+      actions: read
 
     steps:
       - name: Harden Runner
@@ -92,19 +99,16 @@ jobs:
         with:
           egress-policy: audit
 
-      - name: Checkout default branch
+      - name: Checkout exact producer source
         # actions/checkout v7.0.1
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
-          ref: "${{ github.event.repository.default_branch }}"
+          ref: "${{ github.sha }}"
+          persist-credentials: false
 
-      - name: Clear the previous Scorecard summary
-        shell: bash
-        run: |
-          set -euo pipefail
-          git rm --force -r --ignore-unmatch -- ".reports/scorecard"
-          mkdir --parents ".cache/scorecard" ".reports/scorecard"
+      - name: Prepare the normalization workspace
+        run: mkdir --parents ".cache/scorecard" ".reports/scorecard"
 
       - name: Download Scorecard SARIF
         continue-on-error: true
@@ -160,13 +164,57 @@ jobs:
           fi
 
       - name: Normalize repository-intelligence summary
-        uses: egohygiene/relay/actions/normalize-repository-report@1eada5142f7fc7da7862f335589e3b8f5884ffaf # v1.5.0
+        id: normalize
+        uses: egohygiene/relay/actions/normalize-repository-report@f7f9bd44713606d9c099adda715db2542c8b66bf # reviewed finalized-report parser
         with:
           producer: scorecard
           input: .cache/scorecard/results.sarif
           output: .reports/scorecard/summary.json
+          detail-url: "${{ github.event_name == 'workflow_dispatch' && !inputs['publish-snapshot'] && format('{0}/{1}/actions/runs/{2}', github.server_url, github.repository, github.run_id) || '' }}"
           scorecard-api-input: "${{ steps.scorecard-api.outputs.path }}"
 
+      - name: Retain source-bound normalized scorecard summary
+        if: ${{ always() && steps.normalize.outcome == 'success' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: "empathy-report-scorecard-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .reports/scorecard/summary.json
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9
+
+  publish-summary:
+    name: Publish normalized Scorecard summary
+    needs: normalize-summary
+    if: >-
+      always() &&
+      needs.normalize-summary.result == 'success' &&
+      github.event_name != 'pull_request' &&
+      (github.event_name != 'workflow_dispatch' || inputs['publish-snapshot']) &&
+      github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Checkout default branch for the separately authorized snapshot
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          ref: "${{ github.event.repository.default_branch }}"
+      - name: Clear the previous Scorecard summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm --force -r --ignore-unmatch -- ".reports/scorecard"
+          mkdir --parents ".reports/scorecard"
+      - name: Download the exact same-run normalized summary
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: "empathy-report-scorecard-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .reports/scorecard
+          digest-mismatch: error
       - name: Publish stable Scorecard summary
         uses: egohygiene/relay/actions/publish-report-snapshot@1eada5142f7fc7da7862f335589e3b8f5884ffaf # v1.5.0
         with:

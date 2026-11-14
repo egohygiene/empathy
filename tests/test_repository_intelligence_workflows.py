@@ -13,6 +13,7 @@ PyYAML 6.0.3 is a validation-only dependency, installed by the contract workflow
 from __future__ import annotations
 
 import ast
+import io
 from itertools import product
 import json
 import os
@@ -24,6 +25,7 @@ import subprocess  # nosec B404
 from tempfile import TemporaryDirectory
 from typing import TYPE_CHECKING, Any, ClassVar, cast
 import unittest
+import zipfile
 
 import yaml
 
@@ -32,7 +34,7 @@ if TYPE_CHECKING:
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = REPOSITORY_ROOT / ".github/workflows"
-RELAY_REVISION = "d7c60473626f8dcc901210a208ad01a6474e8c1d"
+RELAY_REVISION = "f7f9bd44713606d9c099adda715db2542c8b66bf"
 RESULTS = ("success", "failure", "cancelled", "skipped")
 PRODUCERS = ("MegaLinter", "OpenSSF Scorecard", "🔍 OSV Vulnerability Scan")
 
@@ -47,13 +49,16 @@ class UniqueKeyLoader(yaml.SafeLoader):
 
 def unique_mapping(loader: UniqueKeyLoader, node: yaml.MappingNode) -> dict[str, Any]:
     result: dict[str, Any] = {}
+    # PyYAML dynamically dispatches this bound method; stub versions differ.
+    # Give that single foreign call boundary a stable signature instead of
+    # version-sensitive ignores on the mapping logic.
+    construct_object = cast("Callable[..., Any]", loader.construct_object)
     for key_node, value_node in node.value:
-        # PyYAML's dynamically dispatched constructor has no typed stub signature.
-        key = loader.construct_object(key_node, deep=True)  # type: ignore[no-untyped-call]
+        key = construct_object(key_node, deep=True)
         if key in result:
             message = f"duplicate YAML mapping key: {key}"
             raise ValueError(message)
-        result[key] = loader.construct_object(value_node, deep=True)  # type: ignore[no-untyped-call]
+        result[key] = construct_object(value_node, deep=True)
     return result
 
 
@@ -466,6 +471,69 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
             self.assertIn("github.run_attempt", download["with"]["name"])
             self.assertIn("needs.build.outputs.deployment-mode", download["with"]["name"])
 
+    def test_provenance_archive_roundtrip_preserves_receipt_and_live_consumer_layout(self) -> None:
+        """Multiple upload paths must share the root expected by both later jobs."""
+        jobs = self.pages["jobs"]
+        steps = {step["id"]: step for step in jobs["build"]["steps"] if "id" in step}
+        retain = steps["report_selection_receipt"]
+        self.assertEqual(retain["if"], "matrix.mode == 'current'")
+        manifest_bytes = b'{"consumer": "exact retained site fixture"}\n'
+        receipt_bytes = b'{"mode": "selected-artifacts", "reports": []}\n'
+        with TemporaryDirectory() as directory:
+            upload = Path(directory) / "upload-runner"
+            manifest = upload / ".cache/mindgarden/site/intelligence/build-manifest.json"
+            manifest.parent.mkdir(parents=True)
+            manifest.write_bytes(manifest_bytes)
+            receipt = upload / ".cache/repository-intelligence-publication/report-selection.json"
+            receipt.parent.mkdir(parents=True)
+            receipt.write_bytes(receipt_bytes)
+            (upload / ".cache/mindgarden/publication").mkdir(parents=True)
+            # Only the checked-in fixed cp command runs in this owned fixture.
+            subprocess.run(  # noqa: S603 # nosec B603, B607
+                ["bash", "-e", "-c", retain["run"]],  # noqa: S607
+                cwd=upload,
+                check=True,
+                capture_output=True,
+            )
+            paths = [
+                upload / line for line in steps["provenance_artifact"]["with"]["path"].splitlines()
+            ]
+            self.assertTrue(all(path.exists() for path in paths))
+            # The pinned upload-artifact roots multi-path archives at the
+            # least common ancestor of the configured search paths.
+            root = Path(os.path.commonpath(paths))
+            archive = io.BytesIO()
+            with zipfile.ZipFile(archive, "w") as package:
+                for path in paths:
+                    files = [path] if path.is_file() else sorted(path.rglob("*"))
+                    for file in files:
+                        if file.is_file():
+                            package.write(file, file.relative_to(root).as_posix())
+            for job in ("finalize-deployment", "verify-live"):
+                with self.subTest(job=job):
+                    download = next(
+                        step
+                        for step in jobs[job]["steps"]
+                        if step.get("uses", "").startswith("actions/download-artifact@")
+                    )
+                    destination = Path(directory) / job / download["with"]["path"]
+                    with zipfile.ZipFile(archive) as package:
+                        # These are controlled fixture members, never external ZIPs.
+                        for member in package.namelist():
+                            target = destination / member
+                            target.parent.mkdir(parents=True, exist_ok=True)
+                            target.write_bytes(package.read(member))
+                    consumer_root = Path(directory) / job / ".cache/mindgarden"
+                    self.assertEqual(
+                        (consumer_root / "site/intelligence/build-manifest.json").read_bytes(),
+                        manifest_bytes,
+                    )
+                    self.assertEqual(
+                        (consumer_root / "publication/report-selection.json").read_bytes(),
+                        receipt_bytes,
+                    )
+            self.assertEqual(receipt.read_bytes(), receipt_bytes)
+
     def test_build_report_requires_artifact_uploads_and_every_applicable_stage(self) -> None:
         steps = self.pages["jobs"]["build"]["steps"]
         report_step = next(
@@ -505,6 +573,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 ("runtime", "EMRI-004"),
                 ("review_artifact", "EMRI-008"),
                 ("provenance_artifact", "EMRI-008"),
+                ("report_selection_receipt", "EMRI-008"),
                 ("pages_artifact", "EMRI-009"),
                 ("configure_pages", "EMRI-009"),
                 ("rollback_checkout", "EMRI-002"),
@@ -567,6 +636,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 "HARDEN_RESULT",
                 "CHECKOUT_RESULT",
                 "INPUT_RESULT",
+                "REPORT_SELECTION_RESULT",
                 "BUILD_RESULT",
                 "ARTIFACT_RESULT",
                 "CAPTURE_RESULT",
@@ -594,6 +664,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         report = self.run_report(report_step, filename, environment, 0)
         self.assertEqual(report["conclusion"], "success")
         for stage, key, code in (
+            ("report_selection", "REPORT_SELECTION_RESULT", "EMRI-003"),
             ("public_sources", "CAPTURE_RESULT", "EMRI-011"),
             ("source_capture_upload", "CAPTURE_UPLOAD_RESULT", "EMRI-011"),
             ("review_feed", "REVIEW_FEED_RESULT", "EMRI-012"),

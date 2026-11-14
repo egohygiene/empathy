@@ -1,0 +1,500 @@
+{
+  "schema": "egohygiene.empathy.batch-integration-checkpoint/v1",
+  "observed_at": "2026-11-14T02:37:06Z",
+  "parent_issue": "https://github.com/egohygiene/empathy/issues/118",
+  "base_revision": "04ddb82548ce1509428e4095dc8f018197136635",
+  "assembled_source_revision": "8592794977221f7553181675b8b34eeb1bba2610",
+  "containing_checkpoint_revision": null,
+  "candidate_branch": "codex/empathy-batch10-integration",
+  "slice_heads": {
+    "145": "4511edfdda90d1c824cad82b47a3e6d0dcba75e6",
+    "143": "f7c69f5ce581f8451edb93ae09b2d9a3c04e8245",
+    "141": "0be166309c6238462ac00693cabfb6cc40906333",
+    "144": "fc01ff52bc5a94ba553a24d0d9f16bea0aa2568c"
+  },
+  "current_relay_revision": "f7f9bd44713606d9c099adda715db2542c8b66bf",
+  "fixed_rollback": {
+    "consumer_revision": "254185272ab27b6858b8b0393af6549c205c9a8d",
+    "relay_revision": "b71b090406a3a9e4cd9f107e9d14a623bbecb127",
+    "site_digest": "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498",
+    "verifier_bytes_unchanged": true
+  },
+  "source_bound_local_review": {
+    "source_revision": "8592794977221f7553181675b8b34eeb1bba2610",
+    "root_suite": {
+      "tests": 257,
+      "failures": 0,
+      "skips": 0,
+      "exit_code": 0
+    },
+    "embedded_egolint_suite": {
+      "tests": 31,
+      "failures": 1,
+      "exit_code": 1,
+      "held_failure": "test_catalog_is_pinned_to_the_workflow_release",
+      "owner_issue": "https://github.com/egohygiene/empathy/issues/110"
+    },
+    "whole_root_python": {
+      "ruff": "0.16.5",
+      "mypy": ["1.19.1", "2.3.0"],
+      "mypy_source_files": 40
+    },
+    "commands": [
+      {
+        "name": "baseline-independent",
+        "exit_code": 1,
+        "started_at": "2026-11-14T02:34:23.069464+00:00",
+        "finished_at": "2026-11-14T02:34:41.813237+00:00",
+        "stdout_sha256": "ca8a0f5a64c298129e59de7a405c57432ecf19725128ddca332ee13c59199099"
+      },
+      {
+        "name": "ruff-whole-root",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:41.813564+00:00",
+        "finished_at": "2026-11-14T02:34:41.849468+00:00",
+        "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      {
+        "name": "mypy119-whole-root",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:41.849544+00:00",
+        "finished_at": "2026-11-14T02:34:44.399940+00:00",
+        "stdout_sha256": "ecc16c0564b42e826048bd3cc3026ed6f52b5dc94d3419716c4a1f1ab458ac8d"
+      },
+      {
+        "name": "mypy23-whole-root",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:44.400000+00:00",
+        "finished_at": "2026-11-14T02:34:46.886110+00:00",
+        "stdout_sha256": "ecc16c0564b42e826048bd3cc3026ed6f52b5dc94d3419716c4a1f1ab458ac8d"
+      },
+      {
+        "name": "foundation-catalog",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:46.886192+00:00",
+        "finished_at": "2026-11-14T02:34:46.938533+00:00",
+        "stdout_sha256": "de00f9c30696400dabb2e022b0c5df4066a05a2d1c767ed68e63c13f0d9c4670"
+      },
+      {
+        "name": "foundation-manifest",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:46.938595+00:00",
+        "finished_at": "2026-11-14T02:34:46.977250+00:00",
+        "stdout_sha256": "77f385769ac84fc599317daf15bf0cdd3b611b0890058749f9df766357c00402"
+      },
+      {
+        "name": "foundation-workspace",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:46.977313+00:00",
+        "finished_at": "2026-11-14T02:34:47.014229+00:00",
+        "stdout_sha256": "34dc74b2a5e2aa7da7a41c21065244e815198c819c53d248b558e897f8b80897"
+      },
+      {
+        "name": "foundation-ignore-plan",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:47.014280+00:00",
+        "finished_at": "2026-11-14T02:34:47.062035+00:00",
+        "stdout_sha256": "cba46d60fdb59e020040f46183af30e93ca4f2d7236eb0b06a4673d3cdaff083"
+      },
+      {
+        "name": "foundation-contract",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:47.062096+00:00",
+        "finished_at": "2026-11-14T02:34:47.099192+00:00",
+        "stdout_sha256": "ec1781df874c6900219e85967f66d4561f4bca5029361c3dc5a225e59b651d1a"
+      },
+      {
+        "name": "automation-policy",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:47.099249+00:00",
+        "finished_at": "2026-11-14T02:34:47.144309+00:00",
+        "stdout_sha256": "8579fb86041274d1a159f405b84399d8d402e1e8918593ec0360198315952fa5"
+      },
+      {
+        "name": "architecture",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:47.144369+00:00",
+        "finished_at": "2026-11-14T02:34:47.283632+00:00",
+        "stdout_sha256": "3619b94f02382f37f78a076ae9fe2100c2e9f0734d0b8be41ab803458582b805"
+      },
+      {
+        "name": "task-catalog",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:47.283703+00:00",
+        "finished_at": "2026-11-14T02:34:47.750823+00:00",
+        "stdout_sha256": "280c257209ef9443004b3c17dfd059a5412351204dbc9688b04536caada66da6"
+      },
+      {
+        "name": "local-ci-direct",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:47.750891+00:00",
+        "finished_at": "2026-11-14T02:34:48.087365+00:00",
+        "stdout_sha256": "29ee6961419ef193648f6c89ff51d0f49154cd206e4a22bbd5dd8243b7616046"
+      },
+      {
+        "name": "foundation-inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:48.087432+00:00",
+        "finished_at": "2026-11-14T02:34:48.123330+00:00",
+        "stdout_sha256": "b16d29e9e4d11b12908cd7ec9d9d1d4d230e8a217c5f6e0c30ea921c1cce722e"
+      },
+      {
+        "name": "actual-staging-diff",
+        "exit_code": 0,
+        "started_at": "2026-11-14T02:34:48.123387+00:00",
+        "finished_at": "2026-11-14T02:34:53.726337+00:00",
+        "stdout_sha256": "a818d2edce4bdd094463e822f01fbf0bd3ba14737c21c1e68d9bbb54b09f6fb5"
+      }
+    ],
+    "identity_revision": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
+    "generated_identity_files": 27,
+    "generated_inputs_removed_after_checks": true
+  },
+  "metadata_only_correction": {
+    "scope": "Owned unmerged task DAG only; no accepted history rewrite.",
+    "original_heads": {
+      "143": "d65b5204aaa4618442ca399c7e63446c63e92c09",
+      "145": "bf0fcd88f684156eb33afc5aed3cb83c9355f725"
+    },
+    "archive_refs": {
+      "143": "refs/heads/archive/empathy-batch10-109-d65b5204",
+      "145": "refs/heads/archive/empathy-batch10-92-bf0fcd88"
+    },
+    "replacement_heads": {
+      "143": "f7c69f5ce581f8451edb93ae09b2d9a3c04e8245",
+      "145": "4511edfdda90d1c824cad82b47a3e6d0dcba75e6"
+    },
+    "mapping": [
+      {
+        "old": "72bb5d2cf2be7afd6a1974c5a93e178ff7e69af6",
+        "new": "08124944d5c961f762821c5f41abb656cc481194",
+        "tree": "dad39463b154cb327de7fcc5b64b302b24e64191"
+      },
+      {
+        "old": "70037cdce0e4144e2538d164c1766d513361b266",
+        "new": "0f41a0137181dea08381feea584dea67e32565f4",
+        "tree": "3fe15be983c22c0d78fbcf00cfb5dc466c51f337"
+      },
+      {
+        "old": "6f8a5cf4350251f99be8f63735f5c09152f98de7",
+        "new": "b6400c0c951544517f46f02b7b03ec3d263716ea",
+        "tree": "3b42bcb5200d232f9768edef4759690c9d729a3e"
+      },
+      {
+        "old": "7635c3d211f4704d00d2b533147f26010e14d76a",
+        "new": "9f264500202ef851dc53ece023fd9da23198eee3",
+        "tree": "33b5d834ecdfa1e671497a5d2b731c26c9352411"
+      },
+      {
+        "old": "99d9cf3e3a3cf778b2c04f54d07aabc3975a04dc",
+        "new": "9007589729f68d7498f74e4ddc59729bffb40806",
+        "tree": "0164bcde7717eb4e0ece145709a7e7269dc32c5b"
+      },
+      {
+        "old": "d70c37e34104e84a07e2795ab15b6ccdd7d58fac",
+        "new": "ebf44844a262db437ae4e66fc348f724fd2e2d63",
+        "tree": "2f1e8eea062a505b607ee331e169f7fd5a378f77"
+      },
+      {
+        "old": "c6c906e90eba02ce1238312c8e56706ef1f0f020",
+        "new": "c3eb2309c419f3c946b0f53b67f230b5c698bae2",
+        "tree": "a1d59c5907b2d3bd5944b799cda76006df29ce7c"
+      },
+      {
+        "old": "624a953e149b7ac681483fdbe643d830409026ac",
+        "new": "02ac50e552d56947a695fc13942bda99368a11ae",
+        "tree": "23c0fa2d9c20ad9dbf0e96e38ab4ceb465c5a700"
+      },
+      {
+        "old": "08c520451f143ed1d99f1b821357ef22843da87e",
+        "new": "d6c1c480bff093e6638f12abe22ee8841480ddd4",
+        "tree": "8387d95b05690451ae0e4fb206ceb83cef360b2a"
+      },
+      {
+        "old": "7990c8f36ff739675d33c07a2d0ac4c4f3ee958f",
+        "new": "04fc91f6e49d551efc3e2244e4bc9c06303539a1",
+        "tree": "6aeb5bacc3b235ffb6322e0b9bd20a64ac1b1336"
+      },
+      {
+        "old": "0c27e1011834e572fb19507c63d753dc5544e6dd",
+        "new": "79a170c4fda06649a0b25e7ad7076d03c4d140d4",
+        "tree": "6d76ce53c4db8aa44ce2c01985a44cadb28f97fd"
+      },
+      {
+        "old": "a41fcedbeaa7b7457d2ab6ac975cb12283c2563f",
+        "new": "f0df749243ca573acf8244908dc594d8c6c5c039",
+        "tree": "708c03dc408aa5379508e6287f8eca282f6eef6c"
+      },
+      {
+        "old": "1ef910c6d0819da6e0657ea5b5886f4415400238",
+        "new": "4e4064a076a62464bcc82707dfd4da01cd5cbfcb",
+        "tree": "5cfcf64ac45831b77eff9eb2a6dd5e7d7fb78feb"
+      },
+      {
+        "old": "bf0fcd88f684156eb33afc5aed3cb83c9355f725",
+        "new": "4511edfdda90d1c824cad82b47a3e6d0dcba75e6",
+        "tree": "6eb344069f8c9b01ee8a15ed61d98596fbe0b942"
+      },
+      {
+        "old": "f502804e304a6902f07374d24276ae0e5afb8933",
+        "new": "4dc261c3f0d7f92d7fdc4fce321a997b4edc2966",
+        "tree": "c5836124e140ef649c72606be9abfe651705e1bf"
+      },
+      {
+        "old": "d65b5204aaa4618442ca399c7e63446c63e92c09",
+        "new": "f7c69f5ce581f8451edb93ae09b2d9a3c04e8245",
+        "tree": "8b78de4d5429adb0e62114508bc4aa31249eb63f"
+      }
+    ],
+    "all_mapped_trees_identical": true,
+    "all_author_and_committer_identities_and_dates_preserved": true,
+    "all_message_bodies_and_parent_order_preserved": true,
+    "source_content_changes": false,
+    "evidence_boundary": "Original source/test/CI hashes and clocks remain bound to archived originals."
+  },
+  "preserved_boundaries": [
+    "All four current slice heads are reachable through ordinary merges; shared ancestry is preserved.",
+    "The frozen staged tree, approval and receipt objects retain their base bytes; human authority is not authenticated.",
+    "The current Relay adoption changes four workflow bindings and three test constants; separately recorded archive/format corrections preserve privileged job and rollback boundaries.",
+    "The fixed rollback generator, source identity, digest and verifier remain unchanged.",
+    "Read-only report normalization is separate from the default-branch-only snapshot publisher.",
+    "No feature-branch report snapshots or deployment are authorized by this checkpoint."
+  ],
+  "acceptance_at_authorship": {
+    "status": "partial",
+    "exact_containing_head_pr_event_staging": "pending provider execution after checkpoint freeze",
+    "exact_containing_head_canonical_holistic": "pending provider execution after checkpoint freeze",
+    "current_and_fixed_rollback_readonly_previews": "pending provider execution after checkpoint freeze",
+    "postmerge_same_source_artifact_to_live_cycle": "separate root-owned acceptance after ordinary merge",
+    "issue_states": "unchanged; references only",
+    "historical_evidence": "Original source/run hashes and clocks remain original; no old execution is relabelled.",
+    "later_receipts": "Bind actual frozen head and provider results in the integration PR and root handoff, avoiding a new evidence-only head."
+  },
+  "limits": [
+    "A passing fast profile or source merge does not establish canonical holistic or live acceptance.",
+    "The embedded EgoLint failure and unrelated full-profile debt remain visible; no checks are waived.",
+    "Preview inputs may truthfully remain mismatched or unavailable; fresh same-source producer evidence belongs to the postmerge phase.",
+    "Thirteen preserved nested policies, shared-adapter upgrades, container qualification, release/fleet adoption and human approval remain outside this batch.",
+    "No Compare baseline is selected; empty Audits/Sanity plan selections do not imply human review."
+  ],
+  "accepted_main_reconciliation": {
+    "accepted_main": "04ddb82548ce1509428e4095dc8f018197136635",
+    "accepted_paths_byte_identical": [
+      ".actrc",
+      ".github/act/local-validation.yml",
+      "README.md",
+      "config/local-ci.json",
+      "docs/current-state-backlog.md",
+      "docs/foundation/INVENTORY.md",
+      "docs/foundation/README.md",
+      "docs/integrations/LOCAL_CI.md",
+      "foundation/catalog.json",
+      "integrations/realm/local-ci.source.json",
+      "tests/test_local_ci_consumer.py",
+      "tools/foundation.py",
+      "tools/local_ci.py"
+    ],
+    "semantic_reconciliation": [
+      "CONTINUITY.md",
+      "foundation/contracts/empathy.gitignore-plan.json",
+      "foundation/contracts/empathy.repository-contract.toml",
+      "foundation/empathy.manifest.json",
+      "tests/test_foundation_contract.py"
+    ],
+    "root_ignore_equal_to_reviewed145": true,
+    "Rust_default_deselected": true,
+    "local_ci_selected": true,
+    "foundation": "2.1.0",
+    "generated_contract_source": "b80a585653be803c8fab3711b021b2e12de5b3fb"
+  },
+  "superseded_candidate_review": {
+    "head": "382508fe2fbdfb37777a005aa71ddd3af56485c3",
+    "base_revision": "2202636a1957ee7598359465b4ae562e1c67358a",
+    "pull_request": "https://github.com/egohygiene/empathy/pull/146",
+    "original_local_source": "331e82cd4b2e234776a1c7b4d971595baf9ef964",
+    "canonical_holistic": {
+      "run_id": 43539593909,
+      "attempt": 1,
+      "status": "failed",
+      "artifact_id": 14091756435,
+      "zip_sha256": "f5ce2f99c94795395bdeceb28603d89a3104fb195d4dd85457ccf3cd2d215ee8",
+      "report_sha256": "9d7f7b82452016ff3fd6f7e0014aefca45220bf99a724d64ca64271fb6bf1352",
+      "descriptor_counts": {
+        "success": 71,
+        "warning": 8,
+        "error": 22
+      },
+      "snapshot_job_id": 132279603269,
+      "snapshot_job_result": "skipped"
+    },
+    "actual_pr_previews": {
+      "standalone_run": 43539567428,
+      "composed_run": 43539567426,
+      "represented_consumer": "84491ae6e076a2faf3c8e3ad0af515eb82ede2a5",
+      "source_scope": "Hosted synthetic merge; immutable run head remains the frozen candidate above.",
+      "current": "success",
+      "fixed_rollback": "success",
+      "deployment": "skipped",
+      "finalization": "skipped",
+      "live": "skipped"
+    },
+    "actual_captured_previews": {
+      "standalone_run": 43539593798,
+      "composed_run": 43539594133,
+      "result": "failed",
+      "stage": "typed review feed",
+      "closed_diagnostic": "PIN",
+      "denial_artifact": 14090499041,
+      "denial_zip_sha256": "2896baad1260aeb560980d25e514c468364880c63b47ea06506c9b8da63a6d00"
+    },
+    "evidence_boundary": "These original results remain historical and are not relabelled as executions of the successor source."
+  },
+  "introduced_findings_and_corrections": [
+    {
+      "finding": "Strict typed-feed admission compared current Hygiene 627 to the locked Observatory Hygiene 496 profile.",
+      "correction": "Adopt the separately authenticated owner successor above; preserve strict equality and original Observatory contract."
+    },
+    {
+      "finding": "A third provenance upload search path changed the archive root expected by both downstream consumers.",
+      "correction": "Retain the byte-identical admission receipt in the existing publication tree and restore the original two upload paths; actual archive roundtrip regression passes."
+    },
+    {
+      "finding": "Four raw Betterleaks matches treated historical token-asset path to digest entries as credential assignments.",
+      "correction": "Encode every original path/hash pair as explicit path and sha256 records. Exact 1.7.3 same-config control reproduces four original findings and zero corrected findings; no excludes or redaction."
+    },
+    {
+      "finding": "Three producer workflow files contained an introduced surplus blank line.",
+      "correction": "Canonical formatting removes one blank line per file; all parsed semantics, pins and publication guards remain equal."
+    },
+    {
+      "finding": "Captured Health composition failed the freshness/identifier guard.",
+      "correction": "Adopt accepted owner186 aggregation repair; preserve the strict renderer and source facts."
+    },
+    {
+      "finding": "Final763 scan failed while the old normalized tool/findings projection incorrectly reported all50 passed and clear0.",
+      "correction": "Adopt accepted owner188 finalized-result parser, with owner187 source-URL fix; preserve execution failure, source, original clocks and all publisher boundaries."
+    }
+  ],
+  "historical_introduced_diagnostic_review": {
+    "head": "382508fe2fbdfb37777a005aa71ddd3af56485c3",
+    "private_peer_report_sha256": "1ddc14799aea72aa23a4eef3926507cba14d7bd1f1956d1c932ba0d60a5fad36",
+    "additional_owned_blocking_findings_observed": 0,
+    "required_checks": {
+      "Mypy": "Native success.",
+      "Bandit": "Three Low findings refer to exact base-identical source.",
+      "Secretlint": "One finding refers to exact base-identical source; no raw value retained here.",
+      "Lychee": "The two failing authored URLs in changed files already exist in base220."
+    },
+    "introduced_advisory_disposition": [
+      "Exact int type checks intentionally reject bool in closed provider admission; do not weaken them to isinstance.",
+      "TemporaryDirectory with addCleanup spans the unittest fixture lifetime; explicit closed validation conditions remain reviewable.",
+      "The new test yaml import encounters hosted Pylint missing the already-required PyYAML dependency, as existing tests do; it is an introduced advisory at that path with an inherited environment cause.",
+      "Resume-verb/table-padding suggestions, formatter disagreement and repeated contract/evidence/test structures are reviewed advisory output under unchanged policy."
+    ],
+    "other_warnings": "Dependency/container inventory and existing class/local complexity debt remain explicit; no advisory policy or detector exclusions changed.",
+    "fast_summary_limit": "Original fast run43539567488 failed. Its structured success/zero-findings summary omitted the four raw detector findings and three formatting failures; raw logs govern the correction.",
+    "provider_baseline_limit": "Original automation run43539567397 root suite reports228 tests with20 skips; embedded EgoLint31 retains one failure. This differs from the separately equipped root suite and establishes no broad acceptance."
+  },
+  "corrected_identity_digest_evidence_sha256": "a01d9af29a54e0b1fc5881a391acc713c509ac2b9565832533fb490b1da8ebc6",
+  "prior_functional_checkpoint": {
+    "source": "7a4bbd8eac1bd49ce5cef61a1bc972eb22fb78ed",
+    "root_tests": 240,
+    "skips": 0,
+    "scope": "Exact Relay951 functional source before the separately accepted main04 local-CI reconciliation; not relabelled as the later source."
+  },
+  "current_normalizer_revision": "f7f9bd44713606d9c099adda715db2542c8b66bf",
+  "snapshot_publisher_revision": "1eada5142f7fc7da7862f335589e3b8f5884ffaf",
+  "combined_owner_acceptance": {
+    "revision": "f7f9bd44713606d9c099adda715db2542c8b66bf",
+    "pull_requests": [186, 187, 188],
+    "scope": "Health aggregation, canonical source URL identity and finalized MegaLinter attribution; preserves guarded publishers and original contracts.",
+    "local_owner_replay": "Separate owner evidence; not a new scan or provider execution of this consumer head."
+  },
+  "qualification_history_763": {
+    "head": "7639304babcba9d4baf21ccea163f31f9045a0c6",
+    "base_revision": "04ddb82548ce1509428e4095dc8f018197136635",
+    "relay_revision": "95105a9f5d99239af0d44d7dbd796fd1507fef31",
+    "staging": {
+      "run": 43543469411,
+      "job": 132289126311,
+      "artifact": 14093470181,
+      "zip_sha256": "20c383a44c89a76ad0bacc255d7b9c2430f280a04fde3923a10fd4b94f26d4b5",
+      "status": "success",
+      "changes": 0,
+      "new_receipts": 0,
+      "human_authority": "not-authenticated"
+    },
+    "commit_gate": {
+      "run": 43543469320,
+      "job": 132289126061,
+      "status": "success"
+    },
+    "fast_lint": {
+      "run": 43543469538,
+      "status": "success",
+      "snapshot": "skipped"
+    },
+    "canonical_holistic": {
+      "run": 43543368762,
+      "attempt": 1,
+      "artifact": 14092638403,
+      "zip_sha256": "1606bc614c6a9497bbac2cd37e6b0e0dbf4393abce91151757a574f2963235b5",
+      "raw_report_sha256": "ba3846dbeb53e2d425b671f993c150288ca4d931a21777e1c6aafe3afc667c0f",
+      "status": "failed",
+      "all_descriptor_counts": {
+        "success": 72,
+        "warning": 8,
+        "error": 21
+      },
+      "active_descriptor_counts": {
+        "success": 21,
+        "warning": 8,
+        "error": 21
+      },
+      "snapshot": "skipped"
+    },
+    "normalized_summary_defect": {
+      "artifact": 14092703255,
+      "payload_sha256": "c13105386260953b9a34e6cb96e8164797faaefa4b520670a3049f63bbde884c",
+      "generated_at": "2026-11-14T02:00:58Z",
+      "overall_execution": "failure",
+      "incorrect_findings": "clear/0",
+      "incorrect_tools": "50 passed",
+      "actual_finalized_tools": "21 passed / 21 blocking / 8 advisory",
+      "actual_diagnostics": {
+        "errors": 74527,
+        "warnings": 17
+      },
+      "corrected_offline_replay_sha256": "04cba3dc81ebcd2227be2a487bc2c91a6e9e6c593d7cc8542985fd3b36ad7852",
+      "offline_boundary": "Owner replay preserves source and clock; it is not a replacement provider artifact."
+    },
+    "captured_previews": {
+      "standalone": 43543368971,
+      "composed": 43543369199,
+      "status": "failed",
+      "stage": "Health rendering",
+      "error": "freshness.unknown must match unknown_ids",
+      "capture_artifact": 14093290779,
+      "capture_zip_sha256": "fc1999fcd4001b8944bf9a7fd8e81f9c8d4fc0f2b66f24526ddf2f1f13bc17d1",
+      "as_of": "2026-11-14T01:55:36Z",
+      "review_artifact": 14093011293,
+      "review_zip_sha256": "b664534291ccb8fb257d2d0baa9bbf11897344517a16a6b8409be86f8c023f32"
+    },
+    "actual_pr_composition": {
+      "run": 43543469353,
+      "represented_consumer": "c405d63cdec0e72272469451ca56eae521955a7d",
+      "current": "success",
+      "rollback": "success",
+      "deployment": "skipped",
+      "finalization": "skipped",
+      "live": "skipped",
+      "current_artifact": 14092653624,
+      "current_zip_sha256": "b8328f3bd6ccbf868f585a274e6a8f8891797634bab64250bd43d1935e7dd551",
+      "rollback_artifact": 14093140981,
+      "rollback_zip_sha256": "c61b97cf592ef78abbeff9b5f3062bb043d4b6937187cdd5653f86c4fb3128bf",
+      "actual_archive_roots": ["site", "publication"],
+      "current_duplicate_identical": true
+    },
+    "acceptance": "Historical results remain exact and unqualified; final combined-source provider evidence is pending."
+  }
+}

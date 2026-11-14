@@ -23,6 +23,11 @@ on:
         options:
           - current
           - rollback-v1.4
+      report-artifacts:
+        description: "Reviewed same-source producer artifact selection JSON; empty retains committed report history."
+        required: false
+        default: ""
+        type: string
       review-plan:
         description: "Repository-relative typed public review plan at the represented source; empty report selections remain unavailable."
         required: false
@@ -36,7 +41,7 @@ concurrency:
 env:
   TZ: UTC
   CANONICAL_ORIGIN: "https://egohygiene.github.io/empathy/"
-  RELAY_REVISION: "d7c60473626f8dcc901210a208ad01a6474e8c1d"
+  RELAY_REVISION: "f7f9bd44713606d9c099adda715db2542c8b66bf"
   ROLLBACK_REVISION: "254185272ab27b6858b8b0393af6549c205c9a8d"
   ROLLBACK_RELAY_REVISION: "b71b090406a3a9e4cd9f107e9d14a623bbecb127"
   ROLLBACK_SITE_DIGEST: "sha256:1e92a0a74c154bbc3c339a6ef1764852bfcceba1a58b294e238b4a0331f94498"
@@ -103,11 +108,13 @@ jobs:
         id: identity
         env:
           MODE: ${{ matrix.mode }}
+          REPORT_ARTIFACTS: "${{ inputs.report-artifacts || '' }}"
         shell: bash
         run: |
           set -euo pipefail
           represented_revision="$(git rev-parse HEAD)"
           if [[ "${MODE}" == 'rollback-v1.4' ]]; then
+            [[ -z "${REPORT_ARTIFACTS}" ]]
             [[ "${GITHUB_EVENT_NAME}" == 'pull_request' || "${GITHUB_EVENT_NAME}" == 'workflow_dispatch' ]]
             [[ "${represented_revision}" == "${ROLLBACK_REVISION}" ]]
             # The frozen historical generator includes the checkout basename.
@@ -118,12 +125,29 @@ jobs:
           printf 'represented-revision=%s\n' "${represented_revision}" >> "${GITHUB_OUTPUT}"
           printf 'deployment-mode=%s\n' "${MODE}" >> "${GITHUB_OUTPUT}"
 
+      - name: Select exact source-bound normalized report artifacts
+        id: report_selection
+        if: matrix.mode == 'current'
+        uses: ./.github/actions/report-artifacts
+        with:
+          selection: "${{ inputs.report-artifacts || '' }}"
+          github-token: "${{ github.token }}"
+          deployment-mode: "${{ matrix.mode }}"
+
       - name: Validate and retain normalized input identities
         id: inputs
         run: >-
           python3 "${RUNNER_TEMP}/empathy-publication.py" collect-input-evidence
           --repository-root .
+          --reports-directory "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           --output .cache/mindgarden/publication/inputs.json
+
+      - name: Preserve report admission in the existing provenance archive layout
+        id: report_selection_receipt
+        if: matrix.mode == 'current'
+        run: >-
+          cp -- .cache/repository-intelligence-publication/report-selection.json
+          .cache/mindgarden/publication/report-selection.json
 
       - name: Set up Node.js 24
         id: runtime
@@ -147,7 +171,7 @@ jobs:
       - name: Capture consumer routes before composition
         id: baseline
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@d7c60473626f8dcc901210a208ad01a6474e8c1d
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f7f9bd44713606d9c099adda715db2542c8b66bf
         with:
           operation: capture-baseline
           site-directory: .cache/mindgarden/site
@@ -165,7 +189,7 @@ jobs:
       - name: Capture public Work, Health and Releases sources
         id: public_sources
         if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-        uses: egohygiene/relay/actions/repository-intelligence-github-sources@d7c60473626f8dcc901210a208ad01a6474e8c1d
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@f7f9bd44713606d9c099adda715db2542c8b66bf
         with:
           github-token: "${{ github.token }}"
           include-titles: "true"
@@ -192,7 +216,7 @@ jobs:
         id: review_feed
         if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         # Reviewed typed feed source; original report times and human authority remain separate.
-        uses: egohygiene/relay/actions/repository-intelligence-review-feed@d7c60473626f8dcc901210a208ad01a6474e8c1d
+        uses: egohygiene/relay/actions/repository-intelligence-review-feed@f7f9bd44713606d9c099adda715db2542c8b66bf
         with:
           source-root: "."
           plan: "${{ inputs.review-plan || '.config/repository-intelligence/review-plan.json' }}"
@@ -223,11 +247,11 @@ jobs:
         id: intelligence
         if: matrix.mode == 'current'
         # Reviewed portable Relay candidate; exact source qualification remains pending.
-        uses: egohygiene/relay/actions/repository-intelligence@d7c60473626f8dcc901210a208ad01a6474e8c1d
+        uses: egohygiene/relay/actions/repository-intelligence@f7f9bd44713606d9c099adda715db2542c8b66bf
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
-          reports-directory: ".reports"
+          reports-directory: "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           collect-journey: "true"
           search-attribution: "true"
           collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
@@ -248,11 +272,11 @@ jobs:
       - name: Rebuild identical Repository Intelligence inputs
         id: intelligence_duplicate
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence@d7c60473626f8dcc901210a208ad01a6474e8c1d
+        uses: egohygiene/relay/actions/repository-intelligence@f7f9bd44713606d9c099adda715db2542c8b66bf
         with:
           output-directory: ".cache/mindgarden/site/intelligence"
           work-directory: ".cache/mindgarden/repository-intelligence"
-          reports-directory: ".reports"
+          reports-directory: "${{ steps.report_selection.outputs.reports-directory || '.reports' }}"
           collect-journey: "true"
           search-attribution: "true"
           collect-dependencies: "${{ steps.source_capture_upload.outputs.artifact-id != '' }}"
@@ -290,14 +314,14 @@ jobs:
       - name: Verify current provenance and Quartz non-clobber boundary
         id: composition
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@d7c60473626f8dcc901210a208ad01a6474e8c1d
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f7f9bd44713606d9c099adda715db2542c8b66bf
         with:
           operation: verify-composition
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ steps.identity.outputs.represented-revision }}"
-          relay-revision: "d7c60473626f8dcc901210a208ad01a6474e8c1d"
+          relay-revision: "f7f9bd44713606d9c099adda715db2542c8b66bf"
           required-routes: >-
             ["/","/intelligence/","/intelligence/now/","/intelligence/roadmap/",
             "/intelligence/decisions/","/intelligence/journey/","/intelligence/dependencies/",
@@ -366,6 +390,13 @@ jobs:
         with:
           path: ".cache/mindgarden/site"
 
+      - name: Retain only a closed native source failure diagnostic
+        if: ${{ always() && (steps.intelligence.outcome == 'failure' || steps.intelligence_duplicate.outcome == 'failure') }}
+        run: >-
+          python3 "${RUNNER_TEMP}/empathy-publication.py" retain-source-failure
+          --input .cache/mindgarden/repository-intelligence/sources/failure.json
+          --output .cache/mindgarden/publication/source-build-failure.json
+
       - name: Preserve sanitized build result
         if: ${{ always() }}
         env:
@@ -390,7 +421,13 @@ jobs:
           stages = ["harden", "checkout", "helper_tools"]
           if mode == "rollback-v1.4":
               stages.append("rollback_checkout")
-          stages += ["identity", "inputs", "runtime", "garden", "quartz"]
+          stages += ["identity"]
+          if mode == "current":
+              stages.append("report_selection")
+          stages += ["inputs"]
+          if mode == "current":
+              stages.append("report_selection_receipt")
+          stages += ["runtime", "garden", "quartz"]
           if mode == "current":
               stages += ["baseline", "canonical_baseline"]
               if os.environ["CAPTURE_EXPECTED"] == "true":
@@ -429,7 +466,7 @@ jobs:
           }
           stage_codes = {
               "harden": "EMRI-001", "checkout": "EMRI-001", "helper_tools": "EMRI-001", "rollback_checkout": "EMRI-002",
-              "identity": "EMRI-002", "inputs": "EMRI-003", "runtime": "EMRI-004",
+              "identity": "EMRI-002", "report_selection": "EMRI-003", "inputs": "EMRI-003", "runtime": "EMRI-004",
               "garden": "EMRI-004", "quartz": "EMRI-004", "baseline": "EMRI-005",
               "canonical_baseline": "EMRI-005", "composition": "EMRI-005",
               "public_sources": "EMRI-011", "source_capture_upload": "EMRI-011", "source_receipt": "EMRI-011",
@@ -437,7 +474,7 @@ jobs:
               "intelligence": "EMRI-006", "first_composition": "EMRI-006",
               "intelligence_duplicate": "EMRI-006", "duplicate": "EMRI-006",
               "intelligence_rollback": "EMRI-007", "rollback": "EMRI-007",
-              "review_artifact": "EMRI-008", "provenance_artifact": "EMRI-008",
+              "report_selection_receipt": "EMRI-008", "review_artifact": "EMRI-008", "provenance_artifact": "EMRI-008",
               "configure_pages": "EMRI-009", "pages_artifact": "EMRI-009",
               "mode-selection": "EMRI-010", "publication-policy": "EMRI-010",
           }
@@ -473,7 +510,9 @@ jobs:
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: "empathy-publication-report-${{ matrix.mode }}-${{ github.run_id }}-${{ github.run_attempt }}"
-          path: "${{ runner.temp }}/empathy-publication-run.json"
+          path: |
+            ${{ runner.temp }}/empathy-publication-run.json
+            .cache/mindgarden/publication/source-build-failure.json
           if-no-files-found: error
           retention-days: 30
 
@@ -534,14 +573,14 @@ jobs:
       - name: Record current deployment receipt
         id: receipt
         if: needs.build.outputs.deployment-mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@d7c60473626f8dcc901210a208ad01a6474e8c1d
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@f7f9bd44713606d9c099adda715db2542c8b66bf
         with:
           operation: record-receipt
           site-directory: .cache/mindgarden/site
           intelligence-directory: .cache/mindgarden/site/intelligence
           evidence-directory: .cache/mindgarden/publication
           consumer-revision: "${{ needs.build.outputs.represented-revision }}"
-          relay-revision: "d7c60473626f8dcc901210a208ad01a6474e8c1d"
+          relay-revision: "f7f9bd44713606d9c099adda715db2542c8b66bf"
           workflow-run-id: "${{ github.run_id }}"
           workflow-run-attempt: "${{ github.run_attempt }}"
           deployment-environment: github-pages

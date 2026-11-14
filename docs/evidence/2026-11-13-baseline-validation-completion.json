@@ -1,0 +1,1335 @@
+{
+  "repository": "egohygiene/empathy",
+  "issue": 109,
+  "parent": 118,
+  "source_base": "2202636a1957ee7598359465b4ae562e1c67358a",
+  "functional_revision": "f502804e304a6902f07374d24276ae0e5afb8933",
+  "recorded_at": "2026-11-14T00:23:09Z",
+  "scope": "baseline staging maintenance policy/typing and explicit optional Rust composition; no staged/specialist source changes",
+  "functional_file_sha256": {
+    ".gitignore": "713d801ef244e18f38cddb4832da4e030ddb6fff3c15ab2f3d7ed43e5fe7baa0",
+    "foundation/contracts/empathy.gitignore-plan.json": "25c0216c6eb3f334785c4ddceead304188d5844844c521dfaadfa04d898af792",
+    "foundation/contracts/empathy.repository-contract.toml": "8c816b7beb0968ee05b0a1af774bd036af0e38726fc76de3cfe23813edca62cd",
+    "foundation/empathy.manifest.json": "d01085720e4207455a965a5e018489bdf7e5fa8402ca1fefcffa01807b322b51",
+    "tests/fixtures/gitignore/empathy-migration.json": "c308cd7426d8751fb787b807e6664c58e6143d033940bacdc2302dce43ee423d",
+    "tests/test_foundation_contract.py": "2905b28a025ef87fa2cbbf88d6b7cdb0a0d68c9ad100f5010aa22b609fc50d38",
+    "tests/test_foundation_ignore.py": "8592908ecd59251314ae49d1b742aa37566cfe5bbc65205279ca20a15eae2f51",
+    "tests/test_repository_intelligence_workflows.py": "6a6b72ecffbbf914112c34dc052353756eaf384e2e88c45759e3c771e77e2423",
+    "tests/test_staging_diff_gate.py": "c06ce2ed4e259814f75e0b68851b8b32e8cae1701a09340a18c5b8223784032a",
+    "tests/test_staging_home_audit.py": "23f0a06b5d1089dd1f9517bc8313c6ab15f411acb9ef7c4f7d12788301c3ab8a",
+    "tests/test_staging_removal_gate.py": "8dca9dde9c4b6189e15aa1fb771a1d576eae56e16ec4bd093e2efd6ff6a138d2",
+    "tools/staging_diff_gate.py": "35f56c55732dafbf9715be2dd3201e7aa83ffa67a210abbba6ffda60d4dea235",
+    "tools/staging_removal_gate.py": "e3c831861ebe4a3b0990665f3029da6efde6b0787bce49d191eb156d1661cba0"
+  },
+  "tools": {
+    "python": "3.12.14",
+    "Task": "3.54.0",
+    "Cargo": "1.97.1",
+    "rustc": "1.97.1",
+    "ruff": "0.16.5",
+    "mypy": "2.3.0",
+    "bandit": "1.9.4"
+  },
+  "owner_inputs": {
+    "relay_revision": "d7c60473626f8dcc901210a208ad01a6474e8c1d",
+    "identity_revision": "481e284a77e0a7cc3bf25f40dc91a71120d036ef",
+    "identity_generated_outputs": 27,
+    "generation_boundary": "Task-owned disposable validation inputs, not source-committed; moved outside checkout after suites.",
+    "identity_generated_inputs": [
+      {
+        "path": "assets/identity/.identity-manifest.json",
+        "sha256": "cbe6c9e2632e2fff6f26638f8dec014aefb0ccc4eada11f884481664f9e13914"
+      },
+      {
+        "path": "assets/identity/docs/document.css",
+        "sha256": "8aee221038de4005dfdae1e63af03c325009c0b0452ca4a1019aeac0498e6e85"
+      },
+      {
+        "path": "assets/identity/web/favicon-32.png",
+        "sha256": "811c4767d40dbc14ecfb2fab90e070385f879fc75fe5be1c587517186c32f1ce"
+      },
+      {
+        "path": "assets/identity/web/favicon.svg",
+        "sha256": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6"
+      },
+      {
+        "path": "assets/identity/web/favicon-64.png",
+        "sha256": "790b44a71587a38024bad9e9c086c629e6a4c2e80a157b74e23ee1ac9cfd18a7"
+      },
+      {
+        "path": "assets/identity/social/card-1200x630.png",
+        "sha256": "17818277159b4f6c0d4ff3c75ed85d7164a5e576117e8d0f64bd2afe56565623"
+      },
+      {
+        "path": "assets/identity/github/social-preview.png",
+        "sha256": "de38bf51df05d28c5ed89e583f0128659a2a59535d74e2bad556a0b9ed7394ff"
+      },
+      {
+        "path": "assets/identity/brand/mark.svg",
+        "sha256": "db6de6b198f6a64e1fa9dcb6b678318927c4b1e08696c3bfc47d6d6d958070a6"
+      },
+      {
+        "path": "assets/identity/pwa/icon-512.png",
+        "sha256": "af7b134257d811918a69ead539fb9f5a875cda87a6ab7aedd3e3bb7cff03879a"
+      },
+      {
+        "path": "assets/identity/pwa/icon-maskable-512.png",
+        "sha256": "a40c0787e70570a4b58a1c432900d8cbd3f48b40d97deba029fad9f7fba2210c"
+      },
+      {
+        "path": "assets/identity/pwa/icon-192.png",
+        "sha256": "ed9291397d611e39645f7e8b9ef859c4db07123b5de8d48e770d33b0ddffc118"
+      },
+      {
+        "path": "assets/identity/pwa/manifest-icons.json",
+        "sha256": "badc8d57c723fe34a0489bda0251b569739f06b7e7806b9584edbb606d0ff2a0"
+      },
+      {
+        "path": "assets/identity/packages/tokens/package.json",
+        "sha256": "d37c7947f8662c1c970b03d2bdfb05e5e4a629f2c9156edee0bf217d1ec27843"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.d.ts",
+        "sha256": "3e8f23156481845d31e3964c302887c503da69041a2e5af3779ddd08a75290ea"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tailwind.theme.json",
+        "sha256": "9f9391e8e1cbee4ed905a19a6ad721c037b37cc23b5bb7a7f30dddc8594ce140"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.css",
+        "sha256": "b8caaff6e73bcbe69125c2069342f86d6f6e162998f28136431e393e6560e33b"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.json",
+        "sha256": "e0bc421093f98b47dbfbff0f03b49a05e35a645f790195c68cd4393a68103a8e"
+      },
+      {
+        "path": "assets/identity/packages/tokens/tokens.js",
+        "sha256": "4ecc65f53722fe932b2fba028595c666d69c39477cf2dffb395a0d71e6cf0766"
+      },
+      {
+        "path": "assets/identity/packages/metadata/open-graph.html",
+        "sha256": "1ade5cc1f4e26f13c28416ae8173e269a8756fed2388b880b0ebd00a640cdb7b"
+      },
+      {
+        "path": "assets/identity/packages/metadata/package.json",
+        "sha256": "5d1f5a5db300379fa7fafe7845311b1d5796f0bffb083ed6a44cd3cc51dd528f"
+      },
+      {
+        "path": "assets/identity/packages/metadata/metadata.json",
+        "sha256": "92f11718c86eb3ab515ba555406aa02cff37969715570e602cba935be979e190"
+      },
+      {
+        "path": "assets/identity/packages/brand-kit/index.json",
+        "sha256": "65963c537f1c1edab35d04bc615c5a129c4461f3f95da7e856ac1508b63bf922"
+      },
+      {
+        "path": "assets/identity/packages/brand-kit/checksums.json",
+        "sha256": "889d74113e7dc7cd24d8196c620369ea73296526d8bee8781be536f5e2c8f2e2"
+      },
+      {
+        "path": "assets/identity/packages/brand-kit/brand-kit.zip",
+        "sha256": "d2c4cf06681b366fbe43bbbb2cadaa957d66d251063560f2618679faeaab263f"
+      },
+      {
+        "path": "assets/identity/packages/guidance/voice-and-usage.json",
+        "sha256": "88c3f107f53bcd56cdc96bf208e1df1de99661ff99bd5216e771caaded34c158"
+      },
+      {
+        "path": "assets/identity/packages/guidance/README.md",
+        "sha256": "cdf7465380b00a10c1ad0b227572010ba71152d681e0dae91d1b68d44718889a"
+      },
+      {
+        "path": "assets/identity/packages/renderer/brand-kit.view-model.json",
+        "sha256": "ae0fe071a6cf602ea9d224c569601d86102bd52a29c672b914a2679e9a0628f5"
+      }
+    ]
+  },
+  "initial_regression": {
+    "revision": "70037cdce0e4144e2538d164c1766d513361b266",
+    "root_tests": 228,
+    "failures": 8,
+    "errors": 1,
+    "cause": "Existing ignore-composition fixtures implicitly selected the old golden Rust default and required obsolete Cargo.toml as current evidence. Explicit opt-in fixtures and retained immutable historical evidence repair those assumptions without dropping scenarios."
+  },
+  "independent_suites": {
+    "repository": {
+      "tests": 228,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "egolint": {
+      "tests": 31,
+      "skipped": 0,
+      "failures": 1,
+      "errors": 0,
+      "exit_code": 1,
+      "owner_issue": 110,
+      "failed_test": "test_catalog_is_pinned_to_the_workflow_release"
+    }
+  },
+  "commands": [
+    {
+      "name": "foundation-catalog",
+      "command": ["python3", "tools/foundation.py", "validate-catalog"],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:06.134996+00:00",
+      "finished_at": "2026-11-14T00:18:06.199221+00:00"
+    },
+    {
+      "name": "foundation-manifest",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "validate-manifest",
+        "--manifest",
+        "foundation/empathy.manifest.json"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:06.199621+00:00",
+      "finished_at": "2026-11-14T00:18:06.263699+00:00"
+    },
+    {
+      "name": "foundation-workspace",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "verify-workspace",
+        "--manifest",
+        "foundation/empathy.manifest.json",
+        "--workspace",
+        "."
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:06.264238+00:00",
+      "finished_at": "2026-11-14T00:18:06.328267+00:00"
+    },
+    {
+      "name": "foundation-inventory",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "check-inventory",
+        "--output",
+        "docs/foundation/INVENTORY.md"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:06.328691+00:00",
+      "finished_at": "2026-11-14T00:18:06.392901+00:00"
+    },
+    {
+      "name": "foundation-gitignore",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "check-gitignore-plan",
+        "--manifest",
+        "foundation/empathy.manifest.json",
+        "--source-root",
+        ".",
+        "--output",
+        "foundation/contracts/empathy.gitignore-plan.json"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:06.393415+00:00",
+      "finished_at": "2026-11-14T00:18:06.457429+00:00"
+    },
+    {
+      "name": "foundation-contract",
+      "command": [
+        "python3",
+        "tools/foundation.py",
+        "check-contract",
+        "--manifest",
+        "foundation/empathy.manifest.json",
+        "--source-revision",
+        "d597e6fac0b5e8205e4878eaf133101af3487e98",
+        "--output",
+        "foundation/contracts/empathy.repository-contract.toml"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:06.458395+00:00",
+      "finished_at": "2026-11-14T00:18:06.577175+00:00"
+    },
+    {
+      "name": "independent-suites",
+      "command": [
+        "python3",
+        "tools/baseline_tests.py",
+        "--output-directory",
+        "<disposable-results>"
+      ],
+      "exit_code": 1,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:06.580345+00:00",
+      "finished_at": "2026-11-14T00:18:23.924858+00:00"
+    },
+    {
+      "name": "architecture",
+      "command": ["task", "architecture:check"],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:23.925973+00:00",
+      "finished_at": "2026-11-14T00:18:24.093350+00:00"
+    },
+    {
+      "name": "task-catalog",
+      "command": ["task", "taskfile:check"],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:24.093786+00:00",
+      "finished_at": "2026-11-14T00:18:24.560506+00:00"
+    },
+    {
+      "name": "ruff-root",
+      "command": [
+        "uvx",
+        "--from",
+        "ruff==0.16.5",
+        "ruff",
+        "check",
+        "--config",
+        "egolint/.config/lint/python/ruff.toml",
+        "tools",
+        "tests"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:24.561294+00:00",
+      "finished_at": "2026-11-14T00:18:24.625556+00:00"
+    },
+    {
+      "name": "ruff-format",
+      "command": [
+        "uvx",
+        "--from",
+        "ruff==0.16.5",
+        "ruff",
+        "format",
+        "--check",
+        "--config",
+        "egolint/.config/lint/python/ruff.toml",
+        "tools/staging_diff_gate.py",
+        "tools/staging_removal_gate.py",
+        "tests/test_staging_diff_gate.py",
+        "tests/test_staging_removal_gate.py",
+        "tests/test_foundation_contract.py"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:24.626074+00:00",
+      "finished_at": "2026-11-14T00:18:24.658157+00:00"
+    },
+    {
+      "name": "mypy",
+      "command": [
+        "mypy",
+        "--config-file",
+        "egolint/.config/lint/python/.mypy.ini",
+        "tools/staging_diff_gate.py",
+        "tools/staging_removal_gate.py",
+        "tests/test_staging_diff_gate.py",
+        "tests/test_staging_removal_gate.py",
+        "tests/test_foundation_contract.py"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:24.658567+00:00",
+      "finished_at": "2026-11-14T00:18:24.823182+00:00"
+    },
+    {
+      "name": "bandit",
+      "command": [
+        "bandit",
+        "-c",
+        "egolint/.config/lint/python/.bandit.yml",
+        "tools/staging_diff_gate.py",
+        "tools/staging_removal_gate.py",
+        "tests/test_staging_diff_gate.py",
+        "tests/test_staging_removal_gate.py",
+        "tests/test_foundation_contract.py",
+        "-f",
+        "json",
+        "-o",
+        "<disposable-results>"
+      ],
+      "exit_code": 0,
+      "unavailable": null,
+      "started_at": "2026-11-14T00:18:24.823672+00:00",
+      "finished_at": "2026-11-14T00:18:25.088960+00:00"
+    }
+  ],
+  "python_policy": {
+    "root_tools_tests_ruff_before": 44,
+    "root_tools_tests_ruff_after": 0,
+    "strict_mypy_staging_before": 32,
+    "strict_mypy_touched_after": 0,
+    "bandit_findings": 0,
+    "reviewed_annotations": [
+      "Stdlib unittest exception assertions remain the existing framework; no new test framework.",
+      "Strings-only PyYAML BaseLoader preserves literal GitHub on/event keys and cannot construct Python objects.",
+      "Git execution resolves only the fixed system executable with controlled argv, disabled hooks/config/protocols and no shell.",
+      "Bandit emits two unused-B603 warnings on the controlled fixture call during other subprocess plugin passes; the selected B603 call is explicitly reviewed and all findings are empty."
+    ],
+    "fixture_scan_followup": "Secretlint initially flags an inherited literal BasicAuth-looking negative URL. The test now constructs clearly synthetic userinfo into a reserved .invalid URL, retaining the same rejection scenario without a scanner waiver; final focused scan has zero messages.",
+    "whole_root_mypy_followup": {
+      "scope": "tools tests,36 source files",
+      "initial_remaining_errors": 16,
+      "final_errors": 0,
+      "checked_versions": ["1.19.1", "2.3.0"],
+      "correction": "LedgerRow ClassVar declarations for existing fixture state and one typed bound PyYAML callable replace version-sensitive ignores; workflow semantics unchanged.",
+      "native_context": "First hosted run identified14 class-attribute errors; exact local current-stub check additionally identified2 unused historical ignores. The final mapping boundary passes both tool/stub selections."
+    },
+    "ruff_native_version_supplement": {
+      "version": "0.17.2",
+      "scope": "root tools/tests",
+      "outcome": "passed; canonical0.16.5 also passes"
+    },
+    "bandit_touched_files": 8,
+    "unchanged_classifier_bandit_dispositions": [
+      {
+        "id": "B404",
+        "path": "tools/staging_home_audit.py",
+        "disposition": "The stdlib subprocess import supports one fixed local Git metadata operation; no shell, caller-provided executable or remote content is executed."
+      },
+      {
+        "id": "B603",
+        "path": "tools/staging_home_audit.py",
+        "disposition": "The only argv is git -C <operator-selected root> ls-files --stage -z. It reads index metadata and does not execute staged payloads, Git hooks or checkout filters."
+      },
+      {
+        "id": "B607",
+        "path": "tools/staging_home_audit.py",
+        "disposition": "Normal Git lookup in the local operator environment is existing CLI trust, not an untrusted remote selection. Kept visible as a source-context observation; no blanket policy ignore or imported source rewrite."
+      }
+    ]
+  },
+  "rust_profile_disposition": {
+    "default_root_package": "not-selected",
+    "root_cargo_manifest": "removed orphan virtual workspace whose only member was absent",
+    "catalog_rust_profile": "still supported as explicit opt-in with repository-owned Cargo metadata",
+    "existing_commands": "Root build, Beacon and Identity commands already use explicit project manifests; no task or language checker removed.",
+    "root_target_ignore": "Same /target/ rule retained as a repository-local cache allowance; unrelated ignore behavior unchanged.",
+    "historical_root_cargo": {
+      "revision": "2202636a1957ee7598359465b4ae562e1c67358a",
+      "path": "Cargo.toml",
+      "git_blob": "14b6bca841947a5f676a5bcc74110183d5fb34bb"
+    },
+    "canonical_catalog_source_revision": "d597e6fac0b5e8205e4878eaf133101af3487e98",
+    "corpus_cleanup": "none",
+    "root_cargo_commands": "No root Cargo package/workspace is claimed; use the declared project manifest for the selected opt-in."
+  },
+  "rust_execution": [
+    {
+      "name": "cargo-version",
+      "command": ["cargo", "--version"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.398758+00:00",
+      "finished_at": "2026-11-13T23:42:17.430721+00:00"
+    },
+    {
+      "name": "rustc-version",
+      "command": ["rustc", "--version"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.431292+00:00",
+      "finished_at": "2026-11-13T23:42:17.447209+00:00"
+    },
+    {
+      "name": "egolint-metadata",
+      "command": [
+        "cargo",
+        "metadata",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--format-version",
+        "1",
+        "--no-deps",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.447626+00:00",
+      "finished_at": "2026-11-13T23:42:17.479620+00:00"
+    },
+    {
+      "name": "egolint-fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-11-13T23:42:17.480283+00:00",
+      "finished_at": "2026-11-13T23:42:17.544450+00:00"
+    },
+    {
+      "name": "egolint-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--all-targets",
+        "--all-features",
+        "--locked",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.545156+00:00",
+      "finished_at": "2026-11-13T23:42:17.759709+00:00"
+    },
+    {
+      "name": "egolint-test",
+      "command": [
+        "cargo",
+        "test",
+        "--manifest-path",
+        "egolint/Cargo.toml",
+        "--all-features",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:17.760169+00:00",
+      "finished_at": "2026-11-13T23:42:18.024632+00:00"
+    },
+    {
+      "name": "beacon-metadata",
+      "command": [
+        "cargo",
+        "metadata",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--format-version",
+        "1",
+        "--no-deps",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:18.025206+00:00",
+      "finished_at": "2026-11-13T23:42:18.041146+00:00"
+    },
+    {
+      "name": "beacon-fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-11-13T23:42:18.041623+00:00",
+      "finished_at": "2026-11-13T23:42:18.105482+00:00"
+    },
+    {
+      "name": "beacon-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--all-targets",
+        "--all-features",
+        "--locked",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 101,
+      "started_at": "2026-11-13T23:42:18.105975+00:00",
+      "finished_at": "2026-11-13T23:42:18.678923+00:00"
+    },
+    {
+      "name": "beacon-test",
+      "command": [
+        "cargo",
+        "test",
+        "--manifest-path",
+        "beacon/Cargo.toml",
+        "--all-features",
+        "--locked"
+      ],
+      "exit_code": 101,
+      "started_at": "2026-11-13T23:42:18.679501+00:00",
+      "finished_at": "2026-11-13T23:42:19.044223+00:00"
+    },
+    {
+      "name": "identity-generate",
+      "command": [
+        "cargo",
+        "run",
+        "--quiet",
+        "--manifest-path",
+        "identity/Cargo.toml",
+        "--locked",
+        "--",
+        "v1-generate",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:42:19.044938+00:00",
+      "finished_at": "2026-11-13T23:42:39.634774+00:00"
+    },
+    {
+      "name": "beacon-lock",
+      "command": ["cargo", "generate-lockfile", "--offline"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:46:51.306315+00:00",
+      "finished_at": "2026-11-13T23:46:51.521092+00:00"
+    },
+    {
+      "name": "beacon-disposable-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--all-targets",
+        "--all-features",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 101,
+      "started_at": "2026-11-13T23:46:51.521458+00:00",
+      "finished_at": "2026-11-13T23:46:55.056221+00:00"
+    },
+    {
+      "name": "beacon-disposable-test",
+      "command": ["cargo", "test", "--all-features", "--locked", "--offline"],
+      "exit_code": 0,
+      "started_at": "2026-11-13T23:46:55.056706+00:00",
+      "finished_at": "2026-11-13T23:46:57.395397+00:00"
+    }
+  ],
+  "rust_result_interpretation": {
+    "egolint": "metadata/clippy/test pass; one test passes. Existing fixture rustfmt check fails. No owner source edited.",
+    "beacon": "metadata passes. Source has no Cargo.lock, so strict locked compile refuses to create it. An isolated exact-source consumer resolves a disposable offline lockfile: all six tests pass, existing clippy unnecessary_wraps and rustfmt findings remain failures. No lockfile or source change committed.",
+    "identity": "Pinned owner generation and equipped root verification pass with Rust1.97.1."
+  },
+  "holistic": {
+    "required": "Canonical holistic execution bound to the actual final review/integration head; inspect linter outcomes and feature-branch publication guards.",
+    "initial_execution": "Run43531062730/1 at7990 completed failure;101 linters70success8warning23error, artifact14088365106 exact archive hash retained. Snapshot publication was skipped.",
+    "current_boundary": "Final local corrections are independently scoped. A final slice/integration run must bind the later review head; initial7990 execution is never relabeled as that later head.",
+    "evidence_location": "PR actual run/head/artifact receipts and final aggregate qualification coordinated by root."
+  },
+  "acceptance": "partial; aggregate remains failed and no full holistic/runtime/platform readiness claim",
+  "remaining": [
+    "Held canonical EgoLint policy/runtime reconciliation stays under110; independent31-test suite still has one catalog/runtime failure and aggregate remains failed.",
+    "Full native report retains imported/scaffold/dependency/link debt and reviewed warning-only observations; no global conformance claim or suppressed linter.",
+    "Optional specialist formatting/Clippy/canonical lock and source graduation stay79/owner work; no specialist source copied or edited.",
+    "Final exact integration-head holistic and actual provider outcomes remain root-coordinated, separate from source snapshots."
+  ],
+  "supplemental": {
+    "secretlint": {
+      "version": "13.0.5",
+      "source_files": 14,
+      "exit_code": 0,
+      "messages": 0,
+      "errors": 0,
+      "started_at": "2026-11-13T23:56:43.536778+00:00",
+      "finished_at": "2026-11-13T23:56:43.879419+00:00"
+    },
+    "lychee": {
+      "version": "0.24.2",
+      "scope": "docs/BASELINE_VALIDATION.md",
+      "result": {
+        "total": 10,
+        "unique": 8,
+        "successful": 10,
+        "unknown": 0,
+        "unsupported": 0,
+        "timeouts": 0,
+        "redirects": 0,
+        "remaps": 0,
+        "excludes": 0,
+        "errors": 0,
+        "cached": 0,
+        "timeout_map": {},
+        "suggestion_map": {},
+        "duration": {
+          "secs": 1,
+          "nanos": 985527094
+        },
+        "detailed_stats": false
+      }
+    },
+    "final_typed_secretlint": {
+      "source_files": 16,
+      "version": "13.0.5",
+      "exit_code": 0,
+      "messages": 0,
+      "errors": 0,
+      "started_at": "2026-11-14T00:23:58.854920+00:00",
+      "finished_at": "2026-11-14T00:23:59.240991+00:00"
+    },
+    "final_typed_lychee": {
+      "version": "0.24.2",
+      "scope": "docs/BASELINE_VALIDATION.md",
+      "total": 11,
+      "unique": 9,
+      "successful": 11,
+      "errors": 0,
+      "excludes": 0
+    }
+  },
+  "holistic_initial": {
+    "repository": "egohygiene/empathy",
+    "workflow": "MegaLinter",
+    "run_id": 43531062730,
+    "run_attempt": 1,
+    "head": "7990c8f36ff739675d33c07a2d0ac4c4f3ee958f",
+    "profile": ".mega-linter.yml",
+    "event": "workflow_dispatch",
+    "conclusion": "failure",
+    "artifact_id": 14088365106,
+    "archive_sha256": "50ed1e1b5e87f8b918ede27fc1267b49074f0dadc154c1350f0227c0d02ff47c",
+    "archive_bytes": 7435367,
+    "raw_report_bytes": 42238806,
+    "linters": 101,
+    "status_counts": {
+      "success": 70,
+      "warning": 8,
+      "error": 23
+    },
+    "publish_snapshot_job": "skipped",
+    "sarif_upload_step": "skipped",
+    "report_upload_step": "success",
+    "summaries": [
+      {
+        "name": "ACTION_ACTIONLINT",
+        "version": "1.7.12",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "ANSIBLE_ANSIBLE_LINT",
+        "version": "26.10.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "API_SPECTRAL",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "ARM_ARM_TTK",
+        "version": "0.0.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BASH_EXEC",
+        "version": "5.3.9",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BASH_SHELLCHECK",
+        "version": "0.11.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BASH_SHFMT",
+        "version": "3.14.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "BICEP_BICEP_LINTER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "C_CLANG_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "C_CPPCHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "C_CPPLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CLOJURE_CLJSTYLE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CLOJURE_CLJ_KONDO",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CLOUDFORMATION_CFN_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "COPYPASTE_JSCPD",
+        "version": "5.4.2",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CPP_CLANG_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CPP_CPPCHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CPP_CPPLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSHARP_CSHARPIER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSHARP_DOTNET_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSHARP_ROSLYNATOR",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "CSS_STYLELINT",
+        "version": "17.16.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "DART_DARTANALYZER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "DOCKERFILE_HADOLINT",
+        "version": "2.15.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "EDITORCONFIG_EDITORCONFIG_CHECKER",
+        "version": "4.0.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "ENV_DOTENV_LINTER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "GHERKIN_GHERKIN_LINT",
+        "version": "0.0.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "GO_REVIVE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "GROOVY_NPM_GROOVY_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "HTML_HTMLHINT",
+        "version": "1.9.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JAVA_CHECKSTYLE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "JAVA_PMD",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "JAVASCRIPT_ES",
+        "version": "10.13.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JAVASCRIPT_PRETTIER",
+        "version": "3.9.10",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "JSON_JSONLINT",
+        "version": "17.0.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JSON_NPM_PACKAGE_JSON_LINT",
+        "version": "11.0.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JSON_PRETTIER",
+        "version": "3.9.10",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "JSON_V8R",
+        "version": "6.1.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "KOTLIN_DETEKT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "KOTLIN_KTLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "LATEX_CHKTEX",
+        "version": "1.7.8",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "LUA_LUACHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "LUA_STYLUA",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "MARKDOWN_MARKDOWNLINT",
+        "version": "0.49.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "MARKDOWN_MARKDOWN_TABLE_FORMATTER",
+        "version": "1.7.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PERL_PERLCRITIC",
+        "version": "1.156",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPCS",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPCSFIXER",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PHPSTAN",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PHP_PSALM",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "POWERSHELL_POWERSHELL",
+        "version": "7.6.8",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "POWERSHELL_POWERSHELL_FORMATTER",
+        "version": "7.6.8",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PROTOBUF_PROTOLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PYTHON_BANDIT",
+        "version": "1.9.4",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "PYTHON_MYPY",
+        "version": "1.19.1",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "PYTHON_PYLINT",
+        "version": "4.1.3",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PYTHON_PYRIGHT",
+        "version": "1.1.414",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "PYTHON_RUFF",
+        "version": "0.17.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "PYTHON_RUFF_FORMAT",
+        "version": "0.17.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "R_LINTR",
+        "version": "0.0.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RAKU_RAKU",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_BETTERLEAKS",
+        "version": "1.7.3",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "REPOSITORY_CHECKOV",
+        "version": "3.3.30",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_DUSTILOCK",
+        "version": "1.2.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_GRYPE",
+        "version": "0.121.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_LS_LINT",
+        "version": "2.3.2",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_SECRETLINT",
+        "version": "13.0.7",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "REPOSITORY_SYFT",
+        "version": "1.55.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_TRIVY",
+        "version": "0.76.1",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_TRIVY_SBOM",
+        "version": "0.76.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "REPOSITORY_TRUFFLEHOG",
+        "version": "3.99.7",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "ROBOTFRAMEWORK_ROBOCOP",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RST_RSTCHECK",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RST_RSTFMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RST_RST_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RUBY_RUBOCOP",
+        "version": "1.92.1",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "RUST_CLIPPY",
+        "version": "0.1.99",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "SCALA_SCALAFIX",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SNAKEMAKE_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SNAKEMAKE_SNAKEFMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SPELL_CSPELL",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SPELL_LYCHEE",
+        "version": "0.24.2",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "SPELL_PROSELINT",
+        "version": "0.16.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SPELL_VALE",
+        "version": "3.24.0",
+        "status": "warning",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SQL_SQLFLUFF",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "SWIFT_SWIFTLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TEKTON_TEKTON_LINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TERRAFORM_FMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TERRAGRUNT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TFLINT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TOFU_FMT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TERRAFORM_TOFU_VALIDATE",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "TSX_ESLINT",
+        "version": "10.13.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "TYPESCRIPT_ES",
+        "version": "10.13.0",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "TYPESCRIPT_PRETTIER",
+        "version": "3.9.10",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "VBDOTNET_DOTNET_FORMAT",
+        "version": null,
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "XML_XMLLINT",
+        "version": "21309",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "YAML_PRETTIER",
+        "version": "3.9.10",
+        "status": "error",
+        "command_exit_code": 1
+      },
+      {
+        "name": "YAML_V8R",
+        "version": "6.1.0",
+        "status": "success",
+        "command_exit_code": 0
+      },
+      {
+        "name": "YAML_YAMLLINT",
+        "version": "1.38.0",
+        "status": "error",
+        "command_exit_code": 1
+      }
+    ],
+    "warning_review": {
+      "COPYPASTE_JSCPD": "Repeated negative fixtures, module-load and controlled Git boundary patterns; intentional test clarity, no behavior or policy waiver.",
+      "MARKDOWN_MARKDOWN_TABLE_FORMATTER": "Historical repository tables; no new target table finding in this guide/handoff.",
+      "PYTHON_PYLINT": "Existing PyYAML availability, unittest addCleanup resource lifetime and local variable-count warnings; runtime/scoped typing proven separately.",
+      "REPOSITORY_CHECKOV": "Existing repository/cloud configuration observations; no workflow/IaC source changed here.",
+      "REPOSITORY_GRYPE": "Existing dependency vulnerability observations; no source dependency selection changed.",
+      "REPOSITORY_TRIVY": "Existing dependency/IaC observations; no source dependency or deployment policy changed.",
+      "SPELL_PROSELINT": "Mandatory Resume protocol heading uses the verb, not the CV noun; the accent suggestion does not apply.",
+      "SPELL_VALE": "Broader repository prose observations; no owned target finding identified in the inspected output."
+    },
+    "followup": "Native Mypy identified14 baseline-owned class attributes, and local exact-stub whole-root check exposed2 version-sensitive comments. Both were corrected at f502804e; all36 root Python files pass Mypy1.19.1 and2.3.0. Final review-head holistic execution remains separate.",
+    "privacy": "Raw report contains runtime/cache metadata and stays outside source. Only allowlisted identity/status/version fields and bounded dispositions are retained.",
+    "followup_functional_revision": "f502804e304a6902f07374d24276ae0e5afb8933"
+  }
+}

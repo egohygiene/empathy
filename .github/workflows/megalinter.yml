@@ -13,6 +13,12 @@ on:
   schedule:
     - cron: "41 5 * * 3"
   workflow_dispatch:
+    inputs:
+      publish-snapshot:
+        description: "Commit the stable report snapshot; disable for an artifact-only frozen-source proof."
+        required: true
+        default: true
+        type: boolean
 
 permissions:
   contents: read
@@ -74,13 +80,25 @@ jobs:
           fi
 
       - name: Normalize repository-intelligence summary
+        id: normalize
         if: always()
-        uses: egohygiene/relay/actions/normalize-repository-report@1eada5142f7fc7da7862f335589e3b8f5884ffaf # v1.5.0
+        uses: egohygiene/relay/actions/normalize-repository-report@f7f9bd44713606d9c099adda715db2542c8b66bf # reviewed finalized-report parser
         with:
           producer: megalinter
           input: .reports/megalinter/mega-linter-report.json
           output: .reports/megalinter/summary.json
+          detail-url: "${{ github.event_name == 'workflow_dispatch' && !inputs['publish-snapshot'] && format('{0}/{1}/actions/runs/{2}', github.server_url, github.repository, github.run_id) || '' }}"
           policy-input: egolint/.config/megalinter/tool-matrix.json
+
+      - name: Retain source-bound normalized megalinter summary
+        if: ${{ always() && steps.normalize.outcome == 'success' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: "empathy-report-megalinter-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: .reports/megalinter/summary.json
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 9
 
       - name: Publish MegaLinter summary
         if: always()
@@ -140,6 +158,7 @@ jobs:
       always() &&
       needs.lint.result != 'cancelled' &&
       github.event_name != 'pull_request' &&
+      (github.event_name != 'workflow_dispatch' || inputs['publish-snapshot']) &&
       github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     timeout-minutes: 10

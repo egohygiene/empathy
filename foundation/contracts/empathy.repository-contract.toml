@@ -126,12 +126,6 @@ kind = "file"
 ownership = "repository-owned"
 
 [[requirements]]
-id = "rust-manifest"
-path = "Cargo.toml"
-kind = "file"
-ownership = "repository-owned"
-
-[[requirements]]
 id = "license"
 path = "LICENSE"
 kind = "file"
