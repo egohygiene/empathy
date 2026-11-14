@@ -39,6 +39,27 @@ SENTINEL = "SECRET"
 
 
 class PublicationEvidenceTests(unittest.TestCase):
+    def test_retained_native_failure_is_closed_and_keeps_private_material_out(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory) / "failure.json", Path(directory) / "retained.json"
+            publication.retain_source_failure(source, output)
+            self.assertFalse(output.exists())
+            value = {
+                "schema": "egohygiene.relay.source-build-failure/v1",
+                "status": "denied",
+                "publication": "denied",
+                "stage": "collection-validation-normalization",
+                "source": "journey",
+                "code": "SOURCE_BUILD_DENIED",
+            }
+            source.write_text(json.dumps(value), encoding="utf-8")
+            publication.retain_source_failure(source, output)
+            self.assertEqual(json.loads(output.read_bytes()), value)
+            for invalid in ({**value, "raw_log": SENTINEL}, {**value, "source": SENTINEL}):
+                source.write_text(json.dumps(invalid), encoding="utf-8")
+                with self.assertRaises(publication.PublicationError):
+                    publication.retain_source_failure(source, output)
+
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)

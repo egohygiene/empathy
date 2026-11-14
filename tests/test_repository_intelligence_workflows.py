@@ -570,6 +570,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
                 "HARDEN_RESULT",
                 "CHECKOUT_RESULT",
                 "INPUT_RESULT",
+                "REPORT_SELECTION_RESULT",
                 "BUILD_RESULT",
                 "ARTIFACT_RESULT",
                 "CAPTURE_RESULT",
@@ -597,6 +598,7 @@ class RepositoryIntelligenceWorkflowTests(unittest.TestCase):
         report = self.run_report(report_step, filename, environment, 0)
         self.assertEqual(report["conclusion"], "success")
         for stage, key, code in (
+            ("report_selection", "REPORT_SELECTION_RESULT", "EMRI-003"),
             ("public_sources", "CAPTURE_RESULT", "EMRI-011"),
             ("source_capture_upload", "CAPTURE_UPLOAD_RESULT", "EMRI-011"),
             ("review_feed", "REVIEW_FEED_RESULT", "EMRI-012"),
