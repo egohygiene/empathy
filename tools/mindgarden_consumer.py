@@ -76,8 +76,8 @@ def source_bytes(root: Path, row: dict[str, Any]) -> bytes:
     return raw
 
 
-def build(root: Path, output: Path, exchange: str | None = None) -> dict[str, Any]:
-    """Delegate normalization/index/privacy gates; never mutate canonical knowledge."""
+def normalize_destination(root: Path, output: Path) -> tuple[Path, Path]:
+    """Normalize API paths before evaluating canonical ownership and aliases."""
     root = root.resolve()
     if any(path.is_symlink() for path in (output, *output.parents)):
         message = "Corpus destination must not follow a symlink alias"
@@ -86,6 +86,12 @@ def build(root: Path, output: Path, exchange: str | None = None) -> dict[str, An
     if output.is_relative_to(root) and not output.is_relative_to(root / ".cache"):
         message = "Repository corpus outputs belong under ignored .cache, never canonical knowledge"
         raise ValueError(message)
+    return root, output
+
+
+def build(root: Path, output: Path, exchange: str | None = None) -> dict[str, Any]:
+    """Delegate normalization/index/privacy gates; never mutate canonical knowledge."""
+    root, output = normalize_destination(root, output)
     owner = engine(root)
     agent = importlib.import_module("mindgarden.application.agent")
     publishing = importlib.import_module("mindgarden.adapters.publishing")
