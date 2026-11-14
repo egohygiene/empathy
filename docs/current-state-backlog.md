@@ -14,11 +14,12 @@ identifies the durable owner for each capability.
 
 ## Start from a clean checkout
 
-| Area | Owner and prerequisites | Inspect and check |
-| --- | --- | --- |
-| Foundation composition | Empathy; Python 3.11+ | Read the [foundation contract](foundation/README.md), then run `python3 tools/foundation.py validate-manifest --manifest foundation/empathy.manifest.json`. |
-| Visual identity | Identity owns the compiler; Empathy owns its inputs. Initialize the pinned submodule, and use Task, Python 3, and Cargo as described in the guide. | Follow the [Identity v1 guide](integrations/IDENTITY_V1.md) from source validation through generation and snapshot verification. |
-| Staging | Empathy owns intake evidence and its file ledger. Capability owners supply migration evidence. | Read the [staging contract](migration/STAGING.md) before proposing any change to preserved intake. |
+| Area                   | Owner and prerequisites                                                                                                                            | Inspect and check                                                                                                                                                 |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Foundation composition | Empathy; Python 3.11+                                                                                                                              | Read the [foundation contract](foundation/README.md), then run `python3 tools/foundation.py validate-manifest --manifest foundation/empathy.manifest.json`.       |
+| Selected local CI      | Empathy composition; immutable Realm checkout, act and eligible Linux Docker for workflow execution                                                | Follow the [local CI consumer guide](integrations/LOCAL_CI.md); `plan` reads the explicit selection, while `run` retains scoped results and unsupported coverage. |
+| Visual identity        | Identity owns the compiler; Empathy owns its inputs. Initialize the pinned submodule, and use Task, Python 3, and Cargo as described in the guide. | Follow the [Identity v1 guide](integrations/IDENTITY_V1.md) from source validation through generation and snapshot verification.                                  |
+| Staging                | Empathy owns intake evidence and its file ledger. Capability owners supply migration evidence.                                                     | Read the [staging contract](migration/STAGING.md) before proposing any change to preserved intake.                                                                |
 
 Foundation resolution and checked-in projections are active. Some specialist
 capabilities are pinned consumers, some sources remain in incubation or frozen

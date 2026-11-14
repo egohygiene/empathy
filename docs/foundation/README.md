@@ -36,12 +36,28 @@ subsequent work. Existing nested policies are measured separately, so this does
 not claim whole-repository ignore-content conformance.
 
 The authoring schema remains `1.1.0` with the existing v1 schema filenames.
-Foundation catalog `2.0.0` changes the required-file baseline without changing
-the JSON shape. Catalog version and schema version therefore have separate
-constants; manifests and the EgoLint projection identify foundation `2.0.0`.
+Foundation catalog `2.0.0` changed the required-file baseline without changing
+the JSON shape. Catalog `2.1.0` adds the optional local-CI composition below.
+Catalog version and schema version therefore have separate constants;
+the current manifest and EgoLint projection identify foundation `2.1.0`.
 The resolver requires an exact foundation match. Existing consumers keep their
 pinned input and resolver until explicitly upgraded. The selected Holon contract
 stays at `1.0.0`.
+
+## Optional local CI
+
+The `local-ci` execution profile selects `.actrc`, `config/local-ci.json`,
+the immutable Realm source pin, a thin Empathy adapter, and the local-only
+workflow fixture. Empathy's golden manifest selects it explicitly. It requires
+only `universal`; it does not imply the holistic quality profile is qualified.
+
+Consumers that do not select it have no foundation requirement for these files,
+act, Docker or a Realm checkout. They can keep their existing native validation
+commands. The selected profile makes act a development prerequisite, not a
+runtime dependency. The [consumer guide](../integrations/LOCAL_CI.md) defines
+the reviewed configuration boundary, reproduction commands and honest coverage
+limits. This additive catalog release retains schema `1.1.0`; existing consumers
+keep their exact pinned foundation until a reviewed upgrade.
 
 ## Required Dependabot configuration
 
