@@ -44,16 +44,11 @@
     "path": ".devcontainer/.env",
     "before_sha256": "1f232aaa7ba1c397eb9ef4fa9e41853f177539bfe7d0611ade49b233060f34cb",
     "payload_disclosed": false,
-    "keys": [
-      "IN_DEVCONTAINER"
-    ],
+    "keys": ["IN_DEVCONTAINER"],
     "active_configuration": ".devcontainer/devcontainer.json",
     "configuration_sha256": "6e0a3846ab9d7bd20206b76e0e30e280dadf364e3e9090915e0a823f4fbf6d0f",
     "configuration_unchanged": true,
-    "equivalent_truth_declared_in": [
-      "containerEnv",
-      "remoteEnv"
-    ],
+    "equivalent_truth_declared_in": ["containerEnv", "remoteEnv"],
     "loader_observation": "Only the active JSON configuration references this marker; tracked compose/Dockerfile contain comments only, and lifecycle environment creation addresses root .env, not this file. No container runtime/build qualification is claimed."
   },
   "environment_baseline": {

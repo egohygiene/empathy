@@ -36,7 +36,7 @@
     }
   ],
   "later_source_change": "An integrated #109 test-only synthetic authorization fixture follow-up is included at current624a953e; runtime/profile bytes remain unchanged. Exact final source/profile observations are recorded separately in PR review.",
-  "holistic_profile": "Required manual feature-branch observation follows the frozen review head; no full pass is claimed by this source checkpoint.",
+  "holistic_profile": "Actual frozen1ef manual holistic completed and all blocking/warning diagnostics were reviewed; introduced guide/JSON formatting repaired in the bounded follow-up. Exact aggregate qualification remains root-owned.",
   "other_boundaries": [
     "Independent EgoLint runtime/catalog failure remains held under110.",
     "Current foundation2.0 adapter identity remains distinct from accepted1.1 comparison.",
@@ -109,5 +109,85 @@
     "ruff": "0.16.2",
     "mypy": "2.3.0",
     "outcome": "Canonical-config scoped checks passed, then separately repeated with exact listed pinned versions in an isolated venv. Shared tools were not changed."
+  },
+  "holistic_review": {
+    "run_id": 43532024604,
+    "run_attempt": 1,
+    "head": "1ef910c6d0819da6e0657ea5b5886f4415400238",
+    "conclusion": "failure",
+    "artifact_id": 14087733913,
+    "artifact_archive_sha256": "6cdac3d1820c77c958248707fe15fe0819886d234bc26d2828a72ea40701cb3e",
+    "artifact_bytes": 7445981,
+    "descriptor_records": 101,
+    "reported_success_records": 70,
+    "warning_records": 8,
+    "blocking_error_records": 23,
+    "active_descriptors": 50,
+    "active_success": 19,
+    "active_warnings": 8,
+    "active_errors": 23,
+    "whole_codebase_selected": true,
+    "focused_tool_observations": {
+      "PYTHON_MYPY": {
+        "status": "error",
+        "actual_version": "1.19.1",
+        "own_test_selected": true
+      },
+      "PYTHON_BANDIT": {
+        "status": "error",
+        "actual_version": "1.9.4",
+        "own_test_selected": true
+      },
+      "PYTHON_RUFF": {
+        "status": "error",
+        "actual_version": "0.17.2",
+        "own_test_selected": true
+      },
+      "PYTHON_RUFF_FORMAT": {
+        "status": "error",
+        "actual_version": "0.17.2",
+        "own_test_selected": true
+      },
+      "REPOSITORY_SECRETLINT": {
+        "status": "error",
+        "actual_version": "13.0.7",
+        "own_test_selected": false
+      },
+      "SPELL_LYCHEE": {
+        "status": "error",
+        "actual_version": "0.24.2",
+        "own_test_selected": false
+      }
+    },
+    "introduced_findings": [
+      {
+        "tool": "MARKDOWN_MARKDOWNLINT",
+        "finding": "Two MD018 parses from line-leading issue references in the new guide",
+        "resolution": "Prefix issue references with ordinary prose; focused canonical markdownlint0.49.1 passes."
+      },
+      {
+        "tool": "JSON_PRETTIER",
+        "finding": "New nested-adoptions JSON formatting",
+        "resolution": "Format with actual Prettier3.9.10 and canonical owner config; JSON semantics/source hashes remain unchanged."
+      }
+    ],
+    "baseline_109_typing_followup": {
+      "findings": 16,
+      "files": 2,
+      "owner_commit": "f502804e304a6902f07374d24276ae0e5afb8933",
+      "disposition": "Root aggregate will integrate the finalized109 typing follow-up; the old1ef run remains failed and is not relabeled passing."
+    },
+    "warning_review": {
+      "COPYPASTE_JSCPD": "Existing corpus duplication plus repeated protocol evidence in the three new receipt cases. Distinct observed native outputs are intentionally retained; no new runtime code duplication or abstraction is introduced.",
+      "MARKDOWN_MARKDOWN_TABLE_FORMATTER": "Existing tables and the new guide table were flagged for spacing. The new table was subsequently formatted with the canonical Prettier config; no policy or severity was changed.",
+      "PYTHON_PYLINT": "Existing root/imported complexity/style findings; no new adoption-test path finding.",
+      "REPOSITORY_CHECKOV": "Existing infrastructure and intentional negative security fixtures; active devcontainer configuration bytes are unchanged.",
+      "REPOSITORY_GRYPE": "Existing dependency inventory findings. This scoped adoption adds no project dependency; no vulnerability closure is claimed.",
+      "REPOSITORY_TRIVY": "Repository scanner execution warning/panic; not a successful scan or empty finding set.",
+      "SPELL_PROSELINT": "Existing prose/typography findings outside the new owned guide; no source-corpus rewrite is authorized.",
+      "SPELL_VALE": "Existing imported kaobook front-matter/parser failure; not a successful prose scan."
+    },
+    "snapshot_publication": "Actual Publish curated MegaLinter snapshot job skipped",
+    "aggregate_gate": "Root will execute the exact canonical aggregate profile and actual PR-event acceptance before ordinary integration; this slice makes no full-profile pass claim."
   }
 }

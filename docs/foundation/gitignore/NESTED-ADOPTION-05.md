@@ -13,12 +13,12 @@ unassessed; this checkpoint does not certify their entire contents.
 
 ## Resolved source cases
 
-| Case | Actual consumer reconciliation |
-| --- | --- |
-| Devcontainer environment marker | Retire the tracked `.devcontainer/.env` after matching its exact known digest and confirming that it contains only the marker key. Both existing `devcontainer.json` environment declarations retain the same semantic truth and exact file bytes. The obsolete `!.env` exemption is removed. |
-| Imported EgoLint target rule | Consume the accepted owner's `/target/` correction from `ec97ed8b3f1a4a2198aec03355600ea6c9caa1e1`. All other imported bytes remain unchanged. Build output is ignored while `egolint/examples/target/source.rs` and equivalent source fixtures remain visible. |
+| Case                                 | Actual consumer reconciliation                                                                                                                                                                                                                                                                                             |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Devcontainer environment marker      | Retire the tracked `.devcontainer/.env` after matching its exact known digest and confirming that it contains only the marker key. Both existing `devcontainer.json` environment declarations retain the same semantic truth and exact file bytes. The obsolete `!.env` exemption is removed.                              |
+| Imported EgoLint target rule         | Consume the accepted owner's `/target/` correction from `ec97ed8b3f1a4a2198aec03355600ea6c9caa1e1`. All other imported bytes remain unchanged. Build output is ignored while `egolint/examples/target/source.rs` and equivalent source fixtures remain visible.                                                            |
 | Imported Holon environment templates | The accepted owner at `660b941f99618806fcadd589bcdae61c519f96e4` delegates environment policy to Empathy. Replace only the obsolete prefix-exemption block with the exact accepted universal suffix block. All unrelated imported rules remain unchanged; this is scoped adoption, not a complete imported-source refresh. |
-| Former Mantle case | Remains retired by the existing [actual extraction](../../migration/MANTLE.md); no Mantle copy or new exception is introduced. |
+| Former Mantle case                   | Remains retired by the existing [actual extraction](../../migration/MANTLE.md); no Mantle copy or new exception is introduced.                                                                                                                                                                                             |
 
 Only `devcontainer.json` actively references the marker. The checked-in
 Dockerfile and Compose file contain comments, with no marker-loading directive;
@@ -83,15 +83,15 @@ not publish report snapshots from the feature branch.
 The historical #82 environment criterion now has explicit source correction and
 accepted shared semantic evidence for its scoped cases. Full-suite/profile
 findings remain separate: #109 owns baseline diagnostics and profile intent,
-#110 retains its direct bootstrap/runtime hold, and foundation 2.0 adapter
+Issue #110 retains its direct bootstrap/runtime hold, and foundation 2.0 adapter
 adoption remains a future owner upgrade. No full holistic pass or whole-Empathy
 conformance is inferred from these file-specific results.
 
 The master file-contract epic
 [organization #32](https://github.com/egohygiene/.github/issues/32) must reconcile
 this scoped checkpoint after source integration and explicit issue disposition.
-Shared execution/release remains with Relay #5/#49 and fleet adoption with Pace
-#30. `EMP-Q04`/`EMP-Q05` remain planned; this work supplies neither a complete
+Shared execution/release remains with Relay #5/#49. Fleet adoption remains with
+Pace #30. `EMP-Q04`/`EMP-Q05` remain planned; this work supplies neither a complete
 foundation materialization nor a baseline release.
 
 Decision impact: reference the existing foundation ownership ADR-0001. These are
