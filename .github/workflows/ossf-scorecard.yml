@@ -127,7 +127,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          api_path="${RUNNER_TEMP}/scorecard-api.json"
+          api_path=".cache/scorecard/scorecard-api.json"
           candidate_path="${api_path}.candidate"
           rm --force "${api_path}" "${candidate_path}"
 

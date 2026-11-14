@@ -20,6 +20,19 @@ job while retaining the actual scan, native normalization and summary artifact.
 Scorecard normalization runs in a read-only job at the actual scanned source;
 its separate write job consumes that same-run normalized artifact.
 
+Scorecard's optional official API cache stays under ignored `.cache/scorecard`
+and is passed as a repository-relative path, as required by the pinned action.
+An aggregate is accepted only for the scanned repository and commit. A missing
+or stale API response keeps the fresh SARIF checks and reports the aggregate
+as unavailable; it does not retime or replace the scan.
+
+Actual S1 run [43548931035](https://github.com/egohygiene/empathy/actions/runs/43548931035)
+scanned `4a12cbb8cbc8580ef8b7fe0911b51bbaa35a9924` successfully, but its absolute
+temporary API path failed the action's shell guard before Python normalization.
+That run emitted no normalized carrier or normalization time; its API cache
+was not retained. The caller correction requires a fresh default-branch source
+cycle; offline regression controls are not replacement provider artifacts.
+
 For artifact-only runs, the existing normalizer's `detail-url` input links to
 the actual producer run, which holds the source-bound summary. It does not link
 to an older committed summary under the same path. Generation time, freshness,

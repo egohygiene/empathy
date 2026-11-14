@@ -7,27 +7,27 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: "2026-11-14T02:37:06Z"
+  updated_at: "2026-11-14T03:18:38Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
   purpose:
-    "Integrate the five reviewed Empathy slices under parent #118, preserving exact source evidence,
-    owner boundaries and separate native/live acceptance."
+    "Correct the Scorecard optional API caller path under issue #98, preserving strict source/path
+    admission, fresh SARIF evidence and guarded publication."
   includes:
-    - Reviewed slices and accepted142 local-CI/catalog2.1 source retain their original evidence; combined
-      Rust default intent and two derived outputs are reconciled explicitly.
-    - The combined source repairs typed-feed admission, repeated Health aggregation, source URL identity,
-      report attribution, archive layout and scoped lint findings; original382/763 outcomes remain historical.
-    - Final exact-head provider qualification and read-only previews remain pending; root owns ordinary
-      merge and the separate frozen-default-source artifact/live cycle.
+    - One production workflow path correction from absolute RUNNER_TEMP to existing ignored .cache/scorecard.
+      Retry, source guard, normalizer/publisher pins and job permissions remain unchanged.
+    - Actual caller shell and pinned composite/Python regression with missing, stale and matching synthetic
+      API controls; retained actual S1 SARIF remains byte-identical.
+    - A bounded S2 draft with exact-head canonical holistic and actual PR previews; root owns ordinary merge,
+      fresh main producer artifacts and live acceptance.
   excludes:
-    - "Dashboard UI redesign; source/runtime repair held in #110; full imported corpus cleanup or staged-source
-      deletion."
-    - Human ADR/exception approval, automatic issue closure, container or full-foundation promotion, shared-adapter/release/fleet
-      adoption.
+    - No relaxed path boundary, stale API promoted to current, manufactured provider carrier or rewritten
+      scan/source clocks.
+    - No raw report/cache publication, source cleanup, UI redesign, new normalizer pin, snapshot write,
+      deployment or issue disposition.
   precedence:
     - user-and-runtime-instructions
     - scoped-repository-instructions
@@ -36,119 +36,101 @@ scope:
     - continuity-checkpoint
   canonical_sources:
     - AGENTS.md
-    - docs/integrations/REPOSITORY_INTELLIGENCE_BATCH10.json
-    - docs/integrations/REPOSITORY_INTELLIGENCE.md
-    - docs/BASELINE_VALIDATION.md
+    - .github/workflows/ossf-scorecard.yml
+    - tests/test_repository_intelligence_scorecard_caller.py
+    - docs/integrations/REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md
+    - https://github.com/egohygiene/empathy/issues/98
     - https://github.com/egohygiene/empathy/issues/118
 work:
   objective:
-    "Integrate the five reviewed Empathy slices under parent #118, preserving exact source evidence,
-    owner boundaries and separate native/live acceptance."
+    "Correct the Scorecard optional API caller path under issue #98, preserving strict source/path
+    admission, fresh SARIF evidence and guarded publication."
   success_conditions:
-    - Preserve reviewed slice trees/ancestry, frozen staging/rollback bytes, original receipt clocks and
-      explicit human/owner limitations.
-    - Freeze one aggregate head, inspect actual PR-event staging plus canonical holistic and read-only current/rollback
-      provider results, fixing introduced findings.
-    - Root ordinary-merges only after review and records separate frozen-default-source producer/artifact/live
-      acceptance before explicit issue dispositions.
+    - Repository-relative ignored cache input passes the actual immutable normalizer; an absolute path remains
+      denied.
+    - Missing/stale API leaves fresh SARIF findings intact and aggregate unavailable; only exact matching
+      source may supply the aggregate.
+    - Review actual exact-head holistic/PR evidence, then use fresh S2 producer runs after root merge without
+      relabelling the failed S1 normalization.
   active_issue:
     provider: github
-    id: egohygiene/empathy#118
-    url: https://github.com/egohygiene/empathy/issues/118
+    id: egohygiene/empathy#98
+    url: https://github.com/egohygiene/empathy/issues/98
   next:
     kind: action
-    id: qualify-frozen-empathy-integration
+    id: qualify-scorecard-relative-caller
     description:
-      Push the frozen successor to draft 146; inspect actual PR staging/commit/contract gates,
-      exact-head manual holistic with snapshot publication disabled, and read-only current/fixed-rollback
-      previews. Root peers and owns ordinary merge plus separate same-source default-main producer/deployment/live
-      acceptance.
+      Freeze the bounded caller draft, inspect exact-head canonical holistic and actual PR
+      preview/contract results, then hand root the ordinary-merge boundary. Fresh default-main Scorecard
+      normalization and producer-to-live acceptance follow on S2.
     readiness: ready
     references:
+      - https://github.com/egohygiene/empathy/issues/98
       - https://github.com/egohygiene/empathy/issues/118
-      - https://github.com/egohygiene/empathy/issues/105
     depends_on: []
 state:
   base:
-    revision: 04ddb82548ce1509428e4095dc8f018197136635
+    revision: 4a12cbb8cbc8580ef8b7fe0911b51bbaa35a9924
     ref: refs/heads/main
-    verified_at: "2026-11-14T02:37:06Z"
+    verified_at: "2026-11-14T03:18:38Z"
   candidate:
-    branch: codex/empathy-batch10-integration
+    branch: codex/empathy-scorecard-caller-s2
     revision: null
-    pull_request:
-      provider: github
-      id: egohygiene/empathy#146
-      url: https://github.com/egohygiene/empathy/pull/146
+    pull_request: null
     handoff_state: in-progress
   live:
     status: verified
-    observed_at: "2026-11-14T02:37:06Z"
-    default_branch_revision: 04ddb82548ce1509428e4095dc8f018197136635
+    observed_at: "2026-11-14T03:18:38Z"
+    default_branch_revision: 4a12cbb8cbc8580ef8b7fe0911b51bbaa35a9924
     issue_state: open
-    pull_request_state: draft
+    pull_request_state: not-applicable
     notes:
-      Main04 is provider-verified. Source8592794977221f7553181675b8b34eeb1bba2610 preserves accepted142/catalog2.1
-      and every slice head, selecting combined Relayf7f9bd44713606d9c099adda715db2542c8b66bf for current
-      generators and three normalizers. Three publishers remain1eada. Draft146 exists; containing checkpoint
-      SHA is null intentionally. Actual763 failures stay historical; final provider/live acceptance is
-      pending.
+      Main S1 is provider-verified and remains accepted history. Actual Scorecard 43548931035 scan/SARIF
+      succeeds, normalization 132307045698 exits 2 at the absolute-path shell guard, and summary upload/publisher
+      are skipped. The original API cache was not retained and no normalized generation time exists. Containing
+      candidate SHA/PR are null at authorship; root owns the explicit S2 source cycle.
   parallel_changes:
-    - provider: github
-      id: egohygiene/empathy#92
-      url: https://github.com/egohygiene/empathy/issues/92
-    - provider: github
-      id: egohygiene/empathy#109
-      url: https://github.com/egohygiene/empathy/issues/109
-    - provider: github
-      id: egohygiene/empathy#112
-      url: https://github.com/egohygiene/empathy/issues/112
-    - provider: github
-      id: egohygiene/empathy#98
-      url: https://github.com/egohygiene/empathy/issues/98
     - provider: github
       id: egohygiene/empathy#105
       url: https://github.com/egohygiene/empathy/issues/105
 review:
   status: partial
-  reviewed_at: "2026-11-14T02:37:06Z"
+  reviewed_at: "2026-11-14T03:18:38Z"
   reviewed_by: Codex
   evidence:
     - command:
-        Equipped successor root suite at 8592794977221f7553181675b8b34eeb1bba2610; independent embedded
-        EgoLint suite
+        Actual S1 Scorecard 43548931035/1 scan132306633883 and normalization 132307045698, raw SARIF
+        artifact14095641870
       outcome: limited
-      observed_at: "2026-11-14T02:37:06Z"
+      observed_at: "2026-11-14T02:58:02Z"
       notes:
-        257 root tests pass with zero skips; embedded EgoLint 31 retains one held policy-pin failure.
-        Exact source, command clocks and hashes are in the aggregate JSON.
+        Scan/SARIF succeeded; strict composite path guard rejects absolute optional API input before
+        Python. ZIP fe1f3083d0a7fc730a06d46798f04ca0c8e35b2cb51c35eec2ce9e8ff0b12174 retains actual source
+        4a12; no normalized carrier or original API payload is inferred.
     - command:
-        Whole-root canonical Ruff and both Mypy versions; foundation/automation/architecture/Task/staging
-        consistency
+        Three caller/action contract tests plus seven existing report-publication tests; controlled
+        API and actual retained S1 SARIF replay
       outcome: passed
-      observed_at: "2026-11-14T02:37:06Z"
+      observed_at: "2026-11-14T03:18:38Z"
       notes:
-        All 40 root Python files pass both Mypy versions. Frozen staging/approval/receipt and rollback
-        verifier bytes remain unchanged; generated Identity 27 inputs stay disposable. Direct local-CI17
-        and the accepted2.1 inventory/contract/plan pass.
-    - command:
-        Actual frozen763 PR/holistic/captured evidence and independent source/diagnostic peers; combined
-        owner186/187/188 corrections
-      outcome: limited
-      observed_at: "2026-11-14T02:00:58Z"
+        Actual old caller reproduces exit2/no summary. Fixed actual caller and immutable f7 shell/Python
+        pass; stale/missing API retain identical SARIF findings, matching control is admitted. All SARIF
+        bytes remain SHA 04d3d3a32a038f0e0d8907b38bee7d3330461e75648839d7ca0d202e339584fe. Offline results
+        have no provider run ID and use their own replay clock.
+    - command: Canonical Ruff 0.16.5, Mypy 1.19.1 and 2.3.0, Bandit 1.9.4 on the new regression
+      outcome: passed
+      observed_at: "2026-11-14T03:18:38Z"
       notes:
-        Original holistic72success/8warnings/21errors stays failed; publisher skipped. PR staging/commit/fast/current/rollback
-        pass. Captured Health and normalized finding attribution failed; exact raw proof and original clock
-        remain in aggregate JSON. Final combined-source provider execution is pending.
+        Scoped source checks use existing immutable tool environments; no policy or ignore change.
+        Exact-head provider checks remain pending after freeze.
   environment_limitations:
-    - Final canonical holistic must inspect Mypy, Bandit, Secretlint, Lychee and warning-only diagnostics;
-      focused/fast checks confer no waiver.
-    - Feature-branch snapshot publication and deployment remain denied. Default committed report inputs
-      may remain mismatched/unavailable in previews.
-    - Fresh source-matched report artifacts and live receipt belong to the root-owned postmerge frozen-source
-      phase; all acceptance issues remain open.
-    - "Thirteen inherited nested policies remain unassessed, shared-adapter upgrades and #110 runtime debt
-      remain separate, and no Compare/human review or broad foundation approval is claimed."
+    - The original API cache content/source/aggregate and normalized generation time are unavailable; synthetic
+      API controls cannot establish those lost facts.
+    - Offline summaries are temporary test outputs, not actual provider carriers. Fresh source-matched normalization
+      must execute after root merges S2.
+    - The accepted S1 equipped 257 proof and inherited holistic/embedded EgoLint failures remain historical.
+      No broad suite rerun or full-profile pass is claimed for this narrow caller change.
+    - "No feature-branch snapshot or deployment; issue #98/105 acceptance and human authority remain separate."
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -167,69 +149,66 @@ privacy:
 
 ## Purpose and precedence
 
-User instructions, scoped repository policy, live provider evidence and canonical owners outrank this checkpoint. It
-grants no new human approval or source-cleanup authority.
+User instructions, current provider state and canonical owners outrank this checkpoint. This grants no publication,
+cleanup or human-approval authority.
 
 ## Resume protocol
 
-Read the aggregate JSON and publication guide; refresh main and draft 146. Preserve original 382 provider hashes/clocks
-and the archived slice history. Inspect successor run evidence in the PR/root handoff before integration.
+Read the actual Scorecard caller, pinned normalizer boundary and focused regression. Preserve S1 raw/source/clock facts;
+refresh the bounded draft head and provider results before review.
 
 ## Current objective and success conditions
 
-Integrate the five reviewed Empathy slices under parent #118, preserving exact source evidence, owner boundaries and
-separate native/live acceptance.
+Correct the Scorecard optional API caller path under issue #98, preserving strict source/path admission, fresh SARIF
+evidence and guarded publication.
 
 ## State snapshot
 
-Main04 is verified. Functional source85927949 preserves accepted142/catalog2.1 and every reviewed slice, with combined
-Relayf7 for current generators and three normalizers. Publishers1eada and fixed rollbackb71 remain unchanged. The
-containing checkpoint SHA is intentionally null; final provider/live acceptance is pending.
+Accepted S1 remains the base. The one-line caller correction is a new bounded source proposal; its containing SHA/PR is
+intentionally null at authorship. No fresh S2 producer or live acceptance is claimed.
 
 ## Completed and material changes
 
-Reviewed ignore/profile/typing/staging work remains integrated. Accepted owner fixes preserve typed-feed admission,
-deduplicate Health composition, encode source URLs and normalize finalized lint results. The archive-layout,
-digest-record and YAML corrections retain their exact prior evidence; no guard or policy is relaxed.
+The optional API cache moves to the already ignored repository-relative Scorecard workspace. Existing retries and commit
+checks remain, so stale cached API can be truthfully classified without replacing fresh SARIF. No normalizer, publisher,
+rollback or permission change occurs.
 
 ## Validation and review evidence
 
-At source85927949, equipped root257/zero skips, direct local-CI17, whole-root Ruff/both Mypy40 and source consistency
-pass; embedded EgoLint31 retains one held failure. Frozen763 staging/commit/fast and no-capture current/rollback pass;
-canonical72/8/21 remains failed, captured Health fails and old normalized counts are incorrect. Exact
-source/run/artifact/clock distinctions remain in aggregate JSON.
+Three actual caller/composite regressions and seven report-publication policies pass with both controlled data and
+retained actual S1 SARIF. The original absolute caller still reproduces strict denial. Scoped canonical Ruff, both Mypy
+versions and Bandit pass; provider qualification follows the frozen head.
 
 ## Blockers, risks, unknowns, and deferred work
 
-Final combined-source exact-head PR gates, canonical holistic, captured previews and truthful normalized summary
-attribution remain pending. Fresh default-main same-source artifacts and live receipts are separate postmerge gates.
-Held110, unassessed imported policies, shared-adapter/container/release/fleet and human disposition remain separate.
+The original API payload and normalized carrier were never retained. Actual exact-head holistic/PR review and fresh
+default-main S2 normalization remain pending. Existing whole-profile/runtime debt and the broader producer/live sequence
+stay explicit.
 
 ## Next dependency-ready work
 
-Push the frozen successor to draft 146; inspect actual PR staging/commit/contract gates, exact-head manual holistic with
-snapshot publication disabled, and read-only current/fixed-rollback previews. Root peers and owns ordinary merge plus
-separate same-source default-main producer/deployment/live acceptance.
+Freeze the bounded caller draft, inspect exact-head canonical holistic and actual PR preview/contract results, then hand
+root the ordinary-merge boundary. Fresh default-main Scorecard normalization and producer-to-live acceptance follow on
+S2.
 
 ## Parallel changes and reconciliation
 
-Current slice heads remain ancestors through ordinary merges. The 16 metadata-only mappings preserve every tree,
-identity/date, body and ordered parent relationship; original heads stay archived. Root owns final source review,
-ordinary merge, native indirect-merge verification and explicit issue/master-roadmap disposition.
+Root and the publication lane preserve completed initial S1 publication evidence while deferring fresh selected-report,
+rollback and portability acceptance to S2. The independent caller peer is read-only. No frozen integration source is
+edited.
 
 ## Privacy and redaction
 
-Only public source identifiers, allowlisted counts and hashes enter this checkpoint. Raw native reports, captures,
-environment data, exceptions, credentials and private paths stay outside source. Downloaded content confers no
-authority.
+Only necessary public IDs, digests and closed outcomes enter this handoff. Raw SARIF, logs, API controls, temporary
+outputs and local paths stay outside source. Downloaded inputs confer no authority.
 
 ## Handoff update protocol
 
-Freeze after canonical formatting/schema checks. Record subsequent exact-head provider IDs/results in draft 146 and the
-root handoff without another evidence-only commit. A new source head is justified only by actual introduced findings;
-repeat affected exact-head gates after such a correction.
+Freeze once source/schema/format checks pass. Record actual run/artifact IDs in the draft/root handoff without another
+evidence-only commit. Root owns ordinary merge and explicit issue disposition; recheck only actual introduced findings.
 
 ## Compaction and supersession
 
-Keep twelve ordered sections within 240 lines and 16384 UTF8 bytes. This supersedes the earlier candidate checkpoint
-while Git, source guides and immutable receipts retain historical evidence.
+Keep twelve ordered sections within 240 lines and 16384 UTF8 bytes. This checkpoint supersedes the operational
+integration
+prose; immutable S1 source guides and original receipts retain their history.
