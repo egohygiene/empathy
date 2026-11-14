@@ -126,7 +126,22 @@ Hygiene496 profile locked by Observatory. Relay
 [#185](https://github.com/egohygiene/relay/pull/185) separately authenticates
 that historical profile, preserving strict equality, public ownership and
 original Observatory contracts while retaining the current dependency profile.
-Current consumers select immutable Relay `95105a9f5d99239af0d44d7dbd796fd1507fef31`.
+Current consumers select immutable Relay `f7f9bd44713606d9c099adda715db2542c8b66bf`.
+
+The actual captured previews at Empathy
+`7639304babcba9d4baf21ccea163f31f9045a0c6` passed typed-feed admission but
+failed the Health freshness/identifier consistency guard after composition.
+Relay [#186](https://github.com/egohygiene/relay/pull/186) preserves that guard
+and repairs repeated-view aggregation;
+[#187](https://github.com/egohygiene/relay/pull/187) preserves canonical source
+URL identity. The same head's actual holistic run `43543368762` failed, while
+the old normalizer incorrectly reported zero findings and all 50 tools passed.
+Relay [#188](https://github.com/egohygiene/relay/pull/188) reads finalized linter
+results: the exact-source replay preserves failed execution and the original
+clock while recovering 21 blocking and 8 advisory tools. Current normalizer
+calls select the combined immutable source above; all three snapshot publisher
+calls remain frozen at `1eada5142f7fc7da7862f335589e3b8f5884ffaf`. These owner
+replays do not replace actual successor provider and postmerge live evidence.
 Dependencies remain enabled, selected Journey objects are not pruned, and source
 equality is unchanged. Owner replay and different-checkout byte equality do not
 replace final aggregate consumer, provider and live qualification.
