@@ -49,6 +49,14 @@ def inventory(root: Path) -> dict[str, str]:
     }
 
 
+def tls_context(certificate: Path, private_key: Path) -> ssl.SSLContext:
+    """Create the fixture server context with TLS 1.2 as its minimum."""
+    context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+    context.minimum_version = ssl.TLSVersion.TLSv1_2
+    context.load_cert_chain(certificate, private_key)
+    return context
+
+
 def check_skip_link(page: Any) -> dict[str, bool]:
     """Wait for the browser's actual keyboard navigation before judging its URL."""
     page.keyboard.press("Tab")
@@ -72,8 +80,7 @@ def inspect(args: argparse.Namespace) -> dict[str, Any]:
     server = ThreadingHTTPServer(
         ("127.0.0.1", 9443), partial(QuietHandler, directory=str(args.site_root))
     )
-    tls = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    tls.load_cert_chain(args.certificate, args.private_key)
+    tls = tls_context(args.certificate, args.private_key)
     server.socket = tls.wrap_socket(server.socket, server_side=True)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
