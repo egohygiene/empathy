@@ -112,19 +112,21 @@ tasks:
         --output-directory ".cache/mindgarden/publish"
 
   garden:site:build:
-    desc: Build the public garden with the pinned Quartz engine
+    desc: Build the public garden through standalone Mindgarden and pinned Quartz
     cmds:
       - >-
-        python3 mindgarden/scripts/quartz_site.py
+        .cache/mindgarden-standalone/bin/python -I -m mindgarden site
         --repository-root .
+        --profile mindgarden/profiles/quartz/profile.yaml
         build
 
   garden:site:serve:
-    desc: Serve the public garden locally with the pinned Quartz engine
+    desc: Serve the public garden through standalone Mindgarden and pinned Quartz
     cmds:
       - >-
-        python3 mindgarden/scripts/quartz_site.py
+        .cache/mindgarden-standalone/bin/python -I -m mindgarden site
         --repository-root .
+        --profile mindgarden/profiles/quartz/profile.yaml
         serve
         --port "{{.SITE_PORT | default 8080}}"
 
