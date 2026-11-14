@@ -107,7 +107,8 @@ def build(root: Path, output: Path, exchange: str | None = None) -> dict[str, An
             input=stage / row["path"],
             source_id=identifier,
             title="Source: " + row["artifact_id"],
-            origin="https://github.com/egohygiene/empathy/blob/"
+            origin="https://github.com/egohygiene/empathy"
+            + "/blob/"
             + manifest["source_revision"]
             + "/"
             + row["path"],
