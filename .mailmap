@@ -1,3 +1,8 @@
+# Mailmap presentation changes do not rewrite commits or commit IDs.
+# Identity values belong to the consumer; Git's matching rules are authoritative.
+# See https://git-scm.com/docs/gitmailmap and docs/foundation/mailmap/README.md.
+
+# Repository-owned local mappings and comments.
 # .mailmap - Simplified mapping of author and committer names and email addresses
 # https://git-scm.com/docs/gitmailmap
 #
@@ -15,4 +20,6 @@
 #
 # Below is a basic configuration for this project.
 
+
+# Consumer-approved baseline.
 Alan Szmyt <14865041+szmyty@users.noreply.github.com>

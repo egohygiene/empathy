@@ -23,7 +23,7 @@
     }
   ],
   "format": "empathy.gitignore/v1",
-  "foundation": "empathy/repository-foundation@2.1.0",
+  "foundation": "empathy/repository-foundation@3.0.0",
   "generator": "tools/foundation.py plan-gitignore",
   "profiles": [
     "agent-context",
@@ -39,9 +39,9 @@
   ],
   "repository": "egohygiene/empathy",
   "source": {
-    "catalog_sha256": "34100fa7e7d872952e83acb29b1c7abc879eee09c1fc1d50ca1b3b4c806ec701",
+    "catalog_sha256": "59e10d8beae359219b64558f4bf1a46b52aa7021217e2b22956cc092f45f5574",
     "owner": "egohygiene/empathy",
-    "resolved_manifest_sha256": "85a3b6761e4c3f196f9c72119ce3a27c3ad44c92c848f6b50a476503604e4574"
+    "resolved_manifest_sha256": "8bb55ce1c002556123c9ee08389e8dce6aa02e250649088703e492d633fa06b7"
   },
   "status": "plan-only"
 }

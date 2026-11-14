@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "id": "empathy/repository-foundation",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "owner": "egohygiene/empathy",
   "holon_contract": {
     "owner": "egohygiene/holon",
@@ -556,6 +556,25 @@
       "executable": false,
       "markers": [],
       "description": "Local-only portable consumer test job; not a hosted workflow"
+    },
+    {
+      "id": "mailmap",
+      "path": ".mailmap",
+      "kind": "file",
+      "category": "metadata",
+      "presence": "required",
+      "ownership": "repository-owned",
+      "profiles": [],
+      "executable": false,
+      "markers": [],
+      "description": "Consumer-approved author presentation with preserved local mappings; no history rewriting",
+      "composition": {
+        "format": "empathy.mailmap/v1",
+        "header": {
+          "path": "foundation/mailmap/universal.mailmap",
+          "sha256": "1d584c2f3bdb78e18bf69edf9a137439888532c490ea6423725f4dbdb7fbbd48"
+        }
+      }
     }
   ],
   "repository_owned_fields": [
@@ -613,6 +632,12 @@
       "path": "docs/ecosystem/CONTEXT.md",
       "owner": "egohygiene/hygiene",
       "source": "catalog/repositories.yaml + catalog/repository-context.json",
+      "checked_in": true
+    },
+    {
+      "path": "foundation/contracts/empathy.mailmap-plan.json",
+      "owner": "egohygiene/empathy",
+      "source": "foundation/catalog.json + foundation/empathy.manifest.json",
       "checked_in": true
     }
   ]

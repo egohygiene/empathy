@@ -123,15 +123,15 @@ class FoundationContractTests(unittest.TestCase):
             self.assertEqual(instructions, copilot.read_text(encoding="utf-8"))
 
     def test_baseline_upgrade_is_explicit_without_changing_schema_shape(self) -> None:
-        self.assertEqual("1.1.0", self.catalog["schema_version"])
+        self.assertEqual("1.2.0", self.catalog["schema_version"])
         legacy_catalog = copy.deepcopy(self.catalog)
         legacy_catalog["version"] = "1.1.0"
-        self.assertIn("catalog version must be 2.1.0", foundation.validate_catalog(legacy_catalog))
+        self.assertIn("catalog version must be 3.0.0", foundation.validate_catalog(legacy_catalog))
         legacy_manifest = copy.deepcopy(self.manifest)
         legacy_manifest["foundation"] = "empathy/repository-foundation@1.1.0"
         resolved, errors = foundation.resolve_manifest(self.catalog, legacy_manifest)
         self.assertIsNone(resolved)
-        self.assertIn("manifest foundation must be empathy/repository-foundation@2.1.0", errors)
+        self.assertIn("manifest foundation must be empathy/repository-foundation@3.0.0", errors)
 
     def test_resolution_is_byte_idempotent(self) -> None:
         first, first_errors = foundation.resolve_manifest(self.catalog, self.manifest)

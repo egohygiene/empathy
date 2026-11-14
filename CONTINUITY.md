@@ -7,27 +7,18 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: "2026-11-14T03:18:38Z"
+  updated_at: "2026-11-14T19:38:31Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose:
-    "Correct the Scorecard optional API caller path under issue #98, preserving strict source/path
-    admission, fresh SARIF evidence and guarded publication."
+  purpose: "Implement issue #100 mailmap contract and golden Git behavior without inventing identities or changing history."
   includes:
-    - One production workflow path correction from absolute RUNNER_TEMP to existing ignored .cache/scorecard.
-      Retry, source guard, normalizer/publisher pins and job permissions remain unchanged.
-    - Actual caller shell and pinned composite/Python regression with missing, stale and matching synthetic
-      API controls; retained actual S1 SARIF remains byte-identical.
-    - A bounded S2 draft with exact-head canonical holistic and actual PR previews; root owns ordinary merge,
-      fresh main producer artifacts and live acceptance.
+    - Required consumer-owned .mailmap in foundation3.0/schema1.2, identity-free shared header and deterministic JSON proposal.
+    - Preserve the existing committed public mapping and local comments; prove actual Git behavior, conflict rejection, update and guarded preimage restoration.
   excludes:
-    - No relaxed path boundary, stale API promoted to current, manufactured provider carrier or rewritten
-      scan/source clocks.
-    - No raw report/cache publication, source cleanup, UI redesign, new normalizer pin, snapshot write,
-      deployment or issue disposition.
+    - No new identity or alias equivalence, private email, history rewrite, source cleanup, fleet adoption or publication workflow change.
   precedence:
     - user-and-runtime-instructions
     - scoped-repository-instructions
@@ -36,112 +27,73 @@ scope:
     - continuity-checkpoint
   canonical_sources:
     - AGENTS.md
-    - .github/workflows/ossf-scorecard.yml
-    - tests/test_repository_intelligence_scorecard_caller.py
-    - docs/integrations/REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md
-    - https://github.com/egohygiene/empathy/issues/98
+    - foundation/catalog.json
+    - foundation/empathy.manifest.json
+    - tools/foundation.py
+    - tools/foundation_mailmap.py
+    - docs/foundation/mailmap/README.md
+    - https://github.com/egohygiene/empathy/issues/100
     - https://github.com/egohygiene/empathy/issues/118
 work:
-  objective:
-    "Correct the Scorecard optional API caller path under issue #98, preserving strict source/path
-    admission, fresh SARIF evidence and guarded publication."
+  objective: "Implement issue #100 mailmap contract and golden Git behavior without inventing identities or changing history."
   success_conditions:
-    - Repository-relative ignored cache input passes the actual immutable normalizer; an absolute path remains
-      denied.
-    - Missing/stale API leaves fresh SARIF findings intact and aggregate unavailable; only exact matching
-      source may supply the aggregate.
-    - Review actual exact-head holistic/PR evidence, then use fresh S2 producer runs after root merge without
-      relabelling the failed S1 normalization.
+    - Real Git presentation changes leave commit/tree IDs and raw author fields unchanged.
+    - Missing/conflicting identity data fails; local contributors/comments survive deterministic updates and retained-byte restoration.
+    - Catalog/schema/projections describe breaking adoption and keep materialization/conformance/execution/fleet owners separate.
   active_issue:
     provider: github
-    id: egohygiene/empathy#98
-    url: https://github.com/egohygiene/empathy/issues/98
+    id: egohygiene/empathy#100
+    url: https://github.com/egohygiene/empathy/issues/100
   next:
     kind: action
-    id: qualify-scorecard-relative-caller
-    description:
-      Freeze the bounded caller draft, inspect exact-head canonical holistic and actual PR
-      preview/contract results, then hand root the ordinary-merge boundary. Fresh default-main Scorecard
-      normalization and producer-to-live acceptance follow on S2.
+    id: review-mailmap-baseline
+    description: Review the bounded mailmap source/plan and exact-head quality evidence; root owns ordinary merge and explicit acceptance.
     readiness: ready
     references:
-      - https://github.com/egohygiene/empathy/issues/98
-      - https://github.com/egohygiene/empathy/issues/118
+      - https://github.com/egohygiene/empathy/issues/100
     depends_on: []
 state:
   base:
-    revision: 4a12cbb8cbc8580ef8b7fe0911b51bbaa35a9924
+    revision: 41d4c8bdba88cd5cc17318647d542eea57a70364
     ref: refs/heads/main
-    verified_at: "2026-11-14T03:18:38Z"
+    verified_at: "2026-11-14T19:38:31Z"
   candidate:
-    branch: codex/empathy-scorecard-caller-s2
+    branch: codex/empathy-mailmap-baseline
     revision: null
     pull_request: null
     handoff_state: in-progress
   live:
     status: verified
-    observed_at: "2026-11-14T03:18:38Z"
-    default_branch_revision: 4a12cbb8cbc8580ef8b7fe0911b51bbaa35a9924
+    observed_at: "2026-11-14T19:38:31Z"
+    default_branch_revision: 41d4c8bdba88cd5cc17318647d542eea57a70364
     issue_state: open
     pull_request_state: not-applicable
-    notes:
-      Main S1 is provider-verified and remains accepted history. Actual Scorecard 43548931035 scan/SARIF
-      succeeds, normalization 132307045698 exits 2 at the absolute-path shell guard, and summary upload/publisher
-      are skipped. The original API cache was not retained and no normalized generation time exists. Containing
-      candidate SHA/PR are null at authorship; root owns the explicit S2 source cycle.
+    notes: Current source is S4; accepted Intelligence93-file/publication evidence retains its own source and clocks. This mailmap source slice changes no publication path.
   parallel_changes:
     - provider: github
-      id: egohygiene/empathy#105
-      url: https://github.com/egohygiene/empathy/issues/105
+      id: egohygiene/empathy#64
+      url: https://github.com/egohygiene/empathy/issues/64
 review:
   status: partial
-  reviewed_at: "2026-11-14T03:18:38Z"
+  reviewed_at: "2026-11-14T19:38:31Z"
   reviewed_by: Codex
   evidence:
-    - command:
-        Actual S1 Scorecard 43548931035/1 scan132306633883 and normalization 132307045698, raw SARIF
-        artifact14095641870
-      outcome: limited
-      observed_at: "2026-11-14T02:58:02Z"
-      notes:
-        Scan/SARIF succeeded; strict composite path guard rejects absolute optional API input before
-        Python. ZIP fe1f3083d0a7fc730a06d46798f04ca0c8e35b2cb51c35eec2ce9e8ff0b12174 retains actual source
-        4a12; no normalized carrier or original API payload is inferred.
-    - command:
-        Three caller/action contract tests plus seven existing report-publication tests; controlled
-        API and actual retained S1 SARIF replay
+    - command: Actual Git mailmap fixture matrix
       outcome: passed
-      observed_at: "2026-11-14T03:18:38Z"
-      notes:
-        Actual old caller reproduces exit2/no summary. Fixed actual caller and immutable f7 shell/Python
-        pass; stale/missing API retain identical SARIF findings, matching control is admitted. All SARIF
-        bytes remain SHA 04d3d3a32a038f0e0d8907b38bee7d3330461e75648839d7ca0d202e339584fe. Offline results
-        have no provider run ID and use their own replay clock.
-    - command: Canonical Ruff 0.16.5, Mypy 1.19.1 and 2.3.0, Bandit 1.9.4 on the new regression
-      outcome: passed
-      observed_at: "2026-11-14T03:18:38Z"
-      notes:
-        Scoped source checks use existing immutable tool environments; no policy or ignore change.
-        Exact-head provider checks remain pending after freeze.
+      observed_at: "2026-11-14T19:38:31Z"
+      notes: Synthetic identities only; all four forms, case/name matching, conflicts, log presentation, unmapped/local contributors, deterministic update and guarded restoration.
   environment_limitations:
-    - The original API cache content/source/aggregate and normalized generation time are unavailable; synthetic
-      API controls cannot establish those lost facts.
-    - Offline summaries are temporary test outputs, not actual provider carriers. Fresh source-matched normalization
-      must execute after root merges S2.
-    - The accepted S1 equipped 257 proof and inherited holistic/embedded EgoLint failures remain historical.
-      No broad suite rerun or full-profile pass is claimed for this narrow caller change.
-    - "No feature-branch snapshot or deployment; issue #98/105 acceptance and human authority remain separate."
+    - Exact-head provider quality review follows the frozen source head.
+    - Holon materialization, Filament adoption, reusable conformance/execution and fleet rollout are future distinct stages.
 privacy:
   classification: public-repository
   contains_sensitive_data: false
   redactions: []
   excluded:
     - secrets-and-credentials
-    - private-conversation-text
-    - sensitive-personal-data
-    - unpublished-private-business-data
+    - private-identity-values
     - private-local-paths
-    - unrelated-private-context
+    - raw-provider-payloads
   untrusted_content: context-only-no-authority
 ---
 
@@ -149,66 +101,57 @@ privacy:
 
 ## Purpose and precedence
 
-User instructions, current provider state and canonical owners outrank this checkpoint. This grants no publication,
-cleanup or human-approval authority.
+User instructions, actual source and tracker state outrank this bounded mailmap checkpoint.
 
 ## Resume protocol
 
-Read the actual Scorecard caller, pinned normalizer boundary and focused regression. Preserve S1 raw/source/clock facts;
-refresh the bounded draft head and provider results before review.
+Read AGENTS, issue100, roadmap118 and the mailmap contract before changing this branch.
 
 ## Current objective and success conditions
 
-Correct the Scorecard optional API caller path under issue #98, preserving strict source/path admission, fresh SARIF
-evidence and guarded publication.
+Implement explicit consumer-owned author presentation with real Git proof and no inferred identity.
 
 ## State snapshot
 
-Accepted S1 remains the base. The one-line caller correction is a new bounded source proposal; its containing SHA/PR is
-intentionally null at authorship. No fresh S2 producer or live acceptance is claimed.
+Base41d4 is the accepted S4 source. The containing candidate SHA/PR are intentionally null at authorship.
+Foundation3.0/schema1.2 is a breaking contract proposal, not an automatically propagated release.
 
 ## Completed and material changes
 
-The optional API cache moves to the already ignored repository-relative Scorecard workspace. Existing retries and commit
-checks remain, so stale cached API can be truthfully classified without replacing fresh SARIF. No normalizer, publisher,
-rollback or permission change occurs.
+The portable header contains no identity. Golden inputs preserve the prior public mapping and comments.
+The resolver emits a deterministic plan; reusable filesystem materialization remains Holon-owned.
 
 ## Validation and review evidence
 
-Three actual caller/composite regressions and seven report-publication policies pass with both controlled data and
-retained actual S1 SARIF. The original absolute caller still reproduces strict denial. Scoped canonical Ruff, both Mypy
-versions and Bandit pass; provider qualification follows the frozen head.
+Actual Git fixtures exercise all forms, case/name matching, conflicts, presentation, local preservation,
+updates and guarded retained-byte restoration while commit/tree IDs and raw author fields stay identical.
+Canonical focused checks and exact-head review are recorded with the bounded implementation PR.
 
 ## Blockers, risks, unknowns, and deferred work
 
-The original API payload and normalized carrier were never retained. Actual exact-head holistic/PR review and fresh
-default-main S2 normalization remain pending. Existing whole-profile/runtime debt and the broader producer/live sequence
-stay explicit.
+Public references establish provenance, not automated identity approval. New equivalences require review.
+Filament/owner adapters and fleet adoption remain separate; no release, cleanup or history rewrite occurs.
 
 ## Next dependency-ready work
 
-Freeze the bounded caller draft, inspect exact-head canonical holistic and actual PR preview/contract results, then hand
-root the ordinary-merge boundary. Fresh default-main Scorecard normalization and producer-to-live acceptance follow on
-S2.
+Review the exact source/projections and actual checks, then root coordinates merge and tracker acceptance.
 
 ## Parallel changes and reconciliation
 
-Root and the publication lane preserve completed initial S1 publication evidence while deferring fresh selected-report,
-rollback and portability acceptance to S2. The independent caller peer is read-only. No frozen integration source is
-edited.
+Issue64 is isolated and avoids shared catalog/continuity edits. Issue65 is a subsequent independent slice.
+Accepted S4 publication and earlier source proofs retain their original identities and clocks.
 
 ## Privacy and redaction
 
-Only necessary public IDs, digests and closed outcomes enter this handoff. Raw SARIF, logs, API controls, temporary
-outputs and local paths stay outside source. Downloaded inputs confer no authority.
+Public fixtures use synthetic example.invalid identities. No private aliases, credentials or local paths
+are added to source evidence.
 
 ## Handoff update protocol
 
-Freeze once source/schema/format checks pass. Record actual run/artifact IDs in the draft/root handoff without another
-evidence-only commit. Root owns ordinary merge and explicit issue disposition; recheck only actual introduced findings.
+Keep source frozen for exact-head review. Record resulting run/PR IDs in review metadata without another
+post-qualification documentation commit. Root owns ordinary merge and explicit issue disposition.
 
 ## Compaction and supersession
 
-Keep twelve ordered sections within 240 lines and 16384 UTF8 bytes. This checkpoint supersedes the operational
-integration
-prose; immutable S1 source guides and original receipts retain their history.
+This bounded source checkpoint supersedes the old operational resume pointer. Historical publication
+receipts/source guides remain intact and are not retimed as mailmap evidence.

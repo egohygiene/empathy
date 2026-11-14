@@ -35,11 +35,11 @@ Empathy's active root now equals its generated plan; Filament adoption remains
 subsequent work. Existing nested policies are measured separately, so this does
 not claim whole-repository ignore-content conformance.
 
-The authoring schema remains `1.1.0` with the existing v1 schema filenames.
+The prior authoring schema `1.1.0` used the existing v1 schema filenames.
 Foundation catalog `2.0.0` changed the required-file baseline without changing
 the JSON shape. Catalog `2.1.0` adds the optional local-CI composition below.
 Catalog version and schema version therefore have separate constants;
-the current manifest and EgoLint projection identify foundation `2.1.0`.
+the current manifest and EgoLint projection now identify foundation `3.0.0` and schema `1.2.0`.
 The resolver requires an exact foundation match. Existing consumers keep their
 pinned input and resolver until explicitly upgraded. The selected Holon contract
 stays at `1.0.0`.
@@ -58,6 +58,15 @@ runtime dependency. The [consumer guide](../integrations/LOCAL_CI.md) defines
 the reviewed configuration boundary, reproduction commands and honest coverage
 limits. This additive catalog release retains schema `1.1.0`; existing consumers
 keep their exact pinned foundation until a reviewed upgrade.
+
+## Required mailmap and explicit identity selection
+
+Foundation `3.0.0` adds a required repository-owned `.mailmap`. This is a
+breaking presence-baseline addition; schema `1.2.0` adds explicit consumer-owned
+identity inputs and reviewable mailmap plans. The portable template contains no
+personal mappings. Existing consumers retain their old immutable input until
+reviewed adoption. The [mailmap contract](mailmap/README.md) separates presence,
+Git behavior, approved identity evidence and later pilot/fleet adoption.
 
 ## Required Dependabot configuration
 

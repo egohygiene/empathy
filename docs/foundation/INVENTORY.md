@@ -2,9 +2,9 @@
 
 > Generated from `foundation/catalog.json`. Do not edit by hand.
 
-- Contract: `empathy/repository-foundation@2.1.0`
+- Contract: `empathy/repository-foundation@3.0.0`
 - Canonical owner: `egohygiene/empathy`
-- Canonical artifacts: `35`
+- Canonical artifacts: `36`
 
 | Path | Category | Presence | Ownership | Profiles | Description |
 | --- | --- | --- | --- | --- | --- |
@@ -22,6 +22,7 @@
 | `.github/workflows/megalinter.yml` | quality | profile | required | quality-baseline | Thin repository caller for reusable quality automation |
 | `.gitignore` | metadata | required | repository-owned | — | Repository-owned exclusions with explicit, scoped baseline composition |
 | `.identity/identity.toml` | metadata | profile | repository-owned | product | Consumer-owned product identity input |
+| `.mailmap` | metadata | required | repository-owned | — | Consumer-approved author presentation with preserved local mappings; no history rewriting |
 | `.mega-linter.yml` | quality | profile | repository-owned | quality-baseline | Repository-selected EgoLint and MegaLinter policy overlay |
 | `.release-please-manifest.json` | release | profile | repository-owned | release-automated | Repository release state |
 | `.secrets.baseline` | security | profile | repository-owned | risk-hardened | Reviewed repository secret-scanner baseline |
@@ -60,4 +61,5 @@ Sources are owned by `egohygiene/empathy`; they are not required consumer paths.
 | `docs/ecosystem/CONTEXT.md` | `egohygiene/hygiene` | `catalog/repositories.yaml + catalog/repository-context.json` | `true` |
 | `docs/foundation/INVENTORY.md` | `egohygiene/empathy` | `foundation/catalog.json` | `true` |
 | `foundation/contracts/empathy.gitignore-plan.json` | `egohygiene/empathy` | `foundation/catalog.json + foundation/empathy.manifest.json + foundation/ignore/*` | `true` |
+| `foundation/contracts/empathy.mailmap-plan.json` | `egohygiene/empathy` | `foundation/catalog.json + foundation/empathy.manifest.json` | `true` |
 | `foundation/contracts/empathy.repository-contract.toml` | `egohygiene/empathy` | `foundation/catalog.json + foundation/empathy.manifest.json` | `true` |
