@@ -1,0 +1,107 @@
+{
+  "commit": "acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
+  "execution": {
+    "message": "OpenSSF Scorecard produced valid SARIF output.",
+    "state": "success"
+  },
+  "findings": {
+    "advisory": 8,
+    "blocking": 0,
+    "by_severity": {
+      "critical": 0,
+      "high": 4,
+      "low": 1,
+      "medium": 3,
+      "unknown": 0
+    },
+    "state": "attention",
+    "total": 8
+  },
+  "freshness": {
+    "expires_at": "2026-11-23T02:15:13Z",
+    "stale_after_days": 8
+  },
+  "generated_at": "2026-11-15T02:15:13Z",
+  "links": {
+    "detail": "https://scorecard.dev/viewer/?uri=github.com/egohygiene/empathy",
+    "security": "https://github.com/egohygiene/empathy/security/code-scanning",
+    "source": "https://github.com/egohygiene/empathy/commit/acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43666706710"
+  },
+  "producer": "scorecard",
+  "provenance": {
+    "event": "push",
+    "run_attempt": 1,
+    "run_id": "43666706710",
+    "workflow": "OpenSSF Scorecard"
+  },
+  "repository": "egohygiene/empathy",
+  "schema": "egohygiene.repository-report-summary/v1",
+  "schema_version": 1,
+  "scorecard": {
+    "aggregate_score": null,
+    "aggregate_source": "unavailable",
+    "api_status": "invalid",
+    "check_source": "sarif",
+    "checks_needing_attention": 8,
+    "checks_total": 18,
+    "weakest_checks": [
+      {
+        "id": "BranchProtectionID",
+        "name": "Branch-Protection",
+        "risk": "high",
+        "score": 0,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#branch-protection"
+      },
+      {
+        "id": "CIIBestPracticesID",
+        "name": "CII-Best-Practices",
+        "risk": "low",
+        "score": 0,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#cii-best-practices"
+      },
+      {
+        "id": "CodeReviewID",
+        "name": "Code-Review",
+        "risk": "high",
+        "score": 0,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#code-review"
+      },
+      {
+        "id": "FuzzingID",
+        "name": "Fuzzing",
+        "risk": "medium",
+        "score": 0,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#fuzzing"
+      },
+      {
+        "id": "TokenPermissionsID",
+        "name": "Token-Permissions",
+        "risk": "high",
+        "score": 0,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#token-permissions"
+      },
+      {
+        "id": "VulnerabilitiesID",
+        "name": "Vulnerabilities",
+        "risk": "high",
+        "score": 0,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#vulnerabilities"
+      },
+      {
+        "id": "PinnedDependenciesID",
+        "name": "Pinned-Dependencies",
+        "risk": "medium",
+        "score": 4,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#pinned-dependencies"
+      },
+      {
+        "id": "SecurityPolicyID",
+        "name": "Security-Policy",
+        "risk": "medium",
+        "score": 4,
+        "url": "https://github.com/ossf/scorecard/blob/61e84743356275f6ffca23b1b2f2cb945e19eb96/docs/checks.md#security-policy"
+      }
+    ]
+  }
+}
